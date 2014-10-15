@@ -266,7 +266,7 @@ BASE_OBJS = adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c circui
 tkgate_LDFLAGS = @TKGATE_LPATH@ @X_LIBS@ @COMMON_LPATH@
 tkgate_SOURCES = $(BASE_OBJS) main.c
 #tkgate_LDADD=libtkgate.la
-tkgate_LDADD = @TKGATE_LIB@ -lcommon
+tkgate_LDADD = @TKGATE_LIB@ -lcommon -lm
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
