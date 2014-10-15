@@ -1,0 +1,1057 @@
+#
+#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+# Last edit by hansen on Fri Jun  4 10:37:11 2004
+
+##############################################################################
+#
+# basic strings
+#
+.dismiss	Zru¹it
+b.close		Zavøít
+b.ok		OK
+b.clear		Znova
+b.cancel	Zru¹it
+b.open		Otevøít...
+b.bitw		Bitová ¹íøka
+b.in		vstup
+b.out		výstup
+b.inout		smí¹ený
+b.browse	Procházet...
+b.label		Návì¹tí
+b.find		Najít
+b.edit		Upravit...
+b.add		Pøidat...
+b.delete	Smazat
+b.deleteb	Smazat...
+b.apply		Pou¾ít
+b.anchor	Ukotvit
+b.tech		Technologie
+
+##############################################################################
+# Menu strings
+#
+file		Soubor
+edit		Úpravy
+tool		Nástroje
+simulate	Simulace
+module		Modul
+gate		Hradlo
+make		Pøidej
+circ		Obvod
+
+new		Nový
+open		Otevøít...
+openlib		Otevøít Knihovnu...
+save		Ulo¾it
+saveas		Ulo¾it jako...
+print		Tisk...
+options		Mo¾nosti...
+quit		Ukonèit
+
+undo		Zpìt
+redo		Znovu
+cut		Vyjmout
+copy		Kopírovat
+paste		Vlo¾it
+selall		Vybrat v¹e
+find		Najít...
+algnv		Uspoøádat Ver.
+algnh		Uspoøádat Horiz.
+zoomin		Zvìt¹it
+zoomout		Zmen¹it
+
+move		Pøesunout/Spojit
+delg		Smazat Hradlo
+cutw		Pøeru¹it Vodiè
+inv		Invertovat
+bitw		Bitová ¹íøka
+debug		Debug
+rot0		Otoèit 0
+rot90		Otoèit 90
+rot180		Otoèit 180
+rot270		Otoèit 270
+
+simbegin	Zaèít Simulaci
+simend		Ukonèit Simulaci
+simadprobe	Pøidat/Smazat Sondu
+simrun		Spustit
+simpause	Pøeru¹it
+simstep		Step Epoch(s)
+simcycle	Step Cycle
+simbreak	Kontrolní bod...
+simscript	Spustit Skript...
+simload		Load Memory...
+simdump		Dump Memory...
+
+modopen		Otevøít
+modclose	Zavøít
+modseti		Nastavit Rozhraní
+modediti	Upravit Rozhraní...
+modnew		Nový...
+moddel		Smazat...
+modcopy		Kopírovat...
+modrename	Pøejmenovat...
+modclaim	Claim...
+circprop	Vlastnosti Obvodu...
+cpath		Citlivá Cesta...
+
+gataddin	Pøidat Vstup
+gataddout	Pøidat Výstup
+gataddinout	Add BiDir
+gatiochg	Zmìnit Typ
+gatanchor	Ukotvit Vybrané
+gatunanchor	Uvolnit Vybrané
+gatprop		Vlastnosti...
+gatrep		Vytvoøit Kopii
+gatdel		Smazat
+gatsettech	Nastavit Technologii
+
+gmswitch	I/O
+gmgate		Hradlo
+gmredgate	Redukce
+gmmsi		MSI
+gmalu		ALU
+gmmem		Pamì»
+gmmod		Modul
+gmcomment	Komentáø
+gmframe		Rámec
+
+gmxswitch	Switch
+gmdip		DIP Switch
+gmground	Uzemnìní
+gmvdd		Vdd
+gmmerge		Wire Merge
+gmclock		Hodiny
+
+gm.led		LED
+gm.ledbar	LED Panel
+gm.ledhex	7-Seg. LED (HEX)
+gm.leddec	7-Seg. LED (DEC)
+gm.ledseg	7-Seg. LED (Pøímý)
+
+gmtty		TTY
+
+gmand		AND
+gmnand		NAND
+gmor		OR
+gmnor		NOR
+gmxor		XOR
+gmxnor		XNOR
+gmbuf		Buffer
+gminv		Invertor
+gmtribuf	Tri-Buffer
+gmnmos		NMOS
+gmpmos		PMOS
+
+gmrand		AND
+gmrnand		NAND
+gmror		OR
+gmrnor		NOR
+gmrxor		XOR
+gmrxnor		XNOR
+
+gmadd		Sèítaèka
+gmmult		Násobièka
+gmdiv		Dìlièka
+gmlshift	Posun Doleva
+gmrshift	Posun Doprava
+gmarshift	Arit.Posun Doprava
+gmroll		Rotace
+
+gmreg		Registr
+gmff		Klopný Obvod
+gmram		RAM
+gmrom		ROM
+
+gm21mux		2-1 Multiplexor
+gm41mux		4-1 Multiplexor
+gm81mux		8-1 Multiplexor
+gm12dec		1-2 Dekodér
+gm14dec		1-4 Dekodér
+gm18dec		1-8 Dekodér
+    
+gmmodinst	Instance Modulu
+gmmodin		Vstup Modulu
+gmmodout	Výstup Module 
+gmmodinout	Module InOut
+
+addwireseg	Pøidat Segment Vodièe
+
+help		Nápovìda
+hlpabout	O programu...
+hlplicense	Licence...
+hlpdoc		Dokumentace...
+hlptut		Návody
+hlpexample	Pøíklady
+exampcomb	Kombinaèní Logika
+examp3bit	3-Bitový Èítaè
+examp8bit	8-Bitový Èítaè
+examptrff	Transistor-Level FF
+exampcpu	Menagerie CPU
+tutwelcome	TkGate Intro
+tutcreate	Vytvoøení Obvodu
+tutedit1	Úpravy Obvodu (1)
+tutedit2	Úpravy Obvodu (2)
+tutmods		Pou¾ití Modulù
+tutsim		Simulace Obvodu
+
+# Scope Menu
+menu.sc.prtrace	Tisknout Stopu...
+menu.sc.close	Zavøít
+menu.sc.trace	Stopa
+menu.sc.zoomin Zvìt¹it	
+menu.sc.zoomout Zmen¹it
+
+scope.emptymsg	Poklepáním na vodiè pøidejte nebo sma¾te stopu.
+comment.empty	[Poklepáním pøidejte text.]
+##############################################################################
+# Interface strings
+#
+ifile		Soubor
+imodule		Modul
+iblmodule	Moduly
+iports		Porty
+ibits		Bity
+
+#############################################################################
+# Net Dialog Box
+#
+db.net.name	Jméno Sitì
+db.net.hide	Skrýt Jméno
+db.net.bits	Bitová ¹íøka	
+db.net.port	Typ Portu
+db.net.in	vstup
+db.net.out	výstup
+db.net.inout	inout
+db.net.inets	Sitì
+
+##############################################################################
+# Gate dialog box
+#
+db.gate.signam		Název Signálu
+db.gate.portnam		Název Portu
+db.gate.iotype		Typ
+db.gate.bitw		Bitová ¹íøka
+db.gate.cyclew		Cycle Width
+db.gate.phase		Phase
+db.gate.duty		Duty
+db.gate.port		Port
+db.gate.bitws		Bity
+db.gate.gtype		Typ Hradla
+db.gate.gname		Název Hradla
+db.gate.hidenam		Skrýt Název
+db.gate.anchor		Ukotvit
+db.gate.cpbreak		Critical Path Partition
+db.gate.butstate	Stav tlaèítka
+db.gate.dipval		Hodnota pøepínaèe
+db.gate.memfilenam	Soubor s obsahem pamìti
+db.gate.modname		Funkce
+db.gate.islink		Text je Hypertextový Odkaz
+db.gate.link		Odkaz na Soubor
+db.gate.findw		Hledat pouze vodièe
+db.gate.findg		Hledat pouze hradla
+db.gate.findwg		Hledat vodièe i hradla
+db.gate.general		Obecné
+db.gate.details		Detaily
+db.gate.ports		Port
+db.gate.delay		Zpo¾dìní
+db.gate.stddelay	Standartní Zpo¾dìní
+db.gate.custdelay	Definované Zpo¾dìní
+db.gate.extbar		Pou¾ít roz¹iøující li¹ty
+
+db.led.type		Typ LED 
+db.led.bit		Bit
+db.led.bar		Bar Graph
+db.led.hex		7-Segment (HEX)
+db.led.dec		7-Segment (DEC)
+db.led.seg		7-Segment (Direct)
+
+cpath.cloops -begin-
+Combinational loops were detected in your circuit.
+In order to do delay analysis on this circuit, you
+must either break the loop, or mark some of the
+gates in the loop as a "Critical Path Partition"
+point.  Nets at which a loop was detected are
+listed below.
+-end-
+
+##############################################################################
+# Print dialog box
+#
+print.outto		Výstup do
+print.printer		Tiskárna
+print.file		Soubor
+print.prcmd		Pøíkaz k tisku
+print.filename		Jméno Souboru
+print.epssave		Ulo¾it jako Encapsulated Postscript
+print.doctit		Název Dokumentu
+print.prmod		Print Modules
+print.epcm		Epochs/cm
+print.estpg		Odhad poètu stránek
+print.all		V¹echny
+print.cur		Aktuální
+print.use		Pou¾ité
+print.sel		Vybrané
+print.inclib		Vlo¾it knihovní moduly.
+print.papsz		Velikost papíru
+print.orient		Orientace
+print.portrait		Na vý¹ku
+print.landscape		Na ¹íøku
+print.2side		Tisknout Oboustrannì
+print.opts		Mo¾nosti
+print.scale		Pøizpùsobit velké moduly velikosti stránky.
+print.partition		Rozdìlit velké moduly do více stránek.
+print.incidx		Vlo¾it index.
+print.incgraph		Vlo¾it graf hierarchie.
+print.4up		Tisknout malé moduly 4 na stránku.
+print.range		Range Selection
+print.fulltr		Úplná Stopa
+print.parttr		Èást Stopy
+print.start		Start
+print.end		Konec
+
+##############################################################################
+#
+# Options dialog
+#
+opt.site		Název organizace
+opt.inst		Instance
+opt.mods		Moduly
+opt.modports		Porty Modulù
+opt.frames		Rámce
+opt.comment		Komentáøe
+opt.hlink		Hyperlinky
+opt.wire		1-bitové Vodièe
+opt.bus			Vícebitové Vodièe
+opt.tools		Nástroje pro práci s hradly
+opt.cpath		Citlivá cesta
+opt.grid		Scope Grid
+opt.logic1		Logická 1
+opt.logic0		Logická 0
+opt.float		Float
+opt.unknown		Nedefinována/Konfliktní
+opt.offled		Nesvítící LED
+opt.onled		Svítící LED
+opt.zled		Floating LED
+opt.restdef		Obnovit pùvodní nastavení
+opt.regudate		Region Update
+opt.smoothscroll	Smooth Scrolling
+opt.outmove		Outline Move modules
+opt.balloon		Povolit bublinovou nápovìdu
+opt.debug		Enable Debugging
+opt.novice		Novice Mode
+opt.ckpoint		Do Checkpointing
+opt.freq		Interval
+opt.beak		Enable Special Modes
+opt.mode		Mode
+opt.normal		Normal
+opt.bat			Bat
+opt.trek		Star Trek
+opt.miles		Miles
+opt.contver		Automatická Kontrola Integrity 
+opt.showsimcmd		Display Simulator Stream
+opt.logfile		Simulator Log File
+opt.estepsz		Poèet jednotek èasu/krok
+opt.cstepsz		Poèet hodinových cyklù/krok
+opt.overstep		Clock Overstep
+opt.sorttraces		¹˜adit stopy podle abecedy
+opt.rememberprobes	Pamatovat si umístìní sond
+opt.vpopupdelay		Value Pop-Up Delay
+opt.initscript		Inicialièní skript
+opt.posedge		Clock step stops on all clock posedges
+opt.setclock		Clock step stops on clock
+opt.delayfilepath	Soubor se zpo¾dìními
+opt.general		Obecné
+opt.print		Tisk
+opt.simulate		Simulace
+opt.analysis		Analýza
+opt.color		Barvy
+opt.undolen		Max Poèet Krokù Zpìt (Undo)
+
+opt.cpopts		Mo¾nosti citlivé cesty:
+opt.maxpath		Maximální poèet cest:
+opt.cpflash		Display with Flashing Path
+
+opt.vercheck		-begin-
+Periodically check for new versions of tkgate over
+the Internet.  Do not enable unless you have continuous
+access to the Internet.
+-end-
+
+##############################################################################
+#
+# Block list dialog boxes
+blklst.newmod		Nový Modul 
+blklst.delmod		Smazat Modul
+blklst.frommod		Kopírovat Modul Z
+blklst.tomod		Do
+blklst.oldname		Starý Název
+blklst.newname		Nový Název
+blklst.claim		Claim Module
+
+##############################################################################
+#
+# Circuit Dialog box
+#
+circ.topmod		Top-Level Module
+circ.discchg		Discard Changes
+circ.iniscript		Inicializaèní Skripty
+circ.noscript		Nebyli vybrány ¾ádné soubory se skripty.
+circ.really1		Opravdu chcete odstranit
+circ.really2		ze seznamu inicializaèních skriptù.
+circ.extbar		Pou¾ít roz¹iøující li¹ty
+
+##############################################################################
+# Simulator
+#
+sim.breakpt		Kontrolní bod
+
+##############################################################################
+#
+# Command box
+#
+cmd.file		Název souboru
+cmd.topname		Název Hlavního Modulu
+
+##############################################################################
+#
+# Critical path messages
+#
+cp.delay		Zpo¾dìní cesty:
+cp.pathl		Seznam Cest:
+cp.numpath		Poèet cest:
+cp.recompute		Pøepoèítat
+
+##############################################################################
+# Error messages
+#
+err.verilog		Chyby v souboru:
+err.nopin		Can't change selected pin.
+err.badhex		Illegal hex value '%s' ignored.
+err.gatanchor		Hradlo(a) jsou ukotveny a nelze je pøemístit.
+err.libmode		Neplatná operace s knihovním modulem(convert to normal module to edit).
+err.badfind		Can't find target '%s'.
+err.badopendel		Nelze smazat otevøený modul.
+err.nosrcmod		Source module '%s' not found.
+err.noerr		Can not locate error.
+err.misserr		Error information incomplete (did the simulator crash?)
+err.pounimpl		Unimplemented error in ParseOption
+
+err.badinadd	     Nelze pøidat dal¹í vstup k vybranému hradlu	
+err.badoutadd	     	Nelze pøidat dal¹í výstup k vybranému hradlu
+err.badinoutadd		Can't add any more inout pins to selected gate.
+err.badpinchg		Can't change pin types on selected gate.
+err.badnetname		Neplatné znaky v identifikátoru byly smazány.
+err.netbcrename		Identifier renamed to '%s' because of illegal characters.
+err.netconfnet		Identifier renamed to '%s' because of conflict.
+err.netconfgat		Identifier renamed to avoid conflict with primitive gate name
+err.netconfkw		Identifier renamed to avoid conflict with reserved word.
+err.badconsame		Spojení nepovoleno. Vodièe jsou souèástí stejné sítì
+err.badconptsp		Connection refused because both wires are module ports or supply.
+err.badconbitw		Spojení nepovoleno. Bitové ¹íøky nejsou stejné
+err.badrange		Non-positive range for scope trace is not allowed.
+err.badlprcmd		Nelze vykonat pøíkaz k tisku '%s'.
+err.badpsopen		Nelze otevøít soubor '%s' pro postskriptový výstup.
+err.badid		Neplatný identifikátor '%s'.
+
+err.bkpt.badexp		Syntax error in breakpoint expression.  Must be one of: 'net', '!net', 'net==value', 'net!=value'
+err.bkpt.badnet		Neplatný název sitì '%s'. Names must start with a letter and contain only letters, digits and '.'.
+err.bkpt.badval		Syntax error in value '%s'.  Must be decimal or verilog-style constant.
+err.bkpt.toomany	Pøíli¹ mnoho kontrolních bodù.  Maximální mno¾stvi je %d.
+
+err.sim.badtmp		Could not save temporary file '%s' for simulator (disc full?)
+err.sim.syntx		Syntax error in '%s' command.
+err.sim.noincl		Include file '%s' not found.
+err.sim.clockbadedge	Illegal edge indicator '%c' in clock command.
+err.sim.nobkpt		No such breakpoint '%s'.
+err.sim.nonet		Si» '%s' nebyla nalezena.
+err.sim.nogate		Hradlo '%s' nebylo nalezeno.
+err.sim.badbin		Neplatný znak v binární konstantì '%s'.
+err.sim.notswitch	Gate '%s' is not a switch, dip or register.
+err.sim.badcmd		Neznámý pøíkaz '%s' v simulaèním skriptu.
+
+err.noteditpchg		Properties can only be changed in edit mode.	
+err.badeditop		Illegal interface edit mode operation.
+err.badopen		Nelze otevøít vstupní soubor '%s'.
+err.badlibopen		Nelze otevøít knihovní soubor '%s'.
+
+err.nomark		Please set a mark with the left mouse button before selecting a gate type.
+err.badgate		Neznámý typ hradla.
+err.badmake		Hradlo nelze vytvoøit.
+
+err.badportadd		Can't add ports to gates of this type.
+err.badportdel		Selected port can not be deleted.
+err.badportedit		Selected port can not be edited.
+err.noport		Nebyly vybráný ¾ádné porty.
+
+err.manypages		-begin-
+There are an awful lot of
+pages in this document.  Are
+you sure you want to print it?
+-end-
+
+err.nojump		-begin-
+The 'jump-to-module' feature can not be used
+in simulation or critical path analysis mode.
+Please navigate manully to the target block
+by selecting modules and opening them with the
+'>' keyboard command.  You can leave a module
+you are in with the '<' keyboard command.
+-end-
+
+err.nomod		Module '%s' is not defined.
+err.modlock		Logic Block is Locked!
+err.closeroot		Can't close top-level module.  Use quit.
+err.sim.isrun		Simulator is already running (Use 'Ctrl-s e' to end).
+err.sim.isnotrun	Simulator is not running (Use 'Ctrl-s b' to start).
+err.editonly		Neplatný pøíkaz v re¾imu simulace.
+err.simonly		Pøíkaz platný jen v re¾imu simulace.
+
+err.nodel		Nebyly vybrány objekty, které by bylo mo¾no smazat.
+err.modnotdef		Modul '%s' není definovaný.
+err.moddef		Blok '%s' ji¾ existuje.
+err.noprop		Zvolené hradlo nemá vlastnosti, které by ¹lo mìnit.
+err.openscript		Soubor se simulaèním skriptem '%s' nelze otevøít.
+err.oldversion		Loaded file with obsolete version number %s (current version is %s).
+err.futureversion	Loaded file saved by future tkgate version %s (this version is %s).
+err.badversion		Unknown version number.  Use at your own risk.
+err.nodrive		Net %s has no driver in module %s.
+err.noconn		Wire %s{%d} has no connections - deleted.
+err.oldportact		Please right click on port or module edge to add/change port.
+
+err.backupfail		Nelze vytvoøit zálo¾ný soubor '%s'.
+
+err.corruptnewsave	-begin-
+Aplikace TkGate ulo¾ila vá¹ soubor jako '%s', ale zdá se být
+po¹kozený.  If you have checkpointing enabled try
+loading one of the checkpoint files.  Use 'tkgate -V' to
+check the integrety of a save file.
+-end-
+
+err.corruptsave		-begin-
+TkGate detetected a problem while trying to save the file '%s'.
+The existing file has been left unmodified and the damaged file has
+been written to '%s'.  If you have checkpointing enabled you
+can try loading one of the checkpoint files.  You can also use
+'tkgate -V' to check the integrety of a save file.
+-end-
+
+err.badsave		-begin-
+A problem has occured trying to open or write the file '%s'.  Check
+file/directory protections and or disk space.
+-end-
+
+err.nosafesave		-begin-
+A problem has occured attempting to save '%s'.  If you wish, you can
+try again without save validation.  If you say "no", the original file
+will remain unmodified.  If you say "yes" the original file will be
+overwritten, but may be destroyed if a problem occurs.  Would you like
+to attempt an unvalidated save?
+-end-
+
+err.noback		-begin-
+Soubor byl vytvoøen v tkgate 
+verze %s, a nemusí být èitelný
+verzemi star¹ími ne¾
+aktuální verze (%s) bude-li ulo¾en.
+-end-
+
+##############################################################################
+# Informational messages
+#
+msg.selwire		Selected wire named '%s'.
+msg.selgate		Selected %s named '%s'.
+msg.selblock		Selected %s block named '%s'.
+msg.modoverwt		Destination module '%s' already exists.  Overwrite?
+msg.foundgate		Nalezeno hradlo '%s'.
+msg.foundwire		Nalezen vodiè '%s'.
+msg.searchagn		Target string '%s' not found.  Hit 'find' to restart search again.
+msg.sim.chgtoroot	Simulation mode requires root module at top of edit stack.
+msg.sim.nogatemod	Simulation mode requires concrete module stack.
+msg.setinterface	Set module interface for '%s'.
+msg.needsel		Please select a module instance.
+msg.wroteckpt		Checkpointed to %s...
+msg.save		Obvod ulo¾en jako '%s'.
+msg.reallynew		Obvod byl zmìnìn.  Opravdu chcete zru¹it v¹echny zmìný a vytvoøit nový obvod?
+msg.reallyquit		Obvod byl zmìnìn.  Opravdu chcete ukonèit aplikaci?
+msg.notlib		Modul '%s' není knihovní modul.
+
+##############################################################################
+# Miles messages (Activated when Miles Bader uses tkgate)
+#
+miles.msg1		Only a fool would put %s%s there, Miles.
+miles.msg2		That's a really stupid place to put %s%s, Miles.
+miles.msg3		That's a terrible place for %s%s, Miles.
+miles.msg4		Miles, you are a fool for putting %s%s there.
+miles.msg5		Only you would put %s%s there, Miles.
+miles.msg6		Putting %s%s there is proof of your absolute stupidity, Miles.
+miles.msg7		Why don't you give up Miles, this is a stupid circuit.
+miles.msg8a		It's pointless to continue, Miles.
+miles.msg8b		It's obvious you can't design a circuit
+
+
+##############################################################################
+# Balloon Help
+#
+
+ho.new		-begin-
+Clear the current circuit,
+and start editing a new one.
+-end-
+
+ho.open		Open a circuit from a file.
+ho.save		Save circuit to current file.
+ho.print	Tisk aktuálního obvodu.
+
+ho.move		-begin-
+Move/Connect - By clicking and dragging you can:
+  Set the position for a new gate
+  Move gates and wires
+  Connect wires
+By double-clicking you can:
+  Upravit vlastnosti hradla, vodièe a portu
+  Upravit text komentáøe
+-end-
+
+ho.delgat	-begin-
+Smazat hradlo - Pou¾ijte tento nástroj na smazání hradel.
+-end-
+
+ho.cutw		-begin-
+Pøeru¹it vodiè - Use this
+tool to cut wires.
+-end-
+
+ho.inv		-begin-
+Invert - Use this tool to add
+or remove inverters from gate ports.
+-end-
+
+ho.bitw		-begin-
+Bit Width - Use this tool to change the
+bit size of a wire.  Enter the number of
+bits in the entry box in the lower right
+corner of the window.
+-end-
+
+ho.modopen	Open the selected module.
+ho.modclose	Zavøít the current module.
+
+ho.undo	Undo previous action(s)
+ho.redo	Redo undone action(s)
+
+ho.simstart	-begin-
+Start the simulator, open the logic analyzer
+and execute any initialization scripts if defined.
+-end-
+
+ho.simgo	-begin-
+Run simulator in continuous execution mode.
+Note that combinational circuits simulate
+only until the circuit reaches steady state.
+-end-
+
+ho.simpause	-begin-
+Pause a continuously running simulation.
+-end-
+
+ho.simstep	-begin-
+Step a fixed interval of time.
+Open the simulation options
+window to set the step size.
+-end-
+
+ho.simclock	-begin-
+Step a fixed number of clock
+cycles.  Open the simulation options
+window to set the step size.
+-end-
+
+ho.simstop	-begin-
+End the current simulation
+and return to edit mode.
+-end-
+
+ho.simbreak	-begin-
+Edit the current breakpoints.  Simulation
+will be halted when a breakpoint condition
+becomes true.
+-end-
+
+ho.simexec	Execute a simultion script.
+
+ho.simload	-begin-
+Load memory with contents of
+a .mem file.
+-end-
+
+ho.simdump	-begin-
+Dump the contents of a memory
+to a .mem file.
+-end-
+
+ho.sim.break	-begin-
+Enter a simulator breakpoint.  Breakpoints are expressions
+which cause the simulator to pause execution when they become
+true.  Currently only simple expressions with a single
+relational operator such as "w1 == 0" or "w7 != 8" are
+supported.  Expressions such as "w8" or "!w2" may also be
+used to test for non-zero and zero values respectively.
+-end-
+
+ho.f.modlist	-begin-
+List of all modules currently loaded.
+The top-level module is indicated by
+a trailing "+", and library modules are
+shown in parentheses.
+-end-
+
+ho.netlist	-begin-
+List of nets in the current module.
+ Nets marked with a '@' have hidden
+names.  Multi-bit nets are displayed
+with a range after them.
+-end-
+
+ho.ports	-begin-
+List of ports on the current
+module. A '>' indicates an input,
+a '<' indicates an output, and a
+'=' indicates an inout."
+-end-
+
+ho.status.logo		-begin-
+Simulation status indicator.  If the iron gate
+logo is shown, tkgate is in edit mode.  If the
+quadrapedal AND gate is shown, tkgate is in
+simulation mode.  If the AND gate is stationary,
+the simulation is paused, and if it is walking
+the simulation is running.
+-end-
+
+ho.status.msg		Messages from tkgate are displayed here.
+
+ho.status.block		The stack of modules being edited.
+
+ho.status.file		-begin-
+The current file being edited.  A '*' indicates
+that the buffer has been modifed since
+the last save.
+-end-
+
+ho.print.selall		Print all modules currently loaded by TKGate.
+ho.print.selcur		Print only the current module in the TKGate edit window.
+ho.print.seluse		-begin-
+Print all modules "in use". In use modues are 
+those that are a decendent of the root module.
+-end-
+
+ho.print.fulltrace	Print the entire trace.
+
+ho.print.parttrace	-begin-
+Print a portion of the trace.  Enter the starting
+and stopping times in the entry windows below, or
+use the right mouse button to select a range on the
+scope window (use shift-right to select long ranges).
+-end-
+
+ho.print.parttracestart	Starting time of trace output.
+ho.print.parttraceend	Ending time of trace output.
+
+
+ho.print.selsel		-begin-
+Print only the modules selected below.  Use
+the control key to select multiple modules.
+-end-
+
+ho.print.modlist	Select the modules to be printed.
+
+ho.circuit.discchg	-begin-
+TkGate will not display a warning if you
+discard changes without saving.
+-end-
+
+ho.circuit.extbar	-begin-
+Basic gates (AND, OR, XOR) will use
+extender bars to handle many input
+gates.
+-end-
+
+ho.cmd.bitw		-begin-
+Wires selected with the cursor
+will be set to this bit width.
+-end-
+
+ho.edgat.extbar		-begin-
+If selected, multi-input basic gates
+will use extender bars as inputs
+are added to the gate.
+-end-
+
+ho.edgat.signam		-begin-
+The name of the selected signal on the
+selected gate.  You can change the name
+of the signal by editing it here.
+-end-
+
+ho.edgat.port		-begin-
+The name of the port for this signal
+on the gate.  This field can only be
+edited for module instances.
+-end-
+
+ho.edgat.iolab		-begin-
+The direction of the selected signal
+on the selected gate.  This field can only
+be edited for module instances.
+-end-
+
+ho.edgat.bitlab		-begin-
+The bit width of the selected signal
+on the selected gate.  You can change the
+bitwidth by editing it here.
+-end-
+
+ho.edgat.cycle		The total number of epochs in a clock cycle.
+ho.edgat.phase		The starting point of the cycle (in percent).
+ho.edgat.duty		The percent of the cycle, the clock is low.
+
+ho.edgat.cname		Name of connected net.
+ho.edgat.cport		Port to which net is connected.
+ho.edgat.ctype		Type of connection.
+ho.edgat.cbitw		Bit width of connected net.
+ho.edgat.cedit		Edit the selected port.
+ho.edgat.cadd		Add a port.
+ho.edgat.cdel		Delete the selected port.
+
+ho.edgat.hide		-begin-
+Set this flag to disable
+display of gate name.
+-end-
+
+ho.edgat.gtype		Type of the gate.
+ho.edgat.gname		Name of this gate instance.
+ho.edgat.ganchor	Set this flag to anchor the position of a gate.
+ho.edgat.gx		X coordinate of gate.
+ho.edgat.gy		Y coordinate of gate.
+
+ho.edgat.swstate	-begin-
+The initial state of the switch to use when
+starting a simulation.
+-end-
+
+ho.edgat.dipstate	-begin-
+The initial state of the dip switch to use
+when starting a simulation.
+-end-
+
+ho.edgat.range		The range of bits to pull off a bus.
+
+ho.edgat.memfile	-begin-
+The file with the initial state for this memory.
+This file is read when the simulator is started.
+-end-
+
+ho.edgat.func		The function type of this module.
+ho.edgat.frame		The frame label.
+
+ho.traceprint		Print logic trace. 
+
+ho.showxhair		-begin-
+If this button is depressed, a vertical crosshair
+line will be displayed in the scope window.
+-end-
+
+ho.opt.sorttraces	-begin-
+If this option is enabled, traces on the
+scope window will be displayed in sorted
+order.  If this option is disabled, traces
+on the scope window will be displayed in
+the order in which the probes were set.
+-end-
+
+ho.opt.rememberprobes	-begin-
+If this option is enabled, any probes set
+while in simulation mode will be remembered
+and automatically added when restarting the
+simulation.
+-end-
+
+
+ho.opt.undolen		-begin-
+Maximum number of undo actions to retain.
+-end-
+
+ho.opt.site		-begin-
+The name of the site where tkgate is
+installed.  This name will be used on
+any printer or postscript output.
+-end-
+
+ho.opt.smooth		-begin-
+If this option is enabled, scrolling will
+be optimized by using bitmap copies instead
+of a complete redisplay.  You can turn this
+off if there are any problems with your server.
+-end-
+
+ho.opt.clip		-begin-
+If this option is enabled, clipping will be
+used to update only the exposed portion of
+the window on a redisplay.  Otherwise the
+entire display will be redrawn for all
+exposures.
+-end-
+
+ho.opt.outmove		-begin-
+If this option is enabled, only an outline
+of module instances being moved will be displayed
+while dragging.  Use this feature only on machines
+with slow displays.
+-end-
+
+ho.opt.bhelp		-begin-
+If this option is enabled,  help balloons will 
+be activated.  Help balloons, such as this one,
+provide tips on interface elements when the
+mouse is over them.
+-end-
+
+ho.opt.novice		-begin-
+If no other circuit is specified on the command
+line.  A TkGate tutorial will be disaplyed as
+the initial circuit on start up.
+-end-
+
+ho.opt.debug		-begin-
+Enables several debugging features
+only useful to TkGate developers.
+-end-
+
+ho.opt.ckpt		Enable checkpointing of unsaved circuits.
+ho.opt.ckptfreq		Frequency of checkpoints in seconds.
+
+ho.opt.beak		-begin-
+Enable these totally useless features.
+If you disable this feature, these modes
+(and this checkbox) will no longer appear
+in the options box.  The only way to
+reenable them will be to edit
+your .tkgate-preferences file.
+-end-
+
+ho.opt.miles		-begin-
+If this mode is enabled, TkGate will
+periodically insult the intelligence of
+the user.
+-end-
+
+ho.opt.bat		-begin-
+If this mode is enabled, TkGate will
+set up an enviornment for designing a
+bat computer.
+-end-
+
+ho.opt.trek		Beam me up Scoty!
+ho.opt.normal		Disable fun Stuff.
+
+ho.opt.simstep		-begin-
+The number of epochs to advance when
+the step command is issued.
+-end-
+
+ho.opt.ckstep		-begin-
+The number of clock cycles to advance
+when the clock step command is issued.
+-end-
+
+ho.opt.ckover		-begin-
+The number of epochs past rising edge
+of the clock to advance when the clock
+step command is issued.
+-end-
+
+ho.opt.vpopupdelay		-begin-
+The delay in milliseconds between pressing
+and holding the mouse button and the display
+of a signal value.  On some systems, short
+delay values interfere with the ability to
+recognize a double click.  If you have this
+problem, increase this value.  Values between
+1 and 10000 are allowed.
+-end-
+
+ho.opt.init		-begin-
+A simulation script file to execute
+automatically when the simulation
+is started.
+-end-
+
+ho.opt.ckall		-begin-
+If this mode is enabled, the clock step
+command will pause the simulation on the
+positive edge of any clock in the circuit.
+-end-
+
+ho.opt.ckspec		-begin-
+If this mode is enabled, the clock step
+command will pause the simulation only on
+the positive edge of the specified clock.
+-end-
+
+ho.deftech		-begin-
+Default technology for new gates.
+Affects delay of gates. To change
+the technology of a specific gate,
+open its properties box (double
+click) and select the "Delay" tab.
+-end-
+
+ho.techbut		-begin-
+Use delays from standard technology
+definition file.  To add custom
+technologies, add them to the list
+in the "File -> Options -> Simulate"
+menu.
+-end-
+
+ho.custbut		-begin-
+Set custom delay values for this gate.
+-end-
+
+ho.contver		-begin-
+Continuously verify the integrity of internal
+data structures after every operation.
+-end-
+
+ho.simwatch		-begin-
+Display commands sent between
+the GUI and the simulator.
+-end-
+
+ho.simlog		-begin-
+Write commands issued to the
+simulator to a log file.  The
+log file can then be used as
+input to the simulator in a
+debugger.
+-end-
+
+ho.cpathanal		-begin-
+Find critical paths in a circuit.
+-end-

@@ -1,0 +1,1065 @@
+#
+#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+# Last edit by hansen on Tue May 24 10:44:10 2005
+
+##############################################################################
+#
+# Japanese messages file (should be EUC encoded)
+#
+# NOTE: The messages.ja file should not be edited directly.  Please edit
+# the message.ja.euc and/or messages.ha.utf8 files.  The messages.ja file
+# will be overwritten by the either the .euc or .utf8 file when doing
+# a configure.
+#
+# On FreeBSD (and possibly Linux), the euc file can be converted to
+# unicode using the command:
+#
+# iconv -f euc-jp -t utf-8 messages.euc > messages
+#
+##############################################################################
+
+##############################################################################
+#
+# basic strings
+#
+b.dismiss	閉じる
+b.close		閉じる
+b.clear		クリア
+b.ok		ＯＫ
+b.cancel	キャンセル
+b.open		開く
+b.bitw		ビット幅
+b.in		入
+b.out		出
+b.inout		入出
+b.browse	選択...
+b.label		名前
+b.find		探索
+b.edit		編集...
+b.add		追加...
+b.delete	削除
+b.deleteb	削除...
+b.apply		セット
+b.anchor	移動不可
+b.tech		テクノロジー
+
+##############################################################################
+#
+# Main tab strings
+#
+tab.edit	編集
+tab.editintr	インタフェース
+tab.simulate	シミュレート
+tab.cpath	遅延解析
+
+
+##############################################################################
+# Menu strings
+#
+menu.file		ファイル
+menu.edit		編集
+menu.tool		ツール
+menu.simulate		シミュレート
+menu.module		モジュール
+menu.interface		インタフェース
+menu.gate		ゲート
+menu.make		作成
+menu.circ		回路
+menu.help		ヘルプ
+
+menu.file.new		新規作成
+menu.file.open		開く...
+menu.file.openlib	ライブラリを開く...
+menu.file.save		保存
+menu.file.saveas	名前を付けて保存...
+menu.file.print		印刷...
+menu.file.options	設定...
+menu.file.quit		終了
+
+menu.edit.undo		Undo
+menu.edit.redo		Redo
+menu.edit.cut		切り取り
+menu.edit.copy		コピー
+menu.edit.paste		張り付け
+menu.edit.selall	全てを選択
+menu.edit.find		回路を探索...
+menu.edit.algnv		縦の一列
+menu.edit.algnh		横のー列
+menu.edit.zoomin	ズーム・イン
+menu.edit.zoomout	ズーム・アウト
+
+menu.tool.move		移動／接続
+menu.tool.delg		ゲートの削除
+menu.tool.cutw		ワイヤの切断
+menu.tool.inv		否定
+menu.tool.bitw		ビット幅
+menu.tool.debug		デバッグ
+menu.tool.rot0		0度回転
+menu.tool.rot90		90度回転
+menu.tool.rot180	180度回転
+menu.tool.rot270	270度回転
+
+
+menu.simulate.begin	シミュレーションを開始
+menu.simulate.end	シミュレーションを終了
+menu.simulate.run	ラン
+menu.simulate.pause	一時ストップ
+menu.simulate.step	ステップ(エポック)
+menu.simulate.cycle	ステップ(サイクル)
+menu.simulate.break	ブレークポイントの設定...
+menu.simulate.script	スクリプトを実行...
+menu.simulate.load	メモリの読み込み...
+menu.simulate.dump	メモリの書き出し...
+menu.simulate.adprobe	プローブの追加／削除
+
+menu.module.open	開く
+menu.module.close	閉じる
+menu.module.seti	インタフェースの設定
+menu.module.editi	インタフェースの編集...
+menu.module.new		新規作成...
+menu.module.del		削除...
+menu.module.copy	コピー...
+menu.module.rename	名前の編集...
+menu.module.claim	取得...
+menu.module.setroot	ルートにする...
+menu.module.prop	モジュールの設定...
+
+menu.circ.prop		回路の設定...
+menu.circ.cpath		クリティカル・パス...
+
+menu.gate.addin		入力を追加
+menu.gate.addout	出力を追加
+menu.gate.addinout	入出力を追加
+menu.gate.iochg		ピン・タイプの変更
+menu.gate.anchor	選択を移動不可にする
+menu.gate.unanchor	選択を移動可にする
+menu.gate.prop		ゲートの設定...
+menu.gate.rep		複製
+menu.gate.del		削除
+menu.gate.settech	テクノロジーの設定
+
+menu.help.about		tkgateについて...
+menu.help.license	ライセンス...
+menu.help.doc		ドキュメンテーション...
+menu.help.tut		チュートリアル
+menu.help.example	回路の例
+menu.help.example.comb	組合せ回路
+menu.help.example.3bit	3ビットのカウンター
+menu.help.example.8bit	8ビットのカウンター
+menu.help.example.trff	トランジスタ・レベルのFF
+menu.help.example.cpu	Menagerie CPU
+menu.help.tut.welcome	tkgateの紹介
+menu.help.tut.create	基本の使い方
+menu.help.tut.edit1	回路の編集(1)
+menu.help.tut.edit2	回路の編集(2)
+menu.help.tut.mods	モジュールの使い方
+menu.help.tut.sim	シミュレータの使い方
+
+pop.wire.addseg		ワイヤの追加
+
+
+
+gm.io		I/O
+gm.gate		ゲート
+gm.rgate	単項縮約ゲート
+gm.msi		MSI
+gm.alu		ALU
+gm.mem		メモリー
+gm.mod		モジュール
+gm.comment	コメント
+gm.frame		フレーム
+
+gm.io.switch	スイッチ
+gm.io.dip		DIPスイッチ
+gm.io.ground	アース
+gm.io.vdd		Vdd
+gm.io.merge		ワイヤのマージ
+gm.io.clock		クロック
+
+gm.io.led	LEDビット
+gm.io.ledbar	LED棒グラフ
+gm.io.ledhex	7-Seg. LED (HEX)
+gm.io.leddec	7-Seg. LED (DEC)
+gm.io.ledseg	7-Seg. LED (Direct)
+
+gm.io.tty		TTY
+
+gm.gate.and		AND
+gm.gate.nand		NAND
+gm.gate.or		OR
+gm.gate.nor		NOR
+gm.gate.xor		XOR
+gm.gate.xnor		XNOR
+gm.gate.buf		バッファ
+gm.gate.inv		否定バッファ
+gm.gate.tribuf	トライ・バッファ
+gm.gate.nmos		NMOS
+gm.gate.pmos		PMOS
+
+gm.rgate.and		単項縮約AND
+gm.rgate.nand		単項縮約NAND
+gm.rgate.or		単項縮約OR
+gm.rgate.nor		単項縮約NOR
+gm.rgate.xor		単項縮約XOR
+gm.rgate.xnor		単項縮約XNOR
+
+gm.alu.add		加算器
+gm.alu.mult		乗算器
+gm.alu.div		除算器
+gm.alu.lshift	左シフト
+gm.alu.rshift	右シフト
+gm.alu.arshift	算数的右シフト
+gm.alu.roll		ロール
+
+gm.mem.reg		レジスタ
+gm.mem.ff		フリップ・フロップ
+gm.mem.ram		RAM
+gm.mem.rom		ROM
+
+gm.msi.21mux		2-1 セレクター
+gm.msi.41mux		4-1 セレクター
+gm.msi.81mux		8-1 セレクター
+gm.msi.12dec		1-2 デコーダ
+gm.msi.14dec		1-4 デコーダ
+gm.msi.18dec		1-8 デコーダ
+    
+gm.mod.inst	モジュールのインスタンス
+gm.mod.in		モジュールの入力
+gm.mod.out	モジュールの出力
+gm.mod.inout	モジュールの入出力
+
+
+
+# Scope Menu
+menu.sc.prtrace	トレース印刷...
+menu.sc.close	閉じる
+menu.sc.trace	トレース
+menu.sc.zoomin	ズーム・イン
+menu.sc.zoomout	ズーム・アウト
+
+##############################################################################
+# Interface strings
+#
+ifile		ファイル
+imodule		モジュール
+iblmodule	モジュール:
+iports		ポート:
+ibits		ビット幅:
+
+#############################################################################
+# Net Dialog Box
+#
+db.net.name	ネット名
+db.net.hide	ネット名を隠す
+db.net.bits	ビット幅
+db.net.port	ポート・タイプ
+db.net.in	入
+db.net.out	出
+db.net.inout	入出
+db.net.inets	ネット
+db.gate.extbar		拡張バーを利用する。
+
+##############################################################################
+# Gate dialog box
+#
+db.gate.signam		ネット名
+db.gate.portnam		ポート名
+db.gate.iotype		タイプ
+db.gate.bitw		ビット幅
+db.gate.cyclew		サイクル幅
+db.gate.phase		フェーズ
+db.gate.duty		デューティー
+db.gate.port		ポート
+db.gate.bitws		ビット
+db.gate.gtype		ゲート・タイプ
+db.gate.gname		ゲート名
+db.gate.hidenam		名前を隠す
+db.gate.anchor		移動不可にする
+db.gate.cpbreak		クリティカル・パス分割点
+db.gate.butstate	スイッチ状態
+db.gate.dipval		DIP状態
+db.gate.memfilenam	メモリ・ファイル名
+db.gate.modname		機能名
+db.gate.islink		リンクにする
+db.gate.link		リンク先
+db.gate.findw		ワイヤのみの探索
+db.gate.findg		ゲートのみの探索
+db.gate.findwg		ワイヤとゲートの探索
+db.gate.general		一般
+db.gate.details		詳細
+db.gate.ports		ポート
+db.gate.delay		遅延
+db.gate.stddelay	標準の遅延
+db.gate.custdelay	カスタムの遅延
+
+db.led.type		LEDのタイプ
+db.led.bit		ビット
+db.led.bar		棒グラフ
+db.led.hex		7-Segment (HEX)
+db.led.dec		7-Segment (DEC)
+db.led.seg		7-Segment (Direct)
+
+cpath.cloops -begin-
+回路に組合せのループが発見された。クリティカル
+・パスの解析を行ないたければ、ループ上のネット
+を切ったり、ループ上のゲートを「クリティカル・
+パス分割点」にしたりする必要がある。
+-end-
+
+##############################################################################
+# Print dialog box
+#
+print.outto		出力先
+print.printer		プリンター
+print.file		ファイル
+print.prcmd		印刷コマンド
+print.filename		ファイル名
+print.browse		選択...
+print.epssave		Encapsulated Postscriptとしてセーブする.
+print.doctit		ドキュメントの題名
+print.prmod		印刷するモジュール
+print.epcm		エポック/cm
+print.estpg		ページ数の見積もり
+print.all		全て
+print.cur		現在
+print.use		使用中
+print.sel		指定
+print.inclib		ライブラリ・ファイルも印刷
+print.papsz		ページ・サイズ
+print.orient		オリエンテーション
+print.portrait		縦
+print.landscape		横
+print.2side		両面印刷
+print.opts		オプション
+print.scale		大きいモジュールをスケールして一ページで印刷する
+print.partition		大きいモジュールを複数のページで印刷する
+print.incidx		インデックスを含む
+print.incgraph		階層グラフを含む
+print.4up		小さいモジュールを一頁に四つずつ印刷する
+print.range		レンジ
+print.fulltr		全部
+print.parttr		部分
+print.start		スタート
+print.end		ストップ
+
+##############################################################################
+#
+# Options dialog
+#
+# Number of columns in list of toolbars
+@opt.tool.columns	3
+# Width of columns in list of toolbars
+@opt.tool.colwidth	30
+@opt.width		775
+@opt.height		450
+@opt.tabwidth		95
+
+opt.editor.features	基礎的なエディターの機能
+opt.editor.format	自動インデントを有効にする
+opt.editor.colorize	自動色付けを有効にする
+opt.editor.comments	コメント
+opt.editor.strings	文字列
+opt.editor.reserved	キーワード
+opt.editor.gateword	ゲート名
+opt.editor.instword	モジュール名
+opt.editor.taskword	システム・タスク
+opt.editor.color	色
+opt.editor.bold		太字
+opt.editor.italic	イタリック
+opt.editor.indentlevel	Indentation per level:
+opt.editor.beginindent	Make begin..end flush with enclosing level.
+opt.editor.movesel	Enable drag-and-drop of selection.
+opt.editor.returntab	Auto indent after return.
+
+
+opt.site		サイト名
+opt.inst		インスタンス
+opt.mods		モジュール
+opt.modports		ポート
+opt.frames		フレーム
+opt.comment		コメント
+opt.hlink		リンク
+opt.wire		1ビットのワイヤ
+opt.bus			多ビットのワイヤ
+opt.tools		ツール
+opt.cpath		クリティカル・パス
+opt.grid		スコープのグリッド
+opt.logic1		論理１
+opt.logic0		論理０
+opt.float		フロート
+opt.unknown		不明
+opt.offled		オフのLED
+opt.onled		オンのLED
+opt.zled		フロートのLED
+opt.restdef		デフォールト
+opt.regudate		リージョン・アップデート
+opt.smoothscroll	スムーズ・スクロール
+opt.outmove		モジュールのアウトライン移動
+opt.balloon		バルーン・ヘルプを利用
+opt.debug		デバッグ
+opt.novice		初心者モード
+opt.ckpoint		チェックポイント保存
+opt.freq		期間
+opt.beak		特別モードを可能にする
+opt.mode		モード
+opt.normal		普通
+opt.bat			バットマン
+opt.trek		スター・トレック
+opt.miles		マイルス
+opt.contver		内部構造の自動確認
+opt.showsimcmd		シミュレートのコマンドを表示する
+opt.logfile		シミュレータのログ・ファイル
+opt.estepsz		エポックのステップ数
+opt.cstepsz		クロックのサイクル数
+opt.overstep		クロックのオバーステップ
+opt.initscript		初期化スクリプト
+opt.posedge		全てのクロックで停止する
+opt.setclock		指定のクロックで停止する
+opt.delayfilepath	遅延ファイル
+opt.general		一般
+opt.print		印刷
+opt.simulate		シミュレート
+opt.analysis		解析
+opt.color		色
+opt.undolen		最大Undo
+
+
+opt.cpopts		クリティカル・パス設定:
+opt.maxpath		最大パス数:
+opt.cpflash		パスの点滅表示
+opt.vpopupdelay		信号値ウィンドの表示遅延
+
+
+opt.vercheck		-begin-
+定期的に tkgate の新しいバージョンをインターネットで
+チェックする。常時接続でなければ有効にしないこと。
+-end-
+
+##############################################################################
+#
+# Block list dialog boxes
+blklst.newmod		新モジュール名
+blklst.delmod		削除するモジュール名
+blklst.frommod		元のモジュール名
+blklst.tomod		コピー先のモジュール名
+blklst.oldname		元のモジュール名
+blklst.newname		新モジュール名
+blklst.claim		取得するモジュール名
+
+find.label		探索
+find.exp		-begin-
+ゲート名、ネット名、
+コメントなどの中に
+指定ストリングを
+探索する。
+-end-
+
+#
+# This is a special tag used to indicate whether the position qualifier box
+# should be "before" or "after" the text entry box.  Use the keywords before
+# or after to indicate the position.
+#
+@find.qual.pos		after
+
+find.qual.contains	を含む
+find.qual.begins	から始まる
+find.qual.ends		で終る
+
+
+##############################################################################
+#
+# Circuit Dialog box
+#
+circ.topmod		トップのモジュール
+circ.discchg		変更を無視する
+circ.iniscript		初期化スクリプト
+circ.noscript		スクリプト・ファイルは指定されていない。
+circ.really1		本当に
+circ.really2		をスクリプト・ファイルのリストから削除しますか
+circ.extbar		拡張バーを利用する。
+
+#############################################################################
+#
+# Dynamic Verilog Module Manager
+#
+break.tab		ブレークポイント
+break.id		番号
+break.state		状
+break.condition		条件
+break.value		値
+
+
+##############################################################################
+# Simulator
+#
+sim.breakpt		ブレークポイント
+
+
+##############################################################################
+#
+# Command box
+#
+cmd.file		ファイル名
+cmd.topname		トップのモジュール名
+
+##############################################################################
+#
+# Critical path messages
+#
+cp.delay		パス遅延:
+cp.pathl		パスの一覧:
+cp.numpath		パス数:
+cp.recompute		再計算
+
+##############################################################################
+# Error messages
+#
+err.verilog		ファイルのエラー：
+err.nopin		選択されたピンのタイプを変更出来ない。
+err.badhex		不正の16進数の値は無視された。
+err.gatanchor		ゲートが移動不可にマークされている為、移動出来ない。
+err.libmode		ライブラリ・モジュールには不正の操作である。
+err.badfind		探索ストリング「%s」が見つからない。
+err.badopendel		使用中のモジュールを削除出来ない。
+err.nosrcmod		ソース・モジュール'%s'が見つからない。
+err.noerr		エラー・メッセージが見つからない。
+err.misserr		エラー情報が不完全である。(シミュレータが落ちた？)
+err.pounimpl		インプリメントしていない(in ParseOption)
+
+err.badinadd		選択のゲートにもう入力追加が出来ない。
+err.badoutadd		選択のゲートにもう出力追加が出来ない。
+err.badinoutadd		選択のゲートにもう入出力追加が出来ない。
+err.badpinchg		選択のゲートのピンのタイプが変更出来ない。
+err.badnetname		名前に不正の文字がある為削除された。
+err.netbcrename		指定の名前に不正の文字がある為、「%s」に変更された。
+err.netconfnet		指定の名前が別の名前と衝突する為、「%s」に変更された。
+err.netconfgat		指定の名前が基礎のゲート名と衝突する為、「%s」に変更された。
+err.netconfkw		指定の名前がキーワードと衝突する為、「%s」に変更された。
+err.badconsame		ネットが同じなので、接続出来ない。
+err.badconptsp		ネットの両方がポート又は電力なので、接続出来ない。
+err.badconbitw		ネットのビット幅が異なるので、接続出来ない。
+
+err.badrange		指定された時間のレンジが不正である。
+err.badlprcmd		印刷コマンド「%s」が実行出来ない。
+err.badpsopen		ポスト・スクリプトを「%s」に書き込めない。
+err.badid		「%s」は不正の名前である。
+
+err.bkpt.badexp		不正なブレークポイントの条件である。「net」, 「!net」, 「net==value」, 「net!=value」のどれかでなければならない。
+err.bkpt.badnet		不正のネット名である。
+err.bkpt.badval		不正の値である。10進数あるいは、verilog形式の値しか認識されていない。
+err.bkpt.toomany	ブレークポイントが多過ぎる。制限は%dである。
+
+err.sim.badtmp		/tmpのファイルが書き込めなかった（ディスクがいっぱいか）。
+err.sim.syntx		不正の「%s」コマンド
+err.sim.noincl		インクルード・ファイル「%s」が見つからなかった。
+err.sim.clockbadedge	clockコマンドのエッジ'%c'が不正である。
+err.sim.nobkpt		ブレーク・ポイント「%s」が見つからない。
+err.sim.nonet		ネット「%s」は定義していない。
+err.sim.nogate		ゲート「%s」は定義していない。
+err.sim.badbin		2進数の値に不正の文字がある。
+err.sim.notswitch	ゲート'%s'はスイッチ、DIP、レジスタのどれかでなければならない。
+err.sim.badcmd		シミュレーション・スクリプトに不正のコマンド「%s」がある。
+
+err.noteditpchg		設定は編集モード以外、変更不可。
+err.badeditop		編集コマンドに不正がある。
+err.badopen		回路ファイル「%s」が見つからない。
+err.badlibopen		ライブラリ・ファイル「%s」が見つからない。
+
+err.nomark		ゲート種を選ぶ前に、マウスで位置を設定してください。
+err.badgate		ゲート種が未定義である。
+err.badmake		ゲートが作成出来なかった。
+
+err.nojump		-begin-
+現在、'jump-to-module'機能はシミュレーション・モードで使用出来ない。
+トップ・モジュールより、「>」や「<」のコマンドでモジュールを開けてください。
+-end-
+
+err.nomod		モジュール「%s」は定義していない。
+err.modlock		モジュールがロックしている。
+err.closeroot		トップ・モジュールが閉じれない。
+err.sim.isrun		シミュレータは既に実行している。 ('Ctrl-s e'で終了する).
+err.sim.isnotrun	シミュレータは実行していない。 ('Ctrl-s b'で実行する).
+err.editonly		コマンドは、シミュレーション・モードで使えない。
+err.simonly		コマンドは、シミュレーション・モードでしか使えない。
+err.nodel		ゲートを選択していない。
+err.modnotdef		モジュール「%s」は定義していない。
+err.moddef		モジュール「%s」が既に定義している。
+err.noprop		選択されたゲートは編集出来る設定がない。
+err.openscript		シミュレーション・スクリプト「%s」が見つからない。
+err.oldversion		回路ファイルのバージョン(%s)が古い。(現在のバージョンは%s).
+err.futureversion	未来のバージョン（%s）のtkgateファイルである。（現在のバージョンは%s）
+err.badversion		回路ファイルのバージョンが認識出来ない。注意して利用下さい。
+err.nodrive		ネット%sはモジュール%sに信号のソースがない。
+err.noconn		ワイヤ%s{%d}は接続がない（削除した）。
+err.oldportact		ポートやモジュールの端に右クリックして下さい。
+
+err.badportadd		選択されたゲートにポートは追加不可。
+err.badportdel		選択されたポートは削除出来ない。
+err.badportedit		選択されたポートは編集出来ない。
+err.noport		ポートは選択していない。
+
+err.noback		-begin-
+tkgateバージョン%sで作られたファイルである。保存すると、
+tkgateの古いバージョンに読み込めないことがある（現在の
+バージョンは%sである）。
+-end-
+
+
+err.manypages		-begin-
+ページ数が極めて大きい。
+本当に印刷しますか?
+-end-
+
+err.backupfail		バックアップ・ファイル'%s'が作成出来なかった。
+
+err.corruptnewsave	-begin-
+TkGateは'%s'にセーブ出来たが、ファイルが混乱されているみたい。もしチェッ
+ク・ポイントを利用していれば、チェック・ポイントのファイルを使ってみてく
+ださい。'tkgate -V'でファイルをチェック出来る。
+-end-
+
+err.corruptsave		-begin-
+'%s'をセーブしようとしている時、TkGateに内部問題が発見した。元々のファイ
+ルはそのまま残してある。混乱されている可能性のあるファイルは'%s'にセーブ
+した。もしチェック・ポイントを利用していれば、チェック・ポイントのファイ
+ルを使ってみてください。'tkgate -V'でファイルをチェック出来る。
+-end-
+
+err.badsave		-begin-
+'%s'をセーブ出来なかった。ファイルのプロテクションや空きディスク量を確認
+してください。
+-end-
+
+err.nosafesave -begin-
+'%s'の安全セーブを行うための一時のファイルが作成出来なかったから、直接セー
+ブしなくてはならない。「NO」にクリックすれば、元々のファイルはそのまま残
+す。「YES」にクリックすれば、セーブするが、セーブ途中に問題が起こったら、
+回路データが破壊される可能性がある。直接セーブしてみましょうか。
+-end-
+
+##############################################################################
+# Informational messages
+#
+msg.selwire		%sというワイヤが選択された。
+msg.selgate		%2$sという%1$sゲートが選択された。
+msg.selblock		%2$sという%1$sモジュールが選択された。
+msg.modoverwt		モジュール「%s」が既に定義されている。定義しなおしますか?
+msg.foundgate		%sというゲートが見つかった。
+msg.foundwire		%sというワイヤが見つかった。
+msg.searchagn		探索ストリング「%s」が見つからなかった。もう一度「探索」を押すと、探索しなおす。
+msg.sim.chgtoroot	シミュレーション・モードでは、トップ・モジュールがモジュール・スタックのトップでなければならない。
+msg.sim.nogatemod	シミュレーション・モードで、具体的なモジュール・スタックが必要である。
+msg.setinterface	モジュール「%s」のインタフェースをセットした。
+msg.needsel		モジュールのインスタンスを選んでください。
+msg.wroteckpt		「%s」にチェックポイントを書き込んだ...
+msg.save		「%s」に保存した。
+msg.badsave		「%s」に保存出来なかった。
+msg.reallynew		回路に変更がある。本当に保存しないで、新しい回路を開きますか?
+msg.reallyquit		回路に変更がある。本当に保存しないで、終了しますか?
+msg.notlib		モジュール「%s」はライブラリ・モジュールではない。
+
+##############################################################################
+# Miles messages (Activated when Miles Bader uses tkgate)
+#
+miles.msg1		その位置にゲートを置くのは、お前みたいな大馬鹿しかいないよ。
+miles.msg2		馬鹿！
+miles.msg3		愚かもの！
+miles.msg4		マイルス、その位置にゲートを置くのは、馬鹿だよ。
+miles.msg5		馬鹿なゲートの位置付けをやめてよ、マイルス。
+miles.msg6		ゲートをその位置においたのは、お前の愚かさの証明だよ。
+miles.msg7		このロクでなし回路の設計を諦めよ、マイスル。
+miles.msg8a		続けても、無駄だよ、マイルス。
+miles.msg8b		お前が回路を設計出来ないというのは、誰でも分かるよ。
+
+##############################################################################
+# Balloon Help
+#
+
+ho.new		-begin-
+現在の回路を消して、新しい
+回路を作成する。
+-end-
+
+ho.open		回路ファイルを開く
+ho.save		回路ファイルを保存する
+ho.print	回路ファイルを印刷する
+
+ho.move		-begin-
+移動／接続 - このツールで以下の機能が使える
+  新しいゲートの位置を設定する
+  ゲートを移動する
+  ワイヤを移動する
+  ワイヤを接続する
+ダブル・クリックで以下の機能が使える
+  ゲートの属性を編集する
+  ワイヤの属性を編集する
+  ポートの属性を編集する
+  コメントのテキストの属性を編集する
+-end-
+
+ho.delgat	このツールでゲートを削除する
+ho.cutw		このツールでワイヤを切断する
+
+ho.inv		-begin-
+このツールで、ゲートの入出力に
+否定を付けたり、消したりする。
+-end-
+
+ho.bitw		-begin-
+このツールでワイヤのビット幅を
+変更する。ビット幅を右下の入力
+ボックスに入力してください。
+-end-
+
+ho.modopen	選択されたモジュールを開く
+ho.modclose	現在のモジュールを閉じる
+
+ho.undo		最近行った変化を元通りにする。
+ho.redo		undoした変化をやり直す。
+
+
+ho.simstart	-begin-
+シミュレータを開始し、論理アナライザのウィンドを
+開き、そして初期化スクリプトが定義している場合、
+そのスクリプトを実行する。
+-end-
+
+ho.simgo	-begin-
+シミュレータを動かす。組合せ回路の場合、
+信号が変わらなくなる時、シミュレーションの時間
+が一時停止する。
+-end-
+
+ho.simpause	シミュレータの一時停止
+
+ho.simstep	-begin-
+シミュレータを一定数のエポックだけ動かす。
+ステップ数はシミュレートの設定による。
+-end-
+
+ho.simclock	-begin-
+シミュレータを一定数のクロック・サイクル
+だけ動かす。
+ステップ数はシミュレートの設定による。
+-end-
+
+ho.simstop	-begin-
+シミュレータを停止して、
+編集モードに戻る。
+-end-
+
+ho.simbreak	-begin-
+シミュレータのブレークポイント
+を編集する。
+-end-
+
+ho.simexec	スクリプトを実行する。
+
+ho.simload	-begin-
+メモリ・ファイルを読み込む
+-end-
+
+ho.simdump	-begin-
+メモリ・ファイルに書き出す
+-end-
+
+ho.sim.break	-begin-
+ブレークポイントを入力してください。ブレークポイント
+条件が成立する時、シミュレータが一時停止のモードに入る。
+現在、「w1 == 0」、「w7 != 8」、「w8」、「!w2」などの
+ブレークポイント条件しか利用出来ない。
+-end-
+
+
+ho.f.modlist	-begin-
+読み込んであるモジュールの一覧表。
+トップのモジュールの名前に「+」が
+付いている。ライブラリのモジュール
+は括弧に囲まれている。
+-end-
+
+ho.netlist	-begin-
+現在のモジュールの一覧表。名前を隠して
+いるネットの名前に「@」が付いている。
+マルチ・ビットのネットの名前の後に
+ビットのレンジを表示している。
+-end-
+
+ho.ports	-begin-
+現在のモジュールのポートの一覧表。
+入力に「>」、出力に「<」、入出力に
+「=」が付いている。
+-end-
+
+ho.status.logo		-begin-
+現在のモードが表示されている。鉄のゲート
+は編集モードを表す。ANDゲートはシミュレー
+ション・モードを表す。ANDゲートが走って
+いる時、シミュレーションの時間が動いている。
+-end-
+
+ho.status.msg		tkgateよりのメッセージがここに表示される。
+
+ho.status.block		現在のモジュールのパス
+
+ho.status.file		-begin-
+現在編集中のファイル名が表示されている。「*」
+という記号がついている時、保存していない変更
+がある。
+-end-
+
+ho.print.selall		全ての読み込んでいるモジュールを印刷する。
+ho.print.selcur		現在のモジュールのみを印刷する。
+ho.print.seluse		使用中のモジュールのみ印刷する。
+
+ho.print.selsel		-begin-
+以下にマークしているモジュールのみを印刷する。
+コントロール・キーで複数のモジュールを選択
+出来る。
+-end-
+ho.print.modlist	印刷するモジュールを選択する。
+
+ho.circuit.discchg	-begin-
+有効にすると、変更ありの回路を
+保存しないで閉じるとき警告しない。
+-end-
+
+ho.cmd.bitw		-begin-
+カーソルで選択されたワイヤは表示
+されているビット幅に設定される。
+-end-
+
+ho.edgat.signam		-begin-
+選択されたゲートの選択された
+ネットである。名前が変更出来る。
+-end-
+
+ho.edgat.port		-begin-
+選択されたゲートの選択された
+ネットのポート名である。モジュール
+のゲートの場合のみ変更出来る。
+-end-
+
+ho.edgat.iolab		-begin-
+選択されたゲートの選択された
+ネットのポート方向である。モジュール
+のゲートの場合のみ変更出来る。
+-end-
+
+ho.edgat.bitlab		-begin-
+選択されたゲートの選択された
+ネットのビット幅である。変更出来る。
+-end-
+
+ho.edgat.cycle		一サイクルのエポック数
+ho.edgat.phase		クロックのフェーズ（パーセントで設定する）
+ho.edgat.duty		クロック・サイクルの何パーセントが論理0であるか
+ho.edgat.cname		接続されているネット名
+ho.edgat.cport		接続されているポート名
+ho.edgat.ctype		接続の種類
+ho.edgat.cbitw		接続されているネットのビット幅
+ho.edgat.cedit		選択のポートを編集する。
+ho.edgat.cadd		ゲートにポートを追加する。
+ho.edgat.cdel		ゲートのポートを削除する。
+
+ho.edgat.hide		-begin-
+有効にするとゲート名が表示されない。
+-end-
+
+ho.edgat.gtype		ゲートの種類
+ho.edgat.gname		ゲートの名前
+ho.edgat.ganchor	有効にすると、ゲートが移動不可になる。
+ho.edgat.gx		ゲートのX位置
+ho.edgat.gy		ゲートのY位置
+
+ho.edgat.swstate	-begin-
+シミュレーションを始める時の初期の値である。
+-end-
+
+ho.edgat.dipstate	-begin-
+シミュレーションを始める時の初期の値である。
+-end-
+
+ho.edgat.range		マルチビットの信号のサブ・レンジである。
+
+ho.edgat.memfile	-begin-
+メモリの初期の値のファイルを指定する。
+シミュレーションを始める時、このファイル
+が読み込まれる。
+-end-
+
+ho.edgat.func		モジュールの機能
+ho.edgat.frame		フレームのラベル
+
+ho.opt.site		-begin-
+回路などを印刷する時、このサイト名が表示される。
+-end-
+
+ho.opt.smooth		-begin-
+この設定を有効にすると、回路をスクロールする時、
+ビットマップのコピーを利用して、効率よく
+スクロールできる。Xサーバの問題があれば、この
+設定を無効にすれば良い。
+-end-
+
+ho.opt.clip		-begin-
+有効にすると、ウインドウの部分領域の
+再描画を行なう。そうでなければ常に
+全領域を再描画する。
+-end-
+
+ho.opt.outmove		-begin-
+有効にすると、モジュールを移動する時、
+ワイヤなどはマウスのボタンを離すまで
+移動しない。画面の表示が遅い時に便利である。
+-end-
+
+ho.opt.bhelp		-begin-
+有効にすると、このメッセージの様な「ヘルプ・
+バルーン」が表示される。
+-end-
+
+ho.opt.novice		-begin-
+有効にすると、初心者モードになる。
+初心者モードでは、tkgateが立ち上がる時、
+チュートリアルが自動的に読み込まれる。
+-end-
+
+ho.opt.debug		-begin-
+有効にすると、デバグ機能が使える。
+開発者以外に、あまり役に立たない。
+-end-
+
+ho.opt.ckpt		有効にすると、tkgateはチェックポイント保存のファイルを作る。
+ho.opt.ckptfreq		チェックポイント保存を何クリック毎に行なうか
+
+ho.opt.beak		-begin-
+全然役に立たない機能を有効にする。この機能を
+無効にすると、このスイッチはダイアログ
+ボックスから消え、.tkgate-propertiesを編集しない限り
+戻らない。
+-end-
+
+ho.opt.miles		-begin-
+有効にすると、tkgateは時々ユーザを
+馬鹿にしたり、悪口を言ったりする。
+-end-
+
+ho.opt.bat		-begin-
+有効にすると、バットマンのコンピュータを
+設計する為に「役にたつ」機能が使える。
+-end-
+
+ho.opt.trek		転送しろ、スコッティ！
+ho.opt.normal		つまらないモードに戻る。
+
+ho.opt.simstep		-begin-
+シミュレータのステップ・コマンドで
+何エポック進むかを指定する。
+-end-
+
+ho.opt.ckstep		-begin-
+シミュレータのクロックステップ・コマンドで
+何サイクル進むかを指定する。
+-end-
+
+ho.opt.ckover		-begin-
+シミュレータのクロック・コマンドは
+クロックのエッジより更に何エポック
+進むかを指定する。
+-end-
+
+ho.opt.init		-begin-
+シミュレータを立ち上げる時に
+自動的に実行するスクリプト・
+ファイルを指定する。
+-end-
+
+ho.opt.ckall		-begin-
+有効にすると、クロック・コマンドは
+どのクロックのエッジでも停止する。
+-end-
+
+ho.opt.ckspec		-begin-
+有効にすると、クロック・コマンドは
+指定したクロックのエッジのみに停止する。
+-end-
+
+ho.deftech		-begin-
+新しいゲートのデフォルトのテクノロジー。
+ゲートの遅延に影響する。任意のゲート
+のテクノロジーを変更するには、ゲートの
+設定ボックスを開いて、「遅延」のタブ
+を選択して下さい。
+-end-
+
+ho.techbut		-begin-
+指定したテクノロジー・ファイルからの遅延値を
+利用する。新しいテクノロジーを追加する為、
+「ファイル」→「設定...」→「シミュレート」
+のメニューを開いて、ファイルのリストに追加
+して下さい。
+-end-
+
+ho.custbut		-begin-
+このゲート専用の遅延値を指定する。
+-end-
+
+ho.contver		-begin-
+マウス操作を行なう時、内部構造を自動的に
+確認して、不正の所を知らす。
+-end-
+
+ho.simwatch		-begin-
+シミュレータとGUIの間のコマンドを表示する。
+-end-
+
+ho.simlog		-begin-
+シミュレータのコマンドをファイルに
+書き込む。シミュレータをデバッガで
+実行する時、このファイルはシミュレータ
+の入力として利用できる。
+-end-
+
+ho.cpathanal		-begin-
+回路のクリティカル・パスを探索する。
+-end-
+
+ho.circuit.extbar	-begin-
+基本ゲート(AND, OR, XOR)の入力数が
+3本以上の時、拡張バーは利用する。
+-end-
+
+ho.edgat.extbar		-begin-
+基本ゲート(AND, OR, XOR)の入力数が
+3本以上の時、拡張バーは利用する。
+-end-
+
+ho.opt.undolen		-begin-
+undoのリストの長さ
+-end-
+
+
+ho.opt.vpopupdelay		-begin-
+マウスボタンを押してから、何ミリ秒経って
+から信号の値が表示される遅延である。
+この遅延が短過ぎる時、ダブルクリックが
+認知できなくなる問題があるシステムは
+ある。この問題が起こらなければ、遅延
+をより短くしても良い。
+-end-
