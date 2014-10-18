@@ -35,6 +35,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wall" />
 			<Add directory="../../" />
 		</Compiler>
 		<Unit filename="../../src/common/hash.c">

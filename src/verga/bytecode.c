@@ -19,7 +19,10 @@
 ****************************************************************************/
 #include "thyme.h"
 
+#ifndef DEBUG
 #define DEBUG 0
+#endif
+
 /*****************************************************************************
  *
  * Create a new CodeBlock
@@ -752,7 +755,7 @@ void BCNbMemPutE_exec(BCNbMemPutE *mpe,VGThread *thread)
   Event *e;
 
 #if DEBUG
-  vgio_echo("%p: BCNbMemPutD(%p) #%d\n",thread,mpe,mpe->m_delay);
+  vgio_echo("%p: BCNbMemPutE(%p)\n",thread,mpe);
 #endif
 
   if (mpe->m_netLsb) {
@@ -951,7 +954,7 @@ void BCAsgn_exec(BCAsgn *a, VGThread *t)
  *     delay		Delay after which to queue assignment.
  *
  *****************************************************************************/
-void BCNbAsgnD_init(ByteCode *bc, Net *net, Value *netLsb, Value *value, 
+void BCNbAsgnD_init(ByteCode *bc, Net *net, Value *netLsb, Value *value,
 		    unsigned valLsb, unsigned width,deltatime_t delay)
 {
   BCNbAsgnD *a = (BCNbAsgnD*)bc;
@@ -1086,7 +1089,7 @@ void BCNbAsgnE_exec(BCNbAsgnE *a, VGThread *thread)
  *     delay		Delay after which to queue assignment.
  *
  *****************************************************************************/
-void BCWireAsgnD_init(ByteCode *bc, Net *net, int id, Value *netLsb, Value *value, 
+void BCWireAsgnD_init(ByteCode *bc, Net *net, int id, Value *netLsb, Value *value,
 		    unsigned valLsb, unsigned width,deltatime_t delay)
 {
   BCWireAsgnD *a = (BCWireAsgnD*)bc;
@@ -1290,7 +1293,7 @@ void BCDebugPrint_init(ByteCode *bc,char *msg,...)
 
   dp->dp_func = (BCfunc*) BCDebugPrint_exec;
   dp->dp_message = strdup(buf);
-  
+
 }
 
 /*****************************************************************************

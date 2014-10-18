@@ -1,0 +1,215 @@
+# depslib dependency file v1.0
+1413617034 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/bytecode.c
+	"thyme.h"
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/thyme.h
+	<stdlib.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/time.h>
+	<unistd.h>
+	<stdarg.h>
+	<string.h>
+	"config.h"
+	"thyme_config.h"
+	"misc.h"
+	"hash.h"
+	"list.h"
+	"ycmalloc.h"
+	"io.h"
+	"error.h"
+	"multint.h"
+	"value.h"
+	"operators.h"
+	"systask.h"
+	"memory.h"
+	"expr.h"
+	"statement.h"
+	"mitem.h"
+	"specify.h"
+	"directive.h"
+	"module.h"
+	"task.h"
+	"net.h"
+	"circuit.h"
+	"evqueue.h"
+	"channel.h"
+	"trigger.h"
+	"bytecode.h"
+	"verilog.h"
+	"yybasic.h"
+	"vgrammar.h"
+
+1413613319 /home/starling13/STARLING_REPO/tkgate-work//config.h
+	"options.h"
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work//options.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/thyme_config.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/common/misc.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/common/hash.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/common/list.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/common/ycmalloc.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/io.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/error.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/multint.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/value.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/operators.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/systask.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/memory.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/expr.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/statement.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/mitem.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/specify.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/directive.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/module.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/task.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/net.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/circuit.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/evqueue.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/channel.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/trigger.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/bytecode.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/verilog.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/yybasic.h
+
+1413612730 /home/starling13/STARLING_REPO/tkgate-work/src/verga/vgrammar.h
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/channel.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/circuit.c
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/commands.c
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/directive.c
+	"thyme.h"
+
+1413615189 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/error.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/evqueue.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/expr.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/io.c
+	<signal.h>
+	<errno.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/luthor.c
+	<sys/cdefs.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<ctype.h>
+	"thyme.h"
+	<stdlib.h>
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/memory.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/mitem.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/module.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/multint.c
+	"thyme.h"
+	<ctype.h>
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/net.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/operators.c
+	<assert.h>
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/pathmod.c
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/paux.c
+	<unistd.h>
+	<string.h>
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/specify.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/statement.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/systask.c
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/task.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/thyme.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/trigger.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/value.c
+	<assert.h>
+	<ctype.h>
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/verilog.c
+	"thyme.h"
+
+1413612730 source:/home/starling13/STARLING_REPO/tkgate-work/src/verga/vgrammar.c
+	"thyme.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+
