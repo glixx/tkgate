@@ -46,4 +46,8 @@ void init_mainWindow(Tcl_Interp *tcl);
 void init_cursors();
 void init_specials();void init_specials();
 
+void FlagScrolling();
+
+void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
+
 #endif

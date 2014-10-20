@@ -78,8 +78,8 @@ typedef struct {
 typedef struct {
   char			*spec;		/* Special character specifier */
   char			*text;		/* Raw text for replacement */
-  char			*pretag;	/* Html code to preceed text */	
-  char			*posttag;	/* Html code to follow text */	
+  char			*pretag;	/* Html code to preceed text */
+  char			*posttag;	/* Html code to follow text */
 } HtmlSpecialSpec;
 
 void Html_handle_basic(Html *h, HtmlTag *tag);
@@ -123,52 +123,52 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
   {"&Delta;",	"D",	"<font face=symbol>",	"</font>"},
   {"&Epsilon;",	"E",	"<font face=symbol>",	"</font>"},
   {"&Zeta;",	"Z",	"<font face=symbol>",	"</font>"},
-  {"&Eta;",	"H",	"<font face=symbol>",	"</font>"}, 	
-  {"&Theta;",	"Q",	"<font face=symbol>",	"</font>"}, 
-  {"&Iota;",	"I",	"<font face=symbol>",	"</font>"}, 	
-  {"&Kappa;",	"K",	"<font face=symbol>",	"</font>"}, 
+  {"&Eta;",	"H",	"<font face=symbol>",	"</font>"},
+  {"&Theta;",	"Q",	"<font face=symbol>",	"</font>"},
+  {"&Iota;",	"I",	"<font face=symbol>",	"</font>"},
+  {"&Kappa;",	"K",	"<font face=symbol>",	"</font>"},
   {"&Lambda;",	"L",	"<font face=symbol>",	"</font>"},
-  {"&Mu;",	"M",	"<font face=symbol>",	"</font>"}, 	
-  {"&Nu;",	"N",	"<font face=symbol>",	"</font>"}, 	
-  {"&Xi;",	"X",	"<font face=symbol>",	"</font>"}, 	
+  {"&Mu;",	"M",	"<font face=symbol>",	"</font>"},
+  {"&Nu;",	"N",	"<font face=symbol>",	"</font>"},
+  {"&Xi;",	"X",	"<font face=symbol>",	"</font>"},
   {"&Omicron;",	"O",	"<font face=symbol>",	"</font>"},
-  {"&Pi;",	"P",	"<font face=symbol>",	"</font>"}, 	
-  {"&Rho;",	"R",	"<font face=symbol>",	"</font>"}, 	
-  {"&Sigma;",	"S",	"<font face=symbol>",	"</font>"}, 
-  {"&Tau;",	"T",	"<font face=symbol>",	"</font>"}, 	
+  {"&Pi;",	"P",	"<font face=symbol>",	"</font>"},
+  {"&Rho;",	"R",	"<font face=symbol>",	"</font>"},
+  {"&Sigma;",	"S",	"<font face=symbol>",	"</font>"},
+  {"&Tau;",	"T",	"<font face=symbol>",	"</font>"},
   {"&Upsilon;",	"U",	"<font face=symbol>",	"</font>"},
-  {"&Phi;",	"F",	"<font face=symbol>",	"</font>"}, 	
-  {"&Chi;",	"C",	"<font face=symbol>",	"</font>"}, 	
-  {"&Psi;",	"Y",	"<font face=symbol>",	"</font>"}, 	
-  {"&Omega;",	"W",	"<font face=symbol>",	"</font>"}, 
-  {"&alpha;",	"a",	"<font face=symbol>",	"</font>"}, 
-  {"&beta;",	"b",	"<font face=symbol>",	"</font>"}, 	
-  {"&gamma;",	"g",	"<font face=symbol>",	"</font>"}, 
-  {"&delta;",	"d",	"<font face=symbol>",	"</font>"}, 
+  {"&Phi;",	"F",	"<font face=symbol>",	"</font>"},
+  {"&Chi;",	"C",	"<font face=symbol>",	"</font>"},
+  {"&Psi;",	"Y",	"<font face=symbol>",	"</font>"},
+  {"&Omega;",	"W",	"<font face=symbol>",	"</font>"},
+  {"&alpha;",	"a",	"<font face=symbol>",	"</font>"},
+  {"&beta;",	"b",	"<font face=symbol>",	"</font>"},
+  {"&gamma;",	"g",	"<font face=symbol>",	"</font>"},
+  {"&delta;",	"d",	"<font face=symbol>",	"</font>"},
   {"&epsilon;",	"e",	"<font face=symbol>",	"</font>"},
-  {"&zeta;",	"z",	"<font face=symbol>",	"</font>"}, 	
-  {"&eta;",	"h",	"<font face=symbol>",	"</font>"}, 	
-  {"&theta;",	"q",	"<font face=symbol>",	"</font>"}, 
-  {"&iota;",	"i",	"<font face=symbol>",	"</font>"}, 	
-  {"&kappa;",	"k",	"<font face=symbol>",	"</font>"}, 
+  {"&zeta;",	"z",	"<font face=symbol>",	"</font>"},
+  {"&eta;",	"h",	"<font face=symbol>",	"</font>"},
+  {"&theta;",	"q",	"<font face=symbol>",	"</font>"},
+  {"&iota;",	"i",	"<font face=symbol>",	"</font>"},
+  {"&kappa;",	"k",	"<font face=symbol>",	"</font>"},
   {"&lambda;",	"l",	"<font face=symbol>",	"</font>"},
-  {"&mu;",	"m",	"<font face=symbol>",	"</font>"}, 
-  {"&nu;",	"n",	"<font face=symbol>",	"</font>"}, 
-  {"&xi;",	"x",	"<font face=symbol>",	"</font>"}, 
-  {"&omicron;",	"o",	"<font face=symbol>",	"</font>"}, 
-  {"&pi;",	"p",	"<font face=symbol>",	"</font>"}, 	
-  {"&rho;",	"r",	"<font face=symbol>",	"</font>"}, 	
+  {"&mu;",	"m",	"<font face=symbol>",	"</font>"},
+  {"&nu;",	"n",	"<font face=symbol>",	"</font>"},
+  {"&xi;",	"x",	"<font face=symbol>",	"</font>"},
+  {"&omicron;",	"o",	"<font face=symbol>",	"</font>"},
+  {"&pi;",	"p",	"<font face=symbol>",	"</font>"},
+  {"&rho;",	"r",	"<font face=symbol>",	"</font>"},
   {"&sigmaf;",	"V",	"<font face=symbol>",	"</font>"},
   {"&sigma;",	"s",	"<font face=symbol>",	"</font>"},
-  {"&tau;",	"t",	"<font face=symbol>",	"</font>"}, 	
+  {"&tau;",	"t",	"<font face=symbol>",	"</font>"},
   {"&upsilon;",	"u",	"<font face=symbol>",	"</font>"},
-  {"&phi;",	"f",	"<font face=symbol>",	"</font>"}, 	
-  {"&chi;",	"c",	"<font face=symbol>",	"</font>"}, 	
-  {"&psi;",	"y",	"<font face=symbol>",	"</font>"}, 	
+  {"&phi;",	"f",	"<font face=symbol>",	"</font>"},
+  {"&chi;",	"c",	"<font face=symbol>",	"</font>"},
+  {"&psi;",	"y",	"<font face=symbol>",	"</font>"},
   {"&omega;",	"w",	"<font face=symbol>",	"</font>"},
   {"&thetasym;","J",	"<font face=symbol>",	"</font>"},
-  {"&upsih;",	"\241",	"<font face=symbol>",	"</font>"}, 
-  {"&piv;",	"v",	"<font face=symbol>",	"</font>"}, 
+  {"&upsih;",	"\241",	"<font face=symbol>",	"</font>"},
+  {"&piv;",	"v",	"<font face=symbol>",	"</font>"},
 
   {"&bull;",	"\267",	"<font face=symbol>",	"</font>"},
   {"&hellip;",	"\274",	"<font face=symbol>",	"</font>"},
@@ -276,7 +276,7 @@ int istruevalue(const char *s)
 
 static Encoder *Html_getEncoder(Html *h)
 {
-  if (h->h_target == TD_X11) 
+  if (h->h_target == TD_X11)
     return Circuit_getDisplayEncoder(TkGate.circuit);
   else
     return Circuit_getPSEncoder(TkGate.circuit);
@@ -340,7 +340,7 @@ void delete_HtmlTag(HtmlTag *ht)
   if (ht->ht_name) ob_free(ht->ht_name);
   if (ht->ht_options) {
     int i;
-    
+
     for (i = 0;i < ht->ht_numOptions;i++) {
       ob_free(ht->ht_options[i].hto_label);
      ob_free(ht->ht_options[i].hto_value);
@@ -498,7 +498,7 @@ static HtmlContext *new_HtmlContext(HtmlContext *base,Html *html)
   if (hc->hc_link) hc->hc_link = ob_strdup(hc->hc_link);
   if (hc->hc_tag)  hc->hc_tag = ob_strdup(hc->hc_tag);
   hc->hc_next = 0;
-  
+
   HtmlFont_updatePoints(&hc->hc_font);
   HtmlContext_activateFont(hc);
 
@@ -612,9 +612,12 @@ const char *Html_makeTutorialNavigationLine_bymodule(char *line)
   if (max_pnum > 1) {
     if (sscanf(M->m_name,"PAGE%d",&cur_pnum) != 1 || cur_pnum < 1 || cur_pnum > max_pnum)
       return "[no-controls]";
-  
+
     if (cur_pnum == 1) {
+    /** @TODO to remove */
+      /*
       int i;
+      */
 
       p += sprintf(p,"<font color=gray>&lt;%s</font>   ",msgLookup("tutorial.prev"));
     } else {
@@ -777,7 +780,7 @@ void Html_addLine(Html *h,const char *line)
 
 
   /*
-   * Check to see if we need to increase length of data buffer.  Be sure to 
+   * Check to see if we need to increase length of data buffer.  Be sure to
    * make space for the newline and the null character.
    */
   if (h->h_dataLen + l + 2 > curLen) {
@@ -850,7 +853,7 @@ static void Html_popContext(Html *h)
   ob_touch(hc);
   ob_touch(h);
 
-  h->h_context = h->h_context->hc_next;  
+  h->h_context = h->h_context->hc_next;
 
   hc->hc_next = h->h_contextPool;
   h->h_contextPool = hc;
@@ -934,8 +937,9 @@ void Html_handle_valueOf(Html *h, HtmlTag *tag)
   } else if (strcasecmp(name,"tkgate-release-date") == 0) {
     text = release_date;
   } else if (strcasecmp(name,"pancake-recipe") == 0) {
-    extern const char *recipe_list[];
-    //text = recipe_list[0];
+    /** @TODO to remove */
+    /* extern const char *recipe_list[]; */
+    /* text = recipe_list[0];*/
   }
 
   if (text)
@@ -959,7 +963,7 @@ void HtmlContext_handle_modifiers(HtmlContext *hc,HtmlTag *tag)
       fontfamily_t j;
 
       ob_touch(hc);
-      
+
       for (j = 0;j < FF_MAX;j++)
 	if (strcasecmp(getFontFamilyName(j),value) == 0)
 	  hc->hc_font.family = j;
@@ -1319,8 +1323,9 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
 {
   HtmlUnit *hu;
   HtmlContext *last_hc = 0;
-  Encoder *encoder = Circuit_getPSEncoder(TkGate.circuit);
-  char text[STRMAX];
+  /** @TODO to remove */
+  /* Encoder *encoder = Circuit_getPSEncoder(TkGate.circuit); */
+  /* char text[STRMAX]; */
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
@@ -1329,7 +1334,8 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
      * Update properties only if there was a change.
      */
     if (hc != last_hc) {
-      // Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+      /** @TODO to remove */
+      /* Tkg_changeColor(gc, GXxor, hc->hc_pixel); */
       last_hc = hc;
     }
 
@@ -1384,7 +1390,7 @@ void Html_draw(Html *h,int x,int y)
 	XDrawString(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
 		    hu->hu_text,strlen(hu->hu_text));
       }
-      
+
       break;
     case HU_IMAGE :
       {

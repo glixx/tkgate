@@ -8,12 +8,16 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/tkgate" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../../tkgate-work" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="../common/lib/Debug/libcommon.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/tkgate" prefix_auto="1" extension_auto="1" />
@@ -30,7 +34,16 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-DTKGATE_HOMEDIR=NULL" />
+			<Add option="-DHAVE_CONFIG_H" />
+			<Add directory="../../" />
+			<Add directory="/usr/include/tcl8.5" />
+			<Add directory="../../src/common" />
 		</Compiler>
+		<Linker>
+			<Add option="-ltcl8.5" />
+			<Add option="-ltk8.5" />
+		</Linker>
 		<Unit filename="../../src/tkgate/adder.c">
 			<Option compilerVar="CC" />
 		</Unit>

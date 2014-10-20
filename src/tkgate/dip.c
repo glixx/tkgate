@@ -33,7 +33,8 @@ int Dip_SimHitFunc(EditState *ss,GCElement *g);
 void Dip_SimInitFunc(EditState *es,GCElement *g,const char *path);
 GCElement *SwitchDip_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned);
 void SwitchDip_VerSave(FILE *f,GCElement *g);
-void SwitchDip_SetProp(FILE *f,GCElement *g);
+void SwitchDip_SetProp(GCElement*,const char*,const void*);
+void SwitchDip_getCompositeName(GCElement *g,char *compositeName);
 
 static iconDimensions dip_iconDims[] = {
   {0, 0, 75, 20, 37, 10},
@@ -77,7 +78,7 @@ static char *psDip[] = {
 GGateInfo gate_dip_info = {
   GC_DIP,
   "DIP",
-  "dip",0x0,
+  "dip",0x0u,
   "psdip",psDip,
   -1,-1,
 
@@ -140,7 +141,7 @@ void Dip_Draw(GCElement *g,int md)
   char s[STRMAX];
   char compositeName[STRMAX];
   int vox,voy;
-  
+
   mk_gate(g->xpos,g->ypos,g->typeinfo,g->orient,g->selected);
   gate_drawWires(g,md);
 
@@ -158,14 +159,14 @@ void Dip_Draw(GCElement *g,int md)
       dipValue = g->u.sw.perm_dipval;
 
     sprintf(s,"%x",dipValue & mask);
-  
+
     vox = (g->orient == 2) ?  43 : 0;
     voy = (g->orient == 2) ?  5 : -15;
 
     if (g->selected)
-      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);  
+      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);
     else
-      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);  
+      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);
     dce_DrawString(TkGate.instGC,g->xpos+vox,g->ypos+voy,
 		   CENTER_JUST,s);
   }
