@@ -139,7 +139,7 @@ void RegisterGate(GGateInfo *gi);
 
 void GetPinIOMark(GWire *w,int d,int iod,int atype,int *x,int *y,Icon **arrow);
 void DrawPinIOMark(GWire *w,int d,int iod,int atype);
-
+void init_gateHashTables();
 
 /*
  * Extra memory required for allocating a GCElement object with n ports.

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tkgate" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/tkgate" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/tkgate" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../../src/tkgate/adder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/and.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/arshift.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/ascii.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/block.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/breakpoint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/breakpoint.h" />
+		<Unit filename="../../src/tkgate/buffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/circuit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/circuit.h" />
+		<Unit filename="../../src/tkgate/clock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/comment.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/concat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/cpath.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/cpath.h" />
+		<Unit filename="../../src/tkgate/cursors.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/decoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/delay.h" />
+		<Unit filename="../../src/tkgate/demux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/dip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/divide.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/edit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/editstate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/editstate.h" />
+		<Unit filename="../../src/tkgate/elements.h" />
+		<Unit filename="../../src/tkgate/error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/error.h" />
+		<Unit filename="../../src/tkgate/expr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/expr.h" />
+		<Unit filename="../../src/tkgate/flipflop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/fonts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/fonts.h" />
+		<Unit filename="../../src/tkgate/frame.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/functions.h" />
+		<Unit filename="../../src/tkgate/gates.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/gates.h" />
+		<Unit filename="../../src/tkgate/generic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/generic.h" />
+		<Unit filename="../../src/tkgate/ground.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/hdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/html.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/html.h" />
+		<Unit filename="../../src/tkgate/hyperlink.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/icon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/icon.h" />
+		<Unit filename="../../src/tkgate/igenerate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/igenerate.h" />
+		<Unit filename="../../src/tkgate/in.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/jkff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/join.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/joint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/locale.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/lshift.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/luthor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/message.h" />
+		<Unit filename="../../src/tkgate/metrics.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/modint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/modsym.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/modsym.h" />
+		<Unit filename="../../src/tkgate/module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/module.h" />
+		<Unit filename="../../src/tkgate/mult.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/mux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/net.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/net.h" />
+		<Unit filename="../../src/tkgate/nmos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/object.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/object.h" />
+		<Unit filename="../../src/tkgate/or.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/paux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/pmos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/primitives.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/primitives.h" />
+		<Unit filename="../../src/tkgate/print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/print.h" />
+		<Unit filename="../../src/tkgate/psprolog.h" />
+		<Unit filename="../../src/tkgate/ram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/register.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/release.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/roll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/rom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/rshift.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/scope.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/scope.h" />
+		<Unit filename="../../src/tkgate/scopewin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/script.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/script.h" />
+		<Unit filename="../../src/tkgate/search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/selection.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/simulate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/simulate.h" />
+		<Unit filename="../../src/tkgate/switch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/symblock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/tap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/tclfuncs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/text.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/text.h" />
+		<Unit filename="../../src/tkgate/tkgate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/tkgate.h" />
+		<Unit filename="../../src/tkgate/tkgate_config.h" />
+		<Unit filename="../../src/tkgate/tkgate_misc.h" />
+		<Unit filename="../../src/tkgate/tkgatewin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/traceprint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/tri.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/tribuffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/vdd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/verify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/verilog.h" />
+		<Unit filename="../../src/tkgate/verilog_in.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/verilog_out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/vgrammar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/vgrammar.h" />
+		<Unit filename="../../src/tkgate/vparser.h" />
+		<Unit filename="../../src/tkgate/wires.h" />
+		<Unit filename="../../src/tkgate/wiresadd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/wiresdraw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/wiresedit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/wiresmove.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/wiresnap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/wmstuff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/xor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/yybasic.h" />
+		<Unit filename="../../src/tkgate/zoom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/tkgate/zoom.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

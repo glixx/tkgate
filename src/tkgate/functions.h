@@ -38,4 +38,12 @@
 #define	MS2 0x1c	    /* Proc on/off bits */
 #define MS3 0xfe0	    /* All mode bits */
 
+void init_tclProcs(Tcl_Interp *tcl);
+void init_iconTables();
+void init_localeSet();
+void init_cpathNetDelayTable();
+void init_mainWindow(Tcl_Interp *tcl);
+void init_cursors();
+void init_specials();void init_specials();
+
 #endif

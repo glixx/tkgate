@@ -108,7 +108,7 @@ b.new		Новый...
 b.dismiss	Dismiss
 b.close		Закрыть
 b.ok		OK
-b.clear		Clear
+b.clear		Очистить
 b.cancel	Отмена
 #b.open		Открыть...
 #b.bitw		Bit Width
@@ -134,11 +134,10 @@ b.tech		Technology
 #
 # Main tab strings
 #
-tab.edit	Edit
-tab.editintr	Interface
-tab.simulate	Simulate
-tab.cpath	Critical Path
-
+tab.edit	Редактирование
+tab.editintr	Интерфейс
+tab.simulate	Симуляция
+tab.cpath	Критический путь
 
 #############################################################################
 #
@@ -176,25 +175,25 @@ mm.disable	Disable
 #
 menu.file	0:Файл
 menu.edit	0:Правка
-menu.tool	0:Tool
-menu.symbol	0:Symbol
-menu.simulate	0:Simulate
+menu.tool	0:Инструмент
+menu.symbol	0:Символ
+menu.simulate	0:Симуляция
 menu.module	0:Модуль
-menu.interface	0:Interface
+menu.interface	0:Интерфейс
 menu.format	0:Формат
-menu.make	0:Components
+menu.make	0:Компоненты
 menu.help	0:Справка
 
 menu.file.new		0:Создать...
 menu.file.open		0:Открыть...
-menu.file.openlib	0:Library Manager...
+menu.file.openlib	0:Управление библиотеками...
 menu.file.save		0:Сохранить
 menu.file.saveas	5:Сохранить как...
 menu.file.print		0:Печать...
 menu.file.quit		0:Выход
 menu.file.cprop		0:Параметры Схемы...
-menu.file.import	0:Import Image...
-menu.file.export	0:Export Image...
+menu.file.import	0:Импортировать изображение...
+menu.file.export	0:Экспортировать изображение...
 
 menu.edit.undo		0:Отменить
 menu.edit.redo		0:Повторить
@@ -204,8 +203,8 @@ menu.edit.paste		0:Вставить
 menu.edit.overlay	0:Overlay Paste
 menu.edit.selall	0:Выделить Все
 menu.edit.find		0:Найти...
-menu.edit.zoomin	5:Zoom In
-menu.edit.zoomout	5:Zoom Out
+menu.edit.zoomin	5:Увеличить
+menu.edit.zoomout	5:Уменьшить
 
 menu.edit.rshift	10:Bit Shift Right 
 menu.edit.lshift	10:Bit Shift Left 
@@ -224,13 +223,13 @@ menu.tool.cutw		0:Cut Wire
 menu.tool.inv		0:Invert
 menu.tool.bitw		0:Bit Width
 menu.tool.debug		0:Debug
-menu.tool.point		0:Point
-menu.tool.line		0:Line
-menu.tool.rect		0:Rectangle
+menu.tool.point		0:Точка
+menu.tool.line		0:Линия
+menu.tool.rect		0:Прямоугольник
 menu.tool.fillrect	0:Fill Rectangle
-menu.tool.port		0:Port
+menu.tool.port		0:Порт
 menu.tool.select	0:Select Region
-menu.tool.options	0:Options...
+menu.tool.options	0:Настройки...
 
 menu.format.addport	4:Add Port
 menu.format.ioset	0:Set Type
@@ -329,20 +328,20 @@ port.inout	InOut
 # Tags for built-in gate types
 #
 
-gm.io		I/O
-gm.gate		Gate
+gm.io		Ввод/вывод
+gm.gate		Вентиль
 gm.rgate	Reduction
 gm.msi		MSI
-gm.alu		ALU
-gm.mem		Memory
-gm.mod		Module
-gm.comment	Comment
-gm.script	Verilog Script
-gm.frame	Frame
+gm.alu		АЛУ
+gm.mem		Память
+gm.mod		Модуль
+gm.comment	Комментарий
+gm.script	Скрипт Verilog
+gm.frame	Рамка
 
-gm.io.switch	Switch
-gm.io.dip	DIP Switch
-gm.io.ground	Ground
+gm.io.switch	Переключатель
+gm.io.dip	DIP переключатель
+gm.io.ground	Земля
 gm.io.vdd	Vdd
 gm.io.merge	Concat
 gm.io.clock	Clock
@@ -355,15 +354,15 @@ gm.io.ledseg	7-Seg. LED (Direct)
 
 gm.io.tty	TTY
 
-gm.gate.and	AND
-gm.gate.nand	NAND
-gm.gate.or	OR
-gm.gate.nor	NOR
-gm.gate.xor	XOR
-gm.gate.xnor	XNOR
-gm.gate.buf	Buffer
+gm.gate.and	И
+gm.gate.nand	НЕ-И
+gm.gate.or	ИЛИ
+gm.gate.nor	НЕ-ИЛИ
+gm.gate.xor	ИСКЛ.ИЛИ
+gm.gate.xnor	НЕ-ИСКЛ.ИЛИ
+gm.gate.buf	Буфер
 gm.gate.inv	Inverter
-gm.gate.tribuf	Tri-Buffer
+gm.gate.tribuf	Буфер с тремя состояниями
 gm.gate.nmos	NMOS
 gm.gate.pmos	PMOS
 
@@ -374,19 +373,19 @@ gm.rgate.nor	NOR
 gm.rgate.xor	XOR
 gm.rgate.xnor	XNOR
 
-gm.alu.add	Adder
-gm.alu.mult	Multiplier
-gm.alu.div	Divider
-gm.alu.lshift	Left Shift
-gm.alu.rshift	Right Shift
+gm.alu.add	Сумматор
+gm.alu.mult	Умножитель
+gm.alu.div	Делитель
+gm.alu.lshift	Левый сдвиг
+gm.alu.rshift	Правый сдвиг
 gm.alu.arshift	Arith. Right Shift
 gm.alu.roll	Roll
 
-gm.mem.reg	Register
+gm.mem.reg	Регистр
 gm.mem.ff	D Flip-Flop
 gm.mem.rff	Rev. D Flip-Flop
-gm.mem.ram	RAM
-gm.mem.rom	ROM
+gm.mem.ram	ОЗУ
+gm.mem.rom	ПЗУ
 
 gm.mem.jkff	JK Flip-Flop
 gm.mem.rjkff	Rev. JK Flip-Flop
@@ -401,10 +400,10 @@ gm.msi.12demux	1-2 Demultiplexor
 gm.msi.14demux	1-4 Demultiplexor
 gm.msi.18demux	1-8 Demultiplexor
     
-gm.mod.inst	Module Instance
-gm.mod.in	Module Input
-gm.mod.out	Module Output
-gm.mod.inout	Module InOut
+gm.mod.inst	Экземпляр модуля
+gm.mod.in	Вход модуля
+gm.mod.out	Выход модуля
+gm.mod.inout	Вход-выход модуля
 
 tutorial.prev		PREVIOUS
 tutorial.next		NEXT
@@ -559,11 +558,11 @@ itype		Type:
 #############################################################################
 # Module Dialog Box
 #
-db.mod.name	Name
-db.mod.file	File Name
-db.mod.type	Type
-db.mod.flags	Flags
-db.mod.dataprot	Prevent editing of module definition.
+db.mod.name	Имя
+db.mod.file	Имя файла
+db.mod.type	Тип
+db.mod.flags	Флаги
+db.mod.dataprot	Запретить редактирование определения модуля.
 db.mod.intfprot	Prevent all interface changes.
 db.mod.edprot	Prevent edit mode interface changes.
 db.mod.props	Properties
