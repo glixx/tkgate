@@ -255,7 +255,7 @@ void modint_arrange(EditState*es)
   int N = Hash_numElems(M->m_gates);
   int i;
   int x,y,maxh;
-  int isFirst;  
+  int isFirst;
 
   if (N < 1) return;					/* No defined blocks */
 
@@ -296,7 +296,7 @@ void modint_arrange(EditState*es)
       cx = cy = 0;
 
 
-    if (!isFirst && (x + width + MODINT_BLOCKSPACE) > TkGate.width) { 
+    if (!isFirst && (x + width + MODINT_BLOCKSPACE) > TkGate.width) {
       x = MODINT_BLOCKSPACE;
       y += MODINT_BLOCKSPACE + maxh;
       maxh = 0;
@@ -457,6 +457,7 @@ void modint_edit(EditState **es,GModuleDef *M)
  *****************************************************************************/
 void modint_close()
 {
+#if MODINT_DEBUG
   GModuleDef *m;
 
   if (TkGate.circuit->es->env == TkGate.circuit->mid_display)
@@ -464,7 +465,6 @@ void modint_close()
   else
     m = TkGate.circuit->root_mod;				/* Top-level interface editor */
 
-#if MODINT_DEBUG
   printf("modint_close: (%s)=%p\n",TkGate.circuit->mid_display->m_name,m);
 #endif
 
@@ -502,7 +502,7 @@ void modint_makeSymbolInterface(GModuleDef *M,GModSymbol *ms)
   g = SymBlock_convert(g,ms,M,0);
 
   /*
-   * Make this new symbol block gate the new interface for M. 
+   * Make this new symbol block gate the new interface for M.
    */
   modint_setInterface(M, g);
 }
@@ -522,11 +522,11 @@ void modint_flush()
 
   for (E = Hash_first(mm->m_gates);E;E = Hash_next(mm->m_gates,E)) {
     GCElement *g = (GCElement*) HashElem_obj(E);
-    if (GCElement_getType(g) != GC_BLOCK && 
+    if (GCElement_getType(g) != GC_BLOCK &&
 	GCElement_getType(g) != GC_SYMBLOCK)
       continue;
 
-    List_addToTail(&dlist, 
+    List_addToTail(&dlist,
   }
 
   List_uninit(&dlist);
@@ -546,7 +546,7 @@ void modint_flush()
  *****************************************************************************/
 void modint_openSelected(const char *modName)
 {
-  
+
   EditState **es = &TkGate.circuit->es;
   GModuleDef *M;
   char *p;

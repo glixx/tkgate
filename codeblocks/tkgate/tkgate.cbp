@@ -43,6 +43,7 @@
 		<Linker>
 			<Add option="-ltcl8.5" />
 			<Add option="-ltk8.5" />
+			<Add option="-lX11" />
 		</Linker>
 		<Unit filename="../../src/tkgate/adder.c">
 			<Option compilerVar="CC" />
