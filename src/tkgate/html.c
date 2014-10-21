@@ -1141,6 +1141,7 @@ void Html_partition(Html *h,char *data)
   char *p,*q;
   Encoder *encoder = Html_getEncoder(h);
   int isJapanese = isJapaneseDisplay(encoder);
+  int i;
 
   Html_flushUnits(h);
 
@@ -1194,12 +1195,10 @@ void Html_partition(Html *h,char *data)
        ******************************************************************/
       HtmlContext *hc;
       HtmlUnit *hu;
-      int i;
 
       for (q = p;*q;q++)
 	if (!(*q & 0x80))
 	  break;
-
 
       hc = new_HtmlContext(h->h_context,h);
       hc->hc_font.family = FF_KANJI;
@@ -1213,6 +1212,22 @@ void Html_partition(Html *h,char *data)
 
       if (!*q) break;
       p = q;
+    } else if (*p & 0x80) {
+      /******************************************************************
+       *
+       * This is a regular non-kanji utf-8 text string
+       *
+       ******************************************************************/
+      HtmlUnit *hu;
+
+      for (q = p;*q;q++)
+	    if (!(*q & 0x80)) break;
+
+      hu = new_HtmlUnit(p,q-p,h->h_context);
+      Html_addUnit(h,hu);
+      for (i = 0;hu->hu_text[i];i++) hu->hu_text[i] &= 0x7f;
+      if (!*q) break;
+      p = q;
     } else {
       /******************************************************************
        *
@@ -1222,7 +1237,7 @@ void Html_partition(Html *h,char *data)
       HtmlUnit *hu;
 
       for (q = p;*q;q++)
-	if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
+	if (strchr("<&\n",*q) != 0 || (*q & 0x80) )
 	  break;
       hu = new_HtmlUnit(p,q-p,h->h_context);
       Html_addUnit(h,hu);
@@ -1250,7 +1265,6 @@ void Html_format(Html *h)
   int max_width = 0;
   int x = 0, y = 0;					/* Current text position */
   char *p;
-
 
   ob_touch(h);
   Html_partition(h,h->h_data);
@@ -1358,6 +1372,9 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  *****************************************************************************/
 void Html_draw(Html *h,int x,int y)
 {
+#ifndef NDEBUG
+    puts(__PRETTY_FUNCTION__);
+#endif
   GC gc = TkGate.commentGC;
   GC igc = TkGate.imageGC;
   HtmlUnit *hu;
@@ -1366,29 +1383,53 @@ void Html_draw(Html *h,int x,int y)
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
 
+#ifndef NDEBUG
+  char buf[256];
+  if (dumpLocale(h->h_locale,buf,256) == 0)
+    puts(buf);
+#endif
+
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
-
+#ifndef NDEBUG
+  buf[0] = '\0';
+  if (dumpHtmlContext(hc,buf,256) == 0)
+    puts(buf);
+#endif
     switch (hu->hu_type) {
     case HU_TEXT :
       /*
        * Update properties only if there was a change.
        */
       if (hc != last_hc) {
-	XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
+	    XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
 
-	if (hc->hc_pixel >= 0)
-	  Tkg_changeColor(gc, GXxor, hc->hc_pixel);
-	last_hc = hc;
+	    if (hc->hc_pixel >= 0)
+          Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+        last_hc = hc;
       }
 
       if (hc->hc_font.family == FF_KANJI) {
-	XDrawString16(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
-		      (XChar2b*)hu->hu_text,strlen(hu->hu_text)/2);
-
+	    XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
+                       hu->hu_x + x,hu->hu_y + y,
+                       (XChar2b*)hu->hu_text,
+                       strlen(hu->hu_text)/2 );
+      } else if (strcmp(h->h_locale->l_code, "utf-8") == 0) {
+        XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
+                       hu->hu_x + x,hu->hu_y + y,
+                       (XChar2b*)hu->hu_text,
+                       strlen(hu->hu_text)/2 );
       } else {
-	XDrawString(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
-		    hu->hu_text,strlen(hu->hu_text));
+	    XDrawString( TkGate.D,
+                     TkGate.W,
+                     gc,
+                     hu->hu_x + x,hu->hu_y + y,
+		             hu->hu_text,
+		             strlen(hu->hu_text) );
       }
 
       break;
@@ -1462,3 +1503,28 @@ const char *Html_getLink(Html *h,int x,int y)
   return 0;
 }
 
+#ifndef NDEBUG
+int dumpHtmlContext(const HtmlContext * context, char * buf, size_t bufLen)
+{
+  char stackBuf[512] = "";
+
+  if (bufLen > 512) bufLen = 512;
+
+  strcpy(stackBuf, "\nHtml context:    ");
+  strcat(stackBuf, "\n\tPixel color:         ");
+    sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_pixel);
+  strcat(stackBuf, "\n\tAssociated hyperlink:");
+  if (context->hc_link)
+    strcat(stackBuf, context->hc_link);
+  strcat(stackBuf, "\n\tAssociated tag:      ");
+  if (context->hc_tag)
+    strcat(stackBuf, context->hc_tag);
+
+  if (bufLen > strlen(stackBuf)) {
+    strcpy(buf, stackBuf);
+    return 0;
+  }
+  else
+    return -1;
+}
+#endif

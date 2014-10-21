@@ -7,8 +7,8 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/tkgate" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../../../tkgate-work" />
+				<Option output="../../tkgate" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -20,7 +20,8 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/tkgate" prefix_auto="1" extension_auto="1" />
+				<Option output="../../tkgate" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />

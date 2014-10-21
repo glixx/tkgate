@@ -17,9 +17,9 @@
 
     Last edit by hansen on Sun Feb 22 18:12:36 2009
 ****************************************************************************/
+#include "tkgate.h"
 #include <stdlib.h>
 #include <string.h>
-#include "tkgate.h"
 
 #define ENGLISH_LINESPACE	12	/* Line spacing for English text */
 #define KANJI_LINESPACE		15	/* Line spacing for lines with kanji characters */
@@ -68,7 +68,7 @@ GGateInfo gate_comment_info = {
   {1},
 
   {0},
-  
+
   Comment_Make,
   Nop_WriteCellDef,
   Comment_Init,
@@ -196,7 +196,7 @@ void Comment_flushLines(GCElement *g)
 
 void Comment_addLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine"); 
+  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
 
   ob_touch(L);
   L->text = ob_strdup(text);
@@ -213,7 +213,7 @@ void Comment_addLine(GCElement *g,const char *text)
 
 void Comment_prependLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine"); 
+  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
 
   L->text = ob_strdup(text);
   L->next = g->u.comment.first;
@@ -285,7 +285,7 @@ static int Comment_buildHtml(GCElement *g)
   Html *h;
   int is_empty = 0;
 
-  /* 
+  /*
      Already built and with the correct zoom factor
   */
   if (g->u.comment.html
@@ -406,7 +406,7 @@ GCElement *Comment_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
   for (L = g->u.comment.first;L;L = L->next) {
     Comment_addLine(ng,L->text);
   }
-  
+
   ng->u.comment.reqWidth = g->u.comment.reqWidth;
 
   Comment_buildHtml(ng);
@@ -417,7 +417,7 @@ GCElement *Comment_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 void Comment_Draw(GCElement *g,int md)
 {
   GC gc = TkGate.commentGC;
-  int x,y; 
+  int x,y;
 
   Comment_buildHtml(g);
 

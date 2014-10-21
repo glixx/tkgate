@@ -92,7 +92,7 @@ GGateInfo gate_mult_info = {
   {1},
 
   {"Dab_p",0},
-  
+
   Generic_Make,
   Mult_WriteCellDef,
   Generic_Init,
@@ -117,7 +117,7 @@ GGateInfo gate_mult_info = {
 
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for multipliers.
  *
  * Parameters:
@@ -127,7 +127,10 @@ GGateInfo gate_mult_info = {
  *****************************************************************************/
 static void Mult_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
+  /** @TODO to remove */
+  /*
   GGateInfo *gi = gcs->gc_info;
+  */
   int numBit = gcs->gc_numBits;
   const char *invSpec = gcs->gc_invSpec;
   PrimParm primParm;

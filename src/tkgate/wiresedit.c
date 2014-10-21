@@ -28,7 +28,7 @@
  *   wire_findIdx(w,d)		Find the the wire with index d
  *   wire_chooseUniqueNet(dw)	Choose a unique net for a newly merged wire.
  *   wire_replaceNet(w,n)	Replace the net of a wire.
- *   GWire_sizeisdisplayed(w)	Returns true if w has any segments displaying the size 
+ *   GWire_sizeisdisplayed(w)	Returns true if w has any segments displaying the size
  *   wire_finalizeNet(w)	Do all finalization of a wire after it has been modified
  *   wire_findClosest(w,x,y)	Find other wire end closest to w at (x,y)
  *   wire_solder(n1,n2)		Connect two nodes together
@@ -45,8 +45,8 @@
  *
  *   Helping functions for primary functions above:
  *
- *   wire_sigroot_aux(w,rw)     
- *   wire_replaceNetAux(w,net)     
+ *   wire_sigroot_aux(w,rw)
+ *   wire_replaceNetAux(w,net)
  *   wire_trashin(n,M,dp)	Trash a wire in the "in" direction.
  *   wire_trashout(n,M,dp)	Trash a wire in the "out" direction.
  *
@@ -57,14 +57,14 @@
 
 
 /* Wire snap cases */
-#define HH 0x3
-#define VV 0xC
-#define HV 0x6
-#define VH 0x9
-#define HZ 0x1
-#define ZH 0x2
-#define VZ 0x4
-#define ZV 0x8
+#define WS_HH 0x3
+#define WS_VV 0xC
+#define WS_HV 0x6
+#define WS_VH 0x9
+#define WS_HZ 0x1
+#define WS_ZH 0x2
+#define WS_VZ 0x4
+#define WS_ZV 0x8
 
 /*
   Return the orientation of the segment 'd' in from end 'n'.
@@ -123,7 +123,7 @@ static void wire_choose_root(GWire *w,GWire **root_w)
   if (!*root_w) {			/* If no current root, then make w the root */
     *root_w = w;
     return;
-  } 
+  }
 
   /*
    * Ideally, the root should be a driver of a segment.  If both w and
@@ -182,7 +182,7 @@ static void wire_sigroot_aux(GWire *w,GWire **root_w)
 GWire *wire_sigroot(GWire *w)
 {
   GWire *root_w = 0;
-  
+
   wire_sigroot_aux(w,&root_w);
   wire_sigroot_aux(wire_other(w),&root_w);
 
@@ -463,7 +463,7 @@ int GWire_sizeisdisplayed(GWire *w)
   if (GWire_sizeisdisplayed_aux(o_w,1))
     return 1;
 
-  return 0; 
+  return 0;
 }
 
 /*****************************************************************************
@@ -538,7 +538,7 @@ GWire *wire_findClosest(GWire *w,int x,int y)
     GCElement *g = ow->gate;
     switch (g->typeinfo->Code) {
     case GC_JOINT :
-      for (i = 0;i < 4;i++) 
+      for (i = 0;i < 4;i++)
 	if (g->wires[i] != ow) {
 	  xw = wire_findClosest(g->wires[i],x,y);
 	  if (xw && wdist(xw,x,y) < wdist(bw,x,y))
@@ -556,7 +556,7 @@ GWire *wire_findClosest(GWire *w,int x,int y)
 	bw = xw;
       break;
     }
-  } 
+  }
 
   return bw;
 }
@@ -577,8 +577,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
     (vertical(n1,n1->in)<<2) | (vertical(n2,n2->out)<<3);
 
   switch (t) {
-  case HH :
-  case VV :
+  case WS_HH :
+  case WS_VV :
     if ((n1->x != n2->x) || (n1->y != n2->y)) { /* Couldn't move a node */
       n1->out = n2;				  /* Don't remove bend */
       n2->in = n1;
@@ -594,8 +594,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
       debugprint("*click* (case 2)\n");
     }
     break;
-  case HV :
-  case VH :
+  case WS_HV :
+  case WS_VH :
     ob_touch(n2->out);
 
     n1->out = n2->out;
@@ -603,8 +603,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
     delete_GWireNode(n2);
     debugprint("*click* (case 3)\n");
     break;
-  case ZH :
-  case ZV :
+  case WS_ZH :
+  case WS_ZV :
     if (n1->in->in) {
       ob_touch(n1->in);
 
@@ -621,8 +621,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
       logError(ERL_ERROR,"Out of wire case 4 in wire_solder.");
     }
     break;
-  case HZ :
-  case VZ :
+  case WS_HZ :
+  case WS_VZ :
     if (n2->out->out) {
       ob_touch(n2->out);
 
@@ -701,7 +701,7 @@ GWire *wire_connect(GModuleDef *M,GWire *w1,GWire *w2)
 
 /*****************************************************************************
  *
- * Changes the driver of a node 
+ * Changes the driver of a node
  *
  * Parameters:
  *      n		Node of wire on which to make change
@@ -799,8 +799,8 @@ GWireNode *wirenode_cutsegment(int x,int y,GWireNode *n,GModuleDef *M)
   GWire *w = wirenode_driver(n);
 
   cn1 = new_GWireNode();
-  cn2 = new_GWireNode();	
-  
+  cn2 = new_GWireNode();
+
   ob_touch(cn1);
   ob_touch(cn2);
   if (n->x == n->out->x) {
@@ -810,7 +810,7 @@ GWireNode *wirenode_cutsegment(int x,int y,GWireNode *n,GModuleDef *M)
     cn1->x = cn2->x = x;
     cn1->y = cn2->y = n->y;
   }
-  
+
   cn1->in = n;
   cn2->out = n->out;
   n->out = cn1;
@@ -830,7 +830,7 @@ GWireNode *wirenode_cutsegment(int x,int y,GWireNode *n,GModuleDef *M)
 
   /*
    * Decide which side to rename.
-   */  
+   */
 
   GWire_pickRenameWire(cn1->end,cn2->end,M);
 
@@ -934,7 +934,7 @@ void wire_cut(int x,int y,GWireNode *n,GModuleDef *M)
 	  message(0,msgLookup("err.protintf"),g->u.block.moduleName);
 	  return;
 	}
-	
+
 	SetModified(MF_INTERFACE);
 
 	GNet_draw(w->net);
@@ -1087,9 +1087,9 @@ static int wire_trashin(GWireNode *n,GModuleDef *M,int drawp)
 static int wire_trashout(GWireNode *n,GModuleDef *M,int drawp)
 {
   int trashp;
-  
+
   if (!n) return 0;
-  
+
   if (!n->out) {
     if (n->end && n->end->gate) {
       switch (n->end->gate->typeinfo->Code) {
@@ -1097,7 +1097,7 @@ static int wire_trashout(GWireNode *n,GModuleDef *M,int drawp)
 	return joint_dejoint(n,M,drawp);
       default :
 	return 0;
-      } 
+      }
     } else {
       if (M) {
 	ob_touch(M);
@@ -1147,7 +1147,7 @@ GWireNode *wire_makecorner(GWireNode *n,int tx,int ty)
 
   if (!n->out)
     return NULL;
-  
+
   if ((n->stype != HORIZONTAL) && (n->stype != VERTICAL))
     return NULL;
 
@@ -1158,7 +1158,7 @@ GWireNode *wire_makecorner(GWireNode *n,int tx,int ty)
   nn->out = new_GWireNode();
   ob_touch(nn->out);
   nn->out->in = nn;
-  
+
   if (n->x == n->out->x) {
     nn->x = nn->out->x = n->x;
     nn->y = nn->out->y = ty;
@@ -1166,17 +1166,17 @@ GWireNode *wire_makecorner(GWireNode *n,int tx,int ty)
     nn->y = nn->out->y = n->y;
     nn->x = nn->out->x = tx;
   }
-  
+
   nn->out->out = n->out;
   ob_touch(n->out);
   n->out->in = nn->out;
   nn->in = n;
   n->out = nn;
-  
+
   nn->stype = nn->out->stype = HORIZONTAL | VERTICAL;
-  
+
   GWire_draw(dn);
-  
+
   return n->in ? nn : nn->out;
 }
 
@@ -1287,7 +1287,7 @@ void wire_dump(EditState *es)
 
 
 /*
- * Adds a new wire stub at position (x,y).  
+ * Adds a new wire stub at position (x,y).
  */
 void wire_addstub(EditState *es,int x,int y)
 {
@@ -1342,7 +1342,7 @@ void wire_addstub(EditState *es,int x,int y)
     cut_w1->nodes->y = y;
     cut_w2->nodes->x = x;
     cut_w2->nodes->y = y;
-    
+
     if (n1->x > n1->in->x)
       jw[2] = cut_w1;
     else if (n1->x < n1->in->x)
@@ -1482,7 +1482,7 @@ void wire_addstub(EditState *es,int x,int y)
 
 int wire_numOnPad(GWire *w)
 {
-  if (!w) 
+  if (!w)
     return 0;
   else
     return 1 + wire_numOnPad(w->next);
@@ -1584,7 +1584,7 @@ int GWire_getNetWires(GWire *w,GWire **wlist,unsigned which)
   count = GWire_getNetWires_aux(w,wlist,which,0);
   count += GWire_getNetWires_aux(o_w,wlist+count,which,1);
 
-  return count; 
+  return count;
 }
 
 void GWire_insertNode(GWire*w)

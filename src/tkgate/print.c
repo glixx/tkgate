@@ -236,7 +236,7 @@ PaperSize paperSizes[] = {
   {0}
 };
 
- 
+
 const char *recipe_list[] = {
   /* Receipe 1 */
     "%	Pancakes - one serving\n"
@@ -416,7 +416,7 @@ char *trimChars(char *buf,char *s,char *trim)
 
 
 /*****************************************************************************
- * 
+ *
  * Get the width of a postscript string in points.
  *
  * Parameters:
@@ -425,7 +425,7 @@ char *trimChars(char *buf,char *s,char *trim)
  *     len		Length of string
  *
  * Returns:		String width in points.
- * 
+ *
  *****************************************************************************/
 int PSStringWidth(HtmlFont *F,const char *s,int len)
 {
@@ -934,7 +934,7 @@ void GPrint_outputPreamble(GPrint *P,int do_gates)
 
   for (i = 0;gateps_copyright[i];i++)
     fprintf(P->p_f,"%s\n",gateps_copyright[i]);
-  
+
   if (TkGate.japaneseMode) {
     for (i = 0;kanji_support_prolog[i];i++)
       fprintf(P->p_f,"%s\n",kanji_support_prolog[i]);
@@ -1043,7 +1043,7 @@ static void GPrint_printModuleCPath(GPrint *P,GModLayout *L)
 	fprintf(P->p_f,"8 setlinewidth\n");
 	fprintf(P->p_f,".5 setgray\n");
 	fprintf(P->p_f,"newpath\n");
-      
+
 	for (n = w->nodes;n;n = n->out) {
 	  int x,y;
 
@@ -1058,7 +1058,7 @@ static void GPrint_printModuleCPath(GPrint *P,GModLayout *L)
 	}
 	fprintf(P->p_f,"stroke\n");
 	fprintf(P->p_f,"grestore\n");
-      }      
+      }
     }
   }
 }
@@ -1068,7 +1068,7 @@ void GPrint_printLabelsAndSizes(GPrint *P,GModLayout *L,GWire *w)
   GWireNode *n;
   int x,y,p;
   char label[STRMAX];
-  
+
   GNet_getDisplayLabel(w->net, label, STRMAX, DLM_GET_ALWAYS);
 
   for (n = w->nodes;n && n->out;n = n->out) {
@@ -1083,7 +1083,7 @@ void GPrint_printLabelsAndSizes(GPrint *P,GModLayout *L,GWire *w)
     }
     if (n->isLabeled) {
       GWireNode_getLabelPos(n,w->net,&x,&y,&p);
-      
+
       fprintf(P->p_f,"(%s) %d %d %d wirelabel\n",label,p,x,y);
 
     }
@@ -1311,10 +1311,10 @@ static void GPrint_printModule(GPrint *P,GModLayout *L,double scale,double xoff,
  * Parameters:
  *     P
  *     L
- * 
+ *
  * When pages are partitioned, we include a little overlap on the edges to
  * compensate for any gates that might have been cut in two.
- * 
+ *
  *         V
  * +-------+-+-------+
  * |       | |       |
@@ -1492,7 +1492,7 @@ static void GPrint_printIndexPage(GPrint *P,GPage *PG)
       fprintf(P->p_f,"%d %d moveto (%d) show\n",x+PIDX_PGCOLSEP,y,start_page[i]);
     else
       fprintf(P->p_f,"%d %d moveto (%d-%d) show\n",x+PIDX_PGCOLSEP,y,start_page[i],end_page[i]);
-    
+
   }
 
   fprintf(P->p_f,"EP\n");
@@ -1560,6 +1560,8 @@ static void unbuild_HGNodeGraph(HGNode *G)
   ob_free(G);
 }
 
+/** @TODO to check necessity */
+/*
 static void HGNodeGraph_print(HGNode *G,int level)
 {
   int i;
@@ -1571,6 +1573,7 @@ static void HGNodeGraph_print(HGNode *G,int level)
   HGNodeGraph_print(G->hg_children,level+1);
   HGNodeGraph_print(G->hg_nextSibling,level);
 }
+*/
 
 static int HGNode_translatePoint(int *x,int *y)
 {
@@ -1693,13 +1696,18 @@ void GPrint_outputPages(GPrint *P)
 void GPrint_setupEPSFPage(GPrint *P)
 {
   GModLayout *L = P->p_mods[0];
+  /** @TODO to check necessity */
+  /*
   int cwidth,cheight;
+  */
   GPage *PG;
 
   GModuleDef_getBBX(L->l_mod, TD_PRINT, &L->l_xmin,&L->l_xmax,&L->l_ymin,&L->l_ymax);
+  /** @TODO to check necessity */
+  /*
   cwidth  = L->l_xmax-L->l_xmin + 2*PAGE_MODMARGIN;
   cheight = L->l_ymax-L->l_ymin + 2*PAGE_MODMARGIN;
-
+  */
   L->l_isSmall = 0;
   L->l_numRows = 1;
   L->l_numCols = 1;
@@ -1708,7 +1716,7 @@ void GPrint_setupEPSFPage(GPrint *P)
   P->p_pages = (GPage**) ob_malloc(sizeof(GPage*),"GPage*[]");
   assert(P->p_pages);
 
-  
+
   L->l_xbase = EPSF_MINX;
   L->l_ybase = EPSF_MINY;
   L->l_width = L->l_xmax-L->l_xmin;
@@ -1872,7 +1880,7 @@ void GPrint_setupPages(GPrint *P)
 	int linesPerPage = (P->p_uHeight-2*PAGE_MODMARGIN)/(int)(1.2*hdl_font.points);
 	int numLines = GModuleDef_numHdlLines(L->l_mod);
 	int numPages = (numLines+linesPerPage-1)/linesPerPage;
-	
+
 	L->l_numCols = 1;
 	L->l_numRows = numPages;
 	numLarge += numPages;
