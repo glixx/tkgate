@@ -356,8 +356,9 @@ size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromStri
     toString[len-1] = 0;
     return 0;
   }
-
-  /*  printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);*/
+#ifndef NDEBUG
+  printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);
+#endif
 
   inPtr = fromString;
   inSize = strlen(fromString);

@@ -447,7 +447,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 
   switch (hc->hc_html->h_target) {
   case TD_X11 :
-#if 0
+#ifndef NDEBUG
     printf("%p: activate-x ",hc);HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
 
@@ -463,7 +463,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
     hc->hc_descent = hc->hc_xFont->descent;
     break;
   case TD_PRINT :
-#if 0
+#ifndef NDEBUG
     printf("activate-ps ");HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
     hc->hc_xFont = 0;
@@ -1142,6 +1142,8 @@ void Html_partition(Html *h,char *data)
   Encoder *encoder = Html_getEncoder(h);
   int isJapanese = isJapaneseDisplay(encoder);
   int i;
+  HtmlUnit *hu;
+  HtmlContext *hc;
 
   Html_flushUnits(h);
 
@@ -1182,7 +1184,7 @@ void Html_partition(Html *h,char *data)
        *
        ******************************************************************/
       if (h->h_context->hc_preformat) {
-	HtmlUnit *hu = new_HtmlUnit_T(HU_NEWLINE,h->h_context);
+	hu = new_HtmlUnit_T(HU_NEWLINE,h->h_context);
 	Html_addUnit(h,hu);
       } else
 	Html_addUnit(h,new_HtmlUnit(" ",1,h->h_context));
@@ -1193,12 +1195,9 @@ void Html_partition(Html *h,char *data)
        * This is Kanji text.  Scan until we find a non-8-bit character.
        *
        ******************************************************************/
-      HtmlContext *hc;
-      HtmlUnit *hu;
 
       for (q = p;*q;q++)
-	if (!(*q & 0x80))
-	  break;
+        if (!(*q & 0x80)) break;
 
       hc = new_HtmlContext(h->h_context,h);
       hc->hc_font.family = FF_KANJI;
@@ -1212,33 +1211,26 @@ void Html_partition(Html *h,char *data)
 
       if (!*q) break;
       p = q;
-    } else if (*p & 0x80) {
-      /******************************************************************
-       *
-       * This is a regular non-kanji utf-8 text string
-       *
-       ******************************************************************/
-      HtmlUnit *hu;
+    }/* else if (*p & 0x80) {
 
       for (q = p;*q;q++)
 	    if (!(*q & 0x80)) break;
 
       hu = new_HtmlUnit(p,q-p,h->h_context);
       Html_addUnit(h,hu);
-      for (i = 0;hu->hu_text[i];i++) hu->hu_text[i] &= 0x7f;
+
       if (!*q) break;
       p = q;
-    } else {
+    }*/ else {
       /******************************************************************
        *
        * This is a regular non-kanji text string
        *
        ******************************************************************/
-      HtmlUnit *hu;
 
       for (q = p;*q;q++)
-	if (strchr("<&\n",*q) != 0 || (*q & 0x80) )
-	  break;
+	    if ( (strchr("<&\n",*q) != 0) || (*q & 0x80) && isJapanese )
+	      break;
       hu = new_HtmlUnit(p,q-p,h->h_context);
       Html_addUnit(h,hu);
 
@@ -1416,7 +1408,7 @@ void Html_draw(Html *h,int x,int y)
                        hu->hu_x + x,hu->hu_y + y,
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
-      } else if (strcmp(h->h_locale->l_code, "utf-8") == 0) {
+      } else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
         XDrawString16( TkGate.D,
                        TkGate.W,
                        gc,
@@ -1511,14 +1503,26 @@ int dumpHtmlContext(const HtmlContext * context, char * buf, size_t bufLen)
   if (bufLen > 512) bufLen = 512;
 
   strcpy(stackBuf, "\nHtml context:    ");
-  strcat(stackBuf, "\n\tPixel color:         ");
-    sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_pixel);
-  strcat(stackBuf, "\n\tAssociated hyperlink:");
+
+  strcat(stackBuf, "\n\tpixel color:         ");
+  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_pixel);
+
+  strcat(stackBuf, "\n\tassociated hyperlink:");
   if (context->hc_link)
     strcat(stackBuf, context->hc_link);
-  strcat(stackBuf, "\n\tAssociated tag:      ");
+
+  strcat(stackBuf, "\n\tassociated tag:      ");
   if (context->hc_tag)
     strcat(stackBuf, context->hc_tag);
+
+  strcat(stackBuf, "\n\tpreformat:           ");
+  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_preformat);
+
+  strcat(stackBuf, "\n\tis 16 bit:           ");
+  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_is16bit);
+
+  strcat(stackBuf, "\n\tspace width:         ");
+  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_spaceWidth);
 
   if (bufLen > strlen(stackBuf)) {
     strcpy(buf, stackBuf);

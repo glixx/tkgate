@@ -365,7 +365,9 @@
 			<envvars />
 			<code_completion />
 			<lib_finder disable_auto="1" />
-			<debugger />
+			<debugger>
+				<search_path add="../../src/tkgate" />
+			</debugger>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
