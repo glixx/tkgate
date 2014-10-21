@@ -92,8 +92,8 @@
 #
 ##############################################################################
 
-\font-encoding		microsoft-cp1251
-\display-encoding	CP1251
+\font-encoding		koi8-r
+\display-encoding	KOI8-R
 \messages-encoding	utf-8
 \verilog-encoding	utf-8
 \postscript-encoding	utf-8

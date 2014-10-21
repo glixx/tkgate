@@ -362,7 +362,7 @@
 		</Unit>
 		<Unit filename="../../src/tkgate/zoom.h" />
 		<Extensions>
-			<envvars />
+			<envvars set="default" />
 			<code_completion />
 			<lib_finder disable_auto="1" />
 			<debugger>

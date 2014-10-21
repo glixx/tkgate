@@ -123,7 +123,7 @@ GGateInfo gate_ram_info = {
   {1},
 
   {"Dout","Dread","Dwrite","Daddr_setup","Daddr_hold","Ddata_hold",0},
-  
+
   RamRom_Make,
   Ram_WriteCellDef,
   Generic_Init,
@@ -217,7 +217,7 @@ void RamRom_VerSave(FILE *f,GCElement *g)
 }
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for rams.
  *
  * Parameters:
@@ -233,10 +233,16 @@ void RamRom_VerSave(FILE *f,GCElement *g)
  *****************************************************************************/
 static void Ram_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
+  /** @TODO to remove */
+  /*
   GGateInfo *gi = gcs->gc_info;
+  */
   int AnumBits = gcs->gc_multiPad;	/* Hack for ROM/RAM gates */
   int DnumBits = gcs->gc_numBits;
+  /** @TODO to remove */
+  /*
   const char *invSpec = gcs->gc_invSpec;
+  */
   PrimParm primParm;
 
   PrimParm_init(&primParm);

@@ -41,6 +41,7 @@ static char *font_family_names[FF_MAX] = {
   "times",
   "symbol",
   "kanji",
+  "fixed"
 };
 
 /*
@@ -81,7 +82,7 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
   char *font_weight = (fp & FP_BOLD) ? "bold" : "medium";
   char *font_posture;
 
-  if (ff == FF_TIMES) 
+  if (ff == FF_TIMES)
     font_posture = (fp & FP_ITALIC) ? "i" : "r";
   else
     font_posture = (fp & FP_ITALIC) ? "o" : "r";
@@ -95,12 +96,12 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
     break;
   case FF_SYMBOL :
     sprintf(fullName,
-	    "-adobe-symbol-medium-r-normal--%d-*-*-*-*-*-*",
+	    "-*-symbol-medium-r-normal--%d-*-*-*-*-*-*",
  	    font_sizes[fs]*zoom);
     break;
   default :
     sprintf(fullName,
-	    "-adobe-%s-%s-%s-normal--%d-*-*-*-*-*-%s",
+	    "-*-%s-%s-%s-normal-*-%d-*-*-*-*-*-%s",
 	    font_family_names[ff],
 	    font_weight,
 	    font_posture,

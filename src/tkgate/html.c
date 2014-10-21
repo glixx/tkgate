@@ -249,7 +249,7 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
-  {FF_HELVETICA, FP_ROMAN, FS_NORMAL},
+  {FF_FIXED, FP_ROMAN, FS_NORMAL},
   0,
   0,
   0,
@@ -1229,7 +1229,7 @@ void Html_partition(Html *h,char *data)
        ******************************************************************/
 
       for (q = p;*q;q++)
-	    if ( (strchr("<&\n",*q) != 0) || (*q & 0x80) && isJapanese )
+	    if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
 	      break;
       hu = new_HtmlUnit(p,q-p,h->h_context);
       Html_addUnit(h,hu);
@@ -1364,7 +1364,7 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  *****************************************************************************/
 void Html_draw(Html *h,int x,int y)
 {
-#ifndef NDEBUG
+#ifdef DEBUG
     puts(__PRETTY_FUNCTION__);
 #endif
   GC gc = TkGate.commentGC;
@@ -1375,7 +1375,7 @@ void Html_draw(Html *h,int x,int y)
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
 
-#ifndef NDEBUG
+#ifdef DEBUG
   char buf[256];
   if (dumpLocale(h->h_locale,buf,256) == 0)
     puts(buf);
@@ -1383,7 +1383,7 @@ void Html_draw(Html *h,int x,int y)
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
-#ifndef NDEBUG
+#ifdef NDEBUG
   buf[0] = '\0';
   if (dumpHtmlContext(hc,buf,256) == 0)
     puts(buf);
