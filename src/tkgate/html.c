@@ -249,7 +249,7 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
-  {FF_FIXED, FP_ROMAN, FS_NORMAL},
+  {FF_HELVETICA, FP_ROMAN, FS_NORMAL},
   0,
   0,
   0,
@@ -1211,17 +1211,7 @@ void Html_partition(Html *h,char *data)
 
       if (!*q) break;
       p = q;
-    }/* else if (*p & 0x80) {
-
-      for (q = p;*q;q++)
-	    if (!(*q & 0x80)) break;
-
-      hu = new_HtmlUnit(p,q-p,h->h_context);
-      Html_addUnit(h,hu);
-
-      if (!*q) break;
-      p = q;
-    }*/ else {
+    } else {
       /******************************************************************
        *
        * This is a regular non-kanji text string
@@ -1364,7 +1354,7 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  *****************************************************************************/
 void Html_draw(Html *h,int x,int y)
 {
-#ifdef DEBUG
+#ifndef NDEBUG
     puts(__PRETTY_FUNCTION__);
 #endif
   GC gc = TkGate.commentGC;
@@ -1375,7 +1365,7 @@ void Html_draw(Html *h,int x,int y)
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
 
-#ifdef DEBUG
+#ifndef NDEBUG
   char buf[256];
   if (dumpLocale(h->h_locale,buf,256) == 0)
     puts(buf);
@@ -1383,11 +1373,9 @@ void Html_draw(Html *h,int x,int y)
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
-#ifdef NDEBUG
-  buf[0] = '\0';
-  if (dumpHtmlContext(hc,buf,256) == 0)
-    puts(buf);
-#endif
+
+  HtmlContext_print(hc,stdout);
+
     switch (hu->hu_type) {
     case HU_TEXT :
       /*
@@ -1495,40 +1483,14 @@ const char *Html_getLink(Html *h,int x,int y)
   return 0;
 }
 
-#ifndef NDEBUG
-int dumpHtmlContext(const HtmlContext * context, char * buf, size_t bufLen)
+void HtmlContext_print(const HtmlContext * context, FILE * fp)
 {
-  char stackBuf[512] = "";
+  fputs("Html context:    ", fp);
 
-  if (bufLen > 512) bufLen = 512;
-
-  strcpy(stackBuf, "\nHtml context:    ");
-
-  strcat(stackBuf, "\n\tpixel color:         ");
-  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_pixel);
-
-  strcat(stackBuf, "\n\tassociated hyperlink:");
-  if (context->hc_link)
-    strcat(stackBuf, context->hc_link);
-
-  strcat(stackBuf, "\n\tassociated tag:      ");
-  if (context->hc_tag)
-    strcat(stackBuf, context->hc_tag);
-
-  strcat(stackBuf, "\n\tpreformat:           ");
-  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_preformat);
-
-  strcat(stackBuf, "\n\tis 16 bit:           ");
-  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_is16bit);
-
-  strcat(stackBuf, "\n\tspace width:         ");
-  sprintf(stackBuf+strlen(stackBuf), "%d", context->hc_spaceWidth);
-
-  if (bufLen > strlen(stackBuf)) {
-    strcpy(buf, stackBuf);
-    return 0;
-  }
-  else
-    return -1;
+  fprintf(fp, "\tpixel color:         %d\n", context->hc_pixel);
+  fprintf(fp, "\tassociated hyperlink:%s\n", context->hc_link);
+  fprintf(fp, "\tassociated tag:      %s\n", context->hc_tag);
+  fprintf(fp, "\tpreformat:           %d\n", context->hc_preformat);
+  fprintf(fp, "\tis 16 bit:           %d\n", context->hc_is16bit);
+  fprintf(fp, "\tspace width:         %d\n", context->hc_spaceWidth);
 }
-#endif
