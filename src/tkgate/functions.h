@@ -50,9 +50,9 @@ void FlagScrolling();
 
 void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
 void Comment_addLine(GCElement *g,const char *text);
-#ifndef NDEBUG
-int dumpLocale(const Locale *locale,char *buf,size_t bufLen);
-#endif
+
+void Locale_print(const Locale *locale,FILE *fp);
+
 int utf8toXChar2b(XChar2b *output_r, int outsize, const char *input, int inlen);
 
 #endif

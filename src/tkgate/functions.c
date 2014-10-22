@@ -62,27 +62,13 @@ int utf8toXChar2b(XChar2b *output_r, int outsize, const char *input, int inlen) 
 	return k;
 }
 
-
-#ifndef NDEBUG
-int dumpLocale(const Locale *locale,char *buf,size_t bufLen) {
-  char stackBuf[512];
-
-  if (bufLen > 512) bufLen = 512;
-
-  strcpy(stackBuf, "\nLocale:    ");
-  strcat(stackBuf, "\n\tcode:    "); strcat(stackBuf, locale->l_code);
-  strcat(stackBuf, "\n\tname:    "); strcat(stackBuf, locale->l_name);
-  strcat(stackBuf, "\n\tmessages:"); strcat(stackBuf, locale->l_messages);
-  strcat(stackBuf, "\n\tenc font:"); strcat(stackBuf, locale->l_encFont);
-  strcat(stackBuf, "\n\tenc disp:"); strcat(stackBuf, locale->l_encDisplay);
-  strcat(stackBuf, "\n\tenc mess:"); strcat(stackBuf, locale->l_encMessages);
-  strcat(stackBuf, "\n\tenc vrlg:"); strcat(stackBuf, locale->l_encVerilog);
-
-  if (bufLen > strlen(stackBuf)) {
-    strcpy(buf, stackBuf);
-    return 0;
-  }
-  else
-    return -1;
+void Locale_print(const Locale *locale,FILE *fp) {
+  fprintf(fp, "\nLocale:    ");
+  fprintf(fp, "\n\tcode:    %s", locale->l_code);
+  fprintf(fp, "\n\tname:    %s", locale->l_name);
+  fprintf(fp, "\n\tmessages:%s", locale->l_messages);
+  fprintf(fp, "\n\tenc font:%s", locale->l_encFont);
+  fprintf(fp, "\n\tenc disp:%s", locale->l_encDisplay);
+  fprintf(fp, "\n\tenc mess:%s", locale->l_encMessages);
+  fprintf(fp, "\n\tenc vrlg:%s", locale->l_encVerilog);
 }
-#endif

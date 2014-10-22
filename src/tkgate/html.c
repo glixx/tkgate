@@ -1354,9 +1354,6 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  *****************************************************************************/
 void Html_draw(Html *h,int x,int y)
 {
-#ifndef NDEBUG
-    puts(__PRETTY_FUNCTION__);
-#endif
   GC gc = TkGate.commentGC;
   GC igc = TkGate.imageGC;
   HtmlUnit *hu;
@@ -1365,11 +1362,7 @@ void Html_draw(Html *h,int x,int y)
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
 
-#ifndef NDEBUG
-  char buf[256];
-  if (dumpLocale(h->h_locale,buf,256) == 0)
-    puts(buf);
-#endif
+  Locale_print(h->h_locale, stdout);
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
