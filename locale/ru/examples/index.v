@@ -1,8 +1,11 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
 //: property title = "index.v"
+//: property showSwitchNets = 0
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -53,17 +56,16 @@ module main;    //: root_module
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
-  //: /line:"Combinational Logic</a></h3>"
-  //: /line:"A simple 3-bit adder that you"
-  //: /line:"simulate.  Push the play button"
-  //: /line:"then click on the switches and"
-  //: /line:"watch how the LEDs change."
+  //: /line:"Комбинационная логика</a></h3>"
+  //: /line:"Простой 3-битный сумматор, который"
+  //: /line:"можно запускать в симуляторе."
+  //: /line:"Нажмите кнопку запуска, затем"
+  //: /line:"изменяйте значения переключателй"
+  //: /line:"и смотрите, как меняются состояния"
+  //: /line:"светодиодов."
   //: /line:""
   //: /end
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

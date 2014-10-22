@@ -88,7 +88,7 @@ GGateInfo gate_roller_info = {
 
   {{"S O",	{"gm.alu",0},		{"gm.alu.roll",0,"shift",400},	"gat_make ROLL"},
    {0}},
-  
+
 
   roll_iconDims,
 
@@ -125,7 +125,10 @@ GGateInfo gate_roller_info = {
 
 static void Roll_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
+  /** @TODO to check for necessity */
+  /*
   GGateInfo *gi = gcs->gc_info;
+  */
   int numBits = gcs->gc_numBits;
   const char *invSpec = gcs->gc_invSpec;
   int shiftSelBits = required_bits(numBits);

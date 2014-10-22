@@ -96,12 +96,12 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
     break;
   case FF_SYMBOL :
     sprintf(fullName,
-	    "-*-symbol-medium-r-normal--%d-*-*-*-*-*-*",
+	    "-adobe-symbol-medium-r-normal--%d-*-*-*-*-*-*",
  	    font_sizes[fs]*zoom);
     break;
   default :
     sprintf(fullName,
-	    "-*-%s-%s-%s-normal-*-%d-*-*-*-*-*-%s",
+	    "-*-%s-%s-%s-normal--%d-*-*-*-*-*-%s",
 	    font_family_names[ff],
 	    font_weight,
 	    font_posture,

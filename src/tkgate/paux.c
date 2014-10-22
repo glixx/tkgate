@@ -38,13 +38,13 @@ static int default_module_type = HDLMODULE;
 static int current_module_type = HDLMODULE;
 
 typedef void *Encoder;
-
+size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromString);
 extern Encoder *parserEncoder;
 
 /*****************************************************************************
  *
  * List of all Verilog reserved words.  These are used by the ycIsKW() function
- * to indicate these names should not be used as identifiers in user circuits. 
+ * to indicate these names should not be used as identifiers in user circuits.
  *
  *****************************************************************************/
 struct lex_keywordentry lex_reserved_words[] = {
