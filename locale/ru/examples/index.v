@@ -34,15 +34,17 @@ module main;    //: root_module
   //: /end
   //: comment g2 @(551,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex3/counter.v\"><img src=\"example_counter.gif\">"
-  //: /line:"<h3>8-Bit Counter</h3></a>"
-  //: /line:"A counter implemented using the"
-  //: /line:"register and adder devices."
+  //: /line:"<h3>8-разрядный счетчик</h3></a>"
+  //: /line:"Счётчик, реализованный с"
+  //: /line:"использованием регистра и"
+  //: /line:"сумматора."
   //: /end
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
-  //: /line:"<h3>3-Bit Counter</h3></a>"
-  //: /line:"A 3-bitcounter implemented using"
-  //: /line:"three single-bit D-flip-flops."
+  //: /line:"<h3>3-разрядный счетчик</h3></a>"
+  //: /line:"3-разрядный счетчик, реализованный с"
+  //: /line:"использованием трех одноразрядных"
+  //: /line:"D-защелок."
   //: /end
   //: comment g6 @(20,552) /sn:0
   //: /line:"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
@@ -57,11 +59,11 @@ module main;    //: root_module
   //: comment g0 @(32,30) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
   //: /line:"Комбинационная логика</a></h3>"
-  //: /line:"Простой 3-битный сумматор, который"
+  //: /line:"Простой 3-разрядный сумматор, который"
   //: /line:"можно запускать в симуляторе."
   //: /line:"Нажмите кнопку запуска, затем"
-  //: /line:"изменяйте значения переключателй"
-  //: /line:"и смотрите, как меняются состояния"
+  //: /line:"изменяйте значения переключателй и"
+  //: /line:"смотрите, как меняются состояния"
   //: /line:"светодиодов."
   //: /line:""
   //: /end

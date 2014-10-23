@@ -1,8 +1,8 @@
-//: version "2.0-b7"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
+//: property title = "Страница Добро пожаловать в TkGate"
 //: property discardChanges = 1
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -10,7 +10,7 @@
 `timescale 1ns/1ns
 
 
-//: /symbolBegin: 688896144
+//: /symbolBegin: 155357720
 //: /iconBegin normal 2990 3 3
 //: /data "#define bitmap_width 57"
 //: /data "#define bitmap_height 58"
@@ -179,7 +179,7 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: joint g13 (w1) @(394, 87) /w:[ 2 4 1 6 ]
   //: SWITCH g3 (w0) @(340,39) /sn:0 /w:[ 0 ] /st:0 /dn:1
   _GGCLOCK_P200_0_50 g51 (.Z(w33));   //: @(46,529) /sn:0 /w:[ 1 ] /omega:200 /phi:0 /duty:50
-  REGS g2 (.SA(sa), .AIN(w12), .AOUT(w14), .SB(sb), .BOUT(w30), .ck(w33));   //: @(165, 479) /symbol:688896144 /sn:0 /w:[ 0 0 0 0 0 0 ]
+  REGS g2 (.SA(sa), .AIN(w12), .AOUT(w14), .SB(sb), .BOUT(w30), .ck(w33));   //: @(165, 479) /symbol:155357720 /sn:0 /w:[ 0 0 0 0 0 0 ]
   //: LED g59 (w30) @(213,288) /sn:0 /w:[ 3 ] /type:2
   _GGCLOCK_P120_0_50 g1 (.Z(clk));   //: @(580,183) /sn:0 /w:[ 0 ] /omega:120 /phi:0 /duty:50
   //: joint g11 (w2) @(456, 166) /w:[ 1 -1 2 4 ]
@@ -221,24 +221,26 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: GROUND g46 (w9) @(650,108) /sn:0 /w:[ 0 ]
   _GGADD8 #(68, 70, 62, 64) g45 (.A(w19), .B(reg_out), .S(w22), .CI(w11), .CO(w24));   //: @(719,82) /sn:0 /w:[ 0 3 1 1 0 ]
   //: SWITCH g26 (b) @(56,134) /sn:0 /w:[ 0 ] /st:1 /dn:1
-  //: comment g0 @(280,236) /anc:1
-  //: /line:"<h1 color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></h1>"
-  //: /line:"<font size=6 color=\"firebrick\">[Beta Release]</font>"
+  //: comment g0 @(279,271)
+  //: /line:"<h1 color=green4>Добро пожаловать в TkGate <value-of name=\"tkgate-version\"></h1>"
+  //: /line:"<font size=6 color=\"firebrick\">[Beta релиз]</font>"
   //: /line:""
   //: /line:"<value-of name=\"tkgate-copyright\">"
-  //: /line:"  TKGate comes with ABSOLUTELY NO WARRANTY; see 'Help...License' menu"
-  //: /line:"  for license and warranty details.  Report problems to <a href=\"mailto:hansen@tkgate.org\"><value-of name=\"tkgate-mailcontact\"></a>"
-  //: /line:"  [released <value-of name=\"tkgate-release-date\">]"
+  //: /line:"  TKGate предоставляется БЕЗО ВСЯКИХ ГАРАНТИЙ; см. пункт меню 'Справка...Лицензионное соглашение'"
+  //: /line:"  для получения дополнительной информации о лицензии и гарантиях."
+  //: /line:"  Сообщайте о проблемах на <a href=\"mailto:hansen@tkgate.org\"><value-of name=\"tkgate-mailcontact\"></a> (по англицски)"
+  //: /line:"  Русская локализация: А.В. Скворцов <a href=\"mailto:starling13@gmail.com\">starling13@gmail.com</a>"
+  //: /line:"  [выпуск от <value-of name=\"tkgate-release-date\">]"
   //: /line:""
-  //: /line:"<font size=5>Click on a link below to start using tkgate!"
+  //: /line:"<h3>Перейдите по одной из ссылок чтобы начать использовать TkGate!</h3>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@T/index.v\">* Go to the tutorial</a>"
+  //: /line:"   <a href=\"file:///@T/index.v\">* Перейти к учебному руководству</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@E/index.v\">* Go to the example circuits</a>"
+  //: /line:"   <a href=\"file:///@E/index.v\">* Перейти к примерам схем</a>"
   //: /line:""
-  //: /line:"   <a href=\"action:newFile\">* Edit a new circuit</a>"
+  //: /line:"   <a href=\"action:newFile\">* Редактировать новую схему</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@H/doc/index.html\">* Open the documentation </a>"
+  //: /line:"   <a href=\"file:///@H/doc/index.html\">* Просмотр документации</a>"
   //: /end
   //: SWITCH data_select (w28) @(52,268) /sn:0 /w:[ 0 ] /st:0 /dn:1
   //: SWITCH g12 (w1) @(340,87) /sn:0 /w:[ 0 ] /st:0 /dn:1
@@ -251,7 +253,7 @@ endmodule
 
 //: /netlistBegin ALU
 module ALU(F, A, B, Z);
-//: interface  /sz:(89, 65) /bd:[ Ti0>A[7:0](21/89) Ti1>B[7:0](67/89) Li0>F[1:0](39/65) Bo0<Z[7:0](44/89) ]
+//: interface  /sz:(89, 65) /bd:[ Ti0>A[7:0](21/89) Ti1>B[7:0](67/89) Li0>F[1:0](39/65) Bo0<Z[7:0](44/89) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [7:0] B;    //: /sn:0 {0}(#:342,147)(342,184){1}
 //: {2}(344,186)(367,186){3}
 //: {4}(371,186)(425,186)(425,258){5}
@@ -293,8 +295,8 @@ endmodule
 
 //: /netlistBegin REGS
 module REGS(SB, SA, BOUT, AOUT, ck, AIN);
-//: /symbol:688896144
-//: interface  /sz:(40, 40) /bd:[ ]
+//: /symbol:155357720
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 0
 //: property pptype=0
 supply1 w0;    //: /sn:0 {0}(368,281)(380,281)(380,262){1}
 supply1 w21;    //: /sn:0 {0}(267,134)(188,134)(188,96){1}
@@ -369,273 +371,4 @@ wire [7:0] R0;    //: {0}(#:50:582,414)(582,383)(396,383){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P120_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #60
-     if (0 == 0)
-       forever
-	 begin
-	    Z =  1'b1;
-	    #60;
-	    Z =  1'b0;
-	    #60;
-	 end
-     else
-       forever
-	 begin
-	    Z =  1'b0;
-	    #60;
-	    Z =  1'b1;
-	    #60;
-	 end
-   
-endmodule // clock
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [7:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNMOS #(.Diz(1), .Dgz(1)) (Z, S, G);
-   input  S, G;
-   output  Z;
-
-//   specify
-//      (G *> Z) = Dgz;
-//      (S *> Z) = Diz;
-//   endspecify
-
-   nmos #Dgz mos (Z, S, G);
-
-endmodule // nmos_trans
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-   reg  [7:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x8 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [7:0] I0, I1;
-   input  S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNDECODER4 #(.Dez(1), .Diz(1)) (I, E, Z0, Z1, Z2, Z3);
-   input  [1:0] I;
-   input E;
-   output Z0, Z1, Z2, Z3;
-   wire  [3:0] Zcat;
-
-   specify
-      (E *> Z0) = Dez; 
-      (E *> Z1) = Dez; 
-      (E *> Z2) = Dez; 
-      (E *> Z3) = Dez;  
-      (I *> Z0) = Diz; 
-      (I *> Z1) = Diz; 
-      (I *> Z2) = Diz; 
-      (I *> Z3) = Diz;  
-   endspecify
-
-   assign Zcat = ~ ({4{E}} & (4'b1 << I));
-
-   assign Z0 = Zcat[0];
-   assign Z1 = Zcat[1];
-   assign Z2 = Zcat[2];
-   assign Z3 = Zcat[3]; 
-   
-endmodule // decoder
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P200_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #100
-     if (0 == 0)
-       forever
-	 begin
-	    Z =  1'b1;
-	    #100;
-	    Z =  1'b0;
-	    #100;
-	 end
-     else
-       forever
-	 begin
-	    Z =  1'b0;
-	    #100;
-	    Z =  1'b1;
-	    #100;
-	 end
-   
-endmodule // clock
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGPMOS #(.Diz(1), .Dgz(1)) (Z, S, G);
-   input  S, G;
-   output  Z;
-
-//   specify
-//      (G *> Z) = Dgz;
-//      (S *> Z) = Diz;
-//   endspecify
-
-   pmos #Dgz pos (Z, S, G);
-
-endmodule // pmos_trans
-//: /builtinEnd
 

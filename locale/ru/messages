@@ -112,9 +112,9 @@ b.clear		Очистить
 b.cancel	Отмена
 #b.open		Открыть...
 #b.bitw		Bit Width
-b.in		in
-b.out		out
-b.inout		inout
+b.in		вход
+b.out		выход
+b.inout		вход-выход
 b.browse	Browse...
 b.label		Label
 b.find		Найти
@@ -124,10 +124,10 @@ b.delete	Удалить
 #b.deleteb	Удалить...
 b.remove	Remove
 b.apply		Apply
-b.anchor	Anchor
-b.tech		Technology
-#b.enable	Enable
-#b.disable	Disable
+b.anchor	Якорь
+b.tech		Технология
+#b.enable	Включить
+#b.disable	Отключить
 #b.flush	Очистить
 
 ##############################################################################
@@ -143,9 +143,9 @@ tab.cpath	Критический путь
 #
 # Module tree/list box
 #
-module.tree		Tree
-module.list		List
-module.box.libraries	Libraries
+module.tree		Дерево
+module.list		Список
+module.box.libraries	Библиотеки
 
 #############################################################################
 #
@@ -159,11 +159,11 @@ sidetab.ports	Ports
 # MsgMgr strings (including breakpoint and script handling) 
 #
 @mm.width	7
-mm.add		Add...
-mm.delete	Delete
-mm.edit		Edit...
-mm.enable	Enable
-mm.disable	Disable
+mm.add		Добавить...
+mm.delete	Удалить
+mm.edit		Редактировать...
+mm.enable	Включить
+mm.disable	Отключить
 
 ##############################################################################
 # Menu strings
@@ -175,7 +175,7 @@ mm.disable	Disable
 #
 menu.file	0:Файл
 menu.edit	0:Правка
-menu.tool	0:Инструмент
+menu.tool	0:Инструменты
 menu.symbol	0:Символ
 menu.simulate	0:Симуляция
 menu.module	0:Модуль
@@ -218,17 +218,17 @@ menu.edit.autobold	Boldify Bits
 menu.edit.resize	Resize Bitmap
 
 menu.tool.move		0:Move/Connect
-menu.tool.delg		0:Delete Component
-menu.tool.cutw		0:Cut Wire
+menu.tool.delg		0:Удалить компонент
+menu.tool.cutw		0:Разрезать провод
 menu.tool.inv		0:Invert
 menu.tool.bitw		0:Bit Width
-menu.tool.debug		0:Debug
+menu.tool.debug		0:Отладка
 menu.tool.point		0:Точка
 menu.tool.line		0:Линия
 menu.tool.rect		0:Прямоугольник
 menu.tool.fillrect	0:Fill Rectangle
 menu.tool.port		0:Порт
-menu.tool.select	0:Select Region
+menu.tool.select	0:Выбрать область
 menu.tool.options	0:Настройки...
 
 menu.format.addport	4:Add Port
@@ -236,8 +236,8 @@ menu.format.ioset	0:Set Type
 menu.format.anchor	0:Anchor Selected
 menu.format.unanchor	0:Unanchor Selected
 menu.format.prop	0:Instance Properties...
-menu.format.del		0:Delete
-menu.format.settech	0:Set Technology
+menu.format.del		0:Удалить
+menu.format.settech	0:Установить технологию
 menu.format.rot		0:Rotation
 menu.format.rot.0	17:Default Rotation 0
 menu.format.rot.90	17:Default Rotation 90
@@ -245,8 +245,8 @@ menu.format.rot.180	17:Default Rotation 180
 menu.format.rot.270	17:Default Rotation 270
 menu.format.rot.rotate	10:Clockwise Rotate
 menu.format.rot.brotate	0:Counter-Clockwise Rotate
-menu.format.algnv	6:Align Ver.
-menu.format.algnh	6:Align Horz.
+menu.format.algnv	6:Вертикальное выравнивание
+menu.format.algnh	6:Горизонтальное выравнивание
 
 
 menu.tool.tclshell	0:Tcl Shell
@@ -348,9 +348,9 @@ gm.io.clock	Clock
 
 gm.io.led	LED
 gm.io.ledbar	LED Bar
-gm.io.ledhex	7-Seg. LED (HEX)
-gm.io.leddec	7-Seg. LED (DEC)
-gm.io.ledseg	7-Seg. LED (Direct)
+gm.io.ledhex	7-сег. индикатор (16 предст.)
+gm.io.leddec	7-сег. индикатор (10 предст.)
+gm.io.ledseg	7-сег. индикатор (прямое управление)
 
 gm.io.tty	TTY
 
@@ -366,12 +366,12 @@ gm.gate.tribuf	Буфер с тремя состояниями
 gm.gate.nmos	NMOS
 gm.gate.pmos	PMOS
 
-gm.rgate.and	AND
-gm.rgate.nand	NAND
-gm.rgate.or	OR
-gm.rgate.nor	NOR
-gm.rgate.xor	XOR
-gm.rgate.xnor	XNOR
+gm.rgate.and	И
+gm.rgate.nand	НЕ-И
+gm.rgate.or	ИЛИ
+gm.rgate.nor	НЕ-ИЛИ
+gm.rgate.xor	ИСКЛ.ИЛИ
+gm.rgate.xnor	НЕ-ИСКЛ.ИЛИ
 
 gm.alu.add	Сумматор
 gm.alu.mult	Умножитель
@@ -390,12 +390,12 @@ gm.mem.rom	ПЗУ
 gm.mem.jkff	JK Flip-Flop
 gm.mem.rjkff	Rev. JK Flip-Flop
 
-gm.msi.21mux	2-1 Multiplexor
-gm.msi.41mux	4-1 Multiplexor
-gm.msi.81mux	8-1 Multiplexor
-gm.msi.12dec	1-2 Decoder
-gm.msi.14dec	1-4 Decoder
-gm.msi.18dec	1-8 Decoder
+gm.msi.21mux	2-1 Мультиплексор
+gm.msi.41mux	4-1 Мультиплексор
+gm.msi.81mux	8-1 Мультиплексор
+gm.msi.12dec	1-2 Дешифратор
+gm.msi.14dec	1-4 Дешифратор
+gm.msi.18dec	1-8 Дешифратор
 gm.msi.12demux	1-2 Demultiplexor
 gm.msi.14demux	1-4 Demultiplexor
 gm.msi.18demux	1-8 Demultiplexor
@@ -414,18 +414,18 @@ tutorial.reload		RELOAD
 #
 # Popup menus
 #
-pop.make		Components
-pop.tool		Tool
+pop.make		Компоненты
+pop.tool		Инструменты
 
-pop.edit.paste		Paste
-pop.edit.cut		Cut
-pop.edit.copy		Copy
+pop.edit.paste		Вставить
+pop.edit.cut		Вырезать
+pop.edit.copy		Копировать
 
 pop.port.in		In
 pop.port.out		Out
 pop.port.inout		InOut
 
-pop.wire.addseg		Add Wire Segment
+pop.wire.addseg		Добавить сегмент провода
 pop.wire.prop		Net Properties...
 pop.wire.hidesize	Hide Bit Width
 pop.wire.showsize	Show Bit Width
@@ -434,8 +434,8 @@ pop.wire.hidealllabel	Hide All Labels
 pop.wire.clearalllabel	Clear All Labels
 pop.wire.showlabel	Show Label 
 
-pop.gate.open		Open
-pop.gate.close		Close
+pop.gate.open		Открыть
+pop.gate.close		Закрыть
 pop.gate.prop		Instance Properties...
 pop.gate.addport	Add Port
 pop.gate.addin		Add Input...
@@ -443,13 +443,13 @@ pop.gate.addout		Add Output...
 pop.gate.addinout	Add InOut...
 pop.gate.anchor		Anchor/Unanchor
 pop.gate.settech	Set Technology
-pop.gate.delete		Delete
+pop.gate.delete		Удалить
 pop.gate.ioset		Set Type
 
-pop.module.new		New...
-pop.module.del		Delete...
-pop.module.copy		Copy...
-pop.module.rename	Rename...
+pop.module.new		Новый...
+pop.module.del		Удалить...
+pop.module.copy		Копировать...
+pop.module.rename	Переименовть...
 pop.module.claim	Claim...
 pop.module.setroot	Set As Root...
 pop.module.prop		Module Properties...
@@ -761,7 +761,7 @@ db.gate.tab.MUX.cap		Mux Properties
 db.gate.tab.DEMUX.cap		Demux Properties
 db.gate.tab.DECODER.cap		Decoder Properties
 db.gate.tab.CONCAT.cap		Concat Properties
-db.gate.tab.COMMENT.cap		Text Properties
+db.gate.tab.COMMENT.cap		Текст
 db.gate.tab.FF.cap		D Flip-Flop Properties
 db.gate.tab.JKFF.cap		JK Flip-Flop Properties
 db.gate.tab.SCRIPT.cap		Verilog Script
@@ -812,9 +812,9 @@ db.gate.tab.FF.exp	`db.gate.tab.details.exp
 db.gate.tab.JKFF.exp	`db.gate.tab.details.exp
 
 db.gate.tab.COMMENT.exp	-fillbegin-
-Set the text to be displayed in a comment.
-Limited html commands including links can be
-used here.
+Введите ткст, который будет отображаться в комментарии.
+Некоторые HTML тэги могут быть использованы (
+<h1> - <h3>, <a>, <p>, <font> и др.).
 -end-
 
 db.gate.tab.SCRIPT.exp	-fillbegin-
