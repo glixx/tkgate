@@ -111,14 +111,14 @@ b.ok		OK
 b.clear		Очистить
 b.cancel	Отмена
 #b.open		Открыть...
-#b.bitw		Bit Width
+#b.bitw		Разрядность
 b.in		вход
 b.out		выход
 b.inout		вход-выход
 b.browse	Browse...
 b.label		Label
 b.find		Найти
-b.edit		Edit...
+b.edit		Редактировать...
 b.add		Добавить...
 b.delete	Удалить
 #b.deleteb	Удалить...
@@ -221,21 +221,21 @@ menu.tool.move		0:Move/Connect
 menu.tool.delg		0:Удалить компонент
 menu.tool.cutw		0:Разрезать провод
 menu.tool.inv		0:Invert
-menu.tool.bitw		0:Bit Width
+menu.tool.bitw		0:Разрядность
 menu.tool.debug		0:Отладка
 menu.tool.point		0:Точка
 menu.tool.line		0:Линия
 menu.tool.rect		0:Прямоугольник
-menu.tool.fillrect	0:Fill Rectangle
+menu.tool.fillrect	0:Заполнить прямоугольник
 menu.tool.port		0:Порт
 menu.tool.select	0:Выбрать область
 menu.tool.options	0:Настройки...
 
-menu.format.addport	4:Add Port
-menu.format.ioset	0:Set Type
+menu.format.addport	4:Добавить порт
+menu.format.ioset	0:Установить тип
 menu.format.anchor	0:Anchor Selected
 menu.format.unanchor	0:Unanchor Selected
-menu.format.prop	0:Instance Properties...
+menu.format.prop	0:Свойства экземпляра...
 menu.format.del		0:Удалить
 menu.format.settech	0:Установить технологию
 menu.format.rot		0:Rotation
@@ -243,8 +243,8 @@ menu.format.rot.0	17:Default Rotation 0
 menu.format.rot.90	17:Default Rotation 90
 menu.format.rot.180	17:Default Rotation 180
 menu.format.rot.270	17:Default Rotation 270
-menu.format.rot.rotate	10:Clockwise Rotate
-menu.format.rot.brotate	0:Counter-Clockwise Rotate
+menu.format.rot.rotate	10:Повернуть по часовой стрелке
+menu.format.rot.brotate	0:Повернуть против часовой стрелки
 menu.format.algnv	6:Вертикальное выравнивание
 menu.format.algnh	6:Горизонтальное выравнивание
 
@@ -256,14 +256,14 @@ menu.simulate.begin	0:Begin Simulation
 menu.simulate.end	0:End Simulation
 menu.simulate.addprobe	0:Add/Delete Probe
 menu.simulate.run	0:Run
-menu.simulate.pause	0:Pause
+menu.simulate.pause	0:Пауза
 menu.simulate.step	0:Step Epoch(s)
 menu.simulate.cycle	5:Step Cycle
-menu.simulate.break	0:Breakpoint...
+menu.simulate.break	0:Точка остановки...
 menu.simulate.script	1:Exec. Script...
-menu.simulate.load	1:Load Memory...
-menu.simulate.dump	1:Dump Memory...
-menu.simulate.view	1:View Memory...
+menu.simulate.load	1:Загрузка памяти...
+menu.simulate.dump	1:Дамп памяти...
+menu.simulate.view	1:Просмотр памяти...
 
 menu.module.open	0:Открыть
 menu.module.close	0:Закрыть
@@ -278,8 +278,8 @@ menu.module.interface		0:Interface
 menu.module.interface.set	0:Set As Default
 menu.module.interface.update	1:Sync. to Default
 menu.module.interface.updateall	6:Sync. All to Default...
-menu.module.interface.edit	0:Edit...
-menu.module.interface.auto	5:Auto Generate...
+menu.module.interface.edit	0:Редактировать...
+menu.module.interface.auto	5:Автогенерация...
 
 
 menu.help.about		0:О Программе...
@@ -292,15 +292,15 @@ menu.help.example	1:Примеры
 #############################################################################
 # Scope Menu
 #
-menu.scope_file			0:File
+menu.scope_file			0:Файл
 menu.scope_sim			0:Simulate
 menu.scope_trace		0:Trace
-menu.scope_help			0:Help
+menu.scope_help			0:Справка
 
 menu.scope_file.ptrace		0:Print Trace...
-menu.scope_file.close		0:Close
-menu.scope_trace.zoomin		5:Zoom In
-menu.scope_trace.zoomout	5:Zoom Out
+menu.scope_file.close		0:Закрыть
+menu.scope_trace.zoomin		5:Приблизить
+menu.scope_trace.zoomout	5:Отдалить
 menu.scope_sim.addprobe		0:Add/Delete Probe
 menu.scope_sim.run		0:Run
 menu.scope_sim.pause		0:Pause
@@ -314,7 +314,7 @@ menu.scope_help.about		0:About...
 menu.scope_help.license		0:License...
 menu.scope_help.doc		0:Documentation...
 
-mod.intf	Interface
+mod.intf	Интерфейс
 
 port.title	TkGate: Port Properties
 port.parms	Port Parameters
@@ -363,8 +363,8 @@ gm.gate.xnor	НЕ-ИСКЛ.ИЛИ
 gm.gate.buf	Буфер
 gm.gate.inv	Inverter
 gm.gate.tribuf	Буфер с тремя состояниями
-gm.gate.nmos	NMOS
-gm.gate.pmos	PMOS
+gm.gate.nmos	N-МОП
+gm.gate.pmos	P-МОП
 
 gm.rgate.and	И
 gm.rgate.nand	НЕ-И
@@ -396,9 +396,9 @@ gm.msi.81mux	8-1 Мультиплексор
 gm.msi.12dec	1-2 Дешифратор
 gm.msi.14dec	1-4 Дешифратор
 gm.msi.18dec	1-8 Дешифратор
-gm.msi.12demux	1-2 Demultiplexor
-gm.msi.14demux	1-4 Demultiplexor
-gm.msi.18demux	1-8 Demultiplexor
+gm.msi.12demux	1-2 Демультиплексор
+gm.msi.14demux	1-4 Демультиплексор
+gm.msi.18demux	1-8 Демультиплексор
     
 gm.mod.inst	Экземпляр модуля
 gm.mod.in	Вход модуля
@@ -421,9 +421,9 @@ pop.edit.paste		Вставить
 pop.edit.cut		Вырезать
 pop.edit.copy		Копировать
 
-pop.port.in		In
-pop.port.out		Out
-pop.port.inout		InOut
+pop.port.in		Вход
+pop.port.out		Выход
+pop.port.inout		Вход-выход
 
 pop.wire.addseg		Добавить сегмент провода
 pop.wire.prop		Net Properties...
@@ -437,23 +437,23 @@ pop.wire.showlabel	Show Label
 pop.gate.open		Открыть
 pop.gate.close		Закрыть
 pop.gate.prop		Instance Properties...
-pop.gate.addport	Add Port
-pop.gate.addin		Add Input...
-pop.gate.addout		Add Output...
-pop.gate.addinout	Add InOut...
+pop.gate.addport	Добавить порт
+pop.gate.addin		Добавить вход...
+pop.gate.addout		Добавить выход...
+pop.gate.addinout	Добавить вход-выход...
 pop.gate.anchor		Anchor/Unanchor
 pop.gate.settech	Set Technology
 pop.gate.delete		Удалить
-pop.gate.ioset		Set Type
+pop.gate.ioset		Установить тип
 
 pop.module.new		Новый...
 pop.module.del		Удалить...
 pop.module.copy		Копировать...
 pop.module.rename	Переименовть...
 pop.module.claim	Claim...
-pop.module.setroot	Set As Root...
-pop.module.prop		Module Properties...
-pop.module.int		Edit Interface...
+pop.module.setroot	Установить корневым...
+pop.module.prop		Свойства модуля...
+pop.module.int		Редактировать интерфейс...
 
 
 pop.simulate.end	End Simulation

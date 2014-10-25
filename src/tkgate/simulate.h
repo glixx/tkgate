@@ -35,7 +35,7 @@
 
 /*****************************************************************************
  *
- * Simulator probe 
+ * Simulator probe
  *
  *****************************************************************************/
 typedef struct {
@@ -47,7 +47,7 @@ typedef struct {
 
 /*****************************************************************************
  *
- * Simulator switch 
+ * Simulator switch
  *
  *****************************************************************************/
 typedef struct {
@@ -59,7 +59,7 @@ typedef struct {
 
 /*****************************************************************************
  *
- * Simulator LED (device that changes with simulation state) 
+ * Simulator LED (device that changes with simulation state)
  *
  *****************************************************************************/
 typedef struct {
@@ -96,7 +96,7 @@ typedef struct SimInterface_str {
   char		simFileName[STRMAX];	/* Temp file with circuit description */
   GSimModule	*sim_root;		/* Root simulator module */
 
-  int		no_scope;		/* Non-zero if no scope should be created */ 
+  int		no_scope;		/* Non-zero if no scope should be created */
 
   int		area;			/* Area reported for circuit */
   int		staticPower;		/* Static power reported for circuit */
@@ -116,6 +116,7 @@ void SimInterface_drawProbes(SimInterface*);
 void SimInterface_hit(SimInterface*,int x,int y,int isDoubleClick);
 void SimInterface_hitRelease(SimInterface*);
 void SimInterface_addDelProbe(SimInterface *si,GSimModule *sM,const char *name,GWire *w,GWireNode *n,int x,int y);
+void SimInterface_delProbe(SimInterface *si,const char *name);
 void SimInterface_addDelHDLProbe(SimInterface *si,GSimModule *sM,const char *name,GNet *net);
 int SimInterface_probeExists(SimInterface *si,GSimModule *sM,const char *name);
 void SimInterface_send(SimInterface*,const char*,...);
@@ -128,7 +129,7 @@ void SimInterface_fileError(SimInterface *si,const char *msg);
 void SimInterface_wireError(SimInterface *si,const char *wname,const char *msg);
 void SimInterface_navigateToModule(EditState **es,const char *path);
 void SimInterface_updateNetlistProbes(GSimModule *SM);
-char *SimInterface_formatTime(SimInterface *si, char *buf,simtime_t t); 
+char *SimInterface_formatTime(SimInterface *si, char *buf,simtime_t t);
 
 void GSimModule_getNetPathName(GSimModule *M,GNet *n,char *buf);
 void GSimModule_getFullPath(GSimModule *M,GCElement *g,char *buf);

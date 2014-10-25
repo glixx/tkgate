@@ -49,7 +49,9 @@ void init_specials();void init_specials();
 void FlagScrolling();
 
 void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
+
 void Comment_addLine(GCElement *g,const char *text);
+void Comment_flushLines(GCElement *g);
 
 void Locale_print(const Locale *locale,FILE *fp);
 

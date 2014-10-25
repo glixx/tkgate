@@ -447,7 +447,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 
   switch (hc->hc_html->h_target) {
   case TD_X11 :
-#ifndef NDEBUG
+#ifdef DEBUG
     printf("%p: activate-x ",hc);HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
 
@@ -463,7 +463,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
     hc->hc_descent = hc->hc_xFont->descent;
     break;
   case TD_PRINT :
-#ifndef NDEBUG
+#ifdef DEBUG
     printf("activate-ps ");HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
     hc->hc_xFont = 0;
@@ -1070,7 +1070,6 @@ void Html_handle_a(Html *h, HtmlTag *ht)
     }
   }
 
-
   Html_pushContext(h,hc);
 }
 
@@ -1361,14 +1360,14 @@ void Html_draw(Html *h,int x,int y)
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
-
+#ifdef DEBUG
   Locale_print(h->h_locale, stdout);
-
+#endif
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
-
+#ifdef DEBUG
   HtmlContext_print(hc,stdout);
-
+#endif
     switch (hu->hu_type) {
     case HU_TEXT :
       /*
