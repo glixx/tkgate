@@ -1,9 +1,12 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
+//: property title = "Страница Учебного руководства"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -18,28 +21,31 @@ module PAGE1;    //: root_module
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"
   //: /end
   //: comment g18 @(10,10) /sn:0 /anc:1
-  //: /line:"<h1>Tutorial Chapters:</h1>"
+  //: /line:"<h1>Разделы руководства:</h1>"
   //: /line:""
-  //: /line:"<h3><a href=\"create.v\">1. Creating a Circuit</a></h3> - Get started by creating a simple circuit."
+  //: /line:"<h3><a href=\"create.v\">1. Создание схемы</a></h3> - Начните с создания простой схемы."
   //: /line:""
-  //: /line:"<h3><a href=\"gates.v\">2. Editing Gates</a></h3> - The basics of editing gates."
+  //: /line:"<h3><a href=\"gates.v\">2. Редактирование вентилей</a></h3> - Основы редактирования вентилей."
   //: /line:""
-  //: /line:"<h3><a href=\"wires.v\">3. Editing Wires</a></h3> - The basics of editing wires."
+  //: /line:"<h3><a href=\"wires.v\">3. Редактирование проводов</a></h3> - Основы редактирования проводов."
   //: /line:""
-  //: /line:"<h3><a href=\"group.v\">4. Group Editing Features</a></h3> - Operate on groups of gates."
+  //: /line:"<h3><a href=\"group.v\">4. Средства редактирования групп</a></h3> - Управляйте группами вентилей."
   //: /line:""
-  //: /line:"<h3><a href=\"modules.v\">5. Using Modules</a></h3> - Using modules in your circuit."
+  //: /line:"<h3><a href=\"modules.v\">5. Использование модулей</a></h3> - Использование моделей в ваших схемах."
   //: /line:""
-  //: /line:"<h3><a href=\"advanced.v\">6. Advanced Editing Techniques</a></h3> - Learn advanced editing tricks."
+  //: /line:"<h3><a href=\"advanced.v\">6. Расширенные техники редактирования</a></h3> - Изучите особенности"
+  //: /line:"    и тонкости редактирования схем."
   //: /line:""
-  //: /line:"<h3><a href=\"combinational1.v\">7. Combinational Simulation</a></h3> - Simulate a circuit with"
-  //: /line:"    combinational logic."
+  //: /line:"<h3><a href=\"combinational1.v\">7. Комбинационная симуляция</a></h3> - Имитируйте работу схемы"
+  //: /line:"    с комбинационной логикой."
   //: /line:""
-  //: /line:"<h3><a href=\"sequential1.v\">8. Sequential Simulation</a></h3> - Simulate a circuit with sequential logic."
+  //: /line:"<h3><a href=\"sequential1.v\">8. Последовательная симуляция</a></h3> - Имитируйте работу схемы с "
+  //: /line:"    последовательной логикой."
   //: /line:""
-  //: /line:"<h3><a href=\"verilog.v\">9. Textual Verilog</a></h3> - Create modules with textual Verilog descriptions."
+  //: /line:"<h3><a href=\"verilog.v\">9. Текстовый верилог</a></h3> - Создавайте модули с текстовым описанием"
+  //: /line:"    на Verilog."
   //: /line:""
-  //: /line:"<h3><a href=\"options.v\">10. Customizing TkGate</a></h3> - Customize TkGate to suit your tastes."
+  //: /line:"<h3><a href=\"options.v\">10. Настройка TkGate</a></h3> - Настраивайте TkGate по своему вкусу."
   //: /line:""
   //: /line:""
   //: /line:""
@@ -47,7 +53,4 @@ module PAGE1;    //: root_module
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 
