@@ -122,8 +122,8 @@ b.edit		Редактировать...
 b.add		Добавить...
 b.delete	Удалить
 #b.deleteb	Удалить...
-b.remove	Remove
-b.apply		Apply
+b.remove	Удалить
+b.apply		Применить
 b.anchor	Якорь
 b.tech		Технология
 #b.enable	Включить
@@ -152,7 +152,7 @@ module.box.libraries	Библиотеки
 # Tabs for Nets/Ports
 #
 sidetab.nets	Nets
-sidetab.ports	Ports
+sidetab.ports	Порты
 
 #############################################################################
 #
@@ -217,7 +217,7 @@ menu.edit.pccwrotate	16:Port Rotate C-C-W
 menu.edit.autobold	Boldify Bits
 menu.edit.resize	Resize Bitmap
 
-menu.tool.move		0:Move/Connect
+menu.tool.move		0:Переместить/Соединить
 menu.tool.delg		0:Удалить компонент
 menu.tool.cutw		0:Разрезать провод
 menu.tool.inv		0:Invert
@@ -252,10 +252,10 @@ menu.format.algnh	6:Горизонтальное выравнивание
 menu.tool.tclshell	0:Tcl Shell
 menu.tool.rep		0:Replicate
 
-menu.simulate.begin	0:Begin Simulation
-menu.simulate.end	0:End Simulation
-menu.simulate.addprobe	0:Add/Delete Probe
-menu.simulate.run	0:Run
+menu.simulate.begin	0:Начать симуляцию
+menu.simulate.end	0:Закончить симуляцию
+menu.simulate.addprobe	0:Добавить/удалить зонд
+menu.simulate.run	0:Пуск
 menu.simulate.pause	0:Пауза
 menu.simulate.step	0:Step Epoch(s)
 menu.simulate.cycle	5:Step Cycle
@@ -274,7 +274,7 @@ menu.module.rename	0:Переименовать...
 menu.module.claim	1:Claim...
 menu.module.setroot	1:Установить корневым...
 menu.module.prop	0:Параметры...
-menu.module.interface		0:Interface
+menu.module.interface		0:Интерфейс
 menu.module.interface.set	0:Set As Default
 menu.module.interface.update	1:Sync. to Default
 menu.module.interface.updateall	6:Sync. All to Default...
@@ -301,26 +301,26 @@ menu.scope_file.ptrace		0:Print Trace...
 menu.scope_file.close		0:Закрыть
 menu.scope_trace.zoomin		5:Приблизить
 menu.scope_trace.zoomout	5:Отдалить
-menu.scope_sim.addprobe		0:Add/Delete Probe
-menu.scope_sim.run		0:Run
-menu.scope_sim.pause		0:Pause
+menu.scope_sim.addprobe		0:Добавить/удалить зонд
+menu.scope_sim.run		0:Пуск
+menu.scope_sim.pause		0:Пауза
 menu.scope_sim.step		0:Step Epoch(s)
 menu.scope_sim.cycle		5:Step Cycle
 menu.scope_sim.break		0:Breakpoint...
 menu.scope_sim.script		1:Exec. Script...
 menu.scope_sim.load		1:Load Memory...
 menu.scope_sim.dump		1:Dump Memory...
-menu.scope_help.about		0:About...
-menu.scope_help.license		0:License...
-menu.scope_help.doc		0:Documentation...
+menu.scope_help.about		0:О программе...
+menu.scope_help.license		0:Лицензионное соглашение...
+menu.scope_help.doc		0:Документация...
 
 mod.intf	Интерфейс
 
 port.title	TkGate: Port Properties
 port.parms	Port Parameters
-port.in		In
-port.out	Out
-port.inout	InOut
+port.in		Вход
+port.out	Выход
+port.inout	Вход-выход
 
 
 ##############################################################################
@@ -405,10 +405,10 @@ gm.mod.in	Вход модуля
 gm.mod.out	Выход модуля
 gm.mod.inout	Вход-выход модуля
 
-tutorial.prev		PREVIOUS
-tutorial.next		NEXT
-tutorial.chapter	CHAPTER LIST
-tutorial.reload		RELOAD
+tutorial.prev		ПРЕДЫДУЩИЙ
+tutorial.next		СЛЕДУЮЩИЙ
+tutorial.chapter	СПИСОК РАЗДЕЛОВ
+tutorial.reload		ПЕРЕЗАГРУЗИТЬ
 
 ##############################################################################
 #
@@ -460,8 +460,8 @@ pop.simulate.end	End Simulation
 pop.simulate.begin	Begin Simulation
 pop.simulate.addprobe	Add/Delete Probe
 pop.simulate.delprobe	Delete Probe
-pop.simulate.run	Run
-pop.simulate.pause	Pause
+pop.simulate.run	Пуск
+pop.simulate.pause	Пауза
 pop.simulate.step	Step Epoch(s)
 pop.simulate.cycle	Step Cycle
 pop.simulate.break	Breakpoint...
@@ -470,7 +470,7 @@ pop.simulate.load	Load Memory...
 pop.simulate.dump	Dump Memory...
 pop.simulate.view	View Memory...
 
-pop.interface		Interface
+pop.interface		Интерфейс
 pop.interface.set	Set As Default
 pop.interface.update	Sync. to Default
 pop.interface.updateall	Sync. All to Default...
@@ -578,15 +578,15 @@ db.mod.netlist	Netlist
 db.mod.hdl	HDL
 
 db.mod.netexpl	-begin-
-Define module using a
-graphical editor to connect
-wires between components. 
+Определить модуль, используя
+графический редактор для соединения
+элементов проводами.
 -end-
 
 db.mod.hdlexpl	-begin-
-Define module using a
-textual editor to describe
-behavior in Verilog.
+Определить модуль, используя
+текстовый редактор Verilog
+описания.
 -end-
 
 #############################################################################
