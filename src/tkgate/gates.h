@@ -48,6 +48,7 @@
 #define GC_CONCAT	0x100f
 #define GC_ROM		0x1010
 #define GC_RAM		0x1011
+#define GC_KEYPAD	0x1012
 
 /*
    Gate pad numbers for some of the gates.

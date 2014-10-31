@@ -175,6 +175,9 @@
 		<Unit filename="../../src/tkgate/joint.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../../src/tkgate/keypad.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="../../src/tkgate/led.c">
 			<Option compilerVar="CC" />
 		</Unit>
