@@ -115,8 +115,8 @@ b.cancel	Отмена
 b.in		вход
 b.out		выход
 b.inout		вход-выход
-b.browse	Browse...
-b.label		Label
+b.browse	Просмотр...
+b.label		Надпись
 b.find		Найти
 b.edit		Редактировать...
 b.add		Добавить...
@@ -215,12 +215,12 @@ menu.edit.ccwrotate	15:Bit Rotate C-C-W
 menu.edit.pcwrotate	12:Port Rotate C-C-W
 menu.edit.pccwrotate	16:Port Rotate C-C-W
 menu.edit.autobold	Boldify Bits
-menu.edit.resize	Resize Bitmap
+menu.edit.resize	Изменить размер изображения
 
 menu.tool.move		0:Переместить/Соединить
 menu.tool.delg		0:Удалить компонент
 menu.tool.cutw		0:Разрезать провод
-menu.tool.inv		0:Invert
+menu.tool.inv		0:Обратить
 menu.tool.bitw		0:Разрядность
 menu.tool.debug		0:Отладка
 menu.tool.point		0:Точка
@@ -238,7 +238,7 @@ menu.format.unanchor	0:Unanchor Selected
 menu.format.prop	0:Свойства экземпляра...
 menu.format.del		0:Удалить
 menu.format.settech	0:Установить технологию
-menu.format.rot		0:Rotation
+menu.format.rot		0:Поворот
 menu.format.rot.0	17:Default Rotation 0
 menu.format.rot.90	17:Default Rotation 90
 menu.format.rot.180	17:Default Rotation 180
@@ -260,7 +260,7 @@ menu.simulate.pause	0:Пауза
 menu.simulate.step	0:Step Epoch(s)
 menu.simulate.cycle	5:Step Cycle
 menu.simulate.break	0:Точка остановки...
-menu.simulate.script	1:Exec. Script...
+menu.simulate.script	1:Выполнить скрипт...
 menu.simulate.load	1:Загрузка памяти...
 menu.simulate.dump	1:Дамп памяти...
 menu.simulate.view	1:Просмотр памяти...
@@ -293,8 +293,8 @@ menu.help.example	1:Примеры
 # Scope Menu
 #
 menu.scope_file			0:Файл
-menu.scope_sim			0:Simulate
-menu.scope_trace		0:Trace
+menu.scope_sim			0:Симуляция
+menu.scope_trace		0:Трассировка
 menu.scope_help			0:Справка
 
 menu.scope_file.ptrace		0:Print Trace...
@@ -317,7 +317,7 @@ menu.scope_help.doc		0:Документация...
 mod.intf	Интерфейс
 
 port.title	TkGate: Port Properties
-port.parms	Port Parameters
+port.parms	Параметры порта
 port.in		Вход
 port.out	Выход
 port.inout	Вход-выход
@@ -378,7 +378,7 @@ gm.alu.mult	Умножитель
 gm.alu.div	Делитель
 gm.alu.lshift	Левый сдвиг
 gm.alu.rshift	Правый сдвиг
-gm.alu.arshift	Arith. Right Shift
+gm.alu.arshift	Арифм. правый сдвиг
 gm.alu.roll	Roll
 
 gm.mem.reg	Регистр
@@ -427,22 +427,22 @@ pop.port.inout		Вход-выход
 
 pop.wire.addseg		Добавить сегмент провода
 pop.wire.prop		Net Properties...
-pop.wire.hidesize	Hide Bit Width
-pop.wire.showsize	Show Bit Width
-pop.wire.hidelabel	Hide Label 
-pop.wire.hidealllabel	Hide All Labels
-pop.wire.clearalllabel	Clear All Labels
-pop.wire.showlabel	Show Label 
+pop.wire.hidesize	Скрыть разрядность
+pop.wire.showsize	Показать разрядность
+pop.wire.hidelabel	Скрыть надпись 
+pop.wire.hidealllabel	Скрыть все надписи
+pop.wire.clearalllabel	Очистить все надписи
+pop.wire.showlabel	Показать надпись 
 
 pop.gate.open		Открыть
 pop.gate.close		Закрыть
-pop.gate.prop		Instance Properties...
+pop.gate.prop		Свойства экземпляра...
 pop.gate.addport	Добавить порт
 pop.gate.addin		Добавить вход...
 pop.gate.addout		Добавить выход...
 pop.gate.addinout	Добавить вход-выход...
-pop.gate.anchor		Anchor/Unanchor
-pop.gate.settech	Set Technology
+pop.gate.anchor		Привязать/Освободить
+pop.gate.settech	Установить технологию
 pop.gate.delete		Удалить
 pop.gate.ioset		Установить тип
 
@@ -471,12 +471,12 @@ pop.simulate.dump	Dump Memory...
 pop.simulate.view	View Memory...
 
 pop.interface		Интерфейс
-pop.interface.set	Set As Default
-pop.interface.update	Sync. to Default
-pop.interface.updateall	Sync. All to Default...
-pop.interface.edit	Edit...
-pop.interface.auto	Auto Generate...
-pop.interface.replace	Replace
+pop.interface.set	Установить по умолчанию
+pop.interface.update	Синхрониз. по умолчанию
+pop.interface.updateall	Синхрониз. все по умолчанию...
+pop.interface.edit	Редактировать...
+pop.interface.auto	Автогенерация...
+pop.interface.replace	Заменить
 
 pop.igen.type		Type
 pop.igen.side		Side
@@ -491,8 +491,8 @@ pop.igen.top		top
 pop.igen.bottom		bottom
 pop.igen.other		other
 
-pop.library.mgr		Library Manager...
-pop.library.close	Unload
+pop.library.mgr		Менеджер библиотек...
+pop.library.close	Выгрузить
 
 ##############################################################################
 #
@@ -625,22 +625,21 @@ db.net.inets	Nets
 #
 # New circuit dialog box
 #
-db.newcirc.title	TkGate: New Circuit
-db.newcirc.directory	Directory:
-db.newcirc.cap		New Circuit
+db.newcirc.title	TkGate: Новая схема
+db.newcirc.directory	Каталог:
+db.newcirc.cap		Новая схема
 db.newcirc.exp		-fillbegin-
-Discard the current circuit and start editing
-a new circuit.
+Отказаться от текущей схемы и начать новую..
 -end-
-db.newcirc.file		File Name
-db.newcirc.topname	Top Module Name
+db.newcirc.file		Имя файла
+db.newcirc.topname	Имя модуля верхнего уровня
 
 
 
 ##############################################################################
 # Gate dialog box
 #
-db.gate.title		TKGate: Component Properties
+db.gate.title		TKGate: Свойства компонента
 db.gate.signam		Signal Name
 db.gate.portnam		Port Name
 db.gate.iotype		Type
@@ -769,7 +768,7 @@ db.gate.tab.SCRIPT.cap		Verilog Script
 
 
 db.gate.tab.General.exp	-fillbegin-
-View and modify basic properties of an instance.
+Просмотр и редактирование основных свойств экземпляра.
 -end-
 
 db.gate.tab.Ports.exp	-fillbegin-

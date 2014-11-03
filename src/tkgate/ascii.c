@@ -392,9 +392,9 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   if (!encoder || encoder->ico == ((iconv_t)-1)) {
     return strdup(fromString);
   }
-
+#ifdef DEBUG
   printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);
-
+#endif
   inPtr = fromString;
   inSize = strlen(fromString);
   outSize = inSize+1;

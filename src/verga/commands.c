@@ -125,7 +125,8 @@ void Circuit_execScript(Circuit *c,int argc,char *argv[])
   int i;
   int do_delete = 0;
   int is_silent = 0;
-  int is_breakpt = 0;
+  /** @TODO use ? */
+  /* int is_breakpt = 0; */
 
   if (argc < 3) {
     argError("$script");
@@ -144,8 +145,8 @@ void Circuit_execScript(Circuit *c,int argc,char *argv[])
       do_delete = 1;
     else if (strcmp(argv[i],"-silent") == 0)
       is_silent = 1;
-    else if (strcmp(argv[i],"-breakpt") == 0)
-      is_breakpt = 1;
+    /* else if (strcmp(argv[i],"-breakpt") == 0)
+      is_breakpt = 1; */
 
   if (VerilogLoadScript(argv[2], dm) < 0) {
     vgio_printf("badscript %s\n",argv[1]);
@@ -158,6 +159,8 @@ void Circuit_execScript(Circuit *c,int argc,char *argv[])
 
   if (do_delete)
     unlink(argv[2]);
+
+  /** @TODO is_breakpt use ?*/
 }
 
 
@@ -389,8 +392,8 @@ void Circuit_execDelScript(Circuit*c,int argc,char *argv[])
  *
  * Command summary:
  *
- *   $probe <net>		Place a generic probe on a net 
- *   $probe <net> <who>		Place a probe on behalf of <who> 
+ *   $probe <net>		Place a generic probe on a net
+ *   $probe <net> <who>		Place a probe on behalf of <who>
  *
  *****************************************************************************/
 void Circuit_execProbe(Circuit*c,int argc,char *argv[])
@@ -439,8 +442,8 @@ void Circuit_execProbe(Circuit*c,int argc,char *argv[])
  *
  * Command summary:
  *
- *   $unprobe <net>		Remove a generic probe on a net 
- *   $unprobe <net> <who>	Remove a probe on behalf of <who> 
+ *   $unprobe <net>		Remove a generic probe on a net
+ *   $unprobe <net> <who>	Remove a probe on behalf of <who>
  *
  *****************************************************************************/
 void Circuit_execUnprobe(Circuit*c,int argc,char *argv[])
@@ -478,7 +481,7 @@ void Circuit_execUnprobe(Circuit*c,int argc,char *argv[])
  * Load memory data from a file.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -501,7 +504,7 @@ void Circuit_execMemLoad(Circuit*c,int argc,char *argv[])
  * Dump memory data to a file.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -553,7 +556,7 @@ void Circuit_execTime(Circuit*c,int argc,char *argv[])
  * Step simulator a number of epochs
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -579,7 +582,7 @@ void Circuit_execStep(Circuit*c,int argc,char *argv[])
  * Register a circuit clock.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -610,7 +613,7 @@ void Circuit_execRegClock(Circuit*c,int argc,char *argv[])
  * Step a number of clock steps.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -629,7 +632,7 @@ void Circuit_execStepClock(Circuit *c,int argc,char *argv[])
   if (argc != 4 && argc != 5) {
     argError("$clock");
     return;
-  } 
+  }
 
   if (argc == 5) {
     n = Circuit_findNet(c,argv[4]);
@@ -652,7 +655,7 @@ void Circuit_execStepClock(Circuit *c,int argc,char *argv[])
  * Set simulator options
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -668,7 +671,7 @@ void Circuit_execOption(Circuit*c,int argc,char *argv[])
   if ((argc & 1) != 1) {
     argError("$option");
     return;
-  } 
+  }
 
   for (i = 1;i < argc;i += 2) {
     int value = 0;
@@ -702,7 +705,7 @@ void Circuit_execOption(Circuit*c,int argc,char *argv[])
  * Write a value to a channel.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -718,7 +721,7 @@ void Circuit_execWrite(Circuit*c,int argc,char *argv[])
   if (argc != 3) {
     argError("$write");
     return;
-  } 
+  }
 
   channel = Circuit_getChannel(c,argv[1]);
 
@@ -743,7 +746,7 @@ void Circuit_execWrite(Circuit*c,int argc,char *argv[])
  * Puts a watch on a named channel.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -792,7 +795,7 @@ void Circuit_execStop(Circuit*c,int argc,char *argv[])
  * Begin simulation of the loaded script
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -870,7 +873,7 @@ void Circuit_execDebug(Circuit*c,int argc,char *argv[])
  * Request information about a net or memory
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -918,7 +921,7 @@ void Circuit_execNetInfo(Circuit*c,int argc,char *argv[])
  * Store a value in memory
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -931,11 +934,13 @@ void Circuit_execMemPut(Circuit*c,int argc,char *argv[])
   Net *n;
   Memory *m;
   const char *netName;
-  char buf[STRMAX];
   unsigned addr;
   unsigned beginAddr, endAddr;
   Value *data;
+  /** @TODO to remove */
+  /*
   int numOnLine = 0;
+  */
 
   if (argc != 4) {
     argError("$memput");
@@ -970,12 +975,12 @@ void Circuit_execMemPut(Circuit*c,int argc,char *argv[])
  * Get a range of values from memory
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
  * Usage:
- *   $memget name addr1 addr2 
+ *   $memget name addr1 addr2
  *
  * Return command:
  *   memory name addr : value1 value2 ...
@@ -986,9 +991,9 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
   Net *n;
   Memory *m;
   const char *netName;
-  char buf[STRMAX];
   unsigned addr1,addr2,a;
-  unsigned beginAddr, endAddr;
+  /** @TODO to remove */
+  /* unsigned beginAddr, endAddr; */
   Value *data;
   int numOnLine = 0;
 
@@ -1005,15 +1010,20 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
   }
   m = Net_getMemory(n);
 
+  /** @TODO to remove */
+  /*
   beginAddr = Memory_beginAddr(m);
   endAddr = Memory_endAddr(m);
-
+  */
   if (sscanf(argv[2],"%u",&addr1) != 1 || sscanf(argv[3],"%u",&addr2) != 1 || addr2 < addr1) {
     errorCmd(ERR_SYNTAX);
     return;
   }
+  /** @TODO to remove */
+  /*
   if (addr2  > endAddr) addr2 = endAddr;
   if (addr1  > endAddr) addr1 = endAddr;
+  */
 
   data = new_Value(Net_getMsb(n)-Net_getLsb(n)+1);
 
@@ -1045,13 +1055,13 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
  * Set the watch for a memory (only one in effect at a time)
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
  * Usage:
- *   $memwatch name addr1 addr2 
- *   $memwatch name delete 
+ *   $memwatch name addr1 addr2
+ *   $memwatch name delete
  *
  * Return command (on events):
  *   memory name addr : value1 value2 ...
@@ -1059,7 +1069,7 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
  *
  * The first return command shows the value at a memory or range of memory
  * locations.  The second return command shows the address that was most
- * recently accessed. 
+ * recently accessed.
  *
  *****************************************************************************/
 void Circuit_execMemWatch(Circuit*c,int argc,char *argv[])
@@ -1067,11 +1077,9 @@ void Circuit_execMemWatch(Circuit*c,int argc,char *argv[])
   Net *n;
   Memory *m;
   const char *netName;
-  char buf[STRMAX];
-  unsigned addr1,addr2,a;
-  Value *data;
-  int numOnLine = 0;
-  unsigned beginAddr, endAddr;
+  unsigned addr1,addr2;
+  /** @TODO check */
+  unsigned /*beginAddr,*/ endAddr;
 
   if (argc < 3 || argc > 4) {
     argError("$memwatch");
@@ -1094,8 +1102,8 @@ void Circuit_execMemWatch(Circuit*c,int argc,char *argv[])
     Memory_unsetMonitor(m);
     return;
   }
-
-  beginAddr = Memory_beginAddr(m);
+  /** @TODO to remove */
+  /* beginAddr = Memory_beginAddr(m);*/
   endAddr = Memory_endAddr(m);
 
   if (sscanf(argv[2],"%u",&addr1) != 1 || sscanf(argv[3],"%u",&addr2) != 1 || addr2 < addr1) {

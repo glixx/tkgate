@@ -1266,7 +1266,6 @@ void init_gates()
   init_led();			/*  */
   init_jkff();			/*  */
   init_script();		/*  */
-  init_keypad();
 
   buildMakeMenuData();
 }

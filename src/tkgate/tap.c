@@ -31,7 +31,7 @@ void Tap_VerSave(FILE *f,GCElement *g);
 void Tap_SetProp(GCElement *g,const char *prop,const void *value);
 int Tap_EditProps(GCElement *g,int isLoadDialog);
 GCElement *Tap_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags);
-void Tap_VersionDelta(GCElement*,Version*); 
+void Tap_VersionDelta(GCElement*,Version*);
 GWireNode *Tap_wireSnap(GCElement *g,GWire *w,int *mod,int retry);
 
 #if 0
@@ -111,7 +111,7 @@ GGateInfo gate_tap_info = {
      {"D",TRI,8,1,tap_out_loc}},
   {{5,-5,LJ},{-5,-5,RJ},{-5,-5,RJ},{-5,10,RJ}},
   {1,1},
-  
+
   {0},
 
   Tap_Make,
@@ -144,7 +144,7 @@ GCElement *Tap_Make(EditState **es,GModuleDef *env,int GType,
 {
   GCElement *g;
   const char *Side,*Range;
-  
+
   if (!(g = Generic_Make(es,env,GType,x,y,r,Name,noWires,options,nOptions)))
     return NULL;
 
@@ -227,7 +227,7 @@ void Tap_Delete(GCElement *g,GModuleDef *M,int drawp)
       /*
        * If either end is connected to a gate, rejoin the wires
        */
-    
+
       ob_touch(M);
       M->m_wires = wire_unlink(M->m_wires,iw);
       M->m_wires = wire_unlink(M->m_wires,ow);
@@ -304,10 +304,10 @@ void Tap_Draw(GCElement *g,int md)
   }
 
   gate_drawWires(g,md);
-  
+
   if (!g->ename) return;
-  
-  
+
+
   o = (g->orient + 2*g->u.tap.spliceside) % 4;
   if (g->u.tap.spliceside) {
     x = g->xpos+5*dx[g->orient];
@@ -316,7 +316,7 @@ void Tap_Draw(GCElement *g,int md)
     x = g->xpos;
     y = g->ypos;
   }
-  
+
   if (g->u.tap.lsb == g->u.tap.msb)
     sprintf(buf,"%d",g->u.tap.msb);
   else
@@ -448,7 +448,7 @@ void Tap_VersionDelta(GCElement *g,Version *V)
   ob_touch(w->nodes);
   w->nodes->x += dx;
   w->nodes->y += dy;
-} 
+}
 
 GWireNode *Tap_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
 {
@@ -473,7 +473,7 @@ GWireNode *Tap_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
 
       gate_draw(w->gate,0);
       ob_touch(w->gate);
-      w->gate->u.tap.spliceside = 
+      w->gate->u.tap.spliceside =
 	w->gate->typeinfo->Pad[p].Loc[w->gate->orient].dir!=
 	wireorient(w->nodes,0);
 
@@ -497,14 +497,18 @@ GWireNode *Tap_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
 */
 void tap_transmute(GWire *branch,EditState *es)
 {
+  /** @TODO to remove*/
+  /*
   GModuleDef *env;
+  */
   GWire *in,*out;
   GCElement *g;
   int i,o;
   int tap_dx = 0,tap_dy = 0;
- 
+
   g = branch->gate;
-  env = es->env;
+  /** @TODO to remove */
+  /* env = es->env; */
 #ifdef JOIN_DRAW
   gate_draw(g,0);
 #endif
@@ -518,7 +522,7 @@ void tap_transmute(GWire *branch,EditState *es)
       else
 	out = g->wires[i];
     }
-  
+
   ob_touch(g);
   g->typeinfo = GGateInfo_codeLookup(GC_TAP);
   g->wires[TAP_IN] = in;
@@ -527,10 +531,10 @@ void tap_transmute(GWire *branch,EditState *es)
 
   g->u.tap.msb = g->wires[TAP_TAP]->net->n_nbits - 1;
   g->u.tap.lsb = 0;
-  
+
   o = wireorient(out->nodes,0);
   g->orient = (o=(o+1)%4);
-  g->u.tap.spliceside = 
+  g->u.tap.spliceside =
     g->typeinfo->Pad[TAP_TAP].Loc[o].dir !=
       wireorient(branch->nodes,0);
 

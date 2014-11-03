@@ -89,7 +89,7 @@ char *quoteChars(char *buf,const char *str,const char *qlist)
 
   for (;*str;str++) {
     if (strchr(qlist,*str))
-      *p++ = '\\';
+        *p++ = '\\';
     *p++ = *str;
   }
   *p = 0;
@@ -173,7 +173,7 @@ void printIndent(int n,FILE *f)
  *
  * Returns:		Log2 of n rounded up.
  *
- * Examples: 
+ * Examples:
  *	log2(1) = 1
  *	log2(2) = 1
  *	log2(3) = 2
@@ -233,7 +233,7 @@ int trimName(char *buf)
   for (;*q;q++) {
     if (isalpha((int)*q) || isdigit((int)*q) || *q == '_')
       *p++ = *q;
-    else if (*q == ' ') { 
+    else if (*q == ' ') {
       if (p == buf)
 	*p++ = 'S';
       else
@@ -248,8 +248,8 @@ int trimName(char *buf)
 
 /*****************************************************************************
  *
- * Return a verilog format specification for a bit range.  
- * 
+ * Return a verilog format specification for a bit range.
+ *
  * Parameters:
  *    n			Number of bits.
  *
@@ -275,8 +275,8 @@ const char *bitrangeSpec(int n)
  *
  * Parameters:
  *     **text		Text to be parsed (or 0 if getting the next
- *     **token_begin	Pointer to first character in token found 
- *     **token_end	Pointer to one after last character in token found 
+ *     **token_begin	Pointer to first character in token found
+ *     **token_end	Pointer to one after last character in token found
  *
  * Returns:		Zero if no tokens where available
  *
@@ -285,7 +285,7 @@ const char *bitrangeSpec(int n)
  * fact that we do not want to be confused when the word "module" appears in a
  * comment or in a string.  To this purpose, this function will only return
  * "word" tokens.  That is tokens that are a string of alphanumeric characters
- * or the "_" character.  Comments and other tokens such as strings will be 
+ * or the "_" character.  Comments and other tokens such as strings will be
  * ignored.
  *
  *****************************************************************************/
@@ -452,7 +452,7 @@ int strncasecmp(const char *s1,const char *s2,size_t n)
   for (;n > 0 && p_tolower(*s1) == p_tolower(*s2);s1++, s2++, n--) {
     if (!*s1 || !*s2) break;
   }
-  if (n == 0) return 0; 
+  if (n == 0) return 0;
 
   return p_tolower(*s1) - p_tolower(*s2);
 }
@@ -512,7 +512,7 @@ char *strdup(const char *s)
   char *d = (char*)malloc(l+1);
 
   strcpy(d,s);
-  
+
   return d;
 }
 #endif
