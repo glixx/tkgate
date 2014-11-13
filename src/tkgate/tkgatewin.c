@@ -1287,7 +1287,7 @@ static int tkg_buttonDoublePress(ClientData data, Tcl_Interp *tcl, int argc, con
  *****************************************************************************/
 int getCheckpointFilename(char *checkPointFile,const char *fileName,size_t size)
 {
-  const char *p,*l;
+  const char *p;
   char *q;
   /** @TODO to remove */
   /*

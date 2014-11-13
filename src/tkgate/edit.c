@@ -170,7 +170,6 @@ void mark_unpost()
   TkGate.ed->mark_posted = 0;
 }
 
-
 void HandScroll_set(EditState *es)
 {
   int x = TkGate.ed->rx;
@@ -185,7 +184,6 @@ void HandScroll_set(EditState *es)
   TkGate.ed->handScroll.setSave_y = y;
 
 }
-
 
 void HandScroll_move(EditState *es)
 {
