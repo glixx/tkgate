@@ -10,38 +10,38 @@
 
 //: /netlistBegin main
 module main;    //: root_module
-supply0 w7;    //: /sn:0 {0}(485,154)(485,146)(486,146)(486,138){1}
 reg w4;    //: /sn:0 {0}(164,92)(206,92)(206,113)(227,113){1}
 reg w1;    //: /sn:0 {0}(120,129)(227,129){1}
+supply0 w8;    //: /sn:0 {0}(530,161)(557,161)(557,143){1}
 reg w10;    //: /sn:0 {0}(227,145)(188,145)(188,202)(117,202){1}
-wire [7:0] w6;    //: /sn:0 {0}(#:351,129)(392,129){1}
-//: {2}(396,129)(430,129)(430,196)(552,196)(552,111)(#:510,111){3}
-//: {4}(394,131)(394,224){5}
-wire [7:0] w3;    //: /sn:0 {0}(#:410,97)(464,97)(464,113)(475,113){1}
+wire w6;    //: /sn:0 {0}(351,145)(412,145){1}
+//: {2}(414,143)(414,61)(564,61)(564,93){3}
+//: {4}(414,147)(414,173)(464,173){5}
+wire [7:0] w7;    //: /sn:0 {0}(#:351,129)(385,129)(385,195)(496,195){1}
+//: {2}(500,195)(607,195)(607,116)(#:581,116){3}
+//: {4}(498,197)(498,233){5}
 wire w0;    //: /sn:0 {0}(366,161)(351,161){1}
-wire [7:0] w11;    //: /sn:0 {0}(#:425,107)(410,107){1}
-wire [15:0] w2;    //: /sn:0 {0}(#:404,102)(379,102){1}
-//: {2}(377,100)(#:377,47){3}
-//: {4}(377,104)(377,113)(351,113){5}
-wire w5;    //: /sn:0 {0}(351,145)(441,145){1}
-//: {2}(443,143)(443,76)(493,76)(493,88){3}
-//: {4}(443,147)(443,174)(453,174){5}
-wire w9;    //: /sn:0 {0}(469,174)(500,174)(500,138){1}
+wire [15:0] w3;    //: /sn:0 {0}(#:351,113)(#:440,113){1}
+wire [7:0] w13;    //: /sn:0 {0}(#:461,108)(446,108){1}
+wire [7:0] w5;    //: /sn:0 {0}(#:546,118)(498,118){1}
+//: {2}(496,116)(496,36){3}
+//: {4}(494,118)(#:446,118){5}
+wire w9;    //: /sn:0 {0}(480,173)(571,173)(571,143){1}
 //: enddecls
 
-  //: SWITCH g8 (w10) @(100,202) /sn:0 /w:[ 1 ] /st:1 /dn:1
-  _GGRAM8x8 #(10, 60, 70, 10, 10, 10) g4 (.A(w3), .D(w6), .WE(w5), .OE(w9), .CS(w7));   //: @(493,112) /sn:0 /w:[ 1 3 3 1 1 ]
-  //: LED g3 (w2) @(377,40) /sn:0 /w:[ 3 ] /type:1
-  //: SWITCH g2 (w1) @(103,129) /sn:0 /w:[ 0 ] /st:0 /dn:-1
+  //: SWITCH g8 (w10) @(100,202) /sn:0 /w:[ 1 ] /st:0 /dn:1
+  assign {w13, w5} = w3; //: CONCAT g4  @(441,113) /sn:0 /R:2 /w:[ 1 5 1 ] /dr:1 /tp:1 /drp:0
+  _GGRAM8x8 #(10, 60, 70, 10, 10, 10) g3 (.A(w5), .D(w7), .WE(w6), .OE(w9), .CS(w8));   //: @(564,117) /sn:0 /w:[ 0 3 3 1 1 ]
+  //: SWITCH g2 (w1) @(103,129) /sn:0 /w:[ 0 ] /st:10 /dn:-1
   //: SWITCH g1 (w4) @(147,92) /sn:0 /w:[ 0 ] /st:0 /dn:1
-  //: LED g11 (w6) @(394,231) /sn:0 /R:2 /w:[ 5 ] /type:1
-  //: joint g10 (w2) @(377, 102) /w:[ 1 2 -1 4 ]
-  //: GROUND g6 (w7) @(485,160) /sn:0 /w:[ 0 ]
-  assign {w11, w3} = w2; //: CONCAT g9  @(405,102) /sn:0 /R:2 /w:[ 1 0 0 ] /dr:0 /tp:1 /drp:0
-  //: joint g7 (w5) @(443, 145) /w:[ -1 2 1 4 ]
-  _GGNBUF #(2) g5 (.I(w5), .Z(w9));   //: @(459,174) /sn:0 /w:[ 5 0 ]
-  m6800 g0 (._IRQ(w4), ._RESET(w1), .CLK_1(w10), .A(w2), .R_W(w5), ._HALT(w0), .D(w6));   //: @(228, 97) /sz:(122, 80) /sn:0 /p:[ Li0>1 Li1>1 Li2>0 Ro0<5 Ro1<0 Ro2<1 Rt0=0 ]
-  //: joint g12 (w6) @(394, 129) /w:[ 2 -1 1 4 ]
+  //: LED g11 (w7) @(498,240) /sn:0 /R:2 /w:[ 5 ] /type:2
+  //: joint g10 (w5) @(496, 118) /w:[ 1 2 4 -1 ]
+  //: joint g6 (w6) @(414, 145) /w:[ -1 2 1 4 ]
+  //: LED g9 (w5) @(496,29) /sn:0 /w:[ 3 ] /type:2
+  //: GROUND g7 (w8) @(524,161) /sn:0 /R:3 /w:[ 0 ]
+  _GGNBUF #(2) g5 (.I(w6), .Z(w9));   //: @(470,173) /sn:0 /w:[ 5 0 ]
+  m6800 g0 (._IRQ(w4), ._RESET(w1), .CLK_1(w10), .A(w3), .R_W(w6), ._HALT(w0), .D(w7));   //: @(228, 97) /sz:(122, 80) /sn:0 /p:[ Li0>1 Li1>1 Li2>0 Ro0<0 Ro1<0 Ro2<1 Rt0=0 ]
+  //: joint g12 (w7) @(498, 195) /w:[ 2 -1 1 4 ]
 
 endmodule
 //: /netlistEnd
@@ -59,19 +59,28 @@ module m6800 ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1 );
   inout [7:0] D;
   output R_W, _HALT;
   
+  reg R_W, _HALT;
+  
   // Program visible registers
   reg [7:0]  R_A; // Accumulator A
   reg [7:0]  R_B; // Accumulator B
+    
+  reg [7:0]   R_PC_H;// Program counter higher byte
+  reg [7:0]   R_PC_L;// Program counter lower byte
+  wire [15:0] R_PC;
   
-  //reg [7:0] R_PC_H;// Program counter higher byte
-  //reg [7:0] R_PC_L;// Program counter lower byte
-  reg [15:0] R_PC;
-  
-  reg [7:0] R_SP_H;// Stack pointer higher byte
-  reg [7:0] R_SP_L;// Stack pointer lower byte
+  reg [7:0]   R_SP_H;// Stack pointer higher byte
+  reg [7:0]   R_SP_L;// Stack pointer lower byte
+  wire [15:0] R_SP;
   
   reg [7:0] R_X_H;// Index register higher byte
   reg [7:0] R_X_L;// Index register lower byte
+  wire [15:0] R_X;
+  
+  reg C_H, C_I, C_N, C_Z, C_V, C_C;
+  wire [7:0] R_CC;
+  
+  ChipScope cs( .A(R_A), .B(R_B), .X(R_X), .PC(R_PC), .SP(R_SP), .CC(R_CC), .IR(_R_IR) );
   
   // Internal registers
   reg [7:0] _R_DB; // Data buffer
@@ -79,53 +88,64 @@ module m6800 ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1 );
   reg [7:0] _R_OB_L; // Output buffer lower byte
   reg [7:0] _R_IR; // Instruction register
   
-  reg C_H,C_I,C_N,C_Z,C_V,C_C;
-  wire [7:0] R_CC;
-  
-  reg R_W;
-  
   reg [2:0] mpuState; // 0 - IFETCH, 1 - IEXEC
   
-  ChipScope_6800 chipScope( .A(R_A), .B(R_B), .PC(R_PC), .R_IR(_R_IR), .CC(R_CC) );
   ///////////////////////////////////////////////////////////////
+  
+  assign R_PC = { R_PC_H, R_PC_L };
+  assign R_SP = { R_SP_H, R_SP_L };
+  assign R_X = { R_X_H, R_X_L };
+  assign R_CC = {1'b1, 1'b1, C_H, C_I, C_N, C_Z, C_V, C_C};
   assign A = { _R_OB_H, _R_OB_L };
-  assign R_CC = {1,1,C_H,C_I,C_N,C_Z,C_V,C_C};
-  
-  task TFetch;
-    begin
-      $display("TFetch");
-      {_R_OB_H,_R_OB_L} <= R_PC;
-      R_W <= 1;
-      _R_DB <= D;
-      _R_IR <= _R_DB;
-      R_PC <= R_PC+1;
-      mpuState <= 1;
-    end
-  endtask
-  
-  task TExec;
-    begin
-      $display("TExec");
-      mpuState <= 0;
-    end
-  endtask
   
   initial
     begin
-      $display("MCM 68000 started");
+      $display("MC68");
       R_A = 0;
       R_B = 0;
-      R_PC = 0;
-      C_H=0; C_I=0; C_N=0; C_Z=0; C_V=0; C_C=0;
+      R_PC_H = 0; R_PC_L = 0;
+      R_SP_H = 0; R_SP_L = 0;
+      R_X_H = 0; R_X_L = 0;
+      C_H = 0; C_I = 0; C_N = 0; C_Z = 0; C_V = 0; C_C = 0;
       mpuState = 0;
     end
   
-  always @(posedge CLK_1)
+  task IFetch;
     begin
-      $display("Condition", R_CC);
+      $display("IFetch");
+      {_R_OB_H, _R_OB_L} = R_PC;
+      R_W = 1;
+      _R_DB = D;
+      { R_PC_H, R_PC_L } = R_PC+1;
+      mpuState = 1;
+      $display("Opcode:", _R_DB);
+    end
+  endtask
+  
+  task LDA_IMM;
+    begin
+      $display("LDA (Immediate)");
+      
+    end
+  endtask
+  
+  task IExec;
+    begin
+      $display("IExec");
+      _R_IR = _R_DB;
+      case (_R_IR)
+        'h86 : LDA_IMM;
+        default : $display("Unknown opcode:", _R_IR);
+      endcase
+      mpuState = 0;
+    end
+  endtask
+  
+  always @ (posedge CLK_1)
+    begin
       case (mpuState)
-        0: TFetch;
-        1: TExec;
+        0: IFetch;
+        1: IExec;
       endcase
     end
 
@@ -135,27 +155,47 @@ endmodule
 
 `timescale 1ns/1ns
 
-//: /netlistBegin ChipScope_6800
-module ChipScope_6800(PC, B, CC, R_IR, A);
-//: interface  /sz:(161, 96) /bd:[ Li0>A[7:0](16/96) Li1>B[7:0](32/96) Li2>CC[7:0](48/96) Li3>PC[15:0](64/96) Li4>R_IR[7:0](80/96) ] /pd: 0 /pi: 0 /pe: 1 /pp: 0
-//: property pptype=0
-input [7:0] B;    //: /sn:0 {0}(#:158,145)(#:210,145){1}
-input [7:0] CC;    //: /sn:0 {0}(212,222)(#:168,222){1}
-input [15:0] PC;    //: /sn:0 {0}(#:210,170)(#:161,170){1}
-input [7:0] A;    //: {0}(#:210,120)(183,120)(183,120)(#:-99:155,120){1}
-input [7:0] R_IR;    //: /sn:0 {0}(#:161,193)(#:211,193){1}
+//: /netlistBegin ChipScope
+module ChipScope(IR, X, PC, B, SP, CC, A);
+//: interface  /sz:(102, 128) /bd:[ Li0>IR[7:0](112/128) Li1>CC[7:0](96/128) Li2>SP[15:0](80/128) Li3>X[15:0](64/128) Li4>PC[15:0](48/128) Li5>B[7:0](32/128) Li6>A[7:0](16/128) ] /pd: 0 /pi: 0 /pe: 1 /pp: 1
+input [15:0] X;    //: {0}(290,162)(#:99:290,215){1}
+input [7:0] B;    //: /sn:0 {0}(#:219,214)(#:219,162){1}
+input [7:0] IR;    //: /sn:0 {0}(#:565,181)(565,145){1}
+input [15:0] SP;    //: {0}(#:86:287,-6)(#:287,54){1}
+input [7:0] CC;    //: /sn:0 {0}(#:432,248)(#:432,212){1}
+input [15:0] PC;    //: {0}(#:99:194,-4)(194,54){1}
+input [7:0] A;    //: /sn:0 {0}(#:171,215)(#:171,161){1}
+wire w4;    //: /sn:0 {0}(473,156)(473,191)(457,191)(457,206){1}
+wire w3;    //: /sn:0 {0}(450,156)(450,194)(447,194)(447,206){1}
+wire w0;    //: /sn:0 {0}(397,197)(397,206){1}
+wire w1;    //: /sn:0 {0}(427,206)(427,185)(404,185)(404,156){1}
+wire w12;    //: /sn:0 {0}(417,206)(417,188)(381,188)(381,156){1}
+wire w2;    //: /sn:0 {0}(437,206)(437,180)(427,180)(427,156){1}
+wire w13;    //: /sn:0 {0}(407,206)(407,191){1}
+wire w5;    //: /sn:0 {0}(496,156)(496,194)(467,194)(467,206){1}
 //: enddecls
 
-  //: LED g4 (R_IR) @(218,193) /sn:0 /R:3 /w:[ 1 ] /type:1
-  //: IN g3 (PC) @(159,170) /sn:0 /w:[ 1 ]
-  //: LED g13 (PC) @(217,170) /sn:0 /R:3 /w:[ 0 ] /type:1
-  //: LED g2 (A) @(217,120) /sn:0 /R:3 /w:[ 0 ] /type:1
-  //: IN g1 (B) @(156,145) /sn:0 /w:[ 0 ]
-  //: IN g6 (CC) @(166,222) /sn:0 /w:[ 1 ]
-  //: LED g7 (CC) @(219,222) /sn:0 /R:3 /w:[ 0 ] /type:1
-  //: IN g5 (R_IR) @(159,193) /sn:0 /w:[ 0 ]
-  //: IN g0 (A) @(153,120) /sn:0 /w:[ 1 ]
-  //: LED g12 (B) @(217,145) /sn:0 /R:3 /w:[ 1 ] /type:1
+  //: IN g8 (IR) @(565,183) /sn:0 /R:1 /w:[ 0 ]
+  //: IN g4 (X) @(290,217) /sn:0 /R:1 /w:[ 1 ]
+  //: frame g3 @(139,32) /sn:0 /wi:617 /ht:144 /tx:""
+  //: LED I (w1) @(404,149) /w:[ 1 ] /type:0
+  //: IN g2 (PC) @(194,-6) /sn:0 /R:3 /w:[ 0 ]
+  //: IN g1 (B) @(219,216) /sn:0 /R:1 /w:[ 0 ]
+  //: LED V (w4) @(473,149) /w:[ 0 ] /type:0
+  //: LED Z (w3) @(450,149) /w:[ 0 ] /type:0
+  //: LED REG_IR (IR) @(565,138) /w:[ 1 ] /type:2
+  //: IN g6 (SP) @(287,-8) /sn:0 /R:3 /w:[ 0 ]
+  //: IN g7 (CC) @(432,250) /sn:0 /R:1 /w:[ 0 ]
+  //: LED REG_X (X) @(290,155) /w:[ 0 ] /type:2
+  //: LED RE_SP (SP) @(287,61) /R:2 /w:[ 1 ] /type:2
+  assign {w0, w13, w12, w1, w2, w3, w4, w5} = CC; //: CONCAT g5  @(432,211) /sn:0 /R:3 /w:[ 1 0 0 0 0 1 1 1 1 ] /dr:1 /tp:1 /drp:0
+  //: LED H (w12) @(381,149) /w:[ 1 ] /type:0
+  //: LED C (w5) @(496,149) /w:[ 0 ] /type:0
+  //: LED REG_PC (PC) @(194,61) /R:2 /w:[ 1 ] /type:2
+  //: LED REG_B (B) @(219,155) /w:[ 1 ] /type:2
+  //: IN g0 (A) @(171,217) /sn:0 /R:1 /w:[ 0 ]
+  //: LED REG_A (A) @(171,154) /w:[ 1 ] /type:2
+  //: LED N (w2) @(427,149) /w:[ 1 ] /type:0
 
 endmodule
 //: /netlistEnd

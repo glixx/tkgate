@@ -14,7 +14,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-DDEBUG=1" />
+					<Add option="-DDEBUG=0" />
 				</Compiler>
 				<Linker>
 					<Add library="../common/lib/Debug/libcommon.a" />

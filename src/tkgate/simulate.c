@@ -100,7 +100,7 @@ void parse_verilog_hex(unsigned *Svalue,unsigned *Svalid,const char *A)
     }
 
     /*
-     * If the initial digit is not unknown, make all bits above the 
+     * If the initial digit is not unknown, make all bits above the
      * specified bits valid.
      */
     if (i == 0 && digitValid == 0xf)
@@ -141,7 +141,7 @@ static void parse_verilog_oct(unsigned *Svalue,unsigned *Svalid,const char *A)
     }
 
     /*
-     * If the initial digit is not unknown, make all bits above the 
+     * If the initial digit is not unknown, make all bits above the
      * specified bits valid.
      */
     if (i == 0 && digitValid == 0x7)
@@ -170,7 +170,7 @@ static void parse_verilog_oct(unsigned *Svalue,unsigned *Svalid,const char *A)
  * Only 'b' and 'h' types are used, with 'b' types being used only
  * for single-bit values.
  *
- *****************************************************************************/ 
+ *****************************************************************************/
 int parse_verilog_constant(char *value,unsigned *ivalue,unsigned *ivalid,int *nbits)
 {
   const char *p;
@@ -290,7 +290,7 @@ GNet *sim_findNet(const char *name)
       else
 	return 0;
     } else
-      n = GModuleDef_findNet(M,ptr[i]); 
+      n = GModuleDef_findNet(M,ptr[i]);
   }
 
   return n;
@@ -308,14 +308,19 @@ GCElement *sim_findGate(const char *name)
   for (T = strtok(buf,"."), N = 0;T;T = strtok(0,"."), N++)
     ptr[N] = T;
 
-  for (i = 0;i < N;i++) {
+  assert(N>0);
+  if (N==0)
+    return 0;
+
+  if (strcmp(ptr[0], TkGate.circuit->root_mod->m_name)==0)
+    i=1; /* If path starting from root, oomit root element */
+  else
+    i=0;
+
+  for (;i < N;i++) {
     g = GModuleDef_findGate(M,ptr[i]);
-    if (i == (N-1))
-      break;
-    else if (g && GCElement_isModule(g))
+    if (g && GCElement_isModule(g))
       M = env_findModule(g->u.block.moduleName);
-    else
-      return 0;
   }
   return g;
 }
@@ -1207,7 +1212,7 @@ void SimInterface_setSimMods(SimInterface *si)
 void SimInterface_showStartMsg()
 {
   time_t now;
-  char *nowstr,*p; 
+  char *nowstr,*p;
 
   time(&now);
   nowstr = ctime(&now);
@@ -1354,7 +1359,7 @@ int SimInterface_findPathToModule(char *path,GModuleDef *m)
   GCElement *mpath[MODULE_PATH_MAX];
   char *p;
   int n,i;
-  
+
   n = SimInterface_findPathToModule_aux(mpath, 0, TkGate.circuit->root_mod, m);
 
   if (n <= 0)
@@ -1379,7 +1384,7 @@ void SimInterface_navigateToModule(EditState **es,const char *path)
   GModuleDef *M = TkGate.circuit->root_mod;
 
   if (strncmp(path,"/<",2) != 0) {
-#if 1 
+#if 1
       message(1,msgLookup("err.nojump"));
 #else
     M = env_findModule(path);
@@ -1434,7 +1439,7 @@ void SimInterface_navigateToModule(EditState **es,const char *path)
 
 const char* SimInterface_unitsToStr(int u)
 {
-  if (u >= 0 && u < NUM_UNITS) 
+  if (u >= 0 && u < NUM_UNITS)
     return unitStrings[u];
   else
     return "bs";
@@ -1443,7 +1448,7 @@ const char* SimInterface_unitsToStr(int u)
 int SimInterface_strToUnits(const char *s)
 {
   int u;
-  
+
   for (u = 0;u < NUM_UNITS;u++)
     if (strcmp(s,unitStrings[u]) == 0)
       return u;
@@ -1500,8 +1505,8 @@ char *SimInterface_formatTime(SimInterface *si, char *buf,simtime_t t)
  *    stop		Indicates that simulation has stopped.
  *    post		Requests that a VPD be posted
  *    exec		Requests that a tcl command be executed
- *    error		Reports an error 
- *    warning		Reports a warning 
+ *    error		Reports an error
+ *    warning		Reports a warning
  *
  *****************************************************************************/
 int SimInterface_command(SimInterface *si,const char *C)
@@ -1525,7 +1530,7 @@ int SimInterface_command(SimInterface *si,const char *C)
   } else if (strncmp(C,"echo",4) == 0) {
     DoTcl("InfoPanel::log \"\"");
     return 0;
-  } else if (sscanf(C," zoom %d",&a1) == 1) {			/* Set zoom factor */ 
+  } else if (sscanf(C," zoom %d",&a1) == 1) {			/* Set zoom factor */
     DoTcl(".scope.main.frame.canvas setzoom %d",-a1);
   } else if (sscanf(C,"ok %d %s / %d %s",&a1,buf,&a2,buf2) == 4) { /* Simulator loaded file and is ready to go */
     si->si_tsmult = a1;
@@ -1538,25 +1543,27 @@ int SimInterface_command(SimInterface *si,const char *C)
     DoTcl("ErrBox::hadFatalErrors");
     Error_close();
     tkgate_setMajorMode(MM_EDIT);
-  } else if (sscanf(C," showprobe %s %d", buf, &a1) == 2) {	/* Probe set from script */ 
+  } else if (sscanf(C," showprobe %s %d", buf, &a1) == 2) {	/* Probe set from script */
     SimInterface_addProbe(si,buf,a1);
-  } else if (sscanf(C," hideprobe %s", buf) == 1) {		/* Probe hidden from script */ 
+  } else if (sscanf(C," hideprobe %s", buf) == 1) {		/* Probe hidden from script */
     SimInterface_delProbe(si,buf);
-  } else if (sscanf(C," valueof %s %s @ %llu",			/* The value of a net has changed */ 
+  } else if (sscanf(C," valueof %s %s @ %llu",			/* The value of a net has changed */
 		    buf,buf2,&t) == 3) {
     if (GScope_findTrace(Scope,buf)) {
       Scope_stepTo(t);
       Scope_setValue(buf,buf2);
     }
-  } else if (sscanf(C," tell $queue %s %s @ %llu",buf,buf2,&t) == 3) {	/* The value of a net has been requested */ 
+  } else if (sscanf(C," tell $queue %s %s @ %llu",buf,buf2,&t) == 3) {	/* The value of a net has been requested */
     DoTclL("VPD::qdata",buf,buf2,NULL);
-  } else if (sscanf(C," tell $show %s %s",buf,buf2) == 2) {	/* The value of a net has been requested */ 
+  } else if (sscanf(C," tell $show %s %s",buf,buf2) == 2) {	/* The value of a net has been requested */
     sprintf(buf3,"%s=%s",buf,buf2);
     Tcl_SetVar(TkGate.tcl,"tkg_simDisplayedVal",
 	       buf3,TCL_GLOBAL_ONLY);
-  } else if (sscanf(C," tell $led:%s %*s %s @ %llu",buf,buf2,&t) == 3) {	/* Set value of an led */
+  } else if (sscanf(C," tell $led:%s %s %s @ %llu",buf3,buf,buf2,&t) == 4) {	/* Set value of an led */
+    strcat(buf,".");
+    strcat(buf,buf3);
     SimInterface_setLed(si,buf,buf2);
-  } else if (sscanf(C," tell $switch:%s %*s %s @ %llu",buf,buf2,&t) == 3) {	/* Set value of an led */
+  } else if (sscanf(C," tell $switch:%s %*s %s @ %llu",buf,buf2,&t) == 3) {	/* Set value of an switch */
     SimInterface_setSwitch(si,buf,buf2);
   } else if (sscanf(C," netdelay %s %d %d",buf,&a1,&a2) == 3) {	/* Net delay values */
     cpath_registerNetDelay(buf,a1,a2);
@@ -1564,7 +1571,7 @@ int SimInterface_command(SimInterface *si,const char *C)
     DoTcl("tkg_cpathAdd %d {%s}",a1,buf);
   } else if (strncmp(C,"cdone",5) == 0) {			/* End of critical path data */
     DoTcl("tkg_cpathEnd");
-  } else if (sscanf(C," stats area=%d static_power=%d",		/* Circuit statistics */ 
+  } else if (sscanf(C," stats area=%d static_power=%d",		/* Circuit statistics */
 		    &si->area,&si->staticPower) == 2) {
     message(0,"Estimated area=%d.",si->area,si->staticPower);
   } else if (sscanf(C," badscript %s",buf) == 1) {		/* Report breakpoint/script syntax error */
@@ -1577,7 +1584,7 @@ int SimInterface_command(SimInterface *si,const char *C)
   } else if (sscanf(C," endscript %s",buf) == 1) {		/* Report script termination */
     if (sscanf(buf,"script:%d",&a1) == 1)
       DoTcl("ScriptMgr::setState %d 1",a1);
-  } else if (sscanf(C," break %d %s",&a1,buf) == 2) {		/* Simulator hit a breakpoint */ 
+  } else if (sscanf(C," break %d %s",&a1,buf) == 2) {		/* Simulator hit a breakpoint */
     BrkPtTable_activate(TkGate.circuit->c_breakpoints,a1,buf);
   } else if (sscanf(C," time @ %llu",&t) == 1) {		/* Update current time */
   } else if (sscanf(C," go @ %llu",&t) == 1) {			/* Simulator is in run mode */
@@ -1640,4 +1647,4 @@ int SimInterface_command(SimInterface *si,const char *C)
   return 0;
 }
 
- 
+
