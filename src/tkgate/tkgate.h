@@ -50,7 +50,10 @@
 #include <iconv.h>
 #endif
 
+#ifndef USE_INTERP_RESULT
+#define USE_INTERP_RESULT
 #include "tcl.h"
+#endif // USE_INTERP_RESULT
 #include "tk.h"
 #include "fonts.h"
 #include "zoom.h"

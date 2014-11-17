@@ -18,7 +18,10 @@
     Last edit by hansen on Tue Jan 27 23:21:37 2009
 ****************************************************************************/
 #include <stdlib.h>
+#ifndef USE_INTERP_RESULT
+#define USE_INTERP_RESULT
 #include "tcl.h"
+#endif
 #include "tk.h"
 
 #define STRMAX 1024
