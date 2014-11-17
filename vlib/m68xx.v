@@ -22,18 +22,20 @@ reg w1;    //: /sn:0 {0}(-139,176)(161,176){1}
 reg OSC_W;    //: /sn:0 {0}(-139,80)(-70,80){1}
 wire [9:0] ROM_ADDRESS_BUS;    //: /sn:0 {0}(#:426,211)(144,211)(144,236)(182,236){1}
 wire F2_CBUS;    //: /sn:0 {0}(161,96)(54,96){1}
-wire [15:0] ADDRESS_BUS;    //: {0}(#:432,461)(432,252){1}
-//: {2}(432,251)(432,236)(431,236)(431,211){3}
-//: {4}(431,210)(50:431,80)(292,80){5}
-wire [7:0] DATA_BUS;    //: {0}(#:394,461)(394,238){1}
-//: {2}(394,234)(50:394,96)(292,96){3}
-//: {4}(392,236)(284,236){5}
+wire [15:0] ADDRESS_BUS;    //: {0}(#:431,462)(431,253){1}
+//: {2}(431,252)(431,211){3}
+//: {4}(431,210)(431,153){5}
+//: {6}(#:433,151)(539,151)(539,109){7}
+//: {8}(431,149)(50:431,80)(292,80){9}
+wire [7:0] DATA_BUS;    //: /sn:0 {0}(#:292,96)(329,96){1}
+//: {2}(333,96)(389,96)(389,236)(284,236){3}
+//: {4}(331,94)(331,43){5}
 wire VMA_F2__CBUS;    //: /sn:0 {0}(182,300)(86,300)(86,286){1}
 //: {2}(88,284)(182,284){3}
 //: {4}(86,282)(86,112)(54,112){5}
 wire F1_CBUS;    //: /sn:0 {0}(54,80)(161,80){1}
 wire w11;    //: /sn:0 {0}(149,254)(179,254)(179,252)(182,252){1}
-wire [1:0] w12;    //: /sn:0 {0}(#:427,252)(298,252)(298,354)(145,354)(145,268){1}
+wire [1:0] w12;    //: /sn:0 {0}(#:426,253)(297,253)(297,355)(145,355)(145,268){1}
 //: {2}(145,267)(145,254){3}
 //: {4}(145,253)(145,247){5}
 wire w10;    //: /sn:0 {0}(149,268)(182,268){1}
@@ -44,17 +46,20 @@ wire w5;    //: /sn:0 {0}(307,112)(292,112){1}
   //: joint g8 (w15) @(113, 112) /w:[ 10 12 -1 9 ]
   assign w11 = w12[0]; //: TAP g4 @(143,254) /sn:0 /R:2 /w:[ 0 3 4 ] /ss:1
   assign w10 = w12[1]; //: TAP g3 @(143,268) /sn:0 /R:2 /w:[ 0 1 2 ] /ss:1
-  assign w12 = ADDRESS_BUS[14]; //: TAP g2 @(430,252) /sn:0 /R:2 /w:[ 0 1 2 ] /ss:0
+  //: joint g13 (ADDRESS_BUS) @(431, 151) /w:[ 6 8 -1 5 ]
+  assign w12 = ADDRESS_BUS[15:14]; //: TAP g2 @(429,253) /sn:0 /R:2 /w:[ 0 1 2 ] /ss:0
   assign ROM_ADDRESS_BUS = ADDRESS_BUS[9:0]; //: TAP g1 @(429,211) /sn:0 /R:2 /w:[ 0 3 4 ] /ss:0
   //: SWITCH RESET_SW (w1) @(-156,176) /w:[ 0 ] /st:0 /dn:1
-  //: SWITCH OSC_SW (OSC_W) @(-156,80) /w:[ 0 ] /st:1 /dn:1
-  MC6800 MPU (.CLK_1(F1_CBUS), .CLK_2(F2_CBUS), .DBE(w15), ._HALT(w15), ._IRQ(w15), ._NMI(w15), ._RESET(w1), .A(ADDRESS_BUS), .R_W(w5), .VMA(VMA_CBUS), .D(DATA_BUS));   //: @(162, 64) /sz:(129, 128) /p:[ Li0>1 Li1>0 Li2>11 Li3>7 Li4>3 Li5>0 Li6>1 Ro0<5 Ro1<1 Ro2<1 Rt0=3 ]
+  //: SWITCH OSC_SW (OSC_W) @(-156,80) /w:[ 0 ] /st:0 /dn:1
+  //: LED g10 (DATA_BUS) @(331,36) /sn:0 /w:[ 5 ] /type:2
+  MC6800 MPU (.CLK_1(F1_CBUS), .CLK_2(F2_CBUS), .DBE(w15), ._HALT(w15), ._IRQ(w15), ._NMI(w15), ._RESET(w1), .A(ADDRESS_BUS), .R_W(w5), .VMA(VMA_CBUS), .D(DATA_BUS));   //: @(162, 64) /sz:(129, 128) /p:[ Li0>1 Li1>0 Li2>11 Li3>7 Li4>3 Li5>0 Li6>1 Ro0<9 Ro1<1 Ro2<1 Rt0=0 ]
   //: VDD g6 (w15) @(124,37) /sn:0 /w:[ 13 ]
   //: joint g7 (w15) @(113, 128) /w:[ 6 8 -1 5 ]
   //: joint g9 (VMA_F2__CBUS) @(86, 284) /w:[ 2 4 -1 1 ]
   //: joint g5 (w15) @(113, 144) /w:[ 2 4 -1 1 ]
-  MCM6830 ROM (.A(ROM_ADDRESS_BUS), .CS0(w11), .CS1(w10), .CS2(VMA_F2__CBUS), .CS3(VMA_F2__CBUS), .D(DATA_BUS));   //: @(183, 220) /sz:(100, 96) /p:[ Li0>1 Li1>1 Li2>1 Li3>3 Li4>0 Ro0<5 ]
-  //: joint g0 (DATA_BUS) @(394, 236) /w:[ -1 2 4 1 ]
+  MCM6830 ROM (.A(ROM_ADDRESS_BUS), .CS0(w11), .CS1(w10), .CS2(VMA_F2__CBUS), .CS3(VMA_F2__CBUS), .D(DATA_BUS));   //: @(183, 220) /sz:(100, 96) /p:[ Li0>1 Li1>1 Li2>1 Li3>3 Li4>0 Rt0=3 ]
+  //: joint g0 (DATA_BUS) @(331, 96) /w:[ 2 4 1 -1 ]
+  //: LED g12 (ADDRESS_BUS) @(512,102) /sn:0 /w:[ 7 ] /type:1
   CLOCK CLOCK_SV (.OSC(OSC_W), .VMA(VMA_CBUS), .F1(F1_CBUS), .F2(F2_CBUS), .VMA_F2(VMA_F2__CBUS));   //: @(-69, 64) /sz:(122, 64) /p:[ Li0>1 Li1>0 Ro0<0 Ro1<1 Ro2<5 ]
 
 endmodule
@@ -62,23 +67,23 @@ endmodule
 
 //: /netlistBegin MCM6830
 module MCM6830(CS2, CS1, CS0, D, CS3, A);
-//: interface  /sz:(100, 96) /bd:[ Li0>A[9:0](16/96) Li1>CS0(32/96) Li2>CS1(48/96) Li3>CS2(64/96) Li4>CS3(80/96) Ro0<D[7:0](16/96) ] /pd: 0 /pi: 0 /pe: 1 /pp: 0
+//: interface  /sz:(100, 96) /bd:[ Li0>A[9:0](16/96) Li1>CS0(32/96) Li2>CS1(48/96) Li3>CS2(64/96) Li4>CS3(80/96) Rt0=D[7:0](16/96) ] /pd: 0 /pi: 0 /pe: 1 /pp: 0
 //: property pptype=0
 input [9:0] A;    //: /sn:0 {0}(#:118,82)(201,82){1}
 input CS2;    //: /sn:0 {0}(159,138)(131,138)(131,143)(119,143){1}
 input CS0;    //: {0}(159,128)(150,128)(150,109)(-99:119,109){1}
 input CS3;    //: /sn:0 {0}(159,143)(150,143)(150,160)(119,160){1}
-output [7:0] D;    //: {0}(50:316,80)(#:236,80){1}
+inout [7:0] D;    //: {0}(50:305,80)(#:236,80){1}
 input CS1;    //: /sn:0 {0}(159,133)(131,133)(131,126)(119,126){1}
-wire w3;    //: /sn:0 {0}(180,135)(219,135)(219,107){1}
+wire ROM_CS;    //: /sn:0 {0}(180,135)(219,135)(219,107){1}
 //: enddecls
 
   //: IN g4 (CS2) @(117,143) /sn:0 /w:[ 1 ]
   //: IN g3 (CS1) @(117,126) /sn:0 /w:[ 1 ]
   //: IN g2 (CS0) @(117,109) /sn:0 /w:[ 1 ]
-  //: OUT g1 (D) @(313,80) /sn:0 /w:[ 0 ]
-  _GGROM10x8 #(1, 1) MEMORY (.A(A), .D(D), .OE(w3));   //: @(219,81) /delay:" 1 1" /w:[ 1 1 1 ]
-  _GGNAND4 #(8) g7 (.I0(CS0), .I1(CS1), .I2(CS2), .I3(CS3), .Z(w3));   //: @(170,135) /sn:0 /w:[ 0 0 0 0 0 ]
+  //: INOUT g1 (D) @(313,80) /sn:0 /R:2 /w:[ 0 ]
+  _GGROM10x8 #(1, 1) MEMORY (.A(A), .D(D), .OE(ROM_CS));   //: @(219,81) /delay:" 1 1" /w:[ 1 1 1 ]
+  _GGNAND4 #(8) g7 (.I0(CS0), .I1(CS1), .I2(CS2), .I3(CS3), .Z(ROM_CS));   //: @(170,135) /sn:0 /w:[ 0 0 0 0 0 ]
   //: IN g5 (CS3) @(117,160) /sn:0 /w:[ 1 ]
   //: IN g0 (A) @(116,82) /sn:0 /w:[ 0 ]
 
@@ -175,7 +180,7 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   ChipScope cs( .A(R_A), .B(R_B), .X(R_X), .PC(R_PC), .SP(R_SP), .CC(R_CC), .IR(_R_IR) );
   
   // Internal registers
-  reg [7:0] _R_DB; // Data buffer
+  reg [7:0] _D; // Data buffer
   reg [7:0] _R_OB_H; // Output buffer higher byte
   reg [7:0] _R_OB_L; // Output buffer lower byte
   reg [7:0] _R_IR; // Instruction register
@@ -190,26 +195,36 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   assign R_CC = {1'b1, 1'b1, C_H, C_I, C_N, C_Z, C_V, C_C};
   assign A = { _R_OB_H, _R_OB_L };
   
+  assign D = (R_W) ? 8'hz : _D;
+  
   assign #delay R_W = I_R_W;
   assign #delay VMA = I_VMA;
   
   initial
     begin
       $display("MC6800");
-      R_A = 0;
-      R_B = 0;
-      R_PC_H = 'hFF; R_PC_L = 'hFE;
-      R_SP_H = 0; R_SP_L = 0;
-      R_X_H = 0; R_X_L = 0;
-      C_H = 0; C_I = 0; C_N = 0; C_Z = 0; C_V = 0; C_C = 0;
-      mpuState = 0;
+      R_A <= 0;
+      R_B <= 0;
+      R_PC_H <= 'hc0; R_PC_L <= 'h00;
+      R_SP_H <= 0; R_SP_L <= 0;
+      R_X_H <= 0; R_X_L <= 0;
+      C_H <= 0; C_I <= 0; C_N <= 0; C_Z <= 0; C_V <= 0; C_C <= 0;
+      _D <= 0;
+      mpuState <= 0;
     end
   
-  task IFetch;
+  task IFetch_f1;
     begin
-      $display("IFetch");
+      $display("IFetch_f1");
+      {_R_OB_H,_R_OB_L} = R_PC;
       I_R_W <= 1'b1;
       I_VMA <= 1'b1;
+    end
+  endtask
+  
+  task IFetch_f2;
+    begin
+      $display("IFetch_f2");
       mpuState <= 1;
     end
   endtask
@@ -217,26 +232,59 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   task LDA_IMM;
     begin
       $display("LDA (Immediate)");
+      mpuState <= 2;
     end
   endtask
   
-  task IExec;
+  task IExec_f1;
     begin
-      $display("IExec");
-      _R_IR = _R_DB;
+      $display("IExec_f1");
+      _R_IR <= D;
+      {R_PC_H,R_PC_L} <= R_PC+1;
+    end
+  endtask
+  
+  task IExec_f2;
+    begin
+      $display("IExec_f2");
+      $display("Opcode", _R_IR);
       case (_R_IR)
         'h86 : LDA_IMM;
-        default : $display("Unknown opcode:", _R_IR);
       endcase
       mpuState = 0;
     end
   endtask
   
+  task ImmDFetch_f1;
+    begin
+      $display("ImmDFetch_f1");
+      {_R_OB_H,_R_OB_L} = R_PC;
+      I_R_W <= 1'b1;
+      I_VMA <= 1'b1;
+    end
+  endtask
+  
+  task ImmDFetch_f2;
+    begin
+      $display("ImmDFetch_f2");
+      mpuState <= 0;
+    end
+  endtask  
+    
   always @ (posedge CLK_1)
     begin
       case (mpuState)
-        0: IFetch;
-        1: IExec;
+        0: IFetch_f1;
+        1: IExec_f1;
+        2: ImmDFetch_f1;
+      endcase
+    end
+  
+  always @ (posedge CLK_2)
+    begin
+      case (mpuState)
+        0: IFetch_f2;
+        1: IExec_f2;
       endcase
     end
 
