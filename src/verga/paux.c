@@ -28,7 +28,7 @@ extern int lex_verilog_num;
 /*****************************************************************************
  *
  * List of all Verilog reserved words.  These are used by the ycIsKW() function
- * to indicate these names should not be used as identifiers in user circuits. 
+ * to indicate these names should not be used as identifiers in user circuits.
  * This table may include entries not in the lex_verilog_words to cover verilog
  * reserved words that are not handled by the tkgate verilog simulator.
  *
@@ -330,7 +330,7 @@ int ycDirectiveText(char *token)
 
   for (p = token;*p;p++)
     if (*p == '\n') {
-      Place_incLineno(&curPlace,1); 
+      Place_incLineno(&curPlace,1);
       if (p[-1] == '\\') p[-1] = ' ';
       p[0] = ' ';
     }

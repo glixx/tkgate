@@ -140,7 +140,7 @@ void Dip_Draw(GCElement *g,int md)
   char s[STRMAX];
   char compositeName[STRMAX];
   int vox,voy;
-  
+
   mk_gate(g->xpos,g->ypos,g->typeinfo,g->orient,g->selected);
   gate_drawWires(g,md);
 
@@ -158,14 +158,14 @@ void Dip_Draw(GCElement *g,int md)
       dipValue = g->u.sw.perm_dipval;
 
     sprintf(s,"%x",dipValue & mask);
-  
+
     vox = (g->orient == 2) ?  43 : 0;
     voy = (g->orient == 2) ?  5 : -15;
 
     if (g->selected)
-      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);  
+      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);
     else
-      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);  
+      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);
     dce_DrawString(TkGate.instGC,g->xpos+vox,g->ypos+voy,
 		   CENTER_JUST,s);
   }

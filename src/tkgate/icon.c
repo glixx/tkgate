@@ -55,7 +55,7 @@ void Pixmap_deleteZoomSet(Pixmap p)
   if (!zset) return;
 
   NHash_remove(zoomed_pixmaps,p);
-  
+
   for (i = 0;i < ZOOM_MAX+1;i++)
     if (zset->p[i]) {
       printf("XFreePixmap(%x)\n",(unsigned)zset->p[i]);

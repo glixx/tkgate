@@ -90,7 +90,7 @@ GGateInfo gate_nmos_info = {
     {"G",IN,1,1,nmos_gate_loc,0}},
   {{10,4,LJ},{0,-12,CT},{-10,4,RJ},{0,18,CT}},
   {1},
-  
+
   {"Diz","Dgz",0},
 
   Generic_Make,

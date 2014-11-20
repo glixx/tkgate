@@ -65,7 +65,7 @@ void ZDrawString16(Display *D,Drawable d,GC gc,int x,int y,XChar2b *string,int l
 void ZCopyArea(Display *D,Drawable src,Drawable dest,GC gc,int src_x,int src_y,
 	       unsigned width,unsigned height,int dest_x,int dest_y)
 {
-  src = Pixmap_zoom(src,Z); 
+  src = Pixmap_zoom(src,Z);
   XCopyArea(D,src,dest,gc,Z*src_x,Z*src_y,Z*width,Z*height,Z*dest_x,Z*dest_y);
 
 }
@@ -73,7 +73,7 @@ void ZCopyArea(Display *D,Drawable src,Drawable dest,GC gc,int src_x,int src_y,
 void ZCopyPlane(Display *D,Drawable src,Drawable dest,GC gc,int src_x,int src_y,
 		unsigned width,unsigned height,int dest_x,int dest_y,unsigned long plane)
 {
-  src = Pixmap_zoom(src,Z); 
+  src = Pixmap_zoom(src,Z);
   XCopyPlane(D,src,dest,gc,Z*src_x,Z*src_y,Z*width,Z*height,Z*dest_x,Z*dest_y,plane);
 }
 

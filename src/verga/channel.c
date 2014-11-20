@@ -34,8 +34,8 @@ Channel *new_Channel(const char *name)
   c->c_name = strdup(name);
   List_init(&c->c_queue);
   List_init(&c->c_wake);
-  c->c_isWatched = 0; 
-  c->c_format = 0; 
+  c->c_isWatched = 0;
+  c->c_format = 0;
 
   return c;
 }
@@ -91,7 +91,7 @@ int Channel_queueLen(Channel *c)
  * Parameters:
  *      c		Channel object
  *      isWatched	Flag to indicate if a channel should be watched.
- *      format		Format in which to report values 
+ *      format		Format in which to report values
  *
  *****************************************************************************/
 int Channel_setWatch(Channel *c, int isWatched, const char *format)

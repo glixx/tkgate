@@ -62,7 +62,7 @@ struct gateinfo gate_inout_info = {
   1,{{"Z",TRI,1,1,inout_out_loc}},
   {{-10,4,RJ},{0,15,CT},{10,4,LJ},{0,-10,CT}},
   {1,1,1},
-  
+
   {0},
 
   InOut_Make,

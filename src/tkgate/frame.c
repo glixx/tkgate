@@ -68,7 +68,7 @@ GGateInfo gate_frame_info = {
   0,{{0}},
   {{0,-12,CT},{12,0,LJ},{0,-12,CT},{12,0,LJ}},	/* Are these even used? */
   {0,0,0,0,1},
-  
+
   {0},
 
   Frame_Make,

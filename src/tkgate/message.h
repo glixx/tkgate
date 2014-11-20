@@ -18,7 +18,7 @@
 #ifndef __message_h
 #define __message_h
 
-#define MC_ERRBOX	0x1		/* Display message in an error box */	
+#define MC_ERRBOX	0x1		/* Display message in an error box */
 #define MC_STATUS	0x2		/* Display message on status line */
 #define MC_MSGLOG	0x4		/* Display mesage in log */
 #define MC_SILENT	0x1000		/* Do MSGLOG silently (do not auto open) */

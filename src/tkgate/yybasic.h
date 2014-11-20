@@ -33,7 +33,7 @@ typedef union {
   int I;			/* Used for integers */
   char *S;			/* Used for strings */
   Expr *E;			/* Expression */
-  void *P;			/* Generic pointer */ 
+  void *P;			/* Generic pointer */
 } YYVALUE;
 
 #define YYSTYPE YYVALUE

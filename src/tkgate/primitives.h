@@ -18,7 +18,7 @@
 #ifndef __primitives_h
 #define __primitives_h
 
-#define PARMSPEC_MAXPARMS	64	// Maximum number of parameters 
+#define PARMSPEC_MAXPARMS	64	// Maximum number of parameters
 
 typedef struct Primitive_str {
   const char	*p_name;		// Name of this primitive built-in cell

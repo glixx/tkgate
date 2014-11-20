@@ -80,20 +80,20 @@ static char *psSwitch[] = {
   "  closepath",
   "  fill",
   "  grestore",
-  
+
   "  -8 0 moveto    % Knives",
   "  -8 7 lineto",
   "  -13 7 lineto",
   "  -13 0 lineto",
   "  stroke",
-  
+
   "  -10.5 7  moveto    % Handle",
   "  -10.5 7.5 lineto",
   "  stroke",
   "  -10.5 8 1 0 360 arc",
   "  closepath",
   "  fill",
-  
+
   "  -7 -1 moveto    % Hinges",
   "  -7 1 lineto",
   "  -9 -1 moveto",
@@ -309,7 +309,7 @@ void init_switch()
   GGateInfo *gi = &gate_switch_info;
 
   P = Pixmap_registerFromFile("switch","switch.b");
-  
+
   upId = new_IconID(P,upswitch_iconDims,0);
   upBId = new_IconID(P,upswitch_iconDims,switch_iconBoldOffset);
   dnId = new_IconID(P,dnswitch_iconDims,0);

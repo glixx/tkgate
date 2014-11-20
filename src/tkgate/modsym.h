@@ -46,7 +46,7 @@ typedef struct {
 struct GModSymbol_str {
   int	 	ms_gid;			/* MSS ID for icons */
   int		ms_refCount;		/* Reference count of this symbol */
-  int		ms_mark;		/* Generic mark */ 
+  int		ms_mark;		/* Generic mark */
   GMIconData	ms_normal;		/* Data for normal icon */
   GMIconData	ms_select;		/* Data for select icon */
   int		ms_basex,ms_basey;	/* Base x/y point */

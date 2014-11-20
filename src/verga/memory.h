@@ -82,8 +82,8 @@ void Memory_putRange(Memory *M,unsigned A,unsigned memLsb,Value *v,unsigned vMsb
 void Memory_setMonitor(Memory *m,unsigned startAddr,unsigned stopAddr);
 void Memory_unsetMonitor(Memory *m);
 
-int Memory_readFile(Memory*,const char*); 
-int Memory_writeFile(Memory*,const char*); 
+int Memory_readFile(Memory*,const char*);
+int Memory_writeFile(Memory*,const char*);
 void Memory_accessNotify(Memory *m, unsigned addr,int isWrite);
 
 void Memory_dump(Memory *M,FILE *f,unsigned flags,unsigned start,unsigned stop);

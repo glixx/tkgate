@@ -92,7 +92,7 @@ GGateInfo gate_mult_info = {
   {1},
 
   {"Dab_p",0},
-  
+
   Generic_Make,
   Mult_WriteCellDef,
   Generic_Init,
@@ -117,7 +117,7 @@ GGateInfo gate_mult_info = {
 
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for multipliers.
  *
  * Parameters:

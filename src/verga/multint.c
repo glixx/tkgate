@@ -257,7 +257,7 @@ void multint_mul10(unsigned *x,int n)
     if (nextcarry + P3 < nextcarry) xcarry++;
     nextcarry += P3;
     nextcarry = (nextcarry >> (SSWORDSIZE/2)) + xcarry;
-    
+
     x[i] = x[i] * 10 + carry;
     carry = nextcarry;
   }

@@ -74,9 +74,9 @@ void TextBlock_getStartTP(TextBlock *tb,TextPos *tp)
 /*****************************************************************************
  *
  * Append a line onto a text block.
- * 
+ *
  * Parameters:
- *      tb		Text block in which to add text 
+ *      tb		Text block in which to add text
  *      text		Line of text to be added
  *
  *****************************************************************************/
@@ -89,22 +89,22 @@ void TextBlock_addLine(TextBlock *tb,const char *text)
   tl->text = ob_strdup(text);
   tl->next = 0;
 
-  if (!tb->tb_first) 
+  if (!tb->tb_first)
     tb->tb_first = tb->tb_last = tl;
   else {
     ob_touch(tb->tb_last);
     tb->tb_last->next = tl;
     tb->tb_last = tl;
   }
-      
+
 }
 
 /*****************************************************************************
  *
  * Prepend a line onto a text block.
- * 
+ *
  * Parameters:
- *      tb		Text block in which to add text 
+ *      tb		Text block in which to add text
  *      text		Line of text to be added
  *
  *****************************************************************************/
@@ -117,19 +117,19 @@ void TextBlock_prependLine(TextBlock *tb,const char *text)
   tl->text = ob_strdup(text);
   tl->next = 0;
 
-  if (!tb->tb_first) 
+  if (!tb->tb_first)
     tb->tb_first = tb->tb_last = tl;
   else {
     tl->next = tb->tb_first;
     tb->tb_first = tl;
   }
-      
+
 }
 
 /*****************************************************************************
  *
  * Flush the contents of a text buffer
- * 
+ *
  * Parameters:
  *      tb		Text block to be flushed
  *

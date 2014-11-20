@@ -32,7 +32,7 @@
  * Type codes for statement declarations
  *
  *****************************************************************************/
-typedef enum { 
+typedef enum {
   ST_NULL = 0,
   ST_BLOCK = 1,
   ST_ASGN = 2,
@@ -72,7 +72,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  statcode_t		sdc_type;		/* Type of statement */	
+  statcode_t		sdc_type;		/* Type of statement */
   StatDeclVTable	*sdc_vtable;		/* Table of function pointers */
   Place			sdc_place;		/* Place of statement */
 } SDCommon;
@@ -85,7 +85,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	d_common;	/* Type of statement ST_DELAY */	
+  SDCommon	d_common;	/* Type of statement ST_DELAY */
   Expr		*d_delay;	/* Delay expression */
   StatDecl	*d_stat;	/* Statement subjected to delay */
 } SDDelay;
@@ -98,7 +98,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	r_common;	/* Type of statement ST_RAISE */	
+  SDCommon	r_common;	/* Type of statement ST_RAISE */
   Expr		*r_event;	/* Event name expression */
 } SDRaise;
 
@@ -110,7 +110,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	t_common;	/* Type of statement ST_TRIGGER */	
+  SDCommon	t_common;	/* Type of statement ST_TRIGGER */
   Expr		*t_trigger;	/* Trigger expression */
   StatDecl	*t_stat;	/* Statement subjected to trigger(s) */
 } SDTrigger;
@@ -123,7 +123,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	w_common;	/* Type of statement ST_WAIT */	
+  SDCommon	w_common;	/* Type of statement ST_WAIT */
   Expr		*w_cond;	/* Condition to wait for */
   StatDecl	*w_stat;	/* Statement to execute when condition is true */
 } SDWait;
@@ -146,7 +146,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	a_common;	/* Type of statement ST_ASGN */	
+  SDCommon	a_common;	/* Type of statement ST_ASGN */
   Expr		*a_lhs;		/* Left-hand-side expression */
   Expr		*a_rhs;		/* Right-hand-side expression */
   Expr		*a_bcond;	/* Conditional blocking */
@@ -159,7 +159,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	b_common;	/* Type of statement ST_BLOCK */	
+  SDCommon	b_common;	/* Type of statement ST_BLOCK */
   const char	*b_name;	/* Name if this is a named block */
   List		*b_stats;	/* List of statements in block */
 } SDBlock;
@@ -181,7 +181,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	c_common;	/* Type of statement ST_CASE */	
+  SDCommon	c_common;	/* Type of statement ST_CASE */
   int		c_caseType;	/* CASE, CASEX or CASEZ */
   Expr		*c_select;	/* Selection expression */
   List		*c_caseEnts;	/* List of case entries */
@@ -193,7 +193,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	f_common;	/* Type of statement ST_FOR */	
+  SDCommon	f_common;	/* Type of statement ST_FOR */
   StatDecl	*f_init;	/* Initialization statement */
   Expr		*f_cond;	/* Loop condition */
   StatDecl	*f_next;	/* Next statement */
@@ -206,7 +206,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	w_common;	/* Type of statement ST_WHILE */	
+  SDCommon	w_common;	/* Type of statement ST_WHILE */
   Expr		*w_cond;	/* Loop condition */
   StatDecl	*w_body;	/* Loop body */
 } SDWhile;
@@ -217,7 +217,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	f_common;	/* Type of statement ST_FOREVER */	
+  SDCommon	f_common;	/* Type of statement ST_FOREVER */
   StatDecl	*f_body;	/* Loop body */
 } SDForever;
 
@@ -227,7 +227,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	f_common;	/* Type of statement ST_FORK */	
+  SDCommon	f_common;	/* Type of statement ST_FORK */
   List		*f_stats;	/* Expressions to fork */
 } SDFork;
 
@@ -237,7 +237,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  SDCommon	r_common;	/* Type of statement ST_REPEAT */	
+  SDCommon	r_common;	/* Type of statement ST_REPEAT */
   Expr		*r_count;	/* Number of repitions */
   StatDecl	*r_body;	/* Expressions to fork */
 } SDRepeat;

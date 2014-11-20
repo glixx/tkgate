@@ -114,7 +114,7 @@ GGateInfo gate_arshifter_info = {
        {"S",IN,3,1,arshifter_shift_loc}},
   {{12,-12,LJ},{12,-12,LJ},{12,-12,LJ},{12,-12,LJ}},
   {1},
-  
+
   {"Dsz","Diz",0},
 
   Generic_Make,

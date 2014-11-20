@@ -368,7 +368,7 @@ EditState *Error_open(GError *e,EditState *es)
  * Parameters:
  *      m		Argument for pointless messages
  *
- * 
+ *
  *
  *****************************************************************************/
 void badermessage(const char *m)
@@ -488,18 +488,18 @@ char *lookupSignalName(int s)
   static char buf[16];
 
   switch (s) {
-  case SIGHUP : return "SIGHUP"; 
-  case SIGQUIT : return "SIGQUIT"; 
-  case SIGILL : return "SIGILL"; 
-  case SIGTRAP : return "SIGTRAP"; 
-  case SIGFPE : return "SIGFPE"; 
-  case SIGBUS : return "SIGBUS"; 
-  case SIGSEGV : return "SIGEGV"; 
+  case SIGHUP : return "SIGHUP";
+  case SIGQUIT : return "SIGQUIT";
+  case SIGILL : return "SIGILL";
+  case SIGTRAP : return "SIGTRAP";
+  case SIGFPE : return "SIGFPE";
+  case SIGBUS : return "SIGBUS";
+  case SIGSEGV : return "SIGEGV";
 #ifdef SIGEMT
-  case SIGEMT: return "SIGEMT"; 
+  case SIGEMT: return "SIGEMT";
 #endif
 #ifdef SIGSYS
-  case SIGSYS : return "SIGSYS"; 
+  case SIGSYS : return "SIGSYS";
 #endif
   default:
     sprintf(buf,"UNKNOWN-%d",s);
@@ -737,6 +737,6 @@ void Error_scriptEnd(const char *name,int line)
     return;
   }
   ob_touch(TkGate.errl->el_esList);
-  TkGate.errl->el_esList->es_endLine = line; 
+  TkGate.errl->el_esList->es_endLine = line;
 }
 

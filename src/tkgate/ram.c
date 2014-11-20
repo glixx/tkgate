@@ -123,7 +123,7 @@ GGateInfo gate_ram_info = {
   {1},
 
   {"Dout","Dread","Dwrite","Daddr_setup","Daddr_hold","Ddata_hold",0},
-  
+
   RamRom_Make,
   Ram_WriteCellDef,
   Generic_Init,
@@ -217,7 +217,7 @@ void RamRom_VerSave(FILE *f,GCElement *g)
 }
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for rams.
  *
  * Parameters:

@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "tkgate.h"
-#include "yybasic.h" 
+#include "yybasic.h"
 
 void BeginDD();
 
@@ -116,7 +116,7 @@ int GDelayDef_readFile(const char *file_name)
   if (!delay_def_is_init) {
     delay_def_is_init = 1;
     delay_def_table = new_SHash();
-  } 
+  }
 
   if (!(f = fopen(file_name,"r"))) {
     return -1;
@@ -164,14 +164,14 @@ GDelayDef *GDelayDef_findTech(GDelayDef *dd,const char *tech)
     if (strcmp(l->dd_tech,"default") == 0)
       return l;
 
-  return dd;			/* Return anything as a last resort */ 
+  return dd;			/* Return anything as a last resort */
 }
 
 
 GDelayDef *GDelayDef_find(const char *tech,const char *prim)
 {
   GDelayDef *dd = GDelayDef_findList(prim);
- 
+
   return GDelayDef_findTech(dd,tech);
 }
 
@@ -204,7 +204,7 @@ void GDelayDef_begin(const char *tech,const char *prim)
     new_dd = l;
   } else {
     new_dd = new_GDelayDef(tech,prim);
-    new_dd->dd_next = old_dd; 
+    new_dd->dd_next = old_dd;
     if (old_dd)
       SHash_remove(delay_def_table,(char*)prim);
     SHash_insert(delay_def_table,(char*)prim,new_dd);
@@ -244,7 +244,7 @@ char **GDelayDef_getTechList()
  *
  * Parameters:
  *     func		Function that is being invoked
- *     name		Name of pad	
+ *     name		Name of pad
  *     data		Data for lookup (gate)
  *     rval		Returned value of function
  *

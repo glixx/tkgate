@@ -37,8 +37,8 @@ struct SpecifyStat_str {
   spectype_t		ss_ptype;	/* Type of connection */
   List/*Expr*/		ss_from;	/* From net literals */
   List/*Expr*/		ss_to;		/* To net literals */
-  Expr			*ss_delay;	/* Delay expression */ 
-  unsigned		ss_idelay;	/* Computed delay value (must computed before use) */ 
+  Expr			*ss_delay;	/* Delay expression */
+  unsigned		ss_idelay;	/* Computed delay value (must computed before use) */
 };
 
 /*****************************************************************************

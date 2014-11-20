@@ -81,7 +81,7 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
   char *font_weight = (fp & FP_BOLD) ? "bold" : "medium";
   char *font_posture;
 
-  if (ff == FF_TIMES) 
+  if (ff == FF_TIMES)
     font_posture = (fp & FP_ITALIC) ? "i" : "r";
   else
     font_posture = (fp & FP_ITALIC) ? "o" : "r";

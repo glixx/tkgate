@@ -64,7 +64,7 @@ GGateInfo gate_or_info = {
   "or:nor",0x2,
   "psor",psOr,
   0,0,
-  
+
   {{"o",	{"gm.gate",0},		{"gm.gate.or",0,0,200},	"gat_make OR"},
    {"O",	{"gm.gate",0},		{"gm.gate.nor",0,0,201},	"gat_make OR -invert Z"},
    {"Ctl-r o",	{"gm.rgate",0},		{"gm.rgate.or",0,0,200},	"gat_make OR -pins I=1"},
@@ -77,7 +77,7 @@ GGateInfo gate_or_info = {
   {{0,-12,CT},{12,0,LJ},{0,-12,CT},{12,0,LJ}},
   {1},
   {"Diz",0},
-  
+
   AOX_Make,
   AOX_WriteCellDef,
   Generic_Init,

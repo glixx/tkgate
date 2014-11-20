@@ -47,7 +47,7 @@ struct net {
   unsigned	n_show_name : 1;/* Is net name visible? */
   unsigned	n_finalized : 1;/* Is net finalized? */
 
-  unsigned	n_generation;	/* Generation number of net (used in net merging) */	
+  unsigned	n_generation;	/* Generation number of net (used in net merging) */
 
   short		n_wnum;		/* Counter for counting wires */
   short		n_gnum;		/* Counter for counting joints, etc. */

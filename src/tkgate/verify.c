@@ -28,7 +28,7 @@
 #include "tkgate.h"
 
 static int did_message = 0;
-static int err_count = 0; 
+static int err_count = 0;
 static NHash *v_wires = 0;
 
 void verify_error(GModuleDef *m,char *msg,...)
@@ -78,12 +78,12 @@ void verify_net(GNet *n,GModuleDef *m)
     GWire *w = wl->wl_wire;
     if (!w) continue;
     if (w->net != n) continue;
-      
+
     if (w->nidx < 0 || w->nidx >= num_wires) {
       verify_error(m,"index %d of wire 0x%x on net %s is out of range [0..%d].",
 		   w->nidx,w,n->n_signame,num_wires-1);
       continue;
-    } 
+    }
 
     if (wset[w->nidx]) {
       verify_error(m,"index %d on net %s is used by multiple wires 0x%x and 0x%x.",
@@ -181,7 +181,7 @@ int verify_circuit()
   HashElem *E;
   extern int quietMode;
 
-  err_count = 0; 
+  err_count = 0;
 
   if (!quietMode) {
     printf("verifying...");

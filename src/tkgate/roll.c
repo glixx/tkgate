@@ -88,7 +88,7 @@ GGateInfo gate_roller_info = {
 
   {{"S O",	{"gm.alu",0},		{"gm.alu.roll",0,"shift",400},	"gat_make ROLL"},
    {0}},
-  
+
 
   roll_iconDims,
 

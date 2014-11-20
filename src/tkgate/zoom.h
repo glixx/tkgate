@@ -31,4 +31,4 @@ void ZCopyPlane(Display *display,Drawable src,Drawable dest,GC gc,int src_x,int 
 
 //void unZoomMetrics(Tk_FontMetrics *);
 
-#endif 
+#endif

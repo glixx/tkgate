@@ -103,7 +103,7 @@ typedef struct {
  *   +0[3:0]=%2		type=OI_REGOP
  *   +3[3:0]=#1[3:0]	type=OI_NUMOP
  *   +3[3:0]=#1-@+2	type=OI_RELNUMOP
- * 
+ *
  */
 typedef struct {
   int		oi_type;	/* Type of operation */
@@ -117,7 +117,7 @@ typedef struct {
 /*
  * An OprDef represents a single set of operands and its memory program.
  *
- * %1,%2 = { +1[7:4]=%1, +0[3:0]=%2 } 
+ * %1,%2 = { +1[7:4]=%1, +0[3:0]=%2 }
  */
 typedef struct opr_def OprDef;
 struct opr_def {

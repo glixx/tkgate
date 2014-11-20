@@ -60,7 +60,7 @@ void delete_Net(Net *n)
  *     msb		MSB of net
  *     lsb		LSB of net
  *
- * 
+ *
  *
  *****************************************************************************/
 Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
@@ -101,7 +101,7 @@ Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
     break;
   }
 
-  
+
   if (NT_GET_0STR(ntype) && !NT_GET_1STR(ntype)) {
     Value_zero(value);
     if (NT_GET_0STR(ntype) == NT_P_SUPPLY0) n->n_flags = NA_FIXED;
@@ -124,7 +124,7 @@ Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
  * Return the local name of a net by trimming of leading '.' components
  *
  * Parameters
- *     n		Net 
+ *     n		Net
  *
  * Returns:		Local name of net
  *
@@ -166,7 +166,7 @@ void Net_negedgeListen(Net*n,Trigger*t)
 
 /*****************************************************************************
  *
- * This function is called every time there is a posedge transition on n 
+ * This function is called every time there is a posedge transition on n
  *
  * Parameters
  *     n		Net on which a posedge transition was observed.
@@ -186,7 +186,7 @@ void Net_posedgeNotify(Net *n)
 
 /*****************************************************************************
  *
- * This function is called every time there is a negedge transition on n 
+ * This function is called every time there is a negedge transition on n
  *
  * Parameters
  *     n		Net on which a negedge transition was observed.
@@ -209,7 +209,7 @@ void Net_negedgeNotify(Net *n)
  * Chage the value of a net and notify anything that is triggering on this net.
  *
  * Parameters:
- *      n		Net to be set. 
+ *      n		Net to be set.
  *      s		New value for net (or NULL if this is an "event" node).
  *
  * Determines the transition edge type based on the current and new values for
@@ -290,16 +290,16 @@ void Net_set(Net*n,Value*s)
   switch ((n->n_type & NT_P_REGTYPE_MASK)) {
   case  NT_P_INTEGER :
   case  NT_P_TIME :
-    Net_getValue(n)->flags = SF_INT;    
+    Net_getValue(n)->flags = SF_INT;
     break;
   default :
-    Net_getValue(n)->flags = 0;    
+    Net_getValue(n)->flags = 0;
     break;
   }
 
   if (temp_s)
     delete_Value(temp_s);
-  
+
 }
 
 /*****************************************************************************
@@ -307,7 +307,7 @@ void Net_set(Net*n,Value*s)
  * Change the value of a subrange of net and notify anything that is triggering on this net.
  *
  * Parameters:
- *      n		Net to be set. 
+ *      n		Net to be set.
  *      s		New value for net
  *
  * Determines the transition edge type based on the current and new values for
@@ -398,7 +398,7 @@ int Net_addDriver(Net*n)
 {
   int id = n->n_numDrivers++;
 
-  if (id == 0) 
+  if (id == 0)
     n->n_drivers = (Value**) malloc(sizeof(Value*)*n->n_numDrivers);
   else
     n->n_drivers = (Value**) realloc(n->n_drivers, sizeof(Value*)*n->n_numDrivers);

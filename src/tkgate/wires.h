@@ -52,7 +52,7 @@
 
 /*
    A "GWire" is really an end point of a wire segment.  It might have been
-   more appropriate to call it a port. 
+   more appropriate to call it a port.
 */
 struct wire {
   GNet	*net;			/* Net this wire is a part of */

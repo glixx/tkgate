@@ -206,7 +206,7 @@ int Value_isPartZero(Value *A,int lowz)
   unsigned mask2 = (A->nbits&SSBITMASK) ? LMASK((A->nbits & SSBITMASK)) : SSWORDMASK;
   int i;
 
-  if (wc2 == wc) 
+  if (wc2 == wc)
     mask = (~mask) & mask2;
   else
     mask = (~mask);
@@ -272,7 +272,7 @@ int Value_isEqual(Value *A,Value *B)
   } else if (A->nbits < B->nbits) {
     return Value_isPartZero(B,A->nbits);
   } else
-    return 1;  
+    return 1;
 }
 
 /*****************************************************************************
@@ -290,7 +290,7 @@ transtype_t Value_transitionType(Value *A,Value *B)
     if (fromSym == toSym) return TT_NONE;
     if (toSym == SYM_ZERO) return TT_NEGEDGE;
     if (fromSym == SYM_ONE && toSym != SYM_FLOAT) return TT_NEGEDGE;
-    return TT_POSEDGE;						    
+    return TT_POSEDGE;
   } else {
     if (Value_isEqual(A,B))
       return TT_NONE;
@@ -371,7 +371,7 @@ int Value_isValue(Value *S)
   for (i = 0;i < wc;i++) {
     if (i == wc-1 && (S->nbits & SSBITMASK))
       mask = LMASK(S->nbits);
-      
+
 
     if ((S->flt[i] & mask)) return 0;
   }
@@ -390,12 +390,12 @@ int Value_isZero(Value *S)
   for (i = 0;i < wc;i++) {
     if (i == wc-1 && (S->nbits & SSBITMASK))
       mask = LMASK(S->nbits);
-      
+
     if (((S->flt[i] & mask) != 0)
 	|| ((S->one[i] & mask) != 0)
 	|| ((S->zero[i] & mask) != mask))
       return 0;
-			   
+
   }
   return 1;
 }
@@ -570,7 +570,7 @@ int Value_convertBits(Value *S,const char *A,int nbits)
       return_value = -1;
       p = SYM_ZERO;
     }
-    
+
     Value_putBitSym(S,i,p);
   }
   Value_extend(S,d);
@@ -1215,7 +1215,7 @@ int Value_getstr(Value *S,char *p)
   }
 
   /*
-   * Display as a decimal value 
+   * Display as a decimal value
    */
   if ((S->flags & SF_INT)) {
     Value_getstr_int(S,p);
@@ -1281,13 +1281,13 @@ int Value_getvstr(Value *S,char *p)
  * Convert state value to a string with formatting.
  *
  * Parameters:
- *     S	State value to convert 
+ *     S	State value to convert
  *     fmt	A format string (see below)
  *     p	Buffer in which to write formatted string
  *
  * 'fmt' must be a single Verilog format string.  The first character must be
  * a '%' and the last character must be the type control character.
- * 
+ *
  *****************************************************************************/
 int Value_format(Value *S,const char *fmt,char *p)
 {
@@ -1484,11 +1484,11 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
 
     R->flags |= A->flags;
 
-    if (fromSym == toSym) 
+    if (fromSym == toSym)
       tt = TT_NONE;
-    else if (toSym == SYM_ZERO) 
+    else if (toSym == SYM_ZERO)
       tt = TT_NEGEDGE;
-    else if (fromSym == SYM_ONE && toSym != SYM_FLOAT) 
+    else if (fromSym == SYM_ONE && toSym != SYM_FLOAT)
       tt = TT_NEGEDGE;
     else
       tt = TT_POSEDGE;
@@ -1650,7 +1650,7 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
  *      B		Wire B
  *
  *
- *WIRE                one                zero                flt              
+ *WIRE                one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H  01z
  *  +-----------       +-----------       +-----------       +-----------  ---
  * 0|0 x x 0 0 x      0|0 1 1 0 0 1      0|1 1 1 1 1 1      0|0 1 1 0 0 1  100
@@ -1686,7 +1686,7 @@ void Value_wire(Value *R,Value *A,Value *B)
  *      A		Wire A
  *      B		Wire B
  *
- *WAND/TRIAND        one                zero                flt              
+ *WAND/TRIAND        one                zero                flt
  *   0 1 x z L H       0 1 x z L H        0 1 x z L H        0 1 x z L H  01z
  *  +-----------      +-----------       +-----------       +-----------  ---
  * 0|0 0 0 0 0 0     0|0 0 0 0 0 0      0|1 1 1 1 1 1      0|0 0 0 0 0 0  100
@@ -1723,7 +1723,7 @@ void Value_wand(Value *R,Value *A,Value *B)
  *      A		Wire A
  *      B		Wire B
  *
- *WOR/TRIOR          one                zero                flt              
+ *WOR/TRIOR          one                zero                flt
  *   0 1 x z L H       0 1 x z L H        0 1 x z L H        0 1 x z L H  01z
  *  +-----------      +-----------       +-----------       +-----------  ---
  * 0|0 1 x 0 0 x     0|0 1 1 0 0 1      0|1 0 1 1 1 1      0|0 0 1 0 0 1  100
@@ -1760,7 +1760,7 @@ void Value_wor(Value *R,Value *A,Value *B)
  *      A		Wire A
  *      B		Wire B
  *
- *TRI0          
+ *TRI0
  *   0 1 x z L H
  *  +-----------
  * 0|0 x x 0 0 x
@@ -1796,7 +1796,7 @@ void Value_tri0(Value *R,Value *A,Value *B)
  *      A		Wire A
  *      B		Wire B
  *
- *TRI1          
+ *TRI1
  *   0 1 x z L H
  *  +-----------
  * 0|0 x x 0 0 x
@@ -1833,8 +1833,8 @@ void Value_tri1(Value *R,Value *A,Value *B)
  *      B		Current net value
  *
  *TRIREG
- *          (A)          one                zero                flt              
- *       0 1 x z L H       0 1 x z L H        0 1 x z L H        0 1 x z L H  01z 
+ *          (A)          one                zero                flt
+ *       0 1 x z L H       0 1 x z L H        0 1 x z L H        0 1 x z L H  01z
  *      +-----------      +-----------       +-----------       +-----------  ---
  *     0|0 1 x 0 0 x     0|0 1 1 0 0 1      0|1 0 1 1 1 1      0|0 0 1 0 0 1  100
  *     1|0 1 x 1 x 1     1|0 1 1 1 1 1      1|1 0 1 0 1 0      1|0 0 1 0 1 0  010
@@ -1963,7 +1963,7 @@ void Value_w_shift(Value *R,Value *I,int n,int in1,int in0,int inZ)
 
 /*****************************************************************************
  *
- * same, for nbits > SSWORDSIZE 
+ * same, for nbits > SSWORDSIZE
  *
  *****************************************************************************/
 void Value_shift(Value *R,Value *I,int n,int in1,int in0,int inZ) {
@@ -1975,9 +1975,9 @@ void Value_shift(Value *R,Value *I,int n,int in1,int in0,int inZ) {
   int wc = SSNUMWORDS(R->nbits);
   int i;
 
-  /* 
+  /*
      src represents the word we're copying in from
-     prv is the one before that 
+     prv is the one before that
      if there aren't enough words there, they point to in
 
      for a left shift:

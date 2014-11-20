@@ -24,7 +24,7 @@
  *****************************************************************************/
 #include "thyme.h"
 
-static StatDeclVTable vtable_SDNull = { 
+static StatDeclVTable vtable_SDNull = {
   (StatPrint_f*) SDNull_print,
   (StatGenerate_f*) SDNull_generate,
   (StatGetReaders_f*) SDNull_getReaders,
@@ -54,32 +54,32 @@ static StatDeclVTable vtable_SDAsgn = {
   (StatGenerate_f*) SDAsgn_generate,
   (StatGetReaders_f*) SDAsgn_getReaders,
 };
-static StatDeclVTable vtable_SDBlock = { 
+static StatDeclVTable vtable_SDBlock = {
   (StatPrint_f*) SDBlock_print,
   (StatGenerate_f*) SDBlock_generate,
   (StatGetReaders_f*) SDBlock_getReaders,
 };
-static StatDeclVTable vtable_SDIf = { 
+static StatDeclVTable vtable_SDIf = {
   (StatPrint_f*) SDIf_print,
   (StatGenerate_f*) SDIf_generate,
   (StatGetReaders_f*) SDIf_getReaders,
 };
-static StatDeclVTable vtable_SDWhile = { 
+static StatDeclVTable vtable_SDWhile = {
   (StatPrint_f*) SDWhile_print,
   (StatGenerate_f*) SDWhile_generate,
   (StatGetReaders_f*) SDWhile_getReaders,
 };
-static StatDeclVTable vtable_SDForever = { 
+static StatDeclVTable vtable_SDForever = {
   (StatPrint_f*) SDForever_print,
   (StatGenerate_f*) SDForever_generate,
   (StatGetReaders_f*) SDForever_getReaders,
 };
-static StatDeclVTable vtable_SDFor = { 
+static StatDeclVTable vtable_SDFor = {
   (StatPrint_f*) SDFor_print,
   (StatGenerate_f*) SDFor_generate,
   (StatGetReaders_f*) SDFor_getReaders,
 };
-static StatDeclVTable vtable_SDCase = { 
+static StatDeclVTable vtable_SDCase = {
   (StatPrint_f*) SDCase_print,
   (StatGenerate_f*) SDCase_generate,
   (StatGetReaders_f*) SDCase_getReaders,
@@ -89,12 +89,12 @@ static StatDeclVTable vtable_SDFork = {
   (StatGenerate_f*) SDFork_generate,
   (StatGetReaders_f*) SDFork_getReaders,
 };
-static StatDeclVTable vtable_SDRepeat = { 
+static StatDeclVTable vtable_SDRepeat = {
   (StatPrint_f*) SDRepeat_print,
   (StatGenerate_f*) SDRepeat_generate,
   (StatGetReaders_f*) SDRepeat_getReaders,
 };
-static StatDeclVTable vtable_SDTask = { 
+static StatDeclVTable vtable_SDTask = {
   (StatPrint_f*) SDTask_print,
   (StatGenerate_f*) SDTask_generate,
   (StatGetReaders_f*) SDTask_getReaders,
@@ -178,7 +178,7 @@ StatDecl *new_SDRaise(Expr *event)
 StatDecl *new_SDAsgn(Expr *lhs, Expr *rhs,Expr *bcond,int block)
 {
   SDAsgn *sda = (SDAsgn*) new_StatDecl(ST_ASGN);
-  
+
   sda->a_lhs = lhs;
   sda->a_rhs = rhs;
   sda->a_bcond = bcond;
@@ -577,7 +577,7 @@ static void SDTask_generateUserTask(SDTask *t,Scope *scope,UserTask *ut,CodeBloc
   }
 
   /*
-   * Remember the top of the code we are generating 
+   * Remember the top of the code we are generating
    */
   top_bc = CodeBlock_size(cb);
   if (t->t_nargs)
@@ -646,7 +646,7 @@ void SDTask_generateSysTask(SDTask *t, Scope *scope, CodeBlock *cb,SysTaskDescri
   unsigned top_bc, end_bc;
   TaskContext *taskCtx = 0;
   ModuleInst *mi = Scope_getModuleInst(scope);
-  
+
   /*
    * Make sure only 'specify' tasks are used in specify blocks and only non-specify
    * tasks are used outside specify blocks.
@@ -685,7 +685,7 @@ void SDTask_generateSysTask(SDTask *t, Scope *scope, CodeBlock *cb,SysTaskDescri
   }
 
   /*
-   * Remember the top of the code we are generating 
+   * Remember the top of the code we are generating
    */
   top_bc = CodeBlock_size(cb);
   if (t->t_nargs)
@@ -774,7 +774,7 @@ void SDDelay_generate(SDDelay *sd, Scope *scope, CodeBlock *cb)
  * Parameters:
  *     sd		Trigger statement declaration
  *     scope		Scope to use for variable lookup
- *     cb		Codeblock in which to generate byte code. 
+ *     cb		Codeblock in which to generate byte code.
  *
  *****************************************************************************/
 void SDTrigger_generate(SDTrigger *sdt, Scope *scope, CodeBlock *cb)
@@ -794,12 +794,12 @@ void SDTrigger_generate(SDTrigger *sdt, Scope *scope, CodeBlock *cb)
  * Parameters:
  *     sd		Wait statement declaration
  *     scope		Scope to use for variable lookup
- *     cb		Codeblock in which to generate byte code. 
+ *     cb		Codeblock in which to generate byte code.
  *
  * Generates code equivalent to:
  *
  *    while (!cond) @(*cond*);
- *    stat; 
+ *    stat;
  *
  * where @(*cond*) is the trigger list for variables used in the condition.
  *
@@ -838,7 +838,7 @@ void SDWait_generate(SDWait *sdw, Scope *scope, CodeBlock *cb)
  * Parameters:
  *     sd		Wait statement declaration
  *     scope		Scope to use for variable lookup
- *     cb		Codeblock in which to generate byte code. 
+ *     cb		Codeblock in which to generate byte code.
  *
  * Generates code for:
  *
@@ -872,7 +872,7 @@ void SDRaise_generate(SDRaise *srw, Scope *scope, CodeBlock *cb)
  *     lhs_size		Number of bits we are assigning.
  *
  *****************************************************************************/
-static void SDAsgn_generateNetAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb, 
+static void SDAsgn_generateNetAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb,
 					Net *n,Value *nLsb,Value *r,int base_bit, int lhs_size)
 {
     if (sd->a_block) {
@@ -900,7 +900,7 @@ static void SDAsgn_generateNetAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb,
 	  Trigger *t = Expr_getTrigger(sd->a_bcond->e.opr[1], scope, (StatDecl*)sd);
 	  if (t)
 	    BCNbAsgnE_init(CodeBlock_nextEmpty(cb),n,nLsb,r,base_bit,lhs_size,t);
-	} else if (Expr_type(sd->a_bcond) == E_DELAY) { 
+	} else if (Expr_type(sd->a_bcond) == E_DELAY) {
 	  Timescale *ts = ModuleInst_getTimescale(CodeBlock_getModuleInst(cb));
 	  deltatime_t delay;
 
@@ -927,7 +927,7 @@ static void SDAsgn_generateNetAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb,
  *     lhs_size		Number of bits we are assigning.
  *
  *****************************************************************************/
-static void SDAsgn_generateMemAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb, 
+static void SDAsgn_generateMemAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb,
 					Net *n,Value *nAddr,Value *nLsb,Value *r,int base_bit, int lhs_size)
 {
     if (sd->a_block) {
@@ -972,7 +972,7 @@ static void SDAsgn_generateMemAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb,
  * Parameters:
  *     sd		Trigger statement declaration
  *     scope		Scope to use for variable lookup
- *     cb		Codeblock in which to generate byte code. 
+ *     cb		Codeblock in which to generate byte code.
  *
  *****************************************************************************/
 void SDAsgn_generate(SDAsgn *sd, Scope *scope, CodeBlock *cb)
@@ -987,7 +987,7 @@ void SDAsgn_generate(SDAsgn *sd, Scope *scope, CodeBlock *cb)
 
   if (lsize <= 0 || rsize <= 0) return;			/* Expression error, don't generate anything */
   /*
-   * Generate expression, abort generation if we found an error. 
+   * Generate expression, abort generation if we found an error.
    */
   r = Expr_generate(sd->a_rhs, size, scope, cb);
   if (!r) return;
@@ -1012,7 +1012,7 @@ void SDAsgn_generate(SDAsgn *sd, Scope *scope, CodeBlock *cb)
     BCCopy_init(CodeBlock_nextEmpty(cb),r_copy,r);
     r = r_copy;
   }
-  
+
 
 #if 0
   printf("Stat(%d): ",size);

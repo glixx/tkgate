@@ -187,7 +187,7 @@ GGateInfo gate_jkff_info = {
   {1},
 
   {"Dsetup","Dhold","Dck_q",0},
-  
+
   JKFF_Make,
   JKFF_WriteCellDef,
   Generic_Init,
@@ -400,7 +400,7 @@ static GWireNode *JKFF_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
     if (g->u.ff.mirror)
       JKFF_normal_gateinfo();
 
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;

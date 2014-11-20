@@ -104,7 +104,7 @@ GGateInfo gate_rom_info = {
   {1},
 
   {"Dout","Dread",0},
-  
+
   RamRom_Make,
   Rom_WriteCellDef,
   Generic_Init,
@@ -129,7 +129,7 @@ GGateInfo gate_rom_info = {
 };
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for roms.
  *
  * Parameters:

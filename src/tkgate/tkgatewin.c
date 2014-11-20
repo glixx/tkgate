@@ -91,7 +91,7 @@ void tkgate_setMajorMode(MajorMode requestedMode)
 
   currentMode = tkgate_currentMode();
 
-  /* 
+  /*
    * No change in mode, but we might want to issue a message.
    */
   if (requestedMode == currentMode)
@@ -117,7 +117,7 @@ void tkgate_setMajorMode(MajorMode requestedMode)
   }
 
   /*
-   * Transition to MM_EDIT before changing to new mode. 
+   * Transition to MM_EDIT before changing to new mode.
    */
   switch (currentMode) {
   case MM_EDIT :
@@ -174,7 +174,7 @@ void showSelectedName()
       GWire *w = TkGate.circuit->wsel;
       GCElement *g;
 
-      if (w->name) 
+      if (w->name)
 	g = w->gate;
       else {
 	w = wire_other(w);
@@ -443,7 +443,7 @@ void initGCs()
   values.dashes = DASH_LENGTH/2;
   XChangeGC(TkGate.D,TkGate.frameGC, mask, &values);
 
-  mask = GCForeground | GCBackground | GCFunction | GCGraphicsExposures; 
+  mask = GCForeground | GCBackground | GCFunction | GCGraphicsExposures;
   values.foreground = 1;
   values.background = 1;
   values.function = GXcopy;
@@ -517,7 +517,7 @@ void RescanHDLModules()
     SetModified(MF_MODULE|MF_SYNCONLY);
     ob_end_frame();
   }
-} 
+}
 
 
 /*****************************************************************************
@@ -1026,7 +1026,7 @@ static void gateWinDestroy(ClientData data)
 
 /*****************************************************************************
  * Process the command for creating the main tkgate circuit editing window.
- * 
+ *
  * Usage: gatewin .w
  *
  *****************************************************************************/
@@ -1078,7 +1078,7 @@ static int tkg_gateWin(ClientData data, Tcl_Interp *tcl, int argc, const char **
 
 /*****************************************************************************
  *
- * Do a tcl/tk script command.  Arguments act like printf and are used to 
+ * Do a tcl/tk script command.  Arguments act like printf and are used to
  * construct the command before execution.
  *
  *****************************************************************************/
@@ -1185,7 +1185,7 @@ static int tkg_buttonPress(ClientData data, Tcl_Interp *tcl, int argc, const cha
   int x,y,state,button;
 
   click_count++;
-  
+
   DoTcl("tkg_cancel");
   DoTcl("tkg_undoSelections gate");
 
@@ -1300,7 +1300,7 @@ int getCheckpointFilename(char *checkPointFile,const char *fileName,size_t size)
     return -1;
 
   /*
-   * Start with a copy of the file name. 
+   * Start with a copy of the file name.
    */
   strcpy(checkPointFile,fileName);
 
@@ -1654,9 +1654,9 @@ void init_mainWindow(Tcl_Interp *tcl)
     printf("[synchonized X11 connection]\n");
     XSynchronize(TkGate.D,True);
   }
-  
+
   initGCs();
-  
+
   Tcl_CreateCommand(tcl,"gat_scope"
 		    ,gat_scope
 		    ,(ClientData)root

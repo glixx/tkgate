@@ -64,7 +64,7 @@ int Timescale_unitsToCode(const char *units)
   for (i = 0;i < numUnitCodes;i++) {
     if (strcmp(units, unitCodes[i]) == 0) return i;
   }
-  return -1;  
+  return -1;
 }
 
 simtime_t Timescale_parse(int num,const char *units)

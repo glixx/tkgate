@@ -178,7 +178,7 @@ int GKTextWidth(XFontStruct *F,const char *ps,int l)
       if ((s[0] & 0x80)) {		/* Kanji segment */
 	for (m = 0;m < l && (s[m] & 0x80);m++);
 	for (i = 0;i < m;i++) s[i] &= 0x7f;
-      
+
 	w += KANJIFONT_WIDTH*(m/2);
 	for (i = 0;i < m;i++) s[i] |= 0x80;
       } else {				/* non-Kanji segment */
@@ -218,7 +218,7 @@ int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
     }
   } else
     x_w = GKTextWidth(F,S,strlen(S));
-  
+
   if (p & BetweenLeftAndRight)
     x -= x_w/2;
   else if (p & AtRight)
@@ -233,7 +233,7 @@ int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
 
 
   GKDrawString(TkGate.D,W,gc,x,y,S,strlen(S));
-  
+
   return x_w + x;
 }
 
@@ -312,7 +312,7 @@ Encoder *getEncoder(const char *toCode,const char *fromCode)
    */
   if (!iconv_translators)
     iconv_translators = new_SHash_noob();
-  
+
   /*
    * Construct key and see if we have a translator.
    */
@@ -419,7 +419,7 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   return outBuf;
 }
 
- 
+
 int isJapaneseDisplay(Encoder *encoder)
 {
   return encoder && encoder->isJapanese;

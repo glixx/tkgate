@@ -34,7 +34,7 @@
 #define NUMORIENTS	4		/* Number of orientations */
 #define SNAPSIZE	6		/* */
 #define DEFAULT_PADMAX	16		/* Maximum number of "pads" on a gate */
-#define MAXKBINDS	16		/* Maximum number of key bindings for creating a gate */ 
+#define MAXKBINDS	16		/* Maximum number of key bindings for creating a gate */
 #define MAKEENTRYMAX	128		/* Max entries on a make page */
 #define NETALIASLIST_STEPSIZE 5		/* Allocation increment for net alias lists */
 #define TKGATE_STUBLEN	15		/* Default length of wires on new gates */
@@ -52,7 +52,7 @@
 #define SELMODETHRESH	(15*15)		/* Drag distance to activate select mode */
 
 /*
- * Default prefix 
+ * Default prefix
  */
 #define TKGATE_DEFAULT_PREFIX "_GG"	/* Prefix for tkgate primitive cells */
 

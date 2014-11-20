@@ -50,7 +50,7 @@ static Primitive *Primitive_load(const char *name)
   char path[STRMAX];
   char *body,*s;
   FILE *f;
-  struct stat sb;  
+  struct stat sb;
 
   p->p_name = strdup(name);
   p->p_body = 0;
@@ -102,7 +102,7 @@ static Primitive *Primitive_load(const char *name)
     s++;
     while (isspace(*s)) s++;
     if (*s == '(') {
-      int c = 1; 
+      int c = 1;
       for (s++;*s && c > 0;s++) {
 	if (*s == '(') c++;
 	if (*s == ')') c--;
@@ -129,7 +129,7 @@ static Primitive *Primitive_load(const char *name)
 
 /*****************************************************************************
  *
- * Lookup the definition for primitive "name", loading if necessary 
+ * Lookup the definition for primitive "name", loading if necessary
  *
  * Parameters:
  *    name		Name of the primitive to load
@@ -157,8 +157,8 @@ static Primitive *Primitive_lookup(const char *name)
  * Find the next variable call sequence in a string.
  *
  * Parameters:
- *    begin		Beginning of string to search 
- *    end		End of string to search 
+ *    begin		Beginning of string to search
+ *    end		End of string to search
  *    vsStart		Beginning of string to search for
  *    vsEnd		End of string to search for
  *
@@ -172,7 +172,7 @@ static int Primitive_nextVariable(const char *begin,const char *end,
 
   for (;;) {
     //
-    // Advance to the next $ or % character 
+    // Advance to the next $ or % character
     //
     s = s+strcspn(s, "$%\\");
     if (!*s) return 0;

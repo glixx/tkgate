@@ -123,7 +123,7 @@ GGateInfo gate_demux_info = {
        {"Z",OUT,1,2,demux_out_loc,1}},
   {{23,0,LJ},{0,40,CT},{-23,8,RJ},{0,-33,CT}},
   {1},
-  
+
   {"Dez","Dfz","Dsz",0},
 
   Demux_Make,
@@ -200,7 +200,7 @@ static void Demux_adjustWiresData(GCElement *g)
     }
     break;
   }
-  
+
   for (i = 0,w = g->wires[DEMUX_OUT];w;i++, w = w->next) {
     wx += dx;
     wy += dy;
@@ -289,7 +289,7 @@ GCElement *Demux_Make(EditState **es,GModuleDef *env,int GType,
     const char *Invert,*Pins;
     int N = GCElement_numPads(g);
 
-    
+
     Invert = seekOption("-invert",options,nOptions);
     Pins = seekOption("-pins",options,nOptions);
 
@@ -441,7 +441,7 @@ GWireNode *Demux_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
       pd = &demux_s_loc[g->orient];
     if (p == DEMUX_S && g->u.mux.select_side)
       pd = &demux_en_loc[g->orient];
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;
@@ -455,12 +455,12 @@ void Demux_AddOutput(EditState *es,GCElement *g)
   for (i = 0;i < N;i++)
     if (GCElement_getPadDir(g,i) == OUT && GCElement_getPadCanAdd(g,i))
       break;
-  
+
   if (i == N)
     return;
-  
+
   if (es) SetModified(MF_GATE|MF_NET);
-  
+
   gate_draw(g,GD_NORMAL);
   wire_addToGate(g,i,es->env,0);
   Demux_adjustWires(g);
@@ -479,7 +479,7 @@ void Demux_VerSave(FILE *f,GCElement *g)
 }
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for demuxes.
  *
  * Parameters:
@@ -493,7 +493,7 @@ static void Demux_WriteCellDef(FILE *f,GCellSpec *gcs)
   int selBits = required_bits(gcs->gc_multiPad);
   int inBits = gcs->gc_numBits;
   PrimParm primParm;
-  int i; 
+  int i;
 
   PrimParm_init(&primParm);
   PrimParm_intSet(&primParm,"NUMOUT",multiPad);
@@ -510,7 +510,7 @@ static void Demux_WriteCellDef(FILE *f,GCellSpec *gcs)
   } else {
     char *s = PrimParm_get(&primParm,"invZ");
     sprintf(s,"%d'b",multiPad);
-    s += strlen(s); 
+    s += strlen(s);
     for (i = 0;i < multiPad;i++) {
       *s++ = (gcs->gc_invSpec[i] == 'N') ? '1' : '0';
     }

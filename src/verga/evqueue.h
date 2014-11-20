@@ -91,7 +91,7 @@ typedef void EventUninit_f(Event*);
  *****************************************************************************/
 typedef struct {
   evtype_t		evv_class;	/* Type of event */
-  EventProcess_f	*evv_process;	/* Process an event */ 
+  EventProcess_f	*evv_process;	/* Process an event */
   EventUninit_f		*evv_uninit;	/* Uninitialization of an event */
 } EventVTable;
 

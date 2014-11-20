@@ -114,7 +114,7 @@ GGateInfo gate_clock_info = {
   1,{{"Z",OUT,1,1,clock_out_loc}},
   {{0,-17,CT},{17,0,LJ},{0,-17,CT},{17,0,LJ}},
   {1},
-  
+
   {0},
 
   Clock_Make,
@@ -144,7 +144,7 @@ void gate_drawclockparams(GCElement *g)
 {
   char b[STRMAX];
   int x,y;
-  
+
   x = g->xpos + CLOCKPARAMXOFFSET;
   y = g->ypos + CLOCKPARAMYOFFSET;
 
@@ -152,13 +152,13 @@ void gate_drawclockparams(GCElement *g)
     XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);
   else
     XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);
-  
+
   sprintf(b,"f=%d ",g->u.clock.omega);
   x = RelPosDrawString(TkGate.W,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
-  
+
   sprintf(b,"p=%d ",g->u.clock.phi);
   x = RelPosDrawString(TkGate.W,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
-  
+
   sprintf(b,"dw=%d ",g->u.clock.duty);
   x = RelPosDrawString(TkGate.W,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
 }
@@ -184,7 +184,7 @@ GCElement *Clock_Make(EditState **es,GModuleDef *env,int GType,
 
   if (!LDW || sscanf(LDW,"%hd",&g->u.clock.duty) != 1)
     g->u.clock.duty = CLOCK_DUTY;
-  
+
   return g;
 }
 
@@ -211,7 +211,7 @@ GCElement *Clock_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 void Clock_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
 {
   Generic_PSLabels(P,g);
-  
+
   fprintf(P->p_f,"%d %d %d %d %d %d %s\n",
 	  g->u.clock.duty,g->u.clock.phi,g->u.clock.omega,
 	  g->xpos,g->ypos,-g->orient*90,g->typeinfo->psprint);
@@ -296,7 +296,7 @@ static void Clock_WriteCellDef(FILE *f,GCellSpec *gcs)
     start_value = 1;
     phase_wait = period-shift;
   }
-  
+
 
   PrimParm_init(&primParm);
   PrimParm_intSet(&primParm,"INITIAL",start_value);

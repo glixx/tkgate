@@ -89,9 +89,9 @@ struct Circuit_str {
   int		c_tvMode;	/* Timing violation mode (0=none, 1=after startup, 2=all) */
   double	c_startup;	/* Time required for initialization (suppress timing violations) */
   int		c_startupUnits;	/* Unit code for startup time */
-  
+
   SimInterface	simulator;	/* top-level state for the simulator */
-  NHash		*c_breakpoints;	/* Circuit breakpoints */ 
+  NHash		*c_breakpoints;	/* Circuit breakpoints */
   NHash		*c_scripts;	/* Scripts active in simulator */
   List		*c_probes;	/* Saved list of nets with probes on them */
 

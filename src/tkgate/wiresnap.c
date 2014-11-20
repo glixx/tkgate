@@ -40,7 +40,7 @@
  * Snap all of the wires on a pad
  *
  * Parameters:
- *    w			Wire representing the head wire of a pad 
+ *    w			Wire representing the head wire of a pad
  *
  *****************************************************************************/
 static void wire_snaplist(GWire *w,int doRedraw)
@@ -218,11 +218,11 @@ static void GWireNode_suggestLabelProps(GWireNode *dn,GWireNode *sn)
 
 /*****************************************************************************
  *
- * Snaps out short segments of wire with mobile nodes. 
+ * Snaps out short segments of wire with mobile nodes.
  *
  * Parameters:
  *      n			Wire node to snap
- *      mod			
+ *      mod
  *      retry
  *
  *****************************************************************************/
@@ -230,7 +230,7 @@ static int wire_snap_aux(GWireNode *n,int mod,int retry)
 {
   GWireNode *t;
 
-  if (!n || !n->out) 
+  if (!n || !n->out)
     return mod;
 
     /* Make sure that wires arround a joint look OK */

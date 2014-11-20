@@ -104,7 +104,7 @@ GGateInfo gate_block_info = {
   {0,1,0,0,1},
 
   {0},
-  
+
   Block_Make,
   Nop_WriteCellDef,
   Block_Init,
@@ -256,7 +256,7 @@ GCElement *Block_Make(EditState **es,GModuleDef *PM,int GType,
       GModuleDef *M;
 
       env_checkname(g);
-      M = env_findModule(g->u.block.moduleName); 
+      M = env_findModule(g->u.block.moduleName);
 
       copy = env_getInterface(g);			/* Get copy of the block description */
 
@@ -297,10 +297,10 @@ GCElement *Block_Make(EditState **es,GModuleDef *PM,int GType,
       return 0;
     }
     Tcl_SetVar(TkGate.tcl,"edgat_newBlock","0",TCL_GLOBAL_ONLY);
-  
+
     env_checkname(g);
 
-    M = env_findModule(g->u.block.moduleName); 
+    M = env_findModule(g->u.block.moduleName);
 
     copy = env_getInterface(g);
     if (copy) {
@@ -328,7 +328,7 @@ GCElement *Block_Make(EditState **es,GModuleDef *PM,int GType,
     g->u.block.gwidth = W;
     g->u.block.gheight = H;
   }
- 
+
   return g;
 }
 
@@ -399,7 +399,7 @@ int Block_HitEdge(GCElement *g,int x,int y)
   dy_bottom = abs(dy_bottom);
 
   /*
-   * Ensure that (x,y) is inside the box 
+   * Ensure that (x,y) is inside the box
    */
   if (x < g->xpos || x > g->xpos+g->u.block.gwidth)
     return PSIDE_UNKNOWN;
@@ -428,10 +428,10 @@ int Block_HitComponent(GCElement *g,int x,int y)
   g->top = 0;
   g->bottom = 0;
 
-  w = block_hitPort(g,x,y); 
+  w = block_hitPort(g,x,y);
   if (w && !TkGate.circuit->wsel) {
 
-    TkGate.circuit->wsel = w; 
+    TkGate.circuit->wsel = w;
     return GATERANGE-2;
   }
 
@@ -520,7 +520,7 @@ void Block_Draw(GCElement *g,int md)
 {
   int N = GCElement_numPads(g);
   int i;
-  
+
   ZDrawRectangle(TkGate.D,TkGate.W,TkGate.moduleGC,
 		 ctow_x(g->xpos),ctow_y(g->ypos),
 		 g->u.block.gwidth,g->u.block.gheight);
@@ -534,14 +534,14 @@ void Block_Draw(GCElement *g,int md)
 		       g->typeinfo->Pad[i].Loc[0].dir,
 		       g->typeinfo->Pad[i].iotype);
   }
-  
+
   if (g->selected) {
     ZDrawRectangle(TkGate.D,TkGate.W,TkGate.moduleGC,
 		   ctow_x(g->xpos+1),ctow_y(g->ypos+1),
 		   g->u.block.gwidth-2,g->u.block.gheight-2);
   }
 
-  
+
   if (g->ename && g->show_name) {
     char B[STRMAX];
 
@@ -662,7 +662,7 @@ void Block_Move(GCElement *g,int x,int y)
     if (g->u.block.gheight + y < min_height)
       y = min_height - g->u.block.gheight;
     g->u.block.gheight += y;
-    
+
     for (i = 0;i < N;i++) {
       if (g->typeinfo->Pad[i].Loc->dir == D_LEFT || g->typeinfo->Pad[i].Loc->dir == D_RIGHT)
 	block_scalewirelist(g->wires[i],g,1,ports_fixed);
@@ -672,7 +672,7 @@ void Block_Move(GCElement *g,int x,int y)
 
     SetModified(MF_INTERFACE|MF_FORCE);
   }
-  
+
   if (g->left) {
     if (g->u.block.gwidth - x < min_width)
       x = g->u.block.gwidth - min_width;
@@ -691,7 +691,7 @@ void Block_Move(GCElement *g,int x,int y)
     if (g->u.block.gwidth + x < min_width)
       x = min_width - g->u.block.gwidth;
     g->u.block.gwidth += x;
-    
+
     for (i = 0;i < N;i++) {
       if (g->typeinfo->Pad[i].Loc->dir == D_UP || g->typeinfo->Pad[i].Loc->dir == D_DOWN)
 	block_scalewirelist(g->wires[i],g,0,ports_fixed);
@@ -762,16 +762,16 @@ void Block_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
   GWire *w;
   HtmlFont font[1];
 
-  
-  
+
+
   fprintf(P->p_f,"%d %d %d %d box\n",g->xpos,g->ypos,
 	  g->u.block.gwidth,g->u.block.gheight);
-  
+
   for (i = 0;i < N;i++)
     for (w = g->wires[i];w;w = w->next)
       Block_PSDrawWireName(P,w,g->typeinfo->Pad[i].Loc[0].dir,
 			   g->typeinfo->Pad[i].iotype);
-  
+
   if (g->ename && g->show_name) {
     char B[STRMAX];
     int h;
@@ -793,13 +793,13 @@ void Block_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
 	       g->ypos + (g->u.block.gheight / 2),
 	       g->u.block.moduleName,
 	       BetweenLeftAndRight | BetweenTopAndBottom);
-		
+
   }
 }
 
 void Block_EditParmProps(GCElement *g, int isLoadDialog)
 {
-  GModuleDef *m = env_findModule(g->u.block.moduleName); 
+  GModuleDef *m = env_findModule(g->u.block.moduleName);
 
   if (isLoadDialog) {
     Tcl_UnsetVar(TkGate.tcl,"edgat_modParms",TCL_GLOBAL_ONLY);
@@ -876,7 +876,7 @@ int Block_EditProps(GCElement *g,int isLoadDialog)
  *****************************************************************************/
 void Block_VerSaveModParms(FILE *f,GCElement *g)
 {
-  GModuleDef *m = env_findModule(g->u.block.moduleName); 
+  GModuleDef *m = env_findModule(g->u.block.moduleName);
   HashElem *he;
   int n = 0;
 
@@ -974,7 +974,7 @@ void Block_VerSave(FILE *f,GCElement *g)
 	      GCElement_getPadName(g,i),j,
 	      dirchar[GCElement_getPadDir(g,i)],
 	      w->nidx);
-    } 
+    }
   }
   fprintf(f," ]");
 
@@ -1017,7 +1017,7 @@ void block_movewirelist(GWire *w,int dx,int dy)
     if (ow->gate && ow->gate == g) {
       if (w->driver == w) {
 	GWireNode *n;
-      
+
 	for (n = w->driver->nodes;n;n = n->out) {
 	  ob_touch(n);
 	  n->x += dx;
@@ -1122,7 +1122,7 @@ void guessPortName(char *buf,GCElement *g,int orient,int dir,int nbits)
 
 /*****************************************************************************
  *
- * Set the name of port 'w' on block 'g'. 
+ * Set the name of port 'w' on block 'g'.
  *
  *****************************************************************************/
 int block_setPortName(GCElement *g,GWire *w,EditState *es)
@@ -1202,7 +1202,7 @@ int block_setPortName(GCElement *g,GWire *w,EditState *es)
 
     ok = 0;
   }
-  
+
 
   Block_Draw(w->gate,0);
   if (strcmp(w->net->n_signame,sigName) != 0) net_rename(w->net,sigName,GNet_getShowName(w->net));
@@ -1226,7 +1226,7 @@ int block_setPortName(GCElement *g,GWire *w,EditState *es)
 void block_getwirexy(GWire *w,int d,int *x,int *y,int *p)
 {
   int h;
-  
+
   if (TkGate.tcl)
     h = fontheight(TkGate.stextXF[1]);
   else
@@ -1397,7 +1397,7 @@ int block_connect(GCElement *g,GWireNode *n,int iotype)
 
   ob_touch(n->end);
   n->end->gate = g;
-  
+
   switch (p = nquadrent(g,n)) {
   case D_UP :
     q = BLOCK_TIN;
@@ -1414,7 +1414,7 @@ int block_connect(GCElement *g,GWireNode *n,int iotype)
   default :
     return -1;
   }
-  
+
   switch (iotype) {
   case IN :
     break;
@@ -1431,7 +1431,7 @@ int block_connect(GCElement *g,GWireNode *n,int iotype)
   block_setWireEnd(g,n->end,q);
 
   SetModified(MF_NET|MF_INTERFACE);
-  
+
   switch (p) {
   case D_UP :
     wire_move(n,0,g->ypos - 1 - n->y,n->stype);
@@ -1478,7 +1478,7 @@ void block_deletewire(GWire *w)
   GCElement *g;
   static int xdel[] = {3,0,-3,0};
   static int ydel[] = {0,-3,0,3};
-  
+
   posongate(w,w->gate,&p,&n);
   g = w->gate;
 
@@ -1495,11 +1495,11 @@ void block_deletewire(GWire *w)
   ob_free(w->name);
   w->name = NULL;
   w->gate = NULL;
-  
+
   g->wires[p] = wire_unattach(w,g->wires[p]);
   w->nodes->y += ydel[g->typeinfo->Pad[p].Loc->dir];
   w->nodes->x += xdel[g->typeinfo->Pad[p].Loc->dir];
-  
+
   gate_draw(g,GD_NOWIRE);
 
   SetModified(MF_NET|MF_INTERFACE);
@@ -1516,7 +1516,7 @@ void block_cutoffwire(GWire *w,EditState *es)
     message(0,msgLookup("err.protintf"),g->u.block.moduleName);
     return;
   }
-  
+
   GNet_draw(w->net);
   block_deletewire(w);
   wire_nuke(w,0,es->env);
@@ -1553,7 +1553,7 @@ int block_getNewPortProperties(GCElement *g,int x,int y,int orient,
     portName = Tcl_GetVar(TkGate.tcl,"edport_port",TCL_GLOBAL_ONLY);
     numBits = Tcl_GetVar(TkGate.tcl,"edport_bits",TCL_GLOBAL_ONLY);
     sdir = Tcl_GetVar(TkGate.tcl,"edport_type",TCL_GLOBAL_ONLY);
-    
+
     strcpy(name,portName);
     sscanf(numBits,"%d",nbits);
     *iodir = strIOType(sdir);
@@ -1586,7 +1586,7 @@ void block_newport(EditState *es,int iodir)
   if (!block_getNewPortProperties(g,TkGate.ed->tx,TkGate.ed->ty,orient,
 				  portName,&iodir,&nbits))
     return;
-   
+
   wire_new(es->env,0,&w);
   p = block_attach(es->env,g,w,w->driver,TkGate.ed->tx,TkGate.ed->ty,NULL,iodir);
 
@@ -1610,7 +1610,7 @@ void block_setdir(GWireNode *n,EditState *es,int dir)
 {
   GCElement *g;
   int p,x;
-  
+
   if (!n || !n->end || !n->end->gate) return;
 
   if (n->end->gate->typeinfo->Code != GC_BLOCK) {
@@ -1625,9 +1625,9 @@ void block_setdir(GWireNode *n,EditState *es,int dir)
   }
 
   ob_touch(g);
-  
+
   posongate(n->end,g,&p,&x);
-  
+
   DrawPinIOMark(n->end,g->typeinfo->Pad[p].Loc[0].dir,
 		g->typeinfo->Pad[p].iotype,IODT_PORT);
   g->wires[p] = wire_unattach(n->end,g->wires[p]);
@@ -1637,11 +1637,11 @@ void block_setdir(GWireNode *n,EditState *es,int dir)
     p += 4;
   else if (dir == TRI)
     p += 8;
-  
+
   DrawPinIOMark(n->end,g->typeinfo->Pad[p].Loc[0].dir,
 		g->typeinfo->Pad[p].iotype,IODT_PORT);
   g->wires[p] = block_addwire(n->end,g->wires[p]);
-  
+
   SetModified(MF_INTERFACE);
   SynchronizeInterface();
 }
@@ -1650,7 +1650,7 @@ void block_changedir(GWireNode *n,EditState *es)
 {
   GCElement *g;
   int p,x;
-  
+
   if (!n || !n->end || !n->end->gate) return;
 
   if (n->end->gate->typeinfo->Code != GC_BLOCK) {
@@ -1665,19 +1665,19 @@ void block_changedir(GWireNode *n,EditState *es)
   }
 
   ob_touch(g);
-  
+
   posongate(n->end,g,&p,&x);
-  
+
   DrawPinIOMark(n->end,g->typeinfo->Pad[p].Loc[0].dir,
 		g->typeinfo->Pad[p].iotype,IODT_PORT);
   g->wires[p] = wire_unattach(n->end,g->wires[p]);
-  
+
   p = (p + 4) % GCElement_numPads(g);
-  
+
   DrawPinIOMark(n->end,g->typeinfo->Pad[p].Loc[0].dir,
 		g->typeinfo->Pad[p].iotype,IODT_PORT);
   g->wires[p] = block_addwire(n->end,g->wires[p]);
-  
+
   SetModified(MF_INTERFACE);
   SynchronizeInterface();
 }
@@ -1722,9 +1722,9 @@ int block_attach(GModuleDef *env,GCElement *g,GWire *w1,GWire *w2,
   }
   p = block_connect(g,w1->nodes,iotype);
   SetModified(MF_INTERFACE);
-  
+
   if (name && w1) w1->name = ob_strdup(name);
-  
+
   return p;
 }
 
@@ -1837,7 +1837,7 @@ void Block_Rotate(GCElement *g,int centX, int centY,int rdir)
   g->xpos = nx - g->u.block.gwidth/2;
   g->ypos = ny - g->u.block.gheight/2;
   g->orient = (g->orient + 4 + rdir) % 4;
-  
+
   /*
    * We need to shift the pads that the wires are attached to.
    */
@@ -2069,7 +2069,7 @@ int block_isIsomorphic_blockports(GCElement *g1,GCElement *g2)
     GWire *pw2[1024];
     int npw1 = block_getPadWires(g1,k,pw1,1024);
     int npw2 = block_getPadWires(g2,i,pw2,1024);
-    
+
     if (pd1 != pd2) return 0; /* Pad directions differ */
     if (npw1 != npw2) return 0; /* # wires on pad differ */
 
@@ -2143,7 +2143,7 @@ int block_isIsomorphic(GCElement *g1,GCElement *g2)
      */
     int width = g2->u.block.gwidth;
     int height = g2->u.block.gheight;
-    
+
     if (((g1->orient+4-g2->orient) % 2) == 1) {
       int swap = width;
       width = height;
@@ -2196,7 +2196,7 @@ static int findArrayPort(GWire **pw,int npw,const char *name)
  *****************************************************************************/
 void block_updateInterface(GCElement *g,GModuleDef *m)
 {
-  GCElement *ug = env_getInterface(g);	/* Get current interface */ 
+  GCElement *ug = env_getInterface(g);	/* Get current interface */
   GWire *pw[1024];
   int npw,n;
   GWire *w;
@@ -2218,7 +2218,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
   }
 
   if (draw_p)
-    gate_draw(g,GD_NOWIRE);  
+    gate_draw(g,GD_NOWIRE);
 
   /*
    * Get all of the ports on the old interface
@@ -2230,11 +2230,11 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
   ob_touch(g);
 
   /*
-   * Detach all of the current wires 
+   * Detach all of the current wires
    */
   n = GCElement_numPads(g);
 #if 0
-  printf("detaching gate at (%d,%d)\n",g->xpos,g->ypos); 
+  printf("detaching gate at (%d,%d)\n",g->xpos,g->ypos);
 #endif
   for  (i = 0;i < n;i++) {
 #if 0
@@ -2288,7 +2288,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
    * Reattach ports
    */
 #if 0
-  printf("attaching gate at (%d,%d)\n",g->xpos,g->ypos); 
+  printf("attaching gate at (%d,%d)\n",g->xpos,g->ypos);
 #endif
   n = GCElement_numPads(ug);
   for  (i = 0;i < n;i++) {
@@ -2335,7 +2335,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
       } else {
 	if (draw_p)
 	  GWire_draw(pw[p]->driver);
-	
+
 	if (((orient+4-pw[p]->orient) % 2) == 1) {
 	  GWire_insertNode(pw[p]);
 	}
@@ -2389,7 +2389,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
 
 
   if (draw_p)
-    gate_draw(g,GD_NOWIRE);  
+    gate_draw(g,GD_NOWIRE);
 }
 
 void init_block()

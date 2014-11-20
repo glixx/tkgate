@@ -138,7 +138,7 @@ static void rotatePoint(int *x,int *y,int cx,int cy,int r)
  *
  * Parameters:
  *      x		Number in which to reverse bytes
- * 
+ *
  * Returns:		Byte reversed value.
  *
  *****************************************************************************/
@@ -149,7 +149,7 @@ static unsigned char reverseBits(unsigned char x)
     0, 8, 4, 12, 2, 10, 6, 14, 1, 9,  5, 13,  3, 11,  7, 15};
 
   return (revTab[(x&0xf)]<<4) | revTab[((x>>4)&0xf)];
-  
+
 }
 
 /*****************************************************************************
@@ -163,7 +163,7 @@ static unsigned char reverseBits(unsigned char x)
  *     W                Width of buffer
  *     H                Height of buffer
  *     bpl              Bytes per line.
- * 
+ *
  *****************************************************************************/
 static void extractImageData(char *idata,const char *data,unsigned W,unsigned H,int bpl)
 {
@@ -711,7 +711,7 @@ static void GModSymbol_updateCenter(GModSymbol *ms)
 }
 
 /*
- * Add a port to a module 
+ * Add a port to a module
  */
 void GModSymbol_addPort(GModSymbol *ms,GSymPort *p)
 {
@@ -847,7 +847,7 @@ void GModSymbol_draw(GModSymbol *ms,int x,int y,int r,int isBold)
 
 HashElem *GModSymbol_first()
 {
-  if (!symbolTable) 
+  if (!symbolTable)
     return 0;
   else
     return Hash_first(symbolTable);

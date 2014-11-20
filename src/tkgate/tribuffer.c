@@ -63,7 +63,7 @@ GGateInfo gate_bufif_info = {
      {"E",IN,1,1,bufif_enable_loc}},
   {{0,18,CT},{10,0,LJ},{0,-12,CT},{-8,8,RJ}},
   {1},
-  
+
   {"Dez","Diz",0},
 
   Generic_Make,

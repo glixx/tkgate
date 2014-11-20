@@ -27,7 +27,7 @@
  *****************************************************************************/
 struct ScopeDecl_str {
   ScopeDecl		*sd_parent;	/* Parent scope */
-  SHash/*NetDecl*/	sd_nets;	/* Net declarations */  
+  SHash/*NetDecl*/	sd_nets;	/* Net declarations */
 };
 
 

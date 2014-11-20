@@ -29,16 +29,16 @@
 
 #define isgatenode(_n) ((_n)->end && (_n)->end->gate)
 
-/* 
+/*
  * Straighten out nodes
  */
 int wire_netstraight(GWireNode *n,int wt,int ox,int oy,int nx,int ny)
 {
   int x,y;
   GWireNode *next;
-  
+
   if (!n) return OK;
-  
+
   next = (wt == DRIVER ? n->out : n->in);
   x = n->x;
   y = n->y;
@@ -51,7 +51,7 @@ int wire_netstraight(GWireNode *n,int wt,int ox,int oy,int nx,int ny)
   }
 
   ob_touch(n);
-  
+
   switch (wire_netstraight(next,wt,x,y,x+nx-ox,y+ny-oy)) {
   case OK :
     n->x += nx - ox;
@@ -126,9 +126,9 @@ GWireNode *wire_splitnode(GWireNode *n,int dir)
 void wire_makestraightaux(GWireNode *n,int wt,int ox,int oy,int nx,int ny)
 {
   GWireNode *n1,*n2;
-  
+
   if (!n) return;
-  
+
   if (wire_netstraight(n,wt,ox,oy,nx,ny) == IMMOBILE) {
     if (wt == DRIVEE && (n->out->out || isgatenode(n->out))) {
       n1 = wire_splitnode(n,OUT_DIR);
@@ -203,7 +203,7 @@ void wire_move(GWireNode *n,int dx,int dy,int type)
   x = n->x;
   y = n->y;
 
- 
+
   if ((type & VERTICAL)) n->y += dy;
   if ((type & HORIZONTAL)) n->x += dx;
 
@@ -226,12 +226,12 @@ GWireNode *wire_hitanynode(int x,int y,GWireList *wires)
 {
   struct wirenode *N,*Close;
   int CloseD,D;
-  
+
   if (!wires) return NULL;
-  
+
   CloseD = distance(x,y,wires->wl_wire->nodes->x,wires->wl_wire->nodes->y);
   Close = wires->wl_wire->nodes;
-  
+
   for (;wires;wires = wires->wl_next)
     if (wires->wl_wire->nodes->out)
       for (N = wires->wl_wire->nodes;N;N = N->out) {
@@ -241,7 +241,7 @@ GWireNode *wire_hitanynode(int x,int y,GWireList *wires)
 	  Close = N;
 	}
       }
-  
+
   if (CloseD < MAXWIRERANGE)
     return Close;
   else
@@ -253,10 +253,10 @@ GWireNode *wire_nodehit(int x,int y,GWireNode *n,int includeend,int range,int co
 {
   int testrange;
   GWireNode *test;
-  
+
   if (!n)
     return NULL;
-  
+
   if (includeend || !anchoredp(n))
     if ((testrange = distance(x,y,n->x,n->y))
 	< (corneronly ? range : MAXWIRERANGE)) {
@@ -268,13 +268,13 @@ GWireNode *wire_nodehit(int x,int y,GWireNode *n,int includeend,int range,int co
 	return n;
       }
     }
-  
+
   if ((n->out ? includeend || (!anchoredp(n) && !anchoredp(n->out)) : 0) &&
       !corneronly) {
     if ((n->y == n->out->y) &&
 	(midpointp(x,n->x,n->out->x) && ((testrange = sqr(y - n->y)) < range))) {
-      
-      
+
+
       if ((test = wire_nodehit(x,y,n->out,includeend,testrange,0)))
 	return test;
       else {
@@ -285,7 +285,7 @@ GWireNode *wire_nodehit(int x,int y,GWireNode *n,int includeend,int range,int co
     }
     if ((n->x == n->out->x) &&
 	(midpointp(y,n->y,n->out->y) && ((testrange = sqr(x - n->x)) < range))) {
-      
+
       if ((test = wire_nodehit(x,y,n->out,includeend,testrange,0)))
 	return test;
       else {
@@ -305,10 +305,10 @@ GWireNode *wire_hitall(int x,int y,GWireList *wires)
   if (!wires)
     return NULL;
 
-  if ((wires->wl_wire->nodes->out ? (test = 
+  if ((wires->wl_wire->nodes->out ? (test =
       wire_nodehit(x,y,wires->wl_wire->nodes,1,MAXWIRERANGE,0)):NULL))
     return test;
-  else 
+  else
     return wire_hitall(x,y,wires->wl_next);
 }
 
@@ -321,12 +321,12 @@ GWireNode *wire_hit_other(GWire *w,GWireList *wires)
 
  if ((!wires) || (!w))
    return NULL;
- 
+
  if ((wires->wl_wire->nodes->out && (wires->wl_wire->driver != w->driver)) ?
      (test = wire_nodehit(w->nodes->x,w->nodes->y,wires->wl_wire->nodes,
 			 1,MAXWIRERANGE,0)):NULL)
    return test;
- else 
+ else
    return wire_hit_other(w,wires->wl_next);
 }
 
@@ -334,24 +334,24 @@ GWireNode *wire_hit_other(GWire *w,GWireList *wires)
 GWireNode *wire_hit(int x,int y,GWireList *wires)
 {
   GWireNode *test;
-  
+
   if (!wires)
     return NULL;
-  
-  if ((wires->wl_wire->nodes->out ? (test = 
+
+  if ((wires->wl_wire->nodes->out ? (test =
       wire_nodehit(x,y,wires->wl_wire->nodes,0,MAXWIRERANGE,0)):NULL))
     return test;
-  else 
+  else
     return wire_hit(x,y,wires->wl_next);
 }
 
 GWireNode *wire_iohit(int x,int y,GWireList *wires)
 {
   GWireNode *test;
-  
+
   if (!wires)
     return NULL;
-  
+
 #ifdef DEBUGHIT
   printf("Wire is: %d\n",wires->wl_wire->wtype);
 #endif
@@ -359,7 +359,7 @@ GWireNode *wire_iohit(int x,int y,GWireList *wires)
   if ((test = wire_nodehit(x,y,wires->wl_wire->nodes,1,MAXWIRERANGE,0)))
     /* Danger */
     return test;
-  else 
+  else
     return wire_iohit(x,y,wires->wl_next);
 }
 
@@ -411,7 +411,7 @@ GCElement *wire_drivinggate(GWire *w)
 /* Returns the driver of a wire network */
 GWire *wirenode_driver(GWireNode *n)
 {
-  if (!n) 
+  if (!n)
     return NULL;
   if (!n->in)
     return  n->end;
@@ -422,7 +422,7 @@ GWire *wirenode_driver(GWireNode *n)
 /* Returns the drivee of a wire network */
 GWire *wirenode_drivee(GWireNode *n)
 {
-  if (!n) 
+  if (!n)
     return NULL;
   if (!n->out) {
     return n->end;
@@ -471,7 +471,7 @@ int findwirepos(GWire *w,GWire *l)
   if (!l)
     return 0;
   else {
-    assert(l != l->next); 
+    assert(l != l->next);
     if (w == l)
       return 1;
     else

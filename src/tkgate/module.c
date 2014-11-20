@@ -472,7 +472,7 @@ static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,NHash *mhash)
  * no loops are found, and returns the offending module if one is found.
  */
 GModuleDef *GModuleDef_isRecursive(GModuleDef *M)
-{ 
+{
   NHash *mhash = new_NHash();		/* set of modules we have seen so far. */
   GModuleDef *R;
 
@@ -535,13 +535,13 @@ void GModuleDef_getPropsToTcl(GModuleDef *M, Tcl_Interp *tcl,char *aname)
       strcpy(shortfile,M->m_fileName);
   } else
     strcpy(shortfile,"<new>");
-      
-    
+
+
   Tcl_SetVar2(tcl,aname,"file",(M->m_fileName ? M->m_fileName : "") ,TCL_GLOBAL_ONLY);
   Tcl_SetVar2(tcl,aname,"shortfile",shortfile,TCL_GLOBAL_ONLY);
   Tcl_SetVar2(tcl,aname,"type",modTypes[M->m_type],TCL_GLOBAL_ONLY);
   if (M->m_interface) {
-    if (GCElement_getType(M->m_interface) == GC_SYMBLOCK) 
+    if (GCElement_getType(M->m_interface) == GC_SYMBLOCK)
       Tcl_SetVar2(tcl,aname,"itype","symbol",TCL_GLOBAL_ONLY);
     else
       Tcl_SetVar2(tcl,aname,"itype","block",TCL_GLOBAL_ONLY);
@@ -729,7 +729,7 @@ void GModuleDef_copy(GModuleDef *D,GModuleDef *S)
 /*****************************************************************************
  *
  * Save text as the HDL text for a module.  Allocate new memory only if
- * necessary. 
+ * necessary.
  *
  *****************************************************************************/
 void GModuleDef_saveText(GModuleDef *M,const char *text)
@@ -852,7 +852,7 @@ int GModuleDef_grabLabel(GModuleDef *m,int x,int y,GrabbedLabel *gl)
 	if (y > label_y + 12) continue;
 	if (y < label_y) continue;
       }
-      
+
       /*
        * We found matching net so lets grab it.
        */

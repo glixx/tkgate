@@ -79,7 +79,7 @@ int strIOType(const char *code)
 
 /*****************************************************************************
  *
- * Generate the gate type name for gate g of type gi 
+ * Generate the gate type name for gate g of type gi
  *
  * Parameters:
  *    gi		Type info for gate
@@ -195,7 +195,7 @@ int VerilogBasicGateParmList(FILE *f,GCElement *g)
 	fprintf(f,"(%s%s)",inv,w->net->n_signame);
       else
 	fprintf(f,"(%sw%x)",inv,(unsigned)w->net);
-    } 
+    }
   }
   fprintf(f,");");
   return 0;
@@ -238,7 +238,7 @@ void VerilogBasicGateComment(FILE *f,GCElement *g,unsigned flags)
       for (i = 0;i < gi->NumPads;i++) {
 	for (w = g->wires[i], j=0;w;w = w->next, j++) {
 	  fprintf(f," %d",w->nidx);
-	} 
+	}
       }
       fprintf(f," ]");
     }
@@ -547,7 +547,7 @@ static void VerilogSaveModInterface(FILE *f,GModuleDef *M)
       else
 	fprintf(f,"%s[%d:0]",w->name,w->net->n_nbits-1);
       fprintf(f,"(%d/%d)",w->offset.num,w->offset.den);
-    } 
+    }
   }
   fprintf(f," ]");
   fprintf(f," /pd: %d",M->m_protData);
@@ -798,7 +798,7 @@ int VerilogWriteModules(const char *name,vsaveopts_t flags)
     for (i = 0;i < c->numInitScripts;i++)
       fprintf(f,"//: script \"%s\"\n",quoteChars(buf,c->initScripts[i],"\"\\"));
     fprintf(f,"\n");
-  }    
+  }
 
   for (E = Hash_first(TkGate.libraries);E;E = Hash_next(TkGate.libraries,E)) {
     const char *name = SHashElem_key(E);
@@ -946,7 +946,7 @@ int isWritable(const char *name)
    */
   if (stat(name, &sb) == 0) {
     unsigned mode = sb.st_mode & 7;
-    
+
     if (uid == sb.st_uid)
       mode |= (sb.st_mode >> 6) & 7;
     if (gid == sb.st_gid)
@@ -978,7 +978,7 @@ int isWritable(const char *name)
 
   if (stat(dirName, &sb) == 0) {
     unsigned mode = sb.st_mode & 7;
-    
+
     if (uid == sb.st_uid)
       mode |= (sb.st_mode >> 6) & 7;
     if (gid == sb.st_gid)
@@ -1039,7 +1039,7 @@ int VerilogSave(const char *name)
    */
   if (file_exists) {
     /*
-     * If this is the first time we have saved and the file exists, make a backup. 
+     * If this is the first time we have saved and the file exists, make a backup.
      */
     if (doBackupOnSave) {
       char buf[STRMAX];

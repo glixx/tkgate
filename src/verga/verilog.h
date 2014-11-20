@@ -41,8 +41,8 @@ void VerSpecTask(const char *name,List *args);
 void VerSpecify(Expr *cond,int ptype,Expr *lhs,Expr *rhs,Expr *value);
 void VerSpecParam(const char *name,Expr *value);
 
-void VerGateDecl(int gtype, Expr *delay); 
-void VerGateInst(const char *iname, VRange *range, List *parms); 
+void VerGateDecl(int gtype, Expr *delay);
+void VerGateInst(const char *iname, VRange *range, List *parms);
 
 void VerModDecl(const char *name);
 void VerModDeclParm(const char *name, Expr *e);

@@ -40,7 +40,7 @@
 #define HMARGIN 20			/* Minimum spacing before labels start on horizontal side */
 
 #define NAMEPAD 10			/* Minimum padding on sides of module name label */
-    
+
 /*
  * Map an I/O type and a module side to a block port number.
  */
@@ -64,7 +64,7 @@ const char *igen_sideStr(int side)
   case PSIDE_RIGHT :
     return "right";
   }
-  return "unknown"; 
+  return "unknown";
 }
 
 int igen_strToSide(const char *side)
@@ -83,7 +83,7 @@ int igen_strToSide(const char *side)
 
 /*
  * Create a new IGPort object.  Note that we use malloc() instead of ob_malloc() since IGPort
- * objects are only used temporarilly 
+ * objects are only used temporarilly
  */
 IGPort *new_IGPort(const char *name,int iotype,int side,int bits,int n)
 {
@@ -95,7 +95,7 @@ IGPort *new_IGPort(const char *name,int iotype,int side,int bits,int n)
   igp->igp_pos = n;
   igp->igp_offset = -1;
   igp->igp_keep = 0;
-  igp->igp_x = 0; 
+  igp->igp_x = 0;
   igp->igp_y = 0;
   return igp;
 }
@@ -186,7 +186,7 @@ static int alpha_port_compare(const void *vA,const void *vB)
 
   /*
    * The 'endX' pointers point to null at the end of the string, or to the first of the
-   * terminating sequence of digits. 
+   * terminating sequence of digits.
    */
   endA = nameA + strlen(nameA);
   endB = nameB + strlen(nameB);
@@ -266,7 +266,7 @@ void igen_sortPorts(SHash *phash)
 }
 
 /*
- * Get a sorted array of IGPort elements generated from the 
+ * Get a sorted array of IGPort elements generated from the
  * current module interface.  The length of the array is
  * stored in N.  The returned value, if non-NULL should
  * be freed with free()
@@ -448,7 +448,7 @@ void igen_freePortList(IGPort **portList,int n)
 
 
 /*
- * Transfer port information from module interface to port list window. 
+ * Transfer port information from module interface to port list window.
  */
 int igen_load(GModuleDef *M,char *aname)
 {
@@ -459,7 +459,7 @@ int igen_load(GModuleDef *M,char *aname)
   char buf[STRMAX];
   int i,n;
 
-  if (g && GCElement_getType(g) == GC_SYMBLOCK) 
+  if (g && GCElement_getType(g) == GC_SYMBLOCK)
     Tcl_SetVar2(tcl,aname,"itype","symbol",TCL_GLOBAL_ONLY);
   else
     Tcl_SetVar2(tcl,aname,"itype","block",TCL_GLOBAL_ONLY);
@@ -642,9 +642,9 @@ int igen_putIcon(GModuleDef *M,char *aname,char *icon)
   modint_syncDisplay(M);
 
 #if 0
-  printf("## icon=%s  mm=%p[%s]  md=%p[%s]  M=%p[%s]\n",icon, 
-	 TkGate.circuit->mid_mod,  TkGate.circuit->mid_mod->m_name, 
-	 TkGate.circuit->mid_display,  TkGate.circuit->mid_display->m_name, 
+  printf("## icon=%s  mm=%p[%s]  md=%p[%s]  M=%p[%s]\n",icon,
+	 TkGate.circuit->mid_mod,  TkGate.circuit->mid_mod->m_name,
+	 TkGate.circuit->mid_display,  TkGate.circuit->mid_display->m_name,
 	 TkGate.circuit->es->env,TkGate.circuit->es->env->m_name);
 #endif
   if (icon && strcmp(icon,"select") == 0 && TkGate.circuit->mid_display == TkGate.circuit->es->env) {
@@ -658,7 +658,7 @@ int igen_putIcon(GModuleDef *M,char *aname,char *icon)
       TkGate.circuit->select = g;
     }
   }
-  
+
 
   //  SetModified(MF_INTERFACE);
   FlagRedraw();
@@ -668,7 +668,7 @@ int igen_putIcon(GModuleDef *M,char *aname,char *icon)
 
 /*****************************************************************************
  *
- * Set port position information for ports on symbol blocks. 
+ * Set port position information for ports on symbol blocks.
  *
  *****************************************************************************/
 static void igen_setSymbolPortPositions(GModuleDef *M,IGPort **portList,int numPorts)
@@ -797,7 +797,7 @@ static IGPort **igen_generate_getInstPorts(GModuleDef *M,const char *aname,int *
 static IGPort **igen_generate_getModPorts(GModuleDef *M,IGPort **portList,int *numPorts)
 {
   int numModPorts;
-  IGPort **modPorts = igen_getModulePorts(M,&numModPorts); 
+  IGPort **modPorts = igen_getModulePorts(M,&numModPorts);
   SHash *phash;
   int i;
 
@@ -1260,7 +1260,7 @@ int igen_generate(GModuleDef *M,int argc,const char *argv[])
 	   igp_getSize(igp),
 	   igp_getSideStr(igp));
 
-    if (igp->igp_offset >= 0) 
+    if (igp->igp_offset >= 0)
       printf("+%d\n",igp->igp_offset);
     else
       printf("\n");
@@ -1310,7 +1310,7 @@ int igen_changetype(GModuleDef *M,int argc,const char *argv[])
 
   /*
    * Check the requested type and take action according to the following rules.
-   *   1) If the current interface is of the requested type, do nothing. 
+   *   1) If the current interface is of the requested type, do nothing.
    *   2) If the alternate interface is of the requested type, swap the alternate
    *      and current interface objects.
    *   3) If there is no alternate, or the alternate is not of the requested type,

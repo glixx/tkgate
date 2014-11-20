@@ -19,7 +19,7 @@
 #define __operators_h
 
 /*****************************************************************************
- * Value operator methods 
+ * Value operator methods
  *****************************************************************************/
 int Value_lnot(Value *r,Value *a,Value *b,Value *c);
 int Value_not(Value *r,Value *a,Value *b,Value *c);

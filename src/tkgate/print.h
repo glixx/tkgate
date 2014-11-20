@@ -119,7 +119,7 @@ typedef struct {
   const char	*po_end;
   const char	*po_scaleLength;
   const char	*po_incLib;
-} GPrintOpt; 
+} GPrintOpt;
 
 void GPrintOpt_init(GPrintOpt*);
 void GPrintOpt_clDefault(GPrintOpt*);
@@ -173,7 +173,7 @@ typedef struct {
 
   simtime_t	pg_traceStart;		/* Start time for traces on this page */
   simtime_t	pg_traceEnd;		/* End time for traces on this page */
-  int		pg_traceNum;		/* Index of first trace on this page */ 
+  int		pg_traceNum;		/* Index of first trace on this page */
 
   GModLayout	*pg_mods[MODPGMAX];	/* Module and layout data */
 } GPage;

@@ -44,7 +44,7 @@ extern Encoder *parserEncoder;
 /*****************************************************************************
  *
  * List of all Verilog reserved words.  These are used by the ycIsKW() function
- * to indicate these names should not be used as identifiers in user circuits. 
+ * to indicate these names should not be used as identifiers in user circuits.
  *
  *****************************************************************************/
 struct lex_keywordentry lex_reserved_words[] = {

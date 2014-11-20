@@ -85,7 +85,7 @@ GGateInfo gate_joint_info = {
 
   {{0}},
   joint_iconDims,
-  
+
   /*
      The order here is critical (only for joints).  It should correspond
      to the direction of the pin.  This kludge is only for this type.
@@ -96,7 +96,7 @@ GGateInfo gate_joint_info = {
   {0,1},
 
   {0},
-  
+
   Joint_Make,
   Nop_WriteCellDef,
   Joint_Init,
@@ -197,7 +197,7 @@ void joint_connect(GCElement *g,GWireNode *n)
   GWireNode *nn;
   int i,dx,dy;
   GWire *w,*jw,*o_w;
-  
+
   message(0,"trying joint_connect.");
   if (n->in) {
     nn = n->in;
@@ -265,7 +265,7 @@ void joint_make(int x,int y,GWire *w1,GWire *w2,GWire *w3,GWire *w4,EditState *e
 {
   GCElement *j;
   int i;
-  
+
   j = gate_new(x,y,0,GC_JOINT);
   ob_touch(j);
   j->wires[0] = w1;
@@ -282,7 +282,7 @@ void joint_make(int x,int y,GWire *w1,GWire *w2,GWire *w3,GWire *w4,EditState *e
 	j->u.joint.driver = i;
     }
   }
-  
+
   gate_add(es->env,j);
 }
 
@@ -398,7 +398,7 @@ static void joint_correct(GWireNode *n,int d)
   n->end = NULL;
 
   ob_touch(nn->end);
-  nn->end->nodes = nn;	
+  nn->end->nodes = nn;
 }
 
 /*
@@ -664,7 +664,7 @@ void Joint_VerSave(FILE *f,GCElement *g)
   fprintf(f,"  //: joint %s (%s) @(%d, %d)",g->ename,w->net->n_signame,g->xpos,g->ypos);
   if (g->anchored)
     fprintf(f," /anc:1");
-    
+
 
   fprintf(f," /w:[");
   for (i = 0;i < N;i++)
@@ -686,7 +686,7 @@ void joint_addstub(GCElement *g,EditState *es)
   int x1,y1,x2,y2;
 
   /*
-   * Find position 
+   * Find position
    */
   for (idx = 0;idx < 4;idx++)
     if (!g->wires[idx]) break;

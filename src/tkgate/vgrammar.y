@@ -21,7 +21,7 @@
 
 %token XMODULE NETMODULE HDLMODULE BUILTINMODULE
 
-%token ASSIGN ENDMODULE 
+%token ASSIGN ENDMODULE
 %token PRIMITIVE TECHNOLOGY DELAY AREA POWER IF ELSE SWITCH CASE CASEX CASEZ RETURN
 %token BREAK NEXT FUNC DEFAULT INITIALB
 %token INPUT REG OUTPUT INOUT WIRE KWVERSION SUPPLY0 SUPPLY1 KWTRI TRI0 TRI1 TRIREG TRIAND TRIOR WAND WOR
@@ -207,7 +207,7 @@ net_e_modhead	: NETMODULE LITERAL LPAREN omargs RPAREN SEMI
 		| NETMODULE LITERAL SEMI
 		;
 
-omargs	: 
+omargs	:
 	| margs
 	;
 
@@ -230,28 +230,28 @@ decl	: dtype bwidth LITERAL SEMI 	{ VerNewNet($3,$2,$1); }
 	| ANOTATE PROPERTY LITERAL ASGN STRING ENDANOTATE { VerModuleProp($3,$5,TYPE_STR); }
 	;
 
-dtype	: INPUT				{ $$ = INPUT; } 
-	| OUTPUT			{ $$ = OUTPUT; } 
-	| INOUT				{ $$ = INOUT; } 
-	| SUPPLY0			{ $$ = SUPPLY0; } 
-	| SUPPLY1			{ $$ = SUPPLY1; } 
-	| REG 				{ $$ = REG; } 
-	| WIRE 				{ $$ = WIRE; } 
-	| WAND 				{ $$ = WAND; } 
-	| WOR 				{ $$ = WOR; } 
-	| KWTRI 			{ $$ = KWTRI; } 
-	| TRI0 				{ $$ = TRI0; } 
-	| TRI1 				{ $$ = TRI1; } 
-	| TRIAND 			{ $$ = TRIAND; } 
-	| TRIOR 			{ $$ = TRIOR; } 
-	| TRIREG 			{ $$ = TRIREG; } 
+dtype	: INPUT				{ $$ = INPUT; }
+	| OUTPUT			{ $$ = OUTPUT; }
+	| INOUT				{ $$ = INOUT; }
+	| SUPPLY0			{ $$ = SUPPLY0; }
+	| SUPPLY1			{ $$ = SUPPLY1; }
+	| REG 				{ $$ = REG; }
+	| WIRE 				{ $$ = WIRE; }
+	| WAND 				{ $$ = WAND; }
+	| WOR 				{ $$ = WOR; }
+	| KWTRI 			{ $$ = KWTRI; }
+	| TRI0 				{ $$ = TRI0; }
+	| TRI1 				{ $$ = TRI1; }
+	| TRIAND 			{ $$ = TRIAND; }
+	| TRIOR 			{ $$ = TRIOR; }
+	| TRIREG 			{ $$ = TRIREG; }
 	;
 
-wnotes	: 
+wnotes	:
 	| wnotes wnote
 	;
 
-wnote	: wend wcoords wend 
+wnote	: wend wcoords wend
 	| SHOWNAME COLON NUMBER				{ VerSetShowName($3); }
 	| DECPOS COLON NUMBER				{ VerSetWireDecorationPos($3,-1,-1); }
 	| DECPOS COLON LPAREN NUMBER COMMA NUMBER COMMA NUMBER RPAREN	{ VerSetWireDecorationPos($4,$6,$8); }
@@ -322,7 +322,7 @@ comlines :
 	;
 
 joint	: JOINT LITERAL { VerGate("JOINT",$2); } LPAREN LITERAL RPAREN { VerJointNet($5); } cnote
-	; 
+	;
 
 iogate	: LITERAL LPAREN { VerGate($1,0); } ocargs RPAREN cnote
 	| LITERAL LITERAL LPAREN { VerGate($1,$2); } ocargs RPAREN cnote
@@ -348,7 +348,7 @@ concat	: TRAN LITERAL LBRACK  NUMBER COLON NUMBER RBRACK LPAREN { VerGate("CONCA
 	  COMMA
 	  LITERAL { VerAttach("Z",$14,0); }
 	  RPAREN SEMI { VerRevPad(0); }
-	  ANOTATE cnote ENDANOTATE 
+	  ANOTATE cnote ENDANOTATE
 	;
 
 concat_args : LITERAL { VerAttach("I",$1,0); }
@@ -358,7 +358,7 @@ concat_args : LITERAL { VerAttach("I",$1,0); }
 /*
  * Old style syntac for TAP gates.
  */
-tran	: TRAN LITERAL LPAREN { VerGate("TAP",$2); } carg COMMA 
+tran	: TRAN LITERAL LPAREN { VerGate("TAP",$2); } carg COMMA
 		tran_arg { VerTranDup(); } RPAREN SEMI ANOTATE cnote ENDANOTATE
 	;
 
@@ -374,10 +374,10 @@ call		: LITERAL { VerCallMParmFlush(); } omodparms LITERAL LPAREN { VerCell($1,$
 		;
 
 omodparms	:
-		| HASHMARK LPAREN modparms RPAREN  
+		| HASHMARK LPAREN modparms RPAREN
 		;
 
-modparms	: modparm	
+modparms	: modparm
 		| modparms COMMA modparm
 		;
 
@@ -389,9 +389,9 @@ modparm		: modparmval				{ VerCallMParmAdd(0,$1); }
 modparmval	: NUMBER 				{ $$ = yc_sprintf("%u",$1); }
 		| HEX					{ $$ = $1; }
 		| STRING				{ char buf[1024]; $$ = yc_sprintf("\"%s\"",quoteChars(buf,$1,"\"\\")); }
-		; 
+		;
 
-ocargs	: 
+ocargs	:
 	| cargs
 	;
 
@@ -409,7 +409,7 @@ carg	: DOT LITERAL LPAREN obang clit RPAREN		{ VerAttach($2,$5,$4); }
  */
 clit	: LITERAL					{ $$ = $1; }
 	| LBRACE NUMBER LBRACE LITERAL RBRACE RBRACE	{ $$ = $4; }
-	; 
+	;
 
 obang	:			{ $$ = 0; }
 	| NOT			{ $$ = 1; }
@@ -435,11 +435,11 @@ citem	: AT LPAREN NUMBER COMMA NUMBER RPAREN	{ VerSetPos($3,$5); }
 	| LITERAL COLON LITERAL			{ VerSetStrProperty($1,$3); }
 	;
 
-wplist	: 
+wplist	:
 	| wplist NUMBER				{ VerPlaceWire($2); }
 	;
 
-pplist	: 
+pplist	:
 	| pplist bport
 	;
 
@@ -450,8 +450,8 @@ bdir	: GT					{ $$ = 2; }
 	| LT					{ $$ = 3; }
 	| ASGN					{ $$ = 1; }
 	;
-	
-bdplist	: 
+
+bdplist	:
 	| bdplist bdport
 	;
 
@@ -487,7 +487,7 @@ portdef	: LITERAL LITERAL bwidth
 /* Delay file specifications */
 
 tech_def : TECHNOLOGY LITERAL { tech_name = $2; } LBRACE primdefs RBRACE { tech_name = "default"; }
-	| TECHNOLOGY DEFAULT LBRACE primdefs RBRACE 
+	| TECHNOLOGY DEFAULT LBRACE primdefs RBRACE
 	;
 
 primdefs :
@@ -498,7 +498,7 @@ primdefs :
 primdef	: PRIMITIVE LITERAL { VerBeginDelayDef(tech_name,$2); } LBRACE pstats RBRACE { VerEndDelayDef(); }
 	;
 
-pstats	: 
+pstats	:
 	| pstats pstat
 	;
 
@@ -511,7 +511,7 @@ pstat	: AREA ASGN pexpr SEMI { PrimSet("area",0,$3); }
 	;
 
 /*
- * Delay parameter specifier 
+ * Delay parameter specifier
  */
 dparm	: LT { BeginDDP(); } LITERAL GT {  BeginDD(); $$ = $3; }
 	;

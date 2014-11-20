@@ -199,7 +199,7 @@ void initErrorMessages()
     char *p;
     int count = 0;
 
-    
+
     for (p = ed->ed_text;*p;p++) {
       if (*p == '%') {
 	if (p[1] == '%')
@@ -296,7 +296,7 @@ void dumpErrorMessages()
  *      ecode		Code number of message to find.
  *
  * Returns:		Error descriptor corresponding to the given error code.
- *			Returns a special "unknown" error descriptor if the 
+ *			Returns a special "unknown" error descriptor if the
  *			specified code is not found.
  *
  *****************************************************************************/
@@ -431,7 +431,7 @@ void Place_endMTag(Place *p)
  *     etype		Error message type
  *     s		Buffer to write encoding to.
  *
- * Returns:		Pointer to end of encoded string in buffer. 
+ * Returns:		Pointer to end of encoded string in buffer.
  *
  *
  *****************************************************************************/
@@ -491,7 +491,7 @@ char *Place_report(Place *p, const char *etype, const char *netName,char *s)
 
 /*****************************************************************************
  *
- * Set the mode for place display 
+ * Set the mode for place display
  *
  * Parameters:
  *      pm		Place display mode.
@@ -549,7 +549,7 @@ Place *Place_getCurrent()
  * This function must be supported by programs using yacc.  It is only called
  * from within built-in yacc code.  The most common message is "syntax error"
  * and if we see this message, we translate it to ERR_SYNTAX to allow localization
- * if necessary. 
+ * if necessary.
  *
  *****************************************************************************/
 int yyerror(char *err)
@@ -582,7 +582,7 @@ static int marshalString(char *p,char *s)
     if (strchr("\\\"",*s))
       *p++ = '\\';
     *p++ = *s;
-  }  
+  }
 
   /* Trailing quote */
   *p++ = '"';

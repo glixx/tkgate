@@ -196,7 +196,7 @@ int input_ready(int doWait)
  * Parameters:
  *
  *     s		Buffer for reading characters.
- *     n		
+ *     n
  *
  *****************************************************************************/
 int get_line(char *s,int n)

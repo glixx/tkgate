@@ -32,7 +32,7 @@
  *
  * Parameters:
  *      p		Coordinate to be adjusted
- *      q		Next point in line segment	
+ *      q		Next point in line segment
  *
  * Tweek end point p (where q is the adjacent point) to compensate for
  * X server differences.  It is assumed that p and q are non-heap
@@ -58,7 +58,7 @@ static void tweekPoint(XPoint *p,XPoint *q)
 
 /*****************************************************************************
  *
- * Get the position of the net node label 
+ * Get the position of the net node label
  *
  * Parameters:
  *      n		Node on which to get label position.

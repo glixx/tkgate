@@ -42,7 +42,7 @@ typedef struct {
 
 
 /*****************************************************************************
- * 
+ *
  * Check to make sure that s1 matches the first n characters of s2.
  *
  *****************************************************************************/
@@ -50,7 +50,7 @@ static int ismatch(const char *s1,const char *s2,int n)
 {
 
   if (strlen(s1) != n) return 0;
-  return strncmp(s1,s2,n) == 0; 
+  return strncmp(s1,s2,n) == 0;
 }
 
 /*****************************************************************************
@@ -121,7 +121,7 @@ int hdl_save(const char *name)
 
   return rvalue;
 }
- 
+
 /*****************************************************************************
  *
  * Find the points in a text block at which modules are defined.
@@ -199,14 +199,14 @@ static int hdl_findPartitions(char *text,HdlModuleData *module_data,int n)
 }
 
 /*****************************************************************************
- * 
+ *
  * Replace the name of a module.
  *
  * Parameters:
  *      M		Module to be renamed.
- *      new_name	New module name.  
+ *      new_name	New module name.
  *
- * Returns:		Non-zero on error.	
+ * Returns:		Non-zero on error.
  *
  *****************************************************************************/
 int hdl_replaceName(GModuleDef *M,const char *new_name)
@@ -328,7 +328,7 @@ int hdl_splitModules(GModuleDef *M,HdlModuleData *module_data,int module_count)
  *
  *   2) If there is more than one module definition, split the text into
  *   multiple modules.
- *  
+ *
  *   3) If there are is no module definition, add a simple empty definition.
  *
  *   4) If any module names in 1) or 2) are in use, manipulate the module names.
@@ -395,7 +395,7 @@ int hdl_checkSave(const char *name)
      * If a single module was found, store the HDL text back in the module.  Rename the
      * module if it was changed in the HDL text.
      */
-  
+
     GModuleDef_saveText(M,text);
 
     if (!ismatch(M->m_name,module_data[0].name,module_data[0].name_len)) {

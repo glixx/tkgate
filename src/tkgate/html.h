@@ -40,7 +40,7 @@
 #define HTML_SMALL	7			/* Small text */
 #define HTML_BIG	8			/* Big text */
 #define HTML_TT		9			/* Typewriter text */
-#define HTML_PRE	10			/* Preformated */	
+#define HTML_PRE	10			/* Preformated */
 #define HTML_BR		11			/* Break */
 #define HTML_HR		12			/* Horizontal rule */
 #define HTML_FONT	13			/* Font change */
@@ -84,7 +84,7 @@ struct HtmlContext_str {
 
   HtmlContext		*hc_next;		/* Next item in stack */
 
-  /* 
+  /*
    *     These are informational members computed automatically
    */
   Html			*hc_html;		/* Parent html object */
@@ -108,7 +108,7 @@ struct HtmlUnit_str {
   int			hu_x,hu_y;		/* Position of unit (relative to block origin) */
   HtmlContext		*hu_context;		/* Context of the unit */
   int			hu_width;		/* Width of this unit */
-  Tk_Image		hu_image;		/* Image if this is an image unit */ 
+  Tk_Image		hu_image;		/* Image if this is an image unit */
 
   HtmlUnit		*hu_next;
   HtmlUnit		*hu_prev;

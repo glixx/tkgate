@@ -42,7 +42,7 @@ struct ErrorList_str {
   int ErrorCount;
 
   GEScript *el_esList;
-  
+
   int ErrorXPos;
   int ErrorYPos;
 };

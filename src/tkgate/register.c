@@ -111,7 +111,7 @@ GGateInfo gate_register_info = {
   {1},
 
   {"Dsetup","Dhold","Dck_q",0},
-  
+
   Generic_Make,
   Register_WriteCellDef,
   Generic_Init,

@@ -28,7 +28,7 @@
 
 #define POLL_RATE		50		/* Time between input checks (milliseconds) */
 
-/* 
+/*
  * Maximum number of arguments that can have a type specification
  */
 #define STASK_MAXSPECARGS 8
@@ -67,12 +67,12 @@ typedef void BCfunc(ByteCode *bc,VGThread *t);
 typedef struct CodeBlock_str CodeBlock;
 
 /*****************************************************************************
- * advance declarations from expr.h 
+ * advance declarations from expr.h
  *****************************************************************************/
 typedef struct Expr_str Expr;
 
 /*****************************************************************************
- * advance declarations from trigger.h 
+ * advance declarations from trigger.h
  *****************************************************************************/
 typedef struct Trigger_str Trigger;
 

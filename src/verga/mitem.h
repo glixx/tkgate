@@ -161,8 +161,8 @@ typedef struct {
  *****************************************************************************/
 typedef struct {
   MICommon		mii_common;		/* Common fields */
-  const	char		*mii_name;		/* Name of instance type */	
-  const	char		*mii_instName;		/* Name of instance */	
+  const	char		*mii_name;		/* Name of instance type */
+  const	char		*mii_instName;		/* Name of instance */
   VRange		*mii_slices;		/* Range/number of slices */
   List/*NameExpr*/	*mii_parms;		/* Parameters */
   List/*NameExpr*/	*mii_ports;		/* Ports */
@@ -176,9 +176,9 @@ typedef struct {
  *****************************************************************************/
 typedef struct {
   MICommon		mig_common;		/* Common fields */
-  GateDesc		*mig_desc;		/* Type description */	
+  GateDesc		*mig_desc;		/* Type description */
   Expr			*mig_delay;		/* Delay expression */
-  const	char		*mig_instName;		/* Name of instance */	
+  const	char		*mig_instName;		/* Name of instance */
   VRange		*mig_slices;		/* Range/number of slices */
   List/*Expr*/		*mig_ports;		/* Ports */
 } MIGate;
@@ -221,7 +221,7 @@ void ModuleItem_killNotify(ModuleItem *mi);
  * MIAssign methods
  *****************************************************************************/
 MIAssign *new_MIAssign(Expr*,Expr*,Expr*);
-int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,List *asgns); 
+int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,List *asgns);
 
 /*****************************************************************************
  * MIBlock methods
@@ -238,7 +238,7 @@ Expr *MIInstance_findParm(MIInstance *mi,const char *name, int ppIdx);
  * MIGate methods
  *****************************************************************************/
 MIGate *new_MIGate(unsigned gateType, Expr *delay, const char *instName, VRange *slices, List *ports);
-int MIGate_pathdGenerate(MIGate *mig,ModuleInst *mi,CodeBlock *codeBlock,List *asgns); 
+int MIGate_pathdGenerate(MIGate *mig,ModuleInst *mi,CodeBlock *codeBlock,List *asgns);
 
 /*****************************************************************************
  * MINetDecl methods

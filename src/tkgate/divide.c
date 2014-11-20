@@ -100,7 +100,7 @@ GGateInfo gate_divide_info = {
        {"R",OUT,8,1,divide_R_loc}},
   {{24,10,LJ},{8,-24,LJ},{-24,-8,RJ},{-12,24,RJ}},
   {1},
-  
+
   {"Dab_q","Dab_r",0},
 
   Generic_Make,
@@ -126,7 +126,7 @@ GGateInfo gate_divide_info = {
 };
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for dividers.
  *
  * Parameters:

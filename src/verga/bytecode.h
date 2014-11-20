@@ -26,7 +26,7 @@
  * stored in an array in which instructions are executed ni sequence.  Each
  * thread is handled by a VGThread object which contains the current thread
  * state.  At any given time there may be a number of active threads and one
- * current thread.  Execution on the current thread continues until it is 
+ * current thread.  Execution on the current thread continues until it is
  * suspended for some reason either by executing an event wait or a delay.
  * At that time the next ative thread is invoked until it is suspened and so
  * on.  When there are no longer any active threads, simulation time is
@@ -68,8 +68,8 @@
  * Thread states
  *
  *****************************************************************************/
-#define TS_ACTIVE	0x0		/* Thread is actively executing */ 
-#define TS_BLOCKED	0x1		/* Thread is blocked waiting for event */ 
+#define TS_ACTIVE	0x0		/* Thread is actively executing */
+#define TS_BLOCKED	0x1		/* Thread is blocked waiting for event */
 #define TS_DISABLED	0x2		/* Thread is disabled */
 
 /*****************************************************************************
@@ -126,7 +126,7 @@ typedef struct {
   BCfunc	*m_func;	/* Handler function */
   Net		*m_net;		/* Net for memory */
   Value		*m_addr;	/* Address we are operating on */
-  Value		*m_data;	/* Value to store/retrieve from memory */ 
+  Value		*m_data;	/* Value to store/retrieve from memory */
 } BCMemFetch;
 
 /*****************************************************************************
@@ -138,8 +138,8 @@ typedef struct {
   BCfunc	*m_func;	/* Handler function */
   Net		*m_net;		/* Net for memory */
   Value		*m_addr;	/* Address we are operating on */
-  Value		*m_netLsb;	/* LSB on net (memory) */ 
-  Value		*m_data;	/* Value to store/retrieve from memory */ 
+  Value		*m_netLsb;	/* LSB on net (memory) */
+  Value		*m_data;	/* Value to store/retrieve from memory */
   unsigned	m_valLsb;	/* Lsb in value */
   unsigned	m_width;	/* Width of assignment */
 } BCMemPut;
@@ -153,8 +153,8 @@ typedef struct {
   BCfunc	*m_func;	/* Handler function */
   Net		*m_net;		/* Net for memory */
   Value		*m_addr;	/* Address we are operating on */
-  Value		*m_netLsb;	/* LSB on net (memory) */ 
-  Value		*m_data;	/* Value to store/retrieve from memory */ 
+  Value		*m_netLsb;	/* LSB on net (memory) */
+  Value		*m_data;	/* Value to store/retrieve from memory */
   unsigned	m_valLsb;	/* Lsb in value */
   unsigned	m_width;	/* Width of assignment */
   deltatime_t	m_delay;	/* Delay for assignment */
@@ -169,8 +169,8 @@ typedef struct {
   BCfunc	*m_func;	/* Handler function */
   Net		*m_net;		/* Net for memory */
   Value		*m_addr;	/* Address we are operating on */
-  Value		*m_netLsb;	/* LSB on net (memory) */ 
-  Value		*m_data;	/* Value to store/retrieve from memory */ 
+  Value		*m_netLsb;	/* LSB on net (memory) */
+  Value		*m_data;	/* Value to store/retrieve from memory */
   unsigned	m_valLsb;	/* Lsb in value */
   unsigned	m_width;	/* Width of assignment */
   Trigger	*m_trigger;	/* Trigger for assignment */
@@ -611,19 +611,19 @@ void BCNbMemPutE_exec(BCNbMemPutE *bct,VGThread *t);
 /*****************************************************************************
  * BCSubr - member functions
  *****************************************************************************/
-void BCSubr_init(ByteCode *bc,CodeBlock *block,unsigned offset); 
+void BCSubr_init(ByteCode *bc,CodeBlock *block,unsigned offset);
 void BCSubr_exec(BCSubr *s,VGThread *t);
 
 /*****************************************************************************
  * BCReturn - member functions
  *****************************************************************************/
-void BCReturn_init(ByteCode *bc); 
+void BCReturn_init(ByteCode *bc);
 void BCReturn_exec(BCReturn *r,VGThread *t);
 
 /*****************************************************************************
  * BCDebugPrint - member functions
  *****************************************************************************/
-void BCDebugPrint_init(ByteCode *bc,char *msg,...); 
+void BCDebugPrint_init(ByteCode *bc,char *msg,...);
 void BCDebugPrint_exec(BCDebugPrint *dp,VGThread *t);
 
 /*****************************************************************************

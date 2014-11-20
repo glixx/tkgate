@@ -55,7 +55,7 @@ char *strdup(const char *s);
 #define ST_LITERAL	1		/* A literal token such as "foo" and "_bar" */
 #define ST_NUMBER	2		/* A number token such as "1", "0.2", "5e-10" */
 #define ST_STRING	3		/* A quoted string token */
-#define ST_SYMBOL	4		/* A symbol token such as "+", "@", etc. */		
+#define ST_SYMBOL	4		/* A symbol token such as "+", "@", etc. */
 
 #define imin(a,b) ((a) < (b) ? (a) : (b))
 #define imax(a,b) ((a) > (b) ? (a) : (b))

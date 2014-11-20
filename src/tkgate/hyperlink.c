@@ -27,13 +27,13 @@ int istruevalue(const char *s);
 
 /*****************************************************************************
  *
- * 
+ *
  *
  *****************************************************************************/
 static struct {
   GCElement *g;			/* Gate on which hyperlink is found */
   char *link;			/* Text of the link */
-  int isConfirmed;		/* hyperlink is confirmed (mouse up seen) */	
+  int isConfirmed;		/* hyperlink is confirmed (mouse up seen) */
 } pending_jump = {0,0,0};
 
 static void setPendingLink(GCElement *g,const char *link)
@@ -89,7 +89,7 @@ void Html_invoke_browser(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
-    
+
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.browserCommand);
 
@@ -121,7 +121,7 @@ void Html_invoke_email(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
-    
+
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.emailCommand);
 
@@ -169,7 +169,7 @@ void Html_invoke_file(char * file)
 
   /*
    * If there is still a file name, load the file if it is a .v file, or display
-   * it in a viewer if it is any other type of file.  
+   * it in a viewer if it is any other type of file.
    */
   if (*file) {
     char *ext = strrchr(file,'.');
@@ -184,7 +184,7 @@ void Html_invoke_file(char * file)
       char *title;
 
       title = strrchr(file,'/');
-      if (title) 
+      if (title)
 	title++;
       else
 	title = file;

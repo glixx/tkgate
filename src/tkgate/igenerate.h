@@ -22,7 +22,7 @@
 
 /*
  * Code for the sides of a module instance.  These should match the
- * w->orient code for wires attached to that side.  
+ * w->orient code for wires attached to that side.
  */
 #define PSIDE_UNKNOWN	-1
 #define PSIDE_RIGHT	0

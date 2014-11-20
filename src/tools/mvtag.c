@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
-#include "hash.h" 
+#include "hash.h"
 
 #define STRMAX 4096
 
@@ -80,7 +80,7 @@ void readMapFile(const char *name,SHash *msgMap)
   }
 
   while (fgets(line,STRMAX,f))
-    if (sscanf(line,"%s %s",fromTag,toTag) == 2) 
+    if (sscanf(line,"%s %s",fromTag,toTag) == 2)
       SHash_insert(msgMap,fromTag,strdup(toTag));
 }
 
@@ -115,7 +115,7 @@ int main(int argc,char *argv[])
       exit(1);
     }
     while ((de = readdir(d))) {
-      if (*de->d_name == '.') continue;	/* not a locale */ 
+      if (*de->d_name == '.') continue;	/* not a locale */
       renameTag(de->d_name,&msgMap);
     }
   } else

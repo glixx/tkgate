@@ -45,7 +45,7 @@
 #define NV_TRIREG	8
 
 /*
- * GCellSpec - Decoded built-in gate cell 
+ * GCellSpec - Decoded built-in gate cell
  */
 struct GCellSpec_str {
   char		gc_name[STRMAX];	/* Name of cell */
@@ -118,7 +118,7 @@ typedef struct {
 
 typedef struct {
   int		width,height;	/* Size of the comment block in pixels */
-  int		reqWidth;	/* Requested width (html only) */ 
+  int		reqWidth;	/* Requested width (html only) */
   TextLine	*first;		/* First line in comment */
   TextLine	*last;		/* Last line in comment */
   Html		*html;		/* Formatted html */
@@ -190,7 +190,7 @@ struct celemnt {
     GGateFF		ff;
   } u;
 
-  /* 
+  /*
    * Vector of wire pads (allocated in gate_new).  This array can be extended
    * for some symbol modules by doing a realloc.
    */
@@ -278,7 +278,7 @@ struct gateinfo {
   } Flags;
 
   char		*delayNames[MAXDELAYS];			/* Name of delay parameters */
-  
+
   /* Function for gate creation */
   GCElement *(*MakeFunction)(EditState**,GModuleDef*,
 			     int,int,int,int,const char*,int,const char**,int);

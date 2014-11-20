@@ -48,7 +48,7 @@ typedef struct {
 
 int Directive_handle(char *directive,int inSkip);
 int Directive_macroReplace(char *token);
-int Directive_iftoken(int code, int state); 
+int Directive_iftoken(int code, int state);
 simtime_t Directive_parseTimescale(int num,const char *units);
 void Timescale_decode(simtime_t n, int *num,char *units);
 simtime_t Timescale_toSimtime(Timescale *ts,double n,const char *units);

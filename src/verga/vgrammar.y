@@ -31,7 +31,7 @@
 %token REAL EVENT TIME TRIAND TRIOR
 %token STRONG0 STRONG1 PULL0 PULL1 WEAK0 WEAK1 HIGHZ0 HIGHZ1
 
-%token <I> CMOS RCMOS BUFIF0 BUFIF1 NOTIF0 NOTIF1 NMOS PMOS RNMOS RPMOS 
+%token <I> CMOS RCMOS BUFIF0 BUFIF1 NOTIF0 NOTIF1 NMOS PMOS RNMOS RPMOS
 %token <I> PRIMAND PRIMNAND PRIMNOR PRIMXOR PRIMXNOR BUF PRIMNOT
 %token <I> TRANIF0 TRANIF1 RTRANIF0 RTRANIF1 RTRAN KWOR TRAN COND
 
@@ -50,18 +50,18 @@
 %token BOGUS BOGOCHAR INSTANCE MEMORY
 
 %token <I> NUMBER
-%token <S> HEX 
+%token <S> HEX
 %token <S> SYSLITERAL LITERAL HLITERAL STRING HDLLINE
 %token <F> REALNUM
 
 %type <S> dlit decltail dlits
-%type <I> casekw cmos_gtype mos_gtype inx_gtype outx_gtype bif_gtype tran_gtype trif_gtype	
+%type <I> casekw cmos_gtype mos_gtype inx_gtype outx_gtype bif_gtype tran_gtype trif_gtype
 
 
 %type <I> net_type reg_type xreg_type port_type capsize netattrs netattr size0 size1 ptype oautomatic
 %type <E> expr bval lval lvals catexprs delay dexpr odelay econd trigger triggers event catexpr starg
-%type <R> orange range 
-%type <L> caseents stats miports miexprs miasgns exprs oexprs otgparms tgparms 
+%type <R> orange range
+%type <L> caseents stats miports miexprs miasgns exprs oexprs otgparms tgparms
 %type <CE> caseent
 %type <SD> stat if_stat case_stat for_stat while_stat wait_stat raise_stat repeat_stat fork_stat asgn_stat task_stat
 %type <SD> forever_stat
@@ -105,7 +105,7 @@ void BeginBC();
  *    module foo(...); .... endmodule
  *
  *****************************************************************************/
-prog	: 
+prog	:
 	| punits
 	| BREAKPT NUMBER COLON expr SEMI { VerBreakpoint($2,$4); }
 	| SCRIPT script
@@ -160,7 +160,7 @@ sitem	: decl
 modhead	: MODULE LITERAL { VerNewModule($2); } omparmdecls omargs SEMI
 	;
 
-omparmdecls : 
+omparmdecls :
 	    | HASH LPAREN mparmdecls RPAREN
 	    ;
 
@@ -173,7 +173,7 @@ mparmdecl   : DOT LITERAL LPAREN expr RPAREN	{ VerParmDef($2,$4,1); }
 	    | LITERAL ASGN expr			{ VerParmDef($1,$3,1); }
 	    ;
 
-omargs	: 
+omargs	:
 	| LPAREN RPAREN
 	| LPAREN margs RPAREN
 	;
@@ -235,7 +235,7 @@ always	: ALWAYS stat				{ VerIABlock(ALWAYS,$2); }
  * Embedded script - Used for "script" objects.
  *
  *****************************************************************************/
-escript	: BEGINSCRIPT  { VerBeginEScript($1); } esitems ENDSCRIPT  { VerEndEScript(); } 
+escript	: BEGINSCRIPT  { VerBeginEScript($1); } esitems ENDSCRIPT  { VerEndEScript(); }
 	| error ENDSCRIPT
 	;
 
@@ -314,7 +314,7 @@ instance : LITERAL { VerModDecl($1); } omparmsets minsts SEMI
 	;
 
 omparmsets : HASH LPAREN mparmsets RPAREN
-	   | 
+	   |
 	   ;
 
 
@@ -343,7 +343,7 @@ minst	: LITERAL orange LPAREN miports RPAREN		{ VerModInst($1,$2,$4); }
 	| LITERAL orange				{ VerModInst($1,$2,VerEmptyList()); }
 	;
 
-miports	: miexprs 
+miports	: miexprs
 	| miasgns
 	;
 
@@ -508,10 +508,10 @@ tgparms		: starg								{ $$ = VerListAppend(0,$1); }
 		| tgparms COMMA starg						{ $$ = VerListAppend($1,$3); }
 		;
 
-otgparms	:								{ $$ = 0; } 
+otgparms	:								{ $$ = 0; }
 		| tgparms							{ $$ = $1; }
 		;
-	
+
 /*****************************************************************************
  *
  * Enabling conditions
@@ -562,10 +562,10 @@ trigger	: expr				{ $$ = $1; }
  * User function declarations
  *
  * Examples:
- *     function name(a,b, ..., z); ... endfunction 
- *     function [7:0] name(a,b, ..., z); ... endfunction 
- *     function name(input a,input [3:0] b, ..., input z); ... endfunction 
- *     automatic function name(a,b, ..., z); ... endfunction 
+ *     function name(a,b, ..., z); ... endfunction
+ *     function [7:0] name(a,b, ..., z); ... endfunction
+ *     function name(input a,input [3:0] b, ..., input z); ... endfunction
+ *     automatic function name(a,b, ..., z); ... endfunction
  *
  *****************************************************************************/
 userfunc	: oautomatic FUNCTION orange LITERAL
@@ -574,7 +574,7 @@ userfunc	: oautomatic FUNCTION orange LITERAL
 		| oautomatic FUNCTION orange LITERAL
 			{ VerBeginTask($4,$1); VerBeginDecls(NT_OUTPUT|NT_P_REG,$3); VerDecl($4,0); VerTaskToFunc($3); }
 			LPAREN taskprotos RPAREN SEMI
-		   taskdecls stat ENDFUNCTION { VerEndTask($11); } 
+		   taskdecls stat ENDFUNCTION { VerEndTask($11); }
 		;
 
 /*****************************************************************************
@@ -582,14 +582,14 @@ userfunc	: oautomatic FUNCTION orange LITERAL
  * User task declarations
  *
  * Examples:
- *     task name(a,b, ..., z); ... endfunction 
- *     task name(input a,input [3:0] b, ..., output z); ... endfunction 
- *     automatic task name(a,b, ..., z); ... endfunction 
+ *     task name(a,b, ..., z); ... endfunction
+ *     task name(input a,input [3:0] b, ..., output z); ... endfunction
+ *     automatic task name(a,b, ..., z); ... endfunction
  *
  *****************************************************************************/
-usertask	: oautomatic TASK LITERAL { VerBeginTask($3,$1); } SEMI taskdecls stat ENDTASK { VerEndTask($7); } 
+usertask	: oautomatic TASK LITERAL { VerBeginTask($3,$1); } SEMI taskdecls stat ENDTASK { VerEndTask($7); }
 		| oautomatic TASK LITERAL { VerBeginTask($3,$1); } LPAREN taskprotos RPAREN SEMI
-		   taskdecls stat ENDTASK { VerEndTask($10); } 
+		   taskdecls stat ENDTASK { VerEndTask($10); }
 		;
 
 taskdecls	:
@@ -608,7 +608,7 @@ taskprotos	: taskproto
 
 taskproto	: dlit
 		| port_type orange { VerBeginDecls($1|NT_P_REG,$2); } dlit
-		; 
+		;
 
 oautomatic	: AUTOMATIC	{ $$ = 1; }
 		|		{ $$ = 0; }
@@ -645,7 +645,7 @@ stat	: BBEGIN stats END { $$ = new_SDBlock(0,$2); }
 	| SEMI	     { $$ = 0; }
 	| econd stat { $$ = VerCondStat($1,$2); }
 	| error SEMI { $$ = new_SDNull(); }
-	; 
+	;
 
 stats	:		{ $$ = VerEmptyList(); }
 	| stats stat	{ $$ = VerListAppend($1,$2); }

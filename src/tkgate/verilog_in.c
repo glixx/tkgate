@@ -184,7 +184,7 @@ static void cur_initCircuit()
 }
 
 /*
- * Ensure that element n of wends has been allocated. 
+ * Ensure that element n of wends has been allocated.
  */
 static void cur_wends_extend(int n)
 {
@@ -230,7 +230,7 @@ static unsigned spread(unsigned M,unsigned x)
   int i,j;
 
   j = 0;
-  for (i = 0;i < 32;i++) 
+  for (i = 0;i < 32;i++)
     if ((M & (1 << i)) && (x & (1 << j++)))
       R |= (1 << i);
 
@@ -607,7 +607,7 @@ void VerSetSpecialLoadFeatures(Version *V)
 /*****************************************************************************
  *
  * Check the version of the save file to see if we need to do any special
- * load features or issue warnings about old format save files. 
+ * load features or issue warnings about old format save files.
  *
  *****************************************************************************/
 void VerCheckVersion(const char *version)
@@ -1035,7 +1035,7 @@ void VerNewModule(int mtype, const char *name,int isMain)
  * These parameter lists are used in module declarations.  This function is
  * only called when reading a native (non-tkgate) verilog file.  Parameter
  * values and expressions are stored so that they can be regenerated as part
- * of an HDL module definition.  
+ * of an HDL module definition.
  *
  *****************************************************************************/
 void VerModHashParm(const char *name,Expr *e)
@@ -1048,7 +1048,7 @@ void VerModHashParm(const char *name,Expr *e)
 
   p = buf + sprintf(buf,"%s = ",name);
   Expr_sprint(p,STRMAX-strlen(buf),e);
-  
+
   List_addToTail(cur.modHPorts, (char*)strdup(buf));
 }
 
@@ -1613,7 +1613,7 @@ void VerJointNet(const char *nname)
   int i;
 
   if (!pi) pi = GGateInfo_lookup("JOINT");
-  n = (GNet*) SHash_find(cur.mod->m_nets,nname); 
+  n = (GNet*) SHash_find(cur.mod->m_nets,nname);
   for (i = 0;i < pi->NumPads;i++) {
     cur_gpin_extend(i);
     cur.gPin[i] = pi->Pad[i].Name;
@@ -1701,7 +1701,7 @@ void VerSetSize(int w,int h)
 
 void VerSetRot(int r)
 {
-  if (cur.gate) 
+  if (cur.gate)
     cur.gate->orient = r;
 }
 
@@ -1754,7 +1754,7 @@ void VerSetProperty(const char *prop,int n)
 void VerSetStrProperty(const char *prop,const char *value)
 {
   if (strcmp(prop,"/tech") == 0) {
-    cur.gate->cust_delay = 0; 
+    cur.gate->cust_delay = 0;
     if (cur.gate->tech) ob_free(cur.gate->tech);
     cur.gate->tech = ob_strdup(value);
   }
@@ -1762,7 +1762,7 @@ void VerSetStrProperty(const char *prop,const char *value)
     char buf[STRMAX],*p;
     int i;
 
-    cur.gate->cust_delay = 1; 
+    cur.gate->cust_delay = 1;
     strcpy(buf,value);
     for (i = 0, p = strtok(buf," ");p;i++, p = strtok(0," ")) {
       int d;
@@ -1858,11 +1858,11 @@ static GWire *FastenToGate(GCElement *g,const char *pspec,GNet *n,int p,int bdir
     char pn[STRMAX];
 
     switch (sscanf(pspec,"%[^0123456789]%d",pn,&padPos)) {
-    case 2: 
+    case 2:
       break;
     case 1:
       strcpy(pn,pspec);
-      padPos = 0; 
+      padPos = 0;
       break;
     default :
       yyerror(msgLookup("err.yy.pinformat"),pspec);
@@ -1915,7 +1915,7 @@ static GWire *FastenToGate(GCElement *g,const char *pspec,GNet *n,int p,int bdir
  *****************************************************************************/
 void VerPlaceWire(int p)
 {
-  int x;			/* Position in argument list */ 
+  int x;			/* Position in argument list */
   GNet *n;			/* Net for position x */
   const char *pin;		/* Pin name for position x */
   GWire *w;
@@ -1938,7 +1938,7 @@ void VerPlaceWire(int p)
 
 void VerBlockPort(const char *pname,int pdir,int widx)
 {
-  int x;			/* Position in argument list */ 
+  int x;			/* Position in argument list */
   GNet *n;			/* Net for position x */
   const char *pin;		/* Pin name for position x */
   GWire *w;
@@ -2091,7 +2091,7 @@ void ycDirective(char *dtext)
     unsigned long long x2 = Timescale_parse(n2,u2);
 
     if (x1 == 0 || x2 == 0) {
-      yyerror(msgLookup("err.yy.baddirective"),dtext); 
+      yyerror(msgLookup("err.yy.baddirective"),dtext);
       return;
     }
 

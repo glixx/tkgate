@@ -135,7 +135,7 @@ void GPrint_setupTracePages(GPrint *P)
       G->pg_traceNum = 0;
       G->pg_traceStart = e_start;
       G->pg_traceEnd = e_start + P->p_trace.ti_epochsPerPage - 1;
-      if (G->pg_traceEnd > P->p_trace.ti_iend) 
+      if (G->pg_traceEnd > P->p_trace.ti_iend)
 	G->pg_traceEnd = P->p_trace.ti_iend;
     }
   } else {						/* multiple pages per trace set */
@@ -164,14 +164,14 @@ void GPrint_setupTracePages(GPrint *P)
 	G->pg_traceNum = j*maxtr;
 	G->pg_traceStart = e_start;
 	G->pg_traceEnd = e_start + P->p_trace.ti_epochsPerPage - 1;
-	if (G->pg_traceEnd > P->p_trace.ti_iend) 
+	if (G->pg_traceEnd > P->p_trace.ti_iend)
 	  G->pg_traceEnd = P->p_trace.ti_iend;
 
       }
     }
   }
 
-#if 0 
+#if 0
   printf("actual pages (p=%d (%gx%g) s=%d r=[%d..%d] ---> %d\n",(P->p_size-paperSizes),P->p_uWidth,P->p_uHeight,P->p_trace.scale,P->p_trace.ti_start,P->p_trace.ti_end,P->p_numPages);
 #endif
 }
@@ -252,7 +252,7 @@ double traceLinesPerPage(const char *orient,const char *paper)
   int i;
 
   /*
-   * If no active scope, return 1 page.  
+   * If no active scope, return 1 page.
    */
   if (!Scope || Scope->NumTraces <= 0)
     return 1.0;

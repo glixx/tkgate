@@ -78,7 +78,7 @@ GGateInfo gate_buf_info = {
        {"Z",OUT,1,1,buffer_out_loc}},
   {{0,-12,CT},{12,0,LJ},{0,-12,CT},{12,0,LJ}},
   {1},
-  
+
   {"Diz",0},
 
   Generic_Make,
@@ -104,7 +104,7 @@ GGateInfo gate_buf_info = {
 };
 
 /*****************************************************************************
- * 
+ *
 * Generate primitive cell definition for buffer.
  *
  * Parameters:

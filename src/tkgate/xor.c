@@ -86,7 +86,7 @@ GGateInfo gate_xor_info = {
   {1},
 
   {"Diz",0},
-  
+
   AOX_Make,
   AOX_WriteCellDef,
   Generic_Init,

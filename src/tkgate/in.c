@@ -65,7 +65,7 @@ GGateInfo gate_in_info = {
   1,{{"Z",OUT,1,1,in_out_loc}},
   {{-8,4,RJ},{0,16,CT},{8,4,LJ},{0,-7,CT}},
   {1,1,1},
-  
+
   {0},
 
   InOut_Make,

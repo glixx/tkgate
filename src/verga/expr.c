@@ -218,7 +218,7 @@ Expr *new_Expr_op3(exprcode_t op,Expr *l,Expr *m,Expr *r)
   return e;
 }
 
-/***************************************************************************** 
+/*****************************************************************************
  *
  * Create a repeating concat operator expression
  *
@@ -241,7 +241,7 @@ Expr *new_Expr_repcat(Expr *b,Expr *x)
   return e;
 }
 
-/***************************************************************************** 
+/*****************************************************************************
  *
  * Create an expression for an unsized integer
  *
@@ -262,7 +262,7 @@ Expr *new_Expr_num(int n)
   return e;
 }
 
-/***************************************************************************** 
+/*****************************************************************************
  *
  * Create an expression for a float
  *
@@ -283,7 +283,7 @@ Expr *new_Expr_realnum(real_t n)
   return e;
 }
 
-/***************************************************************************** 
+/*****************************************************************************
  *
  * Create an expression for a sized value
  *
@@ -305,7 +305,7 @@ Expr *new_Expr_hex(const char *spec)
   return e;
 }
 
-/***************************************************************************** 
+/*****************************************************************************
  *
  * Create an expression from a string.
  *
@@ -404,7 +404,7 @@ static char *Expr_getstrCat(Expr *e,char *p)
 
 /*****************************************************************************
  *
- * Generate a string with an expression 
+ * Generate a string with an expression
  *
  * Parameters:
  *     p		String to write to.
@@ -488,7 +488,7 @@ char *Expr_getstr(Expr*e,char *p)
   if (od->od_nopr == 3) {
     return p;
   }
-  
+
   if (e->e.opr[0]) {
     OpDesc *opr_od = OpDesc_find(e->e.opr[0]->e_type);
 
@@ -622,7 +622,7 @@ void Expr_print(Expr*e,FILE *f)
   if (od->od_nopr == 3) {
     return;
   }
-  
+
   if (e->e.opr[0]) {
     OpDesc *opr_od = OpDesc_find(e->e.opr[0]->e_type);
 
@@ -878,7 +878,7 @@ int VRange_getSize(VRange *r,Scope *scope,unsigned *width)
  *
  * Parameters:
  *     name		Name to associate with exression (or null)
- *     e		Expression to name 
+ *     e		Expression to name
  *
  *****************************************************************************/
 NameExpr *new_NameExpr(const char *name,Expr *e)
@@ -910,7 +910,7 @@ int Expr_parmEvalI(Expr *e,Scope *scope,unsigned *n,parmevflags_t flags)
 {
   Value *r = Expr_parmEval(e,scope,flags);
   int rcode = 0;
- 
+
   if (!r) return -1;
   if (Value_toInt(r, n) < 0) {
     rcode = -1;
@@ -1120,11 +1120,11 @@ static int Expr_vectorGetSize(Expr *e, Scope *scope)
       size = 0;
   } else
     size = Net_nbits(n);
-    
+
 
   if (addr) delete_VRange(addr, 0);
   if (bits) delete_VRange(bits, 0);
- 
+
   return size;
 }
 
@@ -1691,7 +1691,7 @@ Value *Expr_generate(Expr *e,int nbits,Scope *scope,CodeBlock *cb)
     {
       if (Value_nbits(e->e.snum) == nbits)
 	return e->e.snum;
-      else {						/* Resize constant if not of requested size */ 
+      else {						/* Resize constant if not of requested size */
 	Value *lhs;
 
 	lhs = new_Value(nbits);
@@ -1705,7 +1705,7 @@ Value *Expr_generate(Expr *e,int nbits,Scope *scope,CodeBlock *cb)
     {
       if (Value_nbits(e->e.snum) == nbits)
 	return e->e.snum;
-      else {						/* Resize constant if not of requested size */ 
+      else {						/* Resize constant if not of requested size */
 	Value *lhs;
 
 	lhs = new_Value(nbits);
@@ -1827,7 +1827,7 @@ void Expr_getReaders(Expr*e, Scope *scope, PHash *H)
 
 /*****************************************************************************
  *
- * Get the set of literals that are read by an expression 
+ * Get the set of literals that are read by an expression
  *
  *****************************************************************************/
 void Expr_getStaticReaders(Expr*e, SHash *H)

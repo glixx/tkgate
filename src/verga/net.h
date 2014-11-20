@@ -157,7 +157,7 @@
  *****************************************************************************/
 typedef struct {
   Net			*snm_net;		/* Net connected to SuperNet */
-  int			snm_netLsb;		/* Lsb on connected net */ 
+  int			snm_netLsb;		/* Lsb on connected net */
   int			snm_superNetLsb;	/* Lsb on SuperNet */
   int			snm_nBits;		/* Number of connected bits */
 } SNetMap;
@@ -166,7 +166,7 @@ typedef struct {
  *
  * SuperNet - shared bits among nets connected with a tran()
  *
- * 
+ *
  *
  *****************************************************************************/
 typedef struct {

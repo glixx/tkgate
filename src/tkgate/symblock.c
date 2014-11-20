@@ -35,7 +35,7 @@ Handling characteristics of SymModules:
 * Each SymModule has its own pointer to a GModSymbol.  Different instances of
   the same module may have different  GModSymbol definitions associated with
   them.
-* Newly created SymModule instances use the GModSymbol for the corresponding 
+* Newly created SymModule instances use the GModSymbol for the corresponding
   module definition.
 *
 ***************************************************************************/
@@ -85,7 +85,7 @@ GGateInfo gate_symblock_info = {
   {0,0,0,0,0,0},
 
   {0},
-  
+
   Generic_Make,
   Nop_WriteCellDef,
   Generic_Init,
@@ -443,7 +443,7 @@ void SymBlock_VerSave(FILE *f,GCElement *g)
     for (i = 0;i < N;i++) {
       for (w = g->wires[i], j=0;w;w = w->next, j++) {
 	fprintf(f," %d",w->nidx);
-      } 
+      }
     }
     fprintf(f," ]");
   }

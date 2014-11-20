@@ -89,7 +89,7 @@ void SBreakPoint_enable(SBreakPoint *bp)
   const char *p;
   const char *edge;
   char *q;
-  int delay = -1; 
+  int delay = -1;
   int isDelayOnly;
   FILE *f;
   char x;
@@ -248,7 +248,7 @@ void BrkPtTable_disable(NHash *bpm,int id)
   if (TkGate.circuit->simulator.active) {
     sendSimCmd("$delscript break:%d",bp->bp_id);
   }
-   
+
   ob_touch(bp);
   bp->bp_state = BPS_IGNORE;
   DoTcl("Breakpoint::setState %d %d",bp->bp_id,bp->bp_state);
@@ -306,7 +306,7 @@ void BrkPtTable_error(NHash *bpm,int id)
 
   ob_touch(bp);
   bp->bp_state = BPS_INVALID;
-  DoTcl("Breakpoint::seeError %d",id); 
+  DoTcl("Breakpoint::seeError %d",id);
 }
 
 /*****************************************************************************

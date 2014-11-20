@@ -111,7 +111,7 @@ GGateInfo gate_add_info = {
   {1},
 
   {"Dab_s","Dab_co","Dci_s","Dci_co",0},
-  
+
   Generic_Make,
   Adder_WriteCellDef,
   Generic_Init,
@@ -135,7 +135,7 @@ GGateInfo gate_add_info = {
 };
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for adders.
  *
  * Parameters:

@@ -45,16 +45,16 @@ void yyrestart(FILE*);
  */
 struct {
   MemProg	*mb;			/* The current memory program */
-  UField	*field;			/* The most recently defined field */ 
+  UField	*field;			/* The most recently defined field */
   SHash		*eset;			/* The current enum set */
   OpDef		*opdef;			/* The current operator */
   OprDef	*oprdef;		/* The current operand */
   OprGroup	*ogdef;			/* The current operand group */
   int		dtype;			/* Current data type for .short, .byte, etc.*/
   int		noprs;			/* Number of operands */
-  int		opr_type[MAXOPRS];	/* Operand types */ 
-  int		opr_regs[MAXOPRS];	/* Operand registers */ 
-  Number	*opr_nums[MAXOPRS];	/* Operand numbers */ 
+  int		opr_type[MAXOPRS];	/* Operand types */
+  int		opr_regs[MAXOPRS];	/* Operand registers */
+  Number	*opr_nums[MAXOPRS];	/* Operand numbers */
   char		*proc_name;		/* Current procedure name */
 } cur;
 
@@ -566,7 +566,7 @@ void ycDataStr(char *v)
 
 void ycBeginProc(char *pname)
 {
-  if (cur.proc_name) 
+  if (cur.proc_name)
     yyerror("Nested procedures not allowed.  Currently in '%s'",cur.proc_name);
 
   ycMLabel(pname);
@@ -593,7 +593,7 @@ void ycRegRecord(char *name,int value)
   num_lex_regs++;
 
   lex_regs[i].Keyword = strdup(name);
-  lex_regs[i].Value = value;  
+  lex_regs[i].Value = value;
 }
 
 void ParseFile(char *fileName)

@@ -83,7 +83,7 @@ static unsigned roundup(unsigned N)
     N <<= 1;
   }
   return N;
-} 
+}
 
 static unsigned int inthash(unsigned int key)
 {
@@ -111,14 +111,14 @@ unsigned computestrhash(const char *s)
     N |= (unsigned char) *s;
     if ((i & 3) == 3)
       H = inthash(H + N);
-  } 
+  }
   H = inthash(H + N);
   return H;
 }
 
 
 static HashElem *new_SHashElem(Hash *H,const char *key,unsigned hcode, void *val)
-{	
+{
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
 
   E->key.s = HT_STRDUP(H,key);
@@ -130,7 +130,7 @@ static HashElem *new_SHashElem(Hash *H,const char *key,unsigned hcode, void *val
 }
 
 static HashElem *new_NHashElem(Hash *H,int key,unsigned hcode,void *val)
-{	
+{
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
 
   E->key.d = key;
@@ -176,7 +176,7 @@ void Hash_init(Hash *H,int use_ob)
     H->vtable = &normal_mmgr;
 
   H->size = roundup(INITIAL_HASHSIZE);
-  H->mask = H->size-1; 
+  H->mask = H->size-1;
   H->num = 0;
   H->loop_ok = 0;
   H->elems = (HashElem**) HT_CALLOC(H,H->size,sizeof(HashElem*),"HashElem[]");

@@ -81,7 +81,7 @@ GGateInfo gate_rshifter_info = {
   {1},
 
   {"Dsz","Diz",0},
-  
+
   Generic_Make,
   Shift_WriteCellDef,
   Generic_Init,

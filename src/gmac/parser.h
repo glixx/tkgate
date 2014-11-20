@@ -54,7 +54,7 @@ typedef struct number {
   union {
     char *s;
     int d;
-  } v; 
+  } v;
 } Number;
 
 

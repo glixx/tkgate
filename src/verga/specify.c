@@ -148,7 +148,7 @@ static void Specify_generateTaskCall(Specify *s,ModuleInst *mi,CodeBlock *codeBl
 
   /*
    * Register this thread
-   */  
+   */
   List_addToTail(&mi->mc_threads,thread);
 
 
@@ -255,7 +255,7 @@ static void Specify_generateTaskCall(Specify *s,ModuleInst *mi,CodeBlock *codeBl
  * Generate code to implement specify tasks.
  *
  * Parameters:
- *      s		Specify block to use 
+ *      s		Specify block to use
  *      mi		Module instance to use
  *      codeBlock	Codeblock in which to write byte code
  *
@@ -310,7 +310,7 @@ void Specify_generateTasks(Specify *s,ModuleInst *mi,CodeBlock *codeBlock)
     top_bc = CodeBlock_size(codeBlock);
     Specify_generateTaskCall(s,mi,codeBlock,-1,-1,task,taskCtx,0,scope);
 
-    which = 0; 
+    which = 0;
     for (i = 0;i < task->t_nargs;i++) {
       if (taskEnt->st_argTypes[i] == TAT_TRIGGER) {
 	Specify_generateTaskCall(s,mi,codeBlock,i,which++,task,taskCtx,0,scope);
@@ -453,7 +453,7 @@ SpecifyStat *new_SpecifyStat(Expr *cond,spectype_t ptype,Expr *lhs,Expr *rhs,Exp
  *
  * Get the delays that match a given source/destination pair
  *
- * 
+ *
  *
  *****************************************************************************/
 int Specify_getDelays(Specify *s,const char *src,const char *dst,List/*SpecifyStat**/ *match)

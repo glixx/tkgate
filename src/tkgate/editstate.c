@@ -212,7 +212,7 @@ void env_updateMTCircuit()
 void env_insertModule(GModuleDef *M)
 {
   char *mflags = "";
-  
+
   if (GModuleDef_isTop(M))
     mflags = "+";
 
@@ -260,7 +260,7 @@ GCElement *env_getInterface(GCElement *g)
 {
   GModuleDef *M;
 
-  if (GCElement_getType(g) != GC_BLOCK && 
+  if (GCElement_getType(g) != GC_BLOCK &&
       GCElement_getType(g) != GC_SYMBLOCK)
     return 0;
 
@@ -542,11 +542,11 @@ void editstate_Init(EditState *es)
 EditState *new_EditState()
 {
   EditState *es;
-    
+
   es = (EditState*) ob_malloc(sizeof(EditState),"EditState");
-    
+
   editstate_Init(es);
-    
+
   return es;
 }
 
@@ -606,7 +606,7 @@ void editstate_update(EditState *es)
   scrollbar_update();
 
   /*
-   * Draw special mode-specific items 
+   * Draw special mode-specific items
    */
   switch (tkgate_currentMode()) {
   case MM_SIMULATE :
@@ -698,7 +698,7 @@ void editstate_regionUpdate(EditState *es,int xmin,int ymin,int xmax,int ymax)
   es->clip.ymin = ymin;
   es->clip.xmax = xmax;
   es->clip.ymax = ymax;
-  
+
   editstate_update(es);
 }
 
@@ -733,7 +733,7 @@ void editstate_displayPathString(EditState *cur_es)
   }
 
   if (TkGate.tcl) {
-    Tcl_SetVar(TkGate.tcl,"tkg_currentPath",path,TCL_GLOBAL_ONLY); 
+    Tcl_SetVar(TkGate.tcl,"tkg_currentPath",path,TCL_GLOBAL_ONLY);
     Tcl_SetVar(TkGate.tcl,"tkg_currentModule",cur_es->env->m_name,TCL_GLOBAL_ONLY);
   }
 }

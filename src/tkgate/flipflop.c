@@ -161,7 +161,7 @@ GGateInfo gate_ff_info = {
   {1},
 
   {"Dsetup","Dhold","Dck_q",0},
-  
+
   FF_Make,
   FF_WriteCellDef,
   Generic_Init,
@@ -371,7 +371,7 @@ static GWireNode *FF_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
     if (g->u.ff.mirror)
       FF_normal_gateinfo();
 
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;

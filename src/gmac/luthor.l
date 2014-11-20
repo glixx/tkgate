@@ -31,23 +31,23 @@
 
 
 struct lex_keywordentry lex_words[] = {
-  {".bss",	DBSS }, 
-  {".byte",	DBYTE }, 
-  {".end",	DEND }, 
-  {".long",	DLONG }, 
-  {".proc",	DPROC }, 
-  {".short",	DSHORT }, 
-  {".symbol",	DSYMBOL }, 
-  {"bank",	BANK }, 
-  {"begin",	KWBEGIN }, 
-  {"end",	KWEND }, 
-  {"field",	FIELD }, 
-  {"macrocode",	MACROCODE }, 
-  {"map",	MAP }, 
-  {"microcode",	MICROCODE }, 
-  {"op",	OP }, 
-  {"operands",	OPERANDS }, 
-  {"registers",	REGISTERS } 
+  {".bss",	DBSS },
+  {".byte",	DBYTE },
+  {".end",	DEND },
+  {".long",	DLONG },
+  {".proc",	DPROC },
+  {".short",	DSHORT },
+  {".symbol",	DSYMBOL },
+  {"bank",	BANK },
+  {"begin",	KWBEGIN },
+  {"end",	KWEND },
+  {"field",	FIELD },
+  {"macrocode",	MACROCODE },
+  {"map",	MAP },
+  {"microcode",	MICROCODE },
+  {"op",	OP },
+  {"operands",	OPERANDS },
+  {"registers",	REGISTERS }
 };
 int num_lex_words = sizeof(lex_words)/sizeof(lex_words[0]);
 

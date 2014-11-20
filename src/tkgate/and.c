@@ -98,7 +98,7 @@ GGateInfo gate_and_info = {
   {1},
 
   {"Diz",0},
-  
+
   AOX_Make,
   AOX_WriteCellDef,
   Generic_Init,
@@ -164,7 +164,7 @@ void AOX_extBarCoords(GCElement *g,int is_draw,int _x1[2],int _y1[2],int _x2[2],
     _x2[1] = x1+1;		_y2[1] = y2+D-(D/2);
     *b_dx = 1;			*b_dy = 0;
     break;
-  case D_LEFT : 
+  case D_LEFT :
     D = (D-(y2-y1-1));		/* distance to add */
     _x1[0] = x1-1;		_y1[0] = y1-1;
     _x2[0] = x1-1;		_y2[0] = y1-D/2;
@@ -220,8 +220,8 @@ static void AOX_adjustWires(GCElement *g)
 
   N = wire_numOnPad(g->wires[AND_IN]);
   L = AOX_WIRESPACE*(N+1);
-  
-  
+
+
   switch (g->orient) {
   case 0 :
     wx = g->xpos + g->typeinfo->Pad[AND_IN].Loc[g->orient].x1;
@@ -248,7 +248,7 @@ static void AOX_adjustWires(GCElement *g)
     dy = 0;
     break;
   }
-  
+
   for (i = 0,w = g->wires[AND_IN];w;i++, w = w->next) {
     wx += dx;
     wy += dy;
@@ -260,7 +260,7 @@ static void AOX_adjustWires(GCElement *g)
 void AOX_AddInput(EditState *es,GCElement *g)
 {
   if (!g->u.basic.extbar)
-    Generic_AddInput(es,g);		/* Legacy gate, use generic add function */ 
+    Generic_AddInput(es,g);		/* Legacy gate, use generic add function */
   else {
     GWire *e1,*e2;
 
@@ -344,7 +344,7 @@ int AOX_GateParmList(FILE *f,GCElement *g)
 	fprintf(f,")");
       } else
 	fprintf(f,"(%sw%x)",inv,(unsigned)w->net);
-    } 
+    }
   }
   fprintf(f,");");
   return 0;
@@ -380,7 +380,7 @@ void AOX_PSWrite(GPrint *P,GModLayout *l,GCElement *g)
     int x1[2],y1[2],x2[2],y2[2],b_dx,b_dy,i;
 
     AOX_extBarCoords(g,0,x1,y1,x2,y2,&b_dx,&b_dy);
-    
+
     for (i = 0;i < 2;i++)
       fprintf(P->p_f,"gsave %d %d %d %d moveto lineto stroke grestore\n",x1[i],y1[i],x2[i],y2[i]);
   }

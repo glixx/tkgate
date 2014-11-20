@@ -69,7 +69,7 @@ void Circuit_sortThreads(Circuit *c);
 void Circuit_unloadDynamicModule(Circuit *c,DynamicModule *dm);
 void Circuit_enableDynamicModule(Circuit *c,DynamicModule *dm);
 void Circuit_disableDynamicModule(Circuit *c,DynamicModule *dm);
-void Circuit_declareNet(Circuit *c,Scope *scope,NetDecl *nd,ModuleDecl *md,Place *place); 
+void Circuit_declareNet(Circuit *c,Scope *scope,NetDecl *nd,ModuleDecl *md,Place *place);
 void Circuit_execScript(Circuit*c,int argc,char *argv[]);
 void Circuit_finishModuleInst(Circuit *c, ModuleInst *mi, CodeBlock *codeBlock);
 #define Circuit_getRoot(c) (c)->c_root

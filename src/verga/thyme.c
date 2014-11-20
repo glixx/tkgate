@@ -542,7 +542,7 @@ int main(int argc,char *argv[])
 	vgsim.vg_baseDirectory = optarg;
 	break;
       case 't' :
-	vgsim.vg_topModuleName = optarg; 
+	vgsim.vg_topModuleName = optarg;
 	break;
       case 'd' :
 	if (strcasecmp(optarg,"min") == 0)
@@ -652,7 +652,7 @@ int main(int argc,char *argv[])
   }
 
   /*
-   * If we do not have a top module name, we must exit. 
+   * If we do not have a top module name, we must exit.
    */
   if (!vgsim.vg_topModuleName) {
     errorFile(&curPlace,ERR_NOTOP, "<none>");

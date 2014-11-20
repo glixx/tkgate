@@ -68,7 +68,7 @@ GGateInfo gate_script_info = {
   {1},
 
   {0},
-  
+
   Script_Make,
   Nop_WriteCellDef,
   Generic_Init,
@@ -119,7 +119,7 @@ static GCElement *Script_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned fl
   for (L = g->u.comment.first;L;L = L->next) {
     Comment_addLine(ng,L->text);
   }
-  
+
 
   return ng;
 }

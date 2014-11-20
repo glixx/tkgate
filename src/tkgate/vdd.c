@@ -64,7 +64,7 @@ GGateInfo gate_vdd_info = {
   1,{{"Z",OUT,1,1,vdd_out_loc}},
   {{5,15,LJ},{5,15,LJ},{5,15,LJ},{5,15,LJ}},
   {1,1,1},
-  
+
   {0},
 
   Generic_Make,
@@ -86,7 +86,7 @@ GGateInfo gate_vdd_info = {
   Nop_SimHitFunc,
   Generic_PSWrite,
   Generic_EditProps,
-  InOut_VerSave    
+  InOut_VerSave
 };
 
 void init_vdd()

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
-#include "hash.h" 
+#include "hash.h"
 
 #define STRMAX 1024
 #define LONGSTRMAX 8096
@@ -49,7 +49,7 @@ Message *new_Message(const char *key,const char *str, int isFill, int isLong)
 
   return m;
 }
- 
+
 
 /*****************************************************************************
  *
@@ -95,7 +95,7 @@ void MsgTable_init(MsgTable *mt)
 MsgTable *new_MsgTable()
 {
   MsgTable *mt = (MsgTable *) malloc(sizeof(MsgTable));
-  
+
   MsgTable_init(mt);
 
   return mt;
@@ -243,7 +243,7 @@ void messageDiff(MsgTable *oldMT,MsgTable *newMT,MsgTable *editMT)
 	  em->m_str = malloc(strlen(nm->m_str) + sizeof("TODO: ") + 1);
 	  strcpy(em->m_str, "TODO: ");
 	  strcat(em->m_str, nm->m_str);
-	  
+
 	  SHash_insert(&editMT->mt_keytab,em->m_key,em);
 	}
       }
@@ -268,7 +268,7 @@ void messageDiff(MsgTable *oldMT,MsgTable *newMT,MsgTable *editMT)
 ,he)) {
       Message *nm = (Message*) HashElem_obj(he);
       Message *em = (Message*) SHash_find(&editMT->mt_keytab,nm->m_key);
-  
+
       /* added if in new but not the edit source (the odd corner case) */
       if (!em) {
         em = (Message *) malloc(sizeof(Message));
@@ -287,7 +287,7 @@ void messageDiff(MsgTable *oldMT,MsgTable *newMT,MsgTable *editMT)
 
 }
 
-/* 
+/*
  * use newfile and newMT as a template to write an edited
  * message file out
  *
@@ -298,7 +298,7 @@ int dumpEdited(char *newfile, MsgTable *newMT, MsgTable *editMT, FILE *out) {
 
   f = fopen(newfile, "r");
   if (!f) return -1; /* shouldn't really happen */
-  
+
   while (fgets(buf,sizeof(buf),f)) {
     if (sscanf(buf,"\\font-encoding %s",tag) == 1) {
       fprintf(out,"%s",buf);
@@ -309,7 +309,7 @@ int dumpEdited(char *newfile, MsgTable *newMT, MsgTable *editMT, FILE *out) {
     } else if (sscanf(buf,"%s %[^\n]",tag,msg) == 2 && *tag != '#') {
       Message *nm = (Message *)SHash_find(&newMT->mt_keytab, tag);
       Message *em = (Message *)SHash_find(&editMT->mt_keytab, tag);
-      
+
       if (!em) { /* old file has message that edit file doesn't */
 	/* discard entire message -- right thing to do? */
 	fprintf(stderr, "Warning: new message '%s' not found in edited\n", tag);
@@ -329,7 +329,7 @@ int dumpEdited(char *newfile, MsgTable *newMT, MsgTable *editMT, FILE *out) {
 	/* discard until -end- */
 	while (fgets(buf,sizeof(buf),f))
 	  if (strncmp(buf,"-end-",5) == 0) break;
-	
+
       } else {
 	fprintf(out, "%s\t\t%s\n", tag, em->m_str);
       }
@@ -360,7 +360,7 @@ void addTags(const char *editFile,MsgTable *oldMT, MsgTable *editMT)
   fprintf(out,"\n");
   fprintf(out,"# New Tags\n");
   fprintf(out,"\n");
-    
+
 
 
   for (he = Hash_first(&oldMT->mt_keytab);he;he = Hash_next(&oldMT->mt_keytab,he)) {
@@ -464,6 +464,6 @@ int main(int argc,char *argv[])
       }
     }
   }
-  
+
   return 0;
 }
