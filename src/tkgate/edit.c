@@ -1620,7 +1620,8 @@ void SetModified(unsigned flags)
   if ((flags & MF_SYNCONLY)) {
     TkGate.sync_flags |= flags;
   } else {
-    if (TkGate.circuit->no_set_modify) return;
+    if (TkGate.circuit->no_set_modify)
+      return;
 
     GSearchContext_clear(TkGate.circuit->search);
 

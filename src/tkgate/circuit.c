@@ -22,7 +22,6 @@
 static const char *unitCodes[] = {"s", "ms", "us", "ns", "ps", "fs"};
 static int numUnitCodes  = sizeof(unitCodes)/sizeof(unitCodes[0]);
 
-
 /*
  * 1ns/1ns
  */
@@ -132,6 +131,9 @@ Circuit *new_Circuit()
   c->rot = 0;
   c->mode = MODE_MOVE;
   c->c_isNewFile = 0;
+  c->no_set_modify = 0;
+  c->org_x = 0;
+  c->org_y = 0;
 
   Circuit_initOptions(c);
   Circuit_setLocale(c,TkGate.locale);

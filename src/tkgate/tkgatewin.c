@@ -469,6 +469,7 @@ static void initGateParms(TkgGateWin *gw,TkGateParams *P)
   P->W = Tk_WindowId(gw->win);
 
   P->circuit->es = new_EditState();
+  TkGate.circuit->no_set_modify = 1;
   P->circuit->es->env = env_defineModule("main",1);
   editstate_setCurrent(P->circuit->es);
   TkGate.circuit->root_mod = P->circuit->es->env;

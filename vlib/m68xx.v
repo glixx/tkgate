@@ -20,22 +20,30 @@ supply1 w15;    //: /sn:0 {0}(161,160)(113,160)(113,146){1}
 //: {12}(113,110)(113,37){13}
 reg w1;    //: /sn:0 {0}(-168,177)(-18,177)(-18,176)(161,176){1}
 reg OSC_W;    //: /sn:0 {0}(-157,80)(-70,80){1}
+wire w6;    //: /sn:0 {0}(180,404)(86,404)(86,302){1}
+//: {2}(88,300)(182,300){3}
+//: {4}(86,298)(86,112)(54,112){5}
 wire [9:0] ROM_ADDRESS_BUS;    //: /sn:0 {0}(#:426,211)(144,211)(144,236)(182,236){1}
+wire w4;    //: /sn:0 {0}(180,388)(165,388){1}
+wire w3;    //: /sn:0 {0}(180,372)(165,372){1}
+wire [9:0] w0;    //: /sn:0 {0}(#:180,340)(151,340)(151,432)(426,432){1}
 wire F2_CBUS;    //: /sn:0 {0}(161,96)(54,96){1}
-wire [15:0] ADDRESS_BUS;    //: {0}(#:431,462)(431,253){1}
-//: {2}(431,252)(431,211){3}
-//: {4}(431,210)(431,153){5}
-//: {6}(#:433,151)(539,151)(539,109){7}
-//: {8}(431,149)(50:431,80)(292,80){9}
-wire [7:0] DATA_BUS;    //: {0}(#:292,96)(50:329,96){1}
-//: {2}(333,96)(389,96)(389,236)(284,236){3}
+wire [15:0] ADDRESS_BUS;    //: {0}(#:431,554)(431,432){1}
+//: {2}(431,431)(431,253){3}
+//: {4}(431,252)(431,211){5}
+//: {6}(431,210)(50:431,80)(409,80){7}
+//: {8}(407,78)(#:407,43){9}
+//: {10}(405,80)(292,80){11}
+wire [7:0] DATA_BUS;    //: {0}(#:282,340)(389,340)(389,238){1}
+//: {2}(389,234)(389,96)(333,96){3}
 //: {4}(331,94)(331,43){5}
-wire VMA_F2__CBUS;    //: /sn:0 {0}(182,300)(86,300)(86,286){1}
-//: {2}(88,284)(182,284){3}
-//: {4}(86,282)(86,112)(54,112){5}
+//: {6}(50:329,96)(#:292,96){7}
+//: {8}(387,236)(284,236){9}
+wire VMA_F2__CBUS;    //: /sn:0 {0}(164,284)(182,284){1}
 wire F1_CBUS;    //: /sn:0 {0}(161,80)(54,80){1}
+wire w2;    //: /sn:0 {0}(180,356)(165,356){1}
 wire w11;    //: /sn:0 {0}(149,254)(179,254)(179,252)(182,252){1}
-wire [1:0] w12;    //: /sn:0 {0}(#:426,253)(297,253)(297,355)(145,355)(145,268){1}
+wire [1:0] w12;    //: /sn:0 {0}(#:426,253)(297,253)(297,493)(145,493)(145,268){1}
 //: {2}(145,267)(145,254){3}
 //: {4}(145,253)(145,247){5}
 wire w10;    //: /sn:0 {0}(149,268)(182,268){1}
@@ -45,22 +53,25 @@ wire w5;    //: /sn:0 {0}(307,112)(292,112){1}
 
   //: joint g8 (w15) @(113, 112) /w:[ 10 12 -1 9 ]
   assign w11 = w12[0]; //: TAP g4 @(143,254) /sn:0 /R:2 /w:[ 0 3 4 ] /ss:1
+  //: joint g13 (DATA_BUS) @(389, 236) /w:[ -1 2 8 1 ]
   assign w10 = w12[1]; //: TAP g3 @(143,268) /sn:0 /R:2 /w:[ 0 1 2 ] /ss:1
-  //: joint g13 (ADDRESS_BUS) @(431, 151) /w:[ 6 8 -1 5 ]
-  assign w12 = ADDRESS_BUS[15:14]; //: TAP g2 @(429,253) /sn:0 /R:2 /w:[ 0 1 2 ] /ss:0
-  assign ROM_ADDRESS_BUS = ADDRESS_BUS[9:0]; //: TAP g1 @(429,211) /sn:0 /R:2 /w:[ 0 3 4 ] /ss:0
-  //: joint g11 (VMA_F2__CBUS) @(86, 284) /w:[ 2 4 -1 1 ]
+  assign w12 = ADDRESS_BUS[14:13]; //: TAP g2 @(429,253) /sn:0 /R:2 /w:[ 0 3 4 ] /ss:0
+  assign ROM_ADDRESS_BUS = ADDRESS_BUS[9:0]; //: TAP g1 @(429,211) /sn:0 /R:2 /w:[ 0 5 6 ] /ss:0
+  //: joint g11 (w6) @(86, 300) /w:[ 2 4 -1 1 ]
+  //: joint g10 (ADDRESS_BUS) @(407, 80) /w:[ 7 8 10 -1 ]
   //: SWITCH RESET_SW (w1) @(-185,177) /w:[ 0 ] /st:0 /dn:1
-  //: SWITCH OSC_SW (OSC_W) @(-174,80) /w:[ 0 ] /st:0 /dn:1
-  //: LED g10 (DATA_BUS) @(331,36) /sn:0 /w:[ 5 ] /type:2
-  MC6800 MPU (.CLK_1(F1_CBUS), .CLK_2(F2_CBUS), .DBE(w15), ._HALT(w15), ._IRQ(w15), ._NMI(w15), ._RESET(w1), .A(ADDRESS_BUS), .R_W(w5), .VMA(VMA_CBUS), .D(DATA_BUS));   //: @(162, 64) /sz:(129, 128) /p:[ Li0>0 Li1>0 Li2>11 Li3>7 Li4>3 Li5>0 Li6>1 Ro0<9 Ro1<1 Ro2<0 Rt0=0 ]
+  //: SWITCH OSC_SW (OSC_W) @(-174,80) /w:[ 0 ] /st:1 /dn:1
+  MC6800 MPU (.CLK_1(F1_CBUS), .CLK_2(F2_CBUS), .DBE(w15), ._HALT(w15), ._IRQ(w15), ._NMI(w15), ._RESET(w1), .A(ADDRESS_BUS), .R_W(w5), .VMA(VMA_CBUS), .D(DATA_BUS));   //: @(162, 64) /sz:(129, 128) /p:[ Li0>0 Li1>0 Li2>11 Li3>7 Li4>3 Li5>0 Li6>1 Ro0<11 Ro1<1 Ro2<0 Rt0=7 ]
   //: VDD g6 (w15) @(124,37) /sn:0 /w:[ 13 ]
-  CLOCK g9 (.CLK(OSC_W), .VMA(VMA_CBUS), .F1(F1_CBUS), .F2(F2_CBUS), .F2_VMA(VMA_F2__CBUS));   //: @(-69, 64) /sz:(122, 64) /sn:0 /p:[ Li0>1 Li1>1 Ro0<1 Ro1<1 Ro2<5 ]
+  CLOCK g9 (.CLK(OSC_W), .VMA(VMA_CBUS), .F1(F1_CBUS), .F2(F2_CBUS), .F2_VMA(w6));   //: @(-69, 64) /sz:(122, 64) /sn:0 /p:[ Li0>1 Li1>1 Ro0<1 Ro1<1 Ro2<5 ]
   //: joint g7 (w15) @(113, 128) /w:[ 6 8 -1 5 ]
+  //: LED ABUS_WATCH (ADDRESS_BUS) @(407,36) /w:[ 9 ] /type:2
+  assign w0 = ADDRESS_BUS[9:0]; //: TAP g14 @(429,432) /sn:0 /R:2 /w:[ 1 1 2 ] /ss:0
+  //: LED DBUS_WATCH (DATA_BUS) @(331,36) /w:[ 5 ] /type:2
   //: joint g5 (w15) @(113, 144) /w:[ 2 4 -1 1 ]
-  MCM6830 ROM (.A(ROM_ADDRESS_BUS), .CS0(w11), .CS1(w10), .CS2(VMA_F2__CBUS), .CS3(VMA_F2__CBUS), .D(DATA_BUS));   //: @(183, 220) /sz:(100, 96) /p:[ Li0>1 Li1>1 Li2>1 Li3>3 Li4>0 Rt0=3 ]
-  //: joint g0 (DATA_BUS) @(331, 96) /w:[ 2 4 1 -1 ]
-  //: LED g12 (ADDRESS_BUS) @(512,102) /sn:0 /w:[ 7 ] /type:1
+  MCM6830 ROM (.A(ROM_ADDRESS_BUS), .CS0(w11), .CS1(w10), .CS2(VMA_F2__CBUS), .CS3(w6), .D(DATA_BUS));   //: @(183, 220) /sz:(100, 96) /p:[ Li0>1 Li1>1 Li2>1 Li3>1 Li4>3 Rt0=9 ]
+  //: joint g0 (DATA_BUS) @(331, 96) /w:[ 3 4 6 -1 ]
+  MCM6830 g12 (.CS3(w6), .CS2(w4), .CS1(w3), .CS0(w2), .A(w0), .D(DATA_BUS));   //: @(181, 324) /sz:(100, 96) /sn:0 /p:[ Li0>0 Li1>0 Li2>0 Li3>0 Li4>0 Rt0=0 ]
 
 endmodule
 //: /netlistEnd
@@ -82,10 +93,16 @@ wire ROM_CS;    //: /sn:0 {0}(180,135)(219,135)(219,107){1}
   //: IN g3 (CS1) @(117,126) /sn:0 /w:[ 1 ]
   //: IN g2 (CS0) @(117,109) /sn:0 /w:[ 1 ]
   //: INOUT g1 (D) @(313,80) /sn:0 /R:2 /w:[ 0 ]
-  _GGROM10x8 #(1, 1) MEMORY (.A(A), .D(D), .OE(ROM_CS));   //: @(219,81) /delay:" 1 1" /w:[ 1 1 1 ]
   _GGNAND4 #(8) g7 (.I0(CS0), .I1(CS1), .I2(CS2), .I3(CS3), .Z(ROM_CS));   //: @(170,135) /sn:0 /w:[ 0 0 0 0 0 ]
   //: IN g5 (CS3) @(117,160) /sn:0 /w:[ 1 ]
+  _GGROM10x8 #(1, 1) STANDART_ROM (.A(A), .D(D), .OE(ROM_CS));   //: @(219,81) /delay:" 1 1" /w:[ 1 1 1 ]
   //: IN g0 (A) @(116,82) /sn:0 /w:[ 0 ]
+//: beginscript STARTUP @(368,45)
+initial
+  begin
+    $readmemh("/home/starling13/6800.mem");
+  end
+//: endscript
 
 endmodule
 //: /netlistEnd
@@ -185,7 +202,7 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   reg [7:0] _R_OB_L; // Output buffer lower byte
   reg [7:0] _R_IR; // Instruction register
   
-  reg [2:0] mpuState; // 0 - IFETCH, 1 - IEXEC
+  reg [2:0] mpuState; // 0-IDLE 1 - IFETCH, 2 - IEXEC
   
   ///////////////////////////////////////////////////////////////
   
@@ -225,6 +242,8 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   task IFetch_f2;
     begin
       $display("IFetch_f2");
+      _R_IR <= D;
+      {R_PC_H,R_PC_L} <= R_PC+1;
       mpuState <= 1;
     end
   endtask
@@ -239,8 +258,6 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   task IExec_f1;
     begin
       $display("IExec_f1");
-      _R_IR <= D;
-      {R_PC_H,R_PC_L} <= R_PC+1;
     end
   endtask
   
@@ -274,17 +291,24 @@ module MC6800 #(.delay(4)) ( _IRQ,_RESET,A,D,R_W,_HALT, CLK_1, CLK_2, VMA, DBE )
   always @ (posedge CLK_1)
     begin
       case (mpuState)
-        0: IFetch_f1;
-        1: IExec_f1;
-        2: ImmDFetch_f1;
+        1: IFetch_f1;
+        2: IExec_f1;
+        3: ImmDFetch_f1;
       endcase
     end
-  
+  /*
   always @ (posedge CLK_2)
     begin
       case (mpuState)
-        0: IFetch_f2;
         1: IExec_f2;
+      endcase
+    end
+  */
+  always @ (negedge CLK_2)
+    begin
+      case (mpuState)
+        0: mpuState <= 1;
+        1: IFetch_f2;
       endcase
     end
 

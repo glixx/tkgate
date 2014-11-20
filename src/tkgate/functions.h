@@ -58,5 +58,7 @@ void Locale_print(const Locale *locale,FILE *fp);
 int utf8toXChar2b(XChar2b *output_r, int outsize, const char *input, int inlen);
 
 void HandScroll_move(EditState *es);
+void HandScroll_set(EditState *es);
+void HandScroll_drop(EditState *es);
 
 #endif

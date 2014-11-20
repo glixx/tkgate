@@ -27,14 +27,14 @@
  *
  * Guidelines for frame names.
  * 1) Frame names that begin with a '-' are weak, frame names that begin
- *    with a '+' are strong, and frame names with no qualifier are normal. 
+ *    with a '+' are strong, and frame names with no qualifier are normal.
  * 2) The ob_suggest_name() function can be used to override the name of
  *    the current frame, but only if the supplied name is "stronger" than
  *    the current name.  This can be used to delay naming of a frame until
  *    after the frame has started.
  *
  * Guidelines for code modification.
- * 
+ *
  * 1) All objects should be created with ob_malloc(), ob_calloc(),
  *    ob_realloc() or ob_stdrup().
  * 2) All objects should be freed with ob_free()
@@ -44,43 +44,43 @@
  *    used in place of ob_begin_frame to cause the new frame to be appended to
  *    the previous frame.  For example, individual scrolling steps are appended into
  *    a single undoable scrolling action.
- * 
+ *
  * Here are some examples of how to use ob_touch()
  *
  *    Example 1)
  * 	ob_touch(g);
  * 	g->xpos += 10;
- * 
+ *
  *    Example 2)
  * 	ob_touch(g);
  * 	g->wires[i] = w;
- * 
+ *
  * 	g->wires[] is an static array declared as part of the 'g' (GCElement) object
  *      so no ob_touch() should be used.
- * 
+ *
  *    Example 3)
  * 	ob_touch(w->nodes);
  * 	w->nodes->x = x;
- * 
+ *
  *    Example 4)
  * 	ob_touch(w->nodes);
  * 	set_position(&w->nodes->x,&w->nodes->y);
- * 
+ *
  *    Example 5)
  * 	ob_touch(g)
  * 	g->u.basic.extbar = n;
- * 
+ *
  * 	u.basic.extbar is part of g (GCElement).
  *
  * Any memory that is allocated and freed wholy within the execution of a command
  * can use the standard malloc()/free() to reduce the amount of data that needs
  * to be backed up for a command.
- * 
+ *
  *###########################################################################*/
 #include "tkgate.h"
 
-#define OBJECT_DEBUG		0	/* Debugging display of object handling */ 
-#define OBJECT_SHOWMODS		0	/* More debugging display of object handling */ 
+#define OBJECT_DEBUG		0	/* Debugging display of object handling */
+#define OBJECT_SHOWMODS		0	/* More debugging display of object handling */
 #define OBJECT_STOPONERROR	0	/* Abort as soon as we hit an object error */
 #define OBJECT_MEGADEBUG	0	/* Print out all calls to malloc/free */
 #define OBJECT_HARSHMEM		0	/* Put bogus data in malloc/free'ed memory */
@@ -95,7 +95,7 @@ void undo_sync(int is_after);
  * Object flags.
  *****************************************************************************/
 #define OF_DELETED		0x1	/* Object is marked for deletion */
-#define OF_NOUNDO		0x2	/* Object can not be undone */ 
+#define OF_NOUNDO		0x2	/* Object can not be undone */
 
 /*****************************************************************************
  * Object change codes
@@ -169,8 +169,8 @@ int ob_max_undo = 10;
 static ObjectManager objm;
 
 struct {
-  unsigned	ob;		/* Allocation of ob_ memory */ 
-  unsigned	actual;		/* Actual outstanding memory usage */ 
+  unsigned	ob;		/* Allocation of ob_ memory */
+  unsigned	actual;		/* Actual outstanding memory usage */
 } memusage = {0,0};
 
 
@@ -473,7 +473,7 @@ void ob_undo(int count)
     ObjectFrame *of;
 
     if (List_numElems(&objm.om_undo) == 0) break;
-    
+
     of = (ObjectFrame*) ob_popUndoFrame();
     if (ObjectFrame_isInvisible(of)) count++;			/* Do the next frame too */
     of = ob_apply(of);
@@ -515,7 +515,7 @@ void ob_redo(int count)
 
   while (count-- > 0) {
     if (List_numElems(&objm.om_redo) == 0) break;
-    
+
     of = (ObjectFrame*) List_popHead(&objm.om_redo);
     if (ObjectFrame_isInvisible(of)) count++;			/* Do the next frame too */
     of = ob_apply(of);
@@ -606,18 +606,18 @@ int ob_getRedoList(const char **L,int N)
  * Typical usage is:
  *
  * Fooby *f = (Fooby*) ob_malloc(sizeof(Fooby),"Fooby");
- * 
+ *
  *****************************************************************************/
 void *ob_malloc(int s,const char *name)
 {
-  Object *o = (Object*) malloc(s+sizeof(Object));
-  memusage.actual += s + sizeof(Object);
+  size_t oSize = s+sizeof(Object);
+  Object *o = (Object*) malloc(oSize);
+  memusage.actual += oSize;
+  memusage.ob += oSize;
 
-  memusage.ob += s+sizeof(Object);
-
-  o->o_size = s+sizeof(Object);
+  o->o_size = oSize;
   o->o_type = name;
-  o->o_mark = objm.om_mark;				/* Objects start out marked */
+  o->o_mark = objm.om_mark;	/* Objects start out marked */
   o->o_flags = 0;
 
 #if OBJECT_HARSHMEM
@@ -656,12 +656,12 @@ void *ob_calloc(int n,int s,const char *name)
 void *ob_realloc(void *vo,int s)
 {
   Object *o = ((Object*)vo)-1;
-  void *c;
-  if (o->o_size-sizeof(Object) >= s) return vo;
-
-  c = ob_malloc(s,o->o_type);
-  memcpy(c,vo,imin(o->o_size,s));
-  ob_free(vo);
+  void *c = vo;
+  if (o->o_size-sizeof(Object) < s) {
+    c = ob_malloc(s,o->o_type);
+    memcpy(c,vo,o->o_size-sizeof(Object));
+    ob_free(vo);
+  }
 
   return c;
 }
@@ -676,6 +676,12 @@ void ob_free(void *vo)
   Object *o = ((Object*)vo)-1;
   int do_ack_frame = 0;
 
+  assert(!(o->o_flags & OF_DELETED));
+  if ((o->o_flags & OF_DELETED)) {
+    fprintf(stderr, "[ob_free of deleted %s object!]\n",o->o_type);
+    return;
+  }
+
   memusage.ob -= o->o_size;
 
 #if OBJECT_SHOWMODS
@@ -687,14 +693,9 @@ void ob_free(void *vo)
   memset(vo,0xa7,o->o_size-sizeof(Object));
 #endif
 
-  if ((o->o_flags & OF_DELETED)) {
-    printf("[ob_free of deleted %s object!]\n",o->o_type);
-    assert(!(o->o_flags & OF_DELETED));
-  }
-
   if (objm.om_mode == OM_DISABLED) {
-    free(o);
     memusage.actual -= sizeof(Object) + o->o_size;
+    free(o);
     return;
   }
   if (!objm.om_cur) {
