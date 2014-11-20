@@ -52,7 +52,7 @@ char *readprintcapentry(char *buf,int N,FILE *f)
 }
 
 /*
-  Check to see if modifications are OK, and if not issue a message. 
+  Check to see if modifications are OK, and if not issue a message.
  */
 int modifyOK(EditState *es,unsigned flags)
 {
@@ -61,7 +61,7 @@ int modifyOK(EditState *es,unsigned flags)
     return 0;
   }
   if (!(flags & 0x1) && GModuleDef_isDataProtected(es->env)) {
-    message(0,msgLookup("err.protdata"),es->env->m_name);			/* Not a library module */      
+    message(0,msgLookup("err.protdata"),es->env->m_name);			/* Not a library module */
     return 0;
   }
   return 1;
@@ -119,7 +119,7 @@ static int gat_hdl(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   }
 
 
-  return TCL_OK; 
+  return TCL_OK;
 }
 
 
@@ -132,7 +132,7 @@ static int gat_init(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   TkGate_init(tcl);
   ClearModified();
   ob_mode(OM_START);
- 
+
   return TCL_OK;
 }
 
@@ -326,7 +326,7 @@ static int gat_loadMore(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[
 
 static int gat_libIsLoaded(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
-  if (argc < 2) 
+  if (argc < 2)
     return TCL_OK;
 
   if (SHash_find(TkGate.libraries,argv[1]))
@@ -420,8 +420,8 @@ static int gat_make(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     if (func) {
       modint_openSelected(func);
     }
-    
-    return TCL_OK; 
+
+    return TCL_OK;
   }
 
   if (tkgate_currentMode() != MM_EDIT) return TCL_OK;
@@ -573,7 +573,7 @@ static int gat_openBox(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
     if (tkgate_currentMode() == MM_SIMULATE) {
       SimInterface_navigateToModule(es,modName);
       return TCL_OK;
-    } 
+    }
   }
 
   if (modName) {
@@ -598,7 +598,7 @@ static int gat_openBox(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
       return TCL_OK;
   }
 
-  if (M->m_hidden && tkgate_currentMode() == MM_EDIT) { 
+  if (M->m_hidden && tkgate_currentMode() == MM_EDIT) {
     message(1,msgLookup("err.modlock"));			/* Logic Block is Locked! */
     return TCL_OK;
   }
@@ -653,7 +653,7 @@ static int gat_reroot(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 }
 
 /*****************************************************************************
- * Get the list of available printers 
+ * Get the list of available printers
  *
  * Usage:
  *    gat_getPrinterList
@@ -719,7 +719,7 @@ static int gat_getPrinterList(ClientData _d,Tcl_Interp *tcl,int argc,const char 
  *
  *****************************************************************************/
 static int gat_setrot(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
-{ 
+{
   char buf[STRMAX];
   int N = 0;
 
@@ -745,7 +745,7 @@ static int gat_scopeCommand(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 }
 
 /*
-   Relay a command from the analyzer to cpath 
+   Relay a command from the analyzer to cpath
 */
 static int gat_analyzerCommand(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
@@ -758,7 +758,7 @@ static int gat_errBoxReport(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   TkgGateWin *gw = TkGate.gw;
   EditState **es = &gw->parms->circuit->es;
   int N = 0;
-  
+
   ob_touch(TkGate.circuit);
 
   if (argc != 2 || sscanf(argv[1],"%d",&N) != 1) {
@@ -990,7 +990,7 @@ static int gat_computestrhash(ClientData _d,Tcl_Interp *tcl,int argc,const char 
   }
 
   sprintf(tcl->result,"%u",computestrhash(argv[1]));
-  
+
   return TCL_OK;
 }
 
@@ -1035,7 +1035,10 @@ static int gat_debug(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   printf("REGS-symbol %p\n",g);
   for (i = 0;i < n;i++) {
     const char *name = GCElement_getPadName(g,i);
-    GWire *w = g->wires[i];
+    /**
+     * @TODO to remove
+     */
+    /* GWire *w = g->wires[i]; */
     printf("   pad %s:\n",name);
   }
 
@@ -1071,7 +1074,7 @@ static int gat_claimBlock(ClientData _d,Tcl_Interp *tcl,
   M = env_findModule(argv[1]);
   if (M) {
     if (!M->m_isLib) {
-      message(1,msgLookup("msg.notlib"),argv[1]);	/* Not a library module */      
+      message(1,msgLookup("msg.notlib"),argv[1]);	/* Not a library module */
       return TCL_OK;
     }
 
@@ -1191,7 +1194,7 @@ static int gat_setGateTechDelays(ClientData _d,Tcl_Interp *tcl,int argc,const ch
     DoTcl("set ::edgat_techdelay(%s) %d",gi->delayNames[i],delays[i]);
   }
   DoTcl("update");
-  return TCL_OK; 
+  return TCL_OK;
 }
 
 /*
@@ -1460,7 +1463,7 @@ static int gat_editModProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
     Tcl_SetVar2(tcl,aname,"ok","0",TCL_GLOBAL_ONLY);
     return TCL_OK;
   }
-  
+
   if (strcmp(argv[1],"load") == 0) {
     GModuleDef_getPropsToTcl(M,tcl,aname);
   } else if (strcmp(argv[1],"save") == 0) {
@@ -1581,13 +1584,13 @@ static int gat_updateInterface(ClientData _d,Tcl_Interp *tcl,int argc,const char
    */
   if (strcmp(tcl->result,"yes") == 0) {
     Circuit *C =  TkGate.circuit;
-    HashElem *he; 
+    HashElem *he;
     for (he = Hash_first(C->moduleTable);he;he = Hash_next(C->moduleTable,he)) {
       GModuleDef *PM = (GModuleDef*)HashElem_obj(he);
-      HashElem *ghe; 
+      HashElem *ghe;
       for (ghe = Hash_first(PM->m_gates);ghe;ghe = Hash_next(PM->m_gates,ghe)) {
 	g = (GCElement*)HashElem_obj(ghe);
-	if ((GCElement_getType(g) == GC_BLOCK || GCElement_getType(g) == GC_SYMBLOCK) && 
+	if ((GCElement_getType(g) == GC_BLOCK || GCElement_getType(g) == GC_SYMBLOCK) &&
 	    strcmp(g->u.block.moduleName,GModuleDef_getName(M)) == 0) {
 	  block_updateInterface(g, PM);
 	}
@@ -1658,7 +1661,7 @@ static int gat_editBlockDesc(ClientData _d,Tcl_Interp *tcl,int argc,const char *
     M = (TkGate.circuit->root_mod == (*es)->env) ? 0 : (*es)->env;
   }
 
-  if (tkgate_currentMode() == MM_EDIT && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0) 
+  if (tkgate_currentMode() == MM_EDIT && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0)
     return TCL_OK;
 
   ob_touch(TkGate.circuit);
@@ -1698,7 +1701,7 @@ static int gat_editNet(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   if ((p = strchr(buf,'@'))) *p = 0;
 
   net = GModuleDef_findNet(TkGate.circuit->es->env,buf);
-  if (net && net->n_driver) 
+  if (net && net->n_driver)
     net_editProps(net,net->n_driver->nodes->x,net->n_driver->nodes->y);
 
   return TCL_OK;
@@ -1780,7 +1783,10 @@ static int gat_yankFromBuf(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 {
   TkgGateWin *gw = TkGate.gw;
   EditState *es = gw->parms->circuit->es;
-  GModuleDef *m = es->env;
+  /**
+   * @TODO to remove
+   */
+  /* GModuleDef *m = es->env; */
   int dx,dy;
 
   if (!modifyOK(es,0)) return TCL_OK;
@@ -1879,7 +1885,7 @@ static int gat_rotate(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (es->isInterface) return TCL_OK;
 
   sel_refinish(es);
- 
+
   sel_draw(es);
   sel_rotate(es,rdir);
   sel_draw(es);
@@ -1980,7 +1986,7 @@ static int gat_simSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
     return TCL_OK;
   }
 
-  if (argc == 1) 
+  if (argc == 1)
     match = 1;
   else {
     for (i = 1;i < argc;i++)
@@ -2225,10 +2231,10 @@ static int gat_getCircProp(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 static int gat_getLocales(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   int i;
-  HashElem *he; 
+  HashElem *he;
 
   Tcl_ResetResult(tcl);
-  
+
   for (he = Hash_first(TkGate.localeTable), i = 0;he;he = Hash_next(TkGate.localeTable,he), i++) {
     char buf[STRMAX],buf2[STRMAX];
     Locale *l = (Locale*) HashElem_obj(he);
@@ -2479,7 +2485,7 @@ static int gat_zoom(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     return TCL_OK;
 
   ob_touch(TkGate.circuit);
-  TkGate.circuit->zoom_factor = zoom; 
+  TkGate.circuit->zoom_factor = zoom;
   if (zoom == 1) {
     DoTcl("ToolBar::toolConfigure Zoom zoomout -state disabled");
     DoTcl("ToolBar::toolConfigure Zoom zoomin -state normal");
@@ -2624,7 +2630,7 @@ static int gat_setpop(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
     return TCL_OK;
   }
-    
+
 
   if (EditState_getMode() != MODE_MOVE && EditState_getMode() != MODE_MOVESEL) {
     strcpy(tcl->result,"notmove");
@@ -2725,8 +2731,8 @@ static int gat_setMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
    * If we are in normal edit mode, do an HDL save with checks before changing modes.
    */
 #if 0
-  if (tkgate_currentMode() == MM_EDIT && target_mode != MM_EDIT 
-      && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0) 
+  if (tkgate_currentMode() == MM_EDIT && target_mode != MM_EDIT
+      && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0)
     return TCL_OK;
 #endif
 
@@ -3004,7 +3010,7 @@ static int gat_popupWireLabel(ClientData _d,Tcl_Interp *tcl,int argc,const char 
   int x = TkGate.ed->tx;
   int isLabeled;
 
-  if (!net || !n || !w) 
+  if (!net || !n || !w)
     return TCL_OK;
 
   isLabeled = n->isLabeled;
@@ -3031,7 +3037,7 @@ static int gat_popupWireLabel(ClientData _d,Tcl_Interp *tcl,int argc,const char 
 	}
       }
       GNet_draw(net);
-      return TCL_OK; 
+      return TCL_OK;
     } else if (strcmp(argv[1],"-show") == 0)
       isLabeled = 1;
     else if (strcmp(argv[1],"-hide") == 0)
@@ -3109,7 +3115,7 @@ static int gat_setTech(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
     message(0,msgLookup("err.protdata"));		/* "Can not edit library module." */
     return TCL_OK;
   }
-  
+
   if (argc > 1) {
     ob_begin_frame("SetTech");
     sel_setTech(es,argv[1]);
@@ -3166,7 +3172,7 @@ static int gat_makeMakeMenu(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 
 /*****************************************************************************
  *
- * Validate the suggested name of a port. 
+ * Validate the suggested name of a port.
  *
  * gat_validatePortName module name orient dir nbits
  * gat_validatePortName module name orient dir nbits
@@ -3175,8 +3181,13 @@ static int gat_makeMakeMenu(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
  *****************************************************************************/
 static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
+  /**
+   * @TODO to remove
+   */
+  /*
   TkgGateWin *gw = TkGate.gw;
   EditState **es = &gw->parms->circuit->es;
+  */
   GModuleDef *m = 0;
   const char *modName = 0;
   const char *oldPortName = 0;
@@ -3186,10 +3197,7 @@ static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const cha
   int orient = 0;
   int dir = 0;
   int nbits = 0;
-  int i;
   const char *s;
-
-
 
   if (argc < 3) {
     sprintf(tcl->result,"wrong number of parameters.");
@@ -3203,7 +3211,7 @@ static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const cha
   if ((s = seekOption("-dir",argv+3,argc-3))) {
     dir = strIOType(s);
   }
-  
+
   if ((s = seekOption("-bits",argv+3,argc-3)))
     sscanf(s,"%d",&nbits);
 
@@ -3339,7 +3347,7 @@ static int gat_toggleProbe(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
     if (w) {
       x = w->nodes->x;
       y = w->nodes->y;
-      if (TkGate.popstate.isSet) { 
+      if (TkGate.popstate.isSet) {
 	x = TkGate.popstate.x;
 	y = TkGate.popstate.y;
 	GWire_pickProbePosition(TkGate.popstate.w,&x,&y);
@@ -3543,7 +3551,7 @@ static int gat_getSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 static int gat_obMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   int m = 1;
-  
+
   if (argc == 1) {
     m = ob_get_mode();
     sprintf(tcl->result,"%d",m);
@@ -3641,7 +3649,7 @@ static void Bit_extend(int x,int y)
     else
       bit_data = ob_malloc(y*sizeof(unsigned*),"unsigned*");
 
-    for (i = bit_height;i < y;i++) 
+    for (i = bit_height;i < y;i++)
       bit_data[i] = ob_malloc(bit_width*sizeof(unsigned),"unsigned");
     bit_height = y;
   }

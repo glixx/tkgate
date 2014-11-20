@@ -61,4 +61,7 @@ void HandScroll_move(EditState *es);
 void HandScroll_set(EditState *es);
 void HandScroll_drop(EditState *es);
 
+int igen_strToSide(const char *side);
+void guessPortName(char *buf,GCElement *g,int orient,int dir,int nbits);
+
 #endif
