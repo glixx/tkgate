@@ -38,7 +38,7 @@
 			<Add option="-DTKGATE_HOMEDIR=NULL" />
 			<Add option="-DHAVE_CONFIG_H" />
 			<Add directory="../../" />
-			<Add directory="/usr/include/tcl8.5" />
+			<Add directory="/usr/include/tcl" />
 			<Add directory="../../src/common" />
 		</Compiler>
 		<Linker>
@@ -363,7 +363,9 @@
 		<Unit filename="../../src/tkgate/zoom.h" />
 		<Extensions>
 			<envvars set="default" />
-			<code_completion />
+			<code_completion>
+				<search_path add="/usr/include/tcl" />
+			</code_completion>
 			<lib_finder disable_auto="1" />
 			<debugger>
 				<search_path add="../../src/tkgate" />
