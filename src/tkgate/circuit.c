@@ -132,6 +132,9 @@ Circuit *new_Circuit()
   c->rot = 0;
   c->mode = MODE_MOVE;
   c->c_isNewFile = 0;
+  c->no_set_modify = 0;
+  c->org_x = 0;
+  c->org_y = 0;
 
   Circuit_initOptions(c);
   Circuit_setLocale(c,TkGate.locale);
