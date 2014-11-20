@@ -610,14 +610,14 @@ int ob_getRedoList(const char **L,int N)
  *****************************************************************************/
 void *ob_malloc(int s,const char *name)
 {
-  Object *o = (Object*) malloc(s+sizeof(Object));
-  memusage.actual += s + sizeof(Object);
+  size_t oSize = s+sizeof(Object);
+  Object *o = (Object*) malloc(oSize);
+  memusage.actual += oSize;
+  memusage.ob += oSize;
 
-  memusage.ob += s+sizeof(Object);
-
-  o->o_size = s+sizeof(Object);
+  o->o_size = oSize;
   o->o_type = name;
-  o->o_mark = objm.om_mark;				/* Objects start out marked */
+  o->o_mark = objm.om_mark;	/* Objects start out marked */
   o->o_flags = 0;
 
 #if OBJECT_HARSHMEM
@@ -656,13 +656,12 @@ void *ob_calloc(int n,int s,const char *name)
 void *ob_realloc(void *vo,int s)
 {
   Object *o = ((Object*)vo)-1;
-  void *c;
-  if (o->o_size-sizeof(Object) >= s) return vo;
-
-  c = ob_malloc(s,o->o_type);
-  memcpy(c,vo,imin(o->o_size,s));
-  ob_free(vo);
-
+  void *c = vo;
+  if (o->o_size-sizeof(Object) < s) {
+    c = ob_malloc(s,o->o_type);
+    memcpy(c,vo,o->o_size-sizeof(Object));
+    ob_free(vo);
+  }
   return c;
 }
 
@@ -676,6 +675,12 @@ void ob_free(void *vo)
   Object *o = ((Object*)vo)-1;
   int do_ack_frame = 0;
 
+  assert(!(o->o_flags & OF_DELETED));
+  if ((o->o_flags & OF_DELETED)) {
+    fprintf(stderr, "[ob_free of deleted %s object!]\n",o->o_type);
+    return;
+  }
+
   memusage.ob -= o->o_size;
 
 #if OBJECT_SHOWMODS
@@ -687,14 +692,9 @@ void ob_free(void *vo)
   memset(vo,0xa7,o->o_size-sizeof(Object));
 #endif
 
-  if ((o->o_flags & OF_DELETED)) {
-    printf("[ob_free of deleted %s object!]\n",o->o_type);
-    assert(!(o->o_flags & OF_DELETED));
-  }
-
   if (objm.om_mode == OM_DISABLED) {
-    free(o);
     memusage.actual -= sizeof(Object) + o->o_size;
+    free(o);
     return;
   }
   if (!objm.om_cur) {
