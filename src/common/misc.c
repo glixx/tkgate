@@ -89,7 +89,7 @@ char *quoteChars(char *buf,const char *str,const char *qlist)
 
   for (;*str;str++) {
     if (strchr(qlist,*str))
-        *p++ = '\\';
+      *p++ = '\\';
     *p++ = *str;
   }
   *p = 0;

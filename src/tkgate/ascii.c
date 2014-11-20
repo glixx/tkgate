@@ -356,7 +356,7 @@ size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromStri
     toString[len-1] = 0;
     return 0;
   }
-#if LOCALE_DEBUG
+#ifdef LOCALE_DEBUG
   printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);
 #endif
 
@@ -392,7 +392,7 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   if (!encoder || encoder->ico == ((iconv_t)-1)) {
     return strdup(fromString);
   }
-#ifdef DEBUG
+#ifdef LOCALE_DEBUG
   printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);
 #endif
   inPtr = fromString;
