@@ -32,7 +32,7 @@ AC_DEFINE(TKGATE_HOMEPAGE,	"http://www.tkgate.org",		[TkGate web page])
 #
 # Tcl/Tk version we will try to use (from most favored to least favored)
 #
-TKGATE_TCLTK_VERSIONS="8.5 8.4 8.3"
+TKGATE_TCLTK_VERSIONS="8.6 8.5 8.4 8.3"
 
 #
 # Directories to search for include files
@@ -42,7 +42,7 @@ TKGATE_INCDIRS="/usr/X11R6/include /usr/X11/include /pkgs/include /usr/local/inc
 #
 # Directories to search for library files
 #
-TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib"
+TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib /usr/local/lib/tcl"
 
 #
 # Libraries we may need if available.
@@ -122,7 +122,7 @@ if test "${CFLAGS+set}" != "set" ; then
 fi
 
 # Checks for programs.
-AC_PROG_CXX
+#AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_YACC
 AM_PROG_LEX
@@ -132,7 +132,7 @@ AC_PROG_RANLIB
 AC_PROG_CPP
 AC_PROG_INSTALL
 AC_PROG_RANLIB
-AC_PROG_LIBTOOL
+#AC_PROG_LIBTOOL
 
 # Checks for header files.
 AC_PATH_XTRA
