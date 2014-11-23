@@ -42,8 +42,8 @@
 			<Add directory="../../src/common" />
 		</Compiler>
 		<Linker>
-			<Add option="-ltcl8.5" />
-			<Add option="-ltk8.5" />
+			<Add option="-ltcl" />
+			<Add option="-ltk8.6" />
 			<Add option="-lX11" />
 		</Linker>
 		<Unit filename="../../src/tkgate/adder.c">

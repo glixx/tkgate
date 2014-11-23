@@ -213,7 +213,7 @@ menu.edit.ushift	10:Bit Shift Up
 menu.edit.dshift	10:Bit Shift Down 
 menu.edit.cwrotate	11:Bit Rotate C-W
 menu.edit.ccwrotate	15:Bit Rotate C-C-W
-menu.edit.pcwrotate	12:Port Rotate C-C-W
+menu.edit.pcwrotate	12:Port Rotate C-W
 menu.edit.pccwrotate	16:Port Rotate C-C-W
 menu.edit.autobold	Boldify Bits
 menu.edit.resize	Resize Bitmap

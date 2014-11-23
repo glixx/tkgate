@@ -18,79 +18,6 @@
 # Last edit by hansen on Sun Feb 22 19:51:17 2009
 
 ##############################################################################
-#
-# Explaination of file format.
-#
-# Messages files are used to "localize" tkgate so that it can run under
-# different languages.  Lines beginning with a '#' character are comments.
-# Most entries in the file are of the form:
-#
-# tag value
-#
-# A tag is any abitrary string of non-whitespace characters.  By convention
-# a dot notation is used to suggest groups of related tags.  The value of the
-# tag begins at the first non-whitespace character after the tag and can include
-# white space.  Normally the value is the localized text message.  By convension,
-# tags beginning with a '@' character are used to control interface layout
-# as opposed to being actual text.  Explainations for this tags will be given
-# in preceeding comments.
-#
-# Multi-line comments have the form:
-#
-# tag	-begin-
-# line1
-# line2
-# -end-
-#
-# or
-#
-# tag	-fillbegin-
-# line1
-# line2
-# -end-
-#
-# When -begin- is used, the newlines in the text are preserved as is.  When
-# -fillbegin- is used the newlines are replaced with spaces and it is assumed
-# that the text will be automatically justified.
-#
-# If the first character of a value is a back-quote, then it is interpreted
-# as a reference to another tag.  For example:
-#
-# foo	This is tag foo.
-# bar	`foo
-#
-# In this instance both 'foo' and 'bar' will translate to 'This is tag foo'.
-#
-# The last type of entry that can occur in the file are declarations.  The
-# declarations should normally be specified before any tags are specified.
-# The currently supported declarations are:
-#
-# \font-encoding	code
-# \messages-encoding	code
-# \verilog-encoding	code
-# \language		name
-#
-# where "code" is a font encoding.  Typical encodings are:
-#
-#   iso8859-1		English and many European languages
-#   iso8859-2 		Some other European languages (e.g., Bosnian, Czech, Polish)
-#   euc-ja		Japanese EUC
-#   utf-8		Unicode
-#
-# "\font-encoding" selects the encoding to use when displaying strings from
-# comments and frames in the main edit window.  It should be "iso8859-1" or
-# "iso8859-2".
-#
-# "\messages-encoding" specifies the encoding of this messages file.
-#
-# "\verilog-encoding" specifies the default encoding to use for verilog files
-# when editing files in this locale.
-#
-# "\language" specifies the full language name of this messages file.  It should
-# be after the \messages-encoding delcaration so that it will be processed
-# using the correct encoding.
-#
-##############################################################################
 
 \font-encoding		koi8-r
 \display-encoding	KOI8-R
@@ -105,7 +32,7 @@
 # basic strings
 #
 b.new		Новый...
-b.dismiss	Dismiss
+b.dismiss	Отклонить
 b.close		Закрыть
 b.ok		OK
 b.clear		Очистить
@@ -151,7 +78,7 @@ module.box.libraries	Библиотеки
 #
 # Tabs for Nets/Ports
 #
-sidetab.nets	Nets
+sidetab.nets	Сети
 sidetab.ports	Порты
 
 #############################################################################
@@ -206,15 +133,15 @@ menu.edit.find		0:Найти...
 menu.edit.zoomin	5:Увеличить
 menu.edit.zoomout	5:Уменьшить
 
-menu.edit.rshift	10:Bit Shift Right 
-menu.edit.lshift	10:Bit Shift Left 
-menu.edit.ushift	10:Bit Shift Up 
-menu.edit.dshift	10:Bit Shift Down 
-menu.edit.cwrotate	11:Bit Rotate C-W
-menu.edit.ccwrotate	15:Bit Rotate C-C-W
-menu.edit.pcwrotate	12:Port Rotate C-C-W
-menu.edit.pccwrotate	16:Port Rotate C-C-W
-menu.edit.autobold	Boldify Bits
+menu.edit.rshift	10:Битовый сдвиг вправо 
+menu.edit.lshift	10:Битовый сдвиг влево 
+menu.edit.ushift	10:Битовый сдвиг вверх 
+menu.edit.dshift	10:Битовый сдвиг вниз 
+menu.edit.cwrotate	11:Повернуть биты по часовой стрелке
+menu.edit.ccwrotate	15:Повернуть биты против часовой стрелки
+menu.edit.pcwrotate	12:Повернуть порт по часовой стрелке
+menu.edit.pccwrotate	16:Повернуть порт против часовой стрелки
+menu.edit.autobold	Сделать жирным
 menu.edit.resize	Изменить размер изображения
 
 menu.tool.move		0:Переместить/Соединить
@@ -233,8 +160,8 @@ menu.tool.options	0:Настройки...
 
 menu.format.addport	4:Добавить порт
 menu.format.ioset	0:Установить тип
-menu.format.anchor	0:Anchor Selected
-menu.format.unanchor	0:Unanchor Selected
+menu.format.anchor	0:Прикрепить выделенное
+menu.format.unanchor	0:Освободить выделенное
 menu.format.prop	0:Свойства экземпляра...
 menu.format.del		0:Удалить
 menu.format.settech	0:Установить технологию
@@ -249,7 +176,7 @@ menu.format.algnv	6:Вертикальное выравнивание
 menu.format.algnh	6:Горизонтальное выравнивание
 
 
-menu.tool.tclshell	0:Tcl Shell
+menu.tool.tclshell	0:Оболчка Tcl
 menu.tool.rep		0:Replicate
 
 menu.simulate.begin	0:Начать симуляцию
@@ -275,9 +202,9 @@ menu.module.claim	1:Claim...
 menu.module.setroot	1:Установить корневым...
 menu.module.prop	0:Параметры...
 menu.module.interface		0:Интерфейс
-menu.module.interface.set	0:Set As Default
-menu.module.interface.update	1:Sync. to Default
-menu.module.interface.updateall	6:Sync. All to Default...
+menu.module.interface.set	0:Установить
+menu.module.interface.update	1:Синхронизировать
+menu.module.interface.updateall	6:Синхронизировать все...
 menu.module.interface.edit	0:Редактировать...
 menu.module.interface.auto	5:Автогенерация...
 

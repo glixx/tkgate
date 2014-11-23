@@ -21,7 +21,7 @@
 #ifndef USE_INTERP_RESULT
 #define USE_INTERP_RESULT
 #include "tcl.h"
-#endif
+#endif // USE_INTERP_RESULT
 #include "tk.h"
 
 #define STRMAX 1024
