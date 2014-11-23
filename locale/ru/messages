@@ -224,7 +224,7 @@ menu.scope_sim			0:Симуляция
 menu.scope_trace		0:Трассировка
 menu.scope_help			0:Справка
 
-menu.scope_file.ptrace		0:Print Trace...
+menu.scope_file.ptrace		0:Печать трассировки...
 menu.scope_file.close		0:Закрыть
 menu.scope_trace.zoomin		5:Приблизить
 menu.scope_trace.zoomout	5:Отдалить
@@ -233,17 +233,17 @@ menu.scope_sim.run		0:Пуск
 menu.scope_sim.pause		0:Пауза
 menu.scope_sim.step		0:Step Epoch(s)
 menu.scope_sim.cycle		5:Step Cycle
-menu.scope_sim.break		0:Breakpoint...
-menu.scope_sim.script		1:Exec. Script...
-menu.scope_sim.load		1:Load Memory...
-menu.scope_sim.dump		1:Dump Memory...
+menu.scope_sim.break		0:Точка остановки...
+menu.scope_sim.script		1:Выполнить скрипт...
+menu.scope_sim.load		1:Загрузить память...
+menu.scope_sim.dump		1:Сохранить память...
 menu.scope_help.about		0:О программе...
 menu.scope_help.license		0:Лицензионное соглашение...
 menu.scope_help.doc		0:Документация...
 
 mod.intf	Интерфейс
 
-port.title	TkGate: Port Properties
+port.title	TkGate. Параметры порта
 port.parms	Параметры порта
 port.in		Вход
 port.out	Выход
@@ -273,13 +273,13 @@ gm.io.vdd	Vdd
 gm.io.merge	Concat
 gm.io.clock	Clock
 
-gm.io.led	LED
-gm.io.ledbar	LED Bar
+gm.io.led	Светодиод
+gm.io.ledbar	Светодиодная панель
 gm.io.ledhex	7-сег. индикатор (16 предст.)
 gm.io.leddec	7-сег. индикатор (10 предст.)
 gm.io.ledseg	7-сег. индикатор (прямое управление)
 
-gm.io.tty	TTY
+gm.io.tty	Телетайп
 
 gm.gate.and	И
 gm.gate.nand	НЕ-И
@@ -309,12 +309,12 @@ gm.alu.arshift	Арифм. правый сдвиг
 gm.alu.roll	Roll
 
 gm.mem.reg	Регистр
-gm.mem.ff	D Flip-Flop
+gm.mem.ff	D-триггер
 gm.mem.rff	Rev. D Flip-Flop
 gm.mem.ram	ОЗУ
 gm.mem.rom	ПЗУ
 
-gm.mem.jkff	JK Flip-Flop
+gm.mem.jkff	JK триггер
 gm.mem.rjkff	Rev. JK Flip-Flop
 
 gm.msi.21mux	2-1 Мультиплексор
@@ -353,7 +353,7 @@ pop.port.out		Выход
 pop.port.inout		Вход-выход
 
 pop.wire.addseg		Добавить сегмент провода
-pop.wire.prop		Net Properties...
+pop.wire.prop		Свойства сети...
 pop.wire.hidesize	Скрыть разрядность
 pop.wire.showsize	Показать разрядность
 pop.wire.hidelabel	Скрыть надпись 
@@ -377,13 +377,13 @@ pop.module.new		Новый...
 pop.module.del		Удалить...
 pop.module.copy		Копировать...
 pop.module.rename	Переименовть...
-pop.module.claim	Claim...
+pop.module.claim	Отказаться...
 pop.module.setroot	Установить корневым...
 pop.module.prop		Свойства модуля...
 pop.module.int		Редактировать интерфейс...
 
 
-pop.simulate.end	End Simulation
+pop.simulate.end	Завершить симуляцию
 pop.simulate.begin	Begin Simulation
 pop.simulate.addprobe	Add/Delete Probe
 pop.simulate.delprobe	Delete Probe
