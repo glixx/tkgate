@@ -19,7 +19,7 @@
 DISTCLEANFILES=vgrammar.h vgrammar.c luthor.c
 
 BUILT_SOURCES = vgrammar.h
-AM_CFLAGS=-DTKGATE_HOMEDIR=\"$(pkgdatadir)\" @TOP_IPATH@ @COMMON_IPATH@ @TKGATE_IPATH@
+AM_CFLAGS=-DUSE_INTERP_RESULT -DTKGATE_HOMEDIR=\"$(pkgdatadir)\" @TOP_IPATH@ @COMMON_IPATH@ @TKGATE_IPATH@
 AM_YFLAGS=-d
 
 BASE_OBJS=adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c circuit.c clock.c \
@@ -48,4 +48,4 @@ bin_PROGRAMS=tkgate
 tkgate_LDFLAGS=@TKGATE_LPATH@ @X_LIBS@ @COMMON_LPATH@
 tkgate_SOURCES=$(BASE_OBJS) main.c
 #tkgate_LDADD=libtkgate.la
-tkgate_LDADD=@TKGATE_LIB@ -lcommon
+tkgate_LDADD=@TKGATE_LIB@ -lcommon -lm
