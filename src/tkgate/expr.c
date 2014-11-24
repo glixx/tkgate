@@ -165,14 +165,17 @@ static int apply_op(int op,int a,int b,int *err)
     {
       int p = 1;
       if (b > 32) *err = EE_OVERFLOW;
-      while (b-- > 0) p *= a; 
+      while (b-- > 0) p *= a;
       return p;
     }
   case MUL :
     return a*b;
   case DIV :
-    if (b == 0) *err = EE_DIV0;
-    return a/b;
+    if (b != 0) return a/b;
+    else {
+      *err = EE_DIV0;
+      return 0;
+    }
   case OR :
     return a||b;
   case AND :
@@ -322,7 +325,7 @@ static int Expr_eval_aux(SHash *H,Expr *e,int *rval,EValueLookup *f,void *d)
       if (!e->l || !e->r) return EE_INTERNAL;
       if ((rr = Expr_eval_aux(H,e->l,&nl,f,d))) return rr;
       if ((rr = Expr_eval_aux(H,e->r,&nr,f,d))) return rr;
-      
+
       *rval = apply_op(e->op,nl,nr,&err);
       return err;
     }
@@ -368,7 +371,7 @@ static int Expr_eval_aux(SHash *H,Expr *e,int *rval,EValueLookup *f,void *d)
   case IF :
     {
       int rr,c;
- 
+
       if ((rr = Expr_eval_aux(H,e->l,&c,f,d))) return rr;
 
       if (c) {
@@ -424,7 +427,7 @@ int Expr_eval(Expr *e,int *rval,EValueLookup *f,void *d)
     ec = Expr_eval_aux(H,e,rval,f,d);
     delete_SHash(H);
 
-    if (ec == EE_RETURN) ec = EE_OK; 
+    if (ec == EE_RETURN) ec = EE_OK;
     return ec;
   } else
     return Expr_eval_aux(0,e,rval,f,d);
@@ -470,7 +473,7 @@ int Expr_sprint(char *s,int n,Expr *e)
     {
       char buf[1024];
       sprintf(buf,"%d",e->value);
-      
+
       if (strlen(buf) >= n)
 	return -1;
 
@@ -507,14 +510,14 @@ int Expr_sprint(char *s,int n,Expr *e)
     return strlen(start);
   case NOT :
     if (n < 2) return -1;
-    *s++ = '!'; n--; 
-    l = Expr_sprint(s,n,e->l); 
+    *s++ = '!'; n--;
+    l = Expr_sprint(s,n,e->l);
     if (l < 0) return -1;
     return strlen(start);
   case UNEG :
     if (n < 2) return -1;
-    *s++ = '-'; n--; 
-    l = Expr_sprint(s,n,e->l); 
+    *s++ = '-'; n--;
+    l = Expr_sprint(s,n,e->l);
     if (l < 0) return -1;
     return strlen(start);
   }
@@ -555,35 +558,35 @@ int Expr_print(Expr *e)
     break;
   case NOT :
     printf("!");
-    Expr_print(e->l); 
+    Expr_print(e->l);
     break;
   case UNEG :
     printf("-");
-    Expr_print(e->l); 
+    Expr_print(e->l);
     break;
   case NEXT :
     printf("{");
     if (e->l) {
-      Expr_print(e->l); 
+      Expr_print(e->l);
     }
     if (e->r) {
-      Expr_print(e->r); 
+      Expr_print(e->r);
     }
     printf("}");
     break;
   case ASGN :
     printf("%s = ",e->l->lit);
-    Expr_print(e->r); 
+    Expr_print(e->r);
     printf("; ");
     break;
   case IF :
     printf("if (");
-    Expr_print(e->l); 
+    Expr_print(e->l);
     printf(")");
-    Expr_print(e->r); 
+    Expr_print(e->r);
     if (e->x) {
       printf(" else ");
-      Expr_print(e->x); 
+      Expr_print(e->x);
     }
     break;
   case BREAK :
@@ -600,9 +603,9 @@ int Expr_print(Expr *e)
     break;
   case SWITCH :
     printf("switch (");
-    Expr_print(e->l); 
+    Expr_print(e->l);
     printf(")");
-    Expr_print(e->r); 
+    Expr_print(e->r);
   }
   return 0;
 }
