@@ -22,7 +22,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
 //: enddecls
 
   //: comment g8 @(313,208)
-  //: /line:"OR gate"
+  //: /line:"Вентиль ИЛИ"
   //: /end
   //: joint g13 (w9) @(211, 237) /w:[ 1 2 4 -1 ]
   //: comment g1 @(10,310) /sn:0 /anc:1
@@ -30,7 +30,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
   //: /end
   _GGAND2 #(6) g11 (.I0(w3), .I1(w9), .Z(w8));   //: @(230,140) /sn:0 /w:[ 0 3 1 ]
   //: comment g6 @(115,104)
-  //: /line:"Switches"
+  //: /line:"Переключатели"
   //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Создание простой схемы</h3>"
@@ -38,7 +38,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
   //: /line:"В этом разделе вы выполните шаги для построения простой схемы, приведенной ниже."
   //: /end
   //: comment g7 @(208,112)
-  //: /line:"AND gate"
+  //: /line:"Вентиль И"
   //: /end
   //: SWITCH g14 (w3) @(137,137) /sn:0 /w:[ 1 ] /st:0 /dn:0
   _GGOR2 #(6) g0 (.I0(w8), .I1(w9), .Z(w10));   //: @(325,235) /sn:0 /w:[ 0 0 0 ]
@@ -100,15 +100,16 @@ wire w2;    //: /sn:0 {0}(240,140)(255,140){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
-  //: /line:"Now create an OR gate.  Right click in the dashed line box then select"
-  //: /line:"<font color=red2>Make &rarr;   Gate &rarr;   OR</font> from the popup menu."
+  //: /line:"Теперь создайте вентиль ИЛИ. Щелкните правой кнопкой внутри пунктирной рамки и выберите"
+  //: /line:"<font color=red2>Компоненты &rarr; Вентиль &rarr; ИЛИ</font> из контекстного меню."
   //: /end
   //: comment g0 @(532,85) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: You can also use the keyboard"
-  //: /line:"shortcut.  Select the position by left clicking"
-  //: /line:"then use \"o\" to create an OR gate.</font>"
+  //: /line:"<font color=green4>Подсказка: Вы также можете использовать"
+  //: /line:"клавиатурные комбинации. Выберите"
+  //: /line:"позицию щелчком левой кнопкой и нажмите \"o\" для"
+  //: /line:"создания вентиля ИЛИ.</font>"
   //: /end
 
 endmodule
@@ -155,31 +156,33 @@ endmodule
 //: /netlistBegin PAGE4
 module PAGE4();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
-wire w7;    //: /sn:0 {0}(335,235)(350,235){1}
-wire w4;    //: /sn:0 {0}(299,232)(314,232){1}
-wire w3;    //: /sn:0 {0}(240,140)(255,140){1}
+wire w4;    //: /sn:0 {0}(306,241)(321,241){1}
 wire w0;    //: /sn:0 {0}(204,137)(219,137){1}
+wire w3;    //: /sn:0 {0}(240,140)(255,140){1}
 wire w1;    //: /sn:0 {0}(204,142)(219,142){1}
-wire w5;    //: /sn:0 {0}(299,237)(314,237){1}
+wire w2;    //: /sn:0 {0}(306,236)(321,236){1}
+wire w5;    //: /sn:0 {0}(342,239)(357,239){1}
 //: enddecls
 
   //: frame g8 @(109,215) /sn:0 /anc:1 /wi:76 /ht:43 /tx:""
-  _GGOR2 #(6) g4 (.I0(w4), .I1(w5), .Z(w7));   //: @(325,235) /sn:0 /anc:1 /w:[ 1 1 0 ]
   _GGAND2 #(6) g3 (.I0(w0), .I1(w1), .Z(w3));   //: @(230,140) /sn:0 /anc:1 /w:[ 1 1 0 ]
+  _GGOR2 #(6) g2 (.I0(w2), .I1(w4), .Z(w5));   //: @(332,239) /sn:0 /w:[ 1 1 0 ]
   //: frame g1 @(109,121) /sn:0 /anc:1 /wi:76 /ht:43 /tx:""
   //: comment g10 @(10,310) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
-  //: /line:"Next create two switches.  Right click in each of the two dashed line box then"
-  //: /line:"select <font color=red2>Make &rarr;   I/O &rarr;   Switch</font> from the popup menu."
+  //: /line:"Далее создайте два переключателя. Последовательно елкните правой кнопкой мыши в"
+  //: /line:"пунктирных рамках и выберите <font color=red2>Компоненты &rarr; Ввод-вывод &rarr; Переключатель</font>"
+  //: /line:"из контекстного меню."
   //: /end
   //: comment g0 @(532,86) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: You can also use the keyboard"
-  //: /line:"shortcut.  Select the position by left clicking"
-  //: /line:"then use \"s\" to create a switch.</font>"
+  //: /line:"<font color=green4>Подсказка: Вы также можете использовать"
+  //: /line:"клавиатурные комбинации. Выберите"
+  //: /line:"позицию щелчком левой кнопкой и нажмите \"s\" для"
+  //: /line:"создания вентиля ИЛИ.</font>"
   //: /end
 
 endmodule
@@ -188,24 +191,20 @@ endmodule
 //: /netlistBegin PAGE2
 module PAGE2();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
-wire w0;    //: /sn:0 {0}(220,143)(235,143){1}
-wire w1;    //: /sn:0 {0}(220,148)(235,148){1}
-wire w2;    //: /sn:0 {0}(256,146)(271,146){1}
 //: enddecls
 
-  _GGAND2 #(6) g3 (.I0(w0), .I1(w1), .Z(w2));   //: @(246,146) /sn:0 /w:[ 1 1 0 ]
   //: comment g2 @(531,86) /sn:0 /anc:1
   //: /line:"<font color=green4>Подсказка: Вы также можете использовать"
   //: /line:"клавиатурные комбинации. Выберите"
   //: /line:"позицию щелчком левой кнопкой и нажмите"
-  //: /line:"\"и\" для создания вентиля И.</font>"
+  //: /line:"\"a\" для создания вентиля И.</font>"
   //: /end
   //: frame g1 @(208,124) /sn:0 /wi:76 /ht:43 /tx:""
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
   //: /line:"Начните с создания вентия И. Щелкните правой кнопкой по пунктирному"
-  //: /line:"прямоугольнику и выберите <font color=red2>Компоненты->Вентиль->И</font>"
+  //: /line:"прямоугольнику и выберите <font color=red2>Компоненты &rarr; Вентиль &rarr; И</font>"
   //: /line:"из контекстного меню."
   //: /end
   //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
