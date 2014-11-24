@@ -171,8 +171,8 @@ static int apply_op(int op,int a,int b,int *err)
   case MUL :
     return a*b;
   case DIV :
-    if (b == 0) *err = EE_DIV0;
-    return a/b;
+    if (b != 0) return a/b;
+    else *err = EE_DIV0;
   case OR :
     return a||b;
   case AND :
