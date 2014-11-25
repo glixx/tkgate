@@ -15,7 +15,7 @@ module main;    //: root_module
 
   //: comment g4 @(553,317) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex6/coke.v\"><img src=example_coke.gif>"
-  //: /line:"Coke Machine</a></h3>"
+  //: /line:"Автомат газировки</a></h3>"
   //: /line:"This example uses TkGate's Viritual"
   //: /line:"Peripheral Device (VPD) mechanism to"
   //: /line:"create an interactive \"Coke Machine\""
@@ -28,8 +28,9 @@ module main;    //: root_module
   //: comment g3 @(32,317) /sn:0 /anc:1
   //: /line:"<a href=\"ex4/trff.v\"><img src=\"example_trff.gif\">"
   //: /line:"<h3>Transistor-Level FF</h3></a>"
-  //: /line:"A flop-flop implemented using"
-  //: /line:"nmos and pmos devices."
+  //: /line:"Триггер, реализованный с"
+  //: /line:"использованием Н-МОП и П-МОП"
+  //: /line:"элементов."
   //: /line:""
   //: /end
   //: comment g2 @(551,30) /sn:0 /anc:1
@@ -48,6 +49,14 @@ module main;    //: root_module
   //: /end
   //: comment g6 @(20,552) /sn:0
   //: /line:"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
+  //: /end
+  //: comment g7 @(787,27) /sn:0
+  //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"
+  //: /line:"<h3>Микросхемы 74xx</h3></a>"
+  //: /line:"Несколько примеров схем с"
+  //: /line:"использованием библиотеки"
+  //: /line:"микросхем стандартной логики"
+  //: /line:"серии 74."
   //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"

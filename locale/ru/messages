@@ -353,7 +353,7 @@ pop.port.out		Выход
 pop.port.inout		Вход-выход
 
 pop.wire.addseg		Добавить сегмент провода
-pop.wire.prop		Net Properties...
+pop.wire.prop		Свойства сети...
 pop.wire.hidesize	Скрыть разрядность
 pop.wire.showsize	Показать разрядность
 pop.wire.hidelabel	Скрыть надпись 
@@ -409,9 +409,9 @@ pop.igen.type		Type
 pop.igen.side		Side
 pop.igen.size		Size
 pop.igen.delete		Delete
-pop.igen.in		in
-pop.igen.out		out
-pop.igen.inout		inout
+pop.igen.in		вход
+pop.igen.out		выход
+pop.igen.inout		вход-выход
 pop.igen.left		left
 pop.igen.right		right
 pop.igen.top		top
@@ -458,12 +458,13 @@ symed.link		Link selected to unselected
 ##############################################################################
 ## memory viewer
 #
-memview.title	Memory Viewer
+memview.title	Просмотр памяти
 memview.exp	-fillbegin-
-View and modify the contents of a RAM
-or ROM component.  Select memory page,
-then type new hex values to change
-memory content.
+Просматривайте и редактируйте
+содержимое компонента ОЗУ или ПЗУ.
+Выберите страницу памяти, затем
+вводите 16-ричные числа для изменения
+содержимого ячеек памяти.
 -end-
 
 ##############################################################################
@@ -493,8 +494,8 @@ db.mod.dataprot	Запретить редактирование определе
 db.mod.intfprot	Prevent all interface changes.
 db.mod.edprot	Prevent edit mode interface changes.
 db.mod.props	Properties
-db.mod.inuse.0	Module is not in use.
-db.mod.inuse.1	Module is in use.
+db.mod.inuse.0	Модуль не используется.
+db.mod.inuse.1	Модуль используется.
 db.mod.lmod.0	Module has not been modified since loading.
 db.mod.lmod.1	Module has been modified since loading.
 db.mod.smod.0	Module has not been modified since saving.
@@ -506,8 +507,9 @@ db.mod.hdl	HDL
 
 db.mod.netexpl	-begin-
 Определить модуль, используя
-графический редактор для соединения
-элементов проводами.
+графический редактор для
+соединения элементов
+проводами.
 -end-
 
 db.mod.hdlexpl	-begin-
@@ -519,34 +521,34 @@ db.mod.hdlexpl	-begin-
 #############################################################################
 # Error List Dialog box
 #
-db.err.title		TkGate: Error List
-db.err.caption		Error List
+db.err.title		TkGate: Список ошибок
+db.err.caption		Список ошибок
 db.err.explain.warn	-fillbegin-
 There were warnings in your circuit, but simulation will continue.  Return to edit mode
 to examine the warnings.
 -end-
 db.err.explain.err	-fillbegin-
-There were errors in your circuit.  TkGate is unable to continue the simulation.
+Схема содержит ошибки. TkGate не может начать симуляцию.
 -end-
 
 db.err.neededit		-fillbegin-
-You must first switch to Edit mode before navigating to warnings.
+Для просмотра ошибок и замечаний необходимо переключиться в режим редактирования.
 -end-
 
 #############################################################################
 # Net Dialog Box
 #
-db.net.title	TkGate: Net Properties
-db.net.caption	Net Properties
-db.net.name	Net Name
-db.net.hide	Hide Name
-db.net.bits	Bit Width	
-db.net.type	Net Type	
-db.net.port	Port Type
-db.net.in	in
-db.net.out	out
-db.net.inout	inout
-db.net.inets	Nets
+db.net.title	TkGate: Свойства сети
+db.net.caption	Свойства сети
+db.net.name	Название сети
+db.net.hide	Скрыть название
+db.net.bits	Разрядность (бит)	
+db.net.type	Тип сети	
+db.net.port	Тип порта
+db.net.in	вход
+db.net.out	выход
+db.net.inout	вход-выход
+db.net.inets	Сети
 
 ##############################################################################
 #
@@ -567,12 +569,12 @@ db.newcirc.topname	Имя модуля верхнего уровня
 # Gate dialog box
 #
 db.gate.title		TKGate: Свойства компонента
-db.gate.signam		Signal Name
-db.gate.portnam		Port Name
-db.gate.iotype		Type
-db.gate.bitw		Bit Width
-db.gate.cyclew		Period
-db.gate.phase		Phase
+db.gate.signam		Название сигнала
+db.gate.portnam		Название порта
+db.gate.iotype		Тип
+db.gate.bitw		Разрядность
+db.gate.cyclew		Период
+db.gate.phase		Фаза
 db.gate.duty		Duty
 db.gate.waveform	Clock Waveform
 db.gate.port		Port
@@ -587,25 +589,25 @@ db.gate.butstate	Button State
 db.gate.dipval		Switch Value
 db.gate.range		Bit Range
 db.gate.memfilenam	Memory File
-db.gate.modname		Type
-db.gate.general		General
-db.gate.details		Details
-db.gate.text		Text
-db.gate.ports		Port
-db.gate.delay		Delay
-db.gate.parameters	Parameters
-db.gate.stddelay	Standard Delay
+db.gate.modname		Тип
+db.gate.general		Общие
+db.gate.details		Детали
+db.gate.text		Текст
+db.gate.ports		Порт
+db.gate.delay		Задержка
+db.gate.parameters	Параметры
+db.gate.stddelay	Стандартная задержка
 db.gate.custdelay	Custom Delay
 db.gate.catdiruse	Port Placement
 db.gate.edit		Edit
-db.gate.delete		Delete
-db.gate.add		Add
+db.gate.delete		Удалить
+db.gate.add		Добавить
 
 db.gate.ff.type		D Flip-Flop Orientation 
 db.gate.ff.normal.hdr	Normal
 db.gate.ff.normal.exp	-fillbegin-
-D Flip-Flop with data
-flowing left to right.
+D-триггер с направлением данных
+слева направо.
 -end-
 db.gate.ff.reverse.hdr	Reversed
 db.gate.ff.reverse.exp	-fillbegin-
@@ -642,18 +644,17 @@ db.gate.cat.tran.hdr	Bidirectional
 
 
 db.gate.cat.auto.exp	-fillbegin-
-Determine signal direction automatically
-from connected nets.
+Определить направление сигнала автоматически
+по подключенным сетям.
 -end-
 
 db.gate.cat.multin.exp	-fillbegin-
-Always assume multi-port side is the
-input.
+Всегда считать множественную
+сторону входом.
 -end-
 
 db.gate.cat.singin.exp	-fillbegin-
-Always assume single-port side is the
-input.
+Всегда считать одиночную сторону входом.
 -end-
 
 db.gate.cat.tran.exp	-fillbegin-
@@ -699,7 +700,7 @@ db.gate.tab.General.exp	-fillbegin-
 -end-
 
 db.gate.tab.Ports.exp	-fillbegin-
-Add, edit or delete ports on an instance.
+Добавить, редактировать или удалить порты экземпляра.
 -end-
 
 db.gate.tab.Delay.exp	-fillbegin-
@@ -744,8 +745,8 @@ db.gate.tab.COMMENT.exp	-fillbegin-
 -end-
 
 db.gate.tab.SCRIPT.exp	-fillbegin-
-Enter free-form Verilog code here to
-be included as part of this module.
+Здесь вводится произвольный Verilog код,
+который станет частью модуля.
 -end-
 
 db.gate.mparm.parameter	Parameter
@@ -954,7 +955,7 @@ print.prcmd		Print Command:
 print.prname		Printer
 print.advanced		Advanced...
 
-print.filename		File Name
+print.filename		Имя файла
 print.epssave		Save as Encapsulated Postscript.
 #print.doctit		Document Title
 #print.prmod		Print Modules
@@ -1452,14 +1453,14 @@ find.target		Target
 #
 # Circuit Dialog box
 #
-circ.wintitle		TkGate: Circuit Properties
-circ.label		Circuit Properties
-circ.ident		Identification
-circ.filev		File Version
-circ.file		File Name
-circ.title		Circuit Title
-circ.encoding		File Encoding
-circ.lang		File Language
+circ.wintitle		TkGate: Свойства схемы
+circ.label		Свойства схемы
+circ.ident		Идентификация
+circ.filev		Версия файла
+circ.file		Имя файла
+circ.title		Заголовок схемы
+circ.encoding		Кодировка файла
+circ.lang		Язык файла
 circ.discchg		Do not warn about discarding changes.
 circ.flags		Options
 circ.defaults		Component Defaults
