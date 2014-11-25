@@ -166,7 +166,7 @@ Cursor Cursor_find(int id)
 void init_cursors()
 {
   XColor FGC,BGC,FGCreal,BGCreal;
-  int MaxW,MaxH;
+  unsigned int MaxW,MaxH;
   Cursor default_cursor = XCreateFontCursor(TkGate.D,XC_top_left_arrow);
   CursorDef *CSet;
   int i;
@@ -194,7 +194,7 @@ void init_cursors()
   } else {
     if (MaxW < 16 && MaxH < 16) {
       printf("[Warning: hardware cursors limited to "
-	     "%dx%d (need at least 16x16).]\n",MaxW,MaxH);
+	     "%ux%u (need at least 16x16).]\n",MaxW,MaxH);
     }
 #if DEBUG_CURSORS
     printf("using smallCursors\n");

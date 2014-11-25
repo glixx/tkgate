@@ -457,6 +457,7 @@ void modint_edit(EditState **es,GModuleDef *M)
  *****************************************************************************/
 void modint_close()
 {
+#if MODINT_DEBUG
   GModuleDef *m;
 
   if (TkGate.circuit->es->env == TkGate.circuit->mid_display)
@@ -464,7 +465,6 @@ void modint_close()
   else
     m = TkGate.circuit->root_mod;				/* Top-level interface editor */
 
-#if MODINT_DEBUG
   printf("modint_close: (%s)=%p\n",TkGate.circuit->mid_display->m_name,m);
 #endif
 

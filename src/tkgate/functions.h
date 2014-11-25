@@ -38,4 +38,30 @@
 #define	MS2 0x1c	    /* Proc on/off bits */
 #define MS3 0xfe0	    /* All mode bits */
 
+void init_tclProcs(Tcl_Interp *tcl);
+void init_iconTables();
+void init_localeSet();
+void init_cpathNetDelayTable();
+void init_mainWindow(Tcl_Interp *tcl);
+void init_cursors();
+void init_specials();void init_specials();
+
+void FlagScrolling();
+
+void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
+
+void Comment_addLine(GCElement *g,const char *text);
+void Comment_flushLines(GCElement *g);
+
+void Locale_print(const Locale *locale,FILE *fp);
+
+int utf8toXChar2b(XChar2b *output_r, int outsize, const char *input, int inlen);
+
+void HandScroll_move(EditState *es);
+void HandScroll_set(EditState *es);
+void HandScroll_drop(EditState *es);
+
+int igen_strToSide(const char *side);
+void guessPortName(char *buf,GCElement *g,int orient,int dir,int nbits);
+
 #endif

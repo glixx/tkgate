@@ -22,7 +22,6 @@
 static const char *unitCodes[] = {"s", "ms", "us", "ns", "ps", "fs"};
 static int numUnitCodes  = sizeof(unitCodes)/sizeof(unitCodes[0]);
 
-
 /*
  * 1ns/1ns
  */
@@ -388,8 +387,6 @@ int Circuit_isSelection(Circuit *c)
   else
     return 0;
 }
-
-
 
 void Circuit_loadLibrary(Circuit *c,const char *name)
 {

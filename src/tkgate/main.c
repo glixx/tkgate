@@ -18,7 +18,10 @@
     Last edit by hansen on Tue Jan 27 23:21:37 2009
 ****************************************************************************/
 #include <stdlib.h>
+#ifndef USE_INTERP_RESULT
+#define USE_INTERP_RESULT
 #include "tcl.h"
+#endif // USE_INTERP_RESULT
 #include "tk.h"
 
 #define STRMAX 1024
@@ -33,7 +36,10 @@ int Tkgate_Init(Tcl_Interp *tcl);
  *****************************************************************************/
 int Tcl_AppInit(Tcl_Interp *tcl)
 {
+  /** @TODO to remove */
+  /*
   char buf[STRMAX];
+  */
   int r;
 
   r = Tcl_Init(tcl);

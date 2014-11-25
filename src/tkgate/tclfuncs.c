@@ -1035,7 +1035,10 @@ static int gat_debug(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   printf("REGS-symbol %p\n",g);
   for (i = 0;i < n;i++) {
     const char *name = GCElement_getPadName(g,i);
-    GWire *w = g->wires[i];
+    /**
+     * @TODO to remove
+     */
+    /* GWire *w = g->wires[i]; */
     printf("   pad %s:\n",name);
   }
 
@@ -1780,7 +1783,10 @@ static int gat_yankFromBuf(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 {
   TkgGateWin *gw = TkGate.gw;
   EditState *es = gw->parms->circuit->es;
-  GModuleDef *m = es->env;
+  /**
+   * @TODO to remove
+   */
+  /* GModuleDef *m = es->env; */
   int dx,dy;
 
   if (!modifyOK(es,0)) return TCL_OK;
@@ -3175,8 +3181,13 @@ static int gat_makeMakeMenu(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
  *****************************************************************************/
 static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
+  /**
+   * @TODO to remove
+   */
+  /*
   TkgGateWin *gw = TkGate.gw;
   EditState **es = &gw->parms->circuit->es;
+  */
   GModuleDef *m = 0;
   const char *modName = 0;
   const char *oldPortName = 0;
@@ -3186,10 +3197,7 @@ static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const cha
   int orient = 0;
   int dir = 0;
   int nbits = 0;
-  int i;
   const char *s;
-
-
 
   if (argc < 3) {
     sprintf(tcl->result,"wrong number of parameters.");

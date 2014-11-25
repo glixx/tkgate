@@ -17,12 +17,12 @@
 
     Last edit by hansen on Wed Jan 14 14:20:33 2009
 ****************************************************************************/
+#include "tkgate.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <unistd.h>
 #include <string.h>
-#include "tkgate.h"
 
 /*****************************************************************************
  *
