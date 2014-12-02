@@ -48,4 +48,4 @@ bin_PROGRAMS=tkgate
 tkgate_LDFLAGS=@TKGATE_LPATH@ @X_LIBS@ @COMMON_LPATH@
 tkgate_SOURCES=$(BASE_OBJS) main.c
 #tkgate_LDADD=libtkgate.la
-tkgate_LDADD=@TKGATE_LIB@ -lcommon -lm
+tkgate_LDADD=@TKGATE_LIB@ -lcommon -lm -lpthread
