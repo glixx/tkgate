@@ -662,6 +662,7 @@ void *ob_realloc(void *vo,int s)
     memcpy(c,vo,o->o_size-sizeof(Object));
     ob_free(vo);
   }
+
   return c;
 }
 

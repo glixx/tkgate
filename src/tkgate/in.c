@@ -94,12 +94,16 @@ GCElement *InOut_Make(EditState **es,GModuleDef *env,int GType,
 		      int x,int y,int r,const char *Name,int noWire,const char **options,int nOptions)
 {
   GCElement     *g;
+  /** @TODO to remove */
+  /*
   GGateInfo *gi;
+  */
 
   if (!(g = Generic_Make(es,env,GType,x,y,r,Name,noWire,options,nOptions)))
     return NULL;
 
-  gi = g->typeinfo;
+  /** @TODO to remove */
+  /* gi = g->typeinfo; */
 
   if (es) {
     Tcl_SetVar(TkGate.tcl,"edgat_newPort","1",TCL_GLOBAL_ONLY);

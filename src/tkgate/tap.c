@@ -497,14 +497,18 @@ GWireNode *Tap_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
 */
 void tap_transmute(GWire *branch,EditState *es)
 {
+  /** @TODO to remove*/
+  /*
   GModuleDef *env;
+  */
   GWire *in,*out;
   GCElement *g;
   int i,o;
   int tap_dx = 0,tap_dy = 0;
 
   g = branch->gate;
-  env = es->env;
+  /** @TODO to remove */
+  /* env = es->env; */
 #ifdef JOIN_DRAW
   gate_draw(g,0);
 #endif

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1112843320 source:/home/starling13/REPO/tkgate/src/common/hash.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1116272638 /home/starling13/REPO/tkgate/src/common/hash.h
+
+1127780347 source:/home/starling13/REPO/tkgate/src/common/list.c
+	<stdlib.h>
+	"list.h"
+
+1127780355 /home/starling13/REPO/tkgate/src/common/list.h
+

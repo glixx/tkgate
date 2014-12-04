@@ -48,6 +48,7 @@
 #define GC_CONCAT	0x100f
 #define GC_ROM		0x1010
 #define GC_RAM		0x1011
+#define GC_KEYPAD	0x1012
 
 /*
    Gate pad numbers for some of the gates.
@@ -139,7 +140,7 @@ void RegisterGate(GGateInfo *gi);
 
 void GetPinIOMark(GWire *w,int d,int iod,int atype,int *x,int *y,Icon **arrow);
 void DrawPinIOMark(GWire *w,int d,int iod,int atype);
-
+void init_gateHashTables();
 
 /*
  * Extra memory required for allocating a GCElement object with n ports.

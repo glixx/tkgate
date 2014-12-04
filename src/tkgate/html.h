@@ -170,6 +170,7 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y);
 int HtmlFont_isEqual(const HtmlFont*,const HtmlFont*);	/* Return non-zero if fonts are equal */
 HtmlFont *HtmlFont_init(HtmlFont*,fontfamily_t,fontprop_t,fontsize_t);
 void HtmlFont_print(HtmlFont*,FILE*);
+void HtmlContext_print(const HtmlContext * context, FILE * fp);
 
 int Hyperlink_selectAt(int x,int y);		/* Select a hyperlink at (x,y) in response to mouse down */
 int Hyperlink_confirmAt(int x,int y);		/* Confirm a hyperlink at (x,y) in response to mouse up */

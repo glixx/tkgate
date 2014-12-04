@@ -247,7 +247,8 @@ double traceLinesPerPage(const char *orient,const char *paper)
 {
   extern GScope *Scope;		/* The scope trace */
   PaperSize *size = 0;
-  double uHeight, uWidth;
+  /** @TODO to remove */
+  double uHeight/*, uWidth*/;
   double vspace,tsheight;
   int i;
 
@@ -272,10 +273,10 @@ double traceLinesPerPage(const char *orient,const char *paper)
    * Figure out height and width from paper size and orientation.
    */
   if (strcmp(orient,"landscape") == 0) {
-    uWidth = size->ps_height - PAGE_LMARGIN - PAGE_RMARGIN;
+    /** @TODO uWidth = size->ps_height - PAGE_LMARGIN - PAGE_RMARGIN; */
     uHeight = size->ps_width - PAGE_TMARGIN - PAGE_BMARGIN - PAGE_LBLOCK;;
   } else {
-    uWidth = size->ps_width - PAGE_LMARGIN - PAGE_RMARGIN;;
+    /** @TODO uWidth = size->ps_width - PAGE_LMARGIN - PAGE_RMARGIN; */
     uHeight = size->ps_height- PAGE_TMARGIN - PAGE_BMARGIN - PAGE_LBLOCK;
   }
 

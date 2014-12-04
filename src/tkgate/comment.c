@@ -17,9 +17,9 @@
 
     Last edit by hansen on Sun Feb 22 18:12:36 2009
 ****************************************************************************/
+#include "tkgate.h"
 #include <stdlib.h>
 #include <string.h>
-#include "tkgate.h"
 
 #define ENGLISH_LINESPACE	12	/* Line spacing for English text */
 #define KANJI_LINESPACE		15	/* Line spacing for lines with kanji characters */

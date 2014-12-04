@@ -41,6 +41,7 @@ static char *font_family_names[FF_MAX] = {
   "times",
   "symbol",
   "kanji",
+  "fixed"
 };
 
 /*
@@ -100,7 +101,7 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
     break;
   default :
     sprintf(fullName,
-	    "-adobe-%s-%s-%s-normal--%d-*-*-*-*-*-%s",
+	    "-*-%s-%s-%s-normal--%d-*-*-*-*-*-%s",
 	    font_family_names[ff],
 	    font_weight,
 	    font_posture,
