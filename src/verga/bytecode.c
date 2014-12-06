@@ -117,14 +117,14 @@ ByteCode *CodeBlock_nextEmpty(CodeBlock *cb)
 
 void CodeBlock_copy(CodeBlock *dst,unsigned dpos,CodeBlock *src,unsigned start,unsigned stop)
 {
-  unsigned reqLen = dpos + (stop-start+1);		/* Required length */
+  unsigned reqLen = dpos + (stop-start);		/* Required length */
 
   if (reqLen >= dst->cb_nalloced) {
     dst->cb_nalloced = reqLen;
     dst->cb_instructions = (ByteCode*) realloc(dst->cb_instructions,sizeof(ByteCode)*dst->cb_nalloced);
   }
 
-  memcpy(CodeBlock_get(dst,dpos),CodeBlock_get(src,start),sizeof(ByteCode)*(stop-start+1));
+  memcpy(CodeBlock_get(dst,dpos),CodeBlock_get(src,start),sizeof(ByteCode)*(stop-start));
 #if 0
   {
     int i;
