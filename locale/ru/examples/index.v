@@ -16,13 +16,13 @@ module main;    //: root_module
   //: comment g4 @(553,317) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex6/coke.v\"><img src=example_coke.gif>"
   //: /line:"Автомат газировки</a></h3>"
-  //: /line:"This example uses TkGate's Viritual"
-  //: /line:"Peripheral Device (VPD) mechanism to"
-  //: /line:"create an interactive \"Coke Machine\""
-  //: /line:"that can be controlled by a user circuit."
-  //: /line:"Only the coke machine device itself is"
-  //: /line:"included.  Can you build a controller"
-  //: /line:"for it?"
+  //: /line:"Этот пример использует механизм"
+  //: /line:"виртуальных периферийных устройств (ВПУ)"
+  //: /line:"TkGate для создания интерактивной модели"
+  //: /line:"\"Автомат газировки\", которой можно управлять"
+  //: /line:"с помощью пользовательской схемы."
+  //: /line:"Включена только модель. Сможете ли Вы построить"
+  //: /line:"контроллер для неё?"
   //: /line:""
   //: /end
   //: comment g3 @(32,317) /sn:0 /anc:1
@@ -48,7 +48,7 @@ module main;    //: root_module
   //: /line:"D-защелок."
   //: /end
   //: comment g6 @(20,552) /sn:0
-  //: /line:"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
+  //: /line:" <font size=5><a href=\"@T/welcome.v\">Вернуться на главную страницу</a></font> "
   //: /end
   //: comment g7 @(787,27) /sn:0
   //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"

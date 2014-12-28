@@ -1,8 +1,9 @@
-//: version "2.0-b7"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
 //: property title = "menagerie.v"
+//: property showSwitchNets = 0
 //: property simAutoStart = 1
 //: property discardChanges = 1
 //: property timingViolationMode = 1
@@ -15,7 +16,7 @@
 `timescale 1ns/1ns
 
 
-//: /symbolBegin: 688834864
+//: /symbolBegin: 186439856
 //: /iconBegin normal 3404 0 0
 //: /data "#define bitmap_width 73"
 //: /data "#define bitmap_height 53"
@@ -171,7 +172,7 @@ wire w55;    //: /sn:0 {0}(589,266)(659,266){1}
 
   //: joint g4 (DATA) @(517, 473) /w:[ 1 2 4 -1 ]
   //: comment g13 @(17,390) /sn:0
-  //: /line:"Circuit highlights:"
+  //: /line:"Важные части схемы:"
   //: /line:"<a href=\"#memory.tty0\">* TTY Device</a>"
   //: /line:"<a href=\"#iunit.mpc\">* Micro Program Counter</a>"
   //: /line:"<a href=\"#eunit.alu\">* ALU</a>"
@@ -217,19 +218,19 @@ wire w55;    //: /sn:0 {0}(589,266)(659,266){1}
   //: /end
   MEMORY memory (._CLR(_reset), .CK(clk), ._incmar(w0), ._rdpc(w59), ._ldhmdr(w42), .spc(w43), ._rd(w44), ._wrt(w36), ._rdmdr(w37), ._incpc(w38), ._ldmdr(w39), ._ldmar(w40), ._ldpc(w41), .DATA(DATA));   //: @(268, 84) /sz:(125, 353) /p:[ Ti0>7 Ti1>7 Ri0>1 Ri1>1 Ri2>1 Ri3>1 Ri4>1 Ri5>1 Ri6>1 Ri7>1 Ri8>1 Ri9>1 Ri10>1 Bt0=5 ]
   //: comment g39 @(12,517) /sn:0
-  //: /line:"<a href=\"../index.v\">[BACK]</a>"
+  //: /line:" <a href=\"../index.v\">[НАЗАД]</a> "
   //: /end
   EUNIT eunit (._CLR(_reset), .CK(clk), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .SA(w45), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), ._LT(w32), ._GT(w33), ._Z(w34), .COUT(w35), .DATA(DATA));   //: @(660, 84) /sz:(128, 353) /p:[ Ti0>0 Ti1>0 Li0>1 Li1>1 Li2>1 Li3>1 Li4>1 Li5>1 Li6>1 Li7>1 Li8>1 Li9>1 Li10>1 Li11>1 Li12>1 Li13>1 Lo0<1 Lo1<1 Lo2<1 Lo3<1 Bt0=0 ]
   //: joint g5 (clk) @(301, 66) /w:[ 3 -1 4 6 ]
   _GGCLOCK_P3000_0_50 g0 (.Z(clk));   //: @(133,66) /sn:0 /w:[ 5 ] /omega:3000 /phi:0 /duty:50
-  //: SWITCH reset (_reset) @(137,31) /sn:0 /w:[ 5 ] /st:1
+  //: SWITCH reset (_reset) @(137,31) /sn:0 /w:[ 5 ] /st:1 /dn:1
 
 endmodule
 //: /netlistEnd
 
 //: /netlistBegin MEMORY
 module MEMORY(DATA, _wrt, _ldpc, spc, _ldmdr, _rd, _rdmdr, _ldhmdr, _CLR, _rdpc, _incmar, _ldmar, CK, _incpc);
-//: interface  /sz:(125, 353) /bd:[ Ti0>_CLR(83/125) Ti1>CK(33/125) Ri0>_incmar(186/353) Ri1>_rdpc(171/353) Ri2>_ldhmdr(155/353) Ri3>spc(136/353) Ri4>_rd(120/353) Ri5>_wrt(104/353) Ri6>_rdmdr(88/353) Ri7>_incpc(73/353) Ri8>_ldmdr(57/353) Ri9>_ldmar(42/353) Ri10>_ldpc(25/353) Bt0=DATA[15:0](60/125) ]
+//: interface  /sz:(125, 353) /bd:[ Ti0>_CLR(83/125) Ti1>CK(33/125) Ri0>_incmar(186/353) Ri1>_rdpc(171/353) Ri2>_ldhmdr(155/353) Ri3>spc(136/353) Ri4>_rd(120/353) Ri5>_wrt(104/353) Ri6>_rdmdr(88/353) Ri7>_incpc(73/353) Ri8>_ldmdr(57/353) Ri9>_ldmar(42/353) Ri10>_ldpc(25/353) Bt0=DATA[15:0](60/125) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 supply0 [5:0] w16;    //: /sn:0 {0}(#:545,861)(545,840){1}
 input _rd;    //: /sn:0 {0}(671,557)(671,614){1}
 //: {2}(673,616)(708,616)(708,273)(740,273){3}
@@ -446,7 +447,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g36 (_ldpc) @(146, 152) /w:[ 1 -1 2 4 ]
   //: IN g23 (_ldmar) @(458,245) /sn:0 /R:3 /w:[ 0 ]
   _GGNOR1x16 #(1) g41 (.I0(w28), .Z(w15));   //: @(355,711) /sn:0 /w:[ 0 9 ] /eb:0
-  //: DIP TTYSTATUS (w38) @(172,713) /R:1 /w:[ 0 ] /st:16
+  //: DIP TTYSTATUS (w38) @(172,713) /R:1 /w:[ 0 ] /st:16 /dn:1
   //: frame g93 @(354,466) /sn:0 /wi:421 /ht:164 /tx:"Main Memory"
   //: joint g81 (_incmar) @(325, 264) /w:[ 4 6 -1 3 ]
   _GGMUX2x8 #(8, 8) g54 (.I0(mdr), .I1(w1), .S(w26), .Z(w36));   //: @(790,740) /sn:0 /w:[ 0 0 1 0 ] /ss:0 /do:0
@@ -468,10 +469,10 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGNOR2 #(6) g35 (.I0(!_incpc), .I1(!_ldpc), .Z(w14));   //: @(244,129) /sn:0 /w:[ 0 0 0 ] /eb:0
   //: joint g45 (mdrin) @(559, 552) /w:[ 2 4 1 -1 ]
   assign w27 = {w31, w15}; //: CONCAT g46  @(638,667) /sn:0 /R:1 /w:[ 1 7 3 ] /dr:0 /tp:0 /drp:1
-  TTY tty0 (.TD(TD), .DSR(DSR), .RTS(RTS), .RD(RD), .CTS(CTS), .DTR(DTR));   //: @(396, 962) /symbol:688834864 /w:[ 0 0 0 0 1 0 ]
+  TTY tty0 (.TD(TD), .DSR(DSR), .RTS(RTS), .RD(RD), .CTS(CTS), .DTR(DTR));   //: @(396, 962) /symbol:186439856 /w:[ 0 0 0 0 1 0 ]
   //: joint g82 (_incmar) @(325, 281) /w:[ 1 2 -1 8 ]
   //: GROUND g66 (w1) @(825,693) /sn:0 /w:[ 1 ]
-  //: DIP TTYDATA (w40) @(174,765) /R:1 /w:[ 0 ] /st:17
+  //: DIP TTYDATA (w40) @(174,765) /R:1 /w:[ 0 ] /st:17 /dn:1
   assign w2 = {w3, mdr}; //: CONCAT g18  @(657,246) /sn:0 /R:2 /w:[ 0 1 9 ] /dr:0 /tp:0 /drp:1
   //: joint g12 (_rd) @(671, 616) /w:[ 2 1 4 -1 ]
   //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Address Resolution"
@@ -484,7 +485,7 @@ endmodule
 
 //: /netlistBegin ALUshift
 module ALUshift(A, B, OUT, FUNC);
-//: interface  /sz:(170, 116) /bd:[ Ti0>FUNC[4:0](121/170) Ti1>B[15:0](82/170) Ti2>A[15:0](34/170) Bo0<OUT[15:0](85/170) ]
+//: interface  /sz:(170, 116) /bd:[ Ti0>FUNC[4:0](121/170) Ti1>B[15:0](82/170) Ti2>A[15:0](34/170) Bo0<OUT[15:0](85/170) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [15:0] B;    //: /sn:0 {0}(#:244,259)(244,197)(342,197){1}
 //: {2}(346,197)(446,197){3}
 //: {4}(450,197)(546,197){5}
@@ -534,7 +535,7 @@ endmodule
 
 //: /netlistBegin REG4
 module REG4(SB, _ENA, B, CK, DIN, _ENB, _WA, _CLR, SA, A);
-//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>CK(123/138) Li1>_WA(106/138) Li2>_ENB(88/138) Li3>_ENA(70/138) Li4>_CLR(51/138) Li5>SB[1:0](33/138) Li6>SA[1:0](17/138) Bo0<B[15:0](79/107) Bo1<A[15:0](31/107) ]
+//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>CK(123/138) Li1>_WA(106/138) Li2>_ENB(88/138) Li3>_ENA(70/138) Li4>_CLR(51/138) Li5>SB[1:0](33/138) Li6>SA[1:0](17/138) Bo0<B[15:0](79/107) Bo1<A[15:0](31/107) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output [15:0] B;    //: /sn:0 {0}(#:507,666)(507,615){1}
 input CK;    //: /sn:0 {0}(53,412)(175,412){1}
 //: {2}(179,412)(317,412){3}
@@ -629,7 +630,7 @@ endmodule
 
 //: /netlistBegin ALU
 module ALU(COUT, A, B, FUNC, CIN, _GT, _Z, OUT, _LT);
-//: interface  /sz:(107, 127) /bd:[ Ti0>A[15:0](31/107) Ti1>B[15:0](79/107) Li0>FUNC[4:0](18/127) Li1>CIN(95/127) Bo0<OUT[15:0](56/107) Ro0<_Z(20/127) Ro1<_GT(37/127) Ro2<_LT(52/127) Ro3<COUT(69/127) ]
+//: interface  /sz:(107, 127) /bd:[ Ti0>A[15:0](31/107) Ti1>B[15:0](79/107) Li0>FUNC[4:0](18/127) Li1>CIN(95/127) Bo0<OUT[15:0](56/107) Ro0<_Z(20/127) Ro1<_GT(37/127) Ro2<_LT(52/127) Ro3<COUT(69/127) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output _Z;    //: /sn:0 {0}(478,431)(488,431){1}
 //: {2}(492,431)(556,431){3}
 //: {4}(490,433)(490,505)(511,505){5}
@@ -690,7 +691,7 @@ endmodule
 
 //: /netlistBegin ZREG4
 module ZREG4(CK, B, _ENA, SB, _ENB, DIN, _WA, _CLR, SA, A);
-//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>CK(123/138) Li1>_WA(106/138) Li2>_ENB(88/138) Li3>_ENA(70/138) Li4>_CLR(51/138) Li5>SB[1:0](33/138) Li6>SA[1:0](17/138) Bo0<B[15:0](79/107) Bo1<A[15:0](31/107) ]
+//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>CK(123/138) Li1>_WA(106/138) Li2>_ENB(88/138) Li3>_ENA(70/138) Li4>_CLR(51/138) Li5>SB[1:0](33/138) Li6>SA[1:0](17/138) Bo0<B[15:0](79/107) Bo1<A[15:0](31/107) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output [15:0] B;    //: /sn:0 {0}(#:507,666)(507,615){1}
 input CK;    //: /sn:0 {0}(46,421)(314,421){1}
 //: {2}(318,421)(463,421){3}
@@ -780,7 +781,7 @@ endmodule
 
 //: /netlistBegin IUNIT
 module IUNIT(_rd, _WA, _LDQ, CK, _DOUT, _rdmdr, FUNC, _CLQ, _CLR, _ldmdr, SB, _LDQH, IR, _ldmar, _incmar, _LDQL, SA, _incpc, IDATA, _LT, COUT, _LDDATA, spc, _Z, _ldhmdr, _wrt, _ldpc, BOP, AOP, _GT, _rdpc, CIN);
-//: interface  /sz:(132, 353) /bd:[ Ti0>_CLR(86/132) Ti1>CK(37/132) Li0>_incmar(187/353) Bi0>IR[15:0](62/132) Ri0>COUT(314/353) Ri1>_Z(296/353) Ri2>_GT(276/353) Ri3>_LT(258/353) Lo0<_rd(121/353) Lo1<spc(137/353) Lo2<_ldhmdr(156/353) Lo3<_ldpc(26/353) Lo4<_ldmar(43/353) Lo5<_ldmdr(58/353) Lo6<_incpc(74/353) Lo7<_rdmdr(89/353) Lo8<_wrt(105/353) Ro0<_DOUT(239/353) Ro1<_LDQL(220/353) Ro2<_LDQH(200/353) Ro3<_LDDATA(182/353) Ro4<CIN(165/353) Ro5<_LDQ(150/353) Ro6<_CLQ(133/353) Ro7<IDATA[7:0](113/353) Ro8<FUNC[4:0](95/353) Ro9<BOP[1:0](81/353) Ro10<AOP[1:0](65/353) Ro11<_WA(50/353) Ro12<SB[3:0](33/353) Ro13<SA[3:0](18/353) Lt0=_rdpc(172/353) ]
+//: interface  /sz:(132, 353) /bd:[ Ti0>_CLR(86/132) Ti1>CK(37/132) Li0>_incmar(187/353) Bi0>IR[15:0](62/132) Ri0>COUT(314/353) Ri1>_Z(296/353) Ri2>_GT(276/353) Ri3>_LT(258/353) Lo0<_rd(121/353) Lo1<spc(137/353) Lo2<_ldhmdr(156/353) Lo3<_ldpc(26/353) Lo4<_ldmar(43/353) Lo5<_ldmdr(58/353) Lo6<_incpc(74/353) Lo7<_rdmdr(89/353) Lo8<_wrt(105/353) Ro0<_DOUT(239/353) Ro1<_LDQL(220/353) Ro2<_LDQH(200/353) Ro3<_LDDATA(182/353) Ro4<CIN(165/353) Ro5<_LDQ(150/353) Ro6<_CLQ(133/353) Ro7<IDATA[7:0](113/353) Ro8<FUNC[4:0](95/353) Ro9<BOP[1:0](81/353) Ro10<AOP[1:0](65/353) Ro11<_WA(50/353) Ro12<SB[3:0](33/353) Ro13<SA[3:0](18/353) Lt0=_rdpc(172/353) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input _Z;    //: /sn:0 {0}(1162,361)(1137,361)(1137,358)(1115,358){1}
 input [15:0] IR;    //: /sn:0 {0}(#:59,70)(84,70){1}
 output _rd;    //: /sn:0 {0}(494,1037)(704,1037){1}
@@ -1040,7 +1041,7 @@ endmodule
 
 //: /netlistBegin OPRDEC
 module OPRDEC(SB, SA, FUNC, OPR, OM2, MAP, OM1, COND, IR);
-//: interface  /sz:(192, 126) /bd:[ Ti0>OPR[7:0](148/192) Ti1>IR[7:0](19/192) Bo0<MAP[7:0](23/192) Ro0<OM1[1:0](76/126) Ro1<COND[2:0](109/126) Ro2<OM2[1:0](92/126) Ro3<FUNC[4:0](60/126) Ro4<SB[3:0](41/126) Ro5<SA[3:0](21/126) ]
+//: interface  /sz:(192, 126) /bd:[ Ti0>OPR[7:0](148/192) Ti1>IR[7:0](19/192) Bo0<MAP[7:0](23/192) Ro0<OM1[1:0](76/126) Ro1<COND[2:0](109/126) Ro2<OM2[1:0](92/126) Ro3<FUNC[4:0](60/126) Ro4<SB[3:0](41/126) Ro5<SA[3:0](21/126) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [7:0] IR;    //: /sn:0 {0}(#:569,291)(430,291){1}
 //: {2}(429,291)(382,291){3}
 //: {4}(381,291)(356,291){5}
@@ -1119,7 +1120,7 @@ endmodule
 
 //: /netlistBegin REG16
 module REG16(DIN, SB, _ENA, SA, A, B, CK, _CLR, _WA, _ENB);
-//: interface  /sz:(108, 138) /bd:[ Ti0>DIN[15:0](53/108) Li0>CK(118/138) Li1>SA[3:0](17/138) Li2>SB[3:0](33/138) Li3>_CLR(51/138) Li4>_ENA(66/138) Li5>_ENB(82/138) Li6>_WA(101/138) Bo0<A[15:0](32/108) Bo1<B[15:0](80/108) ]
+//: interface  /sz:(108, 138) /bd:[ Ti0>DIN[15:0](53/108) Li0>CK(118/138) Li1>SA[3:0](17/138) Li2>SB[3:0](33/138) Li3>_CLR(51/138) Li4>_ENA(66/138) Li5>_ENB(82/138) Li6>_WA(101/138) Bo0<A[15:0](32/108) Bo1<B[15:0](80/108) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output [15:0] B;    //: /sn:0 {0}(#:1208,435)(1135,435){1}
 //: {2}(1133,433)(1133,336){3}
 //: {4}(1131,435)(882,435){5}
@@ -1240,7 +1241,7 @@ endmodule
 
 //: /netlistBegin ALUbasic
 module ALUbasic(B, A, OUT, COUT, CIN, FUNC);
-//: interface  /sz:(165, 122) /bd:[ Ti0>FUNC[4:0](125/165) Ti1>B[15:0](84/165) Ti2>A[15:0](38/165) Li0>CIN(54/122) Bo0<OUT[15:0](91/165) Ro0<COUT(54/122) ]
+//: interface  /sz:(165, 122) /bd:[ Ti0>FUNC[4:0](125/165) Ti1>B[15:0](84/165) Ti2>A[15:0](38/165) Li0>CIN(54/122) Bo0<OUT[15:0](91/165) Ro0<COUT(54/122) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [15:0] B;    //: /sn:0 {0}(#:717,363)(717,178)(600,178){1}
 //: {2}(596,178)(496,178){3}
 //: {4}(492,178)(386,178){5}
@@ -1323,7 +1324,7 @@ endmodule
 
 //: /netlistBegin EUNIT
 module EUNIT(_CLR, _LDDATA, SB, SA, BOP, AOP, _LDQ, _GT, _Z, _WA, _CLQ, CK, DATA, _LT, FUNC, _LDQH, _LDQL, CIN, IDATA, COUT, _DOUT);
-//: interface  /sz:(128, 353) /bd:[ Ti0>_CLR(89/128) Ti1>CK(34/128) Li0>_DOUT(239/353) Li1>_LDQL(220/353) Li2>_LDQH(200/353) Li3>_LDDATA(182/353) Li4>SA[3:0](18/353) Li5>CIN(165/353) Li6>_LDQ(150/353) Li7>_CLQ(133/353) Li8>IDATA[7:0](113/353) Li9>FUNC[4:0](95/353) Li10>BOP[1:0](81/353) Li11>AOP[1:0](65/353) Li12>_WA(50/353) Li13>SB[3:0](33/353) Lo0<_LT(258/353) Lo1<_GT(276/353) Lo2<_Z(296/353) Lo3<COUT(314/353) Bt0=DATA[15:0](67/128) ]
+//: interface  /sz:(128, 353) /bd:[ Ti0>_CLR(89/128) Ti1>CK(34/128) Li0>_DOUT(239/353) Li1>_LDQL(220/353) Li2>_LDQH(200/353) Li3>_LDDATA(182/353) Li4>SA[3:0](18/353) Li5>CIN(165/353) Li6>_LDQ(150/353) Li7>_CLQ(133/353) Li8>IDATA[7:0](113/353) Li9>FUNC[4:0](95/353) Li10>BOP[1:0](81/353) Li11>AOP[1:0](65/353) Li12>_WA(50/353) Li13>SB[3:0](33/353) Lo0<_LT(258/353) Lo1<_GT(276/353) Lo2<_Z(296/353) Lo3<COUT(314/353) Bt0=DATA[15:0](67/128) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output _Z;    //: /sn:0 {0}(646,543)(608,543){1}
 input _CLQ;    //: /sn:0 {0}(549,811)(497,811){1}
 output _LT;    //: /sn:0 {0}(645,575)(608,575){1}
@@ -1452,865 +1453,4 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGNAND3 #(.Diz(1)) (I0, I1, I2,  Z);
-   output  Z;
-   input   I0, I1, I2;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 & I2 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x2 #(.Diz(1)) (I0, I1,  Z);
-   output  [1:0] Z;
-   input   [1:0] I0, I1;
-   reg  [1:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x5 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [4:0] I0, I1;
-   input  S;
-   output  [4:0] Z;
-   reg 	   [4:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  5'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x4 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [3:0] I0, I1;
-   input  S;
-   output  [3:0] Z;
-   reg 	   [3:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  4'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGARSHIFT16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  (I >>> S);
-   
-endmodule // arshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ~( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGXOR2x16 #(.Diz(1)) (I0, I1,  Z);
-   output  [15:0] Z;
-   input   [15:0] I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x3 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [2:0] I0, I1;
-   input  S;
-   output  [2:0] Z;
-   reg 	   [2:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  3'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [7:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x16 #(.Diz(1)) (I0, I1,  Z);
-   output  [15:0] Z;
-   input   [15:0] I0, I1;
-   reg  [15:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG4 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [3:0] D;
-  output  [3:0] Q;
-  reg 	  [3:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 4'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x3 #(.Diz(1)) (I0, I1,  Z);
-   output  [2:0] Z;
-   input   [2:0] I0, I1;
-   reg  [2:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF3 #(.Diz(1)) (I, Z);
-   input  [2:0] I;
-   output  [2:0] Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGROM8x32 #(.Dout(1), .Dread(1)) (A, D, OE);
-   input  OE;
-   input   [7:0] A;
-   output  [31:0] D;
-   reg 	   [31:0] m[0:255];
-   wire    [31:0] X;
-
-   assign #Dread X = m[A];
-   assign #Dout D = (~OE) ? X : 32'bz;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNOR1x16 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [15:0] I0;
-
-   assign #Diz Z = ~ | I0;
-   
-endmodule // ror
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGLSHIFT16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  (I << S);
-   
-endmodule // lshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGROM8x8 #(.Dout(1), .Dread(1)) (A, D, OE);
-   input  OE;
-   input   [7:0] A;
-   output  [7:0] D;
-   reg 	   [7:0] m[0:255];
-   wire    [7:0] X;
-
-   assign #Dread X = m[A];
-   assign #Dout D = (~OE) ? X : 8'bz;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, I4, I5, I6, I7, S, Z);
-   input  I0, I1, I2, I3, I4, I5, I6, I7;
-   input  [2:0] S;
-   output  Z;
-   reg 	   Z;
-
-   always
-     begin
-	case (S)
-	  3'd0: Z <= #Dsz  I0;
-	  3'd1: Z <= #Dsz  I1;
-	  3'd2: Z <= #Dsz  I2;
-	  3'd3: Z <= #Dsz  I3;
-	  3'd4: Z <= #Dsz  I4;
-	  3'd5: Z <= #Dsz  I5;
-	  3'd6: Z <= #Dsz  I6;
-	  3'd7: Z <= #Dsz  I7;
-	  default: Z <= #Dsz  1'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR3 #(.Diz(1)) (I0, I1, I2,  Z);
-   output  Z;
-   input   I0, I1, I2;
-
-     assign #Diz Z = ( I0 | I1 | I2 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND1x4 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [3:0] I0;
-
-   assign #Diz Z =  & I0;
-   
-endmodule // rand
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNBUF #(.Diz(1)) (I, Z);
-   input  I;
-   output  Z;
-
-   assign #Diz Z = ~I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR1x3 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [2:0] I0;
-
-   assign #Diz Z =  | I0;
-   
-endmodule // ror
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUFIF16 #(.Dez(1), .Diz(1)) (Z, I, E);
-   input  [15:0] I;
-   input E;
-   output  [15:0] Z;
-
-   specify
-      (E *> Z) = Dez;
-      (I *> Z) = Diz;
-   endspecify
-
-   assign Z = E ? (I) : 16'bz;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG32 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [31:0] D;
-  output  [31:0] Q;
-  reg 	  [31:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 32'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD16 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [15:0] A,B;
-   output  [15:0] S;
-   wire    [15:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-   reg  [7:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x8 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [7:0] I0, I1;
-   input  S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGRAM16x8 #(.Dout(1),		// Output time
-	     .Dread(1),		// Read time
-	     .Dwrite(1),	// Write time
-	     .Daddr_setup(1),	// Address setup time
-	     .Daddr_hold(1),	// Address hold time
-	     .Ddata_hold(1))	// Data hold time
-	(A, D, WE, OE, CS);
-	    
-   input OE, WE, CS;
-   input  [15:0] A;
-   inout  [7:0] D;
-   reg 	  [7:0] m[0:65535];
-   wire   [7:0] X;
-   wire  doRead, doWrite;
-
-   specify
-      $setup(A, posedge doWrite, Daddr_setup);
-      $hold(negedge doWrite, A, Daddr_hold);
-      $hold(negedge doWrite, D, Ddata_hold);
-      $width(posedge doWrite, Dwrite);
-   endspecify
-
-   assign doRead = (!CS && !OE);
-   assign doWrite = (!CS && !WE);
-
-   //
-   // Value read from addressed memory
-   //
-   assign #Dread X = m[A];
-
-   //
-   // If chip-select and output-enable are asserted, output value from memory
-   //
-   assign #Dout D = doRead ? X : 8'bz;
-
-   //
-   // Look for conditions on which to write to memory
-   //
-   always @(doWrite or D or A)
-     if (doWrite)
-       m[A] <= #Dwrite D;
-
-   always @(D)
-     if (doWrite)
-       $error("`RAMDCHG %m[%M]");
-
-   always @(A)
-     if (doWrite)
-       $error("`RAMACHG %m[%M]");
-   
-
-endmodule // ram
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG16 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [15:0] D;
-  output  [15:0] Q;
-  reg 	  [15:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 16'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGROLL16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  ((I << (S % 16)) | (I >> ((16 - S) % 16)));
-   
-endmodule // lshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR1x16 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [15:0] I0;
-
-   assign #Diz Z =  | I0;
-   
-endmodule // ror
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x16 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [15:0] I0, I1;
-   input  S;
-   output  [15:0] Z;
-   reg 	   [15:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  16'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P3000_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #1500
-     if (0 == 0)
-       forever
-	 begin
-	    Z =  1'b1;
-	    #1500;
-	    Z =  1'b0;
-	    #1500;
-	 end
-     else
-       forever
-	 begin
-	    Z =  1'b0;
-	    #1500;
-	    Z =  1'b1;
-	    #1500;
-	 end
-   
-endmodule // clock
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNDECODER4 #(.Dez(1), .Diz(1)) (I, E, Z0, Z1, Z2, Z3);
-   input  [1:0] I;
-   input E;
-   output Z0, Z1, Z2, Z3;
-   wire  [3:0] Zcat;
-
-   specify
-      (E *> Z0) = Dez; 
-      (E *> Z1) = Dez; 
-      (E *> Z2) = Dez; 
-      (E *> Z3) = Dez;  
-      (I *> Z0) = Diz; 
-      (I *> Z1) = Diz; 
-      (I *> Z2) = Diz; 
-      (I *> Z3) = Diz;  
-   endspecify
-
-   assign Zcat = ~ ({4{E}} & (4'b1 << I));
-
-   assign Z0 = Zcat[0];
-   assign Z1 = Zcat[1];
-   assign Z2 = Zcat[2];
-   assign Z3 = Zcat[3]; 
-   
-endmodule // decoder
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGRSHIFT16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  (I >> S);
-   
-endmodule // rshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGDIV16 #(.Dab_q(1), .Dab_r(1)) (A, B, Q, R);
-   input   [15:0] A,B;
-   output  [15:0] Q,R;
-   
-   assign #Dab_q Q =  (A / B);
-   assign #Dab_r R =  (A % B);
-
-endmodule   // div
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUL16 #(.Dab_p(1)) (A, B, P);
-   input   [15:0] A,B;
-   output  [15:0] P;
-   
-   assign #Dab_p P =  (A * B);
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF5 #(.Diz(1)) (I, Z);
-   input  [4:0] I;
-   output  [4:0] Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX8x16 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, I4, I5, I6, I7, S, Z);
-   input  [15:0] I0, I1, I2, I3, I4, I5, I6, I7;
-   input  [2:0] S;
-   output  [15:0] Z;
-   reg 	   [15:0] Z;
-
-   always
-     begin
-	case (S)
-	  3'd0: Z <= #Dsz  I0;
-	  3'd1: Z <= #Dsz  I1;
-	  3'd2: Z <= #Dsz  I2;
-	  3'd3: Z <= #Dsz  I3;
-	  3'd4: Z <= #Dsz  I4;
-	  3'd5: Z <= #Dsz  I5;
-	  3'd6: Z <= #Dsz  I6;
-	  3'd7: Z <= #Dsz  I7;
-	  default: Z <= #Dsz  16'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF16 #(.Diz(1)) (I, Z);
-   input  [15:0] I;
-   output  [15:0] Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2x16 #(.Diz(1)) (I0, I1,  Z);
-   output  [15:0] Z;
-   input   [15:0] I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x16 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [15:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [15:0] Z;
-   reg 	   [15:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  16'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUFIF8 #(.Dez(1), .Diz(1)) (Z, I, E);
-   input  [7:0] I;
-   input E;
-   output  [7:0] Z;
-
-   specify
-      (E *> Z) = Dez;
-      (I *> Z) = Diz;
-   endspecify
-
-   assign Z = E ? (I) : 8'bz;
-   
-endmodule // buf
-//: /builtinEnd
 

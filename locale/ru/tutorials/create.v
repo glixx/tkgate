@@ -50,14 +50,14 @@ endmodule
 //: /netlistBegin PAGE6
 module PAGE6();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
-reg w6;    //: /sn:0 {0}(154,237)(182,237)(182,237)(314,237){1}
+reg w6;    //: /sn:0 {0}(154,237)(309,237){1}
 reg w2;    //: /sn:0 {0}(219,137)(186,137)(186,137)(154,137){1}
-wire w7;    //: /sn:0 {0}(335,235)(345,235){1}
+wire w7;    //: /sn:0 {0}(330,235)(340,235){1}
 wire w0;    //: /sn:0 {0}(204,142)(219,142){1}
-wire w5;    //: /sn:0 {0}(314,232)(294,232)(294,140)(240,140){1}
+wire w5;    //: /sn:0 {0}(309,232)(289,232)(289,140)(240,140){1}
 //: enddecls
 
-  _GGOR2 #(6) g4 (.I0(w5), .I1(w6), .Z(w7));   //: @(325,235) /sn:0 /w:[ 0 1 0 ]
+  _GGOR2 #(6) g4 (.I0(w5), .I1(w6), .Z(w7));   //: @(320,235) /sn:0 /w:[ 0 1 0 ]
   _GGAND2 #(6) g3 (.I0(w2), .I1(w0), .Z(w5));   //: @(230,140) /sn:0 /w:[ 0 1 1 ]
   //: SWITCH g2 (w6) @(137,237) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g10 @(10,310) /sn:0 /R:14 /anc:1
@@ -74,11 +74,13 @@ wire w5;    //: /sn:0 {0}(314,232)(294,232)(294,140)(240,140){1}
   //: /line:"wire.</font>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
-  //: /line:"Now make the final connection.  Grab the lower input terminal of the AND gate"
-  //: /line:"and drag it down near the wire between the lower switch and the OR gate.  Release"
-  //: /line:"the wire to create a joint."
+  //: /line:"Теперь создадим последние соединения. Захватите конец"
+  //: /line:"нижнего входа верхнего вентиля И, перетащите его и"
+  //: /line:"отпустите посередине провода, соединяющего нижний"
+  //: /line:"переключатель и нижний вентиль И, чтобы создать"
+  //: /line:"соединение."
   //: /line:""
   //: /end
   //: SWITCH g5 (w2) @(137,137) /sn:0 /w:[ 1 ] /st:0 /dn:0
@@ -136,15 +138,17 @@ wire w5;    //: /sn:0 {0}(204,142)(219,142){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g6 @(578,122) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: The soldering iron cursor will"
-  //: /line:"show you when you have selected"
-  //: /line:"a connectable wire end.</font>"
+  //: /line:"<font color=green4>Подсказка: Когда Вы выбираете конец"
+  //: /line:"проводника, который можно соединить с другим,"
+  //: /line:"отображается курсор в виде паяльника.</font>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
-  //: /line:"Finally, connect the wires.  Begin by grabbing the end of the wire leading from one of the"
-  //: /line:"switches with the left mouse button and drag it to the upper input terminal of the AND gate."
+  //: /line:"Наконец, соедините элементы проводниками. Начните с того, что захватите конец провода,"
+  //: /line:"идущего из верхнего переключателя левой кнопкой мыши и, удерживая левую кнопку, перетащите"
+  //: /line:"его к концу провода, ведущего к верхнему входу верхнего вентиля И, после чего отпустите"
+  //: /line:"левую кнопку мыши."
   //: /end
   //: comment g0 @(579,61) /sn:0 /anc:1
   //: /line:"<img src=\"connect_example.gif\">"
@@ -174,7 +178,7 @@ wire w5;    //: /sn:0 {0}(342,239)(357,239){1}
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
-  //: /line:"Далее создайте два переключателя. Последовательно елкните правой кнопкой мыши в"
+  //: /line:"Далее создайте два переключателя. Последовательно щелкните правой кнопкой мыши в"
   //: /line:"пунктирных рамках и выберите <font color=red2>Компоненты &rarr; Ввод-вывод &rarr; Переключатель</font>"
   //: /line:"из контекстного меню."
   //: /end
@@ -203,7 +207,7 @@ module PAGE2();
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Создание простой схемы</h3>"
   //: /line:""
-  //: /line:"Начните с создания вентия И. Щелкните правой кнопкой по пунктирному"
+  //: /line:"Начните с создания вентиля И. Щелкните правой кнопкой по пунктирному"
   //: /line:"прямоугольнику и выберите <font color=red2>Компоненты &rarr; Вентиль &rarr; И</font>"
   //: /line:"из контекстного меню."
   //: /end

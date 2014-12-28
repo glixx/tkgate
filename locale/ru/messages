@@ -15,7 +15,7 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
-# Last edit by hansen on Sun Feb 22 19:51:17 2009
+# Last edit by starling13 on Sun Dec 22 19:51:17 2014
 
 ##############################################################################
 
@@ -85,7 +85,7 @@ sidetab.ports	Порты
 #
 # MsgMgr strings (including breakpoint and script handling) 
 #
-@mm.width	7
+@mm.width	17
 mm.add		Добавить...
 mm.delete	Удалить
 mm.edit		Редактировать...
@@ -224,7 +224,7 @@ menu.scope_sim			0:Симуляция
 menu.scope_trace		0:Трассировка
 menu.scope_help			0:Справка
 
-menu.scope_file.ptrace		0:Print Trace...
+menu.scope_file.ptrace		0:Печать трассировки...
 menu.scope_file.close		0:Закрыть
 menu.scope_trace.zoomin		5:Приблизить
 menu.scope_trace.zoomout	5:Отдалить
@@ -405,7 +405,7 @@ pop.interface.edit	Редактировать...
 pop.interface.auto	Автогенерация...
 pop.interface.replace	Заменить
 
-pop.igen.type		Type
+pop.igen.type		Тип
 pop.igen.side		Side
 pop.igen.size		Size
 pop.igen.delete		Delete
@@ -476,12 +476,12 @@ comment.empty	[Double click to add text.]
 ##############################################################################
 # Interface strings
 #
-ifile		File
-imodule		Module
-iblmodule	Modules
-iports		Ports
-ibits		Bits:
-itype		Type:
+ifile		Файл
+imodule		Модуль
+iblmodule	Модули
+iports		Порты
+ibits		Биты:
+itype		Тип:
 
 #############################################################################
 # Module Dialog Box
@@ -490,10 +490,10 @@ db.mod.name	Имя
 db.mod.file	Имя файла
 db.mod.type	Тип
 db.mod.flags	Флаги
-db.mod.dataprot	Запретить редактирование определения модуля.
-db.mod.intfprot	Prevent all interface changes.
-db.mod.edprot	Prevent edit mode interface changes.
-db.mod.props	Properties
+db.mod.dataprot	Запретить изменение определения модуля.
+db.mod.intfprot	Запретить любые изменения интерфейса.
+db.mod.edprot	Запретить изменять интерфейс вне редактора.
+db.mod.props	Свойства
 db.mod.inuse.0	Модуль не используется.
 db.mod.inuse.1	Модуль используется.
 db.mod.lmod.0	Module has not been modified since loading.
@@ -577,18 +577,18 @@ db.gate.cyclew		Период
 db.gate.phase		Фаза
 db.gate.duty		Duty
 db.gate.waveform	Clock Waveform
-db.gate.port		Port
-db.gate.bitws		Bits
+db.gate.port		Порт
+db.gate.bitws		Биты
 db.gate.side		Side
-db.gate.gtype		Type
-db.gate.gname		Instance Name
-db.gate.hidenam		Hide Name
-db.gate.anchor		Anchor
+db.gate.gtype		Тип
+db.gate.gname		Имя экземпляра
+db.gate.hidenam		Скрыть имя
+db.gate.anchor		Прикрепить
 db.gate.cpbreak		Critical Path Partition
 db.gate.butstate	Button State
 db.gate.dipval		Switch Value
 db.gate.range		Bit Range
-db.gate.memfilenam	Memory File
+db.gate.memfilenam	Файл памяти
 db.gate.modname		Тип
 db.gate.general		Общие
 db.gate.details		Детали
@@ -668,11 +668,11 @@ be connected to switches or registers.
 @db.gate.comment.width		*900
 @db.gate.comment.height		*550
 
-db.gate.tab.General.cap		General Properties
-db.gate.tab.Ports.cap		Port Properties
-db.gate.tab.Delay.cap		Delay Properties
-db.gate.tab.Parameters.cap	Module Parameters
-db.gate.tab.CLOCK.cap		Clock Properties
+db.gate.tab.General.cap		Общие свойства
+db.gate.tab.Ports.cap		Свойства портов
+db.gate.tab.Delay.cap		Свойства задержек
+db.gate.tab.Parameters.cap	Свойства модулей
+db.gate.tab.CLOCK.cap		Clock properties
 db.gate.tab.SWITCH.cap		Switch Properties
 db.gate.tab.DIP.cap		DIP Properties
 db.gate.tab.TAP.cap		Tran Properties
@@ -1244,7 +1244,7 @@ opt.bbar.restoreall	Restore All Defaults
 igen.title		TkGate: Module Interface Generation
 
 igen.port		Port
-igen.type		Type
+igen.type		Тип
 igen.side		Side
 igen.size		Size
 igen.bits		Bits
@@ -1288,17 +1288,17 @@ info.script.error	Script Errors
 module.props.title	TkGate: Module Properties
 module.props		Module Properties
 
-ipanel.plist		Port List
-ipanel.props		Interface Properties
-#ipanel.itype.change	Change Type...
+ipanel.plist		Список портов
+ipanel.props		Свойтсва интерфейса
+#ipanel.itype.change	Изменить тип...
 #ipanel.itype.edsymbol	Edit Symbol...
 ipanel.block		Standard
 ipanel.symbol		Symbol
 
-ipanel.autogen		Auto Generate...
-ipanel.updateall	Synchronize All...
+ipanel.autogen		Автогенерация...
+ipanel.updateall	Синхронизировать...
 
-ipanel.itype.select	Interface Type
+ipanel.itype.select	Тип интерфейса
 
 #ipanel.block.description	Standard Interface
 #ipanel.symbol.description	Custom Symbol Interface
@@ -1345,7 +1345,7 @@ blklst.claim		Claim Module
 blklst.to		To
 blklst.from		From
 blklst.name		Name
-blklst.new.cap		Create New Module
+blklst.new.cap		Создать новый модуль
 blklst.del.cap		Delete Module
 blklst.copy.cap		Copy Module
 blklst.rename.cap	Rename Module
@@ -1403,9 +1403,9 @@ go to that item.
 
 find.ignorecase		Ignore Case
 
-find.result.module	Module
-find.result.type	Type
-find.result.name	Object Name
+find.result.module	Модуль
+find.result.type	Тип
+find.result.name	Имя объекта
 
 #
 # These are special tags used by the search feature.  Do not change their value.
@@ -2203,26 +2203,26 @@ ho.undo	Undo previous action(s)
 ho.redo	Redo undone action(s)
 
 ho.tab.edit		-begin-
-Primary editing mode.
+Основной режим редактирования.
 -end-
 
 
 ho.tab.interface	-begin-
-Edit module interfaces.  While in interface
-mode, double click on a module in the module
-list to edit its interface, or on the root
-module to display all interface.
+Редактирование интерфейсов модулей. В данном
+режиме дважды щелкните на модуле в списке,
+чтобы редактировать его интерфейс или на
+корневом модуле, чтобы отобразить все интерфейсы.
 -end-
 
 
 ho.tab.simulate		-begin-
-Start the simulator, open the logic analyzer
-and execute any initialization scripts if defined.
+Запуск симулятора и логического анализатора, а
+также запуск скриптов, если они определены.
 -end-
 
 
 ho.tab.cpath		-begin-
-Find critical paths in a circuit.
+Поиск критического пути в схемах.
 -end-
 
 ho.log		-begin-
@@ -2288,35 +2288,30 @@ View/modify the contents
 of a memory (RAM or ROM).
 -end-
 
-
 ho.modlist	-begin-
-List of all modules currently loaded in
-alphabetical order.  Drag modules to the
-edit window to create new instances.
+Список всех модулей в алфавитном порядке.
+Перетаскивайте модули в область редактирования
+чтобы создавать новые экземпляры.
 -end-
 
 ho.modtree	-begin-
-List of all modules currently in
-a hierarchical list.  Drag modules to the
-edit window to create new instances.
+Список всех модулей в иерархическом виде.
+Перетаскивайте модули в область редактирования
+чтобы создавать новые экземпляры.
 -end-
 
 ho.netlist	-begin-
-List of nets in the current module.
-The symbol to the left of the name
-indicates whether the net is single
-bit (green) or multi-bit (red).  An
-"A" shown in the symbol indicates
-that the net name is marked as
-visible.
+Список сетей в текущем модуле.
+Символ слева от имени сети показывает,
+является ли сеть однобитной (зеленый)
+или многобитной (красный). "A" означает,
+что сеть помечена как видимая.
 -end-
 
 ho.ports	-begin-
-List of ports on the interface
-of the module displayed in the
-edit window.  The symbol before
-the port indicates the direction
-of the port.
+Список портов в интерфейсе модуля, который
+редактируется в данный момент. Символ слева
+показывает направление порта.
 -end-
 
 ho.status.logo		-begin-

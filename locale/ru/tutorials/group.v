@@ -1,10 +1,13 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
 //: property title = "edit2_tut.v"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -29,7 +32,7 @@ endmodule
 
 //: /netlistBegin PAGE3
 module PAGE3();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 reg c0;    //: {0}(18:183,147)(289,147)(289,189){1}
 //: {2}(291,191)(314,191){3}
 //: {4}(289,193)(289,210){5}
@@ -51,11 +54,11 @@ wire w9;    //: /sn:0 {0}(314,186)(286,186){1}
   //: LED g37 (s0) @(372,189) /sn:0 /R:3 /w:[ 1 ] /type:0
   _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(285,265) /sn:0 /R:3 /w:[ 1 1 0 ]
   _GGNAND2 #(4) g28 (.I0(a0), .I1(b0), .Z(w7));   //: @(257,242) /sn:0 /w:[ 5 5 0 ]
-  //: SWITCH g27 (c0) @(166,147) /sn:0 /w:[ 0 ] /st:0
   //: joint g32 (w9) @(284, 186) /w:[ 1 -1 2 4 ]
+  //: SWITCH g27 (c0) @(166,147) /sn:0 /w:[ 0 ] /st:0 /dn:0
   _GGNAND2 #(4) g31 (.I0(w9), .I1(c0), .Z(w4));   //: @(287,221) /sn:0 /R:3 /w:[ 5 5 0 ]
-  //: SWITCH g25 (a0) @(166,183) /sn:0 /w:[ 0 ] /st:0
   //: joint g29 (a0) @(229, 183) /w:[ 2 -1 1 4 ]
+  //: SWITCH g25 (a0) @(166,183) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g5 @(10,10) /anc:1
   //: /line:"<h3>Group Editing Features</h3> <b>(incremental selection)</b>"
   //: /line:""
@@ -66,19 +69,19 @@ wire w9;    //: /sn:0 {0}(314,186)(286,186){1}
   //: /end
   _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(325,189) /sn:0 /w:[ 0 3 0 ]
   _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(250,186) /sn:0 /w:[ 3 3 3 ]
-  //: SWITCH g26 (b0) @(166,218) /sn:0 /w:[ 0 ] /st:0
   //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: joint g30 (b0) @(223, 218) /w:[ -1 2 1 4 ]
+  //: SWITCH g26 (b0) @(166,218) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g33 (c0) @(289, 191) /w:[ 2 1 -1 4 ]
+  //: joint g30 (b0) @(223, 218) /w:[ -1 2 1 4 ]
 
 endmodule
 //: /netlistEnd
 
 //: /netlistBegin PAGE5
 module PAGE5();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 reg c0;    //: {0}(18:167,153)(273,153)(273,195){1}
 //: {2}(275,197)(298,197){3}
 //: {4}(273,199)(273,216){5}
@@ -105,11 +108,11 @@ wire w9;    //: /sn:0 {0}(298,192)(270,192){1}
   //: /end
   _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(269,271) /sn:0 /R:3 /w:[ 1 1 0 ]
   _GGNAND2 #(4) g28 (.I0(a0), .I1(b0), .Z(w7));   //: @(241,248) /sn:0 /w:[ 5 5 0 ]
-  //: SWITCH g27 (c0) @(150,153) /sn:0 /w:[ 0 ] /st:0
   //: joint g32 (w9) @(268, 192) /w:[ 1 -1 2 4 ]
+  //: SWITCH g27 (c0) @(150,153) /sn:0 /w:[ 0 ] /st:0 /dn:0
   _GGNAND2 #(4) g31 (.I0(w9), .I1(c0), .Z(w4));   //: @(271,227) /sn:0 /R:3 /w:[ 5 5 0 ]
-  //: SWITCH g25 (a0) @(150,189) /sn:0 /w:[ 0 ] /st:0
   //: joint g29 (a0) @(213, 189) /w:[ 2 -1 1 4 ]
+  //: SWITCH g25 (a0) @(150,189) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g5 @(10,10) /anc:1
   //: /line:"<h3>Group Editing Features</h3> <b>(rotation and anchoring)</b>"
   //: /line:""
@@ -118,75 +121,19 @@ wire w9;    //: /sn:0 {0}(298,192)(270,192){1}
   //: /end
   _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(309,195) /sn:0 /w:[ 0 3 0 ]
   _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(234,192) /sn:0 /w:[ 3 3 3 ]
+  //: SWITCH g26 (b0) @(150,224) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: SWITCH g26 (b0) @(150,224) /sn:0 /w:[ 0 ] /st:0
-  //: joint g30 (b0) @(207, 224) /w:[ -1 2 1 4 ]
   //: joint g33 (c0) @(273, 197) /w:[ 2 1 -1 4 ]
-
-endmodule
-//: /netlistEnd
-
-//: /netlistBegin PAGE4
-module PAGE4();
-//: interface  /sz:(40, 40) /bd:[ ]
-reg c0;    //: {0}(18:174,160)(280,160)(280,202){1}
-//: {2}(282,204)(305,204){3}
-//: {4}(280,206)(280,223){5}
-reg a0;    //: {0}(40:174,196)(196,196)(196,196)(218,196){1}
-//: {2}(222,196)(230,196){3}
-//: {4}(220,198)(220,252)(237,252){5}
-reg b0;    //: {0}(50:174,231)(193,231)(193,231)(212,231){1}
-//: {2}(214,229)(214,201)(230,201){3}
-//: {4}(214,233)(214,257)(237,257){5}
-wire w7;    //: /sn:0 {0}(258,255)(273,255)(273,267){1}
-wire s0;    //: {0}(36:326,202)(356,202){1}
-wire w4;    //: /sn:0 {0}(278,244)(278,267){1}
-wire c1;    //: {0}(99:276,288)(276,307){1}
-wire w9;    //: /sn:0 {0}(305,199)(277,199){1}
-//: {2}(273,199)(251,199){3}
-//: {4}(275,201)(275,223){5}
-//: enddecls
-
-  //: LED g37 (s0) @(363,202) /sn:0 /R:3 /w:[ 1 ] /type:0
-  //: comment g2 @(548,117) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: Hitting the <font color=red2>Delete</font> key will"
-  //: /line:"delete all of the selected gates"
-  //: /line:"without copying it to the clipboard.</font>"
-  //: /end
-  _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(276,278) /sn:0 /R:3 /w:[ 1 1 0 ]
-  _GGNAND2 #(4) g28 (.I0(a0), .I1(b0), .Z(w7));   //: @(248,255) /sn:0 /w:[ 5 5 0 ]
-  //: SWITCH g27 (c0) @(157,160) /sn:0 /w:[ 0 ] /st:0
-  //: joint g32 (w9) @(275, 199) /w:[ 1 -1 2 4 ]
-  _GGNAND2 #(4) g31 (.I0(w9), .I1(c0), .Z(w4));   //: @(278,234) /sn:0 /R:3 /w:[ 5 5 0 ]
-  //: SWITCH g25 (a0) @(157,196) /sn:0 /w:[ 0 ] /st:0
-  //: joint g29 (a0) @(220, 196) /w:[ 2 -1 1 4 ]
-  //: comment g5 @(10,10) /anc:1
-  //: /line:"<h3>Group Editing Features</h3> <b>(clipboard operations)</b>"
-  //: /line:""
-  //: /line:"You can use Cut and Paste operations to cut or copy a group of gates to the clipboard"
-  //: /line:"and paste it somewhere else.  Select a group of gates then press the <img src=edit_cut.gif bgcolor=gray> or <img src=edit_copy.gif bgcolor=gray> buttons to"
-  //: /line:"cut or copy, respectively, the selected gates to the clipboard.  To paste the contents of the"
-  //: /line:"clipboard, first set a <img src=mark.gif> with the left mouse button, then press the <img src=edit_paste.gif bgcolor=gray> button to paste the"
-  //: /line:"clipboard contents to that location."
-  //: /line:""
-  //: /end
-  _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(316,202) /sn:0 /w:[ 0 3 0 ]
-  _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(241,199) /sn:0 /w:[ 3 3 3 ]
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
-  //: /line:"<tutorial-navigation>"
-  //: /end
-  //: SWITCH g26 (b0) @(157,231) /sn:0 /w:[ 0 ] /st:0
-  //: joint g30 (b0) @(214, 231) /w:[ -1 2 1 4 ]
-  //: joint g33 (c0) @(280, 204) /w:[ 2 1 -1 4 ]
+  //: joint g30 (b0) @(207, 224) /w:[ -1 2 1 4 ]
 
 endmodule
 //: /netlistEnd
 
 //: /netlistBegin PAGE2
 module PAGE2();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 reg c0;    //: {0}(18:182,149)(288,149)(288,191){1}
 //: {2}(290,193)(313,193){3}
 //: {4}(288,195)(288,212){5}
@@ -213,11 +160,11 @@ wire w9;    //: /sn:0 {0}(313,188)(285,188){1}
   //: /end
   _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(284,267) /sn:0 /R:3 /w:[ 1 1 0 ]
   _GGNAND2 #(4) g28 (.I0(a0), .I1(b0), .Z(w7));   //: @(256,244) /sn:0 /w:[ 5 5 0 ]
-  //: SWITCH g27 (c0) @(165,149) /sn:0 /w:[ 0 ] /st:0
   //: joint g32 (w9) @(283, 188) /w:[ 1 -1 2 4 ]
+  //: SWITCH g27 (c0) @(165,149) /sn:0 /w:[ 0 ] /st:0 /dn:0
   _GGNAND2 #(4) g31 (.I0(w9), .I1(c0), .Z(w4));   //: @(286,223) /sn:0 /R:3 /w:[ 5 5 0 ]
-  //: SWITCH g25 (a0) @(165,185) /sn:0 /w:[ 0 ] /st:0
   //: joint g29 (a0) @(228, 185) /w:[ 2 -1 1 4 ]
+  //: SWITCH g25 (a0) @(165,185) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g5 @(10,10) /anc:1
   //: /line:"<h3>Group Editing Features</h3> <b>(selection and movement)</b>"
   //: /line:""
@@ -228,40 +175,69 @@ wire w9;    //: /sn:0 {0}(313,188)(285,188){1}
   //: /end
   _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(324,191) /sn:0 /w:[ 0 3 0 ]
   _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(249,188) /sn:0 /w:[ 3 3 3 ]
+  //: SWITCH g26 (b0) @(165,220) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: SWITCH g26 (b0) @(165,220) /sn:0 /w:[ 0 ] /st:0
-  //: joint g30 (b0) @(222, 220) /w:[ -1 2 1 4 ]
   //: joint g33 (c0) @(288, 193) /w:[ 2 1 -1 4 ]
+  //: joint g30 (b0) @(222, 220) /w:[ -1 2 1 4 ]
 
 endmodule
 //: /netlistEnd
 
+//: /netlistBegin PAGE4
+module PAGE4();
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
+reg c0;    //: {0}(18:174,160)(280,160)(280,202){1}
+//: {2}(282,204)(305,204){3}
+//: {4}(280,206)(280,223){5}
+reg a0;    //: {0}(40:174,196)(196,196)(196,196)(218,196){1}
+//: {2}(222,196)(230,196){3}
+//: {4}(220,198)(220,252)(237,252){5}
+reg b0;    //: {0}(50:174,231)(193,231)(193,231)(212,231){1}
+//: {2}(214,229)(214,201)(230,201){3}
+//: {4}(214,233)(214,257)(237,257){5}
+wire w7;    //: /sn:0 {0}(258,255)(273,255)(273,267){1}
+wire s0;    //: {0}(36:326,202)(356,202){1}
+wire w4;    //: /sn:0 {0}(278,244)(278,267){1}
+wire c1;    //: {0}(99:276,288)(276,307){1}
+wire w9;    //: /sn:0 {0}(305,199)(277,199){1}
+//: {2}(273,199)(251,199){3}
+//: {4}(275,201)(275,223){5}
+//: enddecls
 
-`timescale 1ns/1ns
+  //: LED g37 (s0) @(363,202) /sn:0 /R:3 /w:[ 1 ] /type:0
+  //: comment g2 @(548,117) /sn:0 /anc:1
+  //: /line:"<font color=green4>Hint: Hitting the <font color=red2>Delete</font> key will"
+  //: /line:"delete all of the selected gates"
+  //: /line:"without copying it to the clipboard.</font>"
+  //: /end
+  _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(276,278) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGNAND2 #(4) g28 (.I0(a0), .I1(b0), .Z(w7));   //: @(248,255) /sn:0 /w:[ 5 5 0 ]
+  //: joint g32 (w9) @(275, 199) /w:[ 1 -1 2 4 ]
+  //: SWITCH g27 (c0) @(157,160) /sn:0 /w:[ 0 ] /st:0 /dn:0
+  _GGNAND2 #(4) g31 (.I0(w9), .I1(c0), .Z(w4));   //: @(278,234) /sn:0 /R:3 /w:[ 5 5 0 ]
+  //: joint g29 (a0) @(220, 196) /w:[ 2 -1 1 4 ]
+  //: SWITCH g25 (a0) @(157,196) /sn:0 /w:[ 0 ] /st:0 /dn:0
+  //: comment g5 @(10,10) /anc:1
+  //: /line:"<h3>Group Editing Features</h3> <b>(clipboard operations)</b>"
+  //: /line:""
+  //: /line:"You can use Cut and Paste operations to cut or copy a group of gates to the clipboard"
+  //: /line:"and paste it somewhere else.  Select a group of gates then press the <img src=edit_cut.gif bgcolor=gray> or <img src=edit_copy.gif bgcolor=gray> buttons to"
+  //: /line:"cut or copy, respectively, the selected gates to the clipboard.  To paste the contents of the"
+  //: /line:"clipboard, first set a <img src=mark.gif> with the left mouse button, then press the <img src=edit_paste.gif bgcolor=gray> button to paste the"
+  //: /line:"clipboard contents to that location."
+  //: /line:""
+  //: /end
+  _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(316,202) /sn:0 /w:[ 0 3 0 ]
+  _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(241,199) /sn:0 /w:[ 3 3 3 ]
+  //: SWITCH g26 (b0) @(157,231) /sn:0 /w:[ 0 ] /st:0 /dn:0
+  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: /line:"<tutorial-navigation>"
+  //: /end
+  //: joint g33 (c0) @(280, 204) /w:[ 2 1 -1 4 ]
+  //: joint g30 (b0) @(214, 231) /w:[ -1 2 1 4 ]
 
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
+endmodule
+//: /netlistEnd
 
