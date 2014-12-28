@@ -734,8 +734,8 @@ void ob_suggest_name(const char *name)
 #endif
       return;
     }
-    free(objm.om_cur->of_name);
     memusage.actual -= strlen(objm.om_cur->of_name)+1;
+    free(objm.om_cur->of_name);
   }
 
 #if OBJECT_DEBUG
@@ -847,8 +847,8 @@ void ob_append_frame(const char *name)
   objm.om_cur->of_level++;
   if (name) {
     if (objm.om_cur->of_name) {
-      free(objm.om_cur->of_name);
       memusage.actual -= strlen(objm.om_cur->of_name)+1;
+      free(objm.om_cur->of_name);
     }
     objm.om_cur->of_name = strdup(name);
     memusage.actual += strlen(name)+1;
