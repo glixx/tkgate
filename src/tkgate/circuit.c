@@ -417,8 +417,6 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
 
   dhash = new_NHash_noob();
 
-  SHash_remove(TkGate.libraries, name);
-
   /*
    * Get list of modules to be deleted.
    */
@@ -441,6 +439,7 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
     env_delete(TkGate.circuit->es,M->m_name);
   }
   delete_NHash(dhash);
+  SHash_remove(TkGate.libraries, name);
 }
 
 void Circuit_unloadAllLibraries(Circuit *c)

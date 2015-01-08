@@ -77,7 +77,13 @@
  * to be backed up for a command.
  *
  *###########################################################################*/
-#include "tkgate.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <assert.h>
+
+#include "object.h"
+#include "list.h"
 
 #define OBJECT_DEBUG		0	/* Debugging display of object handling */
 #define OBJECT_SHOWMODS		0	/* More debugging display of object handling */
@@ -87,9 +93,6 @@
 #define OBJECT_TRACKUSAGE	1	/* Track memory usage */
 
 #define OBJECT_UNNAMED		"Action"	/* Name to use when we get an action without a name */
-
-void undo_sync(int is_after);
-
 
 /*****************************************************************************
  * Object flags.
@@ -156,7 +159,7 @@ struct objectchange_str {
  * is stored in front of each object returned by ob_malloc()
  *****************************************************************************/
 struct object_str {
-  const char	*o_type;		/* Object type */
+  const char *o_type;		/* Object type */
   unsigned	o_size;			/* Size of this object */
   unsigned	o_mark;			/* Object change mark */
   unsigned	o_flags;		/* Change type */
@@ -201,7 +204,7 @@ void xfree(void *o)
 void ob_init()
 {
 #if OBJECT_DEBUG
-  printf("ob_init()\n");
+  puts(__PRETTY_FUNCTION__);
 #endif
   objm.om_started = 0;
   objm.om_mode = OM_DISABLED;
@@ -268,21 +271,22 @@ static void ob_discard_frame(ObjectFrame *F)
     NC = C->oc_next;
     if (C->oc_ptr && (C->oc_type == OC_FREE)) {
       if (C->oc_backup) {
-        /*assert(memusage.actual >= C->oc_ptr->o_size);*/
+        assert(memusage.actual >= C->oc_ptr->o_size);
         memusage.actual -= C->oc_ptr->o_size;
         free(C->oc_backup);
       }
-      /*assert(memusage.actual >= C->oc_ptr->o_size);*/
+      assert(memusage.actual >= C->oc_ptr->o_size);
       memusage.actual -= C->oc_ptr->o_size;
       free(C->oc_ptr);
     }
-    /*assert(memusage.actual >= sizeof(ObjectChange));*/
+    assert(memusage.actual >= sizeof(ObjectChange));
     memusage.actual -= sizeof(ObjectChange);
     free(C);
   }
-  /*assert(memusage.actual >= sizeof(ObjectFrame));*/
+  assert(memusage.actual >= sizeof(ObjectFrame));
   memusage.actual -= sizeof(ObjectFrame);
   free(F);
+  printf("memusage: %u\n", memusage.actual);
 }
 
 /*****************************************************************************
@@ -397,6 +401,7 @@ static void ob_clear_list(List *L)
   for (E = List_first(L);E;E = List_next(L,E)) {
     ObjectFrame *F = (ObjectFrame*)ListElem_obj(E);
     ob_discard_frame(F);
+    F = NULL;
   }
   List_flush(L);
 }
@@ -451,23 +456,11 @@ ObjectFrame *ob_apply(ObjectFrame *f)
     }
   }
 
-  /*assert(memusage.actual >= sizeof(ObjectFrame));*/
+  assert(memusage.actual >= sizeof(ObjectFrame));
   memusage.actual -= sizeof(ObjectFrame);
   free(f);
 
   return inv_f;
-}
-
-/*****************************************************************************
- *
- * Synchronize states of undo buttons
- *
- *****************************************************************************/
-void ob_sync_undo_buttons()
-{
-  DoTcl("Menu::setFlags %s U %s R",
-	(ob_getUndoList(0,0) != 0 ? "-set" : "-clear"),
-	(ob_getRedoList(0,0) != 0 ? "-set" : "-clear"));
 }
 
 /*****************************************************************************
@@ -477,7 +470,6 @@ void ob_sync_undo_buttons()
  *****************************************************************************/
 void ob_undo(int count)
 {
-  undo_sync(0);				/* Synchronize Tcl/Tk undo/redo list */
   while (count-- > 0) {
     ObjectFrame *of;
 
@@ -488,8 +480,6 @@ void ob_undo(int count)
     of = ob_apply(of);
     if (of) List_addToHead(&objm.om_redo,of);
   }
-  undo_sync(1);				/* Synchronize Tcl/Tk undo/redo list */
-  ob_sync_undo_buttons();
 }
 
 /*****************************************************************************
@@ -502,8 +492,6 @@ void ob_undo(int count)
 void ob_redo(int count)
 {
   ObjectFrame *of;
-
-  undo_sync(0);
 
   /*
    * Undo any background frames on the undo stack.
@@ -530,8 +518,6 @@ void ob_redo(int count)
     of = ob_apply(of);
     if (of) ob_pushUndoFrame(of);
   }
-  undo_sync(1);
-  ob_sync_undo_buttons();
 }
 
 /*****************************************************************************
@@ -671,9 +657,6 @@ void *ob_realloc(void *vo,int s)
     memcpy(c,vo,o->o_size-sizeof(Object));
     ob_free(vo);
   }
-  else {
-    memusage.actual -= o->o_size-sizeof(Object) - s;
-  }
 
   return c;
 }
@@ -706,13 +689,13 @@ void ob_free(void *vo)
 #endif
 
   if (objm.om_mode == OM_DISABLED) {
-    /*assert(memusage.actual >= (sizeof(Object) + o->o_size));*/
+    assert(memusage.actual >= (sizeof(Object) + o->o_size));
     memusage.actual -= sizeof(Object) + o->o_size;
     free(o);
     return;
   }
   if (!objm.om_cur) {
-    logError(ERL_ERROR,"object freed outside frame context");
+    perror("object freed outside frame context");
     ob_begin_framef("BadFree",FF_STICKY);
     do_ack_frame = 1;
 #if OBJECT_STOPONERROR
@@ -747,7 +730,7 @@ void ob_suggest_name(const char *name)
 #endif
       return;
     }
-    /*assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
+    assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));
     memusage.actual -= strlen(objm.om_cur->of_name)+1;
     free(objm.om_cur->of_name);
   }
@@ -860,7 +843,7 @@ void ob_append_frame(const char *name)
   objm.om_cur->of_level++;
   if (name) {
     if (objm.om_cur->of_name) {
-      /*assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
+      assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));
       memusage.actual -= strlen(objm.om_cur->of_name)+1;
       free(objm.om_cur->of_name);
     }
@@ -934,7 +917,7 @@ void ob_touch(void *vo)
   if (!objm.om_cur) {
     ob_begin_framef("BadTouch",FF_STICKY);
     do_ack_frame = 1;
-    logError(ERL_ERROR,"object modified outside frame context");
+    perror("object modified outside frame context");
 #if OBJECT_STOPONERROR
     abort();
 #endif

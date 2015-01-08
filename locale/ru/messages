@@ -945,7 +945,7 @@ listed below.
 #
 #print.outto		Output to
 
-print.title		TkGate: Print
+print.title		TkGate: Печать
 print.config.title	TkGate: Printer Configuration
 print.scope.title	TkGate: Scope Print
 
@@ -956,7 +956,7 @@ print.prname		Printer
 print.advanced		Advanced...
 
 print.filename		Имя файла
-print.epssave		Save as Encapsulated Postscript.
+print.epssave		Сохранить как инкапсулированный PostScript.
 #print.doctit		Document Title
 #print.prmod		Print Modules
 print.epcm		Epochs/cm
@@ -967,11 +967,11 @@ print.use		Used
 print.sel		Selected
 print.inclib		Include library modules.
 print.incunused		Include unused modules.
-print.papsz		Paper Size
-print.orient		Orientation
-print.portrait		Portrait
-print.landscape		Landscape
-print.2side		Print Double-Sided
+print.papsz		Размер бумаги
+print.orient		Ориентация
+print.portrait		Портретная
+print.landscape		Ландшафтная
+print.2side		Двусторонняя печать
 print.opts		Content Options
 print.scale		Scale large modules to fit page.
 print.partition		Partition large modules into multiple pages.
@@ -985,29 +985,26 @@ print.parttr		Partial Trace
 print.start		Start
 print.range		Range
 print.linelen		Line Length
-print.filesel		Output to file
-print.printersel	Output to printer
-print.defaultprinter	Default Printer
-print.pageset		Page Setup
+print.filesel		Вывод в файл
+print.printersel	Вывод на принтер
+print.defaultprinter	Принтер по умолчанию
+print.pageset		Настройка страницы
 print.modulesel		Module Selection
 
 ##############################################################################
 #
 # TkGate 2.0 print dialog strings
 #
-print.ok			Print
+print.ok			Печать
 print.printtrace.cap		Print Trace
-print.printcirc.cap		Print Schematic
+print.printcirc.cap		Печать схемы
 print.printcirc.out.exp		-fillbegin-
-Choose whether to send
-your schematic to the
-printer or to a PostScript
-file.
+Печать схемы на принтере либо в файл
+PostScript.
 -end-
 
 print.printcirc.page.exp	-fillbegin-
-Choose page and printer
-options here.
+Выбор настроек принтера и страницы.
 -end-
 
 print.printcirc.mod.exp		-fillbegin-
@@ -1025,11 +1022,11 @@ scale to compute the
 estimated page count.
 -end-
 
-print.tab.output	Output
+print.tab.output	Вывод
 #print.tab.page		Page
-print.tab.modules	Modules
+print.tab.modules	Модули
 print.tab.content	Content
-print.tab.advanced	Advanced
+print.tab.advanced	Дополнительно
 
 ##############################################################################
 #
@@ -1126,8 +1123,8 @@ opt.overstep		Clock Overstep
 opt.sorttraces		Sort traces alphabetically on scope
 opt.vpopupdelay		Pop-Up Delay
 #opt.initscript		Global Initialization Script
-opt.posedge		Clock step stops on all clock posedges
-opt.setclock		Clock step stops on clock
+opt.posedge		Шаг заканчивается на фронте любого сигнала
+opt.setclock		Шаг заканчивается на фронте сигнала
 opt.delayfilepath	Technology Files
 opt.devfilepath		VPD (Virtual Peripheral Device) File Path
 opt.vlibpath		Verilog Library Path
@@ -1141,7 +1138,7 @@ opt.keybind		Key Binding Style
 opt.useless		Enable Useless Features
 opt.features		Save File Features
 opt.simbase		Basic Simulator Options
-opt.simclock		Clock Options
+opt.simclock		Настройки тактирования
 #opt.circdefaults	Circuit Defaults
 
 opt.cpopts		Critical Path Options
@@ -1346,11 +1343,11 @@ blklst.to		To
 blklst.from		From
 blklst.name		Name
 blklst.new.cap		Создать новый модуль
-blklst.del.cap		Delete Module
-blklst.copy.cap		Copy Module
-blklst.rename.cap	Rename Module
+blklst.del.cap		Удалить модуль
+blklst.copy.cap		Копировать модуль
+blklst.rename.cap	Переименовать модуль
 blklst.claim.cap	Claim Module
-blklst.setroot.cap	Set Root Module
+blklst.setroot.cap	Установить корневым модулем
 
 blklst.new.exp		-fillbegin-
 Use this dialog box to create
@@ -1391,17 +1388,16 @@ Make the specified module the top-level module.
 -end-
 
 
-find.title		TkGate: Find Object
-find.label		Find Objects
+find.title		TkGate: Найти объект
+find.label		Найти объекты
 find.exp		-fillbegin-
-Look for text either in
-a component name, a wire name
-or in the text of a comment.
-Double click on a result to
-go to that item.
+Искать текст в имени проводника, сети,
+компонента или тексте комментария.
+Дважды щелкните на результате,
+чтобы перейти к нему.
 -end-
 
-find.ignorecase		Ignore Case
+find.ignorecase		Игнорировать регистр
 
 find.result.module	Модуль
 find.result.type	Тип
@@ -1424,18 +1420,18 @@ find.results		Search Results
 #
 @find.qual.pos		before
 
-find.qual.contains	Contains...
-find.qual.begins	Begins with...
-find.qual.ends		Ends with...
-find.qual.matches	Matches...
+find.qual.contains	Содержит...
+find.qual.begins	Начинается...
+find.qual.ends		Заканчивается...
+find.qual.matches	Соотвествует...
 
-find.dom.label		Look for objects in:
+find.dom.label		Искать объекты в:
 find.dom.gates		Components
 find.dom.nets		Nets
 find.dom.text		Comment Text
 
-find.search		Find:
-find.target		Target
+find.search		Найти:
+find.target		Цель поиска
 
 #
 # These are special tags used to indicate the image file to be used for
@@ -1461,15 +1457,15 @@ circ.file		Имя файла
 circ.title		Заголовок схемы
 circ.encoding		Кодировка файла
 circ.lang		Язык файла
-circ.discchg		Do not warn about discarding changes.
-circ.flags		Options
-circ.defaults		Component Defaults
-circ.extbar		Use extender bars on AND, OR and XOR gates.
-circ.shownet		Show net name on switches and dips.
-circ.autostart		Enable auto-start of simulation.
-circ.iniscript		Initialization Scripts
-#circ.noscript		No script files selected.
-#circ.really		Do you really want to remove '%s' from the list of initialization scripts.
+circ.discchg		Не уведомлять о потере изменений.
+circ.flags		Свойства
+circ.defaults		Детали компонентов
+circ.extbar		Использовть расширительные полосы на вентилях И, ИЛИ, ИСКЛ-ИЛИ.
+circ.shownet		Показывать имя сети на переключателях.
+circ.autostart		Включить автозапуск симуляции.
+circ.iniscript		Инициализационные скрипты
+#circ.noscript		Не выбраны файлы скриптов.
+#circ.really		Действительно удалить '%s' из списка инициализационных скриптов.
 
 circ.reallyupdate	-fillbegin-
 Do you really want to update the interface of all '%s' instances?
@@ -1483,15 +1479,15 @@ Do you really want to overwrite the existing file '%s'?
 @circ.library.height	*350
 
 
-circ.general		General
-circ.library		Libraries
-circ.script		Scripts
-circ.simulator		Simulation
-circ.timescale		Default Simulation Time Scale
-circ.timescale.unit	Units:
-circ.timescale.prec	Precision:
+circ.general		Общие
+circ.library		Библиотеки
+circ.script		Скрипты
+circ.simulator		Симуляция
+circ.timescale		Временной масштаб симуляции по умолчанию
+circ.timescale.unit	Ед. изм.:
+circ.timescale.prec	Точность:
 
-circ.sim.features	Features
+circ.sim.features	Свойства
 
 #
 # Strings for timing violation reporting styles.  The "after" case
@@ -1499,34 +1495,34 @@ circ.sim.features	Features
 # time period box.  You can use the string "-empty-" to make a string
 # empty if it is not needed in a particular language.
 #
-circ.sim.tv.title	Timing Violation Handling
-circ.sim.tv.all		Report all timing violations.
-circ.sim.tv.after.1	Report timing violations after 
+circ.sim.tv.title	Обработка нарушений времени
+circ.sim.tv.all		Докладывать обо всех нарушениях времени.
+circ.sim.tv.after.1	Докладывать о нарушениях времени после
 circ.sim.tv.after.2	-empty-
-circ.sim.tv.never	Never report timing violations.
+circ.sim.tv.never	Никогда не докладывать о нарушениях времени.
 
 circ.exp.general	-fillbegin-
-View and modify circuit specific properties.
-These properties will be stored with the
-circuit when you save.
+Просмотр и реактирование свойств схемы.
+Данные свойства будут сохранены в файле схемы.
 -end-
 
 circ.exp.library	-fillbegin-
-Select libraries required by this circuit.
-Library requirements are saved with the circuit
-and will be automatically loaded the next time
-you load this circuit.
+Выбор библиотек, используемых в данной схеме.
+Требования к библиотекам будут сохзранены в
+файле схемы и автоматически загружены при
+следующем открытии файла.
 -end-
 
 circ.exp.script	-fillbegin-
-Add any simulation scripts that should be
-automatically read and excuted when this
-circuit is simulated.
+Добавление скриптов, которые будут
+автоматически загружены и выполнены при
+запуске симуляции.
 -end-
 
 
 circ.exp.simulator	-fillbegin-
-View and modify simulation preferences for this circuit.
+Просмотр и редактирование настроек симуляции
+для данной схемы.
 -end-
 
 ##############################################################################
@@ -2039,8 +2035,8 @@ with the selected action.
 -end-
 
 ho.new		-begin-
-Clear the current circuit,
-and start editing a new one.
+Очистить текущую схему и начать
+редактировать новую.
 -end-
 
 ho.open		Open a circuit from a file.
@@ -2373,50 +2369,47 @@ up this diaglog box.
 -end-
 
 ho.circuit.discchg	-begin-
-TkGate will not display a warning if you
-discard changes without saving.
+TkGate не будет отображать предупреждение
+если Вы отклоните изхменения без сохранения.
 -end-
 
 ho.circuit.extbar	-begin-
-Newly created basic gates (AND, OR,
-XOR) will use extender bars to handle
-many input gates.
+Вновь создаваемые базовые вентили (И, ИЛИ,
+ИСКЛ-ИЛИ) будут использовать расширительные полосы 
+для объединения множества входов.
 -end-
 
 ho.circuit.shownet	-begin-
-Newly created switches and dips will
-initially show the net name next to
-them.
+Вновь создаваемые переключатели будут снабжены
+названиями сетей, к которым они подключены.
 -end-
 
-
 ho.circuit.autostart	-begin-
-If enabled, simulation will begin as
-soon as the simulation pane is selected.
+Если включено, симуляция начинается
+сразу после активации вкладки "Симуляция".
 -end-
 
 ho.circuit.file		-begin-
-This is the file name from which the current
-circuit was loaded.
+Имя файла из которого была загружена
+текущая схема.
 -end-
 
 ho.circuit.ver		-begin-
-This is the version of TkGate that created
-the file that is currently loaded.
+Версия TkGate, в которой был создан файл,
+загруженный в данный момент.
 -end-
 
 ho.circuit.encoding	-begin-
-Use this encoding for save files.
+Кодировка, используемая при сохранении файла.
 -end-
 
 ho.circuit.language	-begin-
-Use fonts for this encoding to display
-circuit data.
+Использовать шрифты для данной локализации при
+отображении данных схемы.
 -end-
 
 ho.circuit.title	-begin-
-Description of your circuit.  This title is
-used on printed output.
+Описание схемы, которое будет использовано при печати.
 -end-
 
 ho.cmd.bitw		-begin-
@@ -2821,17 +2814,18 @@ circuit properties instead.
 -end-
 
 ho.opt.ckall		-begin-
-If this mode is enabled, the clock step
-command will pause the simulation on the
-positive edge of any clock in the circuit.
+Если включен данный режим, команда шага
+тактирующего сигнала остановит симуляцию на
+восходящем фронте любого тактирующего сигнала
+в схеме.
 -end-
 
 ho.opt.ckspec		-begin-
-If this mode is enabled, the clock step
-command will pause the simulation only on
-the positive edge of the specified clock.
-Use the name of the net to which the 
-clock is attached.
+Если включен данный режим, команда шага
+тактирующего сигнала остановит симуляцию
+только на восходящем фронте указанного
+сигнала. Используйте имя сети, к которой
+подключен сигнал.
 -end-
 
 ho.opt.keybind		-begin-

@@ -533,6 +533,7 @@ static HtmlUnit *new_HtmlUnit_T(int htype,HtmlContext *hc)
   hu->hu_type = htype;
   hu->hu_text =0;
   hu->hu_x = hu->hu_y = 0;
+  hu->hu_width = 0;
   hu->hu_context = hc;
   hu->hu_image = 0;
 
@@ -1434,11 +1435,11 @@ int Html_isHit(Html *h,int x,int y)
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
 
-    if (x >= hu->hu_x && x <= (hu->hu_x + hu->hu_width)
-	&& y <= (hu->hu_y + HtmlContext_fontDescent(hc)) && y >= (hu->hu_y - HtmlContext_fontAscent(hc))) {
-
+    if ((x >= hu->hu_x) &&
+        (x <= (hu->hu_x + hu->hu_width)) &&
+        (y <= (hu->hu_y + HtmlContext_fontDescent(hc))) &&
+        (y >= (hu->hu_y - HtmlContext_fontAscent(hc))))
       return 1;
-    }
   }
 
   return 0;

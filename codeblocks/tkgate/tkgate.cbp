@@ -34,7 +34,6 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-Wall" />
 			<Add option="-DTKGATE_HOMEDIR=NULL" />
 			<Add option="-DHAVE_CONFIG_H" />
 			<Add directory="../../" />

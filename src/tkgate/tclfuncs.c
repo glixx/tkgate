@@ -97,7 +97,6 @@ static int gat_hdl(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     }
   }
 
-
   if (strcmp(argv[1],"load") == 0)
     hdl_load(es->env);
   else if (strcmp(argv[1],"save") == 0) {
@@ -118,11 +117,8 @@ static int gat_hdl(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     ob_touch(TkGate.circuit);			/* Modify somthing to force undo to thing there are changes */
   }
 
-
   return TCL_OK;
 }
-
-
 
 /*
  * Called to do final tkgate initilization
@@ -3379,7 +3375,10 @@ static int gat_undo(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (argc > 1)
     sscanf(argv[1],"%d",&n);
 
+  undo_sync(0);				/* Synchronize Tcl/Tk undo/redo list */
   ob_undo(n);
+  undo_sync(1);				/* Synchronize Tcl/Tk undo/redo list */
+  sync_undo_buttons();
   FlagRedraw();
   return TCL_OK;
 }
@@ -3394,7 +3393,10 @@ static int gat_redo(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (argc > 1)
     sscanf(argv[1],"%d",&n);
 
+  undo_sync(0);				/* Synchronize Tcl/Tk undo/redo list */
   ob_redo(n);
+  undo_sync(1);				/* Synchronize Tcl/Tk undo/redo list */
+  sync_undo_buttons();
   FlagRedraw();
   return TCL_OK;
 }

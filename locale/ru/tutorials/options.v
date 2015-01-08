@@ -1,9 +1,12 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
 //: property title = "options.v"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 //: require "tty"
 
 `timescale 1ns/1ns
@@ -32,7 +35,7 @@ endmodule
 
 //: /netlistBegin PAGE3
 module PAGE3();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(134,181) /sn:0 /anc:1
@@ -55,7 +58,7 @@ endmodule
 
 //: /netlistBegin PAGE2
 module PAGE2();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(116,149) /sn:0 /anc:1
@@ -74,7 +77,4 @@ module PAGE2();
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

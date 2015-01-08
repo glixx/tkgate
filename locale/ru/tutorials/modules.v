@@ -1,9 +1,12 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "module_tut.v"
+//: property title = "Использование модулей"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -11,31 +14,34 @@
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g3 @(259,83) /anc:1
-  //: /line:"A module is an encapsulated piece of logic that can be made"
-  //: /line:"to serve a purpose in a circuit, similar to a function call"
-  //: /line:"in a program.  Each module in TkGate has an \"interface\" and"
-  //: /line:"a \"definition\":"
+  //: comment g3 @(260,80) /anc:1
+  //: /line:"Модуль - это инкапсулированный логический блок, являющийся"
+  //: /line:"элементом иерархической структуры схемы. Модуль выполняет"
+  //: /line:"определенную функцию, может быть переиспользован, и, в"
+  //: /line:"определенном смысле, похож на класс в объектно-ориентированном"
+  //: /line:"програамировании. Каждый модуль в TkGate имеет \"интерфейс\""
+  //: /line:"и \"определение\":"
   //: /line:""
-  //: /line:"  *  The <i color=green4>interface</i> describes the external"
-  //: /line:"     appearance of a module including the size of the box and"
-  //: /line:"     the positions of the ports on it.  TkGate supports \"block\""
-  //: /line:"     interfaces and \"symbol\" interfaces."
+  //: /line:"  *  <i color=green4>Интерфейс</i> определяет внешнее представление"
+  //: /line:"     модуля (\"черный ящик\"): имена и разрядность портов, размеры"
+  //: /line:"     ограничивающего прямоугольника или специфический графический"
+  //: /line:"     символ модуля, расположение портов на нем и др."
   //: /line:"  "
-  //: /line:"  *  The <i color=green4>definition</i> describes the internal"
-  //: /line:"     logic that the module implements.  TkGate supports \"netlist\""
-  //: /line:"     and \"HDL\" modules."
+  //: /line:"  *  <i color=green4>Определение</i> описывает внутреннюю логику"
+  //: /line:"     модуля. TkGate поддерживает модули, описанные в виде графических"
+  //: /line:"     логических схем и описаний на языке Verilog."
   //: /line:""
   //: /end
   //: comment g2 @(10,65) /sn:0 /anc:1
   //: /line:"<img src=bigmodule.gif>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3>"
+  //: /line:"<h3>Использование модулей</h3>"
   //: /line:""
-  //: /line:"In this chapter, you will learn how to create, edit and manage modules."
+  //: /line:"В данном разделе рассматриваются вопросы управления модулями"
+  //: /line:"и иерархического проектирования схем."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,320) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -44,7 +50,7 @@ endmodule
 
 //: /netlistBegin PAGE6
 module PAGE6();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w4;    //: /sn:0 {0}(258,177)(273,177){1}
 wire w3;    //: /sn:0 {0}(258,161)(273,161){1}
 wire w0;    //: /sn:0 {0}(200,161)(185,161){1}
@@ -76,44 +82,44 @@ endmodule
 
 //: /netlistBegin PAGE3
 module PAGE3();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g4 @(576,89) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: The pages in this tutorial"
-  //: /line:"are actually modules with the"
-  //: /line:"names PAGE1, PAGE2, etc.</font>"
+  //: /line:"<font color=green4>Подсказка: Страницы данного руководства"
+  //: /line:"на самом деле являются модулями с названиями"
+  //: /line:"PAGE1, PAGE2 и т.д.</font>"
   //: /end
   //: comment g3 @(23,72) /sn:0 /anc:1
-  //: /line:"<img src=document.gif>   Top-level or root module."
+  //: /line:"<img src=document.gif>   Корневой или модуль верхнего уровня."
   //: /line:""
-  //: /line:"<img src=mod_net.gif>   Netlist module."
+  //: /line:"<img src=mod_net.gif>   Модуль в виде графического набора сетей."
   //: /line:""
-  //: /line:"<img src=mod_hdl.gif>   Verilog HDL module."
+  //: /line:"<img src=mod_hdl.gif>   Verilog модуль."
   //: /line:""
-  //: /line:"<img src=mod_netL.gif>   Locked netlist module."
+  //: /line:"<img src=mod_netL.gif>   Заблокированный модуль набор сетей."
   //: /line:""
-  //: /line:"<img src=mod_hdlL.gif>   Locked Verilog HDL module."
+  //: /line:"<img src=mod_hdlL.gif>   Заблокированный Verilog модуль."
   //: /line:""
-  //: /line:"<img src=unused.gif>   Container for unused modules."
+  //: /line:"<img src=unused.gif>   Контейнер неиспользуемых модулей."
   //: /line:""
   //: /end
-  //: comment g2 @(257,69) /anc:1
-  //: /line:"<img src=chip.gif>   Library module."
+  //: comment g2 @(269,68) /anc:1
+  //: /line:"<img src=chip.gif>   Библиотечный модуль."
   //: /line:""
-  //: /line:"<img src=parts.gif>   Container for all libraries."
+  //: /line:"<img src=parts.gif>   Контейнер для всех библиотек."
   //: /line:""
-  //: /line:"<img src=ichipdir.gif>   Container for a single library."
+  //: /line:"<img src=ichipdir.gif>   Контейнер для одной библиотеки."
   //: /line:""
-  //: /line:"<img src=unknown.gif>   Use of an undefined module."
+  //: /line:"<img src=unknown.gif>   Использование неопределенного модуля."
   //: /line:""
-  //: /line:"<img src=conflict.gif>   Recursive inclusion of a module."
+  //: /line:"<img src=conflict.gif>   Рекурсивное включение модуля."
   //: /line:""
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(module list symbols)</b>"
+  //: /line:"<h3>Использование модулей</h3> <b>(Символы списка модулей)</b>"
   //: /line:""
-  //: /line:"The following symbols are used in the module tree and list view:"
+  //: /line:"В древовидном представлении модулей и списке используются следующие символы:"
   //: /line:""
   //: /end
   //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
@@ -125,7 +131,7 @@ endmodule
 
 //: /netlistBegin foo
 module foo(Z2, I3, Z1, I1, I2, Z3);
-//: interface  /sz:(41, 40) /bd:[ ]
+//: interface  /sz:(41, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input I2;    //: /sn:0 {0}(245,200)(275,200){1}
 //: {2}(277,198)(277,153)(292,153){3}
 //: {4}(277,202)(277,248)(348,248){5}
@@ -176,7 +182,7 @@ endmodule
 
 //: /netlistBegin ALU
 module ALU(F, A, B, Z);
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [7:0] B;    //: /sn:0 {0}(#:342,147)(342,184){1}
 //: {2}(344,186)(367,186){3}
 //: {4}(371,186)(425,186)(425,258){5}
@@ -218,7 +224,7 @@ endmodule
 
 //: /netlistBegin PAGE8
 module PAGE8();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g3 @(573,160) /sn:0 /anc:1
@@ -247,7 +253,7 @@ endmodule
 
 //: /netlistBegin PAGE9
 module PAGE9();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire [1:0] w0;    //: /sn:0 {0}(#:257,226)(272,226){1}
 wire [7:0] w3;    //: /sn:0 {0}(#:329,194)(314,194){1}
 wire [7:0] w1;    //: /sn:0 {0}(#:257,210)(272,210){1}
@@ -273,7 +279,7 @@ endmodule
 
 //: /netlistBegin PAGE7
 module PAGE7();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
@@ -296,7 +302,7 @@ endmodule
 
 //: /netlistBegin PAGE5
 module PAGE5();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
@@ -315,26 +321,27 @@ endmodule
 
 //: /netlistBegin PAGE2
 module PAGE2();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g3 @(548,6) /sn:0 /anc:1
   //: /line:"<img src=modlistfig.gif>"
   //: /end
-  //: comment g2 @(554,346) /sn:0 /anc:1
-  //: /line:"<font color=green4>Module Tree View Example</font>"
+  //: comment g2 @(551,339) /sn:0 /anc:1
+  //: /line:"<font color=green4>Пример иерархического"
+  //: /line:"представления модуля</font>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(module list)</b>"
+  //: /line:"<h3>Использование модулей</h3> <b>(список модулей)</b>"
   //: /line:""
-  //: /line:"The set of modules in the current circuit is shown on the left-hand side of the interface.  You"
-  //: /line:"can choose between a <i>tree view</i> <img src=modtree.gif bgcolor=gray> (see example) and a <i>list view</i> <img src=modlist.gif bgcolor=gray>.  The tree view shows"
-  //: /line:"the module hierarchy starting at a top-level root module indicated by the <img src=document.gif> symbol.  Modules"
-  //: /line:"which are still in the circuit, but are not used anywhere in the hierarchy are listed under the"
-  //: /line:"\"<img src=unused.gif> Unused\" branch.  Click on <img src=hboxopen.gif> to open a branch on the tree."
+  //: /line:"Набор модулей, используемых в схеме отображается в левой части главного окна."
+  //: /line:"Вы можете переключаться между режимами <i>Дерево</i> <img src=modtree.gif bgcolor=gray> (см. пример) и <i>Список</i> <img src=modlist.gif bgcolor=gray>."
+  //: /line:"В древовидном режиме отображается иерархия модулей, начиная с корневого,"
+  //: /line:"помеченного символом <img src=document.gif>. Модули, объявленные в схеме, но нигде не использованные"
+  //: /line:"отображаются в ветви \"<img src=unused.gif> Unused\". Нажмите на символ <img src=hboxopen.gif> чтобы раскрыть ветвь дерева."
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -343,11 +350,11 @@ endmodule
 
 //: /netlistBegin PAGE4
 module PAGE4();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g2 @(545,102) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: You can also drag and drop"
+  //: /line:"<font color=green4>Подсказка: You can also drag and drop"
   //: /line:"module instance from the tree view,"
   //: /line:"but it is easier to use the list view"
   //: /line:"since that view gives you a straight"
@@ -369,7 +376,7 @@ endmodule
 
 //: /netlistBegin PAGE10
 module PAGE10();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g2 @(10,310) /sn:0 /R:14
@@ -388,7 +395,7 @@ endmodule
 
 //: /netlistBegin bar
 module bar(Y, X, C, B, Z, A);
-//: interface  /sz:(56, 72) /bd:[ Li0>A(16/72) Li1>B(32/72) Li2>C(48/72) Ro0<X(16/72) Ro1<Y(32/72) Ro2<Z(48/72) ]
+//: interface  /sz:(56, 72) /bd:[ Li0>A(16/72) Li1>B(32/72) Li2>C(48/72) Ro0<X(16/72) Ro1<Y(32/72) Ro2<Z(48/72) ] /pd: 0 /pi: 0 /pe: 0 /pp: 0
 //: property pptype=0
 output X;    //: /sn:0 {0}(346,161)(268,161){1}
 //: {2}(266,159)(266,131)(282,131){3}
@@ -450,102 +457,4 @@ wire w0;    //: /sn:0 {0}(189,190)(179,190)(179,160){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [7:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-   reg  [7:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 
