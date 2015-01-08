@@ -222,10 +222,14 @@ ObjectFrame *new_ObjectFrame(const char *name,unsigned flags)
   ObjectFrame *o = (ObjectFrame*) malloc(sizeof(ObjectFrame));
 
   memusage.actual += sizeof(ObjectFrame);
-  memusage.actual += name ? strlen(name)+1 : 0;
 
   o->of_flags = flags;
-  o->of_name = name ? strdup(name) : 0;
+  if (name) {
+    memusage.actual += strlen(name)+1;
+    o->of_name = strdup(name);
+  }
+  else
+    o->of_name = NULL;
   o->of_next = 0;
   o->of_level = 1;
   o->of_num_changes = 0;
@@ -262,18 +266,23 @@ static void ob_discard_frame(ObjectFrame *F)
 
   for (C = F->of_changes;C;C = NC) {
     NC = C->oc_next;
-    if (C->oc_type == OC_FREE && C->oc_ptr) {
+    if (C->oc_ptr && (C->oc_type == OC_FREE)) {
+      if (C->oc_backup) {
+        /*assert(memusage.actual >= C->oc_ptr->o_size);*/
+        memusage.actual -= C->oc_ptr->o_size;
+        free(C->oc_backup);
+      }
+      /*assert(memusage.actual >= C->oc_ptr->o_size);*/
+      memusage.actual -= C->oc_ptr->o_size;
       free(C->oc_ptr);
     }
-    if (C->oc_backup) {
-      free(C->oc_backup);
-      memusage.actual -= C->oc_ptr->o_size;
-    }
-    free(C);
+    /*assert(memusage.actual >= sizeof(ObjectChange));*/
     memusage.actual -= sizeof(ObjectChange);
+    free(C);
   }
-  free(F);
+  /*assert(memusage.actual >= sizeof(ObjectFrame));*/
   memusage.actual -= sizeof(ObjectFrame);
+  free(F);
 }
 
 /*****************************************************************************
@@ -376,7 +385,6 @@ unsigned ob_get_mode()
   return objm.om_mode;
 }
 
-
 /*****************************************************************************
  *
  * Clear all undo actions and do the deferred free() calls.
@@ -443,8 +451,9 @@ ObjectFrame *ob_apply(ObjectFrame *f)
     }
   }
 
-  free(f);
+  /*assert(memusage.actual >= sizeof(ObjectFrame));*/
   memusage.actual -= sizeof(ObjectFrame);
+  free(f);
 
   return inv_f;
 }
@@ -662,6 +671,10 @@ void *ob_realloc(void *vo,int s)
     memcpy(c,vo,o->o_size-sizeof(Object));
     ob_free(vo);
   }
+  else {
+    memusage.actual -= o->o_size-sizeof(Object) - s;
+  }
+
   return c;
 }
 
@@ -680,7 +693,7 @@ void ob_free(void *vo)
     fprintf(stderr, "[ob_free of deleted %s object!]\n",o->o_type);
     return;
   }
-
+  assert(memusage.ob >= o->o_size);
   memusage.ob -= o->o_size;
 
 #if OBJECT_SHOWMODS
@@ -693,6 +706,7 @@ void ob_free(void *vo)
 #endif
 
   if (objm.om_mode == OM_DISABLED) {
+    /*assert(memusage.actual >= (sizeof(Object) + o->o_size));*/
     memusage.actual -= sizeof(Object) + o->o_size;
     free(o);
     return;
@@ -733,6 +747,7 @@ void ob_suggest_name(const char *name)
 #endif
       return;
     }
+    /*assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
     memusage.actual -= strlen(objm.om_cur->of_name)+1;
     free(objm.om_cur->of_name);
   }
@@ -758,7 +773,6 @@ void ob_unstick()
     undo_top->of_flags &= ~FF_STICKY;
   }
 }
-
 
 /*****************************************************************************
  *
@@ -846,6 +860,7 @@ void ob_append_frame(const char *name)
   objm.om_cur->of_level++;
   if (name) {
     if (objm.om_cur->of_name) {
+      /*assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
       memusage.actual -= strlen(objm.om_cur->of_name)+1;
       free(objm.om_cur->of_name);
     }
