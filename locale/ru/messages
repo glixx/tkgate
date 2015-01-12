@@ -2039,18 +2039,18 @@ ho.new		-begin-
 редактировать новую.
 -end-
 
-ho.open		Open a circuit from a file.
-ho.save		Save circuit to current file.
-ho.saveas	Save circuit to specified file.
-ho.print	Print current circuit.
-ho.library	Open the library manager.
+ho.open		Загрузить схему из сохраненного файла.
+ho.save		Сохранить схему в текущий открытый файл.
+ho.saveas	Сохранить схему в указанный в диалоге сохранения файл.
+ho.print	Печать текущей схемы.
+ho.library	Открыть диалог управления библиотеками.
 
 ho.symed.tab.normal	-begin-
-Edit the unselected symbol bitmap.
+Редактирование изображения не выделенного символа.
 -end-
 
 ho.symed.tab.select	-begin-
-Edit the selected symbol bitmap.
+Редактировать изображение выделенного символа.
 -end-
 
 ho.simmove	-begin-
