@@ -682,8 +682,7 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
 
   if (strcmp(name,"title") == 0) {
     if (ptype == TYPE_STR) {
-      if (do_circ_props)
-	Circuit_setTitle(value);
+      if (do_circ_props) Circuit_setTitle(value);
     } else
       bad_type = 1;
   } else if (strcmp(name,"locale") == 0) {
@@ -692,12 +691,12 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
       yyerror(msgLookup("err.yy.badpropvalue"),value,name);
       locale = SHash_find(TkGate.localeTable, "en");
     }
-    Circuit_setLocale(c, locale);
+    if (do_circ_props) Circuit_setLocale(c, locale);
 #if LOCALE_DEBUG
     printf("file locale is <%s>\n",locale->l_code);
 #endif
   } else if (strcmp(name,"encoding") == 0) {
-    Circuit_setFileEncoding(c, value);
+    if (do_circ_props) Circuit_setFileEncoding(c, value);
     parserEncoder = Circuit_getLoadFileEncoder(c);
 #if LOCALE_DEBUG
     printf("parserEncoding <%s> to <%s>\n",value,CE_UTF8);
@@ -709,12 +708,11 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
       bad_type = 1;
   } else if (strcmp(name,"discardChanges") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props)
-	c->discardChanges = *(int*)value;
+      if (do_circ_props) c->discardChanges = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"timingViolationMode") == 0) {
-    c->c_tvMode = *(int*)value;
+    if (do_circ_props) c->c_tvMode = *(int*)value;
   } else if (strcmp(name,"initTime") == 0) {
     char units[STRMAX];
     int ucode;
@@ -743,37 +741,27 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
 
   } else if (strcmp(name,"useExtBars") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->useExtBars = *(int*)value;
-      }
+      if (do_circ_props) c->useExtBars = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"showSwitchNets") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->showSwitchNets = *(int*)value;
-      }
+      if (do_circ_props) c->showSwitchNets = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"simClockMode") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->simClockMode = *(int*)value;
-      }
+      if (do_circ_props) c->simClockMode = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"simClockName") == 0) {
     if (ptype == TYPE_STR) {
-      if (do_circ_props) {
-	c->simClockName = ob_strdup(value);
-      }
+      if (do_circ_props) c->simClockName = ob_strdup(value);
     } else
       bad_type = 1;
   } else if (strcmp(name,"simAutoStart") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->simAutoStart = *(int*)value;
-      }
+      if (do_circ_props) c->simAutoStart = *(int*)value;
     } else
       bad_type = 1;
   } else {
