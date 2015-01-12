@@ -433,7 +433,7 @@ pop.library.close	Выгрузить
 #symed.file.discardclose	Close and Discard
 #symed.help		Help
 #symed.help.about	About...
-#symed.edit		Edit
+#symed.edit		Правка
 #symed.edit.cut		Cut
 #symed.edit.copy		Copy
 #symed.edit.paste	Paste
@@ -949,11 +949,11 @@ print.title		TkGate: Печать
 print.config.title	TkGate: Printer Configuration
 print.scope.title	TkGate: Scope Print
 
-print.printer		Printer:
-print.file		File
-print.prcmd		Print Command:
-print.prname		Printer
-print.advanced		Advanced...
+print.printer		Принтер:
+print.file		Файл
+print.prcmd		Команда печати:
+print.prname		Принтер
+print.advanced		Настройка...
 
 print.filename		Имя файла
 print.epssave		Сохранить как инкапсулированный PostScript.
@@ -965,8 +965,8 @@ print.all		All
 print.cur		Current
 print.use		Used
 print.sel		Selected
-print.inclib		Include library modules.
-print.incunused		Include unused modules.
+print.inclib		Включая библиотечные модули.
+print.incunused		Включая неиспользуемые модули.
 print.papsz		Размер бумаги
 print.orient		Ориентация
 print.portrait		Портретная
@@ -975,9 +975,9 @@ print.2side		Двусторонняя печать
 print.opts		Content Options
 print.scale		Scale large modules to fit page.
 print.partition		Partition large modules into multiple pages.
-print.incidx		Include index.
-print.incgraph		Include hierarchy graph.
-print.4up		Print small modules four per page.
+print.incidx		Включая индекс.
+print.incgraph		Включая граф иерархии.
+print.4up		Печатать небольшие модули по четыре на странице.
 print.rangeselection	Range Selection
 print.scaleselect	Scale Selection
 print.fulltr		Full Trace
@@ -989,7 +989,7 @@ print.filesel		Вывод в файл
 print.printersel	Вывод на принтер
 print.defaultprinter	Принтер по умолчанию
 print.pageset		Настройка страницы
-print.modulesel		Module Selection
+print.modulesel		Выбор модулей
 
 ##############################################################################
 #
@@ -1008,10 +1008,10 @@ print.printcirc.page.exp	-fillbegin-
 -end-
 
 print.printcirc.mod.exp		-fillbegin-
-Choose which modules are
-to be printed and set
-options controlling the
-presentation.
+Выберите модули, которые
+будут напечатаны и установите
+параметры, управляющие
+графическим представлением.
 -end-
 
 print.printtrace.trace.exp	-fillbegin-
@@ -1249,13 +1249,13 @@ igen.bits		Bits
 igen.modname		Module Name:
 
 #igen.resort		Re-sort
-igen.add		Add...
-igen.delete		Delete
-igen.edit		Edit...
+igen.add		Добавить
+igen.delete		Удалить
+igen.edit		Редактировать
 
-igen.in			in
-igen.out		out
-igen.inout		inout
+igen.in			вх
+igen.out		вых
+igen.inout		вх-вых
 
 igen.left		left
 igen.right		right
@@ -1300,9 +1300,9 @@ ipanel.itype.select	Тип интерфейса
 #ipanel.block.description	Standard Interface
 #ipanel.symbol.description	Custom Symbol Interface
 
-ipanel.ppos.label	Block resize port position handling:
-ipanel.ppos.fix		Fixed
-ipanel.ppos.scale	Scaled
+ipanel.ppos.label	Расположение портов при изменении размеров блока:
+ipanel.ppos.fix		Фиксированное
+ipanel.ppos.scale	Масштабированное
 #ipanel.ppos.grid	Grid
 
 ipanel.warn.toblock		-begin-
@@ -2125,19 +2125,17 @@ a field in a port.
 -end-
 
 ho.ipanel.generate	-begin-
-Generate a new interface for a
-module based on ports in the
-port list and port elements used
-in the module definition.
+Генерация нового интерфейса для
+модуля на основе списка портов
+и портов, задекларированных в
+определении модуля.
 -end-
 
 ho.ipanel.updateall	-begin-
-Replace the interface on all
-instances of this module with
-the canonical interface shown
-here.
+Заменить интерфейс всех экземпляров
+данного модуля каноническим
+интерфейсом, показанным здесь.
 -end-
-
 
 ho.ipanel.prot		-begin-
 Do not allow the definition of
@@ -2195,8 +2193,8 @@ ho.mod.type.Lnetlist	Netlist module (locked)
 ho.mod.type.hdl		HDL module
 ho.mod.type.Lhdl	HDL module (locked)
 
-ho.undo	Undo previous action(s)
-ho.redo	Redo undone action(s)
+ho.undo	Отменить предыдущее действие
+ho.redo	Повторить отмененное действие
 
 ho.tab.edit		-begin-
 Основной режим редактирования.
@@ -2922,17 +2920,17 @@ default rotation.
 -end-
 
 
-ho.tool.zoomin		Zoom in
-ho.tool.zoomout		Zoom out
+ho.tool.zoomin		Увеличить
+ho.tool.zoomout		Уменьшить
 ho.tool.rotate		Rotate selected component(s) counter-clockwise.
 ho.tool.brotate		Rotate selected component(s) clockwise.
 ho.tool.valgn		Align selected component(s) vertically.
 ho.tool.halgn		Align selected component(s) horizontally.
 
-ho.tool.cut		Cut selection.
-ho.tool.copy		Copy selection.
-ho.tool.paste		Paste from cut buffer.
-ho.tool.find		Find component, wire or text.
+ho.tool.cut		Вырезать выделенное.
+ho.tool.copy		Копировать выделенное.
+ho.tool.paste		Вставить из буфера обменов.
+ho.tool.find		Найти компонент, проводник или текст.
 
 ho.tool.addport		Add a port to the selected component.
 ho.tool.anchor		Anchor the selected component(s).
