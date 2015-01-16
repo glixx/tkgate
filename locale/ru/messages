@@ -433,7 +433,7 @@ pop.library.close	Выгрузить
 #symed.file.discardclose	Close and Discard
 #symed.help		Help
 #symed.help.about	About...
-#symed.edit		Edit
+#symed.edit		Правка
 #symed.edit.cut		Cut
 #symed.edit.copy		Copy
 #symed.edit.paste	Paste
@@ -949,11 +949,11 @@ print.title		TkGate: Печать
 print.config.title	TkGate: Printer Configuration
 print.scope.title	TkGate: Scope Print
 
-print.printer		Printer:
-print.file		File
-print.prcmd		Print Command:
-print.prname		Printer
-print.advanced		Advanced...
+print.printer		Принтер:
+print.file		Файл
+print.prcmd		Команда печати:
+print.prname		Принтер
+print.advanced		Настройка...
 
 print.filename		Имя файла
 print.epssave		Сохранить как инкапсулированный PostScript.
@@ -965,8 +965,8 @@ print.all		All
 print.cur		Current
 print.use		Used
 print.sel		Selected
-print.inclib		Include library modules.
-print.incunused		Include unused modules.
+print.inclib		Включая библиотечные модули.
+print.incunused		Включая неиспользуемые модули.
 print.papsz		Размер бумаги
 print.orient		Ориентация
 print.portrait		Портретная
@@ -975,9 +975,9 @@ print.2side		Двусторонняя печать
 print.opts		Content Options
 print.scale		Scale large modules to fit page.
 print.partition		Partition large modules into multiple pages.
-print.incidx		Include index.
-print.incgraph		Include hierarchy graph.
-print.4up		Print small modules four per page.
+print.incidx		Включая индекс.
+print.incgraph		Включая граф иерархии.
+print.4up		Печатать небольшие модули по четыре на странице.
 print.rangeselection	Range Selection
 print.scaleselect	Scale Selection
 print.fulltr		Full Trace
@@ -989,7 +989,7 @@ print.filesel		Вывод в файл
 print.printersel	Вывод на принтер
 print.defaultprinter	Принтер по умолчанию
 print.pageset		Настройка страницы
-print.modulesel		Module Selection
+print.modulesel		Выбор модулей
 
 ##############################################################################
 #
@@ -1008,10 +1008,10 @@ print.printcirc.page.exp	-fillbegin-
 -end-
 
 print.printcirc.mod.exp		-fillbegin-
-Choose which modules are
-to be printed and set
-options controlling the
-presentation.
+Выберите модули, которые
+будут напечатаны и установите
+параметры, управляющие
+графическим представлением.
 -end-
 
 print.printtrace.trace.exp	-fillbegin-
@@ -1037,48 +1037,48 @@ print.tab.advanced	Дополнительно
 # Width of columns in list of toolbars
 @opt.tool.colwidth	30
 # Width of image sidebar
-@opt.sidebar.width	*200
+@opt.sidebar.width	*300
 # Width of tree box with option categories
-@opt.tree.width		*150
+@opt.tree.width		*250
 
-opt.title		TkGate: Options
-opt.treelabel		Options
+opt.title		TkGate: Настройки
+opt.treelabel		Настройки
 
-opt.general		General
-opt.interface		Interface
-# opt.circuit		Circuit Defaults
-opt.toolbars		Toolbars
-opt.toolbars.edit	Editor
-opt.toolbars.sim	Simulation
-opt.toolbars.symed	Symbol Editor
+opt.general		Общие
+opt.interface		Интерфейс
+# opt.circuit		Параметры схем
+opt.toolbars		Панели инструментов
+opt.toolbars.edit	Редактор
+opt.toolbars.sim	Симуляция
+opt.toolbars.symed	Редактор симоволов
 opt.editor		HDL
-opt.print		Print
-opt.print.output	Output
-opt.print.content	Content
-opt.simulate		Simulate
-opt.simulate.basic	Basic
-opt.simulate.tech	Technology
-opt.simulate.error	Error Handling
-opt.library		Libraries
-opt.library.path	Path
-opt.library.load	Auto Loading
-opt.library.vpd		VPD
-opt.analysis		Analysis
-opt.color		Color
-opt.color.title		TkGate: Color Selection
-opt.color.edit		Editor
-opt.color.scope		Scope
-opt.color.hdl		HDL Editor
+opt.print		Печать
+opt.print.output	Вывод
+opt.print.content	Содержание
+opt.simulate		Симуляция
+opt.simulate.basic	Основные
+opt.simulate.tech	Технология
+opt.simulate.error	Обработка ошибок
+opt.library		Библиотеки
+opt.library.path	Путь
+opt.library.load	Автозагрузка
+opt.library.vpd		Виртуальные устройства
+opt.analysis		Анализ
+opt.color		Цвет
+opt.color.title		TkGate: Выбор цвета
+opt.color.edit		Редактор
+opt.color.scope		Логический анализатор
+opt.color.hdl		редактор HDL
 opt.html		HTML
-opt.debug		Debug
+opt.debug		Отладка
 
-opt.lib.load.available	Available Libraries
-opt.lib.load.selected	Selected Libraries
+opt.lib.load.available	Доступные библиотеки
+opt.lib.load.selected	Выбранные библиотеки
 
-opt.identity		Identity
-opt.site		Site Name
-opt.username		User Name
-opt.libname		Library Name:
+opt.identity		Идентификация
+opt.site		Имя компьютера
+opt.username		Имя пользователя
+opt.libname		Имя библиотеки:
 opt.inst		Instances
 opt.mods		Modules
 opt.modports		Module Ports
@@ -1100,16 +1100,16 @@ opt.onled		On LED
 opt.zled		Floating LED
 opt.restdef		Restore Defaults
 opt.regudate		Region Update
-opt.smoothscroll	Smooth Scrolling
+opt.smoothscroll	Плавная прокрутка
 opt.balloon		Enable Help Balloons
 opt.tearawaymenus	Enable tear-away main menus
-opt.safeSave		Do safe file saving
-opt.saveCells		Include cells in save files
+opt.safeSave		Безопасное сохранение
+opt.saveCells		Включать ячейки в сохраненные файлы
 opt.showimage		Show side-bar images in dialog boxes
 opt.novice		Novice mode
 opt.blockDropConnect	Wire drop port creation
-opt.ckpoint.1		Do checkpointing every
-opt.ckpoint.2		commands.
+opt.ckpoint.1		Делать контрольные точки кажды 
+opt.ckpoint.2		команд.
 opt.freq		Interval
 opt.beak		Enable Special Modes
 opt.bat			Bat
@@ -1128,33 +1128,33 @@ opt.setclock		Шаг заканчивается на фронте сигнала
 opt.delayfilepath	Technology Files
 opt.devfilepath		VPD (Virtual Peripheral Device) File Path
 opt.vlibpath		Verilog Library Path
-opt.vlibnames		Base Libraries
-opt.display		Display
-opt.interaction		Interaction
-opt.input		Input
-opt.security		Security
-opt.undolen		Max Undo
-opt.keybind		Key Binding Style
+opt.vlibnames		Основные библиотеки
+opt.display		Отображение
+opt.interaction		Взаимодействие
+opt.input		Ввод
+opt.security		Безопасность
+opt.undolen		Максимальное число отмен операций
+opt.keybind		Стиль привязки клавишь
 opt.useless		Enable Useless Features
-opt.features		Save File Features
-opt.simbase		Basic Simulator Options
+opt.features		Настройки сохранения файлов
+opt.simbase		Основные параметры симуляции
 opt.simclock		Настройки тактирования
-#opt.circdefaults	Circuit Defaults
+#opt.circdefaults	Значения по умлчанию для схем
 
 opt.cpopts		Critical Path Options
 opt.maxpath		Maximum Number of Paths:
 opt.cpflash		Display with Flashing Path
 
-opt.general.fontset	Font Set
+opt.general.fontset	Набор шрифтов
 
 opt.simulator.savetraces	Save probe locations between simlation runs.
 opt.simulator.noglitch	Enable simulator glitch suppression.
 
-opt.simulator.err	Error Handling
-opt.simulator.stopany	Treat warnings as errors.
-opt.simulator.showall	Always display warnings.
-opt.simulator.showiferr	Display warnings only with errors.
-opt.simulator.ignore	Ignore all warnings.
+opt.simulator.err	Обработка ошибок
+opt.simulator.stopany	Считать предупреждения ошибками.
+opt.simulator.showall	Всегда отображать предупреждения.
+opt.simulator.showiferr	Отображать предупреждения только вместе с ошибками.
+opt.simulator.ignore	Игнорировать все предупреждения.
 
 opt.tool.file		File
 opt.tool.edit		Edit
@@ -1174,24 +1174,22 @@ opt.tool.symport	Ports
 opt.tool.symshift	Bit Shift
 opt.tool.symopr		Bit Ops
 
-opt.editor.features	Basic Editor Features
-opt.editor.format	Enable Automatic Indenting
-opt.editor.colorize	Enable Code Colorization
-opt.editor.comments	Comments
-opt.editor.strings	Strings
-opt.editor.reserved	Reserved Words
-opt.editor.gateword	Built-in Gates
-opt.editor.instword	Module Instances
-opt.editor.taskword	System Tasks
-opt.editor.color	Color
-opt.editor.bold		Bold
-opt.editor.italic	Italic
+opt.editor.features	Основные свойства редактора
+opt.editor.format	Включить автоматический отступ
+opt.editor.colorize	Включить подстветку синтаксиса
+opt.editor.comments	Комментарии
+opt.editor.strings	Строки
+opt.editor.reserved	Зарезервированные слова
+opt.editor.gateword	Встроенные вентили
+opt.editor.instword	Экземпляры модулей
+opt.editor.taskword	Системные задачи
+opt.editor.color	Цвет
+opt.editor.bold		Жирный
+opt.editor.italic	Курсив
 opt.editor.indentlevel	Indentation per level:
 opt.editor.beginindent	Make begin...end flush with enclosing level.
 opt.editor.movesel	Enable drag-and-drop of selection.
 opt.editor.returntab	Auto indent after return.
-
-
 
 opt.vercheck		-begin-
 Periodically check for new versions of TkGate over
@@ -1224,8 +1222,7 @@ opt.debug.opt		Debugging Options
 opt.color.editwin	Edit Window Colors
 opt.color.scopewin	Scope Window Colors
 
-opt.vlibadd.title	TkGate: Add Library
-
+opt.vlibadd.title	TkGate: Добавить библиотеку
 
 opt.gen.basetoolbar	Core Editor Toolbars
 opt.gen.simtoolbar	Simulation Mode Toolbars
@@ -1238,7 +1235,7 @@ opt.bbar.restoreall	Restore All Defaults
 #
 # Interface generator
 #
-igen.title		TkGate: Module Interface Generation
+igen.title		TkGate: Генерация интерфейса модулей
 
 igen.port		Port
 igen.type		Тип
@@ -1249,13 +1246,13 @@ igen.bits		Bits
 igen.modname		Module Name:
 
 #igen.resort		Re-sort
-igen.add		Add...
-igen.delete		Delete
-igen.edit		Edit...
+igen.add		Добавить
+igen.delete		Удалить
+igen.edit		Редактировать
 
-igen.in			in
-igen.out		out
-igen.inout		inout
+igen.in			вх
+igen.out		вых
+igen.inout		вх-вых
 
 igen.left		left
 igen.right		right
@@ -1300,9 +1297,9 @@ ipanel.itype.select	Тип интерфейса
 #ipanel.block.description	Standard Interface
 #ipanel.symbol.description	Custom Symbol Interface
 
-ipanel.ppos.label	Block resize port position handling:
-ipanel.ppos.fix		Fixed
-ipanel.ppos.scale	Scaled
+ipanel.ppos.label	Расположение портов при изменении размеров блока:
+ipanel.ppos.fix		Фиксированное
+ipanel.ppos.scale	Масштабированное
 #ipanel.ppos.grid	Grid
 
 ipanel.warn.toblock		-begin-
@@ -1529,23 +1526,25 @@ circ.exp.simulator	-fillbegin-
 #
 # Library Manager
 #
-libmgr.cap		Library Manager
-libmgr.library		Library
-libmgr.description	Description
-libmgr.status		Status
-libmgr.status.load	Loaded
-libmgr.status.unload	Not Loaded
-libmgr.status.loadp	[Loaded]
-libmgr.status.unloadp	[Not Loaded]
+libmgr.cap		Управление библиотеками
+libmgr.library		Библиотека
+libmgr.description	Описание
+libmgr.status		Состояние
+libmgr.status.load	Загружена
+libmgr.status.unload	Не загружена
+libmgr.status.loadp	[Загружена]
+libmgr.status.unloadp	[Не загружена]
 libmgr.exp		-fillbegin-
-Select libraries to be loaded or unloaded.
+Выберите библиотеки, которые нужно
+загрузить или выгрузить.
 -end-
-libmgr.load		Load
-libmgr.unload		Unload
-libmgr.unloadall	Unload All
+libmgr.load		Загрузить
+libmgr.unload		Выгрузить
+libmgr.unloadall	Выгрузить все
 
 libmgr.notedit		-fillbegin-
-Must be in circuit edit mode to open library manager.
+Для управления библиотеками перейдите в режим
+редактирования схемы.
 -end-
 
 #############################################################################
@@ -2062,42 +2061,37 @@ will show its current  value.
 
 
 ho.move		-begin-
-Move/Connect - By clicking and dragging you can:
-  Set the position for a new component
-  Move components and wires
-  Connect wires
-By double-clicking you can:
-  Edit component, wire and port properties
-  Edit comment text
+Перемещение/соединение - щелкнув и перетаскивая Вы можете:
+  Установить положение курсора для создаваемых компонентов
+  Двигать компоненты и проводники
+  Соединять проводники
+Двойным щелчком Вы можете:
+  Редактировать свойства компонента, проводника или модуля
+  Редактировать текст комментария
 -end-
 
 ho.delgat	-begin-
-Delete Component - Use this
-tool to delete components.
+Удаление компонентов.
 -end-
 
 ho.cutw		-begin-
-Cut Wire - Use this
-tool to cut wires.
+Разрезать проводник.
 -end-
 
 ho.scroll	-begin-
-Scroll - Grab and drag the 
-editing canvas.
+Перемещение канвы редактирования схемы.
 -end-
 
 ho.inv		-begin-
-Invert - Use this tool to
-add or remove inverters
-from component ports.
+Инвертировать - используйте данный
+инструмент для добавления и удаления
+инвертеров на портах компонента.
 -end-
 
 ho.bitw		-begin-
-Net Attributes - Use this tool to change
-the attributes of a net.  The bit size
-and wire type of nets selected with this
-tool will be changed to the those shown
-in the drop-down boxes to the right.
+Атрибуты сети - Разрядность и тип сети,
+выделенной данным инструментом будут изменены
+на те, что указаны в выпадающих списках справа.
 -end-
 
 ho.ipanel.select	-begin-
@@ -2125,19 +2119,17 @@ a field in a port.
 -end-
 
 ho.ipanel.generate	-begin-
-Generate a new interface for a
-module based on ports in the
-port list and port elements used
-in the module definition.
+Генерация нового интерфейса для
+модуля на основе списка портов
+и портов, задекларированных в
+определении модуля.
 -end-
 
 ho.ipanel.updateall	-begin-
-Replace the interface on all
-instances of this module with
-the canonical interface shown
-here.
+Заменить интерфейс всех экземпляров
+данного модуля каноническим
+интерфейсом, показанным здесь.
 -end-
-
 
 ho.ipanel.prot		-begin-
 Do not allow the definition of
@@ -2195,8 +2187,8 @@ ho.mod.type.Lnetlist	Netlist module (locked)
 ho.mod.type.hdl		HDL module
 ho.mod.type.Lhdl	HDL module (locked)
 
-ho.undo	Undo previous action(s)
-ho.redo	Redo undone action(s)
+ho.undo	Отменить предыдущее действие
+ho.redo	Повторить отмененное действие
 
 ho.tab.edit		-begin-
 Основной режим редактирования.
@@ -2915,30 +2907,30 @@ ho.symed.import		Import image from file.
 ho.symed.export		Export image to file.
 
 ho.tool.currot	-begin-
-Displays the current default
-rotation.  Click on this
-button to change the current
-default rotation.
+Показан текущий поворот
+по умолчанию. Нажмите, чтобы
+изменить поворот элементов
+по умолчанию.
 -end-
 
 
-ho.tool.zoomin		Zoom in
-ho.tool.zoomout		Zoom out
-ho.tool.rotate		Rotate selected component(s) counter-clockwise.
-ho.tool.brotate		Rotate selected component(s) clockwise.
-ho.tool.valgn		Align selected component(s) vertically.
-ho.tool.halgn		Align selected component(s) horizontally.
+ho.tool.zoomin		Увеличить
+ho.tool.zoomout		Уменьшить
+ho.tool.rotate		Повернуть выбранные компоненты против часовой стрелки.
+ho.tool.brotate		Повернуть выбранные компоненты по часовой стрелке.
+ho.tool.valgn		Выровнять выбранные компоненты по вертикали.
+ho.tool.halgn		Выровнять выбранные компоненты по горизонтали.
 
-ho.tool.cut		Cut selection.
-ho.tool.copy		Copy selection.
-ho.tool.paste		Paste from cut buffer.
-ho.tool.find		Find component, wire or text.
+ho.tool.cut		Вырезать выделенное.
+ho.tool.copy		Копировать выделенное.
+ho.tool.paste		Вставить из буфера обменов.
+ho.tool.find		Найти компонент, проводник или текст.
 
-ho.tool.addport		Add a port to the selected component.
-ho.tool.anchor		Anchor the selected component(s).
-ho.tool.unanchor	Unanchor the selected component(s).
-ho.tool.replicate	Replicate a component.
-ho.tool.delete		Delete the selection.
+ho.tool.addport		Добавить порт к выделенному компоненту.
+ho.tool.anchor		Привязать выделенные компоненты.
+ho.tool.unanchor	Удалить привязку выделенного компонента.
+ho.tool.replicate	Клонировать компонент.
+ho.tool.delete		Удалить выделенное.
 
 #ho.opt.circuit.extbar	TODO
 #ho.opt.circuit.shownet	TODO

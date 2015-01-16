@@ -10,7 +10,7 @@ AC_CONFIG_HEADER(config.h)
 AC_LANG(C)
 
 #############################################################################
-# 
+#
 # TkGate version and identifying information.
 #
 AC_DEFINE(TKGATE_VERSION, 	"2.0",					[Base TkGate version number])
@@ -52,7 +52,7 @@ TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /s
 
 #############################################################################
 #
-# Default prefix directory for installation by OS 
+# Default prefix directory for installation by OS
 #
 AC_PREFIX_DEFAULT(/usr/local)
 
@@ -69,7 +69,7 @@ TKGATE_LIBS=""
 #
 # Supported locales
 #
-TKGATE_LOCALES="ca cs cy de en es fr it ja"
+TKGATE_LOCALES="ca cs cy de en es fr it ja ru"
 AC_SUBST(TKGATE_LOCALES)
 
 #############################################################################
@@ -116,7 +116,7 @@ AC_DEFINE_UNQUOTED(TKGATE_SECONDARYHOME, "$currentDirectory", [Backup location f
 # the AC_PROG_CC macro from adding "-g -O2".
 #
 # Set TKGATE_CFLAGS in options.h to set compiler options.
-# 
+#
 if test "${CFLAGS+set}" != "set" ; then
     CFLAGS=`grep "^#define.*TKGATE_CFLAGS" options.h | sed 's/#define.*TKGATE_CFLAGS//'`
 fi
