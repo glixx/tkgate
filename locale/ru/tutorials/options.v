@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "options.v"
+//: property title = "Настройка TkGate"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -19,10 +19,10 @@ module PAGE1;    //: root_module
   //: /line:"<img src=iface.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Customizing TkGate</h3>"
+  //: /line:"<h3>Настройка TkGate</h3>"
   //: /line:""
-  //: /line:"This chapter introduces some of the options that can be customized in TkGate.  Your option settings"
-  //: /line:"are stored in a file named \".tkgate2-preferences\" in your home directory."
+  //: /line:"Этот раздел описывает некоторые настройки TkGate. Ваши настройки хранятся в файле"
+  //: /line:"\".tkgate2-preferences\" в Вашем домашнем каталоге."
   //: /line:""
   //: /line:""
   //: /end
@@ -65,11 +65,10 @@ module PAGE2();
   //: /line:"<img src=example_name.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Customizing TkGate</h3> <b>(setting your personal identification)</b>"
+  //: /line:"<h3>Настрока TkGate</h3> <b>(Установка персональной идентификации)</b>"
   //: /line:""
-  //: /line:"To set your TkGate options, open the options dilaog box by selecting <font color=red2>File &rarr;    Options</font> from the"
-  //: /line:"main menu.  Enter your site name and user name in the \"Identity\" dialog box.  The values you enter"
-  //: /line:"here will be used on any printed output from TkGate."
+  //: /line:"Для установки настроек TkGate, откройте диалог настроек, выбрав <font color=red2>Инструменты &rarr; Настроки</font> из меню. Введите имя компьютера"
+  //: /line:"и Ваше собственное в разделе \"Общие\". Введенные значения будут использованы при печати из TkGate."
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
