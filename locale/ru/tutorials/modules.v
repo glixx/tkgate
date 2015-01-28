@@ -52,8 +52,8 @@ endmodule
 module PAGE6();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w4;    //: /sn:0 {0}(258,177)(273,177){1}
-wire w0;    //: /sn:0 {0}(200,161)(185,161){1}
 wire w3;    //: /sn:0 {0}(258,161)(273,161){1}
+wire w0;    //: /sn:0 {0}(200,161)(185,161){1}
 wire w1;    //: /sn:0 {0}(200,177)(185,177){1}
 wire w2;    //: /sn:0 {0}(200,192)(185,192){1}
 wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
@@ -67,11 +67,11 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(editing module definitions)</b>"
+  //: /line:"<h3>Использование модулей</h3> <b>(редактирование определений модулей)</b>"
   //: /line:""
-  //: /line:"To edit the definition of a module you have created, double click on its name in the module name"
-  //: /line:"tree or list view.  Alternatively you can right click on an instance of the module and select"
-  //: /line:"<font color=red2>Open</font> from the popup menu."
+  //: /line:"Для редактирования определения созданного модуля, дважды щелкните по нему в списке или дереве"
+  //: /line:"модулей. Также можно щелкнуть правой кнопкой мыши по экземпляру модуля и выбрать <font color=red2>Открыть</font> из"
+  //: /line:"контекстного меню."
   //: /end
   //: comment g0 @(10,310) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
@@ -129,48 +129,6 @@ module PAGE3();
 endmodule
 //: /netlistEnd
 
-//: /netlistBegin ALU
-module ALU(F, A, B, Z);
-//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
-input [7:0] B;    //: /sn:0 {0}(#:342,147)(342,184){1}
-//: {2}(344,186)(367,186){3}
-//: {4}(371,186)(425,186)(425,258){5}
-//: {6}(369,188)(369,261){7}
-//: {8}(342,188)(342,258){9}
-input [1:0] F;    //: /sn:0 {0}(#:343,353)(214,353){1}
-input [7:0] A;    //: /sn:0 {0}(#:265,147)(265,215){1}
-//: {2}(267,217)(345,217){3}
-//: {4}(349,217)(372,217){5}
-//: {6}(376,217)(457,217)(457,258){7}
-//: {8}(374,219)(374,261){9}
-//: {10}(347,219)(347,258){11}
-//: {12}(265,219)(265,322)(348,322)(348,337){13}
-supply0 w0;    //: /sn:0 {0}(491,295)(491,272)(465,272){1}
-output [7:0] Z;    //: /sn:0 {0}(#:366,404)(366,366){1}
-wire [7:0] w14;    //: /sn:0 {0}(#:345,279)(345,310)(360,310)(360,337){1}
-wire w4;    //: /sn:0 {0}(417,272)(407,272){1}
-wire [7:0] w11;    //: /sn:0 {0}(#:372,282)(372,337){1}
-wire [7:0] w10;    //: /sn:0 {0}(#:384,337)(384,307)(441,307)(441,287){1}
-//: enddecls
-
-  //: joint g8 (A) @(347, 217) /w:[ 4 -1 3 10 ]
-  _GGADD8 #(68, 70, 62, 64) g4 (.A(B), .B(A), .S(w10), .CI(w0), .CO(w4));   //: @(441,274) /sn:0 /w:[ 5 7 1 1 0 ]
-  //: GROUND g13 (w0) @(491,301) /sn:0 /w:[ 0 ]
-  //: IN g3 (F) @(212,353) /sn:0 /w:[ 1 ]
-  //: IN g2 (A) @(265,145) /sn:0 /R:3 /w:[ 0 ]
-  //: IN g1 (B) @(342,145) /sn:0 /R:3 /w:[ 0 ]
-  //: joint g11 (B) @(369, 186) /w:[ 4 -1 3 6 ]
-  //: joint g10 (A) @(374, 217) /w:[ 6 -1 5 8 ]
-  _GGAND2x8 #(6) g6 (.I0(B), .I1(A), .Z(w11));   //: @(372,272) /sn:0 /R:3 /w:[ 7 9 0 ] /eb:0
-  //: joint g9 (A) @(265, 217) /w:[ 2 1 -1 12 ]
-  _GGOR2x8 #(6) g7 (.I0(B), .I1(A), .Z(w14));   //: @(345,269) /sn:0 /R:3 /w:[ 9 11 0 ] /eb:0
-  //: OUT g5 (Z) @(366,401) /sn:0 /R:3 /w:[ 0 ]
-  _GGMUX4x8 #(12, 12) g0 (.I0(A), .I1(w14), .I2(w11), .I3(w10), .S(F), .Z(Z));   //: @(366,353) /sn:0 /w:[ 13 1 1 0 0 1 ] /ss:0 /do:0
-  //: joint g12 (B) @(342, 186) /w:[ 2 1 -1 8 ]
-
-endmodule
-//: /netlistEnd
-
 //: /netlistBegin foo
 module foo(Z2, I3, Z1, I1, I2, Z3);
 //: interface  /sz:(41, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
@@ -191,12 +149,11 @@ wire w0;    //: /sn:0 {0}(348,183)(338,183)(338,153){1}
 //: {4}(336,151)(313,151){5}
 //: enddecls
 
-  //: OUT g4 (Z2) @(445,186) /sn:0 /w:[ 3 ]
   _GGAND2 #(6) g8 (.I0(I2), .I1(I3), .Z(Z3));   //: @(359,251) /sn:0 /w:[ 5 3 0 ] /eb:0
+  //: OUT g4 (Z2) @(445,186) /sn:0 /w:[ 3 ]
   //: joint g13 (w0) @(338, 151) /w:[ 2 -1 4 1 ]
   //: IN g2 (I3) @(243,253) /sn:0 /w:[ 5 ]
   //: OUT g1 (Z1) @(445,154) /sn:0 /w:[ 0 ]
-  _GGAND2 #(6) g11 (.I0(w0), .I1(Z2), .Z(Z1));   //: @(403,154) /sn:0 /w:[ 3 0 1 ] /eb:0
   //: comment g16 @(585,127) /sn:0
   //: /line:"<font color=green4>Hint: If you opened this module by"
   //: /line:"choosing <img src=blk_open.gif><font color=red2>Open</font> from the menu or"
@@ -204,20 +161,63 @@ wire w0;    //: /sn:0 {0}(348,183)(338,183)(338,153){1}
   //: /line:"clicking in the canvas area and"
   //: /line:"selecting <font color=red2>Close</font>."
   //: /end
+  _GGAND2 #(6) g11 (.I0(w0), .I1(Z2), .Z(Z1));   //: @(403,154) /sn:0 /w:[ 3 0 1 ] /eb:0
   //: joint g10 (I2) @(277, 200) /w:[ -1 2 1 4 ]
   //: IN g19 (I1) @(244,128) /sn:0 /w:[ 1 ]
   _GGXOR2 #(8) g6 (.I0(I1), .I1(I2), .Z(w0));   //: @(303,151) /sn:0 /w:[ 0 3 5 ] /eb:0
-  _GGXOR2 #(8) g7 (.I0(w0), .I1(I3), .Z(Z2));   //: @(359,186) /sn:0 /w:[ 0 0 5 ] /eb:0
   //: joint g9 (I3) @(296, 253) /w:[ 2 1 4 -1 ]
+  _GGXOR2 #(8) g7 (.I0(w0), .I1(I3), .Z(Z2));   //: @(359,186) /sn:0 /w:[ 0 0 5 ] /eb:0
   //: comment g15 @(22,25)
   //: /line:"This is the definition for module \"foo\"."
   //: /end
-  //: IN g5 (I2) @(243,200) /sn:0 /w:[ 0 ]
   //: comment g14 @(76,306) /sn:0
   //: /line:"<a href=\"#/PAGE8\">&lang;BACK TO TUTORIAL&rang;</a>"
   //: /end
+  //: IN g5 (I2) @(243,200) /sn:0 /w:[ 0 ]
   //: joint g23 (Z2) @(380, 186) /w:[ 2 1 4 -1 ]
   //: OUT g12 (Z3) @(445,251) /sn:0 /w:[ 1 ]
+
+endmodule
+//: /netlistEnd
+
+//: /netlistBegin ALU
+module ALU(F, A, B, Z);
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
+input [7:0] B;    //: /sn:0 {0}(#:342,147)(342,184){1}
+//: {2}(344,186)(367,186){3}
+//: {4}(371,186)(425,186)(425,258){5}
+//: {6}(369,188)(369,261){7}
+//: {8}(342,188)(342,258){9}
+input [1:0] F;    //: /sn:0 {0}(#:343,353)(214,353){1}
+supply0 w0;    //: /sn:0 {0}(491,295)(491,272)(465,272){1}
+input [7:0] A;    //: /sn:0 {0}(#:265,147)(265,215){1}
+//: {2}(267,217)(345,217){3}
+//: {4}(349,217)(372,217){5}
+//: {6}(376,217)(457,217)(457,258){7}
+//: {8}(374,219)(374,261){9}
+//: {10}(347,219)(347,258){11}
+//: {12}(265,219)(265,322)(348,322)(348,337){13}
+output [7:0] Z;    //: /sn:0 {0}(#:366,404)(366,366){1}
+wire [7:0] w14;    //: /sn:0 {0}(#:345,279)(345,310)(360,310)(360,337){1}
+wire w4;    //: /sn:0 {0}(417,272)(407,272){1}
+wire [7:0] w11;    //: /sn:0 {0}(#:372,282)(372,337){1}
+wire [7:0] w10;    //: /sn:0 {0}(#:384,337)(384,307)(441,307)(441,287){1}
+//: enddecls
+
+  _GGADD8 #(68, 70, 62, 64) g4 (.A(B), .B(A), .S(w10), .CI(w0), .CO(w4));   //: @(441,274) /sn:0 /w:[ 5 7 1 1 0 ]
+  //: joint g8 (A) @(347, 217) /w:[ 4 -1 3 10 ]
+  //: IN g3 (F) @(212,353) /sn:0 /w:[ 1 ]
+  //: GROUND g13 (w0) @(491,301) /sn:0 /w:[ 0 ]
+  //: IN g2 (A) @(265,145) /sn:0 /R:3 /w:[ 0 ]
+  //: IN g1 (B) @(342,145) /sn:0 /R:3 /w:[ 0 ]
+  //: joint g11 (B) @(369, 186) /w:[ 4 -1 3 6 ]
+  //: joint g10 (A) @(374, 217) /w:[ 6 -1 5 8 ]
+  _GGAND2x8 #(6) g6 (.I0(B), .I1(A), .Z(w11));   //: @(372,272) /sn:0 /R:3 /w:[ 7 9 0 ] /eb:0
+  _GGOR2x8 #(6) g7 (.I0(B), .I1(A), .Z(w14));   //: @(345,269) /sn:0 /R:3 /w:[ 9 11 0 ] /eb:0
+  //: joint g9 (A) @(265, 217) /w:[ 2 1 -1 12 ]
+  //: OUT g5 (Z) @(366,401) /sn:0 /R:3 /w:[ 0 ]
+  _GGMUX4x8 #(12, 12) g0 (.I0(A), .I1(w14), .I2(w11), .I3(w10), .S(F), .Z(Z));   //: @(366,353) /sn:0 /w:[ 13 1 1 0 0 1 ] /ss:0 /do:0
+  //: joint g12 (B) @(342, 186) /w:[ 2 1 -1 8 ]
 
 endmodule
 //: /netlistEnd
@@ -254,8 +254,8 @@ endmodule
 //: /netlistBegin PAGE9
 module PAGE9();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
-wire [7:0] w3;    //: /sn:0 {0}(#:329,194)(314,194){1}
 wire [1:0] w0;    //: /sn:0 {0}(#:257,226)(272,226){1}
+wire [7:0] w3;    //: /sn:0 {0}(#:329,194)(314,194){1}
 wire [7:0] w1;    //: /sn:0 {0}(#:257,210)(272,210){1}
 wire [7:0] w2;    //: /sn:0 {0}(#:257,194)(272,194){1}
 //: enddecls
@@ -308,39 +308,11 @@ module PAGE5();
   //: comment g1 @(9,13) /anc:1
   //: /line:"<h3>Использование модулей</h3> <b>(создание определений модулей)</b>"
   //: /line:""
-  //: /line:"To create a new module, press the <img src=blk_new.gif> button.  Enter the name for the new module"
-  //: /line:"and select whether you wish to create it as a \"netlist\" (graphical) module or an"
-  //: /line:"HDL (textual) module.  Try creating a new module named \"CPU\"."
+  //: /line:"Для создания нового модуля нажмите кнопку <img src=blk_new.gif>. Введите имя нового модуля"
+  //: /line:"и выберите, хотите ли Вы создать модуль, описанный как графическая логическая схема,"
+  //: /line:"или на языке описания аппаратуры. Попробуйте создать новый модуль \"CPU\"."
   //: /end
   //: comment g0 @(10,310) /sn:0 /R:14
-  //: /line:"<tutorial-navigation>"
-  //: /end
-
-endmodule
-//: /netlistEnd
-
-//: /netlistBegin PAGE4
-module PAGE4();
-//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
-//: enddecls
-
-  //: comment g2 @(506,99) /sn:0 /anc:1
-  //: /line:"<font color=green4>Подсказка: Можно перетаскивать"
-  //: /line:"модули в область редактирования и в режиме"
-  //: /line:"дерева модулей. В зависимости от сложности"
-  //: /line:"схемы может оказаться удобнее найти нужный"
-  //: /line:"модуль в иерархии дерева схемы или в полном"
-  //: /line:"алфавитном списке модулей.</font>"
-  //: /end
-  //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Использование модулей</h3> <b>(создание экземпляров модулей)</b>"
-  //: /line:""
-  //: /line:"Простейший способ создать экземпляр модуля - это найти его в списке доступных модулей и"
-  //: /line:"перетащить в область схемы. Переключитесь в режим списка модулей, выбрав вкладку"
-  //: /line:" <img src=modlist.gif> в правой части окна TkGate, затем переащите модуль \"bar\" в область"
-  //: /line:"редактирования для создания нескольких экземпляров."
-  //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -376,6 +348,34 @@ module PAGE2();
 endmodule
 //: /netlistEnd
 
+//: /netlistBegin PAGE4
+module PAGE4();
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
+//: enddecls
+
+  //: comment g2 @(506,99) /sn:0 /anc:1
+  //: /line:"<font color=green4>Подсказка: Можно перетаскивать"
+  //: /line:"модули в область редактирования и в режиме"
+  //: /line:"дерева модулей. В зависимости от сложности"
+  //: /line:"схемы может оказаться удобнее найти нужный"
+  //: /line:"модуль в иерархии дерева схемы или в полном"
+  //: /line:"алфавитном списке модулей.</font>"
+  //: /end
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<h3>Использование модулей</h3> <b>(создание экземпляров модулей)</b>"
+  //: /line:""
+  //: /line:"Простейший способ создать экземпляр модуля - это найти его в списке доступных модулей и"
+  //: /line:"перетащить в область схемы. Переключитесь в режим списка модулей, выбрав вкладку"
+  //: /line:" <img src=modlist.gif> в правой части окна TkGate, затем переащите модуль \"bar\" в область"
+  //: /line:"редактирования для создания нескольких экземпляров."
+  //: /end
+  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: /line:"<tutorial-navigation>"
+  //: /end
+
+endmodule
+//: /netlistEnd
+
 //: /netlistBegin PAGE10
 module PAGE10();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
@@ -385,7 +385,7 @@ module PAGE10();
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(11,22) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(interface editor)</b>"
+  //: /line:"<h3>Использование модулей</h3> <b>(редактор интерфейса)</b>"
   //: /line:""
   //: /line:"You can directly edit the module interface using TkGate's interface mode.  Click on the <img src=editintr.gif> <font color=red2>Interface</font>"
   //: /line:"tab over the main canvas to enter this mode.  Details on how to use this mode are given in the TkGate"
@@ -397,14 +397,14 @@ endmodule
 
 //: /netlistBegin bar
 module bar(Y, X, C, B, Z, A);
-//: interface  /sz:(56, 72) /bd:[ Li0>C(48/72) Li1>B(32/72) Li2>A(16/72) Ro0<Z(48/72) Ro1<Y(32/72) Ro2<X(16/72) ] /pd: 0 /pi: 0 /pe: 0 /pp: 0
+//: interface  /sz:(56, 72) /bd:[ Li0>A(16/72) Li1>B(32/72) Li2>C(48/72) Ro0<X(16/72) Ro1<Y(32/72) Ro2<Z(48/72) ] /pd: 0 /pi: 0 /pe: 0 /pp: 0
 //: property pptype=0
-input B;    //: /sn:0 {0}(86,207)(116,207){1}
-//: {2}(118,205)(118,160)(133,160){3}
-//: {4}(118,209)(118,255)(189,255){5}
 output X;    //: /sn:0 {0}(346,161)(268,161){1}
 //: {2}(266,159)(266,131)(282,131){3}
 //: {4}(264,161)(254,161){5}
+input B;    //: /sn:0 {0}(86,207)(116,207){1}
+//: {2}(118,205)(118,160)(133,160){3}
+//: {4}(118,209)(118,255)(189,255){5}
 input A;    //: /sn:0 {0}(133,155)(50:118,155)(118,135)(86,135){1}
 output Z;    //: /sn:0 {0}(210,258)(346,258){1}
 input C;    //: /sn:0 {0}(189,195)(137,195)(137,258){1}
@@ -415,18 +415,19 @@ input C;    //: /sn:0 {0}(189,195)(137,195)(137,258){1}
 output Y;    //: /sn:0 {0}(233,163)(221,163)(221,191){1}
 //: {2}(223,193)(346,193){3}
 //: {4}(219,193)(210,193){5}
+wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
 wire w0;    //: /sn:0 {0}(189,190)(179,190)(179,160){1}
 //: {2}(181,158)(233,158){3}
 //: {4}(177,158)(154,158){5}
-wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
 //: enddecls
 
-  //: OUT g4 (Y) @(343,193) /sn:0 /w:[ 3 ]
   _GGAND2 #(6) g8 (.I0(B), .I1(C), .Z(Z));   //: @(200,258) /sn:0 /w:[ 5 5 0 ] /eb:0
-  //: joint g13 (w0) @(179, 158) /w:[ 2 -1 4 1 ]
+  //: OUT g4 (Y) @(343,193) /sn:0 /w:[ 3 ]
   //: OUT g3 (X) @(343,161) /sn:0 /w:[ 0 ]
+  //: joint g13 (w0) @(179, 158) /w:[ 2 -1 4 1 ]
   //: IN g2 (C) @(84,260) /sn:0 /w:[ 9 ]
   //: IN g1 (B) @(84,207) /sn:0 /w:[ 0 ]
+  _GGAND2 #(6) g11 (.I0(w0), .I1(Y), .Z(X));   //: @(244,161) /sn:0 /w:[ 3 0 5 ] /eb:0
   //: comment g16 @(585,127) /sn:0 /anc:1
   //: /line:"<font color=green4>Hint: If you opened this module by"
   //: /line:"choosing <img src=blk_open.gif><font color=red2>Open</font> from the menu or"
@@ -434,28 +435,28 @@ wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
   //: /line:"clicking in the canvas area and"
   //: /line:"selecting <font color=red2>Close</font>."
   //: /end
-  _GGAND2 #(6) g11 (.I0(w0), .I1(Y), .Z(X));   //: @(244,161) /sn:0 /w:[ 3 0 5 ] /eb:0
   //: joint g10 (B) @(118, 207) /w:[ -1 2 1 4 ]
   //: joint g19 (C) @(162, 260) /w:[ 4 6 3 -1 ]
   _GGXOR2 #(8) g6 (.I0(A), .I1(B), .Z(w0));   //: @(144,158) /sn:0 /w:[ 0 3 5 ] /eb:0
-  _GGXOR2 #(8) g7 (.I0(w0), .I1(C), .Z(Y));   //: @(200,193) /sn:0 /w:[ 0 0 5 ] /eb:0
   //: joint g9 (C) @(137, 260) /w:[ 2 1 8 -1 ]
+  _GGXOR2 #(8) g7 (.I0(w0), .I1(C), .Z(Y));   //: @(200,193) /sn:0 /w:[ 0 0 5 ] /eb:0
   //: comment g15 @(22,25)
-  //: /line:"This is the definition for module \"bar\". Ports A, B and C are inputs, and ports X, Y and Z are"
-  //: /line:"outputs.  Try adding an additional output port \"W\" from the output of the XOR gate below."
-  //: /line:"Right click at the position you want to create the port then select <font color=red2>Make &rarr;   Module &rarr;   Module"
-  //: /line:"Output</font> from the popup menu.  Enter \"W\" for the net name in the dialog box."
+  //: /line:"Это определение модуля \"bar\". Порты A, B и C являются входами, а X, Y и Z выходами."
+  //: /line:"Попробуйте добавить дополнительный выход \"W\" к выходу вениля ИСКЛ-ИЛИ внизу."
+  //: /line:"Щелкните правой кнопкой мыши на место будущего порта, затем выберите <font color=red2>Компоненты &rarr;"
+  //: /line:"Модуль &rarr; Выход модуля</font> из контекстного меню. Введите \"W\" в качестве имени сети в"
+  //: /line:"сответствующее поле."
   //: /line:""
   //: /line:""
   //: /end
   _GGXOR2 #(8) g17 (.I0(C), .I1(X), .Z(w3));   //: @(293,129) /sn:0 /w:[ 7 3 0 ]
-  //: comment g14 @(76,306) /sn:0
-  //: /line:"<a href=\"#/PAGE6\">&lang;BACK TO TUTORIAL&rang;</a>"
-  //: /end
   //: OUT g5 (Z) @(343,258) /sn:0 /w:[ 1 ]
+  //: comment g14 @(76,306) /sn:0
+  //: /line:" <a href=\"#/PAGE6\">&lang;ВОЗВРАТ К РУКОВОДСТВУ&rang;</a> "
+  //: /end
   //: IN g0 (A) @(84,135) /sn:0 /w:[ 1 ]
-  //: joint g12 (Y) @(221, 193) /w:[ 2 1 4 -1 ]
   //: joint g18 (X) @(266, 161) /w:[ 1 2 4 -1 ]
+  //: joint g12 (Y) @(221, 193) /w:[ 2 1 4 -1 ]
 
 endmodule
 //: /netlistEnd
