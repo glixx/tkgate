@@ -42,12 +42,12 @@ module PAGE3();
   //: /line:"<img src=example_bindings.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Customizing TkGate</h3> <b>(setting your key beinding style)</b>"
+  //: /line:"<h3>Настройка TkGate</h3> <b>(изменение стиля назначения клавишь)</b>"
   //: /line:""
-  //: /line:"You can the basic key-binding style that you would like to use on the <font color=red2>Interface</font> tab of the options dialog"
-  //: /line:"box.  Currently you can choose between \"emacs\"-style and \"Windows\"-style.  Chosing one of these"
-  //: /line:"options will make key bindings for operations such as cut/paste similar to either emacs or Windows,"
-  //: /line:"although key bindings for gate creation operations will remain the same."
+  //: /line:"Вы можете изменять стиль привязки клавиш с группе \"Интерфейс\" диалога настроек. В настоящее"
+  //: /line:"время можно выбирать между стилями \"emacs\" и \"Windows\". Выбор стиля привязки сделает вызов"
+  //: /line:"таких операций, как копирование/вставка аналогичными Windows или Emacs. Однако операции работы"
+  //: /line:"с вентилями будут использовать одни и те же клавиши."
   //: /end
   //: comment g0 @(10,310) /sn:0
   //: /line:"<tutorial-navigation>"
