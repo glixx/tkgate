@@ -1586,15 +1586,15 @@ cp.recompute		Recompute
 ##############################################################################
 # Error messages
 #
-err.notinsim		Not allowed while simulator is active.
-err.nomemselect		Memory is not selected.
-err.rootinterface	Can not set interface of root module.
-err.nopin		Can't change selected pin.
-err.badhex		Illegal hex value '%s' ignored.
+err.notinsim		Не допускается, когда симулятор активен.
+err.nomemselect		Память не выбрана.
+err.rootinterface	Нельзя установить интерфейс корневого модуля.
+err.nopin		Невозможно изменить выбранный вывод.
+err.badhex		Недопустимое 16-тиричное значение '%s' игнорировано.
 err.gatanchor		Components(s) are anchored and can not be moved.
 err.protdata		Can not modify contents of protected or library module.
 err.badfind		Can't find target '%s'.
-err.badopendel		Can't delete open module.
+err.badopendel		Нельзя удалить открытый модуль.
 err.nosrcmod		Source module '%s' not found.
 err.noerr		Can not locate error.
 err.misserr		Error information incomplete (did the simulator crash?)
@@ -1648,7 +1648,7 @@ err.badlibopen		Unable to open library file '%s'.
 err.nomark		Please set a mark with the left mouse button before selecting a component type.
 err.badgate		Unknown component type '%s'.
 
-err.badportadd		Can't add ports to components of this type.
+err.badportadd		Нельзя добавлять порты к компонентам этого типа.
 
 err.modmissing		HDL module text missing for module "%s".
 err.modtoomany		Excess module definitions in module "%s".
@@ -1752,7 +1752,7 @@ current version (%s) if you
 save.
 -end-
 
-err.viewfile		Can not open file '%s'.
+err.viewfile		Невозможно открыть файл '%s'.
 
 
 ##############################################################################
@@ -1782,8 +1782,8 @@ msg.setinterface	Set module interface for '%s'.
 msg.needsel		Please select a module instance.
 msg.wroteckpt		Checkpointed to %s...
 msg.save		Saved circuit to '%s'.
-msg.reallynew		Circuit has been modified.  Do you really want to discard your changes and create a new circuit?
-msg.reallyquit		Circuit has been modified.  Do you really want to exit?
+msg.reallynew		Схема была изменена. Вы действительно хотите отказаться от изменений и создать новую схему?
+msg.reallyquit		Схема была изменена. Вы действительно хотите выйти?
 msg.notlib		Module '%s' is not a library module.
 
 ##############################################################################

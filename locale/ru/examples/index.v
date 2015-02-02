@@ -27,7 +27,7 @@ module main;    //: root_module
   //: /end
   //: comment g3 @(32,317) /sn:0 /anc:1
   //: /line:"<a href=\"ex4/trff.v\"><img src=\"example_trff.gif\">"
-  //: /line:"<h3>Transistor-Level FF</h3></a>"
+  //: /line:"<h3>Защелка на уровне транзисторов</h3></a>"
   //: /line:"Триггер, реализованный с"
   //: /line:"использованием Н-МОП и П-МОП"
   //: /line:"элементов."
@@ -42,9 +42,9 @@ module main;    //: root_module
   //: /end
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
-  //: /line:"<h3>3-разрядный счетчик</h3></a>"
-  //: /line:"3-разрядный счетчик, реализованный с"
-  //: /line:"использованием трех одноразрядных"
+  //: /line:"<h3>4-разрядный счетчик</h3></a>"
+  //: /line:"4-разрядный счетчик, реализованный с"
+  //: /line:"использованием четырех одноразрядных"
   //: /line:"D-защелок."
   //: /end
   //: comment g6 @(20,552) /sn:0
