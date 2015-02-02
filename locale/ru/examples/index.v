@@ -42,9 +42,9 @@ module main;    //: root_module
   //: /end
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
-  //: /line:"<h3>4-разрядный счетчик</h3></a>"
-  //: /line:"4-разрядный счетчик, реализованный с"
-  //: /line:"использованием четырех одноразрядных"
+  //: /line:"<h3>3-разрядный счетчик</h3></a>"
+  //: /line:"3-разрядный счетчик, реализованный с"
+  //: /line:"использованием трех одноразрядных"
   //: /line:"D-защелок."
   //: /end
   //: comment g6 @(20,552) /sn:0
@@ -60,10 +60,10 @@ module main;    //: root_module
   //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
-  //: /line:"Menagerie CPU</a></h3>"
-  //: /line:"A simple microcode-based CPU that"
-  //: /line:"will play the \"Animals\" game on a"
-  //: /line:"TTY device when simulated."
+  //: /line:"Компьютер \"Зверинец\"</a></h3>"
+  //: /line:"Простой микропроцессор с микрокодом,"
+  //: /line:"который выполняет игру \"Животные\""
+  //: /line:"во время симуляции."
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
