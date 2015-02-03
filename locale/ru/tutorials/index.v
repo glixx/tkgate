@@ -15,7 +15,7 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g1 @(433,291) /sn:0 /R:14
-  //: /line:"<a href=\"welcome.v\">Go back to the TkGate main page.</a>"
+  //: /line:"<a href=\"welcome.v\">Вернуться к стартовой схеме TkGate.</a>"
   //: /end
   //: comment g0 @(434,49) /sn:0 /anc:1
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"

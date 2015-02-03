@@ -1,17 +1,20 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: version "2.0-b10"
+//: property encoding = "utf-8"
+//: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "seqsim_tut.v"
+//: property title = "последовательная симуляция"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
 //: /netlistBegin PAGE1
 module PAGE1;    //: root_module
 reg [7:0] w7;    //: /sn:0 {0}(#:199,201)(199,227){1}
-supply0 w3;    //: /sn:0 {0}(252,251)(252,241)(239,241){1}
 supply0 w0;    //: /sn:0 {0}(254,296)(274,296)(274,307){1}
+supply0 w3;    //: /sn:0 {0}(252,251)(252,241)(239,241){1}
 reg clr;    //: {0}(32:254,286)(285,286){1}
 wire [7:0] w2;    //: /sn:0 {0}(#:215,281)(215,256){1}
 wire ck;    //: {0}(50:178,291)(113,291){1}
@@ -21,8 +24,8 @@ wire [7:0] reg_out;    //: {0}(#:215,302)(215,328)(273,328){1}
 wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
 //: enddecls
 
-  //: joint g8 (reg_out) @(275, 328) /w:[ 2 -1 1 4 ]
   //: GROUND g4 (w0) @(274,313) /sn:0 /w:[ 1 ]
+  //: joint g8 (reg_out) @(275, 328) /w:[ 2 -1 1 4 ]
   //: comment g13 @(14,12)
   //: /line:"<h3>Sequential Simulation</h3> <b>(scripts)</b>"
   //: /line:""
@@ -54,83 +57,13 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"  end"
   //: /line:"</font>"
   //: /end
-  //: DIP g6 (w7) @(199,191) /sn:0 /w:[ 0 ] /st:1
-  //: GROUND g9 (w3) @(252,257) /sn:0 /w:[ 0 ]
+  //: DIP g6 (w7) @(199,191) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: LED g7 (reg_out) @(275,345) /sn:0 /R:2 /w:[ 5 ] /type:2
+  //: GROUND g9 (w3) @(252,257) /sn:0 /w:[ 0 ]
   _GGADD8 #(68, 70, 62, 64) g5 (.A(w7), .B(reg_out), .S(w2), .CI(w3), .CO(w9));   //: @(215,243) /sn:0 /w:[ 1 3 1 1 0 ]
   _GGCLOCK_P100_0_50 g0 (.Z(ck));   //: @(100,291) /sn:0 /w:[ 1 ] /omega:100 /phi:0 /duty:50
-  //: SWITCH reset (clr) @(303,286) /R:2 /w:[ 1 ] /st:1
+  //: SWITCH reset (clr) @(303,286) /R:2 /w:[ 1 ] /st:1 /dn:0
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
- // specify
-   // $setup(D,posedge CK, Dsetup);
-//    $hold(posedge CK,D, Dhold);
-//  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P100_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #50
-     forever
-       begin
-	  Z =  1'b1;
-	  #50;
-	  Z =  1'b0;
-	  #50;
-       end
-   
-endmodule // clock
-//: /builtinEnd
 
