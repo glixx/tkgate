@@ -22,19 +22,19 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
 
   //: LED g4 (w4) @(357,221) /sn:0 /w:[ 1 ] /type:1
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(dip switches)</b>"
+  //: /line:"<h3>Симуляция комбинационных схем</h3> <b>(DIP-переключатели)</b>"
   //: /line:""
-  //: /line:"To change the value of a dip while simulating a circuit, first click on it to open a value dialog"
-  //: /line:"box.  Then enter the new value in hexidecimal and click <font color=red2>Apply</font>.  Start the simulator then try"
-  //: /line:"changing the input values in the four-bit adder below and observe the output."
+  //: /line:"Чтобы изменить значение DIP-переключателя во время симуляции щелкните по нему, чтобы"
+  //: /line:"открыть диалог ввода. Введите новое значение в 16-ричной форме и нажмите <font color=red2>Применить</font>."
+  //: /line:"Запустите симулятор и попробуйте изменить значения переключателей в этой схеме."
   //: /end
   //: SWITCH g3 (w1) @(279,173) /sn:0 /R:3 /w:[ 1 ] /st:0 /dn:0
   //: DIP g2 (w6) @(133,282) /sn:0 /R:1 /w:[ 0 ] /st:15 /dn:0
   //: DIP g1 (w5) @(130,209) /sn:0 /R:1 /w:[ 0 ] /st:3 /dn:0
   //: comment g6 @(560,127) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: Remember, to start and unpause"
-  //: /line:"the simulator press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab"
-  //: /line:"followed by the <img src=sim_go.gif> button."
+  //: /line:"<font color=green4>Подсказка: Помните, чтобы запустить"
+  //: /line:"и обновить симулятор, перейдите на"
+  //: /line:"вкладку \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" и нажмите кнопку <img src=sim_go.gif>."
   //: /end
   //: LED g5 (w0) @(277,326) /sn:0 /R:2 /w:[ 0 ] /type:0
   ADD4 g0 (.Cin(w1), .A(w5), .B(w6), .Cout(w0), .S(w4));   //: @(245, 221) /sz:(64, 64) /sn:0 /p:[ Ti0>0 Li0>1 Li1>1 Bo0<1 Ro0<0 ]

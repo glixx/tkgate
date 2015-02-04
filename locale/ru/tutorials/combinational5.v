@@ -24,25 +24,20 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
   //: comment g13 @(10,10) /anc:1
   //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(the instance hierarchy)</b>"
   //: /line:""
-  //: /line:"While the simulator is active, the hierarchical module list displays the hierarchy by instance"
-  //: /line:"rather than by module.  This is because the state (i.e., net values) for each instance of a module"
-  //: /line:"in the hierarcy may be different.  Invoke and unpause the simulation for the circuit below, then"
-  //: /line:"try examining the nets in different instances of the ADD1 module.  Double click on \"g0&lt;ADD1>\","
-  //: /line:"\"g1&lt;ADD1>\", etc. in the the hierarchical list box to go to each instance."
+  //: /line:"В режиме симуляции иерархический список модулей отображает иерархию экземпляров, а не модулей."
+  //: /line:"Это происходит потому, что состояние (напр. значение сигналов) для разных экземпляров одного"
+  //: /line:"модуля может отличатся. Запустите симуляцию и просмотрите состояние сетей в различных экземплярах"
+  //: /line:"модуля ADD1. Дважды щёлкните \"g0&lt;ADD1>\", \"g1&lt;ADD1>\" и т.д. в иерархическом списке чтобы"
+  //: /line:"перейти к каждому экземпляру."
   //: /line:""
   //: /end
   //: SWITCH g3 (w1) @(279,173) /sn:0 /R:3 /w:[ 1 ] /st:0 /dn:0
   //: DIP g2 (w6) @(133,282) /sn:0 /R:1 /w:[ 0 ] /st:15 /dn:0
   //: DIP g1 (w5) @(130,209) /sn:0 /R:1 /w:[ 0 ] /st:3 /dn:0
-  //: comment g6 @(580,147) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: Remember, to start and unpause"
-  //: /line:"the simulator press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab"
-  //: /line:"followed by the <img src=sim_go.gif> button."
-  //: /end
-  //: comment g7 @(581,227) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: You can also navigate to modules"
-  //: /line:"by right clicking and select <font color=red2>Open</font>"
-  //: /line:"from the popup menu."
+  //: comment g7 @(557,169) /sn:0 /anc:1
+  //: /line:"<font color=green4>Подсказка: Переходить между модулями"
+  //: /line:"можно щёлкнув правой кнопкой мыши и выбрав"
+  //: /line:"пункт <font color=red2>Открыть</font> из контекстного меню."
   //: /end
   //: LED g5 (w0) @(277,326) /sn:0 /R:2 /w:[ 0 ] /type:0
   ADD4 g0 (.Cin(w1), .A(w5), .B(w6), .Cout(w0), .S(w4));   //: @(245, 221) /sz:(64, 64) /sn:0 /p:[ Ti0>0 Li0>1 Li1>1 Bo0<1 Ro0<0 ]

@@ -16,10 +16,10 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3>"
+  //: /line:"<h3>Симуляция последовательной логики</h3>"
   //: /line:""
-  //: /line:"This chapter builds on the previous chapter about simulating combinational circuits and introduces"
-  //: /line:"simulator features that are useful for simulating sequential circuits."
+  //: /line:"В целом аналогичная симуляции комбинационных схем, симуляция последовательных"
+  //: /line:"имеет ряд особенностей, которым и посвящён данный раздел."
   //: /end
   //: comment g1 @(10,410) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation byfile=1>"

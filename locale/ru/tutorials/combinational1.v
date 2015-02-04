@@ -16,10 +16,10 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3>"
+  //: /line:"<h3>Симуляция комбинационных схем</h3>"
   //: /line:""
-  //: /line:"TkGate uses a Verilog-based discrete event simulator to simulate your circuit description.  In this"
-  //: /line:"chapter the basics needed to simulate a combinational circuit will be presented."
+  //: /line:"TkGate использует основанный на <b>Verilog</b> дискретно-событийный симулятор для моделирования "
+  //: /line:"описания схемы. В данном разделе описаны основы имитации комбинационных схем."
   //: /end
   //: comment g0 @(191,165) /sn:0 /anc:1
   //: /line:"<img src=simulate.gif>"

@@ -12,7 +12,7 @@
 `timescale 1ns/1ns
 
 
-//: /symbolBegin: 169629176
+//: /symbolBegin: 185750768
 //: /iconBegin normal 815 5 5
 //: /data "#define bitmap_width 28"
 //: /data "#define bitmap_height 29"
@@ -49,8 +49,8 @@
 module PAGE1;    //: root_module
 reg [7:0] w7;    //: /sn:0 {0}(#:232,193)(232,219){1}
 reg w4;    //: /sn:0 {0}(287,278)(298,278)(298,266)(308,266){1}
-supply0 w0;    //: /sn:0 {0}(287,288)(310,288)(310,303){1}
 supply0 w3;    //: /sn:0 {0}(285,243)(285,233)(272,233){1}
+supply0 w0;    //: /sn:0 {0}(287,288)(310,288)(310,303){1}
 wire [7:0] w2;    //: /sn:0 {0}(#:248,273)(248,248){1}
 wire ck;    //: {0}(-39:130,283)(211,283){1}
 wire [7:0] reg_out;    //: {0}(#:248,294)(248,327)(304,327){1}
@@ -59,24 +59,24 @@ wire [7:0] reg_out;    //: {0}(#:248,294)(248,327)(304,327){1}
 wire w9;    //: /sn:0 {0}(224,233)(214,233){1}
 //: enddecls
 
-  //: GROUND g4 (w0) @(310,309) /sn:0 /w:[ 1 ]
   //: joint g8 (reg_out) @(306, 327) /w:[ 2 -1 1 4 ]
+  //: GROUND g4 (w0) @(310,309) /sn:0 /w:[ 1 ]
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3> <b>(continuous simulation)</b>"
+  //: /line:"<h3>Симуляция поледовательных схем</h3> <b>(непрерывная симуляция)</b>"
   //: /line:""
-  //: /line:"Also like with a combinational circuit, you can press the <img src=sim_go.gif bgcolor=gray> button to unpause and simulate"
-  //: /line:"continously.  Try it with the circuit below.  This circuit contains a \"real-world-time\" oscilator"
-  //: /line:"that will cycle once per second.  Like in the previous example, you will need to reset it by"
-  //: /line:"turning the \"reset\" switch off monentarily."
+  //: /line:"Как и в случае комбинационной симуляции Вы можете нажать кнопку <img src=sim_go.gif bgcolor=gray> для запуска непрерывной симуляции."
+  //: /line:"Попробуйте на схеме снизу. Эта схема содержит осциллятор реального времени, настроенный на период в"
+  //: /line:"одну секунду. Как и в предыдущем примере, необходимо сбросить счётчик, переведя переключатель <b>reset</b> в"
+  //: /line:"положение <b>off</b>, а затем в положение <b>on</b>."
   //: /end
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(w4), .CK(ck));   //: @(248,283) /sn:0 /w:[ 0 0 0 0 1 ]
   //: comment g1 @(10,410) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
-  OSCILLATOR g10 (.Z(ck));   //: @(116, 283) /symbol:169629176 /sn:0 /w:[ 0 ]
+  OSCILLATOR g10 (.Z(ck));   //: @(116, 283) /symbol:185750768 /sn:0 /w:[ 0 ]
   //: DIP g6 (w7) @(232,183) /sn:0 /w:[ 0 ] /st:1 /dn:0
-  //: LED g7 (reg_out) @(306,349) /sn:0 /R:2 /w:[ 5 ] /type:2
   //: GROUND g9 (w3) @(285,249) /sn:0 /w:[ 0 ]
+  //: LED g7 (reg_out) @(306,349) /sn:0 /R:2 /w:[ 5 ] /type:2
   _GGADD8 #(68, 70, 62, 64) g5 (.A(w7), .B(reg_out), .S(w2), .CI(w3), .CO(w9));   //: @(248,235) /sn:0 /w:[ 1 3 1 1 0 ]
   //: SWITCH reset (w4) @(326,266) /R:2 /w:[ 1 ] /st:1 /dn:0
 

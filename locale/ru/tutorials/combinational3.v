@@ -40,13 +40,13 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   _GGNAND2 #(4) g8 (.I0(w0), .I1(w6), .Z(C));   //: @(332,301) /sn:0 /w:[ 0 0 1 ]
   _GGXOR2 #(8) g4 (.I0(A), .I1(B), .Z(w1));   //: @(234,240) /sn:0 /w:[ 0 7 3 ]
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(setting probes)</b>"
+  //: /line:"<h3>Симуляция комбинационных схем</h3> <b>(установка зондов)</b>"
   //: /line:""
-  //: /line:"Press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab again, to enter simulation mode.  This time right click on a wire (e.g., the"
-  //: /line:"one labeled \"S\") and slect \"Add/Delete Probe\" from the popup menu.  The will set a probe on that"
-  //: /line:"wire and bring up the logic analyzer window.  Set probes on some more wires, then unpause the"
-  //: /line:"simulator by pressing <img src=sim_go.gif bgcolor=gray>.  Click on the switches to change their state and observe how the logic"
-  //: /line:"analyzer is updated."
+  //: /line:"Снова перейдите на вкладку \"<img src=\"simstart.gif\"> <font color=red2>Симуляция</font>\". Щелкните правой кнопкой мыши по проводнику, обозначенному"
+  //: /line:"\"S\" и выберите \"Добавить/Удалить зонд\" из контекстного меню. На проводник будет установлен зонд и"
+  //: /line:"откроется окно логического анализатора. Установите зонды ещё на несколько проводников и запустите"
+  //: /line:"симулятор кнопкой <img src=sim_go.gif bgcolor=gray>. Пощёлкайте переключателями, чтобы увидеть, как изменение значений сигналов"
+  //: /line:"отображается в окне логического анализатора."
   //: /end
   //: SWITCH g3 (Cin) @(241,202) /sn:0 /w:[ 0 ] /st:1 /dn:0
   _GGNAND2 #(4) g2 (.I0(A), .I1(B), .Z(w6));   //: @(239,303) /sn:0 /w:[ 9 5 1 ]
@@ -60,19 +60,19 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   _GGXOR2 #(8) g7 (.I0(Cin), .I1(w1), .Z(S));   //: @(331,238) /sn:0 /w:[ 7 0 0 ]
   //: joint g31 (A) @(157, 217) /w:[ 3 4 6 -1 ]
   //: comment g15 @(585,254) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: Normally, TkGate will simulate"
-  //: /line:"combinational circuits until all signals"
-  //: /line:"have reached a steady state.  You can"
-  //: /line:"hit the space bar to advance the"
-  //: /line:"simulator by one time unit.</font>"
+  //: /line:"<font color=green4>Подсказка: Обычно TkGate будет производить"
+  //: /line:"симуляцию последовательных схем до тех пор,"
+  //: /line:"пока все сигналы не перестанут изменяться."
+  //: /line:"Вы можете нажать пробел, чтобы продвинуть"
+  //: /line:"симуляцию на одну единицу времени.</font>"
   //: /end
   //: LED g29 (B) @(156,286) /sn:0 /w:[ 9 ] /type:0
   //: LED g25 (C) @(390,203) /sn:0 /w:[ 0 ] /type:0
   //: comment g14 @(583,172) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: In addition to using probes,"
-  //: /line:"you can also see the value of a net"
-  //: /line:"by clicking and holding the mouse"
-  //: /line:"button down for a few seconds.</font>"
+  //: /line:"<font color=green4>Подсказка: В дополнение к использованию"
+  //: /line:"зондов Вы можете также узнать значение"
+  //: /line:"сигнала, щёлкнув по проводнику мышью и"
+  //: /line:"удерживая кнопку несколько секунд.</font>"
   //: /end
   //: joint g5 (A) @(189, 237) /w:[ 1 2 -1 8 ]
   //: LED g26 (Cin) @(280,184) /sn:0 /w:[ 3 ] /type:0

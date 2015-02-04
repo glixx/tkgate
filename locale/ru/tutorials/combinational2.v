@@ -37,36 +37,37 @@ wire C;    //: {0}(-21:403,221)(403,312)(355,312){1}
 wire S;    //: {0}(354,249)(-39:373,249)(373,221){1}
 //: enddecls
 
-  _GGXOR2 #(8) g4 (.I0(A), .I1(B), .Z(w1));   //: @(247,251) /sn:0 /w:[ 0 7 3 ]
   _GGNAND2 #(4) g8 (.I0(w0), .I1(w6), .Z(C));   //: @(345,312) /sn:0 /w:[ 0 0 1 ]
-  //: SWITCH g3 (Cin) @(254,213) /sn:0 /w:[ 0 ] /st:1 /dn:0
+  _GGXOR2 #(8) g4 (.I0(A), .I1(B), .Z(w1));   //: @(247,251) /sn:0 /w:[ 0 7 3 ]
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(starting the simulator)</b>"
+  //: /line:"<h3>Симуляция комбинационных схем</h3> <b>(запуск симулятора)</b>"
   //: /line:""
-  //: /line:"Press the \"<img src=\"simstart.gif\" bgcolor=gray> <font color=red2>Simulate</font>\" tab above the main canvas to enter simulation mode.  When you first enter simulation"
-  //: /line:"mode, the simulator will be paused as indicated by the depressed <img src=sim_pause.gif bgcolor=gray> button on the simulator tool bar.  Press"
-  //: /line:"the <img src=\"sim_go.gif\" bgcolor=gray> button to begin simulation.  Now try clicking on the switches to change their state and observe how the"
-  //: /line:"LEDs change.  When you are done, stop the simulator by pressing <img src=sim_stop.gif bgcolor=gray> and go on to the next page."
+  //: /line:"Выберите вкладку \"<img src=\"simstart.gif\" bgcolor=gray> <font color=red2>Симуляция</font>\" над областью редактирования чтобы войти в режим симуляции."
+  //: /line:"Сразу после этого симулятор будет в состоянии приостановки, о чем свидетельствует утопленная"
+  //: /line:"кнопка <img src=sim_pause.gif bgcolor=gray> на панели инструментов. Нажмите кнопку <img src=\"sim_go.gif\" bgcolor=gray> чтобы начать симуляцию. Теперь пощелкайте"
+  //: /line:"переключателями и наблюдайте изменение состояния светодиодов. Когда наиграетесь, остановите"
+  //: /line:"симулятор нажав кнопку <img src=sim_stop.gif bgcolor=gray> и переходите к следующему разделу."
   //: /end
+  //: SWITCH g3 (Cin) @(254,213) /sn:0 /w:[ 0 ] /st:1 /dn:0
   _GGNAND2 #(4) g2 (.I0(A), .I1(B), .Z(w6));   //: @(252,314) /sn:0 /w:[ 9 5 1 ]
   //: SWITCH g1 (B) @(136,316) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: joint g11 (w1) @(288, 251) /w:[ 1 -1 2 4 ]
-  //: joint g10 (Cin) @(293, 246) /w:[ 6 5 -1 8 ]
   //: LED g28 (A) @(170,208) /sn:0 /w:[ 5 ] /type:0
+  //: joint g10 (Cin) @(293, 246) /w:[ 6 5 -1 8 ]
   //: joint g27 (Cin) @(293, 213) /w:[ -1 2 1 4 ]
   //: joint g6 (B) @(191, 316) /w:[ 4 6 3 -1 ]
-  _GGXOR2 #(8) g7 (.I0(Cin), .I1(w1), .Z(S));   //: @(344,249) /sn:0 /w:[ 7 0 0 ]
   _GGNAND2 #(4) g9 (.I0(w1), .I1(Cin), .Z(w0));   //: @(291,283) /sn:0 /R:3 /w:[ 5 9 1 ]
+  _GGXOR2 #(8) g7 (.I0(Cin), .I1(w1), .Z(S));   //: @(344,249) /sn:0 /w:[ 7 0 0 ]
   //: joint g31 (A) @(170, 228) /w:[ 3 4 6 -1 ]
-  //: LED g25 (C) @(403,214) /sn:0 /w:[ 0 ] /type:0
   //: LED g29 (B) @(169,297) /sn:0 /w:[ 9 ] /type:0
+  //: LED g25 (C) @(403,214) /sn:0 /w:[ 0 ] /type:0
   //: joint g5 (A) @(202, 248) /w:[ 1 2 -1 8 ]
-  //: SWITCH g0 (A) @(138,228) /sn:0 /w:[ 7 ] /st:0 /dn:0
   //: LED g26 (Cin) @(293,195) /sn:0 /w:[ 3 ] /type:0
-  //: LED g18 (S) @(373,214) /sn:0 /w:[ 1 ] /type:0
+  //: SWITCH g0 (A) @(138,228) /sn:0 /w:[ 7 ] /st:0 /dn:0
   //: comment g12 @(10,410) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
+  //: LED g18 (S) @(373,214) /sn:0 /w:[ 1 ] /type:0
   //: joint g30 (B) @(169, 316) /w:[ 2 8 1 -1 ]
 
 endmodule
