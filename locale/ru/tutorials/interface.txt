@@ -1,6 +1,6 @@
-Creating and Editing Module Interfaces
+Создание и удаление интерфейсов модулей
 
-1) Select the "Interface" tab in the main window to start the interface editor.
+1) Выбрать вкладку "Интерфейс" главного окна для входа в режим редактора интерфейсов.
 
 2) Double-click on module "bar" in module list to edit its interface.
 
