@@ -570,8 +570,8 @@ db.newcirc.topname	Имя модуля верхнего уровня
 # Gate dialog box
 #
 db.gate.title		TKGate: Свойства компонента
-db.gate.signam		Название сигнала
-db.gate.portnam		Название порта
+db.gate.signam		Имя сигнала
+db.gate.portnam		Имя порта
 db.gate.iotype		Тип
 db.gate.bitw		Разрядность
 db.gate.cyclew		Период
@@ -580,7 +580,7 @@ db.gate.duty		Заполнение
 db.gate.waveform	Форма синхросигнала
 db.gate.port		Порт
 db.gate.bitws		Биты
-db.gate.side		Side
+db.gate.side		Сторона
 db.gate.gtype		Тип
 db.gate.gname		Имя экземпляра
 db.gate.hidenam		Скрыть имя
@@ -1626,47 +1626,46 @@ err.bkpt.badnet		Неверное имя сети '%s'. Имена должны 
 err.bkpt.badval		Синтаксическая ошибка в значении '%s'. Должна быть десятичная или Verilog константа.
 err.bkpt.toomany	Слишком много точек остановки. Должно быть не более %d.
 
-err.sim.badtmp		Could not save temporary file '%s' for simulator (disc full?)
-err.sim.syntx		Syntax error in '%s' command.
-err.sim.noincl		Include file '%s' not found.
-err.sim.badedge		Illegal edge indicator '%c' in clock command.
-err.sim.nobkpt		No such breakpoint '%s'.
-err.sim.nonet		Can't find net '%s'.
-err.sim.nogate		Can't find component '%s'.
-err.sim.badbin		Illegal charcter in binary constant '%s'.
-err.sim.notswitch	Component '%s' is not a switch, dip or register.
-err.sim.badcmd		Unrecognized command '%s' in simulation script.
-err.sim.isrun		Simulator is already running (Use 'Ctrl-s e' to end).
-err.sim.run		Run-time error at time %s:
-err.sim.cmd		Internal Command Error
+err.sim.badtmp		Не удаётся сохранить '%s' симулятора (возможно диск переполнен?)
+err.sim.syntx		Синтаксическая ошибка в команде '%s'.
+err.sim.noincl		Включаемый файл '%s' не найден.
+err.sim.badedge		Недопустимый индикатор фронта '%c' в команде синхронизации.
+err.sim.nobkpt		Не точки остановки '%s'.
+err.sim.nonet		Не удаётся найти сеть '%s'.
+err.sim.nogate		Не удаётся найти компонент '%s'.
+err.sim.badbin		Недопустимый символ в двоичной константе '%s'.
+err.sim.notswitch	Компонент '%s' не является переключателем или регистром.
+err.sim.badcmd		Неопознанная команда '%s' в инициализационном скрипте.
+err.sim.isrun		Симулятор уже запущен (используйте 'Ctrl-s e' для остановки).
+err.sim.run		Ошибка времени исполнения в момент %s:
+err.sim.cmd		Ошибка внутренней команды
 
-err.noteditpchg		Properties can only be changed in edit mode.	
-err.badeditop		Illegal interface edit mode operation.
-err.badopen		Unable to open input file '%s'.
-err.badlibopen		Unable to open library file '%s'.
+err.noteditpchg		Свойтсва можно менять только в режиме редактирования.
+err.badeditop		Недопустимая в режиме редактирования интерфейсов операция.
+err.badopen		Не удаётся открыть входной файл '%s'.
+err.badlibopen		Не удаётся открыть файл библиотеки '%s'.
 
-err.nomark		Please set a mark with the left mouse button before selecting a component type.
-err.badgate		Unknown component type '%s'.
+err.nomark		Установите курсор левой кнопкой мыши прежде чем выбрать тип компонента.
+err.badgate		Неизвестный тип компонента '%s'.
 
 err.badportadd		Нельзя добавлять порты к компонентам этого типа.
 
-err.modmissing		HDL module text missing for module "%s".
-err.modtoomany		Excess module definitions in module "%s".
-err.modmismatch		Name mismatch between text definition and module name in "%s".
+err.modmissing		Нет текста модуля Verilog для "%s".
+err.modtoomany		Лишние определения модуля в "%s".
+err.modmismatch		Несоответствие имени модуля и текста определения "%s".
 
 err.manypages		-fillbegin-
-There are an awful lot of
-pages in this document.  Are
-you sure you want to print it?
+В документе подозрительно много
+страниц. Стоит ли его печатать?
 -end-
 
 err.nojump		-fillbegin-
-The 'jump-to-module' feature can not be used
-in simulation or critical path analysis mode.
-Please navigate manully to the target block
-by selecting modules and opening them with the
-'>' keyboard command.  You can leave a module
-you are in with the '<' keyboard command.
+Функция 'перескочить-в-модуль' не может быть
+использована в режимах симуляции и анализа
+критических путей. Перейдите к нужному блоку
+вручную, выделив его и нажав клавишу '>'.
+Покинуть просматриваемый модуль можно, нажав
+клавишу '<'.
 -end-
 
 err.nomod		Модуль '%s' не определен.
@@ -1675,46 +1674,46 @@ err.closeroot		В списке модулей нет модуля более в�
 err.editonly		Команда не допускается в режиме симуляции.
 err.simonly		Команда допускается только в режиме симуляции.
 
-err.deltop		Can not delete top-level module '%s'.
-err.delprot		Can not delete protected module '%s'.
-err.nodel		No deletable selection.
-err.modnotdef		Module '%s' is undefined.
-err.moddef		The module '%s' already exists.
-err.primredef		Built-in element name '%s' can not be redefined.
-err.primprefix		Illegal module name '%s' begins with built-in prefix '%s'.
-err.iskeyword		Verilog keyword '%s' can not be used as an identifier.
-err.noprop		Selected component has no editable properites.
-err.openscript		Can't open simulation script file '%s'
-err.oldversion		Loaded file '%s' with obsolete version number %s (current version is %s).
-err.futureversion	Loaded file '%s' saved by future TkGate version %s (this version is %s).
-err.badversion		Unknown version number.  Use at your own risk.
-err.nodrive		Net %s has no driver in module %s.
-err.noconn		Wire %s{%d} has no connections - deleted.
-err.oldportact		Please right click on port or module edge to add/change port.
+err.deltop		Невозможно удалить модуль верхнего уровня '%s'.
+err.delprot		Невозможно удалить защищённый модуль '%s'.
+err.nodel		В выделении нет удаляемых компонентов.
+err.modnotdef		Модуль '%s' не определён.
+err.moddef		Модуль '%s' уже существует.
+err.primredef		Нельзя переопределеить встроенное имя '%s'.
+err.primprefix		Недопустимое имя модуля '%s', начинается со встроенного префикса '%s'.
+err.iskeyword		Ключевое слово Verilog '%s' Не может быть использовано в качестве идентификатора.
+err.noprop		Выделенный компонент не имеет редактируемых свойств.
+err.openscript		Не удаётся открыть скрипт симуляции '%s'
+err.oldversion		Загруженнывй файл '%s' с просроченным номером версии  %s (текущая версия %s).
+err.futureversion	Загруденный файл '%s' был сохранён в TkGate версии %s (данная версия %s).
+err.badversion		Неизвестный номер версии. Используйте под свою ответственность.
+err.nodrive		Сеть %s не имеет драйвера в %s.
+err.noconn		Проводник %s{%d} не имеет соединений и удалён.
+err.oldportact		Щёлкните правой кнопкой на порте или ребре модуля для добавления/изменения порта.
 err.nomodule		Не выбран модуль.
 err.nomodop		нет подходящих модулей для операции.
-err.protexec		Attempted execution of protected command '%s' in $tkg$exec().
+err.protexec		Попытка выполнения защищённой команды '%s' в $tkg$exec().
 
-err.notwritable		File '%s' is not writable.
-err.backupfail		Unable to create backup file '%s'.
+err.notwritable		Файл '%s' недоступен для записи.
+err.backupfail		Невозможно создать файл резервной копии '%s'.
 
-err.yy.badprop		Ignoring unknown circuit property '%s'.
-err.yy.badpropval	Bad value '%s' for circuit property '%s'.
-err.yy.baddata		Bad data type supplied for circuit property '%s'.
-err.yy.nosym		No current module symbol.
-err.yy.badicon		Bad icon type '%s'.
-err.yy.toomuchdata	Too much icon data.
-err.yy.nosyminst	Missing symbol %d on instance %s of %s.
-err.yy.badmodprop	Ignoring unknown module property '%s'.
-err.yy.badmoddata	Bad data type supplied for module property '%s'.
-err.yy.badprim		Unknown primitive name '%s'.
-err.yy.nonet		Undeclared net '%s'.
-err.yy.bogussave	Bogus save data detected. circuit may be damaged.
-err.yy.pinformat	Illegal pin name format '%s'.
-err.yy.pinname		Pin name '%s' not defined for component type '%s'
-err.yy.nonetpos		No net for position %d on component %s.
-err.yy.baddirective	Illegal or badly formed directive '%s'.
-err.yy.badlocale	Unknown locale '%s' in save file.  Using English locale.
+err.yy.badprop		Игнорируется неизвестное свойство схемы '%s'.
+err.yy.badpropval	Недопустимое значение '%s' свойтсва схемы '%s'.
+err.yy.baddata		Неверный тип данных для свойства схемы '%s'.
+err.yy.nosym		Нет символа для текущего модуля.
+err.yy.badicon		Недопустимый тип изображения '%s'.
+err.yy.toomuchdata	Слишком много данных изображения.
+err.yy.nosyminst	Отсутствует символ %d в экземпляре %s %s.
+err.yy.badmodprop	Игнорируется неизвестное свойство модуля '%s'.
+err.yy.badmoddata	Неверный тип данных для свойства property '%s'.
+err.yy.badprim		Неизвестное имя примитива '%s'.
+err.yy.nonet		Необъявленная сеть '%s'.
+err.yy.bogussave	Обнаружены неверные данные сохранения, схема может быть повреждена.
+err.yy.pinformat	Недопустимый формат имени вывода '%s'.
+err.yy.pinname		Имя вывода '%s' не определено для компонента '%s'
+err.yy.nonetpos		Нет сети для позиции %d в компоненте %s.
+err.yy.baddirective	Недопустимая или некорректно сформированная директива '%s'.
+err.yy.badlocale	Неизвестная локаль '%s' в сохранённом файле. Используется английская.
 
 err.corruptnewsave	-fillbegin-
 TkGate was able to save your file in '%s', but it appears
@@ -2045,7 +2044,7 @@ ho.print	Печать текущей схемы.
 ho.library	Открыть диалог управления библиотеками.
 
 ho.symed.tab.normal	-begin-
-Редактирование изображения не выделенного символа.
+Редактирование изображение не выделенного символа.
 -end-
 
 ho.symed.tab.select	-begin-
@@ -2109,7 +2108,7 @@ last item to add port.
 -end-
 
 ho.ipanel.deleteport	-begin-
-Delete the selected port.
+Удалить выделенный порт.
 -end-
 
 ho.ipanel.editport	-begin-
@@ -2229,9 +2228,9 @@ ho.simpause	-begin-
 -end-
 
 ho.simstep	-begin-
-Step a fixed interval of time.
-Open the simulation options
-window to set the step size.
+Шаг на фиксированный временной интервал.
+Раземр шага можно установить в настройках
+симуляции.
 -end-
 
 ho.simclock	-begin-
@@ -2447,11 +2446,11 @@ Set this flag to disable
 display of component names.
 -end-
 
-ho.edgat.gtype		Type of the component.
-ho.edgat.gname		Name of this component instance.
-ho.edgat.ganchor	Set this flag to anchor the position of a component.
-ho.edgat.gx		X coordinate of component.
-ho.edgat.gy		Y coordinate of component.
+ho.edgat.gtype		Тип компонента.
+ho.edgat.gname		Имя данного экземпляра компонента.
+ho.edgat.ganchor	Установите этот флаг чтобы привязать положение компонента.
+ho.edgat.gx		Координата X компонента.
+ho.edgat.gy		Координата Y компонента.
 
 ho.edgat.swstate	-begin-
 The initial state of the switch to use when
@@ -2842,8 +2841,7 @@ ho.techbut		-begin-
 определения технологий. Для использования
 специальных тезхнологий добавьте их
 в список в диалоге настроек TkGate
-"Инструменты -> Настройки -> Симуляция -> Технология"
-menu.
+"Инструменты -> Настройки -> Симуляция -> Технология".
 -end-
 
 ho.custbut		-begin-
