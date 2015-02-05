@@ -1551,7 +1551,7 @@ libmgr.notedit		-fillbegin-
 #
 # Dynamic Verilog Module Manager
 #
-break.tab		Njxrb jcnfyjdrb
+break.tab		Точки остановки
 break.id		ID
 break.state		S
 break.condition		Условие
@@ -1716,39 +1716,39 @@ err.yy.baddirective	Недопустимая или некорректно сф�
 err.yy.badlocale	Неизвестная локаль '%s' в сохранённом файле. Используется английская.
 
 err.corruptnewsave	-fillbegin-
-TkGate was able to save your file in '%s', but it appears
-to be corrupted.  If you have checkpointing enabled try
-loading one of the checkpoint files.  Use 'tkgate -V' to
-check the integrety of a save file.
+TkGate смог сохранить файл в '%s', но оказалось,
+что он повреждён. Если выключён режим создания
+контрольных точек, попробуйте загрузить одну из
+них. Использхуйте 'tkgate -V' для проверки
+целостности сохранённого файла.
 -end-
 
 err.corruptsave		-fillbegin-
-TkGate detetected a problem while trying to save the file '%s'.
-The existing file has been left unmodified and the damaged file has
-been written to '%s'.  If you have checkpointing enabled you
-can try loading one of the checkpoint files.  You can also use
-'tkgate -V' to check the integrety of a save file.
+TkGate столкнулся с проблемой во время сохранения файла '%s'.
+Существующий файл не будет изменён, а повреждённый сохранён
+под именем '%s'. Если выключён режим создания контрольных
+точек, попробуйте загрузить одну из них. Используёте
+'tkgate -V' для проверки целостности сохранённого файла.
 -end-
 
 err.badsave		-fillbegin-
-A problem has occured trying to open or write the file '%s'.  Check
-file/directory protections and or disk space.
+При попытке открытия или записи файла '%s' возникла проблема.
+Проверьте права доступа для файла и каталога, в котором он
+находится, а также наличие свободного места на диске.
 -end-
 
 err.nosafesave		-fillbegin-
-A problem has occured attempting to save '%s'.  If you wish, you can
-try again without save validation.  If you say "no", the original file
-will remain unmodified.  If you say "yes" the original file will be
-overwritten, but may be destroyed if a problem occurs.  Would you like
-to attempt an unvalidated save?
+Во время сохранения файла '%s' возникла проблема. Можно попробовать
+ещё раз без проверки сохранённых данных. Нажмите "нет" и исходный
+файл останется неизменным. Нажмите "да" и файл будет перезаписан,
+но может оказаться повреждённым, если возникнет ошибка. Попробовать
+ненадёжное сохранение?
 -end-
 
 err.noback		-fillbegin-
-File '%s' was created by TkGate
-%s, and may not be readable
-by versions earlier than
-current version (%s) if you
-save.
+Файл '%s' был создан в TkGate %s
+и не сможет быть прочитан в версии
+меньше текущей (%s) если его сохранить.
 -end-
 
 err.viewfile		Невозможно открыть файл '%s'.
