@@ -11,12 +11,11 @@
 //: script "menagerie.vs"
 
 //: require "tty"
-//: require "coke"
 
 `timescale 1ns/1ns
 
 
-//: /symbolBegin: 181161944
+//: /symbolBegin: 149698312
 //: /iconBegin normal 3404 0 0
 //: /data "#define bitmap_width 73"
 //: /data "#define bitmap_height 53"
@@ -171,7 +170,7 @@ wire w55;    //: /sn:0 {0}(589,266)(659,266){1}
 //: enddecls
 
   //: joint g4 (DATA) @(517, 473) /w:[ 1 2 4 -1 ]
-  //: comment g13 @(17,390) /sn:0
+  //: comment g13 @(14,383) /sn:0 /anc:1
   //: /line:"Важные части схемы:"
   //: /line:"<a href=\"#memory.tty0\">* Терминал</a>"
   //: /line:"<a href=\"#iunit.mpc\">* Микропрограммный счётчик</a>"
@@ -182,7 +181,7 @@ wire w55;    //: /sn:0 {0}(589,266)(659,266){1}
   //: /end
   //: joint g3 (_reset) @(541, 31) /w:[ 1 -1 2 8 ]
   //: joint g2 (clk) @(492, 66) /w:[ 1 -1 2 8 ]
-  //: comment g1 @(14,90)
+  //: comment g1 @(10,93) /anc:1
   //: /line:"Данная схема содержит несложный процессор."
   //: /line:"Симуляционный скрипт заставляет его"
   //: /line:"исполнять игру \"Animals\" как только Вы"
@@ -207,17 +206,16 @@ wire w55;    //: /sn:0 {0}(589,266)(659,266){1}
   //: /end
   IUNIT iunit (._CLR(_reset), .CK(clk), .IR(DATA), .COUT(w35), ._Z(w34), ._GT(w33), ._LT(w32), ._rdpc(w59), ._incmar(w0), ._rd(w44), .spc(w43), ._ldhmdr(w42), ._ldpc(w41), ._ldmar(w40), ._ldmdr(w39), ._incpc(w38), ._rdmdr(w37), ._wrt(w36), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), .SA(w45));   //: @(456, 84) /sz:(132, 353) /p:[ Ti0>9 Ti1>9 Bi0>3 Ri0>0 Ri1>0 Ri2>0 Ri3>0 Lo0<0 Lo1<0 Lo2<0 Lo3<0 Lo4<0 Lo5<0 Lo6<0 Lo7<0 Lo8<0 Lo9<0 Lo10<0 Ro0<0 Ro1<0 Ro2<0 Ro3<0 Ro4<0 Ro5<0 Ro6<0 Ro7<0 Ro8<0 Ro9<0 Ro10<0 Ro11<0 Ro12<0 Ro13<0 ]
   //: joint g6 (_reset) @(351, 31) /w:[ 3 -1 4 6 ]
-  //: comment g7 @(43,7) /sn:0
-  //: /line:"This is the"
-  //: /line:"reset switch."
+  //: comment g7 @(13,12) /sn:0 /anc:1
+  //: /line:"Это переклчатель"
+  //: /line:"сброса"
   //: /end
-  //: comment g9 @(43,50)
-  //: /line:"This is the"
-  //: /line:"system clock."
-  //: /line:" "
+  //: comment g9 @(13,47) /anc:1
+  //: /line:"Это генератор"
+  //: /line:"синхросигнала"
   //: /end
   MEMORY memory (._CLR(_reset), .CK(clk), ._incmar(w0), ._rdpc(w59), ._ldhmdr(w42), .spc(w43), ._rd(w44), ._wrt(w36), ._rdmdr(w37), ._incpc(w38), ._ldmdr(w39), ._ldmar(w40), ._ldpc(w41), .DATA(DATA));   //: @(268, 84) /sz:(125, 353) /p:[ Ti0>7 Ti1>7 Ri0>1 Ri1>1 Ri2>1 Ri3>1 Ri4>1 Ri5>1 Ri6>1 Ri7>1 Ri8>1 Ri9>1 Ri10>1 Bt0=5 ]
-  //: comment g39 @(12,517) /sn:0
+  //: comment g39 @(19,519) /sn:0 /anc:1
   //: /line:" <a href=\"../index.v\">[НАЗАД]</a> "
   //: /end
   EUNIT eunit (._CLR(_reset), .CK(clk), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .SA(w45), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), ._LT(w32), ._GT(w33), ._Z(w34), .COUT(w35), .DATA(DATA));   //: @(660, 84) /sz:(128, 353) /p:[ Ti0>0 Ti1>0 Li0>1 Li1>1 Li2>1 Li3>1 Li4>1 Li5>1 Li6>1 Li7>1 Li8>1 Li9>1 Li10>1 Li11>1 Li12>1 Li13>1 Lo0<1 Lo1<1 Lo2<1 Lo3<1 Bt0=0 ]
@@ -248,15 +246,15 @@ input CK;    //: /sn:0 {0}(753,813)(742,813)(742,833)(618,833)(618,815){1}
 //: {14}(128,331)(128,253)(151,253){15}
 //: {16}(126,436)(62,436){17}
 reg [15:0] w38;    //: /sn:0 {0}(#:210,713)(300,713){1}
-input _CLR;    //: /sn:0 {0}(512,218)(512,201){1}
-//: {2}(514,199)(844,199)(844,327){3}
-//: {4}(842,329)(802,329){5}
-//: {6}(844,331)(844,770){7}
-//: {8}(842,772)(716,772)(716,808)(707,808){9}
-//: {10}(844,774)(844,808)(829,808){11}
-//: {12}(510,199)(409,199){13}
-//: {14}(405,199)(263,199)(263,248)(227,248){15}
-//: {16}(407,201)(407,302)(402,302){17}
+input _CLR;    //: /sn:0 {0}(707,808)(718,808)(718,770)(857,770){1}
+//: {2}(859,768)(859,570)(948,570)(948,461)(859,461)(859,331){3}
+//: {4}(859,327)(859,199)(514,199){5}
+//: {6}(510,199)(409,199){7}
+//: {8}(405,199)(263,199)(263,248)(227,248){9}
+//: {10}(407,201)(407,302)(402,302){11}
+//: {12}(512,201)(512,218){13}
+//: {14}(857,329)(802,329){15}
+//: {16}(859,772)(859,808)(829,808){17}
 supply0 [7:0] w3;    //: /sn:0 {0}(#:683,269)(683,251)(662,251){1}
 input _ldmar;    //: /sn:0 {0}(458,247)(458,314)(438,314){1}
 input _wrt;    //: /sn:0 {0}(691,706)(424,706){1}
@@ -314,7 +312,7 @@ wire [15:0] PC;    //: /sn:0 {0}(#:188,264)(188,309){1}
 //: {4}(188,313)(188,348){5}
 //: {6}(190,350)(264,350)(264,364){7}
 //: {8}(186,350)(112,350){9}
-wire w37;    //: /sn:0 {0}(713,761)(722,761)(722,818)(707,818){1}
+wire w37;    //: /sn:0 {0}(713,761)(734,761)(734,818)(707,818){1}
 wire DTR;    //: /sn:0 {0}(433,982)(565,982)(565,840){1}
 wire [7:0] w34;    //: /sn:0 {0}(#:555,834)(555,668)(571,668)(571,523){1}
 wire [15:0] w43;    //: /sn:0 {0}(#:363,297)(363,277){1}
@@ -366,19 +364,19 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g61 (w31) @(448, 763) /w:[ 2 8 1 -1 ]
   //: INOUT g8 (DATA) @(510,128) /sn:0 /R:3 /w:[ 13 ]
   //: joint g4 (_rd) @(510, 616) /w:[ 5 6 8 -1 ]
-  //: joint g3 (_CLR) @(512, 199) /w:[ 2 -1 12 1 ]
+  //: joint g3 (_CLR) @(512, 199) /w:[ 5 -1 6 12 ]
   //: joint g55 (CK) @(524, 436) /w:[ 6 -1 8 5 ]
   //: joint g86 (_wrt) @(422, 508) /w:[ 4 -1 6 3 ]
   //: IN g13 (_wrt) @(397,508) /sn:0 /w:[ 7 ]
   //: IN g34 (_ldpc) @(129,152) /sn:0 /w:[ 3 ]
   //: IN g37 (spc) @(205,380) /sn:0 /w:[ 1 ]
-  _GGREG8 #(10, 10, 20) g51 (.Q(RD), .D(mdr), .EN(w37), .CLR(_CLR), .CK(CK));   //: @(668,813) /sn:0 /w:[ 1 13 1 9 3 ]
-  //: joint g58 (_CLR) @(844, 772) /w:[ -1 7 8 10 ]
+  _GGREG8 #(10, 10, 20) g51 (.Q(RD), .D(mdr), .EN(w37), .CLR(_CLR), .CK(CK));   //: @(668,813) /sn:0 /w:[ 1 13 1 0 3 ]
   //: comment g89 @(37,543) /sn:0
-  //: /line:"This is the memory address line."
-  //: /line:"The address can be selected from"
-  //: /line:"the MAR (Memory Address Register)"
-  //: /line:"or from the PC (Program Counter)."
+  //: /line:"Это линия адресов памяти. Адрес"
+  //: /line:"может быть выбран из регистра MAR"
+  //: /line:"(Memory Address Register) или из"
+  //: /line:"программного счётчика PC"
+  //: /line:"(Program Counter)."
   //: /end
   //: IN g77 (_ldmdr) @(671,80) /sn:0 /w:[ 1 ]
   //: joint g76 (w9) @(178, 112) /w:[ 2 1 4 -1 ]
@@ -386,16 +384,16 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: IN g2 (_rd) @(480,616) /sn:0 /w:[ 9 ]
   _GGNAND2 #(6) g59 (.I0(!_wrt), .I1(w31), .Z(w37));   //: @(703,761) /sn:0 /w:[ 9 5 0 ] /eb:0
   //: GROUND g1 (w17) @(496,598) /sn:0 /w:[ 1 ]
-  _GGREG16 #(10, 10, 20) PC (.Q(PC), .D(w19), .EN(w14), .CLR(_CLR), .CK(CK));   //: @(188,253) /w:[ 0 1 1 15 15 ]
+  _GGREG16 #(10, 10, 20) PC (.Q(PC), .D(w19), .EN(w14), .CLR(_CLR), .CK(CK));   //: @(188,253) /w:[ 0 1 1 9 15 ]
   _GGBUFIF16 #(4, 6) g72 (.Z(DATA), .I(PC), .E(~_rdpc));   //: @(268,311) /sn:0 /w:[ 0 3 1 ]
   //: joint g64 (_wrt) @(422, 706) /w:[ 1 2 -1 8 ]
   _GGMUX4x8 #(12, 12) g11 (.I0(mdrin), .I1(w34), .I2(TD), .I3(w24), .S(w27), .Z(w13));   //: @(577,507) /sn:0 /R:2 /w:[ 5 1 1 1 0 1 ] /ss:0 /do:1
-  //: frame g16 @(110,659) /sn:0 /wi:762 /ht:347 /tx:"TTY Control"
+  //: frame g16 @(87,659) /sn:0 /wi:786 /ht:351 /tx:"Управление терминалом (TTY)"
   //: joint g10 (CK) @(128, 333) /w:[ 12 14 -1 11 ]
-  //: comment g87 @(210,776)
-  //: /line:"These dip switches specify the"
-  //: /line:"addresses for the tty status"
-  //: /line:"and data registers."
+  //: comment g87 @(212,793) /anc:1
+  //: /line:"Эти два DIP-переключателя определяют"
+  //: /line:"адреса регистров данных и состояния"
+  //: /line:"для терминала."
   //: /end
   //: joint g78 (PC) @(188, 350) /w:[ 6 5 8 -1 ]
   _GGADD16 #(132, 134, 126, 128) g28 (.A(w6), .B(w21), .S(w9), .CI(w20), .CO(w22));   //: @(178,85) /sn:0 /w:[ 0 1 3 1 0 ]
@@ -410,8 +408,8 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g75 (DATA) @(373, 213) /w:[ -1 2 1 16 ]
   _GGBUFIF8 #(4, 6) g7 (.Z(mdrin), .I(mdr), .E(_rd));   //: @(673,552) /sn:0 /R:2 /w:[ 3 11 0 ]
   _GGMUX2x8 #(8, 8) g9 (.I0(w13), .I1(w42), .S(_rd), .Z(w25));   //: @(763,273) /sn:0 /w:[ 0 0 3 0 ] /ss:0 /do:0
-  _GGREG8 #(10, 10, 20) g53 (.Q(w33), .D(w36), .EN(w23), .CLR(_CLR), .CK(CK));   //: @(790,813) /sn:0 /w:[ 1 1 0 11 0 ]
-  //: joint g57 (_CLR) @(844, 329) /w:[ -1 3 4 6 ]
+  _GGREG8 #(10, 10, 20) g53 (.Q(w33), .D(w36), .EN(w23), .CLR(_CLR), .CK(CK));   //: @(790,813) /sn:0 /w:[ 1 1 0 17 0 ]
+  //: joint g57 (_CLR) @(859, 329) /w:[ -1 4 14 3 ]
   _GGMUX2x16 #(8, 8) g31 (.I0(PC), .I1(mar), .S(~_incmar), .Z(w6));   //: @(96,360) /sn:0 /R:3 /w:[ 9 5 9 1 ] /ss:1 /do:0
   //: joint g71 (_ldhmdr) @(711, 103) /w:[ 2 -1 1 4 ]
   assign {w8, w5} = w4; //: CONCAT g15  @(615,165) /sn:0 /R:2 /w:[ 0 0 1 ] /dr:0 /tp:0 /drp:0
@@ -421,7 +419,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGXOR2x16 #(8) g39 (.I0(w18), .I1(w38), .Z(w28));   //: @(311,711) /sn:0 /w:[ 7 1 1 ] /eb:0
   //: joint g43 (w18) @(274, 552) /w:[ 2 1 -1 4 ]
   //: GROUND g48 (w16) @(545,867) /sn:0 /w:[ 0 ]
-  //: IN g88 (_CLR) @(512,220) /sn:0 /R:1 /w:[ 0 ]
+  //: IN g88 (_CLR) @(512,220) /sn:0 /R:1 /w:[ 13 ]
   //: joint g17 (DATA) @(510, 165) /w:[ 6 12 5 -1 ]
   _GGMUX2x16 #(8, 8) g25 (.I0(PC), .I1(mar), .S(~spc), .Z(w18));   //: @(274,380) /sn:0 /w:[ 7 3 0 0 ] /ss:0 /do:0
   //: VDD g29 (w20) @(252,70) /sn:0 /w:[ 0 ]
@@ -432,50 +430,56 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g63 (w15) @(643, 711) /w:[ 1 2 4 -1 ]
   _GGNOR2 #(6) g83 (.I0(!_incmar), .I1(!_ldmar), .Z(w46));   //: @(427,312) /sn:0 /R:2 /w:[ 0 1 1 ] /eb:0
   //: joint g74 (PC) @(188, 311) /w:[ 2 1 -1 4 ]
-  //: joint g5 (_CLR) @(407, 199) /w:[ 13 -1 14 16 ]
-  //: frame g14 @(536,27) /sn:0 /wi:372 /ht:394 /tx:"MDR Control"
+  //: joint g5 (_CLR) @(407, 199) /w:[ 7 -1 8 10 ]
+  //: frame g14 @(536,27) /sn:0 /wi:372 /ht:394 /tx:"Управление MDR"
   //: joint g56 (CK) @(618, 813) /w:[ 2 -1 4 1 ]
+  //: joint g94 (_CLR) @(859, 770) /w:[ -1 2 1 16 ]
   //: IN g80 (_incmar) @(325,241) /sn:0 /R:3 /w:[ 7 ]
   //: joint g79 (mar) @(363, 351) /w:[ -1 1 2 4 ]
   //: joint g44 (w18) @(274, 708) /w:[ 6 5 -1 8 ]
   assign w34 = {w16, RTS, DTR}; //: CONCAT g47  @(555,835) /sn:0 /R:1 /w:[ 0 1 1 1 ] /dr:0 /tp:0 /drp:1
+  //: comment g92 @(748,473) /sn:0
+  //: /line:"Это линия данных. Данные читаются "
+  //: /line:"и записываются в регистр MDR"
+  //: /line:"(Memory data register)."
+  //: /end
   //: joint g24 (CK) @(128, 436) /w:[ 9 10 16 -1 ]
   //: joint g85 (w15) @(434, 711) /w:[ 5 6 8 -1 ]
   _GGOR3 #(8) g84 (.I0(_wrt), .I1(w15), .I2(w31), .Z(w11));   //: @(465,512) /sn:0 /w:[ 5 7 9 1 ] /eb:0
-  _GGREG8 #(10, 10, 20) mdr (.Q(mdr), .D(w25), .EN(w), .CLR(_CLR), .CK(CK));   //: @(763,334) /w:[ 7 1 0 5 7 ]
+  _GGREG8 #(10, 10, 20) mdr (.Q(mdr), .D(w25), .EN(w), .CLR(_CLR), .CK(CK));   //: @(763,334) /w:[ 7 1 0 15 7 ]
   _GGBUFIF16 #(4, 6) g21 (.Z(DATA), .I(w2), .E(~_rdmdr));   //: @(626,246) /sn:0 /R:2 /w:[ 11 1 1 ]
   //: joint g36 (_ldpc) @(146, 152) /w:[ 1 -1 2 4 ]
   //: IN g23 (_ldmar) @(458,245) /sn:0 /R:3 /w:[ 0 ]
   _GGNOR1x16 #(1) g41 (.I0(w28), .Z(w15));   //: @(355,711) /sn:0 /w:[ 0 9 ] /eb:0
   //: DIP TTYSTATUS (w38) @(172,713) /R:1 /w:[ 0 ] /st:16 /dn:1
-  //: frame g93 @(354,466) /sn:0 /wi:421 /ht:164 /tx:"Main Memory"
+  //: frame g93 @(349,467) /sn:0 /wi:389 /ht:160 /tx:"Основная память"
   //: joint g81 (_incmar) @(325, 264) /w:[ 4 6 -1 3 ]
   _GGMUX2x8 #(8, 8) g54 (.I0(mdr), .I1(w1), .S(w26), .Z(w36));   //: @(790,740) /sn:0 /w:[ 0 0 1 0 ] /ss:0 /do:0
   _GGXOR2x16 #(8) g40 (.I0(w18), .I1(w40), .Z(w30));   //: @(312,763) /sn:0 /w:[ 9 1 1 ] /eb:0
   //: joint g60 (w31) @(633, 763) /w:[ 4 6 3 -1 ]
-  //: comment g90 @(211,844) /sn:0
-  //: /line:"This is the tty.  When simulation mode"
-  //: /line:"starts, a tty window will be popped up"
-  //: /line:"corresponding to this device.  The device"
-  //: /line:"may be accessed through the simulated CPU"
-  //: /line:"by reading or writing the addresses indicated"
-  //: /line:"by the dip switches TTYSTATUS and TTYDATA."
+  //: comment g90 @(212,843) /sn:0 /anc:1
+  //: /line:"Это терминал. Когда начинается симуляция,"
+  //: /line:"всплывает окно терминала, связанное с этим"
+  //: /line:"устройством. К устройству можно получить"
+  //: /line:"доступ из эмулируемого процессора, читая и"
+  //: /line:"записывая данные по адресам, установленным"
+  //: /line:"DIP-переключателями TTYSTATUS и TTYDATA."
   //: /end
   _GGNOR2 #(6) g70 (.I0(!_ldhmdr), .I1(!_ldmdr), .Z(w));   //: @(874,280) /sn:0 /R:3 /w:[ 3 0 1 ] /eb:0
   _GGBUF16 #(4) g22 (.I(DATA), .Z(w4));   //: @(574,165) /sn:0 /w:[ 9 0 ]
-  _GGREG16 #(10, 10, 20) mar (.Q(mar), .D(w43), .EN(w46), .CLR(_CLR), .CK(CK));   //: @(363,307) /w:[ 0 0 0 17 13 ]
+  _GGREG16 #(10, 10, 20) mar (.Q(mar), .D(w43), .EN(w46), .CLR(_CLR), .CK(CK));   //: @(363,307) /w:[ 0 0 0 11 13 ]
   //: IN g0 (CK) @(60,436) /sn:0 /w:[ 17 ]
   _GGMUX2x16 #(8, 8) g26 (.I0(w9), .I1(DATA), .S(~_ldpc), .Z(w19));   //: @(188,204) /sn:0 /w:[ 0 15 5 0 ] /ss:0 /do:0
   _GGNOR2 #(6) g35 (.I0(!_incpc), .I1(!_ldpc), .Z(w14));   //: @(244,129) /sn:0 /w:[ 0 0 0 ] /eb:0
   //: joint g45 (mdrin) @(559, 552) /w:[ 2 4 1 -1 ]
   assign w27 = {w31, w15}; //: CONCAT g46  @(638,667) /sn:0 /R:1 /w:[ 1 7 3 ] /dr:0 /tp:0 /drp:1
-  TTY tty0 (.TD(TD), .DSR(DSR), .RTS(RTS), .RD(RD), .CTS(CTS), .DTR(DTR));   //: @(396, 962) /symbol:181161944 /w:[ 0 0 0 0 1 0 ]
+  TTY tty0 (.TD(TD), .DSR(DSR), .RTS(RTS), .RD(RD), .CTS(CTS), .DTR(DTR));   //: @(396, 962) /symbol:149698312 /w:[ 0 0 0 0 1 0 ]
   //: joint g82 (_incmar) @(325, 281) /w:[ 1 2 -1 8 ]
   //: GROUND g66 (w1) @(825,693) /sn:0 /w:[ 1 ]
   //: DIP TTYDATA (w40) @(174,765) /R:1 /w:[ 0 ] /st:17 /dn:1
   assign w2 = {w3, mdr}; //: CONCAT g18  @(657,246) /sn:0 /R:2 /w:[ 0 1 9 ] /dr:0 /tp:0 /drp:1
   //: joint g12 (_rd) @(671, 616) /w:[ 2 1 4 -1 ]
-  //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Address Resolution"
+  //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Разрешение адреса"
   //: GROUND g30 (w21) @(220,65) /sn:0 /w:[ 0 ]
   //: IN g33 (_incpc) @(131,126) /sn:0 /w:[ 1 ]
   //: GROUND g49 (w24) @(595,544) /sn:0 /w:[ 0 ]
@@ -907,10 +911,9 @@ wire w55;    //: /sn:0 {0}(1025,348)(951,348)(951,333){1}
 wire [7:0] extra;    //: {0}(#:50:494,1187)(504,1187)(504,1234)(446,1234){1}
 //: enddecls
 
-  //: comment g61 @(366,789)
-  //: /line:"This is the low half"
-  //: /line:"of the microinstruction"
-  //: /line:"memory."
+  //: comment g61 @(366,789) /anc:1
+  //: /line:"Это нижняя часть"
+  //: /line:"памяти микрокода."
   //: /end
   _GGNOR2 #(6) g4 (.I0(!w55), .I1(!ww), .Z(_SA));   //: @(880,356) /sn:0 /R:2 /w:[ 11 0 0 ] /eb:0
   //: GROUND g8 (w11) @(372,1131) /sn:0 /w:[ 0 ]
@@ -920,13 +923,13 @@ wire [7:0] extra;    //: {0}(#:50:494,1187)(504,1187)(504,1234)(446,1234){1}
   _GGREG32 #(10, 10, 20) g34 (.Q(mp_wrd0), .D(w26), .EN(w30), .CLR(w19), .CK(CK));   //: @(429,709) /sn:0 /R:1 /w:[ 0 0 0 0 3 ]
   //: IN g3 (CK) @(81,511) /sn:0 /w:[ 21 ]
   //: joint g13 (mp_nxtaddr) @(331, 731) /w:[ -1 2 8 1 ]
-  //: frame g86 @(741,228) /sn:0 /wi:482 /ht:251 /tx:"Condition Code Handling"
+  //: frame g86 @(741,228) /sn:0 /wi:482 /ht:251 /tx:"Управление условными кодами"
   //: joint g37 (CK) @(264, 511) /w:[ 6 -1 8 5 ]
   _GGREG8 #(10, 10, 20) IR (.Q(IRR), .D(w6), .EN(_ldir), .CLR(_CLR), .CK(CK));   //: @(151,98) /w:[ 1 5 1 9 19 ]
-  //: comment g65 @(101,14)
-  //: /line:"The IR and OPR registers store the"
-  //: /line:"instruction and operand bytes of "
-  //: /line:"the current instruction. "
+  //: comment g65 @(137,15) /anc:1
+  //: /line:"Регистры IR и OPR хранят"
+  //: /line:"инструкцию и байт операнда"
+  //: /line:"для текущей операции. "
   //: /end
   //: OUT g76 (_DOUT) @(701,1137) /sn:0 /w:[ 0 ]
   //: GROUND g2 (w9) @(380,534) /sn:0 /w:[ 0 ]
@@ -944,7 +947,7 @@ wire [7:0] extra;    //: {0}(#:50:494,1187)(504,1187)(504,1234)(446,1234){1}
   //: OUT g50 (_CLQ) @(690,714) /sn:0 /w:[ 0 ]
   _GGMUX4x8 #(12, 12) g10 (.I0(w27), .I1(w23), .I2(w1), .I3(w12), .S(w14), .Z(w13));   //: @(331,417) /sn:0 /w:[ 3 1 0 1 1 0 ] /ss:0 /do:0
   assign w48 = {COUT, _Z, _LT, _GT}; //: CONCAT g78  @(1110,353) /sn:0 /R:2 /w:[ 0 0 1 1 1 ] /dr:0 /tp:0 /drp:1
-  //: frame g87 @(26,611) /sn:0 /wi:827 /ht:641 /tx:"Microinstruction Decode"
+  //: frame g87 @(26,611) /sn:0 /wi:827 /ht:641 /tx:"Декодирование микроопераций"
   //: GROUND g19 (w28) @(839,358) /sn:0 /w:[ 0 ]
   //: joint g32 (w55) @(951, 331) /w:[ -1 2 8 1 ]
   //: joint g27 (w32) @(937, 386) /w:[ 2 4 1 -1 ]
@@ -966,16 +969,15 @@ wire [7:0] extra;    //: {0}(#:50:494,1187)(504,1187)(504,1234)(446,1234){1}
   _GGMUX2x4 #(8, 8) g68 (.I0(w41), .I1(w39), .S(w43), .Z(SA));   //: @(725,818) /sn:0 /R:1 /w:[ 0 1 0 0 ] /ss:1 /do:1
   //: joint g48 (IDATA) @(540, 654) /w:[ 2 1 4 -1 ]
   //: GROUND g43 (w20) @(455,1042) /sn:0 /w:[ 1 ]
-  //: comment g62 @(370,940)
-  //: /line:"This is the high half"
-  //: /line:"of the microinstruction"
-  //: /line:"memory."
+  //: comment g62 @(364,966) /anc:1
+  //: /line:"Это верхняя часть"
+  //: /line:"памяти микрокода."
   //: /end
   //: GROUND g17 (w23) @(360,367) /sn:0 /w:[ 0 ]
   _GGNOR2 #(6) g25 (.I0(!w55), .I1(!w32), .Z(_SA0));   //: @(890,384) /sn:0 /R:2 /w:[ 13 0 0 ] /eb:0
   _GGMUX2x5 #(8, 8) g73 (.I0(w7), .I1(w49), .S(w42), .Z(FUNC));   //: @(725,956) /sn:0 /R:1 /w:[ 1 1 0 1 ] /ss:1 /do:1
   //: joint g29 (ww) @(945, 358) /w:[ 2 4 1 -1 ]
-  //: frame g88 @(176,317) /sn:0 /wi:311 /ht:239 /tx:"Microcode Next Address Generation"
+  //: frame g88 @(176,317) /sn:0 /wi:311 /ht:239 /tx:"Генерация следующего адреса микрооперации"
   //: OUT g52 (_ldmar) @(701,1007) /sn:0 /w:[ 1 ]
   //: GROUND g42 (w30) @(455,678) /sn:0 /w:[ 1 ]
   //: joint g63 (CK) @(264, 771) /w:[ 2 4 -1 1 ]
@@ -989,31 +991,27 @@ wire [7:0] extra;    //: {0}(#:50:494,1187)(504,1187)(504,1234)(446,1234){1}
   assign {w4, w55, ww, w32} = w3; //: CONCAT g79  @(1030,353) /sn:0 /w:[ 1 0 3 3 1 ] /dr:0 /tp:0 /drp:0
   //: joint g80 (CK) @(102, 276) /w:[ 12 14 -1 11 ]
   //: comment g84 @(694,22)
-  //: /line:"This is a trival example of an"
-  //: /line:"instruction unit.  The mpc register"
-  //: /line:"contains the micro-instruction"
-  //: /line:"program counter, and the two"
-  //: /line:"registers on the data out of ROMs"
-  //: /line:"m1 and m2 are the current micro-"
-  //: /line:"instructions.  Note that since these"
-  //: /line:"are two separate registers the a"
-  //: /line:"single cycle jump delay."
+  //: /line:"Это тривиальный пример блока инструкций."
+  //: /line:"Регистр mpc - это программный счётчик"
+  //: /line:"микроопераций, а два регистра на выходах"
+  //: /line:"ПЗУ m1 и m2 - это текущая микрооперация."
+  //: /line:"Заметьте, что поскольку это два различных"
+  //: /line:"регистра, существует задержка в один цикл."
   //: /end
   //: IN g24 (_LT) @(1168,345) /sn:0 /R:2 /w:[ 0 ]
   //: IN g21 (COUT) @(1163,375) /sn:0 /R:2 /w:[ 1 ]
   //: OUT g36 (_LDDATA) @(690,734) /sn:0 /w:[ 0 ]
-  //: comment g85 @(16,131) /sn:0
-  //: /line:"This block"
-  //: /line:"decodes"
-  //: /line:"insructions"
-  //: /line:"producing"
-  //: /line:"a map index,"
-  //: /line:"register"
-  //: /line:"numbers,"
-  //: /line:"a function"
-  //: /line:"code and a"
-  //: /line:"condition"
-  //: /line:"code."
+  //: comment g85 @(15,128) /sn:0 /anc:1
+  //: /line:"Этот блок"
+  //: /line:"декодирует"
+  //: /line:"инструкции"
+  //: /line:"вычисляя"
+  //: /line:"индексы,"
+  //: /line:"номера"
+  //: /line:"регистров,"
+  //: /line:"функциональный"
+  //: /line:"и условный"
+  //: /line:"коды."
   //: /end
   //: OUT g41 (spc) @(701,1067) /sn:0 /w:[ 1 ]
   //: IN g23 (_Z) @(1164,361) /sn:0 /R:2 /w:[ 0 ]
@@ -1408,7 +1406,7 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
   //: IN g11 (AOP) @(418,479) /sn:0 /w:[ 0 ]
   //: IN g10 (_LDQ) @(671,739) /sn:0 /w:[ 0 ]
   //: OUT g28 (_GT) @(642,560) /sn:0 /w:[ 0 ]
-  //: frame g50 @(422,693) /sn:0 /wi:442 /ht:238 /tx:"Q Register Handling"
+  //: frame g50 @(422,693) /sn:0 /wi:442 /ht:238 /tx:"Управление регистром Q"
   //: joint g32 (_CLR) @(381, 285) /w:[ 2 -1 1 4 ]
   //: OUT g27 (_Z) @(643,543) /sn:0 /w:[ 0 ]
   _GGMUX4x16 #(12, 12) g19 (.I0(w21), .I1(DATA), .I2(w35), .I3(w36), .S(AOP), .Z(w38));   //: @(480,479) /sn:0 /w:[ 5 9 0 0 1 0 ] /ss:0 /do:0

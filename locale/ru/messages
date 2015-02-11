@@ -2505,64 +2505,63 @@ ho.opt.sec.open		-begin-
 -end-
 
 ho.opt.sec.writemem	-begin-
-Enabling the $writememb() and $writememh() system tasks
-will allow user circuits to write to any file that the
-user invoking TkGate has access to.  Enabling this option
-has a high security risk.
+Включение системных задач $writememb() и $writememh()
+позволит пользовательским схемам записывать файлы в
+соответствии с правами, с которыми запущен TkGate.
+Включение этой возможности имеет высокий риск,
+связанный с безопасностью.
 -end-
 
 ho.opt.sec.enqueue	-begin-
-Enabling the $tkg$recv() and $tkg$send() system tasks
-will enable virtual peripheral devices to send messages
-to TkGate circuits.  Enabling this option has a low
-security risk.
+Включение системных задач $tkg$recv() и $tkg$send()
+позволит виртуальным периферийным устройствам посылать
+команды пользовательским схемам TkGate. Включение этой
+возможности не несёт особого риска.
 -end-
 
 ho.opt.ssave		-begin-
-Perform consistency checks on circuit
-files before overwriting existing save
-file to verify that there are no problems
-with the save file.
+Выполнять проверки целостности файлов схем перед
+ерезаписью существующих сохранённых файлов для
+подтверждения отсутствия ошибок сохранения.
 -end-
 
 ho.opt.sec.exec		-begin-
-Fully enabling the $tkg$exec() system task allows user
-circuit to execute arbitrary tcl/tk commands including
-the ability to execute arbitrary shell commands.  Enabling
-this option has a very high security risk.
+Полное разрешение системной задачи $tkg$exec() позволит
+пользовательским схемам выполнять произвольные команды tcl/tk
+включая возможность выполнять любые команды оболочки.
+Включение этой возможности имеет высокий риск,
+связанный с безопасностью.
 -end-
 
 ho.opt.sec.regexec		-begin-
-Enabling the $tkg$exec() system task for registered functions
-allows user circuits to execute only tcl/tk commands that have
-been registered as safe.  As long has all Virtual Peripheral
-Device files are trusted, enabling $tkg$exec() at this level
-should prevent dangerous commands from being executed.  Enabling
-this option has a medium security risk.
+Включение системной задачи $tkg$exec() для зарегистрированных функций
+позволит пользовательским схемам выполнять только те команды tcl/tk
+которые были зарегистрированы как безопасные. До тех пор, пока все
+файлы виртуальных периферийных устройств являются надёжными включение
+этой возможности должно предотвращать исполнение опасных команд.
+Эта функция имеет средний уровень риска.
 -end-
 
 ho.opt.sec.noexec		-begin-
-Fully disabling the $tkg$exec() command will prevent user
-circuits from executing tcl/tk commands.  This will make it
-impossible to use Virtual Peripheral Devices.  Selecting this
-option has a minimal security risk.
+Полный запрет системной задачи $tkg$exec() не позволит пользовательским
+схемам выполнять команды tcl/tk, что приведёт к невозможности использовать
+виртуальные периферийные устройства. Выбор этого варианта несёт наименьший
+риск для безопасности.
 -end-
 
 ho.opt.sec.stop		-begin-
-If this setting is enabled, the simulation will be terminated
-as soon as any attempt is made by the user circuit to execute
-a disabled feature.
+Если включена эта возможность, то при первой попытке выполнить запрещённую
+команду симуляция будет прервана.
 -end-
 
 ho.opt.sec.warn		-begin-
-If this setting is enabled, the simulation will continue, but
-an error message will be displayed when any attempt is made by
-the user circuit to execute a disabled feature.
+Если включена эта возможность, то при попытке выполнить запрещённую
+команду симуляция будет продолжена, но будет выведено сообщение об ошибке.
 -end-
 
 ho.opt.sec.ignore	-begin-
-If this setting is enabled, use of any disabled features will
-be ignored and no error messages will be displayed.
+Если включена эта возможность, то попытки выполнить запрещённую
+команду будут игнорироваться не будет выведено никаких сообщений.
 -end-
 
 ho.opt.html.browser	-begin-
