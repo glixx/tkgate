@@ -3,7 +3,7 @@ dnl	This file is an input file used by the GNU "autoconf" program to
 dnl	generate the file "configure", which is run during TkGate installation
 dnl	to configure the system for the local environment.
 
-AC_INIT([tkgate],[2.0-b10])
+AC_INIT([tkgate],[2.0-b10],[hansen@tkgate.org],[tkgate],[http://www.tkgate.org])
 AM_INIT_AUTOMAKE
 AC_PREREQ(2.57)
 AC_CONFIG_HEADER(config.h)
@@ -19,7 +19,7 @@ AC_DEFINE(TKGATE_VERSION_SUFFIX,"-b10",					[TkGate version suffix])
 AC_DEFINE(TKGATE_FULL_VERSION,	(TKGATE_VERSION TKGATE_VERSION_SUFFIX), [Full TkGate version number])
 AC_DEFINE(TKGATE_DESCRIPTION,	"Digital Circuit Editor and Simulator",	[Tkgate short description])
 AC_DEFINE(TKGATE_LOCALDOC,	"file:@H/doc/index.html", 		[Local documentation location])
-AC_DEFINE(TKGATE_COPYRIGHT, 	"Copyright (C) 1987-2009 by Jeffery P. Hansen", [Copyright notice])
+AC_DEFINE(TKGATE_COPYRIGHT, 	"Copyright (C) 1987-2015 by Jeffery P. Hansen", [Copyright notice])
 AC_DEFINE(TKGATE_MAILCONTACT,	"hansen@tkgate.org",			[Email address for support])
 AC_DEFINE(TKGATE_HOMEPAGE,	"http://www.tkgate.org",		[TkGate web page])
 
@@ -122,7 +122,6 @@ if test "${CFLAGS+set}" != "set" ; then
 fi
 
 # Checks for programs.
-#AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_YACC
 AM_PROG_LEX
@@ -132,7 +131,6 @@ AC_PROG_RANLIB
 AC_PROG_CPP
 AC_PROG_INSTALL
 AC_PROG_RANLIB
-#AC_PROG_LIBTOOL
 
 # Checks for header files.
 AC_PATH_XTRA
