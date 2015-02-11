@@ -1950,82 +1950,82 @@ ho.net.hwire2		Многоразрядный проводник (Скрытое �
 ho.net.reg		Одноразрядный регистр
 ho.net.reg2		Многоразрядный регистр
 
-ho.opt.tool.file		Save, load of circuit files
-ho.opt.tool.edit		Cut, Paste and Find operations
-ho.opt.tool.gateopt		Component rotation and alignment operations
-ho.opt.tool.gateprop		Basic editing of components
-ho.opt.tool.undo		Undo and redo operations
-ho.opt.tool.zoom		Zoom in and zoom out
-ho.opt.tool.mode		Select the editing tool
-ho.opt.tool.module		Create, delete, rename,etc. of module definitions
-ho.opt.tool.tech		Select default technology for components
-ho.opt.tool.simctl		Start, stop and pause of simulator
-ho.opt.tool.simaux		Auxliary simulator commands (read/write memory files, etc.)
-ho.opt.tool.simmode		Choose between the select and scroll tool in simulator.
-ho.opt.tool.symmode		Selecting editing tool in symbol editor
-ho.opt.tool.symedit		Cut and paste operations for symbol editor
-ho.opt.tool.symport		Port rotation operations for symbol editor
-ho.opt.tool.symshift		Shift the bit map or portion of bitmap
-ho.opt.tool.symopr		Miscellaneous symbol editor operations
+ho.opt.tool.file		Сохранение и загрузка файлов схем
+ho.opt.tool.edit		Операции копирования, вырезания и вставки
+ho.opt.tool.gateopt		Операции вращения и выравнивания компонентов
+ho.opt.tool.gateprop		Базоваое редактирование компонентов
+ho.opt.tool.undo		Операции отмены и повторения действий
+ho.opt.tool.zoom		Увеличение и уменьшение
+ho.opt.tool.mode		Инструменты выделения и редактиорвоания
+ho.opt.tool.module		Операции над определениями модулей
+ho.opt.tool.tech		Выбор технологии по умолчанию для компонентов
+ho.opt.tool.simctl		Управление симулятором
+ho.opt.tool.simaux		Вспомогательные команды симулятора (чтение/запись файлов памяти и др.)
+ho.opt.tool.simmode		Выбор инструментов выделения и прокрутки в симуляторе.
+ho.opt.tool.symmode		Выбор инструмента в редакторе символов
+ho.opt.tool.symedit		Операции копирования вырезания и вставки в редакторе символов
+ho.opt.tool.symport		Операции вращения портов в редакторе символов
+ho.opt.tool.symshift		Сдвиг изображения или части в редакторе
+ho.opt.tool.symopr		Дополнительные операции редактирования символов
 
 ho.opt.editor.movesel		-begin-
-If this option is enabled, a selected block of
-text can be grabbed with the mouse pointer and
-moved to a new location.
+Если включена эта возможность, выделенный блок
+текста может быть захвачен курсором мыши и
+перемещён в новое место.
 -end-
 
 ho.opt.editor.format		-begin-
-If enabled, verilog source code will be automatically
-indented when pressing the tab key.
+Если включено, исходный текст Verilog будет
+снабжаться отступами при нажатии клавиши tab.
 -end-
 
 ho.opt.editor.indent		-begin-
-Number of spaces to indent per level.
+Число пробелов в отступе на уровень.
 -end-
 
 ho.opt.editor.rtab		-begin-
-Automatically indent the current line
-and tab to the appropriate level when
-pressing the return key.
+Автоматический отступ текущеё строки и
+табуляция на нужный уровень при нажатии
+Enter.
 -end-
 
 ho.opt.editor.beginindent	-begin-
-Causes a begin..end block to be indented
-to the same level as its parent block.
+Заставляет блок begin..end получать отступ
+на тот же уровень, что и родительский.
 -end-
 
 ho.opt.editor.colorize		-begin-
-Enable context-dependent colorization of
-code according to the options listed below.
+Включет подстветку синтаксиса в соответствии
+с настройками, перечисленными ниже.
 -end-
 
 ho.hdl.splitexp		-begin-
-Multiple modules in the HDL text will
-be split into different modules defining
-new modules as necessary.  Any name
-conflicts will be resolved by slightly
-modifying module names as necessary.
+Множественный модули в тексте Verilog 
+будут разделены с созданием новых модулей
+при необходимости. Конфликты имён
+будут разрешены небольшими изменениями
+повторяющихся названий.
 -end-
 
 ho.hdl.commentexp	-begin-
-Modules other than the first module or
-module matching the expected name will
-be converted to HDL comments.
+Все модули кроме первого или с именами,
+отличными от ожидаемых будут преобразованы
+в комментарии Verilog.
 -end-
 
 ho.hdl.autoeditexp	-begin-
-Automatically edit the HDL description
-to fix the module name.
+Автоматически изменять Verilog-описание для
+исправления имени модуля.
 -end-
 
 ho.hdl.cancelexp	-begin-
-Take no action and continue editing
-the current module.
+Не выполнять никаких действий и продолжить
+редактирование текущего модуля.
 -end-
 
 ho.hdl.ignoreexp	-begin-
-Ignore the inconsistency and continue
-with the selected action.
+Игнорировать нессоответствие и продолжить
+выбранное действие.
 -end-
 
 ho.new		-begin-
@@ -2048,10 +2048,10 @@ ho.symed.tab.select	-begin-
 -end-
 
 ho.simmove	-begin-
-Select wires and modules, flip
-switches and enter dip values.
-Clicking and holding on a wire
-will show its current  value.
+Выбор проводников и модулей, щёлкание
+переключателями и ввод значений в DIP-переключатели.
+Нажатие и удерживание левой кнопки мыши по проводнику
+позволяет видеть текущее значение.
 -end-
 
 
@@ -2090,17 +2090,16 @@ ho.bitw		-begin-
 -end-
 
 ho.ipanel.select	-begin-
-Use "standard" modules
-for regular rectangular
-interfaces.  Use "symbol"
-modules for custom
-bitmaped symbols.
+Используйте "стандартные" модули
+для обычных прямоугольных интерфейсов.
+Используйте "символы" для произвольных
+изображений интерфейсов.
 -end-
 
 ho.ipanel.addport	-begin-
-Add a port to the module.  You
-can also double-click after the
-last item to add port.
+Добавить порт к модулю. Можно
+также дважды щёлкнуть мышью после последнего
+элемента для создания нового порта.
 -end-
 
 ho.ipanel.deleteport	-begin-
@@ -2108,9 +2107,10 @@ ho.ipanel.deleteport	-begin-
 -end-
 
 ho.ipanel.editport	-begin-
-Edit the selected port.  You
-can also double-click to edit
-a field in a port.
+Редактировать выделенный порт.
+Также можно дважды щёлкнуть на
+любом поле описания порта для его
+изменения.
 -end-
 
 ho.ipanel.generate	-begin-
@@ -2230,44 +2230,46 @@ ho.simstep	-begin-
 -end-
 
 ho.simclock	-begin-
-Step a fixed number of clock
-cycles.  Open the simulation options
-window to set the step size.
+Шаг на фиксированное число шагов синхросигнала.
+Раземр шага можно установить в настройках
+симуляции.
 -end-
 
 ho.simstop	-begin-
-End the current simulation
-and return to edit mode.
+Завершить текущую симуляцию и вернуться
+в режим редактирования схемы.
 -end-
 
 ho.simbreak	-begin-
-Edit the current breakpoints.  Simulation
-will be halted when a breakpoint condition
-becomes true.  Breakpoints can be edited
-in both simulation mode and edit mode.
+Редактирование точек остановки. Симуляция
+будет прервана, когда условие остановки
+станет истинным. Точки остановки можно
+изменять как в режиме редактирования схемы,
+так и в режиме симуляции.
 -end-
 
 ho.simexec	-begin-
-Manage the set of active scripts.
+Управление набором активных скриптов.
 -end-
 
 ho.simoptions	-begin-
-Set various options that control the simulation.
+Установка различных параметров,
+управляющих симуляцией.
 -end-
 
 ho.simload	-begin-
-Load memory with contents of
-a .mem file.
+Загрузить память содержимым 
+.mem файла.
 -end-
 
 ho.simdump	-begin-
-Dump the contents of a memory
-to a .mem file.
+Дамп содержимого памяти в
+.mem файл.
 -end-
 
 ho.simview	-begin-
-View/modify the contents
-of a memory (RAM or ROM).
+Просмотр/изменение содержимого
+памяти (ОЗУ или ПЗУ).
 -end-
 
 ho.modlist	-begin-
@@ -2297,61 +2299,58 @@ ho.ports	-begin-
 -end-
 
 ho.status.logo		-begin-
-Simulation status indicator.  If the iron gate
-logo is shown, TkGate is in edit mode.  If the
-quadrapedal AND gate is shown, TkGate is in
-simulation mode.  If the AND gate is stationary,
-the simulation is paused, and if it is walking
-the simulation is running.
+Индикатор состояния программы. Если показан
+логотип Чугунные ворота, TkGate в режиме редактирования.
+Если показан четвероногий вентиль И, TkGate в режиме
+симуляции. Если вентиль И не движется, симуляция
+приостановлена, а если он бежит, симуляция запущена.
 -end-
 
-ho.status.msg		Messages from TkGate are displayed here.
+ho.status.msg		Здесь отображаются сообщения TkGate.
 
-ho.status.block		The stack of modules being edited.
+ho.status.block		Стек модулей, которые редактируются.
 
 ho.status.file		-begin-
-The current file being edited.  A '*' indicates
-that the buffer has been modifed since
-the last save.
+Текущий редактируемый файл. Символ '*' показывает,
+что файл был изменён с момента последнего сохранения.
 -end-
 
-ho.print.selall		Print all modules currently loaded by TkGate.
-ho.print.selcur		Print only the current module in the TkGate edit window.
+ho.print.selall		Печать всех модулей, загруженных в TkGate.
+ho.print.selcur		Печать только выбранного модуля в области редактирования TkGate.
 ho.print.seluse		-begin-
-Print all modules "in use". In use modues are 
-those that are a decendent of the root module.
+Печать всех используемых модулей (тех, что
+являются потомками модуля верхнего уровня).
 -end-
 
-ho.print.fulltrace	Print the entire trace.
+ho.print.fulltrace	Печать всей трассировки.
 
 ho.print.parttrace	-begin-
-Print a portion of the trace.  Enter the starting
-and stopping times in the entry windows below, or
-use the right mouse button to select a range on the
-scope window (use shift-right to select long ranges).
+Печать части трассировки. Введите начальное и конечное
+время в полях ввода или используйте правую кнопку мыши
+для выделения диапазона в окне логического анализатора
+(зажмите Shift для выбора длинных диапазонов).
 -end-
 
-ho.print.parttracestart	Starting time of trace output.
-ho.print.parttraceend	Ending time of trace output.
+ho.print.parttracestart	Начальное время вывода трассировки.
+ho.print.parttraceend	Конечное время вывода трассировки.
 
 
 ho.print.selsel		-begin-
-Print only the modules selected below.  Use
-the control key to select multiple modules.
+Печать только модулей, выбранных снизу.
+Используйте клавишу Ctrl для выбора
+нескольких модулей.
 -end-
 
-ho.print.modlist	Select the modules to be printed.
+ho.print.modlist	Выбор модулей для печати.
 
 ho.print.timegraph	-begin-
-The display of the region selected
-to be printed is shown here.  The
-green area is the entire range of
-trace data available, and the grey
-area shows the area to be printed.
-Use the selectors to the left to
-select a region, or select the region
-in the scope window before bringing 
-up this diaglog box. 
+Здесь представлена область, выбранная для
+печати. Зелёная зона - это весь доступный
+диапазон данных трассировки, а серая обозначает
+выбранный для печати фрагмент. Используйте
+выделители слева для обозначения требуемой
+области или выберите область в окне логического
+анализатора перед тем, как вызвать этот диалог.
 -end-
 
 ho.circuit.discchg	-begin-
@@ -2405,41 +2404,39 @@ ho.cmd.bitw		-begin-
 -end-
 
 ho.edgat.signam		-begin-
-The name of the selected signal
-on the selected component.  You
-can change the name of the signal
-by editing it here.
+Имя выделенного сигнала у выделенного
+компонента. Можно изменять имя сигнала,
+редактирую его здесь.
 -end-
 
 ho.edgat.port		-begin-
-The name of the port for this
-signal on the component.  This
-field can only be edited for
-module instances.
+Имя порта выделенного сигнала у
+выделенного компонента. Это поле
+можно изменять только у экземпляров
+модулей.
 -end-
 
 ho.edgat.iolab		-begin-
-The direction of the selected
-signal on the selected component.
-This field can only be edited
-for module instances.
+Направление выделенного сигнала
+у выделенного компонента. Это поле
+можно изменять только у экземпляров
+модулей.
 -end-
 
 ho.edgat.bitlab		-begin-
-The bit width of the selected
-signal on the selected component.
-You can change the bitwidth by
-editing it here.
+Разрядность выделенного сигнала у
+выделенного компонента. Здесь
+можно изменить разрядность.
 -end-
 
-ho.edgat.cycle		The total number of epochs in a clock cycle.
-ho.edgat.phase		The starting point of the cycle (in percent).
-ho.edgat.duty		The percent of the cycle, the clock is low.
+ho.edgat.cycle		Общее число эпох в цикле синхронизации.
+ho.edgat.phase		Стартовая позиция цикла (в процентах).
+ho.edgat.duty		Доля цикла, в течении которой синхросигнал имеет низкий уровень.
 
 
 ho.edgat.hide		-begin-
-Set this flag to disable
-display of component names.
+Установить этот флаг для отмены
+отображения имён компонентов.
 -end-
 
 ho.edgat.gtype		Тип компонента.
@@ -2449,60 +2446,62 @@ ho.edgat.gx		Координата X компонента.
 ho.edgat.gy		Координата Y компонента.
 
 ho.edgat.swstate	-begin-
-The initial state of the switch to use when
-starting a simulation.
+Начальное положение переключателя, которое будет
+использовано после начала симуляции.
 -end-
 
 ho.edgat.dipstate	-begin-
-The initial state of the dip switch to use
-when starting a simulation.
+Начальное положение DIP-переключателя, которое будет
+использовано после начала симуляции.
 -end-
 
-ho.edgat.range		The range of bits to pull off a bus.
+ho.edgat.range		Диапазон бит, который нужно отвести от шины.
 
 ho.edgat.memfile	-begin-
-The file with the initial state for this memory.
-This file is read when the simulator is started.
+Файл начального состояния для этой памяти.
+Данный файл будет прочитан после начала симуляции.
 -end-
 
-ho.edgat.func		The function type of this module.
-ho.edgat.frame		The frame label.
+ho.edgat.func		Тип функции для этого модуля.
+ho.edgat.frame		Надмись на рамке.
 
 ho.traceprint		-begin-
-Print the logic trace range selected
-using the right mouse button.  Shift-right
-click can be used to expand the selected
-region.  The range visible in the scope
-view is used when there is no selection. 
+Печать диапазона логической трассировки,
+выделенная правой кнопкой мыши. Для увеличения
+выделения можно использовать Shift с
+правой кнопкой. Если выделение отсутствует,
+будет использован диапазон, видимый в окне
+логического анализатора
 -end-
 
 ho.showxhair		-begin-
-If this button is depressed, a vertical crosshair
-line will be displayed in the scope window.
+Если нажата эта кнопка, в окне логического
+анализатора будет показана вертикальная линия
+визирования.
 -end-
 
 ho.opt.general.fontset	-begin-
-Specifies the basic font size to
-use in the TkGate interface.  This
-option will not take effect until
-restarting TkGate.
+Определяет базовц размер шрифтов, используемых
+в интерфейсе TkGate. Эта настройка вступит
+в силу после перезапуска TkGate.
 -end-
 
 ho.opt.sec.send		-begin-
-Enabling the $tkg$command() system task will allow
-user circuits to send arbitrary simulator control
-commands to the TkGate GUI.  This includes the ability
-to execute arbitrary shell commands.  If the simulator
-will be used to execute untrusted circuits, it is
-recommended that this task be disabled.  Enabling this
-option has a very high security risk.
+Включение системной задачи $tkg$command() позволяет
+пользовательским схемам посылать произвольные команды
+графическому интерфейсу TkGate, в том числе выполнять
+любые команды оболочки. Рекомендуется отключить данную
+возможность, если сим улятор используется для запуска
+схем из ненадёжных источников. Включение этой возможности
+имеет высокий риск, связанный с безопасностью.
 -end-
 
 ho.opt.sec.open		-begin-
-Enabling the $fopen() system task will allow user
-circuits to write to any file that the user invoking
-TkGate has access to.  Enabling this option has a
-high security risk.
+Включение системной задачи $fopen() позволяет
+пользовательским схемам читать и записывать файлы в
+соответствии с правами, с которыми запущен TkGate.
+Включение этой возможности имеет высокий риск,
+связанный с безопасностью.
 -end-
 
 ho.opt.sec.writemem	-begin-
@@ -2766,29 +2765,30 @@ bat computer.
 ho.opt.trek		Beam me up Scoty!
 
 ho.opt.simstep		-begin-
-The number of epochs to advance when
-the step command is issued.
+Число эпох, которые необходимо пройти,
+когда вызывается команда шаг.
 -end-
 
 ho.opt.ckstep		-begin-
-The number of clock cycles to advance
-when the clock step command is issued.
+Число циклов синхросигнала, которые необходимо
+пройти, когда вызывается команда шаг
+синхросигнала.
 -end-
 
 ho.opt.ckover		-begin-
-The number of epochs past rising edge
-of the clock to advance when the clock
-step command is issued.
+Число эпох после восходящего фронта
+синхросигнала, которые необходимо пройти
+когда вызывается команда шаг синхросигнала.
 -end-
 
 ho.opt.vpopupdelay		-begin-
-The delay in milliseconds between pressing
-and holding the mouse button and the display
-of a signal value.  On some systems, short
-delay values interfere with the ability to
-recognize a double click.  If you have this
-problem, increase this value.  Values between
-1 and 10000 are allowed.
+Задержка в миллисекундах между нажатием и удержанием
+кнопки мыши и отображением значения сигнала.
+На некоторых системах короткие значения задержки
+перекрываются с возможностью распознать двойной щелчёк
+мыши. Если вы столкнулись с этой проблемой, попробуйте
+увеличить это значение.
+Допустимы значения от 1 до 10000.
 -end-
 
 ho.opt.init		-begin-
