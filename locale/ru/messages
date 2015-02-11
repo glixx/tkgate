@@ -2565,58 +2565,60 @@ ho.opt.sec.ignore	-begin-
 -end-
 
 ho.opt.html.browser	-begin-
-Command to be execute when the user clicks on a link to
-an html file.  A "%s" in the command will be replaced
-with the link URL. 
+Команда, которая будет выполнена, когда пользователь
+перейдёт по ссылке на html файл. Конструкция "%s" в
+команде на URL ссылки.
 -end-
 
 ho.opt.html.email	-begin-
-Command to be execute when the user clicks on a link to
-send an e-mail message.  A "%s" in the command will be
-replaced with the link URL.
+Команда, которая будет выполнена, когда пользователь
+щёлкнет по ссылке для отправки сообщения электронной
+почты. Конструкция "%s" будет заменена на URL ссылки.
 -end-
 
 ho.opt.fsave		-begin-
-Save TkGate internal cells with circuit
-data.  This will increase save file size
-by about 20% for a typical circuit, but
-will result in save files that can be
-exported to third party tools.
+Сохранить внутренние ячейки TkGate вместе
+с данными схемы. Это увеличит размер файла
+приблизительно на 20% для типичной схемы,
+но облегчит преобразование сохранённых файлов
+для использования сторонними инструментами,
+поддерживающими Verilog.
 -end-
 
 ho.opt.sorttraces	-begin-
-If this option is enabled, traces on the
-scope window will be displayed in sorted
-order.  If this option is disabled, traces
-on the scope window will be displayed in
-the order in which the probes were set.
+Если включена эта функция, данные трассировки
+в окне логического анализатора будут отображаться
+в отсортированном виде. В противном случае
+данные будут отображаться в порядке установки
+зондов на сигналы.
 -end-
 
 ho.opt.sim.noglitch	-begin-
-If this option is enabled, rapidly changing
-inputs to a component will cause the component to
-output unknown rather simply the time shifted
-input signal.  This can eliminate spurious
-events and prevent oscilations in gate-level
-sequential circuits.
+Если включена эта функция, быстро изменяющиеся
+входные сигналы компонента вызовут неопределённое
+значение выхода вместо просто сдвинутого во
+времени входного сигнала. Это может убрать
+спонтанные события и предотвратить осцилляции
+в последовательных схемах на уровне отдельных
+вентилей.
 -end-
 
 ho.opt.sim.savetraces	-begin-
-Probes placed during a simulation run will
-be remembered and replaced when restarting
-the simulation of the same circuit.
+Зонды, установленные во время симуляции
+будут сохранены и вновь установлены при
+перезапуске симуляции той же схемы.
 -end-
 
-
 ho.opt.sim.tech		-begin-
-List of files to load as potential "technology"
-files.  Technology files specify delay and area
-estimates for built-in components.
+Список файлов для загрузки в качестве потенциальных
+файлов технологий. Файлы технологий определяют
+задержки и одидаемые площади для встроенных
+компонентов.
 -end-
 
 ho.opt.sim.err		-begin-
-Select how warnings from the simulator
-should be handled.
+Выбор способа обработки предупреждений
+от симулятора.
 -end-
 
 ho.opt.sim.err.stopany	-begin-
@@ -2815,12 +2817,11 @@ ho.opt.ckspec		-begin-
 -end-
 
 ho.opt.keybind		-begin-
-Specifies the basic style for key
-bindings.  If you change this
-option, bindings will be updated
-immediately, but you will need to
-restart TkGate to see any user
-defined keybindings.
+Определяет базовый стиль привязки клавиш.
+Если изменить эту настройку, привязки
+обновятся немедленно, но Вам придётся
+перезагрузить TkGate, чтобы увидеть
+пользовательские привязки
 -end-
 
 ho.deftech		-begin-
@@ -2844,8 +2845,8 @@ ho.custbut		-begin-
 -end-
 
 ho.contver		-begin-
-Continuously verify the integrity of internal
-data structures after every operation.
+Непрерывно проверять целостность внутренних
+структур данных после каждой операции.
 -end-
 
 ho.simwatch		-begin-
