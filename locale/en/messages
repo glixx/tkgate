@@ -1971,7 +1971,7 @@ verga.err.BADSPECLVAL		Bit-ranges on path delay specifiers unsupported.
 verga.err.PATHDITEM		Unsupported construct in module with path-delay specification.
 verga.err.PATHDINOUT		Use of 'inout' in module with path-delay specification is unsupported.
 verga.err.PATHDLOOP		Loops in modules with path-delay specification are unsupported.
-verga.err.PATHDCOND		DelaMust set through both # expression and specify block. 
+verga.err.PATHDCOND		Delays must set through both # expression and specify block. 
 verga.err.TASKREDEF		Redefinition of task or function '%s' in module '%s'.
 verga.err.TASKASFUNC		Task '%s' used as function.
 verga.err.FUNCASTASK		Function '%s' used as task.
