@@ -2622,133 +2622,132 @@ ho.opt.sim.err		-begin-
 -end-
 
 ho.opt.sim.err.stopany	-begin-
-Do not simulate the circuit if there are any
-warnings in the circuit, even if there are no
-actual erros.
+Не симулировать схему если есть предупреждения,
+даже если нет ошибок.
 -end-
 
 ho.opt.sim.err.showall	-begin-
-Always show warnings in the circuit, even if
-there are no errors.  If there are only warnings,
-the simualtor will be started and the list of
-warnings will be displayed in a separate window.
+Всегда отображать предупреждения в схемах,
+даже если нет ошибок. Если есть предупреждения
+но нет ошибов, симулятор будет запущен и в
+отдельном окне будет выведен предупреждений.
 -end-
 
 ho.opt.sim.err.showiferr	-begin-
-Show warnings only if there are also errors
-in the circuit.  If a circuit contains only
-warnings, they will be ignored and the simulator
-will be started.
+Показывать предупреждения только если присутствуют
+также и ошибки. Если есть предупреждения, но нет
+ошибок, предупреждения будут игнорированы, а 
+симулятор запущен.
 -end-
 
 ho.opt.sim.err.ignore		-begin-
-Never display warning messages, even if there
-are errors in the circuit.
+Никогда не отображать предупреждения. Даже
+если в схеме присутствуют ошибки.
 -end-
 
 ho.opt.lib.vpath		-begin-
-List of directories to search for TkGate library
-files.  Library files should have a .v extention
-and contain modules useful for use in user circuits.
+Список каталогов для поиска файлов библиотек TkGate.
+Библиотеки - это обычные схемы TkGate, содержащие
+полезные переиспользуемые модули.
 -end-
 
 ho.opt.lib.vlib			-begin-
-List of libaries that should automatically be loaded
-when TkGate starts.
+Список библиотек, которые должны быть автоматически
+загружены, когда запускается TkGate.
 -end-
 
 ho.opt.lib.vpd			-begin-
-List of directories to search for virtual peripheral
-devices.  Virtual peripheral devices have a .tcl
-extension and typically implement a GUI representing
-a peripheral device that can be controlled by a user
-circuit.
+Список каталогов поиска виртуальных периферийных
+устройств. Виртуальные периферийные устройства - 
+это модули, написанные на tcl, обычно реализующие
+графический интерфейс пользователя, представляющий
+периферийные устройства, контролируемые
+пользовательскими схемами.
 -end-
 
 ho.opt.undolen		-begin-
-Maximum number of undo actions to retain.
+Максимальное число операций отмены.
 -end-
 
 ho.opt.name		-begin-
-User name to be used on TkGate generated
-reports such as circuit printouts.
+Имя пользователя, которое будет использовано
+в генерируемых TkGate отчётах, таких как
+распечатки схем.
 -end-
 
 ho.opt.site		-begin-
-The name of the site where TkGate is
-installed.  This name will be used on
-any printer or postscript output.
+Имя компьютера, где установлен TkGate.
+Это имя будет использовано во всех
+распечатках и postscript документах.
 -end-
 
 ho.opt.smooth		-begin-
-If this option is enabled, scrolling will
-be optimized by using bitmap copies instead
-of a complete redisplay.  You can turn this
-off if there are any problems with your server.
+Если включена эта функция, прокрутка схемы в
+области редактирования будет оптимизирована с
+использованием растровых копий, вместо полной
+перерисовки. Следует отключить её если при
+прокрутке схемы изображение портится.
 -end-
 
 ho.opt.clip		-begin-
-If this option is enabled, clipping will be
-used to update only the exposed portion of
-the window on a redisplay.  Otherwise the
-entire display will be redrawn for all
-exposures.  Unset only if you are having
-problems on your display.
+Если эта функция включена, то для обновления
+только видимой части области редактирования
+будет использоваться отсечение вместо полной
+перерисовки. Отключать только если имеются
+проблемы с отображением.
 -end-
 
 ho.opt.showimage	-begin-
-Unset this option to suppress display of
-the image and explanitory text at the
-edge of dialog boxes.
+Отключите данную функцию для подавления
+отображения картинок и пояснительного текста
+в окнах диалога.
 -end-
 
-
 ho.opt.outmove		-begin-
-If this option is enabled, only an outline
-of module instances being moved will be displayed
-while dragging.  Use this feature only on machines
-with slow displays.
+Если включена эта функция, то при перемещении
+экземпляров модулей на схеме будут отображаться
+только контуры. Использовать только на машинах
+с медленной видеоподсистемой.
 -end-
 
 ho.opt.bhelp		-begin-
-If this option is enabled,  help balloons will 
-be activated.  Help balloons, such as this one,
-provide tips on interface elements when the
-mouse is over them.
+Если включена эта функция, всплывающие подсказки
+активированы. Всплывающие подсказки, такие как эта,
+предоставляют пояснения к элементам интерфейса
+когда указатель мыши оказывается над ними.
 -end-
 
 ho.opt.tearawaymenus	-begin-
-If enabled, the main menues will be detachable
-from the interface.  This option will take effect
-next time you restart TkGate.
+Если включено, главные меню являются отделяемыми
+от интерфейса. Эта возможность вступит в силу
+после перезапуска TkGate.
 -end-
 
 ho.opt.novice		-begin-
-If no other circuit is specified on the command
-line.  A TkGate tutorial will be disaplyed as
-the initial circuit on start up.
+Если файл схемы прямо не указан в командной строке,
+то при запуске будет открыто учебное руководство.
 -end-
 
 ho.opt.blockDropConnect		-begin-
-Allow ports on module interfaces to be created
-by dropping free wires near an edge.
+Позволяет создавать порты в интерфейсах модулей
+опусканием концов проводников около краёв
+модулей.
 -end-
 
 ho.opt.debug		-begin-
-Enables several debugging features
-only useful to TkGate developers.
+Включает некоторые отладочные возможности,
+востребованные в основном разработчиками.
 -end-
 
-ho.opt.ckpt		Enable checkpointing of unsaved circuits.
-ho.opt.ckptfreq		Frequency of checkpoints in seconds.
+ho.opt.ckpt		Включение контрольных точек на несохранённых схемах.
+ho.opt.ckptfreq		Период создания контрольных точек в секундах.
 
 ho.opt.beak		-begin-
-Enable these totally useless features.
-If you disable this option, the useless
-features checkbox will no longer appear
-in this dialog box.  The only way to
-see the useless features again will be
-to edit your .tkgate2-properties file.
+Включение полностью бесполезных возможностей.
+Если отключить эту функцию, то поле включения
+бесполезных возможностей больше не возникнет
+в этом диалоге и для его включения нужно
+будет редактировать файл .tkgate2-properties.
 -end-
 
 ho.opt.miles		-begin-
@@ -2758,9 +2757,9 @@ the user.
 -end-
 
 ho.opt.bat		-begin-
-If this mode is enabled, TkGate will
-set up an enviornment for designing a
-bat computer.
+Если включен этот режим, TkGate настроит
+среду для разработки учебного примера
+"The bat computer".
 -end-
 
 ho.opt.trek		Beam me up Scoty!
