@@ -1089,8 +1089,8 @@ opt.frames		Рамки
 opt.comment		Комментарии
 opt.hlink		Гиперссылки
 opt.wire		Однобитные проводники
-opt.bus			Многобитный проводники
-opt.tools		Инструменты вентилей
+opt.bus			Многобитные проводники
+opt.tools		Инструменты
 opt.background		Фон
 opt.cpath		Критический путь
 opt.grid		Сетка логического анализатора
