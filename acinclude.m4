@@ -27,7 +27,7 @@ AC_DEFUN([TKG_SET_PREFIX],[
       install_dir=/usr/local
       ;;
   esac
-  AC_MSG_RESULT([$os_name ... $install_dir])  
+  AC_MSG_RESULT([$os_name ... $install_dir])
 ])
 
 #--------------------------------------------------------------------
@@ -44,16 +44,16 @@ AC_DEFUN([TKG_SET_PREFIX],[
 #--------------------------------------------------------------------
 AC_DEFUN([TKG_USE_SIGSET],[
   AC_MSG_CHECKING([how to set signal handlers])
-  AC_CACHE_VAL(signal_ok,
-     AC_TRY_COMPILE([#include <signal.h>], [signal(0,0);], [signal_ok=yes], [signal_ok=no]))
-  AC_CACHE_VAL(sigset_ok,
-     AC_TRY_COMPILE([#include <signal.h>], [sigset(0,0);], [sigset_ok=yes], [sigset_ok=no]))
+  AC_CACHE_VAL(signal_cv_ok,
+     AC_TRY_COMPILE([#include <signal.h>], [signal(0,0);], [signal_cv_ok=yes], [signal_cv_ok=no]))
+  AC_CACHE_VAL(sigset_cv_ok,
+     AC_TRY_COMPILE([#include <signal.h>], [sigset(0,0);], [sigset_cv_ok=yes], [sigset_cv_ok=no]))
 
-  if test "$signal_ok" = "yes"; then
+  if test "$signal_cv_ok" = "yes"; then
     AC_DEFINE(TKGATE_SIGSET, 0, [Use sigset instead of signal if set.])
     AC_MSG_RESULT([signal()])
   else
-    if test "$sigset_ok" = "yes"; then
+    if test "$sigset_cv_ok" = "yes"; then
       AC_DEFINE(TKGATE_SIGSET, 1, [Use sigset instead of signal if set.])
       AC_MSG_RESULT([sigset()])
     else
@@ -141,10 +141,10 @@ AC_DEFUN([TKG_CHECK_ICONV_H],[
 #
 #--------------------------------------------------------------------
 AC_DEFUN([TKG_WORDSIZE],[
-  AC_CACHE_CHECK([word size], wordsize,
+  AC_CACHE_CHECK([word size], wordsize_cv_,
     AC_RUN_IFELSE(AC_LANG_PROGRAM([#include <stdlib.h> #include <stdio.h>], [return sizeof(unsigned) == 8 ? 0 : 1;]),
-	[wordsize=64], [wordsize=32]))
-  if test $wordsize = 32; then
+	[wordsize_cv_=64], [wordsize_cv_=32]))
+  if test $wordsize_cv_ = 32; then
     AC_DEFINE(TKGATE_WORDSIZE, 32, [Word size of machine.])
   else
     AC_DEFINE(TKGATE_WORDSIZE, 64, [Word size of machine.])
@@ -232,8 +232,8 @@ AC_DEFUN([TKG_GETTKTRYDIRS],[
 #
 # Results:
 #	TCLTK_VERSION		Version of Tcl being used
-#	TCL_LIB			Libraries (-l options) needed to link with tcl 
-#	TK_LIB			Libraries (-l options) needed to link with tk 
+#	TCL_LIB			Libraries (-l options) needed to link with tcl
+#	TK_LIB			Libraries (-l options) needed to link with tk
 #	TCL_IPATH		Include paths (-I options) needed to compile with tcl
 #	TK_IPATH		Include paths (-I options) needed to compile with tk
 #	TCL_LPATH		Library paths (-L options) needed to link with tcl
@@ -321,8 +321,8 @@ AC_DEFUN([TKG_FINDTCLTKIPATH],[
 #       None.
 #
 # Results:
-#	TCL_LIB			Libraries (-l options) needed to link with tcl 
-#	TK_LIB			Libraries (-l options) needed to link with tk 
+#	TCL_LIB			Libraries (-l options) needed to link with tcl
+#	TK_LIB			Libraries (-l options) needed to link with tk
 #	TCL_IPATH		Include paths (-I options) needed to compile with tcl
 #	TK_IPATH		Include paths (-I options) needed to compile with tk
 #	TCL_LPATH		Library paths (-L options) needed to link with tcl
@@ -341,7 +341,7 @@ AC_DEFUN([TKG_SETTCLTK],[
     TKG_FINDTCLTKIPATH($TCLTK_VERSION, 'tcl', 'tcl')
     TCL_IPATH=$ipath
 	echo TCL_IPATH=$ipath
-  fi 
+  fi
 
   if test "X$TK_IPATH" = "X"; then
     TKG_FINDTCLTKIPATH($TCLTK_VERSION, 'tk', 'tk')
@@ -349,14 +349,14 @@ AC_DEFUN([TKG_SETTCLTK],[
       TKG_FINDTCLTKIPATH($TCLTK_VERSION, 'tcl', 'tk')
     fi
     TK_IPATH=$ipath
-  fi 
+  fi
 
   if test "X$TCL_IPATH" = "X-I/usr/include"; then
     TCL_IPATH=""
-  fi 
+  fi
   if test "X$TK_IPATH" = "X-I/usr/include"; then
     TK_IPATH=""
-  fi 
+  fi
 ])
 
 
@@ -370,10 +370,10 @@ AC_DEFUN([TKG_SETTCLTK],[
 #
 # Results:
 #	TCLTK_VERSION		Version of Tcl being used
-#	TCL_LIBS		Libraries (-l options) needed to link with tcl 
+#	TCL_LIBS		Libraries (-l options) needed to link with tcl
 #	TCL_IPATH		Include paths (-I options) needed to compile with tcl
 #	TCL_LPATH		Library paths (-L options) needed to link with tcl
-#	TK_LIBS			Libraries (-l options) needed to link with tk 
+#	TK_LIBS			Libraries (-l options) needed to link with tk
 #	TK_IPATH		Include paths (-I options) needed to compile with tk
 #	TK_LPATH		Library paths (-L options) needed to link with tk
 #
@@ -445,10 +445,10 @@ AC_DEFUN([TKG_FINDTCLTK_OBSOLETE],[
 
     if test "X$TCL_IPATH" = "X-I/usr/include"; then
       TCL_IPATH=""
-    fi 
+    fi
     if test "X$TK_IPATH" = "X-I/usr/include"; then
       TK_IPATH=""
-    fi 
+    fi
 
     for d in $TKGATE_LIBDIRS; do
       if test -f $d/libtcl$v.a -o -f $d/libtcl$v.so -o -f $d/libtcl$v.dylib -o -f $d/libtcl$v.dll.a; then
