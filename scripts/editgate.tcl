@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Sep 26 15:32:41 2009
 #
@@ -94,7 +94,7 @@ namespace eval PortEdit {
     global edport_ok
 
     set edport_ok 1
-    destroy .edport 
+    destroy .edport
   }
 
   ########################################
@@ -154,7 +154,7 @@ namespace eval PortEdit {
     pack .edport.box.io.in .edport.box.io.out .edport.box.io.bdir -side left
 
 #    entry .edport.box.bit     -textvariable edport_bits -bg white
-    bitsizeselector .edport.box.bit -variable edport_bits -width 3 
+    bitsizeselector .edport.box.bit -variable edport_bits -width 3
 
 
     if { $showsig } {
@@ -165,7 +165,7 @@ namespace eval PortEdit {
     bind .edport.box.bit <KeyPress-Return> PortEdit::ok
 
     frame .edport.box.pad -height 10
-    grid .edport.box.pad -column 1 -row 0 
+    grid .edport.box.pad -column 1 -row 0
 
     grid .edport.box.portlab  -column 1 -row 1 -sticky e -padx 5 -pady 2
     grid .edport.box.port     -column 2 -row 1 -sticky w -padx 5 -pady 2
@@ -185,7 +185,7 @@ namespace eval PortEdit {
     pack .edport.confirm.ok -side left -padx 5 -pady 5
     pack .edport.confirm.cancel -side right -padx 5 -pady 5
 
-    pack .edport.box -fill x 
+    pack .edport.box -fill x
     pack .edport.confirm -fill both
 
     #
@@ -342,10 +342,10 @@ namespace eval PortMgr {
     global edgat_wops
 
     #
-    # Deletions only allowed when adds are also valid. 
+    # Deletions only allowed when adds are also valid.
     #
     if {!$edcap_add} { return }
-    
+
 
     #
     # If nothing is selected, then do nothing
@@ -386,7 +386,7 @@ namespace eval PortMgr {
       if {$baseName == "" } { set baseName $B }
       if { $baseName != $B } { set ok 0 }
       lappend plist $pnum
-      
+
     }
     if { !$ok } { return }
 
@@ -459,20 +459,20 @@ namespace eval PortMgr {
   proc newPortEntry {} {
     variable iolb_w
     variable edcap_side
-    global edgat_wops edgatio_w edport_basePort 
+    global edgat_wops edgatio_w edport_basePort
     global edport_sig edport_port edport_type edport_bits edport_ok
 
     set Q -1
     set E ""
 
-    set N [SpreadSheet::size $iolb_w] 
+    set N [SpreadSheet::size $iolb_w]
     for {set i 0} { $i < $N } {incr i} {
       set item [SpreadSheet::get $iolb_w $i]
 
       set P [lindex $item 1]
 
       if {[regexp {^([A-Za-z]+)([0-9]+)$} $P X B Nbits]} {
-	if { $Nbits > $Q} { 
+	if { $Nbits > $Q} {
 	  set edport_idx [expr $i + 1]
 	  set Q $Nbits
 	  set E $item
@@ -611,7 +611,7 @@ namespace eval PortMgr {
 	lappend edgat_wops [list add $base_name]
 
 	return $new_ent
-      } 
+      }
     }
   }
 
@@ -742,7 +742,7 @@ namespace eval EditGate {
   # Create the frame for the clock diagram.
   #
   proc clockFrame {w} {
-    global ecpI ecpW 
+    global ecpI ecpW
     variable clock_line_len
 
     $w.wave delete frame
@@ -777,7 +777,7 @@ namespace eval EditGate {
   proc moveClock {w x} {
     global ecpS ecpE0 ecpE1 ecpE2
     global ecpl1 ecpl2 ecpl3 ecpl4 ecpl5
-    global ecpPhi ecpDuty ecpOmega ecpW 
+    global ecpPhi ecpDuty ecpOmega ecpW
     variable clock_line_len
 
     trace vdelete ecpOmega w EditGate::clockPUpdate
@@ -820,7 +820,7 @@ namespace eval EditGate {
     global ecpl1 ecpl2 ecpl3 ecpl4 ecpl5
     global ecpE0 ecpE1 ecpE2
     global ecpW ecpI ecpOmega ecpPhi ecpDuty
-    global edgatclk_w 
+    global edgatclk_w
     variable clock_line_len
 
     catch {
@@ -858,7 +858,7 @@ namespace eval EditGate {
     global ecpS ecpl1 ecpl2 ecpl3 ecpl4 ecpl5
     global ecpE0 ecpE1 ecpE2
     global ecpW ecpI ecpOmega ecpPhi ecpDuty
-    global edgatclk_w 
+    global edgatclk_w
     variable clock_line_len
 
     set edgatclk_w $w
@@ -910,8 +910,8 @@ namespace eval EditGate {
 
     label $edgatclk_w.l -text [m db.gate.waveform]
 
-    pack $edgatclk_w.l -anchor w 
-    pack $edgatclk_w.wave 
+    pack $edgatclk_w.l -anchor w
+    pack $edgatclk_w.wave
     pack $edgatclk_w.cycle $edgatclk_w.phase $edgatclk_w.duty -anchor w
 
     pack $edgatclk_w -fill both -padx 5 -pady 20
@@ -947,7 +947,7 @@ namespace eval EditGate {
     pack $wd.tech_label.opt -side left -padx 3
 
 #    radiobutton $wd.tech_label -text [m db.gate.stddelay] -variable edgat_dtype -value tech -command "EditGate::dvalSetState $wd"
-    
+
 
     windowframe $wd.tech $wd.tech_label -bd 2 -relief groove -dy -3
 
@@ -994,7 +994,7 @@ namespace eval EditGate {
     frame $wd.cust.dtab
     set dtw $wd.cust.dtab
     foreach d $edgat_delays {
-      label $dtw.l${r}_$c -text "$d:" 
+      label $dtw.l${r}_$c -text "$d:"
       entry $dtw.e${r}_$c -width 4 -textvariable edgat_delayvalue($d) -bg white
 
       grid $dtw.l${r}_$c -row $r -column [expr 3*$c] -padx 2 -pady 3 -sticky e
@@ -1031,7 +1031,7 @@ namespace eval EditGate {
     if { [lindex $args 0] == "-raised" } {
       frame $w.basic -bd 1 -relief raised
     } else {
-      frame $w.basic 
+      frame $w.basic
     }
     pack $w.basic
 
@@ -1067,7 +1067,7 @@ namespace eval EditGate {
     entry $wb.anchor_f.xent -width 4 -textvariable edgat_xpos -bg white
     label $wb.anchor_f.ylab -text "Y:"
     entry $wb.anchor_f.yent -width 4 -textvariable edgat_ypos -bg white
-    pack  $wb.anchor_f.ent $wb.anchor_f.xlab $wb.anchor_f.xent $wb.anchor_f.ylab $wb.anchor_f.yent -padx 5 -pady 3 -side left 
+    pack  $wb.anchor_f.ent $wb.anchor_f.xlab $wb.anchor_f.xent $wb.anchor_f.ylab $wb.anchor_f.yent -padx 5 -pady 3 -side left
 
     if { $edgat_type != "Module" } {
       label $wb.cpbreak_l -text "[m db.gate.cpbreak]:" -anchor e
@@ -1076,11 +1076,11 @@ namespace eval EditGate {
       grid $wb.cpbreak_e -row 4 -column 1 -sticky w -padx 5 -pady 3
     }
 
-    #  checkbutton $w.  
+    #  checkbutton $w.
 
     bind $wb.name_e <KeyPress-Return> "EditGate::ok"
 
-    
+
     if { [lindex $args 0] == "-raised" } {
       pack $wb -fill both
     } else {
@@ -1398,7 +1398,7 @@ namespace eval EditGate {
 
   proc dipValChange {w args} {
     global edgat_dip
-    
+
     set n $edgat_dip
     if { $n == ""} { set n "0" }
 
@@ -1413,7 +1413,7 @@ namespace eval EditGate {
     global edgat_dip
 
     #
-    # State Property 
+    # State Property
     #
     labelframe $w.state [m db.gate.dip.value]
     packPad $w.state
@@ -1437,7 +1437,7 @@ namespace eval EditGate {
     bind $w.state <Destroy> "trace vdelete ::edgat_dip w \"EditGate::dipValChange $w\""
 
     #
-    # Show Net Property 
+    # Show Net Property
     #
     set wraplength 130
     labelframe $w.shownet [m db.gate.dip.shownet]
@@ -1529,7 +1529,7 @@ namespace eval EditGate {
       $w.tap.c create line $x $y $x1 $y -width 2 -fill $tkg_busColor
 
       set x3 [expr $x + $tap_len - 15]
-      
+
       $w.tap.c create line [expr $x3-4] [expr $y+4] [expr $x3+4] [expr $y-4] -fill red
       $w.tap.c create text $x3 [expr $y-8] -text $tap_size -fill red -anchor s
 
@@ -1641,7 +1641,7 @@ namespace eval EditGate {
     button $w.mem.browse -text [m b.browse]  -command {
       global mem_filter mem_filetypes edgate_memFile edgatmem_w
       set file [tk_getOpenFile -defaultextension $mem_filter -filetypes $mem_filetypes -parent .edgat]
-      if { $file != "" } { 
+      if { $file != "" } {
 	set edgat_memFile $file
 	$edgatmem_w.file icursor end
 	$edgatmem_w.file xview end
@@ -1689,7 +1689,7 @@ namespace eval EditGate {
     button $w.mod.funcF.new -text [m b.new]... -command "EditGate::newModule $w"
     pack $w.mod.funcF.name $w.mod.funcF.new -anchor w -side left -padx 5
 
-    pack $w.mod.funcL -padx 5 -pady 5 -side left 
+    pack $w.mod.funcL -padx 5 -pady 5 -side left
     pack $w.mod.funcF -pady 5 -side left
 
     focus $w.mod.funcF.name.e
@@ -1784,7 +1784,7 @@ namespace eval EditGate {
     switch $edgat_type {
       COMMENT {
 	# The saveComment will fail if the Text tab is not active, but that is ok
-	# since in this case the edgat_commentLines() array will be up to date. 
+	# since in this case the edgat_commentLines() array will be up to date.
 	# JPH 1/19/09 - The above statement may no longer be true due to the new
 	# tabbox implementation.  We may not need the "catch" anymore.
 	catch { saveComment }
@@ -1821,7 +1821,7 @@ namespace eval EditGate {
     destroy .edgat
   }
 
-  proc saveScript {w} { 
+  proc saveScript {w} {
     global edgat_commentLen edgat_commentLines edgat_ok
 
     for { set i 1 } { [$w compare $i.end < end] } { incr i } {
@@ -1849,7 +1849,7 @@ namespace eval EditGate {
       if { $i > 0 } { $tw insert end "\n" }
       $tw insert end  $edgat_commentLines($i)
     }
-    HdlEditor::recolorize 1.0 end 
+    HdlEditor::recolorize 1.0 end
 
     frame $tw.destroyDetect
     bind $tw.destroyDetect <Destroy> "EditGate::saveScript $tw"
@@ -1964,7 +1964,7 @@ namespace eval EditGate {
 	tabDip $w.props
 	set gif details.gif
       }
-      TAP { 
+      TAP {
 	tabTap $w.props
 	set gif details.gif
       }
@@ -2098,7 +2098,7 @@ namespace eval EditGate {
       lappend tabs $edgat_type; lappend labels [m db.gate.details]
     }
 
-    if { $edgat_type == "MODULE" || $edgat_type == "SYMMODULE" } { 
+    if { $edgat_type == "MODULE" || $edgat_type == "SYMMODULE" } {
       lappend tabs Parameters
       lappend labels [m db.gate.parameters]
     }

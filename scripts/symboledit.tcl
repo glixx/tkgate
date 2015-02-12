@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,13 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jan  9 08:58:18 2009
 #
-
 
 #############################################################################
 #
@@ -64,7 +63,7 @@
 #     seeB3Release w x y		Respond to a release of the B3 mouse button.
 #     decode w bmdata minx miny		Decode an X11 bitmap into the SymbolEdit internal data structures.
 #     mkempty				Make the bitmap editor empty
-#     encode xoff yoff			Encode the bitmap bmdata into a standard X11 bitmap form 
+#     encode xoff yoff			Encode the bitmap bmdata into a standard X11 bitmap form
 #     saveData args...			Save all data about symbol to the tkgate C side.
 #     getOprRegion x1 y1 x2 y2 w h ...	Get the region over which to perform an action.
 #     boldBits				Make the selected region bold.
@@ -95,7 +94,7 @@ namespace eval SymbolEdit {
   #    ok		ok indicator
   #
   # A port:<n> entry has the form:
-  #     
+  #
   #     {name type nbits}
   #
   # The port:<n> entries are "suggested" ports generated from the module description.
@@ -103,7 +102,7 @@ namespace eval SymbolEdit {
   # A pplace:<n> entry has the form:
   #
   #     {name x y type dir nbits}
-  # 
+  #
   # pplace entires are the actual placed ports for a module.
   #
   variable data
@@ -126,18 +125,18 @@ namespace eval SymbolEdit {
   variable cut
   variable cut_width 0
   variable cut_height 0
-  variable width 
-  variable height 
+  variable width
+  variable height
   variable scale 7
   variable emode point
-  variable paint_pending 
+  variable paint_pending
   variable x_base 0
   variable y_base 0
   variable linkSelected 1
 
   #
   # These variables set built-in limits
-  # 
+  #
   variable minWidth 64
   variable minHeight 64
   variable maxWidth 256
@@ -202,7 +201,7 @@ namespace eval SymbolEdit {
 
     pane forget $tabframe_w.smg
     pack $tabframe_w.smg.maing -fill both -expand 1
-  } 
+  }
 
   #############################################################################
   #
@@ -233,7 +232,7 @@ namespace eval SymbolEdit {
 
   #############################################################################
   #
-  # Respond to a drag of an element in the 
+  # Respond to a drag of an element in the
   #
   proc seeDrag {w er} {
     set port [SpreadSheet::get $w $er]
@@ -303,7 +302,7 @@ namespace eval SymbolEdit {
 
   #############################################################################
   #
-  # Make the icon data for the 
+  # Make the icon data for the
   #
   proc openEditIcon {} {
     variable visibleIcon
@@ -421,7 +420,7 @@ namespace eval SymbolEdit {
 
   #############################################################################
   #
-  # Copy the bit at (x,y) to the cut buffer 
+  # Copy the bit at (x,y) to the cut buffer
   #
   proc copybit {x y} {
     variable bits
@@ -484,7 +483,7 @@ namespace eval SymbolEdit {
   # Map window coordinates to bit cell coordinates
   #
   proc windowToCell {w x y} {
-    variable width 
+    variable width
     variable height
     variable scale
 
@@ -512,7 +511,7 @@ namespace eval SymbolEdit {
   # Map cell coordinates to window coordinates
   #
   proc cellToWindow {x y} {
-    variable width 
+    variable width
     variable height
     variable scale
 
@@ -566,11 +565,11 @@ namespace eval SymbolEdit {
   # Display the bitmap array on the screen.
   #
   proc paint {} {
-    variable width 
+    variable width
     variable height
     variable scale
-    variable x_base 
-    variable y_base 
+    variable x_base
+    variable y_base
     variable bits
     variable paint_pending
     variable lbitem
@@ -596,11 +595,11 @@ namespace eval SymbolEdit {
     set X $scale
     set X1 [expr 2*$scale]
     set lx $x_base
-    for { set x 0 } { $x < $width } { incr x } { 
+    for { set x 0 } { $x < $width } { incr x } {
       set Y $scale
       set Y1 [expr $Y + $scale]
       set ly $x_base
-      for { set y 0 } { $y < $height } { incr y } { 
+      for { set y 0 } { $y < $height } { incr y } {
 	set color $colorTable($bits($x,$y))
 
 	set lbitem($x,$y) [$canv_w create rectangle $X $Y $X1 $Y1 -fill $color -outline gray -width 1]
@@ -947,7 +946,7 @@ namespace eval SymbolEdit {
     if { $old_select != "" } { makePort $old_select }
     if { $name != ""} { makePort $name }
   }
-  
+
   #############################################################################
   #
   # Select a port.  (x,y) are raw screen coordinates
@@ -1228,10 +1227,10 @@ namespace eval SymbolEdit {
   # Decode an X11 bitmap into the SymbolEdit internal data structures
   #
   proc decode {w bmdata minx miny args} {
-    variable width 
+    variable width
     variable height
-    variable x_base 
-    variable y_base 
+    variable x_base
+    variable y_base
     variable bits
     variable minWidth
     variable minHeight
@@ -1242,7 +1241,7 @@ namespace eval SymbolEdit {
     if { $bmdata == "" } {
       mkempty $w
       return
-    } 
+    }
 
     catch { unset bits }
 
@@ -1345,7 +1344,7 @@ namespace eval SymbolEdit {
   # Make an empty bit map.
   #
   proc mkempty {w} {
-    variable width 
+    variable width
     variable height
     variable bits
     variable ports
@@ -1369,10 +1368,10 @@ namespace eval SymbolEdit {
 
   #############################################################################
   #
-  # Encode the bitmap bmdata into a standard X11 bitmap form 
+  # Encode the bitmap bmdata into a standard X11 bitmap form
   #
   proc encode {xoff yoff args} {
-    variable width 
+    variable width
     variable height
     variable bits
 
@@ -1567,7 +1566,7 @@ namespace eval SymbolEdit {
 	incr sb_x1 [expr ($sb_width-$sb_height)/2]
 	set sb_width $sb_height
 	set sb_x2 [expr $sb_x1 + $sb_width - 1]
-      } elseif { $sb_height > $sb_width } { 
+      } elseif { $sb_height > $sb_width } {
 	incr sb_y1 [expr ($sb_height-$sb_width)/2]
 	set sb_height $sb_width
 	set sb_y2 [expr $sb_y1 + $sb_height - 1]
@@ -1763,7 +1762,7 @@ namespace eval SymbolEdit {
     variable port_select
     variable ports
     variable changed
-  
+
     if { $port_select != "" } {
       set q [lindex $ports($port_select) 4]
       set q [expr ($q + $d + 4) % 4]
@@ -2004,7 +2003,7 @@ namespace eval SymbolEdit {
     variable canv_w
 
     set canv_w $w.c
-    frame $w 
+    frame $w
     canvas $w.c -width 50 -height 50 -bd 2 -relief sunken \
 	-bg white -yscrollcommand "$w.vb set" -xscrollcommand "$w.hb set" -takefocus 0
     scrollbar $w.vb -orient vertical -command "SymbolEdit::yview" -takefocus 0
@@ -2021,7 +2020,7 @@ namespace eval SymbolEdit {
     bind $w.c <ButtonRelease-1> "SymbolEdit::seeB1Release %W %x %y"
     bind $w.c <ButtonRelease-3> "SymbolEdit::seeB3Release %W %x %y"
   }
-  
+
   #############################################################################
   #
   # Create the link status
@@ -2055,7 +2054,7 @@ namespace eval SymbolEdit {
   # Post the module symbol editor.
   #
   proc create {w args} {
-    variable width 
+    variable width
     variable height
     variable data
     variable ports
@@ -2095,7 +2094,7 @@ namespace eval SymbolEdit {
     set data(selectOffset) "0 0"
 
     #
-    # Make symbol bitmap data empty 
+    # Make symbol bitmap data empty
     #
     mkempty $w
 

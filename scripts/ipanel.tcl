@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,14 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Wed Mar 18 05:31:52 2009
 #
-
-
 
 #############################################################################
 #
@@ -121,7 +119,7 @@ namespace eval PortEntry {
 	      Dropbox::itemadd $W "left"
 	      Dropbox::itemadd $W "right"
 	    }
-	  } 
+	  }
 	  update
 	  focus $W.e
 
@@ -225,7 +223,7 @@ namespace eval PortEntry {
   #############################################################################
   #
   # Set the size of all selected ports in the interface editor.
-  # 
+  #
   proc setSize {w bits} {
     set items [SpreadSheet::getselection $w]
 
@@ -240,7 +238,7 @@ namespace eval PortEntry {
   #############################################################################
   #
   # Set the type of all selected ports in the interface editor.
-  # 
+  #
   proc setType {w type} {
     set items [SpreadSheet::getselection $w]
 
@@ -255,7 +253,7 @@ namespace eval PortEntry {
   #############################################################################
   #
   # Set the side of all selected ports in the interface editor.
-  # 
+  #
   proc setSide {w side} {
     set items [SpreadSheet::getselection $w]
 
@@ -316,7 +314,7 @@ namespace eval IPanel {
 #    puts "IPanel::show $IPanel::data(itype)"
 
     grid $tabframe_w.ipanel -row 0 -column 0 -sticky nsew -rowspan 2
-    
+
     if { $IPanel::data(itype) == "symbol" } {
       SymbolEdit::openModule  $tkg_currentModule
       SymbolEdit::show
@@ -434,7 +432,7 @@ namespace eval IPanel {
     SpreadSheet::addcolumn $w.lb -width 7 -header [m igen.type]
     SpreadSheet::addcolumn $w.lb -width 7 -header [m igen.bits]
     SpreadSheet::addcolumn $w.lb -width 9 -header [m igen.side]
-  
+
     scrollbar $w.vb -orient vertical -command "SpreadSheet::yview $w.lb"
     pack $w.lb -side left
     pack $w.vb -fill y -side left -padx 2
@@ -548,7 +546,7 @@ namespace eval IPanel {
   #############################################################################
   #
   # Respond to a requested change in a module property
-  # 
+  #
   proc mpropUpdate {} {
     action ModProp {
       gat_editModProps save IPanel::props $IPanel::data(name)
@@ -672,7 +670,7 @@ namespace eval IPanel {
 
     helpon $w.autogen [m ho.ipanel.generate]
     helpon $w.update [m ho.ipanel.updateall]
-    
+
 
 #    frame $w.buttons
 #    button $w.buttons.edit -text [m ipanel.itype.generate]
@@ -702,7 +700,7 @@ namespace eval IPanel {
     set w1 [expr $baseWidth*$fontScale]
     set w2 [expr $canvasWidth+($baseWidth-$canvasWidth)*$fontScale]
     set width [max $w1 $w2]
-    
+
     #
     # Create left side panel
     #
@@ -744,7 +742,7 @@ namespace eval IGen {
     }
 
     destroy $igen_w
-  } 
+  }
 
   #
   # Cancel interface generation.
@@ -753,7 +751,7 @@ namespace eval IGen {
     variable igen_w
 
     destroy $igen_w
-  } 
+  }
 
   #
   # Post the interface generator wizard
@@ -801,7 +799,7 @@ namespace eval IGen {
 
 
     #
-    # Set initial values of 
+    # Set initial values of
     #
     set whichports modint
     set portpos keep

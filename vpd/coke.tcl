@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2005 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue Jul 24 13:55:55 2007
+#
 
 font create title_f -family helvetica -weight bold -size 66
 font create button_f -family helvetica -weight bold -size 10
@@ -390,9 +391,9 @@ namespace eval CokeMachine {
   }
 
   #############################################################################
-  #   
+  #
   # Return a coin (bill) that was not put into the slot (bill reader)
-  #   
+  #
   proc returnCoin {n coin w x y} {
     variable numQuarters
     variable numDimes
@@ -462,7 +463,7 @@ namespace eval CokeMachine {
 
     if { $w == "$coke_w($n).c.ext.cslot" ||  $w == "$coke_w($n).c.ext.cslot.e"} {
       switch $coin {
-	25 { 
+	25 {
 	  incr insertQuarters($n)
 	  if {[llength $pendingCoins($n)] == 0} { set osigINSQ($n) 1 }
 	  lappend pendingCoins($n) 25
@@ -487,7 +488,7 @@ namespace eval CokeMachine {
       if { $coin == "D" } { set readyBill($n) "D"; set ok 1 }
       if { $coin == "B" } { set readyBill($n) "B"; set ok 1 }
       if { $readyBill($n) != ""} {
-	set osigBILLSNS($n) 1 
+	set osigBILLSNS($n) 1
       }
     }
 
@@ -497,11 +498,11 @@ namespace eval CokeMachine {
 
       set X 20
       switch $coin {
-	25 { set Y 30 } 
-	10 { set Y 60 } 
-	5  { set Y 90 } 
-	D  { set Y 120 } 
-	B  { set Y 150 } 
+	25 { set Y 30 }
+	10 { set Y 60 }
+	5  { set Y 90 }
+	D  { set Y 120 }
+	B  { set Y 150 }
       }
 
       set X [expr $X + [winfo rootx $coke_w($n)]]
@@ -592,9 +593,9 @@ namespace eval CokeMachine {
     $w bind usrDime <1> "CokeMachine::selectCoin $n 10 %x %y"
     $w bind usrNickle <1> "CokeMachine::selectCoin $n 5 %x %y"
 
-    $w create text 40 30 -text "X" 
-    $w create text 40 60 -text "X" 
-    $w create text 40 90 -text "X" 
+    $w create text 40 30 -text "X"
+    $w create text 40 60 -text "X"
+    $w create text 40 90 -text "X"
 
     label $w.qcount -textvariable CokeMachine::numQuarters($n)
     $w create window 55 30 -window $w.qcount
@@ -610,8 +611,8 @@ namespace eval CokeMachine {
       makeBogus $w 20 150 -tag usrBogus
       $w bind usrDollar <1> "CokeMachine::selectCoin $n D %x %y"
       $w bind usrBogus <1> "CokeMachine::selectCoin $n B %x %y"
-      $w create text 40 120 -text "X" 
-      $w create text 40 150 -text "X" 
+      $w create text 40 120 -text "X"
+      $w create text 40 150 -text "X"
       label $w.lcount -textvariable CokeMachine::numDollars($n)
       $w create window 55 120 -window $w.lcount
 
@@ -689,7 +690,7 @@ namespace eval CokeMachine {
   # Set the state of the empty light
   #
   proc setEmpty {n elist} {
-    variable isEmpty 
+    variable isEmpty
 
     set isEmpty($n) $elist
   }
@@ -756,7 +757,7 @@ namespace eval CokeMachine {
 
   #############################################################################
   #
-  # Add an empty can to the empties list 
+  # Add an empty can to the empties list
   #
   proc drinkCan {n i args} {
     variable coke_w
@@ -903,7 +904,7 @@ namespace eval CokeMachine {
 
     set ok 0
 
-    switch $coin { 
+    switch $coin {
       25 {
 	if { $changeQuarters($n) > 0 } {
 	  incr changeQuarters($n) -1
@@ -971,7 +972,7 @@ namespace eval CokeMachine {
       set scannerBill($n) $readyBill($n)
       set readyBill($n) ""
 
-      set osigBILLSNS($n) 0 
+      set osigBILLSNS($n) 0
       set osigBILLACK($n) 1
     } else {
       # Bill in signal is unasserted
@@ -1009,10 +1010,10 @@ namespace eval CokeMachine {
       }
       set readyBill($n) ""
 
-      set osigBILLSNS($n) 0 
+      set osigBILLSNS($n) 0
       set osigBILLACK($n) 1
     } else {
-      set osigBILLACK($n) 0 
+      set osigBILLACK($n) 0
     }
   }
 
@@ -1107,12 +1108,12 @@ namespace eval CokeMachine {
   # Create the coin slot external view
   #
   proc evCoinSlot {w n args} {
-    canvas $w -bg black -width 70 -height 60 -bg grey -bd 2 -relief raised 
+    canvas $w -bg black -width 70 -height 60 -bg grey -bd 2 -relief raised
 
     # coin slot
     $w create line 65 10 65 32 -width 4
 
-    # 
+    #
     label $w.e -text "no\nchange" -font empty_f -bg "\#a05010" -fg "\#904000" -borderwidth 0
     $w create window 10 10 -window $w.e -anchor nw
 
@@ -1155,7 +1156,7 @@ namespace eval CokeMachine {
   # Create the coin return external view
   #
   proc evCoinReturn {w args} {
-    canvas $w -bg black -width 35 -height 35 -bg grey -bd 2 -relief raised 
+    canvas $w -bg black -width 35 -height 35 -bg grey -bd 2 -relief raised
 
     # coin return
     $w create rectangle 10 10 30 30 -fill gray20
@@ -1194,7 +1195,7 @@ namespace eval CokeMachine {
 
     set count [lindex $numCans($n) $column]
     for { set i [llength $L]} { $i < $count } { incr i } {
-      frame $w.can$i -width [expr $width-4] -height [expr ($width-4)/2] -bd 0 -bg $color 
+      frame $w.can$i -width [expr $width-4] -height [expr ($width-4)/2] -bd 0 -bg $color
       pack $w.can$i -padx 1 -pady 1 -side bottom
     }
   }
@@ -1217,7 +1218,7 @@ namespace eval CokeMachine {
     pack propagate $w 0
     set count [lindex $numCans($n) $column]
     for { set i 0 } { $i < $count } { incr i } {
-      frame $w.can$i -width [expr $width-4] -height [expr ($width-4)/2] -bd 0 -bg $color 
+      frame $w.can$i -width [expr $width-4] -height [expr ($width-4)/2] -bd 0 -bg $color
       pack $w.can$i -padx 1 -pady 1 -side bottom
     }
   }
@@ -1468,7 +1469,7 @@ namespace eval CokeMachine {
     # can output slot
     evCanOutSlot $w.co
     $w create window  25 [expr $mHeight - 80] -window $w.co -anchor w
-    
+
   }
 
 
@@ -1602,7 +1603,7 @@ if {![info exists tkgate_isInitialized]} {
     set L {}
     for {set i 0} { $i < 6 } { incr i } {
       lappend L $emptyLight($i)
-    }    
+    }
     set CokeMachine::isEmpty(test) $L
   }
 

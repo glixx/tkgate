@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,16 +10,17 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Jan 31 08:14:59 2009
+#
 
 #############################################################################
 #
 # This file contains tcl scripts for creating and managing menus (except
-# popup menus). 
+# popup menus).
 #
 # Menu states:
 #       edit			Normal edit mode is active
@@ -145,7 +146,7 @@ namespace eval Menu {
 
     {tool.separator	-		-		-		-	X	edit}
     {tool.rep		replicate	replicate	-		-	-	*}
-    
+
     {tool.separator	-		-		-		-	-	*}
     {tool.options	editOptions	emptytool	-		-	-	*}
     {tool.tclshell	shellWindow	emptytool	-		-	D	*}
@@ -274,7 +275,7 @@ namespace eval Menu {
 	set index [$m index end]
       } else {
 	$m add radiobutton -label $label -underline $underline -command $command \
-	    -state $state -variable $variable -value $value -accelerator $accelerator 
+	    -state $state -variable $variable -value $value -accelerator $accelerator
 	set index [$m index end]
       }
     } else {
@@ -330,7 +331,7 @@ namespace eval Menu {
     variable baseFlagEntries
 
     #
-    # Clear the base flags 
+    # Clear the base flags
     #
     foreach f $baseFlags {
       set baseFlagEntries($f) {}
@@ -481,7 +482,7 @@ namespace eval Menu {
       }
 
       #
-      # Record menu entries that use 
+      # Record menu entries that use
       #
       for {set i 0} {$i < [string length $gflags] } { incr i } {
 	set f [string index $gflags $i]
@@ -516,7 +517,7 @@ namespace eval Menu {
     }
 
     #
-    # Clear the base flags 
+    # Clear the base flags
     #
     foreach f $baseFlags {
       set baseFlagEntries($f) {}

@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Feb 23 20:30:42 2009
 #
@@ -21,7 +21,7 @@
 #############################################################################
 #
 # Use this for a basic action.  "name" is the name of the action that will
-# appear in the undo/redo listboxes, and "body" is the undoable code to 
+# appear in the undo/redo listboxes, and "body" is the undoable code to
 # execute.
 #
 proc action {name body} {
@@ -177,7 +177,7 @@ namespace eval Action  {
   #
   # Put tkgate in cut wire mode
   #
-  proc cutMode {} { 
+  proc cutMode {} {
     action Mode {ToolBar::selectTool 0 }
   }
 
@@ -185,7 +185,7 @@ namespace eval Action  {
   #
   # Put tkgate in invert in/out mode
   #
-  proc invertMode {} { 
+  proc invertMode {} {
     action Mode {ToolBar::selectTool 2 }
   }
 
@@ -193,7 +193,7 @@ namespace eval Action  {
   #
   # Put tkgate in set wire size mode
   #
-  proc sizeMode {} { 
+  proc sizeMode {} {
     action Mode {ToolBar::selectTool 9 }
   }
 
@@ -201,7 +201,7 @@ namespace eval Action  {
   #
   # Set gate rotation to 0 degrees
   #
-  proc rot0 {} { 
+  proc rot0 {} {
     action Rotation { gat_setrot 0 }
   }
 
@@ -209,7 +209,7 @@ namespace eval Action  {
   #
   # Set gate rotation to 90 degrees
   #
-  proc rot90 {} { 
+  proc rot90 {} {
     action Rotation { gat_setrot 1 }
   }
 
@@ -217,7 +217,7 @@ namespace eval Action  {
   #
   # Set gate rotation to 180 degrees
   #
-  proc rot180 {} { 
+  proc rot180 {} {
     action Rotation { gat_setrot 2 }
   }
 
@@ -225,7 +225,7 @@ namespace eval Action  {
   #
   # Set gate rotation to 270 degrees
   #
-  proc rot270 {} { 
+  proc rot270 {} {
     action Rotation { gat_setrot 3 }
   }
 
@@ -233,7 +233,7 @@ namespace eval Action  {
   #
   # Open a Tcl shell window
   #
-  proc shellWindow {} { 
+  proc shellWindow {} {
     ::shellWindow
   }
 
@@ -258,7 +258,7 @@ namespace eval Action  {
   # Replicate a gate.
   #
   proc replicate {} {
-    action Replicate { gat_replicate } 
+    action Replicate { gat_replicate }
   }
 
   ######################################################################
@@ -298,14 +298,14 @@ namespace eval Action  {
   # Move to the previous error in the error box.
   #
   proc errBoxUp {} {
-    action ErrUp { ErrBox::selectUp } 
+    action ErrUp { ErrBox::selectUp }
   }
 
   ######################################################################
   #
   # Move to the next error in the error box.
   #
-  proc errBoxDown {} { 
+  proc errBoxDown {} {
     action ErrDown { ErrBox::selectDown }
   }
 
@@ -324,10 +324,10 @@ namespace eval Action  {
   # The type of rotation depends on the current edit mode.  If en regular
   # edit mode, selected gates are rotated.  If the symbol editor is active
   # and we are in port mode, then the selected port is edited.  If the symbol
-  # editor is active and we are not in port mode, then the bits are rotated. 
+  # editor is active and we are not in port mode, then the bits are rotated.
   #
   proc rotate {} {
-    action Rotate { 
+    action Rotate {
       set mm [gat_getMajorMode]
 
       switch $mm {
@@ -352,7 +352,7 @@ namespace eval Action  {
   # Back rotate gates
   #
   proc backRotate {} {
-    action Rotate { 
+    action Rotate {
       set mm [gat_getMajorMode]
 
       switch $mm {
@@ -420,7 +420,7 @@ namespace eval Action  {
     set lib [BlockTree::getselection]
     if {[string first "||" $lib] != 0} return
     set lib [string range $lib 2 end]
-    clearAction { gat_unloadLibrary $lib } 
+    clearAction { gat_unloadLibrary $lib }
   }
 
   ######################################################################
@@ -483,8 +483,8 @@ namespace eval Action  {
   #
   # Select all gates in the current module
   #
-  proc selectAll {} { 
-    if {$HdlEditor::isActive} { 
+  proc selectAll {} {
+    if {$HdlEditor::isActive} {
       action SelectAll { HdlEditor::selectAll }
     } else {
       action SelectAll { gat_selectAll }
@@ -503,7 +503,7 @@ namespace eval Action  {
   #
   # Set an anchor on the selected gate
   #
-  proc anchor {} { 
+  proc anchor {} {
     action Anchor { gat_anchor 1 }
   }
 
@@ -527,8 +527,8 @@ namespace eval Action  {
   #
   # Copy selected region to cut buffer
   #
-  proc copyToBuf {} { 
-    if {$HdlEditor::isActive} { 
+  proc copyToBuf {} {
+    if {$HdlEditor::isActive} {
       HdlEditor::doCopy
     } else {
       action Copy { gat_copyToBuf }
@@ -540,7 +540,7 @@ namespace eval Action  {
   # Cut the selected objects and place them in the cut buffer
   #
   proc cutToBuf {} {
-    if {$HdlEditor::isActive} { 
+    if {$HdlEditor::isActive} {
       HdlEditor::doCut
     } else {
       action Cut gat_cutToBuf
@@ -552,8 +552,8 @@ namespace eval Action  {
   # Cut the selected objects and append them to the cut buffer
   #
   proc cutToBufAppend {} {
-    if {$HdlEditor::isActive} { 
-      HdlEditor::startCommand - 
+    if {$HdlEditor::isActive} {
+      HdlEditor::startCommand -
     }
     action CutAppend gat_cutToBufAppend
   }
@@ -563,7 +563,7 @@ namespace eval Action  {
   # Yank a copy of the cut buffer to the current module
   #
   proc yankFromBuf {} {
-    if {$HdlEditor::isActive} { 
+    if {$HdlEditor::isActive} {
       HdlEditor::doYank
     } else {
       action Yank gat_yankFromBuf
@@ -574,7 +574,7 @@ namespace eval Action  {
   #
   # Duplicate
   #
-  proc duplicate {} { 
+  proc duplicate {} {
     action Duplicate {
       gat_copyToBuf
       gat_yankFromBuf 30 30
@@ -734,7 +734,7 @@ namespace eval Action  {
   }
 
   ######################################################################
-  # 
+  #
   # Copy a module
   #
   proc blockCopy {} {
@@ -742,7 +742,7 @@ namespace eval Action  {
   }
 
   ######################################################################
-  # 
+  #
   # Set root module
   #
   proc blockSetRoot {} {
@@ -948,7 +948,7 @@ namespace eval Action  {
 
   ######################################################################
   #
-  # Update the interface of a module instance  with the current interface 
+  # Update the interface of a module instance  with the current interface
   #
   proc updateInterface {} {
     action UpdIntf { gat_updateInterface }
@@ -956,7 +956,7 @@ namespace eval Action  {
 
   ######################################################################
   #
-  # Update the interface of all module instances with the current interface 
+  # Update the interface of all module instances with the current interface
   #
   proc updateAllInterfaces {} {
     action UpdAllIntf { gat_updateInterface -all }
@@ -964,7 +964,7 @@ namespace eval Action  {
 
   ######################################################################
   #
-  # Update the interface of all module instances with the current interface 
+  # Update the interface of all module instances with the current interface
   #
   proc updateOpenInterface {} {
     action UpdAllIntf { gat_updateInterface -open }
@@ -1092,7 +1092,7 @@ namespace eval Action  {
   }
   proc hdlPageDown {} {
     HdlEditor::startCommand -
-    HdlEditor::doPageMove 1 
+    HdlEditor::doPageMove 1
   }
   proc hdlPageUp {} {
     HdlEditor::startCommand -
@@ -1152,7 +1152,7 @@ namespace eval Action  {
   }
   proc hdlExchangePointAndMark {} {
     HdlEditor::startCommand -
-    HdlEditor::doPointSwap 
+    HdlEditor::doPointSwap
   }
   proc hdlCancel {} {
     HdlEditor::startCommand -

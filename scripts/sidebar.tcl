@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue Jan 13 09:30:38 2009
+#
 
 namespace eval SideBar {
   #############################################################################
@@ -40,7 +41,7 @@ namespace eval SideBar {
   #
   proc moduleTabs {w tab} {
     switch $tab {
-      Tree {    
+      Tree {
 	BlockTree::create $w
       }
       List {
@@ -58,7 +59,7 @@ namespace eval SideBar {
     TabBox::new $w -tabs { Nets Ports} -command SideBar::netTabs -tablabels [list [m sidetab.nets]  [m sidetab.ports]] -expand 1
 
     helpon $w.bNets [m ho.netlist]
-    helpon $w.bPorts [m ho.ports] 
+    helpon $w.bPorts [m ho.ports]
   }
 
   #############################################################################
@@ -70,7 +71,7 @@ namespace eval SideBar {
 
     set labels [list [m module.tree] [m module.list]]
     set images [list [gifI modtree.gif] [gifI modlist.gif]]
-    
+
     TabBox::new $w.mtab -tabs {Tree List} -command SideBar::moduleTabs -tablabels $labels -tabimages $images -compound left -expand 1
     pack $w.mtab -fill both -expand 1
 
@@ -81,11 +82,11 @@ namespace eval SideBar {
 
   #
   # The user requested a property edit, but there are no gates seleted.  Look in the side
-  # bar windows to see if we can find something selected. 
+  # bar windows to see if we can find something selected.
   #
   proc editModuleOrNet {} {
     set net [NetList::getselection]
-    if {$net != "" } { 
+    if {$net != "" } {
       gat_editNet $net
       return
     }

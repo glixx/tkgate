@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,11 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Nov 29 00:45:14 2004
+#
 
 ##############################################################################
 #
@@ -272,7 +273,7 @@ gm81mux		8-1 Multiplexor
 gm12dec		1-2 Decoder
 gm14dec		1-4 Decoder
 gm18dec		1-8 Decoder
-    
+
 gmmodinst	Module Instance
 gmmodin		Module Input
 gmmodout	Module Output
@@ -402,7 +403,7 @@ see the error location.
 #
 db.net.name	Net Name
 db.net.hide	Hide Name
-db.net.bits	Bit Width	
+db.net.bits	Bit Width
 db.net.port	Port Type
 db.net.in	in
 db.net.out	out
@@ -472,7 +473,7 @@ db.gate.cat.dec.exp	-fillbegin-
 Bits are concatenated in descending order from top to bottom.
 -end-
 
-db.gate.cat.sigdir	Signal Direction 
+db.gate.cat.sigdir	Signal Direction
 db.gate.cat.auto.hdr	Auto
 db.gate.cat.multin.hdr	Multi-Input
 db.gate.cat.singin.hdr	Single-Input
@@ -535,7 +536,7 @@ for this instance.
 
 db.gate.tab.details.exp -fillbegin-
 Set detailed type specific properties
-of a gate here. 
+of a gate here.
 -end-
 
 
@@ -1016,7 +1017,7 @@ Are you sure you want to do this?
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		New Module 
+blklst.newmod		New Module
 blklst.delmod		Delete Module
 blklst.frommod		Copy Module From
 blklst.tomod		To
@@ -1200,7 +1201,7 @@ err.sim.badbin		Illegal charcter in binary constant '%s'.
 err.sim.notswitch	Gate '%s' is not a switch, dip or register.
 err.sim.badcmd		Unrecognized command '%s' in simulation script.
 
-err.noteditpchg		Properties can only be changed in edit mode.	
+err.noteditpchg		Properties can only be changed in edit mode.
 err.badeditop		Illegal interface edit mode operation.
 err.badopen		Unable to open input file '%s'.
 err.badlibopen		Unable to open library file '%s'.
@@ -1524,7 +1525,7 @@ the last save.
 ho.print.selall		Print all modules currently loaded by TKGate.
 ho.print.selcur		Print only the current module in the TKGate edit window.
 ho.print.seluse		-begin-
-Print all modules "in use". In use modues are 
+Print all modules "in use". In use modues are
 those that are a decendent of the root module.
 -end-
 
@@ -1631,7 +1632,7 @@ This file is read when the simulator is started.
 ho.edgat.func		The function type of this module.
 ho.edgat.frame		The frame label.
 
-ho.traceprint		Print trace logic trace. 
+ho.traceprint		Print trace logic trace.
 
 ho.showxhair		-begin-
 If this button is depressed, a vertical crosshair
@@ -1680,7 +1681,7 @@ with slow displays.
 -end-
 
 ho.opt.bhelp		-begin-
-If this option is enabled,  help balloons will 
+If this option is enabled,  help balloons will
 be activated.  Help balloons, such as this one,
 provide tips on interface elements when the
 mouse is over them.

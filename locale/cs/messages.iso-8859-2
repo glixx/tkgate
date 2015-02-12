@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jun  4 10:37:11 2004
 
@@ -184,10 +184,10 @@ gm81mux		8-1 Multiplexor
 gm12dec		1-2 Dekodér
 gm14dec		1-4 Dekodér
 gm18dec		1-8 Dekodér
-    
+
 gmmodinst	Instance Modulu
 gmmodin		Vstup Modulu
-gmmodout	Výstup Module 
+gmmodout	Výstup Module
 gmmodinout	Module InOut
 
 addwireseg	Pøidat Segment Vodièe
@@ -214,7 +214,7 @@ tutsim		Simulace Obvodu
 menu.sc.prtrace	Tisknout Stopu...
 menu.sc.close	Zavøít
 menu.sc.trace	Stopa
-menu.sc.zoomin Zvìt¹it	
+menu.sc.zoomin Zvìt¹it
 menu.sc.zoomout Zmen¹it
 
 scope.emptymsg	Poklepáním na vodiè pøidejte nebo sma¾te stopu.
@@ -233,7 +233,7 @@ ibits		Bity
 #
 db.net.name	Jméno Sitì
 db.net.hide	Skrýt Jméno
-db.net.bits	Bitová ¹íøka	
+db.net.bits	Bitová ¹íøka
 db.net.port	Typ Portu
 db.net.in	vstup
 db.net.out	výstup
@@ -274,7 +274,7 @@ db.gate.stddelay	Standartní Zpo¾dìní
 db.gate.custdelay	Definované Zpo¾dìní
 db.gate.extbar		Pou¾ít roz¹iøující li¹ty
 
-db.led.type		Typ LED 
+db.led.type		Typ LED
 db.led.bit		Bit
 db.led.bar		Bar Graph
 db.led.hex		7-Segment (HEX)
@@ -363,7 +363,7 @@ opt.normal		Normal
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Miles
-opt.contver		Automatická Kontrola Integrity 
+opt.contver		Automatická Kontrola Integrity
 opt.showsimcmd		Display Simulator Stream
 opt.logfile		Simulator Log File
 opt.estepsz		Poèet jednotek èasu/krok
@@ -396,7 +396,7 @@ access to the Internet.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Nový Modul 
+blklst.newmod		Nový Modul
 blklst.delmod		Smazat Modul
 blklst.frommod		Kopírovat Modul Z
 blklst.tomod		Do
@@ -452,7 +452,7 @@ err.noerr		Can not locate error.
 err.misserr		Error information incomplete (did the simulator crash?)
 err.pounimpl		Unimplemented error in ParseOption
 
-err.badinadd	     Nelze pøidat dal¹í vstup k vybranému hradlu	
+err.badinadd	     Nelze pøidat dal¹í vstup k vybranému hradlu
 err.badoutadd	     	Nelze pøidat dal¹í výstup k vybranému hradlu
 err.badinoutadd		Can't add any more inout pins to selected gate.
 err.badpinchg		Can't change pin types on selected gate.
@@ -485,7 +485,7 @@ err.sim.badbin		Neplatný znak v binární konstantì '%s'.
 err.sim.notswitch	Gate '%s' is not a switch, dip or register.
 err.sim.badcmd		Neznámý pøíkaz '%s' v simulaèním skriptu.
 
-err.noteditpchg		Properties can only be changed in edit mode.	
+err.noteditpchg		Properties can only be changed in edit mode.
 err.badeditop		Illegal interface edit mode operation.
 err.badopen		Nelze otevøít vstupní soubor '%s'.
 err.badlibopen		Nelze otevøít knihovní soubor '%s'.
@@ -565,7 +565,7 @@ to attempt an unvalidated save?
 -end-
 
 err.noback		-begin-
-Soubor byl vytvoøen v tkgate 
+Soubor byl vytvoøen v tkgate
 verze %s, a nemusí být èitelný
 verzemi star¹ími ne¾
 aktuální verze (%s) bude-li ulo¾en.
@@ -757,7 +757,7 @@ the last save.
 ho.print.selall		Print all modules currently loaded by TKGate.
 ho.print.selcur		Print only the current module in the TKGate edit window.
 ho.print.seluse		-begin-
-Print all modules "in use". In use modues are 
+Print all modules "in use". In use modues are
 those that are a decendent of the root module.
 -end-
 
@@ -870,7 +870,7 @@ This file is read when the simulator is started.
 ho.edgat.func		The function type of this module.
 ho.edgat.frame		The frame label.
 
-ho.traceprint		Print logic trace. 
+ho.traceprint		Print logic trace.
 
 ho.showxhair		-begin-
 If this button is depressed, a vertical crosshair
@@ -926,7 +926,7 @@ with slow displays.
 -end-
 
 ho.opt.bhelp		-begin-
-If this option is enabled,  help balloons will 
+If this option is enabled,  help balloons will
 be activated.  Help balloons, such as this one,
 provide tips on interface elements when the
 mouse is over them.

@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,13 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Feb 28 22:42:44 2005
 #
+
 set ho_ReqWin ""
 set ho_ReqTag ""
 set ho_PostWin ""
@@ -38,7 +39,7 @@ proc post_help {win tag} {
   scan [winfo pointerxy .] "%d %d" X Y
 
   catch {
-    bind $win <Destroy> { catch { destroy .helpon } } 
+    bind $win <Destroy> { catch { destroy .helpon } }
 
     toplevel .helpon
     wm geometry .helpon +[expr $X + 5]+[expr $Y + 5]
@@ -84,7 +85,7 @@ proc helpon {win msg} {
 
 proc helponitemcancel {win item} {
   global helpon_msg
-  catch { 
+  catch {
     unset helpon_msg(${win}:$item)
   }
 }

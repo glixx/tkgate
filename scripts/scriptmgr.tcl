@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Jul 28 00:20:29 2007
 #
@@ -132,7 +132,7 @@ namespace eval ScriptMgr {
     button $w.dismiss -text [m b.dismiss] -command "destroy $w"
     pack $w.pane -fill both -expand 1
     pack $w.dismiss -fill x
-    
+
     #
     # Copy contents of script file.
     #
@@ -165,7 +165,7 @@ namespace eval ScriptMgr {
     # Get list of lines with errors
     #
     set badLines {}
-    foreach e $errList($id) { 
+    foreach e $errList($id) {
       set lineno [lindex $e 1]
       if {[lsearch -integer $badLines $lineno] < 0} {
 	lappend badLines $lineno
@@ -189,7 +189,7 @@ namespace eval ScriptMgr {
 
     label $w.pane.errlist.box.hdr -text [m info.script.error] -bd 1 -relief raised
 
-    listbox $w.pane.errlist.box.lb -width 60 -height 5 -bg white  -relief flat -bd 0 -yscrollcommand "$w.pane.errlist.vb set" 
+    listbox $w.pane.errlist.box.lb -width 60 -height 5 -bg white  -relief flat -bd 0 -yscrollcommand "$w.pane.errlist.vb set"
     scrollbar $w.pane.errlist.vb -command "$w.pane.errlist.box.lb yview"
 
     pack $w.pane.errlist.box.hdr -fill x
@@ -205,7 +205,7 @@ namespace eval ScriptMgr {
     #
     # Copy error messages
     #
-    foreach line $errList($id) { 
+    foreach line $errList($id) {
       if {[scan $line "%s %d %\[^\n\]" file lineno msg] == 3 } {
 	$w.pane.errlist.box.lb insert end [format "%s, %d: %s" [file tail $file] $lineno $msg]
       } else {
@@ -271,11 +271,11 @@ namespace eval ScriptMgr {
 
     set r [SpreadSheet::getselection $smlb_w]
     if { $r == "" } return
-    set r [lindex $r 0] 
+    set r [lindex $r 0]
     set id [lindex [SpreadSheet::get $smlb_w $r] 0]
 
     Simulator::cmdSend "\$delscript script:$id"
-    SpreadSheet::delete $smlb_w $r 
+    SpreadSheet::delete $smlb_w $r
   }
 
   proc enableSelection {args} {
@@ -284,7 +284,7 @@ namespace eval ScriptMgr {
 
     set r [SpreadSheet::getselection $smlb_w]
     if { $r == "" } return
-    set r [lindex $r 0] 
+    set r [lindex $r 0]
     set id [lindex [SpreadSheet::get $smlb_w $r] 0]
 
     if { $scriptState($id) == 2 } {
@@ -299,7 +299,7 @@ namespace eval ScriptMgr {
 
     set r [SpreadSheet::getselection $smlb_w]
     if { $r == "" } return
-    set r [lindex $r 0] 
+    set r [lindex $r 0]
     set id [lindex [SpreadSheet::get $smlb_w $r] 0]
 
     if { $scriptState($id) == 0 } {
@@ -333,9 +333,9 @@ namespace eval ScriptMgr {
     }
 
 # ENABLE THIS IN A FUTURE VERSION
-#    
+#
 #    frame $w.actions.vcr -relief raised -bd 1
-#    grid $w.actions.vcr -row $i -column 0 -columnspan 2 -pady 1 -sticky ew 
+#    grid $w.actions.vcr -row $i -column 0 -columnspan 2 -pady 1 -sticky ew
 #    label $w.actions.vcr.label -text "Script Control:"
 #    pack $w.actions.vcr.label -padx 2 -pady 2
 #    button $w.actions.vcr.go -image [gifI "sim_go.gif"]  -takefocus 0 -relief flat
@@ -343,7 +343,7 @@ namespace eval ScriptMgr {
 #    button $w.actions.vcr.stop -image [gifI "sim_stop.gif"] -takefocus 0 -relief flat
 #    pack  $w.actions.vcr.go  $w.actions.vcr.pause  $w.actions.vcr.stop -side left -padx 4 -pady 1
 
-    pack $w.actions -side right -fill x -anchor nw -pady 3 
+    pack $w.actions -side right -fill x -anchor nw -pady 3
 
     frame $w.t
     pack $w.t -fill both

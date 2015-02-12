@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,10 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
+
+########################################################################
 #
 # Translation by Roman Valls (brainlinux@softhome.net)
 #
@@ -140,7 +142,7 @@ gmmerge		Línies <-> Bus
 gmclock		Senyal de rellotge
 
 gm.led		LED
-gm.ledbar	Barra de LEDs 
+gm.ledbar	Barra de LEDs
 gm.ledhex	7-Seg. LED (HEXADECIMAL)
 gm.leddec	7-Seg. LED (DECIMAL)
 gm.ledseg	7-Seg. LED (Directe)
@@ -153,9 +155,9 @@ gmor		OR   (O)
 gmnor		NOR  (NO-O)
 gmxor		XOR  (O-EX)
 gmxnor		XNOR (NO-O-EX)
-gmbuf		Buffer 
+gmbuf		Buffer
 gminv		Inversor
-gmtribuf	Buffer-Triestat 
+gmtribuf	Buffer-Triestat
 gmnmos		NMOS
 gmpmos		PMOS
 
@@ -185,7 +187,7 @@ gm81mux		8-1 Multiplexor
 gm12dec		1-2 Decodificador
 gm14dec		1-4 Decodificador
 gm18dec		1-8 Decodificador
-    
+
 gmmodinst	Insereix mòdul
 gmmodin		Entrada mòdul
 gmmodout	Sortida mòdul
@@ -201,10 +203,10 @@ hlptut		Tutorials
 hlpexample	Exemples
 exampcomb	Lògica combinacional
 examp3bit	Comptador de 3 bits
-examp8bit	Comptador de 8 bits 
+examp8bit	Comptador de 8 bits
 examptrff	FF a nivell de transistors
 exampcpu	CPU
-tutwelcome	Introducció al TkGate 
+tutwelcome	Introducció al TkGate
 tutcreate	Creant un circuit
 tutedit1	Editant un circuit (1)
 tutedit2	Editant un circuit (2)
@@ -233,7 +235,7 @@ ibits		Bits:
 #
 db.net.name		Nom connexió
 db.net.hide		Ocultar
-db.net.bits		Amplada bus	
+db.net.bits		Amplada bus
 db.net.port		Tipus de pota
 db.net.in		entrada
 db.net.out		sortida
@@ -306,7 +308,7 @@ print.cur			Actual
 print.use			Usats
 print.sel			Seleccionats
 print.inclib		Inclou mòduls de llibreria.
-print.papsz			Dimensions del paper 
+print.papsz			Dimensions del paper
 print.orient		Orientació
 print.portrait		Vertical
 print.landscape		Apaisada
@@ -389,7 +391,7 @@ d'una connexió permanent a la xarxa.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Mòdul nou 
+blklst.newmod		Mòdul nou
 blklst.delmod		Borra mòdul
 blklst.frommod		Copia mòdul de
 blklst.tomod		a
@@ -475,7 +477,7 @@ err.sim.badbin		'%s' es un caràcter incorrecte en constant binaria.
 err.sim.notswitch	La porta '%s' no es un commutador, dip o registre.
 err.sim.badcmd		No reconeixo la comanda '%s' en el guió de simulació.
 
-err.noteditpchg		Les propietats només es poden canviar en mode Edició.	
+err.noteditpchg		Les propietats només es poden canviar en mode Edició.
 err.badeditop		Operació il·legal en el mode d'Edició.
 err.badopen		No puc obrir el fitxer '%s'.
 err.badlibopen		No puc obrir la llibreria '%s'.
@@ -496,7 +498,7 @@ pot usar en el mode de simulació o
 en l'anàlisi d'un camí crític. Per
 favor navega de forma manual fins al
 bloc de destí seleccionant els mòduls adequats
-y usant l'opció '>' del teclat. S'accedeix 
+y usant l'opció '>' del teclat. S'accedeix
 al mòdul de nivell superior en la
 jerarquia actuant sobre la tecla '<'.
 -end-
@@ -524,7 +526,7 @@ err.noback		-begin-
 El fitxer %s, es crearà per el
 programa tkgate, y no podrà llegir-se
 per a versions anteriors a l'actual
-(%s), si vol salvar-lo. 
+(%s), si vol salvar-lo.
 -end-
 
 ##############################################################################
@@ -597,14 +599,14 @@ per desconnectar cables.
 
 ho.inv		-begin-
 Invertir - Usa aquesta eina
-per inserir o esborrar inversions 
+per inserir o esborrar inversions
 de les potes de les portes.
 -end-
 
 ho.bitw		-begin-
 Amplada del Bus - Usa aquesta eina
 per canviar el número de línies del
-Bus. Introdueix l'esmentat nombre en la 
+Bus. Introdueix l'esmentat nombre en la
 part inferior dreta de la finestra.
 -end-
 
@@ -612,7 +614,7 @@ ho.modopen	Obre el mòdul seleccionat.
 ho.modclose	Tanca el mòdul actual.
 
 ho.simgo	-begin-
-Si no estem simulant, inicia la 
+Si no estem simulant, inicia la
 simulació y executa qualsevol
 guió d'inicializació. Si
 estem simulant, es col·loca en
@@ -665,7 +667,7 @@ Introdueix un punt de ruptura. Un punt de ruptura és una expressió
 que atura la simulació quan l'avaluació resulta certa.
 Les expressions suportades per el programa son del tipus
 operador lògic simple : "w1 == 0" o "w7 != 8". També es
-contemplen expressions en les que es nega la connexió: "!w2". 
+contemplen expressions en les que es nega la connexió: "!w2".
 -end-
 
 ho.f.modlist	-begin-
@@ -678,7 +680,7 @@ es visualitzen entre parèntesi.
 ho.netlist	-begin-
 Llista totes les connexions del mòdul actual.
 Connexions marcades amb el signe "@" no presenten el
-seu nom en l'esquema (connexions ocultes). Les 
+seu nom en l'esquema (connexions ocultes). Les
 connexions BUS van seguides del nombre de línies
 que posseeixen.
 -end-
@@ -686,7 +688,7 @@ que posseeixen.
 ho.ports	-begin-
 Llista totes les potes del mòdul actual
 El signe '>' indica l'entrada, '<' indica la sortida,
-i '=' indica línia bidireccional. 
+i '=' indica línia bidireccional.
 -end-
 
 ho.status.logo		-begin-
@@ -695,7 +697,7 @@ porta de ferro estem en el mode d'Edició.
 Si es presenta una porta AND amb quatre potes
 estem en mode de simulació. Si la porta
 és estàtica, la simulació està aturada i
-si està en moviment, la simulació està en 
+si està en moviment, la simulació està en
 ple funcionamient.
 -end-
 
@@ -705,7 +707,7 @@ ho.status.block		La pila de mòduls que estan essent editats.
 
 ho.status.file		-begin-
 Fitxer actualment editat.  El signe '*' indica
-que el buffer s'ha modificat des de l'últim cop 
+que el buffer s'ha modificat des de l'últim cop
 que el fitxer que s'ha desat al disc.
 -end-
 
@@ -767,7 +769,7 @@ ho.edgat.cadd		Afegeix una pota.
 ho.edgat.cdel		Borra la pota seleccionada.
 
 ho.edgat.hide		-begin-
-Activa aquest flag per no 
+Activa aquest flag per no
 visualitzar el nom de la porta.
 -end-
 
@@ -805,7 +807,7 @@ S'usa en la sortida impresa o fitxer postscript.
 ho.opt.smooth		-begin-
 Si aquesta opció està habilitada, el desplaçament
 s'optimitza al usar copies bitmap en comptes d'un
-re-dibuixat complert. Pots desactivar-la si 
+re-dibuixat complert. Pots desactivar-la si
 hi ha problemes amb el seu servidor.
 -end-
 
@@ -825,12 +827,12 @@ màquines amb microprocessadors i tarjes gràfiques lentes.
 ho.opt.bhelp		-begin-
 Si aquesta opció està habilitada, els globus d'ajuda
 s'activen.  Els globus d'ajuda, com aquest mateix,
-proporcionen una ajuda resumida sobre els elements 
+proporcionen una ajuda resumida sobre els elements
 de la interficie, quan el mouse hi passa per sobre.
 -end-
 
 ho.opt.novice		-begin-
-Si no s'especifica cap circuit en la línia de 
+Si no s'especifica cap circuit en la línia de
 comandes, TkGate presenta un tutorial
 per iniciar-se amb l'ús del programa.
 -end-
@@ -877,7 +879,7 @@ hem activat el mode pas a pas per nº de cicles.
 
 ho.opt.ckover		-begin-
 El nombre de períodes de temps després d'un
-flanc de baixada de rellotge que avancem si 
+flanc de baixada de rellotge que avancem si
 hem activat el mode pas a pas.
 -end-
 
@@ -909,7 +911,7 @@ i seleccionar "Retard".
 -end-
 
 ho.techbut		-begin-
-Usa retards per la tecnologia estàndard d'un fitxer de 
+Usa retards per la tecnologia estàndard d'un fitxer de
 definició. Per afegir tecnologies personalitzades, afegir-les
 a la llista del menú  "Fitxer -> Opcions -> Simulador".
 -end-
@@ -979,7 +981,7 @@ Es permeten valors entre 1 i 10000.
 -end-
 
 ho.contver  -begin-
-Verificar contínuament la integritat de les 
+Verificar contínuament la integritat de les
 estructures de dades internes despres de
 cada operació.
 -end-

@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,19 +10,18 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Jan 17 07:51:39 2009
-#
 #
 
 ######################################################################
 #
 # Basic constants
 #
-set tkg_progName 		TKGate 
+set tkg_progName 		TKGate
 set tkg_prefFile		"~/.tkgate2-preferences"
 set tkg_errorLogFile		"tkgate-error.log"
 set tkg_splashWait 		1500
@@ -69,10 +68,10 @@ set tkg_mmSplitEdit		0
 # current size for InfoPanel in simulate mode
 set tkg_mmSplitSimulate		0.15
 
-# Minimum size for InfoPanel when switching to edit mode 
+# Minimum size for InfoPanel when switching to edit mode
 set tkg_mmSplitEditMin		0
 
-# Minimum size for InfoPanel when switching to simulate mode 
+# Minimum size for InfoPanel when switching to simulate mode
 set tkg_mmSplitEditLog		0.15
 
 # Minimum size for InfoPanel when logging a message

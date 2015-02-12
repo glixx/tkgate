@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Jan  5 00:36:58 2009
 
@@ -117,7 +117,7 @@ tab.cpath		TODO: Critical Path
 
 #############################################################################
 #
-# MsgMgr strings (including breakpoint and script handling) 
+# MsgMgr strings (including breakpoint and script handling)
 #
 @mm.width		7
 mm.add		TODO: Add...
@@ -132,7 +132,7 @@ mm.disable		TODO: Disable
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
 # of a number and a colon.   If this prefix exists, it indicates the character
 # position in the string that will be underlined.  This enables keyboard shortcuts
-# using the Alt key. 
+# using the Alt key.
 #
 menu.file		Fichero
 menu.edit		TODO: Edit
@@ -171,10 +171,10 @@ menu.format.rot.rotate		TODO: Rotate
 menu.edit.zoomin		Zoom Acercar
 menu.edit.zoomout		Zoom Alejar
 
-menu.edit.rshift		TODO: 10:Bit Shift Right 
-menu.edit.lshift		TODO: 10:Bit Shift Left 
-menu.edit.ushift		TODO: 10:Bit Shift Up 
-menu.edit.dshift		TODO: 10:Bit Shift Down 
+menu.edit.rshift		TODO: 10:Bit Shift Right
+menu.edit.lshift		TODO: 10:Bit Shift Left
+menu.edit.ushift		TODO: 10:Bit Shift Up
+menu.edit.dshift		TODO: 10:Bit Shift Down
 menu.edit.cwrotate		TODO: 11:Bit Rotate C-W
 menu.edit.ccwrotate		TODO: 15:Bit Rotate C-C-W
 menu.edit.pcwrotate		TODO: 12:Port Rotate C-C-W
@@ -302,7 +302,7 @@ gm.io.merge		TODO: Concat
 gm.io.clock		Seal de Reloj
 
 gm.io.led		LED
-gm.io.ledbar		Barra de LEDs 
+gm.io.ledbar		Barra de LEDs
 gm.io.ledhex		7-Seg. LED (HEXADECIMAL)
 gm.io.leddec		7-Seg. LED (DECIMAL)
 gm.io.ledseg		7-Seg. LED (Directo)
@@ -315,9 +315,9 @@ gm.gate.or		OR   (O)
 gm.gate.nor		NOR  (NO-O)
 gm.gate.xor		XOR  (O-EX)
 gm.gate.xnor		XNOR (NO-O-EX)
-gm.gate.buf		Buffer 
+gm.gate.buf		Buffer
 gm.gate.inv		Inversor
-gm.gate.tribuf		Buffer-Triestado 
+gm.gate.tribuf		Buffer-Triestado
 gm.gate.nmos		NMOS
 gm.gate.pmos		PMOS
 
@@ -348,7 +348,7 @@ gm.msi.81mux		8-1 Multiplexor
 gm.msi.12dec		1-2 Decodificador
 gm.msi.14dec		1-4 Decodificador
 gm.msi.18dec		1-8 Decodificador
-    
+
 gm.mod.inst		Inserta mdulo
 gm.mod.in		Entrada Mdulo
 gm.mod.out		Salida Mdulo
@@ -378,10 +378,10 @@ pop.wire.addseg		Aadir segmento de cable
 pop.wire.prop		TODO: Properties...
 pop.wire.hidesize		TODO: Hide Bit Width
 pop.wire.showsize		TODO: Show Bit Width
-pop.wire.hidelabel		TODO: Hide Label 
+pop.wire.hidelabel		TODO: Hide Label
 pop.wire.hidealllabel		TODO: Hide All Labels
 pop.wire.clearalllabel		TODO: Clear All Labels
-pop.wire.showlabel		TODO: Show Label 
+pop.wire.showlabel		TODO: Show Label
 
 pop.gate.open		TODO: Open
 pop.gate.close		TODO: Close
@@ -535,8 +535,8 @@ TODO: You must first switch to Edit mode before navigating to warnings.
 #
 db.net.name		Nombre Conexin
 db.net.hide		Nombre Oculto
-db.net.bits		Anchura Bus	
-db.net.type		TODO: Net Type	
+db.net.bits		Anchura Bus
+db.net.type		TODO: Net Type
 db.net.port		Tipo de Patilla
 db.net.in		entrada
 db.net.out		salida
@@ -599,7 +599,7 @@ db.gate.edit		TODO: Edit
 db.gate.delete		TODO: Delete
 db.gate.add		TODO: Add
 
-db.gate.ff.type		TODO: Flip-Flop Orientation 
+db.gate.ff.type		TODO: Flip-Flop Orientation
 db.gate.ff.normal.hdr		TODO: Normal
 db.gate.ff.normal.exp		-fillbegin-
 TODO: Flip-Flop with data flowing left to right.
@@ -618,7 +618,7 @@ db.gate.cat.dec.exp		-fillbegin-
 TODO: Bits are concatenated in descending order from top to bottom.
 -end-
 
-db.gate.cat.sigdir		TODO: Signal Direction 
+db.gate.cat.sigdir		TODO: Signal Direction
 db.gate.cat.auto.hdr		TODO: Auto
 db.gate.cat.multin.hdr		TODO: Multi-Input
 db.gate.cat.singin.hdr		TODO: Single-Input
@@ -681,7 +681,7 @@ TODO: Set the module parameters for this instance of this module if any are defi
 -end-
 
 db.gate.tab.details.exp		-fillbegin-
-TODO: Set detailed type specific properties of a gate here. 
+TODO: Set detailed type specific properties of a gate here.
 -end-
 
 
@@ -835,7 +835,7 @@ print.use		Usados
 print.sel		Seleccionados
 print.inclib		Incluye mdulos de libreria.
 print.incunused		TODO: Include unused modules.
-print.papsz		Tamao del Papel 
+print.papsz		Tamao del Papel
 print.orient		Orientacin
 print.portrait		Vertical
 print.landscape		Apaisada
@@ -1104,7 +1104,7 @@ opt.sec.ignore		TODO: Ignore attempted usage of disabled features.
 
 opt.html.linkopts		TODO: Link Options
 opt.html.browser		TODO: Browser Command
-opt.html.email		TODO: e-Mail Command 
+opt.html.email		TODO: e-Mail Command
 
 opt.debug.opt		TODO: Debugging Options
 
@@ -1500,7 +1500,7 @@ err.sim.isrun		El simulador est ejecutandose en estos momentos (Utiliza 'Ctrl-s 
 err.sim.run		TODO: Run-time Error
 err.sim.cmd		TODO: Internal Command Error
 
-err.noteditpchg		Las propiedades slo pueden cambiarse en modo Edicin.	
+err.noteditpchg		Las propiedades slo pueden cambiarse en modo Edicin.
 err.badeditop		Operacin ilegal en el modo de Edicin.
 err.badopen		No se puede abrir el fichero '%s'.
 err.badlibopen		No puedo abrir la libreria '%s'.
@@ -1582,7 +1582,7 @@ TODO: A problem has occured attempting to save '%s'.  If you wish, you can try a
 -end-
 
 err.noback		-fillbegin-
-El fichero %s, se crear por el programa tkgate, y no puede leerse por versiones anteriores a la actual (%s), si decide salvarlo. 
+El fichero %s, se crear por el programa tkgate, y no puede leerse por versiones anteriores a la actual (%s), si decide salvarlo.
 -end-
 
 err.viewfile		TODO: Can not open file '%s'.
@@ -1723,7 +1723,7 @@ verga.err.BADSPECLVAL		TODO: Bit-ranges on path delay specifiers unsupported.
 verga.err.PATHDITEM		TODO: Unsupported construct in module with path-delay specification.
 verga.err.PATHDINOUT		TODO: Use of 'inout' in module with path-delay specification is unsupported.
 verga.err.PATHDLOOP		TODO: Loops in modules with path-delay specification are unsupported.
-verga.err.PATHDCOND		TODO: DelaMust set through both # expression and specify block. 
+verga.err.PATHDCOND		TODO: DelaMust set through both # expression and specify block.
 verga.err.TASKREDEF		TODO: Redefinition of task or function '%s' in module '%s'.
 verga.err.TASKASFUNC		TODO: Task '%s' used as function.
 verga.err.FUNCASTASK		TODO: Function '%s' used as task.
@@ -1769,8 +1769,8 @@ primitive.err.wrongname		TODO: Internal Error: module name mismatch in definitio
 
 ho.setsel.allr		TODO: Move all items to selected list.
 ho.setsel.alll		TODO: Move all items to unselected list.
-ho.setsel.ltor		TODO: Move highlighted items to selected list. 
-ho.setsel.rtol		TODO: Move highlighted items to unselected list. 
+ho.setsel.ltor		TODO: Move highlighted items to selected list.
+ho.setsel.rtol		TODO: Move highlighted items to unselected list.
 
 ho.net.in		TODO: Single-Bit Input
 ho.net.out		TODO: Single-Bit Output
@@ -2036,7 +2036,7 @@ Lista todas las conexiones del mdulo actual. Conexiones marcadas con el signo "@
 -end-
 
 ho.ports		-begin-
-Lista todas las patillas del mdulo actual El signo '>' indica entrada, '<' indica salida, y '=' indica linea bidireccional. 
+Lista todas las patillas del mdulo actual El signo '>' indica entrada, '<' indica salida, y '=' indica linea bidireccional.
 -end-
 
 ho.status.logo		-begin-
@@ -2074,7 +2074,7 @@ Imprime slo los mdulos seleccionados m-Aás abajo. Usa la tecla CONTROL para sel
 ho.print.modlist		Selecciona los mdulos a imprimir.
 
 ho.print.timegraph		-begin-
-TODO: The display of the region selected to be printed is shown here.  The green area is the entire range of trace data available, and the grey area shows the area to be printed. Use the selectors to the left to select a region, or select the region in the scope window before bringing  up this diaglog box. 
+TODO: The display of the region selected to be printed is shown here.  The green area is the entire range of trace data available, and the grey area shows the area to be printed. Use the selectors to the left to select a region, or select the region in the scope window before bringing  up this diaglog box.
 -end-
 
 ho.circuit.discchg		-begin-
@@ -2142,7 +2142,7 @@ ho.edgat.func		El tipo de funcin de este mdulo.
 ho.edgat.frame		La etiqueta del panel.
 
 ho.traceprint		-begin-
-TODO: Print trace logic trace. 
+TODO: Print trace logic trace.
 -end-
 
 ho.showxhair		-begin-
@@ -2198,7 +2198,7 @@ TODO: If this setting is enabled, use of any disabled features will be ignored a
 -end-
 
 ho.opt.html.browser		-begin-
-TODO: Command to be execute when the user clicks on a link to an html file.  A "%s" in the command will be replaced with the link URL. 
+TODO: Command to be execute when the user clicks on a link to an html file.  A "%s" in the command will be replaced with the link URL.
 -end-
 
 ho.opt.html.email		-begin-

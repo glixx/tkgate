@@ -1,5 +1,5 @@
 //
-//    Copyright (C) 1987-2000 by Jeffery P. Hansen
+//    Copyright (C) 1987-2015 by Jeffery P. Hansen
 //
 //    This program is free software; you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
 //    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //    GNU General Public License for more details.
 //
-//    You should have received a copy of the GNU General Public License
-//    along with this program; if not, write to the Free Software
-//    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+//    You should have received a copy of the GNU General Public License along
+//    with this program; if not, write to the Free Software Foundation, Inc.,
+//    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 //    Last edit by hansen on Fri Dec  1 14:34:44 2000
 //
@@ -55,7 +55,7 @@ field mpccond[12:10]={
 //
 // Address to jump to if mpcop is "jump" and condition specified
 // by mpccond is true.  This field can not be used at the same
-// time as the idata field.  
+// time as the idata field.
 //
 field mpcaddr[9:2];
 
@@ -100,7 +100,7 @@ field ~ldmar[38];	// Load MAR
 field ~ldmdr[39];	// Load MDR
 field ~ldpc[40];	// Load PC
 field ~rd[41];		// Read main memory
-field ~rdmdr[42];	// Read MDR onto external data bus 
+field ~rdmdr[42];	// Read MDR onto external data bus
 field ~wrt[43];		// Write main memory
 field spc[44];		// Address main memory from PC
 field ~isa[45];		// Use sa address from macro instruction
@@ -123,13 +123,13 @@ field extra[63:56];	// Extra bits
 // |7|6|5|4|3|2|1|0|
 // +-+-+-+-+-+-+-+-+
 //
-// Basic instruction types are encoded by the high two bits of the 
+// Basic instruction types are encoded by the high two bits of the
 // first byte of the instruction.  For certain types (e.g., ALU
 // types) some bits are masked when forming the map address.  Bits
 // contributing to the map vector are marked with a *.
 //
 // Move Instruction
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |1 1 1 s|a a|b b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //  * * * * * * * *
@@ -139,21 +139,21 @@ field extra[63:56];	// Extra bits
 //  bb = operand mode 2
 //
 // Single operand instruction (push, pop, call, etc.)
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |1 0|0| op  |b b|   | reg1  |0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //  * * * * * * * *
 //
 //
 // Branch instruction (jmp, jne, etc.)
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |1 0|1|cond |b b|   | reg1  |0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //  * * *       * *
 //
 //
 // ALU Instruction
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|  func   |b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //  * *           *
@@ -162,7 +162,7 @@ field extra[63:56];	// Extra bits
 //  a = operand mode
 //
 // Other instructions
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 0|   op    |b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //  * * * * * * * *
@@ -220,7 +220,7 @@ operands movoprs {
 };
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 0|1 1 1 1 1|0|   |0 0 0 0|0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 //
@@ -233,7 +233,7 @@ op nop {
 };
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 0|0 0 0 0 0|0|   |0 0 0 0|0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 //
@@ -246,7 +246,7 @@ op halt {
 };
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 0|0 0 0 0 1|0|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 //
@@ -258,7 +258,7 @@ op cmp {
 };
 
 // Generic branch operation
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |1 0|1|x x x|b b|   |0 0 0 0| reg1  |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -336,7 +336,7 @@ op jmp {
 // purposes only.  Map entries must be made for each function code
 // to use this instruction for real.
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|x x x x x|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -356,7 +356,7 @@ op jmp {
 //};
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|1 0 1 0 0|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -368,7 +368,7 @@ op add {
 };
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|1 0 1 0 1|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -380,7 +380,7 @@ op sub {
 };
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|1 0 0 0 0|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -392,7 +392,7 @@ op mul {
 };
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|1 1 1 0 0|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -405,7 +405,7 @@ op div {
 
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|1 1 0 0 0|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -418,7 +418,7 @@ op mod {
 
 
 //
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 1|0 1 0 0 0|b|   | reg1  |  reg2 |
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -431,7 +431,7 @@ op and {
 
 
 // Call subroutine
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |1 0|0|0 0 0|b b|   | reg1  |0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -465,7 +465,7 @@ op call {
 };
 
 // Return from subroutine
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |0 0|0 0 0 1 0|0|   |0 0 0 0|0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -479,7 +479,7 @@ op call {
 //    sp = sp + 2
 //    pc = [sp]
 //    sp = sp + 2
-//    
+//
 //
 op ret {
   map ret : 0x4;
@@ -490,7 +490,7 @@ op ret {
 };
 
 // Push a word on the stack
-// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  
+// +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+
 // |1 0|0|0 0 1|b b|   | reg1  |0 0 0 0|
 // +-+-+-+-+-+-+-+-+   +-+-+-+-+-+-+-+-+  ...
 //
@@ -623,7 +623,7 @@ xalu_ri: incpc spc rd ldmdr;						// mdr <- [PC]; PC++;
 		aop=reg bop=qreg wa isa ldcc;				// Ra = Ra (op) Q;  CC; jump to fetch
 	mpcop=next;
 
-cmp_rr:	mpcop=jump mpccond=jmp mpcaddr=fetch ALU_OP=add ALU_BCOMP extra=0x22	
+cmp_rr:	mpcop=jump mpccond=jmp mpcaddr=fetch ALU_OP=add ALU_BCOMP extra=0x22
 		isa isb aop=reg bop=reg ldcc;				// Ra - Rb; CC; jump to fetch
 	mpcop=next;
 
@@ -666,7 +666,7 @@ call_ii:
 	rdpc lddata aop=din bop=idata idata=4 ALU_OP=add ldq;		// Q = PC+4
 	ALU_AZERO ALU_OP=add bop=qreg dout ldmdr;			// Q.L -> mdr
 	wrt;								// [mar] <- mdr;
-	incmar ALU_AZERO ALU_OP=add bop=qreg dout ldhmdr;		// Q.H -> mdr; mar++; 
+	incmar ALU_AZERO ALU_OP=add bop=qreg dout ldhmdr;		// Q.H -> mdr; mar++;
 	mpcop=next;
 	wrt;								// [mar] <- mdr;
 	mpcop=next;
@@ -676,7 +676,7 @@ call_ii:
 			dout ldmar wa;					// SP-2 -> mar; SP = SP - 2;
 	ALU_AZERO bop=reg sb=0xe ALU_OP=add dout ldmdr;			// FP.L -> mdr
 	wrt;								// [mar] <- mdr;
-	incmar ALU_AZERO  bop=reg sb=0xe ALU_OP=add dout ldhmdr; 	// SP.H -> mdr; mar++; 
+	incmar ALU_AZERO  bop=reg sb=0xe ALU_OP=add dout ldhmdr; 	// SP.H -> mdr; mar++;
 	mpcop=next;
 	wrt;								// [mar] <- mdr;
 
@@ -715,7 +715,7 @@ ret:	ALU_AZERO bop=reg sb=0xe ALU_OP=add sa=0xf wa dout ldmar extra=0x12;	// SP 
 	ALU_AZERO bop=qreg ALU_OP=add sa=0xe wa rd incmar ldmdr;	// FP <- Q; mdr <- [mar++]
 	ALU_AZERO bop=din lddata ALU_OP=add ldql rd incmar rdmdr ldmdr;	// Q.L <- mdr; mdr <- [mar++]
 	ALU_AZERO bop=din lddata ALU_OP=add ldqh rdmdr;			// Q.H <- mdr;
-	mpcop=jump mpccond=jmp mpcaddr=fetch1 
+	mpcop=jump mpccond=jmp mpcaddr=fetch1
 		ALU_AZERO bop=qreg ALU_OP=add dout ldpc;		// PC <- Q; jump fetch1
  	incpc spc rd ldmdr;						// mdr <- [PC]; PC++;
 
@@ -732,7 +732,7 @@ pushw_r: aop=reg sa=0xf bop=idata idata=2 ALU_OP=add ALU_BCOMP
 	mpcop=jump mpccond=jmp mpcaddr=fetch wrt;			// [mar] <- mdr; jump to fetch
 	mpcop=next;
 
-pushw_i: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++; 
+pushw_i: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldql ALU_OP=add ALU_AZERO lddata bop=din; // mdr <- [PC]; PC++; Q.L <- mdr
 	rdmdr ldqh ALU_OP=add ALU_AZERO lddata bop=din;			// Q.H = mdr;
 	aop=reg sa=0xf bop=idata idata=2 ALU_OP=add ALU_BCOMP
@@ -745,18 +745,18 @@ pushw_i: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	mpcop=next;
 
 movw_rr: mpcop=jump mpccond=jmp mpcaddr=fetch2 ALU_AZERO ALU_OP=add
-		isa isb wa aop=reg bop=reg ldcc extra=1 
+		isa isb wa aop=reg bop=reg ldcc extra=1
 		incpc spc rd ldmdr;					// Ra <- Rb; jump to fetch2; mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldir;					// mdr <- [PC]; PC++; ir <- mdr;
 
 movb_rr: ALU_AZERO ALU_OP=add isb aop=reg bop=reg ldcc extra=1 ldql;	// Q.L <- Rb;
 	mpcop=jump mpccond=jmp mpcaddr=fetch2 aop=idata bop=idata
 		ALU_OP=add ldqh incpc spc rd ldmdr;			// Q.H <- 0; jump to fetch2;mdr <- [PC]; PC++;
-	ALU_AZERO ALU_OP=add bop=qreg isa wa 
+	ALU_AZERO ALU_OP=add bop=qreg isa wa
 		incpc spc rd ldmdr rdmdr ldir;				// Ra <- Q; mdr <- [PC]; PC++; ir <- mdr;
 
 
-movw_ri: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++; 
+movw_ri: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldql ALU_OP=add ALU_AZERO lddata bop=din; // mdr <- [PC]; PC++; Q.L <- mdr
 	rdmdr ldqh ALU_OP=add ALU_AZERO lddata bop=din;			// Q.H = mdr;
 	mpcop=jump mpccond=jmp mpcaddr=fetch ALU_OP=add ALU_AZERO
@@ -836,7 +836,7 @@ movb_dx: mpcop=next  extra=7;
 	mpcop=next  extra=7;
 
 movw_di: isa bop=idata idata=0 ALU_OP=add dout ldmar;			// mar <- Ra
-_mwdi:	incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++; 
+_mwdi:	incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldql ALU_OP=add ALU_AZERO lddata bop=din; // mdr <- [PC]; PC++; Q.L <- mdr
 	rdmdr ldqh ALU_OP=add ALU_AZERO lddata bop=din;			// Q.H = mdr;
 	aop=idata bop=qreg idata=0 ALU_OP=add ldmdr dout;		// mdr <- Q.L
@@ -847,19 +847,19 @@ _mwdi:	incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	mpcop=next;
 
 movb_di: aop=reg isa bop=idata idata=0 ALU_OP=add dout ldmar extra=0x21;// mar <- Ra
-_mbdi:	incpc spc rd ldmdr;						// mdr <- [PC]; PC++; 
+_mbdi:	incpc spc rd ldmdr;						// mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldql ALU_OP=add ALU_AZERO lddata bop=din; // mdr <- [PC]; PC++; Q.L <- mdr
 	aop=idata bop=qreg idata=0 ALU_OP=add ldmdr dout;		// mdr <- Q.L
 	mpcop=jump mpccond=jmp mpcaddr=fetch wrt;			// [mar] <- mdr; jump to fetch
 	mpcop=next;
 
-movw_xi: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++; 
+movw_xi: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldql ALU_OP=add ALU_AZERO lddata bop=din; // mdr <- [PC]; PC++; Q.L <- mdr
 	mpcop=jump mpccond=jmp mpcaddr=_mwdi rdmdr ldqh
 		ALU_OP=add ALU_AZERO lddata bop=din;			// Q.H = mdr; goto _mwdi
 	isa aop=reg bop=qreg ALU_OP=add dout ldmar;			// mar <- Ra+Q
 
-movb_xi: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++; 
+movb_xi: incpc spc rd ldmdr extra=2;					// mdr <- [PC]; PC++;
 	incpc spc rd ldmdr rdmdr ldql ALU_OP=add ALU_AZERO lddata bop=din; // mdr <- [PC]; PC++; Q.L <- mdr
 	mpcop=jump mpccond=jmp mpcaddr=_mbdi rdmdr ldqh
 		ALU_OP=add ALU_AZERO lddata bop=din;			// Q.H = mdr; goto _mwdi
@@ -889,7 +889,7 @@ ttystatus:	.symbol	0x10	// tty status register
 //
 // struct node {
 //   struct node *yes_b;
-//   struct node *no_b; 
+//   struct node *no_b;
 //   char text[100];
 // };
 //
@@ -946,7 +946,7 @@ loop:
 .end
 
 ////////////////////
-//	find_animal(p)		Find the animal. p is the root node in question tree 
+//	find_animal(p)		Find the animal. p is the root node in question tree
 //
 .proc find_animal
 tree:	.symbol	-2		// Local variable for tree pointer
@@ -960,11 +960,11 @@ tree:	.symbol	-2		// Local variable for tree pointer
 	jne	get_response	// If not 0, then treat as question node
 
 	pushw	R1		// Push pointer to top node
-	call	get_final	// As the final question, and insert new node if necessary 
+	call	get_final	// As the final question, and insert new node if necessary
 	add	SP,2		// Restore stack
 	movw	tree(FP),R1	// Save new root node in "tree"
 
-	jmp	done		// All done, go to final cleanup 
+	jmp	done		// All done, go to final cleanup
 
 get_response:
 	movw	R1,tree(FP)	// Put current node pointer in R1
@@ -1002,22 +1002,22 @@ get_response:
 	jmp	get_response	// Go back and ask again
 
 say_yes:
-	movw	R1,tree(FP)	// Put current tree pointer in R1           
-	movw	R2,yes_b(R1)	// Put "yes" branch pointer in R2           
-	pushw	R2		// Push the yes branch on the stack         
-	call	find_animal	// Recursively ask the next question        
-	add	SP,2		// Restore the stack                        
-	movw	R2,tree(FP)	// Get tree pointer again                   
-	movw	yes_b(R2),R1	// Update the "yes" branch                  
-	jmp	done		// Finish up and prepare to return to caller 
+	movw	R1,tree(FP)	// Put current tree pointer in R1
+	movw	R2,yes_b(R1)	// Put "yes" branch pointer in R2
+	pushw	R2		// Push the yes branch on the stack
+	call	find_animal	// Recursively ask the next question
+	add	SP,2		// Restore the stack
+	movw	R2,tree(FP)	// Get tree pointer again
+	movw	yes_b(R2),R1	// Update the "yes" branch
+	jmp	done		// Finish up and prepare to return to caller
 say_no:
-	movw	R1,tree(FP)	// Put current tree pointer in R1           
-	movw	R2,no_b(R1)	// Put "no" branch pointer in R2           
-	pushw	R2		// Push the no branch on the stack         
-	call	find_animal	// Recursively ask the next question        
-	add	SP,2		// Restore the stack                        
-	movw	R2,tree(FP)	// Get tree pointer again                   
-	movw	no_b(R2),R1	// Update the "no" branch                  
+	movw	R1,tree(FP)	// Put current tree pointer in R1
+	movw	R2,no_b(R1)	// Put "no" branch pointer in R2
+	pushw	R2		// Push the no branch on the stack
+	call	find_animal	// Recursively ask the next question
+	add	SP,2		// Restore the stack
+	movw	R2,tree(FP)	// Get tree pointer again
+	movw	no_b(R2),R1	// Update the "no" branch
 	jmp	done		// Finish up and prepare to return to caller
 
 done:
@@ -1039,7 +1039,7 @@ get_response:
 	movw	tree(FP),R1	// Save it in the 'tree' variable
 
 	movw	R1, 4(FP)	// Put pointer to tree in R1
-	add	R1,text		// Advance R1 to animal name text 
+	add	R1,text		// Advance R1 to animal name text
 	pushw	R1		// Push pointer to animal name on stack
 	pushw	isita		// Push the "is it a..." string pointer
 	call	printf		// Print the final question
@@ -1049,24 +1049,24 @@ get_response:
 	call	gets		// Get the response
 	add	SP,2		// Restore the stack
 
-	pushw	buf		// Push response on stack      
-	pushw	yes		// Push "yes" on stack         
-	call	strcmp		// Compare strings            
-	add	SP,4		// Restore stack               
-	cmp	R1,0		// See if a 0 was returned     
+	pushw	buf		// Push response on stack
+	pushw	yes		// Push "yes" on stack
+	call	strcmp		// Compare strings
+	add	SP,4		// Restore stack
+	cmp	R1,0		// See if a 0 was returned
 	jeq	win		// If so, we guessed the animal
 
-	pushw	buf		// Push response on stack      
-	pushw	no		// Push "no" on stack         
-	call	strcmp		// Compare strings            
-	add	SP,4		// Restore stack               
-	cmp	R1,0		// See if a 0 was returned     
+	pushw	buf		// Push response on stack
+	pushw	no		// Push "no" on stack
+	call	strcmp		// Compare strings
+	add	SP,4		// Restore stack
+	cmp	R1,0		// See if a 0 was returned
 	jeq	loose		// If so, we did not guess the animal
 
-	pushw	yesno		// Push the "yes or no" error message 
-	call	print		// Print it                           
-	add	SP,2		// Restore stack                      
-	jmp	get_response	// Go back and ask again              
+	pushw	yesno		// Push the "yes or no" error message
+	call	print		// Print it
+	add	SP,2		// Restore stack
+	jmp	get_response	// Go back and ask again
 
 win:
 	pushw	winmsg		// Push the (computer) win message
@@ -1097,8 +1097,8 @@ loose:
 	movw	R1,animal_node(FP)	// Put pointer to new node in R1
 	add	R1,text			// Advance to the text field
 	pushw	R1			// Push new animal name on stack
-	pushw	dscrim			// Push "what is difference" question 
-	call	printf			// Print the question 
+	pushw	dscrim			// Push "what is difference" question
+	call	printf			// Print the question
 	add	SP,6			// Restore pointer
 
 	pushw	nsize			// Allocate memory for discrimination node
@@ -1107,7 +1107,7 @@ loose:
 	movw	discrim_node(FP),R1	// Put address of new node in discrim_node
 
 	add	R1,text			// Advance pointer to text field of discrimination node
-	pushw	R1			// Push pointer to text buffer to input question 
+	pushw	R1			// Push pointer to text buffer to input question
 	call	gets			// Input the question
 	add	SP,2			// Restore pointer
 
@@ -1126,46 +1126,46 @@ L1:	movw	R1,animal_node(FP)	// Put pointer to new animal node in R1
 	call	gets			// Input a "yes" or "no"
 	add	SP,2			// Restore stack
 
-	pushw	buf			// Push user response                            
-	pushw	yes			// Push string "yes"                             
-	call	strcmp			// Compare strings                               
-	add	SP,4			// Restore stack                                 
-	cmp	R1,0			// Is the result 0?                              
+	pushw	buf			// Push user response
+	pushw	yes			// Push string "yes"
+	call	strcmp			// Compare strings
+	add	SP,4			// Restore stack
+	cmp	R1,0			// Is the result 0?
 	jeq	L2			// If so, goto L2.  New animal is on "yes" branch
 
-	pushw	buf			// Push user response                            
-	pushw	no			// Push string "no"                             
-	call	strcmp			// Compare strings                               
-	add	SP,4			// Restore stack                                 
-	cmp	R1,0			// Is the result 0?                              
+	pushw	buf			// Push user response
+	pushw	no			// Push string "no"
+	call	strcmp			// Compare strings
+	add	SP,4			// Restore stack
+	cmp	R1,0			// Is the result 0?
 	jeq	L3			// If so, goto L3.  New animal is on "no" branch
 
-	pushw	yesno			// Push the "yes or no" error message 
-	call	printf			// Print it                           
-	add	SP,2			// Restore stack                      
-	jmp	L1			// Go back and ask again              
+	pushw	yesno			// Push the "yes or no" error message
+	call	printf			// Print it
+	add	SP,2			// Restore stack
+	jmp	L1			// Go back and ask again
 
 //
 // Insert new animal on yes branch of new question
 //
-L2:	movw	R1,discrim_node(FP)	// Put new question node in R1 
-	movw	R2,tree(FP)		// Put old animal node in R2   
-	movw	R3,animal_node(FP)	// Put new animal node in R3   
-	movw	yes_b(R1),R3		// Set yes branch to new node  
-	movw	no_b(R1),R2		// Set no branch to old node   
-	movw	tree(FP),R1		// Save R1 to tree pointer     
-	jmp	done			// Finish up and return        
+L2:	movw	R1,discrim_node(FP)	// Put new question node in R1
+	movw	R2,tree(FP)		// Put old animal node in R2
+	movw	R3,animal_node(FP)	// Put new animal node in R3
+	movw	yes_b(R1),R3		// Set yes branch to new node
+	movw	no_b(R1),R2		// Set no branch to old node
+	movw	tree(FP),R1		// Save R1 to tree pointer
+	jmp	done			// Finish up and return
 
 //
 // Insert new animal on no branch of new question
 //
-L3:	movw	R1,discrim_node(FP)	// Put new question node in R1 
-	movw	R2,tree(FP)		// Put old animal node in R2   
-	movw	R3,animal_node(FP)	// Put new animal node in R3   
-	movw	yes_b(R1),R2		// Set yes branch to old node  
-	movw	no_b(R1),R3		// Set no branch to new node   
-	movw	tree(FP),R1		// Save R1 to tree pointer     
-	jmp	done			// Finish up and return        
+L3:	movw	R1,discrim_node(FP)	// Put new question node in R1
+	movw	R2,tree(FP)		// Put old animal node in R2
+	movw	R3,animal_node(FP)	// Put new animal node in R3
+	movw	yes_b(R1),R2		// Set yes branch to old node
+	movw	no_b(R1),R3		// Set no branch to new node
+	movw	tree(FP),R1		// Save R1 to tree pointer
+	jmp	done			// Finish up and return
 
 done:
 	movw	R1,tree(FP)		// Put tree pointer into return register R1
@@ -1198,14 +1198,14 @@ done:	ret
 .end
 
 ////////////////////
-//	printf(s,...)	Print the format string 
+//	printf(s,...)	Print the format string
 //
 .proc printf
 ptr:	.symbol	-2		// Local var for string pointer
 arg:	.symbol -4		// Local var for argument pointer
 	sub	SP,4		// Allocate 4 bytes for local variables
 
-	movw	R3,FP		// Assign R3 and add an offset so that it points 
+	movw	R3,FP		// Assign R3 and add an offset so that it points
 	add	R3,6		//   to the argument after the control string
 
 	movw	R1, 4(FP)	// Put the control string pointer in R1
@@ -1243,7 +1243,7 @@ L2:	cmp	R2,'d'		// See if this is a "%d" conversion
 	movw	arg(FP),R3	// Save the argument pointer value
 	movw	R2,(R3)		// Get number (from arguments) to print
 	pushw	R2		// Push it on the stack
-	call	nprint		// Go print the decimal number 
+	call	nprint		// Go print the decimal number
 	add	SP,2		// Restore stack pointer
 	movw	R1,ptr(FP)	// Restore string pointer value
 	movw	R3,arg(FP)	// Restore argument pointer value
@@ -1256,7 +1256,7 @@ cout:
 	add	R1, #1		// Advance to next char in control string
 	jmp	loop		// Go back and print more
 
-done:	ret			// All done, return to caller 
+done:	ret			// All done, return to caller
 .end
 
 ////////////////////
@@ -1269,11 +1269,11 @@ done:	ret			// All done, return to caller
 	pushw	R1		// Push value to print on stack
 	call	nprint_aux 	// Call aux function to print number
 	add	SP,2		// Restore stack pointer
-	ret			// All done, return to caller 
+	ret			// All done, return to caller
 
 zprint:	movb	(ttydata), '0'	// Put the ascii value of '0' in tty data register
 	movb	(ttystatus), #1	// Signal tty controller to print character
-	ret			// All done, return to caller 
+	ret			// All done, return to caller
 .end
 
 ////////////////////
@@ -1287,7 +1287,7 @@ digit:	.symbol	-2		// Digit to print
 	jeq	done		// If zero, return
 
 	// To print the number n we compute
-	//     R2 = n / 10, and 
+	//     R2 = n / 10, and
 	//     R3 = n % 10
 	// We can then recursively call nprint_aux to print all
 	// but the lowest digit, then print the lowest digit ourselves
@@ -1382,7 +1382,7 @@ del_char:
 
 	jmp	cwait		// Go back and get another char
 
-bell:	
+bell:
 	movb	R3, 7		// Put bell char in R3
 	movb	(ttydata),R3	// Echo bell
 	movb	(ttystatus),#1	// Signal tty controller to print character

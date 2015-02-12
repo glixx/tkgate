@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,11 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Feb 23 19:27:02 2009
-#
 #
 
 # Toolbar y padding
@@ -105,7 +104,7 @@ namespace eval ToolBar {
     foreach m $menu_list {
       catch {
 	destroy $m
-	menu $m  -tearoff 0 
+	menu $m  -tearoff 0
 	foreach mi $L {
 	  $m add command -label $mi -command "gat_setTech $mi"
 	}
@@ -119,7 +118,7 @@ namespace eval ToolBar {
     foreach m $menu_list {
       catch {
 	destroy $m
-	menu $m  -tearoff 0 
+	menu $m  -tearoff 0
 	foreach mi $L {
 	  $m add radiobutton -variable pop_tech -value $mi -label $mi -command "gat_setTech $mi"
 	}
@@ -146,7 +145,7 @@ namespace eval ToolBar {
   }
 
   proc tbSymEdit {w args} {
-    global bd tbr tbypad 
+    global bd tbr tbypad
 
     frame $w
     tbGrabber $w.grab SymEdit $args
@@ -164,7 +163,7 @@ namespace eval ToolBar {
   }
 
   proc tbSymPort {w args} {
-    global bd tbr tbypad 
+    global bd tbr tbypad
 
     frame $w
     tbGrabber $w.grab SymPort $args
@@ -179,7 +178,7 @@ namespace eval ToolBar {
   }
 
   proc tbSymShift {w args} {
-    global bd tbr tbypad 
+    global bd tbr tbypad
 
     frame $w
     tbGrabber $w.grab SymShift $args
@@ -199,7 +198,7 @@ namespace eval ToolBar {
   }
 
   proc tbSymOpr {w args} {
-    global bd tbr tbypad 
+    global bd tbr tbypad
 
     frame $w
     tbGrabber $w.grab SymOpr $args
@@ -217,7 +216,7 @@ namespace eval ToolBar {
   }
 
   proc tbSymZoom {w args} {
-    global bd tbr tbypad 
+    global bd tbr tbypad
 
     frame $w
     tbGrabber $w.grab SymEdit $args
@@ -352,7 +351,7 @@ namespace eval ToolBar {
     flatradiobutton $w.mov -image [gifI "mov_curs.gif"]  -variable mode -value 1 -command Action::editMode
     flatradiobutton $w.scroll -image [gifI "scroll_curs.gif"]  -variable mode -value 3 -command Action::scrollMode
 
-    pack $w.mov $w.scroll  -side left -pady  $tbypad 
+    pack $w.mov $w.scroll  -side left -pady  $tbypad
 
     frame $w.vbar -bd 1 -relief sunken -width 2
     pack $w.vbar -side left -padx 1 -pady 2 -fill y
@@ -392,7 +391,7 @@ namespace eval ToolBar {
 
 
     frame $w.pad
-    pack $w.pad -side left -padx 2 -pady 2 
+    pack $w.pad -side left -padx 2 -pady 2
 
     frame $w.vbar -bd 1 -relief sunken -width 2
     pack $w.vbar -side left -padx 1 -pady 2 -fill y
@@ -429,7 +428,7 @@ namespace eval ToolBar {
     pack $w.nbitsl $w.nbitsv -side left -pady $tbypad
 
     frame $w.pad
-    pack $w.pad -side left -padx 2 -pady 2 
+    pack $w.pad -side left -padx 2 -pady 2
 
     frame $w.vbar -bd 1 -relief sunken -width 2
     pack $w.vbar -side left -padx 1 -pady 2 -fill y
@@ -470,7 +469,7 @@ namespace eval ToolBar {
 
     helpon $w.back [m ho.undo]
     helpon $w.forward [m ho.redo]
-    
+
     set activebackground [option get . activeBackground UndoRedo]
     set normalbackground [$w.back cget -bg]
 
@@ -563,7 +562,7 @@ namespace eval ToolBar {
     global bd tbr tbypad logo_w
 
     set logo_w $w
-    label $logo_w -image [gifI "gatelogo.gif"] 
+    label $logo_w -image [gifI "gatelogo.gif"]
     helpon $logo_w [m ho.status.logo]
 
   }
@@ -576,7 +575,7 @@ namespace eval ToolBar {
     tbGrabber $w.grab Tech $args
     pack $w.grab -side left -fill y
 
-    label $w.l -text "[m b.tech]:" 
+    label $w.l -text "[m b.tech]:"
     Dropbox::new $w.v -variable tkg_defaultTech -value $tkg_defaultTech -width 14 -takefocus 0
     Dropbox::itemadd $w.v [gat_getTechList]
 
@@ -635,7 +634,7 @@ namespace eval ToolBar {
       if { [expr $y - $tbroot_y] > $tbMiddle } {
 	set i 0
 	foreach q $bottomTools {
-	  if {!$toolState($q) } { 
+	  if {!$toolState($q) } {
 	    incr i
 	    continue
 	  }
@@ -651,7 +650,7 @@ namespace eval ToolBar {
       } else {
 	set i 0
 	foreach q $topTools {
-	  if {!$toolState($q) } { 
+	  if {!$toolState($q) } {
 	    incr i
 	    continue
 	  }
@@ -886,7 +885,7 @@ namespace eval ToolBar {
     variable modeTools
     variable currentMode
     variable enabledTools
-    global tkg_filetb tkg_edittb tkg_gateoptb tkg_undotb tkg_zoomtb tkg_modetb 
+    global tkg_filetb tkg_edittb tkg_gateoptb tkg_undotb tkg_zoomtb tkg_modetb
     global tkg_moduletb tkg_techtb tkg_simctltb tkg_simauxtb tkg_gateprop
     global tkg_symmodestb tkg_simmodestb tkg_symedittb tkg_zoomtb tkg_symporttb tkg_symshifttb tkg_symoprtb
 
@@ -902,15 +901,15 @@ namespace eval ToolBar {
     if {$tkg_moduletb} { lappend newSet BlockOp }
     if {$tkg_techtb} { lappend newSet Tech }
     if {$tkg_simctltb} { lappend newSet SimControl }
-    if {$tkg_simauxtb} { lappend newSet SimAux } 
+    if {$tkg_simauxtb} { lappend newSet SimAux }
 
-    if {$tkg_symmodestb} { lappend newSet SymModes } 
-    if {$tkg_simmodestb} { lappend newSet SimModes } 
-    if {$tkg_symedittb} { lappend newSet SymEdit } 
-    if {$tkg_zoomtb} { lappend newSet SymZoom } 
-    if {$tkg_symporttb} { lappend newSet SymPort } 
-    if {$tkg_symshifttb} { lappend newSet SymShift } 
-    if {$tkg_symoprtb} { lappend newSet SymOpr } 
+    if {$tkg_symmodestb} { lappend newSet SymModes }
+    if {$tkg_simmodestb} { lappend newSet SimModes }
+    if {$tkg_symedittb} { lappend newSet SymEdit }
+    if {$tkg_zoomtb} { lappend newSet SymZoom }
+    if {$tkg_symporttb} { lappend newSet SymPort }
+    if {$tkg_symshifttb} { lappend newSet SymShift }
+    if {$tkg_symoprtb} { lappend newSet SymOpr }
 
     if { $enabledTools != $newSet } {
       foreach item $modeTools($currentMode) {
@@ -982,7 +981,7 @@ namespace eval ToolBar {
 
   #############################################################################
   #
-  # 
+  #
   #
   proc takeFocus {} {
     variable mbar_w

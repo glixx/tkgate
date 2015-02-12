@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,11 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Feb 22 19:51:17 2009
+#
 
 ##############################################################################
 #
@@ -157,7 +158,7 @@ sidetab.ports	Ports
 
 #############################################################################
 #
-# MsgMgr strings (including breakpoint and script handling) 
+# MsgMgr strings (including breakpoint and script handling)
 #
 @mm.width	7
 mm.add		Add...
@@ -172,7 +173,7 @@ mm.disable	Disable
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
 # of a number and a colon.   If this prefix exists, it indicates the character
 # position in the string that will be underlined.  This enables keyboard shortcuts
-# using the Alt key. 
+# using the Alt key.
 #
 menu.file	0:File
 menu.edit	0:Edit
@@ -207,10 +208,10 @@ menu.edit.find		0:Find...
 menu.edit.zoomin	5:Zoom In
 menu.edit.zoomout	5:Zoom Out
 
-menu.edit.rshift	10:Bit Shift Right 
-menu.edit.lshift	10:Bit Shift Left 
-menu.edit.ushift	10:Bit Shift Up 
-menu.edit.dshift	10:Bit Shift Down 
+menu.edit.rshift	10:Bit Shift Right
+menu.edit.lshift	10:Bit Shift Left
+menu.edit.ushift	10:Bit Shift Up
+menu.edit.dshift	10:Bit Shift Down
 menu.edit.cwrotate	11:Bit Rotate C-W
 menu.edit.ccwrotate	15:Bit Rotate C-C-W
 menu.edit.pcwrotate	12:Port Rotate C-W
@@ -400,7 +401,7 @@ gm.msi.18dec	1-8 Decoder
 gm.msi.12demux	1-2 Demultiplexor
 gm.msi.14demux	1-4 Demultiplexor
 gm.msi.18demux	1-8 Demultiplexor
-    
+
 gm.mod.inst	Module Instance
 gm.mod.in	Module Input
 gm.mod.out	Module Output
@@ -430,10 +431,10 @@ pop.wire.addseg		Add Wire Segment
 pop.wire.prop		Net Properties...
 pop.wire.hidesize	Hide Bit Width
 pop.wire.showsize	Show Bit Width
-pop.wire.hidelabel	Hide Label 
+pop.wire.hidelabel	Hide Label
 pop.wire.hidealllabel	Hide All Labels
 pop.wire.clearalllabel	Clear All Labels
-pop.wire.showlabel	Show Label 
+pop.wire.showlabel	Show Label
 
 pop.gate.open		Open
 pop.gate.close		Close
@@ -581,7 +582,7 @@ db.mod.hdl	HDL
 db.mod.netexpl	-begin-
 Define module using a
 graphical editor to connect
-wires between components. 
+wires between components.
 -end-
 
 db.mod.hdlexpl	-begin-
@@ -614,8 +615,8 @@ db.net.title	TkGate: Net Properties
 db.net.caption	Net Properties
 db.net.name	Net Name
 db.net.hide	Hide Name
-db.net.bits	Bit Width	
-db.net.type	Net Type	
+db.net.bits	Bit Width
+db.net.type	Net Type
 db.net.port	Port Type
 db.net.in	in
 db.net.out	out
@@ -676,7 +677,7 @@ db.gate.edit		Edit
 db.gate.delete		Delete
 db.gate.add		Add
 
-db.gate.ff.type		D Flip-Flop Orientation 
+db.gate.ff.type		D Flip-Flop Orientation
 db.gate.ff.normal.hdr	Normal
 db.gate.ff.normal.exp	-fillbegin-
 D Flip-Flop with data
@@ -688,7 +689,7 @@ D Flip-Flop with data
 flowing right to left.
 -end-
 
-db.gate.jkff.type		JK Flip-Flop Orientation 
+db.gate.jkff.type		JK Flip-Flop Orientation
 db.gate.jkff.normal.hdr		Normal
 db.gate.jkff.normal.exp	-fillbegin-
 JK Flip-Flop with data
@@ -709,7 +710,7 @@ db.gate.cat.dec.exp	-fillbegin-
 Bits are concatenated in descending order from top to bottom.
 -end-
 
-db.gate.cat.sigdir	Signal Direction 
+db.gate.cat.sigdir	Signal Direction
 db.gate.cat.auto.hdr	Auto
 db.gate.cat.multin.hdr	Multi-Input
 db.gate.cat.singin.hdr	Single-Input
@@ -732,7 +733,7 @@ input.
 -end-
 
 db.gate.cat.tran.exp	-fillbegin-
-Allow bidirectional (tran) signal flow.  Cannot 
+Allow bidirectional (tran) signal flow.  Cannot
 be connected to switches or registers.
 -end-
 
@@ -789,7 +790,7 @@ defined.  Module parameters are used to configure delays and constant values use
 
 db.gate.tab.details.exp -fillbegin-
 Set detailed type-specific properties
-of a component here. 
+of a component here.
 -end-
 
 
@@ -832,7 +833,7 @@ each parameter can be customized for each instance
 through this dialog box.  Module parameters are
 declared in a parenthesized list starting with a '#'
 character.  Below is an example module declaration
-with a parameter named "base_value" that has a 
+with a parameter named "base_value" that has a
 default value of 1'b1.
 -end-
 db.gate.mparm.exampleB	-begin-
@@ -867,8 +868,8 @@ db.gate.dip.shownet.off.exp	Do not show the name of the net next to dip.
 
 
 db.gate.tap.select	Bit Tap Selection
-db.gate.tap.exp.bit	Select the bit to pull off of the multi-bit bus. 
-db.gate.tap.exp.bus	Select the least-significant bit of the bit range to pull off of the multi-bit bus. 
+db.gate.tap.exp.bit	Select the bit to pull off of the multi-bit bus.
+db.gate.tap.exp.bus	Select the least-significant bit of the bit range to pull off of the multi-bit bus.
 db.gate.tap.lbl.bit	Bit:
 db.gate.tap.lbl.bus	LSB:
 @db.gate.tap.exp.width	*180
@@ -1191,7 +1192,7 @@ opt.freq		Interval
 opt.beak		Enable Special Modes
 opt.bat			Bat
 opt.trek		Star Trek
-opt.miles		Miles 
+opt.miles		Miles
 opt.contver		Automatic Integrity Checking
 opt.showsimcmd		Display Simulator Stream
 opt.estepsz		Epoch Step Size
@@ -1294,7 +1295,7 @@ opt.sec.ignore		Ignore attempted usage of disabled features.
 
 opt.html.linkopts	Link Options
 opt.html.browser	Browser Command
-opt.html.email		e-Mail Command 
+opt.html.email		e-Mail Command
 
 opt.debug.opt		Debugging Options
 
@@ -1575,7 +1576,7 @@ circ.sim.features	Features
 #
 circ.sim.tv.title	Timing Violation Handling
 circ.sim.tv.all		Report all timing violations.
-circ.sim.tv.after.1	Report timing violations after 
+circ.sim.tv.after.1	Report timing violations after
 circ.sim.tv.after.2	-empty-
 circ.sim.tv.never	Never report timing violations.
 
@@ -1719,7 +1720,7 @@ err.sim.isrun		Simulator is already running (Use 'Ctrl-s e' to end).
 err.sim.run		Run-time error at time %s:
 err.sim.cmd		Internal Command Error
 
-err.noteditpchg		Properties can only be changed in edit mode.	
+err.noteditpchg		Properties can only be changed in edit mode.
 err.badeditop		Illegal interface edit mode operation.
 err.badopen		Unable to open input file '%s'.
 err.badlibopen		Unable to open library file '%s'.
@@ -1971,7 +1972,7 @@ verga.err.BADSPECLVAL		Bit-ranges on path delay specifiers unsupported.
 verga.err.PATHDITEM		Unsupported construct in module with path-delay specification.
 verga.err.PATHDINOUT		Use of 'inout' in module with path-delay specification is unsupported.
 verga.err.PATHDLOOP		Loops in modules with path-delay specification are unsupported.
-verga.err.PATHDCOND		Delays must set through both # expression and specify block. 
+verga.err.PATHDCOND		Delays must set through both # expression and specify block.
 verga.err.TASKREDEF		Redefinition of task or function '%s' in module '%s'.
 verga.err.TASKASFUNC		Task '%s' used as function.
 verga.err.FUNCASTASK		Function '%s' used as task.
@@ -2017,8 +2018,8 @@ primitive.err.wrongname		Internal Error: module name mismatch in definition of '
 
 ho.setsel.allr		Move all items to selected list.
 ho.setsel.alll		Move all items to unselected list.
-ho.setsel.ltor		Move highlighted items to selected list. 
-ho.setsel.rtol		Move highlighted items to unselected list. 
+ho.setsel.ltor		Move highlighted items to selected list.
+ho.setsel.rtol		Move highlighted items to unselected list.
 
 ho.net.in		Single-Bit Input
 ho.net.out		Single-Bit Output
@@ -2160,7 +2161,7 @@ tool to cut wires.
 -end-
 
 ho.scroll	-begin-
-Scroll - Grab and drag the 
+Scroll - Grab and drag the
 editing canvas.
 -end-
 
@@ -2415,7 +2416,7 @@ the last save.
 ho.print.selall		Print all modules currently loaded by TkGate.
 ho.print.selcur		Print only the current module in the TkGate edit window.
 ho.print.seluse		-begin-
-Print all modules "in use". In use modues are 
+Print all modules "in use". In use modues are
 those that are a decendent of the root module.
 -end-
 
@@ -2447,8 +2448,8 @@ trace data available, and the grey
 area shows the area to be printed.
 Use the selectors to the left to
 select a region, or select the region
-in the scope window before bringing 
-up this diaglog box. 
+in the scope window before bringing
+up this diaglog box.
 -end-
 
 ho.circuit.discchg	-begin-
@@ -2573,7 +2574,7 @@ Print the logic trace range selected
 using the right mouse button.  Shift-right
 click can be used to expand the selected
 region.  The range visible in the scope
-view is used when there is no selection. 
+view is used when there is no selection.
 -end-
 
 ho.showxhair		-begin-
@@ -2669,7 +2670,7 @@ be ignored and no error messages will be displayed.
 ho.opt.html.browser	-begin-
 Command to be execute when the user clicks on a link to
 an html file.  A "%s" in the command will be replaced
-with the link URL. 
+with the link URL.
 -end-
 
 ho.opt.html.email	-begin-
@@ -2811,7 +2812,7 @@ with slow displays.
 -end-
 
 ho.opt.bhelp		-begin-
-If this option is enabled,  help balloons will 
+If this option is enabled,  help balloons will
 be activated.  Help balloons, such as this one,
 provide tips on interface elements when the
 mouse is over them.
@@ -2896,7 +2897,7 @@ A simulation script file to execute
 automatically when simulation of any
 circuit is initiated.  Do not use this
 for circuit specific scripts, use the
-circuit properties instead. 
+circuit properties instead.
 -end-
 
 ho.opt.ckall		-begin-
@@ -2909,7 +2910,7 @@ ho.opt.ckspec		-begin-
 If this mode is enabled, the clock step
 command will pause the simulation only on
 the positive edge of the specified clock.
-Use the name of the net to which the 
+Use the name of the net to which the
 clock is attached.
 -end-
 

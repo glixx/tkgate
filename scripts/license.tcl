@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Wed Mar 30 00:19:59 2005
 #
@@ -96,7 +96,7 @@ proc showAbout {} {
     catch { raise .about }
     return;
   }
-  wm title .about "About TkGate $tkg_progVer" 
+  wm title .about "About TkGate $tkg_progVer"
 
   button .about.dismiss -text [m b.dismiss] -command "destroy .about"
   label .about.logo -relief groove -image [gifI biggatelogo.gif]

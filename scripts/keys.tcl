@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,14 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Thu Jan 29 22:35:38 2009
+#
+
+######################################################################
 #
 #     endPrefix                 End a keyboard shortcut prefix
 #     startPrefix               Start a keyboard shortcut prefix
@@ -24,7 +27,6 @@
 #     newBinding		Define a key binding (error if existing)
 #     getCount			Get cummulative count of key presses
 #
-
 #
 # Note on bindtags usage - In tcl/tk bindings for multi key sequences
 # are executed regardless of overlap with other bindings.  For example,
@@ -32,7 +34,7 @@
 # "Ctl-X Ctl-S g" will cause both commands to be executed.  To avoid this
 # confusing behavior, a special nop command key is used.  After the
 # end of a two-key sequence, a special key not used in any commands is
-# forced into the event stream to break up any unexpected commands. 
+# forced into the event stream to break up any unexpected commands.
 #
 # Another problem is when "g" is a command, but "Ctl-X g" is not a
 # command.  Since "Ctl-X" is a command prefix, if the next character
@@ -42,7 +44,7 @@
 # to the tag "key2win".  These tags are attached to all windows where
 # which process commands.  When a prefix character is entered, the
 # "keywin" tag is temporarily removed from all windows, and restored after
-# a second character has been entered. 
+# a second character has been entered.
 #
 
 array set keysymTable {
@@ -126,7 +128,7 @@ namespace eval KeyBinding {
 
     if { $key == "<Control-g>" } {
       set lastKey ""
-      bell	
+      bell
     }
 
     set keySeq $lastKey$key
@@ -155,7 +157,7 @@ namespace eval KeyBinding {
 
   #############################################################################
   #
-  # Translate a key specifier to a user friendly key specifier that can be 
+  # Translate a key specifier to a user friendly key specifier that can be
   # displayed in a menu.
   #
   proc beautifyKey {key} {
@@ -163,15 +165,15 @@ namespace eval KeyBinding {
 
     set prefix ""
 
-    if {[regexp "<KeyPress-(.+)>" $key X KP] > 0} { 
+    if {[regexp "<KeyPress-(.+)>" $key X KP] > 0} {
       set key $KP
-    } elseif {[regexp "<Control-(.+)>" $key X KP] > 0} { 
+    } elseif {[regexp "<Control-(.+)>" $key X KP] > 0} {
       set prefix "Ctl-"
       set key $KP
-    } elseif {[regexp "<Alt-(.+)>" $key X KP] > 0} { 
+    } elseif {[regexp "<Alt-(.+)>" $key X KP] > 0} {
       set prefix "Alt-"
       set key $KP
-    } elseif {[regexp "<(.+)>" $key X KP] > 0} { 
+    } elseif {[regexp "<(.+)>" $key X KP] > 0} {
       set key $KP
     }
 
@@ -209,7 +211,7 @@ namespace eval KeyBinding {
   #
   # Switches:
   #      -unmatchedcommand {}		command to execute when an unhandled key is pressed.
-  #     
+  #
   #
   proc listener {w group args} {
     variable wgroups
@@ -283,7 +285,7 @@ namespace eval KeyBinding {
     if {[string length $key1] == 1 } { set key1 "<$key1>" }
     if {[string length $key2] == 1 } { set key2 "<$key2>" }
 
-    
+
     set keyseq $key1$key2
 
     foreach g $groups {

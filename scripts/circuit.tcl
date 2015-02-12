@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Feb 21 22:26:14 2009
 #
@@ -62,7 +62,7 @@ namespace eval EditCircDB {
     # File encoding
     #
     label $w.g.encoding_l -text [m circ.encoding]:
-    Dropbox::new $w.g.encoding_e -variable EditCircDB::props(encoding) -width 15 -bd 1 
+    Dropbox::new $w.g.encoding_e -variable EditCircDB::props(encoding) -width 15 -bd 1
     set didMine 0
     foreach encoding $tkg_standardEncodings {
       Dropbox::itemadd $w.g.encoding_e $encoding
@@ -75,7 +75,7 @@ namespace eval EditCircDB {
     # File language
     #
     label $w.g.lang_l -text [m circ.lang]:
-    Dropbox::new $w.g.lang_e -variable EditCircDB::props(locale) -width 15 -bd 1 
+    Dropbox::new $w.g.lang_e -variable EditCircDB::props(locale) -width 15 -bd 1
     set didMine 0
     foreach lang [lsort -dictionary [gat_getLocales]]  {
       set lname [lindex $lang 0]
@@ -83,7 +83,7 @@ namespace eval EditCircDB {
       if { $lname == $EditCircDB::props(locale) } { set didMine 1 }
     }
     if { !$didMine } { Dropbox::itemadd $w.g.lang_e $EditCircDB::props(locale) }
-    
+
 
 
     label $w.g.title_l -text [m circ.title]:
@@ -100,7 +100,7 @@ namespace eval EditCircDB {
     grid $w.g.lang_l -row 3 -column 0 -sticky e -padx 5 -pady 3
     grid $w.g.lang_e -row 3 -column 1 -sticky w -padx 5 -pady 3
     grid $w.g.title_l -row 4 -column 0 -sticky e -padx 5 -pady 3
-    grid $w.g.title_e -row 4 -column 1 -sticky ew -padx 5 -pady 3 
+    grid $w.g.title_e -row 4 -column 1 -sticky ew -padx 5 -pady 3
 
 
 
@@ -134,7 +134,7 @@ namespace eval EditCircDB {
     helpon $w.act [m ho.opt.ckspec]
 
     pack $w.all -padx 5 -pady 5 -anchor w
-    pack $w.act -side left -padx 5 -pady 5 -anchor w 
+    pack $w.act -side left -padx 5 -pady 5 -anchor w
     pack $w.actNam -side left -padx 5 -pady 5 -anchor w -fill x -expand 1
 
   }
@@ -240,7 +240,7 @@ namespace eval EditCircDB {
   }
 
   #
-  # Send dialog box contents back to gate 
+  # Send dialog box contents back to gate
   #
   proc save {w} {
     variable props
@@ -259,10 +259,10 @@ namespace eval EditCircDB {
     timescaleFrame $w.timescale
     simTVFrame $w.tv
 
-    pack $w.other -fill both -padx 5 -pady 5 
+    pack $w.other -fill both -padx 5 -pady 5
     pack $w.clock -fill both -padx 5 -pady 5
     pack $w.timescale -fill both -padx 5 -pady 5
-    pack $w.tv -fill both -padx 5 -pady 5 
+    pack $w.tv -fill both -padx 5 -pady 5
   }
 
   proc frameScript {w} {
@@ -355,7 +355,7 @@ namespace eval EditCircDB {
     wm geometry $w [offsetgeometry . 50 50]
     wm transient $w .
     wm withdraw $w
-    
+
 
 
     set tabs {General Library Script Simulator}

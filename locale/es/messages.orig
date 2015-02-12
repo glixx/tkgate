@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jan 26 11:08:13 2001
 #
@@ -139,7 +139,7 @@ gmmerge		Lineas <-> Bus
 gmclock		Señal de Reloj
 
 gm.led		LED
-gm.ledbar	Barra de LEDs 
+gm.ledbar	Barra de LEDs
 gm.ledhex	7-Seg. LED (HEXADECIMAL)
 gm.leddec	7-Seg. LED (DECIMAL)
 gm.ledseg	7-Seg. LED (Directo)
@@ -152,9 +152,9 @@ gmor		OR   (O)
 gmnor		NOR  (NO-O)
 gmxor		XOR  (O-EX)
 gmxnor		XNOR (NO-O-EX)
-gmbuf		Buffer 
+gmbuf		Buffer
 gminv		Inversor
-gmtribuf	Buffer-Triestado 
+gmtribuf	Buffer-Triestado
 gmnmos		NMOS
 gmpmos		PMOS
 
@@ -184,7 +184,7 @@ gm81mux		8-1 Multiplexor
 gm12dec		1-2 Decodificador
 gm14dec		1-4 Decodificador
 gm18dec		1-8 Decodificador
-    
+
 gmmodinst	Inserta módulo
 gmmodin		Entrada Módulo
 gmmodout	Salida Módulo
@@ -200,10 +200,10 @@ hlptut		Tutoriales
 hlpexample	Ejemplos
 exampcomb	Lógica Combinacional
 examp3bit	Contador de 3 bits
-examp8bit	Contador de 8 bits 
+examp8bit	Contador de 8 bits
 examptrff	FF a nivel de Transistores
 exampcpu	CPU
-tutwelcome	Introducción al TkGate 
+tutwelcome	Introducción al TkGate
 tutcreate	Creando un Circuito
 tutedit1	Editando un Circuito (1)
 tutedit2	Editando un Circuito (2)
@@ -232,7 +232,7 @@ ibits		Bits:
 #
 db.net.name	Nombre Conexión
 db.net.hide	Nombre Oculto
-db.net.bits	Anchura Bus	
+db.net.bits	Anchura Bus
 db.net.port	Tipo de Patilla
 db.net.in	entrada
 db.net.out	salida
@@ -305,7 +305,7 @@ print.cur		Actual
 print.use		Usados
 print.sel		Seleccionados
 print.inclib		Incluye módulos de libreria.
-print.papsz		Tamaño del Papel 
+print.papsz		Tamaño del Papel
 print.orient		Orientación
 print.portrait		Vertical
 print.landscape		Apaisada
@@ -381,14 +381,14 @@ opt.cpflash		Presentar como relampago
 
 opt.vercheck		-begin-
 Chequea de forma periódica si existen nuevas versiones del
-programa TKGATE en Internet. No habilitarla si no se dispone 
+programa TKGATE en Internet. No habilitarla si no se dispone
 de una conexión permanente a la RED.
 -end-
 
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Módulo nuevo 
+blklst.newmod		Módulo nuevo
 blklst.delmod		Borra Módulo
 blklst.frommod		Copia Módulo de
 blklst.tomod		a
@@ -475,7 +475,7 @@ err.sim.badbin		'%s' es un carácter incorrecto en constante binaria.
 err.sim.notswitch	La puerta '%s' no es un conmutador, dip o registro.
 err.sim.badcmd		No reconozco el comando '%s' en el guión de simulación.
 
-err.noteditpchg		Las propiedades sólo pueden cambiarse en modo Edición.	
+err.noteditpchg		Las propiedades sólo pueden cambiarse en modo Edición.
 err.badeditop		Operación ilegal en el modo de Edición.
 err.badopen		No se puede abrir el fichero '%s'.
 err.badlibopen		No puedo abrir la libreria '%s'.
@@ -491,12 +491,12 @@ de querer imprimirlo ?.
 -end-
 
 err.nojump		-begin-
-La posibilidad de 'saltar al módulo' no se 
+La posibilidad de 'saltar al módulo' no se
 puede utilizar en el modo de simulación o
 en el análisis de un camino crítico. Por
 favor navega de forma manual hasta el bloque
 de destino seleccionando los módulos adecuados
-y utilizando la opción '>' del teclado. Se 
+y utilizando la opción '>' del teclado. Se
 acceder al módulo de nivel superior en la
 jerarquia actuando sobre la tecla '<'.
 -end-
@@ -524,7 +524,7 @@ err.noback		-begin-
 El fichero %s, se creará por el
 programa tkgate, y no puede leerse
 por versiones anteriores a la actual
-(%s), si decide salvarlo. 
+(%s), si decide salvarlo.
 -end-
 
 ##############################################################################
@@ -597,14 +597,14 @@ para desconectar cables.
 
 ho.inv		-begin-
 Invertir - Usa esta herramienta
-para insertar o borrar inversiones 
+para insertar o borrar inversiones
 de las patillas de las puertas.
 -end-
 
 ho.bitw		-begin-
 Anchura del Bus - Usa esta herramienta
 para cambiar el número de lineas del
-Bus. Introduce dicho número en la 
+Bus. Introduce dicho número en la
 parte inferior derecha de la ventana.
 -end-
 
@@ -612,7 +612,7 @@ ho.modopen	Abre el módulo seleccionado.
 ho.modclose	Cierra el módulo actual.
 
 ho.simgo	-begin-
-Si no estamos simulando, inicia la 
+Si no estamos simulando, inicia la
 Simulación y ejecuta cualquier
 guión de inicialización. Si
 estamos simulando, se coloca en
@@ -665,7 +665,7 @@ Introduce punto de ruptura.  Punto de ruptura es una expresión
 que detiene la simulación cuando su evaluación resulta
 verdadera. Las Expresiones soportadas por el programa son del tipo
 operador relacional simple : "w1 == 0" o "w7 != 8". También se
-contempla expresiones en las que se niega la conexión: "!w2". 
+contempla expresiones en las que se niega la conexión: "!w2".
 -end-
 
 ho.f.modlist	-begin-
@@ -678,7 +678,7 @@ se visualizan entre paréntesis.
 ho.netlist	-begin-
 Lista todas las conexiones del módulo actual.
 Conexiones marcadas con el signo "@" no presentan su
-nombre en el esquema (conexiones ocultas). Las 
+nombre en el esquema (conexiones ocultas). Las
 conexiones BUS van seguidas del número de lineas
 que poseen.
 -end-
@@ -686,7 +686,7 @@ que poseen.
 ho.ports	-begin-
 Lista todas las patillas del módulo actual
 El signo '>' indica entrada, '<' indica salida,
-y '=' indica linea bidireccional. 
+y '=' indica linea bidireccional.
 -end-
 
 ho.status.logo		-begin-
@@ -695,7 +695,7 @@ puerta de hierro estamos en el modo de Edición.
 Si se presenta una puerta AND con cuatro patas
 estamos en modo de simulación. Si la puerta
 está parada, la simulación está detenida y
-si está en movimiento, la simulación está en 
+si está en movimiento, la simulación está en
 pleno funcionamiento.
 -end-
 
@@ -750,7 +750,7 @@ instancias de módulos.
 -end-
 
 ho.edgat.bitlab		-begin-
-La anchura de Bus de la señal seleccionada de 
+La anchura de Bus de la señal seleccionada de
 esta puerta. Se puede cambiar editandola aquí.
 -end-
 
@@ -766,7 +766,7 @@ ho.edgat.cadd		Añade una patilla.
 ho.edgat.cdel		Borra la patilla seleccionada.
 
 ho.edgat.hide		-begin-
-Activa esta bandera para no 
+Activa esta bandera para no
 visualizar el nombre de la puerta.
 -end-
 
@@ -804,13 +804,13 @@ Se utiliza en la salida impresa o fichero postscript.
 ho.opt.smooth		-begin-
 Si esta opción está habilitada, el desplazamiento
 se optimiza al usar copias bitmap en lugar de un
-completo redibujado. Puedes colocarla en off si 
+completo redibujado. Puedes colocarla en off si
 hay problemas con su servidor.
 -end-
 
 ho.opt.clip		-begin-
 Si esta opción está habilitada, Se actualiza solo
-la región actualmente expuesta del entorno de 
+la región actualmente expuesta del entorno de
 Edición. De lo contrario se redibuja todo.
 -end-
 
@@ -824,12 +824,12 @@ máquinas con micros y tarjetas gráficas lentas.
 ho.opt.bhelp		-begin-
 Si esta opción está habilitada, los globos de ayuda
 se activan.  Los globos de ayuda, como este mismo,
-proporciona una ayuda resumida sobre los elementos 
+proporciona una ayuda resumida sobre los elementos
 del interfaz, cuando el ratón se situa encima de ellos.
 -end-
 
 ho.opt.novice		-begin-
-Si no se especifica ningún circuito en la linea de 
+Si no se especifica ningún circuito en la linea de
 comandos. El programa TkGate presenta un tutorial
 para iniciarse en el manejo del programa.
 -end-
@@ -876,7 +876,7 @@ hemos activado el modo paso a paso por nº de ciclos.
 
 ho.opt.ckover		-begin-
 El número de periodos de tiempo después de un
-flanco de bajada de reloj que avanzamos si 
+flanco de bajada de reloj que avanzamos si
 hemos activado el modo paso a paso.
 -end-
 
@@ -908,7 +908,7 @@ y selecciona "Retraso".
 -end-
 
 ho.techbut		-begin-
-Usa retrasos para la tecnología standard de un fichero de 
+Usa retrasos para la tecnología standard de un fichero de
 definición. Para añadir tecnologias personalizadas, añadirlas
 en la lista del menú  "Fichero -> Opciones -> Simulador".
 -end-
