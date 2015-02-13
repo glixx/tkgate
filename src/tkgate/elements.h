@@ -94,11 +94,6 @@ typedef struct {
 } GGateDip;
 
 typedef struct {
-  unsigned char value; /* value of keypad */
-  unsigned showNet;	   /* Show net name with gate */
-} GGateKeypad;
-
-typedef struct {
   unsigned ltype;		/* Type of LED */
   unsigned value;		/* Current led value */
   unsigned valid;		/* Valid bits in value */
@@ -193,7 +188,6 @@ struct celemnt {
     GGateComment	comment;
     GGateMux		mux;
     GGateFF		ff;
-    GGateKeypad     keypad;
   } u;
 
   /*
