@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue Mar 17 05:44:35 2009
 #
@@ -76,7 +76,7 @@ namespace eval LibraryMgr {
 
     set path $tkg_simVLibPath
     if {[llength $args] > 0} {
-      set path [lindex $args 0] 
+      set path [lindex $args 0]
     }
 
     set L {}
@@ -180,7 +180,7 @@ namespace eval LibraryMgr {
     variable lineHeight
     variable libraryList
     variable libReqStatus
-    
+
     set index [expr int($y/$lineHeight-1)]
 
    if {$index >= [llength $libraryList]} return
@@ -204,7 +204,7 @@ namespace eval LibraryMgr {
     #
     # If variable does not exist, then we have not visited library page
     # and thus there is no reason to update library status
-    # 
+    #
     if {![info exists libraryList]} return
 
     foreach name $libraryList {
@@ -215,7 +215,7 @@ namespace eval LibraryMgr {
 	  gat_unloadLibrary $name
 	}
       }
-    } 
+    }
 
   }
 

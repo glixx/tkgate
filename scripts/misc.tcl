@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,14 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Feb  1 17:56:08 2009
 #
+
+########################################################################
 #
 # Function summary:
 #     mr			Get a message and apply [rescale] to it.
@@ -71,8 +73,8 @@
 #     chooseInterval            Choose an interval to use for a range
 #     colortree			Set background color of a window and all its children
 #     packPad			Add font-size scaled padding to the top and bottom of a frame.
-#     linkVars			Link two variables 
-# 
+#     linkVars			Link two variables
+#
 
 proc mr {tag} {
   return [rescale [m $tag]]
@@ -121,7 +123,7 @@ proc safeeval {bad cmd args} {
     } else {
       set skip 0
     }
-  }    
+  }
   eval $cmd $L
 }
 
@@ -203,7 +205,7 @@ proc assoc {tag l} {
   set value ""
   catch {
     foreach p $l {
-      if {[lindex $p 0] == $tag } { 
+      if {[lindex $p 0] == $tag } {
 	set value [lindex $p 1]
 	break
       }
@@ -213,7 +215,7 @@ proc assoc {tag l} {
 }
 
 #
-# Given a list of the form {{a1 b1 ...} {a2 b2 ...} ... } return 
+# Given a list of the form {{a1 b1 ...} {a2 b2 ...} ... } return
 # the value for which l matches the nth (starting at zero) item
 # in a sub-list
 #
@@ -222,7 +224,7 @@ proc assocn {tag n l} {
   catch {
     foreach p $l {
 #      puts "testing string equal [lindex $p $n] $tag"
-      if {[string equal [lindex $p $n] $tag]} { 
+      if {[string equal [lindex $p $n] $tag]} {
 	set value $p
 	break
       }
@@ -235,7 +237,7 @@ proc assocg {tag l} {
   set value ""
   catch {
     foreach p $l {
-      if {[lindex $p 0] == $tag } { 
+      if {[lindex $p 0] == $tag } {
 	set value $p
 	break
       }
@@ -250,7 +252,7 @@ proc assocset {tag l newV} {
   set L {}
 
   foreach p $l {
-    if {[lindex $p 0] == $tag } { 
+    if {[lindex $p 0] == $tag } {
       lappend L [list $tag $newV]
     } else {
       lappend L $p
@@ -266,7 +268,7 @@ proc assocsetc {tag l newV} {
   set found 0
 
   foreach p $l {
-    if {[lindex $p 0] == $tag } { 
+    if {[lindex $p 0] == $tag } {
       lappend L [list $tag $newV]
       set found 1
     } else {
@@ -311,7 +313,7 @@ proc parseargs {argv nameset args} {
 	upvar $vname local_$vname
       } else {
 	upvar ${vname}($index) local_$vname
-      } 
+      }
       set  local_$vname $val
     } elseif { $is_partial } {
       lappend R $sw
@@ -460,7 +462,7 @@ proc labelframe {w lab args} {
 # Create a labeled grooved frame with a checkbutton
 #
 proc checkframe {w lab args} {
-  
+
   frame $w
 
   set borderwidth [option get $w LabelFrame.borderWidth {}]
@@ -576,7 +578,7 @@ proc gifI {f} {
 proc start_splash {} {
   global sd bd splash_start_time tkg_doSplash
 
-  if { ! $tkg_doSplash} { return } 
+  if { ! $tkg_doSplash} { return }
 
   if {[catch { set splash_start_time [clock clicks -milliseconds] }]} {
     set splash_start_time "rawdelay"
@@ -609,7 +611,7 @@ proc start_splash {} {
 proc end_splash {} {
   global bd splash_start_time tkg_doSplash tkg_splashWait
 
-  if { ! $tkg_doSplash} { return } 
+  if { ! $tkg_doSplash} { return }
 
   if { $splash_start_time == "rawdelay" } {
     set time_to_go 1000
@@ -774,7 +776,7 @@ proc paneDecoration {w args} {
     pack $w.v2 -side left
     pack $w.v3 -side left
   }
-  
+
 }
 
 proc dialogImage {w args} {
@@ -874,7 +876,7 @@ namespace eval TimeCheck {
     variable timer
 
     set timer($e) [clock clicks -milliseconds]
-    puts "begin $e" 
+    puts "begin $e"
   }
   proc end {e} {
     variable timer
@@ -1037,9 +1039,9 @@ proc shellExec {args} {
 proc shellWindow {} {
   set w .shell_win
 
-  if {[catch {toplevel $w}]} { 
+  if {[catch {toplevel $w}]} {
     raise $w
-    return 
+    return
   }
 
   wm title $w "TKGate: Tcl Shell"
@@ -1101,7 +1103,7 @@ proc dialogWait {w args} {
     catch { grab release $w }
     set dialogWaitStack {}
   }
-  
+
   if {$dosync} {
     gat_syncInterface
   }
@@ -1210,7 +1212,7 @@ proc makeFriendlyChar {c} {
 }
 
 proc findLibraryFile {name} {
-  global tkg_simVLibPath 
+  global tkg_simVLibPath
 
   foreach directory $tkg_simVLibPath {
     set directory [namespace eval :: "eval concat $directory"]
@@ -1226,7 +1228,7 @@ proc findLibraryFile {name} {
 }
 
 proc encodeBits {b value} {
-  set n [llength $value] 
+  set n [llength $value]
 
   set out 0
   for {set i 0} {$i < $n} {incr i} {
@@ -1290,7 +1292,7 @@ proc hexValidate {w act cur c newv} {
   if {$act == 1} {
     return [string is xdigit $c]
   }
-  
+
   return 1
 }
 
@@ -1302,7 +1304,7 @@ proc _incdecDelta {varName args} {
   set format %f
   set delta 1
   parseargs $args {-delta -min -max -format}
-  
+
   scan $v $format n
 
   set newValue [expr $n + $delta]
@@ -1353,7 +1355,7 @@ proc replaceSwitchValue {cmd sname value} {
   if {$i < 0} return $cmd
   incr i
   return [lreplace $cmd $i $i $value]
-} 
+}
 
 proc incdecEntry_configure {w args} {
   parseargs $args {-min -max -delta}
@@ -1382,7 +1384,7 @@ proc chooseInterval {D} {
 
   set G [expr exp(int(log($D)/log(10.0)+0.999999999)*log(10.0))]
   set Q [expr ($G-$D)/$G ]
-  
+
   if {$Q >= 0.8} { return [expr $G*0.02 ] }
 
   if {$Q >= 0.6} { return [expr $G*0.05 ] }

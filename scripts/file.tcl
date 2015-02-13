@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,11 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Wed Jan 14 23:18:28 2009
-#
 #
 
 namespace eval File {
@@ -67,7 +66,7 @@ namespace eval File {
     set w .tkgnew
 
     toplevel $w
-    
+
     wm resizable $w 0 0
     wm title $w [m db.newcirc.title]
     wm geometry $w [offsetgeometry . 50 50 ]
@@ -123,7 +122,7 @@ namespace eval File {
 
   #############################################################################
   #
-  # Open a libray 
+  # Open a libray
   #
   proc loadLibrary {} {
 #    global gf_filetypes gf_filter
@@ -194,11 +193,11 @@ namespace eval File {
   #
   proc closeApplication {} {
     global tkg_modifiedFlag tkg_discardChanges
-    
+
     if { $tkg_modifiedFlag && ! $tkg_discardChanges} {
       set result [tk_messageBox -default no -type yesno -icon warning \
 		      -message [m msg.reallyquit]]
-      if { "$result" != "yes" } { 
+      if { "$result" != "yes" } {
 	return
       }
     }
@@ -383,7 +382,7 @@ namespace eval DirSelector {
     }
 
 
-    menubutton $w.top.dbox -indicatoron true -menu $w.top.dbox.m -textvariable DirSelector::currentDir -relief raised -direction flush 
+    menubutton $w.top.dbox -indicatoron true -menu $w.top.dbox.m -textvariable DirSelector::currentDir -relief raised -direction flush
     menu $w.top.dbox.m -tearoff 0
 
     toolbutton $w.top.updir	"updirectory.gif"	"DirSelector::upDir $w.top.dbox.m $w.list"	""

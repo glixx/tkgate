@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,13 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Jan 18 15:25:10 2009
+#
+
 #############################################################################
 #
 # Tabboxes are used to select from a group of windows
@@ -25,7 +27,7 @@
 
 namespace eval TabBox {
   variable active
-  variable disabledTabs 
+  variable disabledTabs
   variable width
   variable height
   variable tabwidth
@@ -113,7 +115,7 @@ namespace eval TabBox {
     variable active
     placehider $w $active($w)
   }
-  
+
   #############################################################################
   #
   # Make the named table the active tab
@@ -173,11 +175,11 @@ namespace eval TabBox {
 
     set bw [$tab_w cget -bd]
 
-    set coords [$w coords tab$i] 
+    set coords [$w coords tab$i]
     set x [lindex $coords 0]
     set y [lindex $coords 1]
 
-    set tw [winfo reqwidth $tab_w] 
+    set tw [winfo reqwidth $tab_w]
     set th [winfo reqheight $tab_w]
 
 #    puts "placehider $w  at $x, $y  ${tw}x${th}"
@@ -199,7 +201,7 @@ namespace eval TabBox {
   # Place and size the content pane for the tabbox
   #
   proc placePane {w name} {
-    variable tabheight 
+    variable tabheight
     variable tabwidth
     variable tabside
     variable active
@@ -227,7 +229,7 @@ namespace eval TabBox {
       }
       left {
 	set x $tabwidth($w)
-	set y 0 
+	set y 0
 	set width [expr $width - $tabwidth($w)]
       }
     }
@@ -246,7 +248,7 @@ namespace eval TabBox {
   # Place all tabs on the tab box
   #
   proc placeTabs {w} {
-    variable tabside 
+    variable tabside
     variable active
 
     placeTabs_$tabside($w) $w
@@ -313,7 +315,7 @@ namespace eval TabBox {
   # Respond to a reconfiguration (e.g., resize) of the main window
   #
   proc reconfigure {w} {
-    variable tabheight 
+    variable tabheight
     variable tabwidth
     variable tabside
     variable active
@@ -352,7 +354,7 @@ namespace eval TabBox {
 
     if {[lsearch -exact $disabledTabs($w) $i] >= 0} {
       set fg $disabledforeground($w)
-      set bg $disabledbackground($w) 
+      set bg $disabledbackground($w)
       $tab_w.iw configure -takefocus 0
     } elseif { $mouseover($w) == $tab } {
       set fg $activeforeground($w)
@@ -368,7 +370,7 @@ namespace eval TabBox {
       $tab_w.iw configure -takefocus 0
     }
 
-    colortree $tab_w -foreground $fg -background $bg -highlightbackground $bg  
+    colortree $tab_w -foreground $fg -background $bg -highlightbackground $bg
   }
 
   proc settabstate {w tab state} {
@@ -377,7 +379,7 @@ namespace eval TabBox {
 
     set i [lsearch -exact $tabs($w) $tab]
     if { $i < 0 } return
-    
+
     switch $state {
       disabled {
 	lappend disabledTabs($w) $i
@@ -472,7 +474,7 @@ namespace eval TabBox {
     }
 
     #
-    # Go back through tabs and find the largest one 
+    # Go back through tabs and find the largest one
     #
     update
     set i 0
@@ -567,7 +569,7 @@ namespace eval TabBox {
   #
   proc new {w args} {
     variable active
-    variable disabledTabs 
+    variable disabledTabs
     variable width
     variable height
     variable selectedforeground

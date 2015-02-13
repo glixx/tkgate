@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Feb 23 20:33:08 2009
+#
 
 #proc dbgputs {s} { puts $s }
 proc dbgputs {s} { }
@@ -66,7 +67,7 @@ proc dbgputs {s} { }
 #	isStart			Test a token to see if it is a "start" token.
 #	colorizeToken		Colorize a token
 #	tokenize		Parse a line into tokens
-#	clearTargetChar		Clear the target character 
+#	clearTargetChar		Clear the target character
 #	getWord			Get the next word
 #	removeTags		Remove tags from a region
 #	finalState		Get the tag state at the end of a line
@@ -91,8 +92,8 @@ proc dbgputs {s} { }
 #	doVMove			Move the cursor vertically (up or down)
 #	doMoveTo		Move cursor to specific location
 #	doSetArgument		Set the command argument status line
-#	doLowercaseWord		Move cursor forward one word and make all chars lowercase 
-#	doLowercaseWord		Move cursor forward one word and make all chars uppercase 
+#	doLowercaseWord		Move cursor forward one word and make all chars lowercase
+#	doLowercaseWord		Move cursor forward one word and make all chars uppercase
 #	doCasefyWord		Move cursor forward one word and make all chars lowercase except first
 #	doWordMove		Move cursor forward or backward one word
 #	doDelete		Delete forward or backward one character
@@ -181,7 +182,7 @@ namespace eval HdlEditor {} {
     real realtime reg release repeat scalared signed small specify specparam
     strength strong0 strong1 supply0 supply1 table task time
     tri tri0 tri1 triand trior trireg unsigned vectored wait wand weak0 weak1
-    while wire wor 
+    while wire wor
   }
 
   # List of verilog gate names that should be highlighted in gate color.
@@ -191,7 +192,7 @@ namespace eval HdlEditor {} {
   }
 
   #
-  # Tokens that start a block 
+  # Tokens that start a block
   #
   variable beginTokens {module primitive case casex casez fork begin task function}
 
@@ -201,7 +202,7 @@ namespace eval HdlEditor {} {
   variable moduleTokens {module primitive case}
 
   #
-  # Tokens that end a block 
+  # Tokens that end a block
   #
   variable endTokens {endmodule endprimitive endcase endtask endfunction endspecify endtable end join}
 
@@ -259,7 +260,7 @@ namespace eval HdlEditor {} {
 
     return [expr [lsearch -exact $moduleTokens $token] >= 0]
   }
-  
+
   #############################################################################
   #
   # Test for an if token
@@ -340,7 +341,7 @@ namespace eval HdlEditor {} {
   # Show dialog box asking what to do about multiple modules in the buffer for
   # a single module.  The presented options are:
   #
-  #    Split		Split multiple modules into new modules 
+  #    Split		Split multiple modules into new modules
   #    Ignore		Ignore the discrepancy and save module data anyway
   #    Cancel		Cancel the operation and return to the buffer
   #
@@ -353,7 +354,7 @@ namespace eval HdlEditor {} {
     wm title $w [m db.hdl.textdisp.title]
     wm geometry $w [offsetgeometry . 50 50 ]
     wm transient $w .
-    
+
     dialogImage $w.di -image [gifI general.gif] -caption [m db.hdl.savecap]  -force 1
     pack $w.di -side left -fill y -expand 1
 
@@ -474,7 +475,7 @@ namespace eval HdlEditor {} {
       return 0
     }
 
-    
+
     if { [$text_w compare insert < point] } {
       $text_w tag add sel insert point
     } elseif { [$text_w compare insert > point] } {
@@ -539,7 +540,7 @@ namespace eval HdlEditor {} {
     variable active_module
     variable isActive
 
-    if {$active_module == ""} { return } 
+    if {$active_module == ""} { return }
 
     set isActive 0
 
@@ -558,10 +559,10 @@ namespace eval HdlEditor {} {
   }
 
   #############################################################################
-  # 
+  #
   # Make the HDL editor visible with module $name
-  #  
-  # 
+  #
+  #
   proc show {name} {
     variable hdl_w
     variable text_w
@@ -574,7 +575,7 @@ namespace eval HdlEditor {} {
 
 #    puts "HdlEditor::show $name"
 
-    if { $name == $active_module } return 
+    if { $name == $active_module } return
 
     configureTag linecomment hdlComment
     configureTag blockcomment hdlComment
@@ -607,12 +608,12 @@ namespace eval HdlEditor {} {
   # a synchronization with tkgate.  Two forms of the command may be used:
   #
   # startCommand Name			Called before a command that modifies the buffer
-  # startCommand -			Called before a command that does not modify buffer. 
+  # startCommand -			Called before a command that does not modify buffer.
   #
   #
   # last	new		action
   # -------------------------------------------------------------------------------------
-  #  ""		Name		Do an empty action with Name and set last equal to Name. 
+  #  ""		Name		Do an empty action with Name and set last equal to Name.
   # Other	Name		Synchronize and set last equal to Name.
   #  ""         -		Do nothing.
   # Other	-		Synchronize and set last equal to ""
@@ -815,7 +816,7 @@ namespace eval HdlEditor {} {
 
   #############################################################################
   #
-  # Try to open the module indicated by the word around the current 
+  # Try to open the module indicated by the word around the current
   # insertion cursor.
   #
   proc openModule {} {
@@ -1049,7 +1050,7 @@ namespace eval HdlEditor {} {
   #
   # Scans backwards from tokens starting at the end of line 'line'.  At each
   # iteration, the token data is stored into 'var' in the form {type start stop}
-  # and the body is executed in the context of the caller.  
+  # and the body is executed in the context of the caller.
   #
   proc fortokensbackfrom {var line body} {
     upvar $var _var
@@ -1075,7 +1076,7 @@ namespace eval HdlEditor {} {
   }
 
   #############################################################################
-  # 
+  #
   # Determine matching 'if' when indenting an 'else' statement.  This function
   # similar to getPrevTokens and is used as a replacement in a special case.
   # it is possible that these two functions can be merged at some time.
@@ -1099,7 +1100,7 @@ namespace eval HdlEditor {} {
     fortokensbackfrom token [expr $line - 1] {
       set token_text [getTokenText $token]
 
-      if { $t_prev == ""} { 
+      if { $t_prev == ""} {
 	set t_prev $token
       }
 
@@ -1138,7 +1139,7 @@ namespace eval HdlEditor {} {
   # Determine various key tokens that determine the indentation of a line.  The
   # tokens returned are:
   #
-  #    prev		Last token on previous line 
+  #    prev		Last token on previous line
   #    begin		Enclosing begin token if found
   #    laststart	Last token that started a statement
   #
@@ -1169,19 +1170,19 @@ namespace eval HdlEditor {} {
 
       #	if { $level == 0 && $t_prev != "" && [isStopToken $token_text]} {}
       if { $level == 0 && $t_prev != "" } {
-	if { [isBeginToken $token_text] } { 
+	if { [isBeginToken $token_text] } {
 	  set t_begin $token
 	  set t_laststart ""
 	  return -code return 1
 	}
 	if { [isIfToken $token_text]  && !$isend} {
 	  incr if_level -1
-	  if {!$did_ifstop || ($if_level == 0 )} { 
+	  if {!$did_ifstop || ($if_level == 0 )} {
 	    set t_laststart [getFirstToken $token]
 	    return -code return 1
 	  }
 	}
-	if { [isStopToken $token_text] && !$isend} { 
+	if { [isStopToken $token_text] && !$isend} {
 	  if { [isElseToken [getTokenText $t_laststart]] && [isStopToken [getTokenText $t_prev]]} {
 	    # this is the statement after and 'else' statement.  in this case we mimic
 	    # and block end and do indentation based on the enclosing 'begin' token.
@@ -1190,7 +1191,7 @@ namespace eval HdlEditor {} {
 	    return -code return 1
 	  }
 	}
-	if { [isElseToken $token_text] } { 
+	if { [isElseToken $token_text] } {
 	  incr if_level
 	}
       }
@@ -1210,9 +1211,9 @@ namespace eval HdlEditor {} {
       #
       # The first token we see is the "prev" token.
       #
-      if { $t_prev == ""} { 
+      if { $t_prev == ""} {
 	set t_prev $token
-	if {[isBeginToken $token_text]} { 
+	if {[isBeginToken $token_text]} {
 	  set t_begin $token
 	  return -code return 1
 	}
@@ -1266,7 +1267,7 @@ namespace eval HdlEditor {} {
   #    find previous start token at the same level, and indent to position of that token plus one level.
   #
   proc getIndentLevel {line} {
-    global tkg_hdlIndentLevel    
+    global tkg_hdlIndentLevel
     variable text_w
 
     #
@@ -1350,7 +1351,7 @@ namespace eval HdlEditor {} {
     variable text_w
 
     while { ([$text_w index $line.end] != "$line.0") && [string is space [$text_w get $line.0]] } {
-      $text_w delete $line.0 
+      $text_w delete $line.0
     }
     for {set i 0 } { $i < $n } { incr i } {
       $text_w insert $line.0 " "
@@ -1429,7 +1430,7 @@ namespace eval HdlEditor {} {
     } else {
       set state space
     }
-    set tokens [tokenize $line -state  $state] 
+    set tokens [tokenize $line -state  $state]
 
 
     set L {}
@@ -1440,7 +1441,7 @@ namespace eval HdlEditor {} {
 	linecomment {}
 	keyword { lappend L [$text_w get $start $stop] }
 	string { lappend L [$text_w get $start $stop] }
-	symbol { 
+	symbol {
 	  set s [$text_w get $start $stop]
 	  set n [string length $s]
 	  for { set i 0 } { $i < $n } { incr i } {
@@ -1661,10 +1662,10 @@ namespace eval HdlEditor {} {
     scan [$text_w index $line.end] %*d.%d endc
 
     set tags {}
-    for { set i 0 } { $i < $endc } { incr i } { 
+    for { set i 0 } { $i < $endc } { incr i } {
       set tags [$text_w tag names $line.$i]
       if {[llength $tags] > 0} break
-      
+
     }
 
     return $tags
@@ -1682,7 +1683,7 @@ namespace eval HdlEditor {} {
   #   taskword		System task names such as "$display".
   #   gateword		Words for built-in gates such as "and", "or", "xor", etc.
   #   instword		Words that are instance names.
-  #   normal		Literals that do not fall into one of the above categories. 
+  #   normal		Literals that do not fall into one of the above categories.
   #   string		Strings delineated by '"' character.
   #   lineComment	Comments between "//" and the end of the line.
   #   blockComment	Comments between "/*" and "*/".
@@ -1741,7 +1742,7 @@ namespace eval HdlEditor {} {
 
   #############################################################################
   #
-  # Clear the target character 
+  # Clear the target character
   #
   proc clearTargetChar {} {
     variable targetChar
@@ -1787,7 +1788,7 @@ namespace eval HdlEditor {} {
     # We are still part of a search
     if {[searchContinue $c]} return
 
-    # We are still part of an argument number 
+    # We are still part of an argument number
     if {[argContinue $c]} return
 
     undoSelection
@@ -1918,7 +1919,7 @@ namespace eval HdlEditor {} {
 
     set startIndex [$text_w index insert]
 
-    HdlEditor::doSetPoint 
+    HdlEditor::doSetPoint
     action Yank gat_yankFromBuf
     $text_w see insert
 
@@ -1970,7 +1971,7 @@ namespace eval HdlEditor {} {
     if { $d > 0 } {
       $text_w delete $oldinsert insert
     } else {
-      $text_w delete insert $oldinsert 
+      $text_w delete insert $oldinsert
     }
     recolorize insert insert
   }
@@ -1984,7 +1985,7 @@ namespace eval HdlEditor {} {
     variable argument
     variable argument_active
 
-    if {$argument_active} { 
+    if {$argument_active} {
       set count [expr $argument*$count]
     } else {
       set count [expr 22*$count]
@@ -2229,7 +2230,7 @@ namespace eval HdlEditor {} {
     set tkg_statusMessage ""
     set last_search -1
 
-    if { $reset } { 
+    if { $reset } {
       undoSelection
       doPointSwap -nosearch 1
     }
@@ -2590,18 +2591,18 @@ namespace eval HdlEditor {} {
       if { ! [doHMove [expr $count*$d]]} return
       set start [$text_w index insert]
       $text_w delete $start $stop
-      $text_w mark set insert $start 
+      $text_w mark set insert $start
     } elseif { $d > 0 } {
       set start [$text_w index insert]
       if { ! [doHMove [expr $count*$d]]} return
       set stop [$text_w index insert]
       $text_w delete $start $stop
-      $text_w mark set insert $start 
+      $text_w mark set insert $start
     } else {
       $text_w delete insert "insert + $count chars"
     }
     # This mean delete the character after the insertion cursor.
- 
+
     recolorize insert insert
   }
 
@@ -2658,7 +2659,7 @@ namespace eval HdlEditor {} {
 
     frame $w
     text $w.t -yscrollcommand "$w.vb set" -bg white -font hdlFont
-    scrollbar $w.vb -command "$w.t yview" -takefocus 0 
+    scrollbar $w.vb -command "$w.t yview" -takefocus 0
     pack $w.t -side left -fill both -expand 1 -pady 5
     pack $w.vb -side right -fill y -pady 5
 
@@ -2726,7 +2727,7 @@ namespace eval HdlEditor {} {
 #############################################################################
 #
 # NOT WORKING AND NOT CURRENTLY USED.
-# 
+#
 # Selection handling - allows cut and paste from external windows.  This is
 # mostly implemented to allow cut and paste into the hdl editor, but it will
 # also allow cut and paste into netlist windows as well.

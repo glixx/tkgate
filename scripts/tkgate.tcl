@@ -1,6 +1,4 @@
-#############################################################################
-#
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -12,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Feb 21 22:32:47 2009
 #
@@ -82,11 +80,11 @@ proc mainWinButton12Press {w x y s b} {
 }
 
 proc mainWinButton12DoublePress {w x y s} {
-  continueAction -DblPress { tkg_buttonDoublePress $w $x $y $s } 
+  continueAction -DblPress { tkg_buttonDoublePress $w $x $y $s }
 }
 
 proc mainWinButton12Release {w x y s} {
-  continueAction - { tkg_buttonRelease $w $x $y $s } 
+  continueAction - { tkg_buttonRelease $w $x $y $s }
 }
 
 proc mainWinButtonMotion {w x y s} {
@@ -113,13 +111,13 @@ proc startTkGate {argv} {
 
   #############################################################################
   #
-  # Set flag to indicate that initialization is not complete. 
+  # Set flag to indicate that initialization is not complete.
   #
   set tkgate_isInitialized 0
 
   #############################################################################
   #
-  # If argument list starts with "--", remove it. 
+  # If argument list starts with "--", remove it.
   #
   if { [lindex $argv 0] == "--" } {
     set argv [lrange $argv 1 end]
@@ -201,7 +199,7 @@ proc startTkGate {argv} {
 
   #############################################################################
   #
-  # Initialize the options database 
+  # Initialize the options database
   #
   setupOptions
 
@@ -211,7 +209,7 @@ proc startTkGate {argv} {
   # Printer dialog box initializations
   #
   printDlgInit
-  
+
   #############################################################################
   #
   # Make all of the popup menus
@@ -293,7 +291,7 @@ proc startTkGate {argv} {
   bind $main_w.main <ButtonRelease-2>	{ mainWinButton12Release %W %x %y %s }
   bind $main_w.main <Motion>		{ mainWinButtonMotion %W %x %y %s }
   bind $main_w.main <Button-3>		{ mainWinButton3Press %W %x %y %s %X %Y }
-  bind $main_w.main <MouseWheel>	{ puts mouseWheel } 
+  bind $main_w.main <MouseWheel>	{ puts mouseWheel }
 
   #############################################################################
   #

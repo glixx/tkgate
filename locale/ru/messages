@@ -1,5 +1,6 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
+#   Copyright (C) 2009-2015 by Andrey V. Skvortsov
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,13 +12,16 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+# Last edit by starling13 on Sun Feb 12 19:51:17 2015
+#
+
+########################################################################
 #
 #   Автор перевода на русский язык Андрей Скворцов starling13@gmail.com
-#
-# Last edit by starling13 on Sun Feb 4 19:51:17 2015
 
 ##############################################################################
 
@@ -85,7 +89,7 @@ sidetab.ports	Порты
 
 #############################################################################
 #
-# MsgMgr strings (including breakpoint and script handling) 
+# MsgMgr strings (including breakpoint and script handling)
 #
 @mm.width	17
 mm.add		Добавить...
@@ -95,12 +99,12 @@ mm.enable	Включить
 mm.disable	Отключить
 
 ##############################################################################
-# Menu strings
+# Строки меню
 #
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
 # of a number and a colon.   If this prefix exists, it indicates the character
 # position in the string that will be underlined.  This enables keyboard shortcuts
-# using the Alt key. 
+# using the Alt key.
 #
 menu.file	0:Файл
 menu.edit	0:Правка
@@ -135,10 +139,10 @@ menu.edit.find		0:Найти...
 menu.edit.zoomin	5:Увеличить
 menu.edit.zoomout	5:Уменьшить
 
-menu.edit.rshift	10:Сдвиг пикселов вправо 
-menu.edit.lshift	10:Сдвиг пикселов влево 
-menu.edit.ushift	10:Сдвиг пикселов вверх 
-menu.edit.dshift	10:Сдвиг пикселов вниз 
+menu.edit.rshift	10:Сдвиг пикселов вправо
+menu.edit.lshift	10:Сдвиг пикселов влево
+menu.edit.ushift	10:Сдвиг пикселов вверх
+menu.edit.dshift	10:Сдвиг пикселов вниз
 menu.edit.cwrotate	11:Повернуть биты по часовой стрелке
 menu.edit.ccwrotate	15:Повернуть биты против часовой стрелки
 menu.edit.pcwrotate	12:Повернуть порт по часовой стрелке
@@ -210,7 +214,6 @@ menu.module.interface.updateall	6:Синхронизировать все...
 menu.module.interface.edit	0:Редактировать...
 menu.module.interface.auto	5:Автогенерация...
 
-
 menu.help.about		0:О Программе...
 menu.help.license	0:Лицензионное соглашение...
 menu.help.doc		0:Документация...
@@ -219,7 +222,7 @@ menu.help.home		1:Домашнаяя Страница
 menu.help.example	1:Примеры
 
 #############################################################################
-# Scope Menu
+# Меню логического анализатора
 #
 menu.scope_file			0:Файл
 menu.scope_sim			0:Симуляция
@@ -254,7 +257,7 @@ port.inout	Вход-выход
 
 ##############################################################################
 #
-# Tags for built-in gate types
+# Надписи для встроенных типов компонентов
 #
 
 gm.io		Ввод/вывод
@@ -269,7 +272,7 @@ gm.script	Скрипт Verilog
 gm.frame	Рамка
 
 gm.io.switch	Переключатель
-gm.io.dip	DIP переключатель
+gm.io.dip	DIP-переключатель
 gm.io.ground	Земля
 gm.io.vdd	Vdd
 gm.io.merge	Объединение
@@ -290,7 +293,7 @@ gm.gate.nor	НЕ-ИЛИ
 gm.gate.xor	ИСКЛ. ИЛИ
 gm.gate.xnor	НЕ-ИСКЛ. ИЛИ
 gm.gate.buf	Буфер
-gm.gate.inv	Inverter
+gm.gate.inv	Инвертор
 gm.gate.tribuf	Буфер с тремя состояниями
 gm.gate.nmos	N-МОП
 gm.gate.pmos	P-МОП
@@ -327,7 +330,7 @@ gm.msi.18dec	1-8 Дешифратор
 gm.msi.12demux	1-2 Демультиплексор
 gm.msi.14demux	1-4 Демультиплексор
 gm.msi.18demux	1-8 Демультиплексор
-    
+
 gm.mod.inst	Экземпляр модуля
 gm.mod.in	Вход модуля
 gm.mod.out	Выход модуля
@@ -357,10 +360,10 @@ pop.wire.addseg		Добавить сегмент провода
 pop.wire.prop		Свойства сети...
 pop.wire.hidesize	Скрыть разрядность
 pop.wire.showsize	Показать разрядность
-pop.wire.hidelabel	Скрыть надпись 
+pop.wire.hidelabel	Скрыть надпись
 pop.wire.hidealllabel	Скрыть все надписи
 pop.wire.clearalllabel	Очистить все надписи
-pop.wire.showlabel	Показать надпись 
+pop.wire.showlabel	Показать надпись
 
 pop.gate.open		Открыть
 pop.gate.close		Закрыть
@@ -449,15 +452,15 @@ pop.library.close	Выгрузить
 #symed.cancel		Отмена
 
 #symed.update		Обновить
-symed.tab.normal	Не выделенный
+symed.tab.normal	Невыделенный
 symed.tab.select	Выделенный
-symed.link		Связать выделенное с не выделенным
+symed.link		Связать выделенное с невыделенным
 # width of symbol editor tabs
 
 
 
 ##############################################################################
-## memory viewer
+## Просмотр памяти
 #
 memview.title	Просмотр памяти
 memview.exp	-fillbegin-
@@ -549,7 +552,7 @@ db.net.port	Тип порта
 db.net.in	вход
 db.net.out	выход
 db.net.inout	вход-выход
-db.net.inets	Сети
+db.net.inets	Cети
 
 ##############################################################################
 #
@@ -564,10 +567,8 @@ db.newcirc.exp		-fillbegin-
 db.newcirc.file		Имя файла
 db.newcirc.topname	Имя модуля верхнего уровня
 
-
-
 ##############################################################################
-# Gate dialog box
+# Диалог свойств встроенного компонета
 #
 db.gate.title		TKGate: Свойства компонента
 db.gate.signam		Имя сигнала
@@ -599,12 +600,12 @@ db.gate.delay		Задержка
 db.gate.parameters	Параметры
 db.gate.stddelay	Стандартная задержка
 db.gate.custdelay	Специальная задержка
-db.gate.catdiruse	Port placement
+db.gate.catdiruse	Размещение порта
 db.gate.edit		Редактировать
 db.gate.delete		Удалить
 db.gate.add		Добавить
 
-db.gate.ff.type		D Flip-Flop Orientation 
+db.gate.ff.type		Расположение D-триггера
 db.gate.ff.normal.hdr	Normal
 db.gate.ff.normal.exp	-fillbegin-
 D-триггер с направлением данных
@@ -637,7 +638,7 @@ db.gate.cat.dec.exp	-fillbegin-
 Биты объединяются по убыванию сверху вниз.
 -end-
 
-db.gate.cat.sigdir	Напрвление сигнала 
+db.gate.cat.sigdir	Напрвление сигнала
 db.gate.cat.auto.hdr	Автоматически
 db.gate.cat.multin.hdr	Многовходовый
 db.gate.cat.singin.hdr	Одновходовый
@@ -664,7 +665,7 @@ db.gate.cat.tran.exp	-fillbegin-
 -end-
 
 #
-# Minimum size of textbox for comment
+# Минимальный размер поля ввода текста комментариев
 #
 @db.gate.comment.width		*900
 @db.gate.comment.height		*550
@@ -922,7 +923,7 @@ db.hdl.saveexp		-fillbegin-
 
 db.hdl.autoedit		Авторедактирование
 db.hdl.split		Разделить
-db.hdl.comment		Сомментировать
+db.hdl.comment		Комментировать
 db.hdl.cancel		ОТменить
 db.hdl.ignore		Игнорировать
 
@@ -934,7 +935,7 @@ db.hdl.autoeditexp		-fillbegin-
 описанных справа для разрешения нессответствия.
 -end-
 
-db.dip.title		TkGate: Dip Value
+db.dip.title		TkGate: значение DIP-переключателя
 
 cpath.cloops -fillbegin-
 В вашей схеме обнаружены комбинационные петли.
@@ -1089,8 +1090,8 @@ opt.frames		Рамки
 opt.comment		Комментарии
 opt.hlink		Гиперссылки
 opt.wire		Однобитные проводники
-opt.bus			Многобитный проводники
-opt.tools		Инструменты вентилей
+opt.bus			Многобитные проводники
+opt.tools		Инструменты
 opt.background		Фон
 opt.cpath		Критический путь
 opt.grid		Сетка логического анализатора
@@ -1365,7 +1366,7 @@ blklst.del.exp		-fillbegin-
 
 blklst.copy.exp		-fillbegin-
 Создать копию указанного определения модуля.
-Используйте, чтобы создать новый вариант 
+Используйте, чтобы создать новый вариант
 существующего модуля.
 -end-
 
@@ -2000,7 +2001,7 @@ ho.opt.editor.colorize		-begin-
 -end-
 
 ho.hdl.splitexp		-begin-
-Множественный модули в тексте Verilog 
+Множественный модули в тексте Verilog
 будут разделены с созданием новых модулей
 при необходимости. Конфликты имён
 будут разрешены небольшими изменениями
@@ -2258,7 +2259,7 @@ ho.simoptions	-begin-
 -end-
 
 ho.simload	-begin-
-Загрузить память содержимым 
+Загрузить память содержимым
 .mem файла.
 -end-
 
@@ -2360,7 +2361,7 @@ TkGate не будет отображать предупреждение
 
 ho.circuit.extbar	-begin-
 Вновь создаваемые базовые вентили (И, ИЛИ,
-ИСКЛ-ИЛИ) будут использовать расширительные полосы 
+ИСКЛ-ИЛИ) будут использовать расширительные полосы
 для объединения множества входов.
 -end-
 
@@ -2636,7 +2637,7 @@ ho.opt.sim.err.showall	-begin-
 ho.opt.sim.err.showiferr	-begin-
 Показывать предупреждения только если присутствуют
 также и ошибки. Если есть предупреждения, но нет
-ошибок, предупреждения будут игнорированы, а 
+ошибок, предупреждения будут игнорированы, а
 симулятор запущен.
 -end-
 
@@ -2658,7 +2659,7 @@ ho.opt.lib.vlib			-begin-
 
 ho.opt.lib.vpd			-begin-
 Список каталогов поиска виртуальных периферийных
-устройств. Виртуальные периферийные устройства - 
+устройств. Виртуальные периферийные устройства -
 это модули, написанные на tcl, обычно реализующие
 графический интерфейс пользователя, представляющий
 периферийные устройства, контролируемые

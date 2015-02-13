@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2006 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Thu Jan  8 23:40:23 2009
+#
 
 namespace eval SimOptions {
   proc create {w} {
@@ -37,9 +38,9 @@ namespace eval SimOptions {
     grid $w.t.simstepL	-row 1 -column 0 -sticky e -padx 5 -pady 5
     grid $w.t.simstepE	-row 1 -column 1 -sticky w -padx 5 -pady 5
     grid $w.t.clkostepL	-row 1 -column 3 -sticky e -padx 5 -pady 5
-    grid $w.t.clkostepE	-row 1 -column 4 -sticky w -padx 5 -pady 5 
+    grid $w.t.clkostepE	-row 1 -column 4 -sticky w -padx 5 -pady 5
     grid $w.t.clkstepL	-row 2 -column 3 -sticky e -padx 5 -pady 5
-    grid $w.t.clkstepE	-row 2 -column 4 -sticky w -padx 5 -pady 5 
+    grid $w.t.clkstepE	-row 2 -column 4 -sticky w -padx 5 -pady 5
 
     pack $w.t -side left -padx 5 -pady 5 -anchor nw
 

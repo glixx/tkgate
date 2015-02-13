@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,14 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue Feb  3 15:01:14 2009
+#
 
+########################################################################
 #
 # The top-level window layout is:
 #
@@ -241,7 +243,7 @@ proc tkg_makeMain {w} {
   # edit window until later.
   #
   set main_w $tabframe_w.smg.maing
-  scrollbar $main_w.vert -command "$main_w.main yview" -takefocus 0 
+  scrollbar $main_w.vert -command "$main_w.main yview" -takefocus 0
   scrollbar $main_w.horz -orient horizontal -command "$main_w.main xview" -takefocus 0
   HdlEditor::new $main_w.hdl -ismain 1
   SymbolEdit::create $tabframe_w.smg.symed
@@ -258,7 +260,7 @@ proc tkg_makeMain {w} {
   bind $main_w.horz <ButtonRelease> { gat_obUnstick }
 
   TabBox::addpassive $w.cf.tab $tabframe_w
-  
+
   helpon $w.cf.tab.bEdit [m ho.tab.edit]
   helpon $w.cf.tab.bEditInterfaces [m ho.tab.interface]
   helpon $w.cf.tab.bSimulate [m ho.tab.simulate]

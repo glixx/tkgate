@@ -14,11 +14,11 @@ simple gate-level 3-bit adder to a 16-bit CPU programmed to play the
 "Animals" game.
 
 TkGate has a multi-langauge interface with support for English,
-Japanese, French and Spanish.
+French, German, Japanese, Russian and Spanish.
 
 For more information on TkGate, see the TkGate web site at:
 
-  http://www.cs.cmu.edu/~hansen/tkgate
+  http://www.tkgate.org
 
 Program and FreeBSD port by: 
   Jeffery Hansen <hansen@cmu.edu>

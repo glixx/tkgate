@@ -16,7 +16,7 @@
 @SET_MAKE@
 
 #
-#    Copyright (C) 1987-2006 by Jeffery P. Hansen
+#    Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -28,9 +28,9 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
 #
-#    You should have received a copy of the GNU General Public License
-#    along with this program; if not, write to the Free Software
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#    You should have received a copy of the GNU General Public License along
+#    with this program; if not, write to the Free Software Foundation, Inc.,
+#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
 
@@ -274,13 +274,13 @@ $(am__aclocal_m4_deps):
 
 clean-noinstPROGRAMS:
 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
-colors$(EXEEXT): $(colors_OBJECTS) $(colors_DEPENDENCIES) $(EXTRA_colors_DEPENDENCIES) 
+colors$(EXEEXT): $(colors_OBJECTS) $(colors_DEPENDENCIES) $(EXTRA_colors_DEPENDENCIES)
 	@rm -f colors$(EXEEXT)
 	$(colors_LINK) $(colors_OBJECTS) $(colors_LDADD) $(LIBS)
-msgdiff$(EXEEXT): $(msgdiff_OBJECTS) $(msgdiff_DEPENDENCIES) $(EXTRA_msgdiff_DEPENDENCIES) 
+msgdiff$(EXEEXT): $(msgdiff_OBJECTS) $(msgdiff_DEPENDENCIES) $(EXTRA_msgdiff_DEPENDENCIES)
 	@rm -f msgdiff$(EXEEXT)
 	$(msgdiff_LINK) $(msgdiff_OBJECTS) $(msgdiff_LDADD) $(LIBS)
-mvtag$(EXEEXT): $(mvtag_OBJECTS) $(mvtag_DEPENDENCIES) $(EXTRA_mvtag_DEPENDENCIES) 
+mvtag$(EXEEXT): $(mvtag_OBJECTS) $(mvtag_DEPENDENCIES) $(EXTRA_mvtag_DEPENDENCIES)
 	@rm -f mvtag$(EXEEXT)
 	$(mvtag_LINK) $(mvtag_OBJECTS) $(mvtag_LDADD) $(LIBS)
 

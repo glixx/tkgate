@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,14 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Feb 21 16:28:03 2009
 #
+
+########################################################################
 #
 # Popup flag meanings:
 #      r		Use label directly without a messages file lookup
@@ -76,7 +78,7 @@ namespace eval PopupMenu {
     {blockedge	gate.addin		popupBlockAddIn		emptytool	-		-		- }
     {blockedge	gate.addout		popupBlockAddOut	emptytool	-		-		- }
     {blockedge	gate.addinout		popupBlockAddInOut	emptytool	-		-		- }
-      
+
     {blockport	igen.type		-cascade		emptytool	-		ioset=blockport.type - }
     {blockport	igen.size		-cascade		emptytool	-		iosize=blockport.size - }
     {blockport	igen.delete		popupDeletePort		emptytool	-		-		- }
@@ -235,7 +237,7 @@ namespace eval PopupMenu {
 	    if { [string index $val 0] == "@" } {
 	      Menu::makeMenu $m.$var [string range $val 1 end]
 	      $m.$var configure -tearoff 0
-	    } else { 
+	    } else {
 	      PopupMenu::make $m.$var $val
 	    }
 	  } else {
@@ -255,7 +257,7 @@ namespace eval PopupMenu {
 	  if { $varval != "-"} {
 	    set var ""
 	    set val ""
-    
+
 	    if { [scan $varval "%\[^=\]=%s" var val] == 2 }  {
 	      safeeval $::menu_forbidden $m add command -command $action -radio 1 -variable $var -value $val -image $image -selectimage $simage -compound left -indicatoron 0 -label $name
 	    } else {
@@ -309,14 +311,14 @@ proc makePopups {} {
   PopupMenu::make	.pop_blockedge		blockedge block gateprop gatebase
   PopupMenu::make	.pop_blockport		blockport block portprop gatebase
   PopupMenu::make 	.pop_canv		canv paste
-  PopupMenu::make 	.pop_simu		simu 
-  PopupMenu::make 	.pop_blksimu		open -nosep simu 
+  PopupMenu::make 	.pop_simu		simu
+  PopupMenu::make 	.pop_blksimu		open -nosep simu
   PopupMenu::make 	.pop_wiresimu		wiresimu simu
   PopupMenu::make	.pop_anal		close
   PopupMenu::make	.pop_blkanal		open -nosep close
   PopupMenu::make 	.pop_intf		close
-  PopupMenu::make 	.pop_intfblock		open -nosep close 
-  PopupMenu::make 	.pop_intfblockport	blockport open -nosep close 
+  PopupMenu::make 	.pop_intfblock		open -nosep close
+  PopupMenu::make 	.pop_intfblockport	blockport open -nosep close
   PopupMenu::make 	.pop_intfblockedge	blockedge open -nosep
   PopupMenu::make	.pop_notmove		notmove close
   PopupMenu::make	.pop_modlist		modlist

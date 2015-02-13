@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Jan 19 19:52:13 2009
 #
@@ -180,7 +180,7 @@ namespace eval BlockOp {
       label $w.top.t.tdst -text $dstprompt
       entry $w.top.t.edst -textvariable BlockOp::dstModule -bg white
       grid $w.top.t.tdst -row 1 -column 0 -sticky e -padx 3 -pady 3
-      grid $w.top.t.edst -row 1 -column 1 -sticky ew -padx 3 -pady 3 
+      grid $w.top.t.edst -row 1 -column 1 -sticky ew -padx 3 -pady 3
 
       append command { $BlockOp::dstModule }
       bind $w.top.t.edst <Return> $command
@@ -254,8 +254,8 @@ namespace eval BlockOp {
 
     label $w.ppos -text [m ipanel.ppos.label]
     pack $w.ppos -anchor w -pady 3 -padx 5
-    
-    
+
+
 
     set IPanel::props(ppos) scale
     frame $w.grid
@@ -273,10 +273,10 @@ namespace eval BlockOp {
   #
   proc seeTypeChanged {w args} {
     if { $BlockOp::props(type) == "netlist" } {
-      $w.image.i configure -image [gifI type_netlist.gif] 
+      $w.image.i configure -image [gifI type_netlist.gif]
       $w.image.l configure -text [m db.mod.netexpl]
     } else {
-      $w.image.i configure -image [gifI type_hdl.gif] 
+      $w.image.i configure -image [gifI type_hdl.gif]
       $w.image.l configure -text [m db.mod.hdlexpl]
     }
   }
@@ -294,12 +294,12 @@ namespace eval BlockOp {
     pack $w.pad
 
     frame $w.button
-    radiobutton $w.button.netlist -variable BlockOp::props(type) -value netlist -text [m db.mod.netlist] 
-    radiobutton $w.button.hdl -variable BlockOp::props(type) -value hdl -text [m db.mod.hdl] 
+    radiobutton $w.button.netlist -variable BlockOp::props(type) -value netlist -text [m db.mod.netlist]
+    radiobutton $w.button.hdl -variable BlockOp::props(type) -value hdl -text [m db.mod.hdl]
     pack $w.button.netlist $w.button.hdl -padx 3 -pady 3 -anchor nw
 
     frame $w.image
-    label $w.image.i -image [gifI type_netlist.gif] 
+    label $w.image.i -image [gifI type_netlist.gif]
     label $w.image.l -text [m db.mod.netexpl] -justify left -anchor n
     pack $w.image.i $w.image.l -padx 5 -pady 5 -side left -anchor nw
 
@@ -504,7 +504,7 @@ namespace eval ModuleProps {
 
 
     okcancel $w.okc -okcommand "ModuleProps::update $w $name" -cancelcommand "destroy $w"
-    pack $w.okc -side bottom -fill x 
+    pack $w.okc -side bottom -fill x
 
     frame $w.main -bd 2 -relief raised
 

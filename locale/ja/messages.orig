@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,11 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue May 24 10:44:10 2005
+#
 
 ##############################################################################
 #
@@ -237,7 +238,7 @@ gm.msi.81mux		8-1 セレクター
 gm.msi.12dec		1-2 デコーダ
 gm.msi.14dec		1-4 デコーダ
 gm.msi.18dec		1-8 デコーダ
-    
+
 gm.mod.inst	モジュールのインスタンス
 gm.mod.in		モジュールの入力
 gm.mod.out	モジュールの出力
