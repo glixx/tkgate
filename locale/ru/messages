@@ -1137,7 +1137,7 @@ opt.interaction		Взаимодействие
 opt.input		Ввод
 opt.security		Безопасность
 opt.undolen		Максимальное число отмен операций
-opt.keybind		Стиль привязки клавишь
+opt.keybind		Стиль привязки клавиш
 opt.useless		Включить бесполезные возможности
 opt.features		Настройки сохранения файлов
 opt.simbase		Основные параметры симуляции
