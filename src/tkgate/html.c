@@ -533,6 +533,7 @@ static HtmlUnit *new_HtmlUnit_T(int htype,HtmlContext *hc)
   hu->hu_type = htype;
   hu->hu_text =0;
   hu->hu_x = hu->hu_y = 0;
+  hu->hu_width = 0;
   hu->hu_context = hc;
   hu->hu_image = 0;
 
