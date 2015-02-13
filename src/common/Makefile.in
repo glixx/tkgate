@@ -251,7 +251,7 @@ $(am__aclocal_m4_deps):
 
 clean-noinstLIBRARIES:
 	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
-libcommon.a: $(libcommon_a_OBJECTS) $(libcommon_a_DEPENDENCIES) $(EXTRA_libcommon_a_DEPENDENCIES)
+libcommon.a: $(libcommon_a_OBJECTS) $(libcommon_a_DEPENDENCIES) $(EXTRA_libcommon_a_DEPENDENCIES) 
 	-rm -f libcommon.a
 	$(libcommon_a_AR) libcommon.a $(libcommon_a_OBJECTS) $(libcommon_a_LIBADD)
 	$(RANLIB) libcommon.a

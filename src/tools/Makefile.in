@@ -274,13 +274,13 @@ $(am__aclocal_m4_deps):
 
 clean-noinstPROGRAMS:
 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
-colors$(EXEEXT): $(colors_OBJECTS) $(colors_DEPENDENCIES) $(EXTRA_colors_DEPENDENCIES)
+colors$(EXEEXT): $(colors_OBJECTS) $(colors_DEPENDENCIES) $(EXTRA_colors_DEPENDENCIES) 
 	@rm -f colors$(EXEEXT)
 	$(colors_LINK) $(colors_OBJECTS) $(colors_LDADD) $(LIBS)
-msgdiff$(EXEEXT): $(msgdiff_OBJECTS) $(msgdiff_DEPENDENCIES) $(EXTRA_msgdiff_DEPENDENCIES)
+msgdiff$(EXEEXT): $(msgdiff_OBJECTS) $(msgdiff_DEPENDENCIES) $(EXTRA_msgdiff_DEPENDENCIES) 
 	@rm -f msgdiff$(EXEEXT)
 	$(msgdiff_LINK) $(msgdiff_OBJECTS) $(msgdiff_LDADD) $(LIBS)
-mvtag$(EXEEXT): $(mvtag_OBJECTS) $(mvtag_DEPENDENCIES) $(EXTRA_mvtag_DEPENDENCIES)
+mvtag$(EXEEXT): $(mvtag_OBJECTS) $(mvtag_DEPENDENCIES) $(EXTRA_mvtag_DEPENDENCIES) 
 	@rm -f mvtag$(EXEEXT)
 	$(mvtag_LINK) $(mvtag_OBJECTS) $(mvtag_LDADD) $(LIBS)
 

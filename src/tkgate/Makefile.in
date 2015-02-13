@@ -346,7 +346,7 @@ clean-binPROGRAMS:
 vgrammar.h: vgrammar.c
 	@if test ! -f $@; then rm -f vgrammar.c; else :; fi
 	@if test ! -f $@; then $(MAKE) $(AM_MAKEFLAGS) vgrammar.c; else :; fi
-tkgate$(EXEEXT): $(tkgate_OBJECTS) $(tkgate_DEPENDENCIES) $(EXTRA_tkgate_DEPENDENCIES)
+tkgate$(EXEEXT): $(tkgate_OBJECTS) $(tkgate_DEPENDENCIES) $(EXTRA_tkgate_DEPENDENCIES) 
 	@rm -f tkgate$(EXEEXT)
 	$(tkgate_LINK) $(tkgate_OBJECTS) $(tkgate_LDADD) $(LIBS)
 
