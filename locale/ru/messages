@@ -604,7 +604,7 @@ db.gate.edit		Редактировать
 db.gate.delete		Удалить
 db.gate.add		Добавить
 
-db.gate.ff.type		D Flip-Flop Orientation
+db.gate.ff.type		Расположение D-триггера
 db.gate.ff.normal.hdr	Normal
 db.gate.ff.normal.exp	-fillbegin-
 D-триггер с направлением данных
