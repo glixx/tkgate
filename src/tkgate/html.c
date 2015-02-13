@@ -938,9 +938,8 @@ void Html_handle_valueOf(Html *h, HtmlTag *tag)
   } else if (strcasecmp(name,"tkgate-release-date") == 0) {
     text = release_date;
   } else if (strcasecmp(name,"pancake-recipe") == 0) {
-    /** @TODO to remove */
-    /* extern const char *recipe_list[]; */
-    /* text = recipe_list[0];*/
+    extern const char *recipe_list[];
+    text = recipe_list[0];
   }
 
   if (text)
