@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1112843320 source:/home/starling13/REPO/tkgate/src/common/hash.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1116272638 /home/starling13/REPO/tkgate/src/common/hash.h
+
+1127780347 source:/home/starling13/REPO/tkgate/src/common/list.c
+	<stdlib.h>
+	"list.h"
+
+1127780355 /home/starling13/REPO/tkgate/src/common/list.h
+
+1418546801 source:/home/starling13/REPO/tkgate-work/src/common/hash.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1415916106 /home/starling13/REPO/tkgate-work/src/common/hash.h
+
+1418546801 source:/home/starling13/REPO/tkgate-work/src/common/list.c
+	<stdlib.h>
+	"list.h"
+
+1415916106 /home/starling13/REPO/tkgate-work/src/common/list.h
+
+1420333735 source:/home/starling13/REPO/tkgate-work/src/common/misc.c
+	"config.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	"misc.h"
+
+1419109436 /home/starling13/REPO/tkgate-work//config.h
+	"options.h"
+
+1415916106 /home/starling13/REPO/tkgate-work//options.h
+
+1418546801 /home/starling13/REPO/tkgate-work/src/common/misc.h
+

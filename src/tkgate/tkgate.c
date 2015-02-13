@@ -150,10 +150,10 @@ void findTkGateHome(char *homeDir)
   if (i == 4) {
     printf("\n");
     printf("I could not locate the tkgate home directory.  I tried looking in:\n");
-    if (trydirs[0]) printf("  %s  (environment variable)\n", trydirs[0]);
-    if (trydirs[1]) printf("  %s  (current directory)\n",    trydirs[1]);
-    if (trydirs[2]) printf("  %s  (primary location)\n",     trydirs[2]);
-    if (trydirs[3]) printf("  %s  (secondary location)\n",   trydirs[3]);
+    if (trydirs[0]) printf("  %s  (TKGATE_HOME environment variable)\n", trydirs[0]);
+    if (trydirs[1]) printf("  %s  (current directory)\n",                trydirs[1]);
+    if (trydirs[2]) printf("  %s  (primary location)\n",                 trydirs[2]);
+    if (trydirs[3]) printf("  %s  (secondary location)\n",               trydirs[3]);
     printf("\n");
     printf("Try setting the environment variable TKGATE_HOME.\n");
     exit(1);
@@ -1049,8 +1049,6 @@ static void init_tk(Tcl_Interp *tcl)
  *****************************************************************************/
 static int tkgate_main(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
-  char buf[STRMAX];
-
   parse_options(argc,argv);		/* Parse the command line options */
 
   init_TkGate();				/* tkgate "main" object */

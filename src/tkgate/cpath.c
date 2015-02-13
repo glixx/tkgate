@@ -440,11 +440,15 @@ int cpath_command(const char *C)
 
 void cpath_open()
 {
+  /** @TODO to remove */
+  /*
   EditState *es;
+  */
   char tempName[STRMAX];
 
   editstate_makeRootAtTop(&TkGate.circuit->es);
-  es = TkGate.circuit->es;
+  /** @TODO to remove */
+  /* es = TkGate.circuit->es;*/
 
   getSimTempFile(tempName);
 

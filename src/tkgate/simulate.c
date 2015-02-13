@@ -308,14 +308,19 @@ GCElement *sim_findGate(const char *name)
   for (T = strtok(buf,"."), N = 0;T;T = strtok(0,"."), N++)
     ptr[N] = T;
 
-  for (i = 0;i < N;i++) {
+  assert(N>0);
+  if (N==0)
+    return 0;
+
+  if (strcmp(ptr[0], TkGate.circuit->root_mod->m_name)==0)
+    i=1; /* If path starting from root, oomit root element */
+  else
+    i=0;
+
+  for (;i < N;i++) {
     g = GModuleDef_findGate(M,ptr[i]);
-    if (i == (N-1))
-      break;
-    else if (g && GCElement_isModule(g))
+    if (g && GCElement_isModule(g))
       M = env_findModule(g->u.block.moduleName);
-    else
-      return 0;
   }
   return g;
 }
@@ -1554,9 +1559,11 @@ int SimInterface_command(SimInterface *si,const char *C)
     sprintf(buf3,"%s=%s",buf,buf2);
     Tcl_SetVar(TkGate.tcl,"tkg_simDisplayedVal",
 	       buf3,TCL_GLOBAL_ONLY);
-  } else if (sscanf(C," tell $led:%s %*s %s @ %llu",buf,buf2,&t) == 3) {	/* Set value of an led */
+  } else if (sscanf(C," tell $led:%s %s %s @ %llu",buf3,buf,buf2,&t) == 4) {	/* Set value of an led */
+    strcat(buf,".");
+    strcat(buf,buf3);
     SimInterface_setLed(si,buf,buf2);
-  } else if (sscanf(C," tell $switch:%s %*s %s @ %llu",buf,buf2,&t) == 3) {	/* Set value of an led */
+  } else if (sscanf(C," tell $switch:%s %*s %s @ %llu",buf,buf2,&t) == 3) {	/* Set value of an switch */
     SimInterface_setSwitch(si,buf,buf2);
   } else if (sscanf(C," netdelay %s %d %d",buf,&a1,&a2) == 3) {	/* Net delay values */
     cpath_registerNetDelay(buf,a1,a2);

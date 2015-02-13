@@ -22,7 +22,6 @@
 static const char *unitCodes[] = {"s", "ms", "us", "ns", "ps", "fs"};
 static int numUnitCodes  = sizeof(unitCodes)/sizeof(unitCodes[0]);
 
-
 /*
  * 1ns/1ns
  */
@@ -389,8 +388,6 @@ int Circuit_isSelection(Circuit *c)
     return 0;
 }
 
-
-
 void Circuit_loadLibrary(Circuit *c,const char *name)
 {
   if (tkgate_currentMode() != MM_EDIT)
@@ -420,8 +417,6 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
 
   dhash = new_NHash_noob();
 
-  SHash_remove(TkGate.libraries, name);
-
   /*
    * Get list of modules to be deleted.
    */
@@ -444,6 +439,7 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
     env_delete(TkGate.circuit->es,M->m_name);
   }
   delete_NHash(dhash);
+  SHash_remove(TkGate.libraries, name);
 }
 
 void Circuit_unloadAllLibraries(Circuit *c)

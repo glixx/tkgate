@@ -1560,6 +1560,8 @@ static void unbuild_HGNodeGraph(HGNode *G)
   ob_free(G);
 }
 
+/** @TODO to check necessity */
+/*
 static void HGNodeGraph_print(HGNode *G,int level)
 {
   int i;
@@ -1571,6 +1573,7 @@ static void HGNodeGraph_print(HGNode *G,int level)
   HGNodeGraph_print(G->hg_children,level+1);
   HGNodeGraph_print(G->hg_nextSibling,level);
 }
+*/
 
 static int HGNode_translatePoint(int *x,int *y)
 {
@@ -1693,13 +1696,18 @@ void GPrint_outputPages(GPrint *P)
 void GPrint_setupEPSFPage(GPrint *P)
 {
   GModLayout *L = P->p_mods[0];
+  /** @TODO to check necessity */
+  /*
   int cwidth,cheight;
+  */
   GPage *PG;
 
   GModuleDef_getBBX(L->l_mod, TD_PRINT, &L->l_xmin,&L->l_xmax,&L->l_ymin,&L->l_ymax);
+  /** @TODO to check necessity */
+  /*
   cwidth  = L->l_xmax-L->l_xmin + 2*PAGE_MODMARGIN;
   cheight = L->l_ymax-L->l_ymin + 2*PAGE_MODMARGIN;
-
+  */
   L->l_isSmall = 0;
   L->l_numRows = 1;
   L->l_numCols = 1;

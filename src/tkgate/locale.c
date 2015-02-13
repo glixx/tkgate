@@ -280,7 +280,10 @@ static void verifyMessagesFile(SHash *H,Locale *englishLocale)
   char buf[STRMAX],buf2[STRMAX],tag[STRMAX],msg[8*STRMAX];
   int no_msg_count = 0;
   FILE *f;
+  /** @TODO to remove */
+  /*
   char *p = 0;
+  */
   Encoder *encoder = 0;
 
   f = fopen(englishLocale->l_messages,"r");

@@ -23,29 +23,37 @@
 
 #include "config.h"
 
-#include <stdlib.h>
-#include <sys/param.h>
+#define _GNU_SOURCE
+
+#include <assert.h>
+#include <ctype.h>
+#include <errno.h>
 #include <limits.h>
+#include <pwd.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <stdio.h>
-#include <stdarg.h>
-#include <ctype.h>
-#include <unistd.h>
-#include <time.h>
-#include <pwd.h>
-#include <errno.h>
-#include <assert.h>
-#include <string.h>
-#include <signal.h>
+#include <sys/param.h>
+
 #include <X11/Xlib.h>
 #include <X11/Xresource.h>
 #include <X11/cursorfont.h>
+
 #if HAVE_ICONV_H
 #include <iconv.h>
 #endif
 
+#ifndef USE_INTERP_RESULT
+#define USE_INTERP_RESULT
 #include "tcl.h"
+#endif // USE_INTERP_RESULT
 #include "tk.h"
 #include "fonts.h"
 #include "zoom.h"

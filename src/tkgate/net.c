@@ -504,6 +504,7 @@ int checkValidName(const char *name,SHash *H)
 void pickValidName(char *buf,const char *name,const char *base,SHash *H)
 {
   char *p;
+
   int reason = 0;
 
   if (!base || !*base)
@@ -541,9 +542,8 @@ void pickValidName(char *buf,const char *name,const char *base,SHash *H)
   p = buf+strlen(buf);
 
   if ((H && SHash_find(H,buf)) || ycIsKW(buf)) {
-    char *p;
     int n;
-
+    /** @TODO to check for necessicty */
     p = buf + strlen(buf);
     while (p > buf && isdigit((int)p[-1])) p--;
 

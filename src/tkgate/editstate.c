@@ -211,10 +211,13 @@ void env_updateMTCircuit()
  *****************************************************************************/
 void env_insertModule(GModuleDef *M)
 {
+  /** @TODO to check the necessity */
+  /*
   char *mflags = "";
 
   if (GModuleDef_isTop(M))
     mflags = "+";
+  */
 
   SHash_insert(TkGate.circuit->moduleTable,M->m_name,M);
 }
@@ -1047,6 +1050,18 @@ void editstate_flushModules(EditState **es)
    *  modint_flush();
    *  printf("**end flushModules\n");
    */
+}
+
+/*****************************************************************************
+ *
+ * Synchronize states of undo buttons
+ *
+ *****************************************************************************/
+void sync_undo_buttons()
+{
+  DoTcl("Menu::setFlags %s U %s R",
+	(ob_getUndoList(0,0) != 0 ? "-set" : "-clear"),
+	(ob_getRedoList(0,0) != 0 ? "-set" : "-clear"));
 }
 
 /*****************************************************************************

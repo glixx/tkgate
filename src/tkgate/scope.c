@@ -17,11 +17,11 @@
 
     Last edit by hansen on Sat Apr 11 15:53:44 2009
 ****************************************************************************/
+#include "tkgate.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include "tkgate.h"
 
 #define SKIPFIELD(C) { \
     for (;*C && isspace(*C);C++); \

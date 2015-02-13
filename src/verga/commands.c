@@ -125,7 +125,8 @@ void Circuit_execScript(Circuit *c,int argc,char *argv[])
   int i;
   int do_delete = 0;
   int is_silent = 0;
-  int is_breakpt = 0;
+  /** @TODO use ? */
+  /* int is_breakpt = 0; */
 
   if (argc < 3) {
     argError("$script");
@@ -144,8 +145,8 @@ void Circuit_execScript(Circuit *c,int argc,char *argv[])
       do_delete = 1;
     else if (strcmp(argv[i],"-silent") == 0)
       is_silent = 1;
-    else if (strcmp(argv[i],"-breakpt") == 0)
-      is_breakpt = 1;
+    /* else if (strcmp(argv[i],"-breakpt") == 0)
+      is_breakpt = 1; */
 
   if (VerilogLoadScript(argv[2], dm) < 0) {
     vgio_printf("badscript %s\n",argv[1]);
@@ -158,6 +159,8 @@ void Circuit_execScript(Circuit *c,int argc,char *argv[])
 
   if (do_delete)
     unlink(argv[2]);
+
+  /** @TODO is_breakpt use ?*/
 }
 
 
@@ -931,11 +934,13 @@ void Circuit_execMemPut(Circuit*c,int argc,char *argv[])
   Net *n;
   Memory *m;
   const char *netName;
-  char buf[STRMAX];
   unsigned addr;
   unsigned beginAddr, endAddr;
   Value *data;
+  /** @TODO to remove */
+  /*
   int numOnLine = 0;
+  */
 
   if (argc != 4) {
     argError("$memput");
@@ -986,9 +991,9 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
   Net *n;
   Memory *m;
   const char *netName;
-  char buf[STRMAX];
   unsigned addr1,addr2,a;
-  unsigned beginAddr, endAddr;
+  /** @TODO to remove */
+  /* unsigned beginAddr, endAddr; */
   Value *data;
   int numOnLine = 0;
 
@@ -1005,15 +1010,20 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
   }
   m = Net_getMemory(n);
 
+  /** @TODO to remove */
+  /*
   beginAddr = Memory_beginAddr(m);
   endAddr = Memory_endAddr(m);
-
+  */
   if (sscanf(argv[2],"%u",&addr1) != 1 || sscanf(argv[3],"%u",&addr2) != 1 || addr2 < addr1) {
     errorCmd(ERR_SYNTAX);
     return;
   }
+  /** @TODO to remove */
+  /*
   if (addr2  > endAddr) addr2 = endAddr;
   if (addr1  > endAddr) addr1 = endAddr;
+  */
 
   data = new_Value(Net_getMsb(n)-Net_getLsb(n)+1);
 
@@ -1067,11 +1077,9 @@ void Circuit_execMemWatch(Circuit*c,int argc,char *argv[])
   Net *n;
   Memory *m;
   const char *netName;
-  char buf[STRMAX];
-  unsigned addr1,addr2,a;
-  Value *data;
-  int numOnLine = 0;
-  unsigned beginAddr, endAddr;
+  unsigned addr1,addr2;
+  /** @TODO check */
+  unsigned /*beginAddr,*/ endAddr;
 
   if (argc < 3 || argc > 4) {
     argError("$memwatch");
@@ -1094,8 +1102,8 @@ void Circuit_execMemWatch(Circuit*c,int argc,char *argv[])
     Memory_unsetMonitor(m);
     return;
   }
-
-  beginAddr = Memory_beginAddr(m);
+  /** @TODO to remove */
+  /* beginAddr = Memory_beginAddr(m);*/
   endAddr = Memory_endAddr(m);
 
   if (sscanf(argv[2],"%u",&addr1) != 1 || sscanf(argv[3],"%u",&addr2) != 1 || addr2 < addr1) {

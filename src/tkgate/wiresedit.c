@@ -57,14 +57,14 @@
 
 
 /* Wire snap cases */
-#define HH 0x3
-#define VV 0xC
-#define HV 0x6
-#define VH 0x9
-#define HZ 0x1
-#define ZH 0x2
-#define VZ 0x4
-#define ZV 0x8
+#define WS_HH 0x3
+#define WS_VV 0xC
+#define WS_HV 0x6
+#define WS_VH 0x9
+#define WS_HZ 0x1
+#define WS_ZH 0x2
+#define WS_VZ 0x4
+#define WS_ZV 0x8
 
 /*
   Return the orientation of the segment 'd' in from end 'n'.
@@ -577,8 +577,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
     (vertical(n1,n1->in)<<2) | (vertical(n2,n2->out)<<3);
 
   switch (t) {
-  case HH :
-  case VV :
+  case WS_HH :
+  case WS_VV :
     if ((n1->x != n2->x) || (n1->y != n2->y)) { /* Couldn't move a node */
       n1->out = n2;				  /* Don't remove bend */
       n2->in = n1;
@@ -594,8 +594,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
       debugprint("*click* (case 2)\n");
     }
     break;
-  case HV :
-  case VH :
+  case WS_HV :
+  case WS_VH :
     ob_touch(n2->out);
 
     n1->out = n2->out;
@@ -603,8 +603,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
     delete_GWireNode(n2);
     debugprint("*click* (case 3)\n");
     break;
-  case ZH :
-  case ZV :
+  case WS_ZH :
+  case WS_ZV :
     if (n1->in->in) {
       ob_touch(n1->in);
 
@@ -621,8 +621,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
       logError(ERL_ERROR,"Out of wire case 4 in wire_solder.");
     }
     break;
-  case HZ :
-  case VZ :
+  case WS_HZ :
+  case WS_VZ :
     if (n2->out->out) {
       ob_touch(n2->out);
 
@@ -837,6 +837,8 @@ GWireNode *wirenode_cutsegment(int x,int y,GWireNode *n,GModuleDef *M)
   return cn2;
 }
 
+/** @TODO check */
+/*
 static int verify_addr(void *p)
 {
   return (p) != (void*)0xa7a7a7a7;
@@ -875,7 +877,7 @@ static void verify_net(const char *place,GNet *n)
   }
   verify_wires(place, n->n_driver);
 }
-
+*/
 /*****************************************************************************
  *
  * Cut wire near node an at (x,y).
@@ -1128,9 +1130,6 @@ static int wire_trash(GWireNode *n,GModuleDef *M,int draw)
  */
 int wire_nuke(GWire *w,int draw,GModuleDef *M)
 {
-  GWire *ow;
-  GWireNode *freeNodes = 0;
-
   if (wire_trash(w->nodes,M,draw)) {
     ob_touch(M);
     M->m_wires = wire_unlink(M->m_wires,w);
