@@ -300,7 +300,7 @@ clean-binPROGRAMS:
 grammar.h: grammar.c
 	@if test ! -f $@; then rm -f grammar.c; else :; fi
 	@if test ! -f $@; then $(MAKE) $(AM_MAKEFLAGS) grammar.c; else :; fi
-gmac$(EXEEXT): $(gmac_OBJECTS) $(gmac_DEPENDENCIES) $(EXTRA_gmac_DEPENDENCIES)
+gmac$(EXEEXT): $(gmac_OBJECTS) $(gmac_DEPENDENCIES) $(EXTRA_gmac_DEPENDENCIES) 
 	@rm -f gmac$(EXEEXT)
 	$(gmac_LINK) $(gmac_OBJECTS) $(gmac_LDADD) $(LIBS)
 
