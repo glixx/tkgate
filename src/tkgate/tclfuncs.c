@@ -3375,10 +3375,7 @@ static int gat_undo(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (argc > 1)
     sscanf(argv[1],"%d",&n);
 
-  undo_sync(0);				/* Synchronize Tcl/Tk undo/redo list */
   ob_undo(n);
-  undo_sync(1);				/* Synchronize Tcl/Tk undo/redo list */
-  sync_undo_buttons();
   FlagRedraw();
   return TCL_OK;
 }
@@ -3393,10 +3390,7 @@ static int gat_redo(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (argc > 1)
     sscanf(argv[1],"%d",&n);
 
-  undo_sync(0);				/* Synchronize Tcl/Tk undo/redo list */
   ob_redo(n);
-  undo_sync(1);				/* Synchronize Tcl/Tk undo/redo list */
-  sync_undo_buttons();
   FlagRedraw();
   return TCL_OK;
 }
