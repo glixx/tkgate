@@ -969,6 +969,7 @@ print.all		Все
 print.cur		Текущий
 print.use		Использованные
 print.sel		Выбранные
+print.avail		Доступные
 print.inclib		Включая библиотечные модули.
 print.incunused		Включая неиспользуемые модули.
 print.papsz		Размер бумаги
@@ -1762,7 +1763,8 @@ err.internal.nomod	Внутренняя ошибка: невозможно на�
 
 
 ##############################################################################
-# Informational messages
+#
+# Информационные сообщения
 #
 msg.selwire		Выбран проводник %s с именем '%s'.
 msg.selgate		Выбран вентиль %s с именем '%s'.
@@ -1923,6 +1925,14 @@ primitive.err.missing		Internal Error: primitive definition for '%s' is missing.
 primitive.err.nomodule		Internal Error: primitive definition for '%s' is missing 'module'.
 primitive.err.nomodname		Internal Error: missing module name in definition of '%s' module.
 primitive.err.wrongname		Internal Error: module name mismatch in definition of '%s' module.
+
+##############################################################################
+#
+# Сообщения об авторских правах и лицензиях
+#
+cprt.about			О программе TkGate
+cprt.lic			Лицензия TkGate
+cprt.descr			Редактор и симулятор цифровых схем
 
 ##############################################################################
 ##############################################################################

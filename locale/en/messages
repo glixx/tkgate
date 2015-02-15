@@ -1037,6 +1037,7 @@ print.epssave		Save as Encapsulated Postscript.
 print.epcm		Epochs/cm
 print.estpg		Estimated pages
 print.all		All
+print.avail		Available
 print.cur		Current
 print.use		Used
 print.sel		Selected
@@ -2006,6 +2007,13 @@ primitive.err.nomodule		Internal Error: primitive definition for '%s' is missing
 primitive.err.nomodname		Internal Error: missing module name in definition of '%s' module.
 primitive.err.wrongname		Internal Error: module name mismatch in definition of '%s' module.
 
+##############################################################################
+#
+# Copyright and license messages
+#
+cprt.about		About TkGate
+cprt.lic		TkGate license
+cprt.descr		Digital Circuit Editor and Simulator
 
 ##############################################################################
 ##############################################################################
