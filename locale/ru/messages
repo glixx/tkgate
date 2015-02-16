@@ -1191,7 +1191,7 @@ opt.editor.color	Цвет
 opt.editor.bold		Жирный
 opt.editor.italic	Курсив
 opt.editor.indentlevel	Отступ на уровень:
-opt.editor.beginindent	Make begin...end flush with enclosing level.
+opt.editor.beginindent	Блок begin...end на том же уровне, что и родительский.
 opt.editor.movesel	Разрешить перетаскивание выделенного.
 opt.editor.returntab	Автоотступ после конца строки.
 
