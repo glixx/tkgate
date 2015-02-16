@@ -214,7 +214,7 @@ wire w0;    //: /sn:0 {0}(348,183)(338,183)(338,153){1}
   //: /end
   //: IN g5 (I2) @(243,200) /sn:0 /w:[ 0 ]
   //: comment g14 @(76,306) /sn:0
-  //: /line:"<a href=\"#/PAGE8\">&lang;BACK TO TUTORIAL&rang;</a>"
+  //: /line:"<a href=\"#/PAGE8\">&lang;ВОЗВРАТ К РУКОВОДСТВУ&rang;</a>"
   //: /end
   //: joint g23 (Z2) @(380, 186) /w:[ 2 1 4 -1 ]
   //: OUT g12 (Z3) @(445,251) /sn:0 /w:[ 1 ]
