@@ -32,12 +32,17 @@ SUBDIRS = src
 #
 # List of data files in this directory that should be included with a tkgate distribution.
 #
-dist_pkgdata_DATA=README README.verga COPYING INSTALL TODO site-preferences license.txt pkg-comment pkg-descr
+dist_pkgdata_DATA=site-preferences pkg-comment pkg-descr
 
 #
 # List of man pages for tkgate
 #
 dist_man_MANS = tkgate.1 verga.1 gmac.1
+
+#
+# List of common documentation files
+#
+dist_doc_DATA = README README.verga COPYING TODO
 
 #
 # List of header files that should not be automatically installed
