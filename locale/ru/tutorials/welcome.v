@@ -226,7 +226,7 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: /line:"<font size=6 color=\"firebrick\">[Beta релиз]</font>"
   //: /line:""
   //: /line:"<value-of name=\"tkgate-copyright\">"
-  //: /line:"  TKGate предоставляется БЕЗО ВСЯКИХ ГАРАНТИЙ; см. пункт меню <b>Справка &rarr;"
+  //: /line:"  TKGate предоставляется БЕЗ ВСЯКИХ ГАРАНТИЙ; см. пункт меню <b>Справка &rarr;"
   //: /line:"  Лицензионное соглашение</b> для получения дополнительной информации о"
   //: /line:"  лицензии и гарантиях. Сообщайте о проблемах на <a href=\"mailto:hansen@tkgate.org\"><value-of name=\"tkgate-mailcontact\"></a> (по английски)."
   //: /line:"  Русская локализация: А.В. Скворцов <a href=\"mailto:starling13@gmail.com\">starling13@gmail.com</a>"
