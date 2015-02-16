@@ -70,7 +70,8 @@ ensure that the environment variables are set correctly.
 
 Russian locale uses 'koi8-r' single-byte encoding for the circuit comment
 text. In order to display in-circuit cyrillic text, the X fonts packages,
-containing 'helvetica' family koi8-r encoded fonts should be installed.
+containing 'helvetica' and 'courier' family koi8-r encoded fonts should be
+installed.
 
 *****************************************************************************
 CREDITS
