@@ -2794,7 +2794,7 @@ TKGATE_INCDIRS="/usr/X11R6/include /usr/X11/include /pkgs/include /usr/local/inc
 #
 # Directories to search for library files
 #
-TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib /usr/local/lib/tcl"
+TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib /usr/local/lib/tcl /usr/lib64"
 
 #
 # Libraries we may need if available.
@@ -6382,6 +6382,51 @@ _ACEOF
 
 fi
 done
+
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for floor in -lm" >&5
+$as_echo_n "checking for floor in -lm... " >&6; }
+if ${ac_cv_lib_m_floor+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  ac_check_lib_save_LIBS=$LIBS
+LIBS="-lm  $LIBS"
+cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+
+/* Override any GCC internal prototype to avoid an error.
+   Use char because int might match the return type of a GCC
+   builtin and then its argument prototype would still apply.  */
+#ifdef __cplusplus
+extern "C"
+#endif
+char floor ();
+int
+main ()
+{
+return floor ();
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_c_try_link "$LINENO"; then :
+  ac_cv_lib_m_floor=yes
+else
+  ac_cv_lib_m_floor=no
+fi
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
+LIBS=$ac_check_lib_save_LIBS
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_m_floor" >&5
+$as_echo "$ac_cv_lib_m_floor" >&6; }
+if test "x$ac_cv_lib_m_floor" = xyes; then :
+  cat >>confdefs.h <<_ACEOF
+#define HAVE_LIBM 1
+_ACEOF
+
+  LIBS="-lm $LIBS"
+
+fi
 
 
 #############################################################################

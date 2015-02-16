@@ -44,7 +44,7 @@ proc showDocFile {label file L} {
   }
 
   if { $file != "" } {
-    set f [open $tkg_gateHome/doc/$file]
+    set f [open $tkg_gateHome/$file]
     $w.text insert end [read $f]
     close $f
   }
@@ -55,12 +55,12 @@ proc showLicense {} {
     global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description
 
     set L {}
-    lappend L "    TKGate $tkg_progVer - $tkg_description"
+    lappend L "    TKGate $tkg_progVer - [m cprt.descr]"
     lappend L ""
     lappend L "    $tkg_copyright"
     lappend L ""
 
-    showDocFile "TkGate License" "license.txt" $L
+    showDocFile [m cprt.lic] "doc/license.txt" $L
 }
 
 proc showDocumentation {} {
@@ -70,7 +70,7 @@ proc showDocumentation {} {
 
   if {0} {
     set L {}
-    lappend L "TKGate $tkg_progVer - $tkg_description"
+    lappend L "TKGate $tkg_progVer - [m cprt.descr]"
     lappend L ""
     lappend L "$tkg_copyright"
     lappend L ""
@@ -96,11 +96,11 @@ proc showAbout {} {
     catch { raise .about }
     return;
   }
-  wm title .about "About TkGate $tkg_progVer"
+  wm title .about  "[m cprt.about] $tkg_progVer"
 
   button .about.dismiss -text [m b.dismiss] -command "destroy .about"
   label .about.logo -relief groove -image [gifI biggatelogo.gif]
-  label .about.label -text "TKGate $tkg_progVer - $tkg_description\n$tkg_copyright\n$tkg_mailContact"
+  label .about.label -text "TKGate $tkg_progVer - [m cprt.descr]\n$tkg_copyright\n$tkg_mailContact"
 
   pack .about.logo -padx 10 -pady 10  -ipadx 10 -ipady 10
   pack .about.label -padx 10 -pady 10

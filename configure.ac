@@ -42,7 +42,7 @@ TKGATE_INCDIRS="/usr/X11R6/include /usr/X11/include /pkgs/include /usr/local/inc
 #
 # Directories to search for library files
 #
-TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib /usr/local/lib/tcl"
+TKGATE_LIBDIRS="/usr/X11R6/lib /usr/X11/lib /pkgs/lib /usr/local/lib /usr/lib /sw/lib /opt/local/lib /usr/local/lib/tcl /usr/lib64"
 
 #
 # Libraries we may need if available.
@@ -154,6 +154,7 @@ AC_TYPE_SIGNAL
 AC_FUNC_STAT
 AC_FUNC_VPRINTF
 AC_CHECK_FUNCS([getcwd gettimeofday memmove memset putenv select strcasecmp strchr strcspn strdup strncasecmp strrchr strspn strstr strcasestr])
+AC_CHECK_LIB(m, floor)
 
 #############################################################################
 #
