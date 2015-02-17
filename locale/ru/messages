@@ -1202,9 +1202,9 @@ opt.vercheck		-begin-
 -end-
 
 opt.sec.execlevel	Системная задача $tkg$exec()
-opt.sec.exec		полностью разрешена.
-opt.sec.regexec		разрешена только для зарегистрированных функций.
-opt.sec.noexec		отключена.
+opt.sec.exec		Полностью разрешена.
+opt.sec.regexec		Разрешена только для зарегистрированных функций.
+opt.sec.noexec		Отключена.
 
 opt.sec.simfeatures	Настройки симулятора
 opt.sec.send		Разрешить системную задачу $tkg$command().

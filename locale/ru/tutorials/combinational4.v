@@ -34,7 +34,7 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
   //: comment g6 @(560,127) /sn:0 /anc:1
   //: /line:"<font color=green4>Подсказка: Помните: чтобы запустить"
   //: /line:"и обновить симулятор, перейдите на"
-  //: /line:"вкладку \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" и нажмите кнопку <img src=sim_go.gif>."
+  //: /line:"вкладку \"<img src=\"simstart.gif\"> <font color=red2>Симуляция</font>\" и нажмите кнопку <img src=sim_go.gif>."
   //: /end
   //: LED g5 (w0) @(277,326) /sn:0 /R:2 /w:[ 0 ] /type:0
   ADD4 g0 (.Cin(w1), .A(w5), .B(w6), .Cout(w0), .S(w4));   //: @(245, 221) /sz:(64, 64) /sn:0 /p:[ Ti0>0 Li0>1 Li1>1 Bo0<1 Ro0<0 ]

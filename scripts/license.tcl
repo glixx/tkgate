@@ -60,7 +60,7 @@ proc showLicense {} {
 
   set licensePath "$tkg_gateHome/locale/$lang/license.txt"
   if { [file exists $licensePath] == 0 } {
-    puts "Cnnot locate $licensePath, using en version"
+    puts "Cannot locate $licensePath, using en version"
     set licensePath "$tkg_gateHome/locale/en/license.txt"
   }
   showDocFile [m cprt.lic] $licensePath $L
