@@ -203,7 +203,6 @@ proc startTkGate {argv} {
   #
   setupOptions
 
-
   #############################################################################
   #
   # Printer dialog box initializations
@@ -242,7 +241,6 @@ proc startTkGate {argv} {
   wm title . "$tkg_progName $tkg_progVer"
   wm minsize . $tkg_minWidth $tkg_minHeight
   setupIconWindow
-
 
   #############################################################################
   #

@@ -18,7 +18,6 @@
 #
 
 proc showDocFile {label file L} {
-  global tkg_gateHome
 
   set w .docwin
   set i 0
@@ -30,7 +29,6 @@ proc showDocFile {label file L} {
   wm resizable $w 0 0
   wm title $w $label
   wm transient $w .
-
 
   button $w.dismiss -text [m b.dismiss] -command "destroy $w"
   scrollbar $w.scroll -command "$w.text yview"
@@ -44,7 +42,7 @@ proc showDocFile {label file L} {
   }
 
   if { $file != "" } {
-    set f [open $tkg_gateHome/$file]
+    set f [open $file r]
     $w.text insert end [read $f]
     close $f
   }
@@ -52,15 +50,20 @@ proc showDocFile {label file L} {
 }
 
 proc showLicense {} {
-    global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description
+  global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description lang tkg_gateHome
 
-    set L {}
-    lappend L "    TkGate $tkg_progVer - [m cprt.descr]"
-    lappend L ""
-    lappend L "    $tkg_copyright"
-    lappend L ""
+  set L {}
+  lappend L "    TkGate $tkg_progVer - [m cprt.descr]"
+  lappend L ""
+  lappend L "    $tkg_copyright"
+  lappend L ""
 
-    showDocFile [m cprt.lic] "doc/license.txt" $L
+  set licensePath "$tkg_gateHome/locale/$lang/license.txt"
+  if { [file exists $licensePath] == 0 } {
+    puts "Cnnot locate $licensePath, using en version"
+    set licensePath "$tkg_gateHome/locale/en/license.txt"
+  }
+  showDocFile [m cprt.lic] $licensePath $L
 }
 
 proc showDocumentation {} {
