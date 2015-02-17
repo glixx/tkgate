@@ -14,10 +14,10 @@
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g1 @(433,291) /sn:0 /R:14
+  //: comment g1 @(475,291) /sn:0 /R:14 /anc:1
   //: /line:"<a href=\"welcome.v\">Вернуться к стартовой схеме TkGate.</a>"
   //: /end
-  //: comment g0 @(434,49) /sn:0 /anc:1
+  //: comment g0 @(476,49) /sn:0 /anc:1
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"
   //: /end
   //: comment g18 @(10,10) /sn:0 /anc:1

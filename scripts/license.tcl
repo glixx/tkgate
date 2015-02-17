@@ -55,7 +55,7 @@ proc showLicense {} {
     global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description
 
     set L {}
-    lappend L "    TKGate $tkg_progVer - [m cprt.descr]"
+    lappend L "    TkGate $tkg_progVer - [m cprt.descr]"
     lappend L ""
     lappend L "    $tkg_copyright"
     lappend L ""
@@ -70,7 +70,7 @@ proc showDocumentation {} {
 
   if {0} {
     set L {}
-    lappend L "TKGate $tkg_progVer - [m cprt.descr]"
+    lappend L "TkGate $tkg_progVer - [m cprt.descr]"
     lappend L ""
     lappend L "$tkg_copyright"
     lappend L ""
