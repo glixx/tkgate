@@ -43,7 +43,7 @@ wire w5;    //: /sn:0 {0}(292,169)(307,169){1}
 //: enddecls
 
   //: comment g4 @(247,195) /sn:0 /anc:1
-  //: /line:"Anchored Gate"
+  //: /line:"Привязанный вентиль"
   //: /end
   _GGOR2 #(6) g3 (.I0(w3), .I1(w4), .Z(w5));   //: @(282,169) /sn:0 /anc:1 /w:[ 1 1 0 ]
   //: comment g2 @(10,10) /anc:1
@@ -62,7 +62,7 @@ wire w5;    //: /sn:0 {0}(292,169)(307,169){1}
   //: /line:"в использовании флага в контекстном меню.</font>"
   //: /end
   //: comment g5 @(81,195) /sn:0 /anc:1
-  //: /line:"Unanchored Gate"
+  //: /line:"Свободный вентиль"
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
