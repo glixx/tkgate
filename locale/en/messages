@@ -140,6 +140,16 @@ tab.editintr	Interface
 tab.simulate	Simulate
 tab.cpath	Critical Path
 
+############################################################################
+#
+# File patterns
+#
+fpattern.v	Verilog Netlist
+fpattern.vs	Verilog Script Files
+fpattern.gdf	TkGate Delay File
+fpattern.xbm	X11 bitmap
+fpattern.mem	TkGate Memory Image Files
+fpattern.all	All Files
 
 #############################################################################
 #

@@ -72,6 +72,17 @@ tab.editintr	Интерфейс
 tab.simulate	Симуляция
 tab.cpath	Критический путь
 
+############################################################################
+#
+# File patterns
+#
+fpattern.v	Список сетей Verilog
+fpattern.vs	Скрипт Verilog
+fpattern.gdf	Файл задержек TkGate
+fpattern.xbm	Растровое изображение X11
+fpattern.mem	Файлы образов памяти TkGate
+fpattern.all	Все файлы
+
 #############################################################################
 #
 # Module tree/list box

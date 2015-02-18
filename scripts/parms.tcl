@@ -143,38 +143,34 @@ set TKGATE_HOME	$tkg_gateHome
 #
 # Constants for file name selectors.
 #
+
 set gf_file				""
 set gf_result				""
-set gf_filter				".v"
-set gf_filetypes {
-    {{Verilog Netlist}			{.v}	}
-    {{All Files}			*	}
-}
-set gf_vfiletypes {
-    {{Verilog Netlist}			{.v}	}
-    {{All Files}			*	}
-}
-set gf_imageFiletypes {
-    {{X11 Bitmap}			{.xbm}	}
-    {{All Files}			*	}
-}
 
-set simScript_filter			".vs"
-set simScript_filetypes {
-    {{Verilog Script Files}		{.vs}	}
-    {{All Files}			*	}
-}
+set gf_filter			".v"
+set gf_filetypes [list \
+    [list [m fpattern.v]	$gf_filter] \
+    [list [m fpattern.all]	"*"] ]
+set gf_vfiletypes [list \
+    [list [m fpattern.v]	$gf_filter] \
+    [list [m fpattern.all]	"*"] ]
 
-set mem_filter				".mem"
-set mem_filetypes {
-    {{Gate Memory Image Files}		{.mem}	}
-    {{All Files}			*	}
-}
+set gf_imageFilter		".xbm"
+set gf_imageFiletypes [list \
+    [list [m fpattern.xbm]	$gf_imageFilter] \
+    [list [m fpattern.all]	"*"] ]
 
-set gdf_filter				".gdf"
-set gdf_filetypes {
-    {{Gate Delay File}			{.gdf}	}
-    {{All Files}			*	}
-}
+set simScript_filter		".vs"
+set simScript_filetypes [list \
+    [list [m fpattern.vs]	$simScript_filter] \
+    [list [m fpattern.all]	"*"] ]
 
+set mem_filter			".mem"
+set mem_filetypes [list \
+    [list [m fpattern.mem]	$mem_filter] \
+    [list [m fpattern.all]	"*"] ]
 
+set gdf_filter			".gdf"
+set gdf_filetypes [list \
+    [list [m fpattern.gdf]	$gdf_filter] \
+    [list [m fpattern.all]	"*"] ]
