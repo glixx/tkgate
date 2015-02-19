@@ -296,7 +296,12 @@ AUTOMAKE_OPTIONS = foreign
 #
 # List of directories that contain data files necessary for tkgate to run.
 #
-TKG_DATADIRS = scripts bindings doc gdf images locale povray primitives vlib vpd test
+TKG_DATADIRS = scripts bindings doc gdf images locale primitives vlib vpd test
+
+#
+# List of directories which will be included in distribution
+#
+TKG_DISTDIRS = $(TKG_DATADIRS) povray
 
 #
 # Subdirectories in which more makefiles can be found
@@ -1001,7 +1006,7 @@ release:
 
 dist-hook:
 	@echo Packaging data files...
-	@for d in $(TKG_DATADIRS); do \
+	@for d in $(TKG_DISTDIRS); do \
 	   cp -pR $(srcdir)/$$d $(distdir); \
 	done
 
