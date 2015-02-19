@@ -469,7 +469,7 @@ int gat_scope(ClientData data, Tcl_Interp *tcl, int argc, const char *argv[])
     return TCL_ERROR;
   }
 
-  tcl->result = Tk_PathName(w);
+  Tcl_SetResult(tcl, Tk_PathName(w), TCL_STATIC);
 
   scope_active = 1;
 

@@ -1071,7 +1071,7 @@ int VerilogSave(const char *name)
 	unlink(tempName1);
 	unlink(tempName2);
 	DoTcl("yesno [format [m err.nosafesave] %s]",name);
-	if (strcmp(TkGate.tcl->result,"yes") == 0)
+	if (strcmp(Tcl_GetStringResult(TkGate.tcl),"yes") == 0)
 	  VerilogQuickSave(name,saveFlags);
 	return 0;
       }

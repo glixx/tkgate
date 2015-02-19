@@ -1117,7 +1117,7 @@ int SimInterface_doSanitizedTcl(char *cmd)
 
 
     DoTcl("VPD::isallowed %s",cmdName);
-    if (*TkGate.tcl->result != '1') return -1;
+    if (Tcl_GetStringResult(TkGate.tcl)[0] != '1') return -1;
 
     DoTcl(cmd);
     return 0;
