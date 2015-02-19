@@ -267,10 +267,10 @@ wire [1:0] w26;    //: /sn:0 /dp:1 {0}(637,356)(658,356)(658,393)(680,393){1}
   //: comment g0 /dolink:0 /link:"" @(19,4)
   //: /line:"Willkommen in TkGate V1.8.3!"
   //: /line:""
-  //: /line:"Copyright (C) 1987-2004 by Jeffery P. Hansen"
+  //: /line:"Copyright (C) 1987-2015 by Jeffery P. Hansen"
   //: /line:"TkGate kommt OHNE JEGLICHE GARANTIE-Zusage; Details zur Lizenz und zum"
   //: /line:"Garantieausschluﬂ findet man unter 'Help...License'. Probleme bitte an"
-  //: /line:"hansen@cmu.edu weiterleiten."
+  //: /line:"hansen@tkgate.org weiterleiten."
   //: /line:""
   //: /line:"   * Dieses Tutorial erscheint automatisch beim ersten Start von TkGate."
   //: /line:"     Man kann es ausblenden: Unter dem Menupunkt \"Optionen...\" des "

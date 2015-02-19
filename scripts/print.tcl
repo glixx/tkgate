@@ -622,8 +622,8 @@ namespace eval PrintDlg {
     labelframe $w [m print.modulesel]
     packPad $w
 
-    SetSelector::new $w.ss -availablelabel Available \
-	-selectedlabel Selected \
+    SetSelector::new $w.ss -availablelabel [m print.avail] \
+	-selectedlabel [m print.sel] \
 	-availablevariable PrintDlg::availableModules \
 	-selectedvariable PrintDlg::selectedModules
 

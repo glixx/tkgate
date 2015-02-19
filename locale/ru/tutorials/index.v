@@ -14,10 +14,10 @@
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g1 @(433,291) /sn:0 /R:14
+  //: comment g1 @(475,291) /sn:0 /R:14 /anc:1
   //: /line:"<a href=\"welcome.v\">Вернуться к стартовой схеме TkGate.</a>"
   //: /end
-  //: comment g0 @(434,49) /sn:0 /anc:1
+  //: comment g0 @(476,49) /sn:0 /anc:1
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"
   //: /end
   //: comment g18 @(10,10) /sn:0 /anc:1
@@ -42,7 +42,7 @@ module PAGE1;    //: root_module
   //: /line:"<h3><a href=\"sequential1.v\">8. Последовательная симуляция</a></h3> - Имитируйте работу схемы с "
   //: /line:"    последовательной логикой."
   //: /line:""
-  //: /line:"<h3><a href=\"verilog.v\">9. Текстовый верилог</a></h3> - Создавайте модули с текстовым описанием"
+  //: /line:"<h3><a href=\"verilog.v\">9. Текстовый Verilog</a></h3> - Создавайте модули с текстовым описанием"
   //: /line:"    на Verilog."
   //: /line:""
   //: /line:"<h3><a href=\"options.v\">10. Настройка TkGate</a></h3> - Настраивайте TkGate по своему вкусу."

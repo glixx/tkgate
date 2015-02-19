@@ -36,7 +36,9 @@ SAVE FILE DIFFERENCES WITH PAST VERSIONS
    not be readable by older versions of tkgate.
 
 *****************************************************************************
-MULTI-LINGUAL SUPPORT (JAPANESE)
+MULTI-LINGUAL SUPPORT 
+
+1. JAPANESE
 
 As of TkGate 2.0, Japanese support is automatically compiled in.  To use
 it, run tkgate with the -Lja option, or make sure your LANG environment
@@ -64,6 +66,13 @@ locale name that starts with "ja", the locale must be set to "ja_JP.eucJP"
 in order to enable Japanese input.  Using the '-Lja' switch will also
 ensure that the environment variables are set correctly.
 
+2. RUSSIAN
+
+Russian locale uses 'koi8-r' single-byte encoding for the circuit comment
+text. In order to display in-circuit cyrillic text, the X fonts packages,
+containing 'helvetica' and 'courier' family koi8-r encoded fonts should be
+installed.
+
 *****************************************************************************
 CREDITS
 
@@ -74,10 +83,10 @@ CREDITS
   * Thanks to Kevin Donnelly for the Welsh translation.
   * Thanks to Jacques JANVILLE for the French translation and French tutorials.
   * Thanks to Roman Valls for the Catalan translation.
-  * Thanks to Anthony Winstanley for the cygwin patch. 
+  * Thanks to Anthony Winstanley for the cygwin patch.
 
 *****************************************************************************
-VERSION HISTORY 
+VERSION HISTORY
 
 Version 2.0-b10 - September 26, 2009
      * Fixed bug causing bar led to display wrong value when some bits are unknown.

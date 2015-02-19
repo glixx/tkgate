@@ -20,7 +20,7 @@
 
 #define VGSIM_NAME		"Verga"		/* Name of program */
 #define VGSIM_VERSION		"1.0"		/* Version number */
-#define VGSIM_COPYRIGHT		"Copyright (C) 2005-2009 by Jeffery P. Hansen"
+#define VGSIM_COPYRIGHT		"Copyright (C) 2005-2015 by Jeffery P. Hansen"
 #define STRMAX			1024		/* Length of longest string */
 
 #define THYMEWHEEL_SIZE		0x1000		/* Size of timewheel (must be power of two) */

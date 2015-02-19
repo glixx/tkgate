@@ -69,7 +69,8 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 subdir = .
-DIST_COMMON = README $(am__configure_deps) $(dist_man_MANS) \
+DIST_COMMON = README $(am__configure_deps) $(dist_desktop_DATA) \
+	$(dist_doc_DATA) $(dist_man_MANS) $(dist_pixmap_DATA) \
 	$(dist_pkgdata_DATA) $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/configure COPYING INSTALL TODO depcomp \
@@ -127,10 +128,13 @@ am__uninstall_files_from_dir = { \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
 man1dir = $(mandir)/man1
-am__installdirs = "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(pkgdatadir)"
+am__installdirs = "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(desktopdir)" \
+	"$(DESTDIR)$(docdir)" "$(DESTDIR)$(pixmapdir)" \
+	"$(DESTDIR)$(pkgdatadir)"
 NROFF = nroff
 MANS = $(dist_man_MANS)
-DATA = $(dist_pkgdata_DATA)
+DATA = $(dist_desktop_DATA) $(dist_doc_DATA) $(dist_pixmap_DATA) \
+	$(dist_pkgdata_DATA)
 HEADERS = $(noinst_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
@@ -302,12 +306,29 @@ SUBDIRS = src
 #
 # List of data files in this directory that should be included with a tkgate distribution.
 #
-dist_pkgdata_DATA = README README.verga COPYING INSTALL TODO site-preferences license.txt pkg-comment pkg-descr
+dist_pkgdata_DATA = site-preferences pkg-comment pkg-descr
 
 #
 # List of man pages for tkgate
 #
 dist_man_MANS = tkgate.1 verga.1 gmac.1
+
+#
+# List of common documentation files
+#
+dist_doc_DATA = README README.verga COPYING TODO
+
+#
+# Desktop file
+#
+desktopdir = $(datadir)/applications
+dist_desktop_DATA = tkgate.desktop
+
+#
+# Pixmap files
+#
+pixmapdir = $(datadir)/pixmaps
+dist_pixmap_DATA = tkgate.png tkgate.xpm
 
 #
 # List of header files that should not be automatically installed
@@ -409,6 +430,69 @@ uninstall-man1:
 	} | sed -e 's,.*/,,;h;s,.*\.,,;s,^[^1][0-9a-z]*$$,1,;x' \
 	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
 	dir='$(DESTDIR)$(man1dir)'; $(am__uninstall_files_from_dir)
+install-dist_desktopDATA: $(dist_desktop_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(dist_desktop_DATA)'; test -n "$(desktopdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(desktopdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(desktopdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(desktopdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(desktopdir)" || exit $$?; \
+	done
+
+uninstall-dist_desktopDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(dist_desktop_DATA)'; test -n "$(desktopdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(desktopdir)'; $(am__uninstall_files_from_dir)
+install-dist_docDATA: $(dist_doc_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(dist_doc_DATA)'; test -n "$(docdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(docdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(docdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(docdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(docdir)" || exit $$?; \
+	done
+
+uninstall-dist_docDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(dist_doc_DATA)'; test -n "$(docdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(docdir)'; $(am__uninstall_files_from_dir)
+install-dist_pixmapDATA: $(dist_pixmap_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(dist_pixmap_DATA)'; test -n "$(pixmapdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(pixmapdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(pixmapdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pixmapdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pixmapdir)" || exit $$?; \
+	done
+
+uninstall-dist_pixmapDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(dist_pixmap_DATA)'; test -n "$(pixmapdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(pixmapdir)'; $(am__uninstall_files_from_dir)
 install-dist_pkgdataDATA: $(dist_pkgdata_DATA)
 	@$(NORMAL_INSTALL)
 	@list='$(dist_pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
@@ -774,7 +858,7 @@ check: check-recursive
 all-am: Makefile $(MANS) $(DATA) $(HEADERS) config.h
 installdirs: installdirs-recursive
 installdirs-am:
-	for dir in "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(pkgdatadir)"; do \
+	for dir in "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(desktopdir)" "$(DESTDIR)$(docdir)" "$(DESTDIR)$(pixmapdir)" "$(DESTDIR)$(pkgdatadir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-recursive
@@ -828,7 +912,8 @@ info: info-recursive
 
 info-am:
 
-install-data-am: install-dist_pkgdataDATA install-man
+install-data-am: install-dist_desktopDATA install-dist_docDATA \
+	install-dist_pixmapDATA install-dist_pkgdataDATA install-man
 	@$(NORMAL_INSTALL)
 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
 install-dvi: install-dvi-recursive
@@ -876,7 +961,9 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am: uninstall-dist_pkgdataDATA uninstall-local uninstall-man
+uninstall-am: uninstall-dist_desktopDATA uninstall-dist_docDATA \
+	uninstall-dist_pixmapDATA uninstall-dist_pkgdataDATA \
+	uninstall-local uninstall-man
 
 uninstall-man: uninstall-man1
 
@@ -892,16 +979,18 @@ uninstall-man: uninstall-man1
 	distclean-tags distcleancheck distdir distuninstallcheck dvi \
 	dvi-am html html-am info info-am install install-am \
 	install-data install-data-am install-data-hook \
-	install-dist_pkgdataDATA install-dvi install-dvi-am \
-	install-exec install-exec-am install-exec-hook install-html \
-	install-html-am install-info install-info-am install-man \
-	install-man1 install-pdf install-pdf-am install-ps \
+	install-dist_desktopDATA install-dist_docDATA \
+	install-dist_pixmapDATA install-dist_pkgdataDATA install-dvi \
+	install-dvi-am install-exec install-exec-am install-exec-hook \
+	install-html install-html-am install-info install-info-am \
+	install-man install-man1 install-pdf install-pdf-am install-ps \
 	install-ps-am install-strip installcheck installcheck-am \
 	installdirs installdirs-am maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
 	pdf-am ps ps-am tags tags-recursive uninstall uninstall-am \
-	uninstall-dist_pkgdataDATA uninstall-local uninstall-man \
-	uninstall-man1
+	uninstall-dist_desktopDATA uninstall-dist_docDATA \
+	uninstall-dist_pixmapDATA uninstall-dist_pkgdataDATA \
+	uninstall-local uninstall-man uninstall-man1
 
 
 #

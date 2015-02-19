@@ -32,7 +32,7 @@ SUBDIRS = src
 #
 # List of data files in this directory that should be included with a tkgate distribution.
 #
-dist_pkgdata_DATA=README README.verga COPYING INSTALL TODO site-preferences license.txt pkg-comment pkg-descr
+dist_pkgdata_DATA = site-preferences pkg-comment pkg-descr
 
 #
 # List of man pages for tkgate
@@ -40,9 +40,26 @@ dist_pkgdata_DATA=README README.verga COPYING INSTALL TODO site-preferences lice
 dist_man_MANS = tkgate.1 verga.1 gmac.1
 
 #
+# List of common documentation files
+#
+dist_doc_DATA = README README.verga COPYING TODO
+
+#
+# Desktop file
+#
+desktopdir = $(datadir)/applications
+dist_desktop_DATA = tkgate.desktop
+
+#
+# Pixmap files
+#
+pixmapdir = $(datadir)/pixmaps
+dist_pixmap_DATA = tkgate.png tkgate.xpm
+
+#
 # List of header files that should not be automatically installed
 #
-noinst_HEADERS=options.h
+noinst_HEADERS = options.h
 
 #
 # Update the release data for this compilation

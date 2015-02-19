@@ -1,10 +1,8 @@
 /* XPM */
-static char *gateicon[] = {
-/* columns rows colors chars-per-pixel */
-"41 35 2 1 ",
-"  c gray100",
-". c black",
-/* pixels */
+static char * tkgate_xpm[] = {
+"41 35 2 1",
+" 	c None",
+".	c #000000",
 " ....            ..   ..            .... ",
 ".    .          .... ....          .    .",
 ".    .          .... ....          .    .",
@@ -39,5 +37,4 @@ static char *gateicon[] = {
 ". . . .  ..  ..  ..   ..  ..  ..  . . . .",
 ".     .  ..  ..  ..   ..  ..  ..  .     .",
 ".     .  ..  ..  ..   ..  ..  ..  .     .",
-".......                           ......."
-};
+".......                           ......."};
