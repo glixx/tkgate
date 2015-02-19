@@ -606,9 +606,18 @@ namespace eval OptionDlg {
     trace vdelete ::opts_${v}Italic w OptionDlg::editorDoColor
   }
 
+  ######################################################################
+  #
+  # Create group of checkboxes for same set of options for different
+  # categories
+  #
+  # w widget's path name
+  # l label
+  # v
+  #
   proc stylegroup {w l v} {
     frame $w
-    label $w.l -width 15 -text $l -justify left -anchor w
+    label $w.l -width [m @opt.editor.catwidth] -text $l -justify left -anchor w
 
     Color::selectorbutton $w.color opts_${v}Color
     label $w.color_l -text [m opt.editor.color]
@@ -643,7 +652,6 @@ namespace eval OptionDlg {
     pack $w.task -anchor w
     pack $w.inst -anchor w
   }
-
 
   #############################################################################
   #
@@ -971,7 +979,6 @@ namespace eval OptionDlg {
     packPad $w -pad 13
 
     helpon ${w}_label [m ho.opt.editor.colorize]
-
 
     editorOptions $w.opts
     editorSample $w.sample

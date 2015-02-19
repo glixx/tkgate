@@ -1129,6 +1129,8 @@ print.tab.advanced	Advanced
 @opt.sidebar.width	*200
 # Width of tree box with option categories
 @opt.tree.width		*150
+# Width of text categories column in the HDL editor color selection
+@opt.editor.catwidth	15
 
 opt.title		TkGate: Options
 opt.treelabel		Options
