@@ -1,3 +1,12 @@
+module top;
+
+  initial
+    begin
+      $display("Verilog grammar test");
+    end
+
+endmodule
+
 module bar #(.delay1(4)) (a,b,c,z);
 
   assign #delay1 z = a & b & c;
@@ -15,7 +24,7 @@ input [3:0] a,b,c;
 output z;
 reg [7:0] m[0:65536];
 
-  assign #1 a = b & c | d & e; 
+  assign #1 a = b & c | d & e;
 
   foo #(.a(1), .b(3)) f1[3:0] (a,b), g1(.i(d), .o(e));
 
@@ -35,14 +44,14 @@ reg [7:0] m[0:65536];
 
 	case (s)
 	  8'h7z: u = r + 4;
-	  8'h?9: 
+	  8'h?9:
 	    begin
 	      u = r + 9;
 	      r = u - 1;
             end
 	  default: u = r + 1;
 	endcase
-    end  
+    end
 
   initial
     begin
