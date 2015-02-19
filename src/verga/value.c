@@ -1540,24 +1540,22 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
       /*****************************************************************************
        * Up shifting
        *****************************************************************************/
-      int rl_w = rl >> SSWORDSHIFT;
-      int rl_b = rl & SSBITMASK;
-      int al_w = al >> SSWORDSHIFT;
-      int al_b = al & SSBITMASK;
-      int rh_w = rh >> SSWORDSHIFT;
-      int rh_b = rh & SSBITMASK;
-      int dst_w;
-      int src_w;
       int b_up = (rl_b - al_b) & SSBITMASK;			/* Shift up bits */
       int b_dn = SSWORDSIZE - b_up;			/* Shift down for next word */
 
       src_w = al_w;
       for (dst_w = rl_w; dst_w <= rh_w; dst_w++, src_w++) {
 	unsigned aone, azero, aflt, rone, rzero, rflt, mask;
-
-	aone  = A->one[src_w] << b_up;
-	azero = A->zero[src_w] << b_up;
-	aflt  = A->flt[src_w] << b_up;
+    if (src_w < A->nalloc) {
+	  aone  = A->one[src_w] << b_up;
+	  azero = A->zero[src_w] << b_up;
+	  aflt  = A->flt[src_w] << b_up;
+    }
+    else {
+      aone  = 0;
+	  azero = 0;
+	  aflt  = 0;
+    }
 	if (src_w > 0) {
 	  aone  |= A->one[src_w-1] >> b_dn;
 	  azero |= A->zero[src_w-1] >> b_dn;
@@ -1589,15 +1587,7 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
       /*****************************************************************************
        * Down shifting
        *****************************************************************************/
-      int rl_w = rl >> SSWORDSHIFT;
-      int rl_b = rl & SSBITMASK;
-      int al_w = al >> SSWORDSHIFT;
-      int al_b = al & SSBITMASK;
-      int rh_w = rh >> SSWORDSHIFT;
-      int rh_b = rh & SSBITMASK;
       int ah_w = ah >> SSWORDSHIFT;
-      int dst_w;
-      int src_w;
       int b_dn = (al_b - rl_b) & SSBITMASK;			/* Shift down bits */
       int b_up = SSWORDSIZE - b_dn;			/* Shift up for next word */
 
@@ -1608,7 +1598,7 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
 	aone  = A->one[src_w] >> b_dn;
 	azero = A->zero[src_w] >> b_dn;
 	aflt  = A->flt[src_w] >> b_dn;
-	if (src_w <= ah_w) {
+	if ( (src_w <= ah_w) && (src_w+1 < A->nalloc) ) {
 	  aone  |= A->one[src_w+1] << b_up;
 	  azero |= A->zero[src_w+1] << b_up;
 	  aflt  |= A->flt[src_w+1] << b_up;
