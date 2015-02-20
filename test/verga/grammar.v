@@ -1,5 +1,9 @@
 module top;
 
+ /*
+  Comment
+ */
+
   initial
     begin
       $display("Verilog grammar test");
