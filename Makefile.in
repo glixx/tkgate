@@ -1019,10 +1019,13 @@ tests:
 install-exec-hook:
 	@echo Creating symbolic links in libexec...
 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/libexec
-	@for p in tkgate verga; do \
+	dir2=$(DESTDIR)$(bindir) ; \
+	dir1=$(DESTDIR)$(pkgdatadir)/libexec ; \
+	$(am__relativize) ; relpath=$$reldir ; \
+	for p in tkgate verga; do \
 	   f=`echo "$$p" | sed 's,^.*/,,;$(transform);s/$$/$(EXEEXT)/'`; \
 	   rm -f $(DESTDIR)$(pkgdatadir)/libexec/$$p; \
-	   $(LN_S) `(cd $(DESTDIR)$(bindir);pwd)`/$$f $(DESTDIR)$(pkgdatadir)/libexec/$$p; \
+	   $(LN_S) $$relpath/$$f $(DESTDIR)$(pkgdatadir)/libexec/$$p; \
 	done
 #
 # Copy all the data files we need
