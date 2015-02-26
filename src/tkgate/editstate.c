@@ -516,7 +516,7 @@ void env_copy(EditState *es,const char *src,const char *dst)
 
     sprintf(buf,msgLookup("msg.modoverwt"),dst);	/* Destination module '%s' already exists.  Overwrite? */
     DoTcl("confirmMsg \"%s\" ",buf);
-    if (*TkGate.tcl->result != '1')
+    if (Tcl_GetStringResult(TkGate.tcl)[0] != '1')
       return;
 
     env_removeModule(dst,0);

@@ -942,7 +942,7 @@ static int gateWinCommand(ClientData data, Tcl_Interp *tcl, int argc, const char
       Tk_ConfigSpec *C = &configSpecs[i];
       if (C->type == TK_CONFIG_STRING && strcmp(C->argvName,argv[2]) == 0) {
 	char *value = *(char**)(((char*)gw) + C->offset);
-	strcpy(tcl->result,value);
+    Tcl_SetResult(tcl, value, TCL_VOLATILE);
 	break;
       }
     }
@@ -1072,7 +1072,7 @@ static int tkg_gateWin(ClientData data, Tcl_Interp *tcl, int argc, const char **
 
   setGCcolors();
 
-  tcl->result = Tk_PathName(w);
+  Tcl_SetResult(tcl, Tk_PathName(w), TCL_STATIC);
 
   return TCL_OK;
 }
@@ -1135,7 +1135,7 @@ int DoTclL(const char *cmd,...)
   /* Are the objects freed here? */
 
   if (r != TCL_OK) {
-    printf("tkgate: DoTclL Error - %s\n",TkGate.tcl->result);
+    printf("tkgate: DoTclL Error - %s\n",Tcl_GetStringResult(TkGate.tcl));
     printf("   while executing: %s\n",cmd);
   }
 
@@ -1165,7 +1165,7 @@ int DoTclV(const char *cmd,int nargs,const char **args)
   /* Are the objects freed here? */
 
   if (r != TCL_OK) {
-    printf("DoTclV Error: %s\n",TkGate.tcl->result);
+    printf("DoTclV Error: %s\n",Tcl_GetStringResult(TkGate.tcl));
     printf("   while executing: %s\n",cmd);
   }
 

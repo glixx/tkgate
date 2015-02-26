@@ -1034,7 +1034,7 @@ static void init_tk(Tcl_Interp *tcl)
    */
   r = Tk_Init(tcl);
   if (r == TCL_ERROR) {
-    fprintf(stderr,"Tk_Init Error in tkgate:\n%s\n",tcl->result);
+    fprintf(stderr,"Tk_Init Error in tkgate:\n%s\n",Tcl_GetStringResult(tcl));
     fprintf(stderr,"Perhaps you could try setting the environment variable TK_LIBRARY\n");
     fprintf(stderr,"to the directory in which tk init files can be found.  You can also\n");
     fprintf(stderr,"set TK_LIBRARY in options.h.\n");
@@ -1095,6 +1095,7 @@ static int tkgate_posttk(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
  *****************************************************************************/
 int Tkgate_Init(Tcl_Interp *tcl)
 {
+  Tk_Init(tcl);
   Tcl_CreateCommand(tcl,"tkgate_main",tkgate_main,0,0);
   Tcl_CreateCommand(tcl,"tkgate_starttk",tkgate_starttk,0,0);
   Tcl_CreateCommand(tcl,"tkgate_posttk",tkgate_posttk,0,0);

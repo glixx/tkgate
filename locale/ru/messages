@@ -1045,7 +1045,7 @@ print.tab.advanced	Дополнительно
 
 ##############################################################################
 #
-# Options dialog
+# Диалог настроек
 #
 # Number of columns in list of toolbars
 @opt.tool.columns	2
@@ -1054,7 +1054,9 @@ print.tab.advanced	Дополнительно
 # Width of image sidebar
 @opt.sidebar.width	*300
 # Width of tree box with option categories
-@opt.tree.width		*250
+@opt.tree.width		*200
+# Width of text categoies column in the HDL editor color selection
+@opt.editor.catwidth	25
 
 opt.title		TkGate: Настройки
 opt.treelabel		Настройки

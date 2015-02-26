@@ -22,7 +22,12 @@ AUTOMAKE_OPTIONS = foreign
 #
 # List of directories that contain data files necessary for tkgate to run.
 #
-TKG_DATADIRS=scripts bindings doc gdf images locale povray primitives vlib vpd test
+TKG_DATADIRS=scripts bindings doc gdf images locale primitives vlib vpd test
+
+#
+# List of data which will be included in distribution
+#
+TKG_DISTITEMS=$(TKG_DATADIRS) povray pkg-comment pkg-descr
 
 #
 # Subdirectories in which more makefiles can be found
@@ -32,7 +37,7 @@ SUBDIRS = src
 #
 # List of data files in this directory that should be included with a tkgate distribution.
 #
-dist_pkgdata_DATA = site-preferences pkg-comment pkg-descr
+dist_pkgdata_DATA = site-preferences
 
 #
 # List of man pages for tkgate
@@ -70,7 +75,7 @@ release:
 
 dist-hook:
 	@echo Packaging data files...
-	@for d in $(TKG_DATADIRS); do \
+	@for d in $(TKG_DISTITEMS); do \
 	   cp -pR $(srcdir)/$$d $(distdir); \
 	done
 
@@ -83,10 +88,13 @@ tests:
 install-exec-hook:
 	@echo Creating symbolic links in libexec...
 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/libexec
-	@for p in tkgate verga; do \
+	dir2=$(DESTDIR)$(bindir) ; \
+	dir1=$(DESTDIR)$(pkgdatadir)/libexec ; \
+	$(am__relativize) ; relpath=$$reldir ; \
+	for p in tkgate verga; do \
 	   f=`echo "$$p" | sed 's,^.*/,,;$(transform);s/$$/$(EXEEXT)/'`; \
 	   rm -f $(DESTDIR)$(pkgdatadir)/libexec/$$p; \
-	   $(LN_S) `(cd $(DESTDIR)$(bindir);pwd)`/$$f $(DESTDIR)$(pkgdatadir)/libexec/$$p; \
+	   $(LN_S) $$relpath/$$f $(DESTDIR)$(pkgdatadir)/libexec/$$p; \
 	done
 #
 # Copy all the data files we need

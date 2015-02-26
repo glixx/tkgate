@@ -898,7 +898,7 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   ob_touch(hc);
 
   DoTcl("gifI %s",gifFile);
-  hu->hu_image = Tk_GetImage(TkGate.tcl, Tk_MainWindow(TkGate.tcl), TkGate.tcl->result, 0, 0);
+  hu->hu_image = Tk_GetImage(TkGate.tcl, Tk_MainWindow(TkGate.tcl), Tcl_GetStringResult(TkGate.tcl), 0, 0);
   if (hu->hu_image)
     Tk_SizeOfImage(hu->hu_image, &width, &height);
 
