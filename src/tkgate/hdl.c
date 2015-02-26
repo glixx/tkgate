@@ -429,8 +429,7 @@ int hdl_checkSave(const char *name)
     }
   }
 
-
-  if (text) free(text);
+  if (text) free((void*)text);
 
   return rvalue;
 }
