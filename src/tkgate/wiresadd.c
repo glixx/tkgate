@@ -159,6 +159,8 @@ GWireNode *new_GWireNode()
 
   n = (GWireNode *) ob_malloc(sizeof(GWireNode),"GWireNode");
 
+  n->x = 0;
+  n->y = 0;
   n->out = NULL;
   n->in = NULL;
   n->end = NULL;
