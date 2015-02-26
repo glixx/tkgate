@@ -21,17 +21,20 @@
 /*
  * Object manager modes
  */
-#define OM_DISABLED		0	/* No object management */
-#define OM_ENABLED		1	/* Undoable object management */
-#define OM_START		2	/* Start doing object management */
+typedef enum {
+    OM_DISABLED = 0, /* No object management */
+    OM_ENABLED,  /* Undoable object management */
+    OM_START     /* Start doing object management */
+} OMMode_t;
 
-/*
- * Frame flags
+/**
+ * @brief Frame flags
  */
-#define FF_TRANSPARENT		0x1	/* Transparent frames are not directly visible */
-#define FF_STICKY		0x2	/* Sticky frames stick together */
-#define FF_BACKGROUND		0x4	/* Background frames do not clear redo stack */
-
+typedef enum {
+  FF_TRANSPARENT = 0x1,	/* Transparent frames are not directly visible */
+  FF_STICKY      = 0x2,	/* Sticky frames stick together */
+  FF_BACKGROUND	 = 0x4	/* Background frames do not clear redo stack */
+} FrameFlags_t;
 
 void *ob_malloc(int,const char*);	/* Allocate an undoable object */
 void *ob_calloc(int,int,const char*);	/* Allocate an undoable object */
@@ -40,8 +43,8 @@ void ob_free(void*);			/* Free an undoable object */
 char *ob_strdup(const char*);		/* Duplicate a string object */
 
 void ob_init();				/* Initialize object handling */
-void ob_mode(int);			/* Set object handling mode */
-unsigned ob_get_mode();			/* Get object handling mode */
+void ob_mode(OMMode_t);			/* Set object handling mode */
+OMMode_t ob_get_mode();			/* Get object handling mode */
 void ob_flush_undo();			/* Flush all undo data */
 void ob_touch(void*);			/* Mark an object as touched */
 void ob_undo(int);			/* Undo all changes in change group */

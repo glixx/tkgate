@@ -90,19 +90,22 @@
 
 void undo_sync(int is_after);
 
-
 /*****************************************************************************
  * Object flags.
  *****************************************************************************/
-#define OF_DELETED		0x1	/* Object is marked for deletion */
-#define OF_NOUNDO		0x2	/* Object can not be undone */
+typedef enum {
+  OF_DELETED = 0x1,	/* Object is marked for deletion */
+  OF_NOUNDO = 0x2,	/* Object can not be undone */
+} ObjectFlag_t;
 
 /*****************************************************************************
- * Object change codes
+ * Object change type codes
  *****************************************************************************/
-#define OC_MALLOC		1
-#define OC_FREE			2
-#define OC_MODIFY		3
+typedef enum {
+  OC_MALLOC = 1,
+  OC_FREE,
+  OC_MODIFY
+} ObjectChangeType_t;
 
 /*****************************************************************************
  *
@@ -114,17 +117,23 @@ typedef struct objectframe_str ObjectFrame;
 typedef struct objectchange_str ObjectChange;
 typedef struct object_str Object;
 
+typedef struct {
+  unsigned	ob;		/* Allocation of ob_ memory */
+  unsigned	actual;		/* Actual outstanding memory usage */
+} Memusage_t;
+
 /*****************************************************************************
  * The object manager.
  *****************************************************************************/
 struct objectmanager_str {
-  unsigned	om_started;		/* Object management has been started */
-  unsigned	om_mode;		/* Current manager mode */
-  unsigned	om_mark;		/* Current mark value */
-  int		om_numUndo;		/* Number of "visible" undo frames */
-  List		om_undo;		/* The undo stack */
-  List		om_redo;		/* The redo stack */
-  ObjectFrame	*om_cur;		/* The current frame */
+  unsigned     om_started;		/* Object management has been started */
+  OMMode_t     om_mode;		/* Current manager mode */
+  unsigned     om_mark;		/* Current mark value */
+  int          om_numUndo;		/* Number of "visible" undo frames */
+  List         om_undo;		/* The undo stack */
+  List         om_redo;		/* The redo stack */
+  ObjectFrame *om_cur;		/* The current frame */
+  Memusage_t   memusage;
 };
 
 /*****************************************************************************
@@ -132,12 +141,12 @@ struct objectmanager_str {
  * a single undoable action.
  *****************************************************************************/
 struct objectframe_str {
-  unsigned	of_flags;		/* Frame flags */
-  char		*of_name;		/* Command name of this frame */
-  int		of_level;		/* Level of frame */
-  ObjectFrame	*of_next;		/* The next item on the stack */
-  int		of_num_changes;		/* Number of changes */
-  ObjectChange	*of_changes;		/* Changes in this frame */
+  FrameFlags_t  of_flags;		/* Frame flags */
+  char         *of_name;		/* Command name of this frame */
+  int           of_level;		/* Level of frame */
+  ObjectFrame  *of_next;		/* The next item on the stack */
+  int           of_num_changes;		/* Number of changes */
+  ObjectChange *of_changes;		/* Changes in this frame */
 };
 
 /*****************************************************************************
@@ -145,10 +154,10 @@ struct objectframe_str {
  * within a frame.
  *****************************************************************************/
 struct objectchange_str {
-  unsigned	oc_type;		/* Type of change */
-  Object	*oc_ptr;		/* Pointer to object location */
-  Object	*oc_backup;		/* Backup copy of object */
-  ObjectChange	*oc_next;		/* Next in list of changes */
+  ObjectChangeType_t oc_type;		/* Type of change */
+  Object            *oc_ptr;		/* Pointer to object location */
+  Object            *oc_backup;		/* Backup copy of object */
+  ObjectChange      *oc_next;		/* Next in list of changes */
 };
 
 /*****************************************************************************
@@ -156,10 +165,10 @@ struct objectchange_str {
  * is stored in front of each object returned by ob_malloc()
  *****************************************************************************/
 struct object_str {
-  const char	*o_type;		/* Object type */
-  unsigned	o_size;			/* Size of this object */
-  unsigned	o_mark;			/* Object change mark */
-  unsigned	o_flags;		/* Change type */
+  const char *o_type;		/* Object type */
+  unsigned	  o_size;			/* Size of this object */
+  unsigned	  o_mark;			/* Object change mark */
+  unsigned	  o_flags;		/* Change type */
 };
 
 /*****************************************************************************/
@@ -167,12 +176,6 @@ struct object_str {
 int ob_max_undo = 10;
 
 static ObjectManager objm;
-
-struct {
-  unsigned	ob;		/* Allocation of ob_ memory */
-  unsigned	actual;		/* Actual outstanding memory usage */
-} memusage = {0,0};
-
 
 #if OBJECT_MEGADEBUG
 void *xmalloc(size_t s)
@@ -210,6 +213,8 @@ void ob_init()
   List_init(&objm.om_redo);
   objm.om_numUndo = 0;
   objm.om_cur = 0;
+  objm.memusage.actual = 0;
+  objm.memusage.ob = 0;
 }
 
 /*****************************************************************************
@@ -221,11 +226,11 @@ ObjectFrame *new_ObjectFrame(const char *name,unsigned flags)
 {
   ObjectFrame *o = (ObjectFrame*) malloc(sizeof(ObjectFrame));
 
-  memusage.actual += sizeof(ObjectFrame);
+  objm.memusage.actual += sizeof(ObjectFrame);
 
   o->of_flags = flags;
   if (name) {
-    memusage.actual += strlen(name)+1;
+    objm.memusage.actual += strlen(name)+1;
     o->of_name = strdup(name);
   }
   else
@@ -236,6 +241,28 @@ ObjectFrame *new_ObjectFrame(const char *name,unsigned flags)
   o->of_changes = 0;
 
   return o;
+}
+
+/*****************************************************************************
+ *
+ * Destructor for the ObjectFrame
+ *
+ *****************************************************************************/
+void ObjectFrame_destroy(ObjectFrame *self)
+{
+  ObjectChange *c = self->of_changes;
+  while (c!=NULL) {
+    if (c->oc_backup) {
+      /*assert(objm.memusage.actual >= c->oc_backup->o_size);*/
+      objm.memusage.actual -= c->oc_backup->o_size;
+      free(c->oc_backup);
+    }
+    /*assert(objm.memusage.actual >= sizeof(ObjectChange));*/
+    objm.memusage.actual -= sizeof(ObjectChange);
+    ObjectChange *todel = c;
+    c=c->oc_next;
+    free(todel);
+  }
 }
 
 /*****************************************************************************
@@ -267,21 +294,26 @@ static void ob_discard_frame(ObjectFrame *F)
   for (C = F->of_changes;C;C = NC) {
     NC = C->oc_next;
     if (C->oc_ptr && (C->oc_type == OC_FREE)) {
-      if (C->oc_backup) {
-        /*assert(memusage.actual >= C->oc_ptr->o_size);*/
-        memusage.actual -= C->oc_ptr->o_size;
-        free(C->oc_backup);
-      }
-      /*assert(memusage.actual >= C->oc_ptr->o_size);*/
-      memusage.actual -= C->oc_ptr->o_size;
+      /*assert(objm.memusage.actual >= C->oc_ptr->o_size);*/
+      objm.memusage.actual -= C->oc_ptr->o_size;
       free(C->oc_ptr);
     }
-    /*assert(memusage.actual >= sizeof(ObjectChange));*/
-    memusage.actual -= sizeof(ObjectChange);
+    if (C->oc_backup) {
+      /*assert(objm.memusage.actual >= C->oc_backup->o_size);*/
+      objm.memusage.actual -= C->oc_backup->o_size;
+      free(C->oc_backup);
+    }
+    /*assert(objm.memusage.actual >= sizeof(ObjectChange));*/
+    objm.memusage.actual -= sizeof(ObjectChange);
     free(C);
   }
-  /*assert(memusage.actual >= sizeof(ObjectFrame));*/
-  memusage.actual -= sizeof(ObjectFrame);
+  /*assert(objm.memusage.actual >= sizeof(ObjectFrame));*/
+  objm.memusage.actual -= sizeof(ObjectFrame);
+  if (F->of_name) {
+    /*assert(objm.memusage.actual >= std::strlen(F->of_name)+1);*/
+    objm.memusage.actual -= strlen(F->of_name)+1;
+    free(F->of_name);
+  }
   free(F);
 }
 
@@ -326,7 +358,7 @@ static void ObjectFrame_add_change(ObjectFrame *F,int chg_type,Object *o)
 {
   ObjectChange *C = (ObjectChange*) malloc(sizeof(ObjectChange));
 
-  memusage.actual += sizeof(ObjectChange);
+  objm.memusage.actual += sizeof(ObjectChange);
 
   C->oc_type = chg_type;
   C->oc_ptr = o;
@@ -342,7 +374,7 @@ static void ObjectFrame_add_change(ObjectFrame *F,int chg_type,Object *o)
     break;
   case OC_MODIFY :
     C->oc_backup = (Object*) malloc(o->o_size);
-    memusage.actual += o->o_size;
+    objm.memusage.actual += o->o_size;
 
     memcpy(C->oc_backup,o,o->o_size);
     o->o_mark = objm.om_mark;			/* Mark the object as saved */
@@ -355,7 +387,7 @@ static void ObjectFrame_add_change(ObjectFrame *F,int chg_type,Object *o)
  * Set the object handling mode.
  *
  *****************************************************************************/
-void ob_mode(int m)
+void ob_mode(OMMode_t m)
 {
   if (!objm.om_started) {
     if (m == OM_START)
@@ -380,7 +412,7 @@ void ob_mode(int m)
  * Get the current object handling mode
  *
  *****************************************************************************/
-unsigned ob_get_mode()
+OMMode_t ob_get_mode()
 {
   return objm.om_mode;
 }
@@ -450,9 +482,14 @@ ObjectFrame *ob_apply(ObjectFrame *f)
       break;
     }
   }
-
-  /*assert(memusage.actual >= sizeof(ObjectFrame));*/
-  memusage.actual -= sizeof(ObjectFrame);
+  if (f->of_name) {
+    /*assert(objm.memusage.actual >= strlen(f->of_name)+1);*/
+    objm.memusage.actual -= strlen(f->of_name)+1;
+    free(f->of_name);
+  }
+  /*assert(objm.memusage.actual >= sizeof(ObjectFrame));*/
+  objm.memusage.actual -= sizeof(ObjectFrame);
+  ObjectFrame_destroy(f);
   free(f);
 
   return inv_f;
@@ -621,8 +658,8 @@ void *ob_malloc(int s,const char *name)
 {
   size_t oSize = s+sizeof(Object);
   Object *o = (Object*) malloc(oSize);
-  memusage.actual += oSize;
-  memusage.ob += oSize;
+  objm.memusage.actual += oSize;
+  objm.memusage.ob += oSize;
 
   o->o_size = oSize;
   o->o_type = name;
@@ -672,7 +709,7 @@ void *ob_realloc(void *vo,int s)
     ob_free(vo);
   }
   else {
-    memusage.actual -= o->o_size-sizeof(Object) - s;
+    objm.memusage.actual -= o->o_size-sizeof(Object) - s;
   }
 
   return c;
@@ -693,8 +730,8 @@ void ob_free(void *vo)
     fprintf(stderr, "[ob_free of deleted %s object!]\n",o->o_type);
     return;
   }
-  assert(memusage.ob >= o->o_size);
-  memusage.ob -= o->o_size;
+  assert(objm.memusage.ob >= o->o_size);
+  objm.memusage.ob -= o->o_size;
 
 #if OBJECT_SHOWMODS
   printf("[free %s::%p (%d)]\n",(o->o_type?o->o_type:"?"),o,o->o_size);
@@ -706,8 +743,8 @@ void ob_free(void *vo)
 #endif
 
   if (objm.om_mode == OM_DISABLED) {
-    /*assert(memusage.actual >= (sizeof(Object) + o->o_size));*/
-    memusage.actual -= sizeof(Object) + o->o_size;
+    /*assert(objm.memusage.actual >= (sizeof(Object) + o->o_size));*/
+    objm.memusage.actual -= sizeof(Object) + o->o_size;
     free(o);
     return;
   }
@@ -747,8 +784,8 @@ void ob_suggest_name(const char *name)
 #endif
       return;
     }
-    /*assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
-    memusage.actual -= strlen(objm.om_cur->of_name)+1;
+    /*assert(objm.memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
+    objm.memusage.actual -= strlen(objm.om_cur->of_name)+1;
     free(objm.om_cur->of_name);
   }
 
@@ -756,7 +793,7 @@ void ob_suggest_name(const char *name)
   printf("ob_suggest_name(%s) [updated]\n",name);
 #endif
   objm.om_cur->of_name = strdup(name);
-  memusage.actual += strlen(name)+1;
+  objm.memusage.actual += strlen(name)+1;
 }
 
 /*****************************************************************************
@@ -860,12 +897,12 @@ void ob_append_frame(const char *name)
   objm.om_cur->of_level++;
   if (name) {
     if (objm.om_cur->of_name) {
-      /*assert(memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
-      memusage.actual -= strlen(objm.om_cur->of_name)+1;
+      /*assert(objm.memusage.actual >= (strlen(objm.om_cur->of_name)+1));*/
+      objm.memusage.actual -= strlen(objm.om_cur->of_name)+1;
       free(objm.om_cur->of_name);
     }
     objm.om_cur->of_name = strdup(name);
-    memusage.actual += strlen(name)+1;
+    objm.memusage.actual += strlen(name)+1;
   }
 #if OBJECT_DEBUG
   printf("(%d) ob_append_frame(%s)\n",objm.om_cur->of_level,objm.om_cur->of_name);
