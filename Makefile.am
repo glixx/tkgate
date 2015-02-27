@@ -72,7 +72,6 @@ noinst_HEADERS = options.h
 release:
 	echo 'char *release_date = "'`(LANG=; date "+%b %d %Y")`'";' > $(srcdir)/src/tkgate/release.c
 
-
 dist-hook:
 	@echo Packaging data files...
 	@for d in $(TKG_DISTITEMS); do \
