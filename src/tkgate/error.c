@@ -542,8 +542,7 @@ void panicSave(int s)
     exit(0);
   }
 
-
-  ob_mode(0);			/* Turn off undo/redo object management */
+  ob_set_mode(OM_DISABLED);	/* Turn off undo/redo object management */
 
   /*
    * If we get a panic while saving a panic file we will just have to give up.

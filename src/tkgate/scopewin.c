@@ -85,13 +85,13 @@ static int scopeWinConfigure(Tcl_Interp *tcl, GScope *sw, int argc, const char *
 static void scopeWinEvent(ClientData data, XEvent *E)
 {
   if (E->type == DestroyNotify) {
-    int old_mode = ob_get_mode();
+    ob_OMMode_t old_mode = ob_get_mode();
 
     scope_active = 0;
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
     ob_clear();
     delete_GScope(Scope);
-    ob_mode(old_mode);
+    ob_set_mode(old_mode);
     Scope = 0;
   }
   ReqScopeRedisplay();

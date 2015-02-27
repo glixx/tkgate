@@ -143,17 +143,17 @@ void tkgate_setMajorMode(MajorMode requestedMode)
   switch (requestedMode) {
   case MM_EDIT :
     DoTcl("tkg_editLogo");
-    ob_mode(OM_ENABLED);
+    ob_set_mode(OM_ENABLED);
     break;
   case MM_SIMULATE :
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
     ob_clear();
     TkGate.circuit->simulator.no_scope = 0;
     SimInterface_begin(&TkGate.circuit->simulator);
     DoTcl("tkg_resetLogo");
     break;
   case MM_ANALYZE :
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
     ob_clear();
     cpath_open();
     DoTcl("tkg_analysisLogo");

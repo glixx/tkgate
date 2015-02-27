@@ -128,7 +128,7 @@ static int gat_init(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   TkGate_init(tcl);
   ClearModified();
-  ob_mode(OM_START);
+  ob_set_mode(OM_START);
 
   return TCL_OK;
 }
@@ -172,7 +172,7 @@ static int gat_new(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   EditState **es = &gw->parms->circuit->es;
   const char *file,*topMod;
   GModuleDef *M;
-  int old_mode;
+  ob_OMMode_t old_mode;
 
   assert(argc == 3);
 
@@ -180,7 +180,7 @@ static int gat_new(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   old_mode = ob_get_mode();
   if (old_mode != OM_DISABLED) {
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
   }
   ob_clear();
 
@@ -218,7 +218,7 @@ static int gat_new(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   FlagRedraw();
 
   if (old_mode == OM_ENABLED) {
-    ob_mode(old_mode);
+    ob_set_mode(old_mode);
   }
   return TCL_OK;
 }
@@ -231,7 +231,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   TkgGateWin *gw = TkGate.gw;
   const char *name;
   const char *modFlag;
-  int old_mode;
+  ob_OMMode_t old_mode;
 
   assert(argc == 2);
   name = argv[1];
@@ -248,7 +248,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   old_mode = ob_get_mode();
   if (old_mode != OM_DISABLED) {
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
   }
   ob_clear();
 
@@ -267,7 +267,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     ClearModified();
 
     if (old_mode == OM_ENABLED) {
-      ob_mode(old_mode);
+      ob_set_mode(old_mode);
     }
 
     Tcl_SetResult(tcl,"0", TCL_STATIC);
@@ -282,7 +282,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   FlagRedraw();
 
   if (old_mode == OM_ENABLED) {
-    ob_mode(old_mode);
+    ob_set_mode(old_mode);
   }
 
   Tcl_SetResult(tcl,"1", TCL_STATIC);
@@ -314,7 +314,6 @@ static int gat_loadMore(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[
   Circuit_setCurrentFile(name);
 
   FlagRedraw();
-
 
   Tcl_SetResult(tcl, "1", TCL_STATIC);
   return TCL_OK;
@@ -3524,14 +3523,14 @@ static int gat_getSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 
 static int gat_obMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
-  int m = 1;
+  ob_OMMode_t m = OM_ENABLED;
 
   if (argc == 1) {
     m = ob_get_mode();
     Tcl_SetObjResult(tcl, Tcl_NewIntObj(m));
   } else {
     sscanf(argv[1],"%d",&m);
-    ob_mode(m);
+    ob_set_mode(m);
   }
 
   return TCL_OK;
