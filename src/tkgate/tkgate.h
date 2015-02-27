@@ -157,8 +157,6 @@ typedef Tcl_CmdProc New_Tcl_CmdProc;
 #define INTFMODE_ALL		1	/* We are on the module list interface mode */
 #define INTFMODE_SINGLE		2	/* We are in the single module interface mode */
 
-
-
 /*
  * Describes an encoder object used to translate strings from one code to another.
  */

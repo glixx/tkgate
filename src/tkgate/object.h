@@ -18,32 +18,97 @@
 #ifndef __object_h
 #define __object_h
 
-/*
- * Object manager modes
- */
-#define OM_DISABLED		0	/* No object management */
-#define OM_ENABLED		1	/* Undoable object management */
-#define OM_START		2	/* Start doing object management */
+/** \brief Object manager modes */
+typedef enum {
+    OM_DISABLED = 0, /** No object management */
+    OM_ENABLED,      /** Undoable object management */
+    OM_START         /** Start doing object management */
+} ob_OMMode_t;
 
-/*
- * Frame flags
- */
-#define FF_TRANSPARENT		0x1	/* Transparent frames are not directly visible */
-#define FF_STICKY		0x2	/* Sticky frames stick together */
-#define FF_BACKGROUND		0x4	/* Background frames do not clear redo stack */
+/** \brief Frame flags */
+typedef enum {
+  FF_TRANSPARENT = 0x1,	/** Transparent frames are not directly visible */
+  FF_STICKY      = 0x2,	/** Sticky frames stick together */
+  FF_BACKGROUND	 = 0x4	/** Background frames do not clear redo stack */
+} FrameFlags_t;
 
+/*******************************************************************************
+ * \brief Allocate an undoable object
+ *
+ * \param s size of the object
+ * \param name typename string
+ *
+ * Allocates memory for an undoable object and tags it with a string for its
+ * type.  The string passed is used as is and may not be modified or freed.
+ * by the calling program.  The string is only for informational purposes and
+ * a null may be passed in its place.
+ *
+ * Typical usage is:
+ *
+ * Fooby *f = (Fooby*) ob_malloc(sizeof(Fooby),"Fooby");
+ ******************************************************************************/
+void *ob_malloc(size_t s,const char *name);
 
-void *ob_malloc(int,const char*);	/* Allocate an undoable object */
-void *ob_calloc(int,int,const char*);	/* Allocate an undoable object */
-void *ob_realloc(void*,int);		/* Reallocate an undoable object */
-void ob_free(void*);			/* Free an undoable object */
-char *ob_strdup(const char*);		/* Duplicate a string object */
+/*******************************************************************************
+ * \brief Undoable object replacement for calloc()
+ *
+ * \param n number of the instances
+ * \param s size of the instance
+ * \param name typename for the instances
+ *
+ * Allocate a known number of similar undoable objects
+ ******************************************************************************/
+void *ob_calloc(unsigned n,size_t s,const char *name);
 
-void ob_init();				/* Initialize object handling */
-void ob_mode(int);			/* Set object handling mode */
-unsigned ob_get_mode();			/* Get object handling mode */
+/*******************************************************************************
+ * \brief Undoable object replacement for realloc()
+ *
+ * \param vo object to be reallocated
+ * \param s new size
+ *
+ * Reallocate an undoable object
+ ******************************************************************************/
+void *ob_realloc(void *vo,size_t s);
+
+/*******************************************************************************
+ * \brief Undoable object replacement for free()
+ *
+ * \param vo object to be freed
+ *
+ * Free an undoable object
+ ******************************************************************************/
+void ob_free(void *vo);
+
+/*******************************************************************************
+ * \brief An "undoable" version of strdup()
+ *
+ * \param s string to be duplicated
+ * \return duplicated string
+ *
+ * Duplicate a string object
+ ******************************************************************************/
+char *ob_strdup(const char *s);
+
+/******************************************************************************
+ * \brief Initialize object handling
+ *
+ * Initialize undo/redo object management.  Must be called on program start
+ * up before any calls to object handling functions.
+ ******************************************************************************/
+void ob_init();
+
+/******************************************************************************
+ *\brief Set object handling mode
+ ******************************************************************************/
+void ob_set_mode(ob_OMMode_t m);
+/******************************************************************************
+ * \brief Get object handling mode
+ ******************************************************************************/
+ob_OMMode_t ob_get_mode();
+
 void ob_flush_undo();			/* Flush all undo data */
 void ob_touch(void*);			/* Mark an object as touched */
+
 void ob_undo(int);			/* Undo all changes in change group */
 void ob_redo(int);			/* Redo all changes in change group */
 void ob_clear();			/* Clear all undo/redo data */

@@ -70,7 +70,6 @@ int main(int argc,char *argv[])
    */
   findTkGateHome(homeDir);
 
-
   /*
    * If the tcl/tk library file path environment variables are not set, use
    * the ones that we found when tkgate was compiled.

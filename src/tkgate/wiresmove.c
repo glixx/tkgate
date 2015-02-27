@@ -16,16 +16,13 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 /*
-    One of four main modules pertaining to wires.  COntaines functions for moving
+    One of four main modules pertaining to wires.  Containes functions for moving
     and drawing wires.  Basic routines to maintain horizontal and vertical wires
     being moved are defined here.
-
-
 */
 #include <stdlib.h>
 #include <stdio.h>
 #include "tkgate.h"
-
 
 #define isgatenode(_n) ((_n)->end && (_n)->end->gate)
 
@@ -194,7 +191,7 @@ void wire_makestraight(GWireNode *n,int ox,int oy)
  *      type		Type of movement (affects movement of connected nodes)
  *
  *****************************************************************************/
-void wire_move(GWireNode *n,int dx,int dy,int type)
+void wire_move(GWireNode *n,int dx,int dy,WireSelectMode_t type)
 {
   int x,y;
 
@@ -202,7 +199,6 @@ void wire_move(GWireNode *n,int dx,int dy,int type)
   n->stype = type;
   x = n->x;
   y = n->y;
-
 
   if ((type & VERTICAL)) n->y += dy;
   if ((type & HORIZONTAL)) n->x += dx;
