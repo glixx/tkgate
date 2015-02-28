@@ -389,8 +389,6 @@ int Circuit_isSelection(Circuit *c)
     return 0;
 }
 
-
-
 void Circuit_loadLibrary(Circuit *c,const char *name)
 {
   if (tkgate_currentMode() != MM_EDIT)

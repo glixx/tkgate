@@ -55,16 +55,17 @@
 
 #define DEBUG_CUT 0
 
-
-/* Wire snap cases */
-#define HH 0x3
-#define VV 0xC
-#define HV 0x6
-#define VH 0x9
-#define HZ 0x1
-#define ZH 0x2
-#define VZ 0x4
-#define ZV 0x8
+/** Wire snap cases */
+typedef enum {
+  OSC_HH = 0x3,
+  OSC_VV = 0xC,
+  OSC_HV = 0x6,
+  OSC_VH = 0x9,
+  OSC_HZ = 0x1,
+  OSC_ZH = 0x2,
+  OSC_VZ = 0x4,
+  OSC_ZV = 0x8
+} ObjectSnapCases_t;
 
 /*
   Return the orientation of the segment 'd' in from end 'n'.
@@ -567,7 +568,7 @@ GWire *wire_findClosest(GWire *w,int x,int y)
 */
 void wire_solder(GWireNode *n1,GWireNode *n2)
 {
-  int t;
+  ObjectSnapCases_t t;
 
   ob_touch(n1);
   ob_touch(n2);
@@ -577,8 +578,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
     (vertical(n1,n1->in)<<2) | (vertical(n2,n2->out)<<3);
 
   switch (t) {
-  case HH :
-  case VV :
+  case OSC_HH :
+  case OSC_VV :
     if ((n1->x != n2->x) || (n1->y != n2->y)) { /* Couldn't move a node */
       n1->out = n2;				  /* Don't remove bend */
       n2->in = n1;
@@ -594,8 +595,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
       debugprint("*click* (case 2)\n");
     }
     break;
-  case HV :
-  case VH :
+  case OSC_HV :
+  case OSC_VH :
     ob_touch(n2->out);
 
     n1->out = n2->out;
@@ -603,8 +604,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
     delete_GWireNode(n2);
     debugprint("*click* (case 3)\n");
     break;
-  case ZH :
-  case ZV :
+  case OSC_ZH :
+  case OSC_ZV :
     if (n1->in->in) {
       ob_touch(n1->in);
 
@@ -621,8 +622,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
       logError(ERL_ERROR,"Out of wire case 4 in wire_solder.");
     }
     break;
-  case HZ :
-  case VZ :
+  case OSC_HZ :
+  case OSC_VZ :
     if (n2->out->out) {
       ob_touch(n2->out);
 

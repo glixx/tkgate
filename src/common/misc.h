@@ -78,6 +78,7 @@ typedef struct {
   int revision;		/* Revision */
   int alpha;		/* Alpha level */
   int beta;		/* Beta level */
+  int rc;       /* release candidate level */
 } Version;
 
 typedef struct {

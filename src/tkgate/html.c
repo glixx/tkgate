@@ -936,7 +936,7 @@ void Html_handle_valueOf(Html *h, HtmlTag *tag)
     text = release_date;
   } else if (strcasecmp(name,"pancake-recipe") == 0) {
     extern const char *recipe_list[];
-    //text = recipe_list[0];
+    text = recipe_list[0];
   }
 
   if (text)

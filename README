@@ -92,32 +92,31 @@ CREDITS
 VERSION HISTORY
 
 Version 2.0-rc1 - February 27, 2015
-     * 74xx library extended: added
+     * 74xx library extended: added circuits
          7411 triple input AND
          7420 Quad input NAND
-		 7421 Quad input AND
-		 7442 BCD decoder
-		 7447 BCD to 7-segment encoder
+         7421 Quad input AND
+         7442 BCD decoder
+         7447 BCD to 7-segment encoder
          74181 4-bit ALU
          74182 Carry look ahead unit
      * Added russian locale
-     * some additional messages and settings (including license text)
+     * Some additional messages and settings (including license text)
        now can be localized
      * Fixed bug in ROM primitive causing it was unable to set the
        high-impedance output value when OE input is zero
-	 * Fixed bug in 74154 (incorrect name of output register)
-	 * Fixed bug, causing incorret encoding settings not handled
-	   properly
-	 * Fixed a lot of bugs, related with the usage of uninitialized
-	   values,
-	   invalid reads and writes, memory leaks in tkgate and verga
-	 * Fixed division by zero bug
-	 * Fixed build scripts to allow build from sources on newer Linux
-	   systems and OpenBSD
-	 * Fixed bug causing the library circuit parameters to override the
-	   main circuit ones
-	 * Fixed erratums and grammar error
-
+     * Fixed bug in 74154 (incorrect name of output register)
+     * Fixed bug, causing incorret locale encoding settings not handled
+       properly
+     * Fixed a lot of bugs, related with the usage of uninitialized
+       values, invalid reads and writes, memory leaks in tkgate and verga
+     * Fixed division by zero bug
+     * Fixed build scripts to allow build from sources on newer Linux
+       systems and OpenBSD
+     * Fixed bug causing the library circuit parameters to override the
+       main circuit ones
+     * Fixed erratums and grammar error
+     * Unlocked the hidden pancake recipe
 
 Version 2.0-b10 - September 26, 2009
      * Fixed bug causing bar led to display wrong value when some bits are unknown.

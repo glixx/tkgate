@@ -514,6 +514,8 @@ int ParseVersion(const char *version,Version *V)
     return 0;
   } else if (sscanf(version,"%d.%d-b%d",&V->major,&V->minor,&V->beta) == 3 && V->major >= 2) {
     return 0;
+  } else if (sscanf(version,"%d.%d-rc%d",&V->major,&V->minor,&V->rc) == 3 && V->major >= 2) {
+    return 0;
   }
 
   /*
@@ -657,7 +659,6 @@ void VerCheckVersion(const char *version)
   /* Loaded file with future? version number */
   if ((flags & VF_UNKNOWN))
     message(1,msgLookup("err.futureversion"),cur.fileName,version,VERSIONS[0].vd_name);
-
 
   VerSetSpecialLoadFeatures(&V);
 }

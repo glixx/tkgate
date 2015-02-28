@@ -3525,7 +3525,7 @@ static int gat_obMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     m = ob_get_mode();
     Tcl_SetObjResult(tcl, Tcl_NewIntObj(m));
   } else {
-    sscanf(argv[1],"%d",&m);
+    sscanf(argv[1],"%d",(int*)&m);
     ob_set_mode(m);
   }
 
