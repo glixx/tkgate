@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="verga" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../verga" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="./test/verga/bitselect1.v" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEBUG=0" />
+				</Compiler>
+				<Linker>
+					<Add library="../common/lib/Debug/libcommon.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="../../verga" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../common/lib/Release/libcommon.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DHAVE_CONFIG_H" />
+			<Add directory="../../" />
+			<Add directory="../../src/common" />
+		</Compiler>
+		<Unit filename="../../src/verga/bytecode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/bytecode.h" />
+		<Unit filename="../../src/verga/channel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/channel.h" />
+		<Unit filename="../../src/verga/circuit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/circuit.h" />
+		<Unit filename="../../src/verga/commands.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/directive.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/directive.h" />
+		<Unit filename="../../src/verga/dynitem.h" />
+		<Unit filename="../../src/verga/error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/error.h" />
+		<Unit filename="../../src/verga/evqueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/evqueue.h" />
+		<Unit filename="../../src/verga/expr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/expr.h" />
+		<Unit filename="../../src/verga/io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/io.h" />
+		<Unit filename="../../src/verga/luthor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/memory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/memory.h" />
+		<Unit filename="../../src/verga/mitem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/mitem.h" />
+		<Unit filename="../../src/verga/module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/module.h" />
+		<Unit filename="../../src/verga/multint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/multint.h" />
+		<Unit filename="../../src/verga/net.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/net.h" />
+		<Unit filename="../../src/verga/operators.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/operators.h" />
+		<Unit filename="../../src/verga/pathmod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/paux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/specify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/specify.h" />
+		<Unit filename="../../src/verga/statement.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/statement.h" />
+		<Unit filename="../../src/verga/systask.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/systask.h" />
+		<Unit filename="../../src/verga/task.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/task.h" />
+		<Unit filename="../../src/verga/thyme.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/thyme.h" />
+		<Unit filename="../../src/verga/thyme_config.h" />
+		<Unit filename="../../src/verga/trigger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/trigger.h" />
+		<Unit filename="../../src/verga/value.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/value.h" />
+		<Unit filename="../../src/verga/verilog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/verilog.h" />
+		<Unit filename="../../src/verga/vgrammar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../src/verga/vgrammar.h" />
+		<Unit filename="../../src/verga/yybasic.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
