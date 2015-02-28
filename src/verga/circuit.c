@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sun Feb  1 15:02:21 2009
 ****************************************************************************/
@@ -63,7 +63,7 @@ Scope *Circuit_getUpScope(Circuit *c,Scope *s)
 
   mi = (ModuleInst*) SHash_find(&c->c_moduleInsts,path);
   if (!mi) return 0;
-  
+
   return &mi->mc_scope;
 }
 
@@ -137,7 +137,7 @@ static void Circuit_buildNets_parameter(Circuit *c,ModuleDecl *m,
 
 #if 0
   {
-    printf("parameter eval: "); 
+    printf("parameter eval: ");
     Expr_print(e,stdout);
     printf(" = ");
     if (s)
@@ -168,7 +168,7 @@ static void Circuit_buildNets_parameter(Circuit *c,ModuleDecl *m,
   printf("parameter %s%s = ",mi->mc_path,mip->mip_name);
   Value_print(s,stdout);
   printf("\n");
-#endif    
+#endif
 }
 
 /*****************************************************************************
@@ -382,7 +382,7 @@ static int Circuit_bindPorts(MIInstance *mi,ModuleInst *parent_ctx,ModuleDecl *s
  *     eCtx		Context of eNet
  *     iNet		Net to be eliminated after merge
  *     iCtx		Context of iNet
- *     
+ *
  * This function is used to elaborate modules ports when the internal and external
  * connections are compatable.
  *
@@ -391,7 +391,7 @@ static void Circuit_mergeNets(Circuit *c,Net *eNet,ModuleInst *eCtx,Net *iNet,Mo
 {
   const char *shortName = strrchr(iNet->n_name,'.');
 
-  if (shortName && *shortName) 
+  if (shortName && *shortName)
     shortName++;
   else
     shortName = iNet->n_name;
@@ -405,7 +405,7 @@ static void Circuit_mergeNets(Circuit *c,Net *eNet,ModuleInst *eCtx,Net *iNet,Mo
 /*****************************************************************************
  *
  * Make an implicit 'assign' for values beinging passed as a module input.
- * 
+ *
  * Parameters:
  *     c		Circuit being elaborated
  *     iNet		Internal net of port
@@ -454,7 +454,7 @@ static void Circuit_makeInAssign(Circuit *c,Net *iNet,ModuleInst *iCtx,Expr *exp
 /*****************************************************************************
  *
  * Make an implicit 'assign' for values beinging passed as a module output.
- * 
+ *
  * Parameters:
  *     c		Circuit being elaborated
  *     expr		External expression for port
@@ -468,7 +468,7 @@ static void Circuit_makeInAssign(Circuit *c,Net *iNet,ModuleInst *iCtx,Expr *exp
  *
  *   foo f1(.z({w1,w2}), .a(w3 & w4), .b(w5));
  *
- * The output from port z has is a concatenation expression.  The port is treated 
+ * The output from port z has is a concatenation expression.  The port is treated
  * as if it where an assign statement for the form:
  *
  *   assign {top.w1,top.w2} = top.f1.z;
@@ -535,11 +535,11 @@ static int mergablePort(Net *iNet,Expr *eNet,ModuleInst *eCtx)
 
   if (!(Net_getType(iNet) & NT_P_WIRE)) return 0;	/* Internal is not a net */
   if (Expr_type(eNet) != E_LITERAL) return 0;		/* External is an expression */
-  en = ModuleInst_findNet(eCtx,Expr_getLitName(eNet));		
+  en = ModuleInst_findNet(eCtx,Expr_getLitName(eNet));
   if (!en) return 0;					/* Can't find external net */
   if (Net_nbits(iNet) != Net_nbits(en)) return 0;	/* Bit size does not match */
   if (!(Net_getType(en) & NT_P_WIRE) && 		/* External is a register, but */
-      !(Net_getType(iNet) & NT_P_INPUT)) return 0;	/*   not an input port */ 
+      !(Net_getType(iNet) & NT_P_INPUT)) return 0;	/*   not an input port */
 
   return 1;
 }
@@ -694,7 +694,7 @@ static int Circuit_buildHier_instance(Circuit *c,ModuleDecl *m,ModuleInst *mi,MI
  * Parameters:
  *      c			Circuit to we are building
  *      mi			Module instance
- *      codeBlock		Code block to use 
+ *      codeBlock		Code block to use
  *
  * This function should be called after generating all bytecode for the module
  * definition.  This function will generate any specify task calls (e.g., $setup,
@@ -814,7 +814,7 @@ static ModuleInst *Circuit_buildNets(Circuit *c,ModuleDecl *m,MIInstance *mid,Mo
 
   mi = new_ModuleInst(m,c,parent,path);
   SHash_insert(&c->c_moduleInsts,path,mi);
-  
+
   for (he = Hash_first(&m->m_tasks);he; he = Hash_next(&m->m_tasks,he)) {
     UserTaskDecl *utd = (UserTaskDecl*) HashElem_obj(he);
     UserTask *ut = new_UserTask(utd, ModuleInst_getScope(mi));
@@ -903,7 +903,7 @@ void Circuit_sortThreads(Circuit *c)
       {
 	VGThread *t = e->ev_thread.et_thread;
 	ModuleItem *mi = VGThread_getMItem(t);
-	
+
 	if (mi) {
 	  printf("thread %p - %d\n",t,ModuleItem_getType(mi));
 	  ModuleItem_print(mi,stdout);
@@ -937,14 +937,14 @@ void Circuit_installScript(Circuit *c,ModuleDecl *m,DynamicModule *dm)
   char scriptRootName[STRMAX];
   ModuleInst *mi;
   ListElem *le;
-  
+
   sprintf(scriptRootName,"%%script%d",count++);
   mi = new_ModuleInst(m,c,0,scriptRootName);
   DynamicModule_setModuleInst(dm,mi);
 
   Scope_setPeer(ModuleInst_getScope(mi),ModuleInst_getScope(c->c_root));
   mi->mc_peer = c->c_root;
-  
+
   for (le = List_first(&m->m_items);le; le = List_next(&m->m_items,le)) {
     ModuleItem *item = (ModuleItem*) ListElem_obj(le);
 
@@ -1006,7 +1006,7 @@ void Circuit_installScript(Circuit *c,ModuleDecl *m,DynamicModule *dm)
 	strcpy(instname,n->n_name);
 	localName = strrchr(instname,'.');
 	if (localName) *localName++ = 0;
-	
+
 	m = Circuit_findModuleInst(c,instname);
 
 	if (m) {
@@ -1165,7 +1165,7 @@ Net *Circuit_findMemoryNet(Circuit *c,const char *name)
 
   net = 0;
   m = Circuit_findModuleInst(c, name);
-  if (!m) return 0;  
+  if (!m) return 0;
 
   nets = &m->mc_scope.s_nets;
   for (he = Hash_first(nets);he;he = Hash_next(nets, he)) {
@@ -1292,8 +1292,8 @@ void Circuit_readMemory(Circuit *c, const char *fileName, Net *net, unsigned sta
  *     c			Pointer to circuit
  *     fileName			File name to write to
  *     net			Net of target memory (or NULL for all memories)
- *     start			Starting address (if single memory) 
- *     stop			Stopping address (if single memory) 
+ *     start			Starting address (if single memory)
+ *     stop			Stopping address (if single memory)
  *     flags			Options
  *
  *****************************************************************************/
@@ -1349,7 +1349,7 @@ int Circuit_writeMemory(Circuit *c, const char *fileName, Net *net, unsigned sta
  * Find (or create if necessary) the named communication channel.
  *
  * Parameters:
- *      c		Circuit in which to find/create the channel 
+ *      c		Circuit in which to find/create the channel
  *      name		Name of the channel.
  *
  *****************************************************************************/
@@ -1372,7 +1372,7 @@ Channel *Circuit_getChannel(Circuit *c, const char *name)
  * Unload a dynamically loaded module
  *
  * Parameters:
- *      c		Circuit object 
+ *      c		Circuit object
  *      dm		Dynamic module object
  *
  *****************************************************************************/

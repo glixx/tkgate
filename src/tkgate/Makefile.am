@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 #
-#    Copyright (C) 1987-2007 by Jeffery P. Hansen
+#    Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -12,9 +12,9 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
 #
-#    You should have received a copy of the GNU General Public License
-#    along with this program; if not, write to the Free Software
-#    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#    You should have received a copy of the GNU General Public License along
+#    with this program; if not, write to the Free Software Foundation, Inc.,
+#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 DISTCLEANFILES=vgrammar.h vgrammar.c luthor.c
 
@@ -48,4 +48,4 @@ bin_PROGRAMS=tkgate
 tkgate_LDFLAGS=@TKGATE_LPATH@ @X_LIBS@ @COMMON_LPATH@
 tkgate_SOURCES=$(BASE_OBJS) main.c
 #tkgate_LDADD=libtkgate.la
-tkgate_LDADD=@TKGATE_LIB@ -lcommon
+tkgate_LDADD=@TKGATE_LIB@ -lcommon -lm -lpthread

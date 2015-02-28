@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Thu Jan 29 12:49:46 2009
 ****************************************************************************/
@@ -488,7 +488,7 @@ static void MIInstance_print(MIInstance *mii, FILE *f)
       if (didFirst)
 	fprintf(f,", ");
       didFirst = 1;
-    
+
       if (ne->ne_name) {
 	fprintf(f,".%s(",ne->ne_name);
 	Expr_print(ne->ne_expr,f);
@@ -537,7 +537,7 @@ static void MIGate_print(MIGate *mig, FILE *f)
       if (didFirst)
 	fprintf(f,", ");
       didFirst = 1;
-    
+
       Expr_print(e, f);
     }
   }
@@ -557,7 +557,7 @@ static void MIGate_print(MIGate *mig, FILE *f)
 static VGThread *MIBlock_generate(MIBlock *mib, ModuleInst *modCtx,CodeBlock *codeBlock)
 {
   VGThread *thread = new_VGThread(codeBlock,CodeBlock_size(codeBlock),modCtx,(ModuleItem*)mib);
-  unsigned top_bc; 
+  unsigned top_bc;
 
   if (ModuleItem_getDynamicModule(mib))
     DynamicModule_addThread(ModuleItem_getDynamicModule(mib), thread);
@@ -637,7 +637,7 @@ static VGThread *MIAssign_generate(MIAssign *mia, ModuleInst *mi, CodeBlock *cod
    * Find the delay for the assignment.
    */
   if (mia->mia_bcond) {
-    if (Expr_type(mia->mia_bcond) == E_DELAY) { 
+    if (Expr_type(mia->mia_bcond) == E_DELAY) {
       Expr_getDelay(mia->mia_bcond, ModuleInst_getScope(mi), ModuleInst_getTimescale(mi), &delay);
     } else {
       errorFile(ModuleItem_getPlace(mia),ERR_ASGNEVENT);
@@ -735,7 +735,7 @@ int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,Lis
    * Find the delay for the assignment.
    */
   if (mia->mia_bcond) {
-    if (Expr_type(mia->mia_bcond) == E_DELAY) { 
+    if (Expr_type(mia->mia_bcond) == E_DELAY) {
       Expr_getDelay(mia->mia_bcond, ModuleInst_getScope(mi), ModuleInst_getTimescale(mi), &delay);
     } else {
       errorFile(ModuleItem_getPlace(mia),ERR_ASGNEVENT);
@@ -849,7 +849,7 @@ static VGThread *MIGate_generate_multin(MIGate *mig, ModuleInst *mi,CodeBlock *c
   if (gd->gd_outFunc) {
     Value *v = rhs_ret;
     rhs_ret = new_Value(size);
-    
+
     BCOpr_init(CodeBlock_nextEmpty(codeBlock),gd->gd_outFunc,rhs_ret,0,v,0);
   }
 
@@ -857,7 +857,7 @@ static VGThread *MIGate_generate_multin(MIGate *mig, ModuleInst *mi,CodeBlock *c
    * Find the delay for the assignment.
    */
   if (mig->mig_delay) {
-    if (Expr_type(mig->mig_delay) == E_DELAY) { 
+    if (Expr_type(mig->mig_delay) == E_DELAY) {
       Expr_getDelay(mig->mig_delay, ModuleInst_getScope(mi), ModuleInst_getTimescale(mi), &delay);
     } else {
       errorFile(ModuleItem_getPlace(mig),ERR_ASGNEVENT);
@@ -971,7 +971,7 @@ static VGThread *MIGate_generate_multout(MIGate *mig, ModuleInst *mi,CodeBlock *
    * Find the delay for the assignment.
    */
   if (mig->mig_delay) {
-    if (Expr_type(mig->mig_delay) == E_DELAY) { 
+    if (Expr_type(mig->mig_delay) == E_DELAY) {
       Expr_getDelay(mig->mig_delay, ModuleInst_getScope(mi), ModuleInst_getTimescale(mi), &delay);
     } else {
       errorFile(ModuleItem_getPlace(mig),ERR_ASGNEVENT);
@@ -985,7 +985,7 @@ static VGThread *MIGate_generate_multout(MIGate *mig, ModuleInst *mi,CodeBlock *
   if (gd->gd_outFunc) {
     Value *v = rhs_ret;
     rhs_ret = new_Value(size);
-    
+
     BCOpr_init(CodeBlock_nextEmpty(codeBlock),gd->gd_outFunc,rhs_ret,0,v,0);
   }
 

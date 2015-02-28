@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "tkgate.h"
 
@@ -140,7 +140,7 @@ void Dip_Draw(GCElement *g,int md)
   char s[STRMAX];
   char compositeName[STRMAX];
   int vox,voy;
-  
+
   mk_gate(g->xpos,g->ypos,g->typeinfo,g->orient,g->selected);
   gate_drawWires(g,md);
 
@@ -158,14 +158,14 @@ void Dip_Draw(GCElement *g,int md)
       dipValue = g->u.sw.perm_dipval;
 
     sprintf(s,"%x",dipValue & mask);
-  
+
     vox = (g->orient == 2) ?  43 : 0;
     voy = (g->orient == 2) ?  5 : -15;
 
     if (g->selected)
-      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);  
+      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextbXF[TkGate.circuit->zoom_factor]->fid);
     else
-      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);  
+      XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);
     dce_DrawString(TkGate.instGC,g->xpos+vox,g->ypos+voy,
 		   CENTER_JUST,s);
   }

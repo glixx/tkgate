@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sun Feb 12 17:01:30 2006
 ****************************************************************************/
@@ -151,15 +151,15 @@ void join_splice_corner(GWireNode *n,GWire *w1[],GWire *w2[],int dwidth,EditStat
 
   ob_touch(n);
   n->in = NULL;
-  
+
   w1[0]->nodes->end = w1[0];
   w2[0]->nodes->end = w2[0];
-  
+
   w1[0]->driver = wire_driver(w1[0]);
   wd = wire_drivee(w1[0]);
   ob_touch(wd);
   wd->driver = w1[0]->driver;
-  
+
   w2[0]->driver = wire_driver(w2[0]);
   wd = wire_drivee(w2[0]);
   ob_touch(wd);
@@ -278,7 +278,7 @@ GCElement *join_wires(GWire *w,GWireNode *n,EditState *es)
 
   splicewire = wirenode_driver(n);
   if (splicewire->net->n_nbits < w->net->n_nbits) return g;
- 
+
   if ((n->stype == VERTICAL)||(n->stype == HORIZONTAL)) {
     if (!w->nodes->out) {
       join_middle_out(w,n,es,splicewire->net->n_nbits);
@@ -296,7 +296,7 @@ GCElement *join_wires(GWire *w,GWireNode *n,EditState *es)
 	wire_finalizeNet(splicewire);
       }
       return g;
-    } 
+    }
   } else {
     if (!n->end) {
       if (!w->nodes->out) {

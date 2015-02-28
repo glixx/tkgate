@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Thu Feb 12 14:49:29 2009
 ****************************************************************************/
@@ -52,7 +52,7 @@ static Icon *boxmark[4][4];	/* Boxed arrows [orient][iodir] */
  *    g			Gate on which to change/set name.
  *    name		New name for gate.
  *    M			Module in which gate is defined (null if gate is not
- *			yet in defined in a module). 
+ *			yet in defined in a module).
  *
  *****************************************************************************/
 void gate_setName(GCElement *g,const char *name,GModuleDef *M)
@@ -126,7 +126,7 @@ GCElement *gate_new(int x,int y,int rot,int type)
   GCElement *g;
   int i,n;
   int N;
-  
+
 #ifdef DEBUG
   printf("gate_new(%d %d %d  NULL)\n",x,y,type);
 #endif
@@ -153,13 +153,13 @@ GCElement *gate_new(int x,int y,int rot,int type)
   N = GCElement_numPads(g);
   for (i = 0;i < N;i++)
     g->wires[i] = NULL;
-  
+
   if (g->typeinfo->InitGate)
     (*g->typeinfo->InitGate)(g);
 
   n = 0;
   for (i = 0;g->typeinfo->delayNames[i];i++)n++;
-  if (n == 0) 
+  if (n == 0)
     g->delays = 0;
   else {
     g->delays = (int*) ob_malloc(sizeof(int)*n,"int[]");
@@ -191,7 +191,7 @@ void gate_unattachwire(GWire *w,GModuleDef *M,int drawp)
   if (M && drawp) GWire_draw(wd);
   w->gate = NULL;
   if (w->name) ob_free(w->name);
-  
+
   w->name = NULL;
 #if 0
   if (!wire_trash(w->nodes,M,drawp)) {
@@ -262,7 +262,7 @@ void gate_cutOffWires(GCElement *g,GModuleDef *M,int drawp)
  * Parameters:
  *    g			Gate to be deleted.
  *    M			Module in which gate is currently defined.
- *    drawp		Non-zero if we should update the display. 
+ *    drawp		Non-zero if we should update the display.
  *
  * Returns:		Non-zero on success.
  *
@@ -381,9 +381,9 @@ void gate_drawWires(GCElement *g,int md)
 
 void gate_drawgatename(GCElement *g,const char *name)
 {
-  int x,y; 
+  int x,y;
   int o;
- 
+
   o = g->orient;
   x = g->xpos;
   y = g->ypos;
@@ -392,7 +392,7 @@ void gate_drawgatename(GCElement *g,const char *name)
     XSetFont(TkGate.D,TkGate.instGC,TkGate.textbXF[TkGate.circuit->zoom_factor]->fid);
   else
     XSetFont(TkGate.D,TkGate.instGC,TkGate.textXF[TkGate.circuit->zoom_factor]->fid);
-  
+
   dce_DrawString(TkGate.instGC,x + g->typeinfo->lpos[o].x,
 		 y + g->typeinfo->lpos[o].y,
 		 g->typeinfo->lpos[o].just,name);
@@ -467,7 +467,7 @@ void gate_doReplication(EditState *es)
 {
   struct celemnt *g;
   int sx,sy,ex,ey,dx,dy,h,w,n,bd,num;
-  
+
   g = TkGate.circuit->select;
   ZDrawLine(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
 
@@ -476,12 +476,12 @@ void gate_doReplication(EditState *es)
   w = ex-sx + bd;
   h = ey-sy + bd;
 
-  
+
   sx = g->xpos;
   sy = g->ypos;
   ex = TkGate.ed->tx;
   ey = TkGate.ed->ty;
-  
+
   if (sx == ex) {
     dx = 0;
     dy = (sy > ey) ? -h : h;
@@ -499,7 +499,7 @@ void gate_doReplication(EditState *es)
     dy = (dx*(sy-ey))/(sx-ex);
     n = abs((sx-ex)/dx);
   }
-  
+
   sx += dx;
   sy += dy;
   num = 2;
@@ -527,19 +527,19 @@ void gate_hashrepline(EditState *es,int x,int y)
 {
   GCElement *g;
   int sx,sy,ex,ey,dx,dy,bd,h,w,n,num;
-  
+
   g = TkGate.circuit->select;
 
   (*g->typeinfo->GetExtents)(g,TD_X11,&sx,&sy,&ex,&ey,&bd);
 
   w = ex-sx + bd;
   h = ey-sy + bd;
-  
+
   sx = g->xpos;
   sy = g->ypos;
   ex = x;
   ey = y;
-  
+
   if (sx == ex) {
     dx = 0;
     dy = (sy > ey) ? -h : h;
@@ -557,7 +557,7 @@ void gate_hashrepline(EditState *es,int x,int y)
     dy = (dx*(sy-ey))/(sx-ex);
     n = abs((sx-ex)/dx);
   }
-  
+
   sx += dx;
   sy += dy;
   num = 2;
@@ -601,7 +601,7 @@ void gate_transmute(GCElement *g,GGateInfo *ngi)
 
   oldOrient = g->orient;
   rot = ogi->Pad[0].Loc[oldOrient].dir;
-  for (i = 0;i < 4;i++) 
+  for (i = 0;i < 4;i++)
     if (ngi->Pad[0].Loc[i].dir == rot) {
       g->orient = i;
       break;
@@ -697,7 +697,7 @@ const char *GCElement_getPadName(GCElement *g,int p)
  * Get the wire associated with the named pad on a gate
  *
  * Parameters:
- *      g		Gate 
+ *      g		Gate
  *      portName	Index of pad
  *
  *****************************************************************************/
@@ -828,7 +828,7 @@ int GGateInfo_variantNum(GGateInfo *gi,const char *func)
  *****************************************************************************/
 void RegisterGate(GGateInfo *gi)
 {
-  static int code_count = 1; 
+  static int code_count = 1;
   char buf[STRMAX],*T;
 
   if (gi->Code <= 0)
@@ -891,7 +891,7 @@ void init_specials()
     ico = new_Icon(P,0,6,5,7,2,3);   /* ^ arrow */
     iodmark[1][OUT] = iodmark[3][IN] = ico;
 
-    
+
 
     /*****************************************************************************
      * Register pixmaps for boxed arrows
@@ -958,7 +958,7 @@ GGateInfo *GGateInfo_codeLookup(int T)
  * _GGNAND3B4D5 g1 (.Z(w1), .I0({{4}{w2}}), .I1(w3), .I2(w4));
  *
  * Here _GG is the prefix for built-in gates, the next "N" means that the
- * output is inverted, "AND" is the base name of the gate, "3" indicates 
+ * output is inverted, "AND" is the base name of the gate, "3" indicates
  * the number of inputs (or outputs depending on type), "B4" indicates the
  * base bit width and "D5" indicates the delay of the gate.
  *
@@ -972,7 +972,7 @@ GGateInfo *GGateInfo_codeLookup(int T)
  *			that all outputs are inverted.  If this field is
  *			omitted it means that all outputs are non-inverted.
  *			For all other cases a string such as "NPPNN_" is used
- *			to indicate the inverter status of each output port. 
+ *			to indicate the inverter status of each output port.
  *
  *    <base-name>	This is the base name of the element.  It must be one
  *			of the tkgate defined primitive names.
@@ -1017,12 +1017,12 @@ void GGateInfo_encodeTypeName(char *buf,GCElement *g)
   GGateInfo *gi = g->typeinfo;
   int npad,nbit;
   char inv[STRMAX],*iq;
-  unsigned inv_flags = 0; 
+  unsigned inv_flags = 0;
   char *p;
   int i;
 
   /*
-   * Get number of bits (or -1) if this gate has constant bit size. 
+   * Get number of bits (or -1) if this gate has constant bit size.
    */
   if (gi->gi_bitPad >= 0) {
     GWire *w;
@@ -1166,7 +1166,7 @@ int GGateInfo_decodeTypeName(const char *name,GCellSpec *gcs)
   } else
     *gcs->gc_invSpec = 0;		/* Normal or no inverter spec */
 
-  /* 
+  /*
    * Copy prefix stripped name
    */
   if (sscanf(name,"%[A-Za-z]%dx%d_%s",baseName,&n1,&n2,dpSpec) == 4) {

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Apr 11 15:53:44 2009
 ****************************************************************************/
@@ -118,7 +118,7 @@ void ReqScopeTraceRedisplay()
  *
  * Parameters:
  *      s		Scope object
- *      v		Trace value object 
+ *      v		Trace value object
  *      n		Number of bits of trace
  *
  *****************************************************************************/
@@ -136,7 +136,7 @@ int isTransition(GScope *s,GValue *v,int n)
     if (v->v_next->v_time < s->s_leftTime) return 0;
     if (v->v_next->v_time > s->s_leftTime + s->s_range) return 0;
   }
-  
+
   return 1;
 }
 
@@ -212,7 +212,7 @@ GC GValue_getColor(GValue *V,int nbits)
   case VC_ONE :
     if (nbits == 1) return TkGate.scopeOneGC;
     break;
-  case VC_ZERO :  
+  case VC_ZERO :
     if (nbits == 1) return TkGate.scopeZeroGC;
     break;
   }
@@ -411,7 +411,7 @@ void GTrace_updateValue(GTrace *T,GValue *V,int y,int x1,int x2)
 		x2,y-ScopeHIGH);
     }
     break;
-  case VC_ZERO :  
+  case VC_ZERO :
     if (T->t_nBits == 1) {
       XDrawLine(TkGate.D,TkGate.ScopeW,gc,
 		x1,y-ScopeLOW,
@@ -488,7 +488,7 @@ GTrace *GScope_hitTrace(GScope *S,int y)
 
     if (y < trace_y)
       return T;
-      
+
     trace_y += ScopeTRACEHEIGHT;
     if (trace_y > S->Height-ScopeBOTTOMHEIGHT) break;
   }
@@ -509,11 +509,11 @@ void GScope_moveTrace(GScope *S,GTrace *t,int y)
   /*
    * Get target index for insertion
    */
-  ipos += S->Start; 
+  ipos += S->Start;
   if (ipos >= S->NumTraces) ipos = S->NumTraces-1;
 
   if (ipos == cpos) return;					/* No change */
-  
+
 
   if (cpos < ipos) {
     for (i = cpos;i < ipos;i++)
@@ -531,7 +531,7 @@ void GScope_moveTrace(GScope *S,GTrace *t,int y)
 void GScope_deleteSelectedTrace(GScope *S)
 {
   int i;
-  const char *name; 
+  const char *name;
 
   if (!scope_highlightedTrace) return;
 
@@ -627,7 +627,7 @@ void GTrace_draw(GTrace *T,GScope *S,int y,int doName)
       T->t_visName = T->t_dVisName = ob_strdup(T->t_printName);
 
       if ((p = strchr(T->t_visName,'.')))
-	T->t_visName = p+1;      
+	T->t_visName = p+1;
 
       while ((w = GKTextWidth(TkGate.textXF[1],T->t_visName,strlen(T->t_visName))) > ScopeLEFTMARGIN-10) {
 	if ((p = strchr(T->t_visName+1,'.')))
@@ -974,7 +974,7 @@ static void GScope_drawScale(GScope *S,int doTicks)
   simtime_t base = S->s_leftTime;
   SimInterface *si = &TkGate.circuit->simulator;
 
-  S->s_scale = UnitSize; 
+  S->s_scale = UnitSize;
 
   if (!doTicks) {
     XFillRectangle(TkGate.D,TkGate.ScopeW,TkGate.scopeClearGC,
@@ -987,10 +987,10 @@ static void GScope_drawScale(GScope *S,int doTicks)
    */
   GScope_drawBaseTime(S,base,y);
 
-  
+
 
   /*
-   * Draw the tick values. 
+   * Draw the tick values.
    */
   if (doTicks) {
     char buf[STRMAX];
@@ -1009,14 +1009,14 @@ static void GScope_drawScale(GScope *S,int doTicks)
       double tick = (T-base)*tickScale;
 
       sprintf(buf,format,tick);
-	
+
       text_w = GKTextWidth(TkGate.textXF[1],buf,strlen(buf))/2;
       XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
 		  ScopeLEFTMARGIN+(int)((T-S->s_leftTime)*UnitSize-text_w),
 		  y,buf,strlen(buf));
     }
 
-    
+
     units_s = SimInterface_unitsToStr(units);
     text_w = GKTextWidth(TkGate.textXF[1],units_s,strlen(units_s));
     XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
@@ -1216,7 +1216,7 @@ void trace_observe(GTrace *T,simtime_t time,int vcode,const char *value)
 
     T->t_last->v_code = vcode;
   } else if (T->t_last->v_time < time) {
-    if (T->t_last->v_code != vcode || 
+    if (T->t_last->v_code != vcode ||
 	(value && !T->t_last->v_hexValue) ||
 	(value && T->t_last->v_hexValue && strcmp(value,T->t_last->v_hexValue) != 0)) {
       T->t_last->v_next = new_Value(time,vcode,value,T->t_last);
@@ -1288,7 +1288,7 @@ void GScope_deleteTrace(GScope *S,const char *name)
 
 
   if (S->NumTraces == 0)
-    S->Start = 0; 
+    S->Start = 0;
   else if (S->Start >= S->NumTraces)
     S->Start = S->NumTraces-1;
 

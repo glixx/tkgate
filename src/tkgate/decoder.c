@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri May  1 20:41:14 2009
 ****************************************************************************/
@@ -32,7 +32,7 @@ static void Decoder_PSWrite(GPrint *P,GModLayout*,GCElement *g);
 static void Decoder_Rotate(GCElement *g, int centX, int centY,int rdir);
 static void Decoder_SetProp(GCElement*,const char*,const void*);
 int MuxDemux_EditProps(GCElement *g,int isLoadDialog);
-static void Decoder_VersionDelta(GCElement*,Version*); 
+static void Decoder_VersionDelta(GCElement*,Version*);
 static GWireNode *Decoder_wireSnap(GCElement *g,GWire *w,int *mod,int retry);
 static void Decoder_AddOutput(EditState *es,GCElement *g);
 void MuxDemux_VerSave(FILE*,GCElement*);
@@ -122,7 +122,7 @@ GGateInfo gate_decoder_info = {
        {"Z",OUT,1,2,decoder_out_loc,1}},
   {{23,0,LJ},{0,40,CT},{-23,8,RJ},{0,-33,CT}},
   {1},
-  
+
   {"Dez","Diz",0},
 
   Decoder_Make,
@@ -199,7 +199,7 @@ static void Decoder_adjustWiresData(GCElement *g)
     }
     break;
   }
-  
+
   for (i = 0,w = g->wires[DECODER_OUT];w;i++, w = w->next) {
     wx += dx;
     wy += dy;
@@ -278,7 +278,7 @@ static GCElement *Decoder_Make(EditState **es,GModuleDef *env,int GType,
     const char *Invert,*Pins;
     int N = GCElement_numPads(g);
 
-    
+
     Invert = seekOption("-invert",options,nOptions);
     Pins = seekOption("-pins",options,nOptions);
 
@@ -459,7 +459,7 @@ static GWireNode *Decoder_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
     GPadLoc *pd = &g->typeinfo->Pad[p].Loc[g->orient];
     if (p == DECODER_EN && g->u.mux.select_side)
       pd = &decoder_en_altloc[g->orient];
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;
@@ -473,12 +473,12 @@ static void Decoder_AddOutput(EditState *es,GCElement *g)
   for (i = 0;i < N;i++)
     if (GCElement_getPadDir(g,i) == OUT && GCElement_getPadCanAdd(g,i))
       break;
-  
+
   if (i == N)
     return;
-  
+
   if (es) SetModified(MF_GATE|MF_NET);
-  
+
   gate_draw(g,GD_NORMAL);
   wire_addToGate(g,i,es->env,0);
   Decoder_adjustWires(g);
@@ -486,7 +486,7 @@ static void Decoder_AddOutput(EditState *es,GCElement *g)
 }
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for decoderes.
  *
  * Parameters:
@@ -499,7 +499,7 @@ static void Decoder_WriteCellDef(FILE *f,GCellSpec *gcs)
   int multiPad = gcs->gc_multiPad;
   int numBits = required_bits(gcs->gc_multiPad);
   PrimParm primParm;
-  int i; 
+  int i;
 
   PrimParm_init(&primParm);
   PrimParm_intSet(&primParm,"NUMOUT",multiPad);
@@ -514,7 +514,7 @@ static void Decoder_WriteCellDef(FILE *f,GCellSpec *gcs)
   } else {
     char *s = PrimParm_get(&primParm,"invZ");
     sprintf(s,"%d'b",multiPad);
-    s += strlen(s); 
+    s += strlen(s);
     for (i = 0;i < multiPad;i++) {
       *s++ = (gcs->gc_invSpec[i] == 'N') ? '1' : '0';
     }

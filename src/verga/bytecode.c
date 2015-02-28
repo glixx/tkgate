@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Feb  2 13:45:47 2009
 ****************************************************************************/
@@ -114,14 +114,17 @@ ByteCode *CodeBlock_nextEmpty(CodeBlock *cb)
 
 void CodeBlock_copy(CodeBlock *dst,unsigned dpos,CodeBlock *src,unsigned start,unsigned stop)
 {
-  unsigned reqLen = dpos + (stop-start+1);		/* Required length */
+  if (stop >= src->cb_length)
+    stop = src->cb_length -1;
+  unsigned copySize = (stop-start+1);
+  unsigned reqLen = dpos + copySize;		/* Required length */
 
   if (reqLen >= dst->cb_nalloced) {
     dst->cb_nalloced = reqLen;
     dst->cb_instructions = (ByteCode*) realloc(dst->cb_instructions,sizeof(ByteCode)*dst->cb_nalloced);
   }
 
-  memcpy(CodeBlock_get(dst,dpos),CodeBlock_get(src,start),sizeof(ByteCode)*(stop-start+1));
+  memcpy(CodeBlock_get(dst,dpos),CodeBlock_get(src,start),sizeof(ByteCode)*copySize);
 #if 0
   {
     int i;
@@ -951,7 +954,7 @@ void BCAsgn_exec(BCAsgn *a, VGThread *t)
  *     delay		Delay after which to queue assignment.
  *
  *****************************************************************************/
-void BCNbAsgnD_init(ByteCode *bc, Net *net, Value *netLsb, Value *value, 
+void BCNbAsgnD_init(ByteCode *bc, Net *net, Value *netLsb, Value *value,
 		    unsigned valLsb, unsigned width,deltatime_t delay)
 {
   BCNbAsgnD *a = (BCNbAsgnD*)bc;
@@ -1086,7 +1089,7 @@ void BCNbAsgnE_exec(BCNbAsgnE *a, VGThread *thread)
  *     delay		Delay after which to queue assignment.
  *
  *****************************************************************************/
-void BCWireAsgnD_init(ByteCode *bc, Net *net, int id, Value *netLsb, Value *value, 
+void BCWireAsgnD_init(ByteCode *bc, Net *net, int id, Value *netLsb, Value *value,
 		    unsigned valLsb, unsigned width,deltatime_t delay)
 {
   BCWireAsgnD *a = (BCWireAsgnD*)bc;
@@ -1290,7 +1293,7 @@ void BCDebugPrint_init(ByteCode *bc,char *msg,...)
 
   dp->dp_func = (BCfunc*) BCDebugPrint_exec;
   dp->dp_message = strdup(buf);
-  
+
 }
 
 /*****************************************************************************

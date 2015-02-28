@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Sep 26 18:18:20 2009
 #
@@ -96,7 +96,7 @@ proc tkg_simCheck {} {
 # start up the simulator
 #
 proc tkg_startSim {fname initTime} {
-  global simId simOn mode simExec tkg_simDelayFile tkg_simDefaultDelayFile tkg_simCustomDelay 
+  global simId simOn mode simExec tkg_simDelayFile tkg_simDefaultDelayFile tkg_simCustomDelay
   global tkg_currentFile tkg_simDebugInterface tkg_warningMode
 
   set basename ""
@@ -124,7 +124,7 @@ proc tkg_startSim {fname initTime} {
   #
   # Construct the commmand line to use for starting the simulator.
   #
-  set simCmd "$simExec -i $fname -B $basename -D [gat_computestrhash $fname] -W $tkg_warningMode -I $initTime"
+  set simCmd "$simExec -i -B $basename -D [gat_computestrhash $fname] -W $tkg_warningMode -I $initTime $fname"
 
   #
   # Start up the simulator
@@ -402,7 +402,7 @@ namespace eval Simulator {
   #
   # Apply value in dip value selector
   #
-  proc dipApply {w g} { 
+  proc dipApply {w g} {
     variable dipValue
     set q [ gat_setDip $g $dipValue($g) ]
     set dipValue($g) $q
@@ -440,10 +440,10 @@ namespace eval Simulator {
     variable dipWindow
 
     #
-    # If DIP window is already open, just raise it. 
+    # If DIP window is already open, just raise it.
     #
     if { [catch { set w $dipWindow($g) } ] } { set w "" }
-    if { $w != "" } { 
+    if { $w != "" } {
       raise $w
       return
     }
@@ -480,7 +480,7 @@ namespace eval Simulator {
     pack $w.top.label -side left -fill both -padx 2
     pack $w.top -side top -fill both
     pack $w.close -side bottom -fill both -pady 3
-    pack $w.entr $w.apply -side left -pady 5 -padx 5 
+    pack $w.entr $w.apply -side left -pady 5 -padx 5
 
     trace variable Simulator::dipValue($g) w "Simulator::dipSetIndicator $w 1"
     bind $w <Destroy> "Simulator::dipDestroy $w $g"

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue May  5 20:45:31 2009
 ****************************************************************************/
@@ -212,7 +212,7 @@ void env_updateMTCircuit()
 void env_insertModule(GModuleDef *M)
 {
   char *mflags = "";
-  
+
   if (GModuleDef_isTop(M))
     mflags = "+";
 
@@ -260,7 +260,7 @@ GCElement *env_getInterface(GCElement *g)
 {
   GModuleDef *M;
 
-  if (GCElement_getType(g) != GC_BLOCK && 
+  if (GCElement_getType(g) != GC_BLOCK &&
       GCElement_getType(g) != GC_SYMBLOCK)
     return 0;
 
@@ -513,7 +513,7 @@ void env_copy(EditState *es,const char *src,const char *dst)
 
     sprintf(buf,msgLookup("msg.modoverwt"),dst);	/* Destination module '%s' already exists.  Overwrite? */
     DoTcl("confirmMsg \"%s\" ",buf);
-    if (*TkGate.tcl->result != '1')
+    if (Tcl_GetStringResult(TkGate.tcl)[0] != '1')
       return;
 
     env_removeModule(dst,0);
@@ -542,11 +542,11 @@ void editstate_Init(EditState *es)
 EditState *new_EditState()
 {
   EditState *es;
-    
+
   es = (EditState*) ob_malloc(sizeof(EditState),"EditState");
-    
+
   editstate_Init(es);
-    
+
   return es;
 }
 
@@ -606,7 +606,7 @@ void editstate_update(EditState *es)
   scrollbar_update();
 
   /*
-   * Draw special mode-specific items 
+   * Draw special mode-specific items
    */
   switch (tkgate_currentMode()) {
   case MM_SIMULATE :
@@ -698,7 +698,7 @@ void editstate_regionUpdate(EditState *es,int xmin,int ymin,int xmax,int ymax)
   es->clip.ymin = ymin;
   es->clip.xmax = xmax;
   es->clip.ymax = ymax;
-  
+
   editstate_update(es);
 }
 
@@ -733,7 +733,7 @@ void editstate_displayPathString(EditState *cur_es)
   }
 
   if (TkGate.tcl) {
-    Tcl_SetVar(TkGate.tcl,"tkg_currentPath",path,TCL_GLOBAL_ONLY); 
+    Tcl_SetVar(TkGate.tcl,"tkg_currentPath",path,TCL_GLOBAL_ONLY);
     Tcl_SetVar(TkGate.tcl,"tkg_currentModule",cur_es->env->m_name,TCL_GLOBAL_ONLY);
   }
 }

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri May  1 20:41:18 2009
 ****************************************************************************/
@@ -27,7 +27,7 @@ static void Mux_WriteCellDef(FILE *f,GCellSpec *gcs);
 
 
 /*
- * Some of these are shared by the Demux element.  These have a MuxDemux_ prefix. 
+ * Some of these are shared by the Demux element.  These have a MuxDemux_ prefix.
  */
 void Mux_Delete(GCElement *g,GModuleDef *env,int drawp);
 void Mux_Draw(GCElement *g,int md);
@@ -40,7 +40,7 @@ void Mux_SetProp(GCElement*,const char*,const void*);
 void Mux_AddInput(EditState *es,GCElement *g);
 int MuxDemux_EditProps(GCElement *g,int isLoadDialog);
 GCElement *MuxDemux_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags);
-void Mux_VersionDelta(GCElement*,Version*); 
+void Mux_VersionDelta(GCElement*,Version*);
 GWireNode *Mux_wireSnap(GCElement *g,GWire *w,int *mod,int retry);
 
 void Demux_adjustWires(GCElement *g);
@@ -135,7 +135,7 @@ GGateInfo gate_mux_info = {
        {"Z",OUT,1,1,mux_out_loc,0}},
   {{23,8,LJ},{0,40,CT},{-23,0,RJ},{0,-33,CT}},
   {1},
-  
+
   {"Dsz","Diz",0},
 
   Mux_Make,
@@ -212,7 +212,7 @@ static void Mux_adjustWiresData(GCElement *g)
     }
     break;
   }
-  
+
   for (i = 0,w = g->wires[MUX_IN];w;i++, w = w->next) {
     wx += dx;
     wy += dy;
@@ -344,12 +344,12 @@ void Mux_AddInput(EditState *es,GCElement *g)
   for (i = 0;i < N;i++)
     if (GCElement_getPadDir(g,i) == IN && g->typeinfo->Pad[i].CanAdd)
       break;
-  
+
   if (i == N)
     return;
-  
+
   if (es) SetModified(MF_NET|MF_GATE);
-  
+
   gate_draw(g,GD_NORMAL);
   wire_addToGate(g,i,es->env,0);
   Mux_adjustWires(g);
@@ -551,7 +551,7 @@ GWireNode *Mux_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
     GPadLoc *pd = &g->typeinfo->Pad[p].Loc[g->orient];
     if (p == MUX_SEL && g->u.mux.select_side)
       pd = &mux_sel_altloc[g->orient];
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;

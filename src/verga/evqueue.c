@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "thyme.h"
 
@@ -202,7 +202,7 @@ void EvThread_process(EvThread *tev,EvQueue *q)
  *     nlsb		LSB in n to begin assignment
  *     s		Value to assign
  *     smsb,slsb	Range in s from which to copy
- *     
+ *
  *
  *****************************************************************************/
 Event *new_EvNet(Net *n,int nlsb,Value *s,int smsb,int slsb)
@@ -264,7 +264,7 @@ void EvNet_uninit(EvNet *en)
  *     task		System task to execute
  *     argc		LSB in n to begin assignment
  *     argv		Value to assign
- *     
+ *
  *
  *****************************************************************************/
 Event *new_EvStrobe(systask_f *task,TaskContext *tContext)
@@ -323,7 +323,7 @@ void EvStrobe_uninit(EvStrobe *e)
  *     net		Net to probe
  *     who		Who to report to
  *     name		Name of net
- *     
+ *
  *
  *****************************************************************************/
 Event *new_EvProbe(Net *n,const char *who,const char *name)
@@ -385,7 +385,7 @@ void EvProbe_uninit(EvProbe *e)
  *     nlsb		LSB in n to begin assignment
  *     s		Value to assign
  *     smsb,slsb	Range in s from which to copy
- *     
+ *
  *
  *****************************************************************************/
 Event *new_EvMem(Net *n,Value *addr,int nlsb,Value *s,int smsb,int slsb)
@@ -465,7 +465,7 @@ void EvMem_uninit(EvMem *em)
  *     nlsb		LSB in n to begin assignment
  *     s		Value to assign
  *     smsb,slsb	Range in s from which to copy
- *     
+ *
  *
  *****************************************************************************/
 Event *new_EvDriver(Net *n,int id,int nlsb,Value *s,int smsb,int slsb)
@@ -743,7 +743,7 @@ void EvQueue_go(EvQueue *Q)
  * end of an epoch and are not automatically removed from the queue.  It is
  * similar to the monitor queue except there can be multiple events in the
  * queue.
- * 
+ *
  *****************************************************************************/
 void EvQueue_enqueueFinal(EvQueue *Q, const char *key, Event *e)
 {
@@ -757,7 +757,7 @@ void EvQueue_enqueueFinal(EvQueue *Q, const char *key, Event *e)
  * Parameter:
  *     Q		Queue in which to insert event
  *     key		Name of the event to be remove
- * 
+ *
  *****************************************************************************/
 void EvQueue_removeFinal(EvQueue *Q, const char *key)
 {
@@ -781,7 +781,7 @@ void EvQueue_removeFinal(EvQueue *Q, const char *key)
  * This queue is used for zero delay '#0' statements.  These events are issued
  * after all events in the active event queue, but before assignments and
  * strobe events.
- * 
+ *
  *****************************************************************************/
 void EvQueue_enqueueInactive(EvQueue *Q, Event *e)
 {
@@ -799,7 +799,7 @@ void EvQueue_enqueueInactive(EvQueue *Q, Event *e)
  *
  * The strobe queue is primarily used to implement the $strobe task.  Events
  * in this queue are issued last in an epoch.
- * 
+ *
  *****************************************************************************/
 void EvQueue_enqueueStrobe(EvQueue *Q, Event *e)
 {
@@ -819,7 +819,7 @@ void EvQueue_enqueueStrobe(EvQueue *Q, Event *e)
  * at the end of every epoch.  Queueing an new event when there is alreay
  * an evenit in the queue causes the old event to be deleted.  This "queue"
  * is primarily used to implement the $montor() task.
- * 
+ *
  *****************************************************************************/
 void EvQueue_enqueueMonitor(EvQueue *Q, Event *e)
 {
@@ -836,7 +836,7 @@ void EvQueue_enqueueMonitor(EvQueue *Q, Event *e)
  * Parameter:
  *     Q		Queue in which to insert event
  *     E		Event to be placed in queue
- * 
+ *
  *****************************************************************************/
 void EvQueue_enqueue(EvQueue *Q,Event *E)
 {
@@ -859,7 +859,7 @@ void EvQueue_enqueue(EvQueue *Q,Event *E)
     Q->eq_wheelTail[s] = E;
   } else {
     /*
-     * Insert event into empty slot queue 
+     * Insert event into empty slot queue
      */
     Q->eq_wheelTail[s] = Q->eq_wheelHead[s] = E;
   }
@@ -880,7 +880,7 @@ void EvQueue_enqueueAtHead(EvQueue *Q, Event *E)
   if (!Q->eq_wheelHead[s])
     Q->eq_wheelTail[s] = E;
 
-  E->ev_base.eb_next = Q->eq_wheelHead[s]; 
+  E->ev_base.eb_next = Q->eq_wheelHead[s];
   Q->eq_wheelHead[s] = E;
   Q->eq_numPending++;
 }
@@ -1038,7 +1038,7 @@ void EvQueue_remove(EvQueue *Q,Event *E)
     /*
      * Event is in overflow list
      */
-    
+
     Q->eq_overflowQ = EventList_remove(Q->eq_overflowQ, E);
   }
 }
@@ -1172,7 +1172,7 @@ void EvQueue_mainEventLoop(EvQueue *Q)
     if (do_input_check) {
       if (Q->eq_realQ) {
 	struct timeval tv;
-	simtime_t now; 
+	simtime_t now;
 
 	gettimeofday(&tv,0);
 	now = tv_to_ms(&tv);
@@ -1247,7 +1247,7 @@ void EvQueue_interactiveMainEventLoop(EvQueue *Q)
 	} else {
 	  if (Q->eq_realQ) {
 	    struct timeval tv;
-	    simtime_t now; 
+	    simtime_t now;
 
 	    gettimeofday(&tv,0);
 	    now = tv_to_ms(&tv);
@@ -1267,7 +1267,7 @@ void EvQueue_interactiveMainEventLoop(EvQueue *Q)
 
       /*
        * Get the next event in this epoch.  Process it if we found one otherwise
-       * advance time to the next epoch. 
+       * advance time to the next epoch.
        */
       e = EvQueue_dequeue(Q);
       if (e) {
@@ -1276,7 +1276,7 @@ void EvQueue_interactiveMainEventLoop(EvQueue *Q)
       } else {
 	/*
 	 * Advance simulator time and check overflow queue to see if we can move
-	 * overflow events to the main queue. 
+	 * overflow events to the main queue.
 	 */
 	if (Q->eq_monitoredChange)
 	  EvQueue_doFinal(Q);
@@ -1328,7 +1328,7 @@ void EvQueue_interactiveMainEventLoop(EvQueue *Q)
  * Schedule a simulator stop at some time in the future.
  *
  * Parameters:
- *     Q		Queue to be stopped 
+ *     Q		Queue to be stopped
  *     dt		Relative time to stop execution.
  *
  * This function will schedule a $stop of the simulation 'dt' epochs in the
@@ -1354,7 +1354,7 @@ void EvQueue_stopAfter(EvQueue *Q,deltatime_t dt)
  * Schedule a clock triggered stop at some time in the future.
  *
  * Parameters:
- *     Q		Queue to be stopped 
+ *     Q		Queue to be stopped
  *     n		Net to watch for clock transition
  *     tt		Type of transition to trigger on.
  *     dt		Time after clock event to schedule $stop
@@ -1385,7 +1385,7 @@ void EvQueue_clockStop(EvQueue *Q,Net *n,int numEdge,transtype_t tt,deltatime_t 
  * Receive notification that a clock signal has changed value.
  *
  * Parameters:
- *     Q		Event queue 
+ *     Q		Event queue
  *     n		Net that has changed
  *     tt		Type of transition
  *
@@ -1435,7 +1435,7 @@ void EvQueue_clockNotify(EvQueue *Q,Net *n, transtype_t tt)
  * Enqueue an event after a specific amount of real elapsed time in milliseconds.
  *
  * Parameters:
- *     Q		Event queue 
+ *     Q		Event queue
  *     E		Event to execute at timer expiration
  *     t		Absolute time of event.
  *

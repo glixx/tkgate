@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 /*###########################################################################*
  *
@@ -96,13 +96,13 @@ GWireList *wire_unlink(GWireList *wl,GWire *w)
 /*****************************************************************************
  *
  * Creates a new endpoint of a wire
- * 
+ *
  * Parameters:
  *    M			Module in which to create new wire end.
  *    net		Net to which new wire end will belong
  *    doNodes		Non-zero if wire nodes should also be created.
  *
- * Returns:		New wire object. 
+ * Returns:		New wire object.
  *
  *****************************************************************************/
 GWire *wire_newend(GModuleDef *M,GNet *net,int doNodes)
@@ -116,7 +116,7 @@ GWire *wire_newend(GModuleDef *M,GNet *net,int doNodes)
   w->name = NULL;
   w->xanchor = 0;
   w->yanchor = 0;
-  w->orient = 0; 
+  w->orient = 0;
   w->wtype = 0;
   w->PadNum = 0;
   w->WireDir = 0;
@@ -159,6 +159,8 @@ GWireNode *new_GWireNode()
 
   n = (GWireNode *) ob_malloc(sizeof(GWireNode),"GWireNode");
 
+  n->x = 0;
+  n->y = 0;
   n->out = NULL;
   n->in = NULL;
   n->end = NULL;
@@ -251,10 +253,10 @@ int wire_new(GModuleDef *M,GWire **e1,GWire **e2)
   GNet *net;
 
   net = new_GNet(0,M);				/* Create a whole new net */
-  wire_newNetSegment(M,net,e1,e2);		/* Create wire segments on net */ 
+  wire_newNetSegment(M,net,e1,e2);		/* Create wire segments on net */
   if (e1)
     (*e1)->nodes->showSize = 1;
-  
+
 
   return 0;
 }
@@ -457,7 +459,7 @@ static void wire_gateadd(GCElement *g,GWire *e1,GWire *e2,int p,int dir,int inve
  *    p			Pad # on which to add wire.
  *    M			Module in which gate is defined.
  *    invertp		Non-zero to add inverter to wire.
- *  
+ *
  * Returns:		Non-zero on error.
  *
  *****************************************************************************/

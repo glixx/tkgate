@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 /*
  *    Declarations for circuit representation structures.
@@ -34,7 +34,7 @@
 #define NUMORIENTS	4		/* Number of orientations */
 #define SNAPSIZE	6		/* */
 #define DEFAULT_PADMAX	16		/* Maximum number of "pads" on a gate */
-#define MAXKBINDS	16		/* Maximum number of key bindings for creating a gate */ 
+#define MAXKBINDS	16		/* Maximum number of key bindings for creating a gate */
 #define MAKEENTRYMAX	128		/* Max entries on a make page */
 #define NETALIASLIST_STEPSIZE 5		/* Allocation increment for net alias lists */
 #define TKGATE_STUBLEN	15		/* Default length of wires on new gates */
@@ -52,7 +52,7 @@
 #define SELMODETHRESH	(15*15)		/* Drag distance to activate select mode */
 
 /*
- * Default prefix 
+ * Default prefix
  */
 #define TKGATE_DEFAULT_PREFIX "_GG"	/* Prefix for tkgate primitive cells */
 

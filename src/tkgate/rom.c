@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Sep 26 18:24:54 2009
 ****************************************************************************/
@@ -104,7 +104,7 @@ GGateInfo gate_rom_info = {
   {1},
 
   {"Dout","Dread",0},
-  
+
   RamRom_Make,
   Rom_WriteCellDef,
   Generic_Init,
@@ -129,7 +129,7 @@ GGateInfo gate_rom_info = {
 };
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for roms.
  *
  * Parameters:

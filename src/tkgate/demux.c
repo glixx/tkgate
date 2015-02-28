@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Jan 19 18:14:35 2009
 ****************************************************************************/
@@ -123,7 +123,7 @@ GGateInfo gate_demux_info = {
        {"Z",OUT,1,2,demux_out_loc,1}},
   {{23,0,LJ},{0,40,CT},{-23,8,RJ},{0,-33,CT}},
   {1},
-  
+
   {"Dez","Dfz","Dsz",0},
 
   Demux_Make,
@@ -200,7 +200,7 @@ static void Demux_adjustWiresData(GCElement *g)
     }
     break;
   }
-  
+
   for (i = 0,w = g->wires[DEMUX_OUT];w;i++, w = w->next) {
     wx += dx;
     wy += dy;
@@ -289,7 +289,7 @@ GCElement *Demux_Make(EditState **es,GModuleDef *env,int GType,
     const char *Invert,*Pins;
     int N = GCElement_numPads(g);
 
-    
+
     Invert = seekOption("-invert",options,nOptions);
     Pins = seekOption("-pins",options,nOptions);
 
@@ -441,7 +441,7 @@ GWireNode *Demux_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
       pd = &demux_s_loc[g->orient];
     if (p == DEMUX_S && g->u.mux.select_side)
       pd = &demux_en_loc[g->orient];
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;
@@ -455,12 +455,12 @@ void Demux_AddOutput(EditState *es,GCElement *g)
   for (i = 0;i < N;i++)
     if (GCElement_getPadDir(g,i) == OUT && GCElement_getPadCanAdd(g,i))
       break;
-  
+
   if (i == N)
     return;
-  
+
   if (es) SetModified(MF_GATE|MF_NET);
-  
+
   gate_draw(g,GD_NORMAL);
   wire_addToGate(g,i,es->env,0);
   Demux_adjustWires(g);
@@ -479,7 +479,7 @@ void Demux_VerSave(FILE *f,GCElement *g)
 }
 
 /*****************************************************************************
- * 
+ *
  * Generate primitive cell definition for demuxes.
  *
  * Parameters:
@@ -493,7 +493,7 @@ static void Demux_WriteCellDef(FILE *f,GCellSpec *gcs)
   int selBits = required_bits(gcs->gc_multiPad);
   int inBits = gcs->gc_numBits;
   PrimParm primParm;
-  int i; 
+  int i;
 
   PrimParm_init(&primParm);
   PrimParm_intSet(&primParm,"NUMOUT",multiPad);
@@ -510,7 +510,7 @@ static void Demux_WriteCellDef(FILE *f,GCellSpec *gcs)
   } else {
     char *s = PrimParm_get(&primParm,"invZ");
     sprintf(s,"%d'b",multiPad);
-    s += strlen(s); 
+    s += strlen(s);
     for (i = 0;i < multiPad;i++) {
       *s++ = (gcs->gc_invSpec[i] == 'N') ? '1' : '0';
     }

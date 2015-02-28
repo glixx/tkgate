@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2006 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,17 +10,17 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jan  9 08:57:44 2009
 
 
 #############################################################################
 #
-# The info panel (InfoPanel) is used to 
-#  * display informational messages in a scrollable window 
+# The info panel (InfoPanel) is used to
+#  * display informational messages in a scrollable window
 #  * display current breakpoint status and edit breakpoints
 #  * display active scripts.
 #
@@ -58,7 +58,7 @@ namespace eval InfoPanel {
     }
 
     switch $action {
-      Edit { 
+      Edit {
 	set split [max $tkg_mmSplitEdit $tkg_mmSplitEditMin ]
 	set active_mode Edit
       }
@@ -86,7 +86,7 @@ namespace eval InfoPanel {
 
     set noshow 0
     set color ""
-    parseargs $args {-noshow -color} 
+    parseargs $args {-noshow -color}
 
     if { !$noshow } {
       setMode Log
@@ -113,7 +113,7 @@ namespace eval InfoPanel {
     frame $w -padx 2 -pady 2
     set log_w $w.text
     text $w.text -background white -yscrollcommand "$w.vb set" -state disabled -takefocus 0  -height 0 -relief sunken
-    scrollbar $w.vb -command "$w.text yview" -takefocus 0 
+    scrollbar $w.vb -command "$w.text yview" -takefocus 0
     pack $w.text -side left -expand 1 -fill both
     pack $w.vb -side left -fill y
   }

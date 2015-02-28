@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Sep  9 23:51:04 2006
 ****************************************************************************/
@@ -37,8 +37,8 @@ struct SpecifyStat_str {
   spectype_t		ss_ptype;	/* Type of connection */
   List/*Expr*/		ss_from;	/* From net literals */
   List/*Expr*/		ss_to;		/* To net literals */
-  Expr			*ss_delay;	/* Delay expression */ 
-  unsigned		ss_idelay;	/* Computed delay value (must computed before use) */ 
+  Expr			*ss_delay;	/* Delay expression */
+  unsigned		ss_idelay;	/* Computed delay value (must computed before use) */
 };
 
 /*****************************************************************************

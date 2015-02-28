@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "thyme.h"
 
@@ -100,7 +100,7 @@ static int cur_getDeclContext()
  *     fileName			File name to read
  *     dm			Dynamic module object to use
  *
- * Dynamic module are modules that are read and parsed at run-time. 
+ * Dynamic module are modules that are read and parsed at run-time.
  *
  *****************************************************************************/
 int VerilogLoadScript(const char *fileName,DynamicModule *dm)
@@ -133,7 +133,7 @@ int VerilogLoadScript(const char *fileName,DynamicModule *dm)
   cur.isRedef = 0;
   current_script = 0;
 
-  return (errCount == 0) ? 0 : -1; 
+  return (errCount == 0) ? 0 : -1;
 }
 
 /*****************************************************************************
@@ -273,7 +273,7 @@ void VerBeginDecls(int dtype,VRange *range)
 
 /******************************************************************************
  *
- * Declare a variable in the current context with the current type 
+ * Declare a variable in the current context with the current type
  *
  * Parameters:
  *     name		Name of the variable
@@ -306,7 +306,7 @@ void VerDecl(const char *name,VRange *addrRange)
      * error.
      */
     if ( (NT_GETIO(n->n_type) == NT_P_OUTPUT)
-    	 && (NT_GETBASE(n->n_type) == NT_WIRE) 
+    	 && (NT_GETBASE(n->n_type) == NT_WIRE)
          && (NT_GETBASE(ntype) == NT_REG)) {
 
       if(addrRange)
@@ -551,7 +551,7 @@ List *VerListPrepend(void *vi,List *L)
 
 /*****************************************************************************
  *
- * Create a conditioned (delay or event trigger) statement 
+ * Create a conditioned (delay or event trigger) statement
  *
  * Parameters:
  *      e		Condition expression
@@ -576,7 +576,7 @@ StatDecl *VerCondStat(Expr *e,StatDecl *s)
  * Set the module type for instance creation.
  *
  * Parameters:
- *      name		Name of module 
+ *      name		Name of module
  *
  *****************************************************************************/
 void VerModDecl(const char *name)
@@ -686,7 +686,7 @@ void VerSpecTask(const char *name,List *args)
 
 /*****************************************************************************
  *
- * Path delay specification 
+ * Path delay specification
  *
  * Parameters:
  *      cond		Condition under which path delay applies
@@ -731,7 +731,7 @@ void VerSpecParam(const char *name,Expr *value)
  * Set the type for declaring built-in gates ("and", "or", etc.)
  *
  * Parameters:
- *      gtype		Type code 
+ *      gtype		Type code
  *      delay		Delay expression
  *
  *****************************************************************************/
@@ -774,7 +774,7 @@ void VerGateInst(const char *iname, VRange *range, List *ports)
  * used to indicate what type of module is being declared.  The primary effect
  * on verga is to do additional consistency checks if the tags exist and to
  * slightly modify the way errors are reported.
- * 
+ *
  *****************************************************************************/
 void VerSpecialTag(const char *tag)
 {

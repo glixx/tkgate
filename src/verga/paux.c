@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <unistd.h>
 #include <string.h>
@@ -28,7 +28,7 @@ extern int lex_verilog_num;
 /*****************************************************************************
  *
  * List of all Verilog reserved words.  These are used by the ycIsKW() function
- * to indicate these names should not be used as identifiers in user circuits. 
+ * to indicate these names should not be used as identifiers in user circuits.
  * This table may include entries not in the lex_verilog_words to cover verilog
  * reserved words that are not handled by the tkgate verilog simulator.
  *
@@ -330,7 +330,7 @@ int ycDirectiveText(char *token)
 
   for (p = token;*p;p++)
     if (*p == '\n') {
-      Place_incLineno(&curPlace,1); 
+      Place_incLineno(&curPlace,1);
       if (p[-1] == '\\') p[-1] = ' ';
       p[0] = ' ';
     }

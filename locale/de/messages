@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,11 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by bartke Tue Feb 24 00:04:27 CET 2009
+#
 
 ##############################################################################
 #
@@ -136,7 +137,7 @@ sidetab.ports Ports
 
 #############################################################################
 #
-# MsgMgr strings (including breakpoint and script handling) 
+# MsgMgr strings (including breakpoint and script handling)
 #
 @mm.width	7
 mm.add		Hinzufügen...
@@ -151,7 +152,7 @@ mm.disable	Sperren
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
 # of a number and a colon.   If this prefix exists, it indicates the character
 # position in the string that will be underlined.  This enables keyboard shortcuts
-# using the Alt key. 
+# using the Alt key.
 #
 menu.file	0:Datei
 menu.edit	0:Editieren
@@ -186,16 +187,16 @@ menu.edit.find		0:Suchen...
 menu.edit.zoomin	5:Zoom In
 menu.edit.zoomout	5:Zoom Out
 
-menu.edit.rshift	16:Bitverschiebung Rechts 
-menu.edit.lshift	16:Bitverschiebung Links 
+menu.edit.rshift	16:Bitverschiebung Rechts
+menu.edit.lshift	16:Bitverschiebung Links
 menu.edit.ushift	16:Bitverschiebung Auf
-menu.edit.dshift	17:Bitverschiebung Ab 
+menu.edit.dshift	17:Bitverschiebung Ab
 menu.edit.cwrotate	11:Bitrotieren rechts
 menu.edit.ccwrotate	15:Bitrotieren links
 menu.edit.pcwrotate	12:Portrotieren rechts
 menu.edit.pccwrotate	16:Portrotieren links
 menu.edit.autobold	Bits fett anzeigen
-menu.edit.resize	Bitmapgröße anpassen 
+menu.edit.resize	Bitmapgröße anpassen
 
 menu.tool.move		0:Bewegen/Verbinden
 menu.tool.delg		0:Gatter löschen
@@ -256,7 +257,7 @@ menu.module.setroot	1:Zur Wurzel machen...
 menu.module.prop	0:Eigenschaften...
 menu.module.interface		0:Schnittstelle
 menu.module.interface.set	0:Definieren
-menu.module.interface.update  0:Mit Standard synchr. 
+menu.module.interface.update  0:Mit Standard synchr.
 menu.module.interface.updateall 0:Alles mit Std. synchr...
 menu.module.interface.edit	0:Editieren...
 menu.module.interface.auto  1:Automatisch erzeugen...
@@ -409,10 +410,10 @@ pop.wire.addseg		Leitungssegment hinzufügen
 pop.wire.prop		Schaltungseigenschaften...
 pop.wire.hidesize	Bitbreite verstecken
 pop.wire.showsize	Bitbreite anzeigen
-pop.wire.hidelabel	Namen verstecken 
+pop.wire.hidelabel	Namen verstecken
 pop.wire.hidealllabel	Alle Namen verstecken
 pop.wire.clearalllabel	Alle Namen löschen
-pop.wire.showlabel	Namen anzeigen 
+pop.wire.showlabel	Namen anzeigen
 
 pop.gate.open		Öffnen
 pop.gate.close		Schließen
@@ -503,7 +504,7 @@ pop.library.close Schließen
 #symed.update		Auffrischen
 symed.tab.normal	Nicht ausgewählt
 symed.tab.select	Ausgewählt
-symed.link		Ausgewähltes mit Unausgewähltem verlinken 
+symed.link		Ausgewähltes mit Unausgewähltem verlinken
 # width of symbol editor tabs
 
 
@@ -559,15 +560,15 @@ db.mod.netlist	Bauteilliste
 db.mod.hdl	HDL
 
 db.mod.netexpl	-begin-
-Moduldefinition mit einem 
+Moduldefinition mit einem
 graphischen Editor,
-um Leitungen zwischen 
+um Leitungen zwischen
 Komponenten zu ziehen
 -end-
 
 db.mod.hdlexpl	-begin-
 Moduldefinition mit einem
-Texteditor, um das Verhalten 
+Texteditor, um das Verhalten
 in Verilog zu beschreiben.
 -end-
 
@@ -577,7 +578,7 @@ in Verilog zu beschreiben.
 db.err.title    TkGate: Fehlerliste
 db.err.caption		Fehlerliste
 db.err.explain.warn -fillbegin-
-In der Schaltung gab es Warnhinweise, die Simulation wird aber fortgesetzt. 
+In der Schaltung gab es Warnhinweise, die Simulation wird aber fortgesetzt.
 Im Editiermodus kann man die Warnhinweise sehen.
 -end-
 db.err.explain.err  -fillbegin-
@@ -597,7 +598,7 @@ db.net.caption  Netzeigenschaften
 db.net.name	Netzname
 db.net.hide	Name verstecken
 db.net.bits	Bitbreite
-db.net.type	Netztyp	
+db.net.type	Netztyp
 db.net.port	Porttyp
 db.net.in	Eingang
 db.net.out	Ausgang
@@ -612,7 +613,7 @@ db.newcirc.title  TkGate: Neue Schaltung
 db.newcirc.directory	Verzeichnis:
 db.newcirc.cap		Neue Schaltung
 db.newcirc.exp		-fillbegin-
-Die aktuelle Schaltung verwerfen und 
+Die aktuelle Schaltung verwerfen und
 eine neue Schaltung bearbeiten.
 -end-
 db.newcirc.file		Dateiname
@@ -623,7 +624,7 @@ db.newcirc.topname	Name des obersten Moduls
 ##############################################################################
 # Gate dialog box
 #
-db.gate.title   TKGate: Gattereigenschaften 
+db.gate.title   TKGate: Gattereigenschaften
 db.gate.signam		Signalname
 db.gate.portnam		Portname
 db.gate.iotype		Typ
@@ -661,19 +662,19 @@ db.gate.add		Hinzufügen
 db.gate.ff.type		D-Flipflop Ausrichtung
 db.gate.ff.normal.hdr	Normal
 db.gate.ff.normal.exp	-fillbegin-
-Datenfluß im D-Flipflop 
+Datenfluß im D-Flipflop
 von links nach rechts.
 -end-
 db.gate.ff.reverse.hdr	Umgekehrt
 db.gate.ff.reverse.exp	-fillbegin-
-Datenfluß im D-Flipflop 
+Datenfluß im D-Flipflop
 von rechts nach links.
 -end-
 
 db.gate.jkff.type   JK Flipflop Ausrichtung
 db.gate.jkff.normal.hdr   Normal
 db.gate.jkff.normal.exp -fillbegin-
-Datenfluß im JK-Flipflop 
+Datenfluß im JK-Flipflop
 von links nach rechts.
 -end-
 db.gate.jkff.reverse.hdr  Reversed
@@ -704,7 +705,7 @@ aus den verbundenen Teilschaltungen erschlossen.
 -end-
 
 db.gate.cat.multin.exp	-fillbegin-
-Die Seite mit Mehrfachleitung wird 
+Die Seite mit Mehrfachleitung wird
 immer als Eingang angenommen.
 -end-
 
@@ -715,7 +716,7 @@ immer als Eingang angenommen.
 
 db.gate.cat.tran.exp	-fillbegin-
 Bidirektionaler Signalfluß (transmission)
-ist erlaubt. Kann nicht mit Schaltern 
+ist erlaubt. Kann nicht mit Schaltern
 oder Registern verbunden werden.
 -end-
 
@@ -765,13 +766,13 @@ durch spezielle Werte für diese Instanz festgelegt werden.
 -end-
 
 db.gate.tab.Parameters.exp	-fillbegin-
-Festlegen der Modulparameter dieser Modulinstanz, falls welche 
-definiert sind. Modulparameter werden zur Definition von 
+Festlegen der Modulparameter dieser Modulinstanz, falls welche
+definiert sind. Modulparameter werden zur Definition von
 Verzögerungen und konstanten Werten in Moduln verwendet.
 -end-
 
 db.gate.tab.details.exp -fillbegin-
-Genaue Festlegung der typspezifischen 
+Genaue Festlegung der typspezifischen
 Eigenschaften eines Gatters.
 -end-
 
@@ -797,7 +798,7 @@ db.gate.tab.JKFF.exp	`db.gate.tab.details.exp
 
 db.gate.tab.COMMENT.exp	-fillbegin-
 Festlegung des Textes für einen Kommentar.
-In beschränktem Umfang können HTML Tags 
+In beschränktem Umfang können HTML Tags
 einschließlich Links verwendet werden.
 -end-
 
@@ -812,11 +813,11 @@ db.gate.mparm.value	Wert
 db.gate.mparm.exampleA	-begin-
 Dieses Modul hat keinerlei Parameter. Parameter
 können zu Verilog-Textmodulen hinzugefügt werden.
-Der Wert jedes Parameters kann für jede Instanz 
+Der Wert jedes Parameters kann für jede Instanz
 durch diese Dialogbox konfiguriert werden. Modul-
 Parameter werden als geklammerte Liste deklariert,
 die mit einem # beginnt. Hier ist ein Beispiel einer
-Moduldeklaration mit einem Parameter namens 
+Moduldeklaration mit einem Parameter namens
 "base_value", der einen Standardwert von 1'b1 besitzt.
 -end-
 db.gate.mparm.exampleB	-begin-
@@ -825,12 +826,12 @@ module foo #(.base_value(1'b1)) (Z,A,B);
 endmodule
 -end-
 
-db.gate.switch.state Initiale Schalterstellung 
+db.gate.switch.state Initiale Schalterstellung
 
 db.gate.switch.state.on.hdr Schalter Ein
 db.gate.switch.state.on.exp Schalter beginnt Simulation im Ein-Zustand.
 db.gate.switch.state.off.hdr  Schalter Aus
-db.gate.switch.state.off.exp Schalter beginnt Simulation im Aus-Zustand. 
+db.gate.switch.state.off.exp Schalter beginnt Simulation im Aus-Zustand.
 
 db.gate.switch.shownet  Zeige den Netznamen an
 db.gate.switch.shownet.on.hdr Zeigen
@@ -844,7 +845,7 @@ db.gate.dip.value.hex Hexwert:
 @db.gate.dip.value.exp.width  150
 
 db.gate.dip.shownet   Zeige den Netznamen
-db.gate.dip.shownet.on.hdr Zeigen 
+db.gate.dip.shownet.on.hdr Zeigen
 db.gate.dip.shownet.on.exp  Zeige den Namen des Netzes neben dem DIP-Schalter an.
 db.gate.dip.shownet.off.hdr Verstecken
 db.gate.dip.shownet.off.exp Zeige keinen Netznamen neben dem DIP-Schalter an.
@@ -921,12 +922,12 @@ Plaziere den Enable-Eingang auf der rechten DECODER-Seite.
 
 
 db.gate.aox.extbaruse	Nutzung von Erweiterungsbalken
-db.gate.aox.use.hdr	Erweiterungsbalken 
-db.gate.aox.nouse.hdr	Keine Erweiterungsbalken 
+db.gate.aox.use.hdr	Erweiterungsbalken
+db.gate.aox.nouse.hdr	Keine Erweiterungsbalken
 db.gate.aox.use.exp	-fillbegin-
 Beim Hinzufügen von Eingängen an
 Grundgattern (AND, OR, etc.) werden
-diese an Erweiterungsbalken 
+diese an Erweiterungsbalken
 angebracht.
 -end-
 db.gate.aox.nouse.exp	-fillbegin-
@@ -982,7 +983,7 @@ db.hdl.ignore		Ignorieren
 db.hdl.autoeditcap	Der Name paßt nicht
 
 db.hdl.autoeditexp		-fillbegin-
-Die Textbeschreibung des Moduls paßt nicht 
+Die Textbeschreibung des Moduls paßt nicht
 zum erwarteten Namen. Wähle eine der Optionen
 rechts, um dieses Problem zu beseitigen.
 -end-
@@ -1061,7 +1062,7 @@ print.printtrace.cap		Signaldiagramm drucken
 print.printcirc.cap		Schaltung drucken
 print.printcirc.out.exp		-fillbegin-
 Wahl der Druckausgabe:
-direkt zum Drucker oder 
+direkt zum Drucker oder
 in eine PostScript-Datei.
 -end-
 
@@ -1071,8 +1072,8 @@ Seitenaufbau und den Drucker.
 -end-
 
 print.printcirc.mod.exp		-fillbegin-
-Auswahl der zu druckenden 
-Module, Einstellung der 
+Auswahl der zu druckenden
+Module, Einstellung der
 Optionen für die Darstellung.
 -end-
 
@@ -1115,9 +1116,9 @@ opt.print		Drucken
 opt.print.output  Ausgabe
 opt.print.content Inhalt
 opt.simulate		Simulieren
-opt.simulate.basic Grundlegendes 
+opt.simulate.basic Grundlegendes
 opt.simulate.tech Technologie
-opt.simulate.error Fehlerbehandlung 
+opt.simulate.error Fehlerbehandlung
 opt.library		Bibliotheken
 opt.library.path  Pfad
 opt.library.load  Autom. Laden
@@ -1173,7 +1174,7 @@ opt.freq		Intervall
 opt.beak		Sondermodi einstellen
 opt.bat			Bat
 opt.trek		Star Trek
-opt.miles		Heinrich 
+opt.miles		Heinrich
 opt.contver		Automatische Integritätsprüfung
 opt.showsimcmd		Anzeige der Simulationsgeschichte
 opt.estepsz		Epochen Schrittweite
@@ -1271,7 +1272,7 @@ opt.sec.enqueue		$tkg$recv() und $tkg$send() Systemroutinen einschalten.
 
 opt.sec.handle		Behandlung von Sicherheitsverletzungen
 opt.sec.stop		Beenden des Simulators bei Nutzung ausgeschalteter Features.
-opt.sec.warn		Anzeige einer Warnung bei Nutzung ausgeschalteter Features. 
+opt.sec.warn		Anzeige einer Warnung bei Nutzung ausgeschalteter Features.
 opt.sec.ignore		Ignoriere versuchte Benutzung von ausgeschalteten Features.
 
 opt.html.linkopts	Link Optionen
@@ -1491,7 +1492,7 @@ find.dom.nets		Schaltungen
 find.dom.text		Kommentartext
 
 find.search		Suchen:
-find.target		Ziel	
+find.target		Ziel
 
 #
 # These are special tags used to indicate the image file to be used for
@@ -1597,7 +1598,7 @@ libmgr.status.unload	Nicht geladen
 libmgr.status.loadp	[Geladen]
 libmgr.status.unloadp	[Nicht geladen]
 libmgr.exp		-fillbegin-
-Wähle zu ladende oder zu entfernende 
+Wähle zu ladende oder zu entfernende
 Bibliotheken aus.
 -end-
 libmgr.load		Laden
@@ -1616,7 +1617,7 @@ Editiermodus der Schaltung geöffnet werden.
 break.tab		Haltepunkte
 break.id		ID
 break.state		S
-break.condition	Bedingung	
+break.condition	Bedingung
 break.value		Wert
 
 
@@ -1672,7 +1673,7 @@ err.netbcrename		Bezeichner umbenannt in '%s' wegen illegaler Zeichen.
 err.netconfnet		Bezeichner umbenannt in '%s' wegen Konflikten.
 err.netconfgat		Bezeichner umbenannt in '%s' um Konflikt mit Grundgatternamen zu vermeiden.
 err.netconfkw		Bezeichner umbenannt in '%s' um Konflikt mit Schlüsselwort zu vermeiden.
-err.badconsame		Keine Verbindung, weil Leitungen Teil desselben Netzes sind. 
+err.badconsame		Keine Verbindung, weil Leitungen Teil desselben Netzes sind.
 err.badconptsp		Keine Verbindung, weil beide Leitungen Modulports oder Versorgungsleitungen sind.
 err.badconbitw		Keine Verbindung, weil die Bitbreiten nicht zusammenpassen.
 err.badrange		Nichtpositiver Bereich für Signaldiagramm nicht erlaubt.
@@ -1702,7 +1703,7 @@ err.sim.isrun		Simulator läuft bereits (Beenden mit 'Ctrl-s e').
 err.sim.run		Laufzeitfehler Zeitpunkt %s.
 err.sim.cmd		Interner Fehler (Befehl)
 
-err.noteditpchg		Eigenschaften können nur im Edit-Modus geändert werden.	
+err.noteditpchg		Eigenschaften können nur im Edit-Modus geändert werden.
 err.badeditop		Illegale Operation im Schnittstellen-Editiermodus.
 err.badopen		Datei '%s' kann nicht geöffnet werden.
 err.badlibopen		Bibliotheksdatei '%s' kann nicht geöffnet werden.
@@ -1727,7 +1728,7 @@ Die Funktion 'Springe-zum-Modul' kann bei der
 Simulation und bei der Analyse Kritischer Pfade
 nicht genutzt werden. Stattdessen sollte von
 Hand zum Zielblock navigiert werden, indem
-Module selektiert und mit der Taste '>' geöffnet 
+Module selektiert und mit der Taste '>' geöffnet
 werden. Das Modul kann mit der Taste '<' wieder
 verlassen werden.
 -end-
@@ -1782,7 +1783,7 @@ err.yy.badlocale  Unbekannte locale '%s' in der Datei.  Benutze die engl. locale
 
 err.corruptnewsave	-fillbegin-
 TkGate konnte die Datei in '%s' sichern, sie scheint aber
-korrupt zu sein. Sind Aufsetzpunkte definiert: Lade eine 
+korrupt zu sein. Sind Aufsetzpunkte definiert: Lade eine
 der Checkpoint Dateien.  'tkgate -V' prüft die Integrität
 einer abgespeicherten Datei.
 -end-
@@ -1802,19 +1803,19 @@ Datei/Verzeichnisrechte und/oder verfügbaren Plattenplatz überprüfen.
 
 err.nosafesave		-fillbegin-
 Beim Versuch der Sicherung von Datei '%s' ist ein Problem aufgetreten.
-Es ist möglich, einen erneuten Versuch ohne Sicherungsvalidierung zu 
+Es ist möglich, einen erneuten Versuch ohne Sicherungsvalidierung zu
 starten. Bei Antwort "nein" bleibt die Originaldatei unverändert.
 Bei Antwort "ja" wird die Originaldatei überschrieben, wird aber
-ggf. beim Auftreten eines Fehlers zerstört. Soll eine unvalidierte 
+ggf. beim Auftreten eines Fehlers zerstört. Soll eine unvalidierte
 Sicherung versucht werden?
 -end-
 
 err.noback		-fillbegin-
-Die Datei wurde von TkGate, 
-Version %s, erzeugt und ist 
-nach Sichern mit der aktuellen 
+Die Datei wurde von TkGate,
+Version %s, erzeugt und ist
+nach Sichern mit der aktuellen
 Version %s möglicherweise
-von früheren Versionen nicht 
+von früheren Versionen nicht
 mehr lesbar.
 -end-
 
@@ -1958,7 +1959,7 @@ verga.err.BADSPECLVAL		Bitbereiche sind bei Pfadverzögerungs-Spezifikatoren nic
 verga.err.PATHDITEM		Nicht unterstütztes Konstrukt in Modul mit Pfadverzögerungs-Spezifikation.
 verga.err.PATHDINOUT		Benutzung von 'inout' in Modul mit Pfadverzögerungs-Spezifikation wird nicht unterstützt.
 verga.err.PATHDLOOP		Schleifen in Modulen mit Pfadverzögerungs-Spezifikation werden nicht unterstützt.
-verga.err.PATHDCOND   Setzen von DelaMust durch # Ausdruck und Blockspezifikation. 
+verga.err.PATHDCOND   Setzen von DelaMust durch # Ausdruck und Blockspezifikation.
 verga.err.TASKREDEF		Redefinition eines Task oder einer Funktion '%s' in Modul '%s'.
 verga.err.TASKASFUNC		Task '%s' wird als Funktion benutzt.
 verga.err.FUNCASTASK		Funktion '%s' wird als Task benutzt.
@@ -2036,7 +2037,7 @@ ho.opt.tool.simaux		Weitere Simulatorbefehle (Lesen und Schreiben von Speicherda
 ho.opt.tool.simmode   Im Simulator zwischen dem Auswahl- und dem Scroll-Werkzeug wählen.
 ho.opt.tool.symmode		Auswahl eines Editierwerkzeugs im Symboleditor
 ho.opt.tool.symedit		Ausschneide- und Einfügeoperationen für den Symboleditor
-ho.opt.tool.symport		Port-Drehoperationen für den Symboleditor 
+ho.opt.tool.symport		Port-Drehoperationen für den Symboleditor
 ho.opt.tool.symshift		Verschieben der Bitmap oder von Teilen der Bitmap
 ho.opt.tool.symopr		Verschiedene Symboleditor-Operationen
 
@@ -2072,7 +2073,7 @@ von Quellcode nach den untenstehenden Optionen.
 -end-
 
 ho.hdl.splitexp		-begin-
-Mehrfachmodule im HDL-Text werden in 
+Mehrfachmodule im HDL-Text werden in
 verschiedene Module augespalten, die
 nach Bedarf neue Module definieren.
 Alle Namenskonflikte werden durch leichte
@@ -2101,7 +2102,7 @@ der ausgewählten Aktion.
 -end-
 
 ho.new		-begin-
-Aufgeben der aktuellen Schaltung und 
+Aufgeben der aktuellen Schaltung und
 Editieren einer neuen.
 -end-
 
@@ -2121,17 +2122,17 @@ Editieren der ausgewählten Symbol-Bitmap
 -end-
 
 ho.simmove  -begin-
-Wähle Leitungen und Module aus, 
+Wähle Leitungen und Module aus,
 bediene die Schalter und gib DIP
-Werte ein. Klicken und festhalten 
+Werte ein. Klicken und festhalten
 einer Leitung zeigt ihren aktuellen Wert.
 -end-
 
 ho.move		-begin-
-Bewegen/Verbinden - Klicken und Ziehen 
+Bewegen/Verbinden - Klicken und Ziehen
  - setzt die Position für ein neues Gatter,
  - bewegt Gatter und Leitungen,
- - verbindet Leitungen 
+ - verbindet Leitungen
 Ein Doppelklick editiert
  - Gatter-, Leitungs- und Port-Eigenschaften,
  - Kommentartext.
@@ -2139,11 +2140,11 @@ Ein Doppelklick editiert
 
 ho.delgat	-begin-
 Gatter entfernen - Werkzeug zum
-Löschen von Gattern. 
+Löschen von Gattern.
 -end-
 
 ho.cutw		-begin-
-Leitung trennen -  Werkzeug zum 
+Leitung trennen -  Werkzeug zum
 Durchschneiden von Leitungen.
 -end-
 
@@ -2154,13 +2155,13 @@ des Editier-Canvas.
 
 ho.inv		-begin-
 Invertieren - Werkzeug zum Hinzufügen
-oder Löschen von Invertern an Ein- und 
+oder Löschen von Invertern an Ein- und
 Ausgängen von Gattern.
 -end-
 
 ho.bitw		-begin-
-Bitbreite - Werkzeug zum Ändern der 
-Breite eines Leitungsbündels. Eingabe 
+Bitbreite - Werkzeug zum Ändern der
+Breite eines Leitungsbündels. Eingabe
 der Anzahl der Leitungen in der
 Eingabebox rechts unten neben dem Logo.
 -end-
@@ -2184,21 +2185,21 @@ Löschen des ausgewählten Ports.
 
 ho.ipanel.editport      -begin-
 Editieren des ausgewählten Ports.
-Ein Feld in einem Port wird mit 
+Ein Feld in einem Port wird mit
 Doppelklick editiert.
 -end-
 
 ho.ipanel.generate      -begin-
-Erzeugen einer neuen Schnittstelle 
+Erzeugen einer neuen Schnittstelle
 für ein Modul, basierend auf Ports
 in der Port-Liste und in der Modul-
 definition benutzen Portelementen.
 -end-
 
 ho.ipanel.updateall     -begin-
-Ersetze in allen Instanzen dieses 
-Moduls die Schnittstelle 
-durch die hier gezeigte 
+Ersetze in allen Instanzen dieses
+Moduls die Schnittstelle
+durch die hier gezeigte
 kanonische Schnittstelle.
 -end-
 
@@ -2214,7 +2215,7 @@ eines Moduls.
 
 ho.ipanel.proted	-begin-
 Verbiete die Änderung der Schnittstelle
-eines Moduls außer mit Hilfe des 
+eines Moduls außer mit Hilfe des
 Schnittstelleneditors. Das dient der
 Verhinderung unabsichtlicher Änderungen
 der Schnittstelle im Haupteditorfenster
@@ -2227,7 +2228,7 @@ so skaliere die Abstände zwischen den Ports mit.
 
 ho.ipanel.fix		-begin-
 Wird ein Modul in der Größe verändert,
-so behalte trotzdem die Abstände 
+so behalte trotzdem die Abstände
 zwischen den Ports bei.
 -end-
 
@@ -2268,8 +2269,8 @@ Primärer Editiermodus.
 
 
 ho.tab.interface        -begin-
-Editieren der Modulschnittstellen. 
-Ein Doppelklick im Schnittstellenmodus 
+Editieren der Modulschnittstellen.
+Ein Doppelklick im Schnittstellenmodus
 auf ein Modul der Modulliste führt
 zum Editieren seiner Schnittstelle.
 Im obersten Modul werden alle
@@ -2278,8 +2279,8 @@ Schnittstellen anzeigt.
 
 
 ho.tab.simulate         -begin-
-Start des Simulators, Öffnen des 
-Logikanalysators und Ausführen aller 
+Start des Simulators, Öffnen des
+Logikanalysators und Ausführen aller
 festgelegten Initialisierungsskripte.
 -end-
 
@@ -2290,7 +2291,7 @@ Suche die kritischen Pfade einer Schaltung.
 
 ho.log		-begin-
 Log von TkGate Meldungen:
-Fehlermeldungen, informelle Meldungen 
+Fehlermeldungen, informelle Meldungen
 und Simulator-Konsolenausgabe.
 -end-
 
@@ -2298,25 +2299,25 @@ ho.simgo	-begin-
 Ist eine Simulation aktiv: kontinuierlich
 laufen lassen. Ist keine Simulation aktiv:
 Starten der Simulation und Ausführen
-aller Initialisierungsskripte. 
+aller Initialisierungsskripte.
 -end-
 
 ho.simpause	-begin-
 Pause bei einer kontinuierlich
-laufenden Simulation. 
+laufenden Simulation.
 -end-
 
 ho.simstep	-begin-
-Start des Ablaufs eines festen 
-Zeitintervalls im Einzelschrittmodus. 
+Start des Ablaufs eines festen
+Zeitintervalls im Einzelschrittmodus.
 Im Fenster Simulation->Optionen kann
 die Schrittweite gesetzt werden.
 -end-
 
 ho.simclock	-begin-
-Ablauf einer festen Anzahl 
-von Taktzyklen. Dazu im 
-Fenster Simulation->Optionen 
+Ablauf einer festen Anzahl
+von Taktzyklen. Dazu im
+Fenster Simulation->Optionen
 die Schrittweite setzen.
 -end-
 
@@ -2327,7 +2328,7 @@ Rückkehr in den Editiermodus.
 
 ho.simbreak	-begin-
 Editieren der aktuellen Haltepunkte.
-Die Simulation hält, wenn eine 
+Die Simulation hält, wenn eine
 Haltepunktbedingung wahr wird.
 -end-
 
@@ -2372,7 +2373,7 @@ ho.netlist	-begin-
 Liste der Netze im aktuellen Modul.
 Das Symbol links vom Namen zeigt an,
 ob das Netz einbittig (grün) oder
-mehrbittig (rot) ist. Ein "A" im 
+mehrbittig (rot) ist. Ein "A" im
 Symbol zeigt, ob der Netzname als
 sichtbar markiert ist.
 -end-
@@ -2385,11 +2386,11 @@ Richtung an.
 
 ho.status.logo		-begin-
 Anzeige des Simulations-Status. Wird das
-Eisentor-Logo angezeigt, ist TkGate im 
+Eisentor-Logo angezeigt, ist TkGate im
 Editiermodus. Wird das vierbeinige UND-
 Gatter gezeigt, ist TkGate im Simulations-
 modus. Steht dieses UND-Gatter, so ist die
-Simulation angehalten; läuft es, so läuft 
+Simulation angehalten; läuft es, so läuft
 auch die Simulation.
 -end-
 
@@ -2399,7 +2400,7 @@ ho.status.block		Modulstack, der gerade editiert wird.
 
 ho.status.file		-begin-
 Aktuelle Datei, die gerade editiert wird.
-Ein '*' hinter dem Dateinamen zeigt an, 
+Ein '*' hinter dem Dateinamen zeigt an,
 daß der Puffer seit der letzten Sicherung
 verändert worden ist.
 -end-
@@ -2407,7 +2408,7 @@ verändert worden ist.
 ho.print.selall		Ausdrucken aller zur Zeit von TKGate geladenen Module.
 ho.print.selcur		Ausdruck des aktuellen Moduls aus dem Editierfenster.
 ho.print.seluse		-begin-
-Drucke alle Moduln, die gerade "in 
+Drucke alle Moduln, die gerade "in
 Gebrauch" sind. Das sind solche, die
 Abkömmlinge des root-Moduls sind.
 -end-
@@ -2417,7 +2418,7 @@ ho.print.fulltrace	Drucken des ganzen Signaldiagramms.
 ho.print.parttrace	-begin-
 Drucken eines Teils des Trace.  Start- und Stopzeiten
 werden im Eingabefenster unten eingetragen. Man kann
-auch mit der rechten Maustaste den Bereich auf dem 
+auch mit der rechten Maustaste den Bereich auf dem
 Scope-Fenster auswählen (mit Shift-Rechts werden
 große Bereich ausgewählt).
 -end-
@@ -2426,14 +2427,14 @@ ho.print.parttracestart	Startzeit der Trace-Ausgabe.
 ho.print.parttraceend	Endezeit  der Trace-Ausgabe.
 
 ho.print.selsel		-begin-
-Drucke nur die unten angewählten Module. Benutze  
+Drucke nur die unten angewählten Module. Benutze
 die Strg-Taste zur Auswahl mehrerer Module.
 -end-
 
 ho.print.modlist	Wähle die zu druckenden Module aus.
 
 ho.print.timegraph	-begin-
-Hier wird das zum Drucken ausgewählte 
+Hier wird das zum Drucken ausgewählte
 Gebiet gezeigt. Der grüne Bereich
 ist der Gesamtbereich der verfügbaren
 Signaldaten, grau wird die zu druckende
@@ -2489,7 +2490,7 @@ in der Druckausgabe.
 -end-
 
 ho.cmd.bitw		-begin-
-Vorgegebene Bitbreite für mit dem Bitbreite-Werkzeug 
+Vorgegebene Bitbreite für mit dem Bitbreite-Werkzeug
 selektierte Leitungen.
 -end-
 
@@ -2502,7 +2503,7 @@ geändert werden.
 
 ho.edgat.port		-begin-
 Der Name des Ports für dieses Signal
-am Gatter. 
+am Gatter.
 Dieses Feld kann nur bei
 Modulinstanzen editiert werden.
 -end-
@@ -2537,7 +2538,7 @@ ho.edgat.gx		X Koordinate des Gatters.
 ho.edgat.gy		Y Koordinate des Gatters.
 
 ho.edgat.swstate	-begin-
-Der zu benutzende Anfangszustand 
+Der zu benutzende Anfangszustand
 des Schalters beim Start der Simulation.
 -end-
 
@@ -2560,7 +2561,7 @@ ho.traceprint		-begin-
 Drucke den Bereich des Logik-Signaldiagramms,
 der mit der rechten Maustaste ausgewählt ist.
 Shift-Rechts-Klick kann benutzt werden, um
-das augewählte Gebiet zu vergrößern. 
+das augewählte Gebiet zu vergrößern.
 Der in der Scope-Ansicht sichtbare Bereich
 wird genutzt, falls keine Auswahl erfolgt ist.
 -end-
@@ -2578,7 +2579,7 @@ aktiv, wenn TkGate neu gestartet ist.
 
 ho.opt.sec.send		-begin-
 Aktivieren der $tkg$command() System Task erlaubt es
-Anwendungsschaltungen, dem TkGate GUI beliebige 
+Anwendungsschaltungen, dem TkGate GUI beliebige
 Simulator-Steuerkommandos zu senden. Dazu gehört auch
 die Fähigkeit zum Ausführen beliebiger Shellbefehle.
 Wird der Simulator zum Ausführen von Schaltungen
@@ -2588,7 +2589,7 @@ hohen Sicherheitsrisiko!
 -end-
 
 ho.opt.sec.open		-begin-
-Aktivieren der $fopen() System Task erlaubt 
+Aktivieren der $fopen() System Task erlaubt
 Anwendungsschaltungen in beliebige Dateien des Benutzers
 zu öffnen. Deswegen gibt es ein hohes Sicherheitsrisiko
 mit dieser Option.
@@ -2596,27 +2597,27 @@ mit dieser Option.
 
 ho.opt.sec.writemem	-begin-
 Aktivieren der $writememb() und $writememh() System Tasks
-erlaubt es Anwendungsschaltungen in beliebige Dateien des 
-Benutzers zu schreiben. Deswegen gibt es ein hohes 
+erlaubt es Anwendungsschaltungen in beliebige Dateien des
+Benutzers zu schreiben. Deswegen gibt es ein hohes
 Sicherheitsrisiko mit dieser Option.
 -end-
 
 ho.opt.sec.enqueue	-begin-
 Aktivieren der $tkg$recv() und $tkg$send() System Tasks
-erlaubt virtuellen peripheren Geräten Botschaften an 
+erlaubt virtuellen peripheren Geräten Botschaften an
 TkGate Schaltungen zu senden. Das ist ein relativ geringes
 Sicherheitsrisiko.
 -end-
 
 ho.opt.ssave		-begin-
 Führe Konsistenzüberprüfungen von Schaltungsdateien
-durch, bevor eine existierende Sicherungsdatei 
+durch, bevor eine existierende Sicherungsdatei
 überschrieben wird. Damit wird überprüft, ob es keine
 Probleme mit der Sicherungsdatei gibt.
 -end-
 
 ho.opt.sec.exec		-begin-
-Die volle Aktivierung der $tkg$exec() System Task 
+Die volle Aktivierung der $tkg$exec() System Task
 erlaubt es dem Benutzer, beliebige tcl/tk-Befehle einschließlich
 der Ausführung beliebiger Shellbefehle abzusetzen. Die Aktivierung
 dieser Option stellt also ein sehr hohes Sicherheitsrisiko dar.
@@ -2624,11 +2625,11 @@ dieser Option stellt also ein sehr hohes Sicherheitsrisiko dar.
 
 ho.opt.sec.regexec		-begin-
 Die Aktivierung der $tkg$exec() System Task für registrierte
-Funktionen erlaubt es Anwendungsschaltungen, nur tcl/tk 
+Funktionen erlaubt es Anwendungsschaltungen, nur tcl/tk
 Kommandos auszuführen, die als sicher registriert sind.
 Solange alle virtuellen peripheren Geräte vertrauenswürdig
 sind, hält die Aktivierung von $tkg$exec() auf dieser Stufe
-gefährliche Befehle von der Ausführung ab. Das Einschalten 
+gefährliche Befehle von der Ausführung ab. Das Einschalten
 dieser Option hat ein mittleres Sicherheitsrisiko zur Folge.
 -end-
 
@@ -2641,25 +2642,25 @@ option has a minimal security risk.
 
 ho.opt.sec.stop		-begin-
 Ist diese Einstellung aktiviert, wird die Simulation beendet,
-sobald von der Anwendungsschaltung versucht wird, ein 
+sobald von der Anwendungsschaltung versucht wird, ein
 ausgeschaltetes Feature zu benutzen.
 -end-
 
 ho.opt.sec.warn		-begin-
 Ist diese Einstellung aktiviert, wird die Simulation nach einer
-Warnmeldung weitergehen, wenn die Anwendungsschaltung versucht, 
+Warnmeldung weitergehen, wenn die Anwendungsschaltung versucht,
 ein ausgeschaltetes Feature zu benutzen.
 -end-
 
 ho.opt.sec.ignore	-begin-
-Ist diese Einstellung aktiv, wird die Benutzung aller 
-ausgeschalteten Features ignoriert; es werden keine 
+Ist diese Einstellung aktiv, wird die Benutzung aller
+ausgeschalteten Features ignoriert; es werden keine
 Fehlermeldungen angezeigt.
 -end-
 
 ho.opt.html.browser	-begin-
 Der Befehl, der zur Ausführung kommt, wenn der Benutzer
-auf einen Link zu einer HTML-Datei klickt. 
+auf einen Link zu einer HTML-Datei klickt.
 Ein "%s" in dem Befehl wird durch die Link URL ersetzt.
 -end-
 
@@ -2688,35 +2689,35 @@ Reihenfolge der Probe-Setzungen angezeigt.
 ho.opt.sim.noglitch	-begin-
 Ist diese Option aktiv, so bewirken sich schnell
 verändernde Signale am Eingang eines Gatters
-am Ausgang desselben im wesentlichen das 
-zeitverschobene Eingangssignal. Dies kann 
-flüchtige Ereignisse und Schwingungen in 
+am Ausgang desselben im wesentlichen das
+zeitverschobene Eingangssignal. Dies kann
+flüchtige Ereignisse und Schwingungen in
 sequentiellen Schaltungen auf Gatterebene
 verhindern helfen.
 -end-
 
 ho.opt.sim.savetraces -begin-
 Tastköpfe, die während eines Simulationslaufes
-plaziert wurden, werden abgespeichert und beim 
+plaziert wurden, werden abgespeichert und beim
 Neustart der Simulation wieder richtig gesetzt.
 -end-
 
 
 ho.opt.sim.tech		-begin-
-Dateienliste zum Laden als potentielle 
+Dateienliste zum Laden als potentielle
 "Technologie"-Dateien.
 Technologie-Dateien legen Verzögerungen und
 Flächengrößen für eingebaute Gatter fest.
 -end-
 
 ho.opt.sim.err		-begin-
-Wähle, wie Warnungen vom Simulator 
+Wähle, wie Warnungen vom Simulator
 behandelt werden sollen.
 -end-
 
 ho.opt.sim.err.stopany	-begin-
 Gibt es irgendwelche Warnungen zu der Schaltung,
-wird sie nicht simuliert, auch nicht, falls es 
+wird sie nicht simuliert, auch nicht, falls es
 gar keine wirklichen Fehler gibt.
 -end-
 
@@ -2728,9 +2729,9 @@ einem gesonderten Fenster angezeigt.
 -end-
 
 ho.opt.sim.err.showiferr	-begin-
-Zeige Warnungen nur, wenn es auch Fehler in der 
-Schaltung gibt. Enthält eine Schaltung nur 
-Warnungen, so werden sie ignoriert und der 
+Zeige Warnungen nur, wenn es auch Fehler in der
+Schaltung gibt. Enthält eine Schaltung nur
+Warnungen, so werden sie ignoriert und der
 Simulator wird geräuschlos gestartet.
 -end-
 
@@ -2742,8 +2743,8 @@ Fehler in der Schaltung gibt.
 ho.opt.lib.vpath		-begin-
 Liste von Verzeichnissen, in denen nach TkGate
 Bibliotheksdateien gesucht wird. Bibliotheken
-sollten eine .v Dateierweiterung besitzen und 
-Module enthalten, die für den Gebrauch in 
+sollten eine .v Dateierweiterung besitzen und
+Module enthalten, die für den Gebrauch in
 Anwendungsschaltungen nützlich sind.
 -end-
 
@@ -2796,7 +2797,7 @@ neu gezeichnet.
 
 ho.opt.showimage	-begin-
 Durch Zurücksetzen dieser Option kann die
-Anzeige des Bildes un der erläuternde Text 
+Anzeige des Bildes un der erläuternde Text
 am Rand der Dialogboxen unterdrückt werden.
 -end-
 
@@ -2853,8 +2854,8 @@ geht über das Editieren der
 -end-
 
 ho.opt.miles		-begin-
-Ist dieser Modus eingeschaltet, wird 
-TkGate periodisch die Intelligenz 
+Ist dieser Modus eingeschaltet, wird
+TkGate periodisch die Intelligenz
 des Benutzers anzweifeln.
 -end-
 
@@ -2872,8 +2873,8 @@ Schritt-Kommando vorangeschritten wird.
 -end-
 
 ho.opt.ckstep		-begin-
-Die Anzahl der Taktzyklen, die 
-vorangeschritten wird, wenn das 
+Die Anzahl der Taktzyklen, die
+vorangeschritten wird, wenn das
 Taktschritt-Kommando gegeben wird.
 -end-
 
@@ -2895,13 +2896,13 @@ der Wert zu erhöhen. Es sind Werte zwischen
 -end-
 
 ho.opt.init		-begin-
-Eine Simulationsskript-Datei, 
+Eine Simulationsskript-Datei,
 die automatisch ausgeführt wird,
 wenn die Simulation gestartet wird.
 -end-
 
 ho.opt.ckall		-begin-
-Falls diese Modus eingeschaltet ist, 
+Falls diese Modus eingeschaltet ist,
 hält das Taktschritt-Kommando die
 Simulation bei der positiven Flanke
 jeder Taktquelle in der Schaltung an.
@@ -2909,7 +2910,7 @@ jeder Taktquelle in der Schaltung an.
 
 ho.opt.ckspec		-begin-
 Falls dieser Modus eingeschaltet ist,
-hält das Taktschritt-Kommando die 
+hält das Taktschritt-Kommando die
 Simulation nur an der positiven Flanke
 der spezifizierten Taktquelle an.
 -end-
@@ -2926,8 +2927,8 @@ zu sehen sind.
 
 ho.deftech		-begin-
 Standard-Technologie für neue Gatter.
-Beeinflußt die Verzögerungszeit der 
-Gatter. Um die Technologie eines 
+Beeinflußt die Verzögerungszeit der
+Gatter. Um die Technologie eines
 bestimmten Gatters zu ändern, öffnet
 mann die Eigenschafts-Box mit Doppelklick
 und wählt "Delay" an.
@@ -2935,10 +2936,10 @@ und wählt "Delay" an.
 
 ho.techbut		-begin-
 Benutze Verzögerungszeiten aus der
-Datei zur Definition der Standard 
+Datei zur Definition der Standard
 Technologie. Um eigene Technologien
-zu entwickeln, füge man sie zu 
-der Liste im "Datei -> Optionen 
+zu entwickeln, füge man sie zu
+der Liste im "Datei -> Optionen
 -> Simulation"-Menu hinzu.
 -end-
 
@@ -2958,34 +2959,34 @@ GUI und Simulator gesendet werden.
 
 ho.symed.point		-begin-
 Pixel-Editiermodus. Die linke
-Maustaste setzt Pixel, die 
+Maustaste setzt Pixel, die
 rechte löscht sie.
 -end-
 
 ho.symed.line		-begin-
-Geraden-Modus. Die linke Maus- 
+Geraden-Modus. Die linke Maus-
 taste setzt Pixel, die rechte
 löscht sie.
 -end-
 
 ho.symed.rect		-begin-
-Rechteckmodus.  Die linke Maus- 
+Rechteckmodus.  Die linke Maus-
 taste setzt Pixel, die rechte
 löscht sie.
 -end-
 
 ho.symed.fillrect	-begin-
-Ausgefüllter Rechteckmodus. 
-Die linke Maustaste setzt Pixel, 
+Ausgefüllter Rechteckmodus.
+Die linke Maustaste setzt Pixel,
 die rechte löscht sie.
 -end-
 
 ho.symed.select	-begin-
-Bitmap Auswahlmodus. 
+Bitmap Auswahlmodus.
 Die linke Maustaste wählt Bereiche
 der Bitmap aus. Auf der Auswahl
 können dann Cut und Paste Operationen
-vorgenommen werden. 
+vorgenommen werden.
 -end-
 
 ho.symed.port	-begin-

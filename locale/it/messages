@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,11 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Mon Nov 29 14:37:44 2004
+#
 
 \language Italian
 
@@ -186,7 +187,7 @@ gm81mux		8-1 Multiplexor
 gm12dec		1-2 Decoder
 gm14dec		1-4 Decoder
 gm18dec		1-8 Decoder
-    
+
 gmmodinst	Module Instance
 gmmodin		Module Input
 gmmodout	Module Output
@@ -235,7 +236,7 @@ ibits		Bits:
 #
 db.net.name	Net Name
 db.net.hide	Hide Name
-db.net.bits	Bit Width	
+db.net.bits	Bit Width
 db.net.port	Port Type
 db.net.in	in
 db.net.out	out
@@ -283,7 +284,7 @@ db.led.hex		7-Segment (HEX)
 db.led.dec		7-Segment (DEC)
 db.led.seg		7-Segment (Direct)
 
-		## - Italian localization - 
+		## - Italian localization -
 		## - April 2004 P. Ceppi; SUPSI-DTI
 		## - Will translate:
 		## - - instructive/helpful text only
@@ -291,10 +292,10 @@ db.led.seg		7-Segment (Direct)
 cpath.cloops -begin-
 Il circuito contiene loop combinatori!
 Per procedere ad analisi di ritardi in questo
-circuito devi interrompere i loop oppure indicare 
+circuito devi interrompere i loop oppure indicare
 una porta per ogni loop come punto di interruzione:
 lo puoi fare nel form "Properties" della porta,
-usa il check box "Critical Path Partition". 
+usa il check box "Critical Path Partition".
 I collegamenti per i quali è stato trovato un loop
 sono elencati sotto.
 -end-
@@ -371,7 +372,7 @@ opt.mode		Mode
 opt.normal		Normal
 opt.bat			Bat
 opt.trek		Star Trek
-opt.miles		Giuan 
+opt.miles		Giuan
 opt.contver		Automatic Integrity Checking
 opt.showsimcmd		Display Simulator Stream
 opt.logfile		Simulator Log File
@@ -398,14 +399,14 @@ opt.cpflash		Display with Flashing Path
 
 opt.vercheck		-begin-
 Controlla di tanto in tanto se ci sono nuove versioni
-di TkGate in rete. Non abilitare se non hai accesso 
+di TkGate in rete. Non abilitare se non hai accesso
 continuo a Internet.
 -end-
 
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		New Module 
+blklst.newmod		New Module
 blklst.delmod		Delete Module
 blklst.frommod		Copy Module From
 blklst.tomod		To
@@ -519,7 +520,7 @@ L'opzione 'jump-to-module' non è disponibile
 nella modalità di simulazione o di analisi del
 percorso critico.
 Spostati manualmente nel blocco desiderato
-selezionando moduli e aprendoli con 
+selezionando moduli e aprendoli con
 il carattere '>' da tastiera. Puoi abbandonare
 un modulo inserendo il carattere '<' da tastiera.
 -end-
@@ -556,14 +557,14 @@ l'integrità di un file di salvataggio.
 err.corruptsave		-begin-
 TkGate ha riscontrato un problema nel salvataggio del file '%s'.
 Il file esistente è stato lasciato intatto e il file danneggiato
-è stato salvato in '%s'. Se hai abilitato la modalità "checkpointing" 
-puoi provare a caricare uno dei files di "checkpoint". 
-Puoi anche usare 'tkgate -V' per verificare l'integrità 
+è stato salvato in '%s'. Se hai abilitato la modalità "checkpointing"
+puoi provare a caricare uno dei files di "checkpoint".
+Puoi anche usare 'tkgate -V' per verificare l'integrità
 di un file di salvataggio.
 -end-
 
 err.badsave		-begin-
-C'è un problema ad aprire o a salvare il file '%s'.  
+C'è un problema ad aprire o a salvare il file '%s'.
 Controlla le protezioni del file/directory e/o lo spazio disco.
 -end-
 
@@ -576,7 +577,7 @@ Vuoi tentare un salvataggio senza validazione?
 
 err.noback		-begin-
 Il file è stato creato con TkGate %s.
-Se lo salvi, è probabile che non possa venir 
+Se lo salvi, è probabile che non possa venir
 riletto da versioni precedenti a questa (%s).
 -end-
 
@@ -602,7 +603,7 @@ msg.notlib		Il modulo '%s' non è un modulo di libreria.
 
 ##############################################################################
 # Messaggi par ul Giuan (Dupraa quant ul Giuan Bambela 'l dupera ul TkGate)
-#	
+#
 miles.msg1		Dumà un cücümar al metaresa ul %s%s lì, Giuan.
 miles.msg2		L'è propi un post stupit par met ul %s%s, Giuan.
 miles.msg3		L'è un pustasc par ul %s%s, Giuan; pesc d'inscì ta pudevat mia catà fö!
@@ -650,7 +651,7 @@ dalle entrate/uscite delle porte logiche.
 -end-
 
 ho.bitw		-begin-
-Bit Width - Cambia la larghezza di un bus. 
+Bit Width - Cambia la larghezza di un bus.
 Inserisci il numero di bits nel box in basso
 a destra della finestra.
 -end-
@@ -694,7 +695,7 @@ Termina la simulazione e torna alla modalità di disegno.
 
 ho.simbreak	-begin-
 Modifica i breakpoints.
-La simulazione viene sospesa non appena 
+La simulazione viene sospesa non appena
 la condizione di un breakpoint è verificata.
 -end-
 
@@ -733,7 +734,7 @@ Collegamenti multi-bit sono mostrati con il range.
 
 ho.ports	-begin-
 Elenco delle porte del modulo attuale.
-Il segno '>' indica un input mentre 
+Il segno '>' indica un input mentre
 '<' indica un output; il segno '=' indica inout.
 -end-
 
@@ -767,8 +768,8 @@ ho.print.fulltrace	Stampa tutta la traccia.
 
 ho.print.parttrace	-begin-
 Stampa una parte della traccia. Inserisci gli istanti di inizio
-e di fine nei campi qui sotto o usa il bottone destro 
-del mouse per selezionare una parte della finestra 
+e di fine nei campi qui sotto o usa il bottone destro
+del mouse per selezionare una parte della finestra
 delle tracce (usa shift-right per selezionare pezzi lunghi).
 -end-
 
@@ -789,12 +790,12 @@ elimini cambiamenti senza salvare.
 -end-
 
 ho.circuit.extbar	-begin-
-Porte logiche di base (AND, OR, XOR) useranno 
+Porte logiche di base (AND, OR, XOR) useranno
 barre di estensione per dar posto a molti input.
 -end-
 
 ho.cmd.bitw		-begin-
-Fili selezionati con il puntatore verranno 
+Fili selezionati con il puntatore verranno
 trasformati in bus con questo numero di bit.
 -end-
 
@@ -805,7 +806,7 @@ man mano che vengono aggiunte entrate.
 -end-
 
 ho.edgat.signam		-begin-
-Nome del segnale collegato al port selezionato. 
+Nome del segnale collegato al port selezionato.
 Qui puoi cambiare il nome del segnale.
 -end-
 
@@ -815,7 +816,7 @@ Questo campo può venir modificato solo per istanze di moduli.
 -end-
 
 ho.edgat.iolab		-begin-
-Direzione del port selezionato sul gate. 
+Direzione del port selezionato sul gate.
 Questo campo può venir modificato solo per istanze di moduli.
 -end-
 
@@ -874,16 +875,16 @@ delle tracce il cursore è una linea verticale.
 -end-
 
 ho.opt.sorttraces	-begin-
-Se questa opzione è abilitata, le tracce 
-nella finestra del logic analyzer vengono 
+Se questa opzione è abilitata, le tracce
+nella finestra del logic analyzer vengono
 ordinate in ordine alfabetico.
 Se l'opzione è disabilitata, le tracce vengono
-mostrate nell'ordine in cui sono state richiamate. 
+mostrate nell'ordine in cui sono state richiamate.
 -end-
 
 ho.opt.rememberprobes	-begin-
-Se questa opzione è attiva, le sonde agganciate 
-durante la simulazione verranno memorizzate e saranno 
+Se questa opzione è attiva, le sonde agganciate
+durante la simulazione verranno memorizzate e saranno
 riprese automaticamente al prossimo run di simulazione.
 -end-
 
@@ -899,7 +900,7 @@ Questo nome appare sui documenti stampati.
 
 ho.opt.smooth		-begin-
 Se questa opzione è abilitata, lo scrolling
-è ottimizzato usando copie bitmap invece di 
+è ottimizzato usando copie bitmap invece di
 fare un redisplay completo.
 Spegni questa opzione se vi sono problemi
 con il tuo server.
@@ -908,7 +909,7 @@ con il tuo server.
 ho.opt.clip		-begin-
 Se questa opzione è abilitata, verrà usato
 il meccanismo di clipping per aggiornare solo
-la parte visibile della finestra in caso di 
+la parte visibile della finestra in caso di
 un rinfresco. Altrimenti tutto il display viene
 ridisegnato.
 -end-
@@ -921,13 +922,13 @@ Usa questa opzione solo su macchine con grafica lenta.
 
 ho.opt.bhelp		-begin-
 Se questa opzione è abilitata, verranno mostrati
-messaggi di aiuto (balloons) sugli oggetti 
+messaggi di aiuto (balloons) sugli oggetti
 toccati dal puntatore.
 -end-
 
 ho.opt.novice		-begin-
 Se non è specificato alcun circuito sulla linea
-di comando, all'inizio verrà caricato 
+di comando, all'inizio verrà caricato
 un tutorial di TkGate.
 -end-
 
@@ -941,7 +942,7 @@ ho.opt.ckptfreq		Frequenza di checkpointing in secondi.
 
 ho.opt.beak		-begin-
 Disabilita queste opzioni inutili!
-Se lo fai, questa rubrica e questo checkbox non appariranno più. 
+Se lo fai, questa rubrica e questo checkbox non appariranno più.
 Per riattivarle, dovrai editare il tuo file .tkgate-preferences.
 -end-
 
@@ -975,7 +976,7 @@ del clock per il comando "Step Cycle".
 ho.opt.vpopupdelay		-begin-
 Il ritardo in millisecondi fra un click e la
 visualizzazione del valore di un segnale.
-Su alcuni sistemi, ritardi brevi compromettono 
+Su alcuni sistemi, ritardi brevi compromettono
 la possibilità di riconoscere il doppio click.
 Se hai questo problema, aumenta questo valore.
 Sono ammessi valori fra 1 e 10000.
@@ -988,15 +989,15 @@ quando si attiva la simulazione.
 
 ho.opt.ckall		-begin-
 Se questa opzione è abilitata, il comando
-"Step Cycle" mette in pausa il simulatore 
+"Step Cycle" mette in pausa il simulatore
 al fianco positivo di ogni clock del circuito.
 -end-
 
 ho.opt.ckspec		-begin-
 Se questa opzione è abilitata, il comando
 "Step Cycle" mette in pausa il simulatore
-unicamente al fianco positivo del segnale 
-di clock specificato. 
+unicamente al fianco positivo del segnale
+di clock specificato.
 Fa stato il nome del gate, non del net!
 -end-
 
@@ -1009,10 +1010,10 @@ click) e seleziona l'opzione "Delay".
 -end-
 
 ho.techbut		-begin-
-Usa i ritardi codificati nel file di 
+Usa i ritardi codificati nel file di
 definizione della tecnologia standard.
 Per aggiungere tecnologie personalizzate,
-inseriscile nella lista nel menu 
+inseriscile nella lista nel menu
 "File -> Options -> Simulate".
 -end-
 

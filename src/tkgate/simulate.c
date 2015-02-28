@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Sep 26 18:35:12 2009
 ****************************************************************************/
@@ -100,7 +100,7 @@ void parse_verilog_hex(unsigned *Svalue,unsigned *Svalid,const char *A)
     }
 
     /*
-     * If the initial digit is not unknown, make all bits above the 
+     * If the initial digit is not unknown, make all bits above the
      * specified bits valid.
      */
     if (i == 0 && digitValid == 0xf)
@@ -141,7 +141,7 @@ static void parse_verilog_oct(unsigned *Svalue,unsigned *Svalid,const char *A)
     }
 
     /*
-     * If the initial digit is not unknown, make all bits above the 
+     * If the initial digit is not unknown, make all bits above the
      * specified bits valid.
      */
     if (i == 0 && digitValid == 0x7)
@@ -170,7 +170,7 @@ static void parse_verilog_oct(unsigned *Svalue,unsigned *Svalid,const char *A)
  * Only 'b' and 'h' types are used, with 'b' types being used only
  * for single-bit values.
  *
- *****************************************************************************/ 
+ *****************************************************************************/
 int parse_verilog_constant(char *value,unsigned *ivalue,unsigned *ivalid,int *nbits)
 {
   const char *p;
@@ -290,7 +290,7 @@ GNet *sim_findNet(const char *name)
       else
 	return 0;
     } else
-      n = GModuleDef_findNet(M,ptr[i]); 
+      n = GModuleDef_findNet(M,ptr[i]);
   }
 
   return n;
@@ -1117,7 +1117,7 @@ int SimInterface_doSanitizedTcl(char *cmd)
 
 
     DoTcl("VPD::isallowed %s",cmdName);
-    if (*TkGate.tcl->result != '1') return -1;
+    if (Tcl_GetStringResult(TkGate.tcl)[0] != '1') return -1;
 
     DoTcl(cmd);
     return 0;
@@ -1207,7 +1207,7 @@ void SimInterface_setSimMods(SimInterface *si)
 void SimInterface_showStartMsg()
 {
   time_t now;
-  char *nowstr,*p; 
+  char *nowstr,*p;
 
   time(&now);
   nowstr = ctime(&now);
@@ -1354,7 +1354,7 @@ int SimInterface_findPathToModule(char *path,GModuleDef *m)
   GCElement *mpath[MODULE_PATH_MAX];
   char *p;
   int n,i;
-  
+
   n = SimInterface_findPathToModule_aux(mpath, 0, TkGate.circuit->root_mod, m);
 
   if (n <= 0)
@@ -1379,7 +1379,7 @@ void SimInterface_navigateToModule(EditState **es,const char *path)
   GModuleDef *M = TkGate.circuit->root_mod;
 
   if (strncmp(path,"/<",2) != 0) {
-#if 1 
+#if 1
       message(1,msgLookup("err.nojump"));
 #else
     M = env_findModule(path);
@@ -1434,7 +1434,7 @@ void SimInterface_navigateToModule(EditState **es,const char *path)
 
 const char* SimInterface_unitsToStr(int u)
 {
-  if (u >= 0 && u < NUM_UNITS) 
+  if (u >= 0 && u < NUM_UNITS)
     return unitStrings[u];
   else
     return "bs";
@@ -1443,7 +1443,7 @@ const char* SimInterface_unitsToStr(int u)
 int SimInterface_strToUnits(const char *s)
 {
   int u;
-  
+
   for (u = 0;u < NUM_UNITS;u++)
     if (strcmp(s,unitStrings[u]) == 0)
       return u;
@@ -1500,8 +1500,8 @@ char *SimInterface_formatTime(SimInterface *si, char *buf,simtime_t t)
  *    stop		Indicates that simulation has stopped.
  *    post		Requests that a VPD be posted
  *    exec		Requests that a tcl command be executed
- *    error		Reports an error 
- *    warning		Reports a warning 
+ *    error		Reports an error
+ *    warning		Reports a warning
  *
  *****************************************************************************/
 int SimInterface_command(SimInterface *si,const char *C)
@@ -1525,7 +1525,7 @@ int SimInterface_command(SimInterface *si,const char *C)
   } else if (strncmp(C,"echo",4) == 0) {
     DoTcl("InfoPanel::log \"\"");
     return 0;
-  } else if (sscanf(C," zoom %d",&a1) == 1) {			/* Set zoom factor */ 
+  } else if (sscanf(C," zoom %d",&a1) == 1) {			/* Set zoom factor */
     DoTcl(".scope.main.frame.canvas setzoom %d",-a1);
   } else if (sscanf(C,"ok %d %s / %d %s",&a1,buf,&a2,buf2) == 4) { /* Simulator loaded file and is ready to go */
     si->si_tsmult = a1;
@@ -1538,19 +1538,19 @@ int SimInterface_command(SimInterface *si,const char *C)
     DoTcl("ErrBox::hadFatalErrors");
     Error_close();
     tkgate_setMajorMode(MM_EDIT);
-  } else if (sscanf(C," showprobe %s %d", buf, &a1) == 2) {	/* Probe set from script */ 
+  } else if (sscanf(C," showprobe %s %d", buf, &a1) == 2) {	/* Probe set from script */
     SimInterface_addProbe(si,buf,a1);
-  } else if (sscanf(C," hideprobe %s", buf) == 1) {		/* Probe hidden from script */ 
+  } else if (sscanf(C," hideprobe %s", buf) == 1) {		/* Probe hidden from script */
     SimInterface_delProbe(si,buf);
-  } else if (sscanf(C," valueof %s %s @ %llu",			/* The value of a net has changed */ 
+  } else if (sscanf(C," valueof %s %s @ %llu",			/* The value of a net has changed */
 		    buf,buf2,&t) == 3) {
     if (GScope_findTrace(Scope,buf)) {
       Scope_stepTo(t);
       Scope_setValue(buf,buf2);
     }
-  } else if (sscanf(C," tell $queue %s %s @ %llu",buf,buf2,&t) == 3) {	/* The value of a net has been requested */ 
+  } else if (sscanf(C," tell $queue %s %s @ %llu",buf,buf2,&t) == 3) {	/* The value of a net has been requested */
     DoTclL("VPD::qdata",buf,buf2,NULL);
-  } else if (sscanf(C," tell $show %s %s",buf,buf2) == 2) {	/* The value of a net has been requested */ 
+  } else if (sscanf(C," tell $show %s %s",buf,buf2) == 2) {	/* The value of a net has been requested */
     sprintf(buf3,"%s=%s",buf,buf2);
     Tcl_SetVar(TkGate.tcl,"tkg_simDisplayedVal",
 	       buf3,TCL_GLOBAL_ONLY);
@@ -1564,7 +1564,7 @@ int SimInterface_command(SimInterface *si,const char *C)
     DoTcl("tkg_cpathAdd %d {%s}",a1,buf);
   } else if (strncmp(C,"cdone",5) == 0) {			/* End of critical path data */
     DoTcl("tkg_cpathEnd");
-  } else if (sscanf(C," stats area=%d static_power=%d",		/* Circuit statistics */ 
+  } else if (sscanf(C," stats area=%d static_power=%d",		/* Circuit statistics */
 		    &si->area,&si->staticPower) == 2) {
     message(0,"Estimated area=%d.",si->area,si->staticPower);
   } else if (sscanf(C," badscript %s",buf) == 1) {		/* Report breakpoint/script syntax error */
@@ -1577,7 +1577,7 @@ int SimInterface_command(SimInterface *si,const char *C)
   } else if (sscanf(C," endscript %s",buf) == 1) {		/* Report script termination */
     if (sscanf(buf,"script:%d",&a1) == 1)
       DoTcl("ScriptMgr::setState %d 1",a1);
-  } else if (sscanf(C," break %d %s",&a1,buf) == 2) {		/* Simulator hit a breakpoint */ 
+  } else if (sscanf(C," break %d %s",&a1,buf) == 2) {		/* Simulator hit a breakpoint */
     BrkPtTable_activate(TkGate.circuit->c_breakpoints,a1,buf);
   } else if (sscanf(C," time @ %llu",&t) == 1) {		/* Update current time */
   } else if (sscanf(C," go @ %llu",&t) == 1) {			/* Simulator is in run mode */
@@ -1640,4 +1640,4 @@ int SimInterface_command(SimInterface *si,const char *C)
   return 0;
 }
 
- 
+

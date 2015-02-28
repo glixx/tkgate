@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Jan 19 18:16:59 2009
 ****************************************************************************/
@@ -64,7 +64,7 @@ GGateInfo gate_or_info = {
   "or:nor",0x2,
   "psor",psOr,
   0,0,
-  
+
   {{"o",	{"gm.gate",0},		{"gm.gate.or",0,0,200},	"gat_make OR"},
    {"O",	{"gm.gate",0},		{"gm.gate.nor",0,0,201},	"gat_make OR -invert Z"},
    {"Ctl-r o",	{"gm.rgate",0},		{"gm.rgate.or",0,0,200},	"gat_make OR -pins I=1"},
@@ -77,7 +77,7 @@ GGateInfo gate_or_info = {
   {{0,-12,CT},{12,0,LJ},{0,-12,CT},{12,0,LJ}},
   {1},
   {"Diz",0},
-  
+
   AOX_Make,
   AOX_WriteCellDef,
   Generic_Init,

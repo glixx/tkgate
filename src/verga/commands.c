@@ -1,8 +1,8 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU Genreal Public License as published by
+    it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Feb  2 22:17:24 2009
 ****************************************************************************/
@@ -389,8 +389,8 @@ void Circuit_execDelScript(Circuit*c,int argc,char *argv[])
  *
  * Command summary:
  *
- *   $probe <net>		Place a generic probe on a net 
- *   $probe <net> <who>		Place a probe on behalf of <who> 
+ *   $probe <net>		Place a generic probe on a net
+ *   $probe <net> <who>		Place a probe on behalf of <who>
  *
  *****************************************************************************/
 void Circuit_execProbe(Circuit*c,int argc,char *argv[])
@@ -439,8 +439,8 @@ void Circuit_execProbe(Circuit*c,int argc,char *argv[])
  *
  * Command summary:
  *
- *   $unprobe <net>		Remove a generic probe on a net 
- *   $unprobe <net> <who>	Remove a probe on behalf of <who> 
+ *   $unprobe <net>		Remove a generic probe on a net
+ *   $unprobe <net> <who>	Remove a probe on behalf of <who>
  *
  *****************************************************************************/
 void Circuit_execUnprobe(Circuit*c,int argc,char *argv[])
@@ -478,7 +478,7 @@ void Circuit_execUnprobe(Circuit*c,int argc,char *argv[])
  * Load memory data from a file.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -501,7 +501,7 @@ void Circuit_execMemLoad(Circuit*c,int argc,char *argv[])
  * Dump memory data to a file.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -553,7 +553,7 @@ void Circuit_execTime(Circuit*c,int argc,char *argv[])
  * Step simulator a number of epochs
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -579,7 +579,7 @@ void Circuit_execStep(Circuit*c,int argc,char *argv[])
  * Register a circuit clock.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -610,7 +610,7 @@ void Circuit_execRegClock(Circuit*c,int argc,char *argv[])
  * Step a number of clock steps.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -629,7 +629,7 @@ void Circuit_execStepClock(Circuit *c,int argc,char *argv[])
   if (argc != 4 && argc != 5) {
     argError("$clock");
     return;
-  } 
+  }
 
   if (argc == 5) {
     n = Circuit_findNet(c,argv[4]);
@@ -652,7 +652,7 @@ void Circuit_execStepClock(Circuit *c,int argc,char *argv[])
  * Set simulator options
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -668,7 +668,7 @@ void Circuit_execOption(Circuit*c,int argc,char *argv[])
   if ((argc & 1) != 1) {
     argError("$option");
     return;
-  } 
+  }
 
   for (i = 1;i < argc;i += 2) {
     int value = 0;
@@ -702,7 +702,7 @@ void Circuit_execOption(Circuit*c,int argc,char *argv[])
  * Write a value to a channel.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -718,7 +718,7 @@ void Circuit_execWrite(Circuit*c,int argc,char *argv[])
   if (argc != 3) {
     argError("$write");
     return;
-  } 
+  }
 
   channel = Circuit_getChannel(c,argv[1]);
 
@@ -743,7 +743,7 @@ void Circuit_execWrite(Circuit*c,int argc,char *argv[])
  * Puts a watch on a named channel.
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -792,7 +792,7 @@ void Circuit_execStop(Circuit*c,int argc,char *argv[])
  * Begin simulation of the loaded script
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -870,7 +870,7 @@ void Circuit_execDebug(Circuit*c,int argc,char *argv[])
  * Request information about a net or memory
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -918,7 +918,7 @@ void Circuit_execNetInfo(Circuit*c,int argc,char *argv[])
  * Store a value in memory
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
@@ -970,12 +970,12 @@ void Circuit_execMemPut(Circuit*c,int argc,char *argv[])
  * Get a range of values from memory
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
  * Usage:
- *   $memget name addr1 addr2 
+ *   $memget name addr1 addr2
  *
  * Return command:
  *   memory name addr : value1 value2 ...
@@ -1045,13 +1045,13 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
  * Set the watch for a memory (only one in effect at a time)
  *
  * Parameters:
- *     c		Current Circuit 
+ *     c		Current Circuit
  *     argc		Number of arguments
  *     argv		Argument array
  *
  * Usage:
- *   $memwatch name addr1 addr2 
- *   $memwatch name delete 
+ *   $memwatch name addr1 addr2
+ *   $memwatch name delete
  *
  * Return command (on events):
  *   memory name addr : value1 value2 ...
@@ -1059,7 +1059,7 @@ void Circuit_execMemGet(Circuit*c,int argc,char *argv[])
  *
  * The first return command shows the value at a memory or range of memory
  * locations.  The second return command shows the address that was most
- * recently accessed. 
+ * recently accessed.
  *
  *****************************************************************************/
 void Circuit_execMemWatch(Circuit*c,int argc,char *argv[])

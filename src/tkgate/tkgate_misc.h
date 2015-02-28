@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 /*
     Declarations for circuit representation structures.
@@ -64,7 +64,7 @@ typedef struct locale_str Locale;
    Gate editing modes
 */
 #define MODE_CUT 	0		/* Cut wires */
-#define MODE_MOVE	1		/* Move gates, wires, connect wires */ 
+#define MODE_MOVE	1		/* Move gates, wires, connect wires */
 #define MODE_INVERT	2		/* Add/remove inverter on gate */
 #define MODE_SCROLL	3		/* x/y scrolling with hand cursor */
 #define MODE_NAME	5		/* Set the name of a gate or wire */
@@ -162,7 +162,7 @@ typedef struct locale_str Locale;
  * Special cursors
  */
 #define CANCELMOUSEOVER		-1	/* Cancel any special mouseover cursors */
-#define HYPERLINKCURSOR 	-2	/* Use the hyperlink mouseover cursor */ 
+#define HYPERLINKCURSOR 	-2	/* Use the hyperlink mouseover cursor */
 
 #define SCROLL_LIMIT 100
 
@@ -202,10 +202,10 @@ typedef struct locale_str Locale;
 #define GD_NORMAL	0	/* Normal drawing (gate with wires) */
 #define GD_NOINWIRE	1	/* Suppress input wire drawing */
 #define GD_NOWIRE	2	/* Suppress wire drawing */
-#define GD_PADONLY	3	/* Draw only wire pad names (block type only) */ 
+#define GD_PADONLY	3	/* Draw only wire pad names (block type only) */
 
 #define DEFAULT_PORT_NAME "*port_name*"
- 
+
 #define bits(var,size) unsigned int var : size
 #define abs(x) ((x) < 0 ? (-(x)) : (x))
 #define midpointp(m,v1,v2) (abs((m)-(v1)) + abs((m)-(v2)) == abs((v1)-(v2)))

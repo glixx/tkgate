@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue Feb  3 15:33:02 2009
 ****************************************************************************/
@@ -161,7 +161,7 @@ GGateInfo gate_ff_info = {
   {1},
 
   {"Dsetup","Dhold","Dck_q",0},
-  
+
   FF_Make,
   FF_WriteCellDef,
   Generic_Init,
@@ -371,7 +371,7 @@ static GWireNode *FF_wireSnap(GCElement *g,GWire *w,int *mod,int retry)
     if (g->u.ff.mirror)
       FF_normal_gateinfo();
 
-  
+
     *mod = wire_force(w,pd->dir,retry);
   }
   return w->nodes;

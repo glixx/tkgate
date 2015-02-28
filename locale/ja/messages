@@ -1,5 +1,5 @@
 #
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -11,11 +11,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Feb 22 18:51:02 2009
+#
 
 ##############################################################################
 #
@@ -114,7 +115,7 @@ tab.cpath		遅延解析
 
 #############################################################################
 #
-# MsgMgr strings (including breakpoint and script handling) 
+# MsgMgr strings (including breakpoint and script handling)
 #
 @mm.width		8
 mm.add			追加...
@@ -129,7 +130,7 @@ mm.disable		無効にする
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
 # of a number and a colon.   If this prefix exists, it indicates the character
 # position in the string that will be underlined.  This enables keyboard shortcuts
-# using the Alt key. 
+# using the Alt key.
 #
 menu.file		ファイル
 menu.edit		編集
@@ -352,7 +353,7 @@ gm.msi.18dec		1-8 デコーダ
 gm.msi.12demux		1-2 デマルチプレクサ
 gm.msi.14demux		1-4 デマルチプレクサ
 gm.msi.18demux		1-8 デマルチプレクサ
-    
+
 gm.mod.inst		モジュールのインスタンス
 gm.mod.in		モジュールの入力
 gm.mod.out		モジュールの出力
@@ -1083,7 +1084,7 @@ opt.cpflash		パスの点滅表示
 opt.general.fontset		フォント・サイズ
 
 opt.simulator.savetraces	プローブの箇所をシミュレータの起動の間に記憶する。
-opt.simulator.noglitch		シミュレータのグリッチの抑制  
+opt.simulator.noglitch		シミュレータのグリッチの抑制
 
 opt.simulator.err		エラー扱い
 opt.simulator.stopany		シミュレーションの忠告をエラーとして扱える。
@@ -1792,7 +1793,7 @@ verga.err.TIMESCALEAN		TODO: Design contains some modules with `timescale and so
 verga.err.NONSTATCTL		TODO: Event control @(*) applied to non-statment.
 verga.err.BADVALUE		TODO: Bad numeric value '%s'.
 verga.err.BADPORTTYPE		TODO: Invalid type declaration used on port '%s'
-verga.err.PATHDCOND		TODO: DelaMust set through both # expression and specify block. 
+verga.err.PATHDCOND		TODO: DelaMust set through both # expression and specify block.
 verga.err.IE_TASK		TODO: Task definition '%s' found outside module - internal error.
 verga.err.IE_NONET		TODO: Failed to find net '%s' - internal error.
 verga.err.IE_BADTYPE		TODO: Bogus port type for port '%s' - internal error.
@@ -1851,7 +1852,7 @@ menu.edit.autobold		自動太字
 @db.gate.tap.exp.width		*180
 
 circ.reallyupdate		-fillbegin-
-本当に全ての「%s」のインスタンスを更新したいのですか。 
+本当に全ての「%s」のインスタンスを更新したいのですか。
 -end-
 
 circ.reallyoverwrite	-fillbegin-
@@ -2292,7 +2293,7 @@ ho.edgat.memfile		-begin-
 ho.edgat.func		モジュールの機能
 ho.edgat.frame		フレームのラベル
 
-ho.traceprint		TODO: Print trace logic trace. 
+ho.traceprint		TODO: Print trace logic trace.
 
 ho.showxhair		-begin-
 TODO: If this button is depressed, a vertical crosshair line will be displayed in the scope window.
@@ -2347,7 +2348,7 @@ TODO: If this setting is enabled, use of any disabled features will be ignored a
 -end-
 
 ho.opt.html.browser		-begin-
-TODO: Command to be execute when the user clicks on a link to an html file.  A "%s" in the command will be replaced with the link URL. 
+TODO: Command to be execute when the user clicks on a link to an html file.  A "%s" in the command will be replaced with the link URL.
 -end-
 
 ho.opt.html.email		-begin-
@@ -2658,10 +2659,10 @@ TODO: Edit the selected port.  You can also double-click to edit a field in a po
 ho.symed.export		TODO: Export image to file.
 
 
-ho.setsel.ltor		TODO: Move highlighted items to selected list. 
+ho.setsel.ltor		TODO: Move highlighted items to selected list.
 
 ho.print.timegraph		-begin-
-TODO: The display of the region selected to be printed is shown here.  The green area is the entire range of trace data available, and the grey area shows the area to be printed. Use the selectors to the left to select a region, or select the region in the scope window before bringing  up this diaglog box. 
+TODO: The display of the region selected to be printed is shown here.  The green area is the entire range of trace data available, and the grey area shows the area to be printed. Use the selectors to the left to select a region, or select the region in the scope window before bringing  up this diaglog box.
 -end-
 
 ho.setsel.allr		TODO: Move all items to selected list.
@@ -2688,6 +2689,6 @@ TODO: Use "standard" modules for regular rectangular interfaces.  Use "symbol" m
 ho.ipanel.addport		-begin-
 TODO: Add a port to the module.  You can also double-click after the last item to add port.
 -end-
-ho.setsel.rtol			TODO: Move highlighted items to unselected list. 
+ho.setsel.rtol			TODO: Move highlighted items to unselected list.
 
 

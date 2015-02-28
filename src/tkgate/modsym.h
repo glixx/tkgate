@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #ifndef __modsym_h
 #define __modsym_h
@@ -46,7 +46,7 @@ typedef struct {
 struct GModSymbol_str {
   int	 	ms_gid;			/* MSS ID for icons */
   int		ms_refCount;		/* Reference count of this symbol */
-  int		ms_mark;		/* Generic mark */ 
+  int		ms_mark;		/* Generic mark */
   GMIconData	ms_normal;		/* Data for normal icon */
   GMIconData	ms_select;		/* Data for select icon */
   int		ms_basex,ms_basey;	/* Base x/y point */

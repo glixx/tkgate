@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Sep 14 23:00:33 2005
 ****************************************************************************/
@@ -257,7 +257,7 @@ void multint_mul10(unsigned *x,int n)
     if (nextcarry + P3 < nextcarry) xcarry++;
     nextcarry += P3;
     nextcarry = (nextcarry >> (SSWORDSIZE/2)) + xcarry;
-    
+
     x[i] = x[i] * 10 + carry;
     carry = nextcarry;
   }

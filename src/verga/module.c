@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "thyme.h"
 
@@ -182,7 +182,7 @@ NetDecl *ScopeDecl_findNet(ScopeDecl *s,const char *name,unsigned flags)
 
   n = (NetDecl*) SHash_find(&s->sd_nets,name);
   if (!n && s->sd_parent && !(flags & SDF_LOCAL_ONLY))
-    n = ScopeDecl_findNet(s->sd_parent,name,flags); 
+    n = ScopeDecl_findNet(s->sd_parent,name,flags);
 
   return n;
 }
@@ -335,7 +335,7 @@ void ModuleDecl_printData(ModuleDecl *m)
 	    printf("  parmport %s 0\n",mip->mip_name);
 	}
 
-	      
+
       }
       break;
     case IC_NETDECL :
@@ -406,7 +406,7 @@ void ModuleDecl_print(ModuleDecl *m,FILE *f)
   }
 
   /*
-   * Display the ports 
+   * Display the ports
    */
   if (List_numElems(&m->m_ports) > 0) {
     ListElem *E;
@@ -601,7 +601,7 @@ int ModuleDecl_makeFaninTree(ModuleDecl *m)
 	printHList(&inH);
 	printf("\n");
 #endif
-	
+
 
 	SHash_uninit(&inH);
 	SHash_uninit(&outH);

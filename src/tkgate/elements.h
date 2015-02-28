@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 /*
     Declarations for circuit representation structures.
@@ -45,7 +45,7 @@
 #define NV_TRIREG	8
 
 /*
- * GCellSpec - Decoded built-in gate cell 
+ * GCellSpec - Decoded built-in gate cell
  */
 struct GCellSpec_str {
   char		gc_name[STRMAX];	/* Name of cell */
@@ -118,7 +118,7 @@ typedef struct {
 
 typedef struct {
   int		width,height;	/* Size of the comment block in pixels */
-  int		reqWidth;	/* Requested width (html only) */ 
+  int		reqWidth;	/* Requested width (html only) */
   TextLine	*first;		/* First line in comment */
   TextLine	*last;		/* Last line in comment */
   Html		*html;		/* Formatted html */
@@ -190,7 +190,7 @@ struct celemnt {
     GGateFF		ff;
   } u;
 
-  /* 
+  /*
    * Vector of wire pads (allocated in gate_new).  This array can be extended
    * for some symbol modules by doing a realloc.
    */
@@ -278,7 +278,7 @@ struct gateinfo {
   } Flags;
 
   char		*delayNames[MAXDELAYS];			/* Name of delay parameters */
-  
+
   /* Function for gate creation */
   GCElement *(*MakeFunction)(EditState**,GModuleDef*,
 			     int,int,int,int,const char*,int,const char**,int);

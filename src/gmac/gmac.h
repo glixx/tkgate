@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri Jan  9 19:20:55 2009
 ****************************************************************************/
@@ -103,7 +103,7 @@ typedef struct {
  *   +0[3:0]=%2		type=OI_REGOP
  *   +3[3:0]=#1[3:0]	type=OI_NUMOP
  *   +3[3:0]=#1-@+2	type=OI_RELNUMOP
- * 
+ *
  */
 typedef struct {
   int		oi_type;	/* Type of operation */
@@ -117,7 +117,7 @@ typedef struct {
 /*
  * An OprDef represents a single set of operands and its memory program.
  *
- * %1,%2 = { +1[7:4]=%1, +0[3:0]=%2 } 
+ * %1,%2 = { +1[7:4]=%1, +0[3:0]=%2 }
  */
 typedef struct opr_def OprDef;
 struct opr_def {

@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,14 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue Feb  3 10:31:35 2009
+#
+
+########################################################################
 #
 # This file contains procedures for displaying and maniuplating
 # the error list.  The error list is a box listing any errors that
@@ -55,7 +58,7 @@ namespace eval ErrBox {
     transAction - {
       gat_errBoxReport -1
     }
-    catch { 
+    catch {
       set errbox_x [expr [winfo rootx .errbox] - [winfo rootx .]]
       set errbox_y [expr [winfo rooty .errbox] - [winfo rooty .]]
       destroy .errbox
@@ -66,7 +69,7 @@ namespace eval ErrBox {
   proc selectUp {} {
     if { [catch {set N [.errbox.lframe.list curselection]} ] } {
       return
-    } 
+    }
 
 
     if { $N == "" } {
@@ -84,7 +87,7 @@ namespace eval ErrBox {
   proc selectDown {} {
     if { [catch {set N [.errbox.lframe.list curselection]} ] } {
       return
-    } 
+    }
 
     if { $N == "" } {
       set N 0
@@ -127,9 +130,9 @@ namespace eval ErrBox {
 
     grid rowconfigure .errbox.lframe 0 -weight 1
     grid columnconfigure .errbox.lframe 0 -weight 1
-    grid .errbox.lframe.list -row 0 -column 0 -sticky nsew 
-    grid .errbox.lframe.vert -row 0 -column 1 -sticky ns 
-    grid .errbox.lframe.horz -row 1 -column 0 -sticky ew 
+    grid .errbox.lframe.list -row 0 -column 0 -sticky nsew
+    grid .errbox.lframe.vert -row 0 -column 1 -sticky ns
+    grid .errbox.lframe.horz -row 1 -column 0 -sticky ew
 
     pack .errbox.lframe -side top  -padx 5 -pady 5 -fill both -expand 1
 

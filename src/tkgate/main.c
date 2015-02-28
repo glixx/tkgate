@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue Jan 27 23:21:37 2009
 ****************************************************************************/
@@ -38,7 +38,7 @@ int Tcl_AppInit(Tcl_Interp *tcl)
 
   r = Tcl_Init(tcl);
   if (r == TCL_ERROR) {
-    fprintf(stderr,"Tcl_Init Error in tkgate:\n%s\n",tcl->result);
+    fprintf(stderr,"Tcl_Init Error in tkgate:\n%s\n",Tcl_GetStringResult(tcl));
     fprintf(stderr,"Perhaps you could try setting the environment variable TCL_LIBRARY\n");
     fprintf(stderr,"to the directory in which init.tcl can be found.  You can also\n");
     fprintf(stderr,"set TCL_LIBRARY in options.h.\n");
@@ -69,7 +69,6 @@ int main(int argc,char *argv[])
    * Figure out which directory we should use as the tkgate home.
    */
   findTkGateHome(homeDir);
-
 
   /*
    * If the tcl/tk library file path environment variables are not set, use

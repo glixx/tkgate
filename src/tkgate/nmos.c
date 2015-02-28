@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Jan 19 18:16:51 2009
 ****************************************************************************/
@@ -90,7 +90,7 @@ GGateInfo gate_nmos_info = {
     {"G",IN,1,1,nmos_gate_loc,0}},
   {{10,4,LJ},{0,-12,CT},{-10,4,RJ},{0,18,CT}},
   {1},
-  
+
   {"Diz","Dgz",0},
 
   Generic_Make,

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Dec 22 06:31:44 2008
 ****************************************************************************/
@@ -99,7 +99,7 @@ const char *GNet_getVType(GNet *n)
 
   code = n->n_vtype;
   if (code > vtype_table_length)
-    code = 0; 
+    code = 0;
 
 
   return vtype_table[code];
@@ -166,7 +166,7 @@ GNet *new_GNet_compatable(const char *name,GNet *rnet,GModuleDef *M)
   net->n_finalized = 0;
   net->n_labelWidth = 0;
   net->n_generation = generation++;
- 
+
   SHash_insert(M->m_nets,net->n_signame,net);
 
   if (M && TkGate.circuit->es && M == TkGate.circuit->es->env && editstate_getInterfaceMode() == INTFMODE_NONE) {
@@ -275,9 +275,9 @@ GNet *net_pickOne(GNet *a,GNet *b,int decref_loser)
   GNet *r = 0;	/* Net to return */
   GNet *l = 0;	/* Losing net */
 
-  if (!a) 
+  if (!a)
     r = b;
-  else if (!b) 
+  else if (!b)
     r = a;
   else if (a == b) {
     r = a;
@@ -310,7 +310,7 @@ GNet *net_pickOne(GNet *a,GNet *b,int decref_loser)
 /*
    Check to see if it is OK to connect wires from the
    specified nets.  Return 1 if OK, return 0 and display
-   a status bar message if not OK. 
+   a status bar message if not OK.
 */
 int net_connectOK(GNet *n1,GNet *n2,int isMidWire)
 {
@@ -426,7 +426,7 @@ void net_editProps(GNet *n,int x,int y)
 }
 
 /*
-   Set the signal name of a wire to s.  
+   Set the signal name of a wire to s.
 */
 void net_rename(GNet *net,const char *s,int showName)
 {
@@ -578,7 +578,7 @@ int GWire_pickProbePosition(GWire *w,int *x,int *y)
   int best_d = 0x7ffffff;
   int best_x, best_y;
   GWireNode *n;
-  
+
 
   w = wire_driver(w);
   for (n = w->nodes;n && n->out;n = n->out) {
@@ -735,7 +735,7 @@ void GNet_checkNameVisibility(GNet *net,int action)
 	printf("    wire %p islab=%d\n",n,n->isLabeled);
 #endif
 	if (n->isLabeled) return;
-      } 
+      }
     }
 
     /*
@@ -826,7 +826,7 @@ void GNet_labelClosest(GNet *net,int x,int y)
   }
 
   if (best_dist > 50*50) {
-    GNet_checkNameVisibility(net,0);    
+    GNet_checkNameVisibility(net,0);
     net_update(net);
     return;
   }

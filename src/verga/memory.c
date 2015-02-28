@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
@@ -113,7 +113,7 @@ static void delete_MemNode(MemNode *N)
 }
 
 static MemPage *Memory_getPage(Memory *M,unsigned A)
-{ 
+{
   int addr[4];
   MemNode *N;
   int i;
@@ -228,7 +228,7 @@ void Memory_put(Memory *M,unsigned A,Value *data)
     vgio_echo("* Memory_put(%x, %s)\n",A,buf);
   }
 #endif
- 
+
   Memory_lookup(M,A,&D1,&D0,&Dz);
 
   memcpy(D1,data->one, bytesPerWord);
@@ -293,7 +293,7 @@ int Memory_putLine(Memory *M,char *line)
       if (Value_convertHex(data,T,M->m_dbits) != 0)
 	ret_code = -1;
       Memory_put(M,addr, data);
-	
+
       addr++;
     }
   }
@@ -441,7 +441,7 @@ void Memory_init(Memory *M,unsigned beginAddr,unsigned endAddr,int dbits,Net *ne
 {
   int i,n;
 
-  M->m_flags = 0; 
+  M->m_flags = 0;
   M->m_beginAddr = beginAddr;
   M->m_endAddr = endAddr;
   M->m_dbits = dbits;

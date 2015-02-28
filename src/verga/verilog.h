@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #ifndef __verilog_h
 #define __verilog_h
@@ -41,8 +41,8 @@ void VerSpecTask(const char *name,List *args);
 void VerSpecify(Expr *cond,int ptype,Expr *lhs,Expr *rhs,Expr *value);
 void VerSpecParam(const char *name,Expr *value);
 
-void VerGateDecl(int gtype, Expr *delay); 
-void VerGateInst(const char *iname, VRange *range, List *parms); 
+void VerGateDecl(int gtype, Expr *delay);
+void VerGateInst(const char *iname, VRange *range, List *parms);
 
 void VerModDecl(const char *name);
 void VerModDeclParm(const char *name, Expr *e);

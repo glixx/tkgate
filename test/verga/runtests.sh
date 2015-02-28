@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERGA=../../src/verga/verga
+VERGA=../../libexec/verga
 
 PASS=0
 FAIL=0

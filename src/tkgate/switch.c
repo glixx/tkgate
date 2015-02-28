@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Feb 21 20:02:58 2009
 ****************************************************************************/
@@ -80,20 +80,20 @@ static char *psSwitch[] = {
   "  closepath",
   "  fill",
   "  grestore",
-  
+
   "  -8 0 moveto    % Knives",
   "  -8 7 lineto",
   "  -13 7 lineto",
   "  -13 0 lineto",
   "  stroke",
-  
+
   "  -10.5 7  moveto    % Handle",
   "  -10.5 7.5 lineto",
   "  stroke",
   "  -10.5 8 1 0 360 arc",
   "  closepath",
   "  fill",
-  
+
   "  -7 -1 moveto    % Hinges",
   "  -7 1 lineto",
   "  -9 -1 moveto",
@@ -309,7 +309,7 @@ void init_switch()
   GGateInfo *gi = &gate_switch_info;
 
   P = Pixmap_registerFromFile("switch","switch.b");
-  
+
   upId = new_IconID(P,upswitch_iconDims,0);
   upBId = new_IconID(P,upswitch_iconDims,switch_iconBoldOffset);
   dnId = new_IconID(P,dnswitch_iconDims,0);

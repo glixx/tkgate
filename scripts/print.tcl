@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Wed Jan 14 22:24:59 2009
 #
@@ -126,7 +126,7 @@ proc tkg_printWithDefaults {isFile name} {
   global pd_isfile pd_file pd_ok
   global tkg_currentFile tkg_displayFile pd_printPgSize
   global pd_file pd_paper pd_printPgOrient pd_printStyle pd_select pd_selectList
-  global pd_epsf pd_printIndex pd_printMergeSmall pd_printDuplex pd_inclib pd_printGraph 
+  global pd_epsf pd_printIndex pd_printMergeSmall pd_printDuplex pd_inclib pd_printGraph
 
   Option::dialogLoad -optclass {/Print/Output /Print/Content}
   Option::dialogSave -optclass {/Print/Output /Print/Content} -prefix pd
@@ -140,7 +140,7 @@ proc tkg_printWithDefaults {isFile name} {
 	-select $pd_select -modlist $pd_selectList -epsf $pd_epsf -index $pd_printIndex \
 	-merge $pd_printMergeSmall -duplex $pd_printDuplex -graph $pd_printGraph \
 	-inclib $pd_inclib
-  } { 
+  } {
     set printer [getPrintCommand $name]
 
     gat_print -printer $printer -paper $pd_printPgSize -orient $pd_printPgOrient -style $pd_printStyle \
@@ -249,7 +249,7 @@ namespace eval PrintDlg {
   # Map a change in the long printer name to the short printer name
   #
   proc mapLPNChange args {
-    global longPrinterName opts_printer   
+    global longPrinterName opts_printer
     variable longToShort
     variable printerList
 
@@ -279,7 +279,7 @@ namespace eval PrintDlg {
       if {[assoc $opts_printer $printerList] == "" } {
 	puts "fixing opts_printer"
 	set opts_printer [lindex $printerList 0]
-      } 
+      }
 
       if { $longPrinterName != $shortToLong($opts_printer) } {
 	set longPrinterName $shortToLong($opts_printer)
@@ -437,14 +437,14 @@ namespace eval PrintDlg {
 
     trace variable opts_printPgOrient w ScopePrintDlg::updateLPPEstimate
     trace variable opts_printPgSize w ScopePrintDlg::updateLPPEstimate
-  } 
+  }
 
   proc fpsUninit {} {
     global opts_printPgOrient opts_printPgSize
 
     trace vdelete opts_printPgOrient w ScopePrintDlg::updateLPPEstimate
     trace vdelete opts_printPgSize w ScopePrintDlg::updateLPPEstimate
-  } 
+  }
 
   #############################################################################
   #
@@ -471,7 +471,7 @@ namespace eval PrintDlg {
 #    set curSize [paperSizeToName $opts_printPgSize]
 #    Dropbox::new $w.size.mb -value $curSize -variable opts_printPgSizeName -width 23 -command PrintDlg::setPaperSize
     Dropbox::new $w.size.mb -variable opts_printPgSizeName -width 23
-    foreach ps $paperSizeTable { 
+    foreach ps $paperSizeTable {
       Dropbox::itemadd $w.size.mb [list [lindex $ps 1]]
     }
 
@@ -518,11 +518,11 @@ namespace eval PrintDlg {
     frame $w.sp2
 
     pack $w.sp1 -anchor w -padx 5 -pady 5
-    pack $w.part -anchor w -padx 5 
+    pack $w.part -anchor w -padx 5
     pack $w.sp2 -anchor w -padx 5  -pady 10
-    pack $w.idx -anchor w -padx 5 
-    pack $w.graph -anchor w -padx 5 
-    pack $w.mrgsml -anchor w -padx 5 
+    pack $w.idx -anchor w -padx 5
+    pack $w.graph -anchor w -padx 5
+    pack $w.mrgsml -anchor w -padx 5
   }
 
   proc outputSelectNotify {lpr file} {
@@ -572,7 +572,7 @@ namespace eval PrintDlg {
     variable availableModules
     variable selectedModules
     global pd_inclib pd_incunused
-    
+
     set exclude {}
     if {!$pd_inclib} {
       set exclude {part}
@@ -613,17 +613,17 @@ namespace eval PrintDlg {
     trace vdelete pd_inclib w "PrintDlg::fmsUpdateList"
     trace vdelete pd_incunused w "PrintDlg::fmsUpdateList"
   }
-  
+
   #############################################################################
   #
-  # Frame including selector to choose a set of modules to be printed. 
+  # Frame including selector to choose a set of modules to be printed.
   #
   proc frameModuleSelect {w} {
     labelframe $w [m print.modulesel]
     packPad $w
 
-    SetSelector::new $w.ss -availablelabel Available \
-	-selectedlabel Selected \
+    SetSelector::new $w.ss -availablelabel [m print.avail] \
+	-selectedlabel [m print.sel] \
 	-availablevariable PrintDlg::availableModules \
 	-selectedvariable PrintDlg::selectedModules
 
@@ -666,13 +666,13 @@ namespace eval PrintDlg {
     }
 
     #
-    # If current default printer is not valid, choose the first printer 
+    # If current default printer is not valid, choose the first printer
     # in the list as the default printer.
     #
     if {[assoc $opts_printer $printerList] == ""} {
       set newDefault [lindex [lindex $printerList 0] 0]
       set opts_printer $newDefault
-    } 
+    }
 
     #
     # Set the long name of the printer
@@ -736,7 +736,7 @@ namespace eval PrintDlg {
     }
 
     set file [tk_getSaveFile -defaultextension $pd_filter -filetypes $pd_filetypes -parent .prntdlg]
-    if { $file != "" } { 
+    if { $file != "" } {
       set $fileNameVar $file
       .prntdlg.left.file.e icursor end
       .prntdlg.left.file.e xview end
@@ -748,7 +748,7 @@ namespace eval PrintDlg {
   # File name selection
   #
   proc frameFileSelect {which w} {
-    
+
     if { $which == "circuit" } {
       set fileNameVar pd_file
     } else {
@@ -903,7 +903,7 @@ namespace eval PrintDlg {
 	    -style $pd_printStyle -select sel -modlist $pd_selectList -epsf $pd_epsf \
 	    -index $pd_printIndex -merge $pd_printMergeSmall -duplex $pd_printDuplex \
 	    -graph $pd_printGraph -inclib 0
-      } { 
+      } {
 	set printer [getPrintCommand]
 	gat_print -printer $printer -paper $pd_printPgSize -orient $pd_printPgOrient \
 	    -style $pd_printStyle -select sel -modlist $pd_selectList -epsf $pd_epsf \
@@ -917,7 +917,7 @@ namespace eval PrintDlg {
 #############################################################################
 
 namespace eval ScopePrintDlg {
-  variable timeCorrection 
+  variable timeCorrection
   variable startUnits ns
   variable rangeUnits ns
   variable startUnits_saved ns
@@ -935,7 +935,7 @@ namespace eval ScopePrintDlg {
   variable graphEnd
   variable leftMargin
   variable rightMargin
-  variable graphLength 
+  variable graphLength
   variable graphHeight
   variable lppEstimate
   variable tg_w
@@ -944,7 +944,7 @@ namespace eval ScopePrintDlg {
   variable linesEstimate
   variable ppvWidth 200
   variable ppvHeight 150
-  
+
   #############################################################################
   #
   # Variable traces to keep the display region timeline updated.
@@ -1019,7 +1019,7 @@ namespace eval ScopePrintDlg {
     variable units
 
     return [expr $v * ([unitsNum $u]/[unitsNum $units])]
-  } 
+  }
 
   #############################################################################
   #
@@ -1073,8 +1073,8 @@ namespace eval ScopePrintDlg {
     variable graphEnd
     variable leftMargin
     variable rightMargin
-    variable graphLength 
-    variable graphHeight 
+    variable graphLength
+    variable graphHeight
     variable units
     variable start
     variable startUnits
@@ -1166,7 +1166,7 @@ namespace eval ScopePrintDlg {
     #
     set su [unitsNum $startUnits]
     while { $start > 1000 && $su < 1000000000000000.0 } {
-      set start [expr $start / 1000.0 ] 
+      set start [expr $start / 1000.0 ]
       set su [expr $su * 1000.0 ]
     }
     set startUnits [numUnits $su]
@@ -1177,7 +1177,7 @@ namespace eval ScopePrintDlg {
     #
     set su [unitsNum $rangeUnits]
     while { $range > 1000 && $su < 1000000000000000.0 } {
-      set range [expr $range / 1000.0 ] 
+      set range [expr $range / 1000.0 ]
       set su [expr $su * 1000.0 ]
     }
     set rangeUnits [numUnits $su]
@@ -1188,7 +1188,7 @@ namespace eval ScopePrintDlg {
     #
     set su [unitsNum $pageLenUnits]
     while { $pageLen > 1000 && $su < 1000000000000000.0 } {
-      set pageLen [expr $pageLen / 1000.0 ] 
+      set pageLen [expr $pageLen / 1000.0 ]
       set su [expr $su * 1000.0 ]
     }
     set pageLenUnits [numUnits $su]
@@ -1209,7 +1209,7 @@ namespace eval ScopePrintDlg {
     variable graphEnd
     variable leftMargin
     variable rightMargin
-    variable graphLength 
+    variable graphLength
     variable graphHeight
     variable tg_w
 
@@ -1325,11 +1325,11 @@ namespace eval ScopePrintDlg {
 
     if { $N > 10 } {
       set N 7
-      set figW [expr $W + $N*5 + 3*8] 
-      set figH [expr $H + $N*5 + 3*8] 
+      set figW [expr $W + $N*5 + 3*8]
+      set figH [expr $H + $N*5 + 3*8]
     } else {
-      set figW [expr $W + $N*5] 
-      set figH [expr $H + $N*5] 
+      set figW [expr $W + $N*5]
+      set figH [expr $H + $N*5]
     }
 
     set x0 [expr int($ppvWidth/2.0 - $figW/2.0) ]
@@ -1378,7 +1378,7 @@ namespace eval ScopePrintDlg {
 	for {set i 0} { $i < $M } {incr i} {
 	  $w create rectangle [expr $x+5] [expr $y+5+$i*$traceSpace] [expr $x+$W-5] \
 		  [expr $y+5+($i+1)*$traceSpace-$traceGap] -outline "" -fill gray60
-	  
+
 	}
       }
     } else {
@@ -1387,7 +1387,7 @@ namespace eval ScopePrintDlg {
       for {set i 0} { $i < $M } {incr i} {
 	  $w create rectangle [expr $x+5] [expr $y+5+$i*$traceSpace] [expr $x+$W-5] \
 		  [expr $y+5+($i+1)*$traceSpace-$traceGap] -outline "" -fill gray60
-	  
+
       }
 
       set P [expr $linesEstimate-int($linesEstimate)]
@@ -1433,8 +1433,8 @@ namespace eval ScopePrintDlg {
 
     timegraph $w.g
 
-    pack $w.g -padx 3 -pady 3 -side right -anchor ne 
-    pack $w.bb -padx 3 -pady 3 -side right -anchor ne 
+    pack $w.g -padx 3 -pady 3 -side right -anchor ne
+    pack $w.bb -padx 3 -pady 3 -side right -anchor ne
 
     grid $w.bb.start_l -row 0 -column 0 -sticky e
     grid $w.bb.start   -row 0 -column 1
@@ -1456,13 +1456,13 @@ namespace eval ScopePrintDlg {
     #
     # Old style display
     #
-#    frame $w.b 
+#    frame $w.b
 #    label $w.b.l -text "[m print.estpg]: "
 #    label $w.b.pc -textvariable ScopePrintDlg::pageEstimate
 #    pack $w.b.l $w.b.pc -side left -padx 5 -pady 5
 #    pack $w.b -side bottom -anchor w
 
-    
+
     frame $w.pageLen
     label $w.pageLen.l -text "[m print.linelen]: "
     timeselector $w.pageLen.ts -unitvariable ScopePrintDlg::pageLenUnits -valuevariable ScopePrintDlg::pageLen
@@ -1494,7 +1494,7 @@ namespace eval ScopePrintDlg {
 	PrintDlg::frameFileSelect trace $w.main.file
 	PrintDlg::outputSelectNotify $w.main.lpr $w.main.file
 	PrintDlg::framePaperSelect $w.main.paper groove
-	
+
 	pack $w.main.lpr -padx 5 -pady 5 -fill both
 	pack $w.main.file -padx 5 -pady 5 -fill both
 	pack $w.main.paper -padx 5 -pady 5 -fill both
@@ -1581,7 +1581,7 @@ namespace eval ScopePrintDlg {
 	  return
 	}
       }
-      
+
       set rawStart   [expr int([getRawTime $start $startUnits] / $timeCorrection + 0.5) ]
       set rawRange   [expr int([getRawTime $range $rangeUnits] / $timeCorrection + 0.5) ]
       set rawPageLen [expr int([getRawTime $pageLen $pageLenUnits] / $timeCorrection + 0.5) ]
@@ -1589,7 +1589,7 @@ namespace eval ScopePrintDlg {
       if {$pd_isfile} {
 	gat_tracePrint -file $pd_traceFile -paper $pd_printPgSize -orient $pd_printPgOrient -epsf $pd_epsf \
 	    -duplex $pd_printDuplex -scalelength $rawPageLen -start $rawStart -end [expr $rawStart + $rawRange]
-      } { 
+      } {
 	set printer [getPrintCommand]
 	gat_tracePrint -printer $printer -paper $pd_printPgSize -orient $pd_printPgOrient -epsf $pd_epsf \
 	    -duplex $pd_printDuplex -scalelength $rawPageLen -start $rawStart -end [expr $rawStart + $rawRange]

@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2005 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Dec  7 20:44:06 2008
+#
 
 namespace eval VPD {
   variable shutdown_cmd
@@ -63,7 +64,7 @@ namespace eval VPD {
   #
   # Parameters:
   #      name		Type name of the VPD
-  #      inst		Instance name of the VPD	
+  #      inst		Instance name of the VPD
   #
   proc post {name inst} {
     variable loaded
@@ -86,7 +87,7 @@ namespace eval VPD {
 
   #############################################################################
   #
-  # Respond to data received on a named pipe. 
+  # Respond to data received on a named pipe.
   #
   proc qdata {name value} {
     variable insignalCommand
@@ -145,7 +146,7 @@ namespace eval VPD {
     variable outSignals
     global simOn
 
-    if { !$simOn } { 
+    if { !$simOn } {
       trace vdelete ::simOn w "VPD::execShutdown $w"
       eval $shutdown_cmd($w)
       catch { destroy $w }
@@ -160,8 +161,8 @@ namespace eval VPD {
     global simOn
     variable insignalCommand
     variable insignalVariable
- 
-    if { !$simOn } { 
+
+    if { !$simOn } {
       trace vdelete $var w "VPD::dataOut $chan $var"
       trace vdelete ::simOn w "VPD::closeChannel $chan $var"
 

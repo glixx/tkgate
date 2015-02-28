@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Feb  2 17:03:26 2009
 ****************************************************************************/
@@ -135,7 +135,7 @@ void GPrint_setupTracePages(GPrint *P)
       G->pg_traceNum = 0;
       G->pg_traceStart = e_start;
       G->pg_traceEnd = e_start + P->p_trace.ti_epochsPerPage - 1;
-      if (G->pg_traceEnd > P->p_trace.ti_iend) 
+      if (G->pg_traceEnd > P->p_trace.ti_iend)
 	G->pg_traceEnd = P->p_trace.ti_iend;
     }
   } else {						/* multiple pages per trace set */
@@ -164,14 +164,14 @@ void GPrint_setupTracePages(GPrint *P)
 	G->pg_traceNum = j*maxtr;
 	G->pg_traceStart = e_start;
 	G->pg_traceEnd = e_start + P->p_trace.ti_epochsPerPage - 1;
-	if (G->pg_traceEnd > P->p_trace.ti_iend) 
+	if (G->pg_traceEnd > P->p_trace.ti_iend)
 	  G->pg_traceEnd = P->p_trace.ti_iend;
 
       }
     }
   }
 
-#if 0 
+#if 0
   printf("actual pages (p=%d (%gx%g) s=%d r=[%d..%d] ---> %d\n",(P->p_size-paperSizes),P->p_uWidth,P->p_uHeight,P->p_trace.scale,P->p_trace.ti_start,P->p_trace.ti_end,P->p_numPages);
 #endif
 }
@@ -252,7 +252,7 @@ double traceLinesPerPage(const char *orient,const char *paper)
   int i;
 
   /*
-   * If no active scope, return 1 page.  
+   * If no active scope, return 1 page.
    */
   if (!Scope || Scope->NumTraces <= 0)
     return 1.0;

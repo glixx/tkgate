@@ -15,7 +15,7 @@
 
 #define DTHRESH 10
 
-typedef struct { 
+typedef struct {
   char *name;
   int r,g,b;
   int cclass;
@@ -65,7 +65,7 @@ int chooseClass(ColorInfo *C)
   if ( (C->b > C->g) && (C->b > C->r))
     return 2;				// blue-like color
 
-  return 6;				// Don't know		
+  return 6;				// Don't know
 }
 
 int computeStrength(ColorInfo *C)

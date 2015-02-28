@@ -18,7 +18,7 @@ typedef struct expr {
   int op;			/* Op code */
   char *lit;			/* Literal or function name  */
   int value;			/* Value of expression  */
-  struct expr *l,*r,*x;		/* left, right and extended operands */  
+  struct expr *l,*r,*x;		/* left, right and extended operands */
 } Expr;
 
 Expr *Expr_lit(const char*);

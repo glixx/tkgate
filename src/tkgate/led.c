@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Sep 26 14:30:18 2009
 ****************************************************************************/
@@ -143,7 +143,7 @@ GGateInfo gate_led_info = {
   1,{{"I",IN,1,1,led_in_loc,0}},
   {{0,-12,CT},{-12,3,RJ},{0,18,CT},{12,3,LJ}},
   {1,1,0,0,0},
-  
+
   {0},
 
   Led_Make,
@@ -236,7 +236,7 @@ static unsigned decDigits(unsigned n)
   if (!n) n = 1;
 
   return n;
-} 
+}
 
 /*
  * Returns number of 7-seg digits.
@@ -246,14 +246,14 @@ static unsigned numDigits(GCElement *g)
   unsigned n = g->wires[LED_IN]->net->n_nbits;
 
   switch (g->u.led.ltype) {
-  case LT_HEX : 
+  case LT_HEX :
   default :
     n = (n+3)/4;
     break;
-  case LT_SEG : 
+  case LT_SEG :
     n = (n+6)/7;
     break;
-  case LT_DEC : 
+  case LT_DEC :
     n = decDigits(n);
     break;
   }
@@ -274,8 +274,8 @@ static void getLedSegments(GCElement *g,unsigned *seg_value,unsigned *seg_valid,
   static unsigned seg_data[] = {
     S(1)|S(2)|S(3)|S(5)|S(6)|S(7),		/* 0 */
     S(3)|S(6),					/* 1 */
-    S(1)|S(3)|S(4)|S(5)|S(7),			/* 2 */ 
-    S(1)|S(3)|S(4)|S(6)|S(7),			/* 3 */ 
+    S(1)|S(3)|S(4)|S(5)|S(7),			/* 2 */
+    S(1)|S(3)|S(4)|S(6)|S(7),			/* 3 */
     S(2)|S(4)|S(3)|S(6),			/* 4 */
     S(1)|S(2)|S(4)|S(6)|S(7),			/* 5 */
     S(1)|S(2)|S(4)|S(5)|S(6)|S(7),		/* 6 */
@@ -307,7 +307,7 @@ static void getLedSegments(GCElement *g,unsigned *seg_value,unsigned *seg_valid,
 
   i = *n - 1;
   switch (g->u.led.ltype) {
-  case LT_HEX : 
+  case LT_HEX :
   default :
     for (i = *n-1;i >= 0;i--) {
       unsigned a = value & 0xf;
@@ -325,7 +325,7 @@ static void getLedSegments(GCElement *g,unsigned *seg_value,unsigned *seg_valid,
       value >>= 4;
     }
     break;
-  case LT_SEG : 
+  case LT_SEG :
     for (i = *n-1;i >= 0;i--) {
       unsigned a = value & 0x7f;
       unsigned b = valid & 0x7f;
@@ -337,7 +337,7 @@ static void getLedSegments(GCElement *g,unsigned *seg_value,unsigned *seg_valid,
       value >>= 7;
     }
     break;
-  case LT_DEC : 
+  case LT_DEC :
     if (valid == 0xffffffff) {
       for (i = *n-1;i >= 0;i--) {
 	unsigned a = value % 10;
@@ -360,11 +360,11 @@ static void getLedSegments(GCElement *g,unsigned *seg_value,unsigned *seg_valid,
 void Led_GetExtents(GCElement *g,TargetDev_e target,int *minx,int *miny,int *maxx,int *maxy,int *bd)
 {
   switch (g->u.led.ltype) {
-  case LT_BASIC : 
+  case LT_BASIC :
   default :
     Generic_GetExtents(g,target,minx,miny,maxx,maxy,bd);
     break;
-  case LT_BAR : 
+  case LT_BAR :
     {
       int x = 0,y = 0,w,h,n;
 
@@ -398,9 +398,9 @@ void Led_GetExtents(GCElement *g,TargetDev_e target,int *minx,int *miny,int *max
       if (maxy) *maxy = y + h;
       break;
     }
-  case LT_HEX : 
-  case LT_SEG : 
-  case LT_DEC : 
+  case LT_HEX :
+  case LT_SEG :
+  case LT_DEC :
     {
       int x = 0,y = 0,w,h;
       unsigned n;
@@ -513,8 +513,8 @@ static void Led_Draw_bar(GCElement *g,int md)
   n = g->wires[LED_IN]->net->n_nbits;
 
   Led_GetExtents(g,TD_X11,&x,&y,&x2,&y2,0);
-  w = x2-x; 
-  h = y2-y; 
+  w = x2-x;
+  h = y2-y;
 
   if (g->show_name && g->ename)
     led_drawname(g,g->ename,x,y,w,h);
@@ -576,8 +576,8 @@ void Led_Draw_7segs(GCElement *g,int md)
   char *seg_type = 0;
 
   Led_GetExtents(g,TD_X11,&x,&y,&x2,&y2,0);
-  w = x2-x; 
-  h = y2-y; 
+  w = x2-x;
+  h = y2-y;
 
   if (g->show_name && g->ename)
     led_drawname(g,g->ename,x,y,w,h);
@@ -597,13 +597,13 @@ void Led_Draw_7segs(GCElement *g,int md)
     Draw the type indicator for 7-seg LEDs
   */
   switch (g->u.led.ltype) {
-  case LT_HEX : 
+  case LT_HEX :
     seg_type = "16";
     break;
-  case LT_SEG : 
+  case LT_SEG :
     seg_type = "D";
     break;
-  case LT_DEC : 
+  case LT_DEC :
     seg_type = "10";
     break;
   }
@@ -656,7 +656,7 @@ void Led_Draw(GCElement *g,int md)
   }
 
   switch (g->u.led.ltype) {
-  case LT_BASIC : 
+  case LT_BASIC :
     Led_Draw_basic(g,md);
     break;
   case LT_BAR :
@@ -736,25 +736,25 @@ void Led_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
   HtmlFont font[1];
 
   Led_GetExtents(g,TD_PRINT,&x,&y,&x2,&y2,0);
-  w = x2-x; 
-  h = y2-y; 
+  w = x2-x;
+  h = y2-y;
 
   switch (g->u.led.ltype) {
-  case LT_BASIC : 
+  case LT_BASIC :
   default :
     Generic_PSLabels(P,g);
     fprintf(P->p_f,"%d %d %d psled_bit\n",g->xpos,g->ypos,-g->orient*90);
     break;
-  case LT_BAR : 
+  case LT_BAR :
     if (g->show_name && g->ename)
       led_PSdrawname(P,g,g->ename,x,y,w,h);
 
     n = g->wires[LED_IN]->net->n_nbits;
     fprintf(P->p_f,"%d %d %d %d %d 0 psled_bar\n",n,w,h,x,y);
     break;
-  case LT_HEX : 
-  case LT_SEG : 
-  case LT_DEC : 
+  case LT_HEX :
+  case LT_SEG :
+  case LT_DEC :
     if (g->show_name && g->ename)
       led_PSdrawname(P,g,g->ename,x,y,w,h);
     n = numDigits(g);
@@ -763,13 +763,13 @@ void Led_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
   }
 
   switch (g->u.led.ltype) {
-  case LT_HEX : 
+  case LT_HEX :
     PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x+w/2+3,y+30,"16",AtLeft|AtTop);
     break;
-  case LT_SEG : 
+  case LT_SEG :
     PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x+w/2+3,y+30,"D",AtLeft|AtTop);
     break;
-  case LT_DEC : 
+  case LT_DEC :
     PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x+w/2+3,y+30,"10",AtLeft|AtTop);
     break;
   }

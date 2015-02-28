@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "tkgate.h"
 
@@ -89,7 +89,7 @@ void SBreakPoint_enable(SBreakPoint *bp)
   const char *p;
   const char *edge;
   char *q;
-  int delay = -1; 
+  int delay = -1;
   int isDelayOnly;
   FILE *f;
   char x;
@@ -248,7 +248,7 @@ void BrkPtTable_disable(NHash *bpm,int id)
   if (TkGate.circuit->simulator.active) {
     sendSimCmd("$delscript break:%d",bp->bp_id);
   }
-   
+
   ob_touch(bp);
   bp->bp_state = BPS_IGNORE;
   DoTcl("Breakpoint::setState %d %d",bp->bp_id,bp->bp_state);
@@ -306,7 +306,7 @@ void BrkPtTable_error(NHash *bpm,int id)
 
   ob_touch(bp);
   bp->bp_state = BPS_INVALID;
-  DoTcl("Breakpoint::seeError %d",id); 
+  DoTcl("Breakpoint::seeError %d",id);
 }
 
 /*****************************************************************************

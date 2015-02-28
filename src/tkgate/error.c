@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Thu Feb 12 14:48:49 2009
 ****************************************************************************/
@@ -368,7 +368,7 @@ EditState *Error_open(GError *e,EditState *es)
  * Parameters:
  *      m		Argument for pointless messages
  *
- * 
+ *
  *
  *****************************************************************************/
 void badermessage(const char *m)
@@ -488,18 +488,18 @@ char *lookupSignalName(int s)
   static char buf[16];
 
   switch (s) {
-  case SIGHUP : return "SIGHUP"; 
-  case SIGQUIT : return "SIGQUIT"; 
-  case SIGILL : return "SIGILL"; 
-  case SIGTRAP : return "SIGTRAP"; 
-  case SIGFPE : return "SIGFPE"; 
-  case SIGBUS : return "SIGBUS"; 
-  case SIGSEGV : return "SIGEGV"; 
+  case SIGHUP : return "SIGHUP";
+  case SIGQUIT : return "SIGQUIT";
+  case SIGILL : return "SIGILL";
+  case SIGTRAP : return "SIGTRAP";
+  case SIGFPE : return "SIGFPE";
+  case SIGBUS : return "SIGBUS";
+  case SIGSEGV : return "SIGEGV";
 #ifdef SIGEMT
-  case SIGEMT: return "SIGEMT"; 
+  case SIGEMT: return "SIGEMT";
 #endif
 #ifdef SIGSYS
-  case SIGSYS : return "SIGSYS"; 
+  case SIGSYS : return "SIGSYS";
 #endif
   default:
     sprintf(buf,"UNKNOWN-%d",s);
@@ -542,8 +542,7 @@ void panicSave(int s)
     exit(0);
   }
 
-
-  ob_mode(0);			/* Turn off undo/redo object management */
+  ob_set_mode(OM_DISABLED);	/* Turn off undo/redo object management */
 
   /*
    * If we get a panic while saving a panic file we will just have to give up.
@@ -737,6 +736,6 @@ void Error_scriptEnd(const char *name,int line)
     return;
   }
   ob_touch(TkGate.errl->el_esList);
-  TkGate.errl->el_esList->es_endLine = line; 
+  TkGate.errl->el_esList->es_endLine = line;
 }
 

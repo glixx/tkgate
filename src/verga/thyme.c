@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2007 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri Feb 13 20:25:04 2009
 ****************************************************************************/
@@ -464,9 +464,9 @@ void showLicense()
   printf("    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n");
   printf("    GNU General Public License for more details.\n");
   printf("\n");
-  printf("    You should have received a copy of the GNU General Public License\n");
-  printf("    along with this program; if not, write to the Free Software\n");
-  printf("    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n");
+  printf("    You should have received a copy of the GNU General Public License along\n");
+  printf("    with this program; if not, write to the Free Software Foundation, Inc.,\n");
+  printf("    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.\n");
   printf("\n");
   exit(0);
 }
@@ -542,7 +542,7 @@ int main(int argc,char *argv[])
 	vgsim.vg_baseDirectory = optarg;
 	break;
       case 't' :
-	vgsim.vg_topModuleName = optarg; 
+	vgsim.vg_topModuleName = optarg;
 	break;
       case 'd' :
 	if (strcasecmp(optarg,"min") == 0)
@@ -652,7 +652,7 @@ int main(int argc,char *argv[])
   }
 
   /*
-   * If we do not have a top module name, we must exit. 
+   * If we do not have a top module name, we must exit.
    */
   if (!vgsim.vg_topModuleName) {
     errorFile(&curPlace,ERR_NOTOP, "<none>");

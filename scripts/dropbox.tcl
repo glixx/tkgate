@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jan 16 08:15:18 2009
 #
@@ -33,7 +33,7 @@ static unsigned char dbarrow_bits[] = {
 
 #############################################################################
 #
-# 
+#
 #
 namespace eval Dropbox {
   variable contents
@@ -244,7 +244,7 @@ namespace eval Dropbox {
     variable p_validatecommand
     variable p_entryVariable
 
-    parseargs $argv {-width -height -command -value -variable -entry -bd  -highlightthickness -state -validatecommand -takefocus} 
+    parseargs $argv {-width -height -command -value -variable -entry -bd  -highlightthickness -state -validatecommand -takefocus}
 
     if {[info exists variable]} {
       catch { global $variable }
@@ -260,11 +260,11 @@ namespace eval Dropbox {
     if {[info exists entry]}  { set p_entry($w) $entry }
     if {[info exists state]}  { set p_state($w) $state }
 
-    if {[info exists validatecommand]}  { 
+    if {[info exists validatecommand]}  {
       $w.e configure -validatecommand "$validatecommand %W %d %s %S %P" -validate key -invalidcommand bell
     }
 
-    if {[info exists takefocus]}  { 
+    if {[info exists takefocus]}  {
       $w.e configure -takefocus $takefocus
     }
 
@@ -289,7 +289,7 @@ namespace eval Dropbox {
 
     $w configure -bd $p_bd($w) -highlightthickness $p_highlightthickness($w)
 
-    if {[info exists p_entry($w)] && $p_entry($w)} { 
+    if {[info exists p_entry($w)] && $p_entry($w)} {
       $w.e configure -state normal
     } else {
       $w.e configure -state disabled
@@ -329,7 +329,7 @@ namespace eval Dropbox {
 
     if {$p_state($w) == "disabled" } return
 
-    if { $W == ".dblist.lb" } { 
+    if { $W == ".dblist.lb" } {
       set i [.dblist.lb curselection]
       if  {$i != ""} {
 	set text [.dblist.lb get $i]

@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,12 +10,11 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Feb 22 10:28:29 2009
-#
 #
 
 set emptyImageData {#define aa_width 10
@@ -36,13 +35,13 @@ font create SSValFont -family Helvetica -size 8
 #
 namespace eval Color {
   variable colors {
-     red red3 firebrick orange brown coral1 sienna tan4 RosyBrown MistyRose3 seashell 
-     green green2 green4 chartreuse4 YellowGreen OliveDrab turquoise aquamarine3 aquamarine DarkSeaGreen3 honeydew 
-     blue MediumBlue navy RoyalBlue purple SlateBlue CornflowerBlue MediumOrchid4 SkyBlue lavender GhostWhite 
-     magenta magenta2 magenta3 violet magenta4 DarkMagenta thistle2 plum3 plum3 LavenderBlush2 orchid4 
-     yellow yellow2 yellow3 khaki1 LemonChiffon khaki3 cornsilk yellow4 beige seashell2 ivory4 
-     cyan cyan2 LightSeaGreen PaleTurquoise cyan4 PowderBlue azure AliceBlue LightCyan3 CadetBlue DarkSlateGray 
-     black gray10 gray20 gray30 gray40 gray50 gray60 gray70 gray80 gray90 white 
+     red red3 firebrick orange brown coral1 sienna tan4 RosyBrown MistyRose3 seashell
+     green green2 green4 chartreuse4 YellowGreen OliveDrab turquoise aquamarine3 aquamarine DarkSeaGreen3 honeydew
+     blue MediumBlue navy RoyalBlue purple SlateBlue CornflowerBlue MediumOrchid4 SkyBlue lavender GhostWhite
+     magenta magenta2 magenta3 violet magenta4 DarkMagenta thistle2 plum3 plum3 LavenderBlush2 orchid4
+     yellow yellow2 yellow3 khaki1 LemonChiffon khaki3 cornsilk yellow4 beige seashell2 ivory4
+     cyan cyan2 LightSeaGreen PaleTurquoise cyan4 PowderBlue azure AliceBlue LightCyan3 CadetBlue DarkSlateGray
+     black gray10 gray20 gray30 gray40 gray50 gray60 gray70 gray80 gray90 white
   }
 
   proc setReidaiColor {tag c} {
@@ -143,26 +142,26 @@ namespace eval Color {
     global tkgdef_toolColor tkgdef_cpathColor tkgdef_gridColor tkgdef_oneColor tkgdef_instColor
     global tkgdef_floatColor tkgdef_unknownColor tkgdef_offLedColor tkgdef_onLedColor tkgdef_zLedColor tkgdef_backgroundColor
 
-    setColor $w.edit.instc    $tkgdef_instColor			opts_instColor		
-    setColor $w.edit.modc     $tkgdef_moduleColor		opts_moduleColor		
-    setColor $w.edit.modpc    $tkgdef_modulePortColor		opts_modulePortColor	
-    setColor $w.edit.framec   $tkgdef_frameColor		opts_frameColor		
-    setColor $w.edit.commc    $tkgdef_commentColor		opts_commentColor	
-    setColor $w.edit.hlinkc   $tkgdef_hyperlinkColor		opts_hyperlinkColor	
-    setColor $w.edit.wirec    $tkgdef_wireColor			opts_wireColor		
-    setColor $w.edit.busc     $tkgdef_busColor			opts_busColor		
-    setColor $w.edit.toolc    $tkgdef_toolColor			opts_toolColor		
-    setColor $w.edit.cpathc   $tkgdef_cpathColor		opts_cpathColor		
-    setColor $w.edit.offledc  $tkgdef_offLedColor		opts_offLedColor		
-    setColor $w.edit.onledc   $tkgdef_onLedColor		opts_onLedColor		
-    setColor $w.edit.zledc    $tkgdef_zLedColor           	opts_zLedColor           
-    setColor $w.scope.backgroundc $tkgdef_backgroundColor	opts_backgroundColor	
+    setColor $w.edit.instc    $tkgdef_instColor			opts_instColor
+    setColor $w.edit.modc     $tkgdef_moduleColor		opts_moduleColor
+    setColor $w.edit.modpc    $tkgdef_modulePortColor		opts_modulePortColor
+    setColor $w.edit.framec   $tkgdef_frameColor		opts_frameColor
+    setColor $w.edit.commc    $tkgdef_commentColor		opts_commentColor
+    setColor $w.edit.hlinkc   $tkgdef_hyperlinkColor		opts_hyperlinkColor
+    setColor $w.edit.wirec    $tkgdef_wireColor			opts_wireColor
+    setColor $w.edit.busc     $tkgdef_busColor			opts_busColor
+    setColor $w.edit.toolc    $tkgdef_toolColor			opts_toolColor
+    setColor $w.edit.cpathc   $tkgdef_cpathColor		opts_cpathColor
+    setColor $w.edit.offledc  $tkgdef_offLedColor		opts_offLedColor
+    setColor $w.edit.onledc   $tkgdef_onLedColor		opts_onLedColor
+    setColor $w.edit.zledc    $tkgdef_zLedColor           	opts_zLedColor
+    setColor $w.scope.backgroundc $tkgdef_backgroundColor	opts_backgroundColor
 
-    setColor $w.scope.gridc    $tkgdef_gridColor		opts_gridColor		
-    setColor $w.scope.onec     $tkgdef_oneColor			opts_oneColor		
-    setColor $w.scope.zeroc    $tkgdef_zeroColor		opts_zeroColor		
-    setColor $w.scope.floatc   $tkgdef_floatColor		opts_floatColor		
-    setColor $w.scope.unknownc $tkgdef_unknownColor		opts_unknownColor	
+    setColor $w.scope.gridc    $tkgdef_gridColor		opts_gridColor
+    setColor $w.scope.onec     $tkgdef_oneColor			opts_oneColor
+    setColor $w.scope.zeroc    $tkgdef_zeroColor		opts_zeroColor
+    setColor $w.scope.floatc   $tkgdef_floatColor		opts_floatColor
+    setColor $w.scope.unknownc $tkgdef_unknownColor		opts_unknownColor
   }
 
   proc selectorVarChanged {w vname args} {
@@ -206,7 +205,7 @@ namespace eval PathSelector {
     }
 
     if { $dirname == "" } return
-    
+
     lappend ::$variable $dirname
   }
 
@@ -470,7 +469,7 @@ namespace eval OptionDlg {
 
     pack $w.ssave -anchor w
     pack $w.fsave -anchor w
-    pack $w.cpe -anchor nw 
+    pack $w.cpe -anchor nw
 
     helpon $w.ssave [m ho.opt.ssave]
     helpon $w.fsave [m ho.opt.fsave]
@@ -532,7 +531,7 @@ namespace eval OptionDlg {
   }
 
   proc editorSample {w} {
-    variable edsamp_w 
+    variable edsamp_w
 
     frame $w
 
@@ -607,9 +606,18 @@ namespace eval OptionDlg {
     trace vdelete ::opts_${v}Italic w OptionDlg::editorDoColor
   }
 
+  ######################################################################
+  #
+  # Create group of checkboxes for same set of options for different
+  # categories
+  #
+  # w widget's path name
+  # l label
+  # v
+  #
   proc stylegroup {w l v} {
     frame $w
-    label $w.l -width 15 -text $l -justify left -anchor w
+    label $w.l -width [m @opt.editor.catwidth] -text $l -justify left -anchor w
 
     Color::selectorbutton $w.color opts_${v}Color
     label $w.color_l -text [m opt.editor.color]
@@ -644,7 +652,6 @@ namespace eval OptionDlg {
     pack $w.task -anchor w
     pack $w.inst -anchor w
   }
-
 
   #############################################################################
   #
@@ -710,7 +717,7 @@ namespace eval OptionDlg {
       $c create line 135 [expr $dy + 5] 145 [expr $dy - 5]	-tags $w.cpathc
       $c create line 135 [expr 95 + $dy + 5] 145 [expr 95 + $dy - 5]	-tags $w.cpathc
     }
-    
+
   }
 
   #############################################################################
@@ -885,7 +892,7 @@ namespace eval OptionDlg {
     label $w.opts.tool -text [m opt.tools]
     Color::selectorbutton $w.opts.toolc opts_toolColor
 
-    label $w.opts.cpath -text [m opt.cpath] 
+    label $w.opts.cpath -text [m opt.cpath]
     Color::selectorbutton $w.opts.cpathc opts_cpathColor
 
     label $w.opts.background -text [m opt.background]
@@ -973,7 +980,6 @@ namespace eval OptionDlg {
 
     helpon ${w}_label [m ho.opt.editor.colorize]
 
-
     editorOptions $w.opts
     editorSample $w.sample
 
@@ -1015,17 +1021,17 @@ namespace eval OptionDlg {
     grid $w.t.simstepL	-row 0 -column 0 -sticky e -padx 5 -pady 1
     grid $w.t.simstepE	-row 0 -column 1 -sticky w -padx 5 -pady 1
     grid $w.t.vpopL	-row 1 -column 0 -sticky e -padx 5 -pady 1
-    grid $w.t.vpopE	-row 1 -column 1 -sticky w -padx 5 -pady 1 
+    grid $w.t.vpopE	-row 1 -column 1 -sticky w -padx 5 -pady 1
 
     grid $w.t.clkostepL	-row 2 -column 0 -sticky e -padx 5 -pady 1
-    grid $w.t.clkostepE	-row 2 -column 1 -sticky w -padx 5 -pady 1 
+    grid $w.t.clkostepE	-row 2 -column 1 -sticky w -padx 5 -pady 1
     grid $w.t.clkstepL	-row 3 -column 0 -sticky e -padx 5 -pady 1
-    grid $w.t.clkstepE	-row 3 -column 1 -sticky w -padx 5 -pady 1 
+    grid $w.t.clkstepE	-row 3 -column 1 -sticky w -padx 5 -pady 1
 
     pack $w.t -anchor w -fill x
-    pack $w.dosort -padx 5 -pady 0 -anchor w 
-    pack $w.savetraces -padx 5 -pady 0 -anchor w 
-    pack $w.noglitch -padx 5 -pady 0 -anchor w 
+    pack $w.dosort -padx 5 -pady 0 -anchor w
+    pack $w.savetraces -padx 5 -pady 0 -anchor w
+    pack $w.noglitch -padx 5 -pady 0 -anchor w
 
     helpon $w.t.simstepL [m ho.opt.simstep]
     helpon $w.t.clkstepL [m ho.opt.ckstep]
@@ -1101,7 +1107,7 @@ namespace eval OptionDlg {
       } else {
 	$w.left.lb insert end $l
       }
-    } 
+    }
   }
 
   #############################################################################
@@ -1170,7 +1176,7 @@ namespace eval OptionDlg {
     # Get current set of libraries
     #
     set libraryList [LibraryMgr::scanlibs]
-    
+
     #
     # Left side box
     #
@@ -1243,7 +1249,7 @@ namespace eval OptionDlg {
     checkbutton $w.open -text [m opt.sec.open] -variable opts_securityOpen
     checkbutton $w.writemem -text [m opt.sec.writemem] -variable opts_securityWriteMem
     checkbutton $w.enqueue -text [m opt.sec.enqueue] -variable opts_securityEnqueue
-    
+
     pack $w.send -anchor w -padx 5 -pady 2
     pack $w.open -anchor w -padx 5 -pady 2
     pack $w.writemem -anchor w -padx 5 -pady 2
@@ -1279,7 +1285,7 @@ namespace eval OptionDlg {
     radiobutton $w.stop -text [m opt.sec.stop] -value 2 -variable opts_securityHandling
     radiobutton $w.warn -text [m opt.sec.warn] -value 1 -variable opts_securityHandling
     radiobutton $w.ignore -text [m opt.sec.ignore] -value 0 -variable opts_securityHandling
-    
+
     pack $w.stop -anchor w -padx 5 -pady 2
     pack $w.warn -anchor w -padx 5 -pady 2
     pack $w.ignore -anchor w -padx 5 -pady 2
@@ -1339,7 +1345,7 @@ namespace eval OptionDlg {
 	  {opt.tool.tech ho.opt.tool.tech opts_techtb}
     }
     OptionDlg::frameToolbar $w.opts [m opt.gen.basetoolbar] $base_toolbars
-    pack $w.opts -fill x -padx 5 -pady 5 
+    pack $w.opts -fill x -padx 5 -pady 5
   }
 
   proc pageToolbarsSimulation {w} {
@@ -1351,7 +1357,7 @@ namespace eval OptionDlg {
 	  {opt.tool.simmode ho.opt.tool.simmode opts_simmodetb}
     }
     OptionDlg::frameToolbar $w.opts [m opt.gen.basetoolbar] $base_toolbars
-    pack $w.opts -fill x -padx 5 -pady 5 
+    pack $w.opts -fill x -padx 5 -pady 5
   }
 
   proc pageToolbarsSymboledit {w} {
@@ -1365,7 +1371,7 @@ namespace eval OptionDlg {
 	  {opt.tool.symopr ho.opt.tool.symopr opts_symoprtb}
     }
     OptionDlg::frameToolbar $w.opts [m opt.gen.basetoolbar] $base_toolbars
-    pack $w.opts -fill x -padx 5 -pady 5 
+    pack $w.opts -fill x -padx 5 -pady 5
   }
 
 
@@ -1801,7 +1807,7 @@ namespace eval OptionDlg {
       set pw $w.right.$page
       set pgWidth [expr [winfo reqwidth $pw] + 4*[$pw cget -bd]]
       set pgHeight [expr [winfo reqheight $pw] + 4*[$pw cget -bd]]
-      
+
       if {$pgWidth > $width} { set width $pgWidth }
       if {$pgHeight > $height} { set height $pgHeight }
     }

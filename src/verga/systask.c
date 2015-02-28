@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <ctype.h>
 #include "thyme.h"
@@ -160,7 +160,7 @@ TaskContext *new_TaskContext(int nargs,Expr **args,ModuleInst *modCtx)
   PHash H;
   HashElem *he;
   int i;
-  
+
   tc->tc_thread = 0;
   tc->tc_codeBlock = 0;
   tc->tc_action = TA_SETUP;
@@ -174,7 +174,7 @@ TaskContext *new_TaskContext(int nargs,Expr **args,ModuleInst *modCtx)
   for (i = 0;i < nargs;i++) {
     Expr_getReaders(args[i], ModuleInst_getScope(modCtx), &H);
   }
-      
+
   tc->tc_numNets = Hash_numElems(&H);
   if (tc->tc_numNets > 0) {
     tc->tc_nets = (Net**) malloc(sizeof(Net*)*tc->tc_numNets);
@@ -244,7 +244,7 @@ static int SysTask_getstr_time(Value *S,char *p, ModuleInst *mi)
 
     return sprintf(p,format,thigh,tlow);
   }
-    
+
 }
 
 
@@ -369,10 +369,10 @@ static void SysTask_printfSSVec(VGThread *t,int numArgs, void **args)
 /*****************************************************************************
  *
  * $tkg$reportBreak: Stop simulation and report a breakpoint.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -393,7 +393,7 @@ static void SysTask_tkg_reportBreak(VGThread *t,Value *r,int numArgs,void **args
   EvQueue_enqueueAfter(Q,new_EvThread(t), 0);
 
   /*
-   * Report the breakpoint. 
+   * Report the breakpoint.
    */
   if (numArgs >= 2) {
     int id = -1;
@@ -413,7 +413,7 @@ static void SysTask_tkg_reportBreak(VGThread *t,Value *r,int numArgs,void **args
     Value_format(value,"%h",p);
     p += strlen(p);
     sprintf(p," @ %llu",Q->eq_curTime);
-    
+
     vgio_printf("%s\n",buf);
   }
 }
@@ -421,10 +421,10 @@ static void SysTask_tkg_reportBreak(VGThread *t,Value *r,int numArgs,void **args
 /*****************************************************************************
  *
  * $monitor: Set up a monitor on a set of variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -474,10 +474,10 @@ static void SysTask_monitor(VGThread *t,Value *r,int numArgs,void **args,TaskCon
 /*****************************************************************************
  *
  * $fmonitor: Set up a monitor on a set of variables (with multi-channel output)
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -527,10 +527,10 @@ static void SysTask_fmonitor(VGThread *t,Value *r,int numArgs,void **args,TaskCo
 /*****************************************************************************
  *
  * $tkg$probe: Set probes on a set of variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -560,7 +560,7 @@ static void SysTask_tkg_probe(VGThread *t,Value *r,int numArgs,void **args,TaskC
       sprintf(key, "$probe:%s",Net_getName(taskContext->tc_nets[i]));
       *who = 0;
     }
-    
+
     if (!*who)
       vgio_printf("showprobe %s %d\n",Net_getName(taskContext->tc_nets[i]),Net_nbits(taskContext->tc_nets[i]));
 
@@ -579,10 +579,10 @@ static void SysTask_tkg_probe(VGThread *t,Value *r,int numArgs,void **args,TaskC
 /*****************************************************************************
  *
  * $tkg$unprobe: Remove probes on a set of variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -620,10 +620,10 @@ static void SysTask_tkg_unprobe(VGThread *t,Value *r,int numArgs,void **args,Tas
 /*****************************************************************************
  *
  * $fwrite: Display strings/variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -678,10 +678,10 @@ static void SysTask_fwrite(VGThread *t,Value *r,int numArgs,void **args,TaskCont
 /*****************************************************************************
  *
  * $fdisplay: Display strings/variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -711,10 +711,10 @@ static void SysTask_fdisplay(VGThread *t,Value *r,int numArgs,void **args,TaskCo
 /*****************************************************************************
  *
  * $write: Display strings/variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -731,10 +731,10 @@ static void SysTask_write(VGThread *t,Value *r,int numArgs,void **args,TaskConte
 /*****************************************************************************
  *
  * $display: Display strings/variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -749,10 +749,10 @@ static void SysTask_display(VGThread *t,Value *r,int numArgs,void **args,TaskCon
 /*****************************************************************************
  *
  * $error: Display strings/variables as a run-time error
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -777,10 +777,10 @@ static void SysTask_error(VGThread *t,Value *r,int numArgs,void **args,TaskConte
 /*****************************************************************************
  *
  * $tkg$command: Format and send a command to the GUI
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -802,10 +802,10 @@ static void SysTask_tkg_command(VGThread *t,Value *r,int numArgs,void **args,Tas
 /*****************************************************************************
  *
  * $tkg$exec: Format and execute as a tcl/tk command
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -828,10 +828,10 @@ static void SysTask_tkg_exec(VGThread *t,Value *r,int numArgs,void **args,TaskCo
 /*****************************************************************************
  *
  * $tkg$post: Send command to request that a VPD be posted.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -862,10 +862,10 @@ static void SysTask_tkg_post(VGThread *t,Value *r,int numArgs,void **args,TaskCo
 /*****************************************************************************
  *
  * $strobe: Strobe strings/variables
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -895,10 +895,10 @@ static void SysTask_strobe(VGThread *t,Value *r,int numArgs,void **args,TaskCont
 /*****************************************************************************
  *
  * $fstrobe: Strobe strings/variables to multiple outputs
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -930,10 +930,10 @@ static void SysTask_fstrobe(VGThread *t,Value *r,int numArgs,void **args,TaskCon
 /*****************************************************************************
  *
  * $finish: Terminate the simulation
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -947,10 +947,10 @@ static void SysTask_finish(VGThread *t,Value *r,int numArgs,void **args,TaskCont
 /*****************************************************************************
  *
  * $monitoroff: Temporarily disable display of $monitor reports
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -965,10 +965,10 @@ static void SysTask_monitoroff(VGThread *t,Value *r,int numArgs,void **args,Task
 /*****************************************************************************
  *
  * $monitoron: Reenable display of $monitor reports
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -983,10 +983,10 @@ static void SysTask_monitoron(VGThread *t,Value *r,int numArgs,void **args,TaskC
 /*****************************************************************************
  *
  * $stop: Stop the simulator and enter paused mode.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1013,10 +1013,10 @@ static void SysTask_stop(VGThread *t,Value *r,int numArgs,void **args,TaskContex
 /*****************************************************************************
  *
  * $random: Generate random numbers (or set seed)
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1041,10 +1041,10 @@ static void SysTask_random(VGThread *t, Value *r, int numArgs, void **args, Task
 /*****************************************************************************
  *
  * $time: Return the current simulation time.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1061,10 +1061,10 @@ static void SysTask_time(VGThread *t,Value *r,int numArgs,void **args,TaskContex
 /*****************************************************************************
  *
  * $stime: Return the bottom 32-bits of the current simulation time.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1081,10 +1081,10 @@ static void SysTask_stime(VGThread *t,Value *r,int numArgs,void **args,TaskConte
 /*****************************************************************************
  *
  * $tkg$systime: Returns the wall clock time in ms since the epoch.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1109,10 +1109,10 @@ static void SysTask_tkg_systime(VGThread *t, Value *r, int numArgs, void **args,
 /*****************************************************************************
  *
  * $tkg$wait: Pause a thread for a specified number of milliseconds.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1146,10 +1146,10 @@ static void SysTask_tkg_wait(VGThread *t, Value *r, int numArgs, void **args, Ta
 /*****************************************************************************
  *
  * $tkg$zoom: Set the zoom factor in the TkGate scope window
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1171,10 +1171,10 @@ static void SysTask_tkg_zoom(VGThread *t, Value *r, int numArgs, void **args, Ta
 /*****************************************************************************
  *
  * $tkg$waituntil: Pause a thread until a specific time in milliseconds from the epoch.
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1195,10 +1195,10 @@ static void SysTask_tkg_waituntil(VGThread *t, Value *r, int numArgs, void **arg
 /*****************************************************************************
  *
  * $tkg$recv: Read a value from a channel, block if necessary
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1247,10 +1247,10 @@ static void SysTask_tkg_recv(VGThread *t, Value *r, int numArgs, void **args, Ta
 /*****************************************************************************
  *
  * $tkg$send: Write a value to a channel
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1281,10 +1281,10 @@ static void SysTask_tkg_send(VGThread *t, Value *r, int numArgs, void **args, Ta
 /*****************************************************************************
  *
  * $readmemb: Read a memory file in binary format
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1329,10 +1329,10 @@ static void SysTask_readmemb(VGThread *t,Value *r,int numArgs,void **args,TaskCo
 /*****************************************************************************
  *
  * $readmemh: Read a memory file in hex format
- * 
+ *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context
@@ -1603,7 +1603,7 @@ static void reportTimingViolation(const char *name,int *argTypes,VGThread *t, Va
  *
  * Parameters:
  *     t		Thread in which system task is executed
- *     r		Optional return value 
+ *     r		Optional return value
  *     numArgs		Number of arguments
  *     args		Array of argument values
  *     taskContext	Optional task context

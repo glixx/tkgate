@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 /*##########################################################################*
  *
@@ -40,7 +40,7 @@
  * Snap all of the wires on a pad
  *
  * Parameters:
- *    w			Wire representing the head wire of a pad 
+ *    w			Wire representing the head wire of a pad
  *
  *****************************************************************************/
 static void wire_snaplist(GWire *w,int doRedraw)
@@ -218,11 +218,11 @@ static void GWireNode_suggestLabelProps(GWireNode *dn,GWireNode *sn)
 
 /*****************************************************************************
  *
- * Snaps out short segments of wire with mobile nodes. 
+ * Snaps out short segments of wire with mobile nodes.
  *
  * Parameters:
  *      n			Wire node to snap
- *      mod			
+ *      mod
  *      retry
  *
  *****************************************************************************/
@@ -230,7 +230,7 @@ static int wire_snap_aux(GWireNode *n,int mod,int retry)
 {
   GWireNode *t;
 
-  if (!n || !n->out) 
+  if (!n || !n->out)
     return mod;
 
     /* Make sure that wires arround a joint look OK */

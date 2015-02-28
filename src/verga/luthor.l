@@ -1,6 +1,6 @@
 %{
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -12,9 +12,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <unistd.h>
 #include <string.h>
@@ -248,16 +248,16 @@ any	[^ \t\r\n]
 
 <PV>\"([^\\\"]*("\\".)*)*\"	{ return ycString(yytext); }
 
-<PV>\\{any}+		{ yylval.S = yc_strdup(yytext+1); return LITERAL; } 
-<PV>{num}*"'h"{hex}+	{ return ycHex(yytext); } 
-<PV>{num}*"'b"{hex}+	{ return ycHex(yytext); } 
-<PV>{num}*"'o"{hex}+	{ return ycHex(yytext); } 
-<PV>{num}*"'d"{hex}+	{ return ycHex(yytext); } 
+<PV>\\{any}+		{ yylval.S = yc_strdup(yytext+1); return LITERAL; }
+<PV>{num}*"'h"{hex}+	{ return ycHex(yytext); }
+<PV>{num}*"'b"{hex}+	{ return ycHex(yytext); }
+<PV>{num}*"'o"{hex}+	{ return ycHex(yytext); }
+<PV>{num}*"'d"{hex}+	{ return ycHex(yytext); }
 <PV>{num}+		{ return ycNumber(yytext); }
 <PV>{num}+\.{num}+	{ return ycFloat(yytext); }
 <PV>{lit1}{lit2}*	{ return ycLiteral(yytext,lex_verilog_words,lex_verilog_num); }
-<PV>${litsys}+		{ yylval.S = yc_strdup(yytext); return SYSLITERAL; } 
-<PV>{lit1}{lit2}*"."{lit1}{lit2}*("."{lit1}{lit2}*)* { yylval.S = yc_strdup(yytext); return HLITERAL; } 
+<PV>${litsys}+		{ yylval.S = yc_strdup(yytext); return SYSLITERAL; }
+<PV>{lit1}{lit2}*"."{lit1}{lit2}*("."{lit1}{lit2}*)* { yylval.S = yc_strdup(yytext); return HLITERAL; }
 <PV>"`"{lit2}+		{ int r = ycDirective(yytext); if (r>0) return r; }
 
 <PV>{white}+		{ }
@@ -299,7 +299,7 @@ int yc_bogochar()
   sprintf(buf1,"%d",*yytext);
   sprintf(buf2,"%c",*yytext);
   errorFile(&curPlace,ERR_BADCHAR,buf1,buf2);
-  return BOGOCHAR; 
+  return BOGOCHAR;
 }
 
 /*****************************************************************************

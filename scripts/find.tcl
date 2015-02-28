@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jan  9 09:16:28 2009
 #
@@ -139,7 +139,7 @@ namespace eval Find {
 
       set Find::goto [SpreadSheet::get $lb_w $idx]
 
-      action Find { 
+      action Find {
 	gat_find goto $Find::goto
       }
     }
@@ -150,11 +150,11 @@ namespace eval Find {
 
     set idx [SpreadSheet::getselection $lb_w]
 #    puts "goto idx=$idx"
-    
+
     if { $idx != "" } {
       set Find::goto [SpreadSheet::get $lb_w $idx]
 
-      action Find { 
+      action Find {
 	gat_find goto $Find::goto
       }
     }
@@ -258,7 +258,7 @@ namespace eval Find {
     # Instead of doing entry when we get a double click, goto that selected item
     switch $cmd {
       doublePress {
-	Find::gotoSelected	
+	Find::gotoSelected
 	return 0
       }
       canenter {
@@ -285,7 +285,7 @@ namespace eval Find {
     }
 
     init
- 
+
     wm resizable $w 0 0
     wm title $w [m find.title]
     wm geometry $w [offsetgeometry . 50 50 ]
@@ -317,7 +317,7 @@ namespace eval Find {
     pack $w.top.target  -fill both -padx 5 -pady 5
 
     #
-    # Build the search results box 
+    # Build the search results box
     #
     buildResultsBox $w.top.list
     pack $w.top.list -fill both -padx 5 -pady 5

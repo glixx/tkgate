@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Feb 21 16:44:18 2009
 ****************************************************************************/
@@ -174,7 +174,7 @@ void Generic_GetExtents(GCElement *g,TargetDev_e target,int *minx,int *miny,int 
     logError(ERL_ERROR,"Generic_GetExtents called on gate with no dimensions.");
     return;
   }
-  
+
   if (gi->Flags.CanRot && !gi->Flags.single_icon)
     id = &gi->dim[g->orient];
   else
@@ -322,18 +322,18 @@ void Generic_AddInput(EditState *es,GCElement *g)
 {
   int i;
   int N = GCElement_numPads(g);
-  
+
   for (i = 0;i < N;i++)
     if (GCElement_getPadDir(g,i) == IN && GCElement_getPadCanAdd(g,i))
       break;
-  
+
   if (i == N)
     return;
-  
+
   if (es) SetModified(MF_GATE|MF_NET);
-  
+
   gate_draw(g,GD_NORMAL);
-  
+
   wire_addToGate(g,i,es->env,0);
   gate_draw(g,GD_NORMAL);
 }
@@ -342,18 +342,18 @@ void Generic_AddOutput(EditState *es,GCElement *g)
 {
   int i;
   int N = GCElement_numPads(g);
-  
+
   for (i = 0;i < N;i++)
     if (GCElement_getPadDir(g,i) == OUT && GCElement_getPadCanAdd(g,i))
       break;
-  
+
   if (i == N)
     return;
-  
+
   if (es) SetModified(MF_GATE|MF_NET);
-  
+
   gate_draw(g,GD_NORMAL);
-  
+
   wire_addToGate(g,i,es->env,0);
   gate_draw(g,GD_NORMAL);
 }
@@ -545,7 +545,7 @@ void Generic_editPropsULWires(GCElement *g)
       }
     } else if (sscanf(p,"{delete %[A-Za-z]%d",port,&n) == 2) {
       int N = GCElement_numPads(g);
-      GWire *w; 
+      GWire *w;
 
       for (i = 0;i < N;i++) {
 	const char *padName = GCElement_getPadName(g,i);
@@ -610,7 +610,7 @@ void Generic_editPropsULWires(GCElement *g)
       } else {
 	int N = GCElement_numPads(g);
 	char *q;
-	
+
 	/*
 	 * Separate the port name into the base name 'port' and the
 	 * quantifier index.
@@ -749,7 +749,7 @@ void Generic_editPropsDLBasics(GCElement *g)
   y = ctow_y(g->ypos-50);
 
   DoTcl("offsetgeometry . %d %d",x,y);
-  sscanf(TkGate.tcl->result,"+%d+%d",&x,&y);
+  sscanf(Tcl_GetStringResult(TkGate.tcl),"+%d+%d",&x,&y);
 
   if (x < 25) x = 25;
   if (y < 25) y = 25;
@@ -773,7 +773,7 @@ void Generic_editPropsULBasics(GCElement *g)
   SetModified(MF_NET|MF_GATE);
 
   ob_touch(g);
-  
+
   if (*name)
     gate_setName(g,name,TkGate.circuit->es->env);
 
@@ -1005,7 +1005,7 @@ void buildMakeMenuData()
    * First Pass - standard entries
    * Register all root names
    * Create shortcuts
-   * 
+   *
    */
   for (E = Hash_first(GateIdxHash);E;E = Hash_next(GateIdxHash,E)) {
     GGateInfo *gi = (GGateInfo*) HashElem_obj(E);
@@ -1026,7 +1026,7 @@ void buildMakeMenuData()
   /*
    * Second Pass - direct top-level entries (e.g., Comment, Frame)
    * Create shortcuts
-   * 
+   *
    */
   for (E = Hash_first(GateIdxHash);E;E = Hash_next(GateIdxHash,E)) {
     GGateInfo *gi = (GGateInfo*) HashElem_obj(E);
@@ -1111,7 +1111,7 @@ int parseKeys(char keys[5][128],const char *key_seq)
       if (ks) strcpy(keys[n++],ks);
     }
     if (n == 5) break;
-  } 
+  }
 
   return n;
 }
@@ -1141,7 +1141,7 @@ void makeMakeShortcuts()
 	DoTcl("KeyBinding::new <%s><%s> { action Make { %s } } -perm 1",keys[0],keys[1],kme->command);
       }
     }
-  }  
+  }
 }
 
 
@@ -1155,7 +1155,7 @@ void makeMakeMenu(const char *m)
 
   for (j = 0;j < makeMenuData->numRoot;j++) {
     BuildMenuRoot *bmr = makeMenuData->roots[j];
-    
+
     if (bmr->count == 0) continue;
 
     if (bmr->mname) {
@@ -1198,7 +1198,7 @@ void makeMakeMenu(const char *m)
 
 /*****************************************************************************
  *
- * Generate primitive cell definition 
+ * Generate primitive cell definition
  *
  * Parameters:
  *    f			File to write cell to.

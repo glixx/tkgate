@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri Feb 13 20:26:14 2009
 ****************************************************************************/
@@ -48,7 +48,7 @@ typedef struct {
 
 int Directive_handle(char *directive,int inSkip);
 int Directive_macroReplace(char *token);
-int Directive_iftoken(int code, int state); 
+int Directive_iftoken(int code, int state);
 simtime_t Directive_parseTimescale(int num,const char *units);
 void Timescale_decode(simtime_t n, int *num,char *units);
 simtime_t Timescale_toSimtime(Timescale *ts,double n,const char *units);

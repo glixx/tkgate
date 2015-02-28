@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sun Dec 21 22:27:18 2008
 ****************************************************************************/
@@ -28,7 +28,7 @@
 #include "tkgate.h"
 
 static int did_message = 0;
-static int err_count = 0; 
+static int err_count = 0;
 static NHash *v_wires = 0;
 
 void verify_error(GModuleDef *m,char *msg,...)
@@ -78,12 +78,12 @@ void verify_net(GNet *n,GModuleDef *m)
     GWire *w = wl->wl_wire;
     if (!w) continue;
     if (w->net != n) continue;
-      
+
     if (w->nidx < 0 || w->nidx >= num_wires) {
       verify_error(m,"index %d of wire 0x%x on net %s is out of range [0..%d].",
 		   w->nidx,w,n->n_signame,num_wires-1);
       continue;
-    } 
+    }
 
     if (wset[w->nidx]) {
       verify_error(m,"index %d on net %s is used by multiple wires 0x%x and 0x%x.",
@@ -144,7 +144,7 @@ void verify_gate(GCElement *g,GModuleDef *m)
   switch (g->typeinfo->Code) {
   case GC_TAP :
     if (g->wires[TAP_IN]->net != g->wires[TAP_OUT]->net)
-      verify_error(m,"tap 0x%x(%s) has inconsistant attachments.",
+      verify_error(m,"tap 0x%x(%s) has inconsistent attachments.",
 		   g,g->ename,g->wires[TAP_IN]->net->n_signame,g->wires[TAP_OUT]->net->n_signame);
     break;
   }
@@ -181,7 +181,7 @@ int verify_circuit()
   HashElem *E;
   extern int quietMode;
 
-  err_count = 0; 
+  err_count = 0;
 
   if (!quietMode) {
     printf("verifying...");

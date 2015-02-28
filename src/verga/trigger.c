@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "thyme.h"
 
@@ -29,7 +29,7 @@
  * This function is used to ensure that lists of nets in triggers are in a
  * canonical order.  We don't really care what that order is as long as it
  * is the same for any list of nets.  For this reason we just sort on the
- * addresses of the Nets in memory. 
+ * addresses of the Nets in memory.
  *
  *
  *****************************************************************************/
@@ -79,14 +79,14 @@ Trigger *new_Trigger(List *posedges,List *negedges,Trigger *next)
  * Get the hash code for a pair of lists.
  *
  * Parameters:
- *     posedges		Sorted list of posedge Net* 
- *     negedges		Sorted list of negedge Net* 
+ *     posedges		Sorted list of posedge Net*
+ *     negedges		Sorted list of negedge Net*
  *
  * Returns:		Hash code representing lists.
  *
  * The value returned is a hash value representing the pair of lists.  For any
  * identical pairs of lists, the same hash code will always be returned.  For
- * unmatching pairs of lists, the value returned should "usually" be different. 
+ * unmatching pairs of lists, the value returned should "usually" be different.
  *
  *****************************************************************************/
 unsigned Trigger_getHashCode(List *posedges,List *negedges)
@@ -111,8 +111,8 @@ unsigned Trigger_getHashCode(List *posedges,List *negedges)
  * Sort both lists and get the hash code using Trigger_getHashCode
  *
  * Parameters:
- *     posedges		Unsorted list of posedge Net* 
- *     negedges		Unsorted list of negedge Net* 
+ *     posedges		Unsorted list of posedge Net*
+ *     negedges		Unsorted list of negedge Net*
  *
  * Returns:		Hash code representing lists.
  *
@@ -179,7 +179,7 @@ int Trigger_match(Trigger *t,List *posedges,List *negedges)
  * and if it is not found a new trigger is created and it is inserted into
  * *tlist.  Assuming Trigger_getHashCode() returns good values, the *tlist
  * should almost always have either 0 or 1 elements, and when it has 1 element
- * the lookup should almost always succeed. 
+ * the lookup should almost always succeed.
  *
  *****************************************************************************/
 Trigger *Trigger_getTrigger(Trigger **tlist,List *posedges,List *negedges)
@@ -250,7 +250,7 @@ void Trigger_fire(Trigger *t)
   EvQueue *Q = Circuit_getQueue(&vgsim.vg_circuit);
 
   while (t->t_events) {
-    Event *e = t->t_events; 
+    Event *e = t->t_events;
     t->t_events = e->ev_base.eb_next;
 
     EvQueue_enqueueAfter(Q,e,0);

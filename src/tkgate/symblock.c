@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Jan 19 18:18:09 2009
 ****************************************************************************/
@@ -35,7 +35,7 @@ Handling characteristics of SymModules:
 * Each SymModule has its own pointer to a GModSymbol.  Different instances of
   the same module may have different  GModSymbol definitions associated with
   them.
-* Newly created SymModule instances use the GModSymbol for the corresponding 
+* Newly created SymModule instances use the GModSymbol for the corresponding
   module definition.
 *
 ***************************************************************************/
@@ -85,7 +85,7 @@ GGateInfo gate_symblock_info = {
   {0,0,0,0,0,0},
 
   {0},
-  
+
   Generic_Make,
   Nop_WriteCellDef,
   Generic_Init,
@@ -443,7 +443,7 @@ void SymBlock_VerSave(FILE *f,GCElement *g)
     for (i = 0;i < N;i++) {
       for (w = g->wires[i], j=0;w;w = w->next, j++) {
 	fprintf(f," %d",w->nidx);
-      } 
+      }
     }
     fprintf(f," ]");
   }

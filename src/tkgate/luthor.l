@@ -1,6 +1,6 @@
 %{
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -12,9 +12,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <unistd.h>
 #include <string.h>
@@ -242,21 +242,21 @@ any	[^ \t\r\n]
 
 <PV,VR,AC,DD>\"([^\\\"]*("\\\\"|"\\\"")*)*\"	{ return ycString(yytext); }
 
-<PV,VR,AC,DD>{num}+"'h"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; } 
-<PV,VR,AC,DD>{num}+"'b"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; } 
-<PV,VR,AC,DD>{num}+"'o"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; } 
-<PV,VR,AC,DD>{num}+"'d"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; } 
+<PV,VR,AC,DD>{num}+"'h"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; }
+<PV,VR,AC,DD>{num}+"'b"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; }
+<PV,VR,AC,DD>{num}+"'o"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; }
+<PV,VR,AC,DD>{num}+"'d"{hex}+	{ yylval.S = yc_strdup(yytext); return HEX; }
 
 <DD>{num}+		{ sscanf(yytext,"%d",&yylval.I); return NUMBER; }
 <PV,VR,AC>"-"?{num}+	{ sscanf(yytext,"%d",&yylval.I); return NUMBER; }
 <DDP>{litddp}+		{ return ycLiteral(yytext,lex_delay_words,lex_delay_num); }
 <DD>{lit1}{lit2}*	{ return ycLiteral(yytext,lex_delay_words,lex_delay_num); }
 
-<PV,VR>\\{any}+		{ yylval.S = yc_strdup(yytext+1); return LITERAL; } 
+<PV,VR>\\{any}+		{ yylval.S = yc_strdup(yytext+1); return LITERAL; }
 <PV,VR>{lit1}{lit2}*	{ return ycLiteral(yytext,lex_verilog_words,lex_verilog_num); }
 <AC>{lit1}{lit2}*	{ return ycLiteral(yytext,lex_anotate_words,lex_anotate_num); }
 <AC>"/"{lit1}{lit2}*	{ return ycLiteral(yytext,lex_aoption_words,lex_aoption_num); }
-<PV>${lit1}{lit2}*	{ yylval.S = yc_strdup(yytext); return SYSLITERAL; } 
+<PV>${lit1}{lit2}*	{ yylval.S = yc_strdup(yytext); return SYSLITERAL; }
 <PV>.			{ return BOGOCHAR; }
 
 <VN>{vnset}+			{ yylval.S = yc_strdup(yytext); return VERNUM; }

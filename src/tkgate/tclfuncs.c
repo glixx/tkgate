@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue May  5 20:53:56 2009
 ****************************************************************************/
@@ -52,7 +52,7 @@ char *readprintcapentry(char *buf,int N,FILE *f)
 }
 
 /*
-  Check to see if modifications are OK, and if not issue a message. 
+  Check to see if modifications are OK, and if not issue a message.
  */
 int modifyOK(EditState *es,unsigned flags)
 {
@@ -61,7 +61,7 @@ int modifyOK(EditState *es,unsigned flags)
     return 0;
   }
   if (!(flags & 0x1) && GModuleDef_isDataProtected(es->env)) {
-    message(0,msgLookup("err.protdata"),es->env->m_name);			/* Not a library module */      
+    message(0,msgLookup("err.protdata"),es->env->m_name);			/* Not a library module */
     return 0;
   }
   return 1;
@@ -102,24 +102,25 @@ static int gat_hdl(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     hdl_load(es->env);
   else if (strcmp(argv[1],"save") == 0) {
     if (hdl_save(name) < 0)
-      sprintf(tcl->result,"cancel");
+      Tcl_SetResult(tcl, "cancel", TCL_STATIC);
   } else if (strcmp(argv[1],"checksave") == 0) {
-    if (hdl_checkSave(name) < 0)
-      sprintf(tcl->result,"cancel");
+      Tcl_SetResult(tcl, "cancel", TCL_STATIC);
   } else if (strcmp(argv[1],"close") == 0) {
     hdl_close();
   } else if (strcmp(argv[1],"getindex") == 0) {
     int line,pos;
     if (hdl_getCursor(&line,&pos) == 0) {
-      sprintf(tcl->result,"%d.%d",line,pos);
+      char res[127];
+      sprintf(res,"%d.%d",line,pos);
+      Tcl_SetResult(tcl, res, TCL_VOLATILE);
     } else
-      sprintf(tcl->result,"1.0");
+      Tcl_SetResult(tcl, "1.0", TCL_STATIC);
   } else if (strcmp(argv[1],"touch") == 0) {
     ob_touch(TkGate.circuit);			/* Modify somthing to force undo to thing there are changes */
   }
 
 
-  return TCL_OK; 
+  return TCL_OK;
 }
 
 
@@ -131,8 +132,8 @@ static int gat_init(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   TkGate_init(tcl);
   ClearModified();
-  ob_mode(OM_START);
- 
+  ob_set_mode(OM_START);
+
   return TCL_OK;
 }
 
@@ -154,12 +155,12 @@ static int gat_reinitDelay(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 static int gat_interface(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   if (argc < 3) {
-    strcpy(tcl->result,"too few arguments.");
+    Tcl_SetResult(tcl, "too few arguments.", TCL_STATIC);
     return TCL_ERROR;
   }
 
   if (igen_command(argv[1],argv[2],argc-3,argv + 3) != 0) {
-    strcpy(tcl->result,"invalid command.");
+    Tcl_SetResult(tcl, "invalid command.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -175,7 +176,7 @@ static int gat_new(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   EditState **es = &gw->parms->circuit->es;
   const char *file,*topMod;
   GModuleDef *M;
-  int old_mode;
+  ob_OMMode_t old_mode;
 
   assert(argc == 3);
 
@@ -183,7 +184,7 @@ static int gat_new(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   old_mode = ob_get_mode();
   if (old_mode != OM_DISABLED) {
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
   }
   ob_clear();
 
@@ -221,7 +222,7 @@ static int gat_new(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   FlagRedraw();
 
   if (old_mode == OM_ENABLED) {
-    ob_mode(old_mode);
+    ob_set_mode(old_mode);
   }
   return TCL_OK;
 }
@@ -234,7 +235,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   TkgGateWin *gw = TkGate.gw;
   const char *name;
   const char *modFlag;
-  int old_mode;
+  ob_OMMode_t old_mode;
 
   assert(argc == 2);
   name = argv[1];
@@ -243,7 +244,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   if ((modFlag = Tcl_GetVar(tcl,"tkg_modifiedFlag",TCL_GLOBAL_ONLY)) && *modFlag != '0') {
     DoTcl("File::confDelMods");
-    if (!TkGate.tcl->result || strcmp(TkGate.tcl->result,"yes") != 0) {
+    if (!Tcl_GetStringResult(TkGate.tcl) || strcmp(Tcl_GetStringResult(TkGate.tcl),"yes") != 0) {
       Tcl_SetResult(tcl,"0", TCL_STATIC);
       return TCL_OK;
     }
@@ -251,7 +252,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   old_mode = ob_get_mode();
   if (old_mode != OM_DISABLED) {
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
   }
   ob_clear();
 
@@ -270,7 +271,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     ClearModified();
 
     if (old_mode == OM_ENABLED) {
-      ob_mode(old_mode);
+      ob_set_mode(old_mode);
     }
 
     Tcl_SetResult(tcl,"0", TCL_STATIC);
@@ -285,7 +286,7 @@ static int gat_load(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   FlagRedraw();
 
   if (old_mode == OM_ENABLED) {
-    ob_mode(old_mode);
+    ob_set_mode(old_mode);
   }
 
   Tcl_SetResult(tcl,"1", TCL_STATIC);
@@ -308,7 +309,7 @@ static int gat_loadMore(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[
   ob_touch(gw->parms->circuit);
 
   if (VerilogOpen(&gw->parms->circuit->es,name,1) < 0) {
-    sprintf(tcl->result,"0");
+    Tcl_SetResult(tcl, "0", TCL_STATIC);
     return TCL_OK;
   }
 
@@ -318,21 +319,20 @@ static int gat_loadMore(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[
 
   FlagRedraw();
 
-
-  sprintf(tcl->result,"1");
+  Tcl_SetResult(tcl, "1", TCL_STATIC);
   return TCL_OK;
 }
 
 
 static int gat_libIsLoaded(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
-  if (argc < 2) 
+  if (argc < 2)
     return TCL_OK;
 
   if (SHash_find(TkGate.libraries,argv[1]))
-    sprintf(TkGate.tcl->result,"1");
+    Tcl_SetResult(TkGate.tcl, "1", TCL_STATIC);
   else
-    sprintf(TkGate.tcl->result,"0");
+    Tcl_SetResult(TkGate.tcl, "0", TCL_STATIC);
 
   return TCL_OK;
 }
@@ -420,8 +420,8 @@ static int gat_make(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     if (func) {
       modint_openSelected(func);
     }
-    
-    return TCL_OK; 
+
+    return TCL_OK;
   }
 
   if (tkgate_currentMode() != MM_EDIT) return TCL_OK;
@@ -547,7 +547,7 @@ static int gat_openBox(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   }
 
   if (hdl_checkSave(0) < 0) {		/* Make sure hdl is up to date */
-    sprintf(tcl->result,"cancel");
+    Tcl_SetResult(tcl, "cancel", TCL_STATIC);
     return TCL_OK;
   }
 
@@ -573,7 +573,7 @@ static int gat_openBox(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
     if (tkgate_currentMode() == MM_SIMULATE) {
       SimInterface_navigateToModule(es,modName);
       return TCL_OK;
-    } 
+    }
   }
 
   if (modName) {
@@ -598,7 +598,7 @@ static int gat_openBox(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
       return TCL_OK;
   }
 
-  if (M->m_hidden && tkgate_currentMode() == MM_EDIT) { 
+  if (M->m_hidden && tkgate_currentMode() == MM_EDIT) {
     message(1,msgLookup("err.modlock"));			/* Logic Block is Locked! */
     return TCL_OK;
   }
@@ -653,7 +653,7 @@ static int gat_reroot(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 }
 
 /*****************************************************************************
- * Get the list of available printers 
+ * Get the list of available printers
  *
  * Usage:
  *    gat_getPrinterList
@@ -719,7 +719,7 @@ static int gat_getPrinterList(ClientData _d,Tcl_Interp *tcl,int argc,const char 
  *
  *****************************************************************************/
 static int gat_setrot(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
-{ 
+{
   char buf[STRMAX];
   int N = 0;
 
@@ -745,7 +745,7 @@ static int gat_scopeCommand(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 }
 
 /*
-   Relay a command from the analyzer to cpath 
+   Relay a command from the analyzer to cpath
 */
 static int gat_analyzerCommand(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
@@ -758,14 +758,16 @@ static int gat_errBoxReport(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   TkgGateWin *gw = TkGate.gw;
   EditState **es = &gw->parms->circuit->es;
   int N = 0;
-  
+
   ob_touch(TkGate.circuit);
 
+  char res[127];
   if (argc != 2 || sscanf(argv[1],"%d",&N) != 1) {
     if (argc != 2)
-      sprintf(tcl->result,"argument error argc=%d",argc);
+      sprintf(res,"argument error argc=%d",argc);
     else
-      sprintf(tcl->result,"argument error argv[1]=<%s>",argv[1]);
+      sprintf(res,"argument error argv[1]=<%s>",argv[1]);
+    Tcl_SetResult(tcl, res, TCL_VOLATILE);
     return TCL_ERROR;
   }
 
@@ -804,7 +806,7 @@ static int gat_saveCircuit(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 
     if (f) {
       DoTcl("yesno [format [m circ.reallyoverwrite] %s]",fileName);
-      if (strcmp(tcl->result,"yes") != 0)
+      if (strcmp(Tcl_GetStringResult(tcl),"yes") != 0)
 	abortSave = 1;
 
       fclose(f);
@@ -908,7 +910,7 @@ static int gat_deleteSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char 
   if (TkGate.circuit->select || TkGate.circuit->mg_selection) {
     sel_delete(es);
     scrollbar_bbx_update();
-  } else if (DoTcl("tkg_getSelectedBlock") == TCL_OK && *tcl->result != 0) {
+  } else if (DoTcl("tkg_getSelectedBlock") == TCL_OK && Tcl_GetStringResult(tcl)[0] != 0) {
     DoTcl("BlockOp::delete");
   } else {
     message(1,msgLookup("err.nodel"));		/* "No deletable selection." */
@@ -985,12 +987,12 @@ static int gat_renameBlock(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 static int gat_computestrhash(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   if (argc != 2) {
-    sprintf(tcl->result,"wrong number of parameters.");
+    Tcl_SetResult(tcl, "wrong number of parameters.", TCL_STATIC);
     return TCL_ERROR;
   }
 
-  sprintf(tcl->result,"%u",computestrhash(argv[1]));
-  
+  Tcl_SetObjResult(tcl, Tcl_NewLongObj(computestrhash(argv[1])));
+
   return TCL_OK;
 }
 
@@ -1071,7 +1073,7 @@ static int gat_claimBlock(ClientData _d,Tcl_Interp *tcl,
   M = env_findModule(argv[1]);
   if (M) {
     if (!M->m_isLib) {
-      message(1,msgLookup("msg.notlib"),argv[1]);	/* Not a library module */      
+      message(1,msgLookup("msg.notlib"),argv[1]);	/* Not a library module */
       return TCL_OK;
     }
 
@@ -1094,7 +1096,7 @@ static int gat_newBlock(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[
   const char *modName;
 
   if (argc != 2) {
-    strcpy(tcl->result,"wrong number of arguments.");
+    Tcl_SetResult(tcl, "wrong number of arguments.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -1191,7 +1193,7 @@ static int gat_setGateTechDelays(ClientData _d,Tcl_Interp *tcl,int argc,const ch
     DoTcl("set ::edgat_techdelay(%s) %d",gi->delayNames[i],delays[i]);
   }
   DoTcl("update");
-  return TCL_OK; 
+  return TCL_OK;
 }
 
 /*
@@ -1310,7 +1312,7 @@ static int gat_editCircProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *
   Circuit *c = TkGate.circuit;
 
   if (argc != 3) {
-    strcpy(tcl->result,"wrong number of arguments.");
+    Tcl_SetResult(tcl, "wrong number of arguments.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -1423,7 +1425,7 @@ static int gat_editCircProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *
       }
     }
   } else {
-    strcpy(tcl->result,"bad command.");
+    Tcl_SetResult(tcl, "bad command.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -1447,7 +1449,7 @@ static int gat_editModProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   GModuleDef *M;
 
   if (argc != 4) {
-    strcpy(tcl->result,"wrong number of arguments.");
+    Tcl_SetResult(tcl, "wrong number of arguments.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -1460,7 +1462,7 @@ static int gat_editModProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
     Tcl_SetVar2(tcl,aname,"ok","0",TCL_GLOBAL_ONLY);
     return TCL_OK;
   }
-  
+
   if (strcmp(argv[1],"load") == 0) {
     GModuleDef_getPropsToTcl(M,tcl,aname);
   } else if (strcmp(argv[1],"save") == 0) {
@@ -1468,7 +1470,7 @@ static int gat_editModProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
     SetModified(MF_MODULE);
     SynchronizeInterface();
   } else {
-    strcpy(tcl->result,"bad command.");
+    Tcl_SetResult(tcl, "bad command.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -1560,8 +1562,8 @@ static int gat_updateInterface(ClientData _d,Tcl_Interp *tcl,int argc,const char
   }
 
   if (strcmp(argv[1],"-all") == 0) {
-    if (DoTcl("tkg_getSelectedBlock") == TCL_OK && *tcl->result != 0)
-      modName = tcl->result;
+    if (DoTcl("tkg_getSelectedBlock") == TCL_OK && Tcl_GetStringResult(tcl)[0] != 0)
+      modName = Tcl_GetStringResult(tcl);
     else if (g && (GCElement_getType(g) == GC_BLOCK || GCElement_getType(g) == GC_SYMBLOCK))
       modName = g->u.block.moduleName;
     else
@@ -1579,15 +1581,15 @@ static int gat_updateInterface(ClientData _d,Tcl_Interp *tcl,int argc,const char
   /*
    * Scan circuit for instance of module M and update their interfaces.
    */
-  if (strcmp(tcl->result,"yes") == 0) {
+  if (strcmp(Tcl_GetStringResult(tcl),"yes") == 0) {
     Circuit *C =  TkGate.circuit;
-    HashElem *he; 
+    HashElem *he;
     for (he = Hash_first(C->moduleTable);he;he = Hash_next(C->moduleTable,he)) {
       GModuleDef *PM = (GModuleDef*)HashElem_obj(he);
-      HashElem *ghe; 
+      HashElem *ghe;
       for (ghe = Hash_first(PM->m_gates);ghe;ghe = Hash_next(PM->m_gates,ghe)) {
 	g = (GCElement*)HashElem_obj(ghe);
-	if ((GCElement_getType(g) == GC_BLOCK || GCElement_getType(g) == GC_SYMBLOCK) && 
+	if ((GCElement_getType(g) == GC_BLOCK || GCElement_getType(g) == GC_SYMBLOCK) &&
 	    strcmp(g->u.block.moduleName,GModuleDef_getName(M)) == 0) {
 	  block_updateInterface(g, PM);
 	}
@@ -1658,7 +1660,7 @@ static int gat_editBlockDesc(ClientData _d,Tcl_Interp *tcl,int argc,const char *
     M = (TkGate.circuit->root_mod == (*es)->env) ? 0 : (*es)->env;
   }
 
-  if (tkgate_currentMode() == MM_EDIT && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0) 
+  if (tkgate_currentMode() == MM_EDIT && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0)
     return TCL_OK;
 
   ob_touch(TkGate.circuit);
@@ -1698,7 +1700,7 @@ static int gat_editNet(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   if ((p = strchr(buf,'@'))) *p = 0;
 
   net = GModuleDef_findNet(TkGate.circuit->es->env,buf);
-  if (net && net->n_driver) 
+  if (net && net->n_driver)
     net_editProps(net,net->n_driver->nodes->x,net->n_driver->nodes->y);
 
   return TCL_OK;
@@ -1879,7 +1881,7 @@ static int gat_rotate(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (es->isInterface) return TCL_OK;
 
   sel_refinish(es);
- 
+
   sel_draw(es);
   sel_rotate(es,rdir);
   sel_draw(es);
@@ -1965,7 +1967,7 @@ static int gat_breakpoint(ClientData _d,Tcl_Interp *tcl,int argc,const char *arg
     r = 0;
   }
 
-  sprintf(tcl->result,"%d",r);
+  Tcl_SetObjResult(tcl, Tcl_NewIntObj(r));
   return TCL_OK;
 }
 
@@ -1976,11 +1978,11 @@ static int gat_simSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
   int match = 0;
 
   if (!g) {
-    *tcl->result = 0;
+    Tcl_ResetResult(tcl);
     return TCL_OK;
   }
 
-  if (argc == 1) 
+  if (argc == 1)
     match = 1;
   else {
     for (i = 1;i < argc;i++)
@@ -1991,11 +1993,11 @@ static int gat_simSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
   }
 
   if (!match) {
-    *tcl->result = 0;
+    Tcl_ResetResult(tcl);
     return TCL_OK;
   }
 
-  GSimModule_getFullPath(TkGate.circuit->es->smod,g,tcl->result);
+  GSimModule_getFullPath(TkGate.circuit->es->smod,g,(char *)Tcl_GetStringResult(tcl));
 
   return TCL_OK;
 }
@@ -2097,7 +2099,7 @@ static int gat_getTraceData(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   double timeCorrection;
 
   if (!Scope) {
-    sprintf(tcl->result,"0 0 0 0 ns 0");
+    Tcl_SetResult(tcl, "0 0 0 0 ns 0", TCL_STATIC);
     return TCL_OK;
   }
 
@@ -2130,7 +2132,8 @@ static int gat_getTraceData(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 
   timeCorrection = TkGate.circuit->simulator.si_tsmult/(double)Scope->s_precision;
 
-  sprintf(tcl->result,"%llu %llu %llu %lf %s %llu %llu",
+  char res[128];
+  sprintf(res,"%llu %llu %llu %lf %s %llu %llu",
 	  start,
 	  stop,
 	  Scope->s_range,
@@ -2138,6 +2141,7 @@ static int gat_getTraceData(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 	  SimInterface_unitsToStr(TkGate.circuit->simulator.si_units),
 	  first,
 	  Scope->s_time);
+  Tcl_SetResult(tcl, res, TCL_VOLATILE);
 
   return TCL_OK;
 }
@@ -2159,7 +2163,7 @@ static int gat_traceLPPEst(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
   }
 
   lpp = traceLinesPerPage(orient, paper);
-  sprintf(tcl->result,"%lf",lpp);
+  Tcl_SetObjResult(tcl, Tcl_NewDoubleObj(lpp));
 
   return TCL_OK;
 }
@@ -2200,14 +2204,14 @@ static int gat_setCircProp(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 
 static int gat_getCircProp(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
-  *tcl->result = 0;
+  Tcl_ResetResult(tcl);
 
   if (strcmp(argv[1],"-script") == 0 && argc > 2) {
     int i;
 
     if (sscanf(argv[2],"%d",&i) != 1) return TCL_OK;
     if (i >= TkGate.circuit->numInitScripts) return TCL_OK;
-    strcpy(tcl->result,TkGate.circuit->initScripts[i]);
+    Tcl_SetResult(tcl, TkGate.circuit->initScripts[i], TCL_STATIC);
   }
 
   return TCL_OK;
@@ -2225,10 +2229,10 @@ static int gat_getCircProp(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 static int gat_getLocales(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   int i;
-  HashElem *he; 
+  HashElem *he;
 
   Tcl_ResetResult(tcl);
-  
+
   for (he = Hash_first(TkGate.localeTable), i = 0;he;he = Hash_next(TkGate.localeTable,he), i++) {
     char buf[STRMAX],buf2[STRMAX];
     Locale *l = (Locale*) HashElem_obj(he);
@@ -2253,6 +2257,7 @@ static int gat_setDip(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   if (argc != 3) return TCL_OK;
 
+  char res[128];
   if (SimInterface_lookupGate(&TkGate.circuit->simulator,argv[1],&M,&g,&ss) == 0) {
 
     if (M == TkGate.circuit->es->smod) gate_draw(g,0);
@@ -2271,10 +2276,12 @@ static int gat_setDip(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 	  g->wires[0]->net->n_nbits,
 	  g->u.sw.dipval);
 
-    sprintf(tcl->result,"%x",g->u.sw.dipval);
+    sprintf(res,"%x",g->u.sw.dipval);
   } else {
-    sprintf(tcl->result,"0");
+    sprintf(res,"0");
   }
+
+  Tcl_SetResult(tcl, res, TCL_VOLATILE);
 
 
   return TCL_OK;
@@ -2349,9 +2356,9 @@ static int gat_formatTime(ClientData _d,Tcl_Interp *tcl,int argc,const char *arg
   if (sscanf(argv[1],"%llu",&t) != 1) return TCL_ERROR;
 
   if (tkgate_currentMode() == MM_SIMULATE)
-    SimInterface_formatTime(si, tcl->result, t);
+    SimInterface_formatTime(si, (char *)Tcl_GetStringResult(tcl), t);
   else
-    sprintf(tcl->result,"%llu",t);
+    Tcl_SetObjResult(tcl, Tcl_NewLongObj(t));
 
   return TCL_OK;
 }
@@ -2376,7 +2383,7 @@ static int gat_anchor(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   else
     old_mode = 0;
 
-  sprintf(tcl->result,"%d",old_mode);
+  Tcl_SetObjResult(tcl, Tcl_NewIntObj(old_mode));
 
   if (argc > 1) {
     sscanf(argv[1],"%d",&mode);
@@ -2479,7 +2486,7 @@ static int gat_zoom(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     return TCL_OK;
 
   ob_touch(TkGate.circuit);
-  TkGate.circuit->zoom_factor = zoom; 
+  TkGate.circuit->zoom_factor = zoom;
   if (zoom == 1) {
     DoTcl("ToolBar::toolConfigure Zoom zoomout -state disabled");
     DoTcl("ToolBar::toolConfigure Zoom zoomin -state normal");
@@ -2587,11 +2594,11 @@ static int gat_setpop(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
    */
   if (tkgate_currentMode() == MM_SIMULATE) {
     if (g && GCElement_isModule(g))
-      strcpy(tcl->result,"blksimu");
+      Tcl_SetResult(tcl, "blksimu", TCL_STATIC);
     else if (TkGate.popstate.n)
-      strcpy(tcl->result,"wiresimu");
+      Tcl_SetResult(tcl, "wiresimu", TCL_STATIC);
     else
-      strcpy(tcl->result,"simu");
+      Tcl_SetResult(tcl, "simu", TCL_STATIC);
     return TCL_OK;
   }
 
@@ -2600,9 +2607,9 @@ static int gat_setpop(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
    */
   if (tkgate_currentMode() == MM_ANALYZE) {
     if (g && GCElement_isModule(g))
-      strcpy(tcl->result,"blkanal");
+      Tcl_SetResult(tcl, "blkanal", TCL_STATIC);
     else
-      strcpy(tcl->result,"anal");
+      Tcl_SetResult(tcl, "anal", TCL_STATIC);
     return TCL_OK;
   }
 
@@ -2612,27 +2619,27 @@ static int gat_setpop(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (TkGate.circuit->es->isInterface) {
     if (g && GCElement_getType(g) == GC_BLOCK) {
       if (block_hitPort(g,cx,cy))
-	strcpy(tcl->result,"intfblockport");
+	Tcl_SetResult(tcl, "intfblockport", TCL_STATIC);
       else if (block_edgehit(g,x,y))
-	strcpy(tcl->result,"intfblockedge");
+	Tcl_SetResult(tcl, "intfblockedge", TCL_STATIC);
       else
-	strcpy(tcl->result,"intfblock");
+	Tcl_SetResult(tcl, "intfblock", TCL_STATIC);
     } else if (g && GCElement_getType(g) == GC_SYMBLOCK) {
-	strcpy(tcl->result,"intfblock");
+	Tcl_SetResult(tcl, "intfblock", TCL_STATIC);
     } else
-      strcpy(tcl->result,"intf");
+      Tcl_SetResult(tcl, "intf", TCL_STATIC);
 
     return TCL_OK;
   }
-    
+
 
   if (EditState_getMode() != MODE_MOVE && EditState_getMode() != MODE_MOVESEL) {
-    strcpy(tcl->result,"notmove");
+    Tcl_SetResult(tcl, "notmove", TCL_STATIC);
     return TCL_OK;
   }
 
   if (TkGate.circuit->mg_selection && !g)
-    strcpy(tcl->result,"multi");
+    Tcl_SetResult(tcl, "multi", TCL_STATIC);
   else if (g) {
     int N = GCElement_numPads(g);
     int can_add = 0;
@@ -2644,33 +2651,33 @@ static int gat_setpop(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
     if (g->typeinfo->Code == GC_BLOCK) {
       if (block_hitPort(g,cx,cy))
-	strcpy(tcl->result,"blockport");
+        Tcl_SetResult(tcl, "blockport", TCL_STATIC);
       else if (block_edgehit(g,cx,cy))
-	strcpy(tcl->result,"blockedge");
+        Tcl_SetResult(tcl, "blockedge", TCL_STATIC);
       else
-	strcpy(tcl->result,"block");
+        Tcl_SetResult(tcl, "block", TCL_STATIC);
     } else if (g->typeinfo->Code == GC_SYMBLOCK) {
-      strcpy(tcl->result,"block");
+      Tcl_SetResult(tcl, "block", TCL_STATIC);
     } else if (g->typeinfo->Code == GC_JOINT) {
       if (!g->wires[0] || !g->wires[1] || !g->wires[2] || !g->wires[3])
-	strcpy(tcl->result,"joint3");
+	Tcl_SetResult(tcl, "joint3", TCL_STATIC);
       else
-	strcpy(tcl->result,"joint4");
+	Tcl_SetResult(tcl, "joint4", TCL_STATIC);
     } else if (can_add)
-      strcpy(tcl->result,"MIgate");
+      Tcl_SetResult(tcl, "MIgate", TCL_STATIC);
     else
-      strcpy(tcl->result,"gate");
+      Tcl_SetResult(tcl, "gate", TCL_STATIC);
   } else if (TkGate.popstate.n) {
     char *labelCode = TkGate.popstate.n->isLabeled ? "L" : "";
     char *sizeCode = TkGate.popstate.n->showSize ? "S" : "";
 
     if (TkGate.popstate.net && TkGate.popstate.net->n_nbits > 1)
-      sprintf(tcl->result,"mbwire%s%s",labelCode,sizeCode);
+      Tcl_AppendResult(tcl, "mbwire", labelCode, sizeCode, NULL);
     else
-      sprintf(tcl->result,"wire%s",labelCode);
+      Tcl_AppendResult(tcl, "wire", labelCode, NULL);
   }
   else
-    strcpy(tcl->result,"canv");
+    Tcl_SetResult(tcl, "canv", TCL_STATIC);
 
   /*     ob_touch(TkGate.popstate); (popstate may need to be made undoable?) */
 
@@ -2700,7 +2707,7 @@ static int gat_setMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   int has_plus = 0;
 
   if (argc < 2) {
-    strcpy(tcl->result,"bad mode ");
+    Tcl_SetResult(tcl, "bad mode", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -2716,7 +2723,7 @@ static int gat_setMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   } else if (strcmp(argv[1],"analyze") == 0) {
     target_mode = MM_ANALYZE;
   }  else {
-    strcpy(tcl->result,"bad mode ");
+    Tcl_SetResult(tcl, "bad mode", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -2725,8 +2732,8 @@ static int gat_setMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
    * If we are in normal edit mode, do an HDL save with checks before changing modes.
    */
 #if 0
-  if (tkgate_currentMode() == MM_EDIT && target_mode != MM_EDIT 
-      && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0) 
+  if (tkgate_currentMode() == MM_EDIT && target_mode != MM_EDIT
+      && !TkGate.circuit->es->isInterface && hdl_checkSave(0) < 0)
     return TCL_OK;
 #endif
 
@@ -2760,7 +2767,7 @@ static int gat_setMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 static int gat_getMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   if (argc != 1) {
-    strcpy(tcl->result,"illegal argument.");
+    Tcl_SetResult(tcl, "illegal argument.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -2768,16 +2775,16 @@ static int gat_getMajorMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 
   switch (tkgate_currentMode()) {
     case MM_SIMULATE :
-      strcpy(tcl->result,"simulate");
+      Tcl_SetResult(tcl, "simulate", TCL_STATIC);
       break;
     case MM_EDIT :
       if (editstate_isInterfaceMode())
-	strcpy(tcl->result,"interface");
+        Tcl_SetResult(tcl, "interface", TCL_STATIC);
       else
-	strcpy(tcl->result,"edit");
+        Tcl_SetResult(tcl, "edit", TCL_STATIC);
       break;
     case MM_ANALYZE :
-      strcpy(tcl->result,"analyze");
+      Tcl_SetResult(tcl, "analyze", TCL_STATIC);
       break;
   }
   return TCL_OK;
@@ -2791,7 +2798,7 @@ static int gat_gotoCPathNet(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   GWireNode *wn1,*wn2;
 
   if (argc < 2) {
-    strcpy(tcl->result,"bad cpath");
+    Tcl_SetResult(tcl, "bad cpath", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -2807,7 +2814,7 @@ static int gat_gotoCPathNet(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 
   n = GModuleDef_findNet(TkGate.circuit->es->env,p);
   if (!n) {
-    sprintf(tcl->result,"net '%s' not found.",p);
+    Tcl_AppendResult(tcl, "net '", p, "' not found.", NULL);
     return TCL_ERROR;
   }
 
@@ -2849,7 +2856,7 @@ static int gat_popupPortCmd(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   GWire *w = 0;
 
   if (argc < 2) {
-    strcpy(tcl->result,"bad popup");
+    Tcl_SetResult(tcl, "bad popup", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -2894,7 +2901,7 @@ static int gat_popupPortCmd(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   } else if (strcmp(argv[1],"size") == 0) {
     int size;
     if (argc < 3 || sscanf(argv[2],"%d",&size) != 1) {
-      strcpy(tcl->result,"bad port size");
+      Tcl_SetResult(tcl, "bad port size", TCL_STATIC);
       return TCL_ERROR;
     }
     GNet_draw(w->net);
@@ -2914,7 +2921,7 @@ static int gat_popupPortCmd(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
     SetModified(MF_INTERFACE);
     SynchronizeInterface();
   } else {
-    strcpy(tcl->result,"illegal port command.");
+    Tcl_SetResult(tcl, "illegal port command.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -2926,7 +2933,7 @@ static int gat_popupSetState(ClientData _d,Tcl_Interp *tcl,int argc,const char *
   if (argc > 1)
     sscanf(argv[1],"%d",&TkGate.popstate.isSet);
   else
-    sprintf(tcl->result,"%d",TkGate.popstate.isSet);
+    Tcl_SetObjResult(tcl, Tcl_NewIntObj(TkGate.popstate.isSet));
 
   return TCL_OK;
 }
@@ -3004,7 +3011,7 @@ static int gat_popupWireLabel(ClientData _d,Tcl_Interp *tcl,int argc,const char 
   int x = TkGate.ed->tx;
   int isLabeled;
 
-  if (!net || !n || !w) 
+  if (!net || !n || !w)
     return TCL_OK;
 
   isLabeled = n->isLabeled;
@@ -3031,7 +3038,7 @@ static int gat_popupWireLabel(ClientData _d,Tcl_Interp *tcl,int argc,const char 
 	}
       }
       GNet_draw(net);
-      return TCL_OK; 
+      return TCL_OK;
     } else if (strcmp(argv[1],"-show") == 0)
       isLabeled = 1;
     else if (strcmp(argv[1],"-hide") == 0)
@@ -3075,11 +3082,10 @@ static int gat_dumpWires(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
 static int gat_getTechList(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   char **techs = GDelayDef_getTechList();
-  char *s,*p;
   int l,i;
 
   if (!techs) {
-    strcpy(TkGate.tcl->result,TKGATE_DEFAULT_TECH);
+    Tcl_SetResult(tcl, TKGATE_DEFAULT_TECH, TCL_STATIC);
     return TCL_OK;
   }
 
@@ -3088,11 +3094,8 @@ static int gat_getTechList(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
     l += strlen(techs[i])+1;
   l++;
 
-  p = s = (char*)ob_malloc(l,"char*");
   for (i = 0;techs[i];i++)
-    p += sprintf(p," %s",techs[i]);
-
-  TkGate.tcl->result = s;
+    Tcl_AppendResult(tcl, " ", techs[i], NULL);
 
   return TCL_OK;
 }
@@ -3109,7 +3112,7 @@ static int gat_setTech(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
     message(0,msgLookup("err.protdata"));		/* "Can not edit library module." */
     return TCL_OK;
   }
-  
+
   if (argc > 1) {
     ob_begin_frame("SetTech");
     sel_setTech(es,argv[1]);
@@ -3147,7 +3150,7 @@ static int gat_getTech(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   }
 
   if (!tech) tech = "";
-  strcpy(tcl->result,tech);
+  Tcl_SetResult(tcl, tech, TCL_STATIC);
 
   return TCL_OK;
 }
@@ -3155,7 +3158,7 @@ static int gat_getTech(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
 static int gat_makeMakeMenu(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   if (argc != 2) {
-    strcpy(tcl->result,"bad make menu");
+    Tcl_SetResult(tcl, "bad make menu", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -3166,13 +3169,15 @@ static int gat_makeMakeMenu(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
 
 /*****************************************************************************
  *
- * Validate the suggested name of a port. 
+ * Validate the suggested name of a port.
  *
  * gat_validatePortName module name orient dir nbits
  * gat_validatePortName module name orient dir nbits
  *
  *
  *****************************************************************************/
+int igen_strToSide(const char *side);
+void guessPortName(char *buf,GCElement *g,int orient,int dir,int nbits);
 static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   TkgGateWin *gw = TkGate.gw;
@@ -3192,7 +3197,7 @@ static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const cha
 
 
   if (argc < 3) {
-    sprintf(tcl->result,"wrong number of parameters.");
+    Tcl_SetResult(tcl, "wrong number of parameters.", TCL_STATIC);
     return TCL_ERROR;
   }
 
@@ -3203,7 +3208,7 @@ static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const cha
   if ((s = seekOption("-dir",argv+3,argc-3))) {
     dir = strIOType(s);
   }
-  
+
   if ((s = seekOption("-bits",argv+3,argc-3)))
     sscanf(s,"%d",&nbits);
 
@@ -3254,7 +3259,7 @@ static int gat_validatePortName(ClientData _d,Tcl_Interp *tcl,int argc,const cha
 
   pickValidName(validName,newPortName,"P",curPorts);
 
-  strcpy(tcl->result,validName);
+  Tcl_SetResult(tcl, validName, TCL_VOLATILE);
 
   if (curPorts)
     delete_SHash(curPorts);
@@ -3339,7 +3344,7 @@ static int gat_toggleProbe(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
     if (w) {
       x = w->nodes->x;
       y = w->nodes->y;
-      if (TkGate.popstate.isSet) { 
+      if (TkGate.popstate.isSet) {
 	x = TkGate.popstate.x;
 	y = TkGate.popstate.y;
 	GWire_pickProbePosition(TkGate.popstate.w,&x,&y);
@@ -3396,7 +3401,7 @@ static int gat_obBeginFrame(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   unsigned flags = 0;
 
   if (ob_get_mode() == OM_DISABLED) {
-    sprintf(tcl->result,"0");
+    Tcl_SetResult(tcl, "0", TCL_STATIC);
     return TCL_OK;
   }
 
@@ -3413,7 +3418,7 @@ static int gat_obBeginFrame(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   else
     ob_begin_framef(argv[1],flags);
 
-  sprintf(tcl->result,"1");
+  Tcl_SetResult(tcl, "1", TCL_STATIC);
 
   return TCL_OK;
 }
@@ -3437,25 +3442,12 @@ static int gat_obEndFrame(ClientData _d,Tcl_Interp *tcl,int argc,const char *arg
 static int gat_getUndoList(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   const char *undoList[1024];
-  char *p;
   int N,i;
-  int nc = 0;
 
   N = ob_getUndoList(undoList,1024);
 
-
-  nc = 10;
   for (i = 0;i < N;i++)
-    nc += strlen(undoList[i])+1;
-
-  tcl->result = malloc(nc);	/* Really use malloc/free here */
-  tcl->freeProc = (Tcl_FreeProc*)free;
-
-  p = tcl->result;
-  *p = 0;
-  for (i = 0;i < N;i++)
-    p += sprintf(p," %s",undoList[i]);
-
+    Tcl_AppendResult(tcl, " ", undoList[i], NULL);
 
   return TCL_OK;
 }
@@ -3463,24 +3455,12 @@ static int gat_getUndoList(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 static int gat_getRedoList(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
   const char *redoList[1024];
-  char *p;
   int N,i;
-  int nc = 0;
 
   N = ob_getRedoList(redoList,1024);
 
-
-  nc = 10;
   for (i = 0;i < N;i++)
-    nc += strlen(redoList[i])+1;
-
-  tcl->result = malloc(nc);	/* Really use malloc/free here */
-  tcl->freeProc = (Tcl_FreeProc*)free;
-
-  p = tcl->result;
-  *p = 0;
-  for (i = 0;i < N;i++)
-    p += sprintf(p," %s",redoList[i]);
+    Tcl_AppendResult(tcl, " ", redoList[i], NULL);
 
   return TCL_OK;
 }
@@ -3520,19 +3500,16 @@ static int gat_getSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
      * selected since the tcl->result buffer is not expanded as necessary.  However,
      * this features is not currently used, so it should not matter for now.
      */
-    char *p = tcl->result;
     for (E = Hash_first(gs->s_gates);E;E = Hash_next(gs->s_gates,E)) {
       GCElement *g = (GCElement*) HashElem_obj(E);
-      if (p != tcl->result)
-	p += sprintf(p," ");
-      p += sprintf(p,"%s",g->ename);
+      Tcl_AppendResult(tcl, " ", g->ename, NULL);
     }
   } else {
     if (sel_num(TkGate.circuit->es) == 1) {
       GCElement *g = TkGate.circuit->select;
 
       if (g && GCElement_isModule(g)) {
-	strcpy(tcl->result,g->u.block.moduleName);
+        Tcl_SetResult(tcl, g->u.block.moduleName, TCL_VOLATILE);
       }
     }
   }
@@ -3542,14 +3519,14 @@ static int gat_getSelected(ClientData _d,Tcl_Interp *tcl,int argc,const char *ar
 
 static int gat_obMode(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {
-  int m = 1;
-  
+  ob_OMMode_t m = OM_ENABLED;
+
   if (argc == 1) {
     m = ob_get_mode();
-    sprintf(tcl->result,"%d",m);
+    Tcl_SetObjResult(tcl, Tcl_NewIntObj(m));
   } else {
-    sscanf(argv[1],"%d",&m);
-    ob_mode(m);
+    sscanf(argv[1],"%d",(int*)&m);
+    ob_set_mode(m);
   }
 
   return TCL_OK;
@@ -3641,7 +3618,7 @@ static void Bit_extend(int x,int y)
     else
       bit_data = ob_malloc(y*sizeof(unsigned*),"unsigned*");
 
-    for (i = bit_height;i < y;i++) 
+    for (i = bit_height;i < y;i++)
       bit_data[i] = ob_malloc(bit_width*sizeof(unsigned),"unsigned");
     bit_height = y;
   }

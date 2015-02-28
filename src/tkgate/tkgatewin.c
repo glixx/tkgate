@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue Feb  3 10:24:32 2009
 ****************************************************************************/
@@ -91,7 +91,7 @@ void tkgate_setMajorMode(MajorMode requestedMode)
 
   currentMode = tkgate_currentMode();
 
-  /* 
+  /*
    * No change in mode, but we might want to issue a message.
    */
   if (requestedMode == currentMode)
@@ -117,7 +117,7 @@ void tkgate_setMajorMode(MajorMode requestedMode)
   }
 
   /*
-   * Transition to MM_EDIT before changing to new mode. 
+   * Transition to MM_EDIT before changing to new mode.
    */
   switch (currentMode) {
   case MM_EDIT :
@@ -143,17 +143,17 @@ void tkgate_setMajorMode(MajorMode requestedMode)
   switch (requestedMode) {
   case MM_EDIT :
     DoTcl("tkg_editLogo");
-    ob_mode(OM_ENABLED);
+    ob_set_mode(OM_ENABLED);
     break;
   case MM_SIMULATE :
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
     ob_clear();
     TkGate.circuit->simulator.no_scope = 0;
     SimInterface_begin(&TkGate.circuit->simulator);
     DoTcl("tkg_resetLogo");
     break;
   case MM_ANALYZE :
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
     ob_clear();
     cpath_open();
     DoTcl("tkg_analysisLogo");
@@ -174,7 +174,7 @@ void showSelectedName()
       GWire *w = TkGate.circuit->wsel;
       GCElement *g;
 
-      if (w->name) 
+      if (w->name)
 	g = w->gate;
       else {
 	w = wire_other(w);
@@ -443,7 +443,7 @@ void initGCs()
   values.dashes = DASH_LENGTH/2;
   XChangeGC(TkGate.D,TkGate.frameGC, mask, &values);
 
-  mask = GCForeground | GCBackground | GCFunction | GCGraphicsExposures; 
+  mask = GCForeground | GCBackground | GCFunction | GCGraphicsExposures;
   values.foreground = 1;
   values.background = 1;
   values.function = GXcopy;
@@ -517,7 +517,7 @@ void RescanHDLModules()
     SetModified(MF_MODULE|MF_SYNCONLY);
     ob_end_frame();
   }
-} 
+}
 
 
 /*****************************************************************************
@@ -941,7 +941,7 @@ static int gateWinCommand(ClientData data, Tcl_Interp *tcl, int argc, const char
       Tk_ConfigSpec *C = &configSpecs[i];
       if (C->type == TK_CONFIG_STRING && strcmp(C->argvName,argv[2]) == 0) {
 	char *value = *(char**)(((char*)gw) + C->offset);
-	strcpy(tcl->result,value);
+    Tcl_SetResult(tcl, value, TCL_VOLATILE);
 	break;
       }
     }
@@ -1026,7 +1026,7 @@ static void gateWinDestroy(ClientData data)
 
 /*****************************************************************************
  * Process the command for creating the main tkgate circuit editing window.
- * 
+ *
  * Usage: gatewin .w
  *
  *****************************************************************************/
@@ -1071,14 +1071,14 @@ static int tkg_gateWin(ClientData data, Tcl_Interp *tcl, int argc, const char **
 
   setGCcolors();
 
-  tcl->result = Tk_PathName(w);
+  Tcl_SetResult(tcl, Tk_PathName(w), TCL_STATIC);
 
   return TCL_OK;
 }
 
 /*****************************************************************************
  *
- * Do a tcl/tk script command.  Arguments act like printf and are used to 
+ * Do a tcl/tk script command.  Arguments act like printf and are used to
  * construct the command before execution.
  *
  *****************************************************************************/
@@ -1134,7 +1134,7 @@ int DoTclL(const char *cmd,...)
   /* Are the objects freed here? */
 
   if (r != TCL_OK) {
-    printf("tkgate: DoTclL Error - %s\n",TkGate.tcl->result);
+    printf("tkgate: DoTclL Error - %s\n",Tcl_GetStringResult(TkGate.tcl));
     printf("   while executing: %s\n",cmd);
   }
 
@@ -1164,7 +1164,7 @@ int DoTclV(const char *cmd,int nargs,const char **args)
   /* Are the objects freed here? */
 
   if (r != TCL_OK) {
-    printf("DoTclV Error: %s\n",TkGate.tcl->result);
+    printf("DoTclV Error: %s\n",Tcl_GetStringResult(TkGate.tcl));
     printf("   while executing: %s\n",cmd);
   }
 
@@ -1185,7 +1185,7 @@ static int tkg_buttonPress(ClientData data, Tcl_Interp *tcl, int argc, const cha
   int x,y,state,button;
 
   click_count++;
-  
+
   DoTcl("tkg_cancel");
   DoTcl("tkg_undoSelections gate");
 
@@ -1300,7 +1300,7 @@ int getCheckpointFilename(char *checkPointFile,const char *fileName,size_t size)
     return -1;
 
   /*
-   * Start with a copy of the file name. 
+   * Start with a copy of the file name.
    */
   strcpy(checkPointFile,fileName);
 
@@ -1651,12 +1651,12 @@ void init_mainWindow(Tcl_Interp *tcl)
   SimInterface_init(&TkGate.circuit->simulator);
 
   if (sync_Xserver) {
-    printf("[synchonized X11 connection]\n");
+    printf("[synchronized X11 connection]\n");
     XSynchronize(TkGate.D,True);
   }
-  
+
   initGCs();
-  
+
   Tcl_CreateCommand(tcl,"gat_scope"
 		    ,gat_scope
 		    ,(ClientData)root

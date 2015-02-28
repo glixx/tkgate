@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Jan 17 19:53:38 2009
 #
@@ -128,7 +128,7 @@ namespace eval BlockTree {
   # Make the list of children of a module empty.
   #
   # Parameters:
-  #      mod		Module from which to disown children. 
+  #      mod		Module from which to disown children.
   #
   proc disownChildren {mod} {
     variable children
@@ -217,7 +217,7 @@ namespace eval BlockTree {
   #     <mod>		Name of module to add as a part.
   #     <lib>		Library that the module is a member of.
   #
-  # Add a module as a part from a libarary. 
+  # Add a module as a part from a libarary.
   #
   proc addPart {mod lib} {
     variable mtype

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Jan 19 18:14:18 2009
 ****************************************************************************/
@@ -116,7 +116,7 @@ GGateInfo gate_concat_info = {
   {1,1,0,1},
 
   {0},
-  
+
   Concat_Make,
   Nop_WriteCellDef,
   Generic_Init,
@@ -150,8 +150,8 @@ static void Concat_adjustWires(GCElement *g)
 
   N = wire_numOnPad(g->wires[CONCAT_IN]);
   L = CONCAT_WIRESPACE*(N+1);
-  
-  
+
+
   switch (g->orient) {
   case 0 :
     wx = g->xpos - CONCAT_HOOK;
@@ -178,7 +178,7 @@ static void Concat_adjustWires(GCElement *g)
     dy = 0;
     break;
   }
-  
+
   for (i = 0,w = g->wires[CONCAT_IN];w;i++, w = w->next) {
     wx += dx;
     wy += dy;
@@ -281,7 +281,7 @@ void Concat_Draw(GCElement *g,int md)
   int lsb;
   int iod;
   int atype;
-  
+
   x = ctow_x(g->xpos);
   y = ctow_y(g->ypos);
 
@@ -369,7 +369,7 @@ void Concat_Draw(GCElement *g,int md)
 
     x = w->nodes->x + xBitLab[g->orient];
     y = w->nodes->y + yBitLab[g->orient];
-	  
+
     dce_DrawString(TkGate.instGC,x,y,jBitLab[g->orient],buf);
   }
 
@@ -456,7 +456,7 @@ int Concat_EditProps(GCElement *g,int isLoadDialog)
 
       if (sscanf(p,"%d",&sd) == 1) {
 	switch (sd) {
-	case 0 : 
+	case 0 :
 	case 1 :
 	  newtype = CONCAT_T_FIXED; newdrive = sd;
 	  break;
@@ -524,7 +524,7 @@ int Concat_GateParmList(FILE *f,GCElement *g)
 
 /*****************************************************************************
  *
- * Write the list of ports on the 'multi-port' pad in the correct order. 
+ * Write the list of ports on the 'multi-port' pad in the correct order.
  *
  * Parameters:
  *     f	File on which to write
@@ -536,7 +536,7 @@ int Concat_GateParmList(FILE *f,GCElement *g)
 static void Concat_writeMPorts(FILE *f,GCElement *g)
 {
   int first_pin = 1;
-  GWire **wires; 
+  GWire **wires;
   GWire *w;
   int n = 0;
   int i;
@@ -555,12 +555,12 @@ static void Concat_writeMPorts(FILE *f,GCElement *g)
 
 /*****************************************************************************
  *
- * Write the wire numbers for the ports on a concat gate. 
+ * Write the wire numbers for the ports on a concat gate.
  *
  *****************************************************************************/
 static void Concat_writeWireNums(FILE *f,GCElement *g,unsigned flags)
 {
-  GWire **wires; 
+  GWire **wires;
   GWire *w;
   int n = 0;
   int i;
@@ -576,10 +576,10 @@ static void Concat_writeWireNums(FILE *f,GCElement *g,unsigned flags)
     fprintf(f," %d",g->wires[CONCAT_OUT]->nidx);
 
   if ((flags & WWN_REVIN)) {
-    for (i = 0;i < n;i++) 
+    for (i = 0;i < n;i++)
       fprintf(f," %d",wires[i]->nidx);
   } else {
-    for (i = n-1;i >= 0;i--) 
+    for (i = n-1;i >= 0;i--)
       fprintf(f," %d",wires[i]->nidx);
   }
 
@@ -611,7 +611,7 @@ void Concat_VerSave(FILE *f,GCElement *g)
   } else if (g->u.cat.drivePort == CONCAT_IN) {
     fprintf(f,"  assign {");
     Concat_writeMPorts(f,g);
-    fprintf(f,"} = %s; //: CONCAT %s ",g->wires[CONCAT_OUT]->net->n_signame,g->ename); 
+    fprintf(f,"} = %s; //: CONCAT %s ",g->wires[CONCAT_OUT]->net->n_signame,g->ename);
     VerilogBasicGateComment(f,g,VGC_NOWIRES);
     Concat_writeWireNums(f,g,WWN_INFIRST);
     fprintf(f," /dr:%d /tp:%d /drp:%d",g->u.cat.portDir,g->u.cat.type,g->u.cat.drivePort);
@@ -620,7 +620,7 @@ void Concat_VerSave(FILE *f,GCElement *g)
   } else if (g->u.cat.drivePort == CONCAT_OUT) {
     fprintf(f,"  assign %s = {",g->wires[CONCAT_OUT]->net->n_signame);
     Concat_writeMPorts(f,g);
-    fprintf(f,"}; //: CONCAT %s ",g->ename); 
+    fprintf(f,"}; //: CONCAT %s ",g->ename);
     VerilogBasicGateComment(f,g,VGC_NOWIRES);
     Concat_writeWireNums(f,g,WWN_OUTFIRST);
     fprintf(f," /dr:%d /tp:%d /drp:%d",g->u.cat.portDir,g->u.cat.type,g->u.cat.drivePort);
@@ -734,7 +734,7 @@ static int concat_isDriver(GCElement *g,GWire *w)
  * Parameters:
  *     net	Net that we are testing.
  *
- * Returns:	Non-zero if the net has a driver 
+ * Returns:	Non-zero if the net has a driver
  *
  *****************************************************************************/
 static int concat_hasDriver(GWire *w)
@@ -884,7 +884,7 @@ void Concat_updateAutos(GModuleDef *M,int doDraw)
 
 #if 0
       printf("    %s(in:%d out:%d): %d => %d\n",
-	     g->ename, 
+	     g->ename,
 	     in_has_driver, out_has_driver,
 	     g->u.cat.newDrivePort, new_port);
 #endif

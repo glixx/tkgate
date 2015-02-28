@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Mar 18 05:13:38 2009
 ****************************************************************************/
@@ -255,7 +255,7 @@ void modint_arrange(EditState*es)
   int N = Hash_numElems(M->m_gates);
   int i;
   int x,y,maxh;
-  int isFirst;  
+  int isFirst;
 
   if (N < 1) return;					/* No defined blocks */
 
@@ -296,7 +296,7 @@ void modint_arrange(EditState*es)
       cx = cy = 0;
 
 
-    if (!isFirst && (x + width + MODINT_BLOCKSPACE) > TkGate.width) { 
+    if (!isFirst && (x + width + MODINT_BLOCKSPACE) > TkGate.width) {
       x = MODINT_BLOCKSPACE;
       y += MODINT_BLOCKSPACE + maxh;
       maxh = 0;
@@ -502,7 +502,7 @@ void modint_makeSymbolInterface(GModuleDef *M,GModSymbol *ms)
   g = SymBlock_convert(g,ms,M,0);
 
   /*
-   * Make this new symbol block gate the new interface for M. 
+   * Make this new symbol block gate the new interface for M.
    */
   modint_setInterface(M, g);
 }
@@ -522,11 +522,11 @@ void modint_flush()
 
   for (E = Hash_first(mm->m_gates);E;E = Hash_next(mm->m_gates,E)) {
     GCElement *g = (GCElement*) HashElem_obj(E);
-    if (GCElement_getType(g) != GC_BLOCK && 
+    if (GCElement_getType(g) != GC_BLOCK &&
 	GCElement_getType(g) != GC_SYMBLOCK)
       continue;
 
-    List_addToTail(&dlist, 
+    List_addToTail(&dlist,
   }
 
   List_uninit(&dlist);
@@ -546,7 +546,7 @@ void modint_flush()
  *****************************************************************************/
 void modint_openSelected(const char *modName)
 {
-  
+
   EditState **es = &TkGate.circuit->es;
   GModuleDef *M;
   char *p;

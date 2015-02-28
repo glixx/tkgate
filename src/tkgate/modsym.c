@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Dec 31 17:16:16 2008
 ****************************************************************************/
@@ -138,7 +138,7 @@ static void rotatePoint(int *x,int *y,int cx,int cy,int r)
  *
  * Parameters:
  *      x		Number in which to reverse bytes
- * 
+ *
  * Returns:		Byte reversed value.
  *
  *****************************************************************************/
@@ -149,7 +149,7 @@ static unsigned char reverseBits(unsigned char x)
     0, 8, 4, 12, 2, 10, 6, 14, 1, 9,  5, 13,  3, 11,  7, 15};
 
   return (revTab[(x&0xf)]<<4) | revTab[((x>>4)&0xf)];
-  
+
 }
 
 /*****************************************************************************
@@ -163,7 +163,7 @@ static unsigned char reverseBits(unsigned char x)
  *     W                Width of buffer
  *     H                Height of buffer
  *     bpl              Bytes per line.
- * 
+ *
  *****************************************************************************/
 static void extractImageData(char *idata,const char *data,unsigned W,unsigned H,int bpl)
 {
@@ -711,7 +711,7 @@ static void GModSymbol_updateCenter(GModSymbol *ms)
 }
 
 /*
- * Add a port to a module 
+ * Add a port to a module
  */
 void GModSymbol_addPort(GModSymbol *ms,GSymPort *p)
 {
@@ -847,7 +847,7 @@ void GModSymbol_draw(GModSymbol *ms,int x,int y,int r,int isBold)
 
 HashElem *GModSymbol_first()
 {
-  if (!symbolTable) 
+  if (!symbolTable)
     return 0;
   else
     return Hash_first(symbolTable);

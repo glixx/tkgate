@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Jan 17 00:30:11 2009
 ****************************************************************************/
@@ -27,13 +27,13 @@ int istruevalue(const char *s);
 
 /*****************************************************************************
  *
- * 
+ *
  *
  *****************************************************************************/
 static struct {
   GCElement *g;			/* Gate on which hyperlink is found */
   char *link;			/* Text of the link */
-  int isConfirmed;		/* hyperlink is confirmed (mouse up seen) */	
+  int isConfirmed;		/* hyperlink is confirmed (mouse up seen) */
 } pending_jump = {0,0,0};
 
 static void setPendingLink(GCElement *g,const char *link)
@@ -89,7 +89,7 @@ void Html_invoke_browser(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
-    
+
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.browserCommand);
 
@@ -121,7 +121,7 @@ void Html_invoke_email(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
-    
+
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.emailCommand);
 
@@ -169,7 +169,7 @@ void Html_invoke_file(char * file)
 
   /*
    * If there is still a file name, load the file if it is a .v file, or display
-   * it in a viewer if it is any other type of file.  
+   * it in a viewer if it is any other type of file.
    */
   if (*file) {
     char *ext = strrchr(file,'.');
@@ -184,7 +184,7 @@ void Html_invoke_file(char * file)
       char *title;
 
       title = strrchr(file,'/');
-      if (title) 
+      if (title)
 	title++;
       else
 	title = file;

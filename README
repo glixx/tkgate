@@ -29,14 +29,16 @@ SAVE FILE DIFFERENCES WITH PAST VERSIONS
    be slightly off when rereading from an old version of tkgate.
 
    Basic flip-flop elements do not exist in this version and lower.
-   
+
 1.4c and earlier
    Multi-technology delay specification, and per-gate delay specification is
    not supported.  If any delays other than "default" are used, the file may
    not be readable by older versions of tkgate.
 
 *****************************************************************************
-MULTI-LINGUAL SUPPORT (JAPANESE)
+MULTI-LINGUAL SUPPORT
+
+1. JAPANESE
 
 As of TkGate 2.0, Japanese support is automatically compiled in.  To use
 it, run tkgate with the -Lja option, or make sure your LANG environment
@@ -64,6 +66,13 @@ locale name that starts with "ja", the locale must be set to "ja_JP.eucJP"
 in order to enable Japanese input.  Using the '-Lja' switch will also
 ensure that the environment variables are set correctly.
 
+2. RUSSIAN
+
+Russian locale uses 'koi8-r' single-byte encoding for the circuit comment
+text. In order to display in-circuit cyrillic text, the X fonts packages,
+containing 'helvetica' and 'courier' family koi8-r encoded fonts should be
+installed.
+
 *****************************************************************************
 CREDITS
 
@@ -73,12 +82,41 @@ CREDITS
   * Thanks to Agustin Borrego for the Spanish translation.
   * Thanks to Kevin Donnelly for the Welsh translation.
   * Thanks to Jacques JANVILLE for the French translation and French tutorials.
-  * Thanks to Marc Lavallee for Linux rpm spec file.
   * Thanks to Roman Valls for the Catalan translation.
-  * Thanks to Anthony Winstanley for the cygwin patch. 
+  * Thanks to Anthony Winstanley for the cygwin patch.
+  * Thanks to Alexey Loginov for the russian translation, tutorials and examples improvements
+    and packaging for Mageia Linux.
+  * Thanks to Pietro Cerutti for Tcl/Tk-8.6 patch
 
 *****************************************************************************
-VERSION HISTORY 
+VERSION HISTORY
+
+Version 2.0-rc1 - February 27, 2015
+     * 74xx library extended: added circuits
+         7411 triple input AND
+         7420 Quad input NAND
+         7421 Quad input AND
+         7442 BCD decoder
+         7447 BCD to 7-segment encoder
+         74181 4-bit ALU
+         74182 Carry look ahead unit
+     * Added russian locale
+     * Some additional messages and settings (including license text)
+       now can be localized
+     * Fixed bug in ROM primitive causing it was unable to set the
+       high-impedance output value when OE input is zero
+     * Fixed bug in 74154 (incorrect name of output register)
+     * Fixed bug, causing incorret locale encoding settings not handled
+       properly
+     * Fixed a lot of bugs, related with the usage of uninitialized
+       values, invalid reads and writes, memory leaks in tkgate and verga
+     * Fixed division by zero bug
+     * Fixed build scripts to allow build from sources on newer Linux
+       systems and OpenBSD
+     * Fixed bug causing the library circuit parameters to override the
+       main circuit ones
+     * Fixed erratums and grammar error
+     * Unlocked the hidden pancake recipe
 
 Version 2.0-b10 - September 26, 2009
      * Fixed bug causing bar led to display wrong value when some bits are unknown.
@@ -92,14 +130,14 @@ Version 2.0-b9 - May 5, 2009
      * Fixed bug causing core dump when reversing port ordering on decoder.
      * Fixed bug in updating module tree when creating module instances.
      * Expanded components in the 74xx library.
- 
+
 Version 2.0-b8 - April 25, 2009
-     * Fixed bug with libraries with no descriptions. 
+     * Fixed bug with libraries with no descriptions.
      * Fixed bug in freeing of memory in circuit properties editing
        which caused a core dump on some systems.
      * Fixed bug in module interface update when loading a module that
 	overrides a library module of the same name.
-     * Fixed bug in display of scope axis when non-standard timescale 
+     * Fixed bug in display of scope axis when non-standard timescale
 	is used.
 
 Version 2.0-b7 - February 23, 2009
@@ -194,7 +232,7 @@ Version 2.0-a12 - September 24, 2007
 Version 2.0-a11 - September 24, 2007
      * Fixed bugs and made minor feature enhancements to block port editing
        through popup menus.
-     * Fixed bug causing delayed updates to graphical view in interface editor 
+     * Fixed bug causing delayed updates to graphical view in interface editor
      * Module instances can now be updated in place with new interfaces.
      * Slight redesign of the module interface type selector.
 
@@ -236,7 +274,7 @@ Version 2.0-a6 - July 13, 2007
 Version 2.0-a5 - May 22, 2007
      * Autoconf-based installation
      * Fixed bug preventing the shift-click sequence from being able to edit hyperlinks
-     * Fixed some Japanese localization issues. 
+     * Fixed some Japanese localization issues.
 
 Version 2.0-a1 - February 7, 2007
      * Updated interface.
@@ -275,7 +313,7 @@ Version 1.8.3 - March 18, 2004
 Version 1.8.2 - February 12 , 2004
      * Fixed bug when loading library from command line.
      * Fixed bug when printing selected modules.
-     * Fixed bug with '-V' circuit verify command. 
+     * Fixed bug with '-V' circuit verify command.
      * Fixed bug in Edit menu with Algn Vert. and Algn Horz. being swapped.
      * Fixed bug with cut/paste of concat elements at 90/270 degree orientations.
      * Fixed bug with undo of wire taps.
@@ -368,14 +406,14 @@ Version 1.6f - November 30, 2000
       * Fixed problem with setting label on frames.
 
 Version 1.6e - November 16, 2000
-      * Fixed problem with memories with less than 8-bit data lines. 
+      * Fixed problem with memories with less than 8-bit data lines.
       * Fixed possible direction problem with wire merge.
 
 Version 1.6d - October 19, 2000
       * Fixed carry-out on 32-bit adders
       * Postscript generator now uses latin1 encoding to enable correct
 	printing of accented characters.
-      * Dip switch "value" boxes are now closed when exiting the simulation.	
+      * Dip switch "value" boxes are now closed when exiting the simulation.
       * Fixed Japanese configure problem.
 
 Version 1.6c - October 16, 2000
@@ -394,15 +432,15 @@ Version 1.6 - September 27, 2000
       * -P and -p switch allow printing without starting the GUI.
       * Fixed problem with non-functional output inverters on several gate types
 	including registers, rams, roms and ttys.
-      * Fixed hang problem with simulator when root module not at top of module stack. 
-      * Fixes problem with adding outputs to decoders. 
-      * Fixes extraneous "unknown version" messages when loading old save files. 
+      * Fixed hang problem with simulator when root module not at top of module stack.
+      * Fixes problem with adding outputs to decoders.
+      * Fixes extraneous "unknown version" messages when loading old save files.
       * Fixes problem with externally generated "destroy" events on scope windows.
 
 Version 1.5c - September 8, 2000
-      * Fixes an intermittent core dump problem in editor when manipulating wires. 
-      * Fixes problem with inverters in postscript output. 
-      * Fixes problem with configuration file in detecting existance of bison. 
+      * Fixes an intermittent core dump problem in editor when manipulating wires.
+      * Fixes problem with inverters in postscript output.
+      * Fixes problem with configuration file in detecting existance of bison.
 
 Version 1.5b - June 27, 2000
 
@@ -428,7 +466,7 @@ Version 1.5 - June 26, 2000
       * Bug fixes
            - fixed slopy gate label positions
 
-           - fixed slopy delete of mux/demux 
+           - fixed slopy delete of mux/demux
 
            - fixed position of input numbers on mux/demux
 
@@ -448,19 +486,19 @@ Version 1.5 - June 26, 2000
 	   - fixed memory initialization problem in gsim causing periodic
 	     simulator crashes.
 
-           - moved "Circuit Properties" command from "Module" menu to "Edit" menu.     
+           - moved "Circuit Properties" command from "Module" menu to "Edit" menu.
 
       * NOTE: Save files from tkgate 1.5 may not be readable under earlier
         versions of tkgate if you use the new delay specification features.
 
 Version 1.4c - June 12, 2000
-      * Fixed Postscript output and bit tap problems (Applied patch tkgate-1.4b.patch1) 
+      * Fixed Postscript output and bit tap problems (Applied patch tkgate-1.4b.patch1)
 
-      * Added Postscript output of Japanese (works for printers with Japanese fonts only). 
+      * Added Postscript output of Japanese (works for printers with Japanese fonts only).
 
-      * Made ports on modules easier to select. 
+      * Made ports on modules easier to select.
 
-      * Fixed problem with changing port type in external port dialog box. 
+      * Fixed problem with changing port type in external port dialog box.
 
 Version 1.4b - June 7, 2000
       * Fixed the library module problem (applied tkgate-1.4.patch1)
@@ -469,7 +507,7 @@ Version 1.4b - June 7, 2000
 
       * Created a seperate directory for Japanese tutorials.  Selection of the
         tutorial directory depends on the selected interface language. Currently
-        only a small portion of the tutorial have been translated. 
+        only a small portion of the tutorial have been translated.
 
 Version 1.4 - June 2, 2000
       * Added LED devices (single bit, bar graph, 7-segment)
@@ -523,17 +561,17 @@ Version 1.2 - April 13, 2000
       * Horizontal/Vertical alignment feature added (see "Edit" menu)
 
 Version 1.1 - March 31, 2000
-      * Color interface implemented. 
+      * Color interface implemented.
 
-      * Smooth scrolling in scope implemented. 
+      * Smooth scrolling in scope implemented.
 
-      * Fixed bugs under Solaris (SunOS 5.5) 
+      * Fixed bugs under Solaris (SunOS 5.5)
 
-      * Fixed verious other bugs. 
+      * Fixed verious other bugs.
 
 Version 1.0 - March 22, 2000
-      * Fixed bugs. 
+      * Fixed bugs.
 
 Version 0.9 - May 28, 1999
-      * Initial public release. 
+      * Initial public release.
 

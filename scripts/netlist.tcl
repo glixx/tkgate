@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,13 +10,11 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Jan  9 20:06:34 2009
-#
-#
 #
 
 set ednet_oldName ""
@@ -87,7 +85,7 @@ proc tkg_editNet {x y net io wtype} {
   checkbutton $w.main.box.eh -variable ednet_hide
 
   label $w.main.box.ls -text "[m db.net.bits]: "
-  bitsizeselector $w.main.box.es -variable ednet_nbits -width 3 
+  bitsizeselector $w.main.box.es -variable ednet_nbits -width 3
 
   label $w.main.box.lt -text "[m db.net.type]: "
   Dropbox::new $w.main.box.et -variable ednet_vtype -width 6
@@ -96,7 +94,7 @@ proc tkg_editNet {x y net io wtype} {
     #
     # If not a standard wire type, assume the type is fixed (e.g., supply0, switch, port)
     #
-    Dropbox::configure $w.main.box.et -state disabled 
+    Dropbox::configure $w.main.box.et -state disabled
   }
 
 
@@ -116,7 +114,7 @@ proc tkg_editNet {x y net io wtype} {
     #
     # The values here must match the definitins for LOGICIN,
     # LOGICOUT, LOGICTRI in the main program.
-    # 
+    #
     radiobutton $w.main.box.fio.in -text [m db.net.in] -variable ednet_io -value 4102
     radiobutton $w.main.box.fio.out -text [m db.net.out] -variable ednet_io -value 4103
     radiobutton $w.main.box.fio.tri -text [m db.net.inout] -variable ednet_io -value 4104
@@ -239,7 +237,7 @@ namespace eval NetList {
       }
     }
   }
-  
+
   proc configureitem {net args} {
     variable netl_w
     variable netbits

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Mar 18 04:23:18 2009
 ****************************************************************************/
@@ -89,7 +89,7 @@ static void catchInterrupt(int s)
 
 /*****************************************************************************
  *
- * Test to see if 'path' is a valid tkgate home directory.  We do this by 
+ * Test to see if 'path' is a valid tkgate home directory.  We do this by
  * trying to open some files we expect to be there and returning non-zero
  * if we find all of the expected files.  Returns 0 if one or more expected
  * files are not found.
@@ -232,7 +232,7 @@ void init_linkvars(Tcl_Interp *tcl)
 
   Tcl_LinkVar(tcl,"tkg_saveTraces",(char*)&TkGate.saveTraces,TCL_LINK_INT);
   Tcl_LinkVar(tcl,"tkg_simSortTraces", (char*)&TkGate.sortTraces, TCL_LINK_INT);
-  
+
   DoTcl("namespace eval HdlEditor {}");
   Tcl_LinkVar(tcl,"HdlEditor::isActive",(char*)&hdl_isactive, TCL_LINK_INT);
 }
@@ -597,7 +597,7 @@ void setLanguage(const char *lang)
  *
  * Parse the command-line options to tkgate.
  *
- * Parameters: 
+ * Parameters:
  *      argc			Number of command-line arguments
  *      argv			Command-line argument array
  *
@@ -798,7 +798,7 @@ void TkGate_init(Tcl_Interp *tcl)
 
   /*
    * Load first file on command line.  If the load fails, treat this as a new
-   * circuit using the specified file. 
+   * circuit using the specified file.
    */
   if (numLoads > 0) {
     const char *result;
@@ -1034,7 +1034,7 @@ static void init_tk(Tcl_Interp *tcl)
    */
   r = Tk_Init(tcl);
   if (r == TCL_ERROR) {
-    fprintf(stderr,"Tk_Init Error in tkgate:\n%s\n",tcl->result);
+    fprintf(stderr,"Tk_Init Error in tkgate:\n%s\n",Tcl_GetStringResult(tcl));
     fprintf(stderr,"Perhaps you could try setting the environment variable TK_LIBRARY\n");
     fprintf(stderr,"to the directory in which tk init files can be found.  You can also\n");
     fprintf(stderr,"set TK_LIBRARY in options.h.\n");
@@ -1053,7 +1053,7 @@ static int tkgate_main(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
 
   parse_options(argc,argv);		/* Parse the command line options */
 
-  init_TkGate();				/* tkgate "main" object */ 
+  init_TkGate();				/* tkgate "main" object */
   ob_init();				/* Object memory handeling */
   init_gateHashTables();		/* Hash tables for gates */
   init_tclProcs(tcl);			/* install tkgate tcl commands */
@@ -1062,7 +1062,7 @@ static int tkgate_main(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   init_cpathNetDelayTable();		/* Initialize delay tables for critical path analysis */
 
   localization_Setup(tcl);		/* Set up for the selected locale */
-  if (verify_only)			/* Do verify and exit if we had the -V switch */ 
+  if (verify_only)			/* Do verify and exit if we had the -V switch */
     doVerifyLoad();
   if (print_file || print_printer)	/* Print file and exit if we have the -p or -P switches */
     commandLinePrint();
@@ -1097,6 +1097,7 @@ static int tkgate_posttk(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
  *****************************************************************************/
 int Tkgate_Init(Tcl_Interp *tcl)
 {
+  Tk_Init(tcl);
   Tcl_CreateCommand(tcl,"tkgate_main",tkgate_main,0,0);
   Tcl_CreateCommand(tcl,"tkgate_starttk",tkgate_starttk,0,0);
   Tcl_CreateCommand(tcl,"tkgate_posttk",tkgate_posttk,0,0);

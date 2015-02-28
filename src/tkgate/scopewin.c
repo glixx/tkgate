@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat Jan  3 22:18:22 2009
 ****************************************************************************/
@@ -46,9 +46,9 @@ static Tk_ConfigSpec configSpecs[] = {
      STR(TKG_GATEWIN_HEIGHT), Tk_Offset(GScope,Height), 0, 0},
   {TK_CONFIG_INT, "-width", "width", "Width",
      STR(TKG_GATEWIN_WIDTH), Tk_Offset(GScope,Width), 0, 0},
-  {TK_CONFIG_STRING, "-xscrollcommand", "xscrollcommand",  "Xscrollcommand", 
+  {TK_CONFIG_STRING, "-xscrollcommand", "xscrollcommand",  "Xscrollcommand",
      "", Tk_Offset(GScope,xscroll), 0, 0},
-  {TK_CONFIG_STRING, "-yscrollcommand", "yscrollcommand",  "Yscrollcommand", 
+  {TK_CONFIG_STRING, "-yscrollcommand", "yscrollcommand",  "Yscrollcommand",
      "", Tk_Offset(GScope,yscroll), 0, 0},
   {TK_CONFIG_END, 0, 0, 0, 0, 0, 0, 0}
 };
@@ -85,13 +85,13 @@ static int scopeWinConfigure(Tcl_Interp *tcl, GScope *sw, int argc, const char *
 static void scopeWinEvent(ClientData data, XEvent *E)
 {
   if (E->type == DestroyNotify) {
-    int old_mode = ob_get_mode();
+    ob_OMMode_t old_mode = ob_get_mode();
 
     scope_active = 0;
-    ob_mode(OM_DISABLED);
+    ob_set_mode(OM_DISABLED);
     ob_clear();
     delete_GScope(Scope);
-    ob_mode(old_mode);
+    ob_set_mode(old_mode);
     Scope = 0;
   }
   ReqScopeRedisplay();
@@ -116,12 +116,12 @@ static void scopeYViewCommand(GScope *S,const char *command,const char *arg)
     else if (n > 0)
       newStart++;
   }
-  
+
   if (newStart >= S->NumTraces-visTraces)
     newStart = S->NumTraces-visTraces;
   if (newStart < 0)
     newStart = 0;
-  
+
   if (newStart != S->Start) {
     S->Start = newStart;
     ReqScopeRedisplay();
@@ -155,7 +155,7 @@ static void scopeXViewCommand(GScope *S,const char *command,const char *arg)
     newLeftTime = (S->s_time/S->s_interval)*S->s_interval;
   if (newLeftTime < 0)
     newLeftTime = 0;
-  
+
   if (newLeftTime != S->s_leftTime) {
     S->s_leftTime = newLeftTime;
     ReqScopeRedisplay();
@@ -271,7 +271,7 @@ static void ScopeWin_releaseTrace(int x,int y,int n,int state)
 
 /*
  * Mouse was pressed on the logic trace part of the traces so we should prepare to slide
- * the time line. 
+ * the time line.
  */
 static void ScopeWin_timeSelect(int x,int y,int n,int state)
 {
@@ -304,7 +304,7 @@ static void ScopeWin_timeSelect(int x,int y,int n,int state)
       r = Scope->s_rangePos-1;
     else if (n == 3)
       r = Scope->s_rangePos+1;
-    
+
     if (r < 0) r = 0;
     if (r >= MAXRANGEPOS) r = MAXRANGEPOS-1;
 
@@ -469,7 +469,7 @@ int gat_scope(ClientData data, Tcl_Interp *tcl, int argc, const char *argv[])
     return TCL_ERROR;
   }
 
-  tcl->result = Tk_PathName(w);
+  Tcl_SetResult(tcl, Tk_PathName(w), TCL_STATIC);
 
   scope_active = 1;
 

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Jan  7 14:51:23 2004
 ****************************************************************************/
@@ -77,7 +77,7 @@ fitems		: fitem
 
 fitem		: TILDE LITERAL brange			{ ycField($2,&$3,1); }
 		| LITERAL brange			{ ycField($1,&$2,0); }
-		| LITERAL brange ASGN { ycField($1,&$2,0); } enumset		
+		| LITERAL brange ASGN { ycField($1,&$2,0); } enumset
 		;
 
 enumset		: LBRACE eitems RBRACE
@@ -109,13 +109,13 @@ operand_decl	: OPERANDS LITERAL LBRACE { ycBeginOprGroup($2); } operdefs
 			{ ycEndOprGroup(); } RBRACE SEMI
 		;
 
-operdefs	: 
+operdefs	:
 		| operdefs operdef
 		;
 
 operdef		: {ycBeginOperand();} oprlhss ASGN LBRACE opasgns RBRACE SEMI {ycEndOperand();}
 		| {ycBeginOperand();} MINUS ASGN LBRACE opasgns RBRACE SEMI {ycEndOperand();}
-			
+
 		;
 
 oprlhss		: oprlhs
@@ -129,7 +129,7 @@ oprlhs		: PERCENT NUMBER				 { ycOLHS(AM_DIRECT,$2,0); }
 		| LPAREN HASH NUMBER RPAREN			 { ycOLHS(AM_IMMIND,0,$3); }
 		;
 
-opasgns		: 
+opasgns		:
 		| opasgns opasgn SEMI
 		;
 
@@ -149,7 +149,7 @@ offset 		: AT NUMBER	{ $$ = $2; }
 op_decl		: OP LITERAL LBRACE { ycBeginOp($2); } opditems { ycEndOp(); } RBRACE SEMI
 		;
 
-opditems	: 
+opditems	:
 		| opditems opditem
 		;
 
@@ -193,7 +193,7 @@ mcode		: KWBEGIN MACROCODE AT NUMBER { BeginMA(); ycBeginMCode($4); } NL
 			mops KWEND { ycEndMCode(); BeginBA(); }
 		;
 
-mops		: 
+mops		:
 		| mops lmop NL { ycMNext(); }
 		| error NL { yyerrok; }
 		;
@@ -205,7 +205,7 @@ lmop		: mop
 		| DEND { ycEndProc(); }
 		;
 
-mop		: LITERAL { ycMOp($1); } operands		
+mop		: LITERAL { ycMOp($1); } operands
 		| LITERAL { ycMOp($1); }
 		| dtype { ycData($1); } bsl_items
 		| DBSS NUMBER { ycBss($2); }
@@ -241,7 +241,7 @@ number		: HASH NUMBER	{ $$.ntype = NT_VALUE; $$.v.d = $2; }
 		| NUMBER	{ $$.ntype = NT_VALUE; $$.v.d = $1; }
 		| HASH LITERAL	{ $$.ntype = NT_SYMBOL; $$.v.s = $2; }
 		| LITERAL	{ $$.ntype = NT_SYMBOL; $$.v.s = $1; }
-		;		
+		;
 
 /***********************************************************************
  * Generic declarations

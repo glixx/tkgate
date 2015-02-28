@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri Mar 18 22:21:38 2005
 ****************************************************************************/
@@ -74,9 +74,9 @@ void TextBlock_getStartTP(TextBlock *tb,TextPos *tp)
 /*****************************************************************************
  *
  * Append a line onto a text block.
- * 
+ *
  * Parameters:
- *      tb		Text block in which to add text 
+ *      tb		Text block in which to add text
  *      text		Line of text to be added
  *
  *****************************************************************************/
@@ -89,22 +89,22 @@ void TextBlock_addLine(TextBlock *tb,const char *text)
   tl->text = ob_strdup(text);
   tl->next = 0;
 
-  if (!tb->tb_first) 
+  if (!tb->tb_first)
     tb->tb_first = tb->tb_last = tl;
   else {
     ob_touch(tb->tb_last);
     tb->tb_last->next = tl;
     tb->tb_last = tl;
   }
-      
+
 }
 
 /*****************************************************************************
  *
  * Prepend a line onto a text block.
- * 
+ *
  * Parameters:
- *      tb		Text block in which to add text 
+ *      tb		Text block in which to add text
  *      text		Line of text to be added
  *
  *****************************************************************************/
@@ -117,19 +117,19 @@ void TextBlock_prependLine(TextBlock *tb,const char *text)
   tl->text = ob_strdup(text);
   tl->next = 0;
 
-  if (!tb->tb_first) 
+  if (!tb->tb_first)
     tb->tb_first = tb->tb_last = tl;
   else {
     tl->next = tb->tb_first;
     tb->tb_first = tl;
   }
-      
+
 }
 
 /*****************************************************************************
  *
  * Flush the contents of a text buffer
- * 
+ *
  * Parameters:
  *      tb		Text block to be flushed
  *

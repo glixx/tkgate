@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sun Feb 22 18:12:36 2009
 ****************************************************************************/
@@ -68,7 +68,7 @@ GGateInfo gate_comment_info = {
   {1},
 
   {0},
-  
+
   Comment_Make,
   Nop_WriteCellDef,
   Comment_Init,
@@ -196,7 +196,7 @@ void Comment_flushLines(GCElement *g)
 
 void Comment_addLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine"); 
+  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
 
   ob_touch(L);
   L->text = ob_strdup(text);
@@ -213,7 +213,7 @@ void Comment_addLine(GCElement *g,const char *text)
 
 void Comment_prependLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine"); 
+  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
 
   L->text = ob_strdup(text);
   L->next = g->u.comment.first;
@@ -285,7 +285,7 @@ static int Comment_buildHtml(GCElement *g)
   Html *h;
   int is_empty = 0;
 
-  /* 
+  /*
      Already built and with the correct zoom factor
   */
   if (g->u.comment.html
@@ -406,7 +406,7 @@ GCElement *Comment_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
   for (L = g->u.comment.first;L;L = L->next) {
     Comment_addLine(ng,L->text);
   }
-  
+
   ng->u.comment.reqWidth = g->u.comment.reqWidth;
 
   Comment_buildHtml(ng);
@@ -417,7 +417,7 @@ GCElement *Comment_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 void Comment_Draw(GCElement *g,int md)
 {
   GC gc = TkGate.commentGC;
-  int x,y; 
+  int x,y;
 
   Comment_buildHtml(g);
 

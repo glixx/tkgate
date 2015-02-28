@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,12 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Fri Mar 26 13:26:09 2004
+#
 
 #
 # Current setting for number of paths
@@ -66,7 +67,7 @@ proc tkg_cpathAdd {n p} {
   $cpb_w.f.path insert end $P
   $cpb_w.f.delay insert end $n
 
-} 
+}
 
 proc tkg_cpathEnd {} {
   global cpb_w
@@ -167,7 +168,7 @@ proc tkg_cpathDetails {w} {
   button $w.num.reco -text [m cp.recompute] -command tkg_cpathStart
 
   pack $w.num.reco -padx 5 -pady 5 -side bottom -anchor se
-  pack $w.num.l  $w.num.v -padx 5 -pady 5 -fill x -side left -anchor nw 
+  pack $w.num.l  $w.num.v -padx 5 -pady 5 -fill x -side left -anchor nw
 
   pack $w.g   -ipadx 5 -ipady 5 -side left -anchor nw
   pack $w.num -ipadx 5 -ipady 5 -side left -anchor nw -fill both -expand 1
@@ -232,7 +233,7 @@ proc tkg_cpathBox {} {
 
     bind $w <Destroy>	{ tkg_cpathDestroyed %W}
 
-    frame $w.f -bd 2 -relief raised 
+    frame $w.f -bd 2 -relief raised
     label $w.f.path_l -text [m cp.pathl]
     label $w.f.delay_l -text [m cp.delay]
     listbox $w.f.path -yscrollcommand "$w.f.vb set" -xscrollcommand "$w.f.hb set" -width 40 -height 6
@@ -284,7 +285,7 @@ proc tkg_postNetDelay {n fd bd} {
 }
 
 proc tkg_unpostNetDelay {} {
-  catch { destroy .netdel } 
+  catch { destroy .netdel }
 }
 
 #

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #ifndef __wires_h
 #define __wires_h
@@ -29,11 +29,18 @@
 #define IMMOBILE 0
 
 /* Wire selction modes (These are bit masks) */
-#define UNSELECTED	0x0
-#define HORIZONTAL	0x1
-#define VERTICAL	0x2
-#define FULL		0x3
-#define NOSTRAIGHTEN	0x4
+typedef enum {
+  UNSELECTED  = 0x0,
+#define UNSELECTED   UNSELECTED
+  HORIZONTAL  = 0x1,
+#define HORIZONTAL   HORIZONTAL
+  VERTICAL    = 0x2,
+#define VERTICAL     VERTICAL
+  FULL        = 0x3,
+#define FULL         FULL
+  NOSTRAIGHTEN = 0x4,
+#define NOSTRAIGHTEN NOSTRAIGHTEN
+} WireSelectMode_t;
 
 #define DRIVER 42
 #define DRIVEE 0
@@ -45,14 +52,16 @@
 #define F_WIREEND 0x12
 #define F_WIRENOEND 0x22
 
-#define D_RIGHT 0
-#define D_UP 1
-#define D_LEFT 2
-#define D_DOWN 3
+enum {
+  D_RIGHT = 0,
+  D_UP    = 1,
+  D_LEFT  = 2,
+  D_DOWN  = 3
+};
 
 /*
    A "GWire" is really an end point of a wire segment.  It might have been
-   more appropriate to call it a port. 
+   more appropriate to call it a port.
 */
 struct wire {
   GNet	*net;			/* Net this wire is a part of */
@@ -77,7 +86,7 @@ struct wire {
 
 struct wirenode {
   int x,y;			/* Node position */
-  char stype;			/* What kind of node selection */
+  WireSelectMode_t stype;			/* What kind of node selection */
   unsigned showSize : 1;	/* Show wire size on this link? */
   unsigned mark : 1;		/* Has this node been touched */
   unsigned isLabeled : 1;	/* Non-zero if this node is labeled */
@@ -114,7 +123,7 @@ void wire_setName(GWire*,char*);
 GWire *wire_sigroot(GWire*);
 GWire *wire_newend(GModuleDef *M,GNet*,int doNode);
 void wire_setNet(GWire *w,GNet *net);
-void wire_move(GWireNode *n,int dx,int dy,int type);
+void wire_move(GWireNode *n,int dx,int dy,WireSelectMode_t type);
 void wire_moveto(GWireNode *n,int x,int y);
 GWireNode *wire_iohit(int,int,GWireList*);
 GWireNode *wire_hitanynode(int,int,GWireList*);
@@ -160,7 +169,6 @@ void join_treereverse_aux(GWire *w);
 
 void tap_transmute(GWire *branch,EditState *es);
 
-
 void setwiresize(EditState *es);
 void SignalNamePos(GWireNode *n1,GWireNode *n2,int *x,int *y,int *p,int *q);
 
@@ -176,7 +184,4 @@ GWire *wire_endhit(GWire *w,GWireList *wl);
 GCElement *wire_drivinggate(GWire *w);
 void wire_rePort(GWire *w,int wx,int wy,int dir);
 
-
 #endif
-
-

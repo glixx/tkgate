@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri Feb 13 22:29:46 2009
 ****************************************************************************/
@@ -62,7 +62,7 @@ static Locale *getLocaleDescriptor(const char *locale)
   Locale *l;
   char fileName[STRMAX];
   char buf[STRMAX],tag[STRMAX];
-  FILE *f; 
+  FILE *f;
   unsigned loadMask = 0;
 
   sprintf(fileName,"%s/locale/%s/messages",TkGate.homedir,locale);
@@ -110,7 +110,7 @@ static Locale *getLocaleDescriptor(const char *locale)
       l->l_encPostscript = strdup(tag);
       loadMask |= 0x20;
     }
-    if (loadMask == 0x3f) break;	/* everything loaded */ 
+    if (loadMask == 0x3f) break;	/* everything loaded */
   }
 
 #if LOCALE_DEBUG
@@ -121,7 +121,7 @@ static Locale *getLocaleDescriptor(const char *locale)
 }
 
 /*
- * Find the set of locales that are available 
+ * Find the set of locales that are available
  */
 void init_localeSet()
 {
@@ -141,7 +141,7 @@ void init_localeSet()
   while ((de = readdir(d))) {
     Locale *l;
 
-    if (*de->d_name == '.') continue;	/* not a locale */ 
+    if (*de->d_name == '.') continue;	/* not a locale */
     l = getLocaleDescriptor(de->d_name);
     if (l) {
       Locale *x;
@@ -194,7 +194,7 @@ static void getTkGateLocale(Tcl_Interp *tcl,char *lang,char *territory)
       p = "en_US";
     }
     strncpy(lang,p,1024);
-  } else 
+  } else
     strcpy(lang,"en_US");
 
   /* If locale is any of the following, set the locale to "en" */
@@ -304,7 +304,7 @@ static void verifyMessagesFile(SHash *H,Locale *englishLocale)
 	SHash_insert(H,tag,ob_strdup(msg));
 
 	/*
-	 * Warn if there was a missing tag (but is ok not to redefine the @ tags. 
+	 * Warn if there was a missing tag (but is ok not to redefine the @ tags.
 	 */
 	if (*tag != '@') {
 	  if (is_verbose)
@@ -326,7 +326,7 @@ static void verifyMessagesFile(SHash *H,Locale *englishLocale)
  * Determine which locale we are going to run under and read the appropriate
  * message files.  If the locale is not "en" (English), then the both the
  * locale specific message file and the English message file is read.  If there
- * are any messages in the English message file that are not in the locale 
+ * are any messages in the English message file that are not in the locale
  * specific message file, a warning is printed and the English message
  * is used in place of the missing locale-specific message.
  */
@@ -374,7 +374,7 @@ void localization_Setup(Tcl_Interp *tcl)
    * Test the loaded locale against the English locale to look for missing tags, etc.
    */
   if (strcmp(lang,"en") != 0) {
-    verifyMessagesFile(message_table,englishLocale); 
+    verifyMessagesFile(message_table,englishLocale);
   }
 
 
@@ -395,10 +395,7 @@ static int gat_msgLookup(ClientData d,Tcl_Interp *tcl,int argc,const char *argv[
   if (argc < 2) return TCL_OK;
 
   msg = msgLookup(argv[1]);
-  if (strlen(msg) < 127)
-    strcpy(tcl->result,msg);
-  else
-    tcl->result = strdup(msg);
+  Tcl_SetResult(tcl, msg, TCL_VOLATILE);
 
   return TCL_OK;
 }

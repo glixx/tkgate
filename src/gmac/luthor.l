@@ -1,6 +1,6 @@
 %{
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -12,9 +12,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <unistd.h>
 #include <string.h>
@@ -31,23 +31,23 @@
 
 
 struct lex_keywordentry lex_words[] = {
-  {".bss",	DBSS }, 
-  {".byte",	DBYTE }, 
-  {".end",	DEND }, 
-  {".long",	DLONG }, 
-  {".proc",	DPROC }, 
-  {".short",	DSHORT }, 
-  {".symbol",	DSYMBOL }, 
-  {"bank",	BANK }, 
-  {"begin",	KWBEGIN }, 
-  {"end",	KWEND }, 
-  {"field",	FIELD }, 
-  {"macrocode",	MACROCODE }, 
-  {"map",	MAP }, 
-  {"microcode",	MICROCODE }, 
-  {"op",	OP }, 
-  {"operands",	OPERANDS }, 
-  {"registers",	REGISTERS } 
+  {".bss",	DBSS },
+  {".byte",	DBYTE },
+  {".end",	DEND },
+  {".long",	DLONG },
+  {".proc",	DPROC },
+  {".short",	DSHORT },
+  {".symbol",	DSYMBOL },
+  {"bank",	BANK },
+  {"begin",	KWBEGIN },
+  {"end",	KWEND },
+  {"field",	FIELD },
+  {"macrocode",	MACROCODE },
+  {"map",	MAP },
+  {"microcode",	MICROCODE },
+  {"op",	OP },
+  {"operands",	OPERANDS },
+  {"registers",	REGISTERS }
 };
 int num_lex_words = sizeof(lex_words)/sizeof(lex_words[0]);
 

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #ifndef __tkgate_h
 #define __tkgate_h
@@ -38,7 +38,7 @@
 #include <assert.h>
 #include <string.h>
 #include <signal.h>
-#include <X11/Xlib.h> 
+#include <X11/Xlib.h>
 #include <X11/Xresource.h>
 #include <X11/cursorfont.h>
 #if HAVE_ICONV_H
@@ -122,7 +122,7 @@ typedef Tcl_CmdProc New_Tcl_CmdProc;
 #define MF_NET		0x2		/* Changes to the nets */
 #define MF_INTERFACE	0x4		/* Changes to a module interface */
 #define MF_GATE		0x8		/* Changes to gates or gate properties */
-#define MF_NOMODULE	0xfffe		/* Set all modified flags except module change */ 
+#define MF_NOMODULE	0xfffe		/* Set all modified flags except module change */
 #define MF_ALL		0xffff		/* Set all modified flags */
 #define MF_SYNCONLY	0x10000		/* Synchronize interface only */
 #define MF_BEGINSPEC	0x20000		/* Begin modifications in a special module */
@@ -138,7 +138,7 @@ typedef Tcl_CmdProc New_Tcl_CmdProc;
  * Search mode flags
  */
 #define SF_NETS		0x1		/* Search net names */
-#define SF_GATES	0x2		/* Search gate names */ 
+#define SF_GATES	0x2		/* Search gate names */
 #define SF_TEXT		0x4		/* Search comment text */
 #define SF_IGNORECASE	0x100		/* Ignore case in comparison */
 
@@ -156,8 +156,6 @@ typedef Tcl_CmdProc New_Tcl_CmdProc;
 #define INTFMODE_NONE		0	/* We are not in interface mode */
 #define INTFMODE_ALL		1	/* We are on the module list interface mode */
 #define INTFMODE_SINGLE		2	/* We are in the single module interface mode */
-
-
 
 /*
  * Describes an encoder object used to translate strings from one code to another.
@@ -257,8 +255,8 @@ struct EditData_str {
     int setSave_x,setSave_y;	/* Saved button press point */
   } handScroll;
 
-  int min_x,max_x;		/* Min and max x-coordinates of current module */ 
-  int min_y,max_y;		/* Min and max y-coordinates of current module */ 
+  int min_x,max_x;		/* Min and max x-coordinates of current module */
+  int min_y,max_y;		/* Min and max y-coordinates of current module */
 };
 
 /*****************************************************************************
@@ -269,7 +267,7 @@ struct EditData_str {
  * movement.
  *
  *****************************************************************************/
-typedef struct {			
+typedef struct {
   int pending;			/*   idle event pending */
   int redraw;			/*   redraw requested */
   int scroll_area;		/*   scroll change in viewable area requested */
@@ -284,7 +282,7 @@ typedef struct {
  * State information for popup menus.
  *
  *****************************************************************************/
-typedef struct {			
+typedef struct {
   int		isSet;		/*    Non-zero if we are doing a popup */
   GCElement	*g;		/*    selected gate */
   GWire		*w;		/*    selected wire */
@@ -320,7 +318,7 @@ struct TkGateParams_str {
   XFontStruct	**textbXF;	/* Bold text */
   XFontStruct	**stextXF;	/* Small text */
   XFontStruct	**stextbXF;	/* Small bold text */
-  XFontStruct	**ktextXF;	/* Kanji font */ 
+  XFontStruct	**ktextXF;	/* Kanji font */
 
   GC instGC;			/* GC for built-in instances (variable font) */
   GC moduleGC;			/* GC for modules (variable font)  */
@@ -335,7 +333,7 @@ struct TkGateParams_str {
   GC selBusGC;			/* GC for selected multi-bit wire drawing */
   GC toolGC;			/* GC for TkGate tools, etc. */
   GC cpathGC;			/* GC for critical path */
-  GC kanjiGC;			/* GC for kanji (comments only) */ 
+  GC kanjiGC;			/* GC for kanji (comments only) */
 
   GC copyGC;			/* Basic GC for copying areas, etc. */
 

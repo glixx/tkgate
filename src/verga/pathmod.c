@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Thu Jul 27 00:25:37 2006
 ****************************************************************************/
@@ -208,8 +208,8 @@ static Net *Circuit_dpath_findAddNet(Circuit *c,Scope *port_scope,NetDecl *nd,Mo
  * the net is created.
  *
  *****************************************************************************/
-static void Circuit_dpath_makePortNets(Circuit *c, ModuleDecl *m, Scope *scope, 
-				       Scope *port_scope, const char *outName, 
+static void Circuit_dpath_makePortNets(Circuit *c, ModuleDecl *m, Scope *scope,
+				       Scope *port_scope, const char *outName,
 				       FaninNode *fn)
 {
   int i;
@@ -353,7 +353,7 @@ static int Circuit_dpath_generate_assign(Circuit *c, ModuleInst *mi, Scope *port
 static int Circuit_dpath_outputtree(Circuit *c,
 						ModuleInst *mi,
 						ModuleInst *parent,
-						Scope *port_scope, 
+						Scope *port_scope,
 						CodeBlock *codeBlock,
 						FaninNode *parent_fanin,
 						const char *outName,
@@ -431,8 +431,8 @@ static int Circuit_dpath_outputtree(Circuit *c,
     break;
   }
 
-  fn->fn_flag = 1;	
-  
+  fn->fn_flag = 1;
+
   return ok;
 }
 
@@ -448,7 +448,7 @@ static void Circuit_dpath_makeInputHandlers(Circuit *c, ModuleInst *mi, CodeBloc
     unsigned top_bc;
     VGThread *thread;
     Trigger *trigger;
-    
+
     Net *pn,*n;
     List spec_stats;
 
@@ -477,7 +477,7 @@ static void Circuit_dpath_makeInputHandlers(Circuit *c, ModuleInst *mi, CodeBloc
     Specify_getDelays(spec,name,outName,&spec_stats);
 
     /*
-     * Generate the assignment(s) 
+     * Generate the assignment(s)
      */
     switch (List_numElems(&spec_stats)) {
     case 0 :
@@ -498,7 +498,7 @@ static void Circuit_dpath_makeInputHandlers(Circuit *c, ModuleInst *mi, CodeBloc
 	}
       }
       /* fall through if there are conditions */
-    default : 
+    default :
       /*
        * always @(a)
        *   begin
@@ -632,7 +632,7 @@ static Trigger *Circuit_dpath_getPortTrigger(Circuit *c, ModuleInst *mi, Scope *
  *  		always @(a) z$a <= #a_to_z_delay a;
  *  		always @(b) z$b <= #b_to_z_delay b;
  *  		always @(c) z$c <= #c_to_z_delay c;
- *    
+ *
  *
  *****************************************************************************/
 void Circuit_buildPathDelayMod(Circuit *c,ModuleInst *mi,ModuleInst *parent,char *path)
@@ -669,7 +669,7 @@ void Circuit_buildPathDelayMod(Circuit *c,ModuleInst *mi,ModuleInst *parent,char
     Net *outNet;
 
     /*
-     * Copy the net for the target output to the port scope. 
+     * Copy the net for the target output to the port scope.
      */
     outNet = Scope_findNet(scope,outName, SDF_LOCAL_ONLY);
     Scope_defNet(port_scope, outName, outNet);

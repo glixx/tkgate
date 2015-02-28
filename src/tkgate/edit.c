@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue May  5 20:55:15 2009
 ****************************************************************************/
@@ -135,7 +135,7 @@ void mark_post()
   if (EditState_getMode() != MODE_MOVE ||
       TkGate.circuit->select ||
       TkGate.circuit->labelsel->net ||
-      TkGate.circuit->mg_selection || 
+      TkGate.circuit->mg_selection ||
       TkGate.circuit->wnsel ||
       editstate_isInterfaceMode() ||
       Hyperlink_isPending())
@@ -347,11 +347,11 @@ void setRubberBox(EditState *es)
   if (width < 0) {
     width = -width;
     x = x - width;
-  } 
+  }
   if (height < 0) {
     height = -height;
     y = y - height;
-  } 
+  }
 
   ZDrawRectangle(TkGate.D,TkGate.W,TkGate.toolGC,x,y,width,height);
 }
@@ -375,19 +375,19 @@ void moveRubberBox(EditState *es)
   if (width < 0) {
     width = -width;
     x = x - width;
-  } 
+  }
   if (height < 0) {
     height = -height;
     y = y - height;
-  } 
+  }
   if (lwidth < 0) {
     lwidth = -lwidth;
     lx = lx - lwidth;
-  } 
+  }
   if (lheight < 0) {
     lheight = -lheight;
     ly = ly - lheight;
-  } 
+  }
 
   ZDrawRectangle(TkGate.D,TkGate.W,TkGate.toolGC,x,y,width,height);
   ZDrawRectangle(TkGate.D,TkGate.W,TkGate.toolGC,lx,ly,lwidth,lheight);
@@ -401,7 +401,7 @@ void moveRubberBox(EditState *es)
  *
  *      es		Editstate in which to perform operation
  *
- * Move selected object(s) to the new cursor position. The effect is mode 
+ * Move selected object(s) to the new cursor position. The effect is mode
  * dependent and may result in moving either an object, a selection, a rubber
  * band line/box depending on context.
  *
@@ -519,7 +519,7 @@ void DropWireOnGate(EditState *es,GCElement *g)
   wire_deletezeronodes(TkGate.circuit->wnsel->in ? w->driver->nodes : w->nodes);
   ob_touch(TkGate.circuit);
   TkGate.circuit->wnsel = w->nodes;
-  
+
   switch (g->typeinfo->Code) {
   case GC_JOINT :
     joint_connect(g,TkGate.circuit->wnsel);
@@ -554,7 +554,7 @@ void DropWireOnGate(EditState *es,GCElement *g)
 /*****************************************************************************
  *
  * Hit an object at a location and return either the gate in g, or the wire
- * in w and n.  gbais is an amount to bias toward selecting a gate. 
+ * in w and n.  gbais is an amount to bias toward selecting a gate.
  *
  *****************************************************************************/
 static void hit_choose(int x,int y,int gbias,GCElement **g,GWire **w,GWireNode **n)
@@ -574,7 +574,7 @@ static void hit_choose(int x,int y,int gbias,GCElement **g,GWire **w,GWireNode *
     int dy = (*w)->nodes->y - y;
     dw = dx*dx+dy*dy;
   }
-  
+
   if (n && *n) {
     GWire *e1,*e2;
 
@@ -652,7 +652,7 @@ void DropWire(EditState *es)
       GWire *rw;
 
       if (!net_connectOK(kw1->net,kw2->net,0)) return;
-      
+
       GNet_draw(kw1->net);
       GNet_draw(kw2->net);
       rw = wire_connect(es->env,TkGate.circuit->wnsel->end,csel);
@@ -685,7 +685,7 @@ void DropWire(EditState *es)
 
       wire_finalizeNet(TkGate.circuit->wsel);
 
-      if (n1->n_refs > 1) { 
+      if (n1->n_refs > 1) {
 	wire_finalizeNet(n1->n_driver);
 	GNet_draw(n1);
       }
@@ -883,7 +883,7 @@ char *PrintWireEnd(char *p,GWire *w)
   if (!g)
     p += sprintf(p,"Gate:    *none*\n");
   else {
-    
+
     if (!g->typeinfo)
       p += sprintf(p,"Gate:    typeinfo is null\n");
     else if (badaddr(g->typeinfo))
@@ -1121,7 +1121,7 @@ static int EditState_selectobject_Move(EditState *es)
 	TkGate.circuit->wnsel = n;
 	TkGate.circuit->wsel = w;
       }
-	
+
       EditState_unselectGate(es);
     }
   }
@@ -1133,7 +1133,7 @@ static int EditState_selectobject_Move(EditState *es)
   /*
    * If we selected a wire, unselect any gate selection.
    */
-  if (!TkGate.circuit->wnsel) { 
+  if (!TkGate.circuit->wnsel) {
     if (g && g->selected && (TkGate.state & ControlMask)) {
       gate_draw(g,GD_NOWIRE);
       sel_unselectGate(es,g);
@@ -1145,7 +1145,7 @@ static int EditState_selectobject_Move(EditState *es)
 
   /*
    * If there is no selection, we are setting the mark and will show the current
-   * direction while the mouse button is held down. 
+   * direction while the mouse button is held down.
    */
   if (!Circuit_isSelection(TkGate.circuit) && ! editstate_isInterfaceMode()) {
     TkGate.batc = 0;
@@ -1607,7 +1607,7 @@ void SetModified(unsigned flags)
     }
 
     if (inSpecial)
-      flags |= MF_SYNCONLY; 
+      flags |= MF_SYNCONLY;
   }
 
   if ((flags & MF_SYNCONLY)) {

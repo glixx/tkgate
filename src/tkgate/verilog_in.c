@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
@@ -184,7 +184,7 @@ static void cur_initCircuit()
 }
 
 /*
- * Ensure that element n of wends has been allocated. 
+ * Ensure that element n of wends has been allocated.
  */
 static void cur_wends_extend(int n)
 {
@@ -230,7 +230,7 @@ static unsigned spread(unsigned M,unsigned x)
   int i,j;
 
   j = 0;
-  for (i = 0;i < 32;i++) 
+  for (i = 0;i < 32;i++)
     if ((M & (1 << i)) && (x & (1 << j++)))
       R |= (1 << i);
 
@@ -514,6 +514,8 @@ int ParseVersion(const char *version,Version *V)
     return 0;
   } else if (sscanf(version,"%d.%d-b%d",&V->major,&V->minor,&V->beta) == 3 && V->major >= 2) {
     return 0;
+  } else if (sscanf(version,"%d.%d-rc%d",&V->major,&V->minor,&V->rc) == 3 && V->major >= 2) {
+    return 0;
   }
 
   /*
@@ -607,7 +609,7 @@ void VerSetSpecialLoadFeatures(Version *V)
 /*****************************************************************************
  *
  * Check the version of the save file to see if we need to do any special
- * load features or issue warnings about old format save files. 
+ * load features or issue warnings about old format save files.
  *
  *****************************************************************************/
 void VerCheckVersion(const char *version)
@@ -658,7 +660,6 @@ void VerCheckVersion(const char *version)
   if ((flags & VF_UNKNOWN))
     message(1,msgLookup("err.futureversion"),cur.fileName,version,VERSIONS[0].vd_name);
 
-
   VerSetSpecialLoadFeatures(&V);
 }
 
@@ -682,8 +683,7 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
 
   if (strcmp(name,"title") == 0) {
     if (ptype == TYPE_STR) {
-      if (do_circ_props)
-	Circuit_setTitle(value);
+      if (do_circ_props) Circuit_setTitle(value);
     } else
       bad_type = 1;
   } else if (strcmp(name,"locale") == 0) {
@@ -692,12 +692,12 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
       yyerror(msgLookup("err.yy.badpropvalue"),value,name);
       locale = SHash_find(TkGate.localeTable, "en");
     }
-    Circuit_setLocale(c, locale);
+    if (do_circ_props) Circuit_setLocale(c, locale);
 #if LOCALE_DEBUG
     printf("file locale is <%s>\n",locale->l_code);
 #endif
   } else if (strcmp(name,"encoding") == 0) {
-    Circuit_setFileEncoding(c, value);
+    if (do_circ_props) Circuit_setFileEncoding(c, value);
     parserEncoder = Circuit_getLoadFileEncoder(c);
 #if LOCALE_DEBUG
     printf("parserEncoding <%s> to <%s>\n",value,CE_UTF8);
@@ -709,12 +709,11 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
       bad_type = 1;
   } else if (strcmp(name,"discardChanges") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props)
-	c->discardChanges = *(int*)value;
+      if (do_circ_props) c->discardChanges = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"timingViolationMode") == 0) {
-    c->c_tvMode = *(int*)value;
+    if (do_circ_props) c->c_tvMode = *(int*)value;
   } else if (strcmp(name,"initTime") == 0) {
     char units[STRMAX];
     int ucode;
@@ -743,37 +742,27 @@ void VerCircuitProp(const char *name,const void *value,int ptype)
 
   } else if (strcmp(name,"useExtBars") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->useExtBars = *(int*)value;
-      }
+      if (do_circ_props) c->useExtBars = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"showSwitchNets") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->showSwitchNets = *(int*)value;
-      }
+      if (do_circ_props) c->showSwitchNets = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"simClockMode") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->simClockMode = *(int*)value;
-      }
+      if (do_circ_props) c->simClockMode = *(int*)value;
     } else
       bad_type = 1;
   } else if (strcmp(name,"simClockName") == 0) {
     if (ptype == TYPE_STR) {
-      if (do_circ_props) {
-	c->simClockName = ob_strdup(value);
-      }
+      if (do_circ_props) c->simClockName = ob_strdup(value);
     } else
       bad_type = 1;
   } else if (strcmp(name,"simAutoStart") == 0) {
     if (ptype == TYPE_INT) {
-      if (do_circ_props) {
-	c->simAutoStart = *(int*)value;
-      }
+      if (do_circ_props) c->simAutoStart = *(int*)value;
     } else
       bad_type = 1;
   } else {
@@ -1035,7 +1024,7 @@ void VerNewModule(int mtype, const char *name,int isMain)
  * These parameter lists are used in module declarations.  This function is
  * only called when reading a native (non-tkgate) verilog file.  Parameter
  * values and expressions are stored so that they can be regenerated as part
- * of an HDL module definition.  
+ * of an HDL module definition.
  *
  *****************************************************************************/
 void VerModHashParm(const char *name,Expr *e)
@@ -1048,7 +1037,7 @@ void VerModHashParm(const char *name,Expr *e)
 
   p = buf + sprintf(buf,"%s = ",name);
   Expr_sprint(p,STRMAX-strlen(buf),e);
-  
+
   List_addToTail(cur.modHPorts, (char*)strdup(buf));
 }
 
@@ -1613,7 +1602,7 @@ void VerJointNet(const char *nname)
   int i;
 
   if (!pi) pi = GGateInfo_lookup("JOINT");
-  n = (GNet*) SHash_find(cur.mod->m_nets,nname); 
+  n = (GNet*) SHash_find(cur.mod->m_nets,nname);
   for (i = 0;i < pi->NumPads;i++) {
     cur_gpin_extend(i);
     cur.gPin[i] = pi->Pad[i].Name;
@@ -1701,7 +1690,7 @@ void VerSetSize(int w,int h)
 
 void VerSetRot(int r)
 {
-  if (cur.gate) 
+  if (cur.gate)
     cur.gate->orient = r;
 }
 
@@ -1754,7 +1743,7 @@ void VerSetProperty(const char *prop,int n)
 void VerSetStrProperty(const char *prop,const char *value)
 {
   if (strcmp(prop,"/tech") == 0) {
-    cur.gate->cust_delay = 0; 
+    cur.gate->cust_delay = 0;
     if (cur.gate->tech) ob_free(cur.gate->tech);
     cur.gate->tech = ob_strdup(value);
   }
@@ -1762,7 +1751,7 @@ void VerSetStrProperty(const char *prop,const char *value)
     char buf[STRMAX],*p;
     int i;
 
-    cur.gate->cust_delay = 1; 
+    cur.gate->cust_delay = 1;
     strcpy(buf,value);
     for (i = 0, p = strtok(buf," ");p;i++, p = strtok(0," ")) {
       int d;
@@ -1858,11 +1847,11 @@ static GWire *FastenToGate(GCElement *g,const char *pspec,GNet *n,int p,int bdir
     char pn[STRMAX];
 
     switch (sscanf(pspec,"%[^0123456789]%d",pn,&padPos)) {
-    case 2: 
+    case 2:
       break;
     case 1:
       strcpy(pn,pspec);
-      padPos = 0; 
+      padPos = 0;
       break;
     default :
       yyerror(msgLookup("err.yy.pinformat"),pspec);
@@ -1915,7 +1904,7 @@ static GWire *FastenToGate(GCElement *g,const char *pspec,GNet *n,int p,int bdir
  *****************************************************************************/
 void VerPlaceWire(int p)
 {
-  int x;			/* Position in argument list */ 
+  int x;			/* Position in argument list */
   GNet *n;			/* Net for position x */
   const char *pin;		/* Pin name for position x */
   GWire *w;
@@ -1938,7 +1927,7 @@ void VerPlaceWire(int p)
 
 void VerBlockPort(const char *pname,int pdir,int widx)
 {
-  int x;			/* Position in argument list */ 
+  int x;			/* Position in argument list */
   GNet *n;			/* Net for position x */
   const char *pin;		/* Pin name for position x */
   GWire *w;
@@ -2091,7 +2080,7 @@ void ycDirective(char *dtext)
     unsigned long long x2 = Timescale_parse(n2,u2);
 
     if (x1 == 0 || x2 == 0) {
-      yyerror(msgLookup("err.yy.baddirective"),dtext); 
+      yyerror(msgLookup("err.yy.baddirective"),dtext);
       return;
     }
 

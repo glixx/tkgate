@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Jul 31 15:13:16 2004
 #
@@ -48,7 +48,7 @@ namespace eval Wizard {
     if { $props($w:current) == "finish" } {
       destroy $w
       frame $w
-      pack $w 
+      pack $w
       frame $w.h -width [lindex $props($w:size) 0] -height 0
       frame $w.v -width 0 -height [lindex $props($w:size) 1]
       pack $w.h
@@ -113,7 +113,7 @@ namespace eval Wizard {
 
     frame $w.h -width $width -height 0
     frame $w.v -height $height -width 0
-    frame $w.x -height 4 -width [expr $width - 20] -bd 2 -relief sunken 
+    frame $w.x -height 4 -width [expr $width - 20] -bd 2 -relief sunken
     pack $w.h -side top
     pack $w.v -side left
 

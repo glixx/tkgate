@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Tue Jan 20 14:49:28 2009
 ****************************************************************************/
@@ -106,7 +106,7 @@ void cpath_flush()
 
 /*
  * find the port corresponding to 'name'.  The 'name' string is
- * destroyed in the process.  
+ * destroyed in the process.
  */
 GWire *cpath_findGatePort(const char *Gname,const char *Pname,int n,GModuleDef *M)
 {
@@ -159,7 +159,7 @@ GWire *cpath_findGatePort(const char *Gname,const char *Pname,int n,GModuleDef *
 	for (mw = g->wires[i];mw;mw = mw->next) {
 	  if (strcmp(w->net->n_signame,mw->name) == 0)
 	    return mw;
-	} 
+	}
       }
     }
 
@@ -176,7 +176,7 @@ GWire *cpath_findPort(const char *name,GModuleDef *M)
   if (!name) return 0;
 
   strcpy(buf,name);
-  
+
   Gname = buf;
   Pname = strchr(Gname,'[');
   if (!Pname) return 0;
@@ -344,7 +344,7 @@ void cpath_show_aux(int n,char *pelems[])
     }
 
     if (!net) continue;			/* Net is not in this module */
-    
+
     if (l == 0 || (*port1 && strncmp(port1,modPath,l) == 0))
       w1 = cpath_findPort(port1+l,TkGate.circuit->es->env);
 
@@ -360,10 +360,10 @@ void cpath_show_aux(int n,char *pelems[])
     printf("cpath_show: |%s| w1=%x  w2=%x  modPath=%s  l=%d  net=%x\n",pelems[i],w1,w2,modPath,l,net);
 #endif
 
-    if (!w1 && !w2) {				/* No port info, highligh full net */ 
+    if (!w1 && !w2) {				/* No port info, highligh full net */
       for (wl = M->m_wires;wl;wl = wl->wl_next) {
 	GWire *w = wl->wl_wire;
-	if (w->net != net) continue; 
+	if (w->net != net) continue;
 	w->cpath = 1;
       }
     } else if (!w1) {				/* highlight w2 only */
@@ -425,7 +425,7 @@ int cpath_command(const char *C)
     DoTcl("tkg_cpathAdd %d {%s}",t,buf);
   } else if (strncmp(C,"cdone",5) == 0) {			/* End of critical path data */
     DoTcl("tkg_cpathEnd");
-  } else if (sscanf(C," stats area=%d static_power=%d",&area,&staticPower) == 2) {/* Circuit statistics */ 
+  } else if (sscanf(C," stats area=%d static_power=%d",&area,&staticPower) == 2) {/* Circuit statistics */
     message(0,"Estimated area=%d.",area,staticPower);
   } else if (sscanf(C," warning file %[^\n]",buf) == 1) {		/* An error in a simulator input file. */
     Error_report(C);
@@ -435,7 +435,7 @@ int cpath_command(const char *C)
     message(1,buf);
   }
   return 0;
-  
+
 }
 
 void cpath_open()
@@ -497,7 +497,7 @@ void cpath_reshow()
 
 void cpath_draw(int x1,int y1,int x2,int y2)
 {
-  int n,i; 
+  int n,i;
   int dx = x2-x1;
   int dy = y2-y1;
   int x,y;
@@ -551,7 +551,7 @@ void cpath_drawSegments()
 }
 
 /*
-  Called at regular intervals while cpath is displayed to 
+  Called at regular intervals while cpath is displayed to
   flash the cpath state.
  */
 void cpath_flash()

@@ -1,6 +1,4 @@
-#############################################################################
-#
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -12,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sat Sep 26 16:26:04 2009
 #
@@ -80,7 +78,7 @@ namespace eval MemView {
   variable wordStartChar
 
   #
-  # Overwrite with "text" at the specified position in a text widget 
+  # Overwrite with "text" at the specified position in a text widget
   #
   proc overWrite {w pos text} {
     set l [string length $text]
@@ -166,7 +164,7 @@ namespace eval MemView {
     }
 
     #
-    # Not a character (i.e., key was a shift, control key, etc.) or not a hex digit 
+    # Not a character (i.e., key was a shift, control key, etc.) or not a hex digit
     #
     if {$A == "" } return
     set A [string tolower $A]
@@ -253,7 +251,7 @@ namespace eval MemView {
 
   #############################################################################
   #
-  # Get the address for a screen position (or empty if not on a memory value) 
+  # Get the address for a screen position (or empty if not on a memory value)
   #
   proc getAddress {name pos} {
     variable lineWords
@@ -309,7 +307,7 @@ namespace eval MemView {
     variable pageWords
     variable lineWords
     variable wordStartChar
-    
+
     #
     # If value is not on current page, return an empty string
     #
@@ -447,7 +445,7 @@ namespace eval MemView {
     if { $lineWords($name) > [expr $mstop + 1] } {
       set lineWords($name) [expr $mstop+1]
     }
-    
+
     #puts "pageWord=$pageWords($name)"
     #puts "lineWord=$lineWords($name)"
 
@@ -536,7 +534,7 @@ namespace eval MemView {
     variable mv_w
 
     set w $mv_w($name).text
-    
+
     set width [winfo width $w]
     set height [winfo height $w]
 
@@ -620,7 +618,7 @@ namespace eval MemView {
     label $w.data_v -textvariable MemView::lastData($name:$type) -width 15 -anchor w
     label $w.time_v -textvariable MemView::lastTime($name:$type) -width 15 -anchor w
 
-    grid $w.l -row 0 -column 0 -columnspan 2 -sticky ew 
+    grid $w.l -row 0 -column 0 -columnspan 2 -sticky ew
     grid $w.addr_l -row 1 -column 0 -sticky e -padx 3
     grid $w.addr_v -row 1 -column 1 -sticky w -padx 3
     grid $w.data_l -row 2 -column 0 -sticky e -padx 3
@@ -682,8 +680,8 @@ namespace eval MemView {
     label $w.top.base_l -text "Page: "
     incdecEntry $w.top.base -width 12 -variable MemView::reqBaseAddr($name) -format %x -validatecommand hexValidate
 
-    
-    
+
+
     pack $w.top.base_l $w.top.base -side left -padx 5 -pady 5
     pack $w.top -fill both -side top
 

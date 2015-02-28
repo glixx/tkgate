@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Mar 18 04:17:20 2009
 ****************************************************************************/
@@ -178,7 +178,7 @@ int GKTextWidth(XFontStruct *F,const char *ps,int l)
       if ((s[0] & 0x80)) {		/* Kanji segment */
 	for (m = 0;m < l && (s[m] & 0x80);m++);
 	for (i = 0;i < m;i++) s[i] &= 0x7f;
-      
+
 	w += KANJIFONT_WIDTH*(m/2);
 	for (i = 0;i < m;i++) s[i] |= 0x80;
       } else {				/* non-Kanji segment */
@@ -218,7 +218,7 @@ int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
     }
   } else
     x_w = GKTextWidth(F,S,strlen(S));
-  
+
   if (p & BetweenLeftAndRight)
     x -= x_w/2;
   else if (p & AtRight)
@@ -233,7 +233,7 @@ int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
 
 
   GKDrawString(TkGate.D,W,gc,x,y,S,strlen(S));
-  
+
   return x_w + x;
 }
 
@@ -312,7 +312,7 @@ Encoder *getEncoder(const char *toCode,const char *fromCode)
    */
   if (!iconv_translators)
     iconv_translators = new_SHash_noob();
-  
+
   /*
    * Construct key and see if we have a translator.
    */
@@ -365,7 +365,8 @@ size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromStri
   outSize = len;
 
   result = iconv(encoder->ico,&inPtr,&inSize,&outPtr,&outSize);
-  if (result < 0) {
+  if (result == (size_t)-1) {
+    perror("iconv");
     strncpy(toString,fromString,len);
     toString[len-1] = 0;
     return -1;
@@ -403,7 +404,8 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
 
   while (inSize > 0) {
     result = iconv(encoder->ico,&inPtr,&inSize,&outPtr,&outSize);
-    if (result < 0) {
+    if (result == (size_t)-1) {
+      perror("iconv");
       /* Coding error - returning intranslated string */
       return strdup(fromString);
     }
@@ -419,7 +421,7 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   return outBuf;
 }
 
- 
+
 int isJapaneseDisplay(Encoder *encoder)
 {
   return encoder && encoder->isJapanese;

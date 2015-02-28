@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2000 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Sep 20 09:55:09 2000
 ****************************************************************************/
@@ -34,12 +34,12 @@ technology pat {
       else if ((inv(I) == 0))     //   inverting and all inputs are non-inverting
         d = !inv(Z);              //   (i.e., it is a NAND gate), or if all inputs
       else                        //   are inverting and the output is non-inverting
-        d = 1;                    //   (i.e., it is a NOR gate). 
+        d = 1;                    //   (i.e., it is a NOR gate).
 
-      if (num(I) == 1) {          // If one input, treat this as a reduction gate    
-        return 2*bits(I0) + 2*d;  //   one Tr. delay per bit plus inverter delay.    
-      } else {                    // If multiple inputs, treat this as a normal gate 
-        return 2*num(I) + 2*d;    //   one Tr. delay per input plus inverter delay.  
+      if (num(I) == 1) {          // If one input, treat this as a reduction gate
+        return 2*bits(I0) + 2*d;  //   one Tr. delay per bit plus inverter delay.
+      } else {                    // If multiple inputs, treat this as a normal gate
+        return 2*num(I) + 2*d;    //   one Tr. delay per input plus inverter delay.
       }
     }
 
@@ -51,10 +51,10 @@ technology pat {
       else                        //   the output is non-inverted.  Otherwise we need
         d = inv(I);               //   an inverter for each inverted input.
 
-      if (num(I) == 1) {          // If one input, treat this as a reduction gate    
-        a = 2*bits(I0) + 2*d;	//   one Tr. per bit plus inverter Trs.    
-      } else {			// If multiple inputs, treat this as a normal gate 
-        a = 2*num(I) + 2*d;	//   one Tr. per input plus inverter Trs.  
+      if (num(I) == 1) {          // If one input, treat this as a reduction gate
+        a = 2*bits(I0) + 2*d;	//   one Tr. per bit plus inverter Trs.
+      } else {			// If multiple inputs, treat this as a normal gate
+        a = 2*num(I) + 2*d;	//   one Tr. per input plus inverter Trs.
       }
       return bits(Z)*a;           // Multiply by number of bit slices.
     }
@@ -67,12 +67,12 @@ technology pat {
       else if ((inv(I) == 0))     //   inverting and all inputs are non-inverting
         d = !inv(Z);              //   (i.e., it is an NOR gate), or if all inputs
       else                        //   are inverting and the output is non-inverting
-        d = 1;                    //   (i.e., it is a NAND gate). 
+        d = 1;                    //   (i.e., it is a NAND gate).
 
-      if (num(I) == 1) {          // If one input, treat this as a reduction gate    
-        return 2*bits(I0) + 2*d;  //   one Tr. delay per bit plus inverter delay.    
-      } else {                    // If multiple inputs, treat this as a normal gate 
-        return 2*num(I) + 2*d;    //   one Tr. delay per input plus inverter delay.  
+      if (num(I) == 1) {          // If one input, treat this as a reduction gate
+        return 2*bits(I0) + 2*d;  //   one Tr. delay per bit plus inverter delay.
+      } else {                    // If multiple inputs, treat this as a normal gate
+        return 2*num(I) + 2*d;    //   one Tr. delay per input plus inverter delay.
       }
     }
 
@@ -83,11 +83,11 @@ technology pat {
         d = !inv(Z);              //   are non-inverted, an inverter is required iff
       else                        //   the output is non-inverted.  Otherwise we need
         d = inv(I);               //   an inverter for each inverted input.
-  
-      if (num(I) == 1) {          // If one input, treat this as a reduction gate    
-        a = 2*bits(I0) + 2*d;	//   one Tr. per bit plus inverter Trs.    
-      } else {			// If multiple inputs, treat this as a normal gate 
-        a = 2*num(I) + 2*d;	//   one Tr. per input plus inverter Trs.  
+
+      if (num(I) == 1) {          // If one input, treat this as a reduction gate
+        a = 2*bits(I0) + 2*d;	//   one Tr. per bit plus inverter Trs.
+      } else {			// If multiple inputs, treat this as a normal gate
+        a = 2*num(I) + 2*d;	//   one Tr. per input plus inverter Trs.
       }
       return bits(Z)*a;           // Multiply by number of bit slices.
     }
@@ -101,7 +101,7 @@ technology pat {
         d = !inv(Z);
       else
         d = 1;
- 
+
       if (num(I) == 1) {
         return 3*bits(I0) + 2*d;
       } else {
@@ -171,9 +171,9 @@ technology pat {
   }
 
   primitive mux {
-    delay<I-Z> = (2*(num(S)+1) + 2*num(I)) + 2*(inv(I) || inv(Z)); 
+    delay<I-Z> = (2*(num(S)+1) + 2*num(I)) + 2*(inv(I) || inv(Z));
     delay<S-Z> = (2*(num(S)+1) + 2*num(I));
-    area = bits(Z)*((2*(num(S)+1) + 2*num(I)) + 2*inv(I)); 
+    area = bits(Z)*((2*(num(S)+1) + 2*num(I)) + 2*inv(I));
   }
 
   primitive demux {

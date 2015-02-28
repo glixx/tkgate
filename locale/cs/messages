@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2000 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,11 +10,13 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Thu Aug  5 11:24:01 2004
+
+########################################################################
 # Do češtiny přeložila Katarína Bubli Machálková (K.Machalkova@pod.cvut.cz)
 # Poslední aktualizace 3.srpna 2004
 
@@ -160,7 +162,7 @@ gmxor		XOR
 gmxnor		XNOR
 gmbuf		Budič Sběrnice
 gminv		Invertor
-gmtribuf	3stav. Budič Sběrnice 
+gmtribuf	3stav. Budič Sběrnice
 gmnmos		NMOS
 gmpmos		PMOS
 
@@ -190,10 +192,10 @@ gm81mux		8-1 Multiplexor
 gm12dec		1-2 Dekodér
 gm14dec		1-4 Dekodér
 gm18dec		1-8 Dekodér
-    
+
 gmmodinst	Instance Modulu
 gmmodin		Vstup Modulu
-gmmodout	Výstup Module 
+gmmodout	Výstup Module
 gmmodinout	Vst./Výst. Modulu
 
 addwireseg	Přidat Segment Vodiče
@@ -220,7 +222,7 @@ tutsim		Simulace Obvodu
 menu.sc.prtrace	Tisknout Stopu...
 menu.sc.close	Zavřít
 menu.sc.trace	Stopa
-menu.sc.zoomin Zvětšit	
+menu.sc.zoomin Zvětšit
 menu.sc.zoomout Zmenšit
 
 scope.emptymsg	Dvojitým kliknutím na vodič přidejte nebo smažte stopu.
@@ -239,7 +241,7 @@ ibits		Bity
 #
 db.net.name	Název Sítě
 db.net.hide	Skrýt Jméno
-db.net.bits	Bitová Šířka	
+db.net.bits	Bitová Šířka
 db.net.port	Typ Konektoru
 db.net.in	Vstup
 db.net.out	Výstup
@@ -280,7 +282,7 @@ db.gate.stddelay	Standardní Zpoždění
 db.gate.custdelay	Definované Zpoždění
 db.gate.extbar		Použít Rozšiřující Lišty
 
-db.led.type		Typ LED 
+db.led.type		Typ LED
 db.led.bit		Dioda
 db.led.bar		Panel diod
 db.led.hex		7-Segment (HEX)
@@ -289,10 +291,10 @@ db.led.seg		7-Segment (Přímý kód)
 
 cpath.cloops -begin-
 Ve vašem obvodu byla zjištěna kombinační smyčka.
-Aby bylo možno provést analýzu zpožděni v obvodu, 
+Aby bylo možno provést analýzu zpožděni v obvodu,
 musíte buď přerušit smyčku, nebo označit některé
-z hradel ve smyčce jako bod "Přerušení citlivé 
-cesty". Sítě, v nichž byla zjištěna smyčka, jsou 
+z hradel ve smyčce jako bod "Přerušení citlivé
+cesty". Sítě, v nichž byla zjištěna smyčka, jsou
 vypsány níže.
 -end-
 
@@ -369,7 +371,7 @@ opt.normal		Normální
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Miles
-opt.contver		Automatická kontrola integrity 
+opt.contver		Automatická kontrola integrity
 opt.showsimcmd		Zaznamenat průběh simulace
 opt.logfile		Logovací soubor simulátoru
 opt.estepsz		Jednotky času/krok
@@ -402,7 +404,7 @@ stálý přístup k Internetu.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Nový Modul 
+blklst.newmod		Nový Modul
 blklst.delmod		Smazat Modul
 blklst.frommod		Kopírovat Modul Z
 blklst.tomod		Do
@@ -458,7 +460,7 @@ err.noerr		Chybu nelze lokalizovat.
 err.misserr		Informace o chybě nejsou kompletní (spadl simulátor?).
 err.pounimpl		Neimplementovaná chyba v ParseOption
 
-err.badinadd	     Nelze přidat další vstup k vybranému hradlu.	
+err.badinadd	     Nelze přidat další vstup k vybranému hradlu.
 err.badoutadd	     	Nelze přidat další výstup z vybraného hradla.
 err.badinoutadd		Nelze přidat další vst./výst. konektory k vybranému hradlu.
 err.badpinchg		Nelze změnit typ konektoru na vybraném hradlu.
@@ -491,7 +493,7 @@ err.sim.badbin		Neplatný znak v binární konstantě '%s'.
 err.sim.notswitch	Hradlo '%s' není přepínač, dip nebo registr.
 err.sim.badcmd		Neznámý příkaz '%s' v simulačním skriptu.
 
-err.noteditpchg		Vlastnosti mohou být měněny pouze v režimu úprav.	
+err.noteditpchg		Vlastnosti mohou být měněny pouze v režimu úprav.
 err.badeditop		Neplatná operace v režimu úprav rozhraní.
 err.badopen		Nelze otevřít vstupní soubor '%s'.
 err.badlibopen		Nelze otevřít knihovní soubor '%s'.
@@ -506,7 +508,7 @@ err.badportedit		Vybraný konektor nelze upravovat.
 err.noport		Nebyly vybrány žádné konektory.
 
 err.manypages		-begin-
-V tomto dokumentu je příšerně 
+V tomto dokumentu je příšerně
 mnoho stránek.  Jste si jisti,
 že je chcete všechny tisknout?
 -end-
@@ -515,8 +517,8 @@ err.nojump		-begin-
 Vlastnost 'jump-to-module' nemůže být použita
 v režimu simulace nebo analýzy citlivé cesty.
 Přemístěte se prosím ručně do cílového bloku
-tak, že vyberete příslušné moduly a otevřete je 
-stiskem klávesy '>'. Z modulu, ve kterém  se 
+tak, že vyberete příslušné moduly a otevřete je
+stiskem klávesy '>'. Z modulu, ve kterém  se
 nacházíte, je možno vyskočit stiskem klávesy '<'.
 -end-
 
@@ -543,16 +545,16 @@ err.oldportact		Pro přidání/úpravu konektoru klikněte pravým tlačítkem n
 err.backupfail		Nelze vytvořit záložní soubor '%s'.
 
 err.corruptnewsave	-begin-
-Aplikace TkGate uložila váš soubor jako '%s', ale zdá se být 
-poškozený. Pokud máte povoleno průběžné ukládání, zkuste 
-nahrát některý z průběžně uložených souboru. Pro kontrolu 
+Aplikace TkGate uložila váš soubor jako '%s', ale zdá se být
+poškozený. Pokud máte povoleno průběžné ukládání, zkuste
+nahrát některý z průběžně uložených souboru. Pro kontrolu
 integrity uloženého souboru použijte příkaz 'TkGate -V'
 -end-
 
 err.corruptsave		-begin-
 Pří pokusu uložit soubor '%s' aplikace TkGate zjistila problém.
 Existující soubor nebyl změněn a poškozený soubor byl zapsán
-jako '%s'. Pokud máte povoleno průběžné ukládání, zkuste 
+jako '%s'. Pokud máte povoleno průběžné ukládání, zkuste
 nahrát některý z průběžně uložených souboru. Pro kontrolu
 integrity uloženého souboru můžete použít příkaz 'TkGate -V'.
 -end-
@@ -564,16 +566,16 @@ přístupová práva souboru/adresáře a/nebo místo na disku.
 
 err.nosafesave		-begin-
 Při pokusu uložit soubor '%s' se vyskytl problém.  Pokud chcete, zkuste
-to znova bez ověření korektnosti uložení. Pokud stisknete "ne", původní 
+to znova bez ověření korektnosti uložení. Pokud stisknete "ne", původní
 soubor zůstane nezměněn.  Pokus stisknete "ano", původní soubor bude
-přepsán, ale může být zničen, pokud se vyskytnou problémy. Chcete zkusit 
+přepsán, ale může být zničen, pokud se vyskytnou problémy. Chcete zkusit
 soubor uložit bez ověření korektnosti uložení?
 -end-
 
 err.noback		-begin-
-Soubor byl vytvořen v TkGate 
+Soubor byl vytvořen v TkGate
 verze %s, a nemusí být čitelný
-verzemi staršími než aktuální 
+verzemi staršími než aktuální
 verze (%s) bude-li uložen.
 -end-
 
@@ -635,12 +637,12 @@ Dvojitým kliknutím můžete :
 -end-
 
 ho.delgat	-begin-
-Smazat hradlo - Použijte tento nástroj 
+Smazat hradlo - Použijte tento nástroj
 na smazání hradel.
 -end-
 
 ho.cutw		-begin-
-Přerušit vodič - Použijte tento nástroj 
+Přerušit vodič - Použijte tento nástroj
 na přerušení vodičů.
 -end-
 
@@ -679,13 +681,13 @@ Pozastavit právě běžící simulaci.
 
 ho.simstep	-begin-
 Posunout se o pevný počet jednotek času.
-Otevřete okno s možnostmi simulace pro 
+Otevřete okno s možnostmi simulace pro
 nastavení velikosti kroku.
 -end-
 
 ho.simclock	-begin-
 Posunout se o pevný počet hodinových cyklů.
-Otevřete okno s možnostmi simulace pro 
+Otevřete okno s možnostmi simulace pro
 nastavení velikosti kroku.
 -end-
 
@@ -708,44 +710,44 @@ z .mem souboru.
 -end-
 
 ho.simdump	-begin-
-Uložit obsah paměti 
+Uložit obsah paměti
 do .mem souboru.
 -end-
 
 ho.sim.break	-begin-
 Vložit kontrolní bod simulace.  Kontrolní body jsou výrazy,
 které, pokud se stanou pravdivými, způsobí zastavení
-simulace.  Momentálně jsou podporovány jenom jednoduché 
-výrazy s jediným relačním operátorem jako třeba "w1 == 0" 
-nebo "w7 != 8". Výrazy jako "w8" nebo "!w2" můžou být 
+simulace.  Momentálně jsou podporovány jenom jednoduché
+výrazy s jediným relačním operátorem jako třeba "w1 == 0"
+nebo "w7 != 8". Výrazy jako "w8" nebo "!w2" můžou být
 rovněž použity pro test na nenulovou resp. nulovou hodnotu.
 -end-
 
 ho.f.modlist	-begin-
 Seznam všech aktuálně nahraných modulů.
-Hlavní modul je označen znaménkém "+", 
+Hlavní modul je označen znaménkém "+",
 knihovní moduly jsou v závorkách.
 -end-
 
 ho.netlist	-begin-
 Seznam všech sítí v aktuálním modulu.
 Sítě označeny '@' mají skrytá jména
-Vícebitové sítě jsou zobrazeny s 
+Vícebitové sítě jsou zobrazeny s
 bitovou šířkou na konci.
 -end-
 
 ho.ports	-begin-
 Seznam všech konektorů aktuálního
 modulu. Značka'>' označuje vstup,
-'<' označuje výstup a značka '=' 
+'<' označuje výstup a značka '='
 vstup-výstup."
 -end-
 
 ho.status.logo		-begin-
-Indikátor stavu simulace. Pokud ukazuje železnou bránu, 
-TkGate je v editovacím režimu. Pokud ukazuje AND hradlo 
-na čtyřech nožičkách, TkGate je v režimu simulace. Pokud 
-hradlo AND stojí, simulace je pozastavena a pokud kráčí, 
+Indikátor stavu simulace. Pokud ukazuje železnou bránu,
+TkGate je v editovacím režimu. Pokud ukazuje AND hradlo
+na čtyřech nožičkách, TkGate je v režimu simulace. Pokud
+hradlo AND stojí, simulace je pozastavena a pokud kráčí,
 simulace běží
 -end-
 
@@ -761,7 +763,7 @@ Aktuálně editovaný soubor. Znak '*' ukazuje,
 ho.print.selall		Vytisknout všechny moduly v aplikaci TkGate.
 ho.print.selcur		Vytisknout jen aktuální modul v editovacím okně aplikace TkGate.
 ho.print.seluse		-begin-
-Vytisknout všechny "používané" moduly. Používané moduly 
+Vytisknout všechny "používané" moduly. Používané moduly
 jsou takové, které jsou potomky kořenového modulu.
 -end-
 
@@ -769,8 +771,8 @@ ho.print.fulltrace	Vytisknout celou stopu.
 
 ho.print.parttrace	-begin-
 Vytisknout část stopy. Vložte čas začátku a konce
-stopy v okénku dole, nebo použijte pravé tlačítko 
-myši pro výběr rozsahu v okně simulace (použijte 
+stopy v okénku dole, nebo použijte pravé tlačítko
+myši pro výběr rozsahu v okně simulace (použijte
 klávesy shift-pravá šipka pro výběr velkých rozsahů).
 -end-
 
@@ -797,19 +799,19 @@ vstupy.
 -end-
 
 ho.cmd.bitw		-begin-
-Vodiče vybrané kurzorem budou 
+Vodiče vybrané kurzorem budou
 nastaveny na tuto bitovou šířku
 -end-
 
 ho.edgat.extbar		-begin-
-Při této volbě budou vícevstupová 
+Při této volbě budou vícevstupová
 základní hradla používat rozšiřující
-lišty při přidání dalších vstupů 
+lišty při přidání dalších vstupů
 k hradlu.
 -end-
 
 ho.edgat.signam		-begin-
-Název vybraného signálu na vybraném 
+Název vybraného signálu na vybraném
 hradlu. Zde můžete změnit název signálu.
 -end-
 
@@ -822,13 +824,13 @@ modulu.
 
 ho.edgat.iolab		-begin-
 Směr vybraného signálu na vybraném hradle
-Toto pole může být upravováno pouze pro 
+Toto pole může být upravováno pouze pro
 instance modulu.
 -end-
 
 ho.edgat.bitlab		-begin-
 Bitová šířka vybraného signálu na
-vybraném hradle. Zde můžete změnit 
+vybraném hradle. Zde můžete změnit
 bitovou šířku signálu.
 -end-
 
@@ -875,16 +877,16 @@ je načten na začátku simulace.
 ho.edgat.func		Typ funkce tohoto modulu.
 ho.edgat.frame		Popisek rámce.
 
-ho.traceprint		Vytisknout logickou stopu 
+ho.traceprint		Vytisknout logickou stopu
 
 ho.showxhair		-begin-
-Je-li toto tlačítko aktivní, v okně simulace 
+Je-li toto tlačítko aktivní, v okně simulace
 se objeví vertikální čára.
 -end-
 
 ho.opt.sorttraces	-begin-
 Je-li tato možnost aktivní, stopy v okně
-simulace se zobrazí v setříděném pořadí.  
+simulace se zobrazí v setříděném pořadí.
 Není-li tato možnost aktivní, stopy v okně
 simulace se zobrazí v tom pořadí, v jakém
 byly nastaveny sondy.
@@ -904,14 +906,14 @@ Maximální počet kroků zpátky, které se budou pamatovat.
 
 ho.opt.site		-begin-
 Jméno organizace, kde je TkGate nainstalováno.
-Toto jméno se použije na všech výstupech na 
+Toto jméno se použije na všech výstupech na
 tiskárnu nebo do postskriptového souboru.
 -end-
 
 ho.opt.smooth		-begin-
 Je-li tato možnost aktivní, posouvání okna
 bude optimalizováno použitím kopie bitmapy
-místo úplného znovuzobrazení. Můžete tuto 
+místo úplného znovuzobrazení. Můžete tuto
 možnost vypnout, pokud máte jakékoliv problémy
 s vaším serverem.
 -end-
@@ -919,20 +921,20 @@ s vaším serverem.
 ho.opt.clip		-begin-
 Je-li tato možnost aktivní, při překreslování
 bude aktualizována jenom ta část okna, která se
-momentálně mění. Jinak bude překreslována vždy 
+momentálně mění. Jinak bude překreslována vždy
 celá obrazovka.
 -end-
 
 ho.opt.outmove		-begin-
-Je-li tato možnost aktivní, při přetahování bude 
-zobrazen pouze popisek instance modulu, která se 
-právě přemísťuje. Používejte tuto vlastnost na 
+Je-li tato možnost aktivní, při přetahování bude
+zobrazen pouze popisek instance modulu, která se
+právě přemísťuje. Používejte tuto vlastnost na
 počítačích s pomalým displejem.
 -end-
 
 ho.opt.bhelp		-begin-
 Je-li tato možnost aktivní, budou používány
-bubliny s nápovědou. Bubliny s nápovědou (jako 
+bubliny s nápovědou. Bubliny s nápovědou (jako
 tato) obsahují vysvětlení k jednotlivým položkám,
 když je nad nimi kurzor myši.
 -end-
@@ -976,7 +978,7 @@ ho.opt.trek		Beam me up Scoty!
 ho.opt.normal		Disable fun Stuff.
 
 ho.opt.simstep		-begin-
-Počet jednotek času, o které se při 
+Počet jednotek času, o které se při
 jednom kroku postoupí dopředu.
 -end-
 
@@ -995,14 +997,14 @@ ho.opt.vpopupdelay		-begin-
 Zpoždění v milisekundách mezi stisknutím
 a přidržením tlačítka myši a zobrazením
 hodnoty signálu. Na některých systémech
-jsou hodnoty zpoždění v konfliktu se 
+jsou hodnoty zpoždění v konfliktu se
 schopností rozpoznat dvouklik. Pokud máte
 tento problém, zvyšte tuto hodnotu. Jsou
 povoleny hodnoty mezi 1 and 10000.
 -end-
 
 ho.opt.init		-begin-
-Soubor se simulačním skriptem, který bude 
+Soubor se simulačním skriptem, který bude
 automaticky vykonán při spuštění simulace.
 -end-
 
@@ -1019,16 +1021,16 @@ hraně specifikovaných hodin v obvodu.
 -end-
 
 ho.deftech		-begin-
-Přednastavená technologie pro nová 
+Přednastavená technologie pro nová
 hradla. Ovlivňuje zpoždění hradel.
-Pro změnu technologie konkrétního 
-hradla otevřete okno s jeho vlastnostmi 
+Pro změnu technologie konkrétního
+hradla otevřete okno s jeho vlastnostmi
 (dvouklikem) a vyberte záložku "Zpoždění".
 -end-
 
 ho.techbut		-begin-
-Použít zpoždění ze souboru definujícího standardní 
-technologii. Nové technologie můžete přidat v menu 
+Použít zpoždění ze souboru definujícího standardní
+technologii. Nové technologie můžete přidat v menu
 "Soubor -> Možnosti -> Simulace".
 -end-
 
@@ -1047,10 +1049,10 @@ GUI a simulátorem.
 -end-
 
 ho.simlog		-begin-
-Zapsat příkaz použitý v simulátoru 
-do logovacího souboru. Logovací 
-soubor může být potom použit jako 
-vstup simulátoru v debugovacím 
+Zapsat příkaz použitý v simulátoru
+do logovacího souboru. Logovací
+soubor může být potom použit jako
+vstup simulátoru v debugovacím
 režimu.
 -end-
 

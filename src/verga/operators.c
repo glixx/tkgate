@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Mon Dec 22 20:06:49 2008
 ****************************************************************************/
@@ -39,14 +39,14 @@ OpDesc opTable[] = {
   /*opcode	prec.	#opr.	sym	bitsize		func.		w.func.         f.func.*/
   {E_NOT,	12,	1,	"!",	OS_ONE,		Value_lnot,	0,		0},
 
-  {E_UINV,	12,	1,	"~",	OS_MAX,		Value_not,	Value_w_not,	0},	
-  {E_UNEG,	12,	1,	"-",	OS_MAX,		Value_neg,	Value_w_neg,	Value_f_neg},	
-  {E_UAND,	12,	1,	"&",	OS_MAX,		Value_uand,	Value_w_uand,	0},	
-  {E_UOR,	12,	1,	"|",	OS_MAX,		Value_uor,	Value_w_uor,	0},	
-  {E_UXOR,	12,	1,	"^",	OS_MAX,		Value_uxor,	Value_w_uxor,	0},	
-  {E_UNAND,	12,	1,	"~&",	OS_MAX,		Value_unand,	Value_w_unand,	0},	
-  {E_UNOR,	12,	1,	"~|",	OS_MAX,		Value_unor,	Value_w_unor,	0},	
-  {E_UNXOR,	12,	1,	"~^",	OS_MAX,		Value_unxor,	Value_w_unxor,	0},	
+  {E_UINV,	12,	1,	"~",	OS_MAX,		Value_not,	Value_w_not,	0},
+  {E_UNEG,	12,	1,	"-",	OS_MAX,		Value_neg,	Value_w_neg,	Value_f_neg},
+  {E_UAND,	12,	1,	"&",	OS_MAX,		Value_uand,	Value_w_uand,	0},
+  {E_UOR,	12,	1,	"|",	OS_MAX,		Value_uor,	Value_w_uor,	0},
+  {E_UXOR,	12,	1,	"^",	OS_MAX,		Value_uxor,	Value_w_uxor,	0},
+  {E_UNAND,	12,	1,	"~&",	OS_MAX,		Value_unand,	Value_w_unand,	0},
+  {E_UNOR,	12,	1,	"~|",	OS_MAX,		Value_unor,	Value_w_unor,	0},
+  {E_UNXOR,	12,	1,	"~^",	OS_MAX,		Value_unxor,	Value_w_unxor,	0},
 
   {E_POSEDGE,	12,	1,	"posedge ", OS_NONE,	0,		0,		0},
   {E_NEGEDGE,	12,	1,	"negedge ", OS_NONE,	0,		0,		0},
@@ -89,10 +89,10 @@ OpDesc opTable[] = {
   {E_QUEST,	1,	2,	"?\0:",	OS_MAX,		Value_ifelse,	0,		0},
 
   {E_COND,	0,	2,	"&&&",	OS_NONE,	0,		0,		0},
-  {E_AT,	0,	1,	"@",	OS_NONE,	0,		0,		0},		
-  {E_DELAY,	0,	1,	"#",	OS_NONE,	0,		0,		0},		
+  {E_AT,	0,	1,	"@",	OS_NONE,	0,		0,		0},
+  {E_DELAY,	0,	1,	"#",	OS_NONE,	0,		0,		0},
 
-  {E_EVENTOR,	0,	1,	"or",	OS_NONE,	0,		0,		0},		
+  {E_EVENTOR,	0,	1,	"or",	OS_NONE,	0,		0,		0},
 
   {E_CONCAT,	0,	1,	"{}",	OS_SUM,		Value_concat,	0,		0},
   {E_REPCAT,	0,	1,	"{n{}}",OS_SPECIAL,	Value_repcat,	0,		0},
@@ -101,7 +101,7 @@ int opTable_size = sizeof(opTable)/sizeof(opTable[0]);
 
 /*****************************************************************************
  *
- * Functions below here implement Verilog operators.  They must all have 
+ * Functions below here implement Verilog operators.  They must all have
  * declarations of the form:
  *
  *  void Value_name(Value *r, Value *a, Value *b, Value *c);
@@ -189,7 +189,7 @@ int Value_buf(Value *R,Value *A,Value *B,Value *C)
  *     A,B		Operands
  *     C		Unused
  *
- *OR                 one                zero                flt          
+ *OR                 one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H
  *  +-----------       +-----------       +-----------       +-----------
  * 0|0 1 x x x x      0|0 1 1 1 1 1      0|1 0 1 1 1 1      0|0 0 1 1 1 1
@@ -253,7 +253,7 @@ int Value_nor(Value *R,Value *A,Value *B,Value *C)
  *     A,B		Operands
  *     C		Unused
  *
- *AND                 one                zero                flt          
+ *AND                 one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H
  *  +-----------       +-----------       +-----------       +-----------
  * 0|0 0 0 0 0 0      0|0 0 0 0 0 0      0|1 1 1 1 1 1      0|0 0 0 0 0 0
@@ -319,7 +319,7 @@ int Value_nand(Value *R,Value *A,Value *B,Value *C)
  *     A,B		Operands
  *     C		Unused
  *
- *XOR                 one                zero                flt          
+ *XOR                 one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H
  *  +-----------       +-----------       +-----------       +-----------
  * 0|0 1 x x x x      0|0 1 1 1 1 1      0|1 0 1 1 1 1      0|0 0 1 1 1 1
@@ -1077,7 +1077,7 @@ int Value_add(Value *r,Value *a,Value *b,Value *c)
   register int i;
   int carry = 0;
   unsigned mask = (r->nbits&SSBITMASK) ? LMASK(r->nbits&SSBITMASK) : SSWORDMASK;
-  
+
   r->flags = a->flags | b->flags;
 
   if (!Value_isValue(a) || !Value_isValue(b)) {
@@ -1088,7 +1088,7 @@ int Value_add(Value *r,Value *a,Value *b,Value *c)
   wc--;
   for (i = 0;i < wc;i++) {
     r->one[i] = a->one[i] + b->one[i] + carry;
-    
+
     /*
      * Generate carry for next word.
      */
@@ -1160,7 +1160,7 @@ int Value_sub(Value *r,Value *a,Value *b,Value *c)
     ncarry = ((a->one[i]>>1) + (~b->one[i]>>1) + carry) >> (SSWORDSIZE-1);
 
     r->one[i] = a->one[i] + ~b->one[i] + carry;
-    
+
     carry = ncarry;
   }
   r->one[wc] = (a->one[wc]&mask) + (~b->one[wc]&mask) + carry;
@@ -1327,7 +1327,7 @@ int Value_w_gt(Value *r,Value *a,Value *b,Value *c)
     Value_unknown(r);
     return 0;
   }
-  
+
   r->one[0] = (a->one[0]&mask) > (b->one[0]&mask);
 
   Value_normalize(r);
@@ -1385,7 +1385,7 @@ int Value_w_lt(Value *r,Value *a,Value *b,Value *c)
     Value_unknown(r);
     return 0;
   }
-  
+
   r->one[0] = (a->one[0]&mask) < (b->one[0]&mask);
 
   Value_normalize(r);
@@ -1443,7 +1443,7 @@ int Value_w_ge(Value *r,Value *a,Value *b,Value *c)
     Value_unknown(r);
     return 0;
   }
-  
+
   r->one[0] = (a->one[0]&mask) >= (b->one[0]&mask);
 
   Value_normalize(r);
@@ -1501,7 +1501,7 @@ int Value_w_le(Value *r,Value *a,Value *b,Value *c)
     Value_unknown(r);
     return 0;
   }
-  
+
   r->one[0] = (a->one[0]&mask) <= (b->one[0]&mask);
 
   Value_normalize(r);
@@ -1663,7 +1663,7 @@ int Value_w_land(Value *r,Value *a,Value *b,Value *c)
     Value_unknown(r);
     return 0;
   }
-  
+
   r->one[0] = (a->one[0]&mask) && (b->one[0]&mask);
 
   Value_normalize(r);
@@ -1793,7 +1793,7 @@ int Value_concat(Value *r,Value *a,Value *b,Value *c)
     r->flt[0] = (b->flt[0] & mask) | (a->flt[0] << b->nbits);
 
     /*
-     * Zero any bits left over in r 
+     * Zero any bits left over in r
      */
     if (r->nbits > rhs_nbits) {
       int rwc = SSNUMWORDS(r->nbits);
@@ -1937,7 +1937,7 @@ int Value_repcat(Value *r,Value *a,Value *b,Value *c)
  *
  * Truth tables for operator:
  *
- *      /E\           one                zero                flt          
+ *      /E\           one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H
  *  +-----------       +-----------       +-----------       +-----------
  * 0|z 0 L L L L      0|0 0 0 0 0 0      0|0 1 1 1 1 1      0|1 0 1 1 1 1
@@ -1977,7 +1977,7 @@ int Value_bufif1(Value *R,Value *I,Value *E,Value *dummy)
  *
  * Truth tables for operator:
  *
- *      /E\           one                zero                flt          
+ *      /E\           one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H
  *  +-----------       +-----------       +-----------       +-----------
  * 0|0 z L L L L      0|0 0 0 0 0 0      0|1 0 1 1 1 1      0|0 1 1 1 1 1
@@ -2016,7 +2016,7 @@ int Value_bufif0(Value *R,Value *I,Value *E,Value *dummy)
  *      E		Control value
  *      dummy		Unused parameter (to allow use as "operator" function).
  *
- *      /G\           one                zero                flt          
+ *      /G\           one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H  01z
  *  +-----------       +-----------       +-----------       +-----------  ---
  * 0|z 0 L L L L      0|0 0 0 0 0 0      0|0 1 1 1 1 1      0|1 0 1 1 1 1  100
@@ -2055,7 +2055,7 @@ int Value_nmos(Value *R,Value *I,Value *G,Value *dummy)
  *      E		Control value
  *      dummy		Unused parameter (to allow use as "operator" function).
  *
- *      /G\           one                zero                flt          
+ *      /G\           one                zero                flt
  *   0 1 x z L H        0 1 x z L H        0 1 x z L H        0 1 x z L H  01z
  *  +-----------       +-----------       +-----------       +-----------  ---
  * 0|0 z L L L L      0|0 0 0 0 0 0      0|1 0 1 1 1 1      0|0 1 1 1 1 1  100

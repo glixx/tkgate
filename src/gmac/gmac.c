@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Fri Jan  9 19:52:33 2009
 ****************************************************************************/
@@ -247,7 +247,7 @@ void MemProg_addInst(MemProg *mb,MemInst *mi)
 UField *new_UField(char *name,int msb,int lsb,int isComp)
 {
   UField *f = new(UField);
-  
+
   f->uf_name = strdup(name);
   f->uf_msb = msb;
   f->uf_lsb = lsb;
@@ -503,7 +503,7 @@ int OprDef_check(OprDef *od)
 
 
 OprGroup *new_OprGroup(char *name,int nbits)
-{ 
+{
   OprGroup *G = new(OprGroup);
 
   G->og_name = strdup(name);
@@ -755,7 +755,7 @@ void Code_generate(Code *c,FILE *f)
 	      num_on_line = 0;
 	    }
 	  }
-	  
+
 	  data = 0;
 	  cur_addr = mi->mi_addr;
 
@@ -775,7 +775,7 @@ void Code_generate(Code *c,FILE *f)
 
 	if (isOverlap(mi->mi_dRange.lsb,mi->mi_dRange.msb,Bank_lsb(b),Bank_msb(b))) {
 	  shift = mi->mi_dRange.lsb-Bank_lsb(b);
-	  if  (shift > 0) 
+	  if  (shift > 0)
 	    data ^= MemInst_value(mi) << shift;
 	  else
 	    data ^= MemInst_value(mi) >> -shift;
@@ -856,7 +856,7 @@ void writeMap(FILE *f)
       char *label = sym_list[i];
       unsigned addr = *(unsigned*)SHash_find(&mcode->c_labels,label);
       char *p = strchr(label,'.');
-      if (p) 
+      if (p)
 	fprintf(f,"                 %-15s %08x\n",p+1,addr);
       else
 	fprintf(f,"  %-30s %08x\n",label,addr);

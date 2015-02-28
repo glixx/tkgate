@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2004 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,9 +10,9 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Sun Jan 18 15:10:19 2009
 #
@@ -36,9 +36,9 @@ if {![info exists tkg_progName]} {
 #     setselection w idx	Set selected item
 #     see w idx			Make sure the item idx is selected
 #     clearselection w		Clear the selection
-#     get w p			Get row at the specified position 
+#     get w p			Get row at the specified position
 #     put w p item		Put a row at a specified position
-#     getcell w p c		Get cell at the specified position 
+#     getcell w p c		Get cell at the specified position
 #     putcell w p c item	Put cell at the specified position
 #     insert w p item		Insert a row at a specified position
 #     delete w items		Delete an item
@@ -46,7 +46,7 @@ if {![info exists tkg_progName]} {
 #     addcolumn w options	Add a column
 #     flush w                   Deletes all items
 #     entryValue		Value of cell that is being entered
-#	
+#
 namespace eval SpreadSheet {
   variable parms
   variable focusSave
@@ -165,7 +165,7 @@ namespace eval SpreadSheet {
 
     switch $K {
       Tab {
-	while {1} { 
+	while {1} {
 	  incr c
 	  if { $c >= [llength $parms($w:colwidth)] } {
 	    set c 0
@@ -199,7 +199,7 @@ namespace eval SpreadSheet {
 	  entrySelect $w $r $c
 	} else {
 	  if { [expr $r + 1] < $parms($w:height) } {
-	    incr r 
+	    incr r
 	    entrySelect $w $r $c
 	  } else {
 	    clearEntrySelect $w
@@ -214,7 +214,7 @@ namespace eval SpreadSheet {
 
   #############################################################################
   #
-  # Select a cell for entry.  Returns 1 if this is an entry that should be 
+  # Select a cell for entry.  Returns 1 if this is an entry that should be
   # skipped by the tab key
   #
   proc entrySelect {w r c} {
@@ -224,7 +224,7 @@ namespace eval SpreadSheet {
 
     set focusSave($w) [focus]
 #    puts "entrySelect focus=$focusSave($w) takefocus=[$focusSave($w) cget -takefocus]"
-    
+
 
     clearselection $w
 
@@ -272,7 +272,7 @@ namespace eval SpreadSheet {
       }
     }
     if { !$widget_ok } {
-      entry $w.c${r}_$c  -bd 1 -relief sunken -width $width 
+      entry $w.c${r}_$c  -bd 1 -relief sunken -width $width
       update
       $w.c${r}_$c configure -bg $parms($w:selectcolor) -textvariable SpreadSheet::entryValue -highlightthickness 1
       update
@@ -575,7 +575,7 @@ namespace eval SpreadSheet {
 
     set Cmax [llength $parms($w:colwidth)]
 
-    set L {} 
+    set L {}
     for { set c 0 } { $c < $Cmax } { incr c } {
       lappend L $cell($w:$er:$c)
     }
@@ -763,7 +763,7 @@ namespace eval SpreadSheet {
     if { $Y < [expr $rootY + 40]} {
       set asY [max $Y 1]
       set asc 1
-      
+
       set asSpeed [speedMap [expr $rootY + 40 - $Y]]
     } elseif { $Y > [expr $rootY + $height - 20]} {
       set asY [min $Y [expr $rootY + $height - 1]]
@@ -776,8 +776,8 @@ namespace eval SpreadSheet {
     # Check for event cancelation
     #
     if {$cancel || $asc == 0 || ($asActive != 0 && $asc != $asActive)} {
-      if {$asEvent != ""} { 
-	after cancel $asEvent  
+      if {$asEvent != ""} {
+	after cancel $asEvent
       }
       set asEvent ""
       set asActive 0
@@ -834,7 +834,7 @@ namespace eval SpreadSheet {
     set Cmax [llength $parms($w:colwidth)]
 
     set direct_move 0
-    if { $parms($w:selectmode) == "single" 
+    if { $parms($w:selectmode) == "single"
 	 || ($parms($w:selectmode) == "shift-multiple" && $s == 0) } {
       set direct_move 1
     }
@@ -869,7 +869,7 @@ namespace eval SpreadSheet {
     }
 
     set W [winfo containing $X $Y]
-    if { [scan $W $w.c%d_%d r c] != 2} { 
+    if { [scan $W $w.c%d_%d r c] != 2} {
       catch { $parms($w:entrycommand) dragout zoom }
       return
     }
@@ -898,7 +898,7 @@ namespace eval SpreadSheet {
       return
     }
 
-    
+
     if { $parms($w:grab) } {
       if { $parms($w:dograb) } {
 	grabMotion $w $er $c
@@ -1060,7 +1060,7 @@ namespace eval SpreadSheet {
     set height $parms($w:height)
     for  { set r $new_height } { $r < $height } { incr r } {
 #      puts "    delrow - $r"
-      for { set c 0} { $c < $Ncol } { incr c } { 
+      for { set c 0} { $c < $Ncol } { incr c } {
 	destroy $w.c${r}_$c
       }
     }
@@ -1076,10 +1076,10 @@ namespace eval SpreadSheet {
 #    puts "expandSize $w $H"
 
     set rowHeight [winfo height $w.h0]
-    
+
     for {set r $parms($w:height) } {[expr $r*$rowHeight] < $H } {incr r } {
 #      puts "    addrow - $r"
-      for { set c 0} { $c < $Ncol } { incr c } { 
+      for { set c 0} { $c < $Ncol } { incr c } {
 	set width [lindex $parms($w:colwidth) $c]
 	label $w.c${r}_$c -bd 1 -relief raised -width $width -bg $parms($w:entrycolor) -anchor w
 	grid $w.c${r}_$c -row $r -column $c  -ipadx 1 -ipady 1 -sticky ew
@@ -1133,7 +1133,7 @@ namespace eval SpreadSheet {
 
 #    puts "SpreadSheet::configurev $w $argv"
 
-    set optlist {-height -headercolor -entrycolor -selectcolor -command -statecommand 
+    set optlist {-height -headercolor -entrycolor -selectcolor -command -statecommand
       -bd -relief -yscrollcommand -grabcolor -entrycommand -expandcol -selectmode
       -dograb -dragcommand -resize}
 

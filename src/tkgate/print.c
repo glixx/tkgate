@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Jan 28 08:41:34 2009
 ****************************************************************************/
@@ -121,7 +121,7 @@ char *gateprolog[] = {
 
 char *gateps_copyright[] = {
   "%",
-  "% Copyright (C) 1987-2005 by Jeffery P. Hansen",
+  "% Copyright (C) 1987-2015 by Jeffery P. Hansen",
   "%    This program (the Postscript Prolog) is free software; you can redistribute",
   "%    it and/or modify it under the terms of the GNU General Public License",
   "%    as published by the Free Software Foundation; either version 2 of the",
@@ -132,9 +132,9 @@ char *gateps_copyright[] = {
   "%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the",
   "%    GNU General Public License for more details.",
   "%",
-  "%    You should have received a copy of the GNU General Public License",
-  "%    along with this program; if not, write to the Free Software",
-  "%    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.",
+  "%    You should have received a copy of the GNU General Public License along",
+  "%    with this program; if not, write to the Free Software Foundation, Inc.,",
+  "%    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.",
   "%",
   0
 };
@@ -236,7 +236,7 @@ PaperSize paperSizes[] = {
   {0}
 };
 
- 
+
 const char *recipe_list[] = {
   /* Receipe 1 */
     "%	Pancakes - one serving\n"
@@ -416,7 +416,7 @@ char *trimChars(char *buf,char *s,char *trim)
 
 
 /*****************************************************************************
- * 
+ *
  * Get the width of a postscript string in points.
  *
  * Parameters:
@@ -425,7 +425,7 @@ char *trimChars(char *buf,char *s,char *trim)
  *     len		Length of string
  *
  * Returns:		String width in points.
- * 
+ *
  *****************************************************************************/
 int PSStringWidth(HtmlFont *F,const char *s,int len)
 {
@@ -934,7 +934,7 @@ void GPrint_outputPreamble(GPrint *P,int do_gates)
 
   for (i = 0;gateps_copyright[i];i++)
     fprintf(P->p_f,"%s\n",gateps_copyright[i]);
-  
+
   if (TkGate.japaneseMode) {
     for (i = 0;kanji_support_prolog[i];i++)
       fprintf(P->p_f,"%s\n",kanji_support_prolog[i]);
@@ -1043,7 +1043,7 @@ static void GPrint_printModuleCPath(GPrint *P,GModLayout *L)
 	fprintf(P->p_f,"8 setlinewidth\n");
 	fprintf(P->p_f,".5 setgray\n");
 	fprintf(P->p_f,"newpath\n");
-      
+
 	for (n = w->nodes;n;n = n->out) {
 	  int x,y;
 
@@ -1058,7 +1058,7 @@ static void GPrint_printModuleCPath(GPrint *P,GModLayout *L)
 	}
 	fprintf(P->p_f,"stroke\n");
 	fprintf(P->p_f,"grestore\n");
-      }      
+      }
     }
   }
 }
@@ -1068,7 +1068,7 @@ void GPrint_printLabelsAndSizes(GPrint *P,GModLayout *L,GWire *w)
   GWireNode *n;
   int x,y,p;
   char label[STRMAX];
-  
+
   GNet_getDisplayLabel(w->net, label, STRMAX, DLM_GET_ALWAYS);
 
   for (n = w->nodes;n && n->out;n = n->out) {
@@ -1083,7 +1083,7 @@ void GPrint_printLabelsAndSizes(GPrint *P,GModLayout *L,GWire *w)
     }
     if (n->isLabeled) {
       GWireNode_getLabelPos(n,w->net,&x,&y,&p);
-      
+
       fprintf(P->p_f,"(%s) %d %d %d wirelabel\n",label,p,x,y);
 
     }
@@ -1311,10 +1311,10 @@ static void GPrint_printModule(GPrint *P,GModLayout *L,double scale,double xoff,
  * Parameters:
  *     P
  *     L
- * 
+ *
  * When pages are partitioned, we include a little overlap on the edges to
  * compensate for any gates that might have been cut in two.
- * 
+ *
  *         V
  * +-------+-+-------+
  * |       | |       |
@@ -1492,7 +1492,7 @@ static void GPrint_printIndexPage(GPrint *P,GPage *PG)
       fprintf(P->p_f,"%d %d moveto (%d) show\n",x+PIDX_PGCOLSEP,y,start_page[i]);
     else
       fprintf(P->p_f,"%d %d moveto (%d-%d) show\n",x+PIDX_PGCOLSEP,y,start_page[i],end_page[i]);
-    
+
   }
 
   fprintf(P->p_f,"EP\n");
@@ -1708,7 +1708,7 @@ void GPrint_setupEPSFPage(GPrint *P)
   P->p_pages = (GPage**) ob_malloc(sizeof(GPage*),"GPage*[]");
   assert(P->p_pages);
 
-  
+
   L->l_xbase = EPSF_MINX;
   L->l_ybase = EPSF_MINY;
   L->l_width = L->l_xmax-L->l_xmin;
@@ -1872,7 +1872,7 @@ void GPrint_setupPages(GPrint *P)
 	int linesPerPage = (P->p_uHeight-2*PAGE_MODMARGIN)/(int)(1.2*hdl_font.points);
 	int numLines = GModuleDef_numHdlLines(L->l_mod);
 	int numPages = (numLines+linesPerPage-1)/linesPerPage;
-	
+
 	L->l_numCols = 1;
 	L->l_numRows = numPages;
 	numLarge += numPages;

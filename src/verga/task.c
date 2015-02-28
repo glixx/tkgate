@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Sat May 20 19:09:35 2006
 ****************************************************************************/
@@ -46,7 +46,7 @@ void UserTaskDecl_addParm(UserTaskDecl *utd,NetDecl *netd)
 
 void UserTaskDecl_setStat(UserTaskDecl *utd, StatDecl *sd)
 {
-  utd->utd_stat = sd; 
+  utd->utd_stat = sd;
 }
 
 UserTask *new_UserTask(UserTaskDecl *utd,Scope *scope)
@@ -173,7 +173,7 @@ void UserTask_generateCallOutputs(UserTask *ut,void **sargs,CodeBlock *cb,Scope 
     switch ((NetDecl_getType(netdecl) & NT_P_IO_MASK)) {
     case NT_P_INOUT :
     case NT_P_OUTPUT :
-      if (UserTask_getType(ut) == UTT_FUNCTION) 
+      if (UserTask_getType(ut) == UTT_FUNCTION)
 	out_value = (Value*)sargs[i];
       else
 	out_net = (Net*)sargs[i];
@@ -237,9 +237,9 @@ void UserTask_generateCall(UserTask *ut,void **sargs,CodeBlock *cb)
  *       sargs		Arguments to task
  *       cb		Codeblock to write in
  *
- * The semantics of this function is similar to UserTask_generateCall except 
+ * The semantics of this function is similar to UserTask_generateCall except
  * that bytecode is generated for each invocation of the task.  This results
- * in each invocation getting its own set of nets/variables instead of a 
+ * in each invocation getting its own set of nets/variables instead of a
  * shared set.
  *
  *****************************************************************************/

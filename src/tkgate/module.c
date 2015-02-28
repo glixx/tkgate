@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Wed Mar 18 05:15:53 2009
 ****************************************************************************/
@@ -472,7 +472,7 @@ static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,NHash *mhash)
  * no loops are found, and returns the offending module if one is found.
  */
 GModuleDef *GModuleDef_isRecursive(GModuleDef *M)
-{ 
+{
   NHash *mhash = new_NHash();		/* set of modules we have seen so far. */
   GModuleDef *R;
 
@@ -535,13 +535,13 @@ void GModuleDef_getPropsToTcl(GModuleDef *M, Tcl_Interp *tcl,char *aname)
       strcpy(shortfile,M->m_fileName);
   } else
     strcpy(shortfile,"<new>");
-      
-    
+
+
   Tcl_SetVar2(tcl,aname,"file",(M->m_fileName ? M->m_fileName : "") ,TCL_GLOBAL_ONLY);
   Tcl_SetVar2(tcl,aname,"shortfile",shortfile,TCL_GLOBAL_ONLY);
   Tcl_SetVar2(tcl,aname,"type",modTypes[M->m_type],TCL_GLOBAL_ONLY);
   if (M->m_interface) {
-    if (GCElement_getType(M->m_interface) == GC_SYMBLOCK) 
+    if (GCElement_getType(M->m_interface) == GC_SYMBLOCK)
       Tcl_SetVar2(tcl,aname,"itype","symbol",TCL_GLOBAL_ONLY);
     else
       Tcl_SetVar2(tcl,aname,"itype","block",TCL_GLOBAL_ONLY);
@@ -729,7 +729,7 @@ void GModuleDef_copy(GModuleDef *D,GModuleDef *S)
 /*****************************************************************************
  *
  * Save text as the HDL text for a module.  Allocate new memory only if
- * necessary. 
+ * necessary.
  *
  *****************************************************************************/
 void GModuleDef_saveText(GModuleDef *M,const char *text)
@@ -852,7 +852,7 @@ int GModuleDef_grabLabel(GModuleDef *m,int x,int y,GrabbedLabel *gl)
 	if (y > label_y + 12) continue;
 	if (y < label_y) continue;
       }
-      
+
       /*
        * We found matching net so lets grab it.
        */

@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
     Last edit by hansen on Thu Feb 12 14:50:38 2009
 ****************************************************************************/
@@ -42,7 +42,7 @@ typedef struct {
 
 
 /*****************************************************************************
- * 
+ *
  * Check to make sure that s1 matches the first n characters of s2.
  *
  *****************************************************************************/
@@ -50,7 +50,7 @@ static int ismatch(const char *s1,const char *s2,int n)
 {
 
   if (strlen(s1) != n) return 0;
-  return strncmp(s1,s2,n) == 0; 
+  return strncmp(s1,s2,n) == 0;
 }
 
 /*****************************************************************************
@@ -90,7 +90,7 @@ int hdl_save(const char *name)
 {
   GModuleDef *M;
   int rvalue = 0;
-  char *text;
+  const char *text;
 
   if (name)
     M = env_findModule(name);
@@ -104,7 +104,7 @@ int hdl_save(const char *name)
   if (M->m_type != MT_TEXTHDL) return 0;
 
   DoTcl("HdlEditor::dumpText");
-  text = TkGate.tcl->result;
+  text = Tcl_GetStringResult(TkGate.tcl);
 
 #if 0
   printf("hdl_save(%s)\n",M->m_name);
@@ -121,7 +121,7 @@ int hdl_save(const char *name)
 
   return rvalue;
 }
- 
+
 /*****************************************************************************
  *
  * Find the points in a text block at which modules are defined.
@@ -199,14 +199,14 @@ static int hdl_findPartitions(char *text,HdlModuleData *module_data,int n)
 }
 
 /*****************************************************************************
- * 
+ *
  * Replace the name of a module.
  *
  * Parameters:
  *      M		Module to be renamed.
- *      new_name	New module name.  
+ *      new_name	New module name.
  *
- * Returns:		Non-zero on error.	
+ * Returns:		Non-zero on error.
  *
  *****************************************************************************/
 int hdl_replaceName(GModuleDef *M,const char *new_name)
@@ -328,7 +328,7 @@ int hdl_splitModules(GModuleDef *M,HdlModuleData *module_data,int module_count)
  *
  *   2) If there is more than one module definition, split the text into
  *   multiple modules.
- *  
+ *
  *   3) If there are is no module definition, add a simple empty definition.
  *
  *   4) If any module names in 1) or 2) are in use, manipulate the module names.
@@ -339,7 +339,7 @@ int hdl_checkSave(const char *name)
   int module_count = 0;
   HdlModuleData module_data[MAXMODS];
   GModuleDef *M;
-  char *text;
+  const char *text;
   int rvalue = 0;
 
   if (name)
@@ -358,7 +358,7 @@ int hdl_checkSave(const char *name)
   M->m_needScan = 1;
 
   DoTcl("HdlEditor::dumpText");
-  text = TkGate.tcl->result;
+  text = Tcl_GetStringResult(TkGate.tcl);
 
   /*
    * Turn text into a copy.  Use non-ob functions since we only use it here
@@ -368,7 +368,7 @@ int hdl_checkSave(const char *name)
   /*
    * Find the partition points for modules
    */
-  module_count = hdl_findPartitions(text,module_data,MAXMODS);
+  module_count = hdl_findPartitions((char *)text,module_data,MAXMODS);
 
   ob_touch(M);
 
@@ -395,15 +395,15 @@ int hdl_checkSave(const char *name)
      * If a single module was found, store the HDL text back in the module.  Rename the
      * module if it was changed in the HDL text.
      */
-  
+
     GModuleDef_saveText(M,text);
 
     if (!ismatch(M->m_name,module_data[0].name,module_data[0].name_len)) {
       DoTcl("HdlEditor::askRename");
-      if (strcmp(TkGate.tcl->result,"autoedit") == 0) {
+      if (strcmp(Tcl_GetStringResult(TkGate.tcl),"autoedit") == 0) {
 	hdl_replaceName(M,M->m_name);
 	DoTclL("HdlEditor::loadText",M->m_text,NULL);
-      } else if (strcmp(TkGate.tcl->result,"ignore") == 0) {
+      } else if (strcmp(Tcl_GetStringResult(TkGate.tcl),"ignore") == 0) {
 	/* Do nothing */
       } else {	/* cancel */
 	rvalue = -1;
@@ -416,11 +416,11 @@ int hdl_checkSave(const char *name)
      * which action they want to take.
      */
     DoTcl("HdlEditor::askSaveOption");
-    if (strcmp(TkGate.tcl->result,"split") == 0) {
+    if (strcmp(Tcl_GetStringResult(TkGate.tcl),"split") == 0) {
       GModuleDef_saveText(M, text);
       hdl_splitModules(M,module_data,module_count);
       DoTclL("HdlEditor::loadText",M->m_text,NULL);
-    } else if (strcmp(TkGate.tcl->result,"ignore") == 0) {
+    } else if (strcmp(Tcl_GetStringResult(TkGate.tcl),"ignore") == 0) {
       GModuleDef_saveText(M, text);
     } else {
       /* "cancel" or unknown value */
@@ -429,8 +429,7 @@ int hdl_checkSave(const char *name)
     }
   }
 
-
-  if (text) free(text);
+  if (text) free((void*)text);
 
   return rvalue;
 }

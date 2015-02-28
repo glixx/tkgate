@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2005 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,9 +11,9 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #ifndef __simulate_h
 #define __simulate_h
@@ -35,7 +35,7 @@
 
 /*****************************************************************************
  *
- * Simulator probe 
+ * Simulator probe
  *
  *****************************************************************************/
 typedef struct {
@@ -47,7 +47,7 @@ typedef struct {
 
 /*****************************************************************************
  *
- * Simulator switch 
+ * Simulator switch
  *
  *****************************************************************************/
 typedef struct {
@@ -59,7 +59,7 @@ typedef struct {
 
 /*****************************************************************************
  *
- * Simulator LED (device that changes with simulation state) 
+ * Simulator LED (device that changes with simulation state)
  *
  *****************************************************************************/
 typedef struct {
@@ -96,7 +96,7 @@ typedef struct SimInterface_str {
   char		simFileName[STRMAX];	/* Temp file with circuit description */
   GSimModule	*sim_root;		/* Root simulator module */
 
-  int		no_scope;		/* Non-zero if no scope should be created */ 
+  int		no_scope;		/* Non-zero if no scope should be created */
 
   int		area;			/* Area reported for circuit */
   int		staticPower;		/* Static power reported for circuit */
@@ -128,7 +128,7 @@ void SimInterface_fileError(SimInterface *si,const char *msg);
 void SimInterface_wireError(SimInterface *si,const char *wname,const char *msg);
 void SimInterface_navigateToModule(EditState **es,const char *path);
 void SimInterface_updateNetlistProbes(GSimModule *SM);
-char *SimInterface_formatTime(SimInterface *si, char *buf,simtime_t t); 
+char *SimInterface_formatTime(SimInterface *si, char *buf,simtime_t t);
 
 void GSimModule_getNetPathName(GSimModule *M,GNet *n,char *buf);
 void GSimModule_getFullPath(GSimModule *M,GCElement *g,char *buf);

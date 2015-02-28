@@ -1,5 +1,5 @@
 /****************************************************************************
-    Copyright (C) 1987-2009 by Jeffery P. Hansen
+    Copyright (C) 1987-2015 by Jeffery P. Hansen
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,16 +11,16 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #ifndef __vgsim_config_h
 #define __vgsim_config_h
 
 #define VGSIM_NAME		"Verga"		/* Name of program */
 #define VGSIM_VERSION		"1.0"		/* Version number */
-#define VGSIM_COPYRIGHT		"Copyright (C) 2005-2009 by Jeffery P. Hansen"
+#define VGSIM_COPYRIGHT		"Copyright (C) 2005-2015 by Jeffery P. Hansen"
 #define STRMAX			1024		/* Length of longest string */
 
 #define THYMEWHEEL_SIZE		0x1000		/* Size of timewheel (must be power of two) */
@@ -28,7 +28,7 @@
 
 #define POLL_RATE		50		/* Time between input checks (milliseconds) */
 
-/* 
+/*
  * Maximum number of arguments that can have a type specification
  */
 #define STASK_MAXSPECARGS 8
@@ -67,12 +67,12 @@ typedef void BCfunc(ByteCode *bc,VGThread *t);
 typedef struct CodeBlock_str CodeBlock;
 
 /*****************************************************************************
- * advance declarations from expr.h 
+ * advance declarations from expr.h
  *****************************************************************************/
 typedef struct Expr_str Expr;
 
 /*****************************************************************************
- * advance declarations from trigger.h 
+ * advance declarations from trigger.h
  *****************************************************************************/
 typedef struct Trigger_str Trigger;
 

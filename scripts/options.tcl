@@ -1,4 +1,4 @@
-#   Copyright (C) 1987-2009 by Jeffery P. Hansen
+#   Copyright (C) 1987-2015 by Jeffery P. Hansen
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -10,21 +10,22 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last edit by hansen on Tue Dec 30 00:44:09 2008
 #
+
+########################################################################
 #
-#
-# These methods are used for managing options in tkgate.  For each option "name"
-# there are three (or fixe) variables that are used:
+# These methods are used for managing options in tkgate.  For each option
+# "name" there are three (or fixe) variables that are used:
 #
 #     tkg_name        The currently active value of the parameter.
 #     opts_name       The value to be shown in the options dialog box.
 #     tkgdef_name     The default value of the option.
-#     loctkg_name(l)  Locale specific versions of tkg_ (used only for some options). 
+#     loctkg_name(l)  Locale specific versions of tkg_ (used only for some options).
 #
 # Each option belongs to a class.  If no class is specified, then it will be added
 # to the class "generic".
@@ -96,7 +97,7 @@ namespace eval Option {
 	global ${prefix}_$v opts_$v
 
 	set opts_$v [set ${prefix}_$v]
-      } 
+      }
     }
   }
 
@@ -117,7 +118,7 @@ namespace eval Option {
 	global ${prefix}_$v opts_$v
 
 	set ${prefix}_$v [set opts_$v]
-      } 
+      }
     }
   }
 
@@ -166,7 +167,7 @@ namespace eval Option {
 	} else {
 	  puts $fd "Option::value $v [sfix $value]"
 	}
-      } 
+      }
     }
     close $fd
   }
