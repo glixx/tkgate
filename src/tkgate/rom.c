@@ -139,7 +139,10 @@ GGateInfo gate_rom_info = {
  *****************************************************************************/
 static void Rom_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
+  /** @TODO to check for necessity */
+  /*
   GGateInfo *gi = gcs->gc_info;
+  */
   int AnumBits = gcs->gc_multiPad;	/* Hack for ROM/RAM gates */
   int DnumBits = gcs->gc_numBits;
   const char *invSpec = gcs->gc_invSpec;

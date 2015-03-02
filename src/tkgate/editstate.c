@@ -211,10 +211,13 @@ void env_updateMTCircuit()
  *****************************************************************************/
 void env_insertModule(GModuleDef *M)
 {
+  /** @TODO to check the necessity */
+  /*
   char *mflags = "";
 
   if (GModuleDef_isTop(M))
     mflags = "+";
+  */
 
   SHash_insert(TkGate.circuit->moduleTable,M->m_name,M);
 }

@@ -51,26 +51,29 @@ static char *psScript[] = {
 };
 
 GGateInfo gate_script_info = {
-  0,
-  "SCRIPT",
-  "script",0x0,
-  "script",psScript,
-  -1,0,
+  /*.Code = */0,
+  /*.name = */"SCRIPT",
+  /*.vnames = */"script", /*.vmask = */0x0,
+  /*.psprint = */"script", /*.psdef = */psScript,
+  /*.gi_multiPad = */-1, /*.gi_bitPad = */0,
 
-  {{"V",	{0,0},		{"gm.script",0,0},	"gat_make SCRIPT"},
-   {0}},
+  /*.cmds = */{
+   { /*.key_seq = */"V",
+     /*.root = */{/*.name = */0, /*.ul = */0},
+     /*.entry = */{/*.name = */"gm.script", /*.ul = */0, /*.gtag = */0},
+     /*.command = */"gat_make SCRIPT" },
+   {0}
+  },
 
+  /*.dim = */script_iconDims,
+  /*.NumPads = */0,
+  /*.Pad = */{{0}},
+  /*.lpos = */{{0,-19,CT},{0,-19,CT},{0,-19,CT},{0,-19,CT}},
+  /*.Flags = */{1},
+  /*.delayNames = */{0},
 
-  script_iconDims,
-
-  0,{0},
-  {{0,-19,CT},{0,-19,CT},{0,-19,CT},{0,-19,CT}},
-  {1},
-
-  {0},
-
-  Script_Make,
-  Nop_WriteCellDef,
+  /*.MakeFunction = */Script_Make,
+  /*.WriteCellDef = */Nop_WriteCellDef,
   Generic_Init,
   Script_Delete,
   Generic_GetExtents,

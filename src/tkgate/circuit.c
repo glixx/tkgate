@@ -22,7 +22,6 @@
 static const char *unitCodes[] = {"s", "ms", "us", "ns", "ps", "fs"};
 static int numUnitCodes  = sizeof(unitCodes)/sizeof(unitCodes[0]);
 
-
 /*
  * 1ns/1ns
  */

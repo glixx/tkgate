@@ -170,7 +170,6 @@ void mark_unpost()
   TkGate.ed->mark_posted = 0;
 }
 
-
 void HandScroll_set(EditState *es)
 {
   int x = TkGate.ed->rx;
@@ -185,7 +184,6 @@ void HandScroll_set(EditState *es)
   TkGate.ed->handScroll.setSave_y = y;
 
 }
-
 
 void HandScroll_move(EditState *es)
 {
@@ -212,8 +210,11 @@ void HandScroll_move(EditState *es)
 
 void HandScroll_drop(EditState *es)
 {
+  /** @TODO to remove */
+  /*
   int x = TkGate.ed->rx;
   int y = TkGate.ed->ry;
+  */
 
   HandScroll_move(es);
 }
@@ -1507,7 +1508,11 @@ void logError(int level,const char *fileName,int lineNum,const char *msg,...)
   struct tm *tm;
   time_t clock[1];
   char buf[STRMAX],msgBuf[STRMAX],fname[STRMAX];
+  /** @TODO to check the necessity */
+  /*
   char *lstr = 0;
+  */
+
   static char *mon[] = {
     "Jan","Feb","Mar","Apr","May","Jun",
     "Jul","Aug","Sep","Oct","Nov","Dec"
@@ -1524,13 +1529,15 @@ void logError(int level,const char *fileName,int lineNum,const char *msg,...)
   vsprintf(msgBuf,msg,ap);
   va_end(ap);
 
-
+  /** @TODO to check the necessity */
+  /*
   switch (level) {
   case 0 : lstr = "Warning: "; break;
   case 1 : lstr = "Error: "; break;
   case 2 : lstr = "FATAL: "; break;
   default: lstr = "Unknown: "; break;
   }
+  */
 
   pw = getpwuid(getuid());
   time(clock);
@@ -1613,7 +1620,8 @@ void SetModified(unsigned flags)
   if ((flags & MF_SYNCONLY)) {
     TkGate.sync_flags |= flags;
   } else {
-    if (TkGate.circuit->no_set_modify) return;
+    if (TkGate.circuit->no_set_modify)
+      return;
 
     GSearchContext_clear(TkGate.circuit->search);
 

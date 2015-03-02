@@ -1546,16 +1546,16 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
       src_w = al_w;
       for (dst_w = rl_w; dst_w <= rh_w; dst_w++, src_w++) {
 	unsigned aone, azero, aflt, rone, rzero, rflt, mask;
-	if (src_w < A->nalloc) {
+    if (src_w < A->nalloc) {
 	  aone  = A->one[src_w] << b_up;
 	  azero = A->zero[src_w] << b_up;
 	  aflt  = A->flt[src_w] << b_up;
-	}
-	else {
-	  aone  = 0;
+    }
+    else {
+      aone  = 0;
 	  azero = 0;
 	  aflt  = 0;
-	}
+    }
 	if (src_w > 0) {
 	  aone  |= A->one[src_w-1] >> b_dn;
 	  azero |= A->zero[src_w-1] >> b_dn;

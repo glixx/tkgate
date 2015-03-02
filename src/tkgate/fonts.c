@@ -41,6 +41,7 @@ static char *font_family_names[FF_MAX] = {
   "times",
   "symbol",
   "kanji",
+  "fixed"
 };
 
 /*

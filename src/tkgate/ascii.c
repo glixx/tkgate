@@ -356,15 +356,16 @@ size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromStri
     toString[len-1] = 0;
     return 0;
   }
-
-  /*  printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);*/
+#if LOCALE_DEBUG
+  printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);
+#endif
 
   inPtr = fromString;
   inSize = strlen(fromString);
   outPtr = toString;
   outSize = len;
 
-  result = iconv(encoder->ico,&inPtr,&inSize,&outPtr,&outSize);
+  result = iconv(encoder->ico, (char **) &inPtr, &inSize, &outPtr, &outSize);
   if (result == (size_t)-1) {
     perror("iconv");
     strncpy(toString,fromString,len);
@@ -379,7 +380,6 @@ size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromStri
 
 char *recodeTextP(Encoder *encoder, const char *fromString)
 {
-  char *outString;
   size_t inSize,outSize,result;
   const char *inPtr;
   char *outPtr;
@@ -392,9 +392,9 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   if (!encoder || encoder->ico == ((iconv_t)-1)) {
     return strdup(fromString);
   }
-
-  /*  printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);*/
-
+#if LOCALE_DEBUG
+  printf("recoding <%s> to <%s>: %s\n",encoder->fromCode,encoder->toCode,fromString);
+#endif
   inPtr = fromString;
   inSize = strlen(fromString);
   outSize = inSize+1;
@@ -403,7 +403,7 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   outPtr = outBuf;
 
   while (inSize > 0) {
-    result = iconv(encoder->ico,&inPtr,&inSize,&outPtr,&outSize);
+    result = iconv(encoder->ico, (char **)&inPtr, &inSize, &outPtr, &outSize);
     if (result == (size_t)-1) {
       perror("iconv");
       /* Coding error - returning intranslated string */

@@ -269,7 +269,10 @@ static void Clock_WriteCellDef(FILE *f,GCellSpec *gcs)
   int shift  = gcs->gc_parms[1]*period/100;
   int duty   = gcs->gc_parms[2];
   int on_time, off_time;
+  /** @TODO to remove */
+  /*
   int on_value = 1;
+  */
   int start_value;
   int phase_wait;
   PrimParm primParm;

@@ -125,7 +125,10 @@ GGateInfo gate_roller_info = {
 
 static void Roll_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
+  /** @TODO to check for necessity */
+  /*
   GGateInfo *gi = gcs->gc_info;
+  */
   int numBits = gcs->gc_numBits;
   const char *invSpec = gcs->gc_invSpec;
   int shiftSelBits = required_bits(numBits);

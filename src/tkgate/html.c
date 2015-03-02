@@ -447,7 +447,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 
   switch (hc->hc_html->h_target) {
   case TD_X11 :
-#if 0
+#ifdef DEBUG
     printf("%p: activate-x ",hc);HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
 
@@ -463,7 +463,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
     hc->hc_descent = hc->hc_xFont->descent;
     break;
   case TD_PRINT :
-#if 0
+#ifdef DEBUG
     printf("activate-ps ");HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
     hc->hc_xFont = 0;
@@ -615,7 +615,10 @@ const char *Html_makeTutorialNavigationLine_bymodule(char *line)
       return "[no-controls]";
 
     if (cur_pnum == 1) {
+    /** @TODO to remove */
+      /*
       int i;
+      */
 
       p += sprintf(p,"<font color=gray>&lt;%s</font>   ",msgLookup("tutorial.prev"));
     } else {
@@ -1067,7 +1070,6 @@ void Html_handle_a(Html *h, HtmlTag *ht)
     }
   }
 
-
   Html_pushContext(h,hc);
 }
 
@@ -1138,6 +1140,9 @@ void Html_partition(Html *h,char *data)
   char *p,*q;
   Encoder *encoder = Html_getEncoder(h);
   int isJapanese = isJapaneseDisplay(encoder);
+  int i;
+  HtmlUnit *hu;
+  HtmlContext *hc;
 
   Html_flushUnits(h);
 
@@ -1178,7 +1183,7 @@ void Html_partition(Html *h,char *data)
        *
        ******************************************************************/
       if (h->h_context->hc_preformat) {
-	HtmlUnit *hu = new_HtmlUnit_T(HU_NEWLINE,h->h_context);
+	hu = new_HtmlUnit_T(HU_NEWLINE,h->h_context);
 	Html_addUnit(h,hu);
       } else
 	Html_addUnit(h,new_HtmlUnit(" ",1,h->h_context));
@@ -1189,14 +1194,9 @@ void Html_partition(Html *h,char *data)
        * This is Kanji text.  Scan until we find a non-8-bit character.
        *
        ******************************************************************/
-      HtmlContext *hc;
-      HtmlUnit *hu;
-      int i;
 
       for (q = p;*q;q++)
-	if (!(*q & 0x80))
-	  break;
-
+        if (!(*q & 0x80)) break;
 
       hc = new_HtmlContext(h->h_context,h);
       hc->hc_font.family = FF_KANJI;
@@ -1216,11 +1216,10 @@ void Html_partition(Html *h,char *data)
        * This is a regular non-kanji text string
        *
        ******************************************************************/
-      HtmlUnit *hu;
 
       for (q = p;*q;q++)
-	if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
-	  break;
+	    if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
+	      break;
       hu = new_HtmlUnit(p,q-p,h->h_context);
       Html_addUnit(h,hu);
 
@@ -1247,7 +1246,6 @@ void Html_format(Html *h)
   int max_width = 0;
   int x = 0, y = 0;					/* Current text position */
   char *p;
-
 
   ob_touch(h);
   Html_partition(h,h->h_data);
@@ -1320,8 +1318,9 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
 {
   HtmlUnit *hu;
   HtmlContext *last_hc = 0;
-  Encoder *encoder = Circuit_getPSEncoder(TkGate.circuit);
-  char text[STRMAX];
+  /** @TODO to remove */
+  /* Encoder *encoder = Circuit_getPSEncoder(TkGate.circuit); */
+  /* char text[STRMAX]; */
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
@@ -1330,7 +1329,8 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
      * Update properties only if there was a change.
      */
     if (hc != last_hc) {
-      // Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+      /** @TODO to remove */
+      /* Tkg_changeColor(gc, GXxor, hc->hc_pixel); */
       last_hc = hc;
     }
 
@@ -1360,30 +1360,49 @@ void Html_draw(Html *h,int x,int y)
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
+#ifdef DEBUG
+  Locale_print(h->h_locale, stdout);
+#endif
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
-
+#ifdef DEBUG
+  HtmlContext_print(hc,stdout);
+#endif
     switch (hu->hu_type) {
     case HU_TEXT :
       /*
        * Update properties only if there was a change.
        */
       if (hc != last_hc) {
-	XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
+	    XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
 
-	if (hc->hc_pixel >= 0)
-	  Tkg_changeColor(gc, GXxor, hc->hc_pixel);
-	last_hc = hc;
+	    if (hc->hc_pixel >= 0)
+          Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+        last_hc = hc;
       }
 
       if (hc->hc_font.family == FF_KANJI) {
-	XDrawString16(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
-		      (XChar2b*)hu->hu_text,strlen(hu->hu_text)/2);
-
+	    XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
+                       hu->hu_x + x,hu->hu_y + y,
+                       (XChar2b*)hu->hu_text,
+                       strlen(hu->hu_text)/2 );
+      } else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
+        XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
+                       hu->hu_x + x,hu->hu_y + y,
+                       (XChar2b*)hu->hu_text,
+                       strlen(hu->hu_text)/2 );
       } else {
-	XDrawString(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
-		    hu->hu_text,strlen(hu->hu_text));
+	    XDrawString( TkGate.D,
+                     TkGate.W,
+                     gc,
+                     hu->hu_x + x,hu->hu_y + y,
+		             hu->hu_text,
+		             strlen(hu->hu_text) );
       }
 
       break;
@@ -1415,11 +1434,11 @@ int Html_isHit(Html *h,int x,int y)
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
 
-    if (x >= hu->hu_x && x <= (hu->hu_x + hu->hu_width)
-	&& y <= (hu->hu_y + HtmlContext_fontDescent(hc)) && y >= (hu->hu_y - HtmlContext_fontAscent(hc))) {
-
+    if ((x >= hu->hu_x) &&
+        (x <= (hu->hu_x + hu->hu_width)) &&
+        (y <= (hu->hu_y + HtmlContext_fontDescent(hc))) &&
+        (y >= (hu->hu_y - HtmlContext_fontAscent(hc))))
       return 1;
-    }
   }
 
   return 0;
@@ -1457,3 +1476,14 @@ const char *Html_getLink(Html *h,int x,int y)
   return 0;
 }
 
+void HtmlContext_print(const HtmlContext * context, FILE * fp)
+{
+  fputs("Html context:    ", fp);
+
+  fprintf(fp, "\tpixel color:         %d\n", context->hc_pixel);
+  fprintf(fp, "\tassociated hyperlink:%s\n", context->hc_link);
+  fprintf(fp, "\tassociated tag:      %s\n", context->hc_tag);
+  fprintf(fp, "\tpreformat:           %d\n", context->hc_preformat);
+  fprintf(fp, "\tis 16 bit:           %d\n", context->hc_is16bit);
+  fprintf(fp, "\tspace width:         %d\n", context->hc_spaceWidth);
+}
