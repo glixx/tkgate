@@ -77,7 +77,7 @@ int GScope_t2x(GScope *S,simtime_t t)
 {
   int pmin = ScopeLEFTMARGIN;
   int pmax = S->Width-ScopeRIGHTMARGIN;
-  double f = ((double)t - S->s_leftTime)/(double)S->s_range;
+  double f = (double)(t - S->s_leftTime) / (double)S->s_range;
 
   return (int) (f*(pmax-pmin)+pmin);
 }
@@ -1041,7 +1041,6 @@ void GScope_fullUpdate(GScope *S)
   int i,X,Y,W,H,BW,DP;
   double vs,ve,hs,he;
 
-
   if (!scope_active) return;
 
   if (TkGate.idle_ev.scope_redraw) {
@@ -1059,7 +1058,6 @@ void GScope_fullUpdate(GScope *S)
     GScope_hideCrossLine(S);
     GScope_hideSelection(S);
   }
-
 
   if (S->NumTraces > 0) {
     GScope_drawScale(S,TkGate.idle_ev.scope_redraw);
@@ -1251,6 +1249,9 @@ GScope *new_GScope(simtime_t precision)
   S->show_mark = 0;
   S->xhair_x = 0;
   S->mark_count = 0;
+
+  memset(S->mark_val,0,sizeof(S->mark_val));
+  memset(S->mark_x,0,sizeof(S->mark_x));
 
   return S;
 }
