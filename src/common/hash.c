@@ -85,7 +85,7 @@ static unsigned roundup(unsigned N)
   return N;
 }
 
-static unsigned int inthash(unsigned int key)
+static unsigned int inthash(intptr_t key)
 {
   key += 123456;
   key += (key << 12);
@@ -116,7 +116,6 @@ unsigned computestrhash(const char *s)
   return H;
 }
 
-
 static HashElem *new_SHashElem(Hash *H,const char *key,unsigned hcode, void *val)
 {
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
@@ -129,7 +128,7 @@ static HashElem *new_SHashElem(Hash *H,const char *key,unsigned hcode, void *val
   return E;
 }
 
-static HashElem *new_NHashElem(Hash *H,int key,unsigned hcode,void *val)
+static HashElem *new_NHashElem(Hash *H,intptr_t key,unsigned hcode,void *val)
 {
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
 
@@ -221,7 +220,6 @@ HashElem *Hash_next(Hash *H,HashElem *E)
     printf("echo Illegal sequential hash table access.\n");
     fflush(stdout);
   }
-
 
   if (E->next) return E->next;
 

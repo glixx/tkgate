@@ -24,14 +24,19 @@
 #ifndef __hash_h
 #define __hash_h
 
+#include "config.h"
+
+#if HAVE_STDINT_H
+#include <stdint.h>
+#endif
+
 #define INITIAL_HASHSIZE	32
 #define HASH_MAXLOAD		4
 
-
 typedef struct hash_elem_str {
   union {
-    char  *s;
-    int	  d;
+    char    *s;
+    intptr_t d;
   } 			key;
   unsigned		hashcode;
   void			*value;
@@ -59,7 +64,6 @@ void SHashElem_uninit(HashElem*,Hash*);
 #define SHashElem_key(E)	(E)->key.s
 #define NHashElem_key(E)	(E)->key.d
 #define PHashElem_key(E)	((void*)(E)->key.d)
-
 
 Hash *new_Hash(int);
 void delete_Hash(Hash*,HashElemDelFunc*);
@@ -89,13 +93,12 @@ int SHash_remove(Hash*,const char*);
 #define delete_NHash(H)	delete_Hash(H,0)
 #define NHash_init(H)	Hash_init(H,1)
 #define NHash_uninit(H)	Hash_uninit(H,0)
-void *NHash_find(Hash*,int);
-int NHash_insert(Hash*,int,void*);
-int NHash_replace(Hash*,int,void*);
-int NHash_remove(Hash*,int);
+void *NHash_find(Hash*,intptr_t);
+int NHash_insert(Hash*,intptr_t,void*);
+int NHash_replace(Hash*,intptr_t,void*);
+int NHash_remove(Hash*,intptr_t);
 #define NHash_flush(H)	Hash_flush(H,0)
 #define NHash_resize(H, reqSize) Hash_resize(H,reqSize)
-
 
 #define new_PHash()	((NHash*)new_Hash(1))
 #define new_PHash_noob() ((NHash*)new_Hash(0))
@@ -103,9 +106,9 @@ int NHash_remove(Hash*,int);
 #define PHash_init(H)	Hash_init(H,1)
 #define PHash_init_noob(H)	Hash_init(H,0)
 #define PHash_uninit(H)	Hash_uninit(H,0)
-#define PHash_find(H,P) NHash_find(H,(unsigned)(P))
-#define PHash_insert(H,P,O) NHash_insert(H,(unsigned)(P),O)
-#define PHash_remove(H,P) NHash_remove(H,(unsigned)(P))
+#define PHash_find(H,P) NHash_find(H,(intptr_t)(P))
+#define PHash_insert(H,P,O) NHash_insert(H,(intptr_t)(P),O)
+#define PHash_remove(H,P) NHash_remove(H,(intptr_t)(P))
 #define PHash_flush(H)	Hash_flush(H,0)
 #define PHash_resize(H, reqSize) Hash_resize(H,reqSize)
 
