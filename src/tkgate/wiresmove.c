@@ -20,9 +20,11 @@
     and drawing wires.  Basic routines to maintain horizontal and vertical wires
     being moved are defined here.
 */
+#include "tkgate.h"
+
+#include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "tkgate.h"
 
 #define isgatenode(_n) ((_n)->end && (_n)->end->gate)
 

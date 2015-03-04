@@ -18,6 +18,8 @@
     Last edit by hansen on Fri Feb 13 22:29:46 2009
 ****************************************************************************/
 #include "tkgate.h"
+
+#include <assert.h>
 #include <dirent.h>
 
 extern int is_verbose;

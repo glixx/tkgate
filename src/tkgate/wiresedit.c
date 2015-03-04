@@ -53,6 +53,8 @@
  *****************************************************************************/
 #include "tkgate.h"
 
+#include <assert.h>
+
 #define DEBUG_CUT 0
 
 /** Wire snap cases */
@@ -652,7 +654,8 @@ void wire_solder(GWireNode *n1,GWireNode *n2)
 GWire *wire_connect(GModuleDef *M,GWire *w1,GWire *w2)
 {
   GWire *nw;
-  GWireNode *n1,*n2;
+  /** @TODO to remove */
+  GWireNode *n1/*,*n2*/;
 
   if (w1->net->n_nbits != w2->net->n_nbits) return 0;
 
@@ -662,7 +665,8 @@ GWire *wire_connect(GModuleDef *M,GWire *w1,GWire *w2)
     join_treereverse(w2);
 
   n1 = w1->nodes;
-  n2 = w2->nodes;
+  /** @TODO to remove */
+  /*n2 = w2->nodes;*/
 
   ob_touch(w1->nodes);
   ob_touch(w2->nodes);
@@ -999,6 +1003,8 @@ void wire_cut(int x,int y,GWireNode *n,GModuleDef *M)
       }
     }
     break;
+  default :
+    printf("Unallowed cut type %d", (int)n->stype);
   }
 
   /*
@@ -1131,8 +1137,11 @@ static int wire_trash(GWireNode *n,GModuleDef *M,int draw)
  */
 int wire_nuke(GWire *w,int draw,GModuleDef *M)
 {
+  /** @TODO to remove */
+  /*
   GWire *ow;
   GWireNode *freeNodes = 0;
+  */
 
   if (wire_trash(w->nodes,M,draw)) {
     ob_touch(M);

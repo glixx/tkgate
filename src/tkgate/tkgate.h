@@ -25,22 +25,29 @@
 
 #define _GNU_SOURCE
 
-#include <assert.h>
 #include <ctype.h>
 #include <errno.h>
 #include <limits.h>
-#include <pwd.h>
 #include <signal.h>
 #include <stdarg.h>
-#include <stdio.h>
 #include <stdlib.h>
+#if HAVE_STRING_H
 #include <string.h>
+#endif
 #include <time.h>
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
+#endif
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
+#endif
 
 #include <X11/Xlib.h>
 #include <X11/Xresource.h>
@@ -188,7 +195,6 @@ struct locale_str {
   const char	*l_encVerilog;		/* Encoding of verilog save files */
   const char	*l_encPostscript;	/* Encoding for postscript files */
 };
-
 
 /*
  *  TkGate major modes

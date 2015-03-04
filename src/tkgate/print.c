@@ -41,10 +41,11 @@
  *
  *****************************************************************************/
 
-
 #include "tkgate.h"
-#include <sys/time.h>
+
+#include <assert.h>
 #include <math.h>
+#include <pwd.h>
 
 /*
  * Font change codes

@@ -78,6 +78,7 @@
  *
  *###########################################################################*/
 #include "tkgate.h"
+#include <assert.h>
 
 #define OBJECT_DEBUG		0	/* Debugging display of object handling */
 #define OBJECT_SHOWMODS		0	/* More debugging display of object handling */

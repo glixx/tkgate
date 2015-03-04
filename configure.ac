@@ -20,9 +20,6 @@ AC_DEFINE(TKGATE_FULL_VERSION,	(TKGATE_VERSION TKGATE_VERSION_SUFFIX), [Full TkG
 AC_DEFINE(TKGATE_DESCRIPTION,	"Digital Circuit Editor and Simulator",	[Tkgate short description])
 AC_DEFINE(TKGATE_LOCALDOC,	"file:@H/doc/index.html", 		[Local documentation location])
 AC_DEFINE(TKGATE_COPYRIGHT, 	"Copyright (C) 1987-2015 by Jeffery P. Hansen", [Copyright notice])
-AC_DEFINE(TKGATE_MAILCONTACT,	"hansen@tkgate.org",			[Email address for support])
-AC_DEFINE(TKGATE_HOMEPAGE,	"http://www.tkgate.org",		[TkGate web page])
-
 
 #############################################################################
 #
@@ -130,19 +127,19 @@ AC_PROG_MAKE_SET
 AC_PROG_RANLIB
 AC_PROG_CPP
 AC_PROG_INSTALL
-AC_PROG_RANLIB
 
 # Checks for header files.
 AC_PATH_XTRA
 AC_FUNC_ALLOCA
 AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
-AC_CHECK_HEADERS([limits.h malloc.h stdlib.h string.h sys/param.h sys/time.h unistd.h])
+AC_CHECK_HEADERS([limits.h malloc.h stdlib.h string.h sys/param.h sys/time.h unistd.h stdint.h])
 TKG_CHECK_ICONV_H
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 AC_TYPE_SIZE_T
+AC_TYPE_INTPTR_T
 AC_HEADER_TIME
 AC_STRUCT_TM
 AC_CHECK_TYPES(unsigned long long)

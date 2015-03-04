@@ -18,8 +18,9 @@
     Last edit by hansen on Wed Mar 18 04:23:18 2009
 ****************************************************************************/
 #include "tkgate.h"
-#include <dirent.h>
 
+#include <dirent.h>
+#include <pwd.h>
 
 void MSS_init();			/* Module symbol table initialization */
 
@@ -168,7 +169,7 @@ static void PrintCopyright()
   printf("[Compiled %s %s]\n",__DATE__,__TIME__);
   printf("%s\n",TKGATE_COPYRIGHT);
   printf("  TkGate comes with ABSOLUTELY NO WARRANTY;  see 'Help...License' menu\n");
-  printf("  for license and warranty details.  Report problems to %s\n",TKGATE_MAILCONTACT);
+  printf("  for license and warranty details.  Report problems to %s\n",PACKAGE_BUGREPORT);
 
   fflush(stdout);
 }
@@ -181,7 +182,7 @@ static void LogCopyright()
   message(MC_MSGLOG|MC_SILENT,"[Compiled %s %s]",__DATE__,__TIME__);
   message(MC_MSGLOG|MC_SILENT,"%s",TKGATE_COPYRIGHT);
   message(MC_MSGLOG|MC_SILENT,"  TkGate comes with ABSOLUTELY NO WARRANTY;  see 'Help...License' menu");
-  message(MC_MSGLOG|MC_SILENT,"  for license and warranty details.  Report problems to %s",TKGATE_MAILCONTACT);
+  message(MC_MSGLOG|MC_SILENT,"  for license and warranty details.  Report problems to %s",PACKAGE_BUGREPORT);
 }
 
 void init_linkvars(Tcl_Interp *tcl)
@@ -194,8 +195,8 @@ void init_linkvars(Tcl_Interp *tcl)
   Tcl_SetVar(tcl,"tkg_progVer",VERSIONS[0].vd_name,TCL_GLOBAL_ONLY);
   Tcl_SetVar(tcl,"tkg_description",TKGATE_DESCRIPTION,TCL_GLOBAL_ONLY);
   Tcl_SetVar(tcl,"tkg_copyright",TKGATE_COPYRIGHT,TCL_GLOBAL_ONLY);
-  Tcl_SetVar(tcl,"tkg_mailContact",TKGATE_MAILCONTACT,TCL_GLOBAL_ONLY);
-  Tcl_SetVar(tcl,"tkg_homepage",TKGATE_HOMEPAGE,TCL_GLOBAL_ONLY);
+  Tcl_SetVar(tcl,"tkg_mailContact",PACKAGE_BUGREPORT,TCL_GLOBAL_ONLY);
+  Tcl_SetVar(tcl,"tkg_homepage",PACKAGE_URL,TCL_GLOBAL_ONLY);
   Tcl_SetVar(tcl,"tkg_localdoc",TKGATE_LOCALDOC,TCL_GLOBAL_ONLY);
   Tcl_SetVar(tcl,"tkg_gateHome",TkGate.homedir,TCL_GLOBAL_ONLY);
   Tcl_SetVar(tcl,"tkg_doSplash",binstr(do_splash),TCL_GLOBAL_ONLY);
