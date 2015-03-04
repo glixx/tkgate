@@ -397,9 +397,7 @@ void Hash_flush(Hash *H,HashElemDelFunc *hdel)
   H->num = 0;
 }
 
-
-
-void *NHash_find(Hash *H,int key)
+void *NHash_find(Hash *H,intptr_t key)
 {
   unsigned HC = inthash(key);
   unsigned A = HC & H->mask;
@@ -411,7 +409,7 @@ void *NHash_find(Hash *H,int key)
   return 0;
 }
 
-int NHash_insert(Hash *H,int key,void* val)
+int NHash_insert(Hash *H,intptr_t key,void* val)
 {
   unsigned HC = inthash(key);
   unsigned A = HC & H->mask;
@@ -436,7 +434,7 @@ int NHash_insert(Hash *H,int key,void* val)
   return 0;
 }
 
-int NHash_replace(Hash *H,int key,void* val)
+int NHash_replace(Hash *H,intptr_t key,void* val)
 {
   unsigned HC = inthash(key);
   unsigned A = HC & H->mask;
@@ -463,7 +461,7 @@ int NHash_replace(Hash *H,int key,void* val)
   return 0;
 }
 
-int NHash_remove(Hash *H,int key)
+int NHash_remove(Hash *H,intptr_t key)
 {
   unsigned HC = inthash(key);
   unsigned A = HC & H->mask;

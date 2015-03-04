@@ -407,7 +407,7 @@ void Circuit_loadLibrary(Circuit *c,const char *name)
 void Circuit_unloadLibrary(Circuit *c,const char *name)
 {
   HashElem *he;
-  NHash *dhash;
+  PHash *dhash;
 
   /*
    * Make sure "name" is a loaded library.
@@ -415,7 +415,7 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
   if (!SHash_find(TkGate.libraries, name))
     return;
 
-  dhash = new_NHash_noob();
+  dhash = new_PHash_noob();
 
   /*
    * Get list of modules to be deleted.
@@ -423,7 +423,7 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
   for (he = Hash_first(TkGate.circuit->moduleTable);he;he = Hash_next(TkGate.circuit->moduleTable,he)) {
     GModuleDef *M = (GModuleDef*) HashElem_obj(he);
     if (M->m_isLib && strcmp(M->m_libName,name) == 0) {
-      NHash_insert(dhash,(int)M,M);
+      PHash_insert(dhash,(intptr_t)M,M);
     }
   }
 
@@ -438,7 +438,7 @@ void Circuit_unloadLibrary(Circuit *c,const char *name)
     M->m_protEdit = 0;
     env_delete(TkGate.circuit->es,M->m_name);
   }
-  delete_NHash(dhash);
+  delete_PHash(dhash);
   SHash_remove(TkGate.libraries, name);
 }
 

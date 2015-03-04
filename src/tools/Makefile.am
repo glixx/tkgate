@@ -17,7 +17,7 @@
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-AM_CFLAGS=@COMMON_IPATH@
+AM_CFLAGS=@COMMON_IPATH@ @TOP_IPATH@
 
 noinst_PROGRAMS=colors msgdiff mvtag
 
