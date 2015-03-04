@@ -754,7 +754,8 @@ void BCNbMemPutE_init(ByteCode *bc,Net *n, Value *addr, Value *netLsb, Value *da
 void BCNbMemPutE_exec(BCNbMemPutE *mpe,VGThread *thread)
 {
   unsigned netLsb = 0;
-  EvQueue *Q = VGThread_getQueue(thread);
+  /** @TODO to remove */
+  /* EvQueue *Q = VGThread_getQueue(thread); */
   Event *e;
 
 #if DEBUG

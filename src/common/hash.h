@@ -38,7 +38,7 @@ typedef struct hash_elem_str {
     char    *s;
     intptr_t d;
   } 			key;
-  unsigned		hashcode;
+  intptr_t		hashcode;
   void			*value;
   struct hash_elem_str	*next;
 } HashElem;
@@ -46,7 +46,7 @@ typedef struct hash_elem_str {
 typedef struct {
   void		*vtable;	/* Memory allocator function table */
   unsigned	size;		/* Number of hash buckets (must be power of 2) */
-  unsigned	mask;		/* Mask for hash addressed (size-1) */
+  intptr_t	mask;		/* Mask for hash addressed (size-1) */
   unsigned	num;		/* Number of elements in hash */
   int		loop_ok;	/* OK to use Hash_next() */
   HashElem	**elems;
@@ -56,7 +56,7 @@ typedef Hash SHash;
 typedef Hash NHash;
 typedef Hash PHash;
 
-unsigned computestrhash(const char *s);
+intptr_t computestrhash(const char *s);
 
 typedef void HashElemDelFunc(HashElem*,Hash*);
 void SHashElem_uninit(HashElem*,Hash*);

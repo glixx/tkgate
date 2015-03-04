@@ -23,7 +23,6 @@ Net *new_Net_memory(const char *name,unsigned msb,unsigned lsb,
 		    unsigned beginAddr,unsigned endAddr)
 {
   Net *n = (Net*) malloc(sizeof(Net));
-  int addrBits;
 
   n->n_name = strdup(name);
   n->n_msb = msb;
@@ -45,6 +44,7 @@ Net *new_Net_memory(const char *name,unsigned msb,unsigned lsb,
 
 void delete_Net(Net *n)
 {
+  Value_uninit(Net_getValue(n));
   free(n->n_name);
   free(n);
 }

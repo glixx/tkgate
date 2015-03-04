@@ -75,7 +75,7 @@ C10		28 x 40 mm
 
 A		8.5 x 11
 B		11 x 17
-C		17 x 22
+C	 The first thing you can try doing is running OpenBSD. There are many reasons to	17 x 22
 D		22 x 34
 E		34 x 44
 
@@ -590,8 +590,8 @@ static int GPrint_getUsedMods(NHash *H,GModLayout **L,GModuleDef *M,int incLib)
   int num = 0;
   HashElem *E;
 
-  if (NHash_find(H,(int)M)) return 0;
-  NHash_insert(H,(int)M,M);
+  if (NHash_find(H,(intptr_t)M)) return 0;
+  NHash_insert(H,(intptr_t)M,M);
 
   if (!M->m_isLib || incLib)
     L[num++] = new_GModLayout(M);

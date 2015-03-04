@@ -31,8 +31,8 @@ struct Trigger_str {
 };
 
 Trigger *new_Trigger(List *posedges,List *negedges,Trigger *next);
-unsigned Trigger_getHashCode(List *posedges,List *negedges);
-unsigned Trigger_sortAndGetHashCode(List *posedges,List *negedges);
+intptr_t Trigger_getHashCode(List *posedges,List *negedges);
+intptr_t Trigger_sortAndGetHashCode(List *posedges,List *negedges);
 Trigger *Trigger_getTrigger(Trigger **tlist,List *posedges,List *negedges);
 void Trigger_print(Trigger*,FILE *f);
 void Trigger_fire(Trigger*);

@@ -100,10 +100,10 @@ static unsigned int inthash(intptr_t key)
   return key;
 }
 
-unsigned computestrhash(const char *s)
+intptr_t computestrhash(const char *s)
 {
-  unsigned N = 0;
-  unsigned H = 0;
+  intptr_t N = 0;
+  intptr_t H = 0;
   int i;
 
   for (i = 0;*s;s++, i++) {

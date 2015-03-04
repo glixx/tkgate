@@ -920,7 +920,6 @@ int Expr_parmEvalI(Expr *e,Scope *scope,unsigned *n,parmevflags_t flags)
   return rcode;
 }
 
-
 /*****************************************************************************
  *
  * Evaluate a parameter expression.
@@ -1270,9 +1269,9 @@ int Expr_getBitSize(Expr *e,Scope *scope)
     break;
   case E_REPCAT :
     {
-      int reps,size;
+      unsigned reps,size;
 
-      if (Expr_parmEvalI(e->e.opr[0], scope,&reps,0) < 0) return 0;
+      if (Expr_parmEvalI(e->e.opr[0],scope,&reps,0) < 0) return 0;
       size = Expr_getBitSize(e->e.opr[1],scope);
       return reps*size;
     }
@@ -1414,7 +1413,7 @@ int Expr_getCollapsedBitSize(Expr *e,Scope *scope)
     break;
   case E_REPCAT :
     {
-      int reps,size;
+      unsigned reps,size;
 
       if (Expr_parmEvalI(e->e.opr[0],scope,&reps,0) < 0) return 0;
       size = Expr_getCollapsedBitSize(e->e.opr[1],scope);

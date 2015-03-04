@@ -89,17 +89,17 @@ Trigger *new_Trigger(List *posedges,List *negedges,Trigger *next)
  * unmatching pairs of lists, the value returned should "usually" be different.
  *
  *****************************************************************************/
-unsigned Trigger_getHashCode(List *posedges,List *negedges)
+intptr_t Trigger_getHashCode(List *posedges,List *negedges)
 {
   ListElem *le;
-  unsigned HC = 0;
+  intptr_t HC = 0;
 
   for (le = List_first(posedges);le;le = List_next(posedges,le)) {
-    unsigned X = (unsigned) ListElem_obj(le);
+    intptr_t X = (intptr_t) ListElem_obj(le);
     HC = ((HC+X) << 8) + X*X + (HC>>8);
   }
   for (le = List_first(negedges);le;le = List_next(negedges,le)) {
-    unsigned X = (unsigned) ListElem_obj(le);
+    intptr_t X = (intptr_t) ListElem_obj(le);
     HC = ((HC+X) << 8) + X*X + (HC>>8);
   }
 
@@ -117,7 +117,7 @@ unsigned Trigger_getHashCode(List *posedges,List *negedges)
  * Returns:		Hash code representing lists.
  *
  *****************************************************************************/
-unsigned Trigger_sortAndGetHashCode(List *posedges,List *negedges)
+intptr_t Trigger_sortAndGetHashCode(List *posedges,List *negedges)
 {
   List_sort(posedges,addrCmp);
   List_sort(negedges,addrCmp);

@@ -111,7 +111,6 @@ simtime_t Timescale_toSimtime(Timescale *ts,double n,const char *units)
   int unitDigits = Timescale_getDigits(unitTime);
   int tsDigits = Timescale_getDigits(ts->ts_precision);
   int d = unitDigits-tsDigits;
-  int i;
 
   while (d < 0) {
     d++;
