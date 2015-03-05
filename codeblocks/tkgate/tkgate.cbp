@@ -34,6 +34,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wall" />
 			<Add option="-DTKGATE_HOMEDIR=NULL" />
 			<Add option="-DHAVE_CONFIG_H" />
 			<Add directory="../../" />
@@ -46,6 +47,7 @@
 			<Add option="-ltk8.5" />
 			<Add option="-lX11" />
 		</Linker>
+		<Unit filename="../../config.h" />
 		<Unit filename="../../src/tkgate/adder.c">
 			<Option compilerVar="CC" />
 		</Unit>

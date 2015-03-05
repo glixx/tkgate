@@ -19,7 +19,6 @@
     Data structure and initilization for the hash table.  The hash table is
     used to look up circuit elements by name.  This is used durring the download
     phase and when setting and deleting scope probes.
-
 */
 #ifndef __hash_h
 #define __hash_h
@@ -33,58 +32,80 @@
 #define INITIAL_HASHSIZE	32
 #define HASH_MAXLOAD		4
 
+__BEGIN_DECLS union hash_key {
+	char *s;
+	intptr_t d;
+	void *p;
+};
+
 typedef struct hash_elem_str {
-  union {
-    char    *s;
-    intptr_t d;
-  } 			key;
-  intptr_t		hashcode;
-  void			*value;
-  struct hash_elem_str	*next;
+	union hash_key key;
+	uintptr_t hashcode;
+	void *value;
+	struct hash_elem_str *next;
 } HashElem;
 
-typedef struct {
-  void		*vtable;	/* Memory allocator function table */
-  unsigned	size;		/* Number of hash buckets (must be power of 2) */
-  intptr_t	mask;		/* Mask for hash addressed (size-1) */
-  unsigned	num;		/* Number of elements in hash */
-  int		loop_ok;	/* OK to use Hash_next() */
-  HashElem	**elems;
+typedef struct hash_str {
+	void *vtable;		/* Memory allocator function table */
+	unsigned size;		/* Number of hash buckets (must be power of 2) */
+	uintptr_t mask;		/* Mask for hash addressed (size-1) */
+	unsigned num;		/* Number of elements in hash */
+	int loop_ok;		/* OK to use Hash_next() */
+	HashElem **elems;	/* Elements buffer */
 } Hash;
 
+/* String hash */
 typedef Hash SHash;
+/* Number hash */
 typedef Hash NHash;
+/* Pointer hash */
 typedef Hash PHash;
 
-intptr_t computestrhash(const char *s);
+typedef void HashElemDelFunc(HashElem *, Hash *);
 
-typedef void HashElemDelFunc(HashElem*,Hash*);
-void SHashElem_uninit(HashElem*,Hash*);
+
+uintptr_t computestrhash(const char *);
+
+void SHashElem_uninit(HashElem *, Hash *);
+
+/*******************************************************************************
+ * Create new Hash
+ *
+ * param int use_ob Usage of the undoable objects flag
+ *
+ ******************************************************************************/
+Hash *new_Hash(int);
+
+void Hash_init(Hash *, int);
+
+void delete_Hash(Hash *, HashElemDelFunc *);
+
+void Hash_uninit(Hash *, HashElemDelFunc *);
+
+HashElem *Hash_first(Hash *);
+
+HashElem *Hash_next(Hash *, HashElem *);
+
+void Hash_flush(Hash * H, HashElemDelFunc * hdel);
+
+void Hash_resize(Hash * H, int reqSize);
+
+void *SHash_find(Hash *, const char *);
+
 #define HashElem_obj(E)		(E)->value
 #define SHashElem_key(E)	(E)->key.s
 #define NHashElem_key(E)	(E)->key.d
 #define PHashElem_key(E)	((void*)(E)->key.d)
-
-Hash *new_Hash(int);
-void delete_Hash(Hash*,HashElemDelFunc*);
-void Hash_init(Hash*,int);
-void Hash_uninit(Hash*,HashElemDelFunc*);
 #define Hash_numElems(H)	(H)->num
-
-HashElem *Hash_first(Hash*);
-HashElem *Hash_next(Hash*,HashElem*);
-void Hash_flush(Hash *H,HashElemDelFunc *hdel);
-void Hash_resize(Hash *H, int reqSize);
 
 #define new_SHash()	((SHash*)new_Hash(1))
 #define new_SHash_noob()	((SHash*)new_Hash(0))
 #define delete_SHash(H)	delete_Hash(H,SHashElem_uninit)
 #define SHash_init(H)	Hash_init(H,1)
 #define SHash_uninit(H)	Hash_uninit(H,SHashElem_uninit)
-void *SHash_find(Hash*,const char*);
-int SHash_insert(Hash*,const char*,void*);
-int SHash_replace(Hash*,const char*,void*);
-int SHash_remove(Hash*,const char*);
+int SHash_insert(Hash *, const char *, void *);
+int SHash_replace(Hash *, const char *, void *);
+int SHash_remove(Hash *, const char *);
 #define SHash_flush(H)	Hash_flush(H,SHashElem_uninit)
 #define SHash_resize(H, reqSize) Hash_resize(H,reqSize)
 
@@ -93,10 +114,10 @@ int SHash_remove(Hash*,const char*);
 #define delete_NHash(H)	delete_Hash(H,0)
 #define NHash_init(H)	Hash_init(H,1)
 #define NHash_uninit(H)	Hash_uninit(H,0)
-void *NHash_find(Hash*,intptr_t);
-int NHash_insert(Hash*,intptr_t,void*);
-int NHash_replace(Hash*,intptr_t,void*);
-int NHash_remove(Hash*,intptr_t);
+void *NHash_find(Hash *, intptr_t);
+int NHash_insert(Hash *, intptr_t, void *);
+int NHash_replace(Hash *, intptr_t, void *);
+int NHash_remove(Hash *, intptr_t);
 #define NHash_flush(H)	Hash_flush(H,0)
 #define NHash_resize(H, reqSize) Hash_resize(H,reqSize)
 
@@ -112,4 +133,5 @@ int NHash_remove(Hash*,intptr_t);
 #define PHash_flush(H)	Hash_flush(H,0)
 #define PHash_resize(H, reqSize) Hash_resize(H,reqSize)
 
-#endif
+__END_DECLS
+#endif // __hash_h
