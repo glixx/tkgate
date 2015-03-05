@@ -1520,37 +1520,39 @@ static void HGNode_addChild(HGNode *G,HGNode *CG)
   G->hg_children = CG;
 }
 
-static HGNode *build_HGNodeGraph(GModuleDef *M,NHash *H)
+static HGNode *build_HGNodeGraph(GModuleDef *M, PHash *H)
 {
-  HGNode *G;
-  HashElem *E;
-  NHash *LH = new_NHash();
+	HGNode *G;
+	HashElem *E;
+	PHash *LH;
 
-  G = new_HGNode(M);
+	G = new_HGNode(M);
+	LH = new_PHash();
 
-  if (NHash_find(H,(unsigned)M)) {
-    G->hg_expanded = 0;
-  } else {
-    G->hg_expanded = 1;
-    NHash_insert(H,(unsigned)M,M);
-    for (E = Hash_first(M->m_gates);E;E = Hash_next(M->m_gates,E)) {
-      GCElement *g = (GCElement*) HashElem_obj(E);
-      if (GCElement_isModule(g)) {
-	GModuleDef *CM = env_findModule(g->u.block.moduleName);
-	HGNode *CG;
+	if (PHash_find(H,M)) {
+		G->hg_expanded = 0;
+	} else {
+		G->hg_expanded = 1;
+		PHash_insert(H,M,M);
+		for (E = Hash_first(M->m_gates); E;
+		    E = Hash_next(M->m_gates,E)) {
+			GCElement *g = (GCElement*) HashElem_obj(E);
+			if (GCElement_isModule(g)) {
+				GModuleDef *CM =
+				    env_findModule(g->u.block.moduleName);
+				HGNode *CG;
 
-	if (CM && !NHash_find(LH,(unsigned)CM)) {
-	  NHash_insert(LH,(unsigned)CM,CM);
-	  CG = build_HGNodeGraph(CM,H);
-	  HGNode_addChild(G,CG);
+				if (CM && !PHash_find(LH, CM)) {
+					PHash_insert(LH, CM, CM);
+					CG = build_HGNodeGraph(CM, H);
+					HGNode_addChild(G, CG);
+				}
+			}
+		}
 	}
-      }
-    }
-  }
+	delete_PHash(LH);
 
-  delete_NHash(LH);
-
-  return G;
+	return G;
 }
 
 static void unbuild_HGNodeGraph(HGNode *G)
@@ -1641,25 +1643,20 @@ static int HGNodeGraph_draw(HGNode *G,GPrint *P,int x,int y)
 
 static void GPrint_printGraphPage(GPrint *P,GPage *PG)
 {
-  NHash *H = new_NHash();
-  HGNode *G = 0;
+	PHash *H;
+	HGNode *G;
 
-  G = build_HGNodeGraph(TkGate.circuit->root_mod,H);
+	H = new_PHash();
+	G = build_HGNodeGraph(TkGate.circuit->root_mod,H);
 
-  fprintf(P->p_f,"(%d of %d) (<hierarchy>) BP\n",PG->pg_num,P->p_numPages);
-  fprintf(P->p_f,"%d bfont\n",HG_FONTSIZE);
-  HGNodeGraph_draw(G,P,HG_ROOTX,HG_ROOTY);
-  fprintf(P->p_f,"EP\n");
+	fprintf(P->p_f,"(%d of %d) (<hierarchy>) BP\n",PG->pg_num,
+	    P->p_numPages);
+	fprintf(P->p_f,"%d bfont\n",HG_FONTSIZE);
+	HGNodeGraph_draw(G,P,HG_ROOTX,HG_ROOTY);
+	fprintf(P->p_f,"EP\n");
 
-#if 0
-  for (E = Hash_first(H);E;E = Hash_next(H,E)) {
-    NHashElem_key(E);
-    HashElem_obj(E);
-  }
-#endif
-
-  unbuild_HGNodeGraph(G);
-  delete_NHash(H);
+	unbuild_HGNodeGraph(G);
+	delete_PHash(H);
 }
 
 void GPrint_outputPages(GPrint *P)
@@ -1738,8 +1735,8 @@ void GPrint_setupEPSFPage(GPrint *P)
  */
 void GPrint_hsortPages(GPrint *P)
 {
-  NHash *H = new_NHash();	/* Hash table for building hierarchy graph */
-  NHash *Mhash = new_NHash();	/* Hash table for modules to be printed */
+	PHash *H;	/* Hash table for building hierarchy graph */
+	PHash *Mhash;	/* Hash table for modules to be printed */
   HGNode *G = 0;
   List Q;		/* NOTE: lists do not have undo management.  We must clean up everything here. */
   GModLayout *L;
@@ -1747,15 +1744,16 @@ void GPrint_hsortPages(GPrint *P)
   int i;
 
   List_init(&Q);
+	H = new_PHash();
+	Mhash = new_PHash();
 
-  for (i = 0;i < P->p_numMods;i++) {
+  for (i = 0; i < P->p_numMods; i++) {
     L = P->p_mods[i];
-    NHash_insert(Mhash,(unsigned)L->l_mod,L);
+    PHash_insert(Mhash, L->l_mod, L);
   }
 
-
   //  P->p_numMods;
-  G = build_HGNodeGraph(TkGate.circuit->root_mod,H);
+  G = build_HGNodeGraph(TkGate.circuit->root_mod, H);
   List_addToHead(&Q,G);
   while (List_numElems(&Q) > 0) {
     GModuleDef *M;
@@ -1767,10 +1765,10 @@ void GPrint_hsortPages(GPrint *P)
       List_addToTail(&Q,G);
     }
 
-    if ((L = (GModLayout*) NHash_find(Mhash,(unsigned)M))) {
+    if ((L = (GModLayout*) PHash_find(Mhash, M))) {
       if (N < P->p_numMods)
 	P->p_mods[N++] = L;
-      NHash_remove(Mhash,(unsigned)M);
+      PHash_remove(Mhash, M);
     }
   }
 
@@ -1791,8 +1789,8 @@ void GPrint_hsortPages(GPrint *P)
 
   List_uninit(&Q);
   unbuild_HGNodeGraph(G);
-  delete_NHash(H);
-  delete_NHash(Mhash);
+	delete_PHash(Mhash);
+	delete_PHash(H);
 }
 
 /*****************************************************************************

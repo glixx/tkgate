@@ -1007,23 +1007,22 @@ void editstate_makeRootAtTop(EditState **es)
 void editstate_flushModules(EditState **es)
 {
   HashElem *E;
-  NHash *lmhash = new_NHash();
+  PHash *lmhash;
 
   sel_clear(*es,1);
 
   while (*es)
     editstate_pop(es);
 
-
   TkGate.circuit->root_mod = 0;
 
   /*  printf("**begin flushModules xes=%x\n",TkGate.circuit->es);*/
-
+	lmhash = new_PHash();
   for (E = Hash_first(TkGate.circuit->moduleTable);E; E = Hash_next(TkGate.circuit->moduleTable,E)) {
     GModuleDef *M = (GModuleDef*) HashElem_obj(E);
     /*printf("  deleting module: %s\n",GModuleDef_getName(M));*/
     if (M->m_isLib) {
-      NHash_insert(lmhash,(int)M,M);
+      PHash_insert(lmhash,M,M);
     } else {
       /*printf("  deleting interface: %s %p\n",GModuleDef_getName(M),M->m_interface);*/
       modint_deleteInterface(M);

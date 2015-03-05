@@ -95,7 +95,7 @@ void *SHash_find(Hash *, const char *);
 #define HashElem_obj(E)		(E)->value
 #define SHashElem_key(E)	(E)->key.s
 #define NHashElem_key(E)	(E)->key.d
-#define PHashElem_key(E)	((void*)(E)->key.d)
+#define PHashElem_key(E)	(E)->key.p
 #define Hash_numElems(H)	(H)->num
 
 #define new_SHash()	((SHash*)new_Hash(1))
@@ -121,8 +121,8 @@ int NHash_remove(Hash *, intptr_t);
 #define NHash_flush(H)	Hash_flush(H,0)
 #define NHash_resize(H, reqSize) Hash_resize(H,reqSize)
 
-#define new_PHash()	((NHash*)new_Hash(1))
-#define new_PHash_noob() ((NHash*)new_Hash(0))
+#define new_PHash()	((PHash*)new_Hash(1))
+#define new_PHash_noob() ((PHash*)new_Hash(0))
 #define delete_PHash(H)	delete_Hash(H,0)
 #define PHash_init(H)	Hash_init(H,1)
 #define PHash_init_noob(H)	Hash_init(H,0)

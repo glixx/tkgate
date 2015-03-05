@@ -2212,7 +2212,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
   int i;
   int draw_p = (TkGate.circuit->es->env == m);
   int px,py;
-  NHash *resizeTable = 0;
+  PHash *resizeTable = 0;
 
   /*
    * Nothing to update to.
@@ -2361,9 +2361,9 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
 	GWire_snap(pw[p]->driver);
 
 	if (GNet_getNBits(pw[p]->net) != GNet_getNBits(w->net)) {
-	  if (!resizeTable)
-	    resizeTable = new_PHash_noob();
-	  PHash_insert(resizeTable,pw[p]->net,(void*)GNet_getNBits(w->net));
+		if (!resizeTable)
+			resizeTable = new_PHash_noob();
+		PHash_insert(resizeTable,pw[p]->net,(void*)GNet_getNBits(w->net));
 	}
 
 	if (draw_p)
@@ -2391,9 +2391,8 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
 
     for (he = Hash_first(resizeTable);he;he = Hash_next(resizeTable,he)) {
       GNet *n = (GNet*)PHashElem_key(he);
-      int size = (unsigned)HashElem_obj(he);
       GNet_draw(n);
-      net_setSize(n,size);
+      net_setSize(n,(unsigned)HashElem_obj(he));
       GNet_draw(n);
     }
     delete_PHash(resizeTable);
