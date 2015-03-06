@@ -25,9 +25,9 @@ module jkff #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, _Q, J, K, PRE, CLR, CK);
    //
    always @ (PRE or CLR)
      if (!PRE)
-       Qreg = ${JK_BITS}'b0;
+       Qreg = ${JK_BITS}'b1;
      else if (!CLR)
-       Qreg = ~${JK_BITS}'b0;
+       Qreg = ${JK_BITS}'b0;
 
   always @(posedge CK)
     if (CLR === 1'b1 && PRE === 1'b1)
