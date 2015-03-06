@@ -274,11 +274,11 @@ int sel_finish(EditState *es)
       w2 = 0;
 
     if (w1 && w2) {
-      NHash_insert(S->s_wires,(int)w2,w2);
+      PHash_insert(S->s_wires,w2,w2);
     } else if (w1) {
-      NHash_insert(S->s_edgeWires,(int)w1,w1);
+      PHash_insert(S->s_edgeWires,w1,w1);
     } else if (w2) {
-      NHash_insert(S->s_edgeWires,(int)w2,w2);
+      PHash_insert(S->s_edgeWires,w2,w2);
     }
   }
 

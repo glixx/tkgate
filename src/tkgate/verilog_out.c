@@ -194,7 +194,7 @@ int VerilogBasicGateParmList(FILE *f,GCElement *g)
       if (w->net->n_signame)
 	fprintf(f,"(%s%s)",inv,w->net->n_signame);
       else
-	fprintf(f,"(%sw%x)",inv,(unsigned)w->net);
+	fprintf(f,"(%sw%lx)",inv,(uintptr_t)w->net);
     }
   }
   fprintf(f,");");
@@ -340,7 +340,7 @@ static void VerilogSaveOneNet(FILE *f,GNet *n)
   if (n->n_signame)
     fprintf(f,"%s;    ",n->n_signame);
   else
-    fprintf(f,"w%x;    ",(unsigned)n);
+    fprintf(f,"w%lx;    ",(uintptr_t)n);
 
   fprintf(f,"//:");
   if (!n->n_show_name)
@@ -472,7 +472,7 @@ static void VerilogSaveModSymbol(FILE *f,GModSymbol *ms)
   if (!ms) return;
 
   fprintf(f,"\n");
-  fprintf(f,"//: /symbolBegin: %u\n",(unsigned)ms);
+  fprintf(f,"//: /symbolBegin: %lu\n",(uintptr_t)ms);
 
   /*
    * Generate the normal icon data
@@ -531,7 +531,7 @@ static void VerilogSaveModInterface(FILE *f,GModuleDef *M)
   if (!g) return;
 
   if (GCElement_getType(g) == GC_SYMBLOCK) {
-    fprintf(f,"//: /symbol:%u\n",(unsigned)g->u.block.symbol);
+    fprintf(f,"//: /symbol:%lu\n",(uintptr_t)g->u.block.symbol);
   }
 
   gi = g->typeinfo;
