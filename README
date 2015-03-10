@@ -87,4 +87,5 @@ CREDITS
   * Thanks to Anthony Winstanley for the cygwin patch.
   * Thanks to Alexey Loginov for the russian translation, tutorials and
     examples improvements and packaging for Mageia Linux.
-  * Thanks to Pietro Cerutti for Tcl/Tk-8.6 patch
+  * Thanks to Pietro Cerutti for Tcl/Tk-8.6 patch.
+  * Thanks to Kirill Bychkov for porting to OpenBSD.
