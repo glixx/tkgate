@@ -10,8 +10,7 @@
 #define FF_SYMBOL	3
 #define FF_NOKANJI_MAX	4
 #define FF_KANJI	4
-#define FF_FIXED	5
-#define FF_MAX		6
+#define FF_MAX		5
 
 /*
  * Font property codes
