@@ -1007,7 +1007,7 @@ void editstate_makeRootAtTop(EditState **es)
 void editstate_flushModules(EditState **es)
 {
   HashElem *E;
-  PHash *lmhash;
+	PHash *lmhash;
 
   sel_clear(*es,1);
 
@@ -1041,7 +1041,7 @@ void editstate_flushModules(EditState **es)
     SHash_insert(TkGate.circuit->moduleTable,M->m_name,M);
   }
 
-  delete_NHash(lmhash);
+	delete_PHash(lmhash);
 
   /* i don't think we need this.  It cause trouble by deleting interfaces for
    * library modules we are retaining.
