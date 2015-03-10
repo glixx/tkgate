@@ -73,8 +73,7 @@ GetSysType()
 			pclose(p);
 			if ((x = strrchr(buf, '\n')))
 				*x = 0;
-		}
-		else
+		} else
 			strcpy(buf, "unknown");
 		sys_name = strdup(buf);
 	}
@@ -141,15 +140,12 @@ tclizeString(char *buf, const char *str)
 		if (*str == '\n') {
 			*p++ = '\\';
 			*p++ = 'n';
-		}
-		else if (*str == '\r') {
+		} else if (*str == '\r') {
 			*p++ = '\\';
 			*p++ = 'r';
-		}
-		else if (isprint(*str)) {
+		} else if (isprint(*str)) {
 			*p++ = *str;
-		}
-		else {
+		} else {
 			*p++ = ' ';;
 		}
 	}
@@ -202,8 +198,7 @@ printIndent(int n, FILE * f)
 int
 required_bits(int n)
 {
-	int i,
-	  b;
+	int i, b;
 
 	for (i = b = 0; n; i++) {
 		b += (n & 1);
@@ -260,8 +255,7 @@ trimName(char *buf)
 				*p++ = 'S';
 			else
 				*p++ = '_';
-		}
-		else
+		} else
 			did_trim = 1;
 	}
 	*p = 0;
@@ -345,8 +339,7 @@ getNextToken(char **text, char **token_begin, char **token_end)
 			*token_end = p;
 			token_type = ST_LITERAL;
 			break;
-		}
-		else if (*p == '"') {
+		} else if (*p == '"') {
 			/*
 			 * Handle strings.
 			 */
@@ -360,8 +353,7 @@ getNextToken(char **text, char **token_begin, char **token_end)
 			*token_end = p;
 			token_type = ST_STRING;
 			break;
-		}
-		else if (isdigit(*p) || (*p == '.' && isdigit(p[1]))) {
+		} else if (isdigit(*p) || (*p == '.' && isdigit(p[1]))) {
 			while (isdigit(*p))
 				p++;
 			if (*p == '.')
@@ -377,26 +369,22 @@ getNextToken(char **text, char **token_begin, char **token_end)
 			}
 			*token_end = p;
 			token_type = ST_NUMBER;
-		}
-		else if (isalpha(*p) || *p == '_') {
+		} else if (isalpha(*p) || *p == '_') {
 			*token_begin = p++;
 			while (isalnum(*p) || *p == '_')
 				p++;
 			*token_end = p;
 			token_type = ST_LITERAL;
 			break;
-		}
-		else if (strncmp(p, "//", 2) == 0) {
+		} else if (strncmp(p, "//", 2) == 0) {
 			while (*p && *p != '\n')
 				p++;
-		}
-		else if (strncmp(p, "/*", 2) == 0) {
+		} else if (strncmp(p, "/*", 2) == 0) {
 			while (*p && strncmp(p, "*/", 2))
 				p++;
 			if (*p)
 				p += 2;
-		}
-		else {
+		} else {
 			p++;	/* Any other character */
 			*token_end = p;
 			token_type = ST_SYMBOL;
@@ -540,9 +528,7 @@ strncasecmp(const char *s1, const char *s2, size_t n)
 const char *
 strcasestr(const char *big, const char *little)
 {
-	const char *p,
-	 *q,
-	 *l;
+	const char *p, *q, *l;
 
 	for (p = big; *p; p++) {
 		for (q = p, l = little;

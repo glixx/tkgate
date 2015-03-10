@@ -122,4 +122,9 @@ const char *bitrangeSpec(int n);
 
 #define tv_to_ms(tv) ( ((unsigned long long)(tv)->tv_sec)*1000 + (tv)->tv_usec/1000)
 
+typedef enum boolean_en {
+	FALSE = 0,
+	TRUE = 1
+} Boolean;
+
 #endif
