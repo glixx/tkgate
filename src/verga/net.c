@@ -60,8 +60,6 @@ void delete_Net(Net *n)
  *     msb		MSB of net
  *     lsb		LSB of net
  *
- *
- *
  *****************************************************************************/
 Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
 {
@@ -100,7 +98,6 @@ Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
     value->flags = SF_INT;
     break;
   }
-
 
   if (NT_GET_0STR(ntype) && !NT_GET_1STR(ntype)) {
     Value_zero(value);

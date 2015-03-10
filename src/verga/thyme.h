@@ -56,9 +56,20 @@
 #include "yybasic.h"		/* Basic parser functions */
 #include "vgrammar.h"		/* Symbols definitions for tokens */
 
-#define DT_MIN 0		/* Use minimum delays */
-#define DT_TYP 1		/* Use typical delays */
-#define DT_MAX 2		/* Use maximum delays */
+typedef enum delay_type_en {
+	DT_MIN = 0,
+#define DT_MIN DT_MIN		/* Use minimum delays */
+	DT_TYP = 1,
+#define DT_TYP DT_TYP		/* Use typical delays */
+	DT_MAX = 2
+#define DT_MAX DT_MAX		/* Use maximum delays */
+} DelayType;
+
+typedef enum verilog_std_en {
+	VSTD_UNDEFINED = 0,
+	VSTD_1995 = 1995,
+	VSTD_2001 = 2001
+} VerilogStd;
 
 /*****************************************************************************
  *
@@ -66,12 +77,12 @@
  *
  *****************************************************************************/
 typedef struct {
-  int		vgs_send;		/* Enable $tkg$send() */
-  int		vgs_fopen;		/* Enable $fopen() */
-  int		vgs_writemem;		/* Enable $writememb() and $writememh() */
-  int		vgs_queue;		/* Enable $tkg$read() and $tkg$write() */
-  int		vgs_exec;		/* 0=disabled, 1=registered, 2=enabled */
-  int		vgs_handling;		/* 0=ignore, 1=warn, 2=stop */
+	int vgs_send;		/* Enable $tkg$send() */
+	int vgs_fopen;		/* Enable $fopen() */
+	int vgs_writemem;	/* Enable $writememb() and $writememh() */
+	int vgs_queue;		/* Enable $tkg$read() and $tkg$write() */
+	int vgs_exec;		/* 0=disabled, 1=registered, 2=enabled */
+	int vgs_handling;	/* 0=ignore, 1=warn, 2=stop */
 } VGSecurity;
 
 /*****************************************************************************
@@ -79,36 +90,36 @@ typedef struct {
  * GVSim - Top level structure for simulator data.
  *
  *****************************************************************************/
-typedef struct {
-  char		*vg_baseDirectory;	/* Base directory for input files */
-  char		*vg_topModuleName;	/* Name of top-level module */
-  char		*vg_defaultTopModuleName; /* Default name of top-level module */
-  SHash		vg_modules;		/* Table of modules */
-  Circuit	vg_circuit;		/* Instantiated circuit to be simulated */
-  int		vg_interactive;		/* Non-zero if we are in interactive mode */
+typedef struct vgsim_str {
+	char *vg_baseDirectory;	/* Base directory for input files */
+	char *vg_topModuleName;	/* Name of top-level module */
+	char *vg_defaultTopModuleName;	/* Default name of top-level module */
+	SHash vg_modules;	/* Table of modules */
+	Circuit vg_circuit;	/* Instantiated circuit to be simulated */
+	int vg_interactive;	/* Non-zero if we are in interactive mode */
 
-  VGSecurity	vg_sec;			/* Security options */
+	VGSecurity vg_sec;	/* Security options */
 
-  Timescale	vg_timescale;		/* Lowest timescale of any loaded module */
-  int		vg_haveTScount;		/* Number of modules with timescale */
+	Timescale vg_timescale;	/* Lowest timescale of any loaded module */
+	int vg_haveTScount;	/* Number of modules with timescale */
 
-  int		vg_noTimeViolations;	/* Supress all timing violations? */
-  simtime_t	vg_initTime;		/* Time need for user circuit to initialize. */
+	int vg_noTimeViolations;	/* Supress all timing violations? */
+	simtime_t vg_initTime;	/* Time need for user circuit to initialize. */
 
-  int		vg_delayType;		/* Type of delays to use */
+	DelayType vg_delayType;	/* Type of delays to use */
+	VerilogStd vg_std;
 } VGSim;
 
-void VGSim_init(VGSim*);
-void VGSim_addModule(VGSim*, ModuleDecl *m);
-ModuleDecl *VGSim_findModule(VGSim*, const char *name);
+void VGSim_init(VGSim *);
+void VGSim_addModule(VGSim *, ModuleDecl * m);
+ModuleDecl *VGSim_findModule(VGSim *, const char *name);
 
-void VGSecurity_init(VGSecurity*,int trusted);
-void VGSecurity_handleException(VGSecurity*,VGThread *t,const char *name);
+void VGSecurity_init(VGSecurity *, int trusted);
+void VGSecurity_handleException(VGSecurity *, VGThread * t, const char *name);
 
 int VerilogLoad(const char *name);
-int VerilogLoadScript(const char *name,DynamicModule *dm);
+int VerilogLoadScript(const char *name, DynamicModule * dm);
 FILE *openInPath(const char *name);
-
 
 extern VGSim vgsim;		/* Global state for gvsim */
 

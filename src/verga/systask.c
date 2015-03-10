@@ -631,14 +631,14 @@ static void SysTask_tkg_unprobe(VGThread *t,Value *r,int numArgs,void **args,Tas
  *****************************************************************************/
 static void SysTask_fwrite(VGThread *t,Value *r,int numArgs,void **args,TaskContext *tc)
 {
-  int handle;
+  unsigned handle;
   char buf[2*STRMAX], *p;
   int nUsed;
   int lastWasDiscrete = 0;
   int i;
 
   if (numArgs < 1) return;
-  Value_toInt((Value*) args[0],&handle);
+  Value_toInt((Value*)args[0], &handle);
 
   numArgs--;
   args++;
@@ -690,10 +690,10 @@ static void SysTask_fwrite(VGThread *t,Value *r,int numArgs,void **args,TaskCont
 static void SysTask_fdisplay(VGThread *t,Value *r,int numArgs,void **args,TaskContext *tc)
 {
   int i;
-  int handle;
+  unsigned handle;
 
   if (numArgs < 1) return;
-  Value_toInt((Value*) args[0],&handle);
+  Value_toInt((Value*) args[0], &handle);
 
   SysTask_fwrite(t,r,numArgs,args,tc);
   for (i = 0;i < STT_MAXFILES;i++) {
@@ -1159,9 +1159,10 @@ static void SysTask_tkg_wait(VGThread *t, Value *r, int numArgs, void **args, Ta
  *****************************************************************************/
 static void SysTask_tkg_zoom(VGThread *t, Value *r, int numArgs, void **args, TaskContext *taskContext)
 {
-  EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
-  struct timeval tv;
-  simtime_t evTime;
+  /** @TODO to remove */
+  /*EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);*/
+  /*struct timeval tv;*/
+  /*simtime_t evTime;*/
   unsigned zoom;
 
   Value_toInt((Value*)args[0],&zoom);
@@ -1449,7 +1450,7 @@ static void SysTask_writememh(VGThread *t,Value *r,int numArgs,void **args,TaskC
 static void SysTask_fclose(VGThread *t, Value *r, int numArgs, void **args, TaskContext *taskContext)
 {
   int i;
-  int handle;
+  unsigned handle;
 
   if (!vgsim.vg_sec.vgs_fopen) {
     VGSecurity_handleException(&vgsim.vg_sec,t,"$fclose");
@@ -1458,7 +1459,7 @@ static void SysTask_fclose(VGThread *t, Value *r, int numArgs, void **args, Task
 
   if (numArgs != 1) return;
 
-  Value_toInt((Value*) args[0],&handle);
+  Value_toInt((Value*) args[0], &handle);
 
   for (i = 1;i < STT_MAXFILES;i++)
     if ((handle & (1<<i))) {
@@ -1559,7 +1560,8 @@ static void reportTimingViolation(const char *name,int *argTypes,VGThread *t, Va
   ModuleInst *mi = VGThread_getModCtx(t);
   ModuleDecl *m  = ModuleInst_getModDecl(mi);
   char syscall[STRMAX],*p;
-  char now_s[STRMAX];
+  /** @TODO to remove */
+  /*char now_s[STRMAX];*/
   int i;
 
   /*
@@ -1620,8 +1622,8 @@ static void SysTask_setup(VGThread *t, Value *r, int numArgs, void **args, TaskC
   simtime_t *lastTrans;
   int which = 0,constraint = 0;
 
-  Value_toInt((Value*)args[0],&which);
-  Value_toInt((Value*)args[3],&constraint);
+  Value_toInt((Value*)args[0], &which);
+  Value_toInt((Value*)args[3], &constraint);
 
   /*
    * If this is an initialization call,

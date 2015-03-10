@@ -38,19 +38,29 @@ typedef float real_t;
 #define SYM_HIGH	6
 #define SYM_UNKNOWN	7
 
-
 /*
  * Special property flags of Value
  */
-#define SF_INT		0x1				/* Declared as an integer */
-#define SF_DEC		0x2				/* Declared as sized decimal */
-#define SF_HEX		0x4				/* Declared as sized hex */
-#define SF_OCT		0x8				/* Declaeed as sized octal */
-#define SF_BIN		0x10				/* Declared as sized binary */
-#define SF_STRING	0x20				/* Declared as string */
-#define SF_REAL		0x40				/* Declared as real */
-#define SF_STICKY_MASK	0xffff				/* These flags are sticky and are propegated */
-#define SF_NETVAL	0x10000				/* Value is directly associated with a net */
+typedef enum value_flags_str {
+	SF_INT = 0x1,
+#define SF_INT SF_INT				/* Declared as an integer */
+	SF_DEC = 0x2,
+#define SF_DEC SF_DEC				/* Declared as sized decimal */
+	SF_HEX = 0x4,
+#define SF_HEX SF_HEX				/* Declared as sized hex */
+	SF_OCT = 0x8,
+#define SF_OCT SF_OCT				/* Declaeed as sized octal */
+	SF_BIN = 0x10,
+#define SF_BIN SF_BIN				/* Declared as sized binary */
+	SF_STRING = 0x20,
+#define SF_STRING SF_STRING			/* Declared as string */
+	SF_REAL = 0x40,
+#define SF_REAL	SF_REAL				/* Declared as real */
+	SF_STICKY_MASK = 0xffff,
+#define SF_STICKY_MASK SF_STICKY_MASK		/* These flags are sticky and are propegated */
+	SF_NETVAL = 0x10000
+#define SF_NETVAL SF_NETVAL			/* Value is directly associated with a net */
+} ValueFlags;
 
 /*
  * Basic word size/byte size declarations.
@@ -72,7 +82,6 @@ typedef float real_t;
 #else
 #error Unsupported word size.
 #endif
-
 
 /*
   LMASK returns a mask with the low n bits set
@@ -132,7 +141,7 @@ struct Value_str {
 #if DEBUG_VALUE_MEMMGR
   int		status;		/* Status code for memory management */
 #endif
-  unsigned	flags;		/* Property flags */
+  ValueFlags	flags;		/* Property flags */
   unsigned	permFlags;	/* Perminant property flags */
   short		nbits;		/* Number of bits in state */
   short		nalloc;		/* Number of words allocated */
@@ -140,7 +149,6 @@ struct Value_str {
   unsigned	*one;		/* Bit indicating one */
   unsigned	*flt;		/* Bit indicating float */
 };
-
 
 /*****************************************************************************
  *
@@ -154,9 +162,11 @@ struct value_fl {
 
 Value *new_Value(int nbits);
 void delete_Value(Value*);
+
 void Value_init(Value *S,int nbits);
 void Value_uninit(Value *S);
 void Value_reinit(Value *S,int nbits);
+
 void Value_zero(Value *S);
 void Value_one(Value *S);
 void Value_lone(Value *S);
@@ -169,26 +179,54 @@ void Value_resize(Value *R,int nbits);
 void Value_makeSameSize(Value *A,Value *B);
 void Value_makeSameSize3(Value *A,Value *B,Value *C);
 int Value_getBitSym(Value*,int);
-int Value_isLogic(Value*);
 void Value_wire(Value *R,Value *A,Value *B);
 void Value_wand(Value *R,Value *A,Value *B);
 void Value_wor(Value *R,Value *A,Value *B);
 void Value_tri0(Value *R,Value *A,Value *B);
 void Value_tri1(Value *R,Value *A,Value *B);
 void Value_trireg(Value *R,Value *A,Value *B);
-int Value_isValue(Value *S);
+
+/******************************************************************************
+ * Return non-zero if value has only 0 and 1 bits
+ ******************************************************************************/
+int Value_isLogic(Value *);
+
+/******************************************************************************
+ * Return non-zero if value is logic zero
+ ******************************************************************************/
+int Value_isZero(Value *);
+
+/******************************************************************************
+ * Return non-zero if all bits are at high-impedance value
+ ******************************************************************************/
+int Value_isFloat(Value *);
+
+/******************************************************************************
+ * Return non-zero if all bits have unknown value
+ ******************************************************************************/
+int Value_isUnknown(Value *);
+
+/******************************************************************************
+ * Return TRUE if some bits are unknown, FALSE otherwise
+ ******************************************************************************/
+Boolean Value_hasUnknown(Value *);
+
+/******************************************************************************
+ * Return TRUE if some bits are high-impedance, FALSE otherwise
+ ******************************************************************************/
+Boolean Value_hasFloat(Value *);
+
+int Value_isEqual(Value *A,Value *B);
+
 #define Value_nbits(S) (S)->nbits
 void Value_w_roll(Value *R,Value *I,int shift);
 void Value_w_shift(Value *R,Value *I,int n,int in1,int in0,int inZ);
 void Value_shift(Value *R,Value *I,int n,int in1,int in0,int inZ);
-int Value_isEqual(Value *A,Value *B);
 transtype_t Value_transitionType(Value *A,Value *B);
-int Value_isZero(Value *S);
 #define Value_getAllFlags(S) ((S)->flags|(S)->permFlags)
 #define Value_getTypeFlags(S) (S)->flags
 #define Value_isReal(S) ((S)->flags & SF_REAL)
 void Value_normalize(Value *r);
-
 
 /*****************************************************************************
  * Value conversion methods - other to Value

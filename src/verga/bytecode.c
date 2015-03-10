@@ -314,7 +314,7 @@ void BCGoto_init(ByteCode *bc, Value *cond,int neg,CodeBlock *cb,unsigned offset
  *****************************************************************************/
 void BCGoto_exec(BCGoto *g,VGThread *t)
 {
-  int doskip = (g->g_cond && (Value_isZero(g->g_cond)||!Value_isValue(g->g_cond)));
+  int doskip = (g->g_cond && (Value_isZero(g->g_cond)||!Value_isLogic(g->g_cond)));
 
   if (g->g_neg) doskip = !doskip;
   if (doskip) {

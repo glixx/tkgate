@@ -96,16 +96,17 @@ void VGSim_init(VGSim *vg)
   vg->vg_baseDirectory = 0;
   vg->vg_topModuleName = 0;
   vg->vg_defaultTopModuleName = 0;
-  vg->vg_interactive = 0;
   SHash_init(&vg->vg_modules);
   Circuit_init(&vg->vg_circuit);
+  vg->vg_interactive = 0;
   VGSecurity_init(&vg->vg_sec,0);
   vg->vg_timescale.ts_units = 0;
   vg->vg_timescale.ts_precision = 0;
   vg->vg_haveTScount = 0;
-  vg->vg_delayType = DT_TYP;
   vg->vg_noTimeViolations = 0;
   vg->vg_initTime = 0;
+  vg->vg_delayType = DT_TYP;
+  vg->vg_std = VSTD_1995;
 }
 
 static void usage()
@@ -505,7 +506,7 @@ int main(int argc,char *argv[])
    * Parse the command-line options.
    */
   while (argc > 0) {
-    while ((c = getopt(argc,argv,"eslqid:S:P:t:B:D:W:I:")) != EOF) {
+    while ((c = getopt(argc,argv,"eslqid:S:P:t:B:D:W:I:V:")) != EOF) {
       switch (c) {
       case 'e' :
 	dumpErrorMessages();
@@ -520,6 +521,12 @@ int main(int argc,char *argv[])
       case 'D' :
 	if (sscanf(optarg,"%u",&delete_hash_code) == 1)
 	  delete_on_load = 1;
+	break;
+      case 'V' :
+      	if (strncmp(optarg, "v1995", strlen("v1995")) == 0)
+		vgsim.vg_std = VSTD_1995;
+	else if (strncmp(optarg, "v2001", strlen("v2001")) == 0)
+		vgsim.vg_std = VSTD_2001;
 	break;
       case 'W' :
 	sscanf(optarg,"%d",&warning_mode);

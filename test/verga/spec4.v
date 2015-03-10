@@ -1,15 +1,15 @@
 module top;
   integer i;
   reg ci = 1'b0;
-  reg [1:0] a,b;
-  wire [1:0] s;
+  reg [7:0] a,b;
+  wire [7:0] s;
   wire co;
 
   initial
     $monitor("%4d: a=%d b=%d ci=%d - s=%d co=%d",$time,a,b,ci,s,co);
 
   initial
-    for (i = 0;i < 16;i = i + 1)
+    for (i = 0;i < 2048;i = i + 127)
       begin
 	{a,b} = i;
 	#100;
