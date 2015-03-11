@@ -1,3 +1,11 @@
+Version 2.0-rc2 - March 11, 2015
+     * Fixed bugs, related with 64-bit architectures
+     * Fixed bug in JK flip-flop primitive (Set/Reset invertion)
+     * Fixed display and write system tasks to output decimal values with
+       high-impedance and unknown bits according to the unit 17.1.1.4 of
+       IEEE 1364-2001 in Verga.
+     * A lot of build warnings fixed and workarounded.
+
 Version 2.0-rc1 - February 27, 2015
      * 74xx library extended: added circuits
          7411 triple input AND
