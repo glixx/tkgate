@@ -37,7 +37,7 @@ typedef void free_f(void*);
 typedef char *strdup_f(const char*);
 typedef void touch_f(void*);
 
-typedef struct {
+typedef struct hash_vtable_str {
   malloc_f *hv_malloc;
   calloc_f *hv_calloc;
   free_f   *hv_free;
@@ -67,7 +67,6 @@ static HashVTable normal_mmgr = {
   h_malloc, h_calloc, free, strdup, nop_touch
 };
 
-
 /*
    Round N up to a power of 2.
 */
@@ -85,7 +84,7 @@ static unsigned roundup(unsigned N)
   return N;
 }
 
-static unsigned int inthash(unsigned int key)
+static uintptr_t inthash(uintptr_t key)
 {
   key += 123456;
   key += (key << 12);
@@ -100,10 +99,10 @@ static unsigned int inthash(unsigned int key)
   return key;
 }
 
-unsigned computestrhash(const char *s)
+uintptr_t computestrhash(const char *s)
 {
-  unsigned N = 0;
-  unsigned H = 0;
+  uintptr_t N = 0;
+  uintptr_t H = 0;
   int i;
 
   for (i = 0;*s;s++, i++) {
@@ -117,7 +116,7 @@ unsigned computestrhash(const char *s)
 }
 
 
-static HashElem *new_SHashElem(Hash *H,const char *key,unsigned hcode, void *val)
+static HashElem *new_SHashElem(Hash *H,const char *key,uintptr_t hcode, void *val)
 {
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
 
@@ -129,7 +128,7 @@ static HashElem *new_SHashElem(Hash *H,const char *key,unsigned hcode, void *val
   return E;
 }
 
-static HashElem *new_NHashElem(Hash *H,int key,unsigned hcode,void *val)
+static HashElem *new_NHashElem(Hash *H,intptr_t key,unsigned hcode,void *val)
 {
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
 
@@ -296,8 +295,8 @@ void Hash_removeElem(Hash *H,int A,HashElem *E)
 
 void *SHash_find(Hash *H,const char *key)
 {
-  unsigned HC = computestrhash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = computestrhash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   for (E = H->elems[A];E;E = E->next)
@@ -308,8 +307,8 @@ void *SHash_find(Hash *H,const char *key)
 
 int SHash_insert(Hash *H,const char *key,void* val)
 {
-  unsigned HC = computestrhash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = computestrhash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   HT_TOUCH(H,H);
@@ -332,8 +331,8 @@ int SHash_insert(Hash *H,const char *key,void* val)
 
 int SHash_replace(Hash *H,const char *key,void* val)
 {
-  unsigned HC = computestrhash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = computestrhash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   HT_TOUCH(H,H);
@@ -359,8 +358,8 @@ int SHash_replace(Hash *H,const char *key,void* val)
 
 int SHash_remove(Hash *H,const char *key)
 {
-  unsigned HC = computestrhash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = computestrhash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   HT_TOUCH(H,H);
@@ -399,12 +398,10 @@ void Hash_flush(Hash *H,HashElemDelFunc *hdel)
   H->num = 0;
 }
 
-
-
-void *NHash_find(Hash *H,int key)
+void *NHash_find(Hash *H,intptr_t key)
 {
-  unsigned HC = inthash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = inthash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   for (E = H->elems[A];E;E = E->next)
@@ -413,10 +410,10 @@ void *NHash_find(Hash *H,int key)
   return 0;
 }
 
-int NHash_insert(Hash *H,int key,void* val)
+int NHash_insert(Hash *H,intptr_t key,void* val)
 {
-  unsigned HC = inthash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = inthash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   HT_TOUCH(H,H);
@@ -438,10 +435,10 @@ int NHash_insert(Hash *H,int key,void* val)
   return 0;
 }
 
-int NHash_replace(Hash *H,int key,void* val)
+int NHash_replace(Hash *H,intptr_t key,void* val)
 {
-  unsigned HC = inthash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = inthash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   HT_TOUCH(H,H);
@@ -465,10 +462,10 @@ int NHash_replace(Hash *H,int key,void* val)
   return 0;
 }
 
-int NHash_remove(Hash *H,int key)
+int NHash_remove(Hash * H,intptr_t key)
 {
-  unsigned HC = inthash(key);
-  unsigned A = HC & H->mask;
+  uintptr_t HC = inthash(key);
+  uintptr_t A = HC & H->mask;
   HashElem *E;
 
   HT_TOUCH(H,H);

@@ -17,19 +17,15 @@
 
     Last edit by hansen on Sat Jan 17 00:30:11 2009
 ****************************************************************************/
+#include "tkgate.h"
+
 #include <stdio.h>
 #include <ctype.h>
-#include <sys/time.h>
 #include <stdarg.h>
-#include "tkgate.h"
+#include <assert.h>
 
 int istruevalue(const char *s);
 
-/*****************************************************************************
- *
- *
- *
- *****************************************************************************/
 static struct {
   GCElement *g;			/* Gate on which hyperlink is found */
   char *link;			/* Text of the link */

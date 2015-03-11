@@ -927,9 +927,9 @@ void Html_handle_valueOf(Html *h, HtmlTag *tag)
   if (strcasecmp(name,"tkgate-version") == 0) {
     text = TKGATE_FULL_VERSION;
   } else if (strcasecmp(name,"tkgate-homepage") == 0) {
-    text = TKGATE_HOMEPAGE;
+    text = PACKAGE_URL;
   } else if (strcasecmp(name,"tkgate-mailcontact") == 0) {
-    text = TKGATE_MAILCONTACT;
+    text = PACKAGE_BUGREPORT;
   } else if (strcasecmp(name,"tkgate-copyright") == 0) {
     text = TKGATE_COPYRIGHT;
   } else if (strcasecmp(name,"tkgate-release-date") == 0) {

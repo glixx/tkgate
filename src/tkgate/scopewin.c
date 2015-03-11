@@ -92,7 +92,7 @@ static void scopeWinEvent(ClientData data, XEvent *E)
     ob_clear();
     delete_GScope(Scope);
     ob_set_mode(old_mode);
-    Scope = 0;
+    Scope = NULL;
   }
   ReqScopeRedisplay();
 }

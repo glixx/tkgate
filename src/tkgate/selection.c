@@ -276,11 +276,11 @@ int sel_finish(EditState *es)
       w2 = 0;
 
     if (w1 && w2) {
-      NHash_insert(S->s_wires,(int)w2,w2);
+      PHash_insert(S->s_wires,w2,w2);
     } else if (w1) {
-      NHash_insert(S->s_edgeWires,(int)w1,w1);
+      PHash_insert(S->s_edgeWires,w1,w1);
     } else if (w2) {
-      NHash_insert(S->s_edgeWires,(int)w2,w2);
+      PHash_insert(S->s_edgeWires,w2,w2);
     }
   }
 
@@ -881,12 +881,12 @@ void sel_delete(EditState *es)
   if (TkGate.circuit->mg_selection) {
     HashElem *gl;
     SHash *H = TkGate.circuit->mg_selection->s_gates;
-    NHash *delGates = new_NHash();
+    PHash *delGates = new_PHash();
 
     for (gl = Hash_first(H);gl;gl = Hash_next(H,gl)) {
       GCElement *g = (GCElement*) HashElem_obj(gl);
       if (g->typeinfo->Code != GC_JOINT)
-	NHash_insert(delGates,(int)g,g);
+	PHash_insert(delGates,g,g);
     }
 
     for (gl = Hash_first(delGates);gl;gl = Hash_next(delGates,gl)) {
@@ -897,7 +897,7 @@ void sel_delete(EditState *es)
       gate_delete(g,es->env,0);
     }
 
-    delete_NHash(delGates);
+    delete_PHash(delGates);
 
     delete_GSelection(TkGate.circuit->mg_selection);
     TkGate.circuit->mg_selection = 0;

@@ -60,9 +60,9 @@ static MemPage *new_MemPage(unsigned base,int bpw)
 
   P->motype = MEM_PAGE;
   P->baseAddr = base;
-  P->data1 = (char*)malloc(n);
-  P->data0 = (char*)malloc(n);
-  P->dataz = (char*)malloc(n);
+  P->data1 = (unsigned char*)malloc(n);
+  P->data0 = (unsigned char*)malloc(n);
+  P->dataz = (unsigned char*)malloc(n);
 
   for (i = 0;i < n;i++) {
     P->data1[i] = MEM_BYTEMASK;

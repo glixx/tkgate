@@ -95,25 +95,6 @@ void delete_Value(Value *S)
 #endif
 }
 
-/*
- * Does S contain only 1s and 0s?
- */
-int Value_isLogic(Value *S)
-{
-  int wc = SSNUMWORDS(S->nbits);
-  unsigned mask = SSWORDMASK;
-  int i;
-
-  for (i = 0;i < wc;i++) {
-    if ((S->nbits & SSBITMASK))
-      mask = LMASK((S->nbits & SSBITMASK));
-
-    if ((S->flt[i] & mask)) return 0;
-  }
-
-  return 1;
-}
-
 /*****************************************************************************
  *
  * Make a value stored in the one[] array consistant in the other arrays.
@@ -132,7 +113,6 @@ void Value_normalize(Value *r)
     r->flt[i]  = 0;
   }
 }
-
 
 /*
          Logic values
@@ -229,7 +209,6 @@ int Value_isPartZero(Value *A,int lowz)
 
   return 1;
 }
-
 
 /*****************************************************************************
  *
@@ -359,10 +338,7 @@ void Value_lone(Value *S)
   S->zero[0] &= ~1;
 }
 
-/*
-  return non-zero if S has only 0 and 1 bits
- */
-int Value_isValue(Value *S)
+int Value_isLogic(Value *S)
 {
   register int i;
   register unsigned mask = SSWORDMASK;
@@ -372,15 +348,11 @@ int Value_isValue(Value *S)
     if (i == wc-1 && (S->nbits & SSBITMASK))
       mask = LMASK(S->nbits);
 
-
     if ((S->flt[i] & mask)) return 0;
   }
   return 1;
 }
 
-/*
-  return non-zero if S is zero
- */
 int Value_isZero(Value *S)
 {
   register int i;
@@ -400,6 +372,75 @@ int Value_isZero(Value *S)
   return 1;
 }
 
+int Value_isFloat(Value *S)
+{
+  register int i;
+  register unsigned mask = SSWORDMASK;
+  register int wc = SSNUMWORDS(S->nbits);
+
+  for (i = 0;i < wc;i++) {
+    if (i == wc-1 && (S->nbits & SSBITMASK))
+      mask = LMASK(S->nbits);
+
+    if (((S->flt[i] & mask) != mask)
+	|| ((S->one[i] & mask) != 0)
+	|| ((S->zero[i] & mask) != 0))
+      return 0;
+  }
+  return 1;
+}
+
+int Value_isUnknown(Value *S)
+{
+  register int i;
+  register unsigned mask = SSWORDMASK;
+  register int wc = SSNUMWORDS(S->nbits);
+
+  for (i = 0;i < wc;i++) {
+    if (i == wc-1 && (S->nbits & SSBITMASK))
+      mask = LMASK(S->nbits);
+
+    if (((S->flt[i] & mask) != mask)
+	|| ((S->one[i] & mask) != mask)
+	|| ((S->zero[i] & mask) != mask))
+      return 0;
+  }
+  return 1;
+}
+
+Boolean Value_hasUnknown(Value *S)
+{
+	int i, wordCount;
+
+	wordCount = SSNUMWORDS(S->nbits);
+
+	for (i = 0; i < wordCount; ++i) {
+		if (i == wordCount-1 && (S->nbits & SSBITMASK)) {
+			unsigned mask = LMASK(S->nbits);
+			if (S->flt[i] & S->zero[i] & S->one[i] & mask)
+				return TRUE;
+		} else if (S->flt[i] & S->zero[i] & S->one[i])
+			return TRUE;
+	}
+	return FALSE;
+}
+
+Boolean Value_hasFloat(Value *S)
+{
+	int i, wordCount;
+
+	wordCount = SSNUMWORDS(S->nbits);
+
+	for (i = 0; i < wordCount; ++i) {
+		if (i == wordCount-1 && (S->nbits & SSBITMASK)) {
+			unsigned mask = LMASK(S->nbits);
+			if (S->flt[i] & ~(S->zero[i] | S->one[i]) & mask)
+				return TRUE;
+		} else if (S->flt[i] & ~(S->zero[i] | S->one[i]))
+			return TRUE;
+	}
+	return FALSE;
+}
 
 void Value_xclear(Value *S)
 {
@@ -444,7 +485,6 @@ void Value_putBitSym(Value *S,int bit,int p)
   if ((p & 0x2)) S->one[w] |= b; else S->one[w] &= ~b;
   if ((p & 0x4)) S->flt[w] |= b; else S->flt[w] &= ~b;
 }
-
 
 /*****************************************************************************
  *
@@ -508,10 +548,9 @@ void Value_resize(Value *R,int nbits)
   }
 }
 
-
 int Value_toInt(Value *S,unsigned *I)
 {
-  if (!Value_isValue(S)) return -1;
+  if (!Value_isLogic(S)) return -1;
 
   if (Value_isReal(S))
     *I = (unsigned) *(real_t*)&S->one[0];
@@ -523,7 +562,7 @@ int Value_toInt(Value *S,unsigned *I)
 
 int Value_toReal(Value *S,real_t *n)
 {
-  if (!Value_isValue(S)) return -1;
+  if (!Value_isLogic(S)) return -1;
 
   if (Value_isReal(S)) {
     *n = *(real_t*)&S->one[0];
@@ -536,7 +575,7 @@ int Value_toReal(Value *S,real_t *n)
 
 int Value_toTime(Value *S,simtime_t *I)
 {
-  if (!Value_isValue(S)) return -1;
+  if (!Value_isLogic(S)) return -1;
 
 #if SSWORDSIZE == 64
   *I = S->one[0] & LMASK(S->nbits);
@@ -970,19 +1009,31 @@ static int Value_getstr_str(Value *S,char *p,int prefix)
  *     str		Buffer to which to write string.
  *
  *****************************************************************************/
-static int Value_getstr_int(Value *S,char *p)
+static int Value_getstr_int(Value *S,char *str)
 {
-  if (Value_isValue(S)) {
+  /*
+   * IEEE Std 1364-2001 17.1.1.4
+   */
+  if (Value_isUnknown(S))
+	sprintf(str, "x");
+  else if (Value_isFloat(S))
+	sprintf(str, "z");
+  else if (Value_hasUnknown(S))
+	sprintf(str, "X");
+  else if (Value_hasFloat(S))
+	sprintf(str, "Z");
+  else if (Value_isLogic(S)) {
     if (Value_nbits(S) <= SSWORDSIZE) {
-      sprintf(p,"%u",S->one[0]&LMASK(Value_nbits(S)));
+      sprintf(str,"%u",S->one[0]&LMASK(Value_nbits(S)));
     } else {
       int wc = SSNUMWORDS(S->nbits);
 
       S->one[wc-1] &= LMASK(Value_nbits(S));
-      multint_getstr(S->one,wc,p,1024);
+      multint_getstr(S->one,wc,str,1024);
     }
   } else
-    sprintf(p,"x");
+  /** @TODO generate Verga error  */
+    sprintf(str,"ERROR");
 
   return 0;
 }
@@ -990,7 +1041,7 @@ static int Value_getstr_int(Value *S,char *p)
 #if 0
 static int Value_getstr_time(Value *S,char *p)
 {
-  if (Value_isValue(S)) {
+  if (Value_isLogic(S)) {
 #if SSWORDSIZE == 64
     sprintf(p,"%u",S->one[0]&LMASK(Value_nbits(S)));
 #else
@@ -1012,7 +1063,7 @@ static int Value_getstr_dec(Value *S,char *p,int prefix)
   if (prefix)
     p += sprintf(p,"%d'd",Value_nbits(S));
 
-  if (Value_isValue(S)) {
+  if (Value_isLogic(S)) {
     if (Value_nbits(S) <= SSWORDSIZE)
       sprintf(p,"%u",S->one[0]&LMASK(Value_nbits(S)));
     else
@@ -1132,7 +1183,7 @@ static int Value_getstr_oct(Value *S,char *p,int prefix)
 
 static int Value_getstr_real(Value *S,char *p,int useG)
 {
-  if (!Value_isValue(S))
+  if (!Value_isLogic(S))
     return sprintf(p,"NaN");
   else {
     real_t n = *(real_t*)&S->one[0];

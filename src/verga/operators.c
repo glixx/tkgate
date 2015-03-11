@@ -824,7 +824,7 @@ int Value_lnot(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = b->flags;
 
-  if (!Value_isValue(b))
+  if (!Value_isLogic(b))
     Value_unknown(r);
   else if (Value_isZero(b))
     Value_lone(r);
@@ -847,7 +847,7 @@ int Value_neg(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = b->flags;
 
-  if (!Value_isValue(b)) {
+  if (!Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -871,7 +871,7 @@ int Value_w_neg(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = b->flags;
 
-  if (!Value_isValue(b)) {
+  if (!Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -895,7 +895,7 @@ int Value_mul(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -920,7 +920,7 @@ int Value_w_mul(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -945,7 +945,7 @@ int Value_div(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -971,7 +971,7 @@ int Value_w_div(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1001,7 +1001,7 @@ int Value_mod(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1027,7 +1027,7 @@ int Value_w_mod(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1054,7 +1054,7 @@ int Value_w_add(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1080,7 +1080,7 @@ int Value_add(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1116,7 +1116,7 @@ int Value_w_sub(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1144,7 +1144,7 @@ int Value_sub(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1182,7 +1182,7 @@ int Value_rshift(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(b))
+  if (!Value_isLogic(b))
     Value_unknown(r);
   else
     Value_shift(r, a, -(b->one[0]&smask), 0, 1, 0);
@@ -1201,7 +1201,7 @@ int Value_arshift(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(b)) {
+  if (!Value_isLogic(b)) {
     Value_unknown(r);
   } else {
     int wc = SSNUMWORDS(a->nbits);
@@ -1227,7 +1227,7 @@ int Value_lshift(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(b))
+  if (!Value_isLogic(b))
     Value_unknown(r);
   else
     Value_shift(r, a, b->one[0]&smask, 0, 1, 0);
@@ -1254,7 +1254,7 @@ int Value_w_rshift(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(b))
+  if (!Value_isLogic(b))
     Value_unknown(r);
   else
     Value_w_shift(r, a, -(b->one[0]&LMASK(b->nbits)), 0, 1, 0);
@@ -1271,7 +1271,7 @@ int Value_w_arshift(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(b)) {
+  if (!Value_isLogic(b)) {
     Value_unknown(r);
   } else {
     int hb = 1 << SSHIGHBIT(a->nbits);
@@ -1294,7 +1294,7 @@ int Value_w_lshift(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(b))
+  if (!Value_isLogic(b))
     Value_unknown(r);
   else
     Value_w_shift(r, a, b->one[0]&LMASK(b->nbits), 0, 1, 0);
@@ -1323,7 +1323,7 @@ int Value_w_gt(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1348,7 +1348,7 @@ int Value_gt(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1381,7 +1381,7 @@ int Value_w_lt(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1406,7 +1406,7 @@ int Value_lt(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1439,7 +1439,7 @@ int Value_w_ge(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1464,7 +1464,7 @@ int Value_ge(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1497,7 +1497,7 @@ int Value_w_le(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1522,7 +1522,7 @@ int Value_le(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1611,7 +1611,7 @@ int Value_eq(Value *r,Value *a,Value *b,Value *c)
     return -1;
   }
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1659,7 +1659,7 @@ int Value_w_land(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1680,7 +1680,7 @@ int Value_land(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1703,7 +1703,7 @@ int Value_w_lor(Value *r,Value *a,Value *b,Value *c)
 
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1724,7 +1724,7 @@ int Value_lor(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = a->flags | b->flags;
 
-  if (!Value_isValue(a) || !Value_isValue(b)) {
+  if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
     return 0;
   }
@@ -1745,7 +1745,7 @@ int Value_ifelse(Value *r,Value *a,Value *b,Value *c)
 {
   r->flags = a->flags | b->flags;
 
-  if (Value_isValue(a)) {
+  if (Value_isLogic(a)) {
     if (Value_isZero(a))
       Value_copy(r,c);
     else

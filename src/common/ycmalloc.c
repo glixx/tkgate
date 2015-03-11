@@ -77,7 +77,7 @@ void yc_poppool()
     D = yc_pool;
     yc_pool = yc_pool->pe_next;
 
-    for (i = 0;i < YC_POOL_SIZE-3;i += 4)
+    for (i = 0;i <= YC_POOL_SIZE-sizeof(long);i += sizeof(long))
       *((long*)&D->pe_data[i]) = 0xdeadf001;
     free(D->pe_data);
     free(D);

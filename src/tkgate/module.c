@@ -191,13 +191,13 @@ static GWire *replicate_wire(GWire *w,GModuleDef *M,int dx,int dy)
   return nw;
 }
 
-static GWire *replicate_attachment(GWire *w,GCElement *ng,NHash *whash)
+static GWire *replicate_attachment(GWire *w,GCElement *ng,PHash *whash)
 {
   GWire *nw;
 
   if (!w) return 0;
 
-  nw = (GWire*) NHash_find(whash,(int)w);
+  nw = (GWire*)PHash_find(whash,w);
 
   ob_touch(nw);
 
@@ -228,13 +228,20 @@ static GWire *replicate_attachment(GWire *w,GCElement *ng,NHash *whash)
  *****************************************************************************/
 void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,int selDst)
 {
-  HashElem *E;
-  NHash *ghash = new_NHash();		/* Map from source gates to destination gates */
-  NHash *whash = new_NHash();		/* Map from source wires to destination wires */
-  NHash *nhash = new_NHash();		/* Map from source nets to destination nets */
-  NHash *rhash = new_NHash();		/* Map from destination nets to destination root wire */
-  GWire *w;
-  int i;
+	HashElem *E;
+
+	PHash	*ghash;	/* Map from source gates to destination gates */
+	PHash	*whash;	/* Map from source wires to destination wires */
+	PHash	*nhash;	/* Map from source nets to destination nets */
+	PHash	*rhash;	/* Map from destination nets to destination root wire */
+
+	GWire	*w;
+	int	 i;
+
+	ghash = new_PHash();
+	whash = new_PHash();
+	nhash = new_PHash();
+	rhash = new_PHash();
 
   /*
     Create maps for gates, wires and nets
@@ -249,7 +256,7 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
       continue;
 
     ng = (*g->typeinfo->CopyGate)(D,g,g->xpos+dx,g->ypos+dy,REP_NOWIRES);
-    NHash_insert(ghash,(int)g,ng);
+	PHash_insert(ghash,g,ng);
 
     ob_touch(ng);
 
@@ -257,26 +264,26 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
 
     for (i = 0;i < N;i++) {
       for (w = g->wires[i];w;w = w->next) {
-	if (!NHash_find(whash,(int)w)) {
+	if (!PHash_find(whash,w)) {
 	  GWire *ow = wire_other(w);
 	  GWire *nw = replicate_wire(w,D,dx,dy);
 	  GWire *onw = wire_other(nw);
 
-	  NHash_insert(whash,(int)w,nw);
-	  NHash_insert(whash,(int)ow,onw);
+	  PHash_insert(whash,w,nw);
+	  PHash_insert(whash,ow,onw);
 	}
 
-	if (!NHash_find(nhash,(int)w->net)) {
+	if (!PHash_find(nhash,w->net)) {
 	  GNet *n = w->net;
 	  GNet *nn = new_GNet(n->n_signame,D);
 
 	  ob_touch(nn);
 
-	  nn->n_driver = (GWire*) NHash_find(whash,(int)w);
+	  nn->n_driver = (GWire*) PHash_find(whash,w);
 	  nn->n_nbits = n->n_nbits;
 	  nn->n_show_name = n->n_show_name;
 
-	  NHash_insert(nhash,(int)w->net,nn);
+	  PHash_insert(nhash,w->net,nn);
 	}
       }
     }
@@ -286,9 +293,9 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
    * Set nets of copied wires
    */
   for (E = Hash_first(whash);E;E = Hash_next(whash,E)) {
-    GWire *sw = (GWire*) NHashElem_key(E);
+    GWire *sw = (GWire*) PHashElem_key(E);
     GWire *dw = (GWire*) HashElem_obj(E);
-    GNet *net = (GNet*) NHash_find(nhash,(int)sw->net);
+    GNet *net = (GNet*) PHash_find(nhash,sw->net);
     wire_setNet(dw,net);
   }
 
@@ -316,7 +323,7 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
 
     if (n->n_ionet)  {
       ob_touch(nn);
-      nn->n_ionet = (GCElement*) NHash_find(ghash,(int)n->n_ionet);
+      nn->n_ionet = (GCElement*) PHash_find(ghash,n->n_ionet);
     }
 
     wire_finalizeNet(nn->n_driver);
@@ -330,12 +337,12 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
   for (E = Hash_first(whash);E;E = Hash_next(whash,E)) {
     GWire *dw = (GWire*) HashElem_obj(E);
     GNet *net = dw->net;
-    GWire *rw = (GWire*) NHash_find(rhash,(int)net);
+    GWire *rw = (GWire*) PHash_find(rhash,net);
     GWire *dw_r;
 
     if (!rw) {
       dw_r = rw = wire_sigroot(dw);
-      NHash_insert(rhash,(int)net,rw);
+      PHash_insert(rhash,net,rw);
     } else
       dw_r = wire_sigroot(dw);
 #if 0
@@ -363,10 +370,10 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
     }
   }
 
-  delete_NHash(rhash);
-  delete_NHash(nhash);
-  delete_NHash(whash);
-  delete_NHash(ghash);
+	delete_PHash(rhash);
+	delete_PHash(nhash);
+	delete_PHash(whash);
+	delete_PHash(ghash);
 }
 
 int GModuleDef_numHdlLines(GModuleDef *M)
@@ -441,14 +448,14 @@ void GModuleDef_getBBX(GModuleDef *M,TargetDev_e target, int *minX,int *maxX,int
   }
 }
 
-static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,NHash *mhash)
+static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,PHash *mhash)
 {
   HashElem *E;
   GModuleDef *R;
 
-  if (NHash_find(mhash,(int)M))
-    return M;
-  NHash_insert(mhash,(int)M,(void*)1);
+	if (PHash_find(mhash,M))
+		return M;
+	PHash_insert(mhash,M,(void*)1);
 
   for (E = Hash_first(M->m_gates);E;E = Hash_next(M->m_gates,E)) {
     GCElement *g = (GCElement*) HashElem_obj(E);
@@ -461,11 +468,10 @@ static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,NHash *mhash)
     }
   }
 
-  NHash_remove(mhash,(int)M);
+  PHash_remove(mhash,M);
 
   return 0;
 }
-
 
 /*
  * Check to see if there are any recursive loops in M.  Returns null if
@@ -473,14 +479,14 @@ static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,NHash *mhash)
  */
 GModuleDef *GModuleDef_isRecursive(GModuleDef *M)
 {
-  NHash *mhash = new_NHash();		/* set of modules we have seen so far. */
-  GModuleDef *R;
+	PHash *mhash;	/* set of modules we have seen so far. */
+	GModuleDef *R;
 
-  R = GModuleDef_isRecursive_aux(M,mhash);
+	mhash = new_PHash();
+	R = GModuleDef_isRecursive_aux(M,mhash);
+	delete_PHash(mhash);
 
-  delete_NHash(mhash);
-
-  return R;
+	return R;
 }
 
 /*****************************************************************************

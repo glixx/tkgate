@@ -118,18 +118,18 @@ void verify_gate(GCElement *g,GModuleDef *m)
 {
   int N = GCElement_numPads(g);
   int i;
-  NHash *H = new_NHash();
+  PHash *H = new_PHash();
 
   for (i = 0;i < N;i++) {
     GWire *w;
 
     for (w = g->wires[i];w;w = w->next) {
-      if (NHash_find(H,(unsigned)w)) {
+      if (PHash_find(H,w)) {
 	verify_error(m,"wire 0x%x(%s) attached to gate %s(%s) multiple times.",
 		     w,w->net->n_signame,g->ename,g->typeinfo->name);
 	continue;
       }
-      NHash_insert(H,(unsigned)w,w);
+      PHash_insert(H,w,w);
       if (w->gate != g) {
 	if (w->gate)
 	  verify_error(m,"wire 0x%x(%s) attached to gate %s(%s) is really attached to %s(%s).",
@@ -149,7 +149,7 @@ void verify_gate(GCElement *g,GModuleDef *m)
     break;
   }
 
-  delete_NHash(H);
+  delete_PHash(H);
 }
 
 void verify_module(GModuleDef *M)

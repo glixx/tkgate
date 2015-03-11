@@ -1103,11 +1103,11 @@ void VerEndNetlistModule()
 {
   HashElem *E;
   GWireList *wl;
-  NHash *bad_wires;
-  NHash *bad_nets;
+  PHash *bad_wires;
+  PHash *bad_nets;
 
-  bad_wires = new_NHash_noob();
-  bad_nets = new_NHash_noob();
+	bad_wires = new_PHash_noob();
+	bad_nets = new_PHash_noob();
 
   /*
      Fix up wire nets.  There may be redunant processing here,
@@ -1137,9 +1137,9 @@ void VerEndNetlistModule()
     if (w1 == w2) continue;
 
     if (!w1->gate && !w2->gate) {
-      NHash_insert(bad_wires,(int)w2,w2);
-      NHash_insert(bad_wires,(int)w1,w1);
-      NHash_insert(bad_nets,(int)w1->net,w1->net);
+      PHash_insert(bad_wires,w2,w2);
+      PHash_insert(bad_wires,w1,w1);
+      PHash_insert(bad_nets,w1->net,w1->net);
     }
   }
 
@@ -1176,8 +1176,8 @@ void VerEndNetlistModule()
   }
 
 
-  delete_NHash(bad_wires);
-  delete_NHash(bad_nets);
+  delete_PHash(bad_wires);
+  delete_PHash(bad_nets);
 
   cur.mod = 0;
 }

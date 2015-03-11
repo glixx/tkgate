@@ -311,7 +311,7 @@ void BCGoto_init(ByteCode *bc, Value *cond,int neg,CodeBlock *cb,unsigned offset
  *****************************************************************************/
 void BCGoto_exec(BCGoto *g,VGThread *t)
 {
-  int doskip = (g->g_cond && (Value_isZero(g->g_cond)||!Value_isValue(g->g_cond)));
+  int doskip = (g->g_cond && (Value_isZero(g->g_cond)||!Value_isLogic(g->g_cond)));
 
   if (g->g_neg) doskip = !doskip;
   if (doskip) {
@@ -751,7 +751,8 @@ void BCNbMemPutE_init(ByteCode *bc,Net *n, Value *addr, Value *netLsb, Value *da
 void BCNbMemPutE_exec(BCNbMemPutE *mpe,VGThread *thread)
 {
   unsigned netLsb = 0;
-  EvQueue *Q = VGThread_getQueue(thread);
+  /** @TODO to remove */
+  /* EvQueue *Q = VGThread_getQueue(thread); */
   Event *e;
 
 #if DEBUG

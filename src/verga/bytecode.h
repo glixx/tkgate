@@ -62,15 +62,19 @@
 
 #define BCODE_BLOCKSIZE		64
 
-
 /*****************************************************************************
  *
  * Thread states
  *
  *****************************************************************************/
-#define TS_ACTIVE	0x0		/* Thread is actively executing */
-#define TS_BLOCKED	0x1		/* Thread is blocked waiting for event */
-#define TS_DISABLED	0x2		/* Thread is disabled */
+enum {
+  TS_ACTIVE = 0x0, /**< Thread is actively executing */
+#define TS_ACTIVE TS_ACTIVE
+  TS_BLOCKED = 0x1, /**< Thread is blocked waiting for event */
+#define TS_BLOCKED TS_BLOCKED
+  TS_DISABLED = 0x2, /**< Thread is disabled */
+#define TS_DISABLED	TS_DISABLED
+};
 
 /*****************************************************************************
  *

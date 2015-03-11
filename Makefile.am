@@ -47,7 +47,7 @@ dist_man_MANS = tkgate.1 verga.1 gmac.1
 #
 # List of common documentation files
 #
-dist_doc_DATA = README README.verga COPYING TODO
+dist_doc_DATA = README README.verga COPYING TODO ChangeLog
 
 #
 # Desktop file

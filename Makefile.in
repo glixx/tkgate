@@ -73,7 +73,7 @@ DIST_COMMON = README $(am__configure_deps) $(dist_desktop_DATA) \
 	$(dist_doc_DATA) $(dist_man_MANS) $(dist_pixmap_DATA) \
 	$(dist_pkgdata_DATA) $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(top_srcdir)/configure COPYING INSTALL TODO depcomp \
+	$(top_srcdir)/configure COPYING ChangeLog INSTALL TODO depcomp \
 	install-sh missing ylwrap
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
@@ -321,7 +321,7 @@ dist_man_MANS = tkgate.1 verga.1 gmac.1
 #
 # List of common documentation files
 #
-dist_doc_DATA = README README.verga COPYING TODO
+dist_doc_DATA = README README.verga COPYING TODO ChangeLog
 
 #
 # Desktop file

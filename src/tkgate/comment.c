@@ -110,9 +110,9 @@ int Comment_getValue(char *p,const char *name)
   if (strcasecmp(name,"tkgate-version") == 0) {
     strcpy(p,TKGATE_FULL_VERSION);
   } else if (strcasecmp(name,"tkgate-homepage") == 0) {
-    strcpy(p,TKGATE_HOMEPAGE);
+    strcpy(p,PACKAGE_URL);
   } else if (strcasecmp(name,"tkgate-mailcontact") == 0) {
-    strcpy(p,TKGATE_MAILCONTACT);
+    strcpy(p,PACKAGE_BUGREPORT);
   } else if (strcasecmp(name,"tkgate-copyright") == 0) {
     strcpy(p,TKGATE_COPYRIGHT);
   } else {

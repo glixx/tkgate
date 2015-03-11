@@ -700,7 +700,6 @@ int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,Lis
   ListElem *le;			/* Iterator for left-hand-side components */
   int base_bit = 0;		/* Base bit from which to get data for left-hand side */
 
-
   lsize = Expr_getBitSize(mia->mia_lhs, ModuleInst_getScope(mi));
   rsize = Expr_getBitSize(mia->mia_rhs, ModuleInst_getScope(mi));
   size = imax(lsize,rsize);

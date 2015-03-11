@@ -433,7 +433,7 @@ void SymBlock_VerSave(FILE *f,GCElement *g)
   }
   fprintf(f,");");
 
-  fprintf(f,"   //: @(%d, %d) /symbol:%u",g->xpos,g->ypos,(unsigned)ms);
+  fprintf(f,"   //: @(%d, %d) /symbol:%u",g->xpos,g->ypos,(uintptr_t)ms);
 
   if (!g->show_name) fprintf(f," /sn:%d",g->show_name);
   if (g->anchored) fprintf(f," /anc:1");

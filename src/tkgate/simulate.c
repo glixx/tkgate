@@ -19,6 +19,8 @@
 ****************************************************************************/
 #include "tkgate.h"
 
+#include <assert.h>
+
 #define MAXDEPTH	128
 
 extern GScope *Scope;
