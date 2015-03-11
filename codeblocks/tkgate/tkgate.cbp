@@ -80,6 +80,7 @@
 		<Unit filename="../../src/tkgate/comment.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../../src/tkgate/comment.h" />
 		<Unit filename="../../src/tkgate/concat.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -287,6 +288,7 @@
 		<Unit filename="../../src/tkgate/switch.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../../src/tkgate/switch.h" />
 		<Unit filename="../../src/tkgate/symblock.c">
 			<Option compilerVar="CC" />
 		</Unit>
