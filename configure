@@ -6953,14 +6953,7 @@ See \`config.log' for more details" "$LINENO" 5; }
 else
   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
-#include <stdlib.h> #include <stdio.h>
-int
-main ()
-{
-return sizeof(unsigned) == 8 ? 0 : 1;
-  ;
-  return 0;
-}
+int main() {return sizeof(unsigned) == 8 ? 0 : 1;}
 _ACEOF
 if ac_fn_c_try_run "$LINENO"; then :
   wordsize_cv_=64

@@ -64,8 +64,7 @@ void Pixmap_deleteZoomSet(Pixmap p)
   free(zset);
 }
 
-
-Pixmap Pixmap_register(char *name,unsigned char bits[],int w,int h)
+Pixmap Pixmap_register(char *name,unsigned char data[],unsigned w,unsigned h)
 {
   Pixmap *P;
 
@@ -75,7 +74,7 @@ Pixmap Pixmap_register(char *name,unsigned char bits[],int w,int h)
     return None;
 
   P = (Pixmap*) malloc(sizeof(Pixmap));
-  *P = XCreatePixmapFromBitmapData(TkGate.D,TkGate.root,bits,w,h,1,0,1);
+  *P = XCreatePixmapFromBitmapData(TkGate.D,TkGate.root,data,w,h,1,0,1);
   SHash_insert(icon_pixmaps,name,P);
   Pixmap_initZoomSet(*P,w,h);
 
@@ -86,7 +85,8 @@ Pixmap Pixmap_registerFromFileWithParms(char *name,char *file,int *pw,int *ph,in
 {
   static const char *base_dir = 0;
   Pixmap *P;
-  int w,h,x,y;
+  unsigned w,h;
+  int x,y;
   char buf[STRMAX];
 
   if (!TkGate.tcl) return None;
@@ -158,7 +158,6 @@ Pixmap Pixmap_createZoomPixmap(Pixmap p,int w,int h,int zp)
   }
 
   XPutImage(TkGate.D,DP,TkGate.bitGC,DI,0,0,0,0,zp*w,zp*h);
-
 
   XDestroyImage(DI);
   XDestroyImage(SI);

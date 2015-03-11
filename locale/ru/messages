@@ -297,11 +297,11 @@ gm.io.ledseg	7-сег. индикатор (прямое управление)
 gm.io.tty	TTY
 
 gm.gate.and	И
-gm.gate.nand	НЕ-И
+gm.gate.nand	И-НЕ
 gm.gate.or	ИЛИ
-gm.gate.nor	НЕ-ИЛИ
-gm.gate.xor	ИСКЛ. ИЛИ
-gm.gate.xnor	НЕ-ИСКЛ. ИЛИ
+gm.gate.nor	ИЛИ-НЕ
+gm.gate.xor	ИСКЛ-ИЛИ
+gm.gate.xnor	ИСКЛ-ИЛИ-НЕ
 gm.gate.buf	Буфер
 gm.gate.inv	Инвертор
 gm.gate.tribuf	Буфер с тремя состояниями
@@ -309,11 +309,11 @@ gm.gate.nmos	N-МОП
 gm.gate.pmos	P-МОП
 
 gm.rgate.and	И
-gm.rgate.nand	НЕ-И
+gm.rgate.nand	И-НЕ
 gm.rgate.or	ИЛИ
-gm.rgate.nor	НЕ-ИЛИ
-gm.rgate.xor	ИСКЛ. ИЛИ
-gm.rgate.xnor	НЕ-ИСКЛ. ИЛИ
+gm.rgate.nor	ИЛИ-НЕ
+gm.rgate.xor	ИСКЛ-ИЛИ
+gm.rgate.xnor	ИСКЛ-ИЛИ-НЕ
 
 gm.alu.add	Сумматор
 gm.alu.mult	Умножитель

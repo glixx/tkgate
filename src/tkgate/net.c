@@ -503,12 +503,12 @@ int checkValidName(const char *name,SHash *H)
  *****************************************************************************/
 void pickValidName(char *buf,const char *name,const char *base,SHash *H)
 {
-  char *p;
-  int reason = 0;
+  int reason;
 
   if (!base || !*base)
     base = "n";
 
+  reason = 0;
   if (name) {
     if (buf != (char*)name)
       strcpy(buf,name);
@@ -538,7 +538,8 @@ void pickValidName(char *buf,const char *name,const char *base,SHash *H)
   } else
     sprintf(buf,"%s0",base);
 
-  p = buf+strlen(buf);
+  /** @TODO to remove */
+  /*p = buf+strlen(buf);*/
 
   if ((H && SHash_find(H,buf)) || ycIsKW(buf)) {
     char *p;

@@ -233,10 +233,12 @@ void RamRom_VerSave(FILE *f,GCElement *g)
  *****************************************************************************/
 static void Ram_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
-  GGateInfo *gi = gcs->gc_info;
+  /** @TODO to remove */
+  /* GGateInfo *gi = gcs->gc_info; */
   int AnumBits = gcs->gc_multiPad;	/* Hack for ROM/RAM gates */
   int DnumBits = gcs->gc_numBits;
-  const char *invSpec = gcs->gc_invSpec;
+  /** @TODO to remove */
+  /* const char *invSpec = gcs->gc_invSpec; */
   PrimParm primParm;
 
   PrimParm_init(&primParm);

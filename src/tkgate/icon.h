@@ -40,8 +40,7 @@ typedef struct {
   int 		width,height;		/* Base size of pixmap */
 } PixmapZoomSet;
 
-
-Pixmap Pixmap_register(char *name,unsigned char bits[],int w,int h);
+Pixmap Pixmap_register(char *name,unsigned char bits[],unsigned w,unsigned h);
 Pixmap Pixmap_registerFromFile(char *name,char *file);
 Pixmap Pixmap_registerFromFileWithParms(char *name,char *file,int*,int*,int*,int*);
 Pixmap Pixmap_find(char *name);

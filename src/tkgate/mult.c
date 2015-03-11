@@ -127,7 +127,8 @@ GGateInfo gate_mult_info = {
  *****************************************************************************/
 static void Mult_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
-  GGateInfo *gi = gcs->gc_info;
+  /** @TODO to remove */
+  /* GGateInfo *gi = gcs->gc_info; */
   int numBit = gcs->gc_numBits;
   const char *invSpec = gcs->gc_invSpec;
   PrimParm primParm;

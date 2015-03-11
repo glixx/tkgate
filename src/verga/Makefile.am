@@ -18,7 +18,7 @@
 
 DISTCLEANFILES=vgrammar.h vgrammar.c luthor.c
 
-BUILT_SOURCES = vgrammar.h
+BUILT_SOURCES=vgrammar.h
 AM_CFLAGS=@TOP_IPATH@ @COMMON_IPATH@
 AM_YFLAGS=-d
 

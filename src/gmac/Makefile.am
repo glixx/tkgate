@@ -17,7 +17,7 @@
 
 DISTCLEANFILES=grammar.h grammar.c luthor.c
 
-BUILT_SOURCES = grammar.h
+BUILT_SOURCES=grammar.h
 AM_CFLAGS=@TOP_IPATH@ @COMMON_IPATH@
 AM_YFLAGS=-d
 

@@ -21,6 +21,7 @@
 #include <string.h>
 #include <unistd.h>
 #include "tkgate.h"
+#include "yybasic.h"
 
 #define BLOCK_STUBLEN	15
 
@@ -253,10 +254,12 @@ GCElement *Block_Make(EditState **es,GModuleDef *PM,int GType,
      * This option is used by the drag-and-drop module creation feature.
      */
     if (DoInit && *DoInit == '1') {
-      GModuleDef *M;
+      /** @TODO to remove */
+      /* GModuleDef *M; */
 
       env_checkname(g);
-      M = env_findModule(g->u.block.moduleName);
+      /** @TODO to remove */
+      /* M = env_findModule(g->u.block.moduleName); */
 
       copy = env_getInterface(g);			/* Get copy of the block description */
 
@@ -276,7 +279,8 @@ GCElement *Block_Make(EditState **es,GModuleDef *PM,int GType,
     GGateInfo *gi = g->typeinfo;
     int ok;
     const char *temp;
-    GModuleDef *M;
+    /** @TODO to remove */
+    /* GModuleDef *M; */
 
     g->selected = 1;
     g->top = 0;
@@ -299,8 +303,8 @@ GCElement *Block_Make(EditState **es,GModuleDef *PM,int GType,
     Tcl_SetVar(TkGate.tcl,"edgat_newBlock","0",TCL_GLOBAL_ONLY);
 
     env_checkname(g);
-
-    M = env_findModule(g->u.block.moduleName);
+    /** @TODO to remove */
+    /* M = env_findModule(g->u.block.moduleName); */
 
     copy = env_getInterface(g);
     if (copy) {
@@ -1545,11 +1549,12 @@ int block_getNewPortProperties(GCElement *g,int x,int y,int orient,
 
   if (strcmp(Tcl_GetStringResult(TkGate.tcl),"1") == 0) {
     const char *numBits;
-    const char *sigName;
+    /** @TODO to remove */
+    /* const char *sigName; */
     const char *portName;
     const char *sdir;
-
-    sigName = Tcl_GetVar(TkGate.tcl,"edport_sig",TCL_GLOBAL_ONLY);
+    /** @TODO to remove */
+    /* sigName = Tcl_GetVar(TkGate.tcl,"edport_sig",TCL_GLOBAL_ONLY); */
     portName = Tcl_GetVar(TkGate.tcl,"edport_port",TCL_GLOBAL_ONLY);
     numBits = Tcl_GetVar(TkGate.tcl,"edport_bits",TCL_GLOBAL_ONLY);
     sdir = Tcl_GetVar(TkGate.tcl,"edport_type",TCL_GLOBAL_ONLY);
@@ -2063,8 +2068,11 @@ int block_isIsomorphic_blockports(GCElement *g1,GCElement *g2)
     int k = 4*(i/4) + ((i+g1->orient)%4);
     int pd1 = GCElement_getPadDir(g1,k);
     int pd2 = GCElement_getPadDir(g2,i);
+    /** @TODO to remove */
+    /*
     const char *pn1 = GCElement_getPadName(g1,k);
     const char *pn2 = GCElement_getPadName(g2,i);
+    */
     GWire *pw1[1024];
     GWire *pw2[1024];
     int npw1 = block_getPadWires(g1,k,pw1,1024);
@@ -2128,7 +2136,8 @@ int block_isIsomorphic_blockports(GCElement *g1,GCElement *g2)
  *****************************************************************************/
 int block_isIsomorphic(GCElement *g1,GCElement *g2)
 {
-  int i,j,n;
+  /** @TODO to remove */
+  /* int i,j,n; */
 
   /*
    * Types must match
@@ -2258,6 +2267,8 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
     GModSymbol_attach(g->u.block.symbol);
   }
 
+
+
   /*
    * Swap block size for rotation if necessary and get the relative center point (px,py)
    */
@@ -2294,7 +2305,10 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
      * Get pad and direction information.
      */
     GPadInfo *pad = &ug->typeinfo->Pad[i];
+    /** @TODO to remove */
+    /*
     int dir = GCElement_getPadDir(ug,i);
+    */
     int iodir = pad->iotype;
     int j = 4*(i/4) + ((i+g->orient)%4);
 

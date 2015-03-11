@@ -18,6 +18,7 @@
     Last edit by hansen on Sat Feb 21 20:02:58 2009
 ****************************************************************************/
 #include "tkgate.h"
+#include "switch.h"
 
 #define SWITCH_OUT 0
 
@@ -40,10 +41,7 @@ GCElement *Switch_Make(EditState **,GModuleDef *,int,int,int,int,const char *,in
 void Switch_Draw(GCElement *g,int md);
 int Switch_EditProps(GCElement *g,int isLoadDialog);
 int Switch_SimHitFunc(EditState*,GCElement*);
-GCElement *SwitchDip_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned);
 void Switch_SimInitFunc(EditState *es,GCElement *g,const char *path);
-void SwitchDip_VerSave(FILE *f,GCElement *g);
-void SwitchDip_SetProp(GCElement*,const char*,const void*);
 
 GPadLoc switch_out_loc[] = {
   {17,0,17,0,D_RIGHT},

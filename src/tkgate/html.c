@@ -56,8 +56,6 @@ Special pre-processed tags:
 //#include <X11/Xatom.h>
 
 
-
-
 /*
  * Step size for extending the array of html tag options.
  */
@@ -323,7 +321,6 @@ HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,font
   return font;
 }
 
-
 HtmlTag *new_HtmlTag()
 {
   HtmlTag *ht = (HtmlTag*) ob_malloc(sizeof(HtmlTag),"HtmlTag");
@@ -447,7 +444,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 
   switch (hc->hc_html->h_target) {
   case TD_X11 :
-#if 0
+#ifdef DEBUG
     printf("%p: activate-x ",hc);HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
 
@@ -463,7 +460,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
     hc->hc_descent = hc->hc_xFont->descent;
     break;
   case TD_PRINT :
-#if 0
+#ifdef DEBUG
     printf("activate-ps ");HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
     hc->hc_xFont = 0;
@@ -615,7 +612,10 @@ const char *Html_makeTutorialNavigationLine_bymodule(char *line)
       return "[no-controls]";
 
     if (cur_pnum == 1) {
+    /** @TODO to remove */
+      /*
       int i;
+      */
 
       p += sprintf(p,"<font color=gray>&lt;%s</font>   ",msgLookup("tutorial.prev"));
     } else {
@@ -1067,7 +1067,6 @@ void Html_handle_a(Html *h, HtmlTag *ht)
     }
   }
 
-
   Html_pushContext(h,hc);
 }
 
@@ -1138,6 +1137,9 @@ void Html_partition(Html *h,char *data)
   char *p,*q;
   Encoder *encoder = Html_getEncoder(h);
   int isJapanese = isJapaneseDisplay(encoder);
+  int i;
+  HtmlUnit *hu;
+  HtmlContext *hc;
 
   Html_flushUnits(h);
 
@@ -1178,7 +1180,7 @@ void Html_partition(Html *h,char *data)
        *
        ******************************************************************/
       if (h->h_context->hc_preformat) {
-	HtmlUnit *hu = new_HtmlUnit_T(HU_NEWLINE,h->h_context);
+	hu = new_HtmlUnit_T(HU_NEWLINE,h->h_context);
 	Html_addUnit(h,hu);
       } else
 	Html_addUnit(h,new_HtmlUnit(" ",1,h->h_context));
@@ -1189,14 +1191,9 @@ void Html_partition(Html *h,char *data)
        * This is Kanji text.  Scan until we find a non-8-bit character.
        *
        ******************************************************************/
-      HtmlContext *hc;
-      HtmlUnit *hu;
-      int i;
 
       for (q = p;*q;q++)
-	if (!(*q & 0x80))
-	  break;
-
+        if (!(*q & 0x80)) break;
 
       hc = new_HtmlContext(h->h_context,h);
       hc->hc_font.family = FF_KANJI;
@@ -1216,7 +1213,6 @@ void Html_partition(Html *h,char *data)
        * This is a regular non-kanji text string
        *
        ******************************************************************/
-      HtmlUnit *hu;
 
       for (q = p;*q;q++)
 	if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
@@ -1247,7 +1243,6 @@ void Html_format(Html *h)
   int max_width = 0;
   int x = 0, y = 0;					/* Current text position */
   char *p;
-
 
   ob_touch(h);
   Html_partition(h,h->h_data);
@@ -1320,8 +1315,9 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
 {
   HtmlUnit *hu;
   HtmlContext *last_hc = 0;
-  Encoder *encoder = Circuit_getPSEncoder(TkGate.circuit);
-  char text[STRMAX];
+  /** @TODO to remove */
+  /* Encoder *encoder = Circuit_getPSEncoder(TkGate.circuit); */
+  /* char text[STRMAX]; */
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
@@ -1330,7 +1326,8 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
      * Update properties only if there was a change.
      */
     if (hc != last_hc) {
-      // Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+      /** @TODO to remove */
+      /* Tkg_changeColor(gc, GXxor, hc->hc_pixel); */
       last_hc = hc;
     }
 
@@ -1415,11 +1412,11 @@ int Html_isHit(Html *h,int x,int y)
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
 
-    if (x >= hu->hu_x && x <= (hu->hu_x + hu->hu_width)
-	&& y <= (hu->hu_y + HtmlContext_fontDescent(hc)) && y >= (hu->hu_y - HtmlContext_fontAscent(hc))) {
-
+    if ((x >= hu->hu_x) &&
+        (x <= (hu->hu_x + hu->hu_width)) &&
+        (y <= (hu->hu_y + HtmlContext_fontDescent(hc))) &&
+        (y >= (hu->hu_y - HtmlContext_fontAscent(hc))))
       return 1;
-    }
   }
 
   return 0;
@@ -1457,3 +1454,14 @@ const char *Html_getLink(Html *h,int x,int y)
   return 0;
 }
 
+void HtmlContext_print(const HtmlContext * context, FILE * fp)
+{
+  fputs("Html context:    ", fp);
+
+  fprintf(fp, "\tpixel color:         %d\n", context->hc_pixel);
+  fprintf(fp, "\tassociated hyperlink:%s\n", context->hc_link);
+  fprintf(fp, "\tassociated tag:      %s\n", context->hc_tag);
+  fprintf(fp, "\tpreformat:           %d\n", context->hc_preformat);
+  fprintf(fp, "\tis 16 bit:           %d\n", context->hc_is16bit);
+  fprintf(fp, "\tspace width:         %d\n", context->hc_spaceWidth);
+}

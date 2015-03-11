@@ -842,6 +842,8 @@ GWireNode *wirenode_cutsegment(int x,int y,GWireNode *n,GModuleDef *M)
   return cn2;
 }
 
+/** @TODO check */
+/*
 static int verify_addr(void *p)
 {
   return (p) != (void*)0xa7a7a7a7;
@@ -880,7 +882,7 @@ static void verify_net(const char *place,GNet *n)
   }
   verify_wires(place, n->n_driver);
 }
-
+*/
 /*****************************************************************************
  *
  * Cut wire near node an at (x,y).

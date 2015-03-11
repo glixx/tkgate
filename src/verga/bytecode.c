@@ -19,7 +19,10 @@
 ****************************************************************************/
 #include "thyme.h"
 
+#ifndef DEBUG
 #define DEBUG 0
+#endif
+
 /*****************************************************************************
  *
  * Create a new CodeBlock
@@ -756,7 +759,7 @@ void BCNbMemPutE_exec(BCNbMemPutE *mpe,VGThread *thread)
   Event *e;
 
 #if DEBUG
-  vgio_echo("%p: BCNbMemPutD(%p) #%d\n",thread,mpe,mpe->m_delay);
+  vgio_echo("%p: BCNbMemPutE(%p)\n",thread,mpe);
 #endif
 
   if (mpe->m_netLsb) {

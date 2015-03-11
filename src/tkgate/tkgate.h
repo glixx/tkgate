@@ -23,24 +23,36 @@
 
 #include "config.h"
 
-#include <stdlib.h>
-#include <sys/param.h>
-#include <limits.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <stdarg.h>
+#define _GNU_SOURCE
+
 #include <ctype.h>
-#include <unistd.h>
-#include <time.h>
-#include <pwd.h>
 #include <errno.h>
-#include <assert.h>
-#include <string.h>
+#include <limits.h>
 #include <signal.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#if HAVE_STRING_H
+#include <string.h>
+#endif
+#include <time.h>
+#if HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#if HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+#if HAVE_SYS_STAT_H
+#include <sys/stat.h>
+#endif
+#if HAVE_SYS_PARAM_H
+#include <sys/param.h>
+#endif
+
 #include <X11/Xlib.h>
 #include <X11/Xresource.h>
 #include <X11/cursorfont.h>
+
 #if HAVE_ICONV_H
 #include <iconv.h>
 #endif
@@ -183,7 +195,6 @@ struct locale_str {
   const char	*l_encVerilog;		/* Encoding of verilog save files */
   const char	*l_encPostscript;	/* Encoding for postscript files */
 };
-
 
 /*
  *  TkGate major modes

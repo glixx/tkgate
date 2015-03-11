@@ -23,8 +23,6 @@
   We have separate handling for single-gate and multi-gate selection
   mainly due to historical baggage.  One day, I will merge them into
   a single selection
-
-
 */
 #include <stdlib.h>
 #include <stdio.h>
@@ -34,8 +32,6 @@
 #include <string.h>
 #include <assert.h>
 #include "tkgate.h"
-
-void Comment_addLine(GCElement *g,const char *text);
 
 GSelection *new_GSelection()
 {

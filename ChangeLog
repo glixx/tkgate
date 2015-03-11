@@ -1,7 +1,9 @@
 Version 2.0-rc2 - March 11, 2015
+     * Fixed bug, causing the LEDs and switches of the same name,
+       placed in different modules, be incorrectly redrawed
      * Fixed bugs, related with 64-bit architectures
      * Fixed bug in JK flip-flop primitive (Set/Reset invertion)
-     * Fixed display and write system tasks to output decimal values with
+     * Fixed display and write system tasks for  output decimal values with
        high-impedance and unknown bits according to the unit 17.1.1.4 of
        IEEE 1364-2001 in Verga.
      * A lot of build warnings fixed and workarounded.

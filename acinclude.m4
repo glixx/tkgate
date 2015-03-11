@@ -142,7 +142,7 @@ AC_DEFUN([TKG_CHECK_ICONV_H],[
 #--------------------------------------------------------------------
 AC_DEFUN([TKG_WORDSIZE],[
   AC_CACHE_CHECK([word size], wordsize_cv_,
-    AC_RUN_IFELSE(AC_LANG_PROGRAM([#include <stdlib.h> #include <stdio.h>], [return sizeof(unsigned) == 8 ? 0 : 1;]),
+    AC_RUN_IFELSE([AC_LANG_SOURCE([int main() {return sizeof(unsigned) == 8 ? 0 : 1;}])],
 	[wordsize_cv_=64], [wordsize_cv_=32]))
   if test $wordsize_cv_ = 32; then
     AC_DEFINE(TKGATE_WORDSIZE, 32, [Word size of machine.])

@@ -16,6 +16,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "tkgate.h"
+#include "switch.h"
 
 #define CENTER_JUST	(BetweenTopAndBottom|BetweenLeftAndRight)
 
@@ -31,9 +32,6 @@ int Dip_EditProps(GCElement *g,int isLoadDialog);
 void Dip_PSWrite(GPrint *P,GModLayout*,GCElement *g);
 int Dip_SimHitFunc(EditState *ss,GCElement *g);
 void Dip_SimInitFunc(EditState *es,GCElement *g,const char *path);
-GCElement *SwitchDip_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned);
-void SwitchDip_VerSave(FILE *f,GCElement *g);
-void SwitchDip_SetProp(FILE *f,GCElement *g);
 
 static iconDimensions dip_iconDims[] = {
   {0, 0, 75, 20, 37, 10},
@@ -77,7 +75,7 @@ static char *psDip[] = {
 GGateInfo gate_dip_info = {
   GC_DIP,
   "DIP",
-  "dip",0x0,
+  "dip",0x0u,
   "psdip",psDip,
   -1,-1,
 

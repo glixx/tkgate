@@ -33,7 +33,6 @@ int Tkgate_Init(Tcl_Interp *tcl);
  *****************************************************************************/
 int Tcl_AppInit(Tcl_Interp *tcl)
 {
-  char buf[STRMAX];
   int r;
 
   r = Tcl_Init(tcl);

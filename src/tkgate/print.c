@@ -1561,6 +1561,8 @@ static void unbuild_HGNodeGraph(HGNode *G)
   ob_free(G);
 }
 
+/** @TODO to remove */
+/*
 static void HGNodeGraph_print(HGNode *G,int level)
 {
   int i;
@@ -1572,6 +1574,7 @@ static void HGNodeGraph_print(HGNode *G,int level)
   HGNodeGraph_print(G->hg_children,level+1);
   HGNodeGraph_print(G->hg_nextSibling,level);
 }
+*/
 
 static int HGNode_translatePoint(int *x,int *y)
 {
