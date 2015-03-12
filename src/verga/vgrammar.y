@@ -57,7 +57,6 @@
 %type <S> dlit decltail dlits
 %type <I> casekw cmos_gtype mos_gtype inx_gtype outx_gtype bif_gtype tran_gtype trif_gtype
 
-
 %type <I> net_type reg_type xreg_type port_type capsize netattrs netattr size0 size1 ptype oautomatic
 %type <E> expr bval lval lvals catexprs delay dexpr odelay econd trigger triggers event catexpr starg
 %type <R> orange range
@@ -271,7 +270,7 @@ esitem	: decl
  *   tran  (a,b);
  *
  *****************************************************************************/
-gate	: inx_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
+gate	: inx_gtype odrstrength odelay { VerGateDecl($1,$3); } ginsts SEMI
 	| outx_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| cmos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| mos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
@@ -288,6 +287,14 @@ bif_gtype	: BUFIF0 | BUFIF1 | NOTIF0 | NOTIF1 ;
 tran_gtype	: TRAN | RTRAN ;
 trif_gtype	: TRANIF0 | TRANIF1 | RTRANIF0 | RTRANIF1 ;
 
+odrstrength	: drstrength { perror("fixme: drive_strength"); }
+		|
+		;
+
+drstrength	: LPAREN size0 COMMA size1 RPAREN
+		| LPAREN size1 COMMA size0 RPAREN
+		;
+
 ginsts		: ginst
 		| ginsts COMMA ginst
 		;
@@ -296,6 +303,11 @@ ginst		: LITERAL orange LPAREN exprs RPAREN		{ VerGateInst($1,$2,$4); }
 		| LPAREN exprs RPAREN				{ VerGateInst(0,0,$2); }
 		;
 
+inx_ginsts	: inx_ginst
+		| inx_ginsts COMMA inx_ginst
+		;
+
+inx_ginst	: LITERAL orange LPAREN expr COMMA expr COMMA exprs RPAREN
 
 /*****************************************************************************
  *
@@ -316,7 +328,6 @@ instance : LITERAL { VerModDecl($1); } omparmsets minsts SEMI
 omparmsets : HASH LPAREN mparmsets RPAREN
 	   |
 	   ;
-
 
 mparmsets : mpexprs
 /*	  | mpasgns*/
@@ -385,8 +396,6 @@ decltail : dlit SEMI
 	| dlit ASGN delay expr SEMI { VerDeclAssign(new_Expr_lit($1),$4,$3); }
 	;
 
-
-
 dlits		: dlit
 		| dlits COMMA dlit
 		;
@@ -440,7 +449,6 @@ capsize		: SMALL				{ $$ = NT_P_SMALL; }
 		| MEDIUM			{ $$ = NT_P_MEDIUM; }
 		| LARGE				{ $$ = NT_P_LARGE; }
 		;
-
 
 size0		: SUPPLY0			{ $$ = NT_P_SUPPLY0; }
 		| STRONG0			{ $$ = NT_P_STRONG0; }
