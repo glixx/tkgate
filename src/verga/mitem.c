@@ -90,7 +90,7 @@ static MItemVTable vtable_MIGate = {
  *     mitype		Module item type code (IC_* values)
  *
  *****************************************************************************/
-ModuleItem *new_ModuleItem(int mitype)
+ModuleItem *new_ModuleItem(itemcode_t mitype)
 {
   ModuleItem *mi = (ModuleItem*) malloc(sizeof(ModuleItem));
 
@@ -135,7 +135,7 @@ MIGate *new_MIGate(unsigned gateType, Expr *delay, const char *instName, VRange 
   MIGate *mig = (MIGate*) new_ModuleItem(IC_GATE);
   int i;
 
-  mig->mig_desc = 0;
+  mig->mig_desc = NULL;
   for (i = 0;i < sizeof(gateTable)/sizeof(gateTable[0]);i++) {
     if (gateTable[i].gd_code == gateType) {
       mig->mig_desc = &gateTable[i];
@@ -143,7 +143,7 @@ MIGate *new_MIGate(unsigned gateType, Expr *delay, const char *instName, VRange 
     }
   }
 
-  mig->mig_instName = instName ? strdup(instName) : 0;
+  mig->mig_instName = instName ? strdup(instName) : NULL;
   mig->mig_delay = delay;
   mig->mig_slices = slices;
   mig->mig_ports = ports;

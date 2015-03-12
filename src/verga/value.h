@@ -28,20 +28,31 @@ typedef float real_t;
 /*
   State symbol codes
  */
-#define SYM_INVALID	-1
-#define SYM_NUL1	0
-#define SYM_ZERO	1
-#define SYM_ONE		2
-#define SYM_NUL2	3
-#define SYM_FLOAT	4
-#define SYM_LOW		5
-#define SYM_HIGH	6
-#define SYM_UNKNOWN	7
+typedef enum state_symbol_en {
+  SYM_INVALID = -1,
+#define SYM_INVALID SYM_INVALID
+  SYM_NUL1 = 0,
+#define SYM_NUL1 SYM_NUL1
+  SYM_ZERO = 1,
+#define SYM_ZERO SYM_ZERO
+  SYM_ONE = 2,
+#define SYM_ONE	SYM_ONE
+  SYM_NUL2 = 3,
+#define SYM_NUL2 SYM_NUL2
+  SYM_FLOAT = 4,
+#define SYM_FLOAT SYM_FLOAT
+  SYM_LOW = 5,
+#define SYM_LOW	SYM_LOW
+  SYM_HIGH = 6,
+#define SYM_HIGH SYM_HIGH
+  SYM_UNKNOWN = 7
+#define SYM_UNKNOWN SYM_UNKNOWN
+} StateSymbol;
 
 /*
  * Special property flags of Value
  */
-typedef enum value_flags_str {
+typedef enum value_flags_en {
 	SF_INT = 0x1,
 #define SF_INT SF_INT				/* Declared as an integer */
 	SF_DEC = 0x2,
@@ -125,7 +136,6 @@ typedef enum {
   TT_EDGE,		/* Generic transition */
 } transtype_t;
 
-
 /*
          Logic values
          0  1  x  z  L  H
@@ -134,7 +144,6 @@ zero     1  0  1  0  1  0
 one      0  1  1  0  0  1
 flt      0  0  1  1  1  1
 */
-
 #define DEBUG_VALUE_MEMMGR 0
 
 struct Value_str {
@@ -172,13 +181,17 @@ void Value_one(Value *S);
 void Value_lone(Value *S);
 void Value_unknown(Value *S);
 void Value_float(Value *S);
+
 void Value_print(Value *S,FILE *f);
 void Value_copy(Value *R,Value *A);
 transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al);
 void Value_resize(Value *R,int nbits);
 void Value_makeSameSize(Value *A,Value *B);
 void Value_makeSameSize3(Value *A,Value *B,Value *C);
-int Value_getBitSym(Value*,int);
+
+StateSymbol Value_getBitSym(Value*,int);
+void Value_putBitSym(Value *S,int bit,StateSymbol p);
+
 void Value_wire(Value *R,Value *A,Value *B);
 void Value_wand(Value *R,Value *A,Value *B);
 void Value_wor(Value *R,Value *A,Value *B);

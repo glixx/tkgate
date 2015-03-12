@@ -4,7 +4,6 @@ module top;
   reg x;
   integer i;
 
-
   assign x = a1 ? a0 : 1'bz;
   assign x = b1 ? b0 : 1'bz;
 

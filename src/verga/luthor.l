@@ -103,6 +103,8 @@ struct lex_keywordentry lex_verilog_words[] = {
   {"primitive",PRIMITIVE},
   {"pull0",PULL0},
   {"pull1",PULL1},
+  {"pullup",PULLUP},
+  {"pulldown",PULLDOWN},
   {"rcmos",RCMOS},
   {"real",REAL},
   {"reg",REG},

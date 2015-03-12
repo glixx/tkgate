@@ -454,25 +454,25 @@ void Value_xclear(Value *S)
   }
 }
 
-int Value_getBitSym(Value *S,int i)
+StateSymbol Value_getBitSym(Value *S,int i)
 {
   int w;
   unsigned b;
-  int x = 0;
+  StateSymbol x = 0;
 
   if (i >= S->nbits)
     return SYM_ZERO;
 
   w = i >> SSWORDSHIFT;
   b = 1 << (i & SSBITMASK);
-  if ((S->zero[w] & b)) x |= 0x1;
-  if ((S->one[w] & b))  x |= 0x2;
-  if ((S->flt[w] & b))  x |= 0x4;
+  if ((S->zero[w] & b)) x |= SYM_ZERO;
+  if ((S->one[w] & b))  x |= SYM_ONE;
+  if ((S->flt[w] & b))  x |= SYM_FLOAT;
 
   return x;
 }
 
-void Value_putBitSym(Value *S,int bit,int p)
+void Value_putBitSym(Value *S,int bit,StateSymbol p)
 {
   int w;
   unsigned b;
@@ -481,9 +481,9 @@ void Value_putBitSym(Value *S,int bit,int p)
 
   w = bit >> SSWORDSHIFT;
   b = 1 << (bit & SSBITMASK);
-  if ((p & 0x1)) S->zero[w] |= b; else S->zero[w] &= ~b;
-  if ((p & 0x2)) S->one[w] |= b; else S->one[w] &= ~b;
-  if ((p & 0x4)) S->flt[w] |= b; else S->flt[w] &= ~b;
+  if ((p & SYM_ZERO)) S->zero[w] |= b; else S->zero[w] &= ~b;
+  if ((p & SYM_ONE)) S->one[w] |= b; else S->one[w] &= ~b;
+  if ((p & SYM_FLOAT)) S->flt[w] |= b; else S->flt[w] &= ~b;
 }
 
 /*****************************************************************************
