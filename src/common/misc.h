@@ -19,6 +19,7 @@
 #define __misc_h
 
 __BEGIN_DECLS
+
 /*
  * Functions that we may need to provide ourself if they are not available
  * under this operating system.
@@ -124,4 +125,5 @@ typedef enum boolean_en {
 } Boolean;
 
 __END_DECLS
+
 #endif

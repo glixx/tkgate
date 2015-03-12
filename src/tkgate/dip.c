@@ -16,7 +16,6 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "tkgate.h"
-#include "switch.h"
 
 #define CENTER_JUST	(BetweenTopAndBottom|BetweenLeftAndRight)
 

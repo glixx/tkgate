@@ -298,6 +298,7 @@ GNet *sim_findNet(const char *name)
   return n;
 }
 
+/** @TODO Needs optimisation badly */
 GCElement *sim_findGate(const char *name)
 {
   char buf[STRMAX],*T;

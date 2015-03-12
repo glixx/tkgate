@@ -1215,8 +1215,8 @@ void Html_partition(Html *h,char *data)
        ******************************************************************/
 
       for (q = p;*q;q++)
-	if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
-	  break;
+	    if (strchr("<&\n",*q) != 0 || ((*q & 0x80) && isJapanese))
+	      break;
       hu = new_HtmlUnit(p,q-p,h->h_context);
       Html_addUnit(h,hu);
 
@@ -1357,30 +1357,49 @@ void Html_draw(Html *h,int x,int y)
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
+#ifdef DEBUG
+  Locale_print(h->h_locale, stdout);
+#endif
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
-
+#ifdef DEBUG
+  HtmlContext_print(hc,stdout);
+#endif
     switch (hu->hu_type) {
     case HU_TEXT :
       /*
        * Update properties only if there was a change.
        */
       if (hc != last_hc) {
-	XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
+	    XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
 
-	if (hc->hc_pixel >= 0)
-	  Tkg_changeColor(gc, GXxor, hc->hc_pixel);
-	last_hc = hc;
+	    if (hc->hc_pixel >= 0)
+          Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+        last_hc = hc;
       }
 
       if (hc->hc_font.family == FF_KANJI) {
-	XDrawString16(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
-		      (XChar2b*)hu->hu_text,strlen(hu->hu_text)/2);
-
+	    XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
+                       hu->hu_x + x,hu->hu_y + y,
+                       (XChar2b*)hu->hu_text,
+                       strlen(hu->hu_text)/2 );
+      } else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
+        XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
+                       hu->hu_x + x,hu->hu_y + y,
+                       (XChar2b*)hu->hu_text,
+                       strlen(hu->hu_text)/2 );
       } else {
-	XDrawString(TkGate.D,TkGate.W,gc,hu->hu_x + x,hu->hu_y + y,
-		    hu->hu_text,strlen(hu->hu_text));
+	    XDrawString( TkGate.D,
+                     TkGate.W,
+                     gc,
+                     hu->hu_x + x,hu->hu_y + y,
+		             hu->hu_text,
+		             strlen(hu->hu_text) );
       }
 
       break;

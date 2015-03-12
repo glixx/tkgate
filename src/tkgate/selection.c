@@ -671,7 +671,10 @@ void sel_copy(EditState *es)
 
 void sel_copyAppend(EditState *es)
 {
+  /** @TODO to remove */
+  /*
   GModuleDef *m = es->env;
+  */
   GModuleDef *cbm;
 
   ob_touch(TkGate.circuit);
@@ -705,8 +708,10 @@ void sel_copyAppend(EditState *es)
 
 void sel_kill(EditState *es)
 {
+  /** @TODO to remove */
+  /*
   GModuleDef *m = es->env;
-
+  */
   if (hdl_isactive) {
     DoTcl("HdlEditor::isselection2");
     if (Tcl_GetStringResult(TkGate.tcl)[0] != '1') return;
@@ -723,9 +728,10 @@ void sel_kill(EditState *es)
 
 void sel_killAppend(EditState *es)
 {
+  /** @TODO to remove */
+  /*
   GModuleDef *m = es->env;
-
-
+  */
   sel_copyAppend(es);
 
   if (hdl_isactive) {

@@ -91,23 +91,23 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct vgsim_str {
-	char *vg_baseDirectory;	/* Base directory for input files */
-	char *vg_topModuleName;	/* Name of top-level module */
-	char *vg_defaultTopModuleName;	/* Default name of top-level module */
-	SHash vg_modules;	/* Table of modules */
-	Circuit vg_circuit;	/* Instantiated circuit to be simulated */
-	int vg_interactive;	/* Non-zero if we are in interactive mode */
+  char *vg_baseDirectory;	/* Base directory for input files */
+  char *vg_topModuleName;	/* Name of top-level module */
+  char *vg_defaultTopModuleName;	/* Default name of top-level module */
+  SHash vg_modules;	/* Table of modules */
+  Circuit vg_circuit;	/* Instantiated circuit to be simulated */
+  int vg_interactive;	/* Non-zero if we are in interactive mode */
 
-	VGSecurity vg_sec;	/* Security options */
+  VGSecurity vg_sec;	/* Security options */
 
-	Timescale vg_timescale;	/* Lowest timescale of any loaded module */
-	int vg_haveTScount;	/* Number of modules with timescale */
+  Timescale vg_timescale;	/* Lowest timescale of any loaded module */
+  int vg_haveTScount;	/* Number of modules with timescale */
 
-	int vg_noTimeViolations;	/* Supress all timing violations? */
-	simtime_t vg_initTime;	/* Time need for user circuit to initialize. */
+  int vg_noTimeViolations;	/* Supress all timing violations? */
+  simtime_t vg_initTime;	/* Time need for user circuit to initialize. */
 
-	DelayType vg_delayType;	/* Type of delays to use */
-	VerilogStd vg_std;
+  DelayType vg_delayType;	/* Type of delays to use */
+  VerilogStd vg_std;
 } VGSim;
 
 void VGSim_init(VGSim *);

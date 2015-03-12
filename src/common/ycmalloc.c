@@ -36,11 +36,11 @@
 #include "ycmalloc.h"
 
 struct yc_pool_elem {
-  struct yc_pool_elem *pe_next;		/* Next pool */
-  int		      pe_istop;		/* Is this the top of a context */
-  int   	      pe_size;		/* Size of this pool */
-  int                 pe_last;		/* One byte past last used byte */
-  char		      *pe_data;		/* Data buffer of pool */
+  struct yc_pool_elem *pe_next;  /* Next pool */
+  int                  pe_istop; /* Is this the top of a context */
+  int                  pe_size;	 /* Size of this pool */
+  int                  pe_last;	 /* One byte past last used byte */
+  char                *pe_data;	 /* Data buffer of pool */
 };
 
 static struct yc_pool_elem *yc_pool = 0;	/* Current pool */

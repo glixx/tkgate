@@ -17,11 +17,11 @@
 
     Last edit by hansen on Sat Apr 11 15:53:44 2009
 ****************************************************************************/
+#include "tkgate.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include "tkgate.h"
 
 #define SKIPFIELD(C) { \
     for (;*C && isspace(*C);C++); \
@@ -77,7 +77,7 @@ int GScope_t2x(GScope *S,simtime_t t)
 {
   int pmin = ScopeLEFTMARGIN;
   int pmax = S->Width-ScopeRIGHTMARGIN;
-  double f = ((double)t - S->s_leftTime)/(double)S->s_range;
+  double f = (double)(t - S->s_leftTime) / (double)S->s_range;
 
   return (int) (f*(pmax-pmin)+pmin);
 }
