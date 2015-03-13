@@ -332,24 +332,13 @@ gate	: inx_gtype LPAREN drstrength RPAREN odelay
 	    { fprintf(stderr, "fixme: drive strength\n"); VerGateDecl($1,$5); } inx_ginsts SEMI
 	| inx_gtype LPAREN lval COMMA expr COMMA exprs RPAREN
 	    { VerGateDecl($1,NULL);
-	      List *paramsList = VerListAppend(NULL,$3);
-	      List_append(paramsList, VerListAppend(NULL,$5));
-	      /** @TODO delete list $5 */
-	      List_append(paramsList, $7);
-	      /** @TODO delete list $7 */
-	      VerGateInst(NULL,NULL,paramsList);
+	      VerGateInst(NULL,NULL,VerListPrepend($3,VerListPrepend($5,$7)));
 	    } oinx_ginsts SEMI
 	| inx_gtype delay LPAREN lval COMMA expr COMMA exprs RPAREN
 	    { VerGateDecl($1,$2);
-	      List *paramsList = VerListAppend(NULL,$4);
-	      List_append(paramsList, VerListAppend(NULL,$6));
-	      /** @TODO delete list $5 */
-	      List_append(paramsList, $8);
-	      /** @TODO delete list $7 */
-	      VerGateInst(NULL,NULL,paramsList);
+	      VerGateInst(NULL,NULL,VerListPrepend($4,VerListPrepend($6,$8)));
 	    } oinx_ginsts SEMI
-	| inx_gtype { VerGateDecl($1,NULL); } inx_named_ginst oinx_ginsts SEMI;
-	| inx_gtype delay { VerGateDecl($1,$2); } inx_named_ginst oinx_ginsts SEMI;
+	| inx_gtype odelay { VerGateDecl($1,$2); } inx_named_ginst oinx_ginsts SEMI;
 	| outx_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| cmos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| mos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
@@ -386,39 +375,17 @@ inx_ginsts	: inx_ginst
 		| inx_ginsts COMMA inx_ginst
 		;
 
+/*****************************************************************************
+* N-input gate instance
+*****************************************************************************/
 inx_ginst	: inx_named_ginst
 		| LPAREN lval COMMA expr COMMA exprs RPAREN
-		    {
-		      List *paramsList = VerListAppend(NULL,$2);
-		      List_append(paramsList, VerListAppend(NULL,$4));
-		      /** @TODO delete list $4 */
-		      List_append(paramsList, $6);
-		      /** @TODO delete list $6 */
-		      VerGateInst(NULL,NULL,paramsList);
-		    }
+		    { VerGateInst(NULL,NULL,VerListPrepend($2,VerListPrepend($4,$6))); }
 		;
 
 inx_named_ginst	: LITERAL orange LPAREN lval COMMA expr COMMA exprs RPAREN
-		    {
-		      List *paramsList = VerListAppend(NULL,$4);
-		      List_append(paramsList, VerListAppend(NULL,$6));
-		      /** @TODO delete list $6 */
-		      List_append(paramsList, $8);
-		      /** @TODO delete list $8 */
-		      VerGateInst($1,$2,paramsList);
-		    }
+		    { VerGateInst($1,$2,VerListPrepend($4,VerListPrepend($6,$8))); }
 		;
-
-/*****************************************************************************
-* First unnamed N-input gate instance
-*****************************************************************************/
-inx_first_unnamed : lval COMMA expr COMMA exprs					{ puts("unnamed instance"); }
-		;
-
-/*
-name_of_gate_instance	: LITERAL orange
-			;
-*/
 
 /*****************************************************************************
  *
