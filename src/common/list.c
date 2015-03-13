@@ -155,7 +155,6 @@ void List_append(List *L,List *A)
   }
 }
 
-
 /*
   get the nth element in list
  */
