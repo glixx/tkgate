@@ -57,19 +57,39 @@ endmodule
 
 `timescale 1ns/1ns
 
-//: /hdlBegin trimod1
+//: /hdlBegin SN7404
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 1 /pp: 1
 //: enddecls
-module trimod1(O);
+module SN7404(A1, A2, A3, A4, A5, A6, Y1, Y2, Y3, Y4, Y5, Y6);
+  
+  input A1, A2, A3, A4, A5, A6;
+  output Y1, Y2, Y3, Y4, Y5, Y6;
+  
+  not #12 (Y1, A1);
+  not #12 (Y2, A2);
+  not #12 (Y3, A3);
+  not #12 (Y4, A4);
+  not #12 (Y5, A5);
+  not #12 (Y6, A6);
 
-  output O;
-  tri O1;
-  supply1 a;
-  weak1 b;
+endmodule
+//: /hdlEnd
 
-  assign O1 = a;
-  assign O1 = b;
-  assign O = O1;
+
+`timescale 1ns/1ns
+
+//: /hdlBegin SN7403
+//: interface  /sz:(97, 144) /bd:[ Li0>A1(16/144) Li1>A2(32/144) Li2>A3(48/144) Li3>A4(64/144) Li4>B1(80/144) Li5>B2(96/144) Li6>B3(112/144) Li7>B4(128/144) Ro0<Y1(16/144) Ro1<Y2(32/144) Ro2<Y3(48/144) Ro3<Y4(64/144) ] /pd: 0 /pi: 0 /pe: 1 /pp: 1
+//: enddecls
+module SN7403(A1, A2, A3, A4, B1, B2, B3, B4, Y1, Y2, Y3, Y4);
+
+  input  A1, A2, A3, A4, B1, B2, B3, B4;
+  output Y1, Y2, Y3, Y4;
+
+  nor (highz1,strong0) #35 g1(Y1, A1, B1);
+  nor (highz1,strong0) #35 g2(Y2, A2, B2);
+  nor (highz1,strong0) #35 g3(Y3, A3, B3);
+  nor (highz1,strong0) #35 g4(Y4, A4, B4);
 
 endmodule
 //: /hdlEnd
@@ -86,10 +106,10 @@ module SN7400(A1, A2, A3, A4, B1, B2, B3, B4, Y1, Y2, Y3, Y4);
   input  A1, A2, A3, A4, B1, B2, B3, B4;
   output Y1, Y2, Y3, Y4;
 
-  nand #1 g1(Y1, A1, B1);
-  nand #1 g2(Y2, A2, B2);
-  nand #1 g3(Y3, A3, B3);
-  nand #1 g4(Y4, A4, B4);
+  nand #11 g1(Y1, A1, B1);
+  nand #11 g2(Y2, A2, B2);
+  nand #11 g3(Y3, A3, B3);
+  nand #11 g4(Y4, A4, B4);
 
 endmodule
 //: /hdlEnd
@@ -98,17 +118,17 @@ endmodule
 `timescale 1ns/1ns
 
 //: /hdlBegin SN7401
-//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 1 /pp: 1
+//: interface  /sz:(97, 144) /bd:[ Li0>A1(16/144) Li1>A2(32/144) Li2>A3(48/144) Li3>A4(64/144) Li4>B1(80/144) Li5>B2(96/144) Li6>B3(112/144) Li7>B4(128/144) Ro0<Y1(16/144) Ro1<Y2(32/144) Ro2<Y3(48/144) Ro3<Y4(64/144) ] /pd: 0 /pi: 0 /pe: 1 /pp: 1
 //: enddecls
 module SN7401(A1, A2, A3, A4, B1, B2, B3, B4, Y1, Y2, Y3, Y4);
 
   input  A1, A2, A3, A4, B1, B2, B3, B4;
   output Y1, Y2, Y3, Y4;
 
-  nand (highz1,strong0) #1 g1(Y1, A1, B1);
-  nand (highz1,strong0) #1 g2(Y2, A2, B2);
-  nand (highz1,strong0) #1 g3(Y3, A3, B3);
-  nand (highz1,strong0) #1 g4(Y4, A4, B4);
+  nand (highz1,strong0) #35 g1(Y1, A1, B1);
+  nand (highz1,strong0) #35 g2(Y2, A2, B2);
+  nand (highz1,strong0) #35 g3(Y3, A3, B3);
+  nand (highz1,strong0) #35 g4(Y4, A4, B4);
 
 endmodule
 //: /hdlEnd
@@ -124,10 +144,10 @@ module SN7402(A1, A2, A3, A4, B1, B2, B3, B4, Y1, Y2, Y3, Y4);
   input  A1, A2, A3, A4, B1, B2, B3, B4;
   output Y1, Y2, Y3, Y4;
 
-  nor #1 g1(Y1, A1, B1);
-  nor #1 g2(Y2, A2, B2);
-  nor #1 g3(Y3, A3, B3);
-  nor #1 g4(Y4, A4, B4);
+  nor #12 g1(Y1, A1, B1);
+  nor #12 g2(Y2, A2, B2);
+  nor #12 g3(Y3, A3, B3);
+  nor #12 g4(Y4, A4, B4);
 
 endmodule
 //: /hdlEnd
