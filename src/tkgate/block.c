@@ -2235,7 +2235,6 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
   npw = block_getPadWires(g,-1,pw,1024);
   qsort(pw,npw,sizeof(GWire*),wireNameCmp);
 
-
   ob_touch(g);
 
   /*
@@ -2257,7 +2256,6 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
     pw[i]->next = 0;
   }
 
-
   /*
    * Update core block parameters
    */
@@ -2266,8 +2264,6 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
   if (GCElement_getType(g) == GC_SYMBLOCK) {
     GModSymbol_attach(g->u.block.symbol);
   }
-
-
 
   /*
    * Swap block size for rotation if necessary and get the relative center point (px,py)
@@ -2292,7 +2288,6 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
     px = py = 0;
   }
 
-
   /*
    * Reattach ports
    */
@@ -2300,6 +2295,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
   printf("attaching gate at (%d,%d)\n",g->xpos,g->ypos);
 #endif
   n = GCElement_numPads(ug);
+  resizeTable = NULL;
   for  (i = 0;i < n;i++) {
     /*
      * Get pad and direction information.
@@ -2360,12 +2356,10 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
 	wire_moveto(pw[p]->nodes,x,y);
 	GWire_snap(pw[p]->driver);
 
-	resizeTable = NULL;
-
 	if (GNet_getNBits(pw[p]->net) != GNet_getNBits(w->net)) {
 	  if (!resizeTable)
 	    resizeTable = new_PHash_noob();
-	  PHash_insert(resizeTable,pw[p]->net,(void*)GNet_getNBits(w->net));
+	  PHash_insert(resizeTable,pw[p]->net,GNet_getNBits(w->net));
 	}
 
 	if (draw_p)
