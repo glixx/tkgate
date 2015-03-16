@@ -45,6 +45,7 @@
 %token ELSE
 %token END
 %token ENDCASE
+%token ENDFUNCTION
 %token ENDMODULE
 %token ENDPRIMITIVE
 %token ENDSPECIFY
@@ -55,6 +56,7 @@
 %token FOR
 %token FOREVER
 %token FORK
+%token FUNCTION
 %token GT
 %token HASH
 %token HIGHZ0
@@ -65,33 +67,50 @@
 %token INPUT
 %token INTEGER
 %token JOIN
+%token LARGE
+%token LBRACE
+%token LBRACK
+%token LPAREN
+%token LSHIFT
 %token LT
+%token MOD
 %token MEDIUM
 %token MODULE
+%token MPATH
 %token NEGEDGE
 %token NEZ
 %token NOT
 %token OUTPUT
 %token PARAMETER
 %token PRIMITIVE
+%token QUEST
 %token REG
 %token REPEAT
+%token SCALAR
+%token SIGNED
+%token SMALL
+%token STRONG0
+%token STRONG1
 %token SUPPLY0
 %token SUPPLY1
 %token TASK
 %token TRI
 %token TRI0
 %token TRI1
-%token WHILE WAIT
+%token TRIAND
+%token TRIOR
+%token TRIREG
+%token WAIT
+%token WHILE
 %token WIRE
-%token POSEDGE MPATH TRIGGER FUNCTION ENDFUNCTION
-%token LPAREN RPAREN LBRACE RBRACE LBRACK RBRACK
+%token POSEDGE TRIGGER
+%token RPAREN RBRACE RBRACK
 %token SEMI REPCAT
-%token UINV MOD
-%token LSHIFT RSHIFTEQ QUEST SPECIFY SPECPARAM
-%token SMALL LARGE  WAND WOR TRIREG SIGNED SCALAR VECTORED
-%token REAL TIME TRIAND TRIOR PULLUP PULLDOWN
-%token STRONG0 STRONG1 PULL0 PULL1 WEAK0 WEAK1
+%token UINV
+%token RSHIFTEQ SPECIFY SPECPARAM
+%token WAND WOR VECTORED
+%token REAL TIME PULLUP PULLDOWN
+%token PULL0 PULL1 WEAK0 WEAK1
 
 %token <I> CMOS RCMOS BUFIF0 BUFIF1 NOTIF0 NOTIF1 NMOS PMOS RNMOS RPMOS
 %token <I> PRIMAND PRIMNAND PRIMNOR PRIMXOR PRIMXNOR BUF PRIMNOT
@@ -214,7 +233,7 @@ sitem	: decl
  *    module foo;
  *    module bar(a,b,c,z);
  *    module beep();
- *    module #(delay1, delay2) bam(z,a,b,c);
+ *    module bam #(delay1, delay2) (z,a,b,c);
  *
  *****************************************************************************/
 modhead	: MODULE LITERAL { VerNewModule($2); } omparmdecls omargs SEMI
@@ -330,16 +349,28 @@ esitem	: decl
  *****************************************************************************/
 gate	: inx_gtype LPAREN drstrength RPAREN odelay
 	    { fprintf(stderr, "fixme: drive strength\n"); VerGateDecl($1,$5); } inx_ginsts SEMI
-	| inx_gtype LPAREN lval COMMA expr COMMA exprs RPAREN
+	| inx_gtype LPAREN lval COMMA exprs RPAREN
 	    { VerGateDecl($1,NULL);
-	      VerGateInst(NULL,NULL,VerListPrepend($3,VerListPrepend($5,$7)));
+	      VerGateInst(NULL,NULL,VerListPrepend($3,$5));
 	    } oinx_ginsts SEMI
-	| inx_gtype delay LPAREN lval COMMA expr COMMA exprs RPAREN
+	| inx_gtype delay LPAREN lval COMMA exprs RPAREN
 	    { VerGateDecl($1,$2);
-	      VerGateInst(NULL,NULL,VerListPrepend($4,VerListPrepend($6,$8)));
+	      VerGateInst(NULL,NULL,VerListPrepend($4,$6));
 	    } oinx_ginsts SEMI
-	| inx_gtype odelay { VerGateDecl($1,$2); } inx_named_ginst oinx_ginsts SEMI;
-	| outx_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
+	| inx_gtype odelay { VerGateDecl($1,$2); } inx_named_ginst oinx_ginsts
+	    SEMI
+	| outx_gtype LPAREN drstrength RPAREN odelay
+	    { fprintf(stderr, "fixme: drive strength\n"); VerGateDecl($1,$5); } outx_ginsts SEMI
+	| outx_gtype LPAREN exprs COMMA expr RPAREN
+	    { VerGateDecl($1,NULL);
+	      VerGateInst(NULL,NULL,VerListAppend($3,$5));
+	    } ooutx_ginsts SEMI
+	| outx_gtype delay LPAREN exprs COMMA expr RPAREN
+	    { VerGateDecl($1,$2);
+	      VerGateInst(NULL,NULL,VerListAppend($4,$6));
+	    } ooutx_ginsts SEMI
+	| outx_gtype odelay { VerGateDecl($1,$2); } outx_named_ginst ooutx_ginsts
+	    SEMI
 	| cmos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| mos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| bif_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
@@ -371,20 +402,40 @@ oinx_ginsts	: COMMA inx_ginsts
 		|
 		;
 
+ooutx_ginsts	: COMMA outx_ginsts
+		|
+		;
+
 inx_ginsts	: inx_ginst
 		| inx_ginsts COMMA inx_ginst
 		;
 
-/*****************************************************************************
-* N-input gate instance
-*****************************************************************************/
-inx_ginst	: inx_named_ginst
-		| LPAREN lval COMMA expr COMMA exprs RPAREN
-		    { VerGateInst(NULL,NULL,VerListPrepend($2,VerListPrepend($4,$6))); }
+outx_ginsts	: outx_ginst
+		| outx_ginsts COMMA outx_ginst
 		;
 
-inx_named_ginst	: LITERAL orange LPAREN lval COMMA expr COMMA exprs RPAREN
-		    { VerGateInst($1,$2,VerListPrepend($4,VerListPrepend($6,$8))); }
+/*****************************************************************************
+ * N-input gate instance
+ *****************************************************************************/
+inx_ginst	: inx_named_ginst
+		| LPAREN lval COMMA exprs RPAREN
+		   { VerGateInst(NULL,NULL,VerListPrepend($2,$4)); }
+		;
+
+/*****************************************************************************
+ * N-output instance
+ *****************************************************************************/
+outx_ginst	: outx_named_ginst
+		| LPAREN exprs COMMA expr RPAREN
+		    { VerGateInst(NULL,NULL,VerListAppend($2,$4)); }
+		;
+
+inx_named_ginst	: LITERAL orange LPAREN lval COMMA exprs RPAREN
+		    { VerGateInst($1,$2,VerListPrepend($4,$6)); }
+		;
+
+outx_named_ginst: LITERAL orange LPAREN exprs COMMA expr RPAREN
+		    { VerGateInst($1,$2,VerListAppend($4,$6)); }
 		;
 
 /*****************************************************************************
