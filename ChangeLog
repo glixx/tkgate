@@ -1,3 +1,7 @@
+Version 2.0-rc3 - March 16, 2015
+     * Fixed regression, introduced in 2.0-rc2, causing segmentation
+       fault after synchronization of the module interface
+
 Version 2.0-rc2 - March 11, 2015
      * Fixed bug, causing the LEDs and switches of the same name,
        placed in different modules, be incorrectly redrawed
