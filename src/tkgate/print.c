@@ -1548,6 +1548,7 @@ static HGNode *build_HGNodeGraph(GModuleDef *M,PHash *H)
       }
     }
   }
+  /** @TODO check the necessity */
   delete_PHash(LH);
 
   return G;
@@ -1698,21 +1699,22 @@ void GPrint_outputPages(GPrint *P)
 void GPrint_setupEPSFPage(GPrint *P)
 {
   GModLayout *L = P->p_mods[0];
-  int cwidth,cheight;
+  /** @TODO to check necessity */
+  /* int cwidth,cheight; */
   GPage *PG;
 
   GModuleDef_getBBX(L->l_mod, TD_PRINT, &L->l_xmin,&L->l_xmax,&L->l_ymin,&L->l_ymax);
+  /** @TODO to check necessity */
+  /*
   cwidth  = L->l_xmax-L->l_xmin + 2*PAGE_MODMARGIN;
   cheight = L->l_ymax-L->l_ymin + 2*PAGE_MODMARGIN;
-
+  */
   L->l_isSmall = 0;
   L->l_numRows = 1;
   L->l_numCols = 1;
 
-
   P->p_pages = (GPage**) ob_malloc(sizeof(GPage*),"GPage*[]");
   assert(P->p_pages);
-
 
   L->l_xbase = EPSF_MINX;
   L->l_ybase = EPSF_MINY;

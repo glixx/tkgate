@@ -165,15 +165,6 @@ int VerilogLoad(const char *name)
   return 0;
 }
 
-/*****************************************************************************
- *
- * Start a new module declaration.
- *
- * Parameters:
- *      name		Name of module to declare.
- *
- *
- *****************************************************************************/
 void VerNewModule(const char *name)
 {
   Place *p = Place_getCurrent();
@@ -186,7 +177,7 @@ void VerNewModule(const char *name)
   }
 
 #if DEBUG
-  printf("VerNewModule(%s)\n",name);
+  printf("%s(%s)\n",__PRETTY_FUNCTION__,name);
 #endif
   cur.mod = new_ModuleDecl(name);
   cur.scope = ModuleDecl_getScope(cur.mod);
@@ -198,15 +189,10 @@ void VerNewModule(const char *name)
   }
 }
 
-/*****************************************************************************
- *
- * End a module declaration
- *
- *****************************************************************************/
 void VerEndModule()
 {
 #if DEBUG
-  printf("VerEndModule()\n");
+  printf("%s()\n",__PRETTY_FUNCTION__);
 #endif
 
   if (!cur.isRedef)
@@ -549,17 +535,6 @@ List *VerListPrepend(void *vi,List *L)
   return L;
 }
 
-/*****************************************************************************
- *
- * Create a conditioned (delay or event trigger) statement
- *
- * Parameters:
- *      e		Condition expression
- *      s		Statement to be conditioned
- *
- * Returns:		New statement with condition added.
- *
- *****************************************************************************/
 StatDecl *VerCondStat(Expr *e,StatDecl *s)
 {
   if (e->e_type == E_AT) {
@@ -725,32 +700,12 @@ void VerSpecParam(const char *name,Expr *value)
   Specify_addSpecParam(s, name, value);
 }
 
-
-/*****************************************************************************
- *
- * Set the type for declaring built-in gates ("and", "or", etc.)
- *
- * Parameters:
- *      gtype		Type code
- *      delay		Delay expression
- *
- *****************************************************************************/
 void VerGateDecl(int gtype, Expr *delay)
 {
   cur.gtype = gtype;
   cur.gdelay = delay;
 }
 
-/*****************************************************************************
- *
- * Create an instance of a built-in gate
- *
- * Parameters:
- *      iname		Instance name
- *      range		Range to use
- *      ports		Port list for gate
- *
- *****************************************************************************/
 void VerGateInst(const char *iname, VRange *range, List *ports)
 {
   MIGate *mig;

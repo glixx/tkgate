@@ -115,7 +115,6 @@ uintptr_t computestrhash(const char *s)
   return H;
 }
 
-
 static HashElem *new_SHashElem(Hash *H,const char *key,uintptr_t hcode, void *val)
 {
   HashElem *E = (HashElem*) HT_MALLOC(H,sizeof(HashElem),"HashElem");
@@ -220,7 +219,6 @@ HashElem *Hash_next(Hash *H,HashElem *E)
     printf("echo Illegal sequential hash table access.\n");
     fflush(stdout);
   }
-
 
   if (E->next) return E->next;
 

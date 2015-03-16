@@ -114,7 +114,6 @@ static Event *EventList_remove(Event *Q,Event *E)
   }
 }
 
-
 void SQueue_init(SQueue *Q)
 {
   Q->sq_head = Q->sq_tail = 0;
@@ -145,7 +144,6 @@ void SQueue_remove(SQueue *Q, Event *E)
     }
   }
 }
-
 
 Event *SQueue_dequeue(SQueue *Q)
 {
@@ -314,7 +312,6 @@ void EvStrobe_uninit(EvStrobe *e)
   (*e->es_task)(0,0,0,0,tc);
 }
 
-
 /*****************************************************************************
  *
  * Create a probe event.
@@ -439,7 +436,6 @@ void EvMem_process(EvMem *em,EvQueue *q)
   } else
     Net_memSetRange(em->em_mem, em->em_addr, em->em_lsb, em->em_state, s_nbits-1, 0);
 }
-
 
 /*****************************************************************************
  *

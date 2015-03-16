@@ -97,7 +97,7 @@ typedef struct {
  *
  *****************************************************************************/
 typedef struct {
-  int		mb_type;		/* Type code of mitem */
+  itemcode_t	mb_type;		/* Type code of mitem */
   MItemVTable	*mb_vtable;		/* Virtual function pointer table */
   Place 	mb_place;		/* Location of declaration */
   DynamicModule	*mb_dynMod;		/* Dynamic module if dynamically loaded */
@@ -205,7 +205,7 @@ union ModuleItem_uni {
 /*****************************************************************************
  * ModuleItem methods
  *****************************************************************************/
-ModuleItem *new_ModuleItem(int mitype);
+ModuleItem *new_ModuleItem(itemcode_t);
 void ModuleItem_print(ModuleItem *mi,FILE *f);
 VGThread *ModuleItem_generate(ModuleItem *mi,ModuleInst *modCtx,CodeBlock *cb);
 #define ModuleItem_getPlace(mi) (&((ModuleItem*)(mi))->mi_base.mb_place)

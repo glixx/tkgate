@@ -21,8 +21,23 @@
 #define TYPE_INT	0
 #define TYPE_STR	1
 
-void VerNewModule(const char *name);
+/*****************************************************************************
+ *
+ * Start a new module declaration.
+ *
+ * Parameters:
+ *      name		Name of module to declare.
+ *
+ *****************************************************************************/
+void VerNewModule(const char *);
+
+/*****************************************************************************
+ *
+ * End a module declaration
+ *
+ *****************************************************************************/
 void VerEndModule();
+
 void VerParmDef(const char *name,Expr *e, int isPort);
 void VerPort(const char *name);
 void VerBeginDecls(int dtype,VRange*);
@@ -33,15 +48,48 @@ void VerAutoAssign(int dtype,const char *lval,Expr *expr);
 VRange *VerRange(rangestyle_t,Expr *left,Expr *right);
 int VerLookupParm(const char *name);
 void VerIABlock(int btype,StatDecl *stat);
+
 List *VerEmptyList();
 List *VerListAppend(List*L,void*);
 List *VerListPrepend(void*,List*L);
+
+/*****************************************************************************
+ *
+ * Create a conditioned (delay or event trigger) statement
+ *
+ * Parameters:
+ *      e		Condition expression
+ *      s		Statement to be conditioned
+ *
+ * Returns:		New statement with condition added.
+ *
+ *****************************************************************************/
 StatDecl *VerCondStat(Expr*,StatDecl*);
 void VerSpecTask(const char *name,List *args);
 void VerSpecify(Expr *cond,int ptype,Expr *lhs,Expr *rhs,Expr *value);
 void VerSpecParam(const char *name,Expr *value);
 
+/*****************************************************************************
+ *
+ * Set the type for declaring built-in gates ("and", "or", etc.)
+ *
+ * Parameters:
+ *      gtype		Type code
+ *      delay		Delay expression
+ *
+ *****************************************************************************/
 void VerGateDecl(int gtype, Expr *delay);
+
+/*****************************************************************************
+ *
+ * Create an instance of a built-in gate
+ *
+ * Parameters:
+ *      iname		Instance name
+ *      range		Range to use
+ *      ports		Port list for gate
+ *
+ *****************************************************************************/
 void VerGateInst(const char *iname, VRange *range, List *parms);
 
 void VerModDecl(const char *name);

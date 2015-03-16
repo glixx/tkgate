@@ -174,27 +174,29 @@ namespace eval HdlEditor {} {
 
   # List of verilog keywords that should be highlighted in keyword color.
   variable keywordList {
-    always assign attribute begin case casex casez cmos deassign
-    default defparam disable edge else end endattribute endcase endfunction endmodule
-    endprimitive endspecify endtable endtask event for force forever fork function
-    highz0 highz1 if initial inout input integer join large medium module
-    macromodule negedge output parameter posedge primitive pull0 pull1 pulldown pullup
+    always assign attribute begin case casex casez cmos deassign default
+    defparam disable edge else end endattribute endcase endfunction endmodule
+    endprimitive endspecify endtable endtask event for force forever fork
+    function highz0 highz1 if initial inout input integer join large medium
+    module macromodule negedge output parameter posedge primitive pull0 pull1
     real realtime reg release repeat scalared signed small specify specparam
-    strength strong0 strong1 supply0 supply1 table task time
-    tri tri0 tri1 triand trior trireg unsigned vectored wait wand weak0 weak1
-    while wire wor
+    strength strong0 strong1 supply0 supply1 table task time tri tri0 tri1
+    triand trior trireg unsigned vectored wait wand weak0 weak1 while wire wor
   }
 
   # List of verilog gate names that should be highlighted in gate color.
   variable gatewordList {
-    and xnor xor buf bufif0 bufif1 pmos tran tranif0 tranif1  rnmos rpmos rtran
-    rtranif0 rtranif1 nand nmos nor not notif0 notif1 or rcmos
+    and buf bufif0 bufif1 nand nmos nor not notif0 notif1 or pmos pulldown
+    pullup rnmos rpmos rtran rtranif0 rtranif1 tran tranif0 tranif1 rcmos xnor
+    xor
   }
 
   #
   # Tokens that start a block
   #
-  variable beginTokens {module primitive case casex casez fork begin task function}
+  variable beginTokens {
+    begin case casex casez fork function module primitive task
+  }
 
   #
   # Tokens that start a module (or similar structure)

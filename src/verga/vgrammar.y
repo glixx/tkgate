@@ -1,5 +1,7 @@
 /****************************************************************************
+    This file is part of Verga Verilog 1995/2001 simulator for TkGate
     Copyright (C) 1987-2015 by Jeffery P. Hansen
+    Copyright (C) 2015 by Andrey V. Skvortsov
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,19 +19,79 @@
 ****************************************************************************/
 %expect 1
 
-%token INPUT OUTPUT INOUT WIRE REG SUPPLY0 SUPPLY1 INTEGER
-%token MODULE ENDMODULE PRIMITIVE ENDPRIMITIVE TASK ENDTASK
-%token DEASSIGN ASSIGN INITIALB ALWAYS PARAMETER AUTOMATIC
-%token BBEGIN END IF ELSE CASE CASEX CASEZ ENDCASE DEFAULT
-%token REPEAT FOR WHILE FORK JOIN WAIT FOREVER
-%token POSEDGE NEGEDGE MPATH DPATH TRIGGER FUNCTION ENDFUNCTION
+%token ALSHIFT
+%token ALWAYS
+%token ARSHIFT
+%token ASGN
+%token ASSIGN
+%token AT
+%token AUTOMATIC
+%token BAND
+%token BBEGIN
+%token BNAND
+%token BNOR
+%token BNXOR
+%token BOR
+%token BXOR
+%token CASE
+%token CASEX
+%token CASEZ
+%token COLON
+%token COMMA
+%token DEASSIGN
+%token DEFAULT
+%token DOT
+%token DPATH
+%token ELSE
+%token END
+%token ENDCASE
+%token ENDMODULE
+%token ENDPRIMITIVE
+%token ENDSPECIFY
+%token ENDTASK
+%token EQ
+%token EQZ
+%token EVENT
+%token FOR
+%token FOREVER
+%token FORK
+%token GT
+%token HASH
+%token HIGHZ0
+%token HIGHZ1
+%token IF
+%token INITIALB
+%token INOUT
+%token INPUT
+%token INTEGER
+%token JOIN
+%token LT
+%token MEDIUM
+%token MODULE
+%token NEGEDGE
+%token NEZ
+%token NOT
+%token OUTPUT
+%token PARAMETER
+%token PRIMITIVE
+%token REG
+%token REPEAT
+%token SUPPLY0
+%token SUPPLY1
+%token TASK
+%token TRI
+%token TRI0
+%token TRI1
+%token WHILE WAIT
+%token WIRE
+%token POSEDGE MPATH TRIGGER FUNCTION ENDFUNCTION
 %token LPAREN RPAREN LBRACE RBRACE LBRACK RBRACK
-%token SEMI COLON COMMA DOT ASGN AT HASH REPCAT
-%token NOT GT LT EQ EQZ NEZ BAND BNAND BOR BNOR BXOR BNXOR UINV MOD
-%token ARSHIFT ALSHIFT  LSHIFT RSHIFTEQ QUEST SPECIFY ENDSPECIFY SPECPARAM
-%token SMALL MEDIUM LARGE TRI TRI0 TRI1 WAND WOR TRIREG SIGNED SCALAR VECTORED
-%token REAL EVENT TIME TRIAND TRIOR
-%token STRONG0 STRONG1 PULL0 PULL1 WEAK0 WEAK1 HIGHZ0 HIGHZ1
+%token SEMI REPCAT
+%token UINV MOD
+%token LSHIFT RSHIFTEQ QUEST SPECIFY SPECPARAM
+%token SMALL LARGE  WAND WOR TRIREG SIGNED SCALAR VECTORED
+%token REAL TIME TRIAND TRIOR PULLUP PULLDOWN
+%token STRONG0 STRONG1 PULL0 PULL1 WEAK0 WEAK1
 
 %token <I> CMOS RCMOS BUFIF0 BUFIF1 NOTIF0 NOTIF1 NMOS PMOS RNMOS RPMOS
 %token <I> PRIMAND PRIMNAND PRIMNOR PRIMXOR PRIMXNOR BUF PRIMNOT
@@ -56,7 +118,6 @@
 
 %type <S> dlit decltail dlits
 %type <I> casekw cmos_gtype mos_gtype inx_gtype outx_gtype bif_gtype tran_gtype trif_gtype
-
 
 %type <I> net_type reg_type xreg_type port_type capsize netattrs netattr size0 size1 ptype oautomatic
 %type <E> expr bval lval lvals catexprs delay dexpr odelay econd trigger triggers event catexpr starg
@@ -144,7 +205,6 @@ sitem	: decl
 	| error SEMI
 	;
 
-
 /*****************************************************************************
  *
  * Module header declaration
@@ -160,8 +220,8 @@ sitem	: decl
 modhead	: MODULE LITERAL { VerNewModule($2); } omparmdecls omargs SEMI
 	;
 
-omparmdecls :
-	    | HASH LPAREN mparmdecls RPAREN
+omparmdecls : HASH LPAREN mparmdecls RPAREN
+	    |
 	    ;
 
 mparmdecls  : mparmdecl
@@ -197,8 +257,8 @@ margs	: LITERAL				{ VerPort($1); }
  *
  *
  *****************************************************************************/
-mitems	:
-	| mitems mitem
+mitems	: mitems mitem
+	|
 	;
 
 mitem	: decl
@@ -228,8 +288,6 @@ initial	: INITIALB stat				{ VerIABlock(INITIALB,$2); }
 always	: ALWAYS stat				{ VerIABlock(ALWAYS,$2); }
 	;
 
-
-
 /*****************************************************************************
  *
  * Embedded script - Used for "script" objects.
@@ -239,8 +297,8 @@ escript	: BEGINSCRIPT  { VerBeginEScript($1); } esitems ENDSCRIPT  { VerEndEScri
 	| error ENDSCRIPT
 	;
 
-esitems	:
-	| esitems esitem
+esitems	: esitems esitem
+	|
 	;
 
 /*
@@ -258,7 +316,6 @@ esitem	: decl
 	| userfunc
 	;
 
-
 /*****************************************************************************
  *
  * Primitive gate instantiations
@@ -271,7 +328,17 @@ esitem	: decl
  *   tran  (a,b);
  *
  *****************************************************************************/
-gate	: inx_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
+gate	: inx_gtype LPAREN drstrength RPAREN odelay
+	    { fprintf(stderr, "fixme: drive strength\n"); VerGateDecl($1,$5); } inx_ginsts SEMI
+	| inx_gtype LPAREN lval COMMA expr COMMA exprs RPAREN
+	    { VerGateDecl($1,NULL);
+	      VerGateInst(NULL,NULL,VerListPrepend($3,VerListPrepend($5,$7)));
+	    } oinx_ginsts SEMI
+	| inx_gtype delay LPAREN lval COMMA expr COMMA exprs RPAREN
+	    { VerGateDecl($1,$2);
+	      VerGateInst(NULL,NULL,VerListPrepend($4,VerListPrepend($6,$8)));
+	    } oinx_ginsts SEMI
+	| inx_gtype odelay { VerGateDecl($1,$2); } inx_named_ginst oinx_ginsts SEMI;
 	| outx_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| cmos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
 	| mos_gtype odelay { VerGateDecl($1,$2); } ginsts SEMI
@@ -288,6 +355,10 @@ bif_gtype	: BUFIF0 | BUFIF1 | NOTIF0 | NOTIF1 ;
 tran_gtype	: TRAN | RTRAN ;
 trif_gtype	: TRANIF0 | TRANIF1 | RTRANIF0 | RTRANIF1 ;
 
+drstrength	: size0 COMMA size1
+		| size1 COMMA size0
+		;
+
 ginsts		: ginst
 		| ginsts COMMA ginst
 		;
@@ -296,6 +367,25 @@ ginst		: LITERAL orange LPAREN exprs RPAREN		{ VerGateInst($1,$2,$4); }
 		| LPAREN exprs RPAREN				{ VerGateInst(0,0,$2); }
 		;
 
+oinx_ginsts	: COMMA inx_ginsts
+		|
+		;
+
+inx_ginsts	: inx_ginst
+		| inx_ginsts COMMA inx_ginst
+		;
+
+/*****************************************************************************
+* N-input gate instance
+*****************************************************************************/
+inx_ginst	: inx_named_ginst
+		| LPAREN lval COMMA expr COMMA exprs RPAREN
+		    { VerGateInst(NULL,NULL,VerListPrepend($2,VerListPrepend($4,$6))); }
+		;
+
+inx_named_ginst	: LITERAL orange LPAREN lval COMMA expr COMMA exprs RPAREN
+		    { VerGateInst($1,$2,VerListPrepend($4,VerListPrepend($6,$8))); }
+		;
 
 /*****************************************************************************
  *
@@ -316,7 +406,6 @@ instance : LITERAL { VerModDecl($1); } omparmsets minsts SEMI
 omparmsets : HASH LPAREN mparmsets RPAREN
 	   |
 	   ;
-
 
 mparmsets : mpexprs
 /*	  | mpasgns*/
@@ -385,8 +474,6 @@ decltail : dlit SEMI
 	| dlit ASGN delay expr SEMI { VerDeclAssign(new_Expr_lit($1),$4,$3); }
 	;
 
-
-
 dlits		: dlit
 		| dlits COMMA dlit
 		;
@@ -440,7 +527,6 @@ capsize		: SMALL				{ $$ = NT_P_SMALL; }
 		| MEDIUM			{ $$ = NT_P_MEDIUM; }
 		| LARGE				{ $$ = NT_P_LARGE; }
 		;
-
 
 size0		: SUPPLY0			{ $$ = NT_P_SUPPLY0; }
 		| STRONG0			{ $$ = NT_P_STRONG0; }

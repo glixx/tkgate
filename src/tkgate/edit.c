@@ -1509,9 +1509,7 @@ void logError(int level,const char *fileName,int lineNum,const char *msg,...)
   time_t clock[1];
   char buf[STRMAX],msgBuf[STRMAX],fname[STRMAX];
   /** @TODO to check the necessity */
-  /*
-  char *lstr = 0;
-  */
+  /* char *lstr = 0; */
 
   static char *mon[] = {
     "Jan","Feb","Mar","Apr","May","Jun",

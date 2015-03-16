@@ -370,10 +370,10 @@ void GModuleDef_copyInto(GModuleDef *D,GModuleDef *S,int dx,int dy,int selOnly,i
     }
   }
 
-	delete_PHash(rhash);
-	delete_PHash(nhash);
-	delete_PHash(whash);
-	delete_PHash(ghash);
+  delete_PHash(rhash);
+  delete_PHash(nhash);
+  delete_PHash(whash);
+  delete_PHash(ghash);
 }
 
 int GModuleDef_numHdlLines(GModuleDef *M)
@@ -453,9 +453,9 @@ static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,PHash *mhash)
   HashElem *E;
   GModuleDef *R;
 
-	if (PHash_find(mhash,M))
-		return M;
-	PHash_insert(mhash,M,(void*)1);
+  if (PHash_find(mhash,M))
+    return M;
+  PHash_insert(mhash,M,(void*)1);
 
   for (E = Hash_first(M->m_gates);E;E = Hash_next(M->m_gates,E)) {
     GCElement *g = (GCElement*) HashElem_obj(E);
@@ -479,14 +479,14 @@ static GModuleDef *GModuleDef_isRecursive_aux(GModuleDef *M,PHash *mhash)
  */
 GModuleDef *GModuleDef_isRecursive(GModuleDef *M)
 {
-	PHash *mhash;	/* set of modules we have seen so far. */
-	GModuleDef *R;
+  PHash *mhash;	/* set of modules we have seen so far. */
+  GModuleDef *R;
 
-	mhash = new_PHash();
-	R = GModuleDef_isRecursive_aux(M,mhash);
-	delete_PHash(mhash);
+  mhash = new_PHash();
+  R = GModuleDef_isRecursive_aux(M,mhash);
+  delete_PHash(mhash);
 
-	return R;
+  return R;
 }
 
 /*****************************************************************************

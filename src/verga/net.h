@@ -49,51 +49,82 @@
  * Propery table for generating net/reg types.
  *
  *****************************************************************************/
-#define NT_P_WIRE		0x1		/* Base type is wire */
-#define NT_P_REG		0x2		/* Base type is reg */
-#define NT_P_PARAMETER		0x4		/* Base type is parameter */
-#define NT_P_MEMORY		0x8		/* Base type is memory */
-#define NT_P_AND		0x10		/* Wire does implicit AND */
-#define NT_P_OR			0x20		/* Wire does implicit OR */
-#define NT_P_TRI		0x40		/* Wire can have multiple drivers */
-#define NT_P_TRIREG		0x80		/* Wire can store charge */
-#define NT_P_SMALL		0x100		/* Low charge */
-#define NT_P_MEDIUM		0x200		/* Medium charge */
-#define NT_P_LARGE		0x400		/* High charge */
-#define NT_P_SUPPLY		0x800		/* Reg is a "supply" */
-#define NT_P_INTEGER		0x1000		/* Reg is an integer */
-#define NT_P_TIME		0x2000		/* Reg is a time */
-#define NT_P_EVENT		0x3000		/* Reg is an event */
-#define NT_P_REAL		0x4000		/* Reg is a real */
+typedef enum net_type_prop_en {
+  NT_P_WIRE = 0x1,
+#define NT_P_WIRE		NT_P_WIRE	/* Base type is wire */
+  NT_P_REG = 0x2,
+#define NT_P_REG		NT_P_REG	/* Base type is reg */
+  NT_P_PARAMETER = 0x4,
+#define NT_P_PARAMETER		NT_P_PARAMETER	/* Base type is parameter */
+  NT_P_MEMORY = 0x8,
+#define NT_P_MEMORY		NT_P_MEMORY	/* Base type is memory */
+  NT_P_AND = 0x10,
+#define NT_P_AND		NT_P_AND	/* Wire does implicit AND */
+  NT_P_OR = 0x20,
+#define NT_P_OR			NT_P_OR		/* Wire does implicit OR */
+  NT_P_TRI = 0x40,
+#define NT_P_TRI		NT_P_TRI	/* Wire can have multiple drivers */
+  NT_P_TRIREG = 0x80,
+#define NT_P_TRIREG		NT_P_TRIREG	/* Wire can store charge */
+  NT_P_SMALL = 0x100,
+#define NT_P_SMALL		NT_P_SMALL	/* Low charge */
+  NT_P_MEDIUM = 0x200,
+#define NT_P_MEDIUM		NT_P_MEDIUM	/* Medium charge */
+  NT_P_LARGE = 0x400,
+#define NT_P_LARGE		NT_P_LARGE	/* High charge */
+  NT_P_SUPPLY = 0x800,
+#define NT_P_SUPPLY		NT_P_SUPPLY	/* Reg is a "supply" */
+  NT_P_INTEGER = 0x1000,
+#define NT_P_INTEGER		NT_P_INTEGER	/* Reg is an integer */
+  NT_P_TIME = 0x2000,
+#define NT_P_TIME		NT_P_TIME	/* Reg is a time */
+  NT_P_EVENT = 0x4000,
+#define NT_P_EVENT		NT_P_EVENT	/* Reg is an event */
+  NT_P_REAL = 0x8000,
+#define NT_P_REAL		NT_P_REAL	/* Reg is a real */
 #define NT_P_REGTYPE_MASK	0xf000		/* Mask to get the reg type */
 #define NT_P_BASE_MASK		0xffff		/* Mask to get base type */
 
-#define NT_P_INPUT		0x10000		/* Input */
-#define NT_P_OUTPUT		0x20000		/* Output */
-#define NT_P_INOUT		0x30000		/* in/out */
-#define NT_P_IO_MASK		0xf0000		/* mask to get i/o properties */
+  NT_P_INPUT = 0x10000,
+#define NT_P_INPUT		NT_P_INPUT	/* Input */
+  NT_P_OUTPUT = 0x20000,
+#define NT_P_OUTPUT		NT_P_OUTPUT	/* Output */
+  NT_P_INOUT = 0x40000,
+#define NT_P_INOUT		NT_P_INOUT	/* in/out */
+#define NT_P_IO_MASK		0x70000		/* mask to get i/o properties */
 
-#define NT_P_HIGHZ0		0x100000
-#define NT_P_WEAK0		0x200000
-#define NT_P_PULL0		0x300000
-#define NT_P_STRONG0		0x400000
-#define NT_P_SUPPLY0		0x500000
-#define NT_P_0_STRENGTH_MASK	0xf00000
+  NT_P_HIGHZ0 = 0x80000,
+#define NT_P_HIGHZ0		NT_P_HIGHZ0	/* 0 strength of Z */
+  NT_P_WEAK0 = 0x100000,
+#define NT_P_WEAK0		NT_P_WEAK0
+  NT_P_PULL0 = 0x200000,
+#define NT_P_PULL0		NT_P_PULL0
+  NT_P_STRONG0 = 0x400000,
+#define NT_P_STRONG0		NT_P_STRONG0
+  NT_P_SUPPLY0 = 0x800000,
+#define NT_P_SUPPLY0		NT_P_SUPPLY0
+#define NT_P_0_STRENGTH_MASK	0xf80000
 
-#define NT_P_HIGHZ1		0x1000000
-#define NT_P_WEAK1		0x2000000
-#define NT_P_PULL1		0x3000000
-#define NT_P_STRONG1		0x4000000
-#define NT_P_SUPPLY1		0x5000000
-#define NT_P_1_STRENGTH_MASK	0xf000000
-
+  NT_P_HIGHZ1 = 0x1000000,
+#define NT_P_HIGHZ1		NT_P_HIGHZ1
+  NT_P_WEAK1 = 0x2000000,
+#define NT_P_WEAK1		NT_P_WEAK1
+  NT_P_PULL1 = 0x4000000,
+#define NT_P_PULL1		NT_P_PULL1
+  NT_P_STRONG1 = 0x8000000,
+#define NT_P_STRONG1		NT_P_STRONG1
+  NT_P_SUPPLY1 = 0x10000000,
+#define NT_P_SUPPLY1		NT_P_SUPPLY1
+#define NT_P_1_STRENGTH_MASK	0x1f000000
 #define NT_P_STRENGTH_MASK	(NT_P_0_STRENGTH_MASK|NT_P_1_STRENGTH_MASK)
 
-#define NT_P_SIGNED		0x10000000	/* Net designated as signed */
-#define NT_P_SCALAR		0x20000000	/* Net designated as scalar */
-#define NT_P_VECTORED		0x40000000	/* Net designated as vectored */
-
-
+  NT_P_SIGNED = 0x20000000,
+#define NT_P_SIGNED		NT_P_SIGNED	/* Net designated as signed */
+  NT_P_SCALAR = 0x40000000,
+#define NT_P_SCALAR		NT_P_SCALAR	/* Net designated as scalar */
+  NT_P_VECTORED = 0x80000000
+#define NT_P_VECTORED		NT_P_VECTORED	/* Net designated as vectored */
+} NetTypeProp;
 
 /*****************************************************************************
  *
