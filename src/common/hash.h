@@ -132,7 +132,7 @@ int NHash_remove(Hash*,intptr_t);
 #define PHash_init_noob(H)	Hash_init(H,0)
 #define PHash_uninit(H)	Hash_uninit(H,0)
 #define PHash_find(H,P) NHash_find(H,(intptr_t)(P))
-#define PHash_insert(H,P,O) NHash_insert(H,(intptr_t)(P),O)
+#define PHash_insert(H,P,O) NHash_insert(H,(intptr_t)(P),(void*)O)
 #define PHash_remove(H,P) NHash_remove(H,(intptr_t)(P))
 #define PHash_flush(H)	Hash_flush(H,0)
 #define PHash_resize(H, reqSize) Hash_resize(H,reqSize)

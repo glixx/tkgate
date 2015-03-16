@@ -134,7 +134,7 @@ void *yc_calloc(long N,long S,int Algn)
   long L = N*S;
   char *P;
 
-  P = yc_malloc(L,Algn);
+  P = (char*) yc_malloc(L,Algn);
   memset(P,0,L);
 
   return P;
