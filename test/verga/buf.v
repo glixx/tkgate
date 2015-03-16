@@ -12,7 +12,7 @@ module top;
 	#10 a = 1;
 	#10 a = 0;
     end
- 
+
   buf #7 b(x,y,z,a);
   not #5 n(i,j,k,a);
 

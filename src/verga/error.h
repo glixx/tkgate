@@ -145,7 +145,6 @@ typedef enum {
   ERR_UNKNOWN,
 } errorcode_t;
 
-
 typedef struct ErrorDescriptor_str {
   errorcode_t	ed_code;		/* Error code number */
   int		ed_level;		/* Error level */
@@ -192,7 +191,7 @@ void errorCmd(errorcode_t,...);
 void errorRun(errorcode_t,...);
 void errorFile(Place*,errorcode_t,...);
 void errorModule(ModuleDecl*,Place*,errorcode_t,...);
-void errorNet(ModuleDecl *m,const char *net,Place*,errorcode_t,...);
+void errorNet(ModuleDecl *,const char *,Place*,errorcode_t,...);
 //void errorNet(ModuleDecl*,NetDecl*,Place*,errorcode_t,...);
 
 void dumpErrorMessages();

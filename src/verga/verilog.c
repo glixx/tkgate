@@ -91,7 +91,6 @@ static int cur_getDeclContext()
     return MODULE;
 }
 
-
 /*****************************************************************************
  *
  * Read in a verilog script file.
