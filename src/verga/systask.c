@@ -1620,10 +1620,10 @@ static void SysTask_setup(VGThread *t, Value *r, int numArgs, void **args, TaskC
   EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
   simtime_t now = EvQueue_getCurTime(Q);
   simtime_t *lastTrans;
-  unsigned which = 0,constraint = 0;
+  int which = 0,constraint = 0;
 
-  Value_toInt((Value*)args[0], &which);
-  Value_toInt((Value*)args[3], &constraint);
+  Value_toInt((Value*)args[0], (unsigned*)&which);
+  Value_toInt((Value*)args[3], (unsigned*)&constraint);
 
   /*
    * If this is an initialization call,
@@ -1669,10 +1669,10 @@ static void SysTask_hold(VGThread *t, Value *r, int numArgs, void **args, TaskCo
   EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
   simtime_t now = EvQueue_getCurTime(Q);
   simtime_t *lastTrans;
-  unsigned which = 0,constraint = 0;
+  int which = 0,constraint = 0;
 
-  Value_toInt((Value*)args[0],&which);
-  Value_toInt((Value*)args[3],&constraint);
+  Value_toInt((Value*)args[0],(unsigned*)&which);
+  Value_toInt((Value*)args[3],(unsigned*)&constraint);
 
   /*
    * If this is an initialization call,
@@ -1718,10 +1718,10 @@ static void SysTask_width(VGThread *t, Value *r, int numArgs, void **args, TaskC
   EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
   simtime_t now = EvQueue_getCurTime(Q);
   simtime_t *lastTrans;
-  unsigned which = 0,constraint = 0;
+  int which = 0,constraint = 0;
 
-  Value_toInt((Value*)args[0],&which);
-  Value_toInt((Value*)args[2],&constraint);
+  Value_toInt((Value*)args[0],(unsigned *)&which);
+  Value_toInt((Value*)args[2],(unsigned *)&constraint);
 
   /*
    * If this is an initialization call,
