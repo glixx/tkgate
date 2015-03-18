@@ -122,7 +122,6 @@ one      0  1  1  0  0  1
 zero     1  0  1  0  1  0
 flt      0  0  1  1  1  1
 */
-
 static StateSymbol charToSym(char c)
 {
   char *x;
@@ -263,8 +262,8 @@ int Value_isEqual(Value *A,Value *B)
 transtype_t Value_transitionType(Value *A,Value *B)
 {
   if (Value_nbits(A) == 1) {
-    int fromSym = Value_getBitSym(A,0);
-    int toSym   = Value_getBitSym(B,0);
+    StateSymbol fromSym = Value_getBitSym(A,0);
+    StateSymbol toSym   = Value_getBitSym(B,0);
 
     if (fromSym == toSym) return TT_NONE;
     if (toSym == SYM_ZERO) return TT_NEGEDGE;
@@ -822,7 +821,6 @@ int Value_convert(Value *S,const char *A)
 
   return return_value;
 }
-
 
 int Value_convertFromInt(Value *S,unsigned I)
 {

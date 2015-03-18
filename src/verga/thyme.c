@@ -350,8 +350,6 @@ int startSimulation(const char *topName,int warning_mode,List *load_scripts,cons
     return 1;
   }
 
-
-
   /*
    * Build the circuit and sort threads for proper initialization.
    */

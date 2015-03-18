@@ -49,7 +49,6 @@ void delete_Net(Net *n)
   free(n);
 }
 
-
 /*****************************************************************************
  *
  * Create a new Net
@@ -75,7 +74,6 @@ Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
   n->n_flags = 0;
   n->n_numMonitors = 0;
   n->n_numDrivers = 0;
-  n->n_wfunc = Value_wire;
   List_init(&n->n_posedgeNotify);
   List_init(&n->n_negedgeNotify);
   Value_init(Net_getValue(n),n->n_nbits);
@@ -88,6 +86,8 @@ Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
     n->n_wfunc = Value_tri0;
   else if ((n->n_type & NT_P_PULL1))
     n->n_wfunc = Value_tri1;
+  else
+    n->n_wfunc = Value_wire;
 
   switch ((n->n_type & NT_P_REGTYPE_MASK)) {
   case NT_P_REAL :
@@ -423,7 +423,7 @@ void Net_driverChangeNotify(Net *n,int id)
 #if NET_DEBUG
   printf("   Net_driverChange %s<%d> was ",n->n_name,n->n_numDrivers);
   Value_print(Net_getValue(n),stdout);
-  printf(" ");
+  printf("\n");
 #endif
 
   switch (n->n_numDrivers) {
