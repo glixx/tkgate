@@ -67,7 +67,7 @@ Value *new_Value(int nbits)
       Value_reinit((Value*)S,nbits);
   }
 
-  S->state.flags = 0;
+  S->state.flags = SF_NONE;
   S->state.permFlags = 0;
 
 #if DEBUG_VALUE
@@ -123,16 +123,16 @@ zero     1  0  1  0  1  0
 flt      0  0  1  1  1  1
 */
 
-static int charToSym(char c)
+static StateSymbol charToSym(char c)
 {
   char *x;
-  int p;
+  StateSymbol p;
 
   if (c == '?') c = 'z';
   if (isupper((int)c))
     c = tolower(c);
   x = strchr(sym_table_lc,c);
-  p = x ? (x-sym_table_lc) : SYM_INVALID;
+  p = x ? (StateSymbol)(x-sym_table_lc) : SYM_INVALID;
 
   return p;
 }
@@ -149,7 +149,7 @@ void Value_init(Value *S,int nbits)
   S->one = (unsigned*)malloc(wc*sizeof(unsigned));
   S->zero = (unsigned*)malloc(wc*sizeof(unsigned));
   S->flt = (unsigned*)malloc(wc*sizeof(unsigned));
-  S->flags = 0;
+  S->flags = SF_NONE;
   S->permFlags = 0;
 }
 
@@ -458,16 +458,16 @@ StateSymbol Value_getBitSym(Value *S,int i)
 {
   int w;
   unsigned b;
-  StateSymbol x = 0;
+  StateSymbol x = SYM_NUL1;
 
   if (i >= S->nbits)
     return SYM_ZERO;
 
   w = i >> SSWORDSHIFT;
   b = 1 << (i & SSBITMASK);
-  if ((S->zero[w] & b)) x |= SYM_ZERO;
-  if ((S->one[w] & b))  x |= SYM_ONE;
-  if ((S->flt[w] & b))  x |= SYM_FLOAT;
+  if ((S->zero[w] & b)) x = (StateSymbol)(x | SYM_ZERO);
+  if ((S->one[w] & b))  x = (StateSymbol)(x | SYM_ONE);
+  if ((S->flt[w] & b))  x = (StateSymbol)(x | SYM_FLOAT);
 
   return x;
 }
@@ -503,14 +503,14 @@ void Value_putBitSym(Value *S,int bit,StateSymbol p)
 void Value_extend(Value *S,int d)
 {
   int i;
-  int p = (d > 0) ? Value_getBitSym(S,d-1) : SYM_ZERO;
+  StateSymbol p = (d > 0) ? Value_getBitSym(S,d-1) : SYM_ZERO;
   if (p == SYM_ONE) p = SYM_ZERO;
 
   for (i = d;i < S->nbits;i++)
     Value_putBitSym(S,i,p);
 }
 
-static void Value_extendSym(Value *S,int d,int sym)
+static void Value_extendSym(Value *S,int d,StateSymbol sym)
 {
   int i;
 
@@ -604,7 +604,7 @@ int Value_convertBits(Value *S,const char *A,int nbits)
   Value_xclear(S);
 
   for (i = 0;i < d;i++) {
-    int p = charToSym(A[d-i-1]);
+    StateSymbol p = charToSym(A[d-i-1]);
     if (p == SYM_INVALID) {
       return_value = -1;
       p = SYM_ZERO;
@@ -644,7 +644,7 @@ int Value_convertHex(Value *S,const char *A,int nbits)
       Value_putBitSym(S,b+2,(v&0x4)?SYM_ONE:SYM_ZERO);
       Value_putBitSym(S,b+3,(v&0x8)?SYM_ONE:SYM_ZERO);
     } else {
-      int p = charToSym(c);
+      StateSymbol p = charToSym(c);
       int b = 4*i;
 
       if (p == SYM_INVALID) {
@@ -685,7 +685,7 @@ int Value_convertOct(Value *S,const char *A,int nbits)
       Value_putBitSym(S,b+1,(v&0x2)?SYM_ONE:SYM_ZERO);
       Value_putBitSym(S,b+2,(v&0x4)?SYM_ONE:SYM_ZERO);
     } else {
-      int p = charToSym(c);
+      StateSymbol p = charToSym(c);
       int b = 3*i;
 
       if (p == SYM_INVALID) {
@@ -780,7 +780,7 @@ int Value_convert(Value *S,const char *A)
   char c;
   int return_value = 0;
 
-  S->flags = 0;
+  S->flags = SF_NONE;
 
   if (sscanf(A,"%d'%c",&nbits,&c) == 2) {
     p = strchr(A,'\'')+2;
@@ -1530,10 +1530,10 @@ transtype_t Value_copyRange(Value *R,int rl,Value *A,int ah,int al)
     /*****************************************************************************
      * Special case for one-bit copy.
      *****************************************************************************/
-    int fromSym = Value_getBitSym(R,rl);
-    int toSym   = Value_getBitSym(A,ah);
+    StateSymbol fromSym = Value_getBitSym(R,rl);
+    StateSymbol toSym   = Value_getBitSym(A,ah);
 
-    R->flags |= A->flags;
+    R->flags = (ValueFlags)(R->flags | A->flags);
 
     if (fromSym == toSym)
       tt = TT_NONE;

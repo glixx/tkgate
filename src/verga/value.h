@@ -53,6 +53,8 @@ typedef enum state_symbol_en {
  * Special property flags of Value
  */
 typedef enum value_flags_en {
+	SF_NONE = 0,
+#define SF_NONE SF_NONE
 	SF_INT = 0x1,
 #define SF_INT SF_INT				/* Declared as an integer */
 	SF_DEC = 0x2,

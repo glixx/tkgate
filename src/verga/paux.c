@@ -257,7 +257,7 @@ int ycNumber(char *S)
     sscanf(S,"%d",&yylval.I);
     return NUMBER;
   } else {
-    yylval.S = yc_malloc(strlen(S)+3,ALGN_BYTE);
+    yylval.S = (char *) yc_malloc(strlen(S)+3,ALGN_BYTE);
     sprintf(yylval.S,"'d%s",S);
     return HEX;
   }

@@ -326,7 +326,7 @@ void ModuleDecl_printData(ModuleDecl *m)
 	}
 	/* If parameter is parmport ... */
 	if (le2) {
-	  Value *v = Expr_parmEval(mip->mip_expr,0,0);
+	  Value *v = Expr_parmEval(mip->mip_expr,0,PEF_NONE);
 	  if (v) {
 	    char buf[STRMAX];
 	    Value_getstr(v,buf);
@@ -516,7 +516,7 @@ int ModuleDecl_defineTask(ModuleDecl *m,const char *name,UserTaskDecl *utd)
  *****************************************************************************/
 static char **getHashKeys(SHash *H)
 {
-  char **keys = malloc(sizeof(char*)*(Hash_numElems(H)+1));
+  char **keys = (char **) malloc(sizeof(char*)*(Hash_numElems(H)+1));
   HashElem *he;
   int i = 0;
 
@@ -819,7 +819,7 @@ const char *ModuleInst_findLocalNetName(ModuleInst *mi,Net *n)
   SHash *nets = &mi->mc_scope.s_nets;
 
   for (he = Hash_first(nets);he;he = Hash_next(nets,he)) {
-    Net *mi_n = HashElem_obj(he);
+    Net *mi_n = (Net *) HashElem_obj(he);
     if (mi_n == n)
       return SHashElem_key(he);
   }

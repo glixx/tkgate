@@ -786,13 +786,13 @@ int VRange_parmEvalMsb(VRange *r,Scope *scope,unsigned *msb)
   case RS_SINGLE :
   case RS_MAXMIN :
   case RS_BASEDN :
-    return Expr_parmEvalI(r->vr_left,scope,msb,0);
+    return Expr_parmEvalI(r->vr_left,scope,msb,PEF_NONE);
   case RS_BASEUP :
     {
       unsigned lsb,width;
 
-      if (Expr_parmEvalI(r->vr_left,scope,&lsb,0) < 0) return -1;
-      if (Expr_parmEvalI(r->vr_right,scope,&width,0) < 0) return -1;
+      if (Expr_parmEvalI(r->vr_left,scope,&lsb,PEF_NONE) < 0) return -1;
+      if (Expr_parmEvalI(r->vr_right,scope,&width,PEF_NONE) < 0) return -1;
       *msb = lsb + width -1;
       return 0;
     }
@@ -818,15 +818,15 @@ int VRange_parmEvalLsb(VRange *r,Scope *scope,unsigned *lsb)
   switch (r->vr_style) {
   case RS_SINGLE :
   case RS_BASEUP :
-    return Expr_parmEvalI(r->vr_left,scope,lsb,0);
+    return Expr_parmEvalI(r->vr_left,scope,lsb,PEF_NONE);
   case RS_MAXMIN :
-    return Expr_parmEvalI(r->vr_right,scope,lsb,0);
+    return Expr_parmEvalI(r->vr_right,scope,lsb,PEF_NONE);
   case RS_BASEDN :
     {
       unsigned msb,width;
 
-      if (Expr_parmEvalI(r->vr_left,scope,&msb,0) < 0) return -1;
-      if (Expr_parmEvalI(r->vr_right,scope,&width,0) < 0) return -1;
+      if (Expr_parmEvalI(r->vr_left,scope,&msb,PEF_NONE) < 0) return -1;
+      if (Expr_parmEvalI(r->vr_right,scope,&width,PEF_NONE) < 0) return -1;
       *lsb = msb + 1 - width;
       return 0;
     }
@@ -851,15 +851,15 @@ int VRange_getSize(VRange *r,Scope *scope,unsigned *width)
     break;
   case RS_BASEUP :
   case RS_BASEDN :
-    if (Expr_parmEvalI(r->vr_right,scope,width,0) < 0)
+    if (Expr_parmEvalI(r->vr_right,scope,width,PEF_NONE) < 0)
       return -1;
     break;
   case RS_MAXMIN :
     {
       unsigned msb,lsb;
 
-      if (Expr_parmEvalI(r->vr_left,scope,&msb,0) < 0) return -1;
-      if (Expr_parmEvalI(r->vr_right,scope,&lsb,0) < 0) return -1;
+      if (Expr_parmEvalI(r->vr_left,scope,&msb,PEF_NONE) < 0) return -1;
+      if (Expr_parmEvalI(r->vr_right,scope,&lsb,PEF_NONE) < 0) return -1;
       *width = msb - lsb + 1;
     }
     break;
@@ -1271,7 +1271,7 @@ int Expr_getBitSize(Expr *e,Scope *scope)
     {
       unsigned reps,size;
 
-      if (Expr_parmEvalI(e->e.opr[0],scope,&reps,0) < 0) return 0;
+      if (Expr_parmEvalI(e->e.opr[0],scope,&reps,PEF_NONE) < 0) return 0;
       size = Expr_getBitSize(e->e.opr[1],scope);
       return reps*size;
     }
@@ -1415,7 +1415,7 @@ int Expr_getCollapsedBitSize(Expr *e,Scope *scope)
     {
       unsigned reps,size;
 
-      if (Expr_parmEvalI(e->e.opr[0],scope,&reps,0) < 0) return 0;
+      if (Expr_parmEvalI(e->e.opr[0],scope,&reps,PEF_NONE) < 0) return 0;
       size = Expr_getCollapsedBitSize(e->e.opr[1],scope);
       return reps*size;
     }
@@ -1562,7 +1562,7 @@ Value *Expr_generate(Expr *e,int nbits,Scope *scope,CodeBlock *cb)
       if (has_real && od->od_f_opfunc) {
 	BCOpr_init(CodeBlock_nextEmpty(cb),od->od_f_opfunc,lhs,temp_s[0],temp_s[1],temp_s[2]);
 	if (od->od_outSize == OS_MAX) {
-	  lhs->flags |= SF_REAL;
+	  lhs->flags = (ValueFlags)(lhs->flags | SF_REAL);
 	}
       } else if (nbits <= SSWORDSIZE && od->od_w_opfunc)
 	BCOpr_init(CodeBlock_nextEmpty(cb),od->od_w_opfunc,lhs,temp_s[0],temp_s[1],temp_s[2]);
@@ -1710,7 +1710,7 @@ Value *Expr_generate(Expr *e,int nbits,Scope *scope,CodeBlock *cb)
 	lhs = new_Value(nbits);
 	Value_zero(lhs);
 	Value_copyRange(lhs,0,e->e.snum,Value_nbits(e->e.snum)-1,0);
-	lhs->flags &= ~SF_REAL;
+	lhs->flags = (ValueFlags)(lhs->flags & ~SF_REAL);
 	return lhs;
       }
     }
@@ -1946,7 +1946,7 @@ void Expr_expandConcat(Expr *e,Scope *scope,List *clist)
 
     if (!scope) return;		/* repcats are ignored if no module instance given */
 
-    if (Expr_parmEvalI(e->e.opr[0], scope,&n,0) < 0)
+    if (Expr_parmEvalI(e->e.opr[0], scope,&n,PEF_NONE) < 0)
       return;
 
     for (i = 0;i < n;i++) {
@@ -2178,7 +2178,7 @@ int Expr_getDelay(Expr *delayExpr,Scope *scope,Timescale *ts, deltatime_t *delay
   if (!e)
     e = delayExpr->e.opr[DT_TYP];
 
-  delay_value = Expr_parmEval(e, scope,0);
+  delay_value = Expr_parmEval(e, scope,PEF_NONE);
 
   if (!delay_value) return -1;
 

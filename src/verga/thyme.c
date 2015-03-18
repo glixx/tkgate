@@ -33,7 +33,7 @@ VGSim vgsim;
 void *ob_malloc(int s,char *x) { return malloc(s); }
 void *ob_calloc(int n,int s,char *x) { return calloc(n,s); }
 void ob_free(void *p) { free(p); }
-char *ob_strdup(char *s) { return strdup(s); }
+char *ob_strdup(char const *s) { return strdup(s); }
 void ob_set_type(void *o,char *n) {}
 void ob_touch(void *o) {}
 
@@ -536,11 +536,11 @@ int main(int argc,char *argv[])
 	break;
       case 's' :
 	scan_mode = 1;
-	Place_setMode(PM_MODULE|PM_MODLINE);
+	Place_setMode((placemode_t)(PM_MODULE|PM_MODLINE));
 	break;
       case 'i' :
 	vgsim.vg_interactive = 1;
-	Place_setMode(PM_FILE|PM_LINE|PM_MODULE|PM_MODLINE);
+	Place_setMode((placemode_t)(PM_FILE|PM_LINE|PM_MODULE|PM_MODLINE));
 	break;
       case 'P' :
 	List_addToTail(&show_modules,optarg);

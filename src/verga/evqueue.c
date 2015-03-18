@@ -1420,7 +1420,7 @@ void EvQueue_clockNotify(EvQueue *Q,Net *n, transtype_t tt)
    */
   if (sawTrigger) {
     if (--Q->eq_watchClock.wc_numEdge <= 0) {
-      Q->eq_flags &= ~EVF_CLKWATCH;
+      Q->eq_flags = (eqflag_t)(Q->eq_flags & ~EVF_CLKWATCH);
       EvQueue_stopAfter(Q, Q->eq_watchClock.wc_overstep);
     }
   }

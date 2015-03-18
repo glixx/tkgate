@@ -124,7 +124,7 @@ static StatDeclVTable *SDvtables[] = {
   &vtable_SDRaise,
 };
 
-static StatDecl *new_StatDecl(int stype)
+static StatDecl *new_StatDecl(statcode_t stype)
 {
   StatDecl *sd = (StatDecl*) malloc(sizeof(StatDecl));
 
@@ -1027,7 +1027,7 @@ void SDAsgn_generate(SDAsgn *sd, Scope *scope, CodeBlock *cb)
    */
   for (le = List_first(&lhs_list);le;le = List_next(&lhs_list,le)) {
     Expr *lhs_e = (Expr*) ListElem_obj(le);
-    int lhs_size;
+    unsigned lhs_size;
     Net *n;
     Value *nLsb,*nAddr;
 

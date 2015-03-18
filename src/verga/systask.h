@@ -59,6 +59,7 @@ typedef enum {
  *
  *****************************************************************************/
 typedef enum {
+  STF_NONE = 0,
   STF_NEEDCTX = 0x1,
   STF_NEEDNETS = 0x2,
   STF_SPECIFY = 0x4,

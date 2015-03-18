@@ -670,7 +670,7 @@ void VerSpecTask(const char *name,List *args)
  *      value		Delay value for this path
  *
  *****************************************************************************/
-void VerSpecify(Expr *cond,int ptype,Expr *lhs,Expr *rhs,Expr *value)
+void VerSpecify(Expr *cond,spectype_t ptype,Expr *lhs,Expr *rhs,Expr *value)
 {
   Specify *s;
   SpecifyStat *specstat = new_SpecifyStat(cond,ptype, lhs, rhs, value);

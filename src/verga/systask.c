@@ -59,43 +59,43 @@ static void SysTask_tkg_zoom(VGThread *t, Value *r, int numArgs, void **args, Ta
 SysTaskDescript sysTaskTable[] = {
   /*Name		Function		min	max	ctx?	nets? */
   /*Name		Function		min	max	flags */
-  {"$display",		SysTask_display,	0,	NOLIM,	0},
-  {"$error",		SysTask_error,		0,	NOLIM,	0},
-  {"$finish",		SysTask_finish,		0,	0,	0},
-  {"$fclose",		SysTask_fclose,		1,	1,	0},
-  {"$fdisplay",		SysTask_fdisplay,	1,	NOLIM,	0},
-  {"$fmonitor",		SysTask_fmonitor,	1,	NOLIM,	STF_NEEDCTX|STF_NEEDNETS},
-  {"$fopen",		SysTask_fopen,		1,	1,	0},
+  {"$display",		SysTask_display,	0,	NOLIM,	STF_NONE},
+  {"$error",		SysTask_error,		0,	NOLIM,	STF_NONE},
+  {"$finish",		SysTask_finish,		0,	0,	STF_NONE},
+  {"$fclose",		SysTask_fclose,		1,	1,	STF_NONE},
+  {"$fdisplay",		SysTask_fdisplay,	1,	NOLIM,	STF_NONE},
+  {"$fmonitor",		SysTask_fmonitor,	1,	NOLIM,	(taskflag_t)(STF_NEEDCTX|STF_NEEDNETS)},
+  {"$fopen",		SysTask_fopen,		1,	1,	STF_NONE},
   {"$fstrobe",		SysTask_fstrobe,	1,	NOLIM,	STF_NEEDCTX},
-  {"$fwrite",		SysTask_fwrite,		0,	NOLIM,	},
-  {"$hold",		SysTask_hold,		3,	4,	STF_SPECIFY|STF_NEEDCTX|STF_NEEDNETS, {TAT_TRIGGER,TAT_TRIGGER,TAT_VALUE,TAT_NET}},
-  {"$monitor",		SysTask_monitor,	1,	NOLIM,	STF_NEEDCTX|STF_NEEDNETS},
-  {"$monitoroff",	SysTask_monitoroff,	0,	0,	0},
-  {"$monitoron",	SysTask_monitoron,	0,	0,	0},
-  {"$random",		SysTask_random,		0,	1,	0},
-  {"$readmemb",		SysTask_readmemb,	1,	3,	0, {TAT_VALUE,TAT_NET,TAT_VALUE}},
-  {"$readmemh",		SysTask_readmemh,	1,	3,	0, {TAT_VALUE,TAT_NET,TAT_VALUE}},
-  {"$setup",		SysTask_setup,		3,	4,	STF_SPECIFY|STF_NEEDCTX|STF_NEEDNETS, {TAT_TRIGGER,TAT_TRIGGER,TAT_VALUE,TAT_NET}},
-  {"$stime",		SysTask_stime,		0,	0,	0},
-  {"$stop",		SysTask_stop,		0,	1,	0},
+  {"$fwrite",		SysTask_fwrite,		0,	NOLIM,	STF_NONE},
+  {"$hold",		SysTask_hold,		3,	4,	(taskflag_t)(STF_SPECIFY|STF_NEEDCTX|STF_NEEDNETS), {TAT_TRIGGER,TAT_TRIGGER,TAT_VALUE,TAT_NET}},
+  {"$monitor",		SysTask_monitor,	1,	NOLIM,	(taskflag_t)(STF_NEEDCTX|STF_NEEDNETS)},
+  {"$monitoroff",	SysTask_monitoroff,	0,	0,	STF_NONE},
+  {"$monitoron",	SysTask_monitoron,	0,	0,	STF_NONE},
+  {"$random",		SysTask_random,		0,	1,	STF_NONE},
+  {"$readmemb",		SysTask_readmemb,	1,	3,	STF_NONE, {TAT_VALUE,TAT_NET,TAT_VALUE}},
+  {"$readmemh",		SysTask_readmemh,	1,	3,	STF_NONE, {TAT_VALUE,TAT_NET,TAT_VALUE}},
+  {"$setup",		SysTask_setup,		3,	4,	(taskflag_t)(STF_SPECIFY|STF_NEEDCTX|STF_NEEDNETS), {TAT_TRIGGER,TAT_TRIGGER,TAT_VALUE,TAT_NET}},
+  {"$stime",		SysTask_stime,		0,	0,	STF_NONE},
+  {"$stop",		SysTask_stop,		0,	1,	STF_NONE},
   {"$strobe",		SysTask_strobe,		1,	NOLIM,	STF_NEEDCTX},
-  {"$time",		SysTask_time,		0,	0,	0},
-  {"$tkg$command",	SysTask_tkg_command,	1,	NOLIM,	0},
-  {"$tkg$exec",		SysTask_tkg_exec,	1,	NOLIM,	0},
-  {"$tkg$post",		SysTask_tkg_post,	2,	2,	0},
-  {"$tkg$probe",	SysTask_tkg_probe,		1,	NOLIM,	STF_NEEDCTX|STF_NEEDNETS},
-  {"$tkg$recv",		SysTask_tkg_recv,	1,	1,	0},
-  {"$tkg$reportbreak",	SysTask_tkg_reportBreak,0,	NOLIM,	0},
-  {"$tkg$send",		SysTask_tkg_send,	2,	2,	0},
-  {"$tkg$systime",	SysTask_tkg_systime,	0,	0,	0},
-  {"$tkg$unprobe",	SysTask_tkg_unprobe,	1,	NOLIM,	STF_NEEDCTX|STF_NEEDNETS},
-  {"$tkg$wait",		SysTask_tkg_wait,	1,	1,	0},
-  {"$tkg$waituntil",	SysTask_tkg_waituntil,	1,	1,	0},
-  {"$tkg$zoom",		SysTask_tkg_zoom,	1,	1,	0},
-  {"$width",		SysTask_width,		2,	3,	STF_SPECIFY|STF_NEEDCTX|STF_NEEDNETS, {TAT_TRIGGERPAIR,TAT_VALUE,TAT_NET}},
-  {"$write",		SysTask_write,		0,	NOLIM,	0},
-  {"$writememb",	SysTask_writememb,	1,	3,	0, {TAT_VALUE,TAT_NET,TAT_VALUE}},
-  {"$writememh",	SysTask_writememh,	1,	3,	0, {TAT_VALUE,TAT_NET,TAT_VALUE}},
+  {"$time",		SysTask_time,		0,	0,	STF_NONE},
+  {"$tkg$command",	SysTask_tkg_command,	1,	NOLIM,	STF_NONE},
+  {"$tkg$exec",		SysTask_tkg_exec,	1,	NOLIM,	STF_NONE},
+  {"$tkg$post",		SysTask_tkg_post,	2,	2,	STF_NONE},
+  {"$tkg$probe",	SysTask_tkg_probe,	1,	NOLIM,	(taskflag_t)(STF_NEEDCTX|STF_NEEDNETS)},
+  {"$tkg$recv",		SysTask_tkg_recv,	1,	1,	STF_NONE},
+  {"$tkg$reportbreak",	SysTask_tkg_reportBreak,0,	NOLIM,	STF_NONE},
+  {"$tkg$send",		SysTask_tkg_send,	2,	2,	STF_NONE},
+  {"$tkg$systime",	SysTask_tkg_systime,	0,	0,	STF_NONE},
+  {"$tkg$unprobe",	SysTask_tkg_unprobe,	1,	NOLIM,	(taskflag_t)(STF_NEEDCTX|STF_NEEDNETS)},
+  {"$tkg$wait",		SysTask_tkg_wait,	1,	1,	STF_NONE},
+  {"$tkg$waituntil",	SysTask_tkg_waituntil,	1,	1,	STF_NONE},
+  {"$tkg$zoom",		SysTask_tkg_zoom,	1,	1,	STF_NONE},
+  {"$width",		SysTask_width,		2,	3,	(taskflag_t)(STF_SPECIFY|STF_NEEDCTX|STF_NEEDNETS), {TAT_TRIGGERPAIR,TAT_VALUE,TAT_NET}},
+  {"$write",		SysTask_write,		0,	NOLIM,	STF_NONE},
+  {"$writememb",	SysTask_writememb,	1,	3,	STF_NONE, {TAT_VALUE,TAT_NET,TAT_VALUE}},
+  {"$writememh",	SysTask_writememh,	1,	3,	STF_NONE, {TAT_VALUE,TAT_NET,TAT_VALUE}},
 };
 
 static FILE *openFiles[STT_MAXFILES] = {0};
@@ -357,7 +357,7 @@ static void SysTask_printfSSVec(VGThread *t,int numArgs, void **args)
       lastWasDiscrete = 0;
     } else {
       if (lastWasDiscrete) vgio_printf(" ");
-      Value_getstr(args[0],buf);
+      Value_getstr((Value *) args[0],buf);
       vgio_printf("%s",buf);
       numArgs--;
       args++;
@@ -655,7 +655,7 @@ static void SysTask_fwrite(VGThread *t,Value *r,int numArgs,void **args,TaskCont
       if (lastWasDiscrete) {
 	*p++ = ' '; *p=0;
       }
-      Value_getstr(args[0],p);
+      Value_getstr((Value*) args[0],p);
       p += strlen(p);
       numArgs--;
       args++;
@@ -851,7 +851,7 @@ static void SysTask_tkg_post(VGThread *t,Value *r,int numArgs,void **args,TaskCo
 
   vgio_printf("post");
   for (i = 0;i < numArgs;i++) {
-    Value_getstr(args[i],buf);
+    Value_getstr((Value *) args[i],buf);
     string_expand(buf,VGThread_getModCtx(t));
     vgio_printf(" %s",tclizeString(buf2,buf));
   }
@@ -1620,7 +1620,7 @@ static void SysTask_setup(VGThread *t, Value *r, int numArgs, void **args, TaskC
   EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
   simtime_t now = EvQueue_getCurTime(Q);
   simtime_t *lastTrans;
-  int which = 0,constraint = 0;
+  unsigned which = 0,constraint = 0;
 
   Value_toInt((Value*)args[0], &which);
   Value_toInt((Value*)args[3], &constraint);
@@ -1669,7 +1669,7 @@ static void SysTask_hold(VGThread *t, Value *r, int numArgs, void **args, TaskCo
   EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
   simtime_t now = EvQueue_getCurTime(Q);
   simtime_t *lastTrans;
-  int which = 0,constraint = 0;
+  unsigned which = 0,constraint = 0;
 
   Value_toInt((Value*)args[0],&which);
   Value_toInt((Value*)args[3],&constraint);
@@ -1718,7 +1718,7 @@ static void SysTask_width(VGThread *t, Value *r, int numArgs, void **args, TaskC
   EvQueue *Q = Circuit_getQueue(t->t_modCtx->mc_circuit);
   simtime_t now = EvQueue_getCurTime(Q);
   simtime_t *lastTrans;
-  int which = 0,constraint = 0;
+  unsigned which = 0,constraint = 0;
 
   Value_toInt((Value*)args[0],&which);
   Value_toInt((Value*)args[2],&constraint);

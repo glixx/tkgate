@@ -290,7 +290,7 @@ void Net_set(Net*n,Value*s)
     Net_getValue(n)->flags = SF_INT;
     break;
   default :
-    Net_getValue(n)->flags = 0;
+    Net_getValue(n)->flags = SF_NONE;
     break;
   }
 

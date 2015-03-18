@@ -123,4 +123,11 @@ FILE *openInPath(const char *name);
 
 extern VGSim vgsim;		/* Global state for gvsim */
 
+void *ob_malloc(int s,char *x);
+void *ob_calloc(int n,int s,char *x);
+void ob_free(void *p);
+char *ob_strdup(char *s);
+void ob_set_type(void *o,char *n);
+void ob_touch(void *o);
+
 #endif

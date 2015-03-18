@@ -66,7 +66,7 @@ List *VerListPrepend(void*,List*L);
  *****************************************************************************/
 StatDecl *VerCondStat(Expr*,StatDecl*);
 void VerSpecTask(const char *name,List *args);
-void VerSpecify(Expr *cond,int ptype,Expr *lhs,Expr *rhs,Expr *value);
+void VerSpecify(Expr *cond,spectype_t,Expr *lhs,Expr *rhs,Expr *value);
 void VerSpecParam(const char *name,Expr *value);
 
 /*****************************************************************************

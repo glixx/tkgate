@@ -206,7 +206,7 @@ static void Specify_generateTaskCall(Specify *s,ModuleInst *mi,CodeBlock *codeBl
   sargs = (void**) malloc(sizeof(void*)*nargs);
 
   sargs[0] = new_Value(SSWORDSIZE);
-  Value_convertI(sargs[0],which);
+  Value_convertI((Value *) sargs[0],which);
 
   for (i = 0, j = 1;i < task->t_nargs;i++, j++) {
     stargtype_t argtype = taskEnt->st_argTypes[i];
@@ -274,7 +274,7 @@ void Specify_generateTasks(Specify *s,ModuleInst *mi,CodeBlock *codeBlock)
   for (he = Hash_first(&s->s_specParms);he;he = Hash_next(&s->s_specParms,he)) {
     const char *name = SHashElem_key(he);
     Expr *e = (Expr*)HashElem_obj(he);
-    Value *value = Expr_parmEval(e, scope, 0);
+    Value *value = (Value *) Expr_parmEval(e, scope, PEF_NONE);
     Net *n = new_Net(name, NT_PARAMETER, Value_nbits(value)-1,0);
     Scope_defNet(scope, name, n);
   }
@@ -368,7 +368,7 @@ int Specify_getSpecParm(Specify *s,const char *name,ModuleInst *mi, int *value)
   Expr *x = (Expr*)SHash_find(&s->s_specParms,name);
   if (!x) return -1;
 
-  return Expr_parmEvalI(x, ModuleInst_getScope(mi), value, PEF_SPECPARM);
+  return Expr_parmEvalI(x, ModuleInst_getScope(mi), (unsigned *)value, PEF_SPECPARM);
 }
 
 /*****************************************************************************

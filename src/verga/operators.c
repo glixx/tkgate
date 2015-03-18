@@ -205,7 +205,7 @@ int Value_or(Value *R,Value *A,Value *B,Value *C)
   int wc = SSNUMWORDS(R->nbits);
   register int i;
 
-  R->flags = A->flags | B->flags;
+  R->flags = (ValueFlags)(A->flags | B->flags);
 
   for (i = 0;i < wc;i++) {
     register unsigned RisOne = (A->one[i]&~A->flt[i])|(B->one[i]&~B->flt[i]);
@@ -269,7 +269,7 @@ int Value_and(Value *R,Value *A,Value *B,Value *C)
   int wc = SSNUMWORDS(R->nbits);
   register int i;
 
-  R->flags = A->flags | B->flags;
+  R->flags = (ValueFlags)(A->flags | B->flags);
 
   for (i = 0;i < wc;i++) {
     register unsigned RisZero = (A->zero[i]&~A->flt[i])|(B->zero[i]&~B->flt[i]);
@@ -297,7 +297,7 @@ int Value_nand(Value *R,Value *A,Value *B,Value *C)
   int wc = SSNUMWORDS(R->nbits);
   register int i;
 
-  R->flags = A->flags | B->flags;
+  R->flags = (ValueFlags)(A->flags | B->flags);
 
   for (i = 0;i < wc;i++) {
     register unsigned RisZero = (A->zero[i]&~A->flt[i])|(B->zero[i]&~B->flt[i]);
@@ -335,7 +335,7 @@ int Value_xor(Value *R,Value *A,Value *B,Value *C)
   int wc = SSNUMWORDS(R->nbits);
   register int i;
 
-  R->flags = A->flags | B->flags;
+  R->flags = (ValueFlags)(A->flags | B->flags);
 
   for (i = 0;i < wc;i++) {
     register unsigned RisOne = A->one[i]^B->one[i];
@@ -363,7 +363,7 @@ int Value_nxor(Value *R,Value *A,Value *B,Value *C)
   int wc = SSNUMWORDS(R->nbits);
   register int i;
 
-  R->flags = A->flags | B->flags;
+  R->flags = (ValueFlags)(A->flags | B->flags);
 
   for (i = 0;i < wc;i++) {
     register unsigned RisOne = A->one[i]^B->one[i];
@@ -893,7 +893,7 @@ int Value_mul(Value *r,Value *a,Value *b,Value *c)
   unsigned mask = SSWORDMASK;
   int wc = SSNUMWORDS(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -918,7 +918,7 @@ int Value_w_mul(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -943,7 +943,7 @@ int Value_div(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(r->nbits);
   int ecode;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -969,7 +969,7 @@ int Value_w_div(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -999,7 +999,7 @@ int Value_mod(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(r->nbits);
   int ecode;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1025,7 +1025,7 @@ int Value_w_mod(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1052,7 +1052,7 @@ int Value_w_add(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1078,7 +1078,7 @@ int Value_add(Value *r,Value *a,Value *b,Value *c)
   int carry = 0;
   unsigned mask = (r->nbits&SSBITMASK) ? LMASK(r->nbits&SSBITMASK) : SSWORDMASK;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1114,7 +1114,7 @@ int Value_w_sub(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1142,7 +1142,7 @@ int Value_sub(Value *r,Value *a,Value *b,Value *c)
   int carry = 1;
   unsigned mask = (r->nbits&SSBITMASK) ? LMASK(r->nbits&SSBITMASK) : SSWORDMASK;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1180,7 +1180,7 @@ int Value_rshift(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned smask = (b->nbits < SSWORDSIZE) ? LMASK(b->nbits) : ~0;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(b))
     Value_unknown(r);
@@ -1199,7 +1199,7 @@ int Value_arshift(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned smask = (b->nbits < SSWORDSIZE) ? LMASK(b->nbits) : ~0;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(b)) {
     Value_unknown(r);
@@ -1225,7 +1225,7 @@ int Value_lshift(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned smask = (b->nbits < SSWORDSIZE) ? LMASK(b->nbits) : ~0;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(b))
     Value_unknown(r);
@@ -1252,7 +1252,7 @@ int Value_alshift(Value *r,Value *a,Value *b,Value *c)
  *****************************************************************************/
 int Value_w_rshift(Value *r,Value *a,Value *b,Value *c)
 {
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(b))
     Value_unknown(r);
@@ -1269,7 +1269,7 @@ int Value_w_rshift(Value *r,Value *a,Value *b,Value *c)
  *****************************************************************************/
 int Value_w_arshift(Value *r,Value *a,Value *b,Value *c)
 {
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(b)) {
     Value_unknown(r);
@@ -1292,7 +1292,7 @@ int Value_w_arshift(Value *r,Value *a,Value *b,Value *c)
  *****************************************************************************/
 int Value_w_lshift(Value *r,Value *a,Value *b,Value *c)
 {
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(b))
     Value_unknown(r);
@@ -1321,7 +1321,7 @@ int Value_w_gt(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1346,7 +1346,7 @@ int Value_gt(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(r->nbits);
   unsigned mask = (r->nbits & SSBITMASK) ? LMASK(r->nbits & SSBITMASK) : SSWORDMASK;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1379,7 +1379,7 @@ int Value_w_lt(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1404,7 +1404,7 @@ int Value_lt(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(r->nbits);
   unsigned mask = (r->nbits & SSBITMASK) ? LMASK(r->nbits & SSBITMASK) : SSWORDMASK;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1437,7 +1437,7 @@ int Value_w_ge(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1462,7 +1462,7 @@ int Value_ge(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(r->nbits);
   unsigned mask = (r->nbits & SSBITMASK) ? LMASK(r->nbits & SSBITMASK) : SSWORDMASK;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1495,7 +1495,7 @@ int Value_w_le(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1520,7 +1520,7 @@ int Value_le(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(r->nbits);
   unsigned mask = (r->nbits & SSBITMASK) ? LMASK(r->nbits & SSBITMASK) : SSWORDMASK;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1604,7 +1604,7 @@ int Value_eq(Value *r,Value *a,Value *b,Value *c)
   int wc = SSNUMWORDS(a->nbits);
   int i;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (a->nbits != b->nbits) {
     Value_lone(r);
@@ -1657,7 +1657,7 @@ int Value_w_land(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1678,7 +1678,7 @@ int Value_w_land(Value *r,Value *a,Value *b,Value *c)
  *****************************************************************************/
 int Value_land(Value *r,Value *a,Value *b,Value *c)
 {
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1701,7 +1701,7 @@ int Value_w_lor(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = LMASK(r->nbits);
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1722,7 +1722,7 @@ int Value_w_lor(Value *r,Value *a,Value *b,Value *c)
  *****************************************************************************/
 int Value_lor(Value *r,Value *a,Value *b,Value *c)
 {
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (!Value_isLogic(a) || !Value_isLogic(b)) {
     Value_unknown(r);
@@ -1743,7 +1743,7 @@ int Value_lor(Value *r,Value *a,Value *b,Value *c)
  *****************************************************************************/
 int Value_ifelse(Value *r,Value *a,Value *b,Value *c)
 {
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (Value_isLogic(a)) {
     if (Value_isZero(a))
@@ -1783,7 +1783,7 @@ int Value_concat(Value *r,Value *a,Value *b,Value *c)
 {
   int rhs_nbits = a->nbits + b->nbits;
 
-  r->flags = a->flags | b->flags;
+  r->flags = (ValueFlags)(a->flags | b->flags);
 
   if (rhs_nbits <= SSWORDSIZE) {
     unsigned mask = LMASK(b->nbits);
@@ -1877,7 +1877,7 @@ int Value_concat(Value *r,Value *a,Value *b,Value *c)
 int Value_repcat(Value *r,Value *a,Value *b,Value *c)
 {
   int rwc = SSNUMWORDS(r->nbits);
-  int n,i;
+  unsigned n,i;
   int rhs_nbits;
 
   r->flags = b->flags;

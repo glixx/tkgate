@@ -491,7 +491,7 @@ static void Circuit_dpath_makeInputHandlers(Circuit *c, ModuleInst *mi, CodeBloc
        * always @(a) z$a <= #delay a;
        */
       {
-	SpecifyStat *ss = ListElem_obj(List_first(&spec_stats));
+	SpecifyStat *ss = (SpecifyStat *) ListElem_obj(List_first(&spec_stats));
 	if (!ss->ss_cond) {
 	  BCNbAsgnD_init(CodeBlock_nextEmpty(codeBlock), pn, 0, Net_getValue(n), 0, Net_nbits(n), ss->ss_idelay);
 	  break;
@@ -517,7 +517,7 @@ static void Circuit_dpath_makeInputHandlers(Circuit *c, ModuleInst *mi, CodeBloc
 	//	BCDebugPrint_init(CodeBlock_nextEmpty(codeBlock),"BEGIN conditional delay\n");
 
 	for (le2 = List_first(&spec_stats);le2;le2 = List_next(&spec_stats,le2)) {
-	  SpecifyStat *ss = ListElem_obj(le2);
+	  SpecifyStat *ss = (SpecifyStat *) ListElem_obj(le2);
 	  if (ss->ss_cond) {
 	    Value *cond;
 
@@ -547,7 +547,7 @@ static void Circuit_dpath_makeInputHandlers(Circuit *c, ModuleInst *mi, CodeBloc
 	}
 
 	for (le2 = List_first(&gotoList);le2;le2 = List_next(&gotoList,le2)) {
-	  BCGoto *g = ListElem_obj(le2);
+	  BCGoto *g = (BCGoto *) ListElem_obj(le2);
 	  BCGoto_setOffset(g, CodeBlock_size(codeBlock));
 	}
 
