@@ -90,7 +90,7 @@ static void Circuit_buildNets_reginit(Circuit *c,ModuleDecl *m,
   name = Expr_getLitName(mia->mia_lhs);
 
   scope = ModuleInst_getScope(mi);
-  s = Expr_parmEval(mia->mia_rhs,scope,0);
+  s = Expr_parmEval(mia->mia_rhs,scope,PEF_NONE);
   if (!s) return;
 
   reg = Scope_findNet(scope, name, SDF_LOCAL_ONLY);
@@ -133,7 +133,7 @@ static void Circuit_buildNets_parameter(Circuit *c,ModuleDecl *m,
   scope = ModuleInst_getScope(mi);
   if (mip->mip_ppPos >= 0)
     scope = Circuit_getUpScope(c,scope);
-  s = Expr_parmEval(e,scope,0);
+  s = Expr_parmEval(e,scope,PEF_NONE);
 
 #if 0
   {
@@ -1057,7 +1057,7 @@ Trigger *Circuit_getTrigger(Circuit *c,List *posedges,List *negedges)
   unsigned hc = Trigger_sortAndGetHashCode(posedges,negedges);
   Trigger *tlist,*r;
 
-  tlist = NHash_find(&c->c_triggers,hc);
+  tlist = (Trigger*) NHash_find(&c->c_triggers,hc);
   r = Trigger_getTrigger(&tlist,posedges,negedges);
   NHash_replace(&c->c_triggers,hc,tlist);
 

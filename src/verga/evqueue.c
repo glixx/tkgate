@@ -614,7 +614,7 @@ void EvQueue_init(EvQueue *Q,Circuit *C)
   Q->eq_finalTime = ~0;
   Q->eq_curTime = 0;
   Q->eq_numPending = 0;
-  Q->eq_flags = 0;
+  Q->eq_flags = EVF_NONE;
   SQueue_init(&Q->eq_assignQ);
   SQueue_init(&Q->eq_strobeQ);
   SQueue_init(&Q->eq_inactiveQ);
@@ -719,7 +719,7 @@ void EvQueue_print(EvQueue *Q)
 
 void EvQueue_go(EvQueue *Q)
 {
-  (Q)->eq_flags |= EVF_RUN;
+  (Q)->eq_flags = (eqflag_t)((Q)->eq_flags | EVF_RUN);
 
   if (vgsim.vg_interactive)
     vgio_printf("go @ %llu\n",Q->eq_curTime);
@@ -1303,7 +1303,7 @@ void EvQueue_interactiveMainEventLoop(EvQueue *Q)
       /*****************************************************************************
        *Queue is halted
        *****************************************************************************/
-      Q->eq_flags &= ~EVF_LIMIT;
+      Q->eq_flags = (eqflag_t)(Q->eq_flags & ~EVF_LIMIT);
 
       if (EvQueue_isRunning(Q) && EvQueue_pending(Q) == 0)
 	vgio_printf("readystop @ %llu (qempty - %d - %d)\n",Q->eq_curTime,EvQueue_isRunning(Q), EvQueue_pending(Q));
@@ -1340,7 +1340,7 @@ void EvQueue_stopAfter(EvQueue *Q,deltatime_t dt)
   simtime_t stopTime = Q->eq_curTime + dt;
 
   if (!(Q->eq_flags & EVF_LIMIT) || stopTime < Q->eq_limitTime) {
-    Q->eq_flags |= EVF_LIMIT;
+    Q->eq_flags = (eqflag_t)(Q->eq_flags | EVF_LIMIT);
     Q->eq_limitTime = stopTime;
   }
 }
@@ -1373,7 +1373,7 @@ void EvQueue_clockStop(EvQueue *Q,Net *n,int numEdge,transtype_t tt,deltatime_t 
   Q->eq_watchClock.wc_numEdge = numEdge;
   Q->eq_watchClock.wc_overstep = dt;
 
-  Q->eq_flags |= EVF_CLKWATCH;
+  Q->eq_flags = (eqflag_t)(Q->eq_flags | EVF_CLKWATCH);
 }
 
 /*****************************************************************************

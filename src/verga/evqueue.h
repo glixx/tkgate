@@ -53,6 +53,7 @@ typedef enum {
  *   Event queue flags
  *****************************************************************************/
 typedef enum {
+  EVF_NONE =		0x0,
   EVF_RUN =		0x1,	/* Event queue is free running */
   EVF_POSCLOCK =	0x2,	/* Wait for a clock posedge transition */
   EVF_NEGCLOCK =	0x4,	/* Wait for a clock negedge transition */
@@ -295,7 +296,7 @@ void EvQueue_clockNotify(EvQueue *Q,Net *n, transtype_t tt);
 #define EvQueue_pending(Q)	(Q)->eq_numPending
 #define EvQueue_getCurTime(Q)	(Q)->eq_curTime
 #define EvQueue_isRunning(Q)	((Q)->eq_flags & EVF_RUN)
-#define EvQueue_stop(Q)		((Q)->eq_flags &= ~(EVF_RUN|EVF_LIMIT))
+#define EvQueue_stop(Q)		((Q)->eq_flags = (eqflag_t)((Q)->eq_flags & ~(EVF_RUN|EVF_LIMIT)))
 #define EvQueue_monitoredChangeNotify(Q) ((Q)->eq_monitoredChange = 1)
 void EvQueue_go(EvQueue *Q);
 

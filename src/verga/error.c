@@ -35,7 +35,7 @@ DeferedWarning *wdefer_head = 0;
 DeferedWarning *wdefer_tail = 0;
 
 extern Place curPlace;
-static placemode_t placeMode = PM_FILE|PM_LINE|PM_PRETTY;
+static placemode_t placeMode = (placemode_t)(PM_FILE|PM_LINE|PM_PRETTY);
 char *current_script = 0;
 int warning_mode = 3;
 
