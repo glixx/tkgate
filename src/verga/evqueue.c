@@ -1139,7 +1139,6 @@ void EvQueue_mainEventLoop(EvQueue *Q)
 {
   EvQueue_go(Q);
 
-
   while (EvQueue_isRunning(Q)) {
     Event *e = EvQueue_dequeue(Q);
     if (((Q->eq_flags & EVF_LIMIT) && Q->eq_curTime >= Q->eq_limitTime)) break;

@@ -176,10 +176,18 @@ typedef enum net_type_prop_en {
  * Net attribute flags
  *
  *****************************************************************************/
-#define NA_SIGNED	0x1		/* Net value is signed */
-#define NA_FIXED	0x2		/* Value is fixed */
-#define NA_CLOCK	0x4		/* Net is a clock */
-#define NA_INPATHDMOD	0x8		/* Net is in a path-delay module */
+typedef enum Net_attr_flags_str {
+  NA_NONE = 0x0,
+#define NA_NONE         NA_NONE
+  NA_SIGNED = 0x1,
+#define NA_SIGNED	NA_SIGNED	/* Net value is signed */
+  NA_FIXED = 0x2,
+#define NA_FIXED	NA_FIXED	/* Value is fixed */
+  NA_CLOCK = 0x4,
+#define NA_CLOCK	NA_CLOCK	/* Net is a clock */
+  NA_INPATHDMOD = 0x8
+#define NA_INPATHDMOD	NA_INPATHDMOD	/* Net is in a path-delay module */
+} NetAttrlags;
 
 /*****************************************************************************
  *
@@ -232,7 +240,7 @@ typedef struct {
 struct Net_str {
   char			*n_name;		/* Full path name */
   nettype_t		n_type;			/* Type of wire */
-  unsigned		n_flags;		/* Attribute flags */
+  NetAttrlags		n_flags;		/* Attribute flags */
   unsigned		n_msb,n_lsb;		/* Range of net */
   unsigned		n_nbits;		/* Number of bits */
   unsigned		n_numMonitors;		/* Number of monitors on this net */

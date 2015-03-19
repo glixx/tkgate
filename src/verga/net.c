@@ -30,7 +30,7 @@ Net *new_Net_memory(const char *name,unsigned msb,unsigned lsb,
   n->n_nbits = iabs(msb-lsb) + 1;
   n->n_drivers = 0;
   n->n_type = NT_MEMORY;
-  n->n_flags = 0;
+  n->n_flags = NA_NONE;
   n->n_numDrivers = 0;
   n->n_numMonitors = 0;
   n->n_wfunc = Value_wire;
@@ -71,7 +71,7 @@ Net *new_Net(const char *name,nettype_t ntype,unsigned msb,unsigned lsb)
   n->n_nbits = iabs(msb-lsb) + 1;
   n->n_drivers = 0;
   n->n_type = ntype;
-  n->n_flags = 0;
+  n->n_flags = NA_NONE;
   n->n_numMonitors = 0;
   n->n_numDrivers = 0;
   List_init(&n->n_posedgeNotify);
@@ -417,7 +417,7 @@ int Net_addDriver(Net*n)
  *****************************************************************************/
 void Net_driverChangeNotify(Net *n,int id)
 {
-  Value *s;
+  Value *s, *floatValue;
   int i;
 
 #if NET_DEBUG
@@ -437,16 +437,19 @@ void Net_driverChangeNotify(Net *n,int id)
     break;
   case 1 :
     s = n->n_drivers[0];
-    if ((n->n_type & NT_P_TRIREG))
-      Value_trireg(s,s,&n->n_data.value);
+    floatValue = new_Value(Net_nbits(n));
+    Value_float(floatValue);
+    (*n->n_wfunc)(s,s,floatValue);
+    delete_Value(floatValue);
+    if (n->n_type & NT_P_TRIREG)
+      Value_trireg(s,s,Net_getValue(n));
     Net_set(n,s);
-    /* no delete needed */
     break;
   case 2:
     s = new_Value(Net_nbits(n));
     (*n->n_wfunc)(s,n->n_drivers[0],n->n_drivers[1]);
     if ((n->n_type & NT_P_TRIREG))
-      Value_trireg(s,s,&n->n_data.value);
+      Value_trireg(s,s,Net_getValue(n));
     Net_set(n,s);
     delete_Value(s);
     break;

@@ -605,7 +605,7 @@ void Circuit_execRegClock(Circuit*c,int argc,char *argv[])
     return;
   }
 
-  n->n_flags |= NA_CLOCK;
+  n->n_flags = (NetAttrlags)(n->n_flags | NA_CLOCK);
 }
 
 /*****************************************************************************

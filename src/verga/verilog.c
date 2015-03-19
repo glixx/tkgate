@@ -33,7 +33,7 @@ Place		curPlace;			/* The current place */
  * "current" object structure used by parser
  *
  *****************************************************************************/
-struct {
+typedef struct {
   ModuleDecl	*mod;			/* Module currently being defined */
   int		dtype;			/* Current type for declarations */
   VRange	*range;			/* Current range for declarations */
@@ -46,7 +46,9 @@ struct {
   ScopeDecl	*scope;			/* Scope in which to make variable declarations */
   int		isRedef;		/* This module is a redefinition (i.e., in error). */
   const char	*esName;		/* Name of embedded script  */
-} cur = {0};
+} Current;
+
+static Current cur = {0};
 
 
 /*****************************************************************************

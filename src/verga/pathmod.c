@@ -95,7 +95,7 @@ static int Circuit_dpath_checkPorts(Circuit *c,
 
     if (!net) continue;	/* not an I/O net */
 
-    net->n_flags |= NA_INPATHDMOD;
+    net->n_flags = (NetAttrlags)(net->n_flags | NA_INPATHDMOD);
 
     switch (NetDecl_getType(netdecl) & NT_P_IO_MASK) {
     case NT_P_INPUT :
