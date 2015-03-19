@@ -50,18 +50,32 @@ static char *psVdd[] = {
 };
 
 GGateInfo gate_vdd_info = {
-  0,
-  "VDD",
-  "supply1",0x0,
-  "psvdd",psVdd,
-  -1,-1,
+  0,		/* code */
+  "VDD",	/* name */
+  "supply1",	/* vnames */
+  0x0,		/* vmask */
+  "psvdd",	/* psprint */
+  psVdd,	/* psdef */
+  -1		/* gi_multipad */,
+  -1,		/* gi_bitpad */
 
-  {{"v",	{"gm.io",0},	{"gm.io.vdd",0,0,400},	"gat_make VDD"},
-   {0}},
-
-  vdd_iconDims,
-
-  1,{{"Z",OUT,1,1,vdd_out_loc}},
+  {
+    {"v",	/* key_seq */
+    {"gm.signals",0},/* root */
+    {"gm.signals.vdd",0,0,400}, /* entry */
+    "gat_make VDD"},/* cmds[0] */
+    {0}		    /* cmds[1] */
+  },		/* cmds */
+  vdd_iconDims, /* dim */
+  1,		/* NumPads */
+  {
+    {"Z",	/* name */
+     OUT,	/* iotype */
+     1,		/* size */
+     1,
+     vdd_out_loc
+     } /* Pad[0] */
+  }, /* Pad */
   {{5,15,LJ},{5,15,LJ},{5,15,LJ},{5,15,LJ}},
   {1,1,1},
 

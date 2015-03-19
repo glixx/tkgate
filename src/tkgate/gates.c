@@ -578,7 +578,7 @@ int GGateInfo_getPadNum(GGateInfo *gi,const char *pname)
     return -1;
 
   for (p = 0;p < gi->NumPads;p++)
-    if (strcmp(gi->Pad[p].Name,buf) == 0)
+    if (strcmp(gi->Pad[p].name,buf) == 0)
       return p;
 
   return -1;
@@ -689,7 +689,7 @@ const char *GCElement_getPadName(GCElement *g,int p)
     GSymPort *sp = GModSymbol_getPort(g->u.block.symbol,p);
     return sp->msp_name;
   } else
-    return g->typeinfo->Pad[p].Name;
+    return g->typeinfo->Pad[p].name;
 }
 
 /*****************************************************************************
@@ -723,7 +723,7 @@ GWire *GCElement_getPort(GCElement *g, const char *portName)
     int k = 0;
 
     i = GGateInfo_getPadNum(gi,portName);
-    if (sscanf(portName+strlen(gi->Pad[i].Name),"%d",&k) != 1) k = 0;
+    if (sscanf(portName+strlen(gi->Pad[i].name),"%d",&k) != 1) k = 0;
 
     for (w = g->wires[i];k > 0 && w;w = w->next, k--);
     return w;

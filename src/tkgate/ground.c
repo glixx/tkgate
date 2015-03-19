@@ -56,7 +56,7 @@ GGateInfo gate_ground_info = {
   "psground",psGround,
   -1,-1,
 
-  {{"g",	{"gm.io",0},	{"gm.io.ground",0,0,300},	"gat_make GROUND"},
+  {{"g",	{"gm.signals",0},	{"gm.signals.ground",0,0,300},	"gat_make GROUND"},
    {0}},
 
   ground_iconDims,

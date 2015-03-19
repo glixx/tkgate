@@ -210,9 +210,9 @@ typedef struct locate {
    Used for gateinfo on wires.
 */
 typedef struct padinfo {
-  char *Name;			/* Pin name for wires on this pad */
+  char *name;			/* Pin name for wires on this pad */
   int iotype;			/* I/O type (IN, OUT, TRI) */
-  int Size;			/* Default bit-size */
+  int size;			/* Default bit-size */
   int Num;			/* Initial number of pins */
   GPadLoc *Loc;			/* Location info for pins */
   unsigned CanAdd : 1;		/* Can add to pin list */

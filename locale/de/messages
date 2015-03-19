@@ -320,10 +320,11 @@ gm.comment	Kommentar
 gm.script Verilogskript
 gm.frame	Rahmen
 
+gm.signals.ground	Masse
+gm.signals.vdd	Vdd
+
 gm.io.switch	Schalter
 gm.io.dip	DIP Schalter
-gm.io.ground	Masse
-gm.io.vdd	Vdd
 gm.io.merge	Zusammenführen
 gm.io.clock	Taktgeber
 

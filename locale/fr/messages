@@ -145,10 +145,11 @@ gm.mod		Module
 gm.comment	Commentaire
 gm.frame	Cadre
 
+gm.signals.ground	Terre
+gm.signals.vdd	Vdd
+
 gm.io.switch	Interrupteur
 gm.io.dip	Interrupteurs
-gm.io.ground	Terre
-gm.io.vdd	Vdd
 gm.io.merge	Fusionner connexions
 gm.io.clock	Horloge
 

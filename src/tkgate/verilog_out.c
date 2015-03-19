@@ -188,9 +188,9 @@ int VerilogBasicGateParmList(FILE *f,GCElement *g)
 	inv = "~";
 
       if (gi->Pad[i].CanAdd)
-	fprintf(f,".%s%d",gi->Pad[i].Name,j);
+	fprintf(f,".%s%d",gi->Pad[i].name,j);
       else
-	fprintf(f,".%s",gi->Pad[i].Name);
+	fprintf(f,".%s",gi->Pad[i].name);
       if (w->net->n_signame)
 	fprintf(f,"(%s%s)",inv,w->net->n_signame);
       else
@@ -540,7 +540,7 @@ static void VerilogSaveModInterface(FILE *f,GModuleDef *M)
   for (i = 0;i < gi->NumPads;i++) {
     for (w = g->wires[i], j=0;w;w = w->next, j++) {
       fprintf(f," %s%d%c",
-	      gi->Pad[i].Name,j,
+	      gi->Pad[i].name,j,
 	      dirchar[gi->Pad[i].iotype]);
       if (w->net->n_nbits == 1)
 	fprintf(f,"%s",w->name);
@@ -1133,10 +1133,10 @@ void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs)
     if (gi->Pad[i].CanAdd) {
       for (j = 0;j < multiPad;j++) {
 	if (j > 0) fprintf(f,", ");
-	fprintf(f,"%s%d",gi->Pad[i].Name,j);
+	fprintf(f,"%s%d",gi->Pad[i].name,j);
       }
     } else
-      fprintf(f,"%s",gi->Pad[i].Name);
+      fprintf(f,"%s",gi->Pad[i].name);
   }
   fprintf(f,");\n");
 }
@@ -1160,10 +1160,10 @@ void GCellSpec_writePortDecls(FILE *f,GCellSpec *gcs)
 
     if (gi->Pad[i].CanAdd) {
       for (j = 0;j < multiPad;j++) {
-	fprintf(f,"%s%s %s%d;\n",iotype,bitSpec,gi->Pad[i].Name,j);
+	fprintf(f,"%s%s %s%d;\n",iotype,bitSpec,gi->Pad[i].name,j);
       }
     } else
-      fprintf(f,"%s%s %s;\n",iotype,bitSpec,gi->Pad[i].Name);
+      fprintf(f,"%s%s %s;\n",iotype,bitSpec,gi->Pad[i].name);
   }
 }
 

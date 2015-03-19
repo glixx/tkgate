@@ -294,11 +294,12 @@ gm.mod		TODO: Module
 gm.comment		Comentario
 gm.frame		Marco
 
+gm.signals.ground		Masa
+gm.signals.vdd		Vdd
+
 gm.io.switch		Conmutador
 gm.io.dip		Interruptores DIP
-gm.io.ground		Masa
-gm.io.vdd		Vdd
-gm.io.merge		TODO: Concat
+gm.io.merge		Concat
 gm.io.clock		Seal de Reloj
 
 gm.io.led		LED

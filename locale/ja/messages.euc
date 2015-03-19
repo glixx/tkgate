@@ -300,10 +300,11 @@ gm.mod			モジュール
 gm.comment		コメント
 gm.frame		フレーム
 
+gm.signals.ground		アース
+gm.signals.vdd		Vdd
+
 gm.io.switch		スイッチ
 gm.io.dip		DIPスイッチ
-gm.io.ground		アース
-gm.io.vdd		Vdd
 gm.io.merge		ワイヤのマージ
 gm.io.clock		クロック
 

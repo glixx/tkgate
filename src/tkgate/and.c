@@ -332,9 +332,9 @@ int AOX_GateParmList(FILE *f,GCElement *g)
 	inv = "!";
 
       if (gi->Pad[i].CanAdd)
-	fprintf(f,".%s%d",gi->Pad[i].Name,j);
+	fprintf(f,".%s%d",gi->Pad[i].name,j);
       else
-	fprintf(f,".%s",gi->Pad[i].Name);
+	fprintf(f,".%s",gi->Pad[i].name);
       if (w->net->n_signame) {
 	fprintf(f,"(%s",inv);
 	if (w->net->n_nbits == 1 && nbits > 1)

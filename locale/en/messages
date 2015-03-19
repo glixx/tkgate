@@ -340,6 +340,7 @@ port.inout	InOut
 # Tags for built-in gate types
 #
 
+gm.signals	Signals
 gm.io		I/O
 gm.gate		Gate
 gm.rgate	Reduction
@@ -351,10 +352,14 @@ gm.comment	Comment
 gm.script	Verilog Script
 gm.frame	Frame
 
+gm.signals.pullup	Pullup
+gm.signals.pulldown	Pulldown
+gm.signals.ground	Ground
+gm.signals.vdd	Vdd
+
 gm.io.switch	Switch
 gm.io.dip	DIP Switch
-gm.io.ground	Ground
-gm.io.vdd	Vdd
+
 gm.io.merge	Concat
 gm.io.clock	Clock
 

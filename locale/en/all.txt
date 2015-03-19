@@ -386,7 +386,7 @@ ho.print.selcur
 print.pageset
 ho.opt.sec.writemem
 menu.edit.selall
-gm.io.ground
+gm.signals.ground
 gm.mod.inout
 @opt.width
 @portlist.inout2
@@ -665,7 +665,7 @@ ho.symed.lshift
 err.badlibopen
 verga.err.SYNTAX
 db.gate.demux.sel2.exp
-gm.io.vdd
+gm.signals.vdd
 verga.err.TASKBADTYPE
 opt.tool.tech
 ipanel.props

@@ -299,7 +299,7 @@ GCElement *Mux_Make(EditState **es,GModuleDef *env,int GType,
       if (Pins) {
 	char buf[STRMAX];
 	int N;
-	if (sscanf(Pins,"%[^=]=%d",buf,&N) == 2 && strcmp(buf,g->typeinfo->Pad[i].Name) == 0)
+	if (sscanf(Pins,"%[^=]=%d",buf,&N) == 2 && strcmp(buf,g->typeinfo->Pad[i].name) == 0)
 	  Num = N;
       }
       if (!Num)

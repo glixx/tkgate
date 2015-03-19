@@ -419,8 +419,8 @@ static void wire_gateadd(GCElement *g,GWire *e1,GWire *e2,int p,int dir,int inve
 #ifdef DEBUGADD
   printf("wire_gate_add(%p)\n",p);
 #endif
-  net_setSize(e1->net,g->typeinfo->Pad[p].Size);
-  net_setSize(e2->net,g->typeinfo->Pad[p].Size);
+  net_setSize(e1->net,g->typeinfo->Pad[p].size);
+  net_setSize(e2->net,g->typeinfo->Pad[p].size);
 
   switch (dir) {
   case IN :

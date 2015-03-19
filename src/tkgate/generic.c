@@ -131,14 +131,14 @@ GCElement *Generic_Make(EditState **es,GModuleDef *PM,int GType,
       if (Pins) {
 	char buf[STRMAX];
 	int N;
-	if (sscanf(Pins,"%[^=]=%d",buf,&N) == 2 && strcmp(buf,g->typeinfo->Pad[i].Name) == 0)
+	if (sscanf(Pins,"%[^=]=%d",buf,&N) == 2 && strcmp(buf,g->typeinfo->Pad[i].name) == 0)
 	  Num = N;
       }
       if (!Num)
 	Num = g->typeinfo->Pad[i].Num;
 
       for (j = 0;j < Num;j++) {
-	if (Invert && strcmp(Invert,g->typeinfo->Pad[i].Name) == 0)
+	if (Invert && strcmp(Invert,g->typeinfo->Pad[i].name) == 0)
 	  wire_addToGate(g,i,PM,1);
 	else
 	  wire_addToGate(g,i,PM,0);
@@ -526,7 +526,7 @@ void Generic_editPropsULWires(GCElement *g)
       int pdir = ANY;
 
       for (i = 0;i < N;i++)
-	if (strcmp(gi->Pad[i].Name,port) == 0) {
+	if (strcmp(gi->Pad[i].name,port) == 0) {
 	  pdir = gi->Pad[i].iotype;
 	  break;
 	}

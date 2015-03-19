@@ -1605,7 +1605,7 @@ void VerJointNet(const char *nname)
   n = (GNet*) SHash_find(cur.mod->m_nets,nname);
   for (i = 0;i < pi->NumPads;i++) {
     cur_gpin_extend(i);
-    cur.gPin[i] = pi->Pad[i].Name;
+    cur.gPin[i] = pi->Pad[i].name;
     cur.gNet[i] = n;
     cur.gComp[i] = 0;
   }
@@ -1858,7 +1858,7 @@ static GWire *FastenToGate(GCElement *g,const char *pspec,GNet *n,int p,int bdir
       return 0;
     }
     for (padNum = 0;padNum < gi->NumPads;padNum++)
-      if (strcmp(gi->Pad[padNum].Name,pn) == 0)
+      if (strcmp(gi->Pad[padNum].name,pn) == 0)
 	break;
 
     if (padNum == N) {

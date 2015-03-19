@@ -896,7 +896,7 @@ char *PrintWireEnd(char *p,GWire *w)
 
       posongate(w,g,&pos,&n);
       p += sprintf(p,"Gate:    %s.%s[%d]\n",g->typeinfo->name,
-	     g->typeinfo->Pad[pos].Name,n);
+	     g->typeinfo->Pad[pos].name,n);
       if (GCElement_getType(g) == GC_BLOCK)
 	p += sprintf(p,"Offset:  %d/%d\n",w->offset.num,w->offset.den);
     }
