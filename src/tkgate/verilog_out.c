@@ -292,7 +292,7 @@ static void VerilogSaveWire(FILE *f,GWire *w,int doComment)
     if (!g) return;
     gi = w->gate->typeinfo;
 
-    switch (gi->Code) {
+    switch (gi->code) {
     case GC_JOINT :
       for (i = 0;i < gi->NumPads;i++)
 	if (g->wires[i] && g->wires[i] != w)
@@ -321,7 +321,7 @@ static void ClearNetMarks(GModuleDef *M)
 static void VerilogSaveOneNet(FILE *f,GNet *n)
 {
   if (n->n_ionet) {
-    switch (n->n_ionet->typeinfo->Code) {
+    switch (n->n_ionet->typeinfo->code) {
     case GC_SWITCH :
     case GC_DIP :
       fprintf(f,"reg ");
@@ -403,7 +403,7 @@ static void VerilogSaveModDecl(FILE *f,GModuleDef *M)
   fprintf(f,"(");
   for (gl = Hash_first(M->m_gates);gl;gl = Hash_next(M->m_gates,gl)) {
     GCElement *g = (GCElement*) HashElem_obj(gl);
-    switch (g->typeinfo->Code) {
+    switch (g->typeinfo->code) {
     case GC_LOGICIN :
     case GC_LOGICOUT :
     case GC_LOGICTRI :

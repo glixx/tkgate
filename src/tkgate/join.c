@@ -69,7 +69,7 @@ void join_treereverse_aux(GWire *w)
 
   if (!(g = ow->gate)) return;		/* Other end was endpoint, we are all done */
 
-  switch (g->typeinfo->Code) {
+  switch (g->typeinfo->code) {
   case GC_JOINT :
     if (ow->driver == ow) {		/* ow used to be drivee, need to choose new drivee */
       for (i = 0;i < 4;i++)

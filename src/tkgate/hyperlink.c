@@ -294,7 +294,7 @@ int Hyperlink_selectAt(int x,int y)
 
   setPendingLink(0,0);
 
-  if (!g || g->typeinfo->Code != GC_COMMENT) {
+  if (!g || g->typeinfo->code != GC_COMMENT) {
     return 0;
   }
 
@@ -312,7 +312,7 @@ const char *Hyperlink_getAt(int x,int y)
 {
   GCElement *g = gate_hit(TkGate.circuit->es->env,x,y);
 
-  if (!g || g->typeinfo->Code != GC_COMMENT) {
+  if (!g || g->typeinfo->code != GC_COMMENT) {
     return 0;
   }
 
@@ -331,7 +331,7 @@ int Hyperlink_confirmAt(int x,int y)
     failed = 1;
   } else if (!(g = gate_hit(TkGate.circuit->es->env,x,y))) {
     failed = 1;
-  } else if (g->typeinfo->Code != GC_COMMENT) {
+  } else if (g->typeinfo->code != GC_COMMENT) {
     failed = 1;
   } else if (g != pending_jump.g) {
     failed = 1;

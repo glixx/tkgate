@@ -319,7 +319,7 @@ EditState *Error_open(GError *e,EditState *es)
 
     x = g->xpos;
     y = g->ypos;
-    if (g->typeinfo->Code == GC_BLOCK) {
+    if (g->typeinfo->code == GC_BLOCK) {
       x += g->u.block.gwidth/2;
       y += g->u.block.gheight/2 + 10;
     }

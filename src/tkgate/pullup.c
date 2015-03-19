@@ -1,5 +1,7 @@
 /****************************************************************************
+    This file is part of TkGate digital circuit editor and simulator
     Copyright (C) 1987-2015 by Jeffery P. Hansen
+    Copyright (C) 2015 by Andrey V. Skvortsov
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,27 +19,26 @@
 ****************************************************************************/
 #include "tkgate.h"
 
-static iconDimensions vdd_iconDims[] = {
+static iconDimensions pullup_iconDims[] = {
   {0,  0, 35, 8, 19, 4},
   {36, 0, 8, 35, 4, 15},
   {8, 36, 35, 8, 15, 3},
   {0,  9, 8, 35, 3, 19},
 };
-static int vdd_iconBoldOffset = 45;
+static int pullup_iconBoldOffset = 45;
 
-GPadLoc vdd_out_loc[] = {
+GPadLoc pullup_out_loc[] = {
   {-11, 0, -11, 0, D_DOWN},
   {0, 11, 0, 11, D_RIGHT},
   {11, 0, 11, 0, D_UP},
   {0, -11, 0, -11, D_LEFT}
 };
 
-
-static char *psVdd[] = {
+static char *psPullup[] = {
   "%",
-  "% x y r vdd",
+  "% x y r pullup",
   "%",
-  "/psvdd {",
+  "/pspullup {",
   "  startgate",
   "  -19 0 moveto -3 0 lineto stroke",
   "  10 rfont",
@@ -49,31 +50,31 @@ static char *psVdd[] = {
   0
 };
 
-GGateInfo gate_vdd_info = {
+GGateInfo gate_pullup_info = {
   0,		/* code */
-  "VDD",	/* name */
-  "supply1",	/* vnames */
+  "PULLUP",	/* name */
+  "tri1",	/* vnames */
   0x0,		/* vmask */
-  "psvdd",	/* psprint */
-  psVdd,	/* psdef */
+  "pspullup",	/* psprint */
+  psPullup,	/* psdef */
   -1		/* gi_multipad */,
   -1,		/* gi_bitpad */
 
   {
     {"v",	/* key_seq */
     {"gm.signals",0},/* root */
-    {"gm.signals.vdd",0,0,400}, /* entry */
-    "gat_make VDD"},/* cmds[0] */
+    {"gm.signals.pullup",0,0,400}, /* entry */
+    "gat_make PULLUP"},/* cmds[0] */
     {0}		    /* cmds[1] */
   },		/* cmds */
-  vdd_iconDims, /* dim */
+  pullup_iconDims, /* dim */
   1,		/* NumPads */
   {
     {"Z",	/* name */
      OUT,	/* iotype */
      1,		/* size */
      1,		/* num */
-     vdd_out_loc
+     pullup_out_loc
     }		/* Pad[0] */
   },		/* Pad */
   { /* x   y  just */
@@ -107,11 +108,11 @@ GGateInfo gate_vdd_info = {
   InOut_VerSave
 };
 
-void init_vdd()
+void init_pullup()
 {
   Pixmap P;
 
-  P = Pixmap_registerFromFile("vdd","vdd.b");
-  gateinfo_iconInit(&gate_vdd_info,P,vdd_iconDims,vdd_iconBoldOffset);
-  RegisterGate(&gate_vdd_info);
+  P = Pixmap_registerFromFile("pullup","vdd.b");
+  gateinfo_iconInit(&gate_pullup_info,P,pullup_iconDims,pullup_iconBoldOffset);
+  RegisterGate(&gate_pullup_info);
 }

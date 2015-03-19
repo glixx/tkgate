@@ -521,7 +521,7 @@ void DropWireOnGate(EditState *es,GCElement *g)
   ob_touch(TkGate.circuit);
   TkGate.circuit->wnsel = w->nodes;
 
-  switch (g->typeinfo->Code) {
+  switch (g->typeinfo->code) {
   case GC_JOINT :
     joint_connect(g,TkGate.circuit->wnsel);
     GWire_draw(TkGate.circuit->wsel->driver);
@@ -1172,7 +1172,7 @@ static int EditState_selectobject_Move(EditState *es)
    */
   if (TkGate.circuit->wsel) {
     net_select(TkGate.circuit->wsel->net,1);
-  } else if (TkGate.circuit->select && TkGate.circuit->select->typeinfo->Code == GC_JOINT) {
+  } else if (TkGate.circuit->select && TkGate.circuit->select->typeinfo->code == GC_JOINT) {
     GCElement *g = TkGate.circuit->select;
     int i;
     for (i = 0;i < 4;i++)

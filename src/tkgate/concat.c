@@ -746,7 +746,7 @@ static int concat_hasDriver(GWire *w)
     GCElement *g = w->gate;
     int i;
 
-    switch (g->typeinfo->Code) {
+    switch (g->typeinfo->code) {
     case GC_CONCAT :
       return concat_isDriver(g,w);
     case GC_JOINT :

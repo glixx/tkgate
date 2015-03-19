@@ -29,8 +29,8 @@ BASE_OBJS=adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c \
 	hdl.c html.c hyperlink.c icon.c igenerate.c in.c jkff.c join.c joint.c \
 	led.c locale.c lshift.c metrics.c modint.c modsym.c module.c mult.c \
 	mux.c net.c nmos.c object.c or.c out.c paux.c pmos.c primitives.c \
-	print.c ram.c register.c release.c roll.c rom.c rshift.c scope.c \
-	scopewin.c script.c search.c selection.c simulate.c switch.c \
+	print.c pullup.c ram.c register.c release.c roll.c rom.c rshift.c \
+	scope.c scopewin.c script.c search.c selection.c simulate.c switch.c \
 	symblock.c tap.c tclfuncs.c text.c tkgate.c tkgatewin.c traceprint.c \
 	tri.c tribuffer.c vdd.c verify.c verilog_in.c verilog_out.c wiresadd.c \
 	wiresdraw.c wiresedit.c wiresmove.c wiresnap.c wmstuff.c xor.c zoom.c \

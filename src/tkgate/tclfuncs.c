@@ -401,7 +401,6 @@ static int gat_make(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   assert(argc >=  2);
 
-
   dodraw_s  = seekOption("-dodraw",argv+2,argc-2);
   if (dodraw_s)
     dodraw = (*dodraw_s != '0');
@@ -453,7 +452,7 @@ static int gat_make(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 
   mark_unpost();
 
-  g = (*GI->MakeFunction)(pes,es->env,GI->Code,x,y,r,0,0,argv+2,argc-2);
+  g = (*GI->MakeFunction)(pes,es->env,GI->code,x,y,r,0,0,argv+2,argc-2);
 
   if (!g) return TCL_OK;			/* Make was canceled */
 
@@ -466,7 +465,7 @@ static int gat_make(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   if (dodraw)
     gate_draw(g,0);
 
-  if ((GI->Code == GC_BLOCK || GI->Code == GC_SYMBLOCK))
+  if ((GI->code == GC_BLOCK || GI->code == GC_SYMBLOCK))
     SetModified(MF_MODULE);
 
   if (dodraw && g && pes) {
@@ -475,7 +474,7 @@ static int gat_make(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
     ob_touch(TkGate.circuit);
     TkGate.circuit->select = g;
 
-    if ((GI->Code == GC_BLOCK || GI->Code == GC_SYMBLOCK) && r != 0) {
+    if ((GI->code == GC_BLOCK || GI->code == GC_SYMBLOCK) && r != 0) {
       gate_draw(g,0);
       while (r-- > 0)
 	sel_rotate(*pes,1);
@@ -836,7 +835,7 @@ static int gat_addPort(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   if (!g) return TCL_OK;
   gi = g->typeinfo;
 
-  if (gi->Code == GC_BLOCK) {
+  if (gi->code == GC_BLOCK) {
     message(1,msgLookup("err.oldportact"));
     return TCL_OK;
   }
@@ -1216,7 +1215,7 @@ static int gat_editProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
    * If we are editing the interface, then switch to editing a specific module.
    */
   if ((*es)->isInterface) {
-    if (g->typeinfo->Code == GC_BLOCK) {
+    if (g->typeinfo->code == GC_BLOCK) {
       GWire *w = block_hitPort(g,TkGate.ed->tx,TkGate.ed->ty);
       if (w) {
 	block_setPortName(g,w,*es);
@@ -1229,7 +1228,7 @@ static int gat_editProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
     return TCL_OK;
   }
 
-  if ((!g || g->typeinfo->Code == GC_JOINT) && TkGate.circuit->nsel) {
+  if ((!g || g->typeinfo->code == GC_JOINT) && TkGate.circuit->nsel) {
     DoTcl("gat_editNet %s",TkGate.circuit->nsel->n_signame);
     return TCL_OK;
   }
@@ -1240,7 +1239,7 @@ static int gat_editProps(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
   }
   gi = g->typeinfo;
 
-  switch (gi->Code) {
+  switch (gi->code) {
   case GC_BLOCK :
     {
       GWire *w = block_hitPort(g,TkGate.ed->tx,TkGate.ed->ty);
@@ -1516,7 +1515,7 @@ static int gat_changeNet(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv
 
   if (w->net->n_ionet) {
     GGateInfo *gi = GGateInfo_codeLookup(io);
-    if (gi && (gi->Code == GC_LOGICIN || gi->Code == GC_LOGICOUT || gi->Code == GC_LOGICTRI))
+    if (gi && (gi->code == GC_LOGICIN || gi->code == GC_LOGICOUT || gi->code == GC_LOGICTRI))
 	gate_transmute(w->net->n_ionet,gi);
   }
 
@@ -1629,7 +1628,7 @@ static int gat_setBlockDesc(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
     return TCL_OK;
   }
 
-  if (g && g->typeinfo->Code == GC_BLOCK) {
+  if (g && g->typeinfo->code == GC_BLOCK) {
     GModuleDef *M = env_findAdd(g->u.block.moduleName,0);
     if (modint_setInterface(M,g) == 0)
       message(0,msgLookup("msg.setinterface"),g->u.block.moduleName);/* Set module interface for '%s'. */
@@ -2651,16 +2650,16 @@ static int gat_setpop(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
       if (GCElement_getPadCanAdd(g,i))
 	can_add = 1;
 
-    if (g->typeinfo->Code == GC_BLOCK) {
+    if (g->typeinfo->code == GC_BLOCK) {
       if (block_hitPort(g,cx,cy))
         Tcl_SetResult(tcl, "blockport", TCL_STATIC);
       else if (block_edgehit(g,cx,cy))
         Tcl_SetResult(tcl, "blockedge", TCL_STATIC);
       else
         Tcl_SetResult(tcl, "block", TCL_STATIC);
-    } else if (g->typeinfo->Code == GC_SYMBLOCK) {
+    } else if (g->typeinfo->code == GC_SYMBLOCK) {
       Tcl_SetResult(tcl, "block", TCL_STATIC);
-    } else if (g->typeinfo->Code == GC_JOINT) {
+    } else if (g->typeinfo->code == GC_JOINT) {
       if (!g->wires[0] || !g->wires[1] || !g->wires[2] || !g->wires[3])
 	Tcl_SetResult(tcl, "joint3", TCL_STATIC);
       else
@@ -2881,7 +2880,7 @@ static int gat_popupPortCmd(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   /*
    * All other command must be applied to a port.  Go try to find it.
    */
-  if (TkGate.circuit->select && TkGate.circuit->select->typeinfo->Code == GC_BLOCK)
+  if (TkGate.circuit->select && TkGate.circuit->select->typeinfo->code == GC_BLOCK)
     w = block_hitPort(TkGate.circuit->select,TkGate.ed->tx,TkGate.ed->ty);
 
   /*
@@ -2912,7 +2911,7 @@ static int gat_popupPortCmd(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
     SetModified(MF_INTERFACE);
     SynchronizeInterface();
   } else if (strcmp(argv[1],"delete") == 0) {
-    if (w->gate && (w->gate->typeinfo->Code == GC_BLOCK)) {
+    if (w->gate && (w->gate->typeinfo->code == GC_BLOCK)) {
       SetModified(MF_NET);
       net_unselect(1);
       wire_cut(w->nodes->x,w->nodes->y,w->nodes, es->env);
@@ -2963,7 +2962,7 @@ static int gat_popupWireAddStub(ClientData _d,Tcl_Interp *tcl,int argc,const cha
   EditState *es = gw->parms->circuit->es;
 
   if (TkGate.popstate.g) {
-    if (TkGate.popstate.g->typeinfo->Code == GC_JOINT)
+    if (TkGate.popstate.g->typeinfo->code == GC_JOINT)
       joint_addstub(TkGate.popstate.g,es);
   } else
   wire_addstub(es,TkGate.popstate.x,TkGate.popstate.y);

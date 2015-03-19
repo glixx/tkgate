@@ -22,6 +22,7 @@
 #include <string.h>
 #include <assert.h>
 #include <ctype.h>
+
 #include "tkgate.h"
 
 void init_and();
@@ -58,6 +59,7 @@ void init_ram();
 void init_rom();
 void init_nmos();
 void init_pmos();
+void init_pullup();
 void init_comment();
 void init_frame();
 void init_led();
@@ -135,7 +137,7 @@ GCElement *Generic_Make(EditState **es,GModuleDef *PM,int GType,
 	  Num = N;
       }
       if (!Num)
-	Num = g->typeinfo->Pad[i].Num;
+	Num = g->typeinfo->Pad[i].num;
 
       for (j = 0;j < Num;j++) {
 	if (Invert && strcmp(Invert,g->typeinfo->Pad[i].name) == 0)
@@ -296,7 +298,7 @@ GCElement *Generic_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
   char *name = 0;
   int i;
 
-  ng = gate_new(x,y,g->orient,g->typeinfo->Code);
+  ng = gate_new(x,y,g->orient,g->typeinfo->code);
   ob_touch(ng);
 
   if (GModuleDef_findGate(M,g->ename))
@@ -514,7 +516,7 @@ void Generic_editPropsULWires(GCElement *g)
   int n,i,j;
   const char *wops = Tcl_GetVar(tcl,"edgat_wops",TCL_GLOBAL_ONLY);
 
-  if (g->typeinfo->Code == GC_TAP) return;	/* Can't edit tap ports */
+  if (g->typeinfo->code == GC_TAP) return;	/* Can't edit tap ports */
 
   ob_touch(g);
 
@@ -579,7 +581,7 @@ void Generic_editPropsULWires(GCElement *g)
 
       if (*name == '*') *name = 0;	/* Use default signal name */
 
-      if (g->typeinfo->Code == GC_BLOCK) {
+      if (g->typeinfo->code == GC_BLOCK) {
 	char *q;
 	char *oldport = port;
 	char *newport = _newport;
@@ -1261,6 +1263,7 @@ void init_gates()
   init_rom();			/*  */
   init_nmos();			/*  */
   init_pmos();			/*  */
+  init_pullup();		/*  */
   init_comment();		/*  */
   init_frame();			/*  */
   init_led();			/*  */

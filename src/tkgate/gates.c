@@ -831,8 +831,8 @@ void RegisterGate(GGateInfo *gi)
   static int code_count = 1;
   char buf[STRMAX],*T;
 
-  if (gi->Code <= 0)
-    gi->Code = code_count++;
+  if (gi->code <= 0)
+    gi->code = code_count++;
 
   if (!gi->vnames) {
     fprintf(stderr,"No verilog name for block '%s'\n",gi->name);
@@ -845,7 +845,7 @@ void RegisterGate(GGateInfo *gi)
   }
 
   SHash_insert(GateTypeHash,gi->name,gi);
-  NHash_insert(GateIdxHash,gi->Code,gi);
+  NHash_insert(GateIdxHash,gi->code,gi);
 }
 
 /*****************************************************************************

@@ -505,7 +505,7 @@ int joint_dejoint(GWireNode *n,GModuleDef *M,int drawp)
   k = 0;
 
   j = n->end->gate;
-  if ((!j) || (j->typeinfo->Code != GC_JOINT))
+  if ((!j) || (j->typeinfo->code != GC_JOINT))
     logError(ERL_FATAL,"Called on non-joint in joint_dejoint.");
 
   for (i = 0,num = 0;i < 4;i++)
@@ -600,7 +600,7 @@ int joint_desplice(GWireNode *n,GModuleDef *M)
   GWire *w1,*w2,*we1,*we2;
 
   g = n->end->gate;
-  switch (g->typeinfo->Code) {
+  switch (g->typeinfo->code) {
   case GC_TAP :
     if (n->end == g->wires[TAP_IN]) {
       w1 = g->wires[TAP_OUT];

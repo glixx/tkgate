@@ -60,7 +60,7 @@ const char *GNet_getDTypeStr(GNet *n)
   }
 
   if (n->n_ionet) {
-    switch (n->n_ionet->typeinfo->Code) {
+    switch (n->n_ionet->typeinfo->code) {
       case GC_LOGICIN : return "input";
       case GC_LOGICOUT : return "output";
       case GC_LOGICTRI : return "inout";
@@ -85,7 +85,7 @@ const char *GNet_getVType(GNet *n)
   int code = 0;
 
   if (n->n_ionet) {
-    switch (n->n_ionet->typeinfo->Code) {
+    switch (n->n_ionet->typeinfo->code) {
     case GC_SWITCH :
     case GC_DIP :
       return "switch";
@@ -408,7 +408,7 @@ void net_editProps(GNet *n,int x,int y)
   const char *vtype = GNet_getVType(n);
 
   if (n->n_ionet) {
-    ioCode = n->n_ionet->typeinfo->Code;
+    ioCode = n->n_ionet->typeinfo->code;
     if (ioCode != GC_LOGICIN && ioCode != GC_LOGICOUT && ioCode != GC_LOGICTRI)
       ioCode = 0;	/* yappari yameta */
   }
@@ -635,7 +635,7 @@ int GNet_getDisplayLabel(GNet *net,char label[],int len,int mode)
   *label = 0;
 
   if (net->n_ionet && mode == DLM_GET_VISIBLE) {
-    switch (net->n_ionet->typeinfo->Code) {
+    switch (net->n_ionet->typeinfo->code) {
     case GC_LOGICIN :
     case GC_LOGICOUT :
     case GC_LOGICTRI :

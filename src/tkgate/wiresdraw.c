@@ -327,7 +327,7 @@ static void wire_drawnet_aux(GWire *w,int isFirst)
   }
 
   if (w->gate) {
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       gate_draw(w->gate,GD_NOWIRE);
       for (i=0;i<4;i++)

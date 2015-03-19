@@ -189,7 +189,7 @@ void GSearchContext_find(GSearchContext *S,const char *target,int mode,int quali
       GCElement *g = (GCElement*) HashElem_obj(S->g_elem);
       S->g_elem = Hash_next(M->m_gates,S->g_elem);
 
-      if (g->typeinfo->Code == GC_JOINT) continue;
+      if (g->typeinfo->code == GC_JOINT) continue;
 
       if (GSearchContext_strstr(S,g->ename,S->target)) {
 	GSearchContext_setPosition(M,g,0);
@@ -317,14 +317,14 @@ void GSearchContext_list(GSearchContext *S,const char *target,int mode,int quali
       for (E = Hash_first(M->m_gates);E;E = Hash_next(M->m_gates,E)) {
 	GCElement *g = (GCElement*) HashElem_obj(E);
 
-	if (g->typeinfo->Code == GC_JOINT) continue;
+	if (g->typeinfo->code == GC_JOINT) continue;
 
 	if ((mode & SF_GATES)) {
 	  if (Search_hitTest(S,target, g->ename, M->m_name, "gate", g->ename, qualifier, result, &count,-1))
 	    continue;
 	}
 
-	if ((mode & SF_TEXT) && g->typeinfo->Code == GC_COMMENT) {
+	if ((mode & SF_TEXT) && g->typeinfo->code == GC_COMMENT) {
 	  TextLine *CL;
 	  int lineNo = 1;
 

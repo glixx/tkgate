@@ -110,7 +110,7 @@ void modint_reset(EditState *es, GCElement *g)
   int N;
   int i;
 
-  if (!g || g->typeinfo->Code != GC_BLOCK)
+  if (!g || g->typeinfo->code != GC_BLOCK)
     return;
 
   N = GCElement_numPads(g);

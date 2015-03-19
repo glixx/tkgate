@@ -93,8 +93,6 @@
 #define CONCAT_IN 0
 #define CONCAT_OUT 1
 
-
-
 void gate_add(GModuleDef*,GCElement *);
 void gate_remove(GModuleDef*,GCElement *);
 GCElement *gate_new(int x,int y,int rot,int type);

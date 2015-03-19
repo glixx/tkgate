@@ -81,19 +81,19 @@ am__objects_1 = adder.$(OBJEXT) and.$(OBJEXT) arshift.$(OBJEXT) \
 	module.$(OBJEXT) mult.$(OBJEXT) mux.$(OBJEXT) net.$(OBJEXT) \
 	nmos.$(OBJEXT) object.$(OBJEXT) or.$(OBJEXT) out.$(OBJEXT) \
 	paux.$(OBJEXT) pmos.$(OBJEXT) primitives.$(OBJEXT) \
-	print.$(OBJEXT) ram.$(OBJEXT) register.$(OBJEXT) \
-	release.$(OBJEXT) roll.$(OBJEXT) rom.$(OBJEXT) \
-	rshift.$(OBJEXT) scope.$(OBJEXT) scopewin.$(OBJEXT) \
-	script.$(OBJEXT) search.$(OBJEXT) selection.$(OBJEXT) \
-	simulate.$(OBJEXT) switch.$(OBJEXT) symblock.$(OBJEXT) \
-	tap.$(OBJEXT) tclfuncs.$(OBJEXT) text.$(OBJEXT) \
-	tkgate.$(OBJEXT) tkgatewin.$(OBJEXT) traceprint.$(OBJEXT) \
-	tri.$(OBJEXT) tribuffer.$(OBJEXT) vdd.$(OBJEXT) \
-	verify.$(OBJEXT) verilog_in.$(OBJEXT) verilog_out.$(OBJEXT) \
-	wiresadd.$(OBJEXT) wiresdraw.$(OBJEXT) wiresedit.$(OBJEXT) \
-	wiresmove.$(OBJEXT) wiresnap.$(OBJEXT) wmstuff.$(OBJEXT) \
-	xor.$(OBJEXT) zoom.$(OBJEXT) vgrammar.$(OBJEXT) \
-	luthor.$(OBJEXT)
+	print.$(OBJEXT) pullup.$(OBJEXT) ram.$(OBJEXT) \
+	register.$(OBJEXT) release.$(OBJEXT) roll.$(OBJEXT) \
+	rom.$(OBJEXT) rshift.$(OBJEXT) scope.$(OBJEXT) \
+	scopewin.$(OBJEXT) script.$(OBJEXT) search.$(OBJEXT) \
+	selection.$(OBJEXT) simulate.$(OBJEXT) switch.$(OBJEXT) \
+	symblock.$(OBJEXT) tap.$(OBJEXT) tclfuncs.$(OBJEXT) \
+	text.$(OBJEXT) tkgate.$(OBJEXT) tkgatewin.$(OBJEXT) \
+	traceprint.$(OBJEXT) tri.$(OBJEXT) tribuffer.$(OBJEXT) \
+	vdd.$(OBJEXT) verify.$(OBJEXT) verilog_in.$(OBJEXT) \
+	verilog_out.$(OBJEXT) wiresadd.$(OBJEXT) wiresdraw.$(OBJEXT) \
+	wiresedit.$(OBJEXT) wiresmove.$(OBJEXT) wiresnap.$(OBJEXT) \
+	wmstuff.$(OBJEXT) xor.$(OBJEXT) zoom.$(OBJEXT) \
+	vgrammar.$(OBJEXT) luthor.$(OBJEXT)
 am_tkgate_OBJECTS = $(am__objects_1) main.$(OBJEXT)
 tkgate_OBJECTS = $(am_tkgate_OBJECTS)
 tkgate_DEPENDENCIES =
@@ -256,8 +256,8 @@ BASE_OBJS = adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c \
 	hdl.c html.c hyperlink.c icon.c igenerate.c in.c jkff.c join.c joint.c \
 	led.c locale.c lshift.c metrics.c modint.c modsym.c module.c mult.c \
 	mux.c net.c nmos.c object.c or.c out.c paux.c pmos.c primitives.c \
-	print.c ram.c register.c release.c roll.c rom.c rshift.c scope.c \
-	scopewin.c script.c search.c selection.c simulate.c switch.c \
+	print.c pullup.c ram.c register.c release.c roll.c rom.c rshift.c \
+	scope.c scopewin.c script.c search.c selection.c simulate.c switch.c \
 	symblock.c tap.c tclfuncs.c text.c tkgate.c tkgatewin.c traceprint.c \
 	tri.c tribuffer.c vdd.c verify.c verilog_in.c verilog_out.c wiresadd.c \
 	wiresdraw.c wiresedit.c wiresmove.c wiresnap.c wmstuff.c xor.c zoom.c \
@@ -419,6 +419,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pmos.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/primitives.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/print.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pullup.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ram.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/register.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/release.Po@am__quote@

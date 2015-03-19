@@ -358,7 +358,7 @@ int sel_select(EditState *es)
 
     gx = g->xpos;
     gy = g->ypos;
-    if (g->typeinfo->Code == GC_BLOCK) {
+    if (g->typeinfo->code == GC_BLOCK) {
       gx += g->u.block.gwidth/2;
       gy += g->u.block.gheight/2;
     }
@@ -810,7 +810,7 @@ void sel_yank(EditState *es)
       argv[0] = "-nodialog";
       argv[1] = "1";
 
-      g = (*GI->MakeFunction)(pes,es->env,GI->Code,TkGate.ed->tx,TkGate.ed->ty,0,0,0,argv,2);
+      g = (*GI->MakeFunction)(pes,es->env,GI->code,TkGate.ed->tx,TkGate.ed->ty,0,0,0,argv,2);
       if (g) {
 	char *p,*q;
 
@@ -887,7 +887,7 @@ void sel_delete(EditState *es)
 
     for (gl = Hash_first(H);gl;gl = Hash_next(H,gl)) {
       GCElement *g = (GCElement*) HashElem_obj(gl);
-      if (g->typeinfo->Code != GC_JOINT)
+      if (g->typeinfo->code != GC_JOINT)
 	PHash_insert(delGates,g,g);
     }
 

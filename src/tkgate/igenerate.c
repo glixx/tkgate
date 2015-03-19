@@ -359,7 +359,7 @@ static IGPort **igen_getModulePorts(GModuleDef *M,int *N)
       int side = 0;
       int iotype = 0;
 
-      switch (g->typeinfo->Code) {
+      switch (g->typeinfo->code) {
       case GC_LOGICIN :
 	w = g->wires[0];
 	side = 2;

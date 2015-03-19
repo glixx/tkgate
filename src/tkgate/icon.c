@@ -126,7 +126,6 @@ Pixmap Pixmap_registerFromFile(char *name,char *file)
   return Pixmap_registerFromFileWithParms(name,file,0,0,0,0);
 }
 
-
 Pixmap Pixmap_find(char *name)
 {
   Pixmap *P = (Pixmap*) SHash_find(icon_pixmaps,name);

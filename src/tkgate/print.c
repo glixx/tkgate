@@ -1033,7 +1033,7 @@ static void GPrint_printModuleCPath(GPrint *P,GModLayout *L)
      * Draw critical path if set
      */
     if (w->cpath) {
-      if (w->gate && w->gate->typeinfo->Code == GC_JOINT) {
+      if (w->gate && w->gate->typeinfo->code == GC_JOINT) {
 	int x = w->gate->xpos;
 	int y = w->gate->ypos;
 

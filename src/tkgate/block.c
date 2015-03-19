@@ -208,7 +208,7 @@ GCElement *Block_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 {
   GCElement *ng;
 
-  ng = gate_new(x,y,g->orient,g->typeinfo->Code);
+  ng = gate_new(x,y,g->orient,g->typeinfo->code);
   if (M)
     gate_add(M,ng);
 
@@ -1579,7 +1579,7 @@ void block_newport(EditState *es,int iodir)
   int p;
 
   if (!block_edgehit(g,TkGate.ed->tx,TkGate.ed->ty)) return;
-  if (g && !(TkGate.circuit->select->typeinfo->Code == GC_BLOCK)) return;
+  if (g && !(TkGate.circuit->select->typeinfo->code == GC_BLOCK)) return;
 
   if (block_isIntfProtected(g)) {
     message(0,msgLookup("err.protintf"),g->u.block.moduleName);
@@ -1618,7 +1618,7 @@ void block_setdir(GWireNode *n,EditState *es,int dir)
 
   if (!n || !n->end || !n->end->gate) return;
 
-  if (n->end->gate->typeinfo->Code != GC_BLOCK) {
+  if (n->end->gate->typeinfo->code != GC_BLOCK) {
     message(1,msgLookup("err.nopin"));			/* Can't change selected pin. */
     return;
   }
@@ -1658,7 +1658,7 @@ void block_changedir(GWireNode *n,EditState *es)
 
   if (!n || !n->end || !n->end->gate) return;
 
-  if (n->end->gate->typeinfo->Code != GC_BLOCK) {
+  if (n->end->gate->typeinfo->code != GC_BLOCK) {
     message(1,msgLookup("err.nopin"));			/* Can't change selected pin. */
     return;
   }

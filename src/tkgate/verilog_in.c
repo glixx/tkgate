@@ -1408,7 +1408,7 @@ void VerGate(const char *func,const char *name)
   }
 
   if (gi) {
-    g = (*gi->MakeFunction)(0,cur.mod,gi->Code,0,0,0,name,1,0,0);
+    g = (*gi->MakeFunction)(0,cur.mod,gi->code,0,0,0,name,1,0,0);
     cur.gate = g;
     cur.vnum = vnum;
     cur.numPins = 0;
@@ -1491,10 +1491,10 @@ void VerCell(const char *func,const char *name)
   }
 
   if (gi) {
-    g = (*gi->MakeFunction)(0,cur.mod,gi->Code,0,0,0,name,1,0,0);
+    g = (*gi->MakeFunction)(0,cur.mod,gi->code,0,0,0,name,1,0,0);
   } else {
     gi = GGateInfo_lookup("MODULE");
-    g = (*gi->MakeFunction)(0,cur.mod,gi->Code,0,0,0,name,1,0,0);
+    g = (*gi->MakeFunction)(0,cur.mod,gi->code,0,0,0,name,1,0,0);
     g->u.block.moduleName = ob_strdup(func);
 
     if (cur.mparm_list) {
@@ -1682,7 +1682,7 @@ void VerSetPos(int x,int y)
 
 void VerSetSize(int w,int h)
 {
-  if (cur.gate && cur.gate->typeinfo->Code == GC_BLOCK) {
+  if (cur.gate && cur.gate->typeinfo->code == GC_BLOCK) {
     cur.gate->u.block.gwidth = w;
     cur.gate->u.block.gheight = h;
   }
@@ -1885,7 +1885,7 @@ static GWire *FastenToGate(GCElement *g,const char *pspec,GNet *n,int p,int bdir
 	 g->ename, gi->name ,pspec, n->n_signame, p, bdir,padNum,padPos,loc->dir);
 #endif
 
-  if (gi->Code == GC_BLOCK)
+  if (gi->code == GC_BLOCK)
     block_setWireEnd(cur.gate,w,padNum);
 
   return w;

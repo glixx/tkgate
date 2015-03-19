@@ -656,7 +656,7 @@ int GModuleDef_scanHDLModule(GModuleDef *M)
 	GGateInfo *gi = GGateInfo_lookup("MODULE");
 	GCElement *g;
 
-	if ((g = (*gi->MakeFunction)(0,M,gi->Code,0,0,0,iname,1,0,0)))
+	if ((g = (*gi->MakeFunction)(0,M,gi->code,0,0,0,iname,1,0,0)))
 	  g->u.block.moduleName = ob_strdup(name);
     } else if (sscanf(data," input %s %d:%d",name,&msb,&lsb) == 3) {
       GNet *n = new_GNet(name,M);

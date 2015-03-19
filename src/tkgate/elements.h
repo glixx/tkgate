@@ -213,7 +213,7 @@ typedef struct padinfo {
   char *name;			/* Pin name for wires on this pad */
   int iotype;			/* I/O type (IN, OUT, TRI) */
   int size;			/* Default bit-size */
-  int Num;			/* Initial number of pins */
+  int num;			/* Initial number of pins */
   GPadLoc *Loc;			/* Location info for pins */
   unsigned CanAdd : 1;		/* Can add to pin list */
 } GPadInfo;
@@ -249,7 +249,7 @@ typedef struct gKeyMenuEnt {
  *
  */
 struct gateinfo {
-  int		Code;					/* Code number for gate */
+  int		code;					/* Code number for gate */
   char		*name;					/* Name of this gate type */
   char		*vnames;				/* Verilog names */
   unsigned	vmask;					/* Verilog name mutating ports */
@@ -269,12 +269,12 @@ struct gateinfo {
   GLabelPos lpos[NUMORIENTS];				/* Positions of gate name labels */
 
   struct {
-    unsigned CanRot:1;					/* Do rotations exist */
-    unsigned NoInvert:1;				/* Can't put inverters on it */
-    unsigned IsIOnet:1;					/* Is this an I/O net (port, ground, or vdd) */
-    unsigned WireProps:1;				/* Is gate display affected by wire property changes? */
-    unsigned special_move : 1;				/* Special movement method */
-    unsigned single_icon : 1;				/* set if this is a single icon gate  */
+    unsigned CanRot:1;			/* Do rotations exist */
+    unsigned NoInvert:1;		/* Can't put inverters on it */
+    unsigned IsIOnet:1;			/* Is this an I/O net (port, ground, pullup, pulldown or vdd) */
+    unsigned WireProps:1;		/* Is gate display affected by wire property changes? */
+    unsigned special_move : 1;		/* Special movement method */
+    unsigned single_icon : 1;		/* set if this is a single icon gate  */
   } Flags;
 
   char		*delayNames[MAXDELAYS];			/* Name of delay parameters */
@@ -320,10 +320,10 @@ int GCElement_numPads(GCElement *g);
 GPadLoc *GCElement_getPadLoc(GCElement *g,int p,int r);
 int GCElement_getPadDir(GCElement *g,int p);
 const char *GCElement_getPadName(GCElement *g,int p);
-#define GCElement_getPadNum(g,p) (g)->typeinfo->Pad[(p)].Num
+#define GCElement_getPadNum(g,p) (g)->typeinfo->Pad[(p)].num
 int GCElement_getPadCanAdd(GCElement *g,int p);
-#define GCElement_getType(g) (g)->typeinfo->Code
-#define GCElement_isModule(g) ((g)->typeinfo->Code == GC_BLOCK || (g)->typeinfo->Code == GC_SYMBLOCK)
+#define GCElement_getType(g) (g)->typeinfo->code
+#define GCElement_isModule(g) ((g)->typeinfo->code == GC_BLOCK || (g)->typeinfo->code == GC_SYMBLOCK)
 void GCElement_setSymbol(GCElement *g, GModSymbol *s);
 #define GCElement_getSymbol(g) ((g)->u.block.symbol)
 GWire *GCElement_getPort(GCElement *g, const char *portName);

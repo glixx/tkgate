@@ -246,6 +246,9 @@
 		</Unit>
 		<Unit filename="../../src/tkgate/print.h" />
 		<Unit filename="../../src/tkgate/psprolog.h" />
+		<Unit filename="../../src/tkgate/pullup.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="../../src/tkgate/ram.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -638,7 +638,7 @@ static GSimModule *SimInterface_buildSimMods_aux(GModuleDef *M,GCElement *pg,GSi
 
     (*g->typeinfo->SimInitFunc)(TkGate.circuit->es,g,componentPath);
 
-    switch (g->typeinfo->Code) {
+    switch (g->typeinfo->code) {
     case GC_SYMBLOCK :
     case GC_BLOCK :
       cM = env_findModule(g->u.block.moduleName);
@@ -896,7 +896,7 @@ void SimInterface_hit(SimInterface *si,int x,int y,int isDoubleClick)
   EditState_unselectAll(es);
 
   if ((g = gate_hit(TkGate.circuit->es->env,x,y))) {
-    if (g->typeinfo->Code == GC_JOINT) {
+    if (g->typeinfo->code == GC_JOINT) {
       int i;
 
       for (i = 0;i < 4;i++)

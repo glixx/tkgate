@@ -115,7 +115,7 @@ static GCElement *Script_Make(EditState **es,GModuleDef *env,int GType,
 
 static GCElement *Script_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 {
-  GCElement *ng = Script_Make(&TkGate.circuit->es, M, g->typeinfo->Code, x, y, g->orient, g->ename, 0,0,0);
+  GCElement *ng = Script_Make(&TkGate.circuit->es, M, g->typeinfo->code, x, y, g->orient, g->ename, 0,0,0);
   TextLine *L;
 
   ng->u.comment.first = ng->u.comment.last = 0;

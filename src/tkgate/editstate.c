@@ -299,7 +299,7 @@ void freegatelist(GModuleDef *M)
     gates = (GCElement**)ob_calloc(Hash_numElems(M->m_gates),sizeof(GCElement*),"GCElement*[]");
     for (gl = Hash_first(M->m_gates);gl;gl = Hash_next(M->m_gates,gl)) {
       GCElement *g = (GCElement*) HashElem_obj(gl);
-      if (g->typeinfo->Code != GC_JOINT)
+      if (g->typeinfo->code != GC_JOINT)
 	gates[N++] = g;
     }
 

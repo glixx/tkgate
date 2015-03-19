@@ -108,8 +108,8 @@ int wireorient(GWireNode *n,int d)
 static int wire_root_ok(GWire *w)
 {
   if (!w->gate) return 1;
-  if (w->gate->typeinfo->Code != GC_JOINT && w->gate->typeinfo->Code != GC_TAP) return 1;
-  if (w->gate->typeinfo->Code == GC_TAP && w == w->gate->wires[TAP_TAP]) return 1;
+  if (w->gate->typeinfo->code != GC_JOINT && w->gate->typeinfo->code != GC_TAP) return 1;
+  if (w->gate->typeinfo->code == GC_TAP && w == w->gate->wires[TAP_TAP]) return 1;
 
   return 0;
 }
@@ -153,7 +153,7 @@ static void wire_sigroot_aux(GWire *w,GWire **root_w)
   wire_choose_root(w,root_w);
   if (!w->gate) return;
 
-  switch (w->gate->typeinfo->Code) {
+  switch (w->gate->typeinfo->code) {
   case GC_JOINT :
     for (i=0;i<4;i++)
       if (w->gate->wires[i] && w->gate->wires[i] != w) {
@@ -216,7 +216,7 @@ GCElement *GWire_findIoGate_aux(GWire *w)
   if (w->gate->typeinfo->Flags.IsIOnet)
     return w->gate;
 
-  switch (w->gate->typeinfo->Code) {
+  switch (w->gate->typeinfo->code) {
   case GC_JOINT :
     for (i=0;i<4;i++)
       if (w->gate->wires[i] && w->gate->wires[i] != w) {
@@ -311,7 +311,7 @@ static void wire_replaceNetAux(GWire *w,GNet *net)
 #endif
 
   if (w->gate)
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       if (net) {
 	ob_touch(net);
@@ -347,7 +347,7 @@ GWire *wire_findIdx(GWire *w,int d)
   if (w->nidx == d) return w;
 
   if (w->gate)
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       for (i=0;i<4;i++)
 	if (w->gate->wires[i] && w->gate->wires[i]->net && w->gate->wires[i] != w) {
@@ -387,7 +387,7 @@ GNet *wire_chooseUniqueNet(GWire *dw)
   wire_setNet(w,0);
 
   if (w->gate)
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       for (i=0;i<4;i++)
 	if (w->gate->wires[i] && w->gate->wires[i]->net)
@@ -440,7 +440,7 @@ static int GWire_sizeisdisplayed_aux(GWire *w,int isFirst)
   }
 
   if (w->gate) {
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       for (i=0;i<4;i++)
 	if (w->gate->wires[i] && (w->gate->wires[i] != w))
@@ -539,7 +539,7 @@ GWire *wire_findClosest(GWire *w,int x,int y)
 
   if (ow->gate) {
     GCElement *g = ow->gate;
-    switch (g->typeinfo->Code) {
+    switch (g->typeinfo->code) {
     case GC_JOINT :
       for (i = 0;i < 4;i++)
 	if (g->wires[i] != ow) {
@@ -935,7 +935,7 @@ void wire_cut(int x,int y,GWireNode *n,GModuleDef *M)
 	wire_finalizeNet(nw);
       }
     } else
-      if (n->end->gate && (n->end->gate->typeinfo->Code == GC_BLOCK)) {
+      if (n->end->gate && (n->end->gate->typeinfo->code == GC_BLOCK)) {
 	GCElement *g = n->end->gate;
 	if (block_isIntfProtected(g)) {
 	  message(0,msgLookup("err.protintf"),g->u.block.moduleName);
@@ -1071,7 +1071,7 @@ static int wire_trashin(GWireNode *n,GModuleDef *M,int drawp)
 
   if (!n->in) {
     if (n->end && n->end->gate) {
-      switch (n->end->gate->typeinfo->Code) {
+      switch (n->end->gate->typeinfo->code) {
       case GC_JOINT :
 	return joint_dejoint(n,M,drawp);
       default :
@@ -1101,7 +1101,7 @@ static int wire_trashout(GWireNode *n,GModuleDef *M,int drawp)
 
   if (!n->out) {
     if (n->end && n->end->gate) {
-      switch (n->end->gate->typeinfo->Code) {
+      switch (n->end->gate->typeinfo->code) {
       case GC_JOINT :
 	return joint_dejoint(n,M,drawp);
       default :
@@ -1507,7 +1507,7 @@ GWire *wire_root(GWireNode *n)
 
   w = wirenode_driver(n);
   if (w->gate)
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       for (i=0;i<4;i++)
 	if (w->gate->wires[i] &&
@@ -1567,7 +1567,7 @@ static int GWire_getNetWires_aux(GWire *w,GWire **wlist,unsigned which,int isFir
   }
 
   if (w->gate) {
-    switch (w->gate->typeinfo->Code) {
+    switch (w->gate->typeinfo->code) {
     case GC_JOINT :
       for (i=0;i<4;i++)
 	if (w->gate->wires[i] && (w->gate->wires[i] != w))

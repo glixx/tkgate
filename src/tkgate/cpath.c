@@ -145,7 +145,7 @@ GWire *cpath_findGatePort(const char *Gname,const char *Pname,int n,GModuleDef *
     /*
      * Special case for regular (not symbol) modules.
      */
-    if (g->typeinfo->Code == GC_BLOCK) {
+    if (g->typeinfo->code == GC_BLOCK) {
       int N = GCElement_numPads(g);
 
       Gname = x+1;
@@ -217,7 +217,7 @@ int cpath_highlightPath(GWire *w1,GWire *w2)
     int i;
 
     gi = g->typeinfo;
-    switch (gi->Code) {
+    switch (gi->code) {
     case GC_JOINT :
       for (i = 0;i < 4;i++)
 	if (cpath_highlightPath(g->wires[i],w2))
@@ -255,7 +255,7 @@ GWire *cpath_guessPort(GWire *w,GModuleDef *M,int isOut)
   for (E = Hash_first(M->m_gates);E;E = Hash_next(M->m_gates,E)) {
     GCElement *g = (GCElement*) HashElem_obj(E);
 
-    switch (g->typeinfo->Code) {
+    switch (g->typeinfo->code) {
     case GC_LOGICIN :
     case GC_LOGICOUT :
     case GC_LOGICTRI :
