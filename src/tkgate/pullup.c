@@ -20,18 +20,19 @@
 #include "tkgate.h"
 
 static iconDimensions pullup_iconDims[] = {
-  {0,  0, 35, 8, 19, 4},
-  {36, 0, 8, 35, 4, 15},
-  {8, 36, 35, 8, 15, 3},
-  {0,  9, 8, 35, 3, 19},
+/* x   y  w   h   ox  oy*/
+  {0,  0, 35, 38, 19, 4},
+  {38, 0, 38, 35, 4,  15},
+  {77, 0, 35, 38, 15, 33},
+  {113,0, 38, 35, 33, 19},
 };
-static int pullup_iconBoldOffset = 45;
+static int pullup_iconBoldOffset = 40;
 
 GPadLoc pullup_out_loc[] = {
-  {-11, 0, -11, 0, D_DOWN},
-  {0, 11, 0, 11, D_RIGHT},
-  {11, 0, 11, 0, D_UP},
-  {0, -11, 0, -11, D_LEFT}
+  {-11, 34, -11, 34,  D_DOWN},
+  {34,  11, 34,  11,  D_RIGHT},
+  {11,  -34,11,  -34, D_UP},
+  {-34, -11,-34, -11, D_LEFT}
 };
 
 static char *psPullup[] = {
@@ -45,57 +46,65 @@ static char *psPullup[] = {
   "  -1 -4 moveto (V) show",
   "  8 rfont",
   "  0 -3 rmoveto (dd) show",
+  "  -11 0 moveto -11 -8 lineto stroke",
+  "  -11 -8 moveto -6 -11 lineto stroke",
+  "  -6 -11 moveto -16 -14 lineto stroke",
+  "  -16 -14 moveto -6 -18 lineto stroke",
+  "  -6 -18 moveto -16 -22 lineto stroke",
+  "  -16 -22 moveto -6 -26 lineto stroke",
+  "  -6 -26 moveto -16 -30 lineto stroke",
+  "  -16 -30 moveto -11 -32 lineto stroke",
+  "  -11 -32 moveto -11 -34 lineto stroke",
   "  grestore",
   "} def",
   0
 };
 
 GGateInfo gate_pullup_info = {
-  0,		/* code */
-  "PULLUP",	/* name */
-  "tri1",	/* vnames */
-  0x0,		/* vmask */
-  "pspullup",	/* psprint */
-  psPullup,	/* psdef */
-  -1		/* gi_multipad */,
-  -1,		/* gi_bitpad */
-
+  0,			/* code */
+  "PULLUP",		/* name */
+  "tri1",		/* vnames */
+  0x0,			/* vmask */
+  "pspullup",		/* psprint */
+  psPullup,		/* psdef */
+  -1			/* gi_multipad */,
+  -1,			/* gi_bitpad */
   {
-    {"v",	/* key_seq */
-    {"gm.signals",0},/* root */
+    {"v",		/* key_seq */
+    {"gm.signals",0},	/* root */
     {"gm.signals.pullup",0,0,400}, /* entry */
-    "gat_make PULLUP"},/* cmds[0] */
-    {0}		    /* cmds[1] */
-  },		/* cmds */
-  pullup_iconDims, /* dim */
-  1,		/* NumPads */
+    "gat_make PULLUP"},	/* cmds[0] */
+    {0}		    	/* cmds[1] */
+  },			/* cmds */
+  pullup_iconDims, 	/* dim */
+  1,			/* NumPads */
   {
-    {"Z",	/* name */
-     OUT,	/* iotype */
-     1,		/* size */
-     1,		/* num */
+    {"Z",		/* name */
+     OUT,		/* iotype */
+     1,			/* size */
+     1,			/* num */
      pullup_out_loc
-    }		/* Pad[0] */
-  },		/* Pad */
+    }			/* Pad[0] */
+  },			/* Pad */
   { /* x   y  just */
     { 5,   15, LJ},	/* lpos[0] */
     { 5,   15, LJ},	/* lpos[1] */
     { 5,   15, LJ},	/* lpos[2] */
     { 5,   15, LJ}	/* lpos[3] */
-  },		/* lpos */
-  /* CanRot  NoInvert  IsIONet */
-  { 1,       1,        1},	/* flags */
+  },			/* lpos */
+  /* CanRot NoInvert IsIONet */
+  { 1,      1,       1},/* flags */
   {0},			/* delayNames */
   Generic_Make, 	/* MakeFunction */
   Nop_WriteCellDef,	/* WriteCellDef */
   Generic_Init,		/* InitGate */
   Generic_Delete,	/* DeleteGate */
   Generic_GetExtents,	/* GetExtents */
-  Generic_HitDistance,
-  Generic_Draw,
-  Generic_Move,
-  Generic_Copy,
-  Err_AddInput,
+  Generic_HitDistance,	/* HitDistance */
+  Generic_Draw,		/* DrawGate */
+  Generic_Move,		/* MoveGate */
+  Generic_Copy,		/* CopyGate */
+  Err_AddInput,		/* AddInput */
   Err_AddOutput,
   Err_AddInOut,
   Generic_Rotate,
@@ -112,7 +121,7 @@ void init_pullup()
 {
   Pixmap P;
 
-  P = Pixmap_registerFromFile("pullup","vdd.b");
+  P = Pixmap_registerFromFile("pullup","pullup.b");
   gateinfo_iconInit(&gate_pullup_info,P,pullup_iconDims,pullup_iconBoldOffset);
   RegisterGate(&gate_pullup_info);
 }
