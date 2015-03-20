@@ -256,7 +256,6 @@ static void AOX_adjustWires(GCElement *g)
   }
 }
 
-
 void AOX_AddInput(EditState *es,GCElement *g)
 {
   if (!g->u.basic.extbar)
@@ -308,7 +307,6 @@ void AOX_RemovePort(EditState *es,GCElement *g,GWire *w)
   Generic_RemovePort(es,g,w);
   AOX_adjustWires(g);
 }
-
 
 int AOX_GateParmList(FILE *f,GCElement *g)
 {
