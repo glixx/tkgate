@@ -60,6 +60,7 @@ void init_rom();
 void init_nmos();
 void init_pmos();
 void init_pullup();
+void init_pulldown();
 void init_comment();
 void init_frame();
 void init_led();
@@ -1264,6 +1265,7 @@ void init_gates()
   init_nmos();			/*  */
   init_pmos();			/*  */
   init_pullup();		/*  */
+  init_pulldown();		/*  */
   init_comment();		/*  */
   init_frame();			/*  */
   init_led();			/*  */
