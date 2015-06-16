@@ -32,6 +32,7 @@
 #include <string.h>
 #include <assert.h>
 #include "tkgate.h"
+#include "comment.h"
 
 GSelection *new_GSelection()
 {

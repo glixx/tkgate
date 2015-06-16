@@ -1,6 +1,3 @@
-#ifndef COMMENT_H_INCLUDED
-#define COMMENT_H_INCLUDED
-
 /****************************************************************************
     This file is part of TkGate digital circuit editor and simulator.
 
@@ -22,8 +19,8 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 
-#ifndef SWITCH_H_INCLUDED
-#define SWITCH_H_INCLUDED
+#ifndef COMMENT_H_INCLUDED
+#define COMMENT_H_INCLUDED
 
 void Comment_addLine(GCElement *g,const char *text);
 void Comment_flushLines(GCElement *g);
