@@ -15,17 +15,17 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-    Last edit by hansen on Mon Jan 19 18:15:49 2009
+    Last edit by Skvortsov on Wed Jun 17 17:15:02 2015
 ****************************************************************************/
 #include "tkgate.h"
 
 static iconDimensions pulldown_iconDims[] = {
-  {0, 0, 11, 11, 5, 5},
-  {12, 0, 11, 11, 5, 5},
-  {12, 12, 11, 11, 5, 5},
-  {0, 12, 11, 11, 5, 5},
+  {0, 0, 11, 39, 5, 5},
+  {12, 0, 39, 11, 5, 5},
+  {51, 0, 11, 39, 5, 32},
+  {63, 0, 39, 11, 33, 5},
 };
-static int pulldown_iconBoldOffset = 24;
+static int pulldown_iconBoldOffset = 39;
 
 GPadLoc pulldown_out_loc[] = {
   {0, -6, 0, -6, D_UP},
