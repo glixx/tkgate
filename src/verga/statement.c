@@ -959,6 +959,7 @@ static void SDAsgn_generateMemAsgnPiece(SDAsgn *sd, Scope *scope, CodeBlock *cb,
 	      BCNbMemPutD_init(CodeBlock_nextEmpty(cb),n,nAddr, nLsb, r, base_bit, lhs_size, delay);
 	  }
 	  break;
+    default : break;
 	}
       }
     }

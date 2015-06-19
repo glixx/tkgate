@@ -65,7 +65,7 @@ GGateInfo gate_pullup_info = {
   "PULLUP",		/* name */
   "tri1",		/* vnames */
   0x0,			/* vmask */
-  "pspullup",		/* psprint */
+  "pspullup",	/* psprint */
   psPullup,		/* psdef */
   -1			/* gi_multipad */,
   -1,			/* gi_bitpad */

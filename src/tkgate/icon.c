@@ -164,7 +164,6 @@ Pixmap Pixmap_createZoomPixmap(Pixmap p,int w,int h,int zp)
   return DP;
 }
 
-
 /*
  * Find and/or create zoomed pixmap
  */

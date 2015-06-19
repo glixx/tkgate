@@ -90,7 +90,7 @@ typedef enum {
   OS_ONE,		/* Output is always 1-bit */
   OS_MAX,		/* Output is size of largest operand */
   OS_SUM,		/* Output size is sum of operands */
-  OS_SPECIAL,		/* Special handling for output size */
+  OS_SPECIAL,	/* Special handling for output size */
 } outsize_t;
 
 /*****************************************************************************
@@ -103,7 +103,7 @@ typedef enum {
   RS_MAXMIN,		/* This is the [max:min] form */
   RS_BASEUP,		/* This is the [base+:width] form */
   RS_BASEDN,		/* This is the [base-:width] form */
-  RS_AUTO,		/* This is the [*] form */
+  RS_AUTO,		    /* This is the [*] form */
 } rangestyle_t;
 
 typedef enum {

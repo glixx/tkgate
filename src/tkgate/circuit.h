@@ -33,9 +33,14 @@
  * Timing violation mode
  *
  *****************************************************************************/
-#define TV_NONE		0
-#define TV_AFTER	1
-#define TV_ALL		2
+typedef enum {
+    TV_NONE = 0,
+#define TV_NONE		TV_NONE
+    TV_AFTER = 1,
+#define TV_AFTER	TV_AFTER
+    TV_ALL = 2
+#define TV_ALL		TV_ALL
+} tviolation_t;
 
 /*****************************************************************************
  *
@@ -86,7 +91,7 @@ struct Circuit_str {
 
   Timescale	c_timescale;	/* Circuit timescale */
 
-  int		c_tvMode;	/* Timing violation mode (0=none, 1=after startup, 2=all) */
+  tviolation_t		c_tvMode;	/* Timing violation mode (0=none, 1=after startup, 2=all) */
   double	c_startup;	/* Time required for initialization (suppress timing violations) */
   int		c_startupUnits;	/* Unit code for startup time */
 
@@ -179,7 +184,6 @@ GrabbedLabel *new_GrabbedLabel();
 void GrabbedLabel_draw(int x,int y);
 void GrabbedLabel_unset();
 void GrabbedLabel_set(GNet *net,int x,int y,int p);
-
 
 void EditState_setMode(int mode);
 void EditState_setRotation(int rot);

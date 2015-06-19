@@ -58,7 +58,6 @@ static void nop_touch(void *p) {}
 #define HT_STRDUP(H,s)		 (*((HashVTable*)H->vtable)->hv_strdup)(s)
 #define HT_TOUCH(H,p)		 (*((HashVTable*)H->vtable)->hv_touch)(p)
 
-
 static HashVTable obj_mmgr = {
   ob_malloc, ob_calloc, ob_free, ob_strdup, ob_touch
 };
