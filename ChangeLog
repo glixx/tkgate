@@ -1,3 +1,6 @@
+Version 2.0.0 - June 19, 2015
+     * Very few changes
+
 Version 2.0-rc3 - March 16, 2015
      * Fixed regression, introduced in 2.0-rc2, causing segmentation
        fault after synchronization of the module interface
