@@ -1,3 +1,12 @@
+Version 2.1-a1 - June 19, 2015
+     * Verga can parse output drive strengths for gates
+     * Corrected tri0 and tri1 net signals with only 1 drive in Verga
+     * Pullup and pulldown elements added, thus P-MOP and N-MOP
+         transistor level circuits are allowed
+
+Version 2.0.0 - June 19, 2015
+     * Very few changes
+
 Version 2.0-rc3 - March 16, 2015
      * Fixed regression, introduced in 2.0-rc2, causing segmentation
        fault after synchronization of the module interface
