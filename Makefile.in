@@ -101,7 +101,7 @@ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(srcdir)/config.h.in $(dist_man_MANS) $(dist_desktop_DATA) \
 	$(dist_doc_DATA) $(dist_pixmap_DATA) $(dist_pkgdata_DATA) \
 	$(noinst_HEADERS) COPYING ChangeLog INSTALL README TODO \
-	compile depcomp install-sh missing ylwrap
+	compile install-sh missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
 	$(top_srcdir)/configure.ac
