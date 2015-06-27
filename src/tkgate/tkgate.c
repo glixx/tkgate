@@ -306,7 +306,6 @@ void doVerifyLoad()
   MSS_init();
   init_gates();
 
-
   TkGate.circuit = new_Circuit();
   TkGate.ed = (EditData*) malloc(sizeof(EditData));
   TkGate.errl = (ErrorList*) malloc(sizeof(ErrorList));
@@ -961,8 +960,6 @@ char *canonical_path(const char *ipath,char *rpath)
   while ((p = strstr(rpath,"//"))) {
     memmove(p,p+1,strlen(p+1)+1);
   }
-
-
 
   /*
    * Handle any

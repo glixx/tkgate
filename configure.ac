@@ -18,7 +18,7 @@ AC_SUBST(TKGATE_VERSION,	2.1)
 AC_DEFINE(TKGATE_VERSION_SUFFIX,"-a1",					[TkGate version suffix])
 AC_DEFINE(TKGATE_FULL_VERSION,	(TKGATE_VERSION TKGATE_VERSION_SUFFIX), [Full TkGate version number])
 AC_DEFINE(TKGATE_DESCRIPTION,	"Digital Circuit Editor and Simulator",	[Tkgate short description])
-AC_DEFINE(TKGATE_LOCALDOC,	"file:@H/doc/index.html", 		[Local documentation location])
+AC_DEFINE(TKGATE_LOCALDOC,	"file:@H/doc/@L/index.html", 		[Local documentation location])
 AC_DEFINE(TKGATE_COPYRIGHT, 	"Copyright (C) 1987-2015 by Jeffery P. Hansen", [Copyright notice])
 
 #############################################################################

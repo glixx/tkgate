@@ -347,7 +347,6 @@ void localization_Setup(Tcl_Interp *tcl)
     exit(1);
   }
 
-
   /*
    * Get the locale code
    */
@@ -379,7 +378,6 @@ void localization_Setup(Tcl_Interp *tcl)
   if (strcmp(lang,"en") != 0) {
     verifyMessagesFile(message_table,englishLocale);
   }
-
 
   if (tcl) {
     Tcl_SetVar(tcl,"lang",lang,TCL_GLOBAL_ONLY);

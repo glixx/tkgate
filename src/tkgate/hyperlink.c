@@ -56,6 +56,7 @@ void expandSpecialDirs(char *file)
   strreplace(file,"@E",exampleDir,1);
   strreplace(file,"@H",home,1);
   strreplace(file,"@C",curFileDir,1);
+  strreplace(file,"@L",TkGate.locale->l_code,1);
   strreplace(file,"@",home,1);
 }
 
