@@ -3,54 +3,54 @@
 	"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 
 <book>
-	
-<bookinfo>
-	<title>TKGate 2.0</title>
-	<subtitle>User documentation</subtitle>
-	<author><firstname>Jeffery</firstname><surname>P. Hansen</surname></author>
-	<copyright><year>1987</year><year>2015</year><holder>Jeffery P. Hansen</holder></copyright>
-	<graphic fileref="../fig/biggatelogo.gif"/>
-	<legalnotice>
-	<para>
-	This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-	</para>
-	<para>
-	This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-	</para>
-	<para>
-	You should have received a copy of the GNU General Public License along
-    with this program; if not, write to the Free Software Foundation, Inc.,
-    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-	</para>
-	</legalnotice>
-	<abstract>
-		<para>
-	TkGate is a graphical editor and&nbsp; event-driven simulator for digital
+
+	<bookinfo>
+		<title>TKGate 2.0</title>
+		<subtitle>User documentation</subtitle>
+		<author>
+			<firstname>Jeffery</firstname><surname>P. Hansen</surname>
+		</author>
+		<copyright>
+			<year>1987</year><year>2015</year>
+			<holder>Jeffery P. Hansen</holder>
+		</copyright>
+		<graphic fileref="../fig/biggatelogo.gif"/>
+		<legalnotice>
+			<para>
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+			</para>
+			<para>
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+			</para>
+			<para>
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+			</para>
+		</legalnotice>
+		<abstract>
+			<para>
+TkGate is a graphical editor and&nbsp; event-driven simulator for digital
 circuits with a tcl/tk-based interface.&nbsp; Supported circuit elements
 include basic gates (AND, OR, etc.), tri-state gates, adders, multipliers,
 registers, memories and mos transistors.&nbsp; Hierarchical design is also
 supported with support for user defined modules.&nbsp; Save files are based
 on the Verilog netlist format.
-		</para>
-	</abstract>
-</bookinfo>
+			</para>
+		</abstract>
+	</bookinfo>
 
-<preface>
-	<title>TkGate</title>
-	<para>
-
-	</para>
-</preface>
-
-<chapter>
-	<title>Introduction to TkGate</title>
-	<para>TkGate is a digital circuit editor and simulator with a Tcl/Tk-based
+	<chapter>
+		<title>Introduction to TkGate</title>
+		<abstract>
+			<para>
+TkGate is a digital circuit editor and simulator with a Tcl/Tk-based
 interface.  TkGate includes a large number of built-in devices
 including basic gates, memories, ttys and modules for hierarchical
 design.  The simulator can be controlled either interactively or
@@ -59,15 +59,15 @@ files, and a microcode/macrocode compiler (gmac) is included to create
 TkGate memory files from a high-level description.  The simulator
 supports continuous simulation, single step simulation (by clock or
 epoch) and breakpoints.  Save files are in a Verilog-like format.
-	</para>
-	<para>
+			</para>
+			<para>
 A TkGate circuit is divided into one or more modules, with one of the
 modules being designated the "top-level" or "root" module.  A module
 is composed of zero or more "gates" and wires to connect the gates.
 We use the term "gate" loosely to refer to any circuit element.
 Special "comment" gates can be used to place text in the circuit.
-	</para>
-	<para>
+			</para>
+			<para>
 Creating a gate in TkGate is simply a matter of clicking the cursor to
 set a position, and selecting a gate type from the menu.  Since most
 gate types have a one or two character shortcut, once you learn the
@@ -77,17 +77,13 @@ easy as creating them, simply select a gate (or gates) and drag them
 to a new position, any wires connected to the gates will be moved
 along with them and adjusted to ensure that they contain only
 horizontal and vertical segments.
-	</para>
-	<section>
-		<title>
-			Command Line Options
-		</title>
-		<para>
-			Start TkGate with a command of the form:
-			<command>
-				% tkgate [options] [files ...]
-			</command>
-		</para>
+			</para>
+		</abstract>
+		
+		<section>
+			<title>Command Line Options</title>
+		<para>Start TkGate with a command of the form:</para>
+		<para><command>% tkgate [options] [files ...]</command></para>
 		<table>
 			<title>TkGate command-line options list</title>
 			<tgroup cols="2">
@@ -106,6 +102,44 @@ horizontal and vertical segments.
 					<entry>Print the list of options.</entry>
 				</row>
 				<row>
+					<entry>-l lib</entry>
+					<entry>Loads the specified library on start-up.
+					Can be specified multiple times.</entry>
+				</row>
+				<row>
+					<entry>-L lang</entry>
+					<entry>Specifies the language to use.</entry>
+				</row>
+				<row>
+					<entry>-n</entry>
+					<entry>Do not display the splash screen on start-up.</entry>
+				</row>
+				<row>
+					<entry>-O opts</entry>
+					<entry>Specifies a list of printer options in conjunction
+					with -p and -P switches. The printer options are given as
+					a colon separated list (see table 1-2).</entry>
+				</row>
+				<row>
+					<entry>-p file</entry>
+					<entry>Print the specified circuit to a file without
+					starting up the GUI.</entry>
+				</row>
+				<row>
+					<entry>-P printer</entry>
+					<entry>Print the specified circuit to a printer
+					without starting up the GUI.</entry>
+				</row>
+				<row>
+					<entry>-q</entry>
+					<entry>Suppresses start-up messages.</entry>
+				</row>
+				<row>
+					<entry>-s</entry>
+					<entry>Executes with a synchronous X server connection.
+					This option is primarily for debugging.</entry>
+				</row>
+				<row>
 					<entry>-v</entry>
 					<entry>Be verbose about start-up error messages and warnings.</entry>
 				</row>
@@ -118,18 +152,176 @@ horizontal and vertical segments.
 					<entry>-x</entry>
 					<entry>Automatically starts the simulator on start-up.</entry>
 				</row>
+				<row>
+					<entry>-X script</entry>
+					<entry>Starts the simulator and executes the specified
+					simulation script.</entry>
+				</row>
 			</tbody>
 			</tgroup>
 		</table>
+		<table>
+			<title>Supported printer options list</title>
+			<tgroup cols="2">
+			<thead>
+				<row>
+					<entry>Option</entry><entry>Description</entry>
+				</row>
+			</thead>
+			<tbody>
+				<row>
+					<entry>epsf=bool</entry>
+					<entry>Use encapsulated Postscript format</entry>
+				</row>
+				<row>
+					<entry>duplex=bool</entry>
+					<entry>Use duplex printing</entry>
+				</row>
+				<row>
+					<entry>index=bool</entry>
+					<entry>Include index</entry>
+				</row>
+				<row>
+					<entry>hier=bool</entry>
+					<entry>Include module hierarchy graph</entry>
+				</row>
+				<row>
+					<entry>paper=type</entry>
+					<entry>	Use the specified paper size</entry>
+				</row>
+				<row>
+					<entry>4up=bool</entry>
+					<entry>Do 4-up printing of small modules</entry>
+				</row>
+				<row>
+					<entry>modules=list</entry>
+					<entry>Comma separated list of modules to print</entry>
+				</row>
+			</tbody>
+			</tgroup>
+		</table>
+	</section>
+	<section>
+		<title>
+			History of TkGate
+		</title>
+		<figure>
+			<title>xgate - An Early XLib Based Predecessor to TkGate</title>
+			<graphic fileref="../fig/small-xgate.gif"></graphic>
+		</figure>
+		<para>
+			TkGate begin life as an undergraduate project at Carnegie Mellon
+University (CMU) in 1987.  At that time it was called simply 'gate'
+and ran under the 'wm' window manager, a windowing system developed at
+CMU before X11 was widely used.  This incarnation was used by students
+in the computer architecture course at CMU to develop a simple
+microprocessor (dubbed "The Bat Computer").  Many of the bitmap images
+for the circuit elements and mode cursors (such as the wire-cutter
+cursor) used today were originally designed in this version.  This
+version also contained the hidden pancake recipe which is still in
+TkGate today.
+		</para>
+		<para>
+			After laying dormant for several years, it was resurrected in 1991 and
+ported to run under X11 with the Xlib API.  A screenshot of this
+version, which was called "xgate", is shown in Figure 1.1.  In this incarnation it was used several times by students in
+the introductory digital logic course, but after the author graduated
+and left CMU, it went into hibernation again.
+		</para>
+		<para>
+			Work on the first Tcl/Tk incarnation begun in 1998 as an exercise in
+learning Tcl/Tk.  It was also the first version to use a Verilog-like
+save file format.  Previous versions of gate/xgate used a Lisp-like
+save file format.
+		</para>
+		<para>
+			The current version, TkGate 2.0, represents a substantial effort over
+the previous 1.8 version.  Whereas TkGate 1.8 was comprised of
+approximately 73,000 lines of C and Tcl, TkGate 2.0 nearly doubles
+that line count with over 130,000 lines of C and Tcl.  Major
+improvements added to TkGate 2.0 include an improved user interface,
+true Verilog format save files, Verilog-based simulation, a module
+interface editor, symbolic module interfaces and virtual peripheral
+devices.
+		</para>
 	</section>
 </chapter>
 
 <chapter>
 	<title>Using the Editor</title>
-	<para>
-		This chapter will introduce the basic concepts needed to create a
-		graphical circuit in TkGate.
-	</para>
+	<abstract>
+		<para>
+This chapter will introduce the basic concepts needed to create a
+graphical circuit in TkGate.
+		</para>
+	</abstract>
+	<section>
+		<title>Understanding the TKGate Interface</title>
+		<figure>
+			<title>TkGate Main Window</title>
+			<graphic fileref="../fig/tkgatewindow-small.png"></graphic>
+		</figure>
+		<para>
+The main components of the TKGate edit window consists of a menu bar
+and tool bar at the top, the module, net and port lists on the left, a
+status bar on the bottom, and the main editing area in the center.
+The main edit window contains major mode tabs to switch between "Edit"
+mode for editing your circuit, "Interface" mode for editing the
+interface of any modules you define, and "Simulate" mode for
+simulating your circuit.  Scroll bars can be used to scroll the
+circuit, the list of modules or the list of nets.
+		</para>
+		<bridgehead renderas="sect2">Main Menu</bridgehead>
+		<para>
+The TkGate menu bar appears at the top edge of the main window and is
+arranged by category.  The menus that are available can change when
+you enter different modes (e.g., editing versus simulation).
+		</para>
+		<bridgehead renderas="sect2">Pop-up Menus</bridgehead>
+		<para>
+Many of the features described in this manual can also be accessed
+using the context sensitive pop-up menus.  The pop-up menus are obtained
+by pressing the right mouse button, and the menu items that appear
+depend on what was selected.  The menu that appears, depends on where
+you clicked and what the current mode is.
+		</para>
+		<bridgehead renderas="sect2">Toolbar</bridgehead>
+		<para>
+Frequently used commands can be accessed through the TkGate toolbar.
+These include commands for opening, saving and printing circuit files,
+changing the editing tool, opening and closing modules and controlling
+the simulator.  The toolbars that are displayed change dynamically with
+mode.  You can also configure which toolbars you want to use on the
+Toolbars tab of the Options dialog box. A complete list of the toolbar
+buttons are given in the appendix List of Toolbar Buttons.
+		</para>
+		<bridgehead renderas="sect2">Keyboard Shortcuts</bridgehead>
+		<para>
+Many of the commands that can be accessed through the menu or toolbar
+can also be accessed through keyboard shortcuts.  Commands for
+creating gates are typical single character letters.  When possible,
+the letter is the first character of that gate type (e.g., "a" to
+create an "AND" gate and "r" to create a "register").  By default,
+file handling commands use Emacs-style shortcuts (e.g., "ctrl-c
+ctrl-s" to save, "ctrl-x ctrl-f" to load a file, etc.)  If you prefer,
+you can choose to use Windows style shortcuts through the Interface tab
+on the options dialog box.
+		</para>
+		<bridgehead renderas="sect2">Module List and Module Hierarchy</bridgehead>
+		<para>
+The modules defined in the current circuit can be shown as in an
+alphabetical list view (press <graphic fileref="../fig/modlist.gif"/>
+to select), or in a hierarchy view (press <graphic fileref="../fig/modtree.gif"/>
+to select).  The list view simply displays all
+of the modules in alphabetical order.  The hierarchy view displays the
+module hierarchy starting at the top-level module.  Under each module
+is the list of modules used by that module.  There may also be
+additional hierarchies with the loaded library parts and any unused
+modules.  Modules and the module hierarchy are described in greater
+detail in Section 3.3 Module
+Hierarchy.
+		</para>
+	</section>
 </chapter>
 	
 </book>
