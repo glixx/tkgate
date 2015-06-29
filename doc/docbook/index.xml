@@ -11,9 +11,42 @@
 			<firstname>Jeffery</firstname><surname>P. Hansen</surname>
 		</author>
 		<copyright>
-			<year>1987</year><year>2015</year>
+			<year>1987</year>
+			<year>1988</year>
+			<year>1989</year>
+			<year>1990</year>
+			<year>1991</year>
+			<year>1992</year>
+			<year>1993</year>
+			<year>1994</year>
+			<year>1995</year>
+			<year>1996</year>
+			<year>1997</year>
+			<year>1998</year>
+			<year>1999</year>
+			<year>2000</year>
+			<year>2001</year>
+			<year>2002</year>
+			<year>2003</year>
+			<year>2004</year>
+			<year>2005</year>
+			<year>2006</year>
+			<year>2007</year>
+			<year>2008</year>
+			<year>2009</year>
+			<year>2010</year>
+			<year>2011</year>
+			<year>2012</year>
+			<year>2013</year>
+			<year>2014</year>
+			<year>2015</year>
 			<holder>Jeffery P. Hansen</holder>
 		</copyright>
+		<!-- <mediaobject>
+			<imageobject>
+				<imagedata fileref="../fig/biggatelogo.gif" />
+			</imageobject>
+		</mediaobject> -->
 		<graphic fileref="../fig/biggatelogo.gif"/>
 		<legalnotice>
 			<para>
@@ -82,9 +115,9 @@ horizontal and vertical segments.
 		
 		<section>
 			<title>Command Line Options</title>
-		<para>Start TkGate with a command of the form:</para>
-		<para><command>% tkgate [options] [files ...]</command></para>
-		<table>
+			<para>Start TkGate with a command of the form:</para>
+			<para><command>% tkgate [options] [files ...]</command></para>
+			<table>
 			<title>TkGate command-line options list</title>
 			<tgroup cols="2">
 			<thead>
@@ -201,7 +234,7 @@ horizontal and vertical segments.
 			</tgroup>
 		</table>
 	</section>
-	<section>
+		<section>
 		<title>
 			History of TkGate
 		</title>
@@ -245,17 +278,17 @@ interface editor, symbolic module interfaces and virtual peripheral
 devices.
 		</para>
 	</section>
-</chapter>
+	</chapter>
 
-<chapter>
-	<title>Using the Editor</title>
-	<abstract>
-		<para>
+	<chapter>
+		<title>Using the Editor</title>
+		<abstract>
+			<para>
 This chapter will introduce the basic concepts needed to create a
 graphical circuit in TkGate.
-		</para>
-	</abstract>
-	<section>
+			</para>
+		</abstract>
+		<section>
 		<title>Understanding the TKGate Interface</title>
 		<figure>
 			<title>TkGate Main Window</title>
@@ -321,7 +354,7 @@ modules.  Modules and the module hierarchy are described in greater
 detail in Section 3.3 Module
 Hierarchy.
 		</para>
-	</section>
-</chapter>
+		</section>
+	</chapter>
 	
 </book>
