@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
 	"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 
@@ -42,11 +42,6 @@
 			<year>2015</year>
 			<holder>Jeffery P. Hansen</holder>
 		</copyright>
-		<!-- <mediaobject>
-			<imageobject>
-				<imagedata fileref="../fig/biggatelogo.gif" />
-			</imageobject>
-		</mediaobject> -->
 		<graphic fileref="../fig/biggatelogo.gif"/>
 		<legalnotice>
 			<para>
@@ -58,7 +53,7 @@ the Free Software Foundation; either version 2 of the License, or
 			<para>
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 			</para>
 			<para>
@@ -84,28 +79,28 @@ on the Verilog netlist format.
 		<abstract>
 			<para>
 TkGate is a digital circuit editor and simulator with a Tcl/Tk-based
-interface.  TkGate includes a large number of built-in devices
+interface. TkGate includes a large number of built-in devices
 including basic gates, memories, ttys and modules for hierarchical
-design.  The simulator can be controlled either interactively or
-through a simulation script.  Memory contents can be loaded from
+design. The simulator can be controlled either interactively or
+through a simulation script. Memory contents can be loaded from
 files, and a microcode/macrocode compiler (gmac) is included to create
-TkGate memory files from a high-level description.  The simulator
+TkGate memory files from a high-level description. The simulator
 supports continuous simulation, single step simulation (by clock or
-epoch) and breakpoints.  Save files are in a Verilog-like format.
+epoch) and breakpoints. Save files are in a Verilog-like format.
 			</para>
 			<para>
 A TkGate circuit is divided into one or more modules, with one of the
-modules being designated the "top-level" or "root" module.  A module
+modules being designated the "top-level" or "root" module. A module
 is composed of zero or more "gates" and wires to connect the gates.
 We use the term "gate" loosely to refer to any circuit element.
 Special "comment" gates can be used to place text in the circuit.
 			</para>
 			<para>
 Creating a gate in TkGate is simply a matter of clicking the cursor to
-set a position, and selecting a gate type from the menu.  Since most
+set a position, and selecting a gate type from the menu. Since most
 gate types have a one or two character shortcut, once you learn the
 shortcuts you can perform most of your editing with one hand on the
-keyboard and the other hand on the mouse.  Moving gates is almost as
+keyboard and the other hand on the mouse. Moving gates is almost as
 easy as creating them, simply select a gate (or gates) and drag them
 to a new position, any wires connected to the gates will be moved
 along with them and adjusted to ensure that they contain only
@@ -118,121 +113,123 @@ horizontal and vertical segments.
 			<para>Start TkGate with a command of the form:</para>
 			<para><command>% tkgate [options] [files ...]</command></para>
 			<table>
-			<title>TkGate command-line options list</title>
-			<tgroup cols="2">
-			<thead>
-				<row>
-					<entry>Option</entry><entry>Description</entry>
-				</row>
-			</thead>
-			<tbody>
-				<row>
-					<entry>-d</entry>
-					<entry>Turn on debugging.</entry>
-				</row>
-				<row>
-					<entry>-h</entry>
-					<entry>Print the list of options.</entry>
-				</row>
-				<row>
-					<entry>-l lib</entry>
-					<entry>Loads the specified library on start-up.
-					Can be specified multiple times.</entry>
-				</row>
-				<row>
-					<entry>-L lang</entry>
-					<entry>Specifies the language to use.</entry>
-				</row>
-				<row>
-					<entry>-n</entry>
-					<entry>Do not display the splash screen on start-up.</entry>
-				</row>
-				<row>
-					<entry>-O opts</entry>
-					<entry>Specifies a list of printer options in conjunction
-					with -p and -P switches. The printer options are given as
-					a colon separated list (see table 1-2).</entry>
-				</row>
-				<row>
-					<entry>-p file</entry>
-					<entry>Print the specified circuit to a file without
-					starting up the GUI.</entry>
-				</row>
-				<row>
-					<entry>-P printer</entry>
-					<entry>Print the specified circuit to a printer
-					without starting up the GUI.</entry>
-				</row>
-				<row>
-					<entry>-q</entry>
-					<entry>Suppresses start-up messages.</entry>
-				</row>
-				<row>
-					<entry>-s</entry>
-					<entry>Executes with a synchronous X server connection.
-					This option is primarily for debugging.</entry>
-				</row>
-				<row>
-					<entry>-v</entry>
-					<entry>Be verbose about start-up error messages and warnings.</entry>
-				</row>
-				<row>
-					<entry>-V</entry>
-					<entry>Read the TkGate files specified on the command-line and
-					check them for internal errors, but do not start TkGate.</entry>
-				</row>
-				<row>
-					<entry>-x</entry>
-					<entry>Automatically starts the simulator on start-up.</entry>
-				</row>
-				<row>
-					<entry>-X script</entry>
-					<entry>Starts the simulator and executes the specified
-					simulation script.</entry>
-				</row>
-			</tbody>
-			</tgroup>
-		</table>
-		<table>
-			<title>Supported printer options list</title>
-			<tgroup cols="2">
-			<thead>
-				<row>
-					<entry>Option</entry><entry>Description</entry>
-				</row>
-			</thead>
-			<tbody>
-				<row>
-					<entry>epsf=bool</entry>
-					<entry>Use encapsulated Postscript format</entry>
-				</row>
-				<row>
-					<entry>duplex=bool</entry>
-					<entry>Use duplex printing</entry>
-				</row>
-				<row>
-					<entry>index=bool</entry>
-					<entry>Include index</entry>
-				</row>
-				<row>
-					<entry>hier=bool</entry>
-					<entry>Include module hierarchy graph</entry>
-				</row>
-				<row>
-					<entry>paper=type</entry>
-					<entry>	Use the specified paper size</entry>
-				</row>
-				<row>
-					<entry>4up=bool</entry>
-					<entry>Do 4-up printing of small modules</entry>
-				</row>
-				<row>
-					<entry>modules=list</entry>
-					<entry>Comma separated list of modules to print</entry>
-				</row>
-			</tbody>
-			</tgroup>
-		</table>
+				<title>TkGate command-line options list</title>
+				<tgroup cols="2">
+					<thead>
+						<row>
+							<entry>Option</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>-d</entry>
+							<entry>Turn on debugging.</entry>
+						</row>
+						<row>
+							<entry>-h</entry>
+							<entry>Print the list of options.</entry>
+						</row>
+						<row>
+							<entry>-l lib</entry>
+							<entry>Loads the specified library on start-up.
+							Can be specified multiple times.</entry>
+						</row>
+						<row>
+							<entry>-L lang</entry>
+							<entry>Specifies the language to use.</entry>
+						</row>
+						<row>
+							<entry>-n</entry>
+							<entry>Do not display the splash screen on start-up.</entry>
+						</row>
+						<row>
+							<entry>-O opts</entry>
+							<entry>Specifies a list of printer options in conjunction
+							with -p and -P switches. The printer options are given as
+							a colon separated list (see table 1-2).</entry>
+						</row>
+						<row>
+							<entry>-p file</entry>
+							<entry>Print the specified circuit to a file without
+							starting up the GUI.</entry>
+						</row>
+						<row>
+							<entry>-P printer</entry>
+							<entry>Print the specified circuit to a printer
+							without starting up the GUI.</entry>
+						</row>
+						<row>
+							<entry>-q</entry>
+							<entry>Suppresses start-up messages.</entry>
+						</row>
+						<row>
+							<entry>-s</entry>
+							<entry>Executes with a synchronous X server connection.
+							This option is primarily for debugging.</entry>
+						</row>
+						<row>
+							<entry>-v</entry>
+							<entry>Be verbose about start-up error messages and warnings.</entry>
+						</row>
+						<row>
+							<entry>-V</entry>
+							<entry>Read the TkGate files specified on the command-line and
+							check them for internal errors, but do not start TkGate.</entry>
+						</row>
+						<row>
+							<entry>-x</entry>
+							<entry>Automatically starts the simulator on start-up.</entry>
+						</row>
+						<row>
+							<entry>-X script</entry>
+							<entry>Starts the simulator and executes the specified
+							simulation script.</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<table>
+				<title>Supported printer options list</title>
+				<tgroup cols="2">
+					<thead>
+						<row>
+							<entry>Option</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>epsf=bool</entry>
+							<entry>Use encapsulated Postscript format</entry>
+						</row>
+						<row>
+							<entry>duplex=bool</entry>
+							<entry>Use duplex printing</entry>
+						</row>
+						<row>
+							<entry>index=bool</entry>
+							<entry>Include index</entry>
+						</row>
+						<row>
+							<entry>hier=bool</entry>
+							<entry>Include module hierarchy graph</entry>
+						</row>
+						<row>
+							<entry>paper=type</entry>
+							<entry>	Use the specified paper size</entry>
+						</row>
+						<row>
+							<entry>4up=bool</entry>
+							<entry>Do 4-up printing of small modules</entry>
+						</row>
+						<row>
+							<entry>modules=list</entry>
+							<entry>Comma separated list of modules to print</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
 	</section>
 		<section>
 		<title>
@@ -244,34 +241,34 @@ horizontal and vertical segments.
 		</figure>
 		<para>
 			TkGate begin life as an undergraduate project at Carnegie Mellon
-University (CMU) in 1987.  At that time it was called simply 'gate'
+University (CMU) in 1987. At that time it was called simply 'gate'
 and ran under the 'wm' window manager, a windowing system developed at
-CMU before X11 was widely used.  This incarnation was used by students
+CMU before X11 was widely used. This incarnation was used by students
 in the computer architecture course at CMU to develop a simple
-microprocessor (dubbed "The Bat Computer").  Many of the bitmap images
+microprocessor (dubbed "The Bat Computer"). Many of the bitmap images
 for the circuit elements and mode cursors (such as the wire-cutter
-cursor) used today were originally designed in this version.  This
+cursor) used today were originally designed in this version. This
 version also contained the hidden pancake recipe which is still in
 TkGate today.
 		</para>
 		<para>
 			After laying dormant for several years, it was resurrected in 1991 and
-ported to run under X11 with the Xlib API.  A screenshot of this
-version, which was called "xgate", is shown in Figure 1.1.  In this incarnation it was used several times by students in
+ported to run under X11 with the Xlib API. A screenshot of this
+version, which was called "xgate", is shown in Figure 1.1. In this incarnation it was used several times by students in
 the introductory digital logic course, but after the author graduated
 and left CMU, it went into hibernation again.
 		</para>
 		<para>
 			Work on the first Tcl/Tk incarnation begun in 1998 as an exercise in
-learning Tcl/Tk.  It was also the first version to use a Verilog-like
-save file format.  Previous versions of gate/xgate used a Lisp-like
+learning Tcl/Tk. It was also the first version to use a Verilog-like
+save file format. Previous versions of gate/xgate used a Lisp-like
 save file format.
 		</para>
 		<para>
 			The current version, TkGate 2.0, represents a substantial effort over
-the previous 1.8 version.  Whereas TkGate 1.8 was comprised of
+the previous 1.8 version. Whereas TkGate 1.8 was comprised of
 approximately 73,000 lines of C and Tcl, TkGate 2.0 nearly doubles
-that line count with over 130,000 lines of C and Tcl.  Major
+that line count with over 130,000 lines of C and Tcl. Major
 improvements added to TkGate 2.0 include an improved user interface,
 true Verilog format save files, Verilog-based simulation, a module
 interface editor, symbolic module interfaces and virtual peripheral
@@ -301,21 +298,21 @@ status bar on the bottom, and the main editing area in the center.
 The main edit window contains major mode tabs to switch between "Edit"
 mode for editing your circuit, "Interface" mode for editing the
 interface of any modules you define, and "Simulate" mode for
-simulating your circuit.  Scroll bars can be used to scroll the
+simulating your circuit. Scroll bars can be used to scroll the
 circuit, the list of modules or the list of nets.
 		</para>
 		<bridgehead renderas="sect2">Main Menu</bridgehead>
 		<para>
 The TkGate menu bar appears at the top edge of the main window and is
-arranged by category.  The menus that are available can change when
+arranged by category. The menus that are available can change when
 you enter different modes (e.g., editing versus simulation).
 		</para>
 		<bridgehead renderas="sect2">Pop-up Menus</bridgehead>
 		<para>
 Many of the features described in this manual can also be accessed
-using the context sensitive pop-up menus.  The pop-up menus are obtained
+using the context sensitive pop-up menus. The pop-up menus are obtained
 by pressing the right mouse button, and the menu items that appear
-depend on what was selected.  The menu that appears, depends on where
+depend on what was selected. The menu that appears, depends on where
 you clicked and what the current mode is.
 		</para>
 		<bridgehead renderas="sect2">Toolbar</bridgehead>
@@ -323,38 +320,366 @@ you clicked and what the current mode is.
 Frequently used commands can be accessed through the TkGate toolbar.
 These include commands for opening, saving and printing circuit files,
 changing the editing tool, opening and closing modules and controlling
-the simulator.  The toolbars that are displayed change dynamically with
-mode.  You can also configure which toolbars you want to use on the
+the simulator. The toolbars that are displayed change dynamically with
+mode. You can also configure which toolbars you want to use on the
 Toolbars tab of the Options dialog box. A complete list of the toolbar
 buttons are given in the appendix List of Toolbar Buttons.
 		</para>
 		<bridgehead renderas="sect2">Keyboard Shortcuts</bridgehead>
 		<para>
 Many of the commands that can be accessed through the menu or toolbar
-can also be accessed through keyboard shortcuts.  Commands for
-creating gates are typical single character letters.  When possible,
+can also be accessed through keyboard shortcuts. Commands for
+creating gates are typical single character letters. When possible,
 the letter is the first character of that gate type (e.g., "a" to
-create an "AND" gate and "r" to create a "register").  By default,
+create an "AND" gate and "r" to create a "register"). By default,
 file handling commands use Emacs-style shortcuts (e.g., "ctrl-c
-ctrl-s" to save, "ctrl-x ctrl-f" to load a file, etc.)  If you prefer,
+ctrl-s" to save, "ctrl-x ctrl-f" to load a file, etc.) If you prefer,
 you can choose to use Windows style shortcuts through the Interface tab
 on the options dialog box.
 		</para>
 		<bridgehead renderas="sect2">Module List and Module Hierarchy</bridgehead>
 		<para>
 The modules defined in the current circuit can be shown as in an
-alphabetical list view (press <graphic fileref="../fig/modlist.gif"/>
-to select), or in a hierarchy view (press <graphic fileref="../fig/modtree.gif"/>
-to select).  The list view simply displays all
-of the modules in alphabetical order.  The hierarchy view displays the
-module hierarchy starting at the top-level module.  Under each module
-is the list of modules used by that module.  There may also be
+alphabetical list view (press <inlinegraphic fileref="../fig/modlist.gif"/>
+to select), or in a hierarchy view (press <inlinegraphic fileref="../fig/modtree.gif"/>
+to select). The list view simply displays all
+of the modules in alphabetical order. The hierarchy view displays the
+module hierarchy starting at the top-level module. Under each module
+is the list of modules used by that module. There may also be
 additional hierarchies with the loaded library parts and any unused
-modules.  Modules and the module hierarchy are described in greater
+modules. Modules and the module hierarchy are described in greater
 detail in Section 3.3 Module
 Hierarchy.
 		</para>
+		<bridgehead renderas="sect2">Net and Port Lists</bridgehead>
+		<para>
+Below the module list in the lower-left corner of the main window is
+the list of nets or ports in the current module. A symbol precedes
+each net name depending on the type and whether the net is 1-bit or
+multi-bit as shown in the table below:
+		</para>
+			<table>
+				<title>Net type symbols</title>
+				<tgroup cols="3">
+					<thead>
+						<row>
+							<entry>1-Bit Symbol</entry>
+							<entry>Multi-Bit Symbol</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry><graphic fileref="../fig/net_hwire.gif"/></entry>
+							<entry><graphic fileref="../fig/net_wire2.gif"/></entry>
+							<entry>Wire with a hidden name.</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/net_wire.gif"/></entry>
+							<entry><graphic fileref="../fig/net_wire2.gif"/></entry>
+							<entry>Wire with a visible name.</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/net_reg.gif"/></entry>
+							<entry><graphic fileref="../fig/net_reg2.gif"/></entry>
+							<entry>Register variable (HDL modules only).</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/net_probe.gif"/></entry>
+							<entry><graphic fileref="../fig/net_probe2.gif"/></entry>
+							<entry>Wire with a probe attached to it (in simulation mode).</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/port_in1.gif"/></entry>
+							<entry><graphic fileref="../fig/port_in2.gif"/></entry>
+							<entry>Module input port.</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/port_out1.gif"/></entry>
+							<entry><graphic fileref="../fig/port_out2.gif"/></entry>
+							<entry>Module output port.</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/port_inout1.gif"/></entry>
+							<entry><graphic fileref="../fig/port_inout2.gif"/></entry>
+							<entry>Module bidirectional port.</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<para>
+The "Ports" list can be used to list the modules nets that are defined
+as part of the interface for the current module. These are nets that
+the user is expected to define in the module definition.
+			</para>
+			<bridgehead renderas="sect2">Status Bar</bridgehead>
+			<figure>
+				<title>Status Bar</title>
+				<graphic fileref="../fig/statusbar.gif"></graphic>
+			</figure>
+			<para>
+The status bar on the bottom indicates the file that is being edited,
+and the current module from that file that is displayed in the circuit
+window.&nbsp; A "*" after the file name indicates that the buffer has been
+modified since the last time the file was saved.&nbsp; Below the file and
+module name is a message bar for informational messages from TKGate.&nbsp; 
+These messages include confirmation for files that are loaded or saved,
+or information on the currently selected gate or wire.
+			</para>
+			<bridgehead renderas="sect2">Major Mode Tabs</bridgehead>
+			<figure>
+				<title>Major Mode Tabs</title>
+				<graphic fileref="../fig/majortabs.gif"></graphic>
+			</figure>
+			<para>
+The main edit window has three tabs to indicate and select the major
+mode in TkGate. "Edit" mode is used for creating and editing your
+circuit. The majority of your time using TkGate is likely to be in
+this mode. The "Interface" tab is used to design the interface for
+any modules that you define. You can also use this mode to view the
+interface of a module without creating a module of that type. The
+"Simulate" tab is used to perform simulations. When you press this
+tab, TkGate will send your circuit to the simulator, check for errors,
+and if your circuit is error free, start the simulator. By default,
+the simulator will be "paused" and you will need to press the
+<inlinegraphic fileref="../fig/sim_go.gif"/> button.
+			</para>
+			<para>
+The icon in the upper right corner of the interface can also help show
+you what mode you are in. The possible icons listed in Table 2-2.
+			</para>
+				<table>
+				<title>TkGate state icons</title>
+				<tgroup cols="2">
+					<thead>
+						<row>
+							<entry>Symbol</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry><graphic fileref="../fig/gatelogo.gif"/></entry>
+							<entry>
+Edit/Interface Mode - The TkGate logo is shown when TkGate is in the
+"Edit" or "Interface" modes.
+							</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/simlogo.gif"/></entry>
+							<entry>
+Paused Simulation - A stopped AND dragon shows that TkGate is simulation
+mode, and the simulation is paused.</entry>
+						</row>
+						<row>
+							<entry><graphic fileref="../fig/runsim.gif"/></entry>
+							<entry>
+Running Simulation - A running AND dragon shows that
+TkGate is in simulation mode, and the simulation is running.
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<bridgehead renderas="sect2">Balloon Help</bridgehead>
+			<figure>
+				<title>Balloon Help</title>
+				<graphic fileref="../fig/balloon.gif"></graphic>
+			</figure>
+			<para>
+Balloon help is available for many of the elements in the interface,
+typically on the prompt text. To use balloon help, simply move the
+mouse cursor over an interface element. After about one second, an
+informational help message will be displayed as long as the mouse
+cursor has not moved. For example, moving the mouse cursor over the
+"Nets" label on the main window produces a balloon help message as
+shown below:
+
+Balloon help is also available in most of the dialog boxes.&nbsp;
+Position the cursor over the text in a dialog box to view a more
+detailed description.
+			</para>
+		</section>
+		<section>
+			<title>Loading and Saving Circuits</title>
+			<figure>
+				<title>Open File Dialog Box</title>
+				<graphic fileref="../fig/fileopen.gif"></graphic>
+			</figure>
+			<para>
+Opening and saving circuits as well as circuit printing operations are
+done through the "File" menu option on the main window.&nbsp; To load
+a file into TKGate, you can either specify the file name on the
+command line when you start, select "Open..." from the "File" menu or
+use the <inlinegraphic fileref="../fig/file_open.gif"/> button on the
+toolbar. You can also use the keyboard shortcut Ctl-X Ctl-F. When
+opening a new file, all existing modules will be flushed from the buffer,
+and the modules in the new file will be loaded.  TkGate save files have
+the extension ".v" and are in a special annotated Verilog format. Files
+saved from TkGate contain special comments with information such as circuit
+elements and wire positions.  Also, gates with no explicit counter
+part in Verilog such as switches and clock generators are saved as
+annotation comments in the save file.
+			</para>
+			<para>
+You can also load non-TkGate generated Verilog files.  These files
+will load as a set of HDL modules.  When saving from a file that was
+loaded as a non-TkGate Verilog file, the saved file will contain
+TkGate annotations.
+			</para>
+			<para>
+When you open or save a circuit, you will see a dialog box such as
+the one shown in the figure on the right.  Enter a file name at the
+prompt and press the "Open" (or "Save") button, or double click on a
+file name. Only the appropriate type of files will be
+displayed. You can change directories by double clicking on a
+folder to open it, or by using the button in the upper right corner to
+move up to the parent folder.
+			</para>
+		</section>
+		<section>
+			<title>Loading Libraries</title>
+			<figure float="1">
+				<title>Library Manager</title>
+				<graphic fileref="../fig/libmanager-small.png"/>
+			</figure>
+			<para>
+Libraries are loaded and unloaded through the "Library
+Manager". Select "Library Manager" from the "File" menu or select
+<inlinegraphic fileref="../fig/file_lib.gif"/> from the toolbar. This will open the library
+manager as shown on Figure 2-6.
+To load a library, check the box near the name of the library; to unload a
+library, uncheck corresponding box. When you have
+finished selecting which libraries you wish to have loaded, close the
+dialog box by pressing "OK".  If you press "Cancel", all of your
+changes to the set of loaded libraries will be ignored.
+			</para>
+			<para>
+The set of libraries that are displayed in the library are found by
+searching the TkGate library path. The library path can be set
+through the library options dialog and can
+include user-defined libraries.
+			</para>
+			<para>
+When you save your design after loading libraries, TkGate will store
+the names of libraries you have loaded in the save file.  Then when
+you load your design again, TkGate will automatically load the
+necessary libraries.
+			</para>
+		</section>
+		<section>
+			<title>Basic Editing Tools</title>
+			<para>
+The basic editing tools are selected through the "Mode" toolbar. While
+a mode is active, the mouse cursor will change to reflect the active
+mode. The available editing tools are shown in the table below.
+			</para>
+			<table>
+				<title>Basic editing tools</title>
+				<tgroup cols="4">
+					<thead>
+						<row>
+							<entry>Button</entry>
+							<entry>Cursor</entry>
+							<entry>Shortcut</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>
+								<graphic fileref="../fig/mov_curs.gif"/>
+							</entry>
+							<entry>
+								<graphic fileref="../fig/ptr.gif"/>
+							</entry>
+							<entry>
+								F1
+							</entry>
+							<entry>
+<emphasis role="strong">Move/Connect</emphasis> tool is indicated by the arrow cursor.
+Use this tool for most editing operations including creating gates,
+connecting wires, moving gates and wires, opening module instances,
+opening property boxes of gates and wires, and deleting circuit
+elements (with the "delete" key).
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<graphic fileref="../fig/mov_curs.gif"/>
+							</entry>
+							<entry>
+								<graphic fileref="../fig/solder.gif"/>
+							</entry>
+							<entry>
+								(F1)
+							</entry>
+							<entry>
+The <emphasis role="strong">Connect</emphasis> tool is indicated by the soldering iron cursor.  
+To use this tool, first select the move/connect tool and then press and
+hold the left mouse button on a wire endpoint.&nbsp;  The cursor will then
+change to the connect tool as long as you are holding down the mouse button.
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<graphic fileref="../fig/cut_curs.gif"/>
+							</entry>
+							<entry>
+								<graphic fileref="../fig/cutters.gif"/>
+							</entry>
+							<entry>
+								F2
+							</entry>
+							<entry>
+The <emphasis role="strong">Wire Cutter</emphasis> tool is indicated by the wire cutter cursor.
+Use this tool to cut wires by clicking on the wire at the point you want
+to cut it. If you cut a wire with an unconnected end, the wire
+segments between the cut  point and the unconnected end will be deleted
+automatically.
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<graphic fileref="../fig/inv_curs.gif"/>
+							</entry>
+							<entry>
+								<graphic fileref="../fig/invaddel.gif"/>
+							</entry>
+							<entry>
+								F3
+							</entry>
+							<entry>
+The <emphasis role="strong">Inverter</emphasis> tool is indicated by the inverter bubble grabber
+cursors. Use this tool to add or remove inverter bubbles on the inputs
+and outputs of gates. Click the cursor near an input or
+output to converter a non-inverting port to an inverting port or vice-versa.
+							</entry>
+						</row>
+            <row>
+							<entry>
+								<graphic fileref="../fig/size_curs.gif"/>
+							</entry>
+							<entry>
+								<graphic fileref="../fig/wsize.gif"/>
+							</entry>
+							<entry>
+								F4
+							</entry>
+							<entry>
+The <emphasis role="strong">Wire Size/Type</emphasis> tool is indicated by the ribbon cable
+cursor.  Use this mode to change the bit width of a wire or the type
+of wire.  The desired bit width and wire type should be selected in
+the selector boxes next to the <inlinegraphic fileref="../fig/size_curs.gif"/> button on
+the Mode toolbar.  Any wires that are clicked on will have their size
+and type changed to the selected size/type.  The wire type affects how
+the wire's value will be set when multiple gates drive a wire.  You
+can also change wire bit widths and types using the Wire Properties dialog box.  
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
 		</section>
 	</chapter>
-	
 </book>

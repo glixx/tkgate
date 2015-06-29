@@ -2,8 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 version="1.0">
 
-<xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl/xhtml/chunk.xsl"/>
-<xsl:import href="./titlepage.xsl"/>
+<xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl/fo/docbook.xsl"/>
+<!-- <xsl:import href="./titlepage.xsl"/> -->
 <xsl:param name="html.stylesheet" select="'../tkgate.css'"/>
 <xsl:param name="admon.graphics" select="1"/>
 <xsl:param name="chunk.first.sections" select="1"/>

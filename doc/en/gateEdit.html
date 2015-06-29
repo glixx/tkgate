@@ -112,10 +112,9 @@ the user is expected to define in the module definition.
 <h4>2.1.7 Status Bar</h4>
 
 <div class=rfig>
-<IMG SRC="fig/statusbar.gif"><br><br>
+<IMG SRC="../fig/statusbar.gif"><br><br>
 <b>Figure 2.2: Status Bar</b>
 </div>
-
 
 The status bar on the bottom indicates the file that is being edited,
 and the current module from that file that is displayed in the circuit
@@ -130,7 +129,7 @@ or information on the currently selected gate or wire.
 <h4>2.1.8 Major Mode Tabs</h4>
 
 <div class=rfig>
-<IMG SRC="fig/majortabs.gif"><br><br>
+<IMG SRC="../fig/majortabs.gif"><br><br>
 <b>Figure 2.3: Major Mode Tabs</b>
 </div>
 
@@ -144,7 +143,7 @@ interface of a module without creating a module of that type.  The
 tab, TkGate will send your circuit to the simulator, check for errors,
 and if your circuit is error free, start the simulator.  By default,
 the simulator will be "paused" and you will need to press the <img class=tool
-src="fig/sim_go.gif"> button.
+src="../fig/sim_go.gif"> button.
 
 <br style="clear: right;">
 
@@ -157,19 +156,19 @@ you what mode you are in.  The possible icons are:
 <TABLE WIDTH="500" class=display border>
 <tr><th align=left width=100>Symbol</th><th align=left>Description</th></tr>
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="fig/gatelogo.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="../fig/gatelogo.gif"></TD>
 <TD><b>Edit/Interface Mode</b> - The TkGate logo is shown when TkGate is in the "Edit" or "Interface" modes.</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="fig/simlogo.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="../fig/simlogo.gif"></TD>
 
 <TD><b>Paused Simulation</b> - A stopped AND dragon shows that
 TkGate is simulation mode, and the simulation is paused. 
 </TD>
 </TR>
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="fig/runsim.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="../fig/runsim.gif"></TD>
 <td><b>Running Simulation</b> - A running AND dragon shows that
 TkGate is in simulation mode, and the simulation is running.
 </TABLE>
@@ -177,7 +176,7 @@ TkGate is in simulation mode, and the simulation is running.
 <h4>2.1.9 Balloon Help</h4>
 
 <div class=rfig>
-<IMG SRC="fig/balloon.gif"><br><br>
+<IMG SRC="../fig/balloon.gif"><br><br>
 <b>Figure 2.4: Balloon Help</b>
 </div>
 
@@ -198,16 +197,15 @@ detailed description.
 <H3>2.2 Loading and Saving Circuits</H3>
 
 <div class=rfig>
-<IMG SRC="fig/fileopen.gif" HEIGHT=267 WIDTH=422><br><br>
+<IMG SRC="../fig/fileopen.gif" HEIGHT=267 WIDTH=422><br><br>
 <b>Figure 2.5: Open File Dialog Box</b>
 </div>
-
 
 Opening and saving circuits as well as circuit printing operations are
 done through the "File" menu option on the main window.&nbsp; To load
 a file into TKGate, you can either specify the file name on the
 command line when you start, select "Open..." from the "File" menu or
-use the <img class=tool src="fig/file_open.gif"> button on the toolbar. You can
+use the <img class=tool src="../fig/file_open.gif"> button on the toolbar. You can
 also use the keyboard shortcut Ctl-X Ctl-F.  When opening a new file,
 all existing modules will be flushed from the buffer, and the modules
 in the new file will be loaded.  TkGate save files have the extension
@@ -237,7 +235,7 @@ move up to the parent folder.
 <H3>2.3 Loading Libraries</H3>
 
 <div class=rfig>
-<a href="fig/libmanager.gif" type="image/gif" target=_blank><img src="fig/small-libmanager.gif">
+<a href="../fig/libmanager.gif" type="image/gif" target=_blank><img src="../fig/small-libmanager.gif">
 <br>
 (Click to enlarge)</a><br><br>
 <b>Figure 2.6: Library Manager</b>
@@ -245,7 +243,7 @@ move up to the parent folder.
 
 Libraries are loaded and unloaded through the "Library
 Manager". Select "Library Manager" from the "File" menu or select <img class=tool
-src="fig/file_lib.gif"> from the toolbar.  This will open the library
+src="../fig/file_lib.gif"> from the toolbar.  This will open the library
 manager as shown below:
 
 To load a library, select it and press the "Load" button.  To unload a
@@ -256,7 +254,7 @@ changes to the set of loaded libraries will be ignored.
 <p>
 The set of libraries that are displayed in the library are found by
 searching the TkGate library path.  The library path can be set
-through the <a href="#libraryOpt">library options</a> dialog and can
+through the <a href="gateOptions.html#library">library options</a> dialog and can
 include user-defined libraries.
 <p>
 When you save your design after loading libraries, TkGate will store
@@ -284,8 +282,8 @@ mode.  The available editing tools are shown in the table below.
 <tr><td colspan=4><hr></td></tr>
 
 <TR>
-<td class=center><img class=tool src="fig/mov_curs.gif"></td>
-<TD class=center BGCOLOR="#FFFFFF"><br><IMG SRC="fig/ptr.gif" HEIGHT=13 WIDTH=13></TD>
+<td class=center><img class=tool src="../fig/mov_curs.gif"></td>
+<TD class=center BGCOLOR="#FFFFFF"><br><IMG SRC="../fig/ptr.gif" HEIGHT=13 WIDTH=13></TD>
 <TD class=center>F1</TD>
 <TD >The <B>Move/Connect</B> tool is indicated by the arrow cursor.&nbsp; 
 Use this tool for most editing operations including creating gates,
@@ -296,8 +294,8 @@ elements (with the "delete" key).</TD>
 
 <tr><td colspan=4><hr></td></tr>
 <TR>
-<td class=center><img class=tool src="fig/mov_curs.gif"></td>
-<TD class=center bgcolor="#FFFFFF"><br><IMG SRC="fig/solder.gif" HEIGHT=26 WIDTH=31></TD>
+<td class=center><img class=tool src="../fig/mov_curs.gif"></td>
+<TD class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/solder.gif" HEIGHT=26 WIDTH=31></TD>
 <TD class=center>(F1)</TD>
 <TD>The <B>Connect</B> tool is indicated by the soldering iron cursor.&nbsp;  
 To use this tool, first select the move/connect tool and then press and
@@ -307,8 +305,8 @@ change to the connect tool as long as you are holding down the mouse button.</TD
 
 <tr><td colspan=4><hr></td></tr>
 <tr>
-<td class=center><img class=tool src="fig/cut_curs.gif"></td>
-<td class=center bgcolor="#FFFFFF"><br><IMG SRC="fig/cutters.gif" HEIGHT=25 WIDTH=22></TD>
+<td class=center><img class=tool src="../fig/cut_curs.gif"></td>
+<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/cutters.gif" HEIGHT=25 WIDTH=22></TD>
 <td class=center>F2</TD>
 <td>The <B>Wire Cutter</B> tool is indicated by the wire cutter cursor.&nbsp; 
 Use this tool to cut wires by clicking on the wire at the point you want
@@ -319,24 +317,22 @@ automatically.</TD>
 
 <tr><td colspan=4><hr></td></tr>
 <tr>
-<td class=center><img class=tool src="fig/inv_curs.gif"></td>
-<td class=center bgcolor="#FFFFFF"><br><IMG SRC="fig/invaddel.gif" HEIGHT=24 WIDTH=30></TD>
+<td class=center><img class=tool src="../fig/inv_curs.gif"></td>
+<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/invaddel.gif" HEIGHT=24 WIDTH=30></TD>
 <td class=center>F3</TD>
 <td>The <B>Inverter </B>tool is indicated by the inverter bubble grabber
 cursors.&nbsp;  Use this tool to add or remove inverter bubbles on the inputs
 and outputs of gates.&nbsp;  Click the cursor near an input or
 output to converter a non-inverting port to an inverting port or vice-versa.</TD>
-</TR>
-
-<tr><td colspan=4><hr></td></tr>
+</TR><tr><td colspan=4><hr></td></tr>
 <tr>
-<td class=center><img class=tool src="fig/size_curs.gif"></td>
-<td class=center bgcolor="#FFFFFF"><br><IMG SRC="fig/wsize.gif" HEIGHT=19 WIDTH=26></TD>
+<td class=center><img class=tool src="../fig/size_curs.gif"></td>
+<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/wsize.gif" HEIGHT=19 WIDTH=26></TD>
 <td class=center>F4</TD>
 <td>The <B>Wire Size/Type</B> tool is indicated by the ribbon cable
 cursor.  Use this mode to change the bit width of a wire or the type
 of wire.  The desired bit width and wire type should be selected in
-the selector boxes next to the <img class=tool src="fig/size_curs.gif"> button on
+the selector boxes next to the <img class=tool src="../fig/size_curs.gif"> button on
 the Mode toolbar.  Any wires that are clicked on will have their size
 and type changed to the selected size/type.  The wire type affects how
 the wire's value will be set when multiple gates drive a wire.  You
@@ -1296,8 +1292,8 @@ fit into a single quadrant to be grouped and printed on the same page.&nbsp;
 <H3>2.11 Circuit Properties</H3>
 
 <div class=rfig>
-<a href="fig/circprop_general.gif" type="image/gif" target=_blank>
-<IMG SRC="fig/small-circprop_general.gif"><br>
+<a href="../fig/circprop_general.png" type="image/gif" target=_blank>
+<IMG SRC="../fig/circprop_general-small.png"><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.29: General Circuit Properties</b>
 </div>
@@ -1345,8 +1341,8 @@ circuit.
 <br style="clear: right;">
 
 <div class=rfig>
-<a href="fig/circprop_simulation.gif" type="image/gif" target=_blank>
-<IMG SRC="fig/small-circprop_simulation.gif"><br>
+<a href="../fig/circprop_simulation.gif" type="image/gif" target=_blank>
+<IMG SRC="../fig/small-circprop_simulation.gif"><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.30: Simulation Circuit Properties</b>
 </div>
@@ -1362,12 +1358,12 @@ current directory, the directory containing the circuit file and the
 user's home directory will be searched for the file.
 
 <li><b>Clock Options:</b> Indicates the behavior of the clock step
-command <img class=tool src="fig/sim_clock.gif"> or Tab key when in
+command <img class=tool src="../fig/sim_clock.gif"> or Tab key when in
 simulation mode.  If "<i>Clock step stops on all clock posedges</i>"
-is selected, then the <img class=tool src="fig/sim_clock.gif"> button will
+is selected, then the <img class=tool src="../fig/sim_clock.gif"> button will
 cause the simulation to advance until the rising edge of any clock in
 the circuit.  If "<i>Clock step stops on clock:</i> is selected, then
-the <img class=tool src="fig/sim_clock.gif"> button will cause the
+the <img class=tool src="../fig/sim_clock.gif"> button will cause the
 simulation to advance until a rising edge on the specified clock.  All
 other clocks will be ignored.
 
