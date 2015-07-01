@@ -680,6 +680,79 @@ can also change wire bit widths and types using the Wire Properties dialog box.
 					</tbody>
 				</tgroup>
 			</table>
+			<bridgehead renderas="sect2">Creating Gates</bridgehead>
+			<para>
+			There are three main ways to create gates in TkGate: using the menu
+bar, using pop-up menus, and using keyboard shortcuts.  Once you have
+mastered the keyboard shortcuts, that is generally the preferred way to
+create gates.  These three methods are described in the following
+sections.
+      </para>
+      <bridgehead renderas="sect3">Creating a Gate Using the Menu Bar</bridgehead>
+      <figure>
+        <title>Creating a Gate</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="../fig/create1.gif" />
+          </imageobject>
+          <caption><para>1) Left click to select the point.</para></caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="../fig/create2.gif" />
+          </imageobject>
+          <caption><para>2) Select gate type from menu bar.</para></caption>
+        </mediaobject>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="../fig/create3.gif" />
+          </imageobject>
+          <caption><para>3) Gate is created at location set by point.</para></caption>
+        </mediaobject>
+      </figure>
+      <para>
+<emphasis role="strong">1)</emphasis> To create a gate such as a NAND gate,
+first select the Move/Connect tool <inlinegraphic fileref="../fig/mov_curs.gif"/>,
+and then press the left mouse button at the position you wish to
+create it.  While you are holding the mouse button down, the cursor
+will change to an outline arrow to indicate the current orientation.
+In the case shown at the left, the current orientation is 0 degrees indicating
+the standard orientation.
+      </para>
+      <para>
+When you release the button the arrow will disappear and the mark
+symbol will remain.  The mark indicates the center point for the new
+circuit element.  Clicking the left mouse button at another location
+will move the mark, and selecting a gate or wire will clear the
+mark.
+      </para>
+      <para>
+<emphasis role="strong">2)</emphasis> Select the gate type by opening the
+"Make" menu.  The circuit elements are organized into seven basic categories:
+      </para>
+<itemizedlist>
+  <listitem><para>"I/O" types include switches, dip switches, power sources, clocks, etc.</para></listitem>
+  <listitem><para>"Gate" types include the basic logic gates such as AND and OR gates.</para></listitem>
+  <listitem><para>"Reduction" types include reduction versions of the basic gates types
+  which combine multi-bit signals into a single bit.</para></listitem>
+  <listitem><para>"MSI/LSI" types include MUXES, DEMUXES, etc.</para></listitem>
+  <listitem><para>"ALU" types include adders, multiplier, shifters, etc.</para></listitem>
+  <listitem><para>"Memory" types include registers, RAMs, ROMs, etc.</para></listitem>
+  <listitem><para>"Module" types include module blocks and ports.</para></listitem>
+</itemizedlist>
+      <para>
+There are also two additional non-circuit element objects that can be
+created.  A "Comment" is an arbitrary block of text that can be used
+to add documentation to your circuit, and a "Frame" is a labeled box
+that you can place around a portion of your circuit.
+      </para>
+      <para>
+<emphasis role="strong">3)</emphasis> After selecting the menu option or typing the shortcut, the
+circuit element will be created and displayed in bold to indicate that
+it is selected.  While the gate is still selected, you can press the
+<inlinegraphic fileref="../fig/edit_rotate.gif"/> toolbar button or press the Tab key to
+rotate the gate to the desired orientation.
+      </para>
 		</section>
 	</chapter>
 </book>
