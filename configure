@@ -2873,7 +2873,7 @@ $as_echo "#define TKGATE_FULL_VERSION (TKGATE_VERSION TKGATE_VERSION_SUFFIX)" >>
 $as_echo "#define TKGATE_DESCRIPTION \"Digital Circuit Editor and Simulator\"" >>confdefs.h
 
 
-$as_echo "#define TKGATE_LOCALDOC \"file:@H/doc/index.html\"" >>confdefs.h
+$as_echo "#define TKGATE_LOCALDOC \"file:@H/doc/@L/index.html\"" >>confdefs.h
 
 
 $as_echo "#define TKGATE_COPYRIGHT \"Copyright (C) 1987-2015 by Jeffery P. Hansen\"" >>confdefs.h
