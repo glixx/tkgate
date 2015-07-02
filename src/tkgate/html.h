@@ -21,11 +21,18 @@
 /*
  * HTML unit types
  */
-#define HU_TEXT		0			/* Text string */
-#define HU_RULE		1			/* Horizontal rule */
-#define HU_BREAK	2			/* Line break */
-#define HU_NEWLINE	3			/* New line */
-#define HU_IMAGE	4			/* In-line image */
+typedef enum {
+	HU_TEXT = 0,
+#define HU_TEXT		HU_TEXT		/* Text string */
+	HU_RULE = 1,
+#define HU_RULE		HU_RULE		/* Horizontal rule */
+	HU_BREAK = 2,
+#define HU_BREAK	HU_BREAK	/* Line break */
+	HU_NEWLINE = 3,
+#define HU_NEWLINE	HU_NEWLINE	/* New line */
+	HU_IMAGE = 4
+#define HU_IMAGE	HU_IMAGE	/* In-line image */
+} HUTypes_t;
 
 /*
  * Types of html elements
@@ -75,24 +82,24 @@ struct HtmlFont_str {
  *
  */
 struct HtmlContext_str {
-  HtmlFont		hc_font;		/* Font */
-  int			hc_pixel;		/* Pixel color */
+  HtmlFont		 hc_font;		/* Font */
+  int			 hc_pixel;		/* Pixel color */
 
   char			*hc_link;		/* Associated hyperlink */
   char			*hc_tag;		/* Associated tag */
-  int			hc_preformat;		/* Are we in preformating mode */
+  int			 hc_preformat;		/* Are we in preformating mode */
 
-  HtmlContext		*hc_next;		/* Next item in stack */
+  HtmlContext	*hc_next;		/* Next item in stack */
 
   /*
    *     These are informational members computed automatically
    */
   Html			*hc_html;		/* Parent html object */
   XFontStruct		*hc_xFont;		/* The XFontStruct font definition */
-  int			hc_is16bit;		/* Is this a 16-bit font (e.g., Japanese) */
-  int			hc_spaceWidth;		/* Width of a space */
-  int			hc_ascent;		/* Ascent of the current font */
-  int			hc_descent;		/* Descent of the current font */
+  int			 hc_is16bit;		/* Is this a 16-bit font (e.g., Japanese) */
+  int			 hc_spaceWidth;		/* Width of a space */
+  int			 hc_ascent;		/* Ascent of the current font */
+  int			 hc_descent;		/* Descent of the current font */
 };
 
 /*
@@ -103,13 +110,12 @@ struct HtmlContext_str {
  *
  */
 struct HtmlUnit_str {
-  int			hu_type;		/* Type of unit */
+  HUTypes_t		 hu_type;		/* Type of unit */
   char			*hu_text;		/* Text in the unit */
-  int			hu_x,hu_y;		/* Position of unit (relative to block origin) */
-  HtmlContext		*hu_context;		/* Context of the unit */
-  int			hu_width;		/* Width of this unit */
-  Tk_Image		hu_image;		/* Image if this is an image unit */
-
+  int			 hu_x,hu_y;		/* Position of unit (relative to block origin) */
+  HtmlContext	*hu_context;	/* Context of the unit */
+  int			 hu_width;		/* Width of this unit */
+  Tk_Image		 hu_image;		/* Image if this is an image unit */
   HtmlUnit		*hu_next;
   HtmlUnit		*hu_prev;
 };
@@ -127,8 +133,8 @@ typedef struct {
  * HtmlTag - A parsed html tag
  */
 typedef struct {
-  char		*ht_name;			/* Name of this tag */
-  int		ht_numOptions;			/* Number of options in tag */
+  char			*ht_name;			/* Name of this tag */
+  int			 ht_numOptions;			/* Number of options in tag */
   HtmlTagOpt	*ht_options;			/* Options */
 } HtmlTag;
 
@@ -136,34 +142,34 @@ typedef struct {
  * Html - Block of html formatted text.
  */
 struct Html_str {
-  Locale	*h_locale;			/* Locale used to construct html */
+  Locale		*h_locale;			/* Locale used to construct html */
 
-  TargetDev_e	h_target;			/* Is this formatted for print or x11 display */
+  TargetDev_e	 h_target;			/* Is this formatted for print or x11 display */
 
-  int		h_reqWidth;			/* Requested width */
-  int		h_width;			/* Actual width */
-  int		h_height;			/* Actual height */
-  int		h_isVisible;			/* Are there any visible characters */
+  int			 h_reqWidth;		/* Requested width */
+  int			 h_width;			/* Actual width */
+  int			 h_height;			/* Actual height */
+  int			 h_isVisible;		/* Are there any visible characters */
 
-  int		h_zoom;				/* Zoom level used for formatting */
+  int			 h_zoom;			/* Zoom level used for formatting */
 
-  int		h_dataLen;			/* Length of data */
-  char		*h_data;			/* Data for html formatting */
+  int			 h_dataLen;			/* Length of data */
+  char			*h_data;			/* Data for html formatting */
 
   HtmlContext	*h_context;			/* The context stack used in formatting */
-  HtmlContext	*h_contextPool;			/* Dequeued but possibly in-use context objects */
+  HtmlContext	*h_contextPool;		/* Dequeued but possibly in-use context objects */
 
-  HtmlUnit	*h_head;			/* Pointer to first html unit */
-  HtmlUnit	*h_tail;			/* Pointer to last html unit */
+  HtmlUnit		*h_head;			/* Pointer to first html unit */
+  HtmlUnit		*h_tail;			/* Pointer to last html unit */
 };
 
-Html *new_Html(TargetDev_e target);		/* Create a new html object */
+Html *new_Html(TargetDev_e target);	/* Create a new html object */
 void delete_Html(Html*);			/* Delete an html object */
 void Html_addLine(Html*,const char *line);	/* Add a line to html object */
 void Html_format(Html*);			/* Format the html object */
-void Html_draw(Html*,int x,int y);		/* Draw at specified position */
-int Html_isHit(Html*,int x,int y);		/* Is a hit at (x,y) inside formatted object? */
-const char *Html_getLink(Html*,int x,int y);	/* Get hyperlink referenced at (x,y) */
+void Html_draw(Html*,int x,int y);	/* Draw at specified position */
+int Html_isHit(Html*,int x,int y);	/* Is a hit at (x,y) inside formatted object? */
+const char *Html_getLink(Html*,int x,int y); /* Get hyperlink referenced at (x,y) */
 
 void Html_psPrint(Html *h,GPrint *P,int x,int y);
 
@@ -172,8 +178,8 @@ HtmlFont *HtmlFont_init(HtmlFont*,fontfamily_t,fontprop_t,fontsize_t);
 void HtmlFont_print(HtmlFont*,FILE*);
 void HtmlContext_print(const HtmlContext * context, FILE * fp);
 
-int Hyperlink_selectAt(int x,int y);		/* Select a hyperlink at (x,y) in response to mouse down */
-int Hyperlink_confirmAt(int x,int y);		/* Confirm a hyperlink at (x,y) in response to mouse up */
+int Hyperlink_selectAt(int x,int y);	/* Select a hyperlink at (x,y) in response to mouse down */
+int Hyperlink_confirmAt(int x,int y);	/* Confirm a hyperlink at (x,y) in response to mouse up */
 void Hyperlink_cancel();			/* Cancel any selected hyperlink */
 int Hyperlink_isPending();
 const char *Hyperlink_getAt(int x,int y);	/* Return the hyperlink at the specified location */

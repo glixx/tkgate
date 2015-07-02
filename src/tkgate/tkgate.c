@@ -434,7 +434,6 @@ void commandLinePrint()
   GPrintOpt PO;
   extern PaperSize paperSizes[];
 
-
   TkGate.tcl = 0;
   init_gates();
   TkGate.ed = (EditData*) malloc(sizeof(EditData));
@@ -911,6 +910,7 @@ void init_TkGate()
   memset(&TkGate,0,sizeof(TkGate));
   TkGate.libraries = new_SHash();
   TkGate.homedir = tkgateHomeDir;
+  TkGate.zoomedDraw = &ZoomXlib;
 }
 
 /*****************************************************************************

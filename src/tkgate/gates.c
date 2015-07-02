@@ -469,13 +469,12 @@ void gate_doReplication(EditState *es)
   int sx,sy,ex,ey,dx,dy,h,w,n,bd,num;
 
   g = TkGate.circuit->select;
-  ZDrawLine(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
+  TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
 
   (*g->typeinfo->GetExtents)(g,TD_X11,&sx,&sy,&ex,&ey,&bd);
 
   w = ex-sx + bd;
   h = ey-sy + bd;
-
 
   sx = g->xpos;
   sy = g->ypos;

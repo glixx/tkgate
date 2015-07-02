@@ -28,7 +28,6 @@
  */
 #define p_tolower(c) (isupper(c) ? tolower(c) : (c))
 
-
 const char *
 article(const char *m)
 {
@@ -56,7 +55,7 @@ strend(char *s)
 }
 
 /*
- * return the cpu type. 
+ * return the cpu type.
  */
 char *
 GetSysType()
@@ -318,7 +317,7 @@ getNextToken(char **text, char **token_begin, char **token_end)
 	for (;;) {
 
 		/*
-		 * Skip any whitespace 
+		 * Skip any whitespace
 		 */
 		for (; *p; p++) {
 			if (!isspace(*p))
@@ -593,7 +592,6 @@ strdup(const char *s)
 	return d;
 }
 #endif
-
 
 int
 rotateX(int x, int y, int r)

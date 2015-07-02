@@ -257,7 +257,6 @@ struct EditData_str {
 
   int scr_x,scr_y;		/* Scrolling origin point */
 
-
   /*
    * Used for hand scroll
    */
@@ -395,6 +394,8 @@ struct TkGateParams_str {
   SHash		*localeNameTable;	/* Locales by full name */
   int		japaneseMode;		/* Are we in Japanese mode? */
 
+  ZoomVTable	*zoomedDraw;	/* Vtable of the singleton abstract drawing class */
+
   char *errorLogFile;
   char *siteName;
   char *defaultTech;
@@ -421,8 +422,6 @@ typedef struct{
 
 int Tkg_GetColor(const char *name);
 
-
-
 void configureMainWindow(Tcl_Interp *);
 void message(int,const char*,...);
 
@@ -433,7 +432,6 @@ void logError(int code,const char *fname,int lnum,const char *s,...);
 
 void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs);
 void GCellSpec_writeEndModule(FILE *f,GCellSpec *gcs);
-
 
 unsigned transition_type(int from,int to);
 
@@ -447,12 +445,10 @@ void SetUpCursors();
 void MouseoverCursor(int cursorType);
 void MakeHashTables();
 
-
 int DoTcl(const char*,...);
 int DoTclL(const char*,...);
 int DoTclV(const char*,int,const char**);
 void InitTclProcs(Tcl_Interp *tcl);
-
 
 void mark_draw();
 void mark_flush();
@@ -482,7 +478,6 @@ void ClearModified();
 void UpdateModifiedIndicator();
 void FlagRedraw();
 void SynchronizeInterface();
-
 
 void SetBatCursor();
 void ClearErrorMark();

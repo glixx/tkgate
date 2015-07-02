@@ -55,7 +55,6 @@ Special pre-processed tags:
 //
 //#include <X11/Xatom.h>
 
-
 /*
  * Step size for extending the array of html tag options.
  */
@@ -70,7 +69,7 @@ typedef void HtmlHandlerFunc(Html *h,HtmlTag *tag);
  */
 typedef struct {
   char			*tag;		/* Tag */
-  HtmlHandlerFunc	*func;	        /* Handling function for tag */
+  HtmlHandlerFunc	*func;/* Handling function for tag */
 } HtmlHandler;
 
 typedef struct {
@@ -243,7 +242,6 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
   {0,0,0,0}
 };
 
-
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
@@ -254,7 +252,6 @@ static HtmlContext default_context = {
   1,
   0
 };
-
 
 int istruevalue(const char *s)
 {
@@ -297,7 +294,6 @@ void HtmlFont_updatePoints(HtmlFont *font)
     font->points = getFontSize(font->size);
 }
 
-
 HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,fontsize_t points)
 {
   int i;
@@ -323,7 +319,7 @@ HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,font
 
 HtmlTag *new_HtmlTag()
 {
-  HtmlTag *ht = (HtmlTag*) ob_malloc(sizeof(HtmlTag),"HtmlTag");
+  HtmlTag *ht = OM_MALLOC(HtmlTag);
 
   ht->ht_name = 0;
   ht->ht_numOptions = 0;
@@ -340,7 +336,7 @@ void delete_HtmlTag(HtmlTag *ht)
 
     for (i = 0;i < ht->ht_numOptions;i++) {
       ob_free(ht->ht_options[i].hto_label);
-     ob_free(ht->ht_options[i].hto_value);
+      ob_free(ht->ht_options[i].hto_value);
     }
 
     ob_free(ht->ht_options);
@@ -441,7 +437,6 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 {
   ob_touch(hc);
 
-
   switch (hc->hc_html->h_target) {
   case TD_X11 :
 #ifdef DEBUG
@@ -525,7 +520,7 @@ static HtmlUnit *new_HtmlUnit(const char *text,int len,HtmlContext *hc)
 
 static HtmlUnit *new_HtmlUnit_T(int htype,HtmlContext *hc)
 {
-  HtmlUnit *hu = ob_malloc(sizeof(HtmlUnit),"HtmlUnit");
+  HtmlUnit *hu = OM_MALLOC(HtmlUnit);
 
   hu->hu_type = htype;
   hu->hu_text =0;
@@ -549,7 +544,7 @@ static void delete_HtmlUnit(HtmlUnit *hu)
 
 Html *new_Html(TargetDev_e target)
 {
-  Html *h = (Html*) ob_malloc(sizeof(Html),"Html");
+  Html *h = OM_MALLOC(Html);
 
   h->h_reqWidth = 100;
   h->h_width = h->h_reqWidth;
@@ -1262,6 +1257,8 @@ void Html_format(Html *h)
       max_descent = HtmlContext_fontDescent(hc);
 
     switch (hu->hu_type) {
+	case HU_RULE :
+	  /* fall through */
     case HU_BREAK :
       if (x == 0) break;		/* Do a newline only if we are not already on a newline */
       /* fall through */
@@ -1348,7 +1345,7 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  * Draw a block of html text.
  *
  *****************************************************************************/
-void Html_draw(Html *h,int x,int y)
+void Html_draw(Html *h, int x, int y)
 {
   GC gc = TkGate.commentGC;
   GC igc = TkGate.imageGC;
@@ -1361,7 +1358,7 @@ void Html_draw(Html *h,int x,int y)
   Locale_print(h->h_locale, stdout);
 #endif
 
-  for (hu = h->h_head;hu;hu = hu->hu_next) {
+  for (hu = h->h_head; hu; hu = hu->hu_next) {
     HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
 #ifdef DEBUG
   HtmlContext_print(hc,stdout);
@@ -1387,7 +1384,7 @@ void Html_draw(Html *h,int x,int y)
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
       } else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
-        XDrawString16( TkGate.D,
+	    XDrawString16( TkGate.D,
                        TkGate.W,
                        gc,
                        hu->hu_x + x,hu->hu_y + y,

@@ -49,9 +49,7 @@ int gat_scope(ClientData d,Tcl_Interp *tcl,int argc,const char *argv[]);
  *****************************************************************************/
 TkGateParams TkGate;
 
-
 static int did_doubleclick = 0;	/* Did we just do a double click */
-
 
 static Tk_ConfigSpec configSpecs[] = {
   {TK_CONFIG_COLOR, "-background", "background", "Background",     		"white", Tk_Offset(TkgGateWin,bgColor), 0, 0},

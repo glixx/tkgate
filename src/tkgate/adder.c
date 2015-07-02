@@ -27,7 +27,6 @@
 
 static void Adder_WriteCellDef(FILE *f,GCellSpec *gcs);
 
-
 static iconDimensions add_iconDims[] = {
   {0,  0,  59, 28, 29, 15},
   {60, 0,  28, 59, 15, 29},
