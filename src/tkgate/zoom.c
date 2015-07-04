@@ -19,13 +19,9 @@
 
 #define Z TkGate.circuit->zoom_factor
 
-ZoomVTable ZoomXlib = { ZDrawLine, ZDrawLines };
-
-ZoomVTable ZoomXft = { NULL, NULL };
-
-void ZDrawLine(Drawable d,GC gc,int x1,int y1,int x2,int y2)
+void ZDrawLine(Display *D,Drawable d,GC gc,int x1,int y1,int x2,int y2)
 {
-  XDrawLine(TkGate.D,d,gc,Z*x1,Z*y1,Z*x2,Z*y2);
+  XDrawLine(D,d,gc,Z*x1,Z*y1,Z*x2,Z*y2);
 }
 
 void ZDrawLines(Display *D,Drawable d,GC gc,XPoint *points,int npoints,int mode)

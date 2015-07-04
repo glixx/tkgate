@@ -203,9 +203,9 @@ void AOX_Draw(GCElement *g,int md)
     AOX_extBarCoords(g,1,x1,y1,x2,y2,&b_dx,&b_dy);
 
     for (i = 0;i < 2;i++) {
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x1[i],y1[i],x2[i],y2[i]);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x1[i],y1[i],x2[i],y2[i]);
       if (g->selected)
-	TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x1[i]+b_dx,y1[i]+b_dy,x2[i]+b_dx,y2[i]+b_dy);
+	ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x1[i]+b_dx,y1[i]+b_dy,x2[i]+b_dx,y2[i]+b_dy);
     }
   }
 }

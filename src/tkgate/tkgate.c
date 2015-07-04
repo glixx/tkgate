@@ -910,7 +910,6 @@ void init_TkGate()
   memset(&TkGate,0,sizeof(TkGate));
   TkGate.libraries = new_SHash();
   TkGate.homedir = tkgateHomeDir;
-  TkGate.zoomedDraw = &ZoomXlib;
 }
 
 /*****************************************************************************

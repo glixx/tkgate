@@ -45,7 +45,7 @@ int debugmode = 0;
  *****************************************************************************/
 void line(int x1,int y1,int x2,int y2)
 {
-  TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.toolGC,ctow_x(x1), ctow_y(y1), ctow_x(x2), ctow_y(y2));
+  ZDrawLine(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(x1), ctow_y(y1), ctow_x(x2), ctow_y(y2));
 }
 
 /*****************************************************************************
@@ -56,7 +56,7 @@ void line(int x1,int y1,int x2,int y2)
  *****************************************************************************/
 void box(int x,int y,int w,int h)
 {
-  TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.toolGC,ctow_x(x),ctow_y(y),w,h);
+  ZDrawRectangle(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(x),ctow_y(y),w,h);
 }
 
 /*****************************************************************************
@@ -319,7 +319,7 @@ void setrubberband(EditState *es)
   TkGate.ed->lx = TkGate.ed->sx = TkGate.ed->tx;
   TkGate.ed->lx = TkGate.ed->sy = TkGate.ed->ty;
 
-  TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
+  ZDrawLine(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
 }
 
 /*****************************************************************************
@@ -329,8 +329,8 @@ void setrubberband(EditState *es)
  *****************************************************************************/
 void moverubberband(EditState *es)
 {
-  TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->lx),ctow_y(TkGate.ed->ly));
-  TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
+  ZDrawLine(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->lx),ctow_y(TkGate.ed->ly));
+  ZDrawLine(TkGate.D,TkGate.W,TkGate.toolGC,ctow_x(TkGate.ed->sx),ctow_y(TkGate.ed->sy),ctow_x(TkGate.ed->tx),ctow_y(TkGate.ed->ty));
 }
 
 /*****************************************************************************

@@ -289,43 +289,43 @@ void Concat_Draw(GCElement *g,int md)
 
   switch (g->orient) {
   case 0 :
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y+L/2,x,y-L/2);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y+L/2+1,x-CONCAT_HOOK,y+L/2+1);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y-L/2-1,x-CONCAT_HOOK,y-L/2-1);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y+L/2,x,y-L/2);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y+L/2+1,x-CONCAT_HOOK,y+L/2+1);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y-L/2-1,x-CONCAT_HOOK,y-L/2-1);
     if (g->selected) {
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x-1,y+L/2,x-1,y-L/2);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y+L/2+2,x-CONCAT_HOOK,y+L/2+2);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y-L/2-2,x-CONCAT_HOOK,y-L/2-2);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x-1,y+L/2,x-1,y-L/2);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y+L/2+2,x-CONCAT_HOOK,y+L/2+2);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y-L/2-2,x-CONCAT_HOOK,y-L/2-2);
     }
     break;
   case 1 :
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2,y,x-L/2,y);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2+1,y,x+L/2+1,y+CONCAT_HOOK);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x-L/2-1,y,x-L/2-1,y+CONCAT_HOOK);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2,y,x-L/2,y);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2+1,y,x+L/2+1,y+CONCAT_HOOK);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x-L/2-1,y,x-L/2-1,y+CONCAT_HOOK);
     if (g->selected) {
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2,y+1,x-L/2,y+1);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2+2,y,x+L/2+2,y+CONCAT_HOOK);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x-L/2-2,y,x-L/2-2,y+CONCAT_HOOK);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2,y+1,x-L/2,y+1);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2+2,y,x+L/2+2,y+CONCAT_HOOK);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x-L/2-2,y,x-L/2-2,y+CONCAT_HOOK);
     }
     break;
   case 2 :
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y+L/2,x,y-L/2);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y+L/2+1,x+CONCAT_HOOK,y+L/2+1);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y-L/2-1,x+CONCAT_HOOK,y-L/2-1);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y+L/2,x,y-L/2);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y+L/2+1,x+CONCAT_HOOK,y+L/2+1);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y-L/2-1,x+CONCAT_HOOK,y-L/2-1);
     if (g->selected) {
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+1,y+L/2,x+1,y-L/2);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y+L/2+2,x+CONCAT_HOOK,y+L/2+2);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x,y-L/2-2,x+CONCAT_HOOK,y-L/2-2);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+1,y+L/2,x+1,y-L/2);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y+L/2+2,x+CONCAT_HOOK,y+L/2+2);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x,y-L/2-2,x+CONCAT_HOOK,y-L/2-2);
     }
     break;
   case 3 :
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2,y,x-L/2,y);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2+1,y,x+L/2+1,y-CONCAT_HOOK);
-    TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x-L/2-1,y,x-L/2-1,y-CONCAT_HOOK);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2,y,x-L/2,y);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2+1,y,x+L/2+1,y-CONCAT_HOOK);
+    ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x-L/2-1,y,x-L/2-1,y-CONCAT_HOOK);
     if (g->selected) {
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2,y-1,x-L/2,y-1);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x+L/2+2,y,x+L/2+2,y-CONCAT_HOOK);
-      TkGate.zoomedDraw->drawLine(TkGate.W,TkGate.instGC,x-L/2-2,y,x-L/2-2,y-CONCAT_HOOK);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2,y-1,x-L/2,y-1);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x+L/2+2,y,x+L/2+2,y-CONCAT_HOOK);
+      ZDrawLine(TkGate.D,TkGate.W,TkGate.instGC,x-L/2-2,y,x-L/2-2,y-CONCAT_HOOK);
     }
     break;
   }

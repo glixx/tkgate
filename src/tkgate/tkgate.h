@@ -394,8 +394,6 @@ struct TkGateParams_str {
   SHash		*localeNameTable;	/* Locales by full name */
   int		japaneseMode;		/* Are we in Japanese mode? */
 
-  ZoomVTable	*zoomedDraw;	/* Vtable of the singleton abstract drawing class */
-
   char *errorLogFile;
   char *siteName;
   char *defaultTech;

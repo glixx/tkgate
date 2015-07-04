@@ -207,13 +207,13 @@ int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
     y_w = fontheight(F);
 
     if (p & BetweenLeftAndRight) {
-      TkGate.zoomedDraw->drawLine(W,gc,x - x_w/2,y - 2*y_w/3,
+      ZDrawLine(TkGate.D,W,gc,x - x_w/2,y - 2*y_w/3,
 		x + x_w/2,y - 2*y_w/3);
     } else if (p & AtRight) {
-      TkGate.zoomedDraw->drawLine(W,gc,x - x_w,y - 2*y_w/3,
+      ZDrawLine(TkGate.D,W,gc,x - x_w,y - 2*y_w/3,
 		x,y - 2*y_w/3);
     } else if (p & AtLeft) {
-      TkGate.zoomedDraw->drawLine(W,gc,x,y - 2*y_w/3,
+      ZDrawLine(TkGate.D,W,gc,x,y - 2*y_w/3,
 		x + x_w,y - 2*y_w/3);
     }
   } else

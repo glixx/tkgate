@@ -300,7 +300,7 @@ void Frame_Draw(GCElement *g,int md)
       points[4].y = y;
       points[5].x = x+10;
       points[5].y = y;
-      TkGate.zoomedDraw->drawLines(TkGate.D,TkGate.W,TkGate.frameGC,points,6,CoordModeOrigin);
+      ZDrawLines(TkGate.D,TkGate.W,TkGate.frameGC,points,6,CoordModeOrigin);
     } else {
       points[0].x = x+g->u.frame.width;
       points[0].y = y+8;
@@ -312,7 +312,7 @@ void Frame_Draw(GCElement *g,int md)
       points[3].y = y;
       points[4].x = x+10;
       points[4].y = y;
-      TkGate.zoomedDraw->drawLines(TkGate.D,TkGate.W,TkGate.frameGC,points,5,CoordModeOrigin);
+      ZDrawLines(TkGate.D,TkGate.W,TkGate.frameGC,points,5,CoordModeOrigin);
     }
   }
 

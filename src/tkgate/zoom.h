@@ -18,30 +18,7 @@
 #ifndef __zoom_h
 #define __zoom_h
 
-typedef struct {
-
-	void (*drawLine)(
-	  Drawable d,
-	  GC gc,
-	  int x1,
-	  int y1,
-	  int x2,
-	  int y2);
-
-	void (*drawLines)(
-	  Display *display,
-	  Drawable d,
-	  GC gc,
-	  XPoint *points,
-	  int npoints,
-	  int mode);
-
-} ZoomVTable;
-
-extern ZoomVTable ZoomXlib;
-extern ZoomVTable ZoomXft;
-
-void ZDrawLine(Drawable d,GC gc,int x1,int y1,int x2,int y2);
+void ZDrawLine(Display *display,Drawable d,GC gc,int x1,int y1,int x2,int y2);
 void ZDrawLines(Display *display,Drawable d,GC gc,XPoint *points,int npoints,int mode);
 void ZDrawRectangle(Display *display, Drawable d,GC gc,int x,int y,unsigned width,unsigned height);
 void ZFillRectangle(Display *display, Drawable d,GC gc,int x,int y,unsigned width,unsigned height);

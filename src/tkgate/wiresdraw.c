@@ -232,7 +232,7 @@ void wire_drawend(GWireNode *n,GWireNode *n2,int s,short *x,short *y)
     y1 += yval[r]*5;
     y2 -= yval[r]*5;
 
-    TkGate.zoomedDraw->drawLine(TkGate.W, TkGate.instGC, x1,y1, x2,y2);
+    ZDrawLine(TkGate.D, TkGate.W, TkGate.instGC, x1,y1, x2,y2);
   }
 
   *x += 5*xval[d]*inv;
@@ -296,7 +296,7 @@ void GWire_draw(GWire *w)
     tweekPoint(&p[0],&p[1]);
     tweekPoint(&p[k-1],&p[k-2]);
 
-    TkGate.zoomedDraw->drawLines(TkGate.D,TkGate.W,gc,p,k,CoordModeOrigin);
+    ZDrawLines(TkGate.D,TkGate.W,gc,p,k,CoordModeOrigin);
   } else {
     GC gc = (w1->net == TkGate.circuit->nsel) ? TkGate.selWireGC : TkGate.wireGC;
 
@@ -304,7 +304,7 @@ void GWire_draw(GWire *w)
       tweekPoint(&p[0],&p[1]);
       tweekPoint(&p[k-1],&p[k-2]);
     }
-    TkGate.zoomedDraw->drawLines(TkGate.D,TkGate.W,gc,p,k,CoordModeOrigin);
+    ZDrawLines(TkGate.D,TkGate.W,gc,p,k,CoordModeOrigin);
   }
 
   if (w1->cpath && TkGate.cpath_flashState) {
