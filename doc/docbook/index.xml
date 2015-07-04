@@ -3,7 +3,6 @@
 	"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 
 <book>
-
 	<bookinfo>
 		<title>TKGate 2.0</title>
 		<subtitle>User documentation</subtitle>
@@ -108,10 +107,12 @@ horizontal and vertical segments.
 			</para>
 		</abstract>
 		
-		<section>
+		<sect1>
 			<title>Command Line Options</title>
 			<para>Start TkGate with a command of the form:</para>
-			<para><command>% tkgate [options] [files ...]</command></para>
+			<para>
+				<command>% tkgate [options] [files ...]</command>
+			</para>
 			<table>
 				<title>TkGate command-line options list</title>
 				<tgroup cols="2">
@@ -230,17 +231,18 @@ horizontal and vertical segments.
 					</tbody>
 				</tgroup>
 			</table>
-	</section>
-		<section>
-		<title>
-			History of TkGate
-		</title>
-		<figure>
-			<title>xgate - An Early XLib Based Predecessor to TkGate</title>
-			<graphic fileref="../fig/small-xgate.gif"></graphic>
-		</figure>
-		<para>
-			TkGate begin life as an undergraduate project at Carnegie Mellon
+		</sect1>
+		
+		<sect1>
+			<title>History of TkGate</title>
+			<figure>
+				<title>
+xgate - An Early XLib Based Predecessor to TkGate
+				</title>
+				<graphic fileref="../fig/xgate-small.png" />
+			</figure>
+			<para>
+TkGate begin life as an undergraduate project at Carnegie Mellon
 University (CMU) in 1987. At that time it was called simply 'gate'
 and ran under the 'wm' window manager, a windowing system developed at
 CMU before X11 was widely used. This incarnation was used by students
@@ -250,21 +252,21 @@ for the circuit elements and mode cursors (such as the wire-cutter
 cursor) used today were originally designed in this version. This
 version also contained the hidden pancake recipe which is still in
 TkGate today.
-		</para>
-		<para>
+			</para>
+			<para>
 			After laying dormant for several years, it was resurrected in 1991 and
 ported to run under X11 with the Xlib API. A screenshot of this
 version, which was called "xgate", is shown in Figure 1.1. In this incarnation it was used several times by students in
 the introductory digital logic course, but after the author graduated
 and left CMU, it went into hibernation again.
-		</para>
-		<para>
+			</para>
+			<para>
 			Work on the first Tcl/Tk incarnation begun in 1998 as an exercise in
 learning Tcl/Tk. It was also the first version to use a Verilog-like
 save file format. Previous versions of gate/xgate used a Lisp-like
 save file format.
-		</para>
-		<para>
+			</para>
+			<para>
 			The current version, TkGate 2.0, represents a substantial effort over
 the previous 1.8 version. Whereas TkGate 1.8 was comprised of
 approximately 73,000 lines of C and Tcl, TkGate 2.0 nearly doubles
@@ -273,8 +275,8 @@ improvements added to TkGate 2.0 include an improved user interface,
 true Verilog format save files, Verilog-based simulation, a module
 interface editor, symbolic module interfaces and virtual peripheral
 devices.
-		</para>
-	</section>
+			</para>
+		</sect1>
 	</chapter>
 
 	<chapter>
@@ -285,13 +287,14 @@ This chapter will introduce the basic concepts needed to create a
 graphical circuit in TkGate.
 			</para>
 		</abstract>
-		<section>
-		<title>Understanding the TKGate Interface</title>
-		<figure>
-			<title>TkGate Main Window</title>
-			<graphic fileref="../fig/tkgatewindow-small.png"></graphic>
-		</figure>
-		<para>
+		
+		<sect1>
+			<title>Understanding the TKGate Interface</title>
+			<figure>
+				<title>TkGate Main Window</title>
+				<graphic fileref="../fig/tkgatewindow-small.png"></graphic>
+			</figure>
+			<para>
 The main components of the TKGate edit window consists of a menu bar
 and tool bar at the top, the module, net and port lists on the left, a
 status bar on the bottom, and the main editing area in the center.
@@ -300,23 +303,28 @@ mode for editing your circuit, "Interface" mode for editing the
 interface of any modules you define, and "Simulate" mode for
 simulating your circuit. Scroll bars can be used to scroll the
 circuit, the list of modules or the list of nets.
-		</para>
-		<bridgehead renderas="sect2">Main Menu</bridgehead>
-		<para>
+			</para>
+			<sect2>
+				<title>Main Menu</title>
+				<para>
 The TkGate menu bar appears at the top edge of the main window and is
 arranged by category. The menus that are available can change when
 you enter different modes (e.g., editing versus simulation).
-		</para>
-		<bridgehead renderas="sect2">Pop-up Menus</bridgehead>
-		<para>
+				</para>
+			</sect2>
+			<sect2>
+				<title>Pop-up Menus</title>
+				<para>
 Many of the features described in this manual can also be accessed
 using the context sensitive pop-up menus. The pop-up menus are obtained
 by pressing the right mouse button, and the menu items that appear
 depend on what was selected. The menu that appears, depends on where
 you clicked and what the current mode is.
-		</para>
-		<bridgehead renderas="sect2">Toolbar</bridgehead>
-		<para>
+				</para>
+			</sect2>
+			<sect2>
+				<title>Toolbar</title>
+				<para>
 Frequently used commands can be accessed through the TkGate toolbar.
 These include commands for opening, saving and printing circuit files,
 changing the editing tool, opening and closing modules and controlling
@@ -324,9 +332,11 @@ the simulator. The toolbars that are displayed change dynamically with
 mode. You can also configure which toolbars you want to use on the
 Toolbars tab of the Options dialog box. A complete list of the toolbar
 buttons are given in the appendix List of Toolbar Buttons.
-		</para>
-		<bridgehead renderas="sect2">Keyboard Shortcuts</bridgehead>
-		<para>
+				</para>
+			</sect2>
+			<sect2>
+				<title>Keyboard Shortcuts</title>
+				<para>
 Many of the commands that can be accessed through the menu or toolbar
 can also be accessed through keyboard shortcuts. Commands for
 creating gates are typical single character letters. When possible,
@@ -336,9 +346,11 @@ file handling commands use Emacs-style shortcuts (e.g., "ctrl-c
 ctrl-s" to save, "ctrl-x ctrl-f" to load a file, etc.) If you prefer,
 you can choose to use Windows style shortcuts through the Interface tab
 on the options dialog box.
-		</para>
-		<bridgehead renderas="sect2">Module List and Module Hierarchy</bridgehead>
-		<para>
+				</para>
+			</sect2>
+			<sect2>
+				<title>Module List and Module Hierarchy</title>
+				<para>
 The modules defined in the current circuit can be shown as in an
 alphabetical list view (press <inlinegraphic fileref="../fig/modlist.gif"/>
 to select), or in a hierarchy view (press <inlinegraphic fileref="../fig/modtree.gif"/>
@@ -350,74 +362,78 @@ additional hierarchies with the loaded library parts and any unused
 modules. Modules and the module hierarchy are described in greater
 detail in Section 3.3 Module
 Hierarchy.
-		</para>
-		<bridgehead renderas="sect2">Net and Port Lists</bridgehead>
-		<para>
+				</para>
+			</sect2>
+			<sect2>
+				<title>Net and Port Lists</title>
+				<para>
 Below the module list in the lower-left corner of the main window is
 the list of nets or ports in the current module. A symbol precedes
 each net name depending on the type and whether the net is 1-bit or
 multi-bit as shown in the table below:
-		</para>
-			<table>
-				<title>Net type symbols</title>
-				<tgroup cols="3">
-					<thead>
-						<row>
-							<entry>1-Bit Symbol</entry>
-							<entry>Multi-Bit Symbol</entry>
-							<entry>Description</entry>
-						</row>
-					</thead>
-					<tbody>
-						<row>
-							<entry><graphic fileref="../fig/net_hwire.gif"/></entry>
-							<entry><graphic fileref="../fig/net_wire2.gif"/></entry>
-							<entry>Wire with a hidden name.</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/net_wire.gif"/></entry>
-							<entry><graphic fileref="../fig/net_wire2.gif"/></entry>
-							<entry>Wire with a visible name.</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/net_reg.gif"/></entry>
-							<entry><graphic fileref="../fig/net_reg2.gif"/></entry>
-							<entry>Register variable (HDL modules only).</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/net_probe.gif"/></entry>
-							<entry><graphic fileref="../fig/net_probe2.gif"/></entry>
-							<entry>Wire with a probe attached to it (in simulation mode).</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/port_in1.gif"/></entry>
-							<entry><graphic fileref="../fig/port_in2.gif"/></entry>
-							<entry>Module input port.</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/port_out1.gif"/></entry>
-							<entry><graphic fileref="../fig/port_out2.gif"/></entry>
-							<entry>Module output port.</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/port_inout1.gif"/></entry>
-							<entry><graphic fileref="../fig/port_inout2.gif"/></entry>
-							<entry>Module bidirectional port.</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</table>
-			<para>
+				</para>
+				<table>
+					<title>Net type symbols</title>
+					<tgroup cols="3">
+						<thead>
+							<row>
+								<entry>1-Bit Symbol</entry>
+								<entry>Multi-Bit Symbol</entry>
+								<entry>Description</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry><graphic fileref="../fig/net_hwire.gif"/></entry>
+								<entry><graphic fileref="../fig/net_wire2.gif"/></entry>
+								<entry>Wire with a hidden name.</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/net_wire.gif"/></entry>
+								<entry><graphic fileref="../fig/net_wire2.gif"/></entry>
+								<entry>Wire with a visible name.</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/net_reg.gif"/></entry>
+								<entry><graphic fileref="../fig/net_reg2.gif"/></entry>
+								<entry>Register variable (HDL modules only).</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/net_probe.gif"/></entry>
+								<entry><graphic fileref="../fig/net_probe2.gif"/></entry>
+								<entry>Wire with a probe attached to it (in simulation mode).</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/port_in1.gif"/></entry>
+								<entry><graphic fileref="../fig/port_in2.gif"/></entry>
+								<entry>Module input port.</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/port_out1.gif"/></entry>
+								<entry><graphic fileref="../fig/port_out2.gif"/></entry>
+								<entry>Module output port.</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/port_inout1.gif"/></entry>
+								<entry><graphic fileref="../fig/port_inout2.gif"/></entry>
+								<entry>Module bidirectional port.</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<para>
 The "Ports" list can be used to list the modules nets that are defined
 as part of the interface for the current module. These are nets that
 the user is expected to define in the module definition.
-			</para>
-			<bridgehead renderas="sect2">Status Bar</bridgehead>
-			<figure>
+				</para>
+			</sect2>
+			<sect2>
 				<title>Status Bar</title>
-				<graphic fileref="../fig/statusbar.gif"></graphic>
-			</figure>
-			<para>
+				<figure>
+					<title>Status Bar</title>
+					<graphic fileref="../fig/statusbar.png"></graphic>
+				</figure>
+				<para>
 The status bar on the bottom indicates the file that is being edited,
 and the current module from that file that is displayed in the circuit
 window.&nbsp; A "*" after the file name indicates that the buffer has been
@@ -425,13 +441,15 @@ modified since the last time the file was saved.&nbsp; Below the file and
 module name is a message bar for informational messages from TKGate.&nbsp; 
 These messages include confirmation for files that are loaded or saved,
 or information on the currently selected gate or wire.
-			</para>
-			<bridgehead renderas="sect2">Major Mode Tabs</bridgehead>
-			<figure>
+				</para>
+			</sect2>
+			<sect2>
 				<title>Major Mode Tabs</title>
-				<graphic fileref="../fig/majortabs.gif"></graphic>
-			</figure>
-			<para>
+				<figure>
+					<title>Major Mode Tabs</title>
+					<graphic fileref="../fig/majortabs.png"></graphic>
+				</figure>
+				<para>
 The main edit window has three tabs to indicate and select the major
 mode in TkGate. "Edit" mode is used for creating and editing your
 circuit. The majority of your time using TkGate is likely to be in
@@ -443,50 +461,52 @@ tab, TkGate will send your circuit to the simulator, check for errors,
 and if your circuit is error free, start the simulator. By default,
 the simulator will be "paused" and you will need to press the
 <inlinegraphic fileref="../fig/sim_go.gif"/> button.
-			</para>
-			<para>
+				</para>
+				<para>
 The icon in the upper right corner of the interface can also help show
 you what mode you are in. The possible icons listed in Table 2-2.
-			</para>
+				</para>
 				<table>
-				<title>TkGate state icons</title>
-				<tgroup cols="2">
-					<thead>
-						<row>
-							<entry>Symbol</entry>
-							<entry>Description</entry>
-						</row>
-					</thead>
-					<tbody>
-						<row>
-							<entry><graphic fileref="../fig/gatelogo.gif"/></entry>
-							<entry>
-Edit/Interface Mode - The TkGate logo is shown when TkGate is in the
-"Edit" or "Interface" modes.
-							</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/simlogo.gif"/></entry>
-							<entry>
-Paused Simulation - A stopped AND dragon shows that TkGate is simulation
-mode, and the simulation is paused.</entry>
-						</row>
-						<row>
-							<entry><graphic fileref="../fig/runsim.gif"/></entry>
-							<entry>
-Running Simulation - A running AND dragon shows that
-TkGate is in simulation mode, and the simulation is running.
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</table>
-			<bridgehead renderas="sect2">Balloon Help</bridgehead>
-			<figure>
+					<title>TkGate state icons</title>
+					<tgroup cols="2">
+						<thead>
+							<row>
+								<entry>Symbol</entry>
+								<entry>Description</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry><graphic fileref="../fig/gatelogo.gif"/></entry>
+								<entry>
+	Edit/Interface Mode - The TkGate logo is shown when TkGate is in the
+	"Edit" or "Interface" modes.
+								</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/simlogo.gif"/></entry>
+								<entry>
+	Paused Simulation - A stopped AND dragon shows that TkGate is simulation
+	mode, and the simulation is paused.</entry>
+							</row>
+							<row>
+								<entry><graphic fileref="../fig/runsim.gif"/></entry>
+								<entry>
+	Running Simulation - A running AND dragon shows that
+	TkGate is in simulation mode, and the simulation is running.
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sect2>
+			<sect2>
 				<title>Balloon Help</title>
-				<graphic fileref="../fig/balloon.gif"></graphic>
-			</figure>
-			<para>
+				<figure>
+					<title>Balloon Help</title>
+					<graphic fileref="../fig/balloon.gif"></graphic>
+				</figure>
+				<para>
 Balloon help is available for many of the elements in the interface,
 typically on the prompt text. To use balloon help, simply move the
 mouse cursor over an interface element. After about one second, an
@@ -498,13 +518,15 @@ shown below:
 Balloon help is also available in most of the dialog boxes.&nbsp;
 Position the cursor over the text in a dialog box to view a more
 detailed description.
-			</para>
-		</section>
-		<section>
+				</para>
+			</sect2>
+		</sect1>
+		
+		<sect1>
 			<title>Loading and Saving Circuits</title>
 			<figure>
 				<title>Open File Dialog Box</title>
-				<graphic fileref="../fig/fileopen.gif"></graphic>
+				<graphic fileref="../fig/fileopen.png"></graphic>
 			</figure>
 			<para>
 Opening and saving circuits as well as circuit printing operations are
@@ -514,32 +536,33 @@ command line when you start, select "Open..." from the "File" menu or
 use the <inlinegraphic fileref="../fig/file_open.gif"/> button on the
 toolbar. You can also use the keyboard shortcut Ctl-X Ctl-F. When
 opening a new file, all existing modules will be flushed from the buffer,
-and the modules in the new file will be loaded.  TkGate save files have
+and the modules in the new file will be loaded.	TkGate save files have
 the extension ".v" and are in a special annotated Verilog format. Files
 saved from TkGate contain special comments with information such as circuit
-elements and wire positions.  Also, gates with no explicit counter
+elements and wire positions.	Also, gates with no explicit counter
 part in Verilog such as switches and clock generators are saved as
 annotation comments in the save file.
 			</para>
 			<para>
-You can also load non-TkGate generated Verilog files.  These files
-will load as a set of HDL modules.  When saving from a file that was
+You can also load non-TkGate generated Verilog files.	These files
+will load as a set of HDL modules.	When saving from a file that was
 loaded as a non-TkGate Verilog file, the saved file will contain
 TkGate annotations.
 			</para>
 			<para>
 When you open or save a circuit, you will see a dialog box such as
-the one shown in the figure on the right.  Enter a file name at the
+the one shown in the figure on the right.	Enter a file name at the
 prompt and press the "Open" (or "Save") button, or double click on a
 file name. Only the appropriate type of files will be
 displayed. You can change directories by double clicking on a
 folder to open it, or by using the button in the upper right corner to
 move up to the parent folder.
 			</para>
-		</section>
-		<section>
+		</sect1>
+		
+		<sect1>
 			<title>Loading Libraries</title>
-			<figure float="1">
+			<figure>
 				<title>Library Manager</title>
 				<graphic fileref="../fig/libmanager-small.png"/>
 			</figure>
@@ -551,7 +574,7 @@ manager as shown on Figure 2-6.
 To load a library, check the box near the name of the library; to unload a
 library, uncheck corresponding box. When you have
 finished selecting which libraries you wish to have loaded, close the
-dialog box by pressing "OK".  If you press "Cancel", all of your
+dialog box by pressing "OK".	If you press "Cancel", all of your
 changes to the set of loaded libraries will be ignored.
 			</para>
 			<para>
@@ -562,12 +585,13 @@ include user-defined libraries.
 			</para>
 			<para>
 When you save your design after loading libraries, TkGate will store
-the names of libraries you have loaded in the save file.  Then when
+the names of libraries you have loaded in the save file.	Then when
 you load your design again, TkGate will automatically load the
 necessary libraries.
 			</para>
-		</section>
-		<section>
+		</sect1>
+		
+		<sect1>
 			<title>Basic Editing Tools</title>
 			<para>
 The basic editing tools are selected through the "Mode" toolbar. While
@@ -615,9 +639,9 @@ elements (with the "delete" key).
 								(F1)
 							</entry>
 							<entry>
-The <emphasis role="strong">Connect</emphasis> tool is indicated by the soldering iron cursor.  
+The <emphasis role="strong">Connect</emphasis> tool is indicated by the soldering iron cursor.	
 To use this tool, first select the move/connect tool and then press and
-hold the left mouse button on a wire endpoint.&nbsp;  The cursor will then
+hold the left mouse button on a wire endpoint.&nbsp;	The cursor will then
 change to the connect tool as long as you are holding down the mouse button.
 							</entry>
 						</row>
@@ -635,7 +659,7 @@ change to the connect tool as long as you are holding down the mouse button.
 The <emphasis role="strong">Wire Cutter</emphasis> tool is indicated by the wire cutter cursor.
 Use this tool to cut wires by clicking on the wire at the point you want
 to cut it. If you cut a wire with an unconnected end, the wire
-segments between the cut  point and the unconnected end will be deleted
+segments between the cut	point and the unconnected end will be deleted
 automatically.
 							</entry>
 						</row>
@@ -656,7 +680,7 @@ and outputs of gates. Click the cursor near an input or
 output to converter a non-inverting port to an inverting port or vice-versa.
 							</entry>
 						</row>
-            <row>
+										 <row>
 							<entry>
 								<graphic fileref="../fig/size_curs.gif"/>
 							</entry>
@@ -668,91 +692,291 @@ output to converter a non-inverting port to an inverting port or vice-versa.
 							</entry>
 							<entry>
 The <emphasis role="strong">Wire Size/Type</emphasis> tool is indicated by the ribbon cable
-cursor.  Use this mode to change the bit width of a wire or the type
-of wire.  The desired bit width and wire type should be selected in
+cursor.	Use this mode to change the bit width of a wire or the type
+of wire.	The desired bit width and wire type should be selected in
 the selector boxes next to the <inlinegraphic fileref="../fig/size_curs.gif"/> button on
-the Mode toolbar.  Any wires that are clicked on will have their size
-and type changed to the selected size/type.  The wire type affects how
-the wire's value will be set when multiple gates drive a wire.  You
-can also change wire bit widths and types using the Wire Properties dialog box.  
+the Mode toolbar.	Any wires that are clicked on will have their size
+and type changed to the selected size/type.	The wire type affects how
+the wire's value will be set when multiple gates drive a wire.	You
+can also change wire bit widths and types using the Wire Properties dialog box.	
 							</entry>
 						</row>
 					</tbody>
 				</tgroup>
 			</table>
-			<bridgehead renderas="sect2">Creating Gates</bridgehead>
-			<para>
+			<sect2>
+				<title>Creating Gates</title>
+				<para>
 			There are three main ways to create gates in TkGate: using the menu
-bar, using pop-up menus, and using keyboard shortcuts.  Once you have
+bar, using pop-up menus, and using keyboard shortcuts.	Once you have
 mastered the keyboard shortcuts, that is generally the preferred way to
-create gates.  These three methods are described in the following
+create gates.	These three methods are described in the following
 sections.
-      </para>
-      <bridgehead renderas="sect3">Creating a Gate Using the Menu Bar</bridgehead>
-      <figure>
-        <title>Creating a Gate</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="../fig/create1.gif" />
-          </imageobject>
-          <caption><para>1) Left click to select the point.</para></caption>
-        </mediaobject>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="../fig/create2.gif" />
-          </imageobject>
-          <caption><para>2) Select gate type from menu bar.</para></caption>
-        </mediaobject>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="../fig/create3.gif" />
-          </imageobject>
-          <caption><para>3) Gate is created at location set by point.</para></caption>
-        </mediaobject>
-      </figure>
-      <para>
+				</para>
+				<sect3>
+					<title>Creating a Gate Using the Menu Bar</title>
+					<figure>
+						<title>Creating a Gate</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/create1.png" />
+							</imageobject>
+							<caption>
+								<para>1) Left click to select the point.</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/create2.png" />
+							</imageobject>
+							<caption>
+								<para>2) Select gate type from menu bar.</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/create3.png" />
+							</imageobject>
+							<caption>
+								<para>3) Gate is created at location set by point.</para>
+							</caption>
+						</mediaobject>
+					</figure>
+					<para>
 <emphasis role="strong">1)</emphasis> To create a gate such as a NAND gate,
 first select the Move/Connect tool <inlinegraphic fileref="../fig/mov_curs.gif"/>,
 and then press the left mouse button at the position you wish to
-create it.  While you are holding the mouse button down, the cursor
+create it.	While you are holding the mouse button down, the cursor
 will change to an outline arrow to indicate the current orientation.
 In the case shown at the left, the current orientation is 0 degrees indicating
 the standard orientation.
-      </para>
-      <para>
+					</para>
+					<para>
 When you release the button the arrow will disappear and the mark
-symbol will remain.  The mark indicates the center point for the new
-circuit element.  Clicking the left mouse button at another location
+symbol will remain.	The mark indicates the center point for the new
+circuit element.	Clicking the left mouse button at another location
 will move the mark, and selecting a gate or wire will clear the
 mark.
-      </para>
-      <para>
+					</para>
+					<para>
 <emphasis role="strong">2)</emphasis> Select the gate type by opening the
-"Make" menu.  The circuit elements are organized into seven basic categories:
-      </para>
-<itemizedlist>
-  <listitem><para>"I/O" types include switches, dip switches, power sources, clocks, etc.</para></listitem>
-  <listitem><para>"Gate" types include the basic logic gates such as AND and OR gates.</para></listitem>
-  <listitem><para>"Reduction" types include reduction versions of the basic gates types
-  which combine multi-bit signals into a single bit.</para></listitem>
-  <listitem><para>"MSI/LSI" types include MUXES, DEMUXES, etc.</para></listitem>
-  <listitem><para>"ALU" types include adders, multiplier, shifters, etc.</para></listitem>
-  <listitem><para>"Memory" types include registers, RAMs, ROMs, etc.</para></listitem>
-  <listitem><para>"Module" types include module blocks and ports.</para></listitem>
-</itemizedlist>
-      <para>
-There are also two additional non-circuit element objects that can be
-created.  A "Comment" is an arbitrary block of text that can be used
-to add documentation to your circuit, and a "Frame" is a labeled box
-that you can place around a portion of your circuit.
-      </para>
-      <para>
-<emphasis role="strong">3)</emphasis> After selecting the menu option or typing the shortcut, the
-circuit element will be created and displayed in bold to indicate that
-it is selected.  While the gate is still selected, you can press the
-<inlinegraphic fileref="../fig/edit_rotate.gif"/> toolbar button or press the Tab key to
-rotate the gate to the desired orientation.
-      </para>
-		</section>
+"Make" menu.	The circuit elements are organized into seven basic categories:
+					</para>
+					<itemizedlist>
+						<listitem><para>"I/O" types include switches, dip switches, power sources, clocks, etc.</para></listitem>
+						<listitem><para>"Gate" types include the basic logic gates such as AND and OR gates.</para></listitem>
+						<listitem><para>
+	"Reduction" types include reduction versions of the basic gates types
+	which combine multi-bit signals into a single bit.</para></listitem>
+						<listitem><para>"MSI/LSI" types include MUXES, DEMUXES, etc.</para></listitem>
+						<listitem><para>"ALU" types include adders, multiplier, shifters, etc.</para></listitem>
+						<listitem><para>"Memory" types include registers, RAMs, ROMs, etc.</para></listitem>
+						<listitem><para>"Module" types include module blocks and ports.</para></listitem>
+					</itemizedlist>
+					<para>
+	There are also two additional non-circuit element objects that can be
+	created.	A "Comment" is an arbitrary block of text that can be used
+	to add documentation to your circuit, and a "Frame" is a labeled box
+	that you can place around a portion of your circuit.
+					</para>
+					<para>
+	<emphasis role="strong">3)</emphasis> After selecting the menu option or typing the shortcut, the
+	circuit element will be created and displayed in bold to indicate that
+	it is selected.	While the gate is still selected, you can press the
+	<inlinegraphic fileref="../fig/edit_rotate.gif"/> toolbar button or press the Tab key to
+	rotate the gate to the desired orientation.
+					</para>
+				</sect3>
+				<sect3>
+					<title>Creating a Gate Using the Pop-up Menu</title>
+					<figure>
+						<title>Creating a Gate with Pop-up Menu</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/popcreate.gif" />
+							</imageobject>
+							<caption>
+								<para>Right click to use pop-up menus to create a gate.</para>
+							</caption>
+						</mediaobject>
+					</figure>
+					<para>
+To create a gate using the pop-up menu, right click on the position at
+which you wish to create a gate.	This will both create the position
+mark and bring up the pop-up menu.	Then select "Make", and then
+maneuver through the gate category to select the appropriate gate
+type.
+					</para>
+				</sect3>
+				<sect3>
+					<title>Creating a Gate Using Keyboard Shortcuts</title>
+					<para>
+To create a gate using keyboard shortcuts, first set a mark in the
+same way as when creating a gate using the menu bar (Section 2.5.1).
+Then simply type the shortcut for the gate you wish to create.	Most
+of the gate types have single character commands to create them.	For
+example, you can type "a" to create an AND gate, and "A" to create a
+NAND gate. A list of the gate types and their keyboard shortcuts are
+shown in Section 2.16.
+					</para>
+				</sect3>
+			</sect2>
+			<sect2>
+				<title>Connecting Wires</title>
+				<sect3>
+					<title>Port-to-Port Connections</title>
+					<figure>
+						<title>Port-to-Port Connections</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect1a.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 1: </emphasis>
+									select endpoint
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect1b.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 2: </emphasis>
+									drag wire end
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect1c.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 3: </emphasis>
+									bring wire end close to other terminal
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect1d.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 4: </emphasis>
+									release and connect
+								</para>
+							</caption>
+						</mediaobject>
+					</figure>
+					<para>
+Port-to-port connections are used to connect the end points of two
+wires.  Before making the connections, make sure you have selected the
+"Move/Connect" tool from the "Tool" menu.  Then, click and hold the
+left mouse button on the endpoint of one of the ends you wish to
+connect.  The mouse cursor will change to a soldering iron to indicate
+that connect mode is active as shown in Step 1.
+					</para>
+					<para>
+Next, drag the mouse toward the other endpoint you wish to connect to
+as shown in Step 2, TKGate will automatically introduce any
+necessary bends and maintain connections with only horizontal and
+vertical segments.  Bring the end close the the wire you wish to
+connect to as shown in Step 3.  When you release the mouse button,
+the wires will connect as shown in Step 4.
+					</para>
+				</sect3>
+				<sect3>
+					<title>Port-to-Joint Connections</title>
+					<figure>
+						<title>Port-to-Joint  Connections</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect2a.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 1: </emphasis>
+									select endpoint
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect2b.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 2: </emphasis>
+									drag wire end
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect2c.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 3: </emphasis>
+									bring wire end close to other wire and release
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/connect2d.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 4: </emphasis>
+									continue making connections as necessary
+								</para>
+							</caption>
+						</mediaobject>
+					</figure>
+					<para>
+Port-to-joint connections are used to connect a wire end point to the
+center or corner of another wire, or to an existing wire joint.
+These connections are made essentially the same way as port-to-port
+connections.  First, as in with port-to-port connections, make sure
+you have selected the "Move/Connect" tool from the "Tool" menu.  Then,
+select a free endpoint to get the soldering iron (Step 1).  Drag the
+wire near the wire you want to connect to (Step 2) and release the
+wire to connect to the nearby wire segment (or corner) and create a
+solder joint (Step 3).  You can continue the process to connect as
+many ports to a net as necessary (Step 4).
+					</para>
+				</sect3>
+				<sect3>
+					<title>Creating Bit Taps</title>
+					<figure>
+						<title>Bit Tap</title>
+						<graphic fileref="../fig/bittap.gif"/>
+					</figure>
+					<para>
+When you attempt to do a port-to-joint connection with wires of
+different sizes, a "bit tap" will be created if you are connecting a
+wire with smaller bit size to one with a larger bit size.  A bit tap
+element allows you to select one or more bits off of a bigger wire.
+To set the desired bit, you should double click on the tap to open the
+Gate Properties box, select the "Details" tab
+and enter the desired bit or bits.  Ranges are indicated as a pair of
+bit numbers (high number first) separated by a colon (":")
+character.  For example, to select the low four bits you would use the
+range "3:0".  In the bit tap shown here, bit 4 of the
+register output is used as an input to the AND gate.
+					</para>
+					<para>
+Bit taps can only be used to "read" values off of a larger wire.  To
+individually drive bits on a larger wire you should use the "Concat"
+device.  This device can support data flow in either direction.
+					</para>
+				</sect3>
+			</sect2>
+		</sect1>
 	</chapter>
 </book>
