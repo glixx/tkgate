@@ -245,7 +245,7 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
-  {FF_HELVETICA, FP_ROMAN, FS_NORMAL},
+  .hc_font = { .gateFont = {FF_HELVETICA, FP_ROMAN, FS_NORMAL}},
   0,
   0,
   0,
@@ -279,32 +279,30 @@ static Encoder *Html_getEncoder(Html *h)
 
 int HtmlFont_isEqual(const HtmlFont *a,const HtmlFont *b)
 {
-  if (a->family != b->family) return 0;
-  if (a->props != b->props) return 0;
-  if (a->size != b->size) return 0;
-  if (a->points != b->points) return 0;
-  return 1;
+  if (memcmp(a, b, sizeof(HtmlFont)) == 0)
+    return (1);
+  else
+    return (0);
 }
 
 void HtmlFont_updatePoints(HtmlFont *font)
 {
-  if (font->family == FF_KANJI)
-    font->points = getKanjiFontSize(font->size);
+  if (font->gateFont.family == FF_KANJI)
+    font->points = getKanjiFontSize(font->gateFont.size);
   else
-    font->points = getFontSize(font->size);
+    font->points = getFontSize(font->gateFont.size);
 }
 
-HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,fontsize_t points)
+HtmlFont *HtmlFont_init(HtmlFont *font,GateFont gateFont,fontsize_t points)
 {
   int i;
 
   ob_touch(font);
-
-  font->family = family;
-  font->props = props;
+  
+  memcpy(&font->gateFont, &gateFont, sizeof (GateFont));
   font->points = points;
 
-  if (family != FF_KANJI) {
+  if (gateFont.family != FF_KANJI) {
     for (i = 0;i < FS_MAX;i++)
       if (getFontSize(i) >= points) break;
   } else {
@@ -312,7 +310,7 @@ HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,font
       if (getKanjiFontSize(i) >= points) break;
   }
   if (i >= FS_MAX) i = FS_MAX - 1;
-  font->size = i;
+  font->gateFont.size = i;
 
   return font;
 }
@@ -343,7 +341,6 @@ void delete_HtmlTag(HtmlTag *ht)
   }
   ob_free(ht);
 }
-
 
 /*****************************************************************************
  * Break down an options string into tags and values.  Return the
@@ -411,14 +408,15 @@ HtmlTag *Html_parseTag(const char *tag)
   return ht;
 }
 
-static int  HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
+static int HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
 {
   switch (hc->hc_html->h_target) {
   case TD_X11 :
     if (hc->hc_is16bit)
       return XTextWidth16(hc->hc_xFont,(XChar2b*)text,len/2);
     else
-      return XTextWidth(hc->hc_xFont,text,len);
+      return GatePainterContext_textWidth(TkGate.commentContext,
+	  hc->hc_font.gateFont, text, len);
   case TD_PRINT :
     return PSStringWidth(&hc->hc_font,text,len);
   }
@@ -428,38 +426,39 @@ static int  HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
 void HtmlFont_print(HtmlFont *hf,FILE *f)
 {
   char name[STRMAX];
-  getFontName(name,hf->family,hf->props,hf->size,1);
+  getFontName(name,hf->gateFont.family,hf->gateFont.prop,hf->gateFont.size,1);
   fprintf(f,"%s",name);
 }
 
-
 static void HtmlContext_activateFont(HtmlContext *hc)
-{
+{	
   ob_touch(hc);
 
   switch (hc->hc_html->h_target) {
-  case TD_X11 :
+  case TD_X11 : {
 #ifdef DEBUG
     printf("%p: activate-x ",hc);HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
-
-    hc->hc_xFont  = GetXFont(hc->hc_font.family, hc->hc_font.props, hc->hc_font.size, TkGate.circuit->zoom_factor);
-    hc->hc_is16bit = (hc->hc_font.family == FF_KANJI);
+    
+    hc->hc_xFont = GetXFont(hc->hc_font.gateFont, TkGate.circuit->zoom_factor);
+    hc->hc_is16bit = (hc->hc_font.gateFont.family == FF_KANJI);
 
     if (hc->hc_is16bit)
       hc->hc_spaceWidth = XTextWidth16(hc->hc_xFont, (XChar2b*)"  ", 1);
     else
-      hc->hc_spaceWidth = XTextWidth(hc->hc_xFont, " ", 1);
+      hc->hc_spaceWidth = GatePainterContext_textWidth(
+	  TkGate.commentContext, hc->hc_font.gateFont, " ", 1);
 
     hc->hc_ascent = hc->hc_xFont->ascent;
     hc->hc_descent = hc->hc_xFont->descent;
+  }
     break;
   case TD_PRINT :
 #ifdef DEBUG
     printf("activate-ps ");HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
     hc->hc_xFont = 0;
-    hc->hc_is16bit = (hc->hc_font.family == FF_KANJI);
+    hc->hc_is16bit = (hc->hc_font.gateFont.family == FF_KANJI);
 
     if (hc->hc_is16bit)
       hc->hc_spaceWidth = PSStringWidth(&hc->hc_font,"  ",2);
@@ -474,7 +473,7 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 
 static HtmlContext *new_HtmlContext(HtmlContext *base,Html *html)
 {
-  HtmlContext *hc = (HtmlContext*) ob_malloc(sizeof(HtmlContext),"HtmlContext");
+  HtmlContext *hc = OM_MALLOC(HtmlContext);
 
   //  printf("%p: new_HtmlContext()\n",hc);
 
@@ -505,7 +504,7 @@ static void delete_HtmlContext(HtmlContext *hc)
 
 static HtmlUnit *new_HtmlUnit(const char *text,int len,HtmlContext *hc)
 {
-  HtmlUnit *hu = ob_malloc(sizeof(HtmlUnit),"HtmlUnit");
+  HtmlUnit *hu = OM_MALLOC(HtmlUnit);
 
   hu->hu_type = HU_TEXT;
   hu->hu_text = ob_malloc(len+1,"char*");
@@ -583,7 +582,6 @@ void delete_Html(Html *h)
     delete_HtmlContext(hc);
   }
 
-
   ob_free(h);
 }
 
@@ -607,10 +605,6 @@ const char *Html_makeTutorialNavigationLine_bymodule(char *line)
       return "[no-controls]";
 
     if (cur_pnum == 1) {
-    /** @TODO to remove */
-      /*
-      int i;
-      */
 
       p += sprintf(p,"<font color=gray>&lt;%s</font>   ",msgLookup("tutorial.prev"));
     } else {
@@ -958,13 +952,14 @@ void HtmlContext_handle_modifiers(HtmlContext *hc,HtmlTag *tag)
 
       for (j = 0;j < FF_MAX;j++)
 	if (strcasecmp(getFontFamilyName(j),value) == 0)
-	  hc->hc_font.family = j;
+	  hc->hc_font.gateFont.family = j;
     } else if (strcasecmp(label,"size") == 0) {
       /*
        * Scan font size.  We decrement the scanned size to convert from the
        * html specification to our internal size code.
        */
-      if (sscanf(value,"%d",&hc->hc_font.size) == 1) hc->hc_font.size--;
+      if (sscanf(value,"%d",(int*)&hc->hc_font.gateFont.size) == 1)
+	--hc->hc_font.gateFont.size;
       HtmlFont_updatePoints(&hc->hc_font);
     } else if (strcasecmp(label,"color") == 0) {
       ob_touch(hc);
@@ -988,22 +983,22 @@ void Html_handle_basic(Html *h, HtmlTag *tag)
 
   ob_touch(hc);
   if (strcasecmp(tag->ht_name,"b") == 0) {
-    hc->hc_font.props |= FP_BOLD;
+    hc->hc_font.gateFont.prop |= FP_BOLD;
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"i") == 0) {
-    hc->hc_font.props |= FP_ITALIC;
+    hc->hc_font.gateFont.prop |= FP_ITALIC;
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"tt") == 0) {
-    hc->hc_font.family = FF_COURIER;
+    hc->hc_font.gateFont.family = FF_COURIER;
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"big") == 0) {
-    if (hc->hc_font.size + 1  < FS_MAX)
-      hc->hc_font.size++;
+    if (hc->hc_font.gateFont.size + 1  < FS_MAX)
+      ++hc->hc_font.gateFont.size;
     HtmlFont_updatePoints(&hc->hc_font);
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"small") == 0) {
-    if (hc->hc_font.size - 1  >= 0)
-      hc->hc_font.size--;
+    if (hc->hc_font.gateFont.size - 1  >= 0)
+      --hc->hc_font.gateFont.size;
     HtmlFont_updatePoints(&hc->hc_font);
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"font") == 0) {
@@ -1027,14 +1022,14 @@ void Html_handle_heading(Html *h, HtmlTag *tag)
 
   ob_touch(hc);
 
-  hc->hc_font.props |= FP_BOLD;
+  hc->hc_font.gateFont.prop |= FP_BOLD;
 
   if (strcasecmp(tag->ht_name,"h1") == 0) {
-    hc->hc_font.size = FS_XHUGE;
+    hc->hc_font.gateFont.size = FS_XHUGE;
   } else if (strcasecmp(tag->ht_name,"h2") == 0) {
-    hc->hc_font.size = FS_HUGE;
+    hc->hc_font.gateFont.size = FS_HUGE;
   } else if (strcasecmp(tag->ht_name,"h3") == 0) {
-    hc->hc_font.size = FS_LARGE;
+    hc->hc_font.gateFont.size = FS_LARGE;
   }
 
   HtmlFont_updatePoints(&hc->hc_font);
@@ -1191,7 +1186,7 @@ void Html_partition(Html *h,char *data)
         if (!(*q & 0x80)) break;
 
       hc = new_HtmlContext(h->h_context,h);
-      hc->hc_font.family = FF_KANJI;
+      hc->hc_font.gateFont.family = FF_KANJI;
       HtmlFont_updatePoints(&hc->hc_font);
       HtmlContext_activateFont(hc);
       Html_pushContext(h,hc);
@@ -1345,13 +1340,14 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  *****************************************************************************/
 void Html_draw(Html *h,int x,int y)
 {
-  GC gc = TkGate.commentGC;
+  GC gc = GatePainterContext_gc(TkGate.commentContext);
   GC igc = TkGate.imageGC;
   HtmlUnit *hu;
   HtmlContext *last_hc = 0;
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
+
 #ifdef DEBUG
   Locale_print(h->h_locale, stdout);
 #endif
@@ -1367,14 +1363,14 @@ void Html_draw(Html *h,int x,int y)
        * Update properties only if there was a change.
        */
       if (hc != last_hc) {
-	    XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
+	GatePainterContext_setFont(TkGate.commentContext, hc->hc_font.gateFont);
 
-	    if (hc->hc_pixel >= 0)
+	if (hc->hc_pixel >= 0)
           Tkg_changeColor(gc, GXxor, hc->hc_pixel);
         last_hc = hc;
       }
 
-      if (hc->hc_font.family == FF_KANJI) {
+      if (hc->hc_font.gateFont.family == FF_KANJI) {
 	    XDrawString16( TkGate.D,
                        TkGate.W,
                        gc,
@@ -1389,12 +1385,11 @@ void Html_draw(Html *h,int x,int y)
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
       } else {
-	    XDrawString( TkGate.D,
-                     TkGate.W,
-                     gc,
-                     hu->hu_x + x,hu->hu_y + y,
-		             hu->hu_text,
-		             strlen(hu->hu_text) );
+	  GatePainter_drawString_new( TkGate.painterW,
+	                          TkGate.commentContext,
+	                          hu->hu_x + x, hu->hu_y + y,
+		                  hu->hu_text,
+		                  strlen(hu->hu_text) );
       }
 
       break;

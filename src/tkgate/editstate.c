@@ -584,7 +584,8 @@ void editstate_update(EditState *es)
     XSetClipRectangles(TkGate.D,TkGate.moduleGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.modportGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.frameGC,0,0,&cr,1,YXSorted);
-    XSetClipRectangles(TkGate.D,TkGate.commentGC,0,0,&cr,1,YXSorted);
+    XSetClipRectangles(TkGate.D,TkGate.commentGC,
+	0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.hyperlinkGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.wireGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.busGC,0,0,&cr,1,YXSorted);
@@ -1143,7 +1144,7 @@ int editstate_getInterfaceMode()
  *****************************************************************************/
 EditState *EditState_moveToError(int n,EditState *es)
 {
-  GError *E;
+  GateError *E;
 
   if (!TkGate.errl->errors) {
     message(0,msgLookup("err.misserr"));

@@ -122,7 +122,7 @@ void ReqScopeTraceRedisplay()
  *      n		Number of bits of trace
  *
  *****************************************************************************/
-int isTransition(GScope *s,GValue *v,int n)
+int isTransition(GScope *s,GateValue *v,int n)
 {
   if (!v || !v->v_next) return 0;
 
@@ -169,7 +169,7 @@ void GTrace_adjust(GTrace *T,simtime_t LTime)
  *	LTime		Time at left side of scope window
  *
  *****************************************************************************/
-int GScope_getXPos(GScope *S,GValue *V,simtime_t LTime)
+int GScope_getXPos(GScope *S,GateValue *V,simtime_t LTime)
 {
   simtime_t T;
 
@@ -197,7 +197,7 @@ int GScope_getXPos(GScope *S,GValue *V,simtime_t LTime)
  *	nbits		Number of bits in trace
  *
  *****************************************************************************/
-GC GValue_getColor(GValue *V,int nbits)
+GC GValue_getColor(GateValue *V,int nbits)
 {
   switch (V->v_code) {
   case VC_UNRECORDED :
@@ -226,7 +226,7 @@ GC GValue_getColor(GValue *V,int nbits)
   return TkGate.scopeOneGC;
 }
 
-void GTrace_drawTransValue(GTrace *T,GValue *V,GScope *S,int y,
+void GTrace_drawTransValue(GTrace *T,GateValue *V,GScope *S,int y,
 			   simtime_t LTime,int isFullUpdate)
 {
   int x,nextX,width;
@@ -264,14 +264,14 @@ void GTrace_drawTransValue(GTrace *T,GValue *V,GScope *S,int y,
     char *s = V->v_dpyHexValue;
     gc = TkGate.scopeClearGC;
 
-    XDrawString(TkGate.D,TkGate.ScopeW,gc,x+2,y-ScopeLOW-3,s,strlen(s));
+    GatePainter_drawString(TkGate.painterScopeW, gc,x+2,y-ScopeLOW-3,s,strlen(s));
     ob_free(V->v_dpyHexValue);
     V->v_dpyHexValue = 0;
   }
 
   if (*new_dpy) {
     gc = GValue_getColor(V,T->t_nBits);
-    XDrawString(TkGate.D,TkGate.ScopeW,gc,x+2,y-ScopeLOW-3,new_dpy,strlen(new_dpy));
+    GatePainter_drawString(TkGate.painterScopeW, gc,x+2,y-ScopeLOW-3,new_dpy,strlen(new_dpy));
   }
   V->v_dpyHexValue = ob_strdup(new_dpy);
 }
@@ -304,7 +304,7 @@ unsigned transition_type(int from,int to)
   return trans[from][to];
 }
 
-void GTrace_updateTransition(GTrace *T,GValue *V,GScope *S,int y,int x1,int x2,simtime_t LTime,int isFullUpdate)
+void GTrace_updateTransition(GTrace *T,GateValue *V,GScope *S,int y,int x1,int x2,simtime_t LTime,int isFullUpdate)
 {
   if (isTransition(S,V,T->t_nBits)) {
     GC gc;
@@ -344,7 +344,7 @@ void GTrace_updateTransition(GTrace *T,GValue *V,GScope *S,int y,int x1,int x2,s
   }
 }
 
-void GTrace_updateValue(GTrace *T,GValue *V,int y,int x1,int x2)
+void GTrace_updateValue(GTrace *T,GateValue *V,int y,int x1,int x2)
 {
   GC gc = GValue_getColor(V,T->t_nBits);
 
@@ -433,7 +433,7 @@ void GTrace_update(GTrace *T,GScope *S,int y,simtime_t LTime,int isFullUpdate)
 {
   /*    int lasttime,value,vcode,*/
   int x1,x2;
-  GValue *V;
+  GateValue *V;
 
   GTrace_adjust(T,LTime);
 
@@ -652,7 +652,7 @@ void GTrace_draw(GTrace *T,GScope *S,int y,int doName)
     PosDrawString(TkGate.ScopeW,NULL,gc,10,y-ScopeTEXTPOS,
 		  T->t_visName,AtLeft);
 #endif
-    XDrawString(TkGate.D,TkGate.ScopeW,gc,10,y-ScopeTEXTPOS,
+    GatePainter_drawString(TkGate.painterScopeW, gc,10,y-ScopeTEXTPOS,
 		T->t_visName,strlen(T->t_visName));
     XSetFont(TkGate.D,gc,TkGate.stextXF[1]->fid);
   }
@@ -914,7 +914,7 @@ static void GScope_drawBaseTime(GScope *S,simtime_t base,int y)
     break;
   }
 
-  XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
+  GatePainter_drawString(TkGate.painterScopeW,TkGate.scopeGridGC,
 	      10,y,buf,strlen(buf));
 }
 
@@ -1011,7 +1011,7 @@ static void GScope_drawScale(GScope *S,int doTicks)
       sprintf(buf,format,tick);
 
       text_w = GKTextWidth(TkGate.textXF[1],buf,strlen(buf))/2;
-      XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
+      GatePainter_drawString(TkGate.painterScopeW, TkGate.scopeGridGC,
 		  ScopeLEFTMARGIN+(int)((T-S->s_leftTime)*UnitSize-text_w),
 		  y,buf,strlen(buf));
     }
@@ -1091,7 +1091,7 @@ void GScope_fullUpdate(GScope *S)
     ve = 1.0;
     hs = 0.0;
     he = 1.0;
-    XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
+    GatePainter_drawString(TkGate.painterScopeW,TkGate.scopeGridGC,
 		20,H/2,buf,strlen(buf));
   }
 
@@ -1348,7 +1348,7 @@ GTrace *new_GTrace(const char *name,const char *printName,int nBits,simtime_t cu
 
 void delete_GTrace(GTrace *T)
 {
-  GValue *V;
+  GateValue *V;
 
   ob_free(T->t_name);
   ob_free(T->t_printName);
@@ -1376,11 +1376,11 @@ GTrace *GScope_findTrace(GScope *S,const char *Name)
 }
 
 
-GValue *new_Value(simtime_t CurTime,int Code,const char *value,GValue *Prev)
+GateValue *new_Value(simtime_t CurTime,int Code,const char *value,GateValue *Prev)
 {
-  GValue *V;
+  GateValue *V;
 
-  V = (GValue *) ob_malloc(sizeof(GValue),"GValue");
+  V = (GateValue *) ob_malloc(sizeof(GateValue),"GValue");
   V->v_time = CurTime;
   V->v_code = Code;
   if (value) {

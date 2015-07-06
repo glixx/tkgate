@@ -23,6 +23,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <pwd.h>
+#include <inttypes.h>
 #include "tkgate.h"
 
 static SHash *cellsUsed;	/* Table of all built-in cells used */
@@ -194,7 +195,7 @@ int VerilogBasicGateParmList(FILE *f,GCElement *g)
       if (w->net->n_signame)
 	fprintf(f,"(%s%s)",inv,w->net->n_signame);
       else
-	fprintf(f,"(%sw%lx)",inv,(uintptr_t)w->net);
+	fprintf(f,"(%sw%p)",inv,w->net);
     }
   }
   fprintf(f,");");
@@ -340,7 +341,7 @@ static void VerilogSaveOneNet(FILE *f,GNet *n)
   if (n->n_signame)
     fprintf(f,"%s;    ",n->n_signame);
   else
-    fprintf(f,"w%lx;    ",(uintptr_t)n);
+    fprintf(f,"w%p;    ",n);
 
   fprintf(f,"//:");
   if (!n->n_show_name)
@@ -472,7 +473,7 @@ static void VerilogSaveModSymbol(FILE *f,GModSymbol *ms)
   if (!ms) return;
 
   fprintf(f,"\n");
-  fprintf(f,"//: /symbolBegin: %lu\n",(uintptr_t)ms);
+  fprintf(f,"//: /symbolBegin: %" PRIuPTR "\n",(uintptr_t)ms);
 
   /*
    * Generate the normal icon data
@@ -531,7 +532,7 @@ static void VerilogSaveModInterface(FILE *f,GModuleDef *M)
   if (!g) return;
 
   if (GCElement_getType(g) == GC_SYMBLOCK) {
-    fprintf(f,"//: /symbol:%lu\n",(uintptr_t)g->u.block.symbol);
+    fprintf(f,"//: /symbol:%" PRIuPTR "\n", (uintptr_t)g->u.block.symbol);
   }
 
   gi = g->typeinfo;

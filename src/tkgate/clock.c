@@ -154,13 +154,13 @@ void gate_drawclockparams(GCElement *g)
     XSetFont(TkGate.D,TkGate.instGC,TkGate.stextXF[TkGate.circuit->zoom_factor]->fid);
 
   sprintf(b,"f=%d ",g->u.clock.omega);
-  x = RelPosDrawString(TkGate.W,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
+  x = RelPosDrawString(TkGate.painterW,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
 
   sprintf(b,"p=%d ",g->u.clock.phi);
-  x = RelPosDrawString(TkGate.W,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
+  x = RelPosDrawString(TkGate.painterW,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
 
   sprintf(b,"dw=%d ",g->u.clock.duty);
-  x = RelPosDrawString(TkGate.W,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
+  x = RelPosDrawString(TkGate.painterW,TkGate.stextXF[TkGate.circuit->zoom_factor],TkGate.instGC,x,y,b,AtLeft);
 }
 
 GCElement *Clock_Make(EditState **es,GModuleDef *env,int GType,

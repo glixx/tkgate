@@ -444,7 +444,7 @@ void GModuleDef_getBBX(GModuleDef *M,TargetDev_e target, int *minX,int *maxX,int
 
     *minX = *minY = 0;
     *maxX = maxLen;
-    *maxY = numLines*(int)(1.2*hdl_font.size);
+    *maxY = numLines*(int)(1.2*hdl_font.gateFont.size);
   }
 }
 

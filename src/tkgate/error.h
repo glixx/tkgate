@@ -36,9 +36,9 @@ struct GEScript_str {
  *
  *****************************************************************************/
 struct ErrorList_str {
-  GError *errlist;
-  GError *curerr;
-  GError **errors;
+  GateError *errlist;
+  GateError *curerr;
+  GateError **errors;
   int ErrorCount;
 
   GEScript *el_esList;
@@ -64,8 +64,8 @@ struct GError_str {
   char		*e_instName;	/* Name of instance causing error */
   char		*e_portName;	/* Port on instance where error occurred */
   GCElement	*e_inst;	/* Instance associated with error */
-  GError	*e_next;	/* Next error in error list */
-  GError	*e_last;	/* Previous error in error list */
+  GateError	*e_next;	/* Next error in error list */
+  GateError	*e_last;	/* Previous error in error list */
 };
 
 ErrorList *new_ErrorList();
@@ -75,7 +75,7 @@ void Error_scriptEnd(const char *name,int line);
 void Error_report(const char *errText);
 void Error_close();
 void Error_purge();
-EditState *Error_open(GError *err,EditState *es);
+EditState *Error_open(GateError *err,EditState *es);
 void Error_navigateToModule(EditState **es,const char *path);
 void Error_decode(char *emsg);
 

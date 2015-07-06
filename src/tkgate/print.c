@@ -102,7 +102,7 @@ extern char *psFontNameTable[FF_MAX][FP_MAX];
  * Font to use for displaying hdl module.
  *
  *****************************************************************************/
-HtmlFont hdl_font = {FF_COURIER,FP_ROMAN,0,10};
+HtmlFont hdl_font = {.gateFont = {FF_COURIER,FP_ROMAN,0}, 10};
 
 
 typedef struct hgnode HGNode;
@@ -433,14 +433,14 @@ int PSStringWidth(HtmlFont *F,const char *s,int len)
   int width = 0;
   int i;
 
-  if (F->family == FF_COURIER) {
-    width = fontmetrics_Courier*len*F->size;
-  } else if (F->family == FF_KANJI) {
-    width = fontmetrics_Kanji*len/2*F->size;
+  if (F->gateFont.family == FF_COURIER) {
+    width = fontmetrics_Courier*len*F->gateFont.size;
+  } else if (F->gateFont.family == FF_KANJI) {
+    width = fontmetrics_Kanji*len/2*F->gateFont.size;
   } else {
     for (i = 0;i < len;i++) {
       unsigned char c = s[i];
-      width += psFontWidthTable[F->family][F->props][c]*F->points;
+      width += psFontWidthTable[F->gateFont.family][F->gateFont.prop][c]*F->points;
     }
   }
 
@@ -451,16 +451,16 @@ void PSSetFont(GPrint *P,HtmlFont *font)
 {
   char *encoding = "";
 
-  if (font->family < FF_NOKANJI_MAX)
+  if (font->gateFont.family < FF_NOKANJI_MAX)
     encoding = "-Latin1";
 
   fprintf(P->p_f,"/%s%s findfont %d scalefont setfont\n",
-	  psFontNameTable[font->family][font->props],encoding,font->points);
+	  psFontNameTable[font->gateFont.family][font->gateFont.prop],encoding,font->points);
 }
 
 void PSDrawText(GPrint *P,HtmlFont *font,int x,int y,const char *text,int just)
 {
-  static HtmlFont curFont = {-1, -1, -1};
+  static HtmlFont curFont = {.gateFont = {-1, -1, -1}};
   char buf[STRMAX];
   char vjust = 'R';
   char hjust = 'L';

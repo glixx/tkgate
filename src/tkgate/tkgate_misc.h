@@ -32,7 +32,7 @@ typedef struct gateinfo GGateInfo;
 typedef struct simmodule GSimModule;
 typedef struct modlayout GModLayout;
 typedef struct GModSymbol_str GModSymbol;
-typedef struct GError_str GError;
+typedef struct GError_str GateError;
 typedef struct GEScript_str GEScript;
 typedef struct ErrorList_str ErrorList;
 typedef struct TkgGatWin_str TkgGateWin;

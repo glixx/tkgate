@@ -27,7 +27,6 @@
 extern int sync_Xserver;
 extern int did_interface_resize;
 
-
 /*
  * This is a kludge to prevent a problem that can occur when a hyperlink leads
  * to a file that has a hyperlink in the same location such as the <PREVIOUS
@@ -452,7 +451,6 @@ void initGCs()
   XFreePixmap(TkGate.D,bitPM);
 }
 
-
 /*****************************************************************************
  *
  * The TkGateParms object is the top-level data structure used in the
@@ -465,6 +463,14 @@ static void initGateParms(TkgGateWin *gw,TkGateParams *P)
   Tk_MakeWindowExist(gw->win);
 
   P->W = Tk_WindowId(gw->win);
+  
+  P->painterW = (GatePainter*)new_GatePainterPangoXft();
+  GatePainter_init(P->painterW, P->D, P->W); /* Initializing editing window painter */
+  P->commentContext = GatePainter_createContext(P->painterW);
+  *GatePainterContext_gcRef(P->commentContext) = TkGate.commentGC;
+  
+  P->painterScopeW = (GatePainter*)new_GatePainterXlib();
+  GatePainter_init(P->painterScopeW, P->D, None); /* Initializing scope window painter */
 
   P->circuit->es = new_EditState();
   TkGate.circuit->no_set_modify = 1;

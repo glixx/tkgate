@@ -25,8 +25,8 @@
 
 ##############################################################################
 
-\font-encoding		koi8-r
-\display-encoding	KOI8-R
+\font-encoding		utf-8
+\display-encoding	UTF-8
 \messages-encoding	utf-8
 \verilog-encoding	utf-8
 \postscript-encoding	utf-8

@@ -23,7 +23,9 @@
 
 #include "config.h"
 
+#ifndef _GNU_SOURCE
 #define _GNU_SOURCE
+#endif
 
 #include <ctype.h>
 #include <errno.h>
@@ -95,6 +97,7 @@
 #include "editstate.h"
 #include "circuit.h"
 #include "primitives.h"
+#include "gate_painter.h"
 
 #if TCL_MAJOR_VERSION != 8
 #error This program has not been tested with versions of tcl/tk other than 8.*
@@ -319,6 +322,11 @@ struct TkGateParams_str {
   XrmDatabase	rdb;		/* The resource database */
   int		bitorder;	/* Order of bits in image data */
   int           byteorder;      /* Order of bytes in image data */
+  
+  GatePainter	*painterW;	/* editing window painter */
+  GatePainterContext *commentContext;
+  
+  GatePainter	*painterScopeW;	/* scope window painter */
 
   TkgGateWin	*gw;		/* Tcl/Tk view of main window. */
 
@@ -505,9 +513,9 @@ void mk_gate(int x,int y,GGateInfo *gi,int rot,int selected);
 char *filterParen(char *buf,const char *s);
 
 int dce_DrawString(GC gc,int x,int y,int p,const char *s);
-int RelPosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
-int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
-void GKDrawString(Display *D,Window W,GC gc,int x,int y,const char *s,int l);
+int RelPosDrawString(GatePainter*,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
+int PosDrawString(GatePainter*,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
+void GKDrawString(GatePainter *,GC gc,int x,int y,const char *s,int l);
 int GKTextWidth(XFontStruct *F,const char *S,int l);
 void DrawTextCursor(Window W,int x,int y);
 

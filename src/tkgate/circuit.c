@@ -102,7 +102,7 @@ void Timescale_save(Timescale *ts, FILE *f)
 
 Circuit *new_Circuit()
 {
-  Circuit *c = (Circuit*) ob_malloc(sizeof(Circuit),"Circuit");
+  Circuit *c = OM_MALLOC(Circuit);
   extern Timescale defaultTimescale;
 
   c->currentFile = new_CurrentFile();
@@ -457,7 +457,7 @@ void Circuit_unloadAllLibraries(Circuit *c)
 
 GrabbedLabel *new_GrabbedLabel()
 {
-  GrabbedLabel *gl = (GrabbedLabel *) ob_malloc(sizeof(GrabbedLabel),"GrabbedLabel");
+  GrabbedLabel *gl = OM_MALLOC(GrabbedLabel);
 
   gl->net = 0;
   gl->label = 0;
@@ -498,6 +498,4 @@ void GrabbedLabel_set(GNet *net,int ox,int oy,int p)
   gl->ox = ox;
   gl->oy = oy;
   gl->position = p;
-
 }
-

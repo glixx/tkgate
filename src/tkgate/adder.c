@@ -66,7 +66,7 @@ GPadLoc adder_S_loc[] = {
 	{0,-13,0,-13,D_UP},
 	{-13,0,-13,0,D_LEFT}};
 
-static char *psAdder[] = {
+static const char *psAdder[] = {
   "%",
   "% x y r adder",
   "%",

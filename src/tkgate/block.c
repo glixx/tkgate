@@ -498,7 +498,7 @@ void block_drawnamelist(GWire *w,int s,int d,int iod)
   for (;w;w = w->next) {
     if (w->name) {
       block_getwirexy(w,d,&x,&y,&p);
-      RelPosDrawString(TkGate.W,F,TkGate.modportGC,x,y,w->name,p);
+      RelPosDrawString(TkGate.painterW,F,TkGate.modportGC,x,y,w->name,p);
     }
     DrawPinIOMark(w,d,iod,IODT_PORT);
   }
@@ -739,9 +739,10 @@ void Block_PSDrawWireName(GPrint *P,GWire *w,int Dir,int IODir)
     HtmlFont font[1];
     int x,y,p;
     Icon *arrow;
+    GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
     block_getwirexy(w,Dir,&x,&y,&p);
-    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x,y,w->name,p);
+    PSDrawText(P,HtmlFont_init(font,gateFont,8),x,y,w->name,p);
     GetPinIOMark(w,Dir,IODir,IODT_PORT,&x,&y,&arrow);
     switch (IODir) {
     case IN :
@@ -765,8 +766,7 @@ void Block_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
   int i;
   GWire *w;
   HtmlFont font[1];
-
-
+  GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
   fprintf(P->p_f,"%d %d %d %d box\n",g->xpos,g->ypos,
 	  g->u.block.gwidth,g->u.block.gheight);
@@ -786,13 +786,13 @@ void Block_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
       h = 8;
 
     sprintf(B,"(%s)",g->ename);
-    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),
+    PSDrawText(P,HtmlFont_init(font,gateFont,8),
 	       g->xpos + (g->u.block.gwidth / 2),
 	       g->ypos + (g->u.block.gheight / 2)+h,
 	       B,BetweenLeftAndRight | BetweenTopAndBottom);
   }
   if (g->u.block.moduleName) {
-    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,10),
+    PSDrawText(P,HtmlFont_init(font,gateFont, 10),
 	       g->xpos + (g->u.block.gwidth / 2),
 	       g->ypos + (g->u.block.gheight / 2),
 	       g->u.block.moduleName,

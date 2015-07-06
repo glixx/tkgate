@@ -92,9 +92,9 @@ static GEScript *ErrorList_getScript(ErrorList *el, int line)
 }
 
 
-static GError *new_GError(const char *errText)
+static GateError *new_GError(const char *errText)
 {
-  GError *e = (GError*) ob_malloc(sizeof(GError),"GError");
+  GateError *e = (GateError*) ob_malloc(sizeof(GateError),"GError");
 
   e->e_id = 0;
   e->e_level = 0;
@@ -148,7 +148,7 @@ static GError *new_GError(const char *errText)
   return e;
 }
 
-static void delete_GError(GError *e)
+static void delete_GError(GateError *e)
 {
   if (e->e_fileName) ob_free(e->e_fileName);
   if (e->e_modName) ob_free(e->e_modName);
@@ -158,7 +158,7 @@ static void delete_GError(GError *e)
   ob_free(e);
 }
 
-static void Error_add(GError *e)
+static void Error_add(GateError *e)
 {
   char *prefix = (e->e_level == 0) ? "Warning, " : "";
   GModuleDef *m;
@@ -206,7 +206,7 @@ static void Error_add(GError *e)
 
 void Error_report(const char *errText)
 {
-  GError *e = new_GError(errText);
+  GateError *e = new_GError(errText);
   Error_add(e);
 }
 
@@ -217,11 +217,11 @@ void Error_report(const char *errText)
  *****************************************************************************/
 void Error_close()
 {
-  GError *e;
+  GateError *e;
   int i = 0;
 
   ob_touch(TkGate.errl);
-  TkGate.errl->errors = (GError**) ob_malloc(sizeof(GError*)*TkGate.errl->ErrorCount,"GError*[]");
+  TkGate.errl->errors = (GateError**) ob_malloc(sizeof(GateError*)*TkGate.errl->ErrorCount,"GError*[]");
   for (e = TkGate.errl->errlist;e;e = e->e_next, i++) {
     TkGate.errl->errors[i] = e;
   }
@@ -234,7 +234,7 @@ void Error_close()
  *****************************************************************************/
 void Error_purge()
 {
-  GError *e;
+  GateError *e;
 
   ob_touch(TkGate.errl);
 
@@ -264,7 +264,7 @@ void Error_purge()
  * Returns:		New edit state
  *
  *****************************************************************************/
-EditState *Error_open(GError *e,EditState *es)
+EditState *Error_open(GateError *e,EditState *es)
 {
   GModuleDef *m;
   int x,y;

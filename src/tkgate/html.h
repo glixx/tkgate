@@ -15,13 +15,17 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
+
 #ifndef __html_h
 #define __html_h
+
+#include "fonts.h"
+
 
 /*
  * HTML unit types
  */
-typedef enum {
+typedef enum _hutype_t {
 	HU_TEXT = 0,
 #define HU_TEXT		HU_TEXT		/* Text string */
 	HU_RULE = 1,
@@ -32,7 +36,7 @@ typedef enum {
 #define HU_NEWLINE	HU_NEWLINE	/* New line */
 	HU_IMAGE = 4
 #define HU_IMAGE	HU_IMAGE	/* In-line image */
-} HUTypes_t;
+} hutype_t;
 
 /*
  * Types of html elements
@@ -67,10 +71,8 @@ typedef struct Html_str Html;
  * HtmlFont - Font description
  */
 struct HtmlFont_str {
-  fontfamily_t		family;			/* Current font family */
-  fontprop_t		props;			/* Current font properties */
-  fontsize_t		size;			/* Current font size index */
-  fontsize_t		points;			/* Current font size in points*/
+  GateFont	gateFont;		/* base font part */
+  fontsize_t	points;			/* Current font size in points*/
 };
 
 /*
@@ -110,7 +112,7 @@ struct HtmlContext_str {
  *
  */
 struct HtmlUnit_str {
-  int			hu_type;		/* Type of unit */
+  hutype_t		hu_type;		/* Type of unit */
   char			*hu_text;		/* Text in the unit */
   int			hu_x,hu_y;		/* Position of unit (relative to block origin) */
   HtmlContext		*hu_context;		/* Context of the unit */
@@ -175,7 +177,7 @@ const char *Html_getLink(Html*,int x,int y);	/* Get hyperlink referenced at (x,y
 void Html_psPrint(Html *h,GPrint *P,int x,int y);
 
 int HtmlFont_isEqual(const HtmlFont*,const HtmlFont*);	/* Return non-zero if fonts are equal */
-HtmlFont *HtmlFont_init(HtmlFont*,fontfamily_t,fontprop_t,fontsize_t);
+HtmlFont *HtmlFont_init(HtmlFont*,GateFont,fontsize_t points);
 void HtmlFont_print(HtmlFont*,FILE*);
 void HtmlContext_print(const HtmlContext * context, FILE * fp);
 
