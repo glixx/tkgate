@@ -1,3 +1,5 @@
 syntax: glob
 *.a
 *.o
+*.o.d
+*.Po
