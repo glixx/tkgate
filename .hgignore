@@ -1,6 +1,6 @@
- syntax: glob
- *.a
- *.o
- *.o.d
- *.Po
+syntax: glob
+*.a
+*.o
+*.o.d
+*.Po
 
