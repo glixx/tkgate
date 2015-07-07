@@ -85,7 +85,8 @@ struct HtmlFont_str {
  */
 struct HtmlContext_str {
   HtmlFont		hc_font;		/* Font */
-  int			hc_pixel;		/* Pixel color */
+  //int			hc_pixel;		/* Pixel color */
+  GateColor		hc_pixelColor;
 
   char			*hc_link;		/* Associated hyperlink */
   char			*hc_tag;		/* Associated tag */

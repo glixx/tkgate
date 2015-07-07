@@ -20,7 +20,6 @@
 #include "gate_painter.h"
 #include "tkgate.h"
 
-#include <X11/Xft/Xft.h>
 #include <pango/pangoxft.h>
 #include <assert.h>
 
@@ -33,6 +32,7 @@ struct _GatePainter_vtable {
 	void (*drawString)(GatePainter*, GC, int, int, const char*, int);
 	void (*drawString_new)(GatePainter*, GatePainterContext*, int, int, const char*, int);
 	GatePainterContext *(*createContext)(GatePainter *self);
+	GateColor (*createColor)(GatePainter*, const char*);
 };
 
 static void
@@ -50,6 +50,9 @@ GatePainterXlib_drawString_new(GatePainter*, GatePainterContext*, int, int, cons
 static GatePainterContext*
 GatePainterXlib_createContext(GatePainter*);
 
+static GateColor
+GatePainterXlib_createColor(GatePainter*, const char*);
+
 
 static void
 GatePainterPangoXft_init(GatePainter*, Display*, Drawable);
@@ -65,6 +68,9 @@ GatePainterPangoXft_drawString_new(GatePainter *, GatePainterContext*, int, int,
 
 static GatePainterContext*
 GatePainterPangoXft_createContext(GatePainter*);
+
+static GateColor
+GatePainterPangoXft_createColor(GatePainter*, const char*);
 
 /**
  * @brief virtual methods table for GatePainterContext class
@@ -124,6 +130,7 @@ static struct _GatePainterContext_vtable _gatePainterPangoXftContext_vtable = {
 #define GATE_PAINTER_CONTEXT \
 	struct _GatePainterContext_vtable *vtable; \
 	GatePainter *painter; \
+	GateColor	color; \
 	GC gc;
 
 struct _GatePainterContext {
@@ -150,6 +157,12 @@ GatePainterContext_setFont(GatePainterContext *self, GateFont font)
 	self->vtable->setFont(self, font);
 }
 
+void
+GatePainterContext_setColor(GatePainterContext *self, GateColor color)
+{
+	self->color = color;
+}
+
 int
 GatePainterContext_textWidth(GatePainterContext *self, GateFont font, const char *str, int len)
 {
@@ -168,16 +181,10 @@ struct _GatePainterXlibContext {
 	    
 };
 
-struct _FontHashPair {
-	GateFont key;
-	PangoFontDescription *desc;
-};
-
 struct _GatePainterPangoXftContext {
 	
 	GATE_PAINTER_CONTEXT
 	
-	XftColor		 color;
 	PangoContext		*pangoContext;
 	GHashTable		*fontHash;
 	PangoFont		*activeFont;
@@ -189,7 +196,8 @@ static struct _GatePainter_vtable _gatePainterPangoXft_vtable = {
 	.destroy = GatePainterPangoXft_destroy,
 	.drawString = GatePainterPangoXft_drawString,
 	.drawString_new = GatePainterPangoXft_drawString_new,
-	.createContext = GatePainterPangoXft_createContext
+	.createContext = GatePainterPangoXft_createContext,
+	.createColor = GatePainterPangoXft_createColor
 };
 
 static struct _GatePainter_vtable _gatePainterXlib_vtable = {
@@ -197,7 +205,8 @@ static struct _GatePainter_vtable _gatePainterXlib_vtable = {
 	.destroy = GatePainterXlib_destroy,
 	.drawString = GatePainterXlib_drawString,
 	.drawString_new = GatePainterXlib_drawString_new,
-	.createContext = GatePainterXlib_createContext
+	.createContext = GatePainterXlib_createContext,
+	.createColor = GatePainterXlib_createColor
 };
 
 void
@@ -235,6 +244,13 @@ GatePainter_createContext(GatePainter *self)
 	result->painter = self;
 	
 	return result;
+}
+
+GateColor
+GatePainter_createColor(GatePainter *self, const char *name)
+{
+	printf("%s: %s\n", __PRETTY_FUNCTION__, name);
+	return (self->vtable->createColor(self, name));
 }
 
 Drawable
@@ -314,6 +330,21 @@ GatePainterXlib_createContext(GatePainter *_self)
 #undef self
 }
 
+static GateColor
+GatePainterXlib_createColor(GatePainter *self, const char *name)
+{
+	GateColor	result;
+	XColor		eXC;
+	int		res;
+
+	res = XAllocNamedColor(self->display, TkGate.CM, name, &result.xColor,
+	    &eXC);
+	if (res != Success)
+		fprintf(stderr, "XAllocNamedColor: %d\n", res);
+	
+	return (result);
+}
+
 GatePainterPangoXft*
 new_GatePainterPangoXft()
 {
@@ -370,7 +401,7 @@ GatePainterPangoXft_drawString_new(GatePainter *_self, GatePainterContext *_gc, 
 	pango_layout_set_text(gc->layout, str, len);
 	pango_layout_set_font_description(gc->layout,
 	  pango_font_describe(gc->activeFont));
-	pango_xft_render_layout(self->draw, &gc->color, gc->layout,
+	pango_xft_render_layout(self->draw, &(gc->color.xftColor), gc->layout,
 	    x*PANGO_SCALE,
 	    y*PANGO_SCALE);
 	
@@ -410,7 +441,8 @@ GatePainterPangoXft_createContext(GatePainter *_self)
 #define self ((GatePainterPangoXft*)_self)
 	GatePainterPangoXftContext *result;
 	
-	result = (GatePainterPangoXftContext*)malloc(sizeof (GatePainterPangoXftContext));
+	result = (GatePainterPangoXftContext*)malloc(
+	    sizeof (GatePainterPangoXftContext));
 	assert(result != NULL);
 	memset(result, 0, sizeof (GatePainterPangoXftContext));
 	
@@ -422,13 +454,24 @@ GatePainterPangoXft_createContext(GatePainter *_self)
 	assert(result->fontHash);
 	
 	XftColorAllocName(self->display, XDefaultVisual(self->display, 0),
-	    TkGate.CM, "black", &result->color);
+	    TkGate.CM, "black", &(result->color.xftColor));
 	
 	result->layout = pango_layout_new(result->pangoContext);
 	assert(result->layout);
 	
 	return ((GatePainterContext*)result);
 #undef self
+}
+
+static GateColor
+GatePainterPangoXft_createColor(GatePainter *self, const char *name)
+{
+	GateColor result;
+	
+	XftColorAllocName(self->display, XDefaultVisual(self->display, 0),
+	    TkGate.CM, name, &result.xftColor);
+	
+	return (result);
 }
 
 static void
@@ -475,7 +518,7 @@ _GatePainterPangoXftContext_addFont(GatePainterPangoXftContext *self, GateFont *
 			break;
 		}
 		pango_font_description_set_size(desc,
-		    getFontSize(font->size)*TkGate.circuit->zoom_factor*PANGO_SCALE);
+		    getFontSize(font->size)*TkGate.circuit->zoom_factor*PANGO_SCALE*3/4);
 		
 		result = pango_font_map_load_font(painter->fontMap, self->pangoContext,
 		    desc);
@@ -504,7 +547,6 @@ GatePainterPangoXftContext_setFont(GatePainterContext *_self, GateFont font)
 #define self ((GatePainterPangoXftContext*)_self)
 	self->activeFont = _GatePainterPangoXftContext_addFont(self, &font);
 	assert(self->activeFont);
-	printf("font: %d %d %d\n", font.family, font.prop, font.size);
 #undef self
 }
 

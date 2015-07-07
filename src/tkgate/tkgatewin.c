@@ -369,9 +369,6 @@ void setGCcolors()
   TkGate.ledoff_pixel     = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_offLedColor",TCL_GLOBAL_ONLY));
   TkGate.ledon_pixel      = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_onLedColor",TCL_GLOBAL_ONLY));
   TkGate.ledunknown_pixel = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_zLedColor",TCL_GLOBAL_ONLY));
-
-  TkGate.comment_pixel = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
-  TkGate.hyperlink_pixel = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_hyperlinkColor",TCL_GLOBAL_ONLY));
 }
 
 /*****************************************************************************
@@ -396,7 +393,6 @@ void initGCs()
     TkGate.ktextXF = GetXFonts(FF_KANJI,FP_ROMAN,FS_SMALL);
   else
     TkGate.ktextXF = 0;
-
 
   TkGate.inst_pixel = Tkg_GetColor("blue");
   TkGate.ledoff_pixel = Tkg_GetColor("firebrick4");
@@ -429,7 +425,6 @@ void initGCs()
   TkGate.scopeFloatGC   = Tkg_createGC(GXcopy,"blue",TkGate.stextXF[1]);
   TkGate.scopeUnknownGC = Tkg_createGC(GXcopy,"red",TkGate.stextXF[1]);
   TkGate.scopeClearGC   = Tkg_createGC(GXcopy,"white",TkGate.stextXF[1]);
-
 
   XSetLineAttributes(TkGate.D,TkGate.busGC,2,LineSolid,CapButt,JoinMiter);
   XSetLineAttributes(TkGate.D,TkGate.selBusGC,3,LineSolid,CapButt,JoinMiter);
@@ -468,6 +463,11 @@ static void initGateParms(TkgGateWin *gw,TkGateParams *P)
   GatePainter_init(P->painterW, P->D, P->W); /* Initializing editing window painter */
   P->commentContext = GatePainter_createContext(P->painterW);
   *GatePainterContext_gcRef(P->commentContext) = TkGate.commentGC;
+  
+  P->comment_color = GatePainter_createColor(P->painterW,
+      Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
+  P->hyperlink_color = GatePainter_createColor(P->painterW,
+      Tcl_GetVar(TkGate.tcl,"tkg_hyperlinkColor",TCL_GLOBAL_ONLY));
   
   P->painterScopeW = (GatePainter*)new_GatePainterXlib();
   GatePainter_init(P->painterScopeW, P->D, None); /* Initializing scope window painter */

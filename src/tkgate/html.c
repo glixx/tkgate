@@ -248,11 +248,11 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
 
 static HtmlContext default_context = {
   .hc_font = { .gateFont = {FF_HELVETICA, FP_ROMAN, FS_NORMAL} },
-  0,
-  0,
-  0,
-  1,
-  0
+  .hc_pixelColor.xColor.pixel = 0,
+  .hc_link = 0,
+  .hc_tag = 0,
+  .hc_preformat = 1,
+  .hc_next = 0
 };
 
 static Encoder *Html_getEncoder(Html *h)
@@ -459,14 +459,12 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 static HtmlContext *new_HtmlContext(HtmlContext *base,Html *html)
 {
   HtmlContext *hc = OM_MALLOC(HtmlContext);
-
-  //  printf("%p: new_HtmlContext()\n",hc);
-
+  
   if (base)
     *hc = *base;
   else {
     *hc = default_context;
-    hc->hc_pixel = TkGate.comment_pixel;
+    hc->hc_pixelColor = TkGate.comment_color;
   }
 
   hc->hc_html = html;
@@ -844,7 +842,7 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   const char *gifFile = "blk_copy.gif";
   int i;
 
-  hc->hc_pixel = -1;
+  hc->hc_pixelColor.xColor.pixel = -1;
 
   ob_touch(hu);
 
@@ -857,7 +855,9 @@ void Html_handle_img(Html *h, HtmlTag *tag)
       gifFile = ob_strdup(buf);
     } else if (strcasecmp(tag->ht_options[i].hto_label, "bgcolor") == 0) {
       ob_touch(hc);
-      hc->hc_pixel = Tkg_GetColor(tag->ht_options[i].hto_value);
+      hc->hc_pixelColor = GatePainter_createColor(TkGate.painterW,
+	  tag->ht_options[i].hto_value);
+      hc->hc_pixelColor.xColor.pixel = Tkg_GetColor(tag->ht_options[i].hto_value);
     }
   }
 
@@ -948,10 +948,12 @@ void HtmlContext_handle_modifiers(HtmlContext *hc,HtmlTag *tag)
       HtmlFont_updatePoints(&hc->hc_font);
     } else if (strcasecmp(label,"color") == 0) {
       ob_touch(hc);
-      if (hc->hc_html->h_target == TD_X11)
-	hc->hc_pixel = Tkg_GetColor(value);
+      if (hc->hc_html->h_target == TD_X11) {
+	hc->hc_pixelColor = GatePainter_createColor(TkGate.painterW, value);
+	hc->hc_pixelColor.xColor.pixel = Tkg_GetColor(value);
+      }
       else
-	hc->hc_pixel = 0;
+	hc->hc_pixelColor.xColor.pixel = 0;
     }
   }
 }
@@ -1031,7 +1033,7 @@ void Html_handle_a(Html *h, HtmlTag *ht)
   int i;
 
   ob_touch(hc);
-  hc->hc_pixel = TkGate.hyperlink_pixel;
+  hc->hc_pixelColor = TkGate.hyperlink_color;
   HtmlContext_activateFont(hc);
 
   for (i = 0;i < ht->ht_numOptions;i++) {
@@ -1332,7 +1334,6 @@ void Html_draw(Html *h,int x,int y)
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
-  printf("%d : %d\n", x, y);
 
 #ifdef DEBUG
   Locale_print(h->h_locale, stdout);
@@ -1351,8 +1352,10 @@ void Html_draw(Html *h,int x,int y)
       if (hc != last_hc) {
 	GatePainterContext_setFont(TkGate.commentContext, hc->hc_font.gateFont);
 
-	if (hc->hc_pixel >= 0)
-          Tkg_changeColor(gc, GXxor, hc->hc_pixel);
+	if (hc->hc_pixelColor.xColor.pixel >= 0) {
+          Tkg_changeColor(gc, GXxor, hc->hc_pixelColor.xColor.pixel);
+	  GatePainterContext_setColor(TkGate.commentContext, hc->hc_pixelColor);
+	}
         last_hc = hc;
       }
 
@@ -1385,8 +1388,8 @@ void Html_draw(Html *h,int x,int y)
 	int base_x = hu->hu_x + x;
 	int base_y = hu->hu_y + y - HtmlContext_fontAscent(hc);
 
-	if (hc->hc_pixel >= 0) {
-	  XSetForeground(TkGate.D,igc,hc->hc_pixel);
+	if (hc->hc_pixelColor.xColor.pixel >= 0) {
+	  XSetForeground(TkGate.D,igc,hc->hc_pixelColor.xColor.pixel);
 	  ZFillRectangle(TkGate.D,TkGate.W,igc, base_x,base_y, width, height);
 	} else
 	  XSetForeground(TkGate.D,igc,XWhitePixelOfScreen(TkGate.S));
@@ -1453,7 +1456,6 @@ void HtmlContext_print(const HtmlContext * context, FILE * fp)
 {
   fputs("Html context:    ", fp);
 
-  fprintf(fp, "\tpixel color:         %d\n", context->hc_pixel);
   fprintf(fp, "\tassociated hyperlink:%s\n", context->hc_link);
   fprintf(fp, "\tassociated tag:      %s\n", context->hc_tag);
   fprintf(fp, "\tpreformat:           %d\n", context->hc_preformat);

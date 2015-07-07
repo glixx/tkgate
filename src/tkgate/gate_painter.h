@@ -21,6 +21,13 @@
 #define	GATE_PAINTER_H
 
 #include "fonts.h"
+#include <X11/Xft/Xft.h>
+
+struct _GateColor {
+	XColor		xColor;
+	XftColor	xftColor;
+};
+typedef struct _GateColor GateColor;
 
 /**
  * @class GatePainter
@@ -69,6 +76,8 @@ void GatePainter_drawString(GatePainter*, GC, int, int, const char*, int);
 
 GatePainterContext * GatePainter_createContext(GatePainter*);
 
+GateColor GatePainter_createColor(GatePainter*, const char*);
+
 Drawable GatePainter_drawable(GatePainter *self);
 void GatePainter_setDrawable(GatePainter *self, Drawable newVal);
 
@@ -105,6 +114,8 @@ GC *GatePainterContext_gcRef(GatePainterContext*);
  * @param TkGate font object
  */
 void GatePainterContext_setFont(GatePainterContext*, GateFont);
+
+void GatePainterContext_setColor(GatePainterContext*, GateColor);
 
 int GatePainterContext_textWidth(GatePainterContext*, GateFont, const char*, int);
 
