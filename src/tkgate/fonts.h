@@ -64,6 +64,11 @@ typedef struct _GateFont {
 	fontsize_t	size;
 } GateFont;
 
+typedef struct _GateFontMetrics {
+	int	ascent;
+	int	descent;
+} GateFontMetrics;
+
 XFontStruct *_GetXFont(fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
 XFontStruct *GetXFont(GateFont,int zoom);
 XFontStruct **GetXFonts(fontfamily_t,fontprop_t,fontsize_t);

@@ -100,8 +100,7 @@ struct HtmlContext_str {
   XFontStruct		*hc_xFont;		/* The XFontStruct font definition */
   int			hc_is16bit;		/* Is this a 16-bit font (e.g., Japanese) */
   int			hc_spaceWidth;		/* Width of a space */
-  int			hc_ascent;		/* Ascent of the current font */
-  int			hc_descent;		/* Descent of the current font */
+  GateFontMetrics	hc_fontMetrics;		/* Metrics of the current font */
 };
 
 /*
@@ -187,8 +186,8 @@ void Hyperlink_cancel();			/* Cancel any selected hyperlink */
 int Hyperlink_isPending();
 const char *Hyperlink_getAt(int x,int y);	/* Return the hyperlink at the specified location */
 
-#define HtmlContext_fontAscent(hc) (hc)->hc_ascent
-#define HtmlContext_fontDescent(hc) (hc)->hc_descent
+#define HtmlContext_fontAscent(hc) (hc)->hc_fontMetrics.ascent
+#define HtmlContext_fontDescent(hc) (hc)->hc_fontMetrics.descent
 
 
 #endif

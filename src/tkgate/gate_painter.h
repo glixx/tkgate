@@ -108,4 +108,6 @@ void GatePainterContext_setFont(GatePainterContext*, GateFont);
 
 int GatePainterContext_textWidth(GatePainterContext*, GateFont, const char*, int);
 
+GateFontMetrics GatePainterContext_fontMetrics(GatePainterContext*, GateFont*);
+
 #endif	/* GATE_PAINTER_H */

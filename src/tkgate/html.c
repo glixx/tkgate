@@ -48,7 +48,9 @@ Special pre-processed tags:
 #include <ctype.h>
 #include <sys/time.h>
 #include <stdarg.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 //
 // Testing only
@@ -245,29 +247,13 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
-  .hc_font = { .gateFont = {FF_HELVETICA, FP_ROMAN, FS_NORMAL}},
+  .hc_font = { .gateFont = {FF_HELVETICA, FP_ROMAN, FS_NORMAL} },
   0,
   0,
   0,
   1,
   0
 };
-
-int istruevalue(const char *s)
-{
-  int n;
-
-  if (sscanf(s,"%d",&n) == 1) {
-    return (n != 0);
-  }
-
-  if (strcasecmp(s,"t") == 0) return 1;
-  if (strcasecmp(s,"y") == 0) return 1;
-  if (strcasecmp(s,"true") == 0) return 1;
-  if (strcasecmp(s,"yes") == 0) return 1;
-
-  return 0;
-}
 
 static Encoder *Html_getEncoder(Html *h)
 {
@@ -319,11 +305,9 @@ HtmlTag *new_HtmlTag()
 {
   HtmlTag *ht = OM_MALLOC(HtmlTag);
 
-  ht->ht_name = 0;
-  ht->ht_numOptions = 0;
-  ht->ht_options = 0;
+  memset(ht, 0, sizeof (HtmlTag));
 
-  return ht;
+  return (ht);
 }
 
 void delete_HtmlTag(HtmlTag *ht)
@@ -431,7 +415,7 @@ void HtmlFont_print(HtmlFont *hf,FILE *f)
 }
 
 static void HtmlContext_activateFont(HtmlContext *hc)
-{	
+{
   ob_touch(hc);
 
   switch (hc->hc_html->h_target) {
@@ -449,8 +433,8 @@ static void HtmlContext_activateFont(HtmlContext *hc)
       hc->hc_spaceWidth = GatePainterContext_textWidth(
 	  TkGate.commentContext, hc->hc_font.gateFont, " ", 1);
 
-    hc->hc_ascent = hc->hc_xFont->ascent;
-    hc->hc_descent = hc->hc_xFont->descent;
+    hc->hc_fontMetrics = GatePainterContext_fontMetrics(
+      TkGate.commentContext, &hc->hc_font.gateFont);
   }
     break;
   case TD_PRINT :
@@ -465,8 +449,9 @@ static void HtmlContext_activateFont(HtmlContext *hc)
     else
       hc->hc_spaceWidth = PSStringWidth(&hc->hc_font," ",1);
 
-    hc->hc_descent = (int)(hc->hc_font.points*0.2);
-    hc->hc_ascent = (int)(hc->hc_font.points*1.2) - hc->hc_descent;
+    hc->hc_fontMetrics.ascent = (int)(hc->hc_font.points*0.2);
+    hc->hc_fontMetrics.descent = (int)(hc->hc_font.points*1.2) -
+      hc->hc_fontMetrics.descent;
     break;
   }
 }
@@ -891,8 +876,8 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   hu->hu_text = 0;
   hu->hu_width = width;
 
-  hc->hc_descent = h->h_context->hc_descent;
-  hc->hc_ascent = height - hc->hc_descent;
+  hc->hc_fontMetrics.descent = h->h_context->hc_fontMetrics.descent;
+  hc->hc_fontMetrics.ascent = height - hc->hc_fontMetrics.descent;
 }
 
 /*****************************************************************************
@@ -1253,7 +1238,7 @@ void Html_format(Html *h)
 
     switch (hu->hu_type) {
     case HU_BREAK :
-      if (x == 0) break;		/* Do a newline only if we are not already on a newline */
+      if (x == 0) break;	/* Do a newline only if we are not already on a newline */
       /* fall through */
     case HU_NEWLINE :
       y += max_ascent;
@@ -1347,6 +1332,7 @@ void Html_draw(Html *h,int x,int y)
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
+  printf("%d : %d\n", x, y);
 
 #ifdef DEBUG
   Locale_print(h->h_locale, stdout);
@@ -1377,14 +1363,13 @@ void Html_draw(Html *h,int x,int y)
                        hu->hu_x + x,hu->hu_y + y,
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
-      } else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
-        XDrawString16( TkGate.D,
-                       TkGate.W,
-                       gc,
+      }/* else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
+	      XCreateFontSet
+	      Xutf8DrawString(TkGate.D, TkGate.W,gc, XFontSet
                        hu->hu_x + x,hu->hu_y + y,
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
-      } else {
+      } */else {
 	  GatePainter_drawString_new( TkGate.painterW,
 	                          TkGate.commentContext,
 	                          hu->hu_x + x, hu->hu_y + y,
@@ -1436,7 +1421,7 @@ const char *Html_getLink(Html *h,int x,int y)
   HtmlUnit *hu;
 
   for (hu = h->h_head;hu;hu = hu->hu_next) {
-    HtmlContext *hc = hu->hu_context;			/* Get context of this unit */
+    HtmlContext *hc = hu->hu_context;		/* Get context of this unit */
 
     if (!hc->hc_link) continue;
 
@@ -1453,7 +1438,8 @@ const char *Html_getLink(Html *h,int x,int y)
       }
     } else {
       if (x >= hu->hu_x && x <= (hu->hu_x + hu->hu_width)
-	  && y <= (hu->hu_y + HtmlContext_fontDescent(hc)) && y >= (hu->hu_y - HtmlContext_fontAscent(hc))) {
+	  && y <= (hu->hu_y + HtmlContext_fontDescent(hc)) && y >=
+	  (hu->hu_y - HtmlContext_fontAscent(hc))) {
 
 	return hc->hc_link;
       }
