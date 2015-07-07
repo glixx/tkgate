@@ -163,7 +163,7 @@ void SBreakPoint_enable(SBreakPoint *bp)
  *****************************************************************************/
 SBreakPoint *new_SBreakPoint(int idx,int state, const char *condition)
 {
-  SBreakPoint *bp = (SBreakPoint *) ob_malloc(sizeof(SBreakPoint*) , "SBreakPoint");
+  SBreakPoint *bp = (SBreakPoint *) ob_malloc(sizeof(SBreakPoint) , "SBreakPoint");
 
   bp->bp_id = idx;
   bp->bp_state = state;
