@@ -19,16 +19,16 @@
 DISTCLEANFILES=vgrammar.h vgrammar.c luthor.c
 
 BUILT_SOURCES=vgrammar.h
-AM_CFLAGS=-DTKGATE_HOMEDIR=\"$(pkgdatadir)\" @TOP_IPATH@ @COMMON_IPATH@ @TKGATE_IPATH@
+AM_CFLAGS=-DTKGATE_HOMEDIR=\"$(pkgdatadir)\" @TOP_IPATH@ @COMMON_IPATH@ @TKGATE_IPATH@ $(PANGO_XFT_CFLAGS)
 AM_YFLAGS=-d
 
 BASE_OBJS=adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c \
 	circuit.c clock.c comment.c concat.c cpath.c cursors.c decoder.c \
 	delay.c demux.c dip.c divide.c edit.c editstate.c error.c expr.c \
-	flipflop.c fonts.c frame.c functions.c gates.c generic.c ground.c \
-	hdl.c html.c hyperlink.c icon.c igenerate.c in.c jkff.c join.c joint.c \
-	led.c locale.c lshift.c metrics.c modint.c modsym.c module.c mult.c \
-	mux.c net.c nmos.c object.c or.c out.c paux.c pmos.c primitives.c \
+	flipflop.c fonts.c frame.c functions.c gate_painter.c gates.c generic.c \
+	ground.c hdl.c html.c hyperlink.c icon.c igenerate.c in.c jkff.c join.c \
+	joint.c led.c locale.c lshift.c metrics.c modint.c modsym.c module.c \
+	mult.c mux.c net.c nmos.c object.c or.c out.c paux.c pmos.c primitives.c \
 	print.c pulldown.c pullup.c ram.c register.c release.c roll.c rom.c \
 	rshift.c scope.c scopewin.c script.c search.c selection.c simulate.c \
 	switch.c symblock.c tap.c tclfuncs.c text.c tkgate.c tkgatewin.c \
@@ -36,11 +36,11 @@ BASE_OBJS=adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c \
 	wiresadd.c wiresdraw.c wiresedit.c wiresmove.c wiresnap.c wmstuff.c xor.c \
 	zoom.c vgrammar.y luthor.l \
 	breakpoint.h circuit.h comment.h cpath.h delay.h editstate.h elements.h \
-	error.h expr.h fonts.h functions.h gates.h generic.h html.h icon.h \
-	igenerate.h message.h modsym.h module.h net.h object.h primitives.h \
-	print.h psprolog.h scope.h script.h simulate.h switch.h text.h \
-	tkgate.h tkgate_config.h tkgate_misc.h verilog.h vparser.h wires.h \
-	yybasic.h zoom.h
+	error.h expr.h fonts.h functions.h gate_painter.h gates.h generic.h \
+	html.h icon.h igenerate.h message.h modsym.h module.h net.h object.h \
+	primitives.h print.h psprolog.h scope.h script.h simulate.h switch.h \
+	text.h tkgate.h tkgate_config.h tkgate_misc.h verilog.h vparser.h \
+	wires.h yybasic.h zoom.h
 
 #lib_LTLIBRARIES=libtkgate.la
 #libtkgate_la_SOURCES=$(BASE_OBJS)
@@ -48,7 +48,7 @@ BASE_OBJS=adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c \
 #libtkgate_la_LIBADD=@TKGATE_LIB@ -lcommon
 
 bin_PROGRAMS=tkgate
-tkgate_LDFLAGS=@TKGATE_LPATH@ @X_LIBS@ @COMMON_LPATH@
+tkgate_LDFLAGS=@TKGATE_LPATH@ @X_LIBS@ @COMMON_LPATH@ $(PANGO_XFT_LIBS)
 tkgate_SOURCES=$(BASE_OBJS) main.c
 #tkgate_LDADD=libtkgate.la
 tkgate_LDADD=@TKGATE_LIB@ -lcommon -lm -lpthread

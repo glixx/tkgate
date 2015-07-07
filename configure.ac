@@ -134,6 +134,7 @@ AC_FUNC_ALLOCA
 AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS([limits.h malloc.h stdlib.h string.h sys/param.h sys/time.h unistd.h stdint.h])
+PKG_CHECK_MODULES(PANGO_XFT, pangoxft)
 TKG_CHECK_ICONV_H
 
 # Checks for typedefs, structures, and compiler characteristics.
