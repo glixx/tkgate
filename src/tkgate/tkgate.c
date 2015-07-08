@@ -17,10 +17,24 @@
 
     Last edit by hansen on Wed Mar 18 04:23:18 2009
 ****************************************************************************/
-#include "tkgate.h"
+
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
+#include <stdlib.h>
+#include <string.h>
+#endif
 
 #include <dirent.h>
 #include <pwd.h>
+
+#include "tkgate.h"
+#include "print.h"
 
 void MSS_init();			/* Module symbol table initialization */
 

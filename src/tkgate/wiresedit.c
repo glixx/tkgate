@@ -51,9 +51,11 @@
  *   wire_trashout(n,M,dp)	Trash a wire in the "out" direction.
  *
  *****************************************************************************/
-#include "tkgate.h"
 
+#include <stdlib.h>
 #include <assert.h>
+
+#include "tkgate.h"
 
 #define DEBUG_CUT 0
 

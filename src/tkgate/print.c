@@ -41,11 +41,21 @@
  *
  *****************************************************************************/
 
-#include "tkgate.h"
-
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cassert>
+#include <cmath>
+#else
+#include <stdlib.h>
 #include <assert.h>
 #include <math.h>
+#endif
+
 #include <pwd.h>
+
+#include "tkgate.h"
+#include "print.h"
+
 
 /*
  * Font change codes
@@ -103,7 +113,6 @@ extern char *psFontNameTable[FF_MAX][FP_MAX];
  *
  *****************************************************************************/
 HtmlFont hdl_font = {.gateFont = {FF_COURIER,FP_ROMAN,0}, 10};
-
 
 typedef struct hgnode HGNode;
 struct hgnode {

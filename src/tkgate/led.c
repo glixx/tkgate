@@ -17,7 +17,9 @@
 
     Last edit by hansen on Sat Sep 26 14:30:18 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define LED_IN 0
 

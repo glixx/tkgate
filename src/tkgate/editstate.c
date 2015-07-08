@@ -17,6 +17,9 @@
 
     Last edit by hansen on Tue May  5 20:45:31 2009
 ****************************************************************************/
+
+#include <stdlib.h>
+
 #include "tkgate.h"
 
 #define DEBUG_REDISPLAY 0
@@ -584,7 +587,7 @@ void editstate_update(EditState *es)
     XSetClipRectangles(TkGate.D,TkGate.moduleGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.modportGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.frameGC,0,0,&cr,1,YXSorted);
-    XSetClipRectangles(TkGate.D,TkGate.commentGC,
+    XSetClipRectangles(TkGate.D,GatePainterContext_gc(TkGate.commentContext),
 	0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.hyperlinkGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.wireGC,0,0,&cr,1,YXSorted);
@@ -631,7 +634,7 @@ void editstate_update(EditState *es)
     XSetClipMask(TkGate.D,TkGate.moduleGC,None);
     XSetClipMask(TkGate.D,TkGate.modportGC,None);
     XSetClipMask(TkGate.D,TkGate.frameGC,None);
-    XSetClipMask(TkGate.D,TkGate.commentGC,None);
+    XSetClipMask(TkGate.D,GatePainterContext_gc(TkGate.commentContext),None);
     XSetClipMask(TkGate.D,TkGate.hyperlinkGC,None);
     XSetClipMask(TkGate.D,TkGate.wireGC,None);
     XSetClipMask(TkGate.D,TkGate.busGC,None);

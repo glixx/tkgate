@@ -18,6 +18,8 @@
 #ifndef __misc_h
 #define __misc_h
 
+#include <stdio.h>
+
 __BEGIN_DECLS
 
 /*
@@ -80,7 +82,7 @@ typedef struct {
   int revision;		/* Revision */
   int alpha;		/* Alpha level */
   int beta;		/* Beta level */
-  int rc;       /* release candidate level */
+  int rc;		/* release candidate level */
 } Version;
 
 typedef struct {
@@ -119,9 +121,11 @@ const char *bitrangeSpec(int n);
 
 #define tv_to_ms(tv) ( ((unsigned long long)(tv)->tv_sec)*1000 + (tv)->tv_usec/1000)
 
+int istruevalue(const char *s);
+
 typedef enum boolean_en {
-  FALSE = 0,
-  TRUE = 1
+  GATE_FALSE = 0,
+  GATE_TRUE = 1
 } Boolean;
 
 __END_DECLS

@@ -77,8 +77,11 @@
  * to be backed up for a command.
  *
  *###########################################################################*/
-#include "tkgate.h"
+
+#include <stdlib.h>
 #include <assert.h>
+
+#include "tkgate.h"
 
 #define OBJECT_DEBUG		0	/* Debugging display of object handling */
 #define OBJECT_SHOWMODS		0	/* More debugging display of object handling */

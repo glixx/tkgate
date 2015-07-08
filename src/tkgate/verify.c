@@ -17,14 +17,25 @@
 
     Last edit by hansen on Sun Dec 21 22:27:18 2008
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdarg>
+#include <cstdio>
+#include <cassert>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <assert.h>
+#include <string.h>
+#endif
+
 #include <pwd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <assert.h>
-#include <string.h>
+
 #include "tkgate.h"
 
 static int did_message = 0;

@@ -20,15 +20,27 @@
 /*
     Postscript generator for tkgate.
 */
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cassert>
+#include <cmath>
+#else
 #include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h>
-#include <pwd.h>
-#include <sys/time.h>
 #include <string.h>
 #include <assert.h>
 #include <math.h>
+#endif
+
+#include <unistd.h>
+#include <pwd.h>
+#include <sys/time.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 /***********************************************************************/
 

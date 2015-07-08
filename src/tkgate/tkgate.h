@@ -30,9 +30,7 @@
 #include <ctype.h>
 #include <errno.h>
 #include <limits.h>
-#include <signal.h>
 #include <stdarg.h>
-#include <stdlib.h>
 #if HAVE_STRING_H
 #include <string.h>
 #endif
@@ -70,7 +68,6 @@
 #include "misc.h"
 #include "text.h"
 #include "ycmalloc.h"
-#include "html.h"
 #include "expr.h"
 #include "delay.h"
 #include "icon.h"
@@ -88,7 +85,6 @@
 #include "gates.h"
 #include "generic.h"
 #include "functions.h"
-#include "print.h"
 #include "message.h"
 #include "object.h"
 #include "cpath.h"
@@ -342,7 +338,7 @@ struct TkGateParams_str {
   GC moduleGC;			/* GC for modules (variable font)  */
   GC modportGC;			/* GC for module ports  (variable font) */
   GC frameGC;			/* Dashed line GC for frames  (variable font) */
-  GC commentGC;			/* GC for comments (variable font) */
+  //GC commentGC;			/* GC for comments (variable font) */
   GC imageGC;			/* GC for images */
   GC hyperlinkGC;		/* GC for hyperlink comments (variable font) */
   GC wireGC;			/* GC for wire drawing */
@@ -370,8 +366,8 @@ struct TkGateParams_str {
   int ledoff_pixel;		/* Pixel value for off leds */
   int ledon_pixel;		/* Pixel value for on leds */
   int ledunknown_pixel;		/* Pixel value for led with unknown input */
-  int comment_pixel;		/* Pixel value for comments */
-  int hyperlink_pixel;		/* Pixel value for hyperlinks */
+  GateColor comment_color;	/* Color for comment regular text */
+  GateColor hyperlink_color;	/* Color for hyperlinks */
 
   IdleEv idle_ev;		/* Idle event flags */
   PopState popstate;		/* Popup menu state */

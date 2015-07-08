@@ -17,6 +17,8 @@
 
     Last edit by hansen on Wed Mar 18 04:17:20 2009
 ****************************************************************************/
+
+#include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <sys/time.h>

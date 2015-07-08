@@ -199,15 +199,20 @@ typedef struct locale_str Locale;
 #define PRIENCODER 2
 
 /* Gate draw types */
-#define GD_NORMAL	0	/* Normal drawing (gate with wires) */
-#define GD_NOINWIRE	1	/* Suppress input wire drawing */
-#define GD_NOWIRE	2	/* Suppress wire drawing */
-#define GD_PADONLY	3	/* Draw only wire pad names (block type only) */
+typedef enum _drawtype_t {
+	GD_NORMAL = 0,
+#define GD_NORMAL	GD_NORMAL	/* Normal drawing (gate with wires) */
+	GD_NOINWIRE,    
+#define GD_NOINWIRE	GD_NOINWIRE	/* Suppress input wire drawing */
+	GD_NOWIRE,
+#define GD_NOWIRE	GD_NOWIRE	/* Suppress wire drawing */
+	GD_PADONLY
+#define GD_PADONLY	GD_PADONLY	/* Draw only wire pad names (block type only) */
+} drawtype_t;
 
 #define DEFAULT_PORT_NAME "*port_name*"
 
 #define bits(var,size) unsigned int var : size
-#define abs(x) ((x) < 0 ? (-(x)) : (x))
 #define midpointp(m,v1,v2) (abs((m)-(v1)) + abs((m)-(v2)) == abs((v1)-(v2)))
 
 /* The distance formula */

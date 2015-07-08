@@ -27,6 +27,9 @@
  *	GWire_snap(GWire*)
  *	wire_snapgate(GCElement*,int)
  *##########################################################################*/
+
+#include <stdlib.h>
+
 #include "tkgate.h"
 
 #define crosspoint(x1,x2,x) (((x >= x1) && (x <= x2)) || ((x >= x2) && (x <= x1)))

@@ -842,7 +842,7 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   const char *gifFile = "blk_copy.gif";
   int i;
 
-  hc->hc_pixelColor.xColor.pixel = -1;
+  hc->hc_pixelColor = notAColor;
 
   ob_touch(hu);
 
@@ -855,9 +855,8 @@ void Html_handle_img(Html *h, HtmlTag *tag)
       gifFile = ob_strdup(buf);
     } else if (strcasecmp(tag->ht_options[i].hto_label, "bgcolor") == 0) {
       ob_touch(hc);
-      hc->hc_pixelColor = GatePainter_createColor(TkGate.painterW,
+      hc->hc_pixelColor = GatePainter_getColor(TkGate.painterW,
 	  tag->ht_options[i].hto_value);
-      hc->hc_pixelColor.xColor.pixel = Tkg_GetColor(tag->ht_options[i].hto_value);
     }
   }
 
@@ -949,11 +948,10 @@ void HtmlContext_handle_modifiers(HtmlContext *hc,HtmlTag *tag)
     } else if (strcasecmp(label,"color") == 0) {
       ob_touch(hc);
       if (hc->hc_html->h_target == TD_X11) {
-	hc->hc_pixelColor = GatePainter_createColor(TkGate.painterW, value);
-	hc->hc_pixelColor.xColor.pixel = Tkg_GetColor(value);
+	hc->hc_pixelColor = GatePainter_getColor(TkGate.painterW, value);
       }
       else
-	hc->hc_pixelColor.xColor.pixel = 0;
+	hc->hc_pixelColor = GatePainter_getColor(TkGate.painterW, "balack");
     }
   }
 }
@@ -1331,6 +1329,8 @@ void Html_draw(Html *h,int x,int y)
   GC igc = TkGate.imageGC;
   HtmlUnit *hu;
   HtmlContext *last_hc = 0;
+  
+  GatePainterContext_print(TkGate.commentContext, stdout);
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
@@ -1352,13 +1352,13 @@ void Html_draw(Html *h,int x,int y)
       if (hc != last_hc) {
 	GatePainterContext_setFont(TkGate.commentContext, hc->hc_font.gateFont);
 
-	if (hc->hc_pixelColor.xColor.pixel >= 0) {
+	if (!GateColor_equals(&hc->hc_pixelColor, &notAColor)) {
           Tkg_changeColor(gc, GXxor, hc->hc_pixelColor.xColor.pixel);
 	  GatePainterContext_setColor(TkGate.commentContext, hc->hc_pixelColor);
 	}
         last_hc = hc;
       }
-
+      
       if (hc->hc_font.gateFont.family == FF_KANJI) {
 	    XDrawString16( TkGate.D,
                        TkGate.W,
@@ -1388,7 +1388,7 @@ void Html_draw(Html *h,int x,int y)
 	int base_x = hu->hu_x + x;
 	int base_y = hu->hu_y + y - HtmlContext_fontAscent(hc);
 
-	if (hc->hc_pixelColor.xColor.pixel >= 0) {
+	if (!GateColor_equals(&hc->hc_pixelColor, &notAColor)) {
 	  XSetForeground(TkGate.D,igc,hc->hc_pixelColor.xColor.pixel);
 	  ZFillRectangle(TkGate.D,TkGate.W,igc, base_x,base_y, width, height);
 	} else

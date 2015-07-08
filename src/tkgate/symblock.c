@@ -39,10 +39,19 @@ Handling characteristics of SymModules:
   module definition.
 *
 ***************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <string.h>
+#endif
+
 #include <unistd.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 void SymBlock_Draw(GCElement *g,int md);
 int SymBlock_HitDistance(GCElement *g,int x,int y);

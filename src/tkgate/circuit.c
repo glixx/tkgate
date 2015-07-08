@@ -17,6 +17,9 @@
 
     Last edit by hansen on Tue Mar 17 06:49:35 2009
 ****************************************************************************/
+
+#include <stdlib.h>
+
 #include "tkgate.h"
 
 static const char *unitCodes[] = {"s", "ms", "us", "ns", "ps", "fs"};

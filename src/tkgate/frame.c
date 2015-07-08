@@ -17,9 +17,17 @@
 
     Last edit by hansen on Fri Jan 30 20:27:13 2009
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <string.h>
+#endif
+
 #include "tkgate.h"
+#include "print.h"
 
 static char *psFrame[] = {
   "%",

@@ -17,10 +17,18 @@
 
     Last edit by hansen on Fri Feb 13 22:29:46 2009
 ****************************************************************************/
-#include "tkgate.h"
 
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cassert>
+#else
+#include <stdlib.h>
 #include <assert.h>
+#endif
+
 #include <dirent.h>
+
+#include "tkgate.h"
 
 extern int is_verbose;
 

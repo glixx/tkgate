@@ -17,12 +17,21 @@
 
     Last edit by hansen on Sat Jan 17 00:30:11 2009
 ****************************************************************************/
-#include "tkgate.h"
 
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdio>
+#include <cassert>
+#else
+#include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
+#endif
+
 #include <ctype.h>
 #include <stdarg.h>
-#include <assert.h>
+
+#include "tkgate.h"
 
 int istruevalue(const char *s);
 

@@ -626,3 +626,19 @@ rotateY(int x, int y, int r)
 	}
 	return 0;
 }
+
+int istruevalue(const char *s)
+{
+  int n;
+
+  if (sscanf(s,"%d",&n) == 1) {
+    return (n != 0);
+  }
+
+  if (strcasecmp(s,"t") == 0) return 1;
+  if (strcasecmp(s,"y") == 0) return 1;
+  if (strcasecmp(s,"true") == 0) return 1;
+  if (strcasecmp(s,"yes") == 0) return 1;
+
+  return 0;
+}

@@ -17,10 +17,19 @@
 
     Last edit by hansen on Sun Feb 22 16:55:03 2009
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <string.h>
+#endif
+
 #include <unistd.h>
+
 #include "tkgate.h"
+#include "print.h"
 #include "yybasic.h"
 
 #define BLOCK_STUBLEN	15

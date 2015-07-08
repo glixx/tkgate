@@ -23,6 +23,23 @@
 #include <pango/pangoxft.h>
 #include <assert.h>
 
+GateColor notAColor = {
+	.xColor = {
+		.pixel = -1
+	},
+	.xftColor = {
+		.pixel = -1
+	}
+};
+
+Boolean GateColor_equals(GateColor *lhs, GateColor *rhs)
+{
+	if (memcmp(lhs, rhs, sizeof (GateColor)) == 0)
+		return (GATE_TRUE);
+	else
+		return (GATE_FALSE);
+}
+
 /**
  * @brief virtual methods table for GatePainter class
  */
@@ -32,7 +49,7 @@ struct _GatePainter_vtable {
 	void (*drawString)(GatePainter*, GC, int, int, const char*, int);
 	void (*drawString_new)(GatePainter*, GatePainterContext*, int, int, const char*, int);
 	GatePainterContext *(*createContext)(GatePainter *self);
-	GateColor (*createColor)(GatePainter*, const char*);
+	GateColor (*getColor)(GatePainter*, const char*);
 };
 
 static void
@@ -79,12 +96,13 @@ struct _GatePainterContext_vtable {
 	void (*setFont)(GatePainterContext*, GateFont);
 	int (*textWidth)(GatePainterContext*, GateFont, const char*, int len);
 	GateFontMetrics (*fontMetrics)(GatePainterContext*, GateFont*);
+	void (*print)(GatePainterContext*, FILE*);
 };
 
 #define GATE_PAINTER \
 	struct _GatePainter_vtable	*vtable; \
 	Display				*display; \
-	Drawable			 drawable;
+	Drawable			 drawable; \
 
 struct _GatePainter {
 	
@@ -104,10 +122,14 @@ struct _GatePainterPangoXft {
 	    
 	XftDraw		*draw;
 	PangoFontMap	*fontMap;
+	Pixmap		 pixmap;
 };
 
 static void GatePainterXlibContext_setFont(GatePainterContext*, GateFont);
 static void GatePainterPangoXftContext_setFont(GatePainterContext*, GateFont);
+
+static void GatePainterXlibContext_print(GatePainterContext*, FILE*);
+static void GatePainterPangoXftContext_print(GatePainterContext*, FILE*);
 
 static int GatePainterXlibContext_textWidth(GatePainterContext*, GateFont, const char*, int);
 static int GatePainterPangoXftContext_textWidth(GatePainterContext*, GateFont, const char*, int);
@@ -118,19 +140,21 @@ static GateFontMetrics GatePainterPangoXftContext_fontMetrics(GatePainterContext
 static struct _GatePainterContext_vtable _gatePainterXlibContext_vtable = {
 	.setFont = GatePainterXlibContext_setFont,
 	.textWidth = GatePainterXlibContext_textWidth,
-	.fontMetrics = GatePainterXlibContext_fontMetrics
+	.fontMetrics = GatePainterXlibContext_fontMetrics,
+	.print = GatePainterXlibContext_print
 };
 
 static struct _GatePainterContext_vtable _gatePainterPangoXftContext_vtable = {
 	.setFont = GatePainterPangoXftContext_setFont,
 	.textWidth = GatePainterPangoXftContext_textWidth,
-	.fontMetrics = GatePainterPangoXftContext_fontMetrics
+	.fontMetrics = GatePainterPangoXftContext_fontMetrics,
+	.print = GatePainterPangoXftContext_print
 };
 
 #define GATE_PAINTER_CONTEXT \
 	struct _GatePainterContext_vtable *vtable; \
-	GatePainter *painter; \
-	GateColor	color; \
+	GatePainter	*painter; \
+	GateColor	 color; \
 	GC gc;
 
 struct _GatePainterContext {
@@ -161,6 +185,12 @@ void
 GatePainterContext_setColor(GatePainterContext *self, GateColor color)
 {
 	self->color = color;
+}
+
+void
+GatePainterContext_print(GatePainterContext *self, FILE *stream)
+{
+	self->vtable->print(self, stream);
 }
 
 int
@@ -197,7 +227,7 @@ static struct _GatePainter_vtable _gatePainterPangoXft_vtable = {
 	.drawString = GatePainterPangoXft_drawString,
 	.drawString_new = GatePainterPangoXft_drawString_new,
 	.createContext = GatePainterPangoXft_createContext,
-	.createColor = GatePainterPangoXft_createColor
+	.getColor = GatePainterPangoXft_createColor
 };
 
 static struct _GatePainter_vtable _gatePainterXlib_vtable = {
@@ -206,7 +236,7 @@ static struct _GatePainter_vtable _gatePainterXlib_vtable = {
 	.drawString = GatePainterXlib_drawString,
 	.drawString_new = GatePainterXlib_drawString_new,
 	.createContext = GatePainterXlib_createContext,
-	.createColor = GatePainterXlib_createColor
+	.getColor = GatePainterXlib_createColor
 };
 
 void
@@ -247,10 +277,9 @@ GatePainter_createContext(GatePainter *self)
 }
 
 GateColor
-GatePainter_createColor(GatePainter *self, const char *name)
+GatePainter_getColor(GatePainter *self, const char *name)
 {
-	printf("%s: %s\n", __PRETTY_FUNCTION__, name);
-	return (self->vtable->createColor(self, name));
+	return (self->vtable->getColor(self, name));
 }
 
 Drawable
@@ -362,9 +391,11 @@ static void
 GatePainterPangoXft_init(GatePainter *_self, Display *display, Drawable draw)
 {
 #define self ((GatePainterPangoXft*)_self)
+	
+	self->pixmap = XCreatePixmap(display, draw, 800, 600, 24);
 	self->draw = XftDrawCreate(
 	    self->display,
-	    self->drawable,
+	    self->pixmap,
 	    XDefaultVisual(self->display,0),
 	    XDefaultColormap(self->display, 0));
 	assert(self->draw);
@@ -396,17 +427,36 @@ static void
 GatePainterPangoXft_drawString_new(GatePainter *_self, GatePainterContext *_gc, int x, int y, const char *str, int len)
 {
 #define self ((GatePainterPangoXft*)_self)
-#define gc ((GatePainterPangoXftContext*)_gc)
+#define gCont ((GatePainterPangoXftContext*)_gc)
 	
-	pango_layout_set_text(gc->layout, str, len);
-	pango_layout_set_font_description(gc->layout,
-	  pango_font_describe(gc->activeFont));
-	pango_xft_render_layout(self->draw, &(gc->color.xftColor), gc->layout,
-	    x*PANGO_SCALE,
-	    y*PANGO_SCALE);
+	unsigned width, height, function, foreground;
+	XGCValues result;
+	
+	XGetGCValues(self->display, gCont->gc,
+	  GCFunction | GCBackground | GCForeground, &result);
+	function = result.function;
+	foreground = result.foreground;
+	
+	GatePainterContext_print(_gc, stdout);
+	XSetFunction(self->display, gCont->gc, GXcopy);
+	//XSetForeground(self->display, gCont->gc, result.background);
+	
+	pango_layout_set_text(gCont->layout, str, len);
+	pango_layout_set_font_description(gCont->layout,
+	  pango_font_describe(gCont->activeFont));
+	pango_layout_get_pixel_size(gCont->layout, &width, &height);
+	
+	XFillRectangle(self->display,self->pixmap, gCont->gc, 0,0, width,height);
+	XSetFunction(self->display, gCont->gc, function);
+	//XSetForeground(self->display, gCont->gc, foreground);
+	
+	pango_xft_render_layout(self->draw, &(gCont->color.xftColor), gCont->layout,
+	    0, 0);
+	XCopyArea(self->display, self->pixmap, self->drawable, gCont->gc,
+	    0,0, width,height, x,y);
 	
 #undef self
-#undef gc
+#undef gCont
 }
 
 guint
@@ -440,7 +490,7 @@ GatePainterPangoXft_createContext(GatePainter *_self)
 {
 #define self ((GatePainterPangoXft*)_self)
 	GatePainterPangoXftContext *result;
-	
+
 	result = (GatePainterPangoXftContext*)malloc(
 	    sizeof (GatePainterPangoXftContext));
 	assert(result != NULL);
@@ -449,7 +499,7 @@ GatePainterPangoXft_createContext(GatePainter *_self)
 	result->vtable = &_gatePainterPangoXftContext_vtable;
 	result->pangoContext = pango_font_map_create_context(self->fontMap);
 	assert(result->pangoContext);
-	
+
 	result->fontHash = g_hash_table_new(getFontHash, fontsEqual);
 	assert(result->fontHash);
 	
@@ -468,6 +518,7 @@ GatePainterPangoXft_createColor(GatePainter *self, const char *name)
 {
 	GateColor result;
 	
+	GatePainterXlib_createColor(self, name);
 	XftColorAllocName(self->display, XDefaultVisual(self->display, 0),
 	    TkGate.CM, name, &result.xftColor);
 	
@@ -485,10 +536,36 @@ GatePainterXlibContext_setFont(GatePainterContext *_self, GateFont font)
 	assert(fs);
 	
 	res = XSetFont(self->painter->display, self->gc, fs->fid);
-	if (res != Success)
-		fprintf(stderr, "XSetFont: error %d\n", res);
-	else
-		puts("XSetFont: Success");
+	if (res != Success);
+		//fprintf(stderr, "XSetFont: error %d\n", res);
+#undef self
+}
+
+void
+GatePainterXlibContext_print(GatePainterContext *self, FILE *stream)
+{
+	XGCValues result;
+	
+	XGetGCValues(self->painter->display, self->gc,
+	    GCFunction | GCForeground | GCBackground | GCFont, &result);
+	
+	fprintf(stream, "GatePainter context:\n"
+	    "\tfunction:   %d\n\tforeground: %lx\n\tbackground: %lx\n",
+	    result.function, result.foreground, result.background);
+}
+
+void
+GatePainterPangoXftContext_print(GatePainterContext *_self, FILE *stream)
+{
+#define self ((GatePainterPangoXftContext*)_self)
+	XGCValues result;
+	
+	XGetGCValues(self->painter->display, self->gc,
+	    GCFunction | GCForeground | GCBackground | GCFont, &result);
+	
+	fprintf(stream, "GatePainter context:\n"
+	    "\tfunction:   %d\n\tforeground: %lx\n\tbackground: %lx\n",
+	    result.function, result.foreground, result.background);
 #undef self
 }
 
@@ -519,6 +596,17 @@ _GatePainterPangoXftContext_addFont(GatePainterPangoXftContext *self, GateFont *
 		}
 		pango_font_description_set_size(desc,
 		    getFontSize(font->size)*TkGate.circuit->zoom_factor*PANGO_SCALE*3/4);
+		
+		switch (font->prop) {
+		case FP_BOLD :
+			pango_font_description_set_weight(desc, PANGO_WEIGHT_BOLD);
+			break;
+		case FP_ITALIC :
+			pango_font_description_set_style(desc, PANGO_STYLE_ITALIC);
+			break;
+		default :
+			break;
+		}
 		
 		result = pango_font_map_load_font(painter->fontMap, self->pangoContext,
 		    desc);
