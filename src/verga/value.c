@@ -417,11 +417,11 @@ Boolean Value_hasUnknown(Value *S)
 		if (i == wordCount-1 && (S->nbits & SSBITMASK)) {
 			unsigned mask = LMASK(S->nbits);
 			if (S->flt[i] & S->zero[i] & S->one[i] & mask)
-				return TRUE;
+				return (GATE_TRUE);
 		} else if (S->flt[i] & S->zero[i] & S->one[i])
-			return TRUE;
+			return (GATE_TRUE);
 	}
-	return FALSE;
+	return (GATE_FALSE);
 }
 
 Boolean Value_hasFloat(Value *S)
@@ -434,11 +434,11 @@ Boolean Value_hasFloat(Value *S)
 		if (i == wordCount-1 && (S->nbits & SSBITMASK)) {
 			unsigned mask = LMASK(S->nbits);
 			if (S->flt[i] & ~(S->zero[i] | S->one[i]) & mask)
-				return TRUE;
+				return (GATE_TRUE);
 		} else if (S->flt[i] & ~(S->zero[i] | S->one[i]))
-			return TRUE;
+			return (GATE_TRUE);
 	}
-	return FALSE;
+	return (GATE_FALSE);
 }
 
 void Value_xclear(Value *S)
