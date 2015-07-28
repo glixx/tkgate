@@ -802,8 +802,8 @@ mark.
 					</figure>
 					<para>
 To create a gate using the pop-up menu, right click on the position at
-which you wish to create a gate.	This will both create the position
-mark and bring up the pop-up menu.	Then select "Make", and then
+which you wish to create a gate. This will both create the position
+mark and bring up the pop-up menu. Then select "Make", and then
 maneuver through the gate category to select the appropriate gate
 type.
 					</para>
@@ -813,8 +813,8 @@ type.
 					<para>
 To create a gate using keyboard shortcuts, first set a mark in the
 same way as when creating a gate using the menu bar (Section 2.5.1).
-Then simply type the shortcut for the gate you wish to create.	Most
-of the gate types have single character commands to create them.	For
+Then simply type the shortcut for the gate you wish to create. Most
+of the gate types have single character commands to create them. For
 example, you can type "a" to create an AND gate, and "A" to create a
 NAND gate. A list of the gate types and their keyboard shortcuts are
 shown in Section 2.16.
@@ -874,18 +874,18 @@ shown in Section 2.16.
 					</figure>
 					<para>
 Port-to-port connections are used to connect the end points of two
-wires.  Before making the connections, make sure you have selected the
-"Move/Connect" tool from the "Tool" menu.  Then, click and hold the
+wires. Before making the connections, make sure you have selected the
+"Move/Connect" tool from the "Tool" menu. Then, click and hold the
 left mouse button on the endpoint of one of the ends you wish to
-connect.  The mouse cursor will change to a soldering iron to indicate
+connect. The mouse cursor will change to a soldering iron to indicate
 that connect mode is active as shown in Step 1.
 					</para>
 					<para>
 Next, drag the mouse toward the other endpoint you wish to connect to
 as shown in Step 2, TKGate will automatically introduce any
 necessary bends and maintain connections with only horizontal and
-vertical segments.  Bring the end close the the wire you wish to
-connect to as shown in Step 3.  When you release the mouse button,
+vertical segments. Bring the end close the the wire you wish to
+connect to as shown in Step 3. When you release the mouse button,
 the wires will connect as shown in Step 4.
 					</para>
 				</sect3>
@@ -960,20 +960,139 @@ many ports to a net as necessary (Step 4).
 					<para>
 When you attempt to do a port-to-joint connection with wires of
 different sizes, a "bit tap" will be created if you are connecting a
-wire with smaller bit size to one with a larger bit size.  A bit tap
+wire with smaller bit size to one with a larger bit size. A bit tap
 element allows you to select one or more bits off of a bigger wire.
 To set the desired bit, you should double click on the tap to open the
 Gate Properties box, select the "Details" tab
-and enter the desired bit or bits.  Ranges are indicated as a pair of
+and enter the desired bit or bits. Ranges are indicated as a pair of
 bit numbers (high number first) separated by a colon (":")
-character.  For example, to select the low four bits you would use the
-range "3:0".  In the bit tap shown here, bit 4 of the
+character. For example, to select the low four bits you would use the
+range "3:0". In the bit tap shown here, bit 4 of the
 register output is used as an input to the AND gate.
 					</para>
 					<para>
-Bit taps can only be used to "read" values off of a larger wire.  To
+Bit taps can only be used to "read" values off of a larger wire. To
 individually drive bits on a larger wire you should use the "Concat"
-device.  This device can support data flow in either direction.
+device. This device can support data flow in either direction.
+					</para>
+				</sect3>
+				<sect3>
+					<title>Creating New Joints</title>
+					<figure>
+						<title>Wire Tap</title>
+						<graphic fileref="../fig/addjoint.gif"/>
+					</figure>
+					<para>
+You can also create joints by right clicking on a wire and selecting
+"Add Wire Segments". This will create a new unattached wire segment
+to the wire on which you clicked as shown here.
+					</para>
+				</sect3>
+			</sect2>
+			<sect2>
+				<title>Moving Gates and Wires</title>
+				<sect3>
+					<title>Moving Single Gates</title>
+					<figure>
+						<title>Moving Single Gates</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/movgat1.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 1: </emphasis>
+									select gate
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/movgat2.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 2: </emphasis>
+									drag gate
+								</para>
+							</caption>
+						</mediaobject>
+					</figure>
+					<para>
+To move a single gate, press and hold the left mouse button on the
+gate you wish to move. The selected gate will be shown in bold as
+shown in Step 1. While holding the mouse left mouse button down drag
+the gate to the new position as shown in Step 2. Any wires connected
+to the gate will move along with it. For very fine adjustments,
+you can also move the selected gate using the arrow keys.
+					</para>
+				</sect3>
+				<sect3>
+					<title>Moving Groups of Gates</title>
+					<figure>
+						<title>Moving Groups of Gates</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/movgrp1.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 1: </emphasis>
+									start selection
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/movgrp2.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 2: </emphasis>
+									drag selection box
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/movgrp3.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 3: </emphasis>
+									grab selection
+								</para>
+							</caption>
+						</mediaobject>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="../fig/movgrp4.gif" />
+							</imageobject>
+							<caption>
+								<para>
+									<emphasis role="strong">Step 4: </emphasis>
+									drag selection
+								</para>
+							</caption>
+						</mediaobject>
+					</figure>
+					<para>
+To move a group of gates, first select the Move/Connect tool and press
+and hold the left mouse button at some point near, but not directly on
+the group you wish to move.  The "X" mark should appear just as if you
+were going to create a new gate (Step 1).  Next, while holding the
+left mouse button drag the cursor to enclose a group of gates in the
+selection box (Step 2).  The box will appear after moving the cursor a
+few millimeters. Release the mouse button to select the circuit
+elements enclosed in the box (Step 3).  Then, click and hold the mouse
+cursor on one of the selected elements (Step 4).  You can then move
+the entire group to a new position.
+					</para>
+					<para>
+The gates in a group selection will remain selected until you click on
+a gate not in the selection, or click on an empty part of the
+canvas. If you do this operation while holding the control key, you
+can add gates to the selection rather than create a new selection.
 					</para>
 				</sect3>
 			</sect2>

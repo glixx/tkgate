@@ -1,25 +1,32 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+            "http://www.w3.org/TR/html4/loose.dtd">
+	
 <HTML>
 <HEAD>
-   <TITLE>TKGate User Documentation (Editor)</TITLE>
-    <META http-equiv="Content-Style-Type" content="text/css">
-    <link rel="stylesheet" href="../tkgate.css" type="text/css">
+	<TITLE>TKGate User Documentation (Editor)</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+  <LINK REL="stylesheet" HREF="../tkgate.css" TYPE="text/css">
 </HEAD>
+
 <BODY>
 
 <H2>2. Using the Editor</H2>
 
+<P>
 This chapter will introduce the basic concepts needed to create a
 graphical circuit in TkGate.
 
 <A NAME="understand"></A>
+
 <H3>2.1 Understanding the TKGate Interface</H3>
 
-<div class=rfig>
-<a href="../fig/tkgatewindow.png" type="image/gif" target=_blank><IMG SRC="../fig/tkgatewindow-small.png"><br>
-(click to enlarge)</a><br><br>
-<b>Figure 2.1: TkGate Main Window</b>
-</div>
+<DIV CLASS=rfig>
+<A HREF="../fig/tkgatewindow.png" TYPE="image/gif" TARGET="_blank">
+	<IMG SRC="../fig/tkgatewindow-small.png" ALT="TkGate Main Window"><BR>
+(click to enlarge)</A><BR><BR>
+<B>Figure 2.1: TkGate Main Window</B>
+</DIV>
 
 The main components of the TKGate edit window consists of a menu bar
 and tool bar at the top, the module, net and port lists on the left, a
@@ -72,9 +79,9 @@ dialog box.
 <h4>2.1.5 Module List and Module Hierarchy</h4>
 
 The modules defined in the current circuit can be shown as in an
-alphabetical list view (press <img class=tool src="../fig/modlist.gif">
+alphabetical list view (press <IMG CLASS=tool src="../fig/modlist.gif" ALT="modlist tool">
 to select), or in a hierarchy view (press <img class=tool
-src="../fig/modtree.gif"> to select).  The list view simply displays all
+src="../fig/modtree.gif" ALT="modtree tool"> to select).  The list view simply displays all
 of the modules in alphabetical order.  The hierarchy view displays the
 module hierarchy starting at the top-level module.  Under each module
 is the list of modules used by that module.  There may also be
@@ -93,13 +100,13 @@ multi-bit as shown in the table below:
 <center>
 <table>
 <tr><th align=left width=100>1-Bit<br>Symbol</th><th align=left width=100>Multi-Bit<br>Symbol</th><th align=left>Description</th></tr>
-<tr><td><img src="../fig/net_hwire.gif"></td><td><img src="../fig/net_hwire2.gif"></td><td>Wire with a hidden name.</td></tr>
-<tr><td><img src="../fig/net_wire.gif"></td><td><img src="../fig/net_wire2.gif"></td><td>Wire with a visible name.</td></tr>
-<tr><td><img src="../fig/net_reg.gif"></td><td><img src="../fig/net_reg2.gif"></td><td>Register variable (HDL modules only).</td></tr>
-<tr><td><img src="../fig/net_probe.gif"></td><td><img src="../fig/net_probe2.gif"></td><td>Wire with a probe attached to it (in simulation mode).</td></tr>
-<tr><td><img src="../fig/port_in1.gif"></td><td><img src="../fig/port_in2.gif"></td><td>Module input port.</td></tr>
-<tr><td><img src="../fig/port_out1.gif"></td><td><img src="../fig/port_out2.gif"></td><td>Module output port.</td></tr>
-<tr><td><img src="../fig/port_inout1.gif"></td><td><img src="../fig/port_inout2.gif"></td><td>Module bidirectional port.</td></tr>
+<tr><td><img src="../fig/net_hwire.gif" ALT="Wire with a hidden name"></td><td><img src="../fig/net_hwire2.gif" ALT="Wire with a hidden name2"></td><td>Wire with a hidden name.</td></tr>
+<tr><td><img src="../fig/net_wire.gif" ALT="Wire with a visible name"></td><td><img src="../fig/net_wire2.gif" ALT="Wire with a visible name2"></td><td>Wire with a visible name.</td></tr>
+<tr><td><img src="../fig/net_reg.gif" ALT="register variable"></td><td><img src="../fig/net_reg2.gif" ALT="register variable2"></td><td>Register variable (HDL modules only).</td></tr>
+<tr><td><img src="../fig/net_probe.gif" ALT="Wire with a probe"></td><td><img src="../fig/net_probe2.gif" ALT="Wire with a probe2"></td><td>Wire with a probe attached to it (in simulation mode).</td></tr>
+<tr><td><img src="../fig/port_in1.gif" ALT="Module input port"></td><td><img src="../fig/port_in2.gif" ALT="Module input port2"></td><td>Module input port.</td></tr>
+<tr><td><img src="../fig/port_out1.gif" ALT="Module output port"></td><td><img src="../fig/port_out2.gif" ALT="Module output port2"></td><td>Module output port.</td></tr>
+<tr><td><img src="../fig/port_inout1.gif" ALT="Module bidirectional port"></td><td><img src="../fig/port_inout2.gif" ALT="Module bidirectional port2"></td><td>Module bidirectional port.</td></tr>
 </table>
 </center>
 <p>
@@ -112,7 +119,7 @@ the user is expected to define in the module definition.
 <h4>2.1.7 Status Bar</h4>
 
 <div class=rfig>
-<IMG SRC="../fig/statusbar.gif"><br><br>
+<IMG SRC="../fig/statusbar.gif" ALT="Status Bar"><br><br>
 <b>Figure 2.2: Status Bar</b>
 </div>
 
@@ -129,7 +136,7 @@ or information on the currently selected gate or wire.
 <h4>2.1.8 Major Mode Tabs</h4>
 
 <div class=rfig>
-<IMG SRC="../fig/majortabs.gif"><br><br>
+<IMG SRC="../fig/majortabs.gif" ALT="Major Mode Tabs"><br><br>
 <b>Figure 2.3: Major Mode Tabs</b>
 </div>
 
@@ -143,7 +150,7 @@ interface of a module without creating a module of that type.  The
 tab, TkGate will send your circuit to the simulator, check for errors,
 and if your circuit is error free, start the simulator.  By default,
 the simulator will be "paused" and you will need to press the <img class=tool
-src="../fig/sim_go.gif"> button.
+src="../fig/sim_go.gif" ALT="sim go tool"> button.
 
 <br style="clear: right;">
 
@@ -156,19 +163,19 @@ you what mode you are in.  The possible icons are:
 <TABLE WIDTH="500" class=display border>
 <tr><th align=left width=100>Symbol</th><th align=left>Description</th></tr>
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="../fig/gatelogo.gif"></TD>
+<TD ALIGN=CENTER VALIGN=MIDDLE><IMG SRC="../fig/gatelogo.gif" ALT="gatelogo"></TD>
 <TD><b>Edit/Interface Mode</b> - The TkGate logo is shown when TkGate is in the "Edit" or "Interface" modes.</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="../fig/simlogo.gif"></TD>
+<TD ALIGN=CENTER VALIGN=MIDDLE><IMG SRC="../fig/simlogo.gif" ALT="simlogo"></TD>
 
 <TD><b>Paused Simulation</b> - A stopped AND dragon shows that
 TkGate is simulation mode, and the simulation is paused. 
 </TD>
 </TR>
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER NOSAVE><IMG SRC="../fig/runsim.gif"></TD>
+<TD ALIGN=CENTER VALIGN=MIDDLE><IMG SRC="../fig/runsim.gif" ALT="runsim"></TD>
 <td><b>Running Simulation</b> - A running AND dragon shows that
 TkGate is in simulation mode, and the simulation is running.
 </TABLE>
@@ -176,7 +183,7 @@ TkGate is in simulation mode, and the simulation is running.
 <h4>2.1.9 Balloon Help</h4>
 
 <div class=rfig>
-<IMG SRC="../fig/balloon.gif"><br><br>
+<IMG SRC="../fig/balloon.gif" ALT="Balloon Help"><br><br>
 <b>Figure 2.4: Balloon Help</b>
 </div>
 
@@ -197,7 +204,7 @@ detailed description.
 <H3>2.2 Loading and Saving Circuits</H3>
 
 <div class=rfig>
-<IMG SRC="../fig/fileopen.gif" HEIGHT=267 WIDTH=422><br><br>
+<IMG SRC="../fig/fileopen.gif" HEIGHT=267 WIDTH=422 ALT="Open File Dialog Box"><br><br>
 <b>Figure 2.5: Open File Dialog Box</b>
 </div>
 
@@ -205,11 +212,11 @@ Opening and saving circuits as well as circuit printing operations are
 done through the "File" menu option on the main window.&nbsp; To load
 a file into TKGate, you can either specify the file name on the
 command line when you start, select "Open..." from the "File" menu or
-use the <img class=tool src="../fig/file_open.gif"> button on the toolbar. You can
-also use the keyboard shortcut Ctl-X Ctl-F.  When opening a new file,
-all existing modules will be flushed from the buffer, and the modules
-in the new file will be loaded.  TkGate save files have the extension
-".v" and are in a special annotated Verilog format. Files saved from
+use the <img class=tool src="../fig/file_open.gif" ALT="file open button">
+button on the toolbar. You can also use the keyboard shortcut Ctl-X Ctl-F.
+When opening a new file, all existing modules will be flushed from the buffer,
+and the modules in the new file will be loaded.  TkGate save files have the
+extension ".v" and are in a special annotated Verilog format. Files saved from
 TkGate contain special comments with information such as circuit
 elements and wire positions.  Also, gates with no explicit counter
 part in Verilog such as switches and clock generators are saved as
@@ -235,7 +242,8 @@ move up to the parent folder.
 <H3>2.3 Loading Libraries</H3>
 
 <div class=rfig>
-<a href="../fig/libmanager.gif" type="image/gif" target=_blank><img src="../fig/small-libmanager.gif">
+<a href="../fig/libmanager.gif" type="image/gif" target=_blank>
+	<img src="../fig/small-libmanager.gif" ALT="library manager">
 <br>
 (Click to enlarge)</a><br><br>
 <b>Figure 2.6: Library Manager</b>
@@ -243,7 +251,7 @@ move up to the parent folder.
 
 Libraries are loaded and unloaded through the "Library
 Manager". Select "Library Manager" from the "File" menu or select <img class=tool
-src="../fig/file_lib.gif"> from the toolbar.  This will open the library
+src="../fig/file_lib.gif" ALT="file lib tool"> from the toolbar.  This will open the library
 manager as shown below:
 
 To load a library, select it and press the "Load" button.  To unload a
@@ -282,8 +290,8 @@ mode.  The available editing tools are shown in the table below.
 <tr><td colspan=4><hr></td></tr>
 
 <TR>
-<td class=center><img class=tool src="../fig/mov_curs.gif"></td>
-<TD class=center BGCOLOR="#FFFFFF"><br><IMG SRC="../fig/ptr.gif" HEIGHT=13 WIDTH=13></TD>
+<td class=center><img class=tool src="../fig/mov_curs.gif" ALT="mov_curs.gif"></td>
+<TD class=center BGCOLOR="#FFFFFF"><br><IMG SRC="../fig/ptr.gif" HEIGHT=13 WIDTH=13 ALT="ptr.gif"></TD>
 <TD class=center>F1</TD>
 <TD >The <B>Move/Connect</B> tool is indicated by the arrow cursor.&nbsp; 
 Use this tool for most editing operations including creating gates,
@@ -294,8 +302,8 @@ elements (with the "delete" key).</TD>
 
 <tr><td colspan=4><hr></td></tr>
 <TR>
-<td class=center><img class=tool src="../fig/mov_curs.gif"></td>
-<TD class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/solder.gif" HEIGHT=26 WIDTH=31></TD>
+<td class=center><img class=tool src="../fig/mov_curs.gif" ALT="mov_curs.gif"></td>
+<TD class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/solder.gif" HEIGHT=26 WIDTH=31 ALT="solder.gif"></TD>
 <TD class=center>(F1)</TD>
 <TD>The <B>Connect</B> tool is indicated by the soldering iron cursor.&nbsp;  
 To use this tool, first select the move/connect tool and then press and
@@ -305,8 +313,8 @@ change to the connect tool as long as you are holding down the mouse button.</TD
 
 <tr><td colspan=4><hr></td></tr>
 <tr>
-<td class=center><img class=tool src="../fig/cut_curs.gif"></td>
-<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/cutters.gif" HEIGHT=25 WIDTH=22></TD>
+<td class=center><img class=tool src="../fig/cut_curs.gif" ALT="cut_curs.gif"></td>
+<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/cutters.gif" HEIGHT=25 WIDTH=22 ALT="cutters.gif"></TD>
 <td class=center>F2</TD>
 <td>The <B>Wire Cutter</B> tool is indicated by the wire cutter cursor.&nbsp; 
 Use this tool to cut wires by clicking on the wire at the point you want
@@ -317,8 +325,8 @@ automatically.</TD>
 
 <tr><td colspan=4><hr></td></tr>
 <tr>
-<td class=center><img class=tool src="../fig/inv_curs.gif"></td>
-<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/invaddel.gif" HEIGHT=24 WIDTH=30></TD>
+<td class=center><img class=tool src="../fig/inv_curs.gif" ALT="inv_curs.gif"></td>
+<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/invaddel.gif" HEIGHT=24 WIDTH=30 ALT="invaddel.gif"></TD>
 <td class=center>F3</TD>
 <td>The <B>Inverter </B>tool is indicated by the inverter bubble grabber
 cursors.&nbsp;  Use this tool to add or remove inverter bubbles on the inputs
@@ -326,13 +334,13 @@ and outputs of gates.&nbsp;  Click the cursor near an input or
 output to converter a non-inverting port to an inverting port or vice-versa.</TD>
 </TR><tr><td colspan=4><hr></td></tr>
 <tr>
-<td class=center><img class=tool src="../fig/size_curs.gif"></td>
-<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/wsize.gif" HEIGHT=19 WIDTH=26></TD>
+<td class=center><img class=tool src="../fig/size_curs.gif" ALT="size_curs.gif"></td>
+<td class=center bgcolor="#FFFFFF"><br><IMG SRC="../fig/wsize.gif" HEIGHT=19 WIDTH=26 ALT="wsize.gif"></TD>
 <td class=center>F4</TD>
 <td>The <B>Wire Size/Type</B> tool is indicated by the ribbon cable
 cursor.  Use this mode to change the bit width of a wire or the type
 of wire.  The desired bit width and wire type should be selected in
-the selector boxes next to the <img class=tool src="../fig/size_curs.gif"> button on
+the selector boxes next to the <img class=tool src="../fig/size_curs.gif" ALT="size_curs.gif"> button on
 the Mode toolbar.  Any wires that are clicked on will have their size
 and type changed to the selected size/type.  The wire type affects how
 the wire's value will be set when multiple gates drive a wire.  You
@@ -353,15 +361,15 @@ sections.
 <h5>Creating a Gate Using the Menu Bar</h5>
 
 <div class=rfig>
-<IMG SRC="../fig/create1.gif">
+<IMG SRC="../fig/create1.gif" ALT="create1.gif">
 <br>
 <b>1) Left click to select the point.</b>
 <hr>
-<IMG SRC="../fig/create2.gif">
+<IMG SRC="../fig/create2.gif" ALT="create2.gif">
 <br>
 <b>2) Select gate type from menu bar.</b>
 <hr>
-<IMG SRC="../fig/create3.gif">
+<IMG SRC="../fig/create3.gif" ALT="create3.gif">
 <br>
 <b>3) Gate is created at location set by point.</b>
 <hr>
@@ -525,14 +533,13 @@ device.  This device can support data flow in either direction.
 <h5>Creating New Joints</h5>
 
 <div class=rfig>
-<img src=fig/addjoint.gif><br><br>
+<img src="../fig/addjoint.gif"><br><br>
 <b>Figure 2.12:<br>Wire Tap</b>
 </div>
 
 You can also create joints by right clicking on a wire and selecting
 "Add Wire Segments".  This will create a new unattached wire segment
 to the wire on which you clicked as shown here.
-
 
 <br style="clear: right;">
 <A NAME="movegate"></A>
@@ -543,8 +550,8 @@ to the wire on which you clicked as shown here.
 <div class=rfig>
 <table border>
 <tr>
-  <td><IMG SRC="fig/movgat1.gif" HEIGHT=150 WIDTH=166><br><b>Step 1:</b> select gate</td>
-  <td><IMG SRC="fig/movgat2.gif" HEIGHT=134 WIDTH=153><br><b>Step 2:</b> drag gate</td>
+  <td><IMG SRC="../fig/movgat1.gif" HEIGHT=150 WIDTH=166 ALT="movgat1.gif"><br><b>Step 1:</b> select gate</td>
+  <td><IMG SRC="../fig/movgat2.gif" HEIGHT=134 WIDTH=153 ALT="movgat2.gif"><br><b>Step 2:</b> drag gate</td>
 </tr>
 </table><br>
 <b>Figure 2.13: Moving Single Gates</b>
@@ -561,16 +568,15 @@ you can also move the selected gate using the arrow keys.
 
 <h5>Moving Groups of Gates</h5>
 
-
 <div style="float: right;">
 <table border>
 <tr>
-  <td><IMG SRC="fig/movgrp1.gif" HEIGHT=163 WIDTH=172><br><b>Step 1:</b> start selection</td>
-  <td><IMG SRC="fig/movgrp2.gif" HEIGHT=158 WIDTH=168><br><b>Step 2:</b> drag selection box</td>
+  <td><IMG SRC="../fig/movgrp1.gif" HEIGHT=163 WIDTH=172><br><b>Step 1:</b> start selection</td>
+  <td><IMG SRC="../fig/movgrp2.gif" HEIGHT=158 WIDTH=168><br><b>Step 2:</b> drag selection box</td>
 </tr>
 <tr>
-  <td><IMG SRC="fig/movgrp3.gif" HEIGHT=145 WIDTH=159><br><b>Step 3:</b> grab selection</td>
-  <td><IMG SRC="fig/movgrp4.gif" HEIGHT=159 WIDTH=176><br><b>Step 4:</b> drag selection</td>
+  <td><IMG SRC="../fig/movgrp3.gif" HEIGHT=145 WIDTH=159><br><b>Step 3:</b> grab selection</td>
+  <td><IMG SRC="../fig/movgrp4.gif" HEIGHT=159 WIDTH=176><br><b>Step 4:</b> drag selection</td>
 </tr>
 </table><br>
 <b>Figure 2.14: Moving Groups of Gates</b>
@@ -599,9 +605,9 @@ can add gates to the selection rather than create a new selection.
 
 The selected gate or gates can be deleted by pressing the delete key,
 or by right clicking and selecting the "<img class=tool
-src="fig/delgate.gif">Delete" option.  The selection may also be cut
+src="../fig/delgate.gif">Delete" option.  The selection may also be cut
 or copied to the cut buffer by right clicking and selecting "<img class=tool
-src="fig/edit_cut.gif">Cut" or "<img class=tool src="fig/edit_copy.gif">Copy".
+src="../fig/edit_cut.gif">Cut" or "<img class=tool src="../fig/edit_copy.gif">Copy".
 The original names of the gates and wires in the cut buffer will be
 remembered and used when pasting if possible, but when pasting
 multiple copies from the cut buffer, it may be necessary for TkGate to
@@ -611,14 +617,14 @@ rename those wires and gates.
 <H4>2.4.5 Rotating Gates</H4>
 
 You can rotate single gates, or groups of gates by selecting the
-single gate or group and using the <img class=tool src="fig/edit_rotate.gif"> and
-<img class=tool src="fig/edit_brotate.gif"> toolbar buttons to rotate
+single gate or group and using the <img class=tool src="../fig/edit_rotate.gif"> and
+<img class=tool src="../fig/edit_brotate.gif"> toolbar buttons to rotate
 counter-clockwise or clockwise, respectively.  You can also use the
 Tab or Shift-Tab keys.  When rotating a selection, it can not have any
 wires connecting a selected element to a non-selected element.
 <p>
 You can also set the default rotation by clicking on the <img
-src=fig/currot.gif class=tool> button on the toolbar.  The inverter
+src="../fig/currot.gif" class=tool> button on the toolbar.  The inverter
 symbol on the button will turn to show the current rotation.  Any
 gates that you create will have the default rotation shown on this
 button.
@@ -629,14 +635,14 @@ button.
 <div class=rfig>
 <table border>
 <tr>
-  <td><IMG SRC="fig/before_cut.gif"><br>Before Cut</td>
-  <td><IMG SRC="fig/after_cut.gif"><br>After Cut</td>
+  <td><IMG SRC="../fig/before_cut.gif"><br>Before Cut</td>
+  <td><IMG SRC="../fig/after_cut.gif"><br>After Cut</td>
 </tr>
 </table><br>
 <b>Figure 2.15: Cutting Wires</b>
 </div>
 
-To cut a wire, select the <img class=tool src="fig/cut_curs.gif"> tool
+To cut a wire, select the <img class=tool src="../fig/cut_curs.gif"> tool
 from the toolbar to get the wire cutters tool.  Click on a wire to cut
 the wire at the selected point.  If there are any loose ends of a wire
 that is cut, TkGate will automatically delete the loose ends.  It will
@@ -651,8 +657,8 @@ cut.  You can also use the wire cutter tool on the edge of a module to
 <div class=rfig>
 <table border>
 <tr>
-  <td><IMG SRC="fig/before_andinv.gif"><br>Before Add</td>
-  <td><IMG SRC="fig/after_andinv.gif"><br>After Add</td>
+  <td><IMG SRC="../fig/before_andinv.gif"><br>Before Add</td>
+  <td><IMG SRC="../fig/after_andinv.gif"><br>After Add</td>
 </tr>
 </table><br>
 <b>Figure 2.16: Inverting Inputs/Outputs</b>
@@ -671,11 +677,11 @@ inverter on that port, the inverter will be removed.
 <H4>2.4.8 Wire Bit-Size and Type Tool</H4>
 
 <div class=rfig>
-<IMG SRC="fig/wiretype.gif" ><br><br>
+<IMG SRC="../fig/wiretype.gif" ><br><br>
 <b>Figure 2.17: Wire Type Selector</b>
 </div>
 
-You can use the <img class=tool src="fig/size_curs.gif"> tool to
+You can use the <img class=tool src="../fig/size_curs.gif"> tool to
 change the bit-size and type of one or more wires.  Use the "Bits" and
 "Type" selectors next to the button to set the desired bit size and
 type.  Any wires you click on with this cursor will be set to the size
@@ -690,8 +696,8 @@ wire to open the <a href="#wireprops">Wire Properties</a> dialog box.
 
 <H4>2.4.9 Zoom-In/Zoom-Out</H4>
 
-You can use the <img src=fig/zoom_in.gif class=tool> and <img
-src=fig/zoom_out.gif class=tool> buttons to zoom in and zoom out.
+You can use the <img src="../fig/zoom_in.gif" class=tool> and <img
+src="../fig/zoom_out.gif" class=tool> buttons to zoom in and zoom out.
 There are four zoom levels.
 
 
@@ -712,7 +718,7 @@ editing of delay parameters of gates.
 <h4>2.5.1 General Properties</h4>
 
 <div class=rfig>
-<a href="fig/edgat_general.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edgat_general.gif" >
+<a href="../fig/edgat_general.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edgat_general.gif" >
 <br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.18: General Properties</b>
@@ -754,7 +760,7 @@ purpose of critical path analysis.
 <h4>2.5.2 Port Properties</h4>
 
 <div class=rfig>
-<a href="fig/edgat_port.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edgat_port.gif" >
+<a href="../fig/edgat_port.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edgat_port.gif" >
 <br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.19: Port Properties</b>
@@ -787,7 +793,7 @@ port.  The type can only be changed for module instances.
 <h4>2.5.3 Detail Properties</h4>
 
 <div class=rfig>
-<a href="fig/edgat_props.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edgat_props.gif" >
+<a href="../fig/edgat_props.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edgat_props.gif" >
 <br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.20: Detail Properties</b>
@@ -813,7 +819,7 @@ be specified).
 <h4>2.5.3 Parameter Properties</h4>
 
 <div class=rfig>
-<a href="fig/edgat_parameters.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edgat_parameters.gif" >
+<a href="../fig/edgat_parameters.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edgat_parameters.gif" >
 <br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.21: Parameter Properties</b>
@@ -834,7 +840,7 @@ href="gateHDL.html#wiretypes">parameters</a>.
 <h4>2.5.4 Delay Properties</h4>
 
 <div class=rfig>
-<a href="fig/edgat_delay.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edgat_delay.gif" >
+<a href="../fig/edgat_delay.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edgat_delay.gif" >
 <br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.22: Delay Properties</b>
@@ -868,7 +874,7 @@ values must be integers greater than or equal to one, and less than
 <H3>2.6 Wire Properties</H3>
 
 <div class=rfig>
-<a href="fig/edportnet.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edportnet.gif" ><br>
+<a href="../fig/edportnet.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edportnet.gif" ><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.23: Wire Properties</b>
 </div>
@@ -940,14 +946,14 @@ displayed in the middle of the segment and can not be moved.
 <H3>2.8 Searching for Gates and Wires</H3>
 
 <div class=rfig>
-<a href="fig/search.gif" type="image/gif" target=_blank><IMG SRC="fig/small-search.gif"><br>
+<a href="../fig/search.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-search.gif"><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.24: Search Dialog Box</b>
 </div>
 
 You can search for wires and gates anywhere in your circuit by using
 the "Find..." option from the "Edit" menu, or by pressing <img class=tool
-src="fig/edit_find.gif"> on the toolbar.  Enter text into the entry
+src="../fig/edit_find.gif"> on the toolbar.  Enter text into the entry
 area to search for gates, nets or text in circuit comments.  The
 search results will be updated as you type showing the list of objects
 that match your search criteria.  You can choose to locate objects
@@ -959,7 +965,7 @@ thereof.
 <p>
 
 <div class=lfig>
-<IMG SRC="fig/crosshair.gif">
+<IMG SRC="../fig/crosshair.gif">
 <br><br><b>Figure 2.25: Cross-hairs<br>on Target Device</b>
 </div>
 
@@ -977,7 +983,7 @@ button to go to the next object in the list without double clicking.
 <H3>2.9 HTML in Comments</H3>
 
 <div class=rfig>
-<a href="fig/edcomment.gif" type="image/gif" target=_blank><IMG SRC="fig/small-edcomment.gif"><br>
+<a href="../fig/edcomment.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-edcomment.gif"><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.26: Comment Editor</b>
 </div>
@@ -1185,14 +1191,14 @@ generated.  For example, "&amp;alpha;" is replaced with "&alpha;".
 <H3>2.10 Printing a Schematic</H3>
  
 <div class=rfig>
-<a href="fig/printdlg_output.gif" type="image/gif" target=_blank>
-<IMG SRC="fig/small-printdlg_output.gif"><br>
+<a href="../fig/printdlg_output.gif" type="image/gif" target=_blank>
+<IMG SRC="../fig/small-printdlg_output.gif"><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.27: Print Output Page</b>
 </div>
 
 To print a circuit, choose the "Print..." option from the "File" menu,
-or press the <img class=tool src="fig/file_print.gif"> button on the
+or press the <img class=tool src="../fig/file_print.gif"> button on the
 toolbar.  You can choose to print directly to a printer using a
 specified print command, or you can print to a file. When printing a
 single-page document to a file, you can also choose to save the
@@ -1240,7 +1246,7 @@ capable of double-sided printing.
 <br style="clear: right;">
 
 <div class=rfig>
-<a href="fig/printdlg_content.gif" type="image/gif" target=_blank><IMG SRC="fig/small-printdlg_content.gif"><br>
+<a href="../fig/printdlg_content.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-printdlg_content.gif"><br>
 (Click to Enlarge)</a>
 <br><br><b>Figure 2.28: Print Content Page</b>
 </div>
@@ -1374,10 +1380,14 @@ use for delay, and the precision sets the time for one simulation epoch.
 
 <p>
 
-
 <hr>
-<!--hhmts start -->
-Last edit by hansen on Fri Jul 27 09:37:56 2007
-<!--hhmts end -->
+
+<P>
+    <A HREF="http://validator.w3.org/check?uri=referer">
+      <IMG SRC="../valid-html401.png" ALT="Valid HTML 4.01 Transitional"
+      HEIGHT="31" WIDTH="88">
+    </A>
+</P>
+
 </BODY>
 </HTML>
