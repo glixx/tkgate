@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 09:38+0300\n"
+"POT-Creation-Date: 2015-07-31 10:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1604,9 +1604,9 @@ msgstr ""
 # memview.exp
 #: ./en/messages:552
 msgid ""
-"View and modify the contents of a RAM"
-"or ROM component. Select memory page,"
-"then type new hex values to change"
+"View and modify the contents of a RAM\n"
+"or ROM component. Select memory page,\n"
+"then type new hex values to change\n"
 "memory content."
 msgstr ""
 
@@ -1748,16 +1748,16 @@ msgstr ""
 # db.mod.netexpl
 #: ./en/messages:597
 msgid ""
-"Define module using a"
-"graphical editor to connect"
+"Define module using a\n"
+"graphical editor to connect\n"
 "wires between components."
 msgstr ""
 
 # db.mod.hdlexpl
 #: ./en/messages:603
 msgid ""
-"Define module using a"
-"textual editor to describe"
+"Define module using a\n"
+"textual editor to describe\n"
 "behavior in Verilog."
 msgstr ""
 
@@ -1774,7 +1774,7 @@ msgstr ""
 # db.err.explain.warn
 #: ./en/messages:614
 msgid ""
-"There were warnings in your circuit, but simulation will continue. Return to edit mode"
+"There were warnings in your circuit, but simulation will continue. Return to edit mode\n"
 "to examine the warnings."
 msgstr ""
 
@@ -1861,7 +1861,7 @@ msgstr ""
 # db.newcirc.exp
 #: ./en/messages:648
 msgid ""
-"Discard the current circuit and start editing"
+"Discard the current circuit and start editing\n"
 "a new circuit."
 msgstr ""
 
@@ -2058,7 +2058,7 @@ msgstr ""
 # db.gate.ff.normal.exp
 #: ./en/messages:697
 msgid ""
-"D Flip-Flop with data"
+"D Flip-Flop with data\n"
 "flowing left to right."
 msgstr ""
 
@@ -2070,7 +2070,7 @@ msgstr ""
 # db.gate.ff.reverse.exp
 #: ./en/messages:702
 msgid ""
-"D Flip-Flop with data"
+"D Flip-Flop with data\n"
 "flowing right to left."
 msgstr ""
 
@@ -2087,7 +2087,7 @@ msgstr ""
 # db.gate.jkff.normal.exp
 #: ./en/messages:709
 msgid ""
-"JK Flip-Flop with data"
+"JK Flip-Flop with data\n"
 "flowing left to right."
 msgstr ""
 
@@ -2099,7 +2099,7 @@ msgstr ""
 # db.gate.jkff.reverse.exp
 #: ./en/messages:714
 msgid ""
-"JK Flip-Flop with data"
+"JK Flip-Flop with data\n"
 "flowing right to left."
 msgstr ""
 
@@ -2151,28 +2151,28 @@ msgstr ""
 # db.gate.cat.auto.exp
 #: ./en/messages:735
 msgid ""
-"Determine signal direction automatically"
+"Determine signal direction automatically\n"
 "from connected nets."
 msgstr ""
 
 # db.gate.cat.multin.exp
 #: ./en/messages:740
 msgid ""
-"Always assume multi-port side is the"
+"Always assume multi-port side is the\n"
 "input."
 msgstr ""
 
 # db.gate.cat.singin.exp
 #: ./en/messages:745
 msgid ""
-"Always assume single-port side is the"
+"Always assume single-port side is the\n"
 "input."
 msgstr ""
 
 # db.gate.cat.tran.exp
 #: ./en/messages:750
 msgid ""
-"Allow bidirectional (tran) signal flow. Cannot"
+"Allow bidirectional (tran) signal flow. Cannot\n"
 "be connected to switches or registers."
 msgstr ""
 
@@ -2319,14 +2319,14 @@ msgstr ""
 # db.gate.tab.Delay.exp
 #: ./en/messages:796
 msgid ""
-"Delay can be specified either as a technology or as specific values"
+"Delay can be specified either as a technology or as specific values\n"
 "for this instance."
 msgstr ""
 
 # db.gate.tab.Parameters.exp
 #: ./en/messages:801
 msgid ""
-"Set the module parameters for this instance of this module if any are"
+"Set the module parameters for this instance of this module if any are\n"
 "defined. Module parameters are used to configure delays and constant values used in a module."
 msgstr ""
 
@@ -2423,15 +2423,15 @@ msgstr ""
 # db.gate.tab.COMMENT.exp
 #: ./en/messages:831
 msgid ""
-"Set the text to be displayed in a comment."
-"Limited html commands including links can be"
+"Set the text to be displayed in a comment.\n"
+"Limited html commands including links can be\n"
 "used here."
 msgstr ""
 
 # db.gate.tab.SCRIPT.exp
 #: ./en/messages:837
 msgid ""
-"Enter free-form Verilog code here to"
+"Enter free-form Verilog code here to\n"
 "be included as part of this module."
 msgstr ""
 
@@ -2448,19 +2448,19 @@ msgstr ""
 # db.gate.mparm.exampleA
 #: ./en/messages:844
 msgid ""
-"This module does not have any parameters. Parameters"
-"can be added to Verilog text modules. The value of"
-"each parameter can be customized for each instance"
-"through this dialog box. Module parameters are"
-"character. Below is an example module declaration"
-"with a parameter named "base_value" that has a"
+"This module does not have any parameters. Parameters\n"
+"can be added to Verilog text modules. The value of\n"
+"each parameter can be customized for each instance\n"
+"through this dialog box. Module parameters are\n"
+"character. Below is an example module declaration\n"
+"with a parameter named "base_value" that has a\n"
 "default value of 1'b1."
 msgstr ""
 
 # db.gate.mparm.exampleB
 #: ./en/messages:854
 msgid ""
-"assign Z = A ^ B ^ base_value;"
+"assign Z = A ^ B ^ base_value;\n"
 "endmodule"
 msgstr ""
 
@@ -2632,14 +2632,14 @@ msgstr ""
 # db.gate.mux.sel1.exp
 #: ./en/messages:905
 msgid ""
-"Place the data selector on the left side of"
+"Place the data selector on the left side of\n"
 "the MUX."
 msgstr ""
 
 # db.gate.mux.sel2.exp
 #: ./en/messages:909
 msgid ""
-"Place the data selector on the right side of"
+"Place the data selector on the right side of\n"
 "the MUX."
 msgstr ""
 
@@ -2761,16 +2761,16 @@ msgstr ""
 # db.gate.aox.use.exp
 #: ./en/messages:959
 msgid ""
-"Basic gates (AND, OR, etc.) will"
-"use extender bars as inputs"
+"Basic gates (AND, OR, etc.) will\n"
+"use extender bars as inputs\n"
 "are added."
 msgstr ""
 
 # db.gate.aox.nouse.exp
 #: ./en/messages:964
 msgid ""
-"Basic gates (AND, OR, etc.) will"
-"not use extender bars as inputs"
+"Basic gates (AND, OR, etc.) will\n"
+"not use extender bars as inputs\n"
 "are added."
 msgstr ""
 
@@ -2857,8 +2857,8 @@ msgstr ""
 # db.hdl.saveexp
 #: ./en/messages:1002
 msgid ""
-"The text buffer for the module you have just edited contains more"
-"than one module definition. Please select one of the three actions described"
+"The text buffer for the module you have just edited contains more\n"
+"than one module definition. Please select one of the three actions described\n"
 "on the right."
 msgstr ""
 
@@ -2895,8 +2895,8 @@ msgstr ""
 # db.hdl.autoeditexp
 #: ./en/messages:1016
 msgid ""
-"The textual description of the module does"
-"not match the expected name. Please select"
+"The textual description of the module does\n"
+"not match the expected name. Please select\n"
 "an option to the right to handle the discrepancy."
 msgstr ""
 
@@ -3133,35 +3133,35 @@ msgstr ""
 # print.printcirc.out.exp
 #: ./en/messages:1092
 msgid ""
-"Choose whether to send"
-"your schematic to the"
-"printer or to a PostScript"
+"Choose whether to send\n"
+"your schematic to the\n"
+"printer or to a PostScript\n"
 "file."
 msgstr ""
 
 # print.printcirc.page.exp
 #: ./en/messages:1099
 msgid ""
-"Choose page and printer"
+"Choose page and printer\n"
 "options here."
 msgstr ""
 
 # print.printcirc.mod.exp
 #: ./en/messages:1104
 msgid ""
-"Choose which modules are"
-"to be printed and set"
-"options controlling the"
+"Choose which modules are\n"
+"to be printed and set\n"
+"options controlling the\n"
 "presentation."
 msgstr ""
 
 # print.printtrace.trace.exp
 #: ./en/messages:1111
 msgid ""
-"Choose the time range"
-"over which to produce"
-"output. Also set the"
-"scale to compute the"
+"Choose the time range\n"
+"over which to produce\n"
+"output. Also set the\n"
+"scale to compute the\n"
 "estimated page count."
 msgstr ""
 
@@ -3898,8 +3898,8 @@ msgstr ""
 # opt.vercheck
 #: ./en/messages:1292
 msgid ""
-"Periodically check for new versions of TkGate over"
-"the Internet. Do not enable unless you have continuous"
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
 "access to the Internet."
 msgstr ""
 
@@ -4156,7 +4156,7 @@ msgstr ""
 # igen.description
 #: ./en/messages:1374
 msgid ""
-"Create a new interface"
+"Create a new interface\n"
 "for a module."
 msgstr ""
 
@@ -4228,24 +4228,24 @@ msgstr ""
 # ipanel.warn.toblock
 #: ./en/messages:1404
 msgid ""
-"You are about to change the"
-"interface type for this module"
-"to "block". This will result"
-"in the current interface data"
-"being destroyed."
+"You are about to change the\n"
+"interface type for this module\n"
+"to "block". This will result\n"
+"in the current interface data\n"
+"being destroyed.\n"
 "Are you sure you want to do this?"
 msgstr ""
 
 # ipanel.warn.tosymbol
 #: ./en/messages:1414
 msgid ""
-"You are about to change the"
-"interface type for this module"
-"to "symbol". This will result"
-"in the current interface data"
-"being destroyed. You will also"
-"need to create a bitmap image"
-"for your new symbol."
+"You are about to change the\n"
+"interface type for this module\n"
+"to "symbol". This will result\n"
+"in the current interface data\n"
+"being destroyed. You will also\n"
+"need to create a bitmap image\n"
+"for your new symbol.\n"
 "Are you sure you want to do this?"
 msgstr ""
 
@@ -4332,44 +4332,44 @@ msgstr ""
 # blklst.new.exp
 #: ./en/messages:1448
 msgid ""
-"Use this dialog box to create"
-"a new module definition. You"
-"can create the module as a"
-"netlist or an HDL module, but"
-"once created you will not be"
-"able to modify the type without"
-"deleting and rebuilding the"
+"Use this dialog box to create\n"
+"a new module definition. You\n"
+"can create the module as a\n"
+"netlist or an HDL module, but\n"
+"once created you will not be\n"
+"able to modify the type without\n"
+"deleting and rebuilding the\n"
 "module."
 msgstr ""
 
 # blklst.del.exp
 #: ./en/messages:1459
 msgid ""
-"Delete the definition and interface data"
-"for the specified module. Existing instances"
-"of the deleted module will be retained but"
+"Delete the definition and interface data\n"
+"for the specified module. Existing instances\n"
+"of the deleted module will be retained but\n"
 "will be marked as undefined."
 msgstr ""
 
 # blklst.copy.exp
 #: ./en/messages:1466
 msgid ""
-"Create a copy of the specified module definition. Use this to create"
+"Create a copy of the specified module definition. Use this to create\n"
 "a new variant of an existing module."
 msgstr ""
 
 # blklst.rename.exp
 #: ./en/messages:1471
 msgid ""
-"Rename a module definition. This operation will affect only the"
-"definition, any existing instances of this module will continue to"
+"Rename a module definition. This operation will affect only the\n"
+"definition, any existing instances of this module will continue to\n"
 "point to the old module name."
 msgstr ""
 
 # blklst.claim.exp
 #: ./en/messages:1477
 msgid ""
-"Convert a library module to a user module. This allows the module to be"
+"Convert a library module to a user module. This allows the module to be\n"
 "edited and to be saved with the user circuit."
 msgstr ""
 
@@ -4391,10 +4391,10 @@ msgstr ""
 # find.exp
 #: ./en/messages:1489
 msgid ""
-"Look for text either in"
-"a component name, a wire name"
-"or in the text of a comment."
-"Double click on a result to"
+"Look for text either in\n"
+"a component name, a wire name\n"
+"or in the text of a comment.\n"
+"Double click on a result to\n"
 "go to that item."
 msgstr ""
 
@@ -4691,25 +4691,25 @@ msgstr ""
 # circ.exp.general
 #: ./en/messages:1601
 msgid ""
-"View and modify circuit specific properties."
-"These properties will be stored with the"
+"View and modify circuit specific properties.\n"
+"These properties will be stored with the\n"
 "circuit when you save."
 msgstr ""
 
 # circ.exp.library
 #: ./en/messages:1607
 msgid ""
-"Select libraries required by this circuit."
-"Library requirements are saved with the circuit"
-"and will be automatically loaded the next time"
+"Select libraries required by this circuit.\n"
+"Library requirements are saved with the circuit\n"
+"and will be automatically loaded the next time\n"
 "you load this circuit."
 msgstr ""
 
 # circ.exp.script
 #: ./en/messages:1614
 msgid ""
-"Add any simulation scripts that should be"
-"automatically read and excuted when this"
+"Add any simulation scripts that should be\n"
+"automatically read and excuted when this\n"
 "circuit is simulated."
 msgstr ""
 
@@ -4811,15 +4811,15 @@ msgstr ""
 # sim.recursive
 #: ./en/messages:1664
 msgid ""
-"Recursive module definition found"
-"at '%s'. Can not start simulator or"
+"Recursive module definition found\n"
+"at '%s'. Can not start simulator or\n"
 "perform critical path analysis."
 msgstr ""
 
 # sim.hyperlinkstop
 #: ./en/messages:1669
 msgid ""
-"The simulator is currently running. Would you like"
+"The simulator is currently running. Would you like\n"
 "to stop the simulation and follow the link?"
 msgstr ""
 
@@ -5141,19 +5141,19 @@ msgstr ""
 # err.manypages
 #: ./en/messages:1755
 msgid ""
-"There are an awful lot of"
-"pages in this document. Are"
+"There are an awful lot of\n"
+"pages in this document. Are\n"
 "you sure you want to print it?"
 msgstr ""
 
 # err.nojump
 #: ./en/messages:1761
 msgid ""
-"The 'jump-to-module' feature can not be used"
-"in simulation or critical path analysis mode."
-"Please navigate manully to the target block"
-"by selecting modules and opening them with the"
-"'>' keyboard command. You can leave a module"
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manully to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
 "you are in with the '<' keyboard command."
 msgstr ""
 
@@ -5375,46 +5375,46 @@ msgstr ""
 # err.corruptnewsave
 #: ./en/messages:1817
 msgid ""
-"TkGate was able to save your file in '%s', but it appears"
-"to be corrupted. If you have checkpointing enabled try"
-"loading one of the checkpoint files. Use 'tkgate -V' to"
+"TkGate was able to save your file in '%s', but it appears\n"
+"to be corrupted. If you have checkpointing enabled try\n"
+"loading one of the checkpoint files. Use 'tkgate -V' to\n"
 "check the integrety of a save file."
 msgstr ""
 
 # err.corruptsave
 #: ./en/messages:1824
 msgid ""
-"TkGate detetected a problem while trying to save the file '%s'."
-"The existing file has been left unmodified and the damaged file has"
-"been written to '%s'. If you have checkpointing enabled you"
-"can try loading one of the checkpoint files. You can also use"
+"TkGate detetected a problem while trying to save the file '%s'.\n"
+"The existing file has been left unmodified and the damaged file has\n"
+"been written to '%s'. If you have checkpointing enabled you\n"
+"can try loading one of the checkpoint files. You can also use\n"
 "'tkgate -V' to check the integrety of a save file."
 msgstr ""
 
 # err.badsave
 #: ./en/messages:1832
 msgid ""
-"A problem has occured trying to open or write the file '%s'. Check"
+"A problem has occured trying to open or write the file '%s'. Check\n"
 "file/directory protections and or disk space."
 msgstr ""
 
 # err.nosafesave
 #: ./en/messages:1837
 msgid ""
-"A problem has occured attempting to save '%s'. If you wish, you can"
-"try again without save validation. If you say "no", the original file"
-"will remain unmodified. If you say "yes" the original file will be"
-"overwritten, but may be destroyed if a problem occurs. Would you like"
+"A problem has occured attempting to save '%s'. If you wish, you can\n"
+"try again without save validation. If you say "no", the original file\n"
+"will remain unmodified. If you say "yes" the original file will be\n"
+"overwritten, but may be destroyed if a problem occurs. Would you like\n"
 "to attempt an unvalidated save?"
 msgstr ""
 
 # err.noback
 #: ./en/messages:1845
 msgid ""
-"File '%s' was created by TkGate"
-"%s, and may not be readable"
-"by versions earlier than"
-"current version (%s) if you"
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
 "save."
 msgstr ""
 
@@ -6321,15 +6321,15 @@ msgstr ""
 # ho.opt.editor.movesel
 #: ./en/messages:2081
 msgid ""
-"If this option is enabled, a selected block of"
-"text can be grabbed with the mouse pointer and"
+"If this option is enabled, a selected block of\n"
+"text can be grabbed with the mouse pointer and\n"
 "moved to a new location."
 msgstr ""
 
 # ho.opt.editor.format
 #: ./en/messages:2087
 msgid ""
-"If enabled, verilog source code will be automatically"
+"If enabled, verilog source code will be automatically\n"
 "indented when pressing the tab key."
 msgstr ""
 
@@ -6341,68 +6341,68 @@ msgstr ""
 # ho.opt.editor.rtab
 #: ./en/messages:2096
 msgid ""
-"Automatically indent the current line"
-"and tab to the appropriate level when"
+"Automatically indent the current line\n"
+"and tab to the appropriate level when\n"
 "pressing the return key."
 msgstr ""
 
 # ho.opt.editor.beginindent
 #: ./en/messages:2102
 msgid ""
-"Causes a begin..end block to be indented"
+"Causes a begin..end block to be indented\n"
 "to the same level as its parent block."
 msgstr ""
 
 # ho.opt.editor.colorize
 #: ./en/messages:2107
 msgid ""
-"Enable context-dependent colorization of"
+"Enable context-dependent colorization of\n"
 "code according to the options listed below."
 msgstr ""
 
 # ho.hdl.splitexp
 #: ./en/messages:2112
 msgid ""
-"Multiple modules in the HDL text will"
-"be split into different modules defining"
-"new modules as necessary. Any name"
-"conflicts will be resolved by slightly"
+"Multiple modules in the HDL text will\n"
+"be split into different modules defining\n"
+"new modules as necessary. Any name\n"
+"conflicts will be resolved by slightly\n"
 "modifying module names as necessary."
 msgstr ""
 
 # ho.hdl.commentexp
 #: ./en/messages:2120
 msgid ""
-"Modules other than the first module or"
-"module matching the expected name will"
+"Modules other than the first module or\n"
+"module matching the expected name will\n"
 "be converted to HDL comments."
 msgstr ""
 
 # ho.hdl.autoeditexp
 #: ./en/messages:2126
 msgid ""
-"Automatically edit the HDL description"
+"Automatically edit the HDL description\n"
 "to fix the module name."
 msgstr ""
 
 # ho.hdl.cancelexp
 #: ./en/messages:2131
 msgid ""
-"Take no action and continue editing"
+"Take no action and continue editing\n"
 "the current module."
 msgstr ""
 
 # ho.hdl.ignoreexp
 #: ./en/messages:2136
 msgid ""
-"Ignore the inconsistency and continue"
+"Ignore the inconsistency and continue\n"
 "with the selected action."
 msgstr ""
 
 # ho.new
 #: ./en/messages:2141
 msgid ""
-"Clear the current circuit,"
+"Clear the current circuit,\n"
 "and start editing a new one."
 msgstr ""
 
@@ -6444,78 +6444,78 @@ msgstr ""
 # ho.simmove
 #: ./en/messages:2160
 msgid ""
-"Select wires and modules, flip"
-"switches and enter dip values."
-"Clicking and holding on a wire"
+"Select wires and modules, flip\n"
+"switches and enter dip values.\n"
+"Clicking and holding on a wire\n"
 "will show its current value."
 msgstr ""
 
 # ho.move
 #: ./en/messages:2168
 msgid ""
-"Move/Connect - By clicking and dragging you can:"
-"Set the position for a new component"
-"Move components and wires"
-"Connect wires"
-"By double-clicking you can:"
-"Edit component, wire and port properties"
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
 "Edit comment text"
 msgstr ""
 
 # ho.delgat
 #: ./en/messages:2178
 msgid ""
-"Delete Component - Use this"
+"Delete Component - Use this\n"
 "tool to delete components."
 msgstr ""
 
 # ho.cutw
 #: ./en/messages:2183
 msgid ""
-"Cut Wire - Use this"
+"Cut Wire - Use this\n"
 "tool to cut wires."
 msgstr ""
 
 # ho.scroll
 #: ./en/messages:2188
 msgid ""
-"Scroll - Grab and drag the"
+"Scroll - Grab and drag the\n"
 "editing canvas."
 msgstr ""
 
 # ho.inv
 #: ./en/messages:2193
 msgid ""
-"Invert - Use this tool to"
-"add or remove inverters"
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
 "from component ports."
 msgstr ""
 
 # ho.bitw
 #: ./en/messages:2199
 msgid ""
-"Net Attributes - Use this tool to change"
-"the attributes of a net. The bit size"
-"and wire type of nets selected with this"
-"tool will be changed to the those shown"
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
 "in the drop-down boxes to the right."
 msgstr ""
 
 # ho.ipanel.select
 #: ./en/messages:2207
 msgid ""
-"Use "standard" modules"
-"for regular rectangular"
-"interfaces. Use "symbol""
-"modules for custom"
+"Use "standard" modules\n"
+"for regular rectangular\n"
+"interfaces. Use "symbol"\n"
+"modules for custom\n"
 "bitmaped symbols."
 msgstr ""
 
 # ho.ipanel.addport
 #: ./en/messages:2215
 msgid ""
-"Add a port to the module. You"
-"can also double-click after the"
+"Add a port to the module. You\n"
+"can also double-click after the\n"
 "last item to add port."
 msgstr ""
 
@@ -6527,64 +6527,64 @@ msgstr ""
 # ho.ipanel.editport
 #: ./en/messages:2225
 msgid ""
-"Edit the selected port. You"
-"can also double-click to edit"
+"Edit the selected port. You\n"
+"can also double-click to edit\n"
 "a field in a port."
 msgstr ""
 
 # ho.ipanel.generate
 #: ./en/messages:2231
 msgid ""
-"Generate a new interface for a"
-"module based on ports in the"
-"port list and port elements used"
+"Generate a new interface for a\n"
+"module based on ports in the\n"
+"port list and port elements used\n"
 "in the module definition."
 msgstr ""
 
 # ho.ipanel.updateall
 #: ./en/messages:2238
 msgid ""
-"Replace the interface on all"
-"instances of this module with"
-"the canonical interface shown"
+"Replace the interface on all\n"
+"instances of this module with\n"
+"the canonical interface shown\n"
 "here."
 msgstr ""
 
 # ho.ipanel.prot
 #: ./en/messages:2246
 msgid ""
-"Do not allow the definition of"
+"Do not allow the definition of\n"
 "a module to be modified."
 msgstr ""
 
 # ho.ipanel.protint
 #: ./en/messages:2251
 msgid ""
-"Do not allow the interface of"
+"Do not allow the interface of\n"
 "a module to be modified."
 msgstr ""
 
 # ho.ipanel.proted
 #: ./en/messages:2256
 msgid ""
-"Do not allow the interface of a module to"
-"be modified except through the interface"
-"editor. Use this to prevent accidental"
-"modification of the interface in the"
+"Do not allow the interface of a module to\n"
+"be modified except through the interface\n"
+"editor. Use this to prevent accidental\n"
+"modification of the interface in the\n"
 "main edit window."
 msgstr ""
 
 # ho.ipanel.scale
 #: ./en/messages:2264
 msgid ""
-"Scale the distance between ports"
+"Scale the distance between ports\n"
 "as a module is resized."
 msgstr ""
 
 # ho.ipanel.fix
 #: ./en/messages:2269
 msgid ""
-"Keep the distance between ports"
+"Keep the distance between ports\n"
 "fixed even if the module is resized."
 msgstr ""
 
@@ -6621,14 +6621,14 @@ msgstr ""
 # ho.mod.claim
 #: ./en/messages:2281
 msgid ""
-"Convert a library module to"
+"Convert a library module to\n"
 "a regular module."
 msgstr ""
 
 # ho.mod.setroot
 #: ./en/messages:2285
 msgid ""
-"Designate a module to"
+"Designate a module to\n"
 "be the root module."
 msgstr ""
 
@@ -6705,16 +6705,16 @@ msgstr ""
 # ho.tab.interface
 #: ./en/messages:2310
 msgid ""
-"Edit module interfaces. While in interface"
-"mode, double click on a module in the module"
-"list to edit its interface, or on the root"
+"Edit module interfaces. While in interface\n"
+"mode, double click on a module in the module\n"
+"list to edit its interface, or on the root\n"
 "module to display all interface."
 msgstr ""
 
 # ho.tab.simulate
 #: ./en/messages:2318
 msgid ""
-"Start the simulator, open the logic analyzer"
+"Start the simulator, open the logic analyzer\n"
 "and execute any initialization scripts if defined."
 msgstr ""
 
@@ -6726,16 +6726,16 @@ msgstr ""
 # ho.log
 #: ./en/messages:2328
 msgid ""
-"Log of TkGate messages including"
-"error messages, information messages"
+"Log of TkGate messages including\n"
+"error messages, information messages\n"
 "and simulator console output."
 msgstr ""
 
 # ho.simgo
 #: ./en/messages:2334
 msgid ""
-"Run simulator in continuous execution mode."
-"Note that combinational circuits simulate"
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
 "only until the circuit reaches steady state."
 msgstr ""
 
@@ -6747,32 +6747,32 @@ msgstr ""
 # ho.simstep
 #: ./en/messages:2344
 msgid ""
-"Step a fixed interval of time."
-"Open the simulation options"
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
 "window to set the step size."
 msgstr ""
 
 # ho.simclock
 #: ./en/messages:2350
 msgid ""
-"Step a fixed number of clock"
-"cycles. Open the simulation options"
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
 "window to set the step size."
 msgstr ""
 
 # ho.simstop
 #: ./en/messages:2356
 msgid ""
-"End the current simulation"
+"End the current simulation\n"
 "and return to edit mode."
 msgstr ""
 
 # ho.simbreak
 #: ./en/messages:2361
 msgid ""
-"Edit the current breakpoints. Simulation"
-"will be halted when a breakpoint condition"
-"becomes true. Breakpoints can be edited"
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
 "in both simulation mode and edit mode."
 msgstr ""
 
@@ -6789,70 +6789,70 @@ msgstr ""
 # ho.simload
 #: ./en/messages:2376
 msgid ""
-"Load memory with contents of"
+"Load memory with contents of\n"
 "a .mem file."
 msgstr ""
 
 # ho.simdump
 #: ./en/messages:2381
 msgid ""
-"Dump the contents of a memory"
+"Dump the contents of a memory\n"
 "to a .mem file."
 msgstr ""
 
 # ho.simview
 #: ./en/messages:2386
 msgid ""
-"View/modify the contents"
+"View/modify the contents\n"
 "of a memory (RAM or ROM)."
 msgstr ""
 
 # ho.modlist
 #: ./en/messages:2392
 msgid ""
-"List of all modules currently loaded in"
-"alphabetical order. Drag modules to the"
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
 "edit window to create new instances."
 msgstr ""
 
 # ho.modtree
 #: ./en/messages:2398
 msgid ""
-"List of all modules currently in"
-"a hierarchical list. Drag modules to the"
+"List of all modules currently in\n"
+"a hierarchical list. Drag modules to the\n"
 "edit window to create new instances."
 msgstr ""
 
 # ho.netlist
 #: ./en/messages:2404
 msgid ""
-"List of nets in the current module."
-"The symbol to the left of the name"
-"indicates whether the net is single"
-"bit (green) or multi-bit (red). An"
-""A" shown in the symbol indicates"
-"that the net name is marked as"
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+""A" shown in the symbol indicates\n"
+"that the net name is marked as\n"
 "visible."
 msgstr ""
 
 # ho.ports
 #: ./en/messages:2414
 msgid ""
-"List of ports on the interface"
-"of the module displayed in the"
-"edit window. The symbol before"
-"the port indicates the direction"
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
 "of the port."
 msgstr ""
 
 # ho.status.logo
 #: ./en/messages:2422
 msgid ""
-"Simulation status indicator. If the iron gate"
-"logo is shown, TkGate is in edit mode. If the"
-"quadrapedal AND gate is shown, TkGate is in"
-"simulation mode. If the AND gate is stationary,"
-"the simulation is paused, and if it is walking"
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
 "the simulation is running."
 msgstr ""
 
@@ -6869,8 +6869,8 @@ msgstr ""
 # ho.status.file
 #: ./en/messages:2435
 msgid ""
-"The current file being edited. A '*' indicates"
-"that the buffer has been modifed since"
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
 "the last save."
 msgstr ""
 
@@ -6887,7 +6887,7 @@ msgstr ""
 # ho.print.seluse
 #: ./en/messages:2443
 msgid ""
-"Print all modules "in use". In use modues are"
+"Print all modules "in use". In use modues are\n"
 "those that are a decendent of the root module."
 msgstr ""
 
@@ -6899,9 +6899,9 @@ msgstr ""
 # ho.print.parttrace
 #: ./en/messages:2450
 msgid ""
-"Print a portion of the trace. Enter the starting"
-"and stopping times in the entry windows below, or"
-"use the right mouse button to select a range on the"
+"Print a portion of the trace. Enter the starting\n"
+"and stopping times in the entry windows below, or\n"
+"use the right mouse button to select a range on the\n"
 "scope window (use shift-right to select long ranges)."
 msgstr ""
 
@@ -6918,7 +6918,7 @@ msgstr ""
 # ho.print.selsel
 #: ./en/messages:2461
 msgid ""
-"Print only the modules selected below. Use"
+"Print only the modules selected below. Use\n"
 "the control key to select multiple modules."
 msgstr ""
 
@@ -6930,58 +6930,58 @@ msgstr ""
 # ho.print.timegraph
 #: ./en/messages:2468
 msgid ""
-"The display of the region selected"
-"to be printed is shown here. The"
-"green area is the entire range of"
-"trace data available, and the grey"
-"area shows the area to be printed."
-"Use the selectors to the left to"
-"select a region, or select the region"
-"in the scope window before bringing"
+"The display of the region selected\n"
+"to be printed is shown here. The\n"
+"green area is the entire range of\n"
+"trace data available, and the grey\n"
+"area shows the area to be printed.\n"
+"Use the selectors to the left to\n"
+"select a region, or select the region\n"
+"in the scope window before bringing\n"
 "up this diaglog box."
 msgstr ""
 
 # ho.circuit.discchg
 #: ./en/messages:2480
 msgid ""
-"TkGate will not display a warning if you"
+"TkGate will not display a warning if you\n"
 "discard changes without saving."
 msgstr ""
 
 # ho.circuit.extbar
 #: ./en/messages:2485
 msgid ""
-"Newly created basic gates (AND, OR,"
-"XOR) will use extender bars to handle"
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
 "many input gates."
 msgstr ""
 
 # ho.circuit.shownet
 #: ./en/messages:2491
 msgid ""
-"Newly created switches and dips will"
-"initially show the net name next to"
+"Newly created switches and dips will\n"
+"initially show the net name next to\n"
 "them."
 msgstr ""
 
 # ho.circuit.autostart
 #: ./en/messages:2498
 msgid ""
-"If enabled, simulation will begin as"
+"If enabled, simulation will begin as\n"
 "soon as the simulation pane is selected."
 msgstr ""
 
 # ho.circuit.file
 #: ./en/messages:2503
 msgid ""
-"This is the file name from which the current"
+"This is the file name from which the current\n"
 "circuit was loaded."
 msgstr ""
 
 # ho.circuit.ver
 #: ./en/messages:2508
 msgid ""
-"This is the version of TkGate that created"
+"This is the version of TkGate that created\n"
 "the file that is currently loaded."
 msgstr ""
 
@@ -6993,58 +6993,58 @@ msgstr ""
 # ho.circuit.language
 #: ./en/messages:2517
 msgid ""
-"Use fonts for this encoding to display"
+"Use fonts for this encoding to display\n"
 "circuit data."
 msgstr ""
 
 # ho.circuit.title
 #: ./en/messages:2522
 msgid ""
-"Description of your circuit. This title is"
+"Description of your circuit. This title is\n"
 "used on printed output."
 msgstr ""
 
 # ho.cmd.bitw
 #: ./en/messages:2527
 msgid ""
-"Wires selected with the ribbon"
-"cable tool will be set to this"
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
 "bit width."
 msgstr ""
 
 # ho.edgat.signam
 #: ./en/messages:2533
 msgid ""
-"The name of the selected signal"
-"on the selected component. You"
-"can change the name of the signal"
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
 "by editing it here."
 msgstr ""
 
 # ho.edgat.port
 #: ./en/messages:2540
 msgid ""
-"The name of the port for this"
-"signal on the component. This"
-"field can only be edited for"
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
 "module instances."
 msgstr ""
 
 # ho.edgat.iolab
 #: ./en/messages:2547
 msgid ""
-"The direction of the selected"
-"signal on the selected component."
-"This field can only be edited"
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
 "for module instances."
 msgstr ""
 
 # ho.edgat.bitlab
 #: ./en/messages:2554
 msgid ""
-"The bit width of the selected"
-"signal on the selected component."
-"You can change the bitwidth by"
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
 "editing it here."
 msgstr ""
 
@@ -7066,7 +7066,7 @@ msgstr ""
 # ho.edgat.hide
 #: ./en/messages:2566
 msgid ""
-"Set this flag to disable"
+"Set this flag to disable\n"
 "display of component names."
 msgstr ""
 
@@ -7098,14 +7098,14 @@ msgstr ""
 # ho.edgat.swstate
 #: ./en/messages:2577
 msgid ""
-"The initial state of the switch to use when"
+"The initial state of the switch to use when\n"
 "starting a simulation."
 msgstr ""
 
 # ho.edgat.dipstate
 #: ./en/messages:2582
 msgid ""
-"The initial state of the dip switch to use"
+"The initial state of the dip switch to use\n"
 "when starting a simulation."
 msgstr ""
 
@@ -7117,7 +7117,7 @@ msgstr ""
 # ho.edgat.memfile
 #: ./en/messages:2589
 msgid ""
-"The file with the initial state for this memory."
+"The file with the initial state for this memory.\n"
 "This file is read when the simulator is started."
 msgstr ""
 
@@ -7134,254 +7134,254 @@ msgstr ""
 # ho.traceprint
 #: ./en/messages:2597
 msgid ""
-"Print the logic trace range selected"
-"using the right mouse button. Shift-right"
-"click can be used to expand the selected"
-"region. The range visible in the scope"
+"Print the logic trace range selected\n"
+"using the right mouse button. Shift-right\n"
+"click can be used to expand the selected\n"
+"region. The range visible in the scope\n"
 "view is used when there is no selection."
 msgstr ""
 
 # ho.showxhair
 #: ./en/messages:2605
 msgid ""
-"If this button is depressed, a vertical crosshair"
+"If this button is depressed, a vertical crosshair\n"
 "line will be displayed in the scope window."
 msgstr ""
 
 # ho.opt.general.fontset
 #: ./en/messages:2610
 msgid ""
-"Specifies the basic font size to"
-"use in the TkGate interface. This"
-"option will not take effect until"
+"Specifies the basic font size to\n"
+"use in the TkGate interface. This\n"
+"option will not take effect until\n"
 "restarting TkGate."
 msgstr ""
 
 # ho.opt.sec.send
 #: ./en/messages:2617
 msgid ""
-"Enabling the $tkg$command() system task will allow"
-"user circuits to send arbitrary simulator control"
-"commands to the TkGate GUI. This includes the ability"
-"to execute arbitrary shell commands. If the simulator"
-"will be used to execute untrusted circuits, it is"
-"recommended that this task be disabled. Enabling this"
+"Enabling the $tkg$command() system task will allow\n"
+"user circuits to send arbitrary simulator control\n"
+"commands to the TkGate GUI. This includes the ability\n"
+"to execute arbitrary shell commands. If the simulator\n"
+"will be used to execute untrusted circuits, it is\n"
+"recommended that this task be disabled. Enabling this\n"
 "option has a very high security risk."
 msgstr ""
 
 # ho.opt.sec.open
 #: ./en/messages:2627
 msgid ""
-"Enabling the $fopen() system task will allow user"
-"circuits to write to any file that the user invoking"
-"TkGate has access to. Enabling this option has a"
+"Enabling the $fopen() system task will allow user\n"
+"circuits to write to any file that the user invoking\n"
+"TkGate has access to. Enabling this option has a\n"
 "high security risk."
 msgstr ""
 
 # ho.opt.sec.writemem
 #: ./en/messages:2634
 msgid ""
-"Enabling the $writememb() and $writememh() system tasks"
-"will allow user circuits to write to any file that the"
-"user invoking TkGate has access to. Enabling this option"
+"Enabling the $writememb() and $writememh() system tasks\n"
+"will allow user circuits to write to any file that the\n"
+"user invoking TkGate has access to. Enabling this option\n"
 "has a high security risk."
 msgstr ""
 
 # ho.opt.sec.enqueue
 #: ./en/messages:2641
 msgid ""
-"Enabling the $tkg$recv() and $tkg$send() system tasks"
-"will enable virtual peripheral devices to send messages"
-"to TkGate circuits. Enabling this option has a low"
+"Enabling the $tkg$recv() and $tkg$send() system tasks\n"
+"will enable virtual peripheral devices to send messages\n"
+"to TkGate circuits. Enabling this option has a low\n"
 "security risk."
 msgstr ""
 
 # ho.opt.ssave
 #: ./en/messages:2648
 msgid ""
-"Perform consistency checks on circuit"
-"files before overwriting existing save"
-"file to verify that there are no problems"
+"Perform consistency checks on circuit\n"
+"files before overwriting existing save\n"
+"file to verify that there are no problems\n"
 "with the save file."
 msgstr ""
 
 # ho.opt.sec.exec
 #: ./en/messages:2655
 msgid ""
-"Fully enabling the $tkg$exec() system task allows user"
-"circuit to execute arbitrary tcl/tk commands including"
-"the ability to execute arbitrary shell commands. Enabling"
+"Fully enabling the $tkg$exec() system task allows user\n"
+"circuit to execute arbitrary tcl/tk commands including\n"
+"the ability to execute arbitrary shell commands. Enabling\n"
 "this option has a very high security risk."
 msgstr ""
 
 # ho.opt.sec.regexec
 #: ./en/messages:2662
 msgid ""
-"Enabling the $tkg$exec() system task for registered functions"
-"allows user circuits to execute only tcl/tk commands that have"
-"been registered as safe. As long has all Virtual Peripheral"
-"Device files are trusted, enabling $tkg$exec() at this level"
-"should prevent dangerous commands from being executed. Enabling"
+"Enabling the $tkg$exec() system task for registered functions\n"
+"allows user circuits to execute only tcl/tk commands that have\n"
+"been registered as safe. As long has all Virtual Peripheral\n"
+"Device files are trusted, enabling $tkg$exec() at this level\n"
+"should prevent dangerous commands from being executed. Enabling\n"
 "this option has a medium security risk."
 msgstr ""
 
 # ho.opt.sec.noexec
 #: ./en/messages:2671
 msgid ""
-"Fully disabling the $tkg$exec() command will prevent user"
-"circuits from executing tcl/tk commands. This will make it"
-"impossible to use Virtual Peripheral Devices. Selecting this"
+"Fully disabling the $tkg$exec() command will prevent user\n"
+"circuits from executing tcl/tk commands. This will make it\n"
+"impossible to use Virtual Peripheral Devices. Selecting this\n"
 "option has a minimal security risk."
 msgstr ""
 
 # ho.opt.sec.stop
 #: ./en/messages:2678
 msgid ""
-"If this setting is enabled, the simulation will be terminated"
-"as soon as any attempt is made by the user circuit to execute"
+"If this setting is enabled, the simulation will be terminated\n"
+"as soon as any attempt is made by the user circuit to execute\n"
 "a disabled feature."
 msgstr ""
 
 # ho.opt.sec.warn
 #: ./en/messages:2684
 msgid ""
-"If this setting is enabled, the simulation will continue, but"
-"an error message will be displayed when any attempt is made by"
+"If this setting is enabled, the simulation will continue, but\n"
+"an error message will be displayed when any attempt is made by\n"
 "the user circuit to execute a disabled feature."
 msgstr ""
 
 # ho.opt.sec.ignore
 #: ./en/messages:2690
 msgid ""
-"If this setting is enabled, use of any disabled features will"
+"If this setting is enabled, use of any disabled features will\n"
 "be ignored and no error messages will be displayed."
 msgstr ""
 
 # ho.opt.html.browser
 #: ./en/messages:2695
 msgid ""
-"Command to be execute when the user clicks on a link to"
-"an html file. A "%s" in the command will be replaced"
+"Command to be execute when the user clicks on a link to\n"
+"an html file. A "%s" in the command will be replaced\n"
 "with the link URL."
 msgstr ""
 
 # ho.opt.html.email
 #: ./en/messages:2701
 msgid ""
-"Command to be execute when the user clicks on a link to"
-"send an e-mail message. A "%s" in the command will be"
+"Command to be execute when the user clicks on a link to\n"
+"send an e-mail message. A "%s" in the command will be\n"
 "replaced with the link URL."
 msgstr ""
 
 # ho.opt.fsave
 #: ./en/messages:2707
 msgid ""
-"Save TkGate internal cells with circuit"
-"data. This will increase save file size"
-"by about 20% for a typical circuit, but"
-"will result in save files that can be"
+"Save TkGate internal cells with circuit\n"
+"data. This will increase save file size\n"
+"by about 20% for a typical circuit, but\n"
+"will result in save files that can be\n"
 "exported to third party tools."
 msgstr ""
 
 # ho.opt.sorttraces
 #: ./en/messages:2715
 msgid ""
-"If this option is enabled, traces on the"
-"scope window will be displayed in sorted"
-"order. If this option is disabled, traces"
-"on the scope window will be displayed in"
+"If this option is enabled, traces on the\n"
+"scope window will be displayed in sorted\n"
+"order. If this option is disabled, traces\n"
+"on the scope window will be displayed in\n"
 "the order in which the probes were set."
 msgstr ""
 
 # ho.opt.sim.noglitch
 #: ./en/messages:2723
 msgid ""
-"If this option is enabled, rapidly changing"
-"inputs to a component will cause the component to"
-"output unknown rather simply the time shifted"
-"input signal. This can eliminate spurious"
-"events and prevent oscilations in gate-level"
+"If this option is enabled, rapidly changing\n"
+"inputs to a component will cause the component to\n"
+"output unknown rather simply the time shifted\n"
+"input signal. This can eliminate spurious\n"
+"events and prevent oscilations in gate-level\n"
 "sequential circuits."
 msgstr ""
 
 # ho.opt.sim.savetraces
 #: ./en/messages:2732
 msgid ""
-"Probes placed during a simulation run will"
-"be remembered and replaced when restarting"
+"Probes placed during a simulation run will\n"
+"be remembered and replaced when restarting\n"
 "the simulation of the same circuit."
 msgstr ""
 
 # ho.opt.sim.tech
 #: ./en/messages:2739
 msgid ""
-"List of files to load as potential "technology""
-"files. Technology files specify delay and area"
+"List of files to load as potential "technology"\n"
+"files. Technology files specify delay and area\n"
 "estimates for built-in components."
 msgstr ""
 
 # ho.opt.sim.err
 #: ./en/messages:2745
 msgid ""
-"Select how warnings from the simulator"
+"Select how warnings from the simulator\n"
 "should be handled."
 msgstr ""
 
 # ho.opt.sim.err.stopany
 #: ./en/messages:2750
 msgid ""
-"Do not simulate the circuit if there are any"
-"warnings in the circuit, even if there are no"
+"Do not simulate the circuit if there are any\n"
+"warnings in the circuit, even if there are no\n"
 "actual erros."
 msgstr ""
 
 # ho.opt.sim.err.showall
 #: ./en/messages:2756
 msgid ""
-"Always show warnings in the circuit, even if"
-"there are no errors. If there are only warnings,"
-"the simualtor will be started and the list of"
+"Always show warnings in the circuit, even if\n"
+"there are no errors. If there are only warnings,\n"
+"the simualtor will be started and the list of\n"
 "warnings will be displayed in a separate window."
 msgstr ""
 
 # ho.opt.sim.err.showiferr
 #: ./en/messages:2763
 msgid ""
-"Show warnings only if there are also errors"
-"in the circuit. If a circuit contains only"
-"warnings, they will be ignored and the simulator"
+"Show warnings only if there are also errors\n"
+"in the circuit. If a circuit contains only\n"
+"warnings, they will be ignored and the simulator\n"
 "will be started."
 msgstr ""
 
 # ho.opt.sim.err.ignore
 #: ./en/messages:2770
 msgid ""
-"Never display warning messages, even if there"
+"Never display warning messages, even if there\n"
 "are errors in the circuit."
 msgstr ""
 
 # ho.opt.lib.vpath
 #: ./en/messages:2775
 msgid ""
-"List of directories to search for TkGate library"
-"files. Library files should have a .v extention"
+"List of directories to search for TkGate library\n"
+"files. Library files should have a .v extention\n"
 "and contain modules useful for use in user circuits."
 msgstr ""
 
 # ho.opt.lib.vlib
 #: ./en/messages:2781
 msgid ""
-"List of libaries that should automatically be loaded"
+"List of libaries that should automatically be loaded\n"
 "when TkGate starts."
 msgstr ""
 
 # ho.opt.lib.vpd
 #: ./en/messages:2786
 msgid ""
-"List of directories to search for virtual peripheral"
-"devices. Virtual peripheral devices have a .tcl"
-"extension and typically implement a GUI representing"
-"a peripheral device that can be controlled by a user"
+"List of directories to search for virtual peripheral\n"
+"devices. Virtual peripheral devices have a .tcl\n"
+"extension and typically implement a GUI representing\n"
+"a peripheral device that can be controlled by a user\n"
 "circuit."
 msgstr ""
 
@@ -7393,91 +7393,91 @@ msgstr ""
 # ho.opt.name
 #: ./en/messages:2798
 msgid ""
-"User name to be used on TkGate generated"
+"User name to be used on TkGate generated\n"
 "reports such as circuit printouts."
 msgstr ""
 
 # ho.opt.site
 #: ./en/messages:2803
 msgid ""
-"The name of the site where TkGate is"
-"installed. This name will be used on"
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
 "any printer or postscript output."
 msgstr ""
 
 # ho.opt.smooth
 #: ./en/messages:2809
 msgid ""
-"If this option is enabled, scrolling will"
-"be optimized by using bitmap copies instead"
-"of a complete redisplay. You can turn this"
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
 "off if there are any problems with your server."
 msgstr ""
 
 # ho.opt.clip
 #: ./en/messages:2816
 msgid ""
-"If this option is enabled, clipping will be"
-"used to update only the exposed portion of"
-"the window on a redisplay. Otherwise the"
-"entire display will be redrawn for all"
-"exposures. Unset only if you are having"
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
 "problems on your display."
 msgstr ""
 
 # ho.opt.showimage
 #: ./en/messages:2825
 msgid ""
-"Unset this option to suppress display of"
-"the image and explanitory text at the"
+"Unset this option to suppress display of\n"
+"the image and explanitory text at the\n"
 "edge of dialog boxes."
 msgstr ""
 
 # ho.opt.outmove
 #: ./en/messages:2832
 msgid ""
-"If this option is enabled, only an outline"
-"of module instances being moved will be displayed"
-"while dragging. Use this feature only on machines"
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
 "with slow displays."
 msgstr ""
 
 # ho.opt.bhelp
 #: ./en/messages:2839
 msgid ""
-"If this option is enabled, help balloons will"
-"be activated. Help balloons, such as this one,"
-"provide tips on interface elements when the"
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
 "mouse is over them."
 msgstr ""
 
 # ho.opt.tearawaymenus
 #: ./en/messages:2846
 msgid ""
-"If enabled, the main menues will be detachable"
-"from the interface. This option will take effect"
+"If enabled, the main menues will be detachable\n"
+"from the interface. This option will take effect\n"
 "next time you restart TkGate."
 msgstr ""
 
 # ho.opt.novice
 #: ./en/messages:2852
 msgid ""
-"If no other circuit is specified on the command"
-"line. A TkGate tutorial will be disaplyed as"
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
 "the initial circuit on start up."
 msgstr ""
 
 # ho.opt.blockDropConnect
 #: ./en/messages:2858
 msgid ""
-"Allow ports on module interfaces to be created"
+"Allow ports on module interfaces to be created\n"
 "by dropping free wires near an edge."
 msgstr ""
 
 # ho.opt.debug
 #: ./en/messages:2863
 msgid ""
-"Enables several debugging features"
+"Enables several debugging features\n"
 "only useful to TkGate developers."
 msgstr ""
 
@@ -7494,27 +7494,27 @@ msgstr ""
 # ho.opt.beak
 #: ./en/messages:2871
 msgid ""
-"Enable these totally useless features."
-"If you disable this option, the useless"
-"features checkbox will no longer appear"
-"in this dialog box. The only way to"
-"see the useless features again will be"
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
 "to edit your .tkgate2-properties file."
 msgstr ""
 
 # ho.opt.miles
 #: ./en/messages:2880
 msgid ""
-"If this mode is enabled, TkGate will"
-"periodically insult the intelligence of"
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
 "the user."
 msgstr ""
 
 # ho.opt.bat
 #: ./en/messages:2886
 msgid ""
-"If this mode is enabled, TkGate will"
-"set up an enviornment for designing a"
+"If this mode is enabled, TkGate will\n"
+"set up an enviornment for designing a\n"
 "bat computer."
 msgstr ""
 
@@ -7526,93 +7526,93 @@ msgstr ""
 # ho.opt.simstep
 #: ./en/messages:2894
 msgid ""
-"The number of epochs to advance when"
+"The number of epochs to advance when\n"
 "the step command is issued."
 msgstr ""
 
 # ho.opt.ckstep
 #: ./en/messages:2899
 msgid ""
-"The number of clock cycles to advance"
+"The number of clock cycles to advance\n"
 "when the clock step command is issued."
 msgstr ""
 
 # ho.opt.ckover
 #: ./en/messages:2904
 msgid ""
-"The number of epochs past rising edge"
-"of the clock to advance when the clock"
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
 "step command is issued."
 msgstr ""
 
 # ho.opt.vpopupdelay
 #: ./en/messages:2910
 msgid ""
-"The delay in milliseconds between pressing"
-"and holding the mouse button and the display"
-"of a signal value. On some systems, short"
-"delay values interfere with the ability to"
-"recognize a double click. If you have this"
-"problem, increase this value. Values between"
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
 "1 and 10000 are allowed."
 msgstr ""
 
 # ho.opt.init
 #: ./en/messages:2920
 msgid ""
-"A simulation script file to execute"
-"automatically when simulation of any"
-"circuit is initiated. Do not use this"
-"for circuit specific scripts, use the"
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
 "circuit properties instead."
 msgstr ""
 
 # ho.opt.ckall
 #: ./en/messages:2928
 msgid ""
-"If this mode is enabled, the clock step"
-"command will pause the simulation on the"
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
 "positive edge of any clock in the circuit."
 msgstr ""
 
 # ho.opt.ckspec
 #: ./en/messages:2934
 msgid ""
-"If this mode is enabled, the clock step"
-"command will pause the simulation only on"
-"the positive edge of the specified clock."
-"Use the name of the net to which the"
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
 "clock is attached."
 msgstr ""
 
 # ho.opt.keybind
 #: ./en/messages:2942
 msgid ""
-"Specifies the basic style for key"
-"bindings. If you change this"
-"option, bindings will be updated"
-"immediately, but you will need to"
-"restart TkGate to see any user"
+"Specifies the basic style for key\n"
+"bindings. If you change this\n"
+"option, bindings will be updated\n"
+"immediately, but you will need to\n"
+"restart TkGate to see any user\n"
 "defined keybindings."
 msgstr ""
 
 # ho.deftech
 #: ./en/messages:2951
 msgid ""
-"Default technology for new components."
-"Affects delay of components. To change"
-"the technology of a specific component,"
-"open its properties box (double"
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
 "click) and select the "Delay" tab."
 msgstr ""
 
 # ho.techbut
 #: ./en/messages:2959
 msgid ""
-"Use delays from standard technology"
-"definition file. To add custom"
-"technologies, add them to the list"
-"in the "File -> Options -> Simulate""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the "File -> Options -> Simulate"\n"
 "menu."
 msgstr ""
 
@@ -7624,62 +7624,62 @@ msgstr ""
 # ho.contver
 #: ./en/messages:2971
 msgid ""
-"Continuously verify the integrity of internal"
+"Continuously verify the integrity of internal\n"
 "data structures after every operation."
 msgstr ""
 
 # ho.simwatch
 #: ./en/messages:2976
 msgid ""
-"Display commands sent between"
+"Display commands sent between\n"
 "the GUI and the simulator."
 msgstr ""
 
 # ho.symed.point
 #: ./en/messages:2981
 msgid ""
-"Pixel edit mode. Use the left"
-"mouse button to set pixels and"
+"Pixel edit mode. Use the left\n"
+"mouse button to set pixels and\n"
 "the right button to clear them."
 msgstr ""
 
 # ho.symed.line
 #: ./en/messages:2987
 msgid ""
-"Line mode. Use the left"
-"mouse button to set pixels and"
+"Line mode. Use the left\n"
+"mouse button to set pixels and\n"
 "the right button to clear them."
 msgstr ""
 
 # ho.symed.rect
 #: ./en/messages:2993
 msgid ""
-"Rectangle mode. Use the left"
-"mouse button to set pixels and"
+"Rectangle mode. Use the left\n"
+"mouse button to set pixels and\n"
 "the right button to clear them."
 msgstr ""
 
 # ho.symed.fillrect
 #: ./en/messages:2999
 msgid ""
-"Filled rectangle mode. Use the"
-"left mouse button to set pixels"
+"Filled rectangle mode. Use the\n"
+"left mouse button to set pixels\n"
 "and the right button to clear them."
 msgstr ""
 
 # ho.symed.select
 #: ./en/messages:3005
 msgid ""
-"Bitmap select mode. Use the left"
-"mouse buttons to select regions of"
-"the bitmap and do cut and paste"
+"Bitmap select mode. Use the left\n"
+"mouse buttons to select regions of\n"
+"the bitmap and do cut and paste\n"
 "operations on the selection."
 msgstr ""
 
 # ho.symed.port
 #: ./en/messages:3012
 msgid ""
-"Port select mode. Select ports and"
+"Port select mode. Select ports and\n"
 "move them or rotate them."
 msgstr ""
 
@@ -7736,9 +7736,9 @@ msgstr ""
 # ho.tool.currot
 #: ./en/messages:3028
 msgid ""
-"Displays the current default"
-"rotation. Click on this"
-"button to change the current"
+"Displays the current default\n"
+"rotation. Click on this\n"
+"button to change the current\n"
 "default rotation."
 msgstr ""
 

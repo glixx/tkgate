@@ -179,16 +179,14 @@ foreach pair $messagesLine2Key(m) {
 	set str [lindex $pair 0]
 	set keyName [lindex $pair 1]
 	set msgVal $messagesHash($keyName,m)
+#	regsub -all "\"" $msgVal "\\\"" msgVal
 	puts $f0 ""
 	puts $f0 "# $keyName"
 	puts $f0 "#: $options(m):$str"
 	set line "msgid "
 	set strList [split $msgVal "\n"]
 	if {[llength $strList] > 1} {
-		set line "$line\"\""
-		foreach valueLine $strList {
-			set line "$line\n\"$valueLine\""
-		}
+		set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
 	} else {
 		set line "$line\"[lindex $strList 0]\""
 	}
@@ -233,10 +231,7 @@ foreach pair $messagesLine2Key(l) {
 	set line "msgid "
 	set strList [split $origMsgVal "\n"]
 	if {[llength $strList] > 1} {
-		set line "$line\"\""
-		foreach valueLine $strList {
-			set line "$line\n\"$valueLine\""
-		}
+		set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
 	} else {
 		set line "$line\"[lindex $strList 0]\""
 	}
@@ -246,10 +241,7 @@ foreach pair $messagesLine2Key(l) {
 	set line "msgstr "
 	set strList [split $msgVal "\n"]
 	if {[llength $strList] > 1} {
-		set line "$line\"\""
-		foreach valueLine $strList {
-			set line "$line\n\"$valueLine\""
-		}
+		set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
 	} else {
 		set line "$line\"[lindex $strList 0]\""
 	}
