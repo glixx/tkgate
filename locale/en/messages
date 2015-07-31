@@ -135,7 +135,7 @@ b.tech		Technology
 #
 # Main tab strings
 #
-tab.edit	Edit
+tab.edit	Editing
 tab.editintr	Interface
 tab.simulate	Simulate
 tab.cpath	Critical Path
@@ -1345,9 +1345,9 @@ igen.bits		Bits
 igen.modname		Module Name:
 
 #igen.resort		Re-sort
-igen.add		Add...
+igen.add		Add
 igen.delete		Delete
-igen.edit		Edit...
+igen.edit		Edit
 
 igen.in			in
 igen.out		out

@@ -195,6 +195,9 @@ foreach pair $messagesLine2Key(m) {
 }
 
 close $f0
+exec msguniq $options(pot) -o "$options(pot).tmp"
+exec mv "$options(pot).tmp" $options(pot)
+exec sed -i {/#-#-#-#-#/d} $options(pot)
 
 puts $fLoc "# This file is part of TkGate project"
 puts $fLoc "# Copyright (C) 1987-2015 by Jeffery P. Hansen"
@@ -251,3 +254,6 @@ foreach pair $messagesLine2Key(l) {
 }
 
 close $fLoc
+exec msguniq $options(po) -o "$options(po).tmp"
+exec mv "$options(po).tmp" $options(po)
+exec sed -i {/#-#-#-#-#/d} $options(po)

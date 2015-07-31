@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
-"POT-Creation-Date: 2015-07-31 13:19+0300\n"
-"PO-Revision-Date: 2015-07-31 13:19+0300\n"
+"POT-Creation-Date: 2015-07-31 17:10+0300\n"
+"PO-Revision-Date: 2015-07-31 17:10+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -19,9 +19,10 @@ msgstr ""
 "X-Generator: tkgatemsg2po script\n"
 
 # b.new
-#: ru/messages:40
+# pop.module.new
+#: ru/messages:40 ru/messages:393
 msgid "New..."
-msgstr "Новый..."
+msgstr "Создать..."
 
 # b.dismiss
 #: ru/messages:41
@@ -29,7 +30,8 @@ msgid "Dismiss"
 msgstr "Отклонить"
 
 # b.close
-#: ru/messages:42
+# pop.gate.close
+#: ru/messages:42 ru/messages:382
 msgid "Close"
 msgstr "Закрыть"
 
@@ -44,24 +46,49 @@ msgid "Clear"
 msgstr "Очистить"
 
 # b.cancel
-#: ru/messages:45
+# db.hdl.cancel
+#: ru/messages:45 ru/messages:940
 msgid "Cancel"
 msgstr "Отмена"
 
 # b.in
-#: ru/messages:48
+# pop.igen.in
+# db.net.in
+# igen.in
+#: ru/messages:48 ru/messages:429 ru/messages:565 ru/messages:1273
+#, fuzzy
 msgid "in"
-msgstr "вход"
+msgstr ""
+"вход\n"
+"вход\n"
+"вход\n"
+"вх"
 
 # b.out
-#: ru/messages:49
+# pop.igen.out
+# db.net.out
+# igen.out
+#: ru/messages:49 ru/messages:430 ru/messages:566 ru/messages:1274
+#, fuzzy
 msgid "out"
-msgstr "выход"
+msgstr ""
+"выход\n"
+"выход\n"
+"выход\n"
+"вых"
 
 # b.inout
-#: ru/messages:50
+# pop.igen.inout
+# db.net.inout
+# igen.inout
+#: ru/messages:50 ru/messages:431 ru/messages:567 ru/messages:1275
+#, fuzzy
 msgid "inout"
-msgstr "вход-выход"
+msgstr ""
+"вход-выход\n"
+"вход-выход\n"
+"вход-выход\n"
+"вх-вых"
 
 # b.browse
 #: ru/messages:51
@@ -79,17 +106,26 @@ msgid "Find"
 msgstr "Найти"
 
 # b.edit
-#: ru/messages:54
+# mm.edit
+# pop.interface.edit
+#: ru/messages:54 ru/messages:108 ru/messages:421
 msgid "Edit..."
 msgstr "Редактировать..."
 
 # b.add
-#: ru/messages:55
+# mm.add
+#: ru/messages:55 ru/messages:106
 msgid "Add..."
 msgstr "Добавить..."
 
 # b.delete
-#: ru/messages:56
+# mm.delete
+# pop.gate.delete
+# pop.igen.delete
+# db.gate.delete
+# igen.delete
+#: ru/messages:56 ru/messages:107 ru/messages:390 ru/messages:428
+#: ru/messages:618 ru/messages:1270
 msgid "Delete"
 msgstr "Удалить"
 
@@ -104,32 +140,40 @@ msgid "Apply"
 msgstr "Применить"
 
 # b.anchor
-#: ru/messages:60
+# db.gate.anchor
+#: ru/messages:60 ru/messages:601
 msgid "Anchor"
-msgstr "Якорь"
+msgstr "Прикрепить"
 
 # b.tech
-#: ru/messages:61
+# opt.simulate.tech
+# opt.tool.tech
+#: ru/messages:61 ru/messages:1080 ru/messages:1187
 msgid "Technology"
 msgstr "Технология"
 
 # tab.edit
 #: ru/messages:70
-msgid "Edit"
+msgid "Editing"
 msgstr "Редактирование"
 
 # tab.editintr
-#: ru/messages:71
+# mod.intf
+# pop.interface
+# opt.interface
+#: ru/messages:71 ru/messages:259 ru/messages:417 ru/messages:1068
 msgid "Interface"
 msgstr "Интерфейс"
 
 # tab.simulate
-#: ru/messages:72
+# opt.simulate
+#: ru/messages:72 ru/messages:1078
 msgid "Simulate"
 msgstr "Симуляция"
 
 # tab.cpath
-#: ru/messages:73
+# opt.cpath
+#: ru/messages:73 ru/messages:1112
 msgid "Critical Path"
 msgstr "Критический путь"
 
@@ -174,17 +218,27 @@ msgid "List"
 msgstr "Список"
 
 # module.box.libraries
-#: ru/messages:92
+# opt.library
+# circ.library
+#: ru/messages:92 ru/messages:1082 ru/messages:1496
 msgid "Libraries"
 msgstr "Библиотеки"
 
 # sidetab.nets
-#: ru/messages:98
+# db.net.inets
+# find.dom.nets
+#: ru/messages:98 ru/messages:568 ru/messages:1444
+#, fuzzy
 msgid "Nets"
-msgstr "Цепи"
+msgstr ""
+"Цепи\n"
+"Цепи\n"
+"Цепях"
 
 # sidetab.ports
-#: ru/messages:99
+# iports
+# opt.tool.symport
+#: ru/messages:99 ru/messages:499 ru/messages:1193
 msgid "Ports"
 msgstr "Порты"
 
@@ -192,21 +246,6 @@ msgstr "Порты"
 #: ru/messages:105
 msgid "7"
 msgstr "17"
-
-# mm.add
-#: ru/messages:106
-msgid "Add..."
-msgstr "Добавить..."
-
-# mm.delete
-#: ru/messages:107
-msgid "Delete"
-msgstr "Удалить"
-
-# mm.edit
-#: ru/messages:108
-msgid "Edit..."
-msgstr "Редактировать..."
 
 # mm.enable
 #: ru/messages:109
@@ -219,7 +258,8 @@ msgid "Disable"
 msgstr "Отключить"
 
 # menu.file
-#: ru/messages:120
+# menu.scope_file
+#: ru/messages:120 ru/messages:237
 msgid "0:File"
 msgstr "0:Файл"
 
@@ -239,7 +279,8 @@ msgid "0:Symbol"
 msgstr "0:Символ"
 
 # menu.simulate
-#: ru/messages:124
+# menu.scope_sim
+#: ru/messages:124 ru/messages:238
 msgid "0:Simulate"
 msgstr "0:Симуляция"
 
@@ -249,7 +290,8 @@ msgid "0:Module"
 msgstr "0:Модуль"
 
 # menu.interface
-#: ru/messages:126
+# menu.module.interface
+#: ru/messages:126 ru/messages:220
 msgid "0:Interface"
 msgstr "0:Интерфейс"
 
@@ -264,12 +306,14 @@ msgid "0:Components"
 msgstr "0:Компоненты"
 
 # menu.help
-#: ru/messages:129
+# menu.scope_help
+#: ru/messages:129 ru/messages:240
 msgid "0:Help"
 msgstr "0:Справка"
 
 # menu.file.new
-#: ru/messages:131
+# menu.module.new
+#: ru/messages:131 ru/messages:213
 msgid "0:New..."
 msgstr "0:Создать..."
 
@@ -359,14 +403,22 @@ msgid "0:Find..."
 msgstr "0:Найти..."
 
 # menu.edit.zoomin
-#: ru/messages:150
+# menu.scope_trace.zoomin
+#: ru/messages:150 ru/messages:244
+#, fuzzy
 msgid "5:Zoom In"
-msgstr "5:Увеличить"
+msgstr ""
+"5:Увеличить\n"
+"5:Приблизить"
 
 # menu.edit.zoomout
-#: ru/messages:151
+# menu.scope_trace.zoomout
+#: ru/messages:151 ru/messages:245
+#, fuzzy
 msgid "5:Zoom Out"
-msgstr "5:Уменьшить"
+msgstr ""
+"5:Уменьшить\n"
+"5:Отдалить"
 
 # menu.edit.rshift
 #: ru/messages:153
@@ -584,47 +636,56 @@ msgid "0:End Simulation"
 msgstr "0:Закончить симуляцию"
 
 # menu.simulate.addprobe
-#: ru/messages:200
+# menu.scope_sim.addprobe
+#: ru/messages:200 ru/messages:246
 msgid "0:Add/Delete Probe"
 msgstr "0:Добавить/удалить зонд"
 
 # menu.simulate.run
-#: ru/messages:201
+# menu.scope_sim.run
+#: ru/messages:201 ru/messages:247
 msgid "0:Run"
 msgstr "0:Пуск"
 
 # menu.simulate.pause
-#: ru/messages:202
+# menu.scope_sim.pause
+#: ru/messages:202 ru/messages:248
 msgid "0:Pause"
 msgstr "0:Пауза"
 
 # menu.simulate.step
-#: ru/messages:203
+# menu.scope_sim.step
+#: ru/messages:203 ru/messages:249
 msgid "0:Step Epoch(s)"
 msgstr "0:Шаг на эпоху(и)"
 
 # menu.simulate.cycle
-#: ru/messages:204
+# menu.scope_sim.cycle
+#: ru/messages:204 ru/messages:250
 msgid "5:Step Cycle"
 msgstr "5:Шаг на один цикл"
 
 # menu.simulate.break
-#: ru/messages:205
+# menu.scope_sim.break
+#: ru/messages:205 ru/messages:251
 msgid "0:Breakpoint..."
 msgstr "0:Точка остановки..."
 
 # menu.simulate.script
-#: ru/messages:206
+# menu.scope_sim.script
+#: ru/messages:206 ru/messages:252
 msgid "1:Exec. Script..."
 msgstr "1:Выполнить скрипт..."
 
 # menu.simulate.load
-#: ru/messages:207
+# menu.scope_sim.load
+#: ru/messages:207 ru/messages:253
 msgid "1:Load Memory..."
 msgstr "1:Загрузка памяти..."
 
 # menu.simulate.dump
-#: ru/messages:208
+# menu.scope_sim.dump
+#: ru/messages:208 ru/messages:254
 msgid "1:Dump Memory..."
 msgstr "1:Дамп памяти..."
 
@@ -639,14 +700,10 @@ msgid "0:Open"
 msgstr "0:Открыть"
 
 # menu.module.close
-#: ru/messages:212
+# menu.scope_file.close
+#: ru/messages:212 ru/messages:243
 msgid "0:Close"
 msgstr "0:Закрыть"
-
-# menu.module.new
-#: ru/messages:213
-msgid "0:New..."
-msgstr "0:Новый..."
 
 # menu.module.del
 #: ru/messages:214
@@ -678,11 +735,6 @@ msgstr "1:Установить корневым..."
 msgid "0:Properties..."
 msgstr "0:Параметры..."
 
-# menu.module.interface
-#: ru/messages:220
-msgid "0:Interface"
-msgstr "0:Интерфейс"
-
 # menu.module.interface.set
 #: ru/messages:221
 msgid "0:Set As Default"
@@ -709,17 +761,20 @@ msgid "5:Auto Generate..."
 msgstr "5:Автогенерация..."
 
 # menu.help.about
-#: ru/messages:227
+# menu.scope_help.about
+#: ru/messages:227 ru/messages:255
 msgid "0:About..."
-msgstr "0:О Программе..."
+msgstr "0:О программе..."
 
 # menu.help.license
-#: ru/messages:228
+# menu.scope_help.license
+#: ru/messages:228 ru/messages:256
 msgid "0:License..."
 msgstr "0:Лицензионное соглашение..."
 
 # menu.help.doc
-#: ru/messages:229
+# menu.scope_help.doc
+#: ru/messages:229 ru/messages:257
 msgid "0:Documentation..."
 msgstr "0:Документация..."
 
@@ -738,110 +793,15 @@ msgstr "1:Домашняя Страница"
 msgid "1:Examples"
 msgstr "1:Примеры"
 
-# menu.scope_file
-#: ru/messages:237
-msgid "0:File"
-msgstr "0:Файл"
-
-# menu.scope_sim
-#: ru/messages:238
-msgid "0:Simulate"
-msgstr "0:Симуляция"
-
 # menu.scope_trace
 #: ru/messages:239
 msgid "0:Trace"
 msgstr "0:Трассировка"
 
-# menu.scope_help
-#: ru/messages:240
-msgid "0:Help"
-msgstr "0:Справка"
-
 # menu.scope_file.ptrace
 #: ru/messages:242
 msgid "0:Print Trace..."
 msgstr "0:Печать трассировки..."
-
-# menu.scope_file.close
-#: ru/messages:243
-msgid "0:Close"
-msgstr "0:Закрыть"
-
-# menu.scope_trace.zoomin
-#: ru/messages:244
-msgid "5:Zoom In"
-msgstr "5:Приблизить"
-
-# menu.scope_trace.zoomout
-#: ru/messages:245
-msgid "5:Zoom Out"
-msgstr "5:Отдалить"
-
-# menu.scope_sim.addprobe
-#: ru/messages:246
-msgid "0:Add/Delete Probe"
-msgstr "0:Добавить/удалить зонд"
-
-# menu.scope_sim.run
-#: ru/messages:247
-msgid "0:Run"
-msgstr "0:Пуск"
-
-# menu.scope_sim.pause
-#: ru/messages:248
-msgid "0:Pause"
-msgstr "0:Пауза"
-
-# menu.scope_sim.step
-#: ru/messages:249
-msgid "0:Step Epoch(s)"
-msgstr "0:Шаг на эпоху(и)"
-
-# menu.scope_sim.cycle
-#: ru/messages:250
-msgid "5:Step Cycle"
-msgstr "5:Шаг на один цикл"
-
-# menu.scope_sim.break
-#: ru/messages:251
-msgid "0:Breakpoint..."
-msgstr "0:Точка остановки..."
-
-# menu.scope_sim.script
-#: ru/messages:252
-msgid "1:Exec. Script..."
-msgstr "1:Выполнить скрипт..."
-
-# menu.scope_sim.load
-#: ru/messages:253
-msgid "1:Load Memory..."
-msgstr "1:Загрузка памяти..."
-
-# menu.scope_sim.dump
-#: ru/messages:254
-msgid "1:Dump Memory..."
-msgstr "1:Дамп памяти..."
-
-# menu.scope_help.about
-#: ru/messages:255
-msgid "0:About..."
-msgstr "0:О программе..."
-
-# menu.scope_help.license
-#: ru/messages:256
-msgid "0:License..."
-msgstr "0:Лицензионное соглашение..."
-
-# menu.scope_help.doc
-#: ru/messages:257
-msgid "0:Documentation..."
-msgstr "0:Документация..."
-
-# mod.intf
-#: ru/messages:259
-msgid "Interface"
-msgstr "Интерфейс"
 
 # port.title
 #: ru/messages:261
@@ -854,17 +814,20 @@ msgid "Port Parameters"
 msgstr "Параметры порта"
 
 # port.in
-#: ru/messages:263
+# pop.port.in
+#: ru/messages:263 ru/messages:368
 msgid "In"
 msgstr "Вход"
 
 # port.out
-#: ru/messages:264
+# pop.port.out
+#: ru/messages:264 ru/messages:369
 msgid "Out"
 msgstr "Выход"
 
 # port.inout
-#: ru/messages:265
+# pop.port.inout
+#: ru/messages:265 ru/messages:370
 msgid "InOut"
 msgstr "Вход-выход"
 
@@ -879,9 +842,13 @@ msgid "I/O"
 msgstr "Ввод/вывод"
 
 # gm.gate
-#: ru/messages:274
+# opt.tool.gateprop
+#: ru/messages:274 ru/messages:1182
+#, fuzzy
 msgid "Gate"
-msgstr "Вентиль"
+msgstr ""
+"Вентиль\n"
+"Компоненты"
 
 # gm.rgate
 #: ru/messages:275
@@ -904,19 +871,30 @@ msgid "Memory"
 msgstr "Память"
 
 # gm.mod
-#: ru/messages:279
+# imodule
+# opt.tool.module
+# find.result.module
+#: ru/messages:279 ru/messages:497 ru/messages:1186 ru/messages:1416
 msgid "Module"
 msgstr "Модуль"
 
 # gm.comment
-#: ru/messages:280
+# db.hdl.comment
+#: ru/messages:280 ru/messages:939
+#, fuzzy
 msgid "Comment"
-msgstr "Комментарий"
+msgstr ""
+"Комментарий\n"
+"Комментировать"
 
 # gm.script
-#: ru/messages:281
+# db.gate.tab.SCRIPT.cap
+#: ru/messages:281 ru/messages:709
+#, fuzzy
 msgid "Verilog Script"
-msgstr "Скрипт Verilog"
+msgstr ""
+"Скрипт Verilog\n"
+"Свойства Verilog скрипта"
 
 # gm.frame
 #: ru/messages:282
@@ -994,32 +972,38 @@ msgid "TTY"
 msgstr "TTY"
 
 # gm.gate.and
-#: ru/messages:302
+# gm.rgate.and
+#: ru/messages:302 ru/messages:314
 msgid "AND"
 msgstr "И"
 
 # gm.gate.nand
-#: ru/messages:303
+# gm.rgate.nand
+#: ru/messages:303 ru/messages:315
 msgid "NAND"
 msgstr "И-НЕ"
 
 # gm.gate.or
-#: ru/messages:304
+# gm.rgate.or
+#: ru/messages:304 ru/messages:316
 msgid "OR"
 msgstr "ИЛИ"
 
 # gm.gate.nor
-#: ru/messages:305
+# gm.rgate.nor
+#: ru/messages:305 ru/messages:317
 msgid "NOR"
 msgstr "ИЛИ-НЕ"
 
 # gm.gate.xor
-#: ru/messages:306
+# gm.rgate.xor
+#: ru/messages:306 ru/messages:318
 msgid "XOR"
 msgstr "ИСКЛ-ИЛИ"
 
 # gm.gate.xnor
-#: ru/messages:307
+# gm.rgate.xnor
+#: ru/messages:307 ru/messages:319
 msgid "XNOR"
 msgstr "ИСКЛ-ИЛИ-НЕ"
 
@@ -1047,36 +1031,6 @@ msgstr "N-МОП"
 #: ru/messages:312
 msgid "PMOS"
 msgstr "P-МОП"
-
-# gm.rgate.and
-#: ru/messages:314
-msgid "AND"
-msgstr "И"
-
-# gm.rgate.nand
-#: ru/messages:315
-msgid "NAND"
-msgstr "И-НЕ"
-
-# gm.rgate.or
-#: ru/messages:316
-msgid "OR"
-msgstr "ИЛИ"
-
-# gm.rgate.nor
-#: ru/messages:317
-msgid "NOR"
-msgstr "ИЛИ-НЕ"
-
-# gm.rgate.xor
-#: ru/messages:318
-msgid "XOR"
-msgstr "ИСКЛ-ИЛИ"
-
-# gm.rgate.xnor
-#: ru/messages:319
-msgid "XNOR"
-msgstr "ИСКЛ-ИЛИ-НЕ"
 
 # gm.alu.add
 #: ru/messages:321
@@ -1234,9 +1188,13 @@ msgid "RELOAD"
 msgstr "ПЕРЕЗАГРУЗИТЬ"
 
 # pop.make
-#: ru/messages:361
+# find.dom.gates
+#: ru/messages:361 ru/messages:1443
+#, fuzzy
 msgid "Components"
-msgstr "Компоненты"
+msgstr ""
+"Компоненты\n"
+"Компонентах"
 
 # pop.tool
 #: ru/messages:362
@@ -1257,21 +1215,6 @@ msgstr "Вырезать"
 #: ru/messages:366
 msgid "Copy"
 msgstr "Копировать"
-
-# pop.port.in
-#: ru/messages:368
-msgid "In"
-msgstr "Вход"
-
-# pop.port.out
-#: ru/messages:369
-msgid "Out"
-msgstr "Выход"
-
-# pop.port.inout
-#: ru/messages:370
-msgid "InOut"
-msgstr "Вход-выход"
 
 # pop.wire.addseg
 #: ru/messages:372
@@ -1318,11 +1261,6 @@ msgstr "Показать надпись"
 msgid "Open"
 msgstr "Открыть"
 
-# pop.gate.close
-#: ru/messages:382
-msgid "Close"
-msgstr "Закрыть"
-
 # pop.gate.prop
 #: ru/messages:383
 msgid "Instance Properties..."
@@ -1358,20 +1296,10 @@ msgstr "Привязать/Освободить"
 msgid "Set Technology"
 msgstr "Установить технологию"
 
-# pop.gate.delete
-#: ru/messages:390
-msgid "Delete"
-msgstr "Удалить"
-
 # pop.gate.ioset
 #: ru/messages:391
 msgid "Set Type"
 msgstr "Установить тип"
-
-# pop.module.new
-#: ru/messages:393
-msgid "New..."
-msgstr "Новый..."
 
 # pop.module.del
 #: ru/messages:394
@@ -1473,11 +1401,6 @@ msgstr "Дамп памяти..."
 msgid "View Memory..."
 msgstr "Просмотр памяти..."
 
-# pop.interface
-#: ru/messages:417
-msgid "Interface"
-msgstr "Интерфейс"
-
 # pop.interface.set
 #: ru/messages:418
 msgid "Set As Default"
@@ -1493,13 +1416,9 @@ msgstr "Синхрониз. по умолчанию"
 msgid "Sync. All to Default..."
 msgstr "Синхрониз. все по умолчанию..."
 
-# pop.interface.edit
-#: ru/messages:421
-msgid "Edit..."
-msgstr "Редактировать..."
-
 # pop.interface.auto
-#: ru/messages:422
+# ipanel.autogen
+#: ru/messages:422 ru/messages:1312
 msgid "Auto Generate..."
 msgstr "Автогенерация..."
 
@@ -1509,57 +1428,51 @@ msgid "Replace"
 msgstr "Заменить"
 
 # pop.igen.type
-#: ru/messages:425
+# db.mod.type
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+# igen.type
+# find.result.type
+#: ru/messages:425 ru/messages:508 ru/messages:589 ru/messages:598
+#: ru/messages:607 ru/messages:1261 ru/messages:1417
 msgid "Type"
 msgstr "Тип"
 
 # pop.igen.side
-#: ru/messages:426
+# db.gate.side
+# igen.side
+#: ru/messages:426 ru/messages:597 ru/messages:1262
 msgid "Side"
 msgstr "Сторона"
 
 # pop.igen.size
-#: ru/messages:427
+# igen.size
+#: ru/messages:427 ru/messages:1263
 msgid "Size"
 msgstr "Размер"
 
-# pop.igen.delete
-#: ru/messages:428
-msgid "Delete"
-msgstr "Удалить"
-
-# pop.igen.in
-#: ru/messages:429
-msgid "in"
-msgstr "вход"
-
-# pop.igen.out
-#: ru/messages:430
-msgid "out"
-msgstr "выход"
-
-# pop.igen.inout
-#: ru/messages:431
-msgid "inout"
-msgstr "вход-выход"
-
 # pop.igen.left
-#: ru/messages:432
+# igen.left
+#: ru/messages:432 ru/messages:1277
 msgid "left"
 msgstr "слева"
 
 # pop.igen.right
-#: ru/messages:433
+# igen.right
+#: ru/messages:433 ru/messages:1278
 msgid "right"
 msgstr "справа"
 
 # pop.igen.top
-#: ru/messages:434
+# igen.top
+#: ru/messages:434 ru/messages:1279
 msgid "top"
 msgstr "сверху"
 
 # pop.igen.bottom
-#: ru/messages:435
+# igen.bottom
+#: ru/messages:435 ru/messages:1280
 msgid "bottom"
 msgstr "снизу"
 
@@ -1574,7 +1487,8 @@ msgid "Library Manager..."
 msgstr "Менеджер библиотек..."
 
 # pop.library.close
-#: ru/messages:439
+# libmgr.unload
+#: ru/messages:439 ru/messages:1558
 msgid "Unload"
 msgstr "Выгрузить"
 
@@ -1584,9 +1498,13 @@ msgid "UnSelected"
 msgstr "Невыделенный"
 
 # symed.tab.select
-#: ru/messages:469
+# print.sel
+#: ru/messages:469 ru/messages:985
+#, fuzzy
 msgid "Selected"
-msgstr "Выделенный"
+msgstr ""
+"Выделенный\n"
+"Выбранные"
 
 # symed.link
 #: ru/messages:470
@@ -1628,24 +1546,18 @@ msgid "[Double click to add text.]"
 msgstr "[Дважды щёлкните для добавления текста.]"
 
 # ifile
-#: ru/messages:496
+# print.file
+# opt.tool.file
+#: ru/messages:496 ru/messages:971 ru/messages:1179
 msgid "File"
 msgstr "Файл"
 
-# imodule
-#: ru/messages:497
-msgid "Module"
-msgstr "Модуль"
-
 # iblmodule
-#: ru/messages:498
+# print.tab.modules
+# opt.mods
+#: ru/messages:498 ru/messages:1045 ru/messages:1103
 msgid "Modules"
 msgstr "Модули"
-
-# iports
-#: ru/messages:499
-msgid "Ports"
-msgstr "Порты"
 
 # ibits
 #: ru/messages:500
@@ -1658,19 +1570,18 @@ msgid "Type:"
 msgstr "Тип:"
 
 # db.mod.name
-#: ru/messages:506
+# blklst.name
+#: ru/messages:506 ru/messages:1359
 msgid "Name"
 msgstr "Имя"
 
 # db.mod.file
-#: ru/messages:507
+# db.newcirc.file
+# print.filename
+# circ.file
+#: ru/messages:507 ru/messages:580 ru/messages:976 ru/messages:1470
 msgid "File Name"
 msgstr "Имя файла"
-
-# db.mod.type
-#: ru/messages:508
-msgid "Type"
-msgstr "Тип"
 
 # db.mod.flags
 #: ru/messages:509
@@ -1743,9 +1654,13 @@ msgid "Netlist"
 msgstr "Список цепей"
 
 # db.mod.hdl
-#: ru/messages:523
+# opt.editor
+#: ru/messages:523 ru/messages:1074
+#, fuzzy
 msgid "HDL"
-msgstr "Verilog"
+msgstr ""
+"Verilog\n"
+"Verilog HDL"
 
 # db.mod.netexpl
 #: ru/messages:525
@@ -1783,7 +1698,8 @@ msgstr "Список ошибок"
 # db.err.explain.warn
 #: ru/messages:543
 msgid ""
-"There were warnings in your circuit, but simulation will continue. Return to edit mode\n"
+"There were warnings in your circuit, but simulation will continue. Return to "
+"edit mode\n"
 "to examine the warnings."
 msgstr ""
 "В схеме были предупреждения, но симуляция будет продолжена. Вернитесь\n"
@@ -1791,13 +1707,17 @@ msgstr ""
 
 # db.err.explain.err
 #: ru/messages:547
-msgid "There were errors in your circuit. TkGate is unable to continue the simulation."
+msgid ""
+"There were errors in your circuit. TkGate is unable to continue the "
+"simulation."
 msgstr "Схема содержит ошибки. TkGate не может начать симуляцию."
 
 # db.err.neededit
 #: ru/messages:551
 msgid "You must first switch to Edit mode before navigating to warnings."
-msgstr "Для просмотра ошибок и замечаний необходимо переключиться в режим редактирования."
+msgstr ""
+"Для просмотра ошибок и замечаний необходимо переключиться в режим "
+"редактирования."
 
 # db.net.title
 #: ru/messages:558
@@ -1815,14 +1735,22 @@ msgid "Net Name"
 msgstr "Название цепи"
 
 # db.net.hide
-#: ru/messages:561
+# db.gate.hidenam
+#: ru/messages:561 ru/messages:600
+#, fuzzy
 msgid "Hide Name"
-msgstr "Скрыть название"
+msgstr ""
+"Скрыть название\n"
+"Скрыть имя"
 
 # db.net.bits
-#: ru/messages:562
+# db.gate.bitw
+#: ru/messages:562 ru/messages:590
+#, fuzzy
 msgid "Bit Width"
-msgstr "Разрядность (бит)"
+msgstr ""
+"Разрядность (бит)\n"
+"Разрядность"
 
 # db.net.type
 #: ru/messages:563
@@ -1833,26 +1761,6 @@ msgstr "Тип цепи"
 #: ru/messages:564
 msgid "Port Type"
 msgstr "Тип порта"
-
-# db.net.in
-#: ru/messages:565
-msgid "in"
-msgstr "вход"
-
-# db.net.out
-#: ru/messages:566
-msgid "out"
-msgstr "выход"
-
-# db.net.inout
-#: ru/messages:567
-msgid "inout"
-msgstr "вход-выход"
-
-# db.net.inets
-#: ru/messages:568
-msgid "Nets"
-msgstr "Цепи"
 
 # db.newcirc.title
 #: ru/messages:574
@@ -1876,11 +1784,6 @@ msgid ""
 "a new circuit."
 msgstr "Отказаться от текущей схемы и начать новую..."
 
-# db.newcirc.file
-#: ru/messages:580
-msgid "File Name"
-msgstr "Имя файла"
-
 # db.newcirc.topname
 #: ru/messages:581
 msgid "Top Module Name"
@@ -1900,16 +1803,6 @@ msgstr "Имя сигнала"
 #: ru/messages:588
 msgid "Port Name"
 msgstr "Имя порта"
-
-# db.gate.iotype
-#: ru/messages:589
-msgid "Type"
-msgstr "Тип"
-
-# db.gate.bitw
-#: ru/messages:590
-msgid "Bit Width"
-msgstr "Разрядность"
 
 # db.gate.cyclew
 #: ru/messages:591
@@ -1932,39 +1825,25 @@ msgid "Clock Waveform"
 msgstr "Форма синхросигнала"
 
 # db.gate.port
-#: ru/messages:595
+# db.gate.ports
+# igen.port
+#: ru/messages:595 ru/messages:611 ru/messages:1260
 msgid "Port"
 msgstr "Порт"
 
 # db.gate.bitws
-#: ru/messages:596
+# igen.bits
+#: ru/messages:596 ru/messages:1264
+#, fuzzy
 msgid "Bits"
-msgstr "Биты"
-
-# db.gate.side
-#: ru/messages:597
-msgid "Side"
-msgstr "Сторона"
-
-# db.gate.gtype
-#: ru/messages:598
-msgid "Type"
-msgstr "Тип"
+msgstr ""
+"Биты\n"
+"Разрядн."
 
 # db.gate.gname
 #: ru/messages:599
 msgid "Instance Name"
 msgstr "Имя экземпляра"
-
-# db.gate.hidenam
-#: ru/messages:600
-msgid "Hide Name"
-msgstr "Скрыть имя"
-
-# db.gate.anchor
-#: ru/messages:601
-msgid "Anchor"
-msgstr "Прикрепить"
 
 # db.gate.cpbreak
 #: ru/messages:602
@@ -1991,13 +1870,10 @@ msgstr "Битовый диапазон"
 msgid "Memory File"
 msgstr "Файл памяти"
 
-# db.gate.modname
-#: ru/messages:607
-msgid "Type"
-msgstr "Тип"
-
 # db.gate.general
-#: ru/messages:608
+# opt.general
+# circ.general
+#: ru/messages:608 ru/messages:1067 ru/messages:1495
 msgid "General"
 msgstr "Общие"
 
@@ -2010,11 +1886,6 @@ msgstr "Детали"
 #: ru/messages:610
 msgid "Text"
 msgstr "Текст"
-
-# db.gate.ports
-#: ru/messages:611
-msgid "Port"
-msgstr "Порт"
 
 # db.gate.delay
 #: ru/messages:612
@@ -2042,17 +1913,19 @@ msgid "Port Placement"
 msgstr "Размещение порта"
 
 # db.gate.edit
-#: ru/messages:617
+# opt.tool.edit
+# igen.edit
+#: ru/messages:617 ru/messages:1180 ru/messages:1271
+#, fuzzy
 msgid "Edit"
-msgstr "Редактировать"
-
-# db.gate.delete
-#: ru/messages:618
-msgid "Delete"
-msgstr "Удалить"
+msgstr ""
+"Редактировать\n"
+"Правка\n"
+"Редактировать"
 
 # db.gate.add
-#: ru/messages:619
+# igen.add
+#: ru/messages:619 ru/messages:1269
 msgid "Add"
 msgstr "Добавить"
 
@@ -2062,9 +1935,13 @@ msgid "D Flip-Flop Orientation"
 msgstr "Расположение D-триггера"
 
 # db.gate.ff.normal.hdr
-#: ru/messages:622
+# db.gate.jkff.normal.hdr
+#: ru/messages:622 ru/messages:634
+#, fuzzy
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
+"Normal\n"
+"Нормальная"
 
 # db.gate.ff.normal.exp
 #: ru/messages:623
@@ -2076,9 +1953,13 @@ msgstr ""
 "слева направо."
 
 # db.gate.ff.reverse.hdr
-#: ru/messages:627
+# db.gate.jkff.reverse.hdr
+#: ru/messages:627 ru/messages:639
+#, fuzzy
 msgid "Reversed"
-msgstr "Reversed"
+msgstr ""
+"Reversed\n"
+"Обратная"
 
 # db.gate.ff.reverse.exp
 #: ru/messages:628
@@ -2094,11 +1975,6 @@ msgstr ""
 msgid "JK Flip-Flop Orientation"
 msgstr "Ориентация JK-триггера"
 
-# db.gate.jkff.normal.hdr
-#: ru/messages:634
-msgid "Normal"
-msgstr "Нормальная"
-
 # db.gate.jkff.normal.exp
 #: ru/messages:635
 msgid ""
@@ -2107,11 +1983,6 @@ msgid ""
 msgstr ""
 "JK-триггер с направлением данных\n"
 "слева направо."
-
-# db.gate.jkff.reverse.hdr
-#: ru/messages:639
-msgid "Reversed"
-msgstr "Обратная"
 
 # db.gate.jkff.reverse.exp
 #: ru/messages:640
@@ -2262,7 +2133,8 @@ msgid "ROM Properties"
 msgstr "Свойства ПЗУ"
 
 # db.gate.tab.MODULE.cap
-#: ru/messages:696
+# module.props
+#: ru/messages:696 ru/messages:1303
 msgid "Module Properties"
 msgstr "Свойства модуля"
 
@@ -2326,11 +2198,6 @@ msgstr "Свойства D-триггера"
 msgid "JK Flip-Flop Properties"
 msgstr "Свойства JK-триггера"
 
-# db.gate.tab.SCRIPT.cap
-#: ru/messages:709
-msgid "Verilog Script"
-msgstr "Свойства Verilog скрипта"
-
 # db.gate.tab.General.exp
 #: ru/messages:711
 msgid "View and modify basic properties of an instance."
@@ -2354,99 +2221,36 @@ msgstr ""
 #: ru/messages:724
 msgid ""
 "Set the module parameters for this instance of this module if any are\n"
-"defined. Module parameters are used to configure delays and constant values used in a module."
+"defined. Module parameters are used to configure delays and constant values "
+"used in a module."
 msgstr ""
 "Установите параметры для этого экземпляра модуля, если таковые\n"
 "определены. Параметры используются для определения задержек\n"
 "и констант, используемых в модуле."
 
 # db.gate.tab.CLOCK.exp
-#: ru/messages:735
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.SWITCH.exp
-#: ru/messages:736
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.DIP.exp
-#: ru/messages:737
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.TAP.exp
-#: ru/messages:738
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.RAM.exp
-#: ru/messages:739
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.ROM.exp
-#: ru/messages:740
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.MODULE.exp
-#: ru/messages:741
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.FRAME.exp
-#: ru/messages:742
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.LED.exp
-#: ru/messages:743
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.AND.exp
-#: ru/messages:744
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.OR.exp
-#: ru/messages:745
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.XOR.exp
-#: ru/messages:746
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.MUX.exp
-#: ru/messages:747
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.DEMUX.exp
-#: ru/messages:748
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.DECODER.exp
-#: ru/messages:749
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.CONCAT.exp
-#: ru/messages:750
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.FF.exp
-#: ru/messages:751
-msgid "`db.gate.tab.details.exp"
-msgstr "`db.gate.tab.details.exp"
-
 # db.gate.tab.JKFF.exp
-#: ru/messages:752
+#: ru/messages:735 ru/messages:736 ru/messages:737 ru/messages:738
+#: ru/messages:739 ru/messages:740 ru/messages:741 ru/messages:742
+#: ru/messages:743 ru/messages:744 ru/messages:745 ru/messages:746
+#: ru/messages:747 ru/messages:748 ru/messages:749 ru/messages:750
+#: ru/messages:751 ru/messages:752
 msgid "`db.gate.tab.details.exp"
 msgstr "`db.gate.tab.details.exp"
 
@@ -2476,9 +2280,13 @@ msgid "Parameter"
 msgstr "Parameter"
 
 # db.gate.mparm.value
-#: ru/messages:766
+# break.value
+#: ru/messages:766 ru/messages:1574
+#, fuzzy
 msgid "Value"
-msgstr "Value"
+msgstr ""
+"Value\n"
+"Значение"
 
 # db.gate.mparm.exampleA
 #: ru/messages:767
@@ -2533,12 +2341,14 @@ msgid "Switch begins simulation in the \"off\" state."
 msgstr "Переключатель будет в положении \"Выкл.\" после начала симуляции"
 
 # db.gate.switch.shownet
-#: ru/messages:788
+# db.gate.dip.shownet
+#: ru/messages:788 ru/messages:800
 msgid "Show Net Name"
 msgstr "Отображать имя цепи"
 
 # db.gate.switch.shownet.on.hdr
-#: ru/messages:789
+# db.gate.dip.shownet.on.hdr
+#: ru/messages:789 ru/messages:801
 msgid "Show"
 msgstr "Показать"
 
@@ -2548,7 +2358,8 @@ msgid "Show the name of the net next to switch."
 msgstr "Отображать имя цепи рядом с переключателем."
 
 # db.gate.switch.shownet.off.hdr
-#: ru/messages:791
+# db.gate.dip.shownet.off.hdr
+#: ru/messages:791 ru/messages:803
 msgid "Hide"
 msgstr "Скрыть"
 
@@ -2577,25 +2388,10 @@ msgstr "16-ричное значение:"
 msgid "150"
 msgstr "150"
 
-# db.gate.dip.shownet
-#: ru/messages:800
-msgid "Show Net Name"
-msgstr "Отображать имя цепи"
-
-# db.gate.dip.shownet.on.hdr
-#: ru/messages:801
-msgid "Show"
-msgstr "Показать"
-
 # db.gate.dip.shownet.on.exp
 #: ru/messages:802
 msgid "Show the name of the net next to dip."
 msgstr "Отображать имя цепи рядом с DIP-переключателем."
-
-# db.gate.dip.shownet.off.hdr
-#: ru/messages:803
-msgid "Hide"
-msgstr "Скрыть"
 
 # db.gate.dip.shownet.off.exp
 #: ru/messages:804
@@ -2614,8 +2410,12 @@ msgstr "Выберите биты для ответвления от много�
 
 # db.gate.tap.exp.bus
 #: ru/messages:809
-msgid "Select the least-significant bit of the bit range to pull off of the multi-bit bus."
-msgstr "Выберите наименьший значащий бит из диапазона для ответвления от многоразрядной шины."
+msgid ""
+"Select the least-significant bit of the bit range to pull off of the multi-"
+"bit bus."
+msgstr ""
+"Выберите наименьший значащий бит из диапазона для ответвления от "
+"многоразрядной шины."
 
 # db.gate.tap.lbl.bit
 #: ru/messages:810
@@ -2638,12 +2438,16 @@ msgid "Input Ordering"
 msgstr "Упорядочивание входов"
 
 # db.gate.mux.ord1.hdr
-#: ru/messages:815
+# db.gate.demux.ord1.hdr
+# db.gate.decoder.ord1.hdr
+#: ru/messages:815 ru/messages:837 ru/messages:859
 msgid "Left-to-Right"
 msgstr "Слева направо"
 
 # db.gate.mux.ord2.hdr
-#: ru/messages:816
+# db.gate.demux.ord2.hdr
+# db.gate.decoder.ord2.hdr
+#: ru/messages:816 ru/messages:838 ru/messages:860
 msgid "Right-to-Left"
 msgstr "Справа налево"
 
@@ -2663,12 +2467,16 @@ msgid "Selector Placement"
 msgstr "Расположение входа выбора"
 
 # db.gate.mux.sel1.hdr
-#: ru/messages:825
+# db.gate.demux.sel1.hdr
+# db.gate.decoder.sel1.hdr
+#: ru/messages:825 ru/messages:847 ru/messages:869
 msgid "On Left"
 msgstr "Слева"
 
 # db.gate.mux.sel2.hdr
-#: ru/messages:826
+# db.gate.demux.sel2.hdr
+# db.gate.decoder.sel2.hdr
+#: ru/messages:826 ru/messages:848 ru/messages:870
 msgid "On Right"
 msgstr "Справа"
 
@@ -2691,19 +2499,10 @@ msgstr ""
 "мультиплексора."
 
 # db.gate.demux.dataorder
-#: ru/messages:836
+# db.gate.decoder.dataorder
+#: ru/messages:836 ru/messages:858
 msgid "Output Ordering"
 msgstr "Упорядочивание выходов"
-
-# db.gate.demux.ord1.hdr
-#: ru/messages:837
-msgid "Left-to-Right"
-msgstr "Слева направо"
-
-# db.gate.demux.ord2.hdr
-#: ru/messages:838
-msgid "Right-to-Left"
-msgstr "Справа налево"
 
 # db.gate.demux.ord1.exp
 #: ru/messages:839
@@ -2720,16 +2519,6 @@ msgstr "Упорядочить выходы демультиплексора с�
 msgid "Select Placement"
 msgstr "Расположение входа выбора"
 
-# db.gate.demux.sel1.hdr
-#: ru/messages:847
-msgid "On Left"
-msgstr "Слева"
-
-# db.gate.demux.sel2.hdr
-#: ru/messages:848
-msgid "On Right"
-msgstr "Справа"
-
 # db.gate.demux.sel1.exp
 #: ru/messages:849
 msgid "Place the select input on the left side of the DEMUX."
@@ -2743,21 +2532,6 @@ msgid "Place the select input on the right side of the DEMUX."
 msgstr ""
 "Расположить селектор данных на правой стороне\n"
 "демультиплексора."
-
-# db.gate.decoder.dataorder
-#: ru/messages:858
-msgid "Output Ordering"
-msgstr "Упорядочивание выходов"
-
-# db.gate.decoder.ord1.hdr
-#: ru/messages:859
-msgid "Left-to-Right"
-msgstr "Слева направо"
-
-# db.gate.decoder.ord2.hdr
-#: ru/messages:860
-msgid "Right-to-Left"
-msgstr "Справа налево"
 
 # db.gate.decoder.ord1.exp
 #: ru/messages:861
@@ -2773,16 +2547,6 @@ msgstr "Упорядочить выходы дешифратора справа 
 #: ru/messages:868
 msgid "Enable Placement"
 msgstr "Расположение разрешающего входа"
-
-# db.gate.decoder.sel1.hdr
-#: ru/messages:869
-msgid "On Left"
-msgstr "Слева"
-
-# db.gate.decoder.sel2.hdr
-#: ru/messages:870
-msgid "On Right"
-msgstr "Справа"
 
 # db.gate.decoder.sel1.exp
 #: ru/messages:872
@@ -2922,7 +2686,8 @@ msgstr "Множество модулей"
 #: ru/messages:931
 msgid ""
 "The text buffer for the module you have just edited contains more\n"
-"than one module definition. Please select one of the three actions described\n"
+"than one module definition. Please select one of the three actions "
+"described\n"
 "on the right."
 msgstr ""
 "Текстовый буфер для модуля, который Вы только что редактировали,\n"
@@ -2938,16 +2703,6 @@ msgstr "Авторедактирование"
 #: ru/messages:938
 msgid "Split"
 msgstr "Разделить"
-
-# db.hdl.comment
-#: ru/messages:939
-msgid "Comment"
-msgstr "Комментировать"
-
-# db.hdl.cancel
-#: ru/messages:940
-msgid "Cancel"
-msgstr "Отменить"
 
 # db.hdl.ignore
 #: ru/messages:941
@@ -2995,11 +2750,6 @@ msgstr "TkGate: Печать логического анализатора"
 msgid "Printer:"
 msgstr "Принтер:"
 
-# print.file
-#: ru/messages:971
-msgid "File"
-msgstr "Файл"
-
 # print.prcmd
 #: ru/messages:972
 msgid "Print Command:"
@@ -3014,11 +2764,6 @@ msgstr "Принтер"
 #: ru/messages:974
 msgid "Advanced..."
 msgstr "Настройка..."
-
-# print.filename
-#: ru/messages:976
-msgid "File Name"
-msgstr "Имя файла"
 
 # print.epssave
 #: ru/messages:977
@@ -3049,11 +2794,6 @@ msgstr "Текущий"
 #: ru/messages:984
 msgid "Used"
 msgstr "Использованные"
-
-# print.sel
-#: ru/messages:985
-msgid "Selected"
-msgstr "Выбранные"
 
 # print.avail
 #: ru/messages:986
@@ -3186,7 +2926,8 @@ msgid "Module Selection"
 msgstr "Выбор модулей"
 
 # print.ok
-#: ru/messages:1017
+# opt.print
+#: ru/messages:1017 ru/messages:1075
 msgid "Print"
 msgstr "Печать"
 
@@ -3246,17 +2987,14 @@ msgstr ""
 "вычислить ожидаемое число страниц"
 
 # print.tab.output
-#: ru/messages:1043
+# opt.print.output
+#: ru/messages:1043 ru/messages:1076
 msgid "Output"
 msgstr "Вывод"
 
-# print.tab.modules
-#: ru/messages:1045
-msgid "Modules"
-msgstr "Модули"
-
 # print.tab.content
-#: ru/messages:1046
+# opt.print.content
+#: ru/messages:1046 ru/messages:1077
 msgid "Content"
 msgstr "Содержание"
 
@@ -3296,19 +3034,13 @@ msgid "TkGate: Options"
 msgstr "TkGate: Настройки"
 
 # opt.treelabel
-#: ru/messages:1065
+# circ.flags
+#: ru/messages:1065 ru/messages:1475
+#, fuzzy
 msgid "Options"
-msgstr "Настройки"
-
-# opt.general
-#: ru/messages:1067
-msgid "General"
-msgstr "Общие"
-
-# opt.interface
-#: ru/messages:1068
-msgid "Interface"
-msgstr "Интерфейс"
+msgstr ""
+"Настройки\n"
+"Свойства"
 
 # opt.toolbars
 #: ru/messages:1070
@@ -3316,12 +3048,14 @@ msgid "Toolbars"
 msgstr "Панели инструментов"
 
 # opt.toolbars.edit
-#: ru/messages:1071
+# opt.color.edit
+#: ru/messages:1071 ru/messages:1089
 msgid "Editor"
 msgstr "Редактор"
 
 # opt.toolbars.sim
-#: ru/messages:1072
+# circ.simulator
+#: ru/messages:1072 ru/messages:1498
 msgid "Simulation"
 msgstr "Симуляция"
 
@@ -3330,50 +3064,16 @@ msgstr "Симуляция"
 msgid "Symbol Editor"
 msgstr "Редактор символов"
 
-# opt.editor
-#: ru/messages:1074
-msgid "HDL"
-msgstr "Verilog HDL"
-
-# opt.print
-#: ru/messages:1075
-msgid "Print"
-msgstr "Печать"
-
-# opt.print.output
-#: ru/messages:1076
-msgid "Output"
-msgstr "Вывод"
-
-# opt.print.content
-#: ru/messages:1077
-msgid "Content"
-msgstr "Содержание"
-
-# opt.simulate
-#: ru/messages:1078
-msgid "Simulate"
-msgstr "Симуляция"
-
 # opt.simulate.basic
 #: ru/messages:1079
 msgid "Basic"
 msgstr "Основные"
 
-# opt.simulate.tech
-#: ru/messages:1080
-msgid "Technology"
-msgstr "Технология"
-
 # opt.simulate.error
-#: ru/messages:1081
+# opt.simulator.err
+#: ru/messages:1081 ru/messages:1173
 msgid "Error Handling"
 msgstr "Обработка ошибок"
-
-# opt.library
-#: ru/messages:1082
-msgid "Libraries"
-msgstr "Библиотеки"
 
 # opt.library.path
 #: ru/messages:1083
@@ -3396,7 +3096,8 @@ msgid "Analysis"
 msgstr "Анализ"
 
 # opt.color
-#: ru/messages:1087
+# opt.editor.color
+#: ru/messages:1087 ru/messages:1206
 msgid "Color"
 msgstr "Цвет"
 
@@ -3404,11 +3105,6 @@ msgstr "Цвет"
 #: ru/messages:1088
 msgid "TkGate: Color Selection"
 msgstr "TkGate: Выбор цвета"
-
-# opt.color.edit
-#: ru/messages:1089
-msgid "Editor"
-msgstr "Редактор"
 
 # opt.color.scope
 #: ru/messages:1090
@@ -3465,11 +3161,6 @@ msgstr "Имя библиотеки:"
 msgid "Instances"
 msgstr "Экземпляры"
 
-# opt.mods
-#: ru/messages:1103
-msgid "Modules"
-msgstr "Модули"
-
 # opt.modports
 #: ru/messages:1104
 msgid "Module Ports"
@@ -3481,7 +3172,8 @@ msgid "Frames"
 msgstr "Рамки"
 
 # opt.comment
-#: ru/messages:1106
+# opt.editor.comments
+#: ru/messages:1106 ru/messages:1200
 msgid "Comments"
 msgstr "Комментарии"
 
@@ -3509,11 +3201,6 @@ msgstr "Инструменты"
 #: ru/messages:1111
 msgid "Background"
 msgstr "Фон"
-
-# opt.cpath
-#: ru/messages:1112
-msgid "Critical Path"
-msgstr "Критический путь"
 
 # opt.grid
 #: ru/messages:1113
@@ -3785,11 +3472,6 @@ msgstr "Сохранять положение зондов между симул
 msgid "Enable simulator glitch suppression."
 msgstr "Включить подавление сбоев анализатора."
 
-# opt.simulator.err
-#: ru/messages:1173
-msgid "Error Handling"
-msgstr "Обработка ошибок"
-
 # opt.simulator.stopany
 #: ru/messages:1174
 msgid "Treat warnings as errors."
@@ -3810,25 +3492,10 @@ msgstr "Отображать предупреждения только вмес�
 msgid "Ignore all warnings."
 msgstr "Игнорировать все предупреждения."
 
-# opt.tool.file
-#: ru/messages:1179
-msgid "File"
-msgstr "Файл"
-
-# opt.tool.edit
-#: ru/messages:1180
-msgid "Edit"
-msgstr "Правка"
-
 # opt.tool.gateopt
 #: ru/messages:1181
 msgid "Rotation/Alignment"
 msgstr "Вращение/выравнивание"
-
-# opt.tool.gateprop
-#: ru/messages:1182
-msgid "Gate"
-msgstr "Компоненты"
 
 # opt.tool.undo
 #: ru/messages:1183
@@ -3844,16 +3511,6 @@ msgstr "Увеличение"
 #: ru/messages:1185
 msgid "Editor Tools"
 msgstr "Инструменты редактора"
-
-# opt.tool.module
-#: ru/messages:1186
-msgid "Module"
-msgstr "Модуль"
-
-# opt.tool.tech
-#: ru/messages:1187
-msgid "Technology"
-msgstr "Технология"
 
 # opt.tool.simctl
 #: ru/messages:1188
@@ -3880,11 +3537,6 @@ msgstr "Инструменты редактора символов"
 msgid "Cut/Paste"
 msgstr "Вырезать/вставить"
 
-# opt.tool.symport
-#: ru/messages:1193
-msgid "Ports"
-msgstr "Порты"
-
 # opt.tool.symshift
 #: ru/messages:1194
 msgid "Bit Shift"
@@ -3910,11 +3562,6 @@ msgstr "Включить автоматический отступ"
 msgid "Enable Code Colorization"
 msgstr "Включить подстветку синтаксиса"
 
-# opt.editor.comments
-#: ru/messages:1200
-msgid "Comments"
-msgstr "Комментарии"
-
 # opt.editor.strings
 #: ru/messages:1201
 msgid "Strings"
@@ -3939,11 +3586,6 @@ msgstr "Экземпляры модулей"
 #: ru/messages:1205
 msgid "System Tasks"
 msgstr "Системные задачи"
-
-# opt.editor.color
-#: ru/messages:1206
-msgid "Color"
-msgstr "Цвет"
 
 # opt.editor.bold
 #: ru/messages:1207
@@ -4044,7 +3686,9 @@ msgstr "Остановить симулятор, когда использует
 # opt.sec.warn
 #: ru/messages:1233
 msgid "Display warning message when disabled feature is used."
-msgstr "Отображать предупреждающее сообщение, когда используется отключенная возможность."
+msgstr ""
+"Отображать предупреждающее сообщение, когда используется отключенная "
+"возможность."
 
 # opt.sec.ignore
 #: ru/messages:1234
@@ -4116,85 +3760,10 @@ msgstr "Сбросить все"
 msgid "TkGate: Module Interface Generation"
 msgstr "TkGate: Генерация интерфейса модулей"
 
-# igen.port
-#: ru/messages:1260
-msgid "Port"
-msgstr "Порт"
-
-# igen.type
-#: ru/messages:1261
-msgid "Type"
-msgstr "Тип"
-
-# igen.side
-#: ru/messages:1262
-msgid "Side"
-msgstr "Сторона"
-
-# igen.size
-#: ru/messages:1263
-msgid "Size"
-msgstr "Размер"
-
-# igen.bits
-#: ru/messages:1264
-msgid "Bits"
-msgstr "Разрядн."
-
 # igen.modname
 #: ru/messages:1266
 msgid "Module Name:"
 msgstr "Имя модуля:"
-
-# igen.add
-#: ru/messages:1269
-msgid "Add..."
-msgstr "Добавить"
-
-# igen.delete
-#: ru/messages:1270
-msgid "Delete"
-msgstr "Удалить"
-
-# igen.edit
-#: ru/messages:1271
-msgid "Edit..."
-msgstr "Редактировать"
-
-# igen.in
-#: ru/messages:1273
-msgid "in"
-msgstr "вх"
-
-# igen.out
-#: ru/messages:1274
-msgid "out"
-msgstr "вых"
-
-# igen.inout
-#: ru/messages:1275
-msgid "inout"
-msgstr "вх-вых"
-
-# igen.left
-#: ru/messages:1277
-msgid "left"
-msgstr "слева"
-
-# igen.right
-#: ru/messages:1278
-msgid "right"
-msgstr "справа"
-
-# igen.top
-#: ru/messages:1279
-msgid "top"
-msgstr "сверху"
-
-# igen.bottom
-#: ru/messages:1280
-msgid "bottom"
-msgstr "снизу"
 
 # igen.mod
 #: ru/messages:1284
@@ -4255,11 +3824,6 @@ msgstr "Ошибки в скрипте"
 msgid "TkGate: Module Properties"
 msgstr "TkGate: Свойства модуля"
 
-# module.props
-#: ru/messages:1303
-msgid "Module Properties"
-msgstr "Свойства модуля"
-
 # ipanel.plist
 #: ru/messages:1305
 msgid "Port List"
@@ -4279,11 +3843,6 @@ msgstr "Стандарт."
 #: ru/messages:1310
 msgid "Symbol"
 msgstr "Символ"
-
-# ipanel.autogen
-#: ru/messages:1312
-msgid "Auto Generate..."
-msgstr "Автогенерация..."
 
 # ipanel.updateall
 #: ru/messages:1313
@@ -4377,7 +3936,8 @@ msgid "TKGate: Module New"
 msgstr "TKGate: Новый модуль"
 
 # blklst.claim
-#: ru/messages:1356
+# blklst.claim.cap
+#: ru/messages:1356 ru/messages:1364
 msgid "Claim Module"
 msgstr "Затребовать модуль"
 
@@ -4390,11 +3950,6 @@ msgstr "В"
 #: ru/messages:1358
 msgid "From"
 msgstr "Из"
-
-# blklst.name
-#: ru/messages:1359
-msgid "Name"
-msgstr "Имя"
 
 # blklst.new.cap
 #: ru/messages:1360
@@ -4415,11 +3970,6 @@ msgstr "Копировать модуль"
 #: ru/messages:1363
 msgid "Rename Module"
 msgstr "Переименовать модуль"
-
-# blklst.claim.cap
-#: ru/messages:1364
-msgid "Claim Module"
-msgstr "Затребовать модуль"
 
 # blklst.setroot.cap
 #: ru/messages:1365
@@ -4522,16 +4072,6 @@ msgstr ""
 msgid "Ignore Case"
 msgstr "Игнорировать регистр"
 
-# find.result.module
-#: ru/messages:1416
-msgid "Module"
-msgstr "Модуль"
-
-# find.result.type
-#: ru/messages:1417
-msgid "Type"
-msgstr "Тип"
-
 # find.result.name
 #: ru/messages:1418
 msgid "Object Name"
@@ -4591,16 +4131,6 @@ msgstr "Соответствует..."
 #: ru/messages:1442
 msgid "Look for objects in:"
 msgstr "Искать объекты в:"
-
-# find.dom.gates
-#: ru/messages:1443
-msgid "Components"
-msgstr "Компонентах"
-
-# find.dom.nets
-#: ru/messages:1444
-msgid "Nets"
-msgstr "Цепях"
 
 # find.dom.text
 #: ru/messages:1445
@@ -4667,11 +4197,6 @@ msgstr "Идентификация"
 msgid "File Version"
 msgstr "Версия файла"
 
-# circ.file
-#: ru/messages:1470
-msgid "File Name"
-msgstr "Имя файла"
-
 # circ.title
 #: ru/messages:1471
 msgid "Circuit Title"
@@ -4691,11 +4216,6 @@ msgstr "Язык файла"
 #: ru/messages:1474
 msgid "Do not warn about discarding changes."
 msgstr "Не уведомлять о потере изменений."
-
-# circ.flags
-#: ru/messages:1475
-msgid "Options"
-msgstr "Свойства"
 
 # circ.defaults
 #: ru/messages:1476
@@ -4742,25 +4262,10 @@ msgstr "*500"
 msgid "*350"
 msgstr "*350"
 
-# circ.general
-#: ru/messages:1495
-msgid "General"
-msgstr "Общие"
-
-# circ.library
-#: ru/messages:1496
-msgid "Libraries"
-msgstr "Библиотеки"
-
 # circ.script
 #: ru/messages:1497
 msgid "Scripts"
 msgstr "Скрипты"
-
-# circ.simulator
-#: ru/messages:1498
-msgid "Simulation"
-msgstr "Симуляция"
 
 # circ.timescale
 #: ru/messages:1499
@@ -4854,7 +4359,8 @@ msgid "Library Manager"
 msgstr "Управление библиотеками"
 
 # libmgr.library
-#: ru/messages:1546
+# ho.mod.type.partlib
+#: ru/messages:1546 ru/messages:2197
 msgid "Library"
 msgstr "Библиотека"
 
@@ -4900,11 +4406,6 @@ msgstr ""
 msgid "Load"
 msgstr "Загрузить"
 
-# libmgr.unload
-#: ru/messages:1558
-msgid "Unload"
-msgstr "Выгрузить"
-
 # libmgr.unloadall
 #: ru/messages:1559
 msgid "Unload All"
@@ -4936,11 +4437,6 @@ msgstr "S"
 #: ru/messages:1573
 msgid "Condition"
 msgstr "Условие"
-
-# break.value
-#: ru/messages:1574
-msgid "Value"
-msgstr "Значение"
 
 # sim.recursive
 #: ru/messages:1582
@@ -5090,12 +4586,15 @@ msgstr "Идентификатор переименован в '%s' из-за к
 # err.netconfgat
 #: ru/messages:1627
 msgid "Identifier renamed to avoid conflict with built-in component name"
-msgstr "Идентификатор переименован для избежания конфликта со встроенным компонентом."
+msgstr ""
+"Идентификатор переименован для избежания конфликта со встроенным компонентом."
 
 # err.netconfkw
 #: ru/messages:1628
 msgid "Identifier renamed to avoid conflict with reserved word."
-msgstr "Идентификатор переименован для избежания конфликта с зарезервированным словом."
+msgstr ""
+"Идентификатор переименован для избежания конфликта с зарезервированным "
+"словом."
 
 # err.badconsame
 #: ru/messages:1629
@@ -5105,7 +4604,9 @@ msgstr "Соединение отклонено, поскольку провод
 # err.badconptsp
 #: ru/messages:1630
 msgid "Connection refused because both wires are module ports or supply."
-msgstr "Соединение отклонено, поскольку оба проводника являются питанием или выводами модуля."
+msgstr ""
+"Соединение отклонено, поскольку оба проводника являются питанием или "
+"выводами модуля."
 
 # err.badconbitw
 #: ru/messages:1631
@@ -5144,18 +4645,28 @@ msgstr "Невозможно изменить защищённый интерф�
 
 # err.bkpt.badexp
 #: ru/messages:1640
-msgid "Syntax error in breakpoint expression. Must be one of: 'net', '!net', 'net==value', 'net!=value'"
-msgstr "Синтаксическая ошибка в выражении для точки остановки. Должно быть одно из: 'net', '!net', 'net==value', 'net!=value'"
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"Синтаксическая ошибка в выражении для точки остановки. Должно быть одно из: "
+"'net', '!net', 'net==value', 'net!=value'"
 
 # err.bkpt.badnet
 #: ru/messages:1641
-msgid "Invalid net name '%s'. Names must start with a letter and contain only letters, digits and '.'."
-msgstr "Неверное имя цепи '%s'. Имена должны начинаться с буквы и содержать только буквы, цифры и '.'."
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+"Неверное имя цепи '%s'. Имена должны начинаться с буквы и содержать только "
+"буквы, цифры и '.'."
 
 # err.bkpt.badval
 #: ru/messages:1642
 msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
-msgstr "Синтаксическая ошибка в значении '%s'. Должна быть десятичная или Verilog константа."
+msgstr ""
+"Синтаксическая ошибка в значении '%s'. Должна быть десятичная или Verilog "
+"константа."
 
 # err.bkpt.toomany
 #: ru/messages:1643
@@ -5249,8 +4760,11 @@ msgstr "Не удаётся открыть файл библиотеки '%s'."
 
 # err.nomark
 #: ru/messages:1664
-msgid "Please set a mark with the left mouse button before selecting a component type."
-msgstr "Установите курсор левой кнопкой мыши прежде чем выбрать тип компонента."
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr ""
+"Установите курсор левой кнопкой мыши прежде чем выбрать тип компонента."
 
 # err.badgate
 #: ru/messages:1665
@@ -5367,7 +4881,9 @@ msgstr "Недопустимое имя модуля '%s', начинается 
 # err.iskeyword
 #: ru/messages:1700
 msgid "Verilog keyword '%s' can not be used as an identifier."
-msgstr "Ключевое слово Verilog '%s' не может быть использовано в качестве идентификатора."
+msgstr ""
+"Ключевое слово Verilog '%s' не может быть использовано в качестве "
+"идентификатора."
 
 # err.noprop
 #: ru/messages:1701
@@ -5381,13 +4897,17 @@ msgstr "Не удаётся открыть скрипт симуляции '%s'"
 
 # err.oldversion
 #: ru/messages:1703
-msgid "Loaded file '%s' with obsolete version number %s (current version is %s)."
-msgstr "Загруженный файл '%s' с просроченным номером версии %s (текущая версия %s)."
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr ""
+"Загруженный файл '%s' с просроченным номером версии %s (текущая версия %s)."
 
 # err.futureversion
 #: ru/messages:1704
-msgid "Loaded file '%s' saved by future TkGate version %s (this version is %s)."
-msgstr "Загруженный файл '%s' был сохранён в TkGate версии %s (данная версия %s)."
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr ""
+"Загруженный файл '%s' был сохранён в TkGate версии %s (данная версия %s)."
 
 # err.badversion
 #: ru/messages:1705
@@ -5407,7 +4927,9 @@ msgstr "Проводник %s{%d} не имеет соединений и уда
 # err.oldportact
 #: ru/messages:1708
 msgid "Please right click on port or module edge to add/change port."
-msgstr "Щёлкните правой кнопкой на порте или ребре модуля для добавления/изменения порта."
+msgstr ""
+"Щёлкните правой кнопкой на порте или ребре модуля для добавления/изменения "
+"порта."
 
 # err.nomodule
 #: ru/messages:1709
@@ -5597,14 +5119,13 @@ msgid "internal error: Failed to find module '%s'."
 msgstr "Внутренняя ошибка: невозможно найти модуль '%s'."
 
 # msg.selwire
-#: ru/messages:1784
-msgid "Selected %s named '%s'."
-msgstr "Выбран проводник %s с именем '%s'."
-
 # msg.selgate
-#: ru/messages:1785
+#: ru/messages:1784 ru/messages:1785
+#, fuzzy
 msgid "Selected %s named '%s'."
-msgstr "Выбран вентиль %s с именем '%s'."
+msgstr ""
+"Выбран проводник %s с именем '%s'.\n"
+"Выбран вентиль %s с именем '%s'."
 
 # msg.selblock
 #: ru/messages:1786
@@ -5619,7 +5140,8 @@ msgstr "Выбран порт '%s' в блоке '%s'."
 # msg.iselgate
 #: ru/messages:1788
 msgid "Selected %s named '%s' (huh? this message should be impossible)."
-msgstr "Выбран %s с именем '%s' (Неужели? Это сообщение должно быть невозможным)."
+msgstr ""
+"Выбран %s с именем '%s' (Неужели? Это сообщение должно быть невозможным)."
 
 # msg.iselblock
 #: ru/messages:1789
@@ -5644,12 +5166,15 @@ msgstr "Найден проводник с именем '%s'."
 # msg.searchagn
 #: ru/messages:1794
 msgid "Target string '%s' not found. Hit 'find' to restart search again."
-msgstr "Целевая строка '%s' не найдена. Нажмите 'искать' для перезапуска поиска."
+msgstr ""
+"Целевая строка '%s' не найдена. Нажмите 'искать' для перезапуска поиска."
 
 # msg.sim.chgtoroot
 #: ru/messages:1795
 msgid "Simulation mode requires root module at top of edit stack."
-msgstr "Режим симуляции требует, чтобы корневой модуль находился на вершине стека редактирования."
+msgstr ""
+"Режим симуляции требует, чтобы корневой модуль находился на вершине стека "
+"редактирования."
 
 # msg.sim.nogatemod
 #: ru/messages:1796
@@ -5678,8 +5203,12 @@ msgstr "Схема сохранена в '%s'."
 
 # msg.reallynew
 #: ru/messages:1801
-msgid "Circuit has been modified. Do you really want to discard your changes and create a new circuit?"
-msgstr "Схема была изменена. Вы действительно хотите отказаться от изменений и создать новую схему?"
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr ""
+"Схема была изменена. Вы действительно хотите отказаться от изменений и "
+"создать новую схему?"
 
 # msg.reallyquit
 #: ru/messages:1802
@@ -5759,7 +5288,8 @@ msgstr "Цепь '%s' не имеет драйверов (плавающая ц�
 # verga.err.DIRECTCONN
 #: ru/messages:1827
 msgid "Direct connect operator '=>' unsupported. Treated as '*>'."
-msgstr "Оператор прямого соединения '=>' не поддерживается. Принимается как '*>'."
+msgstr ""
+"Оператор прямого соединения '=>' не поддерживается. Принимается как '*>'."
 
 # verga.err.MEMADDR
 #: ru/messages:1828
@@ -5809,7 +5339,9 @@ msgstr "Деление на ноль."
 # verga.err.NODIV
 #: ru/messages:1837
 msgid "Divide/module unsupported on this machine - sizeof(short) must be 2."
-msgstr "Деление/модуль не поддерживаются на этой машине - sizeof(short) должен быть 2."
+msgstr ""
+"Деление/модуль не поддерживаются на этой машине - sizeof(short) должен быть "
+"2."
 
 # verga.err.BADEDGEEVENT
 #: ru/messages:1838
@@ -6013,8 +5545,11 @@ msgstr "Переопределение идентификатора %s."
 
 # verga.err.PROTTASKSTOP
 #: ru/messages:1878
-msgid "Simulation stopped on attempted execution of protected system task '%s'."
-msgstr "Симуляция остановлена при попытке выполнения защищённого системного задания '%s'."
+msgid ""
+"Simulation stopped on attempted execution of protected system task '%s'."
+msgstr ""
+"Симуляция остановлена при попытке выполнения защищённого системного задания "
+"'%s'."
 
 # verga.err.NOTMEM
 #: ru/messages:1879
@@ -6079,7 +5614,9 @@ msgstr "Неопределённая переменная '%s'."
 # verga.err.BADRANGE
 #: ru/messages:1891
 msgid "Unsupported bit range [%s] on net '%s' (must be of form [n:0])."
-msgstr "Неподдерживаемый битовый диапазон [%s] в цепи '%s' (должен быть в форме [n:0])."
+msgstr ""
+"Неподдерживаемый битовый диапазон [%s] в цепи '%s' (должен быть в форме "
+"[n:0])."
 
 # verga.err.GATEUNIMP
 #: ru/messages:1892
@@ -6169,7 +5706,8 @@ msgstr "Неподдерживаемая конструкция в модуле 
 # verga.err.PATHDINOUT
 #: ru/messages:1909
 msgid "Use of 'inout' in module with path-delay specification is unsupported."
-msgstr "Использование 'inout' в модуле с указанием задержек путей не поддерживается."
+msgstr ""
+"Использование 'inout' в модуле с указанием задержек путей не поддерживается."
 
 # verga.err.PATHDLOOP
 #: ru/messages:1910
@@ -6209,7 +5747,8 @@ msgstr "Недопустимые единицы измерения '%s' в об�
 # verga.err.TIMESCALEN
 #: ru/messages:1918
 msgid "Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100)."
-msgstr "Неверный масштаб '%s' в объявлении `timescale (должно быть 1, 10 или 100)."
+msgstr ""
+"Неверный масштаб '%s' в объявлении `timescale (должно быть 1, 10 или 100)."
 
 # verga.err.TIMESCALES
 #: ru/messages:1919
@@ -6219,7 +5758,8 @@ msgstr "Неверный синтаксис в объявлении `timescale."
 # verga.err.TIMESCALEX
 #: ru/messages:1920
 msgid "Units must be larger than precision in `timescale declaration."
-msgstr "Единицы измерения должны быть большей точности в объявлении `timescale."
+msgstr ""
+"Единицы измерения должны быть большей точности в объявлении `timescale."
 
 # verga.err.TIMESCALEAN
 #: ru/messages:1921
@@ -6284,7 +5824,8 @@ msgstr "Неожиданное внутреннее состояние в %s - �
 # verga.err.IE_RETURN
 #: ru/messages:1933
 msgid "Executed BCReturn bytecode with empty return stack - internal error."
-msgstr "Выполненный байт-код BCReturn имеет пустой стек возврата - внутренняя ошибка."
+msgstr ""
+"Выполненный байт-код BCReturn имеет пустой стек возврата - внутренняя ошибка."
 
 # primitive.err.missing
 #: ru/messages:1939
@@ -6881,11 +6422,6 @@ msgstr "Назначить модуль корневым."
 #: ru/messages:2196
 msgid "Set of Libraries"
 msgstr "Набор библиотек"
-
-# ho.mod.type.partlib
-#: ru/messages:2197
-msgid "Library"
-msgstr "Библиотека"
 
 # ho.mod.type.part
 #: ru/messages:2198
