@@ -1096,6 +1096,98 @@ can add gates to the selection rather than create a new selection.
 					</para>
 				</sect3>
 			</sect2>
+			<sect2>
+				<title>Cut/Paste and Deleting Gates</title>
+				<para>
+The selected gate or gates can be deleted by pressing the delete key,
+or by right clicking and selecting the "<inlinegraphic fileref="../fig/delgate.gif"/>
+Delete" option. The selection may also be cut or copied to the cut buffer
+by right clicking and selecting "<inlinegraphic fileref="../fig/edit_cut.gif"/>
+Cut" or "<inlinegraphic fileref="../fig/edit_copy.gif"/>Copy".
+The original names of the gates and wires in the cut buffer will be
+remembered and used when pasting if possible, but when pasting
+multiple copies from the cut buffer, it may be necessary for TkGate to
+rename those wires and gates.
+				</para>
+			</sect2>
+			<sect2>
+				<title>Rotating Gates</title>
+				<para>
+You can rotate single gates, or groups of gates by selecting the
+single gate or group and using the <inlinegraphic fileref="../fig/edit_rotate.gif"/>
+and <inlinegraphic fileref="../fig/edit_brotate.gif"/> toolbar buttons to rotate
+counter-clockwise or clockwise, respectively.  You can also use the
+Tab or Shift-Tab keys.  When rotating a selection, it can not have any
+wires connecting a selected element to a non-selected element.
+				</para>
+				<para>
+You can also set the default rotation by clicking on the <inlinegraphic
+fileref="../fig/currot.gif"/> button on the toolbar.  The inverter
+symbol on the button will turn to show the current rotation.  Any
+gates that you create will have the default rotation shown on this
+button.
+				</para>
+			</sect2>
+			<sect2>
+				<title>Wire Cutter Tool</title>
+				<figure>
+					<title>Cutting Wires</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="../fig/before_cut.gif" />
+						</imageobject>
+						<caption>
+							<para>Before Cut</para>
+						</caption>
+					</mediaobject>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="../fig/after_cut.gif" />
+						</imageobject>
+						<caption>
+							<para>After Cut</para>
+						</caption>
+					</mediaobject>
+				</figure>
+				<para>
+To cut a wire, select the <inlinegraphic fileref="../fig/cut_curs.gif"/> tool
+from the toolbar to get the wire cutters tool.  Click on a wire to cut
+the wire at the selected point.  If there are any loose ends of a wire
+that is cut, TkGate will automatically delete the loose ends.  It will
+also delete any joints that are no longer needed as the result of a
+cut.  You can also use the wire cutter tool on the edge of a module to
+"cut off" a port if the module does not have a protected interface.
+				</para>
+			</sect2>
+			<sect2>
+				<title>Inverter Add/Remove Tool</title>
+				<figure>
+					<title>Inverting Inputs/Outputs</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="../fig/before_andinv.gif" />
+						</imageobject>
+						<caption>
+							<para>Before Add</para>
+						</caption>
+					</mediaobject>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="../fig/after_andinv.gif" />
+						</imageobject>
+						<caption>
+							<para>After Add</para>
+						</caption>
+					</mediaobject>
+				</figure>
+				<para>
+You can use the <inlinegraphic fileref="../fig/inv_curs.gif"/> tool to add or
+remove inverters from a gate input or output.  Select the tool and
+click on an input or output port of a gate.  If there is currently no
+inverter on that port, one will be added.  If there is already an
+inverter on that port, the inverter will be removed.
+				</para>
+			</sect2>
 		</sect1>
 	</chapter>
 </book>
