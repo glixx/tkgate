@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 10:03+0300\n"
+"POT-Creation-Date: 2015-07-31 10:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2453,7 +2453,7 @@ msgid ""
 "each parameter can be customized for each instance\n"
 "through this dialog box. Module parameters are\n"
 "character. Below is an example module declaration\n"
-"with a parameter named "base_value" that has a\n"
+"with a parameter named \"base_value\" that has a\n"
 "default value of 1'b1."
 msgstr ""
 
@@ -2476,7 +2476,7 @@ msgstr ""
 
 # db.gate.switch.state.on.exp
 #: ./en/messages:862
-msgid "Switch begins simulation in the "on" state."
+msgid "Switch begins simulation in the \"on\" state."
 msgstr ""
 
 # db.gate.switch.state.off.hdr
@@ -2486,7 +2486,7 @@ msgstr ""
 
 # db.gate.switch.state.off.exp
 #: ./en/messages:864
-msgid "Switch begins simulation in the "off" state."
+msgid "Switch begins simulation in the \"off\" state."
 msgstr ""
 
 # db.gate.switch.shownet
@@ -4230,7 +4230,7 @@ msgstr ""
 msgid ""
 "You are about to change the\n"
 "interface type for this module\n"
-"to "block". This will result\n"
+"to \"block\". This will result\n"
 "in the current interface data\n"
 "being destroyed.\n"
 "Are you sure you want to do this?"
@@ -4241,7 +4241,7 @@ msgstr ""
 msgid ""
 "You are about to change the\n"
 "interface type for this module\n"
-"to "symbol". This will result\n"
+"to \"symbol\". This will result\n"
 "in the current interface data\n"
 "being destroyed. You will also\n"
 "need to create a bitmap image\n"
@@ -5125,17 +5125,17 @@ msgstr ""
 
 # err.modmissing
 #: ./en/messages:1751
-msgid "HDL module text missing for module "%s"."
+msgid "HDL module text missing for module \"%s\"."
 msgstr ""
 
 # err.modtoomany
 #: ./en/messages:1752
-msgid "Excess module definitions in module "%s"."
+msgid "Excess module definitions in module \"%s\"."
 msgstr ""
 
 # err.modmismatch
 #: ./en/messages:1753
-msgid "Name mismatch between text definition and module name in "%s"."
+msgid "Name mismatch between text definition and module name in \"%s\"."
 msgstr ""
 
 # err.manypages
@@ -5402,8 +5402,8 @@ msgstr ""
 #: ./en/messages:1837
 msgid ""
 "A problem has occured attempting to save '%s'. If you wish, you can\n"
-"try again without save validation. If you say "no", the original file\n"
-"will remain unmodified. If you say "yes" the original file will be\n"
+"try again without save validation. If you say \"no\", the original file\n"
+"will remain unmodified. If you say \"yes\" the original file will be\n"
 "overwritten, but may be destroyed if a problem occurs. Would you like\n"
 "to attempt an unvalidated save?"
 msgstr ""
@@ -6504,9 +6504,9 @@ msgstr ""
 # ho.ipanel.select
 #: ./en/messages:2207
 msgid ""
-"Use "standard" modules\n"
+"Use \"standard\" modules\n"
 "for regular rectangular\n"
-"interfaces. Use "symbol"\n"
+"interfaces. Use \"symbol\"\n"
 "modules for custom\n"
 "bitmaped symbols."
 msgstr ""
@@ -6830,7 +6830,7 @@ msgid ""
 "The symbol to the left of the name\n"
 "indicates whether the net is single\n"
 "bit (green) or multi-bit (red). An\n"
-""A" shown in the symbol indicates\n"
+"\"A\" shown in the symbol indicates\n"
 "that the net name is marked as\n"
 "visible."
 msgstr ""
@@ -6887,7 +6887,7 @@ msgstr ""
 # ho.print.seluse
 #: ./en/messages:2443
 msgid ""
-"Print all modules "in use". In use modues are\n"
+"Print all modules \"in use\". In use modues are\n"
 "those that are a decendent of the root module."
 msgstr ""
 
@@ -7261,7 +7261,7 @@ msgstr ""
 #: ./en/messages:2695
 msgid ""
 "Command to be execute when the user clicks on a link to\n"
-"an html file. A "%s" in the command will be replaced\n"
+"an html file. A \"%s\" in the command will be replaced\n"
 "with the link URL."
 msgstr ""
 
@@ -7269,7 +7269,7 @@ msgstr ""
 #: ./en/messages:2701
 msgid ""
 "Command to be execute when the user clicks on a link to\n"
-"send an e-mail message. A "%s" in the command will be\n"
+"send an e-mail message. A \"%s\" in the command will be\n"
 "replaced with the link URL."
 msgstr ""
 
@@ -7315,7 +7315,7 @@ msgstr ""
 # ho.opt.sim.tech
 #: ./en/messages:2739
 msgid ""
-"List of files to load as potential "technology"\n"
+"List of files to load as potential \"technology\"\n"
 "files. Technology files specify delay and area\n"
 "estimates for built-in components."
 msgstr ""
@@ -7603,7 +7603,7 @@ msgid ""
 "Affects delay of components. To change\n"
 "the technology of a specific component,\n"
 "open its properties box (double\n"
-"click) and select the "Delay" tab."
+"click) and select the \"Delay\" tab."
 msgstr ""
 
 # ho.techbut
@@ -7612,7 +7612,7 @@ msgid ""
 "Use delays from standard technology\n"
 "definition file. To add custom\n"
 "technologies, add them to the list\n"
-"in the "File -> Options -> Simulate"\n"
+"in the \"File -> Options -> Simulate\"\n"
 "menu."
 msgstr ""
 

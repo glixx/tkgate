@@ -179,7 +179,7 @@ foreach pair $messagesLine2Key(m) {
 	set str [lindex $pair 0]
 	set keyName [lindex $pair 1]
 	set msgVal $messagesHash($keyName,m)
-#	regsub -all "\"" $msgVal "\\\"" msgVal
+	regsub -all "\"" $msgVal "\\\"" msgVal
 	puts $f0 ""
 	puts $f0 "# $keyName"
 	puts $f0 "#: $options(m):$str"
@@ -221,8 +221,10 @@ foreach pair $messagesLine2Key(l) {
 	set str [lindex $pair 0]
 	set keyName [lindex $pair 1]
 	set msgVal $messagesHash($keyName,l)
+	regsub -all "\"" $msgVal "\\\"" msgVal
 	set origMsgVal $messagesHash($keyName,m)
-	
+	regsub -all "\"" $origMsgVal "\\\"" origMsgVal
+
 	puts $fLoc ""
 	puts $fLoc "# $keyName"
 	puts $fLoc "#: $options(l):$str"
