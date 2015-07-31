@@ -18,61 +18,6 @@
 # Last edit by bartke Tue Feb 24 00:04:27 CET 2009
 #
 
-##############################################################################
-#
-# Explaination of file format.
-#
-# Messages files are used to "localize" tkgate so that it can run under
-# different languages.  Lines beginning with a '#' character are comments.
-# Most entries in the file are of the form:
-#
-# tag value
-#
-# A tag is any abitrary string of non-whitespace characters.  By convention
-# a dot notation is used to suggest groups of related tags.  The value of the
-# tag begins at the first non-whitespace character after the tag and can include
-# white space.  Normally the value is the localized text message.  By convension,
-# tags beginning with a '@' character are used to control interface layout
-# as opposed to being actual text.  Explainations for this tags will be given
-# in preceeding comments.
-#
-# Multi-line comments have the form:
-#
-# tag	-begin-
-# line1
-# line2
-# -end-
-#
-# or
-#
-# tag	-fillbegin-
-# line1
-# line2
-# -end-
-#
-# When -begin- is used, the newlines in the text are preserved as is.  When
-# -fillbegin- is used the newlines are replaced with spaces and it is assumed
-# that the text will be automatically justified.
-#
-# If the first character of a value is a back-quote, then it is interpreted
-# as a reference to another tag.  For example:
-#
-# foo	This is tag foo.
-# bar	`foo
-#
-# In this instance both 'foo' and 'bar' will translate to 'This is tag foo'.
-#
-# The last type of entry that can occur in the file, normally at the type is
-# a declaration.  Currently, the only allowed declaration is:
-#
-# \font-encoding	code
-#
-# where "code" is a font encoding such as "iso8859-2". This can be used to
-# select a font encoding specific to a locale.  The default encoding
-# is "iso8859-1".
-#
-##############################################################################
-
 \font-encoding  iso8859-1
 \messages-encoding utf-8
 \verilog-encoding iso8859-1
@@ -124,16 +69,16 @@ tab.cpath	Kritischer Pfad
 #
 # Module tabs
 #
-module.tree Baum
-module.list Liste
-module.box.libraries  Bibliotheken
+module.tree		Baum
+module.list		Liste
+module.box.libraries	Bibliotheken
 
 ############################################################################
 #
 # Tabs for Nets/Ports
 #
-sidetab.nets  Netze
-sidetab.ports Ports
+sidetab.nets	Netze
+sidetab.ports	Ports
 
 #############################################################################
 #
@@ -150,8 +95,8 @@ mm.disable	Sperren
 # Menu strings
 #
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
-# of a number and a colon.   If this prefix exists, it indicates the character
-# position in the string that will be underlined.  This enables keyboard shortcuts
+# of a number and a colon. If this prefix exists, it indicates the character
+# position in the string that will be underlined. This enables keyboard shortcuts
 # using the Alt key.
 #
 menu.file	0:Datei
@@ -173,8 +118,8 @@ menu.file.saveas	8:Sichern unter...
 menu.file.print		0:Drucken...
 menu.file.quit		0:Quit
 menu.file.cprop		10:Schaltungseigenschaften...
-menu.file.import        0:Bild Import...
-menu.file.export        0:Bild Export...
+menu.file.import	0:Bild Import...
+menu.file.export	0:Bild Export...
 
 menu.edit.undo		0:Undo
 menu.edit.redo		0:Redo
@@ -212,26 +157,26 @@ menu.tool.port		0:Port
 menu.tool.select	0:Gebiet auswählen
 menu.tool.options	0:Optionen...
 
-menu.format.addport 4:Port hinzufügen
-menu.format.ioset 0:Typ setzen
-menu.format.anchor  0:Verankern (ausgewählt)
-menu.format.unanchor  0:Anker los (ausgewählt)
-menu.format.prop  0:Instanzeigenschaften...
-menu.format.del   0:Löschen
-menu.format.settech 0:Technologie festlegen
-menu.format.rot   0:Rotation
-menu.format.rot.0		15:Default Drehen 0
-menu.format.rot.90		15:Default Drehen 90
+menu.format.addport	4:Port hinzufügen
+menu.format.ioset	0:Typ setzen
+menu.format.anchor	0:Verankern (ausgewählt)
+menu.format.unanchor	0:Anker los (ausgewählt)
+menu.format.prop	0:Instanzeigenschaften...
+menu.format.del		0:Löschen
+menu.format.settech	0:Technologie festlegen
+menu.format.rot		0:Rotation
+menu.format.rot.0	15:Default Drehen 0
+menu.format.rot.90	15:Default Drehen 90
 menu.format.rot.180	15:Default Drehen 180
 menu.format.rot.270	15:Default Drehen 270
 menu.format.rot.rotate	0:Uhrzeigersinn drehen
-menu.format.rot.brotate 0:Gegenuhrzeigersinn drehen
-menu.format.algnv		11:Ausrichten Ver.
-menu.format.algnh		11:Ausrichten Hor.
+menu.format.rot.brotate	0:Gegenuhrzeigersinn drehen
+menu.format.algnv	11:Ausrichten Ver.
+menu.format.algnh	11:Ausrichten Hor.
 
 
 menu.tool.tclshell	0:Tcl Shell
-menu.tool.rep   0:Replizieren
+menu.tool.rep		0:Replizieren
 
 menu.simulate.begin	0:Beginn Simulation
 menu.simulate.end	0:Ende Simulation
@@ -244,23 +189,23 @@ menu.simulate.break	0:Haltepunkt...
 menu.simulate.script	1:Skript ausführen...
 menu.simulate.load	16:Speicherbereich laden...
 menu.simulate.dump	16:Speicherbereich ausgeben...
-menu.simulate.view  0:Ansehen Speicherauszug...
+menu.simulate.view	0:Ansehen Speicherauszug...
 
-menu.module.open	0:Öffnen
-menu.module.close	0:Schließen
-menu.module.new		0:Neu...
-menu.module.del		0:Löschen...
-menu.module.copy	0:Kopieren...
-menu.module.rename	0:Umbenennen...
-menu.module.claim	1:Aneignen...
-menu.module.setroot	1:Zur Wurzel machen...
-menu.module.prop	0:Eigenschaften...
+menu.module.open		0:Öffnen
+menu.module.close		0:Schließen
+menu.module.new			0:Neu...
+menu.module.del			0:Löschen...
+menu.module.copy		0:Kopieren...
+menu.module.rename		0:Umbenennen...
+menu.module.claim		1:Aneignen...
+menu.module.setroot		1:Zur Wurzel machen...
+menu.module.prop		0:Eigenschaften...
 menu.module.interface		0:Schnittstelle
 menu.module.interface.set	0:Definieren
-menu.module.interface.update  0:Mit Standard synchr.
-menu.module.interface.updateall 0:Alles mit Std. synchr...
+menu.module.interface.update	0:Mit Standard synchr.
+menu.module.interface.updateall	0:Alles mit Std. synchr...
 menu.module.interface.edit	0:Editieren...
-menu.module.interface.auto  1:Automatisch erzeugen...
+menu.module.interface.auto	1:Automatisch erzeugen...
 
 
 menu.help.about		0:Autor...
@@ -297,7 +242,7 @@ menu.scope_help.doc		0:Dokumentation...
 
 mod.intf	Schnittstelle
 
-port.title  TkGate: Porteigenschaften
+port.title	TkGate: Porteigenschaften
 port.parms	Portparameter
 port.in		Eingang
 port.out	Ausgang
@@ -369,8 +314,8 @@ gm.mem.rff	Rev. D-Flipflop
 gm.mem.ram	RAM
 gm.mem.rom	ROM
 
-gm.mem.jkff JK Flipflop
-gm.mem.rjkff  Rev. JK Flipflop
+gm.mem.jkff	JK Flipflop
+gm.mem.rjkff	Rev. JK Flipflop
 
 gm.msi.21mux	2-1 Multiplexer
 gm.msi.41mux	4-1 Multiplexer
@@ -378,9 +323,9 @@ gm.msi.81mux	8-1 Multiplexer
 gm.msi.12dec	1-2 Dekoder
 gm.msi.14dec	1-4 Dekoder
 gm.msi.18dec	1-8 Dekoder
-gm.msi.12demux  1-2 Demultiplexer
-gm.msi.14demux  1-4 Demultiplexer
-gm.msi.18demux  1-8 Demultiplexer
+gm.msi.12demux	1-2 Demultiplexer
+gm.msi.14demux	1-4 Demultiplexer
+gm.msi.18demux	1-8 Demultiplexer
 
 gm.mod.inst	Module Instanz
 gm.mod.in	Module Eingang
@@ -441,7 +386,7 @@ pop.module.int		Schnittstelle editieren...
 pop.simulate.end	Ende Simulation
 pop.simulate.begin	BeginN Simulation
 pop.simulate.addprobe	Tastkopf hinzufügen
-pop.simulate.delprobe Tastkopf löschen
+pop.simulate.delprobe	Tastkopf löschen
 pop.simulate.run	Laufen lassen
 pop.simulate.pause	Pause
 pop.simulate.step	Epochenschritt(e)
@@ -450,12 +395,12 @@ pop.simulate.break	Haltepunkt...
 pop.simulate.script	Skript ausführen...
 pop.simulate.load	Speicherbereich laden...
 pop.simulate.dump	Speicherbereich ausgeben...
-pop.simulate.view Ansehen Speicherauszug...
+pop.simulate.view	Ansehen Speicherauszug...
 
 pop.interface		Schnittstelle
 pop.interface.set	Als Standard setzen
-pop.interface.update    Abgleichen mit Standard
-pop.interface.updateall Alles abgleichen mit Standard...
+pop.interface.update	Abgleichen mit Standard
+pop.interface.updateall	Alles abgleichen mit Standard...
 pop.interface.edit	Editieren...
 pop.interface.auto	Automatisch erzeugen...
 pop.interface.replace	Ersetzen
@@ -473,8 +418,8 @@ pop.igen.top		oben
 pop.igen.bottom		unten
 pop.igen.other		sonstige
 
-pop.library.mgr   Bibliotheksmanager...
-pop.library.close Schließen
+pop.library.mgr		Bibliotheksmanager...
+pop.library.close	Schließen
 
 ##############################################################################
 #
@@ -555,7 +500,7 @@ db.mod.lmod.0	Modul seit dem Laden nicht verändert.
 db.mod.lmod.1	Modul seit dem Laden verändert.
 db.mod.smod.0	Modul seit dem Sichern nicht verändert.
 db.mod.smod.1	Modul seit dem Sichern verändert.
-db.mod.islib.1	Modul ist Teil der  [%s] Bibliothek.
+db.mod.islib.1	Modul ist Teil der [%s] Bibliothek.
 db.mod.islib.0	Modul ist kein Bibliotheksmodul.
 db.mod.netlist	Bauteilliste
 db.mod.hdl	HDL
@@ -576,26 +521,25 @@ in Verilog zu beschreiben.
 #############################################################################
 # Error List Dialog box
 #
-db.err.title    TkGate: Fehlerliste
+db.err.title		TkGate: Fehlerliste
 db.err.caption		Fehlerliste
-db.err.explain.warn -fillbegin-
+db.err.explain.warn	-fillbegin-
 In der Schaltung gab es Warnhinweise, die Simulation wird aber fortgesetzt.
 Im Editiermodus kann man die Warnhinweise sehen.
 -end-
-db.err.explain.err  -fillbegin-
-In der Schaltung gab es Fehler.  TkGate kann die Simulation nicht fortsetzen.
+db.err.explain.err	-fillbegin-
+In der Schaltung gab es Fehler. TkGate kann die Simulation nicht fortsetzen.
 -end-
 
-db.err.neededit   -fillbegin-
+db.err.neededit		-fillbegin-
 Zum Navigieren zu den Warnungen muß erst in den Editiermodus geschaltet werden.
 -end-
-
 
 #############################################################################
 # Net Dialog Box
 #
-db.net.title  TkGate: Netzeigenschaften
-db.net.caption  Netzeigenschaften
+db.net.title	TkGate: Netzeigenschaften
+db.net.caption	Netzeigenschaften
 db.net.name	Netzname
 db.net.hide	Name verstecken
 db.net.bits	Bitbreite
@@ -610,7 +554,7 @@ db.net.inets	Netze
 #
 # New circuit dialog box
 #
-db.newcirc.title  TkGate: Neue Schaltung
+db.newcirc.title	TkGate: Neue Schaltung
 db.newcirc.directory	Verzeichnis:
 db.newcirc.cap		Neue Schaltung
 db.newcirc.exp		-fillbegin-
@@ -625,7 +569,7 @@ db.newcirc.topname	Name des obersten Moduls
 ##############################################################################
 # Gate dialog box
 #
-db.gate.title   TKGate: Gattereigenschaften
+db.gate.title		TKGate: Gattereigenschaften
 db.gate.signam		Signalname
 db.gate.portnam		Portname
 db.gate.iotype		Typ
@@ -633,7 +577,7 @@ db.gate.bitw		Bitbreite
 db.gate.cyclew		Taktlänge
 db.gate.phase		Phase
 db.gate.duty		Taktverhältnis
-db.gate.waveform  Takt-Signalform
+db.gate.waveform	Takt-Signalform
 db.gate.port		Port
 db.gate.bitws		Bits
 db.gate.side		Seite
@@ -672,14 +616,14 @@ Datenfluß im D-Flipflop
 von rechts nach links.
 -end-
 
-db.gate.jkff.type   JK Flipflop Ausrichtung
-db.gate.jkff.normal.hdr   Normal
-db.gate.jkff.normal.exp -fillbegin-
+db.gate.jkff.type		JK Flipflop Ausrichtung
+db.gate.jkff.normal.hdr		Normal
+db.gate.jkff.normal.exp		-fillbegin-
 Datenfluß im JK-Flipflop
 von links nach rechts.
 -end-
-db.gate.jkff.reverse.hdr  Reversed
-db.gate.jkff.reverse.exp  -fillbegin-
+db.gate.jkff.reverse.hdr	Reversed
+db.gate.jkff.reverse.exp	-fillbegin-
 Datenfluß im JK-Flipflop
 von rechts nach links.
 -end-
@@ -723,8 +667,8 @@ oder Registern verbunden werden.
 
 # Minimum size of textbox for comment (in characters)
 #
-@db.gate.comment.width    *500
-@db.gate.comment.height   *450
+@db.gate.comment.width		*500
+@db.gate.comment.height		*450
 
 db.gate.tab.General.cap		Allgemeine Eigenschaften
 db.gate.tab.Ports.cap		Porteigenschaften
@@ -744,7 +688,7 @@ db.gate.tab.OR.cap		OR Eigenschaften
 db.gate.tab.XOR.cap		XOR Eigenschaften
 db.gate.tab.MUX.cap		Mux Eigenschaften
 db.gate.tab.DEMUX.cap		Demux Eigenschaften
-db.gate.tab.DECODER.cap   Decoder Eigenschaften
+db.gate.tab.DECODER.cap		Decoder Eigenschaften
 db.gate.tab.CONCAT.cap		Concat Eigenschaften
 db.gate.tab.COMMENT.cap		Text Eigenschaften
 db.gate.tab.FF.cap		D-Flipflop Eigenschaften
@@ -803,7 +747,7 @@ In beschränktem Umfang können HTML Tags
 einschließlich Links verwendet werden.
 -end-
 
-db.gate.tab.SCRIPT.exp  -fillbegin-
+db.gate.tab.SCRIPT.exp	-fillbegin-
 Hier kann zum Modul ein Stück beliebig
 formatierter Verilog-Quellcode hinzugefügt
 werden.
@@ -827,36 +771,36 @@ module foo #(.base_value(1'b1)) (Z,A,B);
 endmodule
 -end-
 
-db.gate.switch.state Initiale Schalterstellung
+db.gate.switch.state	Initiale Schalterstellung
 
-db.gate.switch.state.on.hdr Schalter Ein
-db.gate.switch.state.on.exp Schalter beginnt Simulation im Ein-Zustand.
-db.gate.switch.state.off.hdr  Schalter Aus
-db.gate.switch.state.off.exp Schalter beginnt Simulation im Aus-Zustand.
+db.gate.switch.state.on.hdr	Schalter Ein
+db.gate.switch.state.on.exp	Schalter beginnt Simulation im Ein-Zustand.
+db.gate.switch.state.off.hdr	Schalter Aus
+db.gate.switch.state.off.exp	Schalter beginnt Simulation im Aus-Zustand.
 
-db.gate.switch.shownet  Zeige den Netznamen an
-db.gate.switch.shownet.on.hdr Zeigen
-db.gate.switch.shownet.on.exp Zeige den Netznamen direkt neben dem Schalter an.
-db.gate.switch.shownet.off.hdr  Verstecken
-db.gate.switch.shownet.off.exp  Zeige keinen Netznamen neben dem Schalter an.
+db.gate.switch.shownet		Zeige den Netznamen an
+db.gate.switch.shownet.on.hdr	Zeigen
+db.gate.switch.shownet.on.exp	Zeige den Netznamen direkt neben dem Schalter an.
+db.gate.switch.shownet.off.hdr	Verstecken
+db.gate.switch.shownet.off.exp	Zeige keinen Netznamen neben dem Schalter an.
 
-db.gate.dip.value Initialer DIP-Schalter-Wert
-db.gate.dip.value.exp Initialer Wert des DIP-Schalters zu Simulationsbeginn.
-db.gate.dip.value.hex Hexwert:
-@db.gate.dip.value.exp.width  150
+db.gate.dip.value Initialer	DIP-Schalter-Wert
+db.gate.dip.value.exp		Initialer Wert des DIP-Schalters zu Simulationsbeginn.
+db.gate.dip.value.hex		Hexwert:
+@db.gate.dip.value.exp.width	150
 
-db.gate.dip.shownet   Zeige den Netznamen
-db.gate.dip.shownet.on.hdr Zeigen
-db.gate.dip.shownet.on.exp  Zeige den Namen des Netzes neben dem DIP-Schalter an.
-db.gate.dip.shownet.off.hdr Verstecken
-db.gate.dip.shownet.off.exp Zeige keinen Netznamen neben dem DIP-Schalter an.
+db.gate.dip.shownet		Zeige den Netznamen
+db.gate.dip.shownet.on.hdr	Zeigen
+db.gate.dip.shownet.on.exp	Zeige den Namen des Netzes neben dem DIP-Schalter an.
+db.gate.dip.shownet.off.hdr	Verstecken
+db.gate.dip.shownet.off.exp	Zeige keinen Netznamen neben dem DIP-Schalter an.
 
-db.gate.tap.select  Auswahl der Bitverzweigung
-db.gate.tap.exp.bit Wähle das Bit aus, das aus dem Multibit-Bus herausgeführt werden soll.
-db.gate.tap.exp.bus Wähle das niederwertigste Bit (LSB) aus dem Bitbereich und führe es aus dem Multibit-Bus heraus.
-db.gate.tap.lbl.bit Bit:
-db.gate.tap.lbl.bus LSB:
-@db.gate.tap.exp.width  *180
+db.gate.tap.select		Auswahl der Bitverzweigung
+db.gate.tap.exp.bit		Wähle das Bit aus, das aus dem Multibit-Bus herausgeführt werden soll.
+db.gate.tap.exp.bus		Wähle das niederwertigste Bit (LSB) aus dem Bitbereich und führe es aus dem Multibit-Bus heraus.
+db.gate.tap.lbl.bit		Bit:
+db.gate.tap.lbl.bus		LSB:
+@db.gate.tap.exp.width		*180
 
 db.gate.mux.dataorder	Eingangsordnung
 db.gate.mux.ord1.hdr	Links-rechts
@@ -890,33 +834,33 @@ db.gate.demux.ord2.exp	-fillbegin-
 Ordne DEMUX-Ausgänge von rechts nach links.
 -end-
 
-db.gate.demux.select  Wähle die Positionierung
-db.gate.demux.sel1.hdr  Auf der Linken
-db.gate.demux.sel2.hdr  Auf der Rechten
-db.gate.demux.sel1.exp  -fillbegin-
+db.gate.demux.select	Wähle die Positionierung
+db.gate.demux.sel1.hdr	Auf der Linken
+db.gate.demux.sel2.hdr	Auf der Rechten
+db.gate.demux.sel1.exp	-fillbegin-
 Plaziere den Select-Eingang auf der linken Seite des DEMUX.
 -end-
-db.gate.demux.sel2.exp  -fillbegin-
+db.gate.demux.sel2.exp	-fillbegin-
 Plaziere den Select-Eingang auf der rechten Seite des DEMUX.
 -end-
 
-db.gate.decoder.dataorder Ausgangsreihenfolge
-db.gate.decoder.ord1.hdr  Links-nach-rechts
-db.gate.decoder.ord2.hdr  Rechts-nach-links
-db.gate.decoder.ord1.exp  -fillbegin-
+db.gate.decoder.dataorder	Ausgangsreihenfolge
+db.gate.decoder.ord1.hdr	Links-nach-rechts
+db.gate.decoder.ord2.hdr	Rechts-nach-links
+db.gate.decoder.ord1.exp	-fillbegin-
 Ordne die Decoderausgänge von links nach rechts.
 -end-
-db.gate.decoder.ord2.exp  -fillbegin-
+db.gate.decoder.ord2.exp	-fillbegin-
 Ordne die Decoderausgänge von rechts nach links.
 -end-
 
-db.gate.decoder.select  Plazierung des Enable-Eingangs
-db.gate.decoder.sel1.hdr  Links
-db.gate.decoder.sel2.hdr  Rechts
-db.gate.decoder.sel1.exp  -fillbegin-
+db.gate.decoder.select		Plazierung des Enable-Eingangs
+db.gate.decoder.sel1.hdr	Links
+db.gate.decoder.sel2.hdr	Rechts
+db.gate.decoder.sel1.exp	-fillbegin-
 Plaziere den Enable-Eingang auf der linken DECODER-Seite.
 -end-
-db.gate.decoder.sel2.exp  -fillbegin-
+db.gate.decoder.sel2.exp	-fillbegin-
 Plaziere den Enable-Eingang auf der rechten DECODER-Seite.
 -end-
 
@@ -990,9 +934,9 @@ rechts, um dieses Problem zu beseitigen.
 -end-
 
 
-db.dip.title    TkGate: Dip-Wert
+db.dip.title	TkGate: Dip-Wert
 
-cpath.cloops -fillbegin-
+cpath.cloops	-fillbegin-
 In der kombinatorischen Schaltung wurde eine
 Rückkopplung entdeckt. Um für diese Schaltung
 eine Verzögerungsanalyse durchführen zu können,
@@ -1008,9 +952,9 @@ deckt wurde, sind unten gelistet.
 #
 #print.outto		Ausgabe nach
 
-print.title   TkGate: Drucken
-print.config.title  TkGate: Druckerkonfiguration
-print.scope.title TkGate: Scopedruck
+print.title		TkGate: Drucken
+print.config.title	TkGate: Druckerkonfiguration
+print.scope.title	TkGate: Scopedruck
 
 print.printer		Drucker:
 print.file		Datei
@@ -1029,7 +973,7 @@ print.cur		Aktuelle
 print.use		Benutzte
 print.sel		Ausgewählte
 print.inclib		Bibliotheksmodule einbeziehen.
-print.incunused   Unbenutzte Module einfügen.
+print.incunused		Unbenutzte Module einfügen.
 print.papsz		Papiergröße
 print.orient		Orientierung
 print.portrait		Hochformat
@@ -1086,9 +1030,9 @@ Seitenzahl zu berechnen.
 
 print.tab.output	Ausgabe
 #print.tab.page		Seite
-print.tab.modules Module
-print.tab.content Inhalt
-print.tab.advanced  Einstellungen
+print.tab.modules	Module
+print.tab.content	Inhalt
+print.tab.advanced	Einstellungen
 
 ##############################################################################
 #
@@ -1099,42 +1043,42 @@ print.tab.advanced  Einstellungen
 # Width of columns in list of toolbars
 @opt.tool.colwidth	30
 # Width of image sidebar
-@opt.sidebar.width  *250
+@opt.sidebar.width	*250
 # Width of tree box with option categories
-@opt.tree.width   *150
+@opt.tree.width		*150
 
-opt.title   TkGate: Optionen
-opt.treelabel   Optionen
+opt.title	TkGate: Optionen
+opt.treelabel	Optionen
 
-opt.general   Allgemein
+opt.general		Allgemein
 opt.interface		Schnittstelle
 opt.toolbars		Toolbars
-opt.toolbars.edit Editor
-opt.toolbars.sim  Simulation
-opt.toolbars.symed  Symbol Editor
+opt.toolbars.edit	Editor
+opt.toolbars.sim	Simulation
+opt.toolbars.symed	Symbol Editor
 opt.editor		HDL
 opt.print		Drucken
-opt.print.output  Ausgabe
-opt.print.content Inhalt
+opt.print.output	Ausgabe
+opt.print.content	Inhalt
 opt.simulate		Simulieren
-opt.simulate.basic Grundlegendes
-opt.simulate.tech Technologie
-opt.simulate.error Fehlerbehandlung
+opt.simulate.basic	Grundlegendes
+opt.simulate.tech	Technologie
+opt.simulate.error	Fehlerbehandlung
 opt.library		Bibliotheken
-opt.library.path  Pfad
-opt.library.load  Autom. Laden
-opt.library.vpd   VPD
+opt.library.path	Pfad
+opt.library.load	Autom. Laden
+opt.library.vpd		VPD
 opt.analysis		Analyse
 opt.color		Farben
-opt.color.title   TkGate: Farbauswahl
-opt.color.edit    Editor
-opt.color.scope   Scope
-opt.color.hdl   HDL Editor
+opt.color.title		TkGate: Farbauswahl
+opt.color.edit		Editor
+opt.color.scope		Scope
+opt.color.hdl		HDL Editor
 opt.html		HTML
 opt.debug		Debug
 
-opt.lib.load.available  Verfügbare Bibliotheken
-opt.lib.load.selected Ausgewählte Bibliotheken
+opt.lib.load.available	Verfügbare Bibliotheken
+opt.lib.load.selected	Ausgewählte Bibliotheken
 
 opt.identity		Organisation
 opt.site		Netzadresse
@@ -1163,14 +1107,14 @@ opt.restdef		Auf Standard zurücksetzen
 opt.regudate		Auffrischen eines Gebiets
 opt.smoothscroll	Glattes Scrolling
 opt.balloon		Hilfeballone einschalten
-opt.tearawaymenus Einschalten von wegziehbaren Hauptmenues
+opt.tearawaymenus	Einschalten von wegziehbaren Hauptmenues
 opt.safeSave		Sicheres Abspeichern der Dateien
 opt.saveCells		Zellen in abgespeicherte Dateien einbeziehen
 opt.showimage		Zeige Randstreifenbilder in Dialogboxen
 opt.novice		Novizenmodus
-opt.blockDropConnect	Porterzeugung mit  Fallenlassen von Leitungen
-opt.ckpoint.1   Checkpointing alle
-opt.ckpoint.2   Kommandos ausführen.
+opt.blockDropConnect	Porterzeugung mit Fallenlassen von Leitungen
+opt.ckpoint.1		Checkpointing alle
+opt.ckpoint.2		Kommandos ausführen.
 opt.freq		Intervall
 opt.beak		Sondermodi einstellen
 opt.bat			Bat
@@ -1191,7 +1135,7 @@ opt.devfilepath		VPD (Virtuelles Peripheres Device) Dateipfad
 opt.vlibpath		Verilog Bibliothekspfad
 opt.vlibnames		Basisbibliotheken
 opt.display		Anzeige
-opt.interaction   Interaktion
+opt.interaction		Interaktion
 opt.input		Eingabe
 opt.security		Sicherheit
 opt.undolen		Maximale Anzahl von Undo-Op.
@@ -1207,8 +1151,8 @@ opt.cpflash		Anzeige mit blinkendem Pfad
 
 opt.general.fontset	Font-Klasse
 
-opt.simulator.savetraces  Tastkopfpositionen zwischen Simulatorläufen sichern.
-opt.simulator.noglitch	Glitch-Unterdrückung im Simulator einschalten.
+opt.simulator.savetraces	Tastkopfpositionen zwischen Simulatorläufen sichern.
+opt.simulator.noglitch		Glitch-Unterdrückung im Simulator einschalten.
 
 opt.simulator.err	Fehlerbehandlung
 opt.simulator.stopany	Abbrechen der Simulation bei jeder Warnung.
@@ -1227,7 +1171,7 @@ opt.tool.module		Module
 opt.tool.tech		Technologie
 opt.tool.simctl		Simulatorsteuerung
 opt.tool.simaux		Simulatorbefehle
-opt.tool.simmode  Simulator Werkzeuge
+opt.tool.simmode	Simulator Werkzeuge
 opt.tool.symmode	Symboleditor Werkzeuge
 opt.tool.symedit	Ausschneiden/Einfügen
 opt.tool.symport	Ports
@@ -1278,28 +1222,28 @@ opt.sec.ignore		Ignoriere versuchte Benutzung von ausgeschalteten Features.
 
 opt.html.linkopts	Link Optionen
 opt.html.browser	Browser Aufruf
-opt.html.email		e-Mail  Aufruf
+opt.html.email		e-Mail Aufruf
 
-opt.debug.opt   Debugging Optionen
+opt.debug.opt		Debugging Optionen
 
 opt.color.editwin	Fensterfarben editieren
 opt.color.scopewin	Farben fürs Signaldiagramm-Fenster einstellen
 
-opt.vlibadd.title TkGate: Bibliothek hinzufügen
+opt.vlibadd.title	TkGate: Bibliothek hinzufügen
 
 
-opt.gen.basetoolbar Editorkern Toolbars
-opt.gen.simtoolbar  Simulationsmodus Toolbars
-opt.gen.symedtoolbar  Symboleditor Toolbars
+opt.gen.basetoolbar	Editorkern Toolbars
+opt.gen.simtoolbar	Simulationsmodus Toolbars
+opt.gen.symedtoolbar	Symboleditor Toolbars
 
-opt.bbar.restore  Seitendefaults wiederherstellen
-opt.bbar.restoreall Alle Defaults wiederherstellen
+opt.bbar.restore	Seitendefaults wiederherstellen
+opt.bbar.restoreall	Alle Defaults wiederherstellen
 
 ##############################################################################
 #
 # Interface generator
 #
-igen.title    TkGate: Module Interface Generation
+igen.title	TkGate: Module Interface Generation
 
 igen.port		Port
 igen.type		Typ
@@ -1343,7 +1287,7 @@ für ein Modul.
 
 info.script.error	Skript Fehler
 
-module.props.title  TkGate: Moduleigenschaften
+module.props.title	TkGate: Moduleigenschaften
 module.props		Moduleigenschaften
 
 ipanel.plist		Portliste
@@ -1376,7 +1320,7 @@ Daten zerstört.
 Ist das wirklich so gewollt?
 -end-
 
-ipanel.warn.tosymbol		-begin-
+ipanel.warn.tosymbol	-begin-
 Der Schnittstellentyp dieses
 Moduls soll nach "Symbol"
 verändert werden. Damit werden
@@ -1392,12 +1336,12 @@ Ist das wirklich so gewollt?
 #
 # Block list dialog boxes
 #
-blklst.delete.title TKGate: Modul löschen
-blklst.copy.title TKGate: Modul kopieren
-blklst.rename.title TKGate: Modul umbenennen
-blklst.claim.title  TKGate: Modul aneignen
-blklst.setroot.title  TKGate: Wurzel-Modul festlegen
-blklst.new.title  TKGate: Neues Modul
+blklst.delete.title	TKGate: Modul löschen
+blklst.copy.title	TKGate: Modul kopieren
+blklst.rename.title	TKGate: Modul umbenennen
+blklst.claim.title	TKGate: Modul aneignen
+blklst.setroot.title	TKGate: Wurzel-Modul festlegen
+blklst.new.title	TKGate: Neues Modul
 
 blklst.claim		Modul aneignen
 blklst.to		Nach
@@ -1450,9 +1394,9 @@ Mache das angegebene Modul zum obersten (Top-Level).
 -end-
 
 
-find.title    TkGate: Objekte finden
-find.label		Objekte finden
-find.exp		-fillbegin-
+find.title	TkGate: Objekte finden
+find.label	Objekte finden
+find.exp	-fillbegin-
 Suche den Mustertext entweder in
 Gatternamen, Leitungsnamen oder in
 Kommentaren. Ein Doppelklick auf das
@@ -1466,7 +1410,7 @@ find.result.type	Typ
 find.result.name	Objektname
 
 #
-# These are special tags used by the search feature.  Do not change their value.
+# These are special tags used by the search feature. Do not change their value.
 #
 @find.type.gate		gate
 @find.type.net		net
@@ -1477,7 +1421,7 @@ find.results		Suchresultate
 
 #
 # This is a special tag used to indicate whether the position qualifier box
-# should be "before" or "after" the text entry box.  Use the keywords before
+# should be "before" or "after" the text entry box. Use the keywords before
 # or after to indicate the position.
 #
 @find.qual.pos		before
@@ -1511,34 +1455,34 @@ find.target		Ziel
 #
 # Circuit Dialog box
 #
-circ.wintitle   TkGate: Schaltungseigenschaften
+circ.wintitle		TkGate: Schaltungseigenschaften
 circ.label		Schaltungseigenschaften
 circ.ident		Identifikation
 circ.filev		Dateiversion
 circ.file		Dateiname
 circ.title		Schaltungsüberschrift
-circ.encoding   Dateicodierung
-circ.lang   Datei: Sprache
+circ.encoding		Dateicodierung
+circ.lang		Datei: Sprache
 circ.discchg		Keine Warnungen bei Verwerfen von Änderungen.
-circ.flags    Optionen
-circ.defaults   Standardeinstellungen für Komponenten
+circ.flags		Optionen
+circ.defaults		Standardeinstellungen für Komponenten
 circ.extbar		Erweiterungsleisten für AND, OR und XOR benutzen.
-circ.shownet    Zeige bei Schaltern und DIP-Schaltern den Netznamen.
+circ.shownet		Zeige bei Schaltern und DIP-Schaltern den Netznamen.
 circ.autostart		Automatischen Simulationsstart einschalten.
 circ.iniscript		Initialisierungsskripte
 #circ.noscript		Keine Skriptdateien ausgewählt.
 #circ.really		Soll '%s' wirklich aus der Liste der Inititalisierungsskripte gelöscht werden?
 
-circ.reallyupdate       -fillbegin-
+circ.reallyupdate	-fillbegin-
 Sollen wirklich alle '%s' Instanzen der Schnittstelle geändert werden?
 -end-
 
-circ.reallyoverwrite  -fillbegin-
+circ.reallyoverwrite	-fillbegin-
 Soll die bereits existierende Datei '%s' wirklich überschrieben werden?
 -end-
 
-@circ.library.width *500
-@circ.library.height  *350
+@circ.library.width	*500
+@circ.library.height	*350
 
 
 circ.general		Allgemein
@@ -1552,36 +1496,36 @@ circ.timescale.prec	Genauigkeit:
 circ.sim.features Features
 
 #
-# Strings for timing violation reporting styles.  The "after" case
+# Strings for timing violation reporting styles. The "after" case
 # is broken into the string before the time period box and after the
-# time period box.  You can use the string "-empty-" to make a string
+# time period box. You can use the string "-empty-" to make a string
 # empty if it is not needed in a particular language.
 #
-circ.sim.tv.title Verletzung von Zeitbedingungen: Behandlung
-circ.sim.tv.all   Über alle Verletzungen von Zeitbedingungen informieren
-circ.sim.tv.after.1 Über Verletzungen von Zeitbedingungen nachher informieren
-circ.sim.tv.after.2 -empty-
+circ.sim.tv.title	Verletzung von Zeitbedingungen: Behandlung
+circ.sim.tv.all		Über alle Verletzungen von Zeitbedingungen informieren
+circ.sim.tv.after.1	Über Verletzungen von Zeitbedingungen nachher informieren
+circ.sim.tv.after.2	-empty-
 circ.sim.tv.never Keine Benachrichtigung über Verletzungen von Zeitbedingungen.
 
-circ.exp.general  -fillbegin-
+circ.exp.general	-fillbegin-
 Betrachten und Modifizieren schaltungsspezifischer Eigenschaften.
 Diese Eigenschaften werden beim Speichern der Schaltung mitgesichert.
 -end-
 
 
-circ.exp.library  -fillbegin-
+circ.exp.library	-fillbegin-
 Auswählen der von dieser Schaltung benutzten Bibliotheken.
 Die Bibliotheksangaben werden mit der Schaltung gesichert,
 sie werden beim nächsten Laden der Schaltung automatisch eingelesen.
 -end-
 
-circ.exp.script -fillbegin-
+circ.exp.script		-fillbegin-
 Hinzufügen von Simulationsskripten, die vor
 Beginn der Simulation automatisch gelesen
 und ausgeführt werden sollen.
 -end-
 
-circ.exp.simulator  -fillbegin-
+circ.exp.simulator	-fillbegin-
 Anzeige und Modifikation der Simulationseinstellungen dieser Schaltung.
 -end-
 
@@ -1650,8 +1594,8 @@ cp.recompute		Neuberechnung
 ##############################################################################
 # Error messages
 #
-err.notinsim    Nicht erlaubt, solange der Simulator aktiv ist.
-err.nomemselect   Der Speicher ist nicht ausgewählt.
+err.notinsim		Nicht erlaubt, solange der Simulator aktiv ist.
+err.nomemselect		Der Speicher ist nicht ausgewählt.
 err.rootinterface	Kann die Schnittstelle des obersten Moduls nicht definieren.
 err.nopin		Ausgewählter Pin kann nicht verändert werden.
 err.badhex		Illegaler Hexwert '%s', ignoriert.
@@ -1662,8 +1606,8 @@ err.badopendel		Kann geöffnetes Modul nicht löschen.
 err.nosrcmod		Quelle zu Modul '%s' nicht gefunden.
 err.noerr		Fehler nicht bestimmbar.
 err.misserr		Fehler nur teilweise bestimmbar (Absturz des Simulators?)
-err.nofunc    Ungeeigneter oder fehlender Funktionsname für die Modulschnittstelle.
-err.wirerot Wegen dranhängender Leitungen kann der ausgewählte Teil nicht rotiert werden.
+err.nofunc		Ungeeigneter oder fehlender Funktionsname für die Modulschnittstelle.
+err.wirerot		Wegen dranhängender Leitungen kann der ausgewählte Teil nicht rotiert werden.
 
 err.badinadd		Kann keine Eingänge mehr zur angewählten Schaltung hinzufügen.
 err.badoutadd		Kann keine Ausgänge mehr zur angewählten Schaltung hinzufügen.
@@ -1681,14 +1625,14 @@ err.badrange		Nichtpositiver Bereich für Signaldiagramm nicht erlaubt.
 err.badlprcmd		Druckkommando '%s' kann nicht ausgeführt werden.
 err.badpsopen		Die Datei '%s' kann nicht für die Postscript-Ausgabe geöffnet werden.
 err.badid		Ungültiger Bezeichner '%s'
-err.noinvgate   Inverters sind auf Gattern dieses Typs nicht erlaubt.
+err.noinvgate		Inverters sind auf Gattern dieses Typs nicht erlaubt.
 
-err.protintf		Kann die geschützte  Schnittstelle von Modul '%s' nicht ändern.
+err.protintf		Kann die geschützte Schnittstelle von Modul '%s' nicht ändern.
 
 err.bkpt.badexp		Syntaxfehler in Haltepunkt-Ausdruck. Mögliche Werte: 'net', '!net', 'net==value', 'net!=value'
 err.bkpt.badnet		Ungültiger Netzname '%s'. Namen beginnen mit Buchstaben und enthalten nur Buchstaben, Ziffern und '.'
-err.bkpt.badval		Syntaxfehler in Wert '%s'.  Nur dezimale oder Verilog-Konstante erlaubt.
-err.bkpt.toomany	Zu viele Haltepunkte.  Maximum ist %d.
+err.bkpt.badval		Syntaxfehler in Wert '%s'. Nur dezimale oder Verilog-Konstante erlaubt.
+err.bkpt.toomany	Zu viele Haltepunkte. Maximum ist %d.
 
 err.sim.badtmp		Zwischendatei '%s' für Simulator konnte nicht gesichert werden (Platte voll?)
 err.sim.syntx		Syntaxfehler in '%s' Kommando.
@@ -1737,8 +1681,8 @@ verlassen werden.
 err.nomod		Modul '%s' nicht definiert.
 err.modlock		Logikblock ist gesperrt!
 err.closeroot		Toplevel Modul kann nicht geschlossen werden. Quit benutzen.
-err.editonly            Kommando im Simulationsmodus nicht möglich.
-err.simonly             Kommando nur im Simulationsmodus möglich.
+err.editonly		Kommando im Simulationsmodus nicht möglich.
+err.simonly		Kommando nur im Simulationsmodus möglich.
 
 err.deltop		Toplevel Modul '%s' kann nicht gelöscht werden.
 err.delprot		Geschütztes Modul '%s' kann nicht gelöscht werden.
@@ -1746,8 +1690,8 @@ err.nodel		Keine löschbare Auswahl.
 err.modnotdef		Modul '%s' ist nicht definiert.
 err.moddef		Der Block '%s' existiert bereits.
 err.primredef		Eingebauter Elementname '%s' kann nicht umdefiniert werden.
-err.primprefix    Illegaler Modulname '%s' beginnt mit eingebautem Präfix '%s'.
-err.iskeyword   Verilog Schlüsselwort '%s' kann nicht als Bezeichner verwendet werden.
+err.primprefix		Illegaler Modulname '%s' beginnt mit eingebautem Präfix '%s'.
+err.iskeyword		Verilog Schlüsselwort '%s' kann nicht als Bezeichner verwendet werden.
 err.noprop		Das ausgewählte Gatter hat keine editierbaren Eigenschaften.
 err.openscript		Datei mit Simulationsskript '%s' kann nicht geöffnet werden.
 err.oldversion		Geladene Datei hat veraltete Versionsnummer '%s' (die aktuelle Version ist '%s').
@@ -1761,10 +1705,10 @@ err.nomodop		Keine geeigneten Module zum Betrieb verhanden.
 err.protexec		Versuchte Ausführung des geschützten Befehls '%s' in $tkg$exec().
 
 err.notwritable		Datei '%s' ist nicht beschreibbar.
-err.backupfail          Erzeugen einer Backupdatei '%s' gescheitert.
+err.backupfail		Erzeugen einer Backupdatei '%s' gescheitert.
 
 err.yy.badprop		Unbekannte Schaltungseigenschaft '%s' wird ignoriert.
-err.yy.badpropval Falscher Wert '%s' für Schaltungseigenschaft '%s'.
+err.yy.badpropval	Falscher Wert '%s' für Schaltungseigenschaft '%s'.
 err.yy.baddata		Falscher Datentyp für Schaltungeigenschaft '%s' gewählt.
 err.yy.nosym		Kein aktuelles Modulsymbol definiert.
 err.yy.badicon		Falscher Icontyp '%s'.
@@ -1779,13 +1723,13 @@ err.yy.pinformat	Illegales Pin Namensformat '%s'.
 err.yy.pinname		Pinname '%s' ist für Gattertyp '%s' nicht definiert.
 err.yy.nonetpos		Kein Netz für Position %d in Gatter %s.
 err.yy.baddirective	Illegale oder fehlerhafte Direktive '%s'.
-err.yy.badlocale  Unbekannte locale '%s' in der Datei.  Benutze die engl. locale.
+err.yy.badlocale	Unbekannte locale '%s' in der Datei. Benutze die engl. locale.
 
 
 err.corruptnewsave	-fillbegin-
 TkGate konnte die Datei in '%s' sichern, sie scheint aber
 korrupt zu sein. Sind Aufsetzpunkte definiert: Lade eine
-der Checkpoint Dateien.  'tkgate -V' prüft die Integrität
+der Checkpoint Dateien. 'tkgate -V' prüft die Integrität
 einer abgespeicherten Datei.
 -end-
 
@@ -1833,12 +1777,12 @@ err.internal.nomod	Interner Fehler: Kann Module '%s' nicht finden.
 ##############################################################################
 # Informational messages
 #
-msg.selwire     Ausgewählt: Die Leitung hat den Namen '%s'.
-msg.selgate     Ausgewählt: %s hat den Namen '%s'.
-msg.selblock    Ausgewählt: %s Block hat den Namen '%s'.
-msg.iselwire		Der ausgewählte Port '%s' ist in Block '%s'.
-msg.iselgate		Das ausgewählte %s, genannt '%s' (huch? Diese Meldung sollte nicht möglich sein).
-msg.iselblock		Ausgewählte Modulschnittstelle ist '%s'.
+msg.selwire	Ausgewählt: Die Leitung hat den Namen '%s'.
+msg.selgate	Ausgewählt: %s hat den Namen '%s'.
+msg.selblock	Ausgewählt: %s Block hat den Namen '%s'.
+msg.iselwire	Der ausgewählte Port '%s' ist in Block '%s'.
+msg.iselgate	Das ausgewählte %s, genannt '%s' (huch? Diese Meldung sollte nicht möglich sein).
+msg.iselblock	Ausgewählte Modulschnittstelle ist '%s'.
 
 msg.modoverwt		Zielmodul '%s' existiert bereits. Überschreiben?
 msg.foundgate		Gatter mit Namen '%s' gefunden.
@@ -1857,16 +1801,16 @@ msg.notlib		Modul '%s' ist kein Bibliotheksmodul.
 ##############################################################################
 # Heinrich messages (Activated when Heinrich Hacker uses tkgate)
 #
-miles.msg1              Nur ein Trottel würde %s%s hierhin plazieren, Heinrich.
-miles.msg2              Eine richtig doofe Stelle, um %s%s abzulegen, Heinrich.
-miles.msg3              Ein schrecklich ungeeigneter Platz für %s%s, Heinrich.
-miles.msg4              Heinrich, Du bist ein Trottel %s%s hierhin zu setzen.
-miles.msg5              Heinrich, Du allein schaffst es, %s%s hierhin zu plazieren.
-miles.msg6              %s%s hierhin zu setzen beweist, daß Du ein totaler Trottel bist, Heinrich.
-miles.msg7              Warum gibst Du nicht auf, Heinrich, das ist eine hirnrissige Schaltung.
-miles.msg8a             Es hat keinen Sinn weiterzumachen, Heinrich.
-miles.msg8b             Heinrich, Du hast keine Ahnung wie man eine Schaltung baut.
-miles.msg8c             Heinrich, mir graut vor Dir.
+miles.msg1	Nur ein Trottel würde %s%s hierhin plazieren, Heinrich.
+miles.msg2	Eine richtig doofe Stelle, um %s%s abzulegen, Heinrich.
+miles.msg3	Ein schrecklich ungeeigneter Platz für %s%s, Heinrich.
+miles.msg4	Heinrich, Du bist ein Trottel %s%s hierhin zu setzen.
+miles.msg5	Heinrich, Du allein schaffst es, %s%s hierhin zu plazieren.
+miles.msg6	%s%s hierhin zu setzen beweist, daß Du ein totaler Trottel bist, Heinrich.
+miles.msg7	Warum gibst Du nicht auf, Heinrich, das ist eine hirnrissige Schaltung.
+miles.msg8a	Es hat keinen Sinn weiterzumachen, Heinrich.
+miles.msg8b	Heinrich, Du hast keine Ahnung wie man eine Schaltung baut.
+miles.msg8c	Heinrich, mir graut vor Dir.
 
 #############################################################################
 #
@@ -1876,7 +1820,7 @@ verga.err.OK			Don't worry, be happy.
 verga.err.INPORT		Portgrößen-Mismatch bei Eingangsport '%s'.
 verga.err.OUTPORT		Portgrößen-Mismatch bei Ausgangsport '%s'.
 verga.err.FLOATNET		Netz '%s' hat keinen Treiber (floating net).
-verga.err.DIRECTCONN		Direct connect Operator '=>' wird nicht unterstützt.  Wird als '*>' behandelt.
+verga.err.DIRECTCONN		Direct connect Operator '=>' wird nicht unterstützt. Wird als '*>' behandelt.
 verga.err.MEMADDR		Versuch, in Speicher %s mit unbekannter Adresse zu schreiben.
 verga.err.MEMBITS		Versuch, in Speicher %s mit unbekanntem Bitbereich zu schreiben.
 verga.err.BADARRAYUSG		Array '%s' wird im Ausdruck ohne Index verwendet.
@@ -1887,7 +1831,7 @@ verga.err.BADGATERNG		Fehlerhafter Bereichausdruck für eine Gatter-Instanz.
 verga.err.BADARGVALUE		Fehlerhafter Wert für Argument '%s' in Task '%s'.
 verga.err.DIVZERO		Teilung durch Null.
 verga.err.NODIV			Divide/module wird auf dieser Maschine nicht unterstützt - sizeof(short) muß 2 sein.
-verga.err.BADEDGEEVENT		Ereignis im  Multi-Bit Netz '%s' kann kein posedge/negedge haben.
+verga.err.BADEDGEEVENT		Ereignis im Multi-Bit Netz '%s' kann kein posedge/negedge haben.
 verga.err.NEEDEDGE		Positive oder negative Flanke muß für Event %s spezifiziert werden.
 verga.err.ASGNEVENT		Warten auf ein Event ist bei Zuweisung illegal.
 verga.err.PROTTASK		Ausführung der geschützen System Task '%s' wird blockiert.
@@ -1907,7 +1851,7 @@ verga.err.NETREDEF		Illegale Redefinition des Netzes '%s'.
 verga.err.BADINOUT		Ein/Ausgabe-Verbindungen müssen bei Port '%s' von Netz zu Netz sein.
 verga.err.MODUNDEF		Instanz eines undefinierten Moduls '%s'.
 verga.err.BADASGNLHS		Üngültige linke Seite in 'assign'.
-verga.err.LHSNOTREG		Illegale Benutzung von  '%s' auf der linken Seite einer Zuweisung.
+verga.err.LHSNOTREG		Illegale Benutzung von '%s' auf der linken Seite einer Zuweisung.
 verga.err.BADLHS		Ungültige linke Seite in Zuweisung.
 verga.err.BADOUT		Üngültige Ausgangs-Zuweisung.
 verga.err.NOTREG		Speicher müssen als Register deklariert werden.
@@ -1953,47 +1897,47 @@ verga.err.BADSTOP		Illegaler Stopwert in $readmemb.
 verga.err.SPECTASKUSG		Task '%s' muss in einem Specify-Block benutzt werden.
 verga.err.BADSPECTASK		Task '%s' kann nicht in einem Specify-Block benutzt werden.
 verga.err.TIMING		Fehler im Zeitablauf in %s[%s] %s.
-verga.err.RAMDCHG   Datenleitung geändert bei gesetztem Schreibzugriff auf %s.
-verga.err.RAMACHG   Adressleitung geändert bei gesetztem Schreibzugriff auf %s.
+verga.err.RAMDCHG		Datenleitung geändert bei gesetztem Schreibzugriff auf %s.
+verga.err.RAMACHG		Adressleitung geändert bei gesetztem Schreibzugriff auf %s.
 verga.err.NOIFDEF		Kein passendes `ifdef/`ifndef für die %s Deklaration.
 verga.err.BADSPECLVAL		Bitbereiche sind bei Pfadverzögerungs-Spezifikatoren nicht unterstützt.
 verga.err.PATHDITEM		Nicht unterstütztes Konstrukt in Modul mit Pfadverzögerungs-Spezifikation.
 verga.err.PATHDINOUT		Benutzung von 'inout' in Modul mit Pfadverzögerungs-Spezifikation wird nicht unterstützt.
 verga.err.PATHDLOOP		Schleifen in Modulen mit Pfadverzögerungs-Spezifikation werden nicht unterstützt.
-verga.err.PATHDCOND   Setzen von DelaMust durch # Ausdruck und Blockspezifikation.
+verga.err.PATHDCOND		Setzen von DelaMust durch # Ausdruck und Blockspezifikation.
 verga.err.TASKREDEF		Redefinition eines Task oder einer Funktion '%s' in Modul '%s'.
 verga.err.TASKASFUNC		Task '%s' wird als Funktion benutzt.
 verga.err.FUNCASTASK		Funktion '%s' wird als Task benutzt.
 verga.err.TASKBADTYPE		Nicht-Register-Typ in Task oder Funktion benutzt.
 verga.err.TASKBADPORT		In Funktionen sind nur Eingabeports erlaubt.
-verga.err.TIMESCALEU            Ungültige Einheit '%s' in `timescale Deklaration.
-verga.err.TIMESCALEN            Ungültige Skala '%s' in `timescale Deklaration (muss 1, 10 oder 100 sein).
-verga.err.TIMESCALES            Ungültige Syntax in `timescale Deklaration.
-verga.err.TIMESCALEX            Einheiten müssen größer sein als die Genauigkeit der `timescale Deklaration.
-verga.err.TIMESCALEAN           Der Entwurf enthält Module mit und ohne `timescale
+verga.err.TIMESCALEU		Ungültige Einheit '%s' in `timescale Deklaration.
+verga.err.TIMESCALEN		Ungültige Skala '%s' in `timescale Deklaration (muss 1, 10 oder 100 sein).
+verga.err.TIMESCALES		Ungültige Syntax in `timescale Deklaration.
+verga.err.TIMESCALEX		Einheiten müssen größer sein als die Genauigkeit der `timescale Deklaration.
+verga.err.TIMESCALEAN		Der Entwurf enthält Module mit und ohne `timescale
 verga.err.BADPORTTYPE		Ungültige Typdeklaration, benutzt bei '%s'
-verga.err.BADVALUE    Ungültiger Zahlenwert '%s'.
-verga.err.NONEXPCTL   Ereignissteuerung @(*) auf einen Nicht-Ausdruck angewendet.
-verga.err.NONSTATCTL    Eriegnissteuerung  @(*) auf eine Nicht-Anweisung angewendet.
-verga.err.MODREDEF    Modul-Redefinition '%s'.
+verga.err.BADVALUE		Ungültiger Zahlenwert '%s'.
+verga.err.NONEXPCTL		Ereignissteuerung @(*) auf einen Nicht-Ausdruck angewendet.
+verga.err.NONSTATCTL		Eriegnissteuerung @(*) auf eine Nicht-Anweisung angewendet.
+verga.err.MODREDEF		Modul-Redefinition '%s'.
 verga.err.IE_TASK		Task Definition '%s' außerhalb von Modul gefunden - interner Fehler.
 verga.err.IE_NONET		Netz '%s' nicht gefunden - interner Fehler.
 verga.err.IE_NOOP		Operatorbeschreibung nicht zu finden - interner Fehler.
 verga.err.IE_BADEXP		Unerwarteter Ausdruckstyp %s - interner Fehler.
 verga.err.IE_BADVAR		Undefinierte Variable oder unbekanntes Netz - interner Fehler.
-verga.err.IE_BADSTATE		Unerwarteter interner Zustand bei %s  - interner Fehler.
+verga.err.IE_BADSTATE		Unerwarteter interner Zustand bei %s - interner Fehler.
 verga.err.IE_RETURN		BCReturn bytecode ausgeführt bei leerem Returnstack - interner Fehler.
 
 
 ##############################################################################
 #
-# Errors for primitive handling.  These are internal errors and probably do
+# Errors for primitive handling. These are internal errors and probably do
 # not need to be translated.
 #
-primitive.err.missing   Internal Error: primitive definition for '%s' is missing.
-primitive.err.nomodule    Internal Error: primitive definition for '%s' is missing 'module'.
-primitive.err.nomodname   Internal Error: missing module name in definition of '%s' module.
-primitive.err.wrongname   Internal Error: module name mismatch in definition of '%s' module.
+primitive.err.missing		Internal Error: primitive definition for '%s' is missing.
+primitive.err.nomodule		Internal Error: primitive definition for '%s' is missing 'module'.
+primitive.err.nomodname		Internal Error: missing module name in definition of '%s' module.
+primitive.err.wrongname		Internal Error: module name mismatch in definition of '%s' module.
 
 
 ##############################################################################
@@ -2005,10 +1949,10 @@ primitive.err.wrongname   Internal Error: module name mismatch in definition of 
 ##############################################################################
 
 
-ho.setsel.allr    Alle Items in die selektierte Liste.
-ho.setsel.alll    Alle Items in die nicht selektierte Liste.
-ho.setsel.ltor    Highlight-Items in die selektierte Liste.
-ho.setsel.rtol    Highlight-Items in die nicht selektierte Liste.
+ho.setsel.allr		Alle Items in die selektierte Liste.
+ho.setsel.alll		Alle Items in die nicht selektierte Liste.
+ho.setsel.ltor		Highlight-Items in die selektierte Liste.
+ho.setsel.rtol		Highlight-Items in die nicht selektierte Liste.
 
 ho.net.in		Single-Bit Eingang
 ho.net.out		Single-Bit Ausgang
@@ -2035,7 +1979,7 @@ ho.opt.tool.module		Erzeugen, Löschen, Umbenennen etc. von Moduldefinitionen
 ho.opt.tool.tech		Auswahl der Standardtechnologie für Gatter
 ho.opt.tool.simctl		Start, Stop und Pause beim Simulator
 ho.opt.tool.simaux		Weitere Simulatorbefehle (Lesen und Schreiben von Speicherdateien etc.)
-ho.opt.tool.simmode   Im Simulator zwischen dem Auswahl- und dem Scroll-Werkzeug wählen.
+ho.opt.tool.simmode		Im Simulator zwischen dem Auswahl- und dem Scroll-Werkzeug wählen.
 ho.opt.tool.symmode		Auswahl eines Editierwerkzeugs im Symboleditor
 ho.opt.tool.symedit		Ausschneide- und Einfügeoperationen für den Symboleditor
 ho.opt.tool.symport		Port-Drehoperationen für den Symboleditor
@@ -2122,7 +2066,7 @@ ho.symed.tab.select	-begin-
 Editieren der ausgewählten Symbol-Bitmap
 -end-
 
-ho.simmove  -begin-
+ho.simmove	-begin-
 Wähle Leitungen und Module aus,
 bediene die Schalter und gib DIP
 Werte ein. Klicken und festhalten
@@ -2145,7 +2089,7 @@ Löschen von Gattern.
 -end-
 
 ho.cutw		-begin-
-Leitung trennen -  Werkzeug zum
+Leitung trennen - Werkzeug zum
 Durchschneiden von Leitungen.
 -end-
 
@@ -2167,37 +2111,37 @@ der Anzahl der Leitungen in der
 Eingabebox rechts unten neben dem Logo.
 -end-
 
-ho.ipanel.select        -begin-
+ho.ipanel.select	-begin-
 "Standard"-Module werden für normale
 rechteckige Schnittstellen benutzt,
 "symbolische" Module für hausgemachte
 Bitmap-Symbole.
 -end-
 
-ho.ipanel.addport       -begin-
+ho.ipanel.addport	-begin-
 Einen Port zu einem Modul hinzu-
 fügen. Doppelklicken nach dem
 letzten Item bewirkt dasselbe.
 -end-
 
-ho.ipanel.deleteport    -begin-
+ho.ipanel.deleteport	-begin-
 Löschen des ausgewählten Ports.
 -end-
 
-ho.ipanel.editport      -begin-
+ho.ipanel.editport	-begin-
 Editieren des ausgewählten Ports.
 Ein Feld in einem Port wird mit
 Doppelklick editiert.
 -end-
 
-ho.ipanel.generate      -begin-
+ho.ipanel.generate	-begin-
 Erzeugen einer neuen Schnittstelle
 für ein Modul, basierend auf Ports
 in der Port-Liste und in der Modul-
 definition benutzen Portelementen.
 -end-
 
-ho.ipanel.updateall     -begin-
+ho.ipanel.updateall	-begin-
 Ersetze in allen Instanzen dieses
 Moduls die Schnittstelle
 durch die hier gezeigte
@@ -2233,18 +2177,18 @@ so behalte trotzdem die Abstände
 zwischen den Ports bei.
 -end-
 
-ho.mod.open     Ausgewähltes Modul öffnen.
-ho.mod.close    Aktuelles Modul schließen.
+ho.mod.open	Ausgewähltes Modul öffnen.
+ho.mod.close	Aktuelles Modul schließen.
 
-ho.mod.new      Einen neuen Modultyp erzeugen.
-ho.mod.del      Modul löschen.
-ho.mod.copy     Modul kopieren.
-ho.mod.rename   Modul umbenennen.
-ho.mod.claim    -begin-
+ho.mod.new	Einen neuen Modultyp erzeugen.
+ho.mod.del	Modul löschen.
+ho.mod.copy	Modul kopieren.
+ho.mod.rename	Modul umbenennen.
+ho.mod.claim	-begin-
 Konvertieren eines Bibliotheksmoduls in ein
 reguläres Modul.
 -end-
-ho.mod.setroot  -begin-
+ho.mod.setroot	-begin-
 Auszeichnen eines Moduls als oberstes
 (Wurzel-)Modul.
 -end-
@@ -2269,7 +2213,7 @@ Primärer Editiermodus.
 -end-
 
 
-ho.tab.interface        -begin-
+ho.tab.interface	-begin-
 Editieren der Modulschnittstellen.
 Ein Doppelklick im Schnittstellenmodus
 auf ein Modul der Modulliste führt
@@ -2278,15 +2222,14 @@ Im obersten Modul werden alle
 Schnittstellen anzeigt.
 -end-
 
-
-ho.tab.simulate         -begin-
+ho.tab.simulate		-begin-
 Start des Simulators, Öffnen des
 Logikanalysators und Ausführen aller
 festgelegten Initialisierungsskripte.
 -end-
 
 
-ho.tab.cpath            -begin-
+ho.tab.cpath	-begin-
 Suche die kritischen Pfade einer Schaltung.
 -end-
 
@@ -2342,29 +2285,29 @@ Setzen verschiedener Optionen, die die
 Simulation steuern.
 -end-
 
-ho.simload      -begin-
+ho.simload	-begin-
 Laden des Speichers mit dem Inhalt
 einer .mem-Datei.
 -end-
 
-ho.simdump      -begin-
+ho.simdump	-begin-
 Speicherinhalt in eine
 .mem-Datei schreiben.
 -end-
 
-ho.simview  -begin-
+ho.simview	-begin-
 Betrachten/Modifizieren von
 RAM- oder ROM-Speicherinhalten.
 -end-
 
-ho.modlist  -begin-
+ho.modlist	-begin-
 Listen aller aktuell geladener Moduln
 in alphabetischer Ordnung.
 Ziehe die Moduln ins Editierfenster, um
 neue Instanzen zu erzeugen.
 -end-
 
-ho.modtree  -begin-
+ho.modtree	-begin-
 Hierarchiebaum aller aktuellen Module.
 Zum erzeugen neuer Modulinstanzen ziehe
 die Module ins Editierfenster.
@@ -2417,7 +2360,7 @@ Abkömmlinge des root-Moduls sind.
 ho.print.fulltrace	Drucken des ganzen Signaldiagramms.
 
 ho.print.parttrace	-begin-
-Drucken eines Teils des Trace.  Start- und Stopzeiten
+Drucken eines Teils des Trace. Start- und Stopzeiten
 werden im Eingabefenster unten eingetragen. Man kann
 auch mit der rechten Maustaste den Bereich auf dem
 Scope-Fenster auswählen (mit Shift-Rechts werden
@@ -2425,7 +2368,7 @@ große Bereich ausgewählt).
 -end-
 
 ho.print.parttracestart	Startzeit der Trace-Ausgabe.
-ho.print.parttraceend	Endezeit  der Trace-Ausgabe.
+ho.print.parttraceend	Endezeit der Trace-Ausgabe.
 
 ho.print.selsel		-begin-
 Drucke nur die unten angewählten Module. Benutze
@@ -2445,17 +2388,17 @@ oder wähle das Gebiet im Scopefenster aus,
 bevor diese Dialogbox geöffnet wird.
 -end-
 
-ho.circuit.discchg      -begin-
+ho.circuit.discchg	-begin-
 TkGate zeigt keine Warnung an, wenn
 Änderungen ohne Sicherung verworfen werden.
 -end-
 
-ho.circuit.extbar       -begin-
+ho.circuit.extbar	-begin-
 Neu erzeugte Grundgatter (AND, OR, XOR) benutzen
 für Mehrfacheingänge Erweiterungsleisten.
 -end-
 
-ho.circuit.shownet  -begin-
+ho.circuit.shownet	-begin-
 Anfänglich zeigen neu erzeugte Schalter
 und DIP-Schalter neben sich den Netznamen an.
 -end-
@@ -2466,26 +2409,26 @@ Simulationsfenster angewählt ist, wenn
 diese Option eingeschaltet ist.
 -end-
 
-ho.circuit.file   -begin-
+ho.circuit.file		-begin-
 Der Name der Datei, von der die aktuelle Schaltung
 geladen wurde.
 -end-
 
-ho.circuit.ver    -begin-
+ho.circuit.ver		-begin-
 Die TkGate-Version, mit der die aktuelle Datei
 erzeugt wurde.
 -end-
 
-ho.circuit.encoding -begin-
+ho.circuit.encoding	-begin-
 Benutze diese Codierung für die Dateisicherung.
 -end-
 
-ho.circuit.language -begin-
+ho.circuit.language	-begin-
 Nutze Fonts mit dieser Codierung zur Anzeige
 von Schaltungsdaten.
 -end-
 
-ho.circuit.title  -begin-
+ho.circuit.title	-begin-
 Beschreibung der Schaltung. Dieser Titel erscheint
 in der Druckausgabe.
 -end-
@@ -2567,7 +2510,7 @@ Der in der Scope-Ansicht sichtbare Bereich
 wird genutzt, falls keine Auswahl erfolgt ist.
 -end-
 
-ho.showxhair            -begin-
+ho.showxhair		-begin-
 Wird dieser Knopf gedrückt, erscheint eine
 senkrechte Maßlinie im Scope-Fenster.
 -end-
@@ -2636,8 +2579,8 @@ dieser Option hat ein mittleres Sicherheitsrisiko zur Folge.
 
 ho.opt.sec.noexec		-begin-
 Fully disabling the $tkg$exec() command will prevent user
-circuits from executing tcl/tk commands.  This will make it
-impossible to use Virtual Peripheral Devices.  Selecting this
+circuits from executing tcl/tk commands. This will make it
+impossible to use Virtual Peripheral Devices. Selecting this
 option has a minimal security risk.
 -end-
 
@@ -2679,7 +2622,7 @@ die zur Verwendung mit Drittanbietertools
 exportiert werden können.
 -end-
 
-ho.opt.sorttraces       -begin-
+ho.opt.sorttraces	-begin-
 Ist diese Option eingeschaltet, werden
 die Signale im Scope-Fenster in sortierter
 Form angezeigt. Ist sie ausgeschaltet,
@@ -2697,7 +2640,7 @@ sequentiellen Schaltungen auf Gatterebene
 verhindern helfen.
 -end-
 
-ho.opt.sim.savetraces -begin-
+ho.opt.sim.savetraces	-begin-
 Tastköpfe, die während eines Simulationslaufes
 plaziert wurden, werden abgespeichert und beim
 Neustart der Simulation wieder richtig gesetzt.
@@ -2757,13 +2700,13 @@ wenn TkGate startet.
 ho.opt.lib.vpd			-begin-
 Liste von Verzeichnissen, in denen nach virtuellen
 peripheren Geräten (VPDs) gesucht wird.
-Virtuelle periphere Geräte  haben eine .tcl
+Virtuelle periphere Geräte haben eine .tcl
 Dateierweiterung und implementieren typischerweise
 ein GUI, das das periphere Gerät repräsentiert und
 das von einer benutzerschaltung gesteuert wird.
 -end-
 
-ho.opt.undolen          -begin-
+ho.opt.undolen		-begin-
 Maximale Zahl der aufzuhebenden Undo-Aktionen.
 -end-
 
@@ -2773,14 +2716,14 @@ produzierten Reports, z.B. Schaltungs-
 ausdrucken, aufgeführt wird.
 -end-
 
-ho.opt.site             -begin-
+ho.opt.site		-begin-
 Der Netzname der Organisation, in der
 TKGate installiert ist. Dieser Name
 wird auf jedem Ausdruck (oder in der
 Postscript-Datei) ausgegeben.
 -end-
 
-ho.opt.smooth           -begin-
+ho.opt.smooth		-begin-
 Falls diese Option eingestellt ist, wird
 Scrollen mittels Bitmap-Kopien realisiert
 statt das Bild immer neu zu zeichnen. Dies
@@ -2788,7 +2731,7 @@ kann ausgeschaltet werden, falls Probleme
 mit dem X-Server auftreten.
 -end-
 
-ho.opt.clip             -begin-
+ho.opt.clip		-begin-
 Ist diese Option eingeschaltet, wird
 Clipping benutzt, um den dargestellten Teil
 des Fensters beim Neuaufbau zu zeichnen.
@@ -2802,7 +2745,7 @@ Anzeige des Bildes un der erläuternde Text
 am Rand der Dialogboxen unterdrückt werden.
 -end-
 
-ho.opt.outmove          -begin-
+ho.opt.outmove		-begin-
 Ist diese Option eingeschaltet, wird nur der
 Umriß der bewegten Modulinstanzen beim
 Verschieben angezeigt. Diese Einstellung
@@ -2810,20 +2753,20 @@ ist nur auf Maschinen mit langsamen Displays
 nötig.
 -end-
 
-ho.opt.bhelp            -begin-
+ho.opt.bhelp		-begin-
 Bei Aktivierung dieser Option werden
 Hilfehinweise angezeigt. Sie zeigen Tips
 an, wenn die Maus sich gerade über einem
 Baustein befindet.
 -end-
 
-ho.opt.tearawaymenus  -begin-
+ho.opt.tearawaymenus	-begin-
 Die Hauptmenues können von der Schnitstelle entfernt
 werden. Diese Option wird erst nach einem Neustart
 von TkGate wirksam.
 -end-
 
-ho.opt.novice           -begin-
+ho.opt.novice		-begin-
 Falls auf der Kommandozeile keine andere
 Schaltung angegeben ist, wird ein TkGate-
 Tutorial als erste Schaltung beim Start
@@ -2971,7 +2914,7 @@ löscht sie.
 -end-
 
 ho.symed.rect		-begin-
-Rechteckmodus.  Die linke Maus-
+Rechteckmodus. Die linke Maus-
 taste setzt Pixel, die rechte
 löscht sie.
 -end-
@@ -3003,27 +2946,26 @@ ho.symed.cwrotate	Ausgewählte Pixel rechts drehen.
 ho.symed.ccwrotate	Ausgewählte Pixel links drehen.
 ho.symed.autobold	Das ausgewählte Bild fett machen.
 ho.symed.resize		Den Bildeditor in der Größe ändern.
-ho.symed.import   Bild aus einer Datei importieren.
-ho.symed.export   Bild in eine Datei exportieren.
+ho.symed.import		Bild aus einer Datei importieren.
+ho.symed.export		Bild in eine Datei exportieren.
 
-ho.tool.currot  -begin-
+ho.tool.currot	-begin-
 Zeigt aktuelle Vorgabe des
 Rotationswinkels an. Ändern
 durch Klick auf diese Taste.
 -end-
 
-
 ho.tool.zoomin		Zoom in
 ho.tool.zoomout		Zoom out
-ho.tool.rotate    Rotieren der ausgewählten Gatter gegen den Uhrzeigersinn.
-ho.tool.brotate   Rotieren der ausgewählten Gatter mit dem Uhrzeigersinn.
-ho.tool.valgn		  Ausgewählte Gatter vertikal ausrichten.
-ho.tool.halgn		  Ausgewählte Gatter horizontal ausrichten.
+ho.tool.rotate	Rotieren der ausgewählten Gatter gegen den Uhrzeigersinn.
+ho.tool.brotate	Rotieren der ausgewählten Gatter mit dem Uhrzeigersinn.
+ho.tool.valgn		Ausgewählte Gatter vertikal ausrichten.
+ho.tool.halgn		Ausgewählte Gatter horizontal ausrichten.
 
-ho.tool.cut       Ausschneiden des ausgewählten Teils.
-ho.tool.copy      Kopieren des ausgewählten Teils..
-ho.tool.paste     Einfügen aus dem Cut-Puffer.
-ho.tool.find      Gatter, Leitungen oder Text suchen (und finden).
+ho.tool.cut	Ausschneiden des ausgewählten Teils.
+ho.tool.copy	Kopieren des ausgewählten Teils..
+ho.tool.paste	Einfügen aus dem Cut-Puffer.
+ho.tool.find	Gatter, Leitungen oder Text suchen (und finden).
 
 ho.tool.addport		Zum ausgewählten Gatter einen Port hinzufügen.
 ho.tool.anchor		Die ausgewählten Gatter verankern.

@@ -181,8 +181,8 @@ mm.disable	Disable
 # Menu strings
 #
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
-# of a number and a colon.   If this prefix exists, it indicates the character
-# position in the string that will be underlined.  This enables keyboard shortcuts
+# of a number and a colon. If this prefix exists, it indicates the character
+# position in the string that will be underlined. This enables keyboard shortcuts
 # using the Alt key.
 #
 menu.file	0:File
@@ -551,7 +551,7 @@ symed.link		Link selected to unselected
 memview.title	Memory Viewer
 memview.exp	-fillbegin-
 View and modify the contents of a RAM
-or ROM component.  Select memory page,
+or ROM component. Select memory page,
 then type new hex values to change
 memory content.
 -end-
@@ -612,11 +612,11 @@ behavior in Verilog.
 db.err.title		TkGate: Error List
 db.err.caption		Error List
 db.err.explain.warn	-fillbegin-
-There were warnings in your circuit, but simulation will continue.  Return to edit mode
+There were warnings in your circuit, but simulation will continue. Return to edit mode
 to examine the warnings.
 -end-
 db.err.explain.err	-fillbegin-
-There were errors in your circuit.  TkGate is unable to continue the simulation.
+There were errors in your circuit. TkGate is unable to continue the simulation.
 -end-
 
 db.err.neededit		-fillbegin-
@@ -748,7 +748,7 @@ input.
 -end-
 
 db.gate.cat.tran.exp	-fillbegin-
-Allow bidirectional (tran) signal flow.  Cannot
+Allow bidirectional (tran) signal flow. Cannot
 be connected to switches or registers.
 -end-
 
@@ -800,7 +800,7 @@ for this instance.
 
 db.gate.tab.Parameters.exp	-fillbegin-
 Set the module parameters for this instance of this module if any are
-defined.  Module parameters are used to configure delays and constant values used in a module.
+defined. Module parameters are used to configure delays and constant values used in a module.
 -end-
 
 db.gate.tab.details.exp -fillbegin-
@@ -842,12 +842,12 @@ be included as part of this module.
 db.gate.mparm.parameter	Parameter
 db.gate.mparm.value	Value
 db.gate.mparm.exampleA	-begin-
-This module does not have any parameters.  Parameters
-can be added to Verilog text modules.  The value of
+This module does not have any parameters. Parameters
+can be added to Verilog text modules. The value of
 each parameter can be customized for each instance
-through this dialog box.  Module parameters are
+through this dialog box. Module parameters are
 declared in a parenthesized list starting with a '#'
-character.  Below is an example module declaration
+character. Below is an example module declaration
 with a parameter named "base_value" that has a
 default value of 1'b1.
 -end-
@@ -1001,7 +1001,7 @@ db.hdl.savecap		Multiple Modules
 
 db.hdl.saveexp		-fillbegin-
 The text buffer for the module you have just edited contains more
-than one module definition.  Please select one of the three actions described
+than one module definition. Please select one of the three actions described
 on the right.
 -end-
 
@@ -1015,7 +1015,7 @@ db.hdl.autoeditcap	Name Mismatch
 
 db.hdl.autoeditexp		-fillbegin-
 The textual description of the module does
-not match the expected name.  Please select
+not match the expected name. Please select
 an option to the right to handle the discrepancy.
 -end-
 
@@ -1026,7 +1026,7 @@ Combinational loops were detected in your circuit.
 In order to do delay analysis on this circuit, you
 must either break the loop, or mark some of the
 components in the loop as a "Critical Path Partition"
-point.  Nets at which a loop was detected are
+point. Nets at which a loop was detected are
 listed below.
 -end-
 
@@ -1111,7 +1111,7 @@ presentation.
 print.printtrace.trace.exp	-fillbegin-
 Choose the time range
 over which to produce
-output.  Also set the
+output. Also set the
 scale to compute the
 estimated page count.
 -end-
@@ -1291,7 +1291,7 @@ opt.editor.returntab	Auto indent after return.
 
 opt.vercheck		-begin-
 Periodically check for new versions of TkGate over
-the Internet.  Do not enable unless you have continuous
+the Internet. Do not enable unless you have continuous
 access to the Internet.
 -end-
 
@@ -1404,7 +1404,7 @@ ipanel.ppos.scale	Scaled
 ipanel.warn.toblock		-begin-
 You are about to change the
 interface type for this module
-to "block".  This will result
+to "block". This will result
 in the current interface data
 being destroyed.
 
@@ -1414,9 +1414,9 @@ Are you sure you want to do this?
 ipanel.warn.tosymbol		-begin-
 You are about to change the
 interface type for this module
-to "symbol".  This will result
+to "symbol". This will result
 in the current interface data
-being destroyed.  You will also
+being destroyed. You will also
 need to create a bitmap image
 for your new symbol.
 
@@ -1447,7 +1447,7 @@ blklst.setroot.cap	Set Root Module
 
 blklst.new.exp		-fillbegin-
 Use this dialog box to create
-a new module definition.  You
+a new module definition. You
 can create the module as a
 netlist or an HDL module, but
 once created you will not be
@@ -1458,24 +1458,24 @@ module.
 
 blklst.del.exp		-fillbegin-
 Delete the definition and interface data
-for the specified module.  Existing instances
+for the specified module. Existing instances
 of the deleted module will be retained but
 will be marked as undefined.
 -end-
 
 blklst.copy.exp		-fillbegin-
-Create a copy of the specified module definition.  Use this to create
+Create a copy of the specified module definition. Use this to create
 a new variant of an existing module.
 -end-
 
 blklst.rename.exp	-fillbegin-
-Rename a module definition.  This operation will affect only the
+Rename a module definition. This operation will affect only the
 definition, any existing instances of this module will continue to
 point to the old module name.
 -end-
 
 blklst.claim.exp	-fillbegin-
-Convert a library module to a user module.  This allows the module to be
+Convert a library module to a user module. This allows the module to be
 edited and to be saved with the user circuit.
 -end-
 
@@ -1501,7 +1501,7 @@ find.result.type	Type
 find.result.name	Object Name
 
 #
-# These are special tags used by the search feature.  Do not change their value.
+# These are special tags used by the search feature. Do not change their value.
 #
 @find.type.gate		gate
 @find.type.net		net
@@ -1512,7 +1512,7 @@ find.results		Search Results
 
 #
 # This is a special tag used to indicate whether the position qualifier box
-# should be "before" or "after" the text entry box.  Use the keywords before
+# should be "before" or "after" the text entry box. Use the keywords before
 # or after to indicate the position.
 #
 @find.qual.pos		before
@@ -1587,9 +1587,9 @@ circ.timescale.prec	Precision:
 circ.sim.features	Features
 
 #
-# Strings for timing violation reporting styles.  The "after" case
+# Strings for timing violation reporting styles. The "after" case
 # is broken into the string before the time period box and after the
-# time period box.  You can use the string "-empty-" to make a string
+# time period box. You can use the string "-empty-" to make a string
 # empty if it is not needed in a particular language.
 #
 circ.sim.tv.title	Timing Violation Handling
@@ -1663,11 +1663,11 @@ break.value		Value
 
 sim.recursive	-fillbegin-
 Recursive module definition found
-at '%s'.  Can not start simulator or
+at '%s'. Can not start simulator or
 perform critical path analysis.
 -end-
 sim.hyperlinkstop	-fillbegin-
-The simulator is currently running.  Would you like
+The simulator is currently running. Would you like
 to stop the simulation and follow the link?
 -end-
 
@@ -1719,10 +1719,10 @@ err.noinvgate		Inverters are not allowed on components of this type.
 
 err.protintf		Can't modifiy protected interface on module '%s'.
 
-err.bkpt.badexp		Syntax error in breakpoint expression.  Must be one of: 'net', '!net', 'net==value', 'net!=value'
+err.bkpt.badexp		Syntax error in breakpoint expression. Must be one of: 'net', '!net', 'net==value', 'net!=value'
 err.bkpt.badnet		Invalid net name '%s'. Names must start with a letter and contain only letters, digits and '.'.
-err.bkpt.badval		Syntax error in value '%s'.  Must be decimal or verilog-style constant.
-err.bkpt.toomany	Too many breakpoints.  Maximum is %d.
+err.bkpt.badval		Syntax error in value '%s'. Must be decimal or verilog-style constant.
+err.bkpt.toomany	Too many breakpoints. Maximum is %d.
 
 err.sim.badtmp		Could not save temporary file '%s' for simulator (disc full?)
 err.sim.syntx		Syntax error in '%s' command.
@@ -1754,7 +1754,7 @@ err.modmismatch		Name mismatch between text definition and module name in "%s".
 
 err.manypages		-fillbegin-
 There are an awful lot of
-pages in this document.  Are
+pages in this document. Are
 you sure you want to print it?
 -end-
 
@@ -1763,7 +1763,7 @@ The 'jump-to-module' feature can not be used
 in simulation or critical path analysis mode.
 Please navigate manully to the target block
 by selecting modules and opening them with the
-'>' keyboard command.  You can leave a module
+'>' keyboard command. You can leave a module
 you are in with the '<' keyboard command.
 -end-
 
@@ -1785,7 +1785,7 @@ err.noprop		Selected component has no editable properites.
 err.openscript		Can't open simulation script file '%s'
 err.oldversion		Loaded file '%s' with obsolete version number %s (current version is %s).
 err.futureversion	Loaded file '%s' saved by future TkGate version %s (this version is %s).
-err.badversion		Unknown version number.  Use at your own risk.
+err.badversion		Unknown version number. Use at your own risk.
 err.nodrive		Net %s has no driver in module %s.
 err.noconn		Wire %s{%d} has no connections - deleted.
 err.oldportact		Please right click on port or module edge to add/change port.
@@ -1812,33 +1812,33 @@ err.yy.pinformat	Illegal pin name format '%s'.
 err.yy.pinname		Pin name '%s' not defined for component type '%s'
 err.yy.nonetpos		No net for position %d on component %s.
 err.yy.baddirective	Illegal or badly formed directive '%s'.
-err.yy.badlocale	Unknown locale '%s' in save file.  Using English locale.
+err.yy.badlocale	Unknown locale '%s' in save file. Using English locale.
 
 err.corruptnewsave	-fillbegin-
 TkGate was able to save your file in '%s', but it appears
-to be corrupted.  If you have checkpointing enabled try
-loading one of the checkpoint files.  Use 'tkgate -V' to
+to be corrupted. If you have checkpointing enabled try
+loading one of the checkpoint files. Use 'tkgate -V' to
 check the integrety of a save file.
 -end-
 
 err.corruptsave		-fillbegin-
 TkGate detetected a problem while trying to save the file '%s'.
 The existing file has been left unmodified and the damaged file has
-been written to '%s'.  If you have checkpointing enabled you
-can try loading one of the checkpoint files.  You can also use
+been written to '%s'. If you have checkpointing enabled you
+can try loading one of the checkpoint files. You can also use
 'tkgate -V' to check the integrety of a save file.
 -end-
 
 err.badsave		-fillbegin-
-A problem has occured trying to open or write the file '%s'.  Check
+A problem has occured trying to open or write the file '%s'. Check
 file/directory protections and or disk space.
 -end-
 
 err.nosafesave		-fillbegin-
-A problem has occured attempting to save '%s'.  If you wish, you can
-try again without save validation.  If you say "no", the original file
-will remain unmodified.  If you say "yes" the original file will be
-overwritten, but may be destroyed if a problem occurs.  Would you like
+A problem has occured attempting to save '%s'. If you wish, you can
+try again without save validation. If you say "no", the original file
+will remain unmodified. If you say "yes" the original file will be
+overwritten, but may be destroyed if a problem occurs. Would you like
 to attempt an unvalidated save?
 -end-
 
@@ -1870,18 +1870,18 @@ msg.iselwire		Selected port '%s' on block '%s'.
 msg.iselgate		Selected %s named '%s' (huh? this message should be impossible).
 msg.iselblock		Selected module interface for '%s'.
 
-msg.modoverwt		Destination module '%s' already exists.  Overwrite?
+msg.modoverwt		Destination module '%s' already exists. Overwrite?
 msg.foundgate		Found component named '%s'.
 msg.foundwire		Found wire named '%s'.
-msg.searchagn		Target string '%s' not found.  Hit 'find' to restart search again.
+msg.searchagn		Target string '%s' not found. Hit 'find' to restart search again.
 msg.sim.chgtoroot	Simulation mode requires root module at top of edit stack.
 msg.sim.nogatemod	Simulation mode requires concrete module stack.
 msg.setinterface	Set module interface for '%s'.
 msg.needsel		Please select a module instance.
 msg.wroteckpt		Checkpointed to %s...
 msg.save		Saved circuit to '%s'.
-msg.reallynew		Circuit has been modified.  Do you really want to discard your changes and create a new circuit?
-msg.reallyquit		Circuit has been modified.  Do you really want to exit?
+msg.reallynew		Circuit has been modified. Do you really want to discard your changes and create a new circuit?
+msg.reallyquit		Circuit has been modified. Do you really want to exit?
 msg.notlib		Module '%s' is not a library module.
 
 ##############################################################################
@@ -1906,7 +1906,7 @@ verga.err.OK			Don't worry, be happy.
 verga.err.INPORT		Port size mismatch on input port '%s'.
 verga.err.OUTPORT		Port size mismatch on output port '%s'.
 verga.err.FLOATNET		Net '%s' has no drivers (floating net).
-verga.err.DIRECTCONN		Direct connect operator '=>' unsupported.  Treated as '*>'.
+verga.err.DIRECTCONN		Direct connect operator '=>' unsupported. Treated as '*>'.
 verga.err.MEMADDR		Attempt to write to memory %s with unknown address.
 verga.err.MEMBITS		Attempt to write to memory %s with unknown bitrange.
 verga.err.BADARRAYUSG		Array '%s' used in expression without index.
@@ -1996,11 +1996,11 @@ verga.err.TASKASFUNC		Task '%s' used as function.
 verga.err.FUNCASTASK		Function '%s' used as task.
 verga.err.TASKBADTYPE		Non-register type used in task or function.
 verga.err.TASKBADPORT		Only input ports are allowed on functions.
-verga.err.TIMESCALEU            Invalid units '%s' in `timescale declaration.
-verga.err.TIMESCALEN            Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100).
-verga.err.TIMESCALES            Invalid syntax in `timescale declaration.
-verga.err.TIMESCALEX            Units must be larger than precision in `timescale declaration.
-verga.err.TIMESCALEAN           Design contains some modules with `timescale and some without.
+verga.err.TIMESCALEU		Invalid units '%s' in `timescale declaration.
+verga.err.TIMESCALEN		Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100).
+verga.err.TIMESCALES		Invalid syntax in `timescale declaration.
+verga.err.TIMESCALEX		Units must be larger than precision in `timescale declaration.
+verga.err.TIMESCALEAN		Design contains some modules with `timescale and some without.
 verga.err.BADPORTTYPE		Invalid type declaration used on port '%s'
 verga.err.BADVALUE		Bad numeric value '%s'.
 verga.err.NONEXPCTL		Event control @(*) applied to non-expression.
@@ -2011,12 +2011,12 @@ verga.err.IE_NONET		Failed to find net '%s' - internal error.
 verga.err.IE_NOOP		Can not find operator description -- internal error.
 verga.err.IE_BADEXP		Unexpected expression type %s - internal error.
 verga.err.IE_BADVAR		Undefined variable or unknown net - internal error.
-verga.err.IE_BADSTATE		Unexpected internal state at %s  - internal error.
+verga.err.IE_BADSTATE		Unexpected internal state at %s - internal error.
 verga.err.IE_RETURN		Executed BCReturn bytecode with empty return stack - internal error.
 
 ##############################################################################
 #
-# Errors for primitive handling.  These are internal errors and probably do
+# Errors for primitive handling. These are internal errors and probably do
 # not need to be translated.
 #
 primitive.err.missing		Internal Error: primitive definition for '%s' is missing.
@@ -2112,7 +2112,7 @@ code according to the options listed below.
 ho.hdl.splitexp		-begin-
 Multiple modules in the HDL text will
 be split into different modules defining
-new modules as necessary.  Any name
+new modules as necessary. Any name
 conflicts will be resolved by slightly
 modifying module names as necessary.
 -end-
@@ -2161,7 +2161,7 @@ ho.simmove	-begin-
 Select wires and modules, flip
 switches and enter dip values.
 Clicking and holding on a wire
-will show its current  value.
+will show its current value.
 -end-
 
 
@@ -2198,7 +2198,7 @@ from component ports.
 
 ho.bitw		-begin-
 Net Attributes - Use this tool to change
-the attributes of a net.  The bit size
+the attributes of a net. The bit size
 and wire type of nets selected with this
 tool will be changed to the those shown
 in the drop-down boxes to the right.
@@ -2207,13 +2207,13 @@ in the drop-down boxes to the right.
 ho.ipanel.select	-begin-
 Use "standard" modules
 for regular rectangular
-interfaces.  Use "symbol"
+interfaces. Use "symbol"
 modules for custom
 bitmaped symbols.
 -end-
 
 ho.ipanel.addport	-begin-
-Add a port to the module.  You
+Add a port to the module. You
 can also double-click after the
 last item to add port.
 -end-
@@ -2223,7 +2223,7 @@ Delete the selected port.
 -end-
 
 ho.ipanel.editport	-begin-
-Edit the selected port.  You
+Edit the selected port. You
 can also double-click to edit
 a field in a port.
 -end-
@@ -2256,7 +2256,7 @@ a module to be modified.
 ho.ipanel.proted	-begin-
 Do not allow the interface of a module to
 be modified except through the interface
-editor.  Use this to prevent accidental
+editor. Use this to prevent accidental
 modification of the interface in the
 main edit window.
 -end-
@@ -2308,7 +2308,7 @@ Primary editing mode.
 
 
 ho.tab.interface	-begin-
-Edit module interfaces.  While in interface
+Edit module interfaces. While in interface
 mode, double click on a module in the module
 list to edit its interface, or on the root
 module to display all interface.
@@ -2349,7 +2349,7 @@ window to set the step size.
 
 ho.simclock	-begin-
 Step a fixed number of clock
-cycles.  Open the simulation options
+cycles. Open the simulation options
 window to set the step size.
 -end-
 
@@ -2359,9 +2359,9 @@ and return to edit mode.
 -end-
 
 ho.simbreak	-begin-
-Edit the current breakpoints.  Simulation
+Edit the current breakpoints. Simulation
 will be halted when a breakpoint condition
-becomes true.  Breakpoints can be edited
+becomes true. Breakpoints can be edited
 in both simulation mode and edit mode.
 -end-
 
@@ -2391,13 +2391,13 @@ of a memory (RAM or ROM).
 
 ho.modlist	-begin-
 List of all modules currently loaded in
-alphabetical order.  Drag modules to the
+alphabetical order. Drag modules to the
 edit window to create new instances.
 -end-
 
 ho.modtree	-begin-
 List of all modules currently in
-a hierarchical list.  Drag modules to the
+a hierarchical list. Drag modules to the
 edit window to create new instances.
 -end-
 
@@ -2405,7 +2405,7 @@ ho.netlist	-begin-
 List of nets in the current module.
 The symbol to the left of the name
 indicates whether the net is single
-bit (green) or multi-bit (red).  An
+bit (green) or multi-bit (red). An
 "A" shown in the symbol indicates
 that the net name is marked as
 visible.
@@ -2414,16 +2414,16 @@ visible.
 ho.ports	-begin-
 List of ports on the interface
 of the module displayed in the
-edit window.  The symbol before
+edit window. The symbol before
 the port indicates the direction
 of the port.
 -end-
 
 ho.status.logo		-begin-
-Simulation status indicator.  If the iron gate
-logo is shown, TkGate is in edit mode.  If the
+Simulation status indicator. If the iron gate
+logo is shown, TkGate is in edit mode. If the
 quadrapedal AND gate is shown, TkGate is in
-simulation mode.  If the AND gate is stationary,
+simulation mode. If the AND gate is stationary,
 the simulation is paused, and if it is walking
 the simulation is running.
 -end-
@@ -2433,7 +2433,7 @@ ho.status.msg		Messages from TkGate are displayed here.
 ho.status.block		The stack of modules being edited.
 
 ho.status.file		-begin-
-The current file being edited.  A '*' indicates
+The current file being edited. A '*' indicates
 that the buffer has been modifed since
 the last save.
 -end-
@@ -2448,7 +2448,7 @@ those that are a decendent of the root module.
 ho.print.fulltrace	Print the entire trace.
 
 ho.print.parttrace	-begin-
-Print a portion of the trace.  Enter the starting
+Print a portion of the trace. Enter the starting
 and stopping times in the entry windows below, or
 use the right mouse button to select a range on the
 scope window (use shift-right to select long ranges).
@@ -2459,7 +2459,7 @@ ho.print.parttraceend	Ending time of trace output.
 
 
 ho.print.selsel		-begin-
-Print only the modules selected below.  Use
+Print only the modules selected below. Use
 the control key to select multiple modules.
 -end-
 
@@ -2467,7 +2467,7 @@ ho.print.modlist	Select the modules to be printed.
 
 ho.print.timegraph	-begin-
 The display of the region selected
-to be printed is shown here.  The
+to be printed is shown here. The
 green area is the entire range of
 trace data available, and the grey
 area shows the area to be printed.
@@ -2520,7 +2520,7 @@ circuit data.
 -end-
 
 ho.circuit.title	-begin-
-Description of your circuit.  This title is
+Description of your circuit. This title is
 used on printed output.
 -end-
 
@@ -2532,14 +2532,14 @@ bit width.
 
 ho.edgat.signam		-begin-
 The name of the selected signal
-on the selected component.  You
+on the selected component. You
 can change the name of the signal
 by editing it here.
 -end-
 
 ho.edgat.port		-begin-
 The name of the port for this
-signal on the component.  This
+signal on the component. This
 field can only be edited for
 module instances.
 -end-
@@ -2596,9 +2596,9 @@ ho.edgat.frame		The frame label.
 
 ho.traceprint		-begin-
 Print the logic trace range selected
-using the right mouse button.  Shift-right
+using the right mouse button. Shift-right
 click can be used to expand the selected
-region.  The range visible in the scope
+region. The range visible in the scope
 view is used when there is no selection.
 -end-
 
@@ -2609,7 +2609,7 @@ line will be displayed in the scope window.
 
 ho.opt.general.fontset	-begin-
 Specifies the basic font size to
-use in the TkGate interface.  This
+use in the TkGate interface. This
 option will not take effect until
 restarting TkGate.
 -end-
@@ -2617,31 +2617,31 @@ restarting TkGate.
 ho.opt.sec.send		-begin-
 Enabling the $tkg$command() system task will allow
 user circuits to send arbitrary simulator control
-commands to the TkGate GUI.  This includes the ability
-to execute arbitrary shell commands.  If the simulator
+commands to the TkGate GUI. This includes the ability
+to execute arbitrary shell commands. If the simulator
 will be used to execute untrusted circuits, it is
-recommended that this task be disabled.  Enabling this
+recommended that this task be disabled. Enabling this
 option has a very high security risk.
 -end-
 
 ho.opt.sec.open		-begin-
 Enabling the $fopen() system task will allow user
 circuits to write to any file that the user invoking
-TkGate has access to.  Enabling this option has a
+TkGate has access to. Enabling this option has a
 high security risk.
 -end-
 
 ho.opt.sec.writemem	-begin-
 Enabling the $writememb() and $writememh() system tasks
 will allow user circuits to write to any file that the
-user invoking TkGate has access to.  Enabling this option
+user invoking TkGate has access to. Enabling this option
 has a high security risk.
 -end-
 
 ho.opt.sec.enqueue	-begin-
 Enabling the $tkg$recv() and $tkg$send() system tasks
 will enable virtual peripheral devices to send messages
-to TkGate circuits.  Enabling this option has a low
+to TkGate circuits. Enabling this option has a low
 security risk.
 -end-
 
@@ -2655,23 +2655,23 @@ with the save file.
 ho.opt.sec.exec		-begin-
 Fully enabling the $tkg$exec() system task allows user
 circuit to execute arbitrary tcl/tk commands including
-the ability to execute arbitrary shell commands.  Enabling
+the ability to execute arbitrary shell commands. Enabling
 this option has a very high security risk.
 -end-
 
 ho.opt.sec.regexec		-begin-
 Enabling the $tkg$exec() system task for registered functions
 allows user circuits to execute only tcl/tk commands that have
-been registered as safe.  As long has all Virtual Peripheral
+been registered as safe. As long has all Virtual Peripheral
 Device files are trusted, enabling $tkg$exec() at this level
-should prevent dangerous commands from being executed.  Enabling
+should prevent dangerous commands from being executed. Enabling
 this option has a medium security risk.
 -end-
 
 ho.opt.sec.noexec		-begin-
 Fully disabling the $tkg$exec() command will prevent user
-circuits from executing tcl/tk commands.  This will make it
-impossible to use Virtual Peripheral Devices.  Selecting this
+circuits from executing tcl/tk commands. This will make it
+impossible to use Virtual Peripheral Devices. Selecting this
 option has a minimal security risk.
 -end-
 
@@ -2694,19 +2694,19 @@ be ignored and no error messages will be displayed.
 
 ho.opt.html.browser	-begin-
 Command to be execute when the user clicks on a link to
-an html file.  A "%s" in the command will be replaced
+an html file. A "%s" in the command will be replaced
 with the link URL.
 -end-
 
 ho.opt.html.email	-begin-
 Command to be execute when the user clicks on a link to
-send an e-mail message.  A "%s" in the command will be
+send an e-mail message. A "%s" in the command will be
 replaced with the link URL.
 -end-
 
 ho.opt.fsave		-begin-
 Save TkGate internal cells with circuit
-data.  This will increase save file size
+data. This will increase save file size
 by about 20% for a typical circuit, but
 will result in save files that can be
 exported to third party tools.
@@ -2715,7 +2715,7 @@ exported to third party tools.
 ho.opt.sorttraces	-begin-
 If this option is enabled, traces on the
 scope window will be displayed in sorted
-order.  If this option is disabled, traces
+order. If this option is disabled, traces
 on the scope window will be displayed in
 the order in which the probes were set.
 -end-
@@ -2724,7 +2724,7 @@ ho.opt.sim.noglitch	-begin-
 If this option is enabled, rapidly changing
 inputs to a component will cause the component to
 output unknown rather simply the time shifted
-input signal.  This can eliminate spurious
+input signal. This can eliminate spurious
 events and prevent oscilations in gate-level
 sequential circuits.
 -end-
@@ -2738,7 +2738,7 @@ the simulation of the same circuit.
 
 ho.opt.sim.tech		-begin-
 List of files to load as potential "technology"
-files.  Technology files specify delay and area
+files. Technology files specify delay and area
 estimates for built-in components.
 -end-
 
@@ -2755,14 +2755,14 @@ actual erros.
 
 ho.opt.sim.err.showall	-begin-
 Always show warnings in the circuit, even if
-there are no errors.  If there are only warnings,
+there are no errors. If there are only warnings,
 the simualtor will be started and the list of
 warnings will be displayed in a separate window.
 -end-
 
 ho.opt.sim.err.showiferr	-begin-
 Show warnings only if there are also errors
-in the circuit.  If a circuit contains only
+in the circuit. If a circuit contains only
 warnings, they will be ignored and the simulator
 will be started.
 -end-
@@ -2774,7 +2774,7 @@ are errors in the circuit.
 
 ho.opt.lib.vpath		-begin-
 List of directories to search for TkGate library
-files.  Library files should have a .v extention
+files. Library files should have a .v extention
 and contain modules useful for use in user circuits.
 -end-
 
@@ -2785,7 +2785,7 @@ when TkGate starts.
 
 ho.opt.lib.vpd			-begin-
 List of directories to search for virtual peripheral
-devices.  Virtual peripheral devices have a .tcl
+devices. Virtual peripheral devices have a .tcl
 extension and typically implement a GUI representing
 a peripheral device that can be controlled by a user
 circuit.
@@ -2802,23 +2802,23 @@ reports such as circuit printouts.
 
 ho.opt.site		-begin-
 The name of the site where TkGate is
-installed.  This name will be used on
+installed. This name will be used on
 any printer or postscript output.
 -end-
 
 ho.opt.smooth		-begin-
 If this option is enabled, scrolling will
 be optimized by using bitmap copies instead
-of a complete redisplay.  You can turn this
+of a complete redisplay. You can turn this
 off if there are any problems with your server.
 -end-
 
 ho.opt.clip		-begin-
 If this option is enabled, clipping will be
 used to update only the exposed portion of
-the window on a redisplay.  Otherwise the
+the window on a redisplay. Otherwise the
 entire display will be redrawn for all
-exposures.  Unset only if you are having
+exposures. Unset only if you are having
 problems on your display.
 -end-
 
@@ -2832,26 +2832,26 @@ edge of dialog boxes.
 ho.opt.outmove		-begin-
 If this option is enabled, only an outline
 of module instances being moved will be displayed
-while dragging.  Use this feature only on machines
+while dragging. Use this feature only on machines
 with slow displays.
 -end-
 
 ho.opt.bhelp		-begin-
-If this option is enabled,  help balloons will
-be activated.  Help balloons, such as this one,
+If this option is enabled, help balloons will
+be activated. Help balloons, such as this one,
 provide tips on interface elements when the
 mouse is over them.
 -end-
 
 ho.opt.tearawaymenus	-begin-
 If enabled, the main menues will be detachable
-from the interface.  This option will take effect
+from the interface. This option will take effect
 next time you restart TkGate.
 -end-
 
 ho.opt.novice		-begin-
 If no other circuit is specified on the command
-line.  A TkGate tutorial will be disaplyed as
+line. A TkGate tutorial will be disaplyed as
 the initial circuit on start up.
 -end-
 
@@ -2872,7 +2872,7 @@ ho.opt.beak		-begin-
 Enable these totally useless features.
 If you disable this option, the useless
 features checkbox will no longer appear
-in this dialog box.  The only way to
+in this dialog box. The only way to
 see the useless features again will be
 to edit your .tkgate2-properties file.
 -end-
@@ -2910,17 +2910,17 @@ step command is issued.
 ho.opt.vpopupdelay		-begin-
 The delay in milliseconds between pressing
 and holding the mouse button and the display
-of a signal value.  On some systems, short
+of a signal value. On some systems, short
 delay values interfere with the ability to
-recognize a double click.  If you have this
-problem, increase this value.  Values between
+recognize a double click. If you have this
+problem, increase this value. Values between
 1 and 10000 are allowed.
 -end-
 
 ho.opt.init		-begin-
 A simulation script file to execute
 automatically when simulation of any
-circuit is initiated.  Do not use this
+circuit is initiated. Do not use this
 for circuit specific scripts, use the
 circuit properties instead.
 -end-
@@ -2941,7 +2941,7 @@ clock is attached.
 
 ho.opt.keybind		-begin-
 Specifies the basic style for key
-bindings.  If you change this
+bindings. If you change this
 option, bindings will be updated
 immediately, but you will need to
 restart TkGate to see any user
@@ -2958,7 +2958,7 @@ click) and select the "Delay" tab.
 
 ho.techbut		-begin-
 Use delays from standard technology
-definition file.  To add custom
+definition file. To add custom
 technologies, add them to the list
 in the "File -> Options -> Simulate"
 menu.
@@ -2979,38 +2979,38 @@ the GUI and the simulator.
 -end-
 
 ho.symed.point		-begin-
-Pixel edit mode.  Use the left
+Pixel edit mode. Use the left
 mouse button to set pixels and
 the right button to clear them.
 -end-
 
 ho.symed.line		-begin-
-Line mode.  Use the left
+Line mode. Use the left
 mouse button to set pixels and
 the right button to clear them.
 -end-
 
 ho.symed.rect		-begin-
-Rectangle mode.  Use the left
+Rectangle mode. Use the left
 mouse button to set pixels and
 the right button to clear them.
 -end-
 
 ho.symed.fillrect	-begin-
-Filled rectangle mode.  Use the
+Filled rectangle mode. Use the
 left mouse button to set pixels
 and the right button to clear them.
 -end-
 
 ho.symed.select	-begin-
-Bitmap select mode.  Use the left
+Bitmap select mode. Use the left
 mouse buttons to select regions of
 the bitmap and do cut and paste
 operations on the selection.
 -end-
 
 ho.symed.port	-begin-
-Port select mode.  Select ports and
+Port select mode. Select ports and
 move them or rotate them.
 -end-
 
@@ -3027,7 +3027,7 @@ ho.symed.export		Export image to file.
 
 ho.tool.currot	-begin-
 Displays the current default
-rotation.  Click on this
+rotation. Click on this
 button to change the current
 default rotation.
 -end-

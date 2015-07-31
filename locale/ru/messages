@@ -113,8 +113,8 @@ mm.disable	Отключить
 # Строки меню
 #
 # Menu strings (tags beginning with "menu.") can take an option prefix consisting
-# of a number and a colon.   If this prefix exists, it indicates the character
-# position in the string that will be underlined.  This enables keyboard shortcuts
+# of a number and a colon. If this prefix exists, it indicates the character
+# position in the string that will be underlined. This enables keyboard shortcuts
 # using the Alt key.
 #
 menu.file	0:Файл
@@ -269,7 +269,7 @@ port.inout	Вход-выход
 # Надписи для встроенных типов компонентов
 #
 
-gm.signals  Сигналы
+gm.signals	Сигналы
 gm.io		Ввод/вывод
 gm.gate		Вентиль
 gm.rgate	Редукция
@@ -1212,7 +1212,7 @@ opt.editor.movesel	Разрешить перетаскивание выделе�
 opt.editor.returntab	Автоотступ после конца строки.
 
 opt.vercheck		-begin-
-Периодически проверять наличие новых версий  TkGate в
+Периодически проверять наличие новых версий TkGate в
 Интернете. Не включайте, если у Вас нет постоянного доступа к
 Интернет.
 -end-
@@ -1226,7 +1226,7 @@ opt.sec.simfeatures	Настройки симулятора
 opt.sec.send		Разрешить системную задачу $tkg$command().
 opt.sec.open		Разрешить системную задачу $fopen().
 opt.sec.writemem	Разрешить системные задачи $writememb() и $writememh().
-opt.sec.enqueue		Разрешить системные задачи  $tkg$recv() и $tkg$send().
+opt.sec.enqueue		Разрешить системные задачи $tkg$recv() и $tkg$send().
 
 opt.sec.handle		Обработка нарушений безопасности
 opt.sec.stop		Остановить симулятор, когда используется отключенная возможность.
@@ -1418,7 +1418,7 @@ find.result.type	Тип
 find.result.name	Имя объекта
 
 #
-# These are special tags used by the search feature.  Do not change their value.
+# These are special tags used by the search feature. Do not change their value.
 #
 @find.type.gate		вентиль
 @find.type.net		цепь
@@ -1429,7 +1429,7 @@ find.results		Результаты поиска
 
 #
 # This is a special tag used to indicate whether the position qualifier box
-# should be "before" or "after" the text entry box.  Use the keywords before
+# should be "before" or "after" the text entry box. Use the keywords before
 # or after to indicate the position.
 #
 @find.qual.pos		before
@@ -1503,9 +1503,9 @@ circ.timescale.prec	Точность:
 circ.sim.features	Свойства
 
 #
-# Strings for timing violation reporting styles.  The "after" case
+# Strings for timing violation reporting styles. The "after" case
 # is broken into the string before the time period box and after the
-# time period box.  You can use the string "-empty-" to make a string
+# time period box. You can use the string "-empty-" to make a string
 # empty if it is not needed in a particular language.
 #
 circ.sim.tv.title	Обработка нарушений времени
@@ -1700,7 +1700,7 @@ err.primprefix		Недопустимое имя модуля '%s', начина�
 err.iskeyword		Ключевое слово Verilog '%s' не может быть использовано в качестве идентификатора.
 err.noprop		Выделенный компонент не имеет редактируемых свойств.
 err.openscript		Не удаётся открыть скрипт симуляции '%s'
-err.oldversion		Загруженный файл '%s' с просроченным номером версии  %s (текущая версия %s).
+err.oldversion		Загруженный файл '%s' с просроченным номером версии %s (текущая версия %s).
 err.futureversion	Загруженный файл '%s' был сохранён в TkGate версии %s (данная версия %s).
 err.badversion		Неизвестный номер версии. Используйте под свою ответственность.
 err.nodrive		Цепь %s не имеет драйвера в %s.
@@ -1908,7 +1908,7 @@ verga.err.BADSPECLVAL		Битовые диапазоны не поддержив
 verga.err.PATHDITEM		Неподдерживаемая конструкция в модуле с указанием задержек путей.
 verga.err.PATHDINOUT		Использование 'inout' в модуле с указанием задержек путей не поддерживается.
 verga.err.PATHDLOOP		Циклы в модулях с указанием задержек путей не поддерживаются.
-verga.err.PATHDCOND		Задержки должны устанавливаться с помощью выражений  # и блоков Specify.
+verga.err.PATHDCOND		Задержки должны устанавливаться с помощью выражений # и блоков Specify.
 verga.err.TASKREDEF		Переопределение задачи или функции '%s' в модуле '%s'.
 verga.err.TASKASFUNC		Задача '%s' использована как функция.
 verga.err.FUNCASTASK		Функция '%s' использована как задача.
@@ -1929,7 +1929,7 @@ verga.err.IE_NONET		Не удалось найти цепь '%s' - внутре�
 verga.err.IE_NOOP		Не удалось найти описание оператора - внутренняя ошибка.
 verga.err.IE_BADEXP		Неожиданный тип выражения %s - внутренняя ошибка.
 verga.err.IE_BADVAR		Неопределённая переменная или неизвестная цепь - внутренняя ошибка.
-verga.err.IE_BADSTATE		Неожиданное внутреннее состояние в %s  - внутренняя ошибка.
+verga.err.IE_BADSTATE		Неожиданное внутреннее состояние в %s - внутренняя ошибка.
 verga.err.IE_RETURN		Выполненный байт-код BCReturn имеет пустой стек возврата - внутренняя ошибка.
 
 ##############################################################################
