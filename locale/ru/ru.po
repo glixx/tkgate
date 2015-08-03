@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
-"POT-Creation-Date: 2015-07-31 17:10+0300\n"
-"PO-Revision-Date: 2015-07-31 17:10+0300\n"
+"POT-Creation-Date: 2015-08-03 12:22+0300\n"
+"PO-Revision-Date: 2015-08-03 12:22+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -54,41 +54,23 @@ msgstr "Отмена"
 # b.in
 # pop.igen.in
 # db.net.in
-# igen.in
-#: ru/messages:48 ru/messages:429 ru/messages:565 ru/messages:1273
-#, fuzzy
+#: ru/messages:48 ru/messages:429 ru/messages:565
 msgid "in"
-msgstr ""
-"вход\n"
-"вход\n"
-"вход\n"
-"вх"
+msgstr "вход"
 
 # b.out
 # pop.igen.out
 # db.net.out
-# igen.out
-#: ru/messages:49 ru/messages:430 ru/messages:566 ru/messages:1274
-#, fuzzy
+#: ru/messages:49 ru/messages:430 ru/messages:566
 msgid "out"
-msgstr ""
-"выход\n"
-"выход\n"
-"выход\n"
-"вых"
+msgstr "выход"
 
 # b.inout
 # pop.igen.inout
 # db.net.inout
-# igen.inout
-#: ru/messages:50 ru/messages:431 ru/messages:567 ru/messages:1275
-#, fuzzy
+#: ru/messages:50 ru/messages:431 ru/messages:567
 msgid "inout"
-msgstr ""
-"вход-выход\n"
-"вход-выход\n"
-"вход-выход\n"
-"вх-вых"
+msgstr "вход-выход"
 
 # b.browse
 #: ru/messages:51
@@ -1164,7 +1146,7 @@ msgstr "Выход модуля"
 
 # gm.mod.inout
 #: ru/messages:350
-msgid "Module InOut"
+msgid "Module Input-Output"
 msgstr "Вход-выход модуля"
 
 # tutorial.prev
@@ -1453,26 +1435,22 @@ msgid "Size"
 msgstr "Размер"
 
 # pop.igen.left
-# igen.left
-#: ru/messages:432 ru/messages:1277
+#: ru/messages:432
 msgid "left"
 msgstr "слева"
 
 # pop.igen.right
-# igen.right
-#: ru/messages:433 ru/messages:1278
+#: ru/messages:433
 msgid "right"
 msgstr "справа"
 
 # pop.igen.top
-# igen.top
-#: ru/messages:434 ru/messages:1279
+#: ru/messages:434
 msgid "top"
 msgstr "сверху"
 
 # pop.igen.bottom
-# igen.bottom
-#: ru/messages:435 ru/messages:1280
+#: ru/messages:435
 msgid "bottom"
 msgstr "снизу"
 

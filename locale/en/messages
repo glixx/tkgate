@@ -129,7 +129,7 @@ b.anchor	Anchor
 b.tech		Technology
 #b.enable	Enable
 #b.disable	Disable
-#b.flush		Clear
+#b.flush	Clear
 
 ##############################################################################
 #
@@ -420,7 +420,7 @@ gm.msi.18demux	1-8 Demultiplexor
 gm.mod.inst	Module Instance
 gm.mod.in	Module Input
 gm.mod.out	Module Output
-gm.mod.inout	Module InOut
+gm.mod.inout	Module Input-Output
 
 tutorial.prev		PREVIOUS
 tutorial.next		NEXT
@@ -803,7 +803,7 @@ Set the module parameters for this instance of this module if any are
 defined. Module parameters are used to configure delays and constant values used in a module.
 -end-
 
-db.gate.tab.details.exp -fillbegin-
+db.gate.tab.details.exp		-fillbegin-
 Set detailed type-specific properties
 of a component here.
 -end-
@@ -1349,14 +1349,14 @@ igen.add		Add
 igen.delete		Delete
 igen.edit		Edit
 
-igen.in			in
-igen.out		out
-igen.inout		inout
+#igen.in			in
+#igen.out		out
+#igen.inout		inout
 
-igen.left		left
-igen.right		right
-igen.top		top
-igen.bottom		bottom
+#igen.left		left
+#igen.right		right
+#igen.top		top
+#igen.bottom		bottom
 
 #igen.other		other
 

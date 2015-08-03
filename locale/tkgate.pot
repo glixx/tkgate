@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 17:10+0300\n"
+"POT-Creation-Date: 2015-08-03 12:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,24 +56,21 @@ msgstr ""
 # b.in
 # pop.igen.in
 # db.net.in
-# igen.in
-#: en/messages:116 en/messages:502 en/messages:636 en/messages:1352
+#: en/messages:116 en/messages:502 en/messages:636
 msgid "in"
 msgstr ""
 
 # b.out
 # pop.igen.out
 # db.net.out
-# igen.out
-#: en/messages:117 en/messages:503 en/messages:637 en/messages:1353
+#: en/messages:117 en/messages:503 en/messages:637
 msgid "out"
 msgstr ""
 
 # b.inout
 # pop.igen.inout
 # db.net.inout
-# igen.inout
-#: en/messages:118 en/messages:504 en/messages:638 en/messages:1354
+#: en/messages:118 en/messages:504 en/messages:638
 msgid "inout"
 msgstr ""
 
@@ -1132,7 +1129,7 @@ msgstr ""
 
 # gm.mod.inout
 #: en/messages:423
-msgid "Module InOut"
+msgid "Module Input-Output"
 msgstr ""
 
 # tutorial.prev
@@ -1418,26 +1415,22 @@ msgid "Size"
 msgstr ""
 
 # pop.igen.left
-# igen.left
-#: en/messages:505 en/messages:1356
+#: en/messages:505
 msgid "left"
 msgstr ""
 
 # pop.igen.right
-# igen.right
-#: en/messages:506 en/messages:1357
+#: en/messages:506
 msgid "right"
 msgstr ""
 
 # pop.igen.top
-# igen.top
-#: en/messages:507 en/messages:1358
+#: en/messages:507
 msgid "top"
 msgstr ""
 
 # pop.igen.bottom
-# igen.bottom
-#: en/messages:508 en/messages:1359
+#: en/messages:508
 msgid "bottom"
 msgstr ""
 
@@ -2131,6 +2124,13 @@ msgid ""
 "Set the module parameters for this instance of this module if any are\n"
 "defined. Module parameters are used to configure delays and constant values "
 "used in a module."
+msgstr ""
+
+# db.gate.tab.details.exp
+#: en/messages:806
+msgid ""
+"Set detailed type-specific properties\n"
+"of a component here."
 msgstr ""
 
 # db.gate.tab.CLOCK.exp

@@ -284,7 +284,7 @@ gm.frame	Рамка
 gm.signals.pullup	Подтяжка к питанию
 gm.signals.pulldown	Подтяжка к земле
 gm.signals.ground	Земля
-gm.signals.vdd	Питание
+gm.signals.vdd		Питание
 
 gm.io.switch	Переключатель
 gm.io.dip	DIP-переключатель
@@ -727,7 +727,7 @@ db.gate.tab.Parameters.exp	-fillbegin-
 и констант, используемых в модуле.
 -end-
 
-db.gate.tab.details.exp -fillbegin-
+db.gate.tab.details.exp	-fillbegin-
 Установите здесь детальные параметры, специфичные
 для данного типа компонента.
 -end-
@@ -1270,14 +1270,14 @@ igen.add		Добавить
 igen.delete		Удалить
 igen.edit		Редактировать
 
-igen.in			вх
-igen.out		вых
-igen.inout		вх-вых
+#igen.in			ВХ
+#igen.out		ВЫХ
+#igen.inout		ВХ-ВЫХ
 
-igen.left		слева
-igen.right		справа
-igen.top		сверху
-igen.bottom		снизу
+#igen.left		слева
+#igen.right		справа
+#igen.top		сверху
+#igen.bottom		снизу
 
 #igen.other		other
 
