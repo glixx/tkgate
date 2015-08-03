@@ -241,8 +241,8 @@ menu.scope_help			0:Справка
 
 menu.scope_file.ptrace		0:Печать трассировки...
 menu.scope_file.close		0:Закрыть
-menu.scope_trace.zoomin		5:Приблизить
-menu.scope_trace.zoomout	5:Отдалить
+menu.scope_trace.zoomin		5:Увеличить
+menu.scope_trace.zoomout	5:Уменьшить
 menu.scope_sim.addprobe		0:Добавить/удалить зонд
 menu.scope_sim.run		0:Пуск
 menu.scope_sim.pause		0:Пауза
@@ -471,7 +471,6 @@ symed.link		Связать выделенное с невыделенным
 # width of symbol editor tabs
 
 
-
 ##############################################################################
 ## Просмотр памяти
 #
@@ -497,7 +496,7 @@ ifile		Файл
 imodule		Модуль
 iblmodule	Модули
 iports		Порты
-ibits		Биты:
+ibits		Разрядн.:
 itype		Тип:
 
 #############################################################################
@@ -520,7 +519,7 @@ db.mod.smod.1	Модуль изменился после сохранения.
 db.mod.islib.1	Модуль является частью [%s] библиотеки.
 db.mod.islib.0	Модуль не является библиотечным.
 db.mod.netlist	Список цепей
-db.mod.hdl	Verilog
+db.mod.hdl	Verilog HDL
 
 db.mod.netexpl	-begin-
 Определить модуль, используя
@@ -558,8 +557,8 @@ db.err.neededit		-fillbegin-
 db.net.title	TkGate: Свойства цепи
 db.net.caption	Свойства цепи
 db.net.name	Название цепи
-db.net.hide	Скрыть название
-db.net.bits	Разрядность (бит)
+db.net.hide	Скрыть имя
+db.net.bits	Разрядность
 db.net.type	Тип цепи
 db.net.port	Тип порта
 db.net.in	вход
@@ -593,7 +592,7 @@ db.gate.phase		Фаза
 db.gate.duty		Заполнение
 db.gate.waveform	Форма синхросигнала
 db.gate.port		Порт
-db.gate.bitws		Биты
+db.gate.bitws		Разр.
 db.gate.side		Сторона
 db.gate.gtype		Тип
 db.gate.gname		Имя экземпляра
@@ -614,29 +613,29 @@ db.gate.parameters	Параметры
 db.gate.stddelay	Стандартная задержка
 db.gate.custdelay	Специальная задержка
 db.gate.catdiruse	Размещение порта
-db.gate.edit		Редактировать
+db.gate.edit		Правка
 db.gate.delete		Удалить
 db.gate.add		Добавить
 
 db.gate.ff.type		Расположение D-триггера
-db.gate.ff.normal.hdr	Normal
+db.gate.ff.normal.hdr	Прямое
 db.gate.ff.normal.exp	-fillbegin-
 D-триггер с направлением данных
 слева направо.
 -end-
-db.gate.ff.reverse.hdr	Reversed
+db.gate.ff.reverse.hdr	Обратное
 db.gate.ff.reverse.exp	-fillbegin-
 D-триггер с направлением данных
 справа налево.
 -end-
 
-db.gate.jkff.type		Ориентация JK-триггера
-db.gate.jkff.normal.hdr		Нормальная
+db.gate.jkff.type		Расположение JK-триггера
+db.gate.jkff.normal.hdr		Прямое
 db.gate.jkff.normal.exp	-fillbegin-
 JK-триггер с направлением данных
 слева направо.
 -end-
-db.gate.jkff.reverse.hdr	Обратная
+db.gate.jkff.reverse.hdr	Обратное
 db.gate.jkff.reverse.exp	-fillbegin-
 JK-триггер с направлением данных
 справа налево.
@@ -762,8 +761,8 @@ db.gate.tab.SCRIPT.exp	-fillbegin-
 который станет частью модуля.
 -end-
 
-db.gate.mparm.parameter	Parameter
-db.gate.mparm.value	Value
+db.gate.mparm.parameter		Параметр
+db.gate.mparm.value		Значение
 db.gate.mparm.exampleA	-begin-
 Этот модуль не имеет параметров. Параметры могут
 быть добавлены в текстовые модули Verilog. Значения
@@ -936,7 +935,7 @@ db.hdl.saveexp		-fillbegin-
 
 db.hdl.autoedit		Авторедактирование
 db.hdl.split		Разделить
-db.hdl.comment		Комментировать
+db.hdl.comment		Закомментировать
 db.hdl.cancel		Отмена
 db.hdl.ignore		Игнорировать
 
@@ -950,7 +949,7 @@ db.hdl.autoeditexp		-fillbegin-
 
 db.dip.title		TkGate: значение DIP-переключателя
 
-cpath.cloops -fillbegin-
+cpath.cloops	-fillbegin-
 В вашей схеме обнаружены комбинационные петли.
 Чтобы отобразить результаты анализа схемы, Вы
 должны либо разорвать петлю, либо пометить компоненты
@@ -1261,14 +1260,14 @@ igen.port		Порт
 igen.type		Тип
 igen.side		Сторона
 igen.size		Размер
-igen.bits		Разрядн.
+igen.bits		Разр.
 
 igen.modname		Имя модуля:
 
 #igen.resort		Упорядочить
 igen.add		Добавить
 igen.delete		Удалить
-igen.edit		Редактировать
+igen.edit		Правка
 
 #igen.in			ВХ
 #igen.out		ВЫХ
@@ -1440,9 +1439,9 @@ find.qual.ends		Заканчивается...
 find.qual.matches	Соответствует...
 
 find.dom.label		Искать объекты в:
-find.dom.gates		Компонентах
-find.dom.nets		Цепях
-find.dom.text		Тексте комментариев
+find.dom.gates		компонентах
+find.dom.nets		цепях
+find.dom.text		тексте комментариев
 
 find.search		Найти:
 find.target		Цель поиска
@@ -1472,7 +1471,7 @@ circ.title		Заголовок схемы
 circ.encoding		Кодировка файла
 circ.lang		Язык файла
 circ.discchg		Не уведомлять о потере изменений.
-circ.flags		Свойства
+circ.flags		Настройки
 circ.defaults		Детали компонентов
 circ.extbar		Использовать расширительные полосы на вентилях И, ИЛИ, ИСКЛ-ИЛИ.
 circ.shownet		Показывать имя цепи на переключателях.
@@ -1526,7 +1525,7 @@ circ.exp.library	-fillbegin-
 следующем открытии файла.
 -end-
 
-circ.exp.script	-fillbegin-
+circ.exp.script		-fillbegin-
 Добавление скриптов, которые будут
 автоматически загружены и выполнены при
 запуске симуляции.

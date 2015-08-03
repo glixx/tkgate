@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-03 12:22+0300\n"
+"POT-Creation-Date: 2015-08-03 15:57+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgstr ""
 
 # b.cancel
 # db.hdl.cancel
-#: en/messages:113 en/messages:1011
+#: en/messages:113 en/messages:1009
 msgid "Cancel"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 # db.gate.delete
 # igen.delete
 #: en/messages:124 en/messages:175 en/messages:463 en/messages:501
-#: en/messages:692 en/messages:1349
+#: en/messages:692 en/messages:1347
 msgid "Delete"
 msgstr ""
 
@@ -132,7 +132,7 @@ msgstr ""
 # b.tech
 # opt.simulate.tech
 # opt.tool.tech
-#: en/messages:129 en/messages:1156 en/messages:1263
+#: en/messages:129 en/messages:1154 en/messages:1261
 msgid "Technology"
 msgstr ""
 
@@ -145,19 +145,19 @@ msgstr ""
 # mod.intf
 # pop.interface
 # opt.interface
-#: en/messages:139 en/messages:329 en/messages:490 en/messages:1144
+#: en/messages:139 en/messages:329 en/messages:490 en/messages:1142
 msgid "Interface"
 msgstr ""
 
 # tab.simulate
 # opt.simulate
-#: en/messages:140 en/messages:1154
+#: en/messages:140 en/messages:1152
 msgid "Simulate"
 msgstr ""
 
 # tab.cpath
 # opt.cpath
-#: en/messages:141 en/messages:1188
+#: en/messages:141 en/messages:1186
 msgid "Critical Path"
 msgstr ""
 
@@ -204,21 +204,20 @@ msgstr ""
 # module.box.libraries
 # opt.library
 # circ.library
-#: en/messages:160 en/messages:1158 en/messages:1580
+#: en/messages:160 en/messages:1156 en/messages:1578
 msgid "Libraries"
 msgstr ""
 
 # sidetab.nets
 # db.net.inets
-# find.dom.nets
-#: en/messages:166 en/messages:639 en/messages:1527
+#: en/messages:166 en/messages:639
 msgid "Nets"
 msgstr ""
 
 # sidetab.ports
 # iports
 # opt.tool.symport
-#: en/messages:167 en/messages:571 en/messages:1269
+#: en/messages:167 en/messages:571 en/messages:1267
 msgid "Ports"
 msgstr ""
 
@@ -816,8 +815,7 @@ msgid "I/O"
 msgstr ""
 
 # gm.gate
-# opt.tool.gateprop
-#: en/messages:345 en/messages:1258
+#: en/messages:345
 msgid "Gate"
 msgstr ""
 
@@ -845,19 +843,17 @@ msgstr ""
 # imodule
 # opt.tool.module
 # find.result.module
-#: en/messages:350 en/messages:569 en/messages:1262 en/messages:1499
+#: en/messages:350 en/messages:569 en/messages:1260 en/messages:1497
 msgid "Module"
 msgstr ""
 
 # gm.comment
-# db.hdl.comment
-#: en/messages:351 en/messages:1010
+#: en/messages:351
 msgid "Comment"
 msgstr ""
 
 # gm.script
-# db.gate.tab.SCRIPT.cap
-#: en/messages:352 en/messages:784
+#: en/messages:352
 msgid "Verilog Script"
 msgstr ""
 
@@ -1153,8 +1149,8 @@ msgid "RELOAD"
 msgstr ""
 
 # pop.make
-# find.dom.gates
-#: en/messages:434 en/messages:1526
+# opt.tool.gateprop
+#: en/messages:434 en/messages:1256
 msgid "Components"
 msgstr ""
 
@@ -1380,7 +1376,7 @@ msgstr ""
 
 # pop.interface.auto
 # ipanel.autogen
-#: en/messages:495 en/messages:1391
+#: en/messages:495 en/messages:1389
 msgid "Auto Generate..."
 msgstr ""
 
@@ -1397,20 +1393,20 @@ msgstr ""
 # igen.type
 # find.result.type
 #: en/messages:498 en/messages:580 en/messages:663 en/messages:672
-#: en/messages:681 en/messages:1340 en/messages:1500
+#: en/messages:681 en/messages:1338 en/messages:1498
 msgid "Type"
 msgstr ""
 
 # pop.igen.side
 # db.gate.side
 # igen.side
-#: en/messages:499 en/messages:671 en/messages:1341
+#: en/messages:499 en/messages:671 en/messages:1339
 msgid "Side"
 msgstr ""
 
 # pop.igen.size
 # igen.size
-#: en/messages:500 en/messages:1342
+#: en/messages:500 en/messages:1340
 msgid "Size"
 msgstr ""
 
@@ -1446,7 +1442,7 @@ msgstr ""
 
 # pop.library.close
 # libmgr.unload
-#: en/messages:512 en/messages:1641
+#: en/messages:512 en/messages:1639
 msgid "Unload"
 msgstr ""
 
@@ -1456,8 +1452,7 @@ msgid "UnSelected"
 msgstr ""
 
 # symed.tab.select
-# print.sel
-#: en/messages:542 en/messages:1058
+#: en/messages:542
 msgid "Selected"
 msgstr ""
 
@@ -1498,14 +1493,14 @@ msgstr ""
 # ifile
 # print.file
 # opt.tool.file
-#: en/messages:568 en/messages:1043 en/messages:1255
+#: en/messages:568 en/messages:1041 en/messages:1253
 msgid "File"
 msgstr ""
 
 # iblmodule
 # print.tab.modules
 # opt.mods
-#: en/messages:570 en/messages:1121 en/messages:1179
+#: en/messages:570 en/messages:1119 en/messages:1177
 msgid "Modules"
 msgstr ""
 
@@ -1521,7 +1516,7 @@ msgstr ""
 
 # db.mod.name
 # blklst.name
-#: en/messages:578 en/messages:1440
+#: en/messages:578 en/messages:1438
 msgid "Name"
 msgstr ""
 
@@ -1529,7 +1524,7 @@ msgstr ""
 # db.newcirc.file
 # print.filename
 # circ.file
-#: en/messages:579 en/messages:652 en/messages:1048 en/messages:1553
+#: en/messages:579 en/messages:652 en/messages:1046 en/messages:1551
 msgid "File Name"
 msgstr ""
 
@@ -1605,8 +1600,8 @@ msgstr ""
 
 # db.mod.hdl
 # opt.editor
-#: en/messages:595 en/messages:1150
-msgid "HDL"
+#: en/messages:595 en/messages:1148
+msgid "Verilog HDL"
 msgstr ""
 
 # db.mod.netexpl
@@ -1757,13 +1752,13 @@ msgstr ""
 # db.gate.port
 # db.gate.ports
 # igen.port
-#: en/messages:669 en/messages:685 en/messages:1339
+#: en/messages:669 en/messages:685 en/messages:1337
 msgid "Port"
 msgstr ""
 
 # db.gate.bitws
 # igen.bits
-#: en/messages:670 en/messages:1343
+#: en/messages:670 en/messages:1341
 msgid "Bits"
 msgstr ""
 
@@ -1800,7 +1795,7 @@ msgstr ""
 # db.gate.general
 # opt.general
 # circ.general
-#: en/messages:682 en/messages:1143 en/messages:1579
+#: en/messages:682 en/messages:1141 en/messages:1577
 msgid "General"
 msgstr ""
 
@@ -1842,13 +1837,13 @@ msgstr ""
 # db.gate.edit
 # opt.tool.edit
 # igen.edit
-#: en/messages:691 en/messages:1256 en/messages:1350
+#: en/messages:691 en/messages:1254 en/messages:1348
 msgid "Edit"
 msgstr ""
 
 # db.gate.add
 # igen.add
-#: en/messages:693 en/messages:1348
+#: en/messages:693 en/messages:1346
 msgid "Add"
 msgstr ""
 
@@ -2037,7 +2032,7 @@ msgstr ""
 
 # db.gate.tab.MODULE.cap
 # module.props
-#: en/messages:771 en/messages:1382
+#: en/messages:771 en/messages:1380
 msgid "Module Properties"
 msgstr ""
 
@@ -2101,25 +2096,30 @@ msgstr ""
 msgid "JK Flip-Flop Properties"
 msgstr ""
 
+# db.gate.tab.SCRIPT.cap
+#: en/messages:784
+msgid "Verilog Script Properties"
+msgstr ""
+
 # db.gate.tab.General.exp
-#: en/messages:788
+#: en/messages:786
 msgid "View and modify basic properties of an instance."
 msgstr ""
 
 # db.gate.tab.Ports.exp
-#: en/messages:792
+#: en/messages:790
 msgid "Add, edit or delete ports on an instance."
 msgstr ""
 
 # db.gate.tab.Delay.exp
-#: en/messages:796
+#: en/messages:794
 msgid ""
 "Delay can be specified either as a technology or as specific values\n"
 "for this instance."
 msgstr ""
 
 # db.gate.tab.Parameters.exp
-#: en/messages:801
+#: en/messages:799
 msgid ""
 "Set the module parameters for this instance of this module if any are\n"
 "defined. Module parameters are used to configure delays and constant values "
@@ -2127,7 +2127,7 @@ msgid ""
 msgstr ""
 
 # db.gate.tab.details.exp
-#: en/messages:806
+#: en/messages:804
 msgid ""
 "Set detailed type-specific properties\n"
 "of a component here."
@@ -2151,16 +2151,16 @@ msgstr ""
 # db.gate.tab.CONCAT.exp
 # db.gate.tab.FF.exp
 # db.gate.tab.JKFF.exp
-#: en/messages:812 en/messages:813 en/messages:814 en/messages:815
-#: en/messages:816 en/messages:817 en/messages:818 en/messages:819
-#: en/messages:820 en/messages:821 en/messages:822 en/messages:823
-#: en/messages:824 en/messages:825 en/messages:826 en/messages:827
-#: en/messages:828 en/messages:829
+#: en/messages:810 en/messages:811 en/messages:812 en/messages:813
+#: en/messages:814 en/messages:815 en/messages:816 en/messages:817
+#: en/messages:818 en/messages:819 en/messages:820 en/messages:821
+#: en/messages:822 en/messages:823 en/messages:824 en/messages:825
+#: en/messages:826 en/messages:827
 msgid "`db.gate.tab.details.exp"
 msgstr ""
 
 # db.gate.tab.COMMENT.exp
-#: en/messages:831
+#: en/messages:829
 msgid ""
 "Set the text to be displayed in a comment.\n"
 "Limited html commands including links can be\n"
@@ -2168,25 +2168,25 @@ msgid ""
 msgstr ""
 
 # db.gate.tab.SCRIPT.exp
-#: en/messages:837
+#: en/messages:835
 msgid ""
 "Enter free-form Verilog code here to\n"
 "be included as part of this module."
 msgstr ""
 
 # db.gate.mparm.parameter
-#: en/messages:842
+#: en/messages:840
 msgid "Parameter"
 msgstr ""
 
 # db.gate.mparm.value
 # break.value
-#: en/messages:843 en/messages:1656
+#: en/messages:841 en/messages:1654
 msgid "Value"
 msgstr ""
 
 # db.gate.mparm.exampleA
-#: en/messages:844
+#: en/messages:842
 msgid ""
 "This module does not have any parameters. Parameters\n"
 "can be added to Verilog text modules. The value of\n"
@@ -2198,184 +2198,184 @@ msgid ""
 msgstr ""
 
 # db.gate.mparm.exampleB
-#: en/messages:854
+#: en/messages:852
 msgid ""
 "assign Z = A ^ B ^ base_value;\n"
 "endmodule"
 msgstr ""
 
 # db.gate.switch.state
-#: en/messages:860
+#: en/messages:858
 msgid "Initial Switch State"
 msgstr ""
 
 # db.gate.switch.state.on.hdr
-#: en/messages:861
+#: en/messages:859
 msgid "Switch On"
 msgstr ""
 
 # db.gate.switch.state.on.exp
-#: en/messages:862
+#: en/messages:860
 msgid "Switch begins simulation in the \"on\" state."
 msgstr ""
 
 # db.gate.switch.state.off.hdr
-#: en/messages:863
+#: en/messages:861
 msgid "Switch Off"
 msgstr ""
 
 # db.gate.switch.state.off.exp
-#: en/messages:864
+#: en/messages:862
 msgid "Switch begins simulation in the \"off\" state."
 msgstr ""
 
 # db.gate.switch.shownet
 # db.gate.dip.shownet
-#: en/messages:866 en/messages:878
+#: en/messages:864 en/messages:876
 msgid "Show Net Name"
 msgstr ""
 
 # db.gate.switch.shownet.on.hdr
 # db.gate.dip.shownet.on.hdr
-#: en/messages:867 en/messages:879
+#: en/messages:865 en/messages:877
 msgid "Show"
 msgstr ""
 
 # db.gate.switch.shownet.on.exp
-#: en/messages:868
+#: en/messages:866
 msgid "Show the name of the net next to switch."
 msgstr ""
 
 # db.gate.switch.shownet.off.hdr
 # db.gate.dip.shownet.off.hdr
-#: en/messages:869 en/messages:881
+#: en/messages:867 en/messages:879
 msgid "Hide"
 msgstr ""
 
 # db.gate.switch.shownet.off.exp
-#: en/messages:870
+#: en/messages:868
 msgid "Do not show the name of the net next to switch."
 msgstr ""
 
 # db.gate.dip.value
-#: en/messages:873
+#: en/messages:871
 msgid "Initial DIP Value"
 msgstr ""
 
 # db.gate.dip.value.exp
-#: en/messages:874
+#: en/messages:872
 msgid "Initial value of DIP switch at start of simulation."
 msgstr ""
 
 # db.gate.dip.value.hex
-#: en/messages:875
+#: en/messages:873
 msgid "Hex Value:"
 msgstr ""
 
 # @db.gate.dip.value.exp.width
-#: en/messages:876
+#: en/messages:874
 msgid "150"
 msgstr ""
 
 # db.gate.dip.shownet.on.exp
-#: en/messages:880
+#: en/messages:878
 msgid "Show the name of the net next to dip."
 msgstr ""
 
 # db.gate.dip.shownet.off.exp
-#: en/messages:882
+#: en/messages:880
 msgid "Do not show the name of the net next to dip."
 msgstr ""
 
 # db.gate.tap.select
-#: en/messages:885
+#: en/messages:883
 msgid "Bit Tap Selection"
 msgstr ""
 
 # db.gate.tap.exp.bit
-#: en/messages:886
+#: en/messages:884
 msgid "Select the bit to pull off of the multi-bit bus."
 msgstr ""
 
 # db.gate.tap.exp.bus
-#: en/messages:887
+#: en/messages:885
 msgid ""
 "Select the least-significant bit of the bit range to pull off of the multi-"
 "bit bus."
 msgstr ""
 
 # db.gate.tap.lbl.bit
-#: en/messages:888
+#: en/messages:886
 msgid "Bit:"
 msgstr ""
 
 # db.gate.tap.lbl.bus
-#: en/messages:889
+#: en/messages:887
 msgid "LSB:"
 msgstr ""
 
 # @db.gate.tap.exp.width
-#: en/messages:890
+#: en/messages:888
 msgid "*180"
 msgstr ""
 
 # db.gate.mux.dataorder
-#: en/messages:892
+#: en/messages:890
 msgid "Input Ordering"
 msgstr ""
 
 # db.gate.mux.ord1.hdr
 # db.gate.demux.ord1.hdr
 # db.gate.decoder.ord1.hdr
-#: en/messages:893 en/messages:915 en/messages:935
+#: en/messages:891 en/messages:913 en/messages:933
 msgid "Left-to-Right"
 msgstr ""
 
 # db.gate.mux.ord2.hdr
 # db.gate.demux.ord2.hdr
 # db.gate.decoder.ord2.hdr
-#: en/messages:894 en/messages:916 en/messages:936
+#: en/messages:892 en/messages:914 en/messages:934
 msgid "Right-to-Left"
 msgstr ""
 
 # db.gate.mux.ord1.exp
-#: en/messages:895
+#: en/messages:893
 msgid "Order MUX inputs from left to right."
 msgstr ""
 
 # db.gate.mux.ord2.exp
-#: en/messages:898
+#: en/messages:896
 msgid "Order MUX inputs from right to left."
 msgstr ""
 
 # db.gate.mux.select
-#: en/messages:902
+#: en/messages:900
 msgid "Selector Placement"
 msgstr ""
 
 # db.gate.mux.sel1.hdr
 # db.gate.demux.sel1.hdr
 # db.gate.decoder.sel1.hdr
-#: en/messages:903 en/messages:925 en/messages:945
+#: en/messages:901 en/messages:923 en/messages:943
 msgid "On Left"
 msgstr ""
 
 # db.gate.mux.sel2.hdr
 # db.gate.demux.sel2.hdr
 # db.gate.decoder.sel2.hdr
-#: en/messages:904 en/messages:926 en/messages:946
+#: en/messages:902 en/messages:924 en/messages:944
 msgid "On Right"
 msgstr ""
 
 # db.gate.mux.sel1.exp
-#: en/messages:905
+#: en/messages:903
 msgid ""
 "Place the data selector on the left side of\n"
 "the MUX."
 msgstr ""
 
 # db.gate.mux.sel2.exp
-#: en/messages:909
+#: en/messages:907
 msgid ""
 "Place the data selector on the right side of\n"
 "the MUX."
@@ -2383,77 +2383,77 @@ msgstr ""
 
 # db.gate.demux.dataorder
 # db.gate.decoder.dataorder
-#: en/messages:914 en/messages:934
+#: en/messages:912 en/messages:932
 msgid "Output Ordering"
 msgstr ""
 
 # db.gate.demux.ord1.exp
-#: en/messages:917
+#: en/messages:915
 msgid "Order DEMUX outputs from left to right."
 msgstr ""
 
 # db.gate.demux.ord2.exp
-#: en/messages:920
+#: en/messages:918
 msgid "Order DEMUX outputs from right to left."
 msgstr ""
 
 # db.gate.demux.select
-#: en/messages:924
+#: en/messages:922
 msgid "Select Placement"
 msgstr ""
 
 # db.gate.demux.sel1.exp
-#: en/messages:927
+#: en/messages:925
 msgid "Place the select input on the left side of the DEMUX."
 msgstr ""
 
 # db.gate.demux.sel2.exp
-#: en/messages:930
+#: en/messages:928
 msgid "Place the select input on the right side of the DEMUX."
 msgstr ""
 
 # db.gate.decoder.ord1.exp
-#: en/messages:937
+#: en/messages:935
 msgid "Order DECODER outputs from left to right."
 msgstr ""
 
 # db.gate.decoder.ord2.exp
-#: en/messages:940
+#: en/messages:938
 msgid "Order DECODER outputs from right to left."
 msgstr ""
 
 # db.gate.decoder.select
-#: en/messages:944
+#: en/messages:942
 msgid "Enable Placement"
 msgstr ""
 
 # db.gate.decoder.sel1.exp
-#: en/messages:947
+#: en/messages:945
 msgid "Place the enable input on the left side of the DECODER."
 msgstr ""
 
 # db.gate.decoder.sel2.exp
-#: en/messages:950
+#: en/messages:948
 msgid "Place the enable input on the right side of the DECODER."
 msgstr ""
 
 # db.gate.aox.extbaruse
-#: en/messages:956
+#: en/messages:954
 msgid "Extender Bar Use"
 msgstr ""
 
 # db.gate.aox.use.hdr
-#: en/messages:957
+#: en/messages:955
 msgid "Extender Bars"
 msgstr ""
 
 # db.gate.aox.nouse.hdr
-#: en/messages:958
+#: en/messages:956
 msgid "No Extender Bars"
 msgstr ""
 
 # db.gate.aox.use.exp
-#: en/messages:959
+#: en/messages:957
 msgid ""
 "Basic gates (AND, OR, etc.) will\n"
 "use extender bars as inputs\n"
@@ -2461,7 +2461,7 @@ msgid ""
 msgstr ""
 
 # db.gate.aox.nouse.exp
-#: en/messages:964
+#: en/messages:962
 msgid ""
 "Basic gates (AND, OR, etc.) will\n"
 "not use extender bars as inputs\n"
@@ -2469,87 +2469,87 @@ msgid ""
 msgstr ""
 
 # db.gate.led.type
-#: en/messages:971
+#: en/messages:969
 msgid "LED Type"
 msgstr ""
 
 # db.gate.led.bit.hdr
-#: en/messages:972
+#: en/messages:970
 msgid "Bit"
 msgstr ""
 
 # db.gate.led.bar.hdr
-#: en/messages:973
+#: en/messages:971
 msgid "Bar Graph"
 msgstr ""
 
 # db.gate.led.hex.hdr
-#: en/messages:974
+#: en/messages:972
 msgid "7-Segment (HEX)"
 msgstr ""
 
 # db.gate.led.dec.hdr
-#: en/messages:975
+#: en/messages:973
 msgid "7-Segment (DEC)"
 msgstr ""
 
 # db.gate.led.seg.hdr
-#: en/messages:976
+#: en/messages:974
 msgid "7-Segment (Direct)"
 msgstr ""
 
 # db.gate.led.bit.exp
-#: en/messages:978
+#: en/messages:976
 msgid "Single-lamp LED display for 1-bit signals."
 msgstr ""
 
 # db.gate.led.bar.exp
-#: en/messages:981
+#: en/messages:979
 msgid "LED bar graph with one bar per bit."
 msgstr ""
 
 # db.gate.led.hex.exp
-#: en/messages:984
+#: en/messages:982
 msgid "Display signal in hexidecimal."
 msgstr ""
 
 # db.gate.led.dec.exp
-#: en/messages:987
+#: en/messages:985
 msgid "Display signal in decimal."
 msgstr ""
 
 # db.gate.led.seg.exp
-#: en/messages:990
+#: en/messages:988
 msgid "Signal bits directly control LED segments."
 msgstr ""
 
 # db.seq.back
-#: en/messages:994
+#: en/messages:992
 msgid "<Back"
 msgstr ""
 
 # db.seq.next
-#: en/messages:995
+#: en/messages:993
 msgid "Next>"
 msgstr ""
 
 # db.hdl.namechange.title
-#: en/messages:997
+#: en/messages:995
 msgid "HDL Module Name Changed"
 msgstr ""
 
 # db.hdl.textdisp.title
-#: en/messages:998
+#: en/messages:996
 msgid "HDL Text Disposition"
 msgstr ""
 
 # db.hdl.savecap
-#: en/messages:1000
+#: en/messages:998
 msgid "Multiple Modules"
 msgstr ""
 
 # db.hdl.saveexp
-#: en/messages:1002
+#: en/messages:1000
 msgid ""
 "The text buffer for the module you have just edited contains more\n"
 "than one module definition. Please select one of the three actions "
@@ -2558,27 +2558,32 @@ msgid ""
 msgstr ""
 
 # db.hdl.autoedit
-#: en/messages:1008
+#: en/messages:1006
 msgid "Auto Edit"
 msgstr ""
 
 # db.hdl.split
-#: en/messages:1009
+#: en/messages:1007
 msgid "Split"
 msgstr ""
 
+# db.hdl.comment
+#: en/messages:1008
+msgid "Comment out"
+msgstr ""
+
 # db.hdl.ignore
-#: en/messages:1012
+#: en/messages:1010
 msgid "Ignore"
 msgstr ""
 
 # db.hdl.autoeditcap
-#: en/messages:1014
+#: en/messages:1012
 msgid "Name Mismatch"
 msgstr ""
 
 # db.hdl.autoeditexp
-#: en/messages:1016
+#: en/messages:1014
 msgid ""
 "The textual description of the module does\n"
 "not match the expected name. Please select\n"
@@ -2586,223 +2591,239 @@ msgid ""
 msgstr ""
 
 # db.dip.title
-#: en/messages:1022
+#: en/messages:1020
 msgid "TkGate: Dip Value"
 msgstr ""
 
+# cpath.cloops
+#: en/messages:1022
+msgid ""
+"Combinational loops were detected in your circuit.\n"
+"In order to do delay analysis on this circuit, you\n"
+"must either break the loop, or mark some of the\n"
+"components in the loop as a \"Critical Path Partition\"\n"
+"point. Nets at which a loop was detected are\n"
+"listed below."
+msgstr ""
+
 # print.title
-#: en/messages:1038
+#: en/messages:1036
 msgid "TkGate: Print"
 msgstr ""
 
 # print.config.title
-#: en/messages:1039
+#: en/messages:1037
 msgid "TkGate: Printer Configuration"
 msgstr ""
 
 # print.scope.title
-#: en/messages:1040
+#: en/messages:1038
 msgid "TkGate: Scope Print"
 msgstr ""
 
 # print.printer
-#: en/messages:1042
+#: en/messages:1040
 msgid "Printer:"
 msgstr ""
 
 # print.prcmd
-#: en/messages:1044
+#: en/messages:1042
 msgid "Print Command:"
 msgstr ""
 
 # print.prname
-#: en/messages:1045
+#: en/messages:1043
 msgid "Printer"
 msgstr ""
 
 # print.advanced
-#: en/messages:1046
+#: en/messages:1044
 msgid "Advanced..."
 msgstr ""
 
 # print.epssave
-#: en/messages:1049
+#: en/messages:1047
 msgid "Save as Encapsulated Postscript."
 msgstr ""
 
 # print.epcm
-#: en/messages:1052
+#: en/messages:1050
 msgid "Epochs/cm"
 msgstr ""
 
 # print.estpg
-#: en/messages:1053
+#: en/messages:1051
 msgid "Estimated pages"
 msgstr ""
 
 # print.all
-#: en/messages:1054
+#: en/messages:1052
 msgid "All"
 msgstr ""
 
 # print.avail
-#: en/messages:1055
+#: en/messages:1053
 msgid "Available"
 msgstr ""
 
 # print.cur
-#: en/messages:1056
+#: en/messages:1054
 msgid "Current"
 msgstr ""
 
 # print.use
-#: en/messages:1057
+#: en/messages:1055
 msgid "Used"
 msgstr ""
 
+# print.sel
+#: en/messages:1056
+msgid "Picked"
+msgstr ""
+
 # print.inclib
-#: en/messages:1059
+#: en/messages:1057
 msgid "Include library modules."
 msgstr ""
 
 # print.incunused
-#: en/messages:1060
+#: en/messages:1058
 msgid "Include unused modules."
 msgstr ""
 
 # print.papsz
-#: en/messages:1061
+#: en/messages:1059
 msgid "Paper Size"
 msgstr ""
 
 # print.orient
-#: en/messages:1062
+#: en/messages:1060
 msgid "Orientation"
 msgstr ""
 
 # print.portrait
-#: en/messages:1063
+#: en/messages:1061
 msgid "Portrait"
 msgstr ""
 
 # print.landscape
-#: en/messages:1064
+#: en/messages:1062
 msgid "Landscape"
 msgstr ""
 
 # print.2side
-#: en/messages:1065
+#: en/messages:1063
 msgid "Print Double-Sided"
 msgstr ""
 
 # print.opts
-#: en/messages:1066
+#: en/messages:1064
 msgid "Content Options"
 msgstr ""
 
 # print.scale
-#: en/messages:1067
+#: en/messages:1065
 msgid "Scale large modules to fit page."
 msgstr ""
 
 # print.partition
-#: en/messages:1068
+#: en/messages:1066
 msgid "Partition large modules into multiple pages."
 msgstr ""
 
 # print.incidx
-#: en/messages:1069
+#: en/messages:1067
 msgid "Include index."
 msgstr ""
 
 # print.incgraph
-#: en/messages:1070
+#: en/messages:1068
 msgid "Include hierarchy graph."
 msgstr ""
 
 # print.4up
-#: en/messages:1071
+#: en/messages:1069
 msgid "Print small modules four per page."
 msgstr ""
 
 # print.rangeselection
-#: en/messages:1072
+#: en/messages:1070
 msgid "Range Selection"
 msgstr ""
 
 # print.scaleselect
-#: en/messages:1073
+#: en/messages:1071
 msgid "Scale Selection"
 msgstr ""
 
 # print.fulltr
-#: en/messages:1074
+#: en/messages:1072
 msgid "Full Trace"
 msgstr ""
 
 # print.parttr
-#: en/messages:1075
+#: en/messages:1073
 msgid "Partial Trace"
 msgstr ""
 
 # print.start
-#: en/messages:1076
+#: en/messages:1074
 msgid "Start"
 msgstr ""
 
 # print.range
-#: en/messages:1077
+#: en/messages:1075
 msgid "Range"
 msgstr ""
 
 # print.linelen
-#: en/messages:1078
+#: en/messages:1076
 msgid "Line Length"
 msgstr ""
 
 # print.filesel
-#: en/messages:1079
+#: en/messages:1077
 msgid "Output to file"
 msgstr ""
 
 # print.printersel
-#: en/messages:1080
+#: en/messages:1078
 msgid "Output to printer"
 msgstr ""
 
 # print.defaultprinter
-#: en/messages:1081
+#: en/messages:1079
 msgid "Default Printer"
 msgstr ""
 
 # print.pageset
-#: en/messages:1082
+#: en/messages:1080
 msgid "Page Setup"
 msgstr ""
 
 # print.modulesel
-#: en/messages:1083
+#: en/messages:1081
 msgid "Module Selection"
 msgstr ""
 
 # print.ok
 # opt.print
-#: en/messages:1089 en/messages:1151
+#: en/messages:1087 en/messages:1149
 msgid "Print"
 msgstr ""
 
 # print.printtrace.cap
-#: en/messages:1090
+#: en/messages:1088
 msgid "Print Trace"
 msgstr ""
 
 # print.printcirc.cap
-#: en/messages:1091
+#: en/messages:1089
 msgid "Print Schematic"
 msgstr ""
 
 # print.printcirc.out.exp
-#: en/messages:1092
+#: en/messages:1090
 msgid ""
 "Choose whether to send\n"
 "your schematic to the\n"
@@ -2811,14 +2832,14 @@ msgid ""
 msgstr ""
 
 # print.printcirc.page.exp
-#: en/messages:1099
+#: en/messages:1097
 msgid ""
 "Choose page and printer\n"
 "options here."
 msgstr ""
 
 # print.printcirc.mod.exp
-#: en/messages:1104
+#: en/messages:1102
 msgid ""
 "Choose which modules are\n"
 "to be printed and set\n"
@@ -2827,7 +2848,7 @@ msgid ""
 msgstr ""
 
 # print.printtrace.trace.exp
-#: en/messages:1111
+#: en/messages:1109
 msgid ""
 "Choose the time range\n"
 "over which to produce\n"
@@ -2838,634 +2859,634 @@ msgstr ""
 
 # print.tab.output
 # opt.print.output
-#: en/messages:1119 en/messages:1152
+#: en/messages:1117 en/messages:1150
 msgid "Output"
 msgstr ""
 
 # print.tab.content
 # opt.print.content
-#: en/messages:1122 en/messages:1153
+#: en/messages:1120 en/messages:1151
 msgid "Content"
 msgstr ""
 
 # print.tab.advanced
-#: en/messages:1123
+#: en/messages:1121
 msgid "Advanced"
 msgstr ""
 
 # @opt.tool.columns
-#: en/messages:1130
+#: en/messages:1128
 msgid "2"
 msgstr ""
 
 # @opt.tool.colwidth
-#: en/messages:1132
+#: en/messages:1130
 msgid "30"
 msgstr ""
 
 # @opt.sidebar.width
-#: en/messages:1134
+#: en/messages:1132
 msgid "*200"
 msgstr ""
 
 # @opt.tree.width
-#: en/messages:1136
+#: en/messages:1134
 msgid "*150"
 msgstr ""
 
 # @opt.editor.catwidth
-#: en/messages:1138
+#: en/messages:1136
 msgid "15"
 msgstr ""
 
 # opt.title
-#: en/messages:1140
+#: en/messages:1138
 msgid "TkGate: Options"
 msgstr ""
 
 # opt.treelabel
 # circ.flags
-#: en/messages:1141 en/messages:1558
+#: en/messages:1139 en/messages:1556
 msgid "Options"
 msgstr ""
 
 # opt.toolbars
-#: en/messages:1146
+#: en/messages:1144
 msgid "Toolbars"
 msgstr ""
 
 # opt.toolbars.edit
 # opt.color.edit
-#: en/messages:1147 en/messages:1165
+#: en/messages:1145 en/messages:1163
 msgid "Editor"
 msgstr ""
 
 # opt.toolbars.sim
 # circ.simulator
-#: en/messages:1148 en/messages:1582
+#: en/messages:1146 en/messages:1580
 msgid "Simulation"
 msgstr ""
 
 # opt.toolbars.symed
-#: en/messages:1149
+#: en/messages:1147
 msgid "Symbol Editor"
 msgstr ""
 
 # opt.simulate.basic
-#: en/messages:1155
+#: en/messages:1153
 msgid "Basic"
 msgstr ""
 
 # opt.simulate.error
 # opt.simulator.err
-#: en/messages:1157 en/messages:1249
+#: en/messages:1155 en/messages:1247
 msgid "Error Handling"
 msgstr ""
 
 # opt.library.path
-#: en/messages:1159
+#: en/messages:1157
 msgid "Path"
 msgstr ""
 
 # opt.library.load
-#: en/messages:1160
+#: en/messages:1158
 msgid "Auto Loading"
 msgstr ""
 
 # opt.library.vpd
-#: en/messages:1161
+#: en/messages:1159
 msgid "VPD"
 msgstr ""
 
 # opt.analysis
-#: en/messages:1162
+#: en/messages:1160
 msgid "Analysis"
 msgstr ""
 
 # opt.color
 # opt.editor.color
-#: en/messages:1163 en/messages:1282
+#: en/messages:1161 en/messages:1280
 msgid "Color"
 msgstr ""
 
 # opt.color.title
-#: en/messages:1164
+#: en/messages:1162
 msgid "TkGate: Color Selection"
 msgstr ""
 
 # opt.color.scope
-#: en/messages:1166
+#: en/messages:1164
 msgid "Scope"
 msgstr ""
 
 # opt.color.hdl
-#: en/messages:1167
+#: en/messages:1165
 msgid "HDL Editor"
 msgstr ""
 
 # opt.html
-#: en/messages:1168
+#: en/messages:1166
 msgid "HTML"
 msgstr ""
 
 # opt.debug
-#: en/messages:1169
+#: en/messages:1167
 msgid "Debug"
 msgstr ""
 
 # opt.lib.load.available
-#: en/messages:1171
+#: en/messages:1169
 msgid "Available Libraries"
 msgstr ""
 
 # opt.lib.load.selected
-#: en/messages:1172
+#: en/messages:1170
 msgid "Selected Libraries"
 msgstr ""
 
 # opt.identity
-#: en/messages:1174
+#: en/messages:1172
 msgid "Identity"
 msgstr ""
 
 # opt.site
-#: en/messages:1175
+#: en/messages:1173
 msgid "Site Name"
 msgstr ""
 
 # opt.username
-#: en/messages:1176
+#: en/messages:1174
 msgid "User Name"
 msgstr ""
 
 # opt.libname
-#: en/messages:1177
+#: en/messages:1175
 msgid "Library Name:"
 msgstr ""
 
 # opt.inst
-#: en/messages:1178
+#: en/messages:1176
 msgid "Instances"
 msgstr ""
 
 # opt.modports
-#: en/messages:1180
+#: en/messages:1178
 msgid "Module Ports"
 msgstr ""
 
 # opt.frames
-#: en/messages:1181
+#: en/messages:1179
 msgid "Frames"
 msgstr ""
 
 # opt.comment
 # opt.editor.comments
-#: en/messages:1182 en/messages:1276
+#: en/messages:1180 en/messages:1274
 msgid "Comments"
 msgstr ""
 
 # opt.hlink
-#: en/messages:1183
+#: en/messages:1181
 msgid "Hyperlinks"
 msgstr ""
 
 # opt.wire
-#: en/messages:1184
+#: en/messages:1182
 msgid "Single-Bit Wires"
 msgstr ""
 
 # opt.bus
-#: en/messages:1185
+#: en/messages:1183
 msgid "Multi-Bit Wires"
 msgstr ""
 
 # opt.tools
-#: en/messages:1186
+#: en/messages:1184
 msgid "Gate Tools"
 msgstr ""
 
 # opt.background
-#: en/messages:1187
+#: en/messages:1185
 msgid "Background"
 msgstr ""
 
 # opt.grid
-#: en/messages:1189
+#: en/messages:1187
 msgid "Scope Grid"
 msgstr ""
 
 # opt.logic1
-#: en/messages:1190
+#: en/messages:1188
 msgid "Logic One"
 msgstr ""
 
 # opt.logic0
-#: en/messages:1191
+#: en/messages:1189
 msgid "Logic Zero"
 msgstr ""
 
 # opt.float
-#: en/messages:1192
+#: en/messages:1190
 msgid "Float"
 msgstr ""
 
 # opt.unknown
-#: en/messages:1193
+#: en/messages:1191
 msgid "Unknown/Conflict"
 msgstr ""
 
 # opt.offled
-#: en/messages:1194
+#: en/messages:1192
 msgid "Off LED"
 msgstr ""
 
 # opt.onled
-#: en/messages:1195
+#: en/messages:1193
 msgid "On LED"
 msgstr ""
 
 # opt.zled
-#: en/messages:1196
+#: en/messages:1194
 msgid "Floating LED"
 msgstr ""
 
 # opt.restdef
-#: en/messages:1197
+#: en/messages:1195
 msgid "Restore Defaults"
 msgstr ""
 
 # opt.regudate
-#: en/messages:1198
+#: en/messages:1196
 msgid "Region Update"
 msgstr ""
 
 # opt.smoothscroll
-#: en/messages:1199
+#: en/messages:1197
 msgid "Smooth Scrolling"
 msgstr ""
 
 # opt.balloon
-#: en/messages:1200
+#: en/messages:1198
 msgid "Enable Help Balloons"
 msgstr ""
 
 # opt.tearawaymenus
-#: en/messages:1201
+#: en/messages:1199
 msgid "Enable tear-away main menus"
 msgstr ""
 
 # opt.safeSave
-#: en/messages:1202
+#: en/messages:1200
 msgid "Do safe file saving"
 msgstr ""
 
 # opt.saveCells
-#: en/messages:1203
+#: en/messages:1201
 msgid "Include cells in save files"
 msgstr ""
 
 # opt.showimage
-#: en/messages:1204
+#: en/messages:1202
 msgid "Show side-bar images in dialog boxes"
 msgstr ""
 
 # opt.novice
-#: en/messages:1205
+#: en/messages:1203
 msgid "Novice mode"
 msgstr ""
 
 # opt.blockDropConnect
-#: en/messages:1206
+#: en/messages:1204
 msgid "Wire drop port creation"
 msgstr ""
 
 # opt.ckpoint.1
-#: en/messages:1207
+#: en/messages:1205
 msgid "Do checkpointing every"
 msgstr ""
 
 # opt.ckpoint.2
-#: en/messages:1208
+#: en/messages:1206
 msgid "commands."
 msgstr ""
 
 # opt.freq
-#: en/messages:1209
+#: en/messages:1207
 msgid "Interval"
 msgstr ""
 
 # opt.beak
-#: en/messages:1210
+#: en/messages:1208
 msgid "Enable Special Modes"
 msgstr ""
 
 # opt.bat
-#: en/messages:1211
+#: en/messages:1209
 msgid "Bat"
 msgstr ""
 
 # opt.trek
-#: en/messages:1212
+#: en/messages:1210
 msgid "Star Trek"
 msgstr ""
 
 # opt.miles
-#: en/messages:1213
+#: en/messages:1211
 msgid "Miles"
 msgstr ""
 
 # opt.contver
-#: en/messages:1214
+#: en/messages:1212
 msgid "Automatic Integrity Checking"
 msgstr ""
 
 # opt.showsimcmd
-#: en/messages:1215
+#: en/messages:1213
 msgid "Display Simulator Stream"
 msgstr ""
 
 # opt.estepsz
-#: en/messages:1216
+#: en/messages:1214
 msgid "Epoch Step Size"
 msgstr ""
 
 # opt.cstepsz
-#: en/messages:1217
+#: en/messages:1215
 msgid "Clock Cycle Step Size"
 msgstr ""
 
 # opt.overstep
-#: en/messages:1218
+#: en/messages:1216
 msgid "Clock Overstep"
 msgstr ""
 
 # opt.sorttraces
-#: en/messages:1219
+#: en/messages:1217
 msgid "Sort traces alphabetically on scope"
 msgstr ""
 
 # opt.vpopupdelay
-#: en/messages:1220
+#: en/messages:1218
 msgid "Pop-Up Delay"
 msgstr ""
 
 # opt.posedge
-#: en/messages:1222
+#: en/messages:1220
 msgid "Clock step stops on all clock posedges"
 msgstr ""
 
 # opt.setclock
-#: en/messages:1223
+#: en/messages:1221
 msgid "Clock step stops on clock"
 msgstr ""
 
 # opt.delayfilepath
-#: en/messages:1224
+#: en/messages:1222
 msgid "Technology Files"
 msgstr ""
 
 # opt.devfilepath
-#: en/messages:1225
+#: en/messages:1223
 msgid "VPD (Virtual Peripheral Device) File Path"
 msgstr ""
 
 # opt.vlibpath
-#: en/messages:1226
+#: en/messages:1224
 msgid "Verilog Library Path"
 msgstr ""
 
 # opt.vlibnames
-#: en/messages:1227
+#: en/messages:1225
 msgid "Base Libraries"
 msgstr ""
 
 # opt.display
-#: en/messages:1228
+#: en/messages:1226
 msgid "Display"
 msgstr ""
 
 # opt.interaction
-#: en/messages:1229
+#: en/messages:1227
 msgid "Interaction"
 msgstr ""
 
 # opt.input
-#: en/messages:1230
+#: en/messages:1228
 msgid "Input"
 msgstr ""
 
 # opt.security
-#: en/messages:1231
+#: en/messages:1229
 msgid "Security"
 msgstr ""
 
 # opt.undolen
-#: en/messages:1232
+#: en/messages:1230
 msgid "Max Undo"
 msgstr ""
 
 # opt.keybind
-#: en/messages:1233
+#: en/messages:1231
 msgid "Key Binding Style"
 msgstr ""
 
 # opt.useless
-#: en/messages:1234
+#: en/messages:1232
 msgid "Enable Useless Features"
 msgstr ""
 
 # opt.features
-#: en/messages:1235
+#: en/messages:1233
 msgid "Save File Features"
 msgstr ""
 
 # opt.simbase
-#: en/messages:1236
+#: en/messages:1234
 msgid "Basic Simulator Options"
 msgstr ""
 
 # opt.simclock
-#: en/messages:1237
+#: en/messages:1235
 msgid "Clock Options"
 msgstr ""
 
 # opt.cpopts
-#: en/messages:1240
+#: en/messages:1238
 msgid "Critical Path Options"
 msgstr ""
 
 # opt.maxpath
-#: en/messages:1241
+#: en/messages:1239
 msgid "Maximum Number of Paths:"
 msgstr ""
 
 # opt.cpflash
-#: en/messages:1242
+#: en/messages:1240
 msgid "Display with Flashing Path"
 msgstr ""
 
 # opt.general.fontset
-#: en/messages:1244
+#: en/messages:1242
 msgid "Font Set"
 msgstr ""
 
 # opt.simulator.savetraces
-#: en/messages:1246
+#: en/messages:1244
 msgid "Save probe locations between simlation runs."
 msgstr ""
 
 # opt.simulator.noglitch
-#: en/messages:1247
+#: en/messages:1245
 msgid "Enable simulator glitch suppression."
 msgstr ""
 
 # opt.simulator.stopany
-#: en/messages:1250
+#: en/messages:1248
 msgid "Treat warnings as errors."
 msgstr ""
 
 # opt.simulator.showall
-#: en/messages:1251
+#: en/messages:1249
 msgid "Always display warnings."
 msgstr ""
 
 # opt.simulator.showiferr
-#: en/messages:1252
+#: en/messages:1250
 msgid "Display warnings only with errors."
 msgstr ""
 
 # opt.simulator.ignore
-#: en/messages:1253
+#: en/messages:1251
 msgid "Ignore all warnings."
 msgstr ""
 
 # opt.tool.gateopt
-#: en/messages:1257
+#: en/messages:1255
 msgid "Rotation/Alignment"
 msgstr ""
 
 # opt.tool.undo
-#: en/messages:1259
+#: en/messages:1257
 msgid "Undo/Redo"
 msgstr ""
 
 # opt.tool.zoom
-#: en/messages:1260
+#: en/messages:1258
 msgid "Zoom"
 msgstr ""
 
 # opt.tool.mode
-#: en/messages:1261
+#: en/messages:1259
 msgid "Editor Tools"
 msgstr ""
 
 # opt.tool.simctl
-#: en/messages:1264
+#: en/messages:1262
 msgid "Simulator Control"
 msgstr ""
 
 # opt.tool.simaux
-#: en/messages:1265
+#: en/messages:1263
 msgid "Simulator Commands"
 msgstr ""
 
 # opt.tool.simmode
-#: en/messages:1266
+#: en/messages:1264
 msgid "Simulator Tools"
 msgstr ""
 
 # opt.tool.symmode
-#: en/messages:1267
+#: en/messages:1265
 msgid "Symbol Editor Tools"
 msgstr ""
 
 # opt.tool.symedit
-#: en/messages:1268
+#: en/messages:1266
 msgid "Cut/Paste"
 msgstr ""
 
 # opt.tool.symshift
-#: en/messages:1270
+#: en/messages:1268
 msgid "Bit Shift"
 msgstr ""
 
 # opt.tool.symopr
-#: en/messages:1271
+#: en/messages:1269
 msgid "Bit Ops"
 msgstr ""
 
 # opt.editor.features
-#: en/messages:1273
+#: en/messages:1271
 msgid "Basic Editor Features"
 msgstr ""
 
 # opt.editor.format
-#: en/messages:1274
+#: en/messages:1272
 msgid "Enable Automatic Indenting"
 msgstr ""
 
 # opt.editor.colorize
-#: en/messages:1275
+#: en/messages:1273
 msgid "Enable Code Colorization"
 msgstr ""
 
 # opt.editor.strings
-#: en/messages:1277
+#: en/messages:1275
 msgid "Strings"
 msgstr ""
 
 # opt.editor.reserved
-#: en/messages:1278
+#: en/messages:1276
 msgid "Reserved Words"
 msgstr ""
 
 # opt.editor.gateword
-#: en/messages:1279
+#: en/messages:1277
 msgid "Built-in Gates"
 msgstr ""
 
 # opt.editor.instword
-#: en/messages:1280
+#: en/messages:1278
 msgid "Module Instances"
 msgstr ""
 
 # opt.editor.taskword
-#: en/messages:1281
+#: en/messages:1279
 msgid "System Tasks"
 msgstr ""
 
 # opt.editor.bold
-#: en/messages:1283
+#: en/messages:1281
 msgid "Bold"
 msgstr ""
 
 # opt.editor.italic
-#: en/messages:1284
+#: en/messages:1282
 msgid "Italic"
 msgstr ""
 
 # opt.editor.indentlevel
-#: en/messages:1285
+#: en/messages:1283
 msgid "Indentation per level:"
 msgstr ""
 
 # opt.editor.beginindent
-#: en/messages:1286
+#: en/messages:1284
 msgid "Make begin...end flush with enclosing level."
 msgstr ""
 
 # opt.editor.movesel
-#: en/messages:1287
+#: en/messages:1285
 msgid "Enable drag-and-drop of selection."
 msgstr ""
 
 # opt.editor.returntab
-#: en/messages:1288
+#: en/messages:1286
 msgid "Auto indent after return."
 msgstr ""
 
 # opt.vercheck
-#: en/messages:1292
+#: en/messages:1290
 msgid ""
 "Periodically check for new versions of TkGate over\n"
 "the Internet. Do not enable unless you have continuous\n"
@@ -3473,244 +3494,244 @@ msgid ""
 msgstr ""
 
 # opt.sec.execlevel
-#: en/messages:1298
+#: en/messages:1296
 msgid "The $tkg$exec() system task is"
 msgstr ""
 
 # opt.sec.exec
-#: en/messages:1299
+#: en/messages:1297
 msgid "fully enabled."
 msgstr ""
 
 # opt.sec.regexec
-#: en/messages:1300
+#: en/messages:1298
 msgid "enabled only for registered functions."
 msgstr ""
 
 # opt.sec.noexec
-#: en/messages:1301
+#: en/messages:1299
 msgid "disabled."
 msgstr ""
 
 # opt.sec.simfeatures
-#: en/messages:1303
+#: en/messages:1301
 msgid "Simulator Features"
 msgstr ""
 
 # opt.sec.send
-#: en/messages:1304
+#: en/messages:1302
 msgid "Enable the $tkg$command() system task."
 msgstr ""
 
 # opt.sec.open
-#: en/messages:1305
+#: en/messages:1303
 msgid "Enable the $fopen() system task."
 msgstr ""
 
 # opt.sec.writemem
-#: en/messages:1306
+#: en/messages:1304
 msgid "Enable the $writememb() and $writememh() system tasks."
 msgstr ""
 
 # opt.sec.enqueue
-#: en/messages:1307
+#: en/messages:1305
 msgid "Enable the $tkg$recv() and $tkg$send() system tasks."
 msgstr ""
 
 # opt.sec.handle
-#: en/messages:1309
+#: en/messages:1307
 msgid "Security Violation Handling"
 msgstr ""
 
 # opt.sec.stop
-#: en/messages:1310
+#: en/messages:1308
 msgid "Stop simulator when disabled feature is used."
 msgstr ""
 
 # opt.sec.warn
-#: en/messages:1311
+#: en/messages:1309
 msgid "Display warning message when disabled feature is used."
 msgstr ""
 
 # opt.sec.ignore
-#: en/messages:1312
+#: en/messages:1310
 msgid "Ignore attempted usage of disabled features."
 msgstr ""
 
 # opt.html.linkopts
-#: en/messages:1314
+#: en/messages:1312
 msgid "Link Options"
 msgstr ""
 
 # opt.html.browser
-#: en/messages:1315
+#: en/messages:1313
 msgid "Browser Command"
 msgstr ""
 
 # opt.html.email
-#: en/messages:1316
+#: en/messages:1314
 msgid "e-Mail Command"
 msgstr ""
 
 # opt.debug.opt
-#: en/messages:1318
+#: en/messages:1316
 msgid "Debugging Options"
 msgstr ""
 
 # opt.color.editwin
-#: en/messages:1320
+#: en/messages:1318
 msgid "Edit Window Colors"
 msgstr ""
 
 # opt.color.scopewin
-#: en/messages:1321
+#: en/messages:1319
 msgid "Scope Window Colors"
 msgstr ""
 
 # opt.vlibadd.title
-#: en/messages:1323
+#: en/messages:1321
 msgid "TkGate: Add Library"
 msgstr ""
 
 # opt.gen.basetoolbar
-#: en/messages:1326
+#: en/messages:1324
 msgid "Core Editor Toolbars"
 msgstr ""
 
 # opt.gen.simtoolbar
-#: en/messages:1327
+#: en/messages:1325
 msgid "Simulation Mode Toolbars"
 msgstr ""
 
 # opt.gen.symedtoolbar
-#: en/messages:1328
+#: en/messages:1326
 msgid "Symbol Editor Toolbars"
 msgstr ""
 
 # opt.bbar.restore
-#: en/messages:1330
+#: en/messages:1328
 msgid "Restore Page Defaults"
 msgstr ""
 
 # opt.bbar.restoreall
-#: en/messages:1331
+#: en/messages:1329
 msgid "Restore All Defaults"
 msgstr ""
 
 # igen.title
-#: en/messages:1337
+#: en/messages:1335
 msgid "TkGate: Module Interface Generation"
 msgstr ""
 
 # igen.modname
-#: en/messages:1345
+#: en/messages:1343
 msgid "Module Name:"
 msgstr ""
 
 # igen.mod
-#: en/messages:1363
+#: en/messages:1361
 msgid "Use ports used in module only."
 msgstr ""
 
 # igen.int
-#: en/messages:1364
+#: en/messages:1362
 msgid "Use ports from exisiting interface only."
 msgstr ""
 
 # igen.modint
-#: en/messages:1365
+#: en/messages:1363
 msgid "Use both module and interface ports."
 msgstr ""
 
 # igen.portsel
-#: en/messages:1367
+#: en/messages:1365
 msgid "Port Selection"
 msgstr ""
 
 # igen.portpos
-#: en/messages:1368
+#: en/messages:1366
 msgid "Port Positions"
 msgstr ""
 
 # igen.portpos.keep
-#: en/messages:1369
+#: en/messages:1367
 msgid "Keep exiting port positions when possible."
 msgstr ""
 
 # igen.portpos.renew
-#: en/messages:1370
+#: en/messages:1368
 msgid "Regenerate all port positionings."
 msgstr ""
 
 # igen.caption
-#: en/messages:1372
+#: en/messages:1370
 msgid "Generate Interface"
 msgstr ""
 
 # igen.description
-#: en/messages:1374
+#: en/messages:1372
 msgid ""
 "Create a new interface\n"
 "for a module."
 msgstr ""
 
 # info.script.error
-#: en/messages:1379
+#: en/messages:1377
 msgid "Script Errors"
 msgstr ""
 
 # module.props.title
-#: en/messages:1381
+#: en/messages:1379
 msgid "TkGate: Module Properties"
 msgstr ""
 
 # ipanel.plist
-#: en/messages:1384
+#: en/messages:1382
 msgid "Port List"
 msgstr ""
 
 # ipanel.props
-#: en/messages:1385
+#: en/messages:1383
 msgid "Interface Properties"
 msgstr ""
 
 # ipanel.block
-#: en/messages:1388
+#: en/messages:1386
 msgid "Standard"
 msgstr ""
 
 # ipanel.symbol
-#: en/messages:1389
+#: en/messages:1387
 msgid "Symbol"
 msgstr ""
 
 # ipanel.updateall
-#: en/messages:1392
+#: en/messages:1390
 msgid "Synchronize All..."
 msgstr ""
 
 # ipanel.itype.select
-#: en/messages:1394
+#: en/messages:1392
 msgid "Interface Type"
 msgstr ""
 
 # ipanel.ppos.label
-#: en/messages:1399
+#: en/messages:1397
 msgid "Block resize port position handling:"
 msgstr ""
 
 # ipanel.ppos.fix
-#: en/messages:1400
+#: en/messages:1398
 msgid "Fixed"
 msgstr ""
 
 # ipanel.ppos.scale
-#: en/messages:1401
+#: en/messages:1399
 msgid "Scaled"
 msgstr ""
 
 # ipanel.warn.toblock
-#: en/messages:1404
+#: en/messages:1402
 msgid ""
 "You are about to change the\n"
 "interface type for this module\n"
@@ -3721,7 +3742,7 @@ msgid ""
 msgstr ""
 
 # ipanel.warn.tosymbol
-#: en/messages:1414
+#: en/messages:1412
 msgid ""
 "You are about to change the\n"
 "interface type for this module\n"
@@ -3734,78 +3755,78 @@ msgid ""
 msgstr ""
 
 # blklst.delete.title
-#: en/messages:1430
+#: en/messages:1428
 msgid "TKGate: Module Delete"
 msgstr ""
 
 # blklst.copy.title
-#: en/messages:1431
+#: en/messages:1429
 msgid "TKGate: Module Copy"
 msgstr ""
 
 # blklst.rename.title
-#: en/messages:1432
+#: en/messages:1430
 msgid "TKGate: Module Rename"
 msgstr ""
 
 # blklst.claim.title
-#: en/messages:1433
+#: en/messages:1431
 msgid "TKGate: Claim Module"
 msgstr ""
 
 # blklst.setroot.title
-#: en/messages:1434
+#: en/messages:1432
 msgid "TKGate: Set Root Module"
 msgstr ""
 
 # blklst.new.title
-#: en/messages:1435
+#: en/messages:1433
 msgid "TKGate: Module New"
 msgstr ""
 
 # blklst.claim
 # blklst.claim.cap
-#: en/messages:1437 en/messages:1445
+#: en/messages:1435 en/messages:1443
 msgid "Claim Module"
 msgstr ""
 
 # blklst.to
-#: en/messages:1438
+#: en/messages:1436
 msgid "To"
 msgstr ""
 
 # blklst.from
-#: en/messages:1439
+#: en/messages:1437
 msgid "From"
 msgstr ""
 
 # blklst.new.cap
-#: en/messages:1441
+#: en/messages:1439
 msgid "Create New Module"
 msgstr ""
 
 # blklst.del.cap
-#: en/messages:1442
+#: en/messages:1440
 msgid "Delete Module"
 msgstr ""
 
 # blklst.copy.cap
-#: en/messages:1443
+#: en/messages:1441
 msgid "Copy Module"
 msgstr ""
 
 # blklst.rename.cap
-#: en/messages:1444
+#: en/messages:1442
 msgid "Rename Module"
 msgstr ""
 
 # blklst.setroot.cap
-#: en/messages:1446
+#: en/messages:1444
 msgid "Set Root Module"
 msgstr ""
 
 # blklst.new.exp
-#: en/messages:1448
+#: en/messages:1446
 msgid ""
 "Use this dialog box to create\n"
 "a new module definition. You\n"
@@ -3818,7 +3839,7 @@ msgid ""
 msgstr ""
 
 # blklst.del.exp
-#: en/messages:1459
+#: en/messages:1457
 msgid ""
 "Delete the definition and interface data\n"
 "for the specified module. Existing instances\n"
@@ -3827,14 +3848,14 @@ msgid ""
 msgstr ""
 
 # blklst.copy.exp
-#: en/messages:1466
+#: en/messages:1464
 msgid ""
 "Create a copy of the specified module definition. Use this to create\n"
 "a new variant of an existing module."
 msgstr ""
 
 # blklst.rename.exp
-#: en/messages:1471
+#: en/messages:1469
 msgid ""
 "Rename a module definition. This operation will affect only the\n"
 "definition, any existing instances of this module will continue to\n"
@@ -3842,29 +3863,29 @@ msgid ""
 msgstr ""
 
 # blklst.claim.exp
-#: en/messages:1477
+#: en/messages:1475
 msgid ""
 "Convert a library module to a user module. This allows the module to be\n"
 "edited and to be saved with the user circuit."
 msgstr ""
 
 # blklst.setroot.exp
-#: en/messages:1482
+#: en/messages:1480
 msgid "Make the specified module the top-level module."
 msgstr ""
 
 # find.title
-#: en/messages:1487
+#: en/messages:1485
 msgid "TkGate: Find Object"
 msgstr ""
 
 # find.label
-#: en/messages:1488
+#: en/messages:1486
 msgid "Find Objects"
 msgstr ""
 
 # find.exp
-#: en/messages:1489
+#: en/messages:1487
 msgid ""
 "Look for text either in\n"
 "a component name, a wire name\n"
@@ -3874,252 +3895,262 @@ msgid ""
 msgstr ""
 
 # find.ignorecase
-#: en/messages:1497
+#: en/messages:1495
 msgid "Ignore Case"
 msgstr ""
 
 # find.result.name
-#: en/messages:1501
+#: en/messages:1499
 msgid "Object Name"
 msgstr ""
 
 # @find.type.gate
-#: en/messages:1506
+#: en/messages:1504
 msgid "gate"
 msgstr ""
 
 # @find.type.net
-#: en/messages:1507
+#: en/messages:1505
 msgid "net"
 msgstr ""
 
 # @find.type.comment
-#: en/messages:1508
+#: en/messages:1506
 msgid "comment"
 msgstr ""
 
 # find.options
-#: en/messages:1510
+#: en/messages:1508
 msgid "Search Options"
 msgstr ""
 
 # find.results
-#: en/messages:1511
+#: en/messages:1509
 msgid "Search Results"
 msgstr ""
 
 # @find.qual.pos
-#: en/messages:1518
+#: en/messages:1516
 msgid "before"
 msgstr ""
 
 # find.qual.contains
-#: en/messages:1520
+#: en/messages:1518
 msgid "Contains..."
 msgstr ""
 
 # find.qual.begins
-#: en/messages:1521
+#: en/messages:1519
 msgid "Begins with..."
 msgstr ""
 
 # find.qual.ends
-#: en/messages:1522
+#: en/messages:1520
 msgid "Ends with..."
 msgstr ""
 
 # find.qual.matches
-#: en/messages:1523
+#: en/messages:1521
 msgid "Matches..."
 msgstr ""
 
 # find.dom.label
-#: en/messages:1525
+#: en/messages:1523
 msgid "Look for objects in:"
 msgstr ""
 
+# find.dom.gates
+#: en/messages:1524
+msgid "components"
+msgstr ""
+
+# find.dom.nets
+#: en/messages:1525
+msgid "nets"
+msgstr ""
+
 # find.dom.text
-#: en/messages:1528
-msgid "Comment Text"
+#: en/messages:1526
+msgid "comment text"
 msgstr ""
 
 # find.search
-#: en/messages:1530
+#: en/messages:1528
 msgid "Find:"
 msgstr ""
 
 # find.target
-#: en/messages:1531
+#: en/messages:1529
 msgid "Target"
 msgstr ""
 
 # @portlist.in
-#: en/messages:1537
+#: en/messages:1535
 msgid "port_in1.gif"
 msgstr ""
 
 # @portlist.out
-#: en/messages:1538
+#: en/messages:1536
 msgid "port_out1.gif"
 msgstr ""
 
 # @portlist.inout
-#: en/messages:1539
+#: en/messages:1537
 msgid "port_inout1.gif"
 msgstr ""
 
 # @portlist.in2
-#: en/messages:1540
+#: en/messages:1538
 msgid "port_in2.gif"
 msgstr ""
 
 # @portlist.out2
-#: en/messages:1541
+#: en/messages:1539
 msgid "port_out2.gif"
 msgstr ""
 
 # @portlist.inout2
-#: en/messages:1542
+#: en/messages:1540
 msgid "port_inout2.gif"
 msgstr ""
 
 # circ.wintitle
-#: en/messages:1549
+#: en/messages:1547
 msgid "TkGate: Circuit Properties"
 msgstr ""
 
 # circ.label
-#: en/messages:1550
+#: en/messages:1548
 msgid "Circuit Properties"
 msgstr ""
 
 # circ.ident
-#: en/messages:1551
+#: en/messages:1549
 msgid "Identification"
 msgstr ""
 
 # circ.filev
-#: en/messages:1552
+#: en/messages:1550
 msgid "File Version"
 msgstr ""
 
 # circ.title
-#: en/messages:1554
+#: en/messages:1552
 msgid "Circuit Title"
 msgstr ""
 
 # circ.encoding
-#: en/messages:1555
+#: en/messages:1553
 msgid "File Encoding"
 msgstr ""
 
 # circ.lang
-#: en/messages:1556
+#: en/messages:1554
 msgid "File Language"
 msgstr ""
 
 # circ.discchg
-#: en/messages:1557
+#: en/messages:1555
 msgid "Do not warn about discarding changes."
 msgstr ""
 
 # circ.defaults
-#: en/messages:1559
+#: en/messages:1557
 msgid "Component Defaults"
 msgstr ""
 
 # circ.extbar
-#: en/messages:1560
+#: en/messages:1558
 msgid "Use extender bars on AND, OR and XOR gates."
 msgstr ""
 
 # circ.shownet
-#: en/messages:1561
+#: en/messages:1559
 msgid "Show net name on switches and dips."
 msgstr ""
 
 # circ.autostart
-#: en/messages:1562
+#: en/messages:1560
 msgid "Enable auto-start of simulation."
 msgstr ""
 
 # circ.iniscript
-#: en/messages:1563
+#: en/messages:1561
 msgid "Initialization Scripts"
 msgstr ""
 
 # circ.reallyupdate
-#: en/messages:1567
+#: en/messages:1565
 msgid "Do you really want to update the interface of all '%s' instances?"
 msgstr ""
 
 # circ.reallyoverwrite
-#: en/messages:1571
+#: en/messages:1569
 msgid "Do you really want to overwrite the existing file '%s'?"
 msgstr ""
 
 # @circ.library.width
-#: en/messages:1575
+#: en/messages:1573
 msgid "*500"
 msgstr ""
 
 # @circ.library.height
-#: en/messages:1576
+#: en/messages:1574
 msgid "*350"
 msgstr ""
 
 # circ.script
-#: en/messages:1581
+#: en/messages:1579
 msgid "Scripts"
 msgstr ""
 
 # circ.timescale
-#: en/messages:1583
+#: en/messages:1581
 msgid "Default Simulation Time Scale"
 msgstr ""
 
 # circ.timescale.unit
-#: en/messages:1584
+#: en/messages:1582
 msgid "Units:"
 msgstr ""
 
 # circ.timescale.prec
-#: en/messages:1585
+#: en/messages:1583
 msgid "Precision:"
 msgstr ""
 
 # circ.sim.features
-#: en/messages:1587
+#: en/messages:1585
 msgid "Features"
 msgstr ""
 
 # circ.sim.tv.title
-#: en/messages:1595
+#: en/messages:1593
 msgid "Timing Violation Handling"
 msgstr ""
 
 # circ.sim.tv.all
-#: en/messages:1596
+#: en/messages:1594
 msgid "Report all timing violations."
 msgstr ""
 
 # circ.sim.tv.after.1
-#: en/messages:1597
+#: en/messages:1595
 msgid "Report timing violations after"
 msgstr ""
 
 # circ.sim.tv.after.2
-#: en/messages:1598
+#: en/messages:1596
 msgid "-empty-"
 msgstr ""
 
 # circ.sim.tv.never
-#: en/messages:1599
+#: en/messages:1597
 msgid "Never report timing violations."
 msgstr ""
 
 # circ.exp.general
-#: en/messages:1601
+#: en/messages:1599
 msgid ""
 "View and modify circuit specific properties.\n"
 "These properties will be stored with the\n"
@@ -4127,7 +4158,7 @@ msgid ""
 msgstr ""
 
 # circ.exp.library
-#: en/messages:1607
+#: en/messages:1605
 msgid ""
 "Select libraries required by this circuit.\n"
 "Library requirements are saved with the circuit\n"
@@ -4136,7 +4167,7 @@ msgid ""
 msgstr ""
 
 # circ.exp.script
-#: en/messages:1614
+#: en/messages:1612
 msgid ""
 "Add any simulation scripts that should be\n"
 "automatically read and excuted when this\n"
@@ -4144,93 +4175,93 @@ msgid ""
 msgstr ""
 
 # circ.exp.simulator
-#: en/messages:1621
+#: en/messages:1619
 msgid "View and modify simulation preferences for this circuit."
 msgstr ""
 
 # libmgr.cap
-#: en/messages:1629
+#: en/messages:1627
 msgid "Library Manager"
 msgstr ""
 
 # libmgr.library
 # ho.mod.type.partlib
-#: en/messages:1630 en/messages:2291
+#: en/messages:1628 en/messages:2289
 msgid "Library"
 msgstr ""
 
 # libmgr.description
-#: en/messages:1631
+#: en/messages:1629
 msgid "Description"
 msgstr ""
 
 # libmgr.status
-#: en/messages:1632
+#: en/messages:1630
 msgid "Status"
 msgstr ""
 
 # libmgr.status.load
-#: en/messages:1633
+#: en/messages:1631
 msgid "Loaded"
 msgstr ""
 
 # libmgr.status.unload
-#: en/messages:1634
+#: en/messages:1632
 msgid "Not Loaded"
 msgstr ""
 
 # libmgr.status.loadp
-#: en/messages:1635
+#: en/messages:1633
 msgid "[Loaded]"
 msgstr ""
 
 # libmgr.status.unloadp
-#: en/messages:1636
+#: en/messages:1634
 msgid "[Not Loaded]"
 msgstr ""
 
 # libmgr.exp
-#: en/messages:1637
+#: en/messages:1635
 msgid "Select libraries to be loaded or unloaded."
 msgstr ""
 
 # libmgr.load
-#: en/messages:1640
+#: en/messages:1638
 msgid "Load"
 msgstr ""
 
 # libmgr.unloadall
-#: en/messages:1642
+#: en/messages:1640
 msgid "Unload All"
 msgstr ""
 
 # libmgr.notedit
-#: en/messages:1644
+#: en/messages:1642
 msgid "Must be in circuit edit mode to open library manager."
 msgstr ""
 
 # break.tab
-#: en/messages:1652
+#: en/messages:1650
 msgid "Breakpoints"
 msgstr ""
 
 # break.id
-#: en/messages:1653
+#: en/messages:1651
 msgid "ID"
 msgstr ""
 
 # break.state
-#: en/messages:1654
+#: en/messages:1652
 msgid "S"
 msgstr ""
 
 # break.condition
-#: en/messages:1655
+#: en/messages:1653
 msgid "Condition"
 msgstr ""
 
 # sim.recursive
-#: en/messages:1664
+#: en/messages:1662
 msgid ""
 "Recursive module definition found\n"
 "at '%s'. Can not start simulator or\n"
@@ -4238,335 +4269,335 @@ msgid ""
 msgstr ""
 
 # sim.hyperlinkstop
-#: en/messages:1669
+#: en/messages:1667
 msgid ""
 "The simulator is currently running. Would you like\n"
 "to stop the simulation and follow the link?"
 msgstr ""
 
 # cp.delay
-#: en/messages:1679
+#: en/messages:1677
 msgid "Path Delay:"
 msgstr ""
 
 # cp.pathl
-#: en/messages:1680
+#: en/messages:1678
 msgid "Path List:"
 msgstr ""
 
 # cp.numpath
-#: en/messages:1681
+#: en/messages:1679
 msgid "Number of Paths:"
 msgstr ""
 
 # cp.recompute
-#: en/messages:1682
+#: en/messages:1680
 msgid "Recompute"
 msgstr ""
 
 # err.notinsim
-#: en/messages:1687
+#: en/messages:1685
 msgid "Not allowed while simulator is active."
 msgstr ""
 
 # err.nomemselect
-#: en/messages:1688
+#: en/messages:1686
 msgid "Memory is not selected."
 msgstr ""
 
 # err.rootinterface
-#: en/messages:1689
+#: en/messages:1687
 msgid "Can not set interface of root module."
 msgstr ""
 
 # err.nopin
-#: en/messages:1690
+#: en/messages:1688
 msgid "Can't change selected pin."
 msgstr ""
 
 # err.badhex
-#: en/messages:1691
+#: en/messages:1689
 msgid "Illegal hex value '%s' ignored."
 msgstr ""
 
 # err.gatanchor
-#: en/messages:1692
+#: en/messages:1690
 msgid "Components(s) are anchored and can not be moved."
 msgstr ""
 
 # err.protdata
-#: en/messages:1693
+#: en/messages:1691
 msgid "Can not modify contents of protected or library module."
 msgstr ""
 
 # err.badfind
-#: en/messages:1694
+#: en/messages:1692
 msgid "Can't find target '%s'."
 msgstr ""
 
 # err.badopendel
-#: en/messages:1695
+#: en/messages:1693
 msgid "Can't delete open module."
 msgstr ""
 
 # err.nosrcmod
-#: en/messages:1696
+#: en/messages:1694
 msgid "Source module '%s' not found."
 msgstr ""
 
 # err.noerr
-#: en/messages:1697
+#: en/messages:1695
 msgid "Can not locate error."
 msgstr ""
 
 # err.misserr
-#: en/messages:1698
+#: en/messages:1696
 msgid "Error information incomplete (did the simulator crash?)"
 msgstr ""
 
 # err.nofunc
-#: en/messages:1699
+#: en/messages:1697
 msgid "Bad or missing function name for module interface."
 msgstr ""
 
 # err.wirerot
-#: en/messages:1700
+#: en/messages:1698
 msgid "Selection can not be rotated due to attaching wires."
 msgstr ""
 
 # err.badinadd
-#: en/messages:1702
+#: en/messages:1700
 msgid "Can't add any more inputs to selected component."
 msgstr ""
 
 # err.badoutadd
-#: en/messages:1703
+#: en/messages:1701
 msgid "Can't add any more outputs to selected component."
 msgstr ""
 
 # err.badinoutadd
-#: en/messages:1704
+#: en/messages:1702
 msgid "Can't add any more inout pins to selected component."
 msgstr ""
 
 # err.badpinchg
-#: en/messages:1705
+#: en/messages:1703
 msgid "Can't change pin types on selected component."
 msgstr ""
 
 # err.badnetname
-#: en/messages:1706
+#: en/messages:1704
 msgid "Illegal characters in identifier deleted."
 msgstr ""
 
 # err.netbcrename
-#: en/messages:1707
+#: en/messages:1705
 msgid "Identifier renamed to '%s' because of illegal characters."
 msgstr ""
 
 # err.netconfnet
-#: en/messages:1708
+#: en/messages:1706
 msgid "Identifier renamed to '%s' because of conflict."
 msgstr ""
 
 # err.netconfgat
-#: en/messages:1709
+#: en/messages:1707
 msgid "Identifier renamed to avoid conflict with built-in component name"
 msgstr ""
 
 # err.netconfkw
-#: en/messages:1710
+#: en/messages:1708
 msgid "Identifier renamed to avoid conflict with reserved word."
 msgstr ""
 
 # err.badconsame
-#: en/messages:1711
+#: en/messages:1709
 msgid "Connection refused because wires are part of the same net."
 msgstr ""
 
 # err.badconptsp
-#: en/messages:1712
+#: en/messages:1710
 msgid "Connection refused because both wires are module ports or supply."
 msgstr ""
 
 # err.badconbitw
-#: en/messages:1713
+#: en/messages:1711
 msgid "Connection refused because bit widths do not match."
 msgstr ""
 
 # err.badrange
-#: en/messages:1714
+#: en/messages:1712
 msgid "Non-positive range for scope trace is not allowed."
 msgstr ""
 
 # err.badlprcmd
-#: en/messages:1715
+#: en/messages:1713
 msgid "Unable to exectute printer command '%s'."
 msgstr ""
 
 # err.badpsopen
-#: en/messages:1716
+#: en/messages:1714
 msgid "Unable to open file '%s' for postscript output."
 msgstr ""
 
 # err.badid
-#: en/messages:1717
+#: en/messages:1715
 msgid "Illegal identifier '%s'."
 msgstr ""
 
 # err.noinvgate
-#: en/messages:1718
+#: en/messages:1716
 msgid "Inverters are not allowed on components of this type."
 msgstr ""
 
 # err.protintf
-#: en/messages:1720
+#: en/messages:1718
 msgid "Can't modifiy protected interface on module '%s'."
 msgstr ""
 
 # err.bkpt.badexp
-#: en/messages:1722
+#: en/messages:1720
 msgid ""
 "Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
 "'net==value', 'net!=value'"
 msgstr ""
 
 # err.bkpt.badnet
-#: en/messages:1723
+#: en/messages:1721
 msgid ""
 "Invalid net name '%s'. Names must start with a letter and contain only "
 "letters, digits and '.'."
 msgstr ""
 
 # err.bkpt.badval
-#: en/messages:1724
+#: en/messages:1722
 msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
 msgstr ""
 
 # err.bkpt.toomany
-#: en/messages:1725
+#: en/messages:1723
 msgid "Too many breakpoints. Maximum is %d."
 msgstr ""
 
 # err.sim.badtmp
-#: en/messages:1727
+#: en/messages:1725
 msgid "Could not save temporary file '%s' for simulator (disc full?)"
 msgstr ""
 
 # err.sim.syntx
-#: en/messages:1728
+#: en/messages:1726
 msgid "Syntax error in '%s' command."
 msgstr ""
 
 # err.sim.noincl
-#: en/messages:1729
+#: en/messages:1727
 msgid "Include file '%s' not found."
 msgstr ""
 
 # err.sim.badedge
-#: en/messages:1730
+#: en/messages:1728
 msgid "Illegal edge indicator '%c' in clock command."
 msgstr ""
 
 # err.sim.nobkpt
-#: en/messages:1731
+#: en/messages:1729
 msgid "No such breakpoint '%s'."
 msgstr ""
 
 # err.sim.nonet
-#: en/messages:1732
+#: en/messages:1730
 msgid "Can't find net '%s'."
 msgstr ""
 
 # err.sim.nogate
-#: en/messages:1733
+#: en/messages:1731
 msgid "Can't find component '%s'."
 msgstr ""
 
 # err.sim.badbin
-#: en/messages:1734
+#: en/messages:1732
 msgid "Illegal charcter in binary constant '%s'."
 msgstr ""
 
 # err.sim.notswitch
-#: en/messages:1735
+#: en/messages:1733
 msgid "Component '%s' is not a switch, dip or register."
 msgstr ""
 
 # err.sim.badcmd
-#: en/messages:1736
+#: en/messages:1734
 msgid "Unrecognized command '%s' in simulation script."
 msgstr ""
 
 # err.sim.isrun
-#: en/messages:1737
+#: en/messages:1735
 msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
 msgstr ""
 
 # err.sim.run
-#: en/messages:1738
+#: en/messages:1736
 msgid "Run-time error at time %s:"
 msgstr ""
 
 # err.sim.cmd
-#: en/messages:1739
+#: en/messages:1737
 msgid "Internal Command Error"
 msgstr ""
 
 # err.noteditpchg
-#: en/messages:1741
+#: en/messages:1739
 msgid "Properties can only be changed in edit mode."
 msgstr ""
 
 # err.badeditop
-#: en/messages:1742
+#: en/messages:1740
 msgid "Illegal interface edit mode operation."
 msgstr ""
 
 # err.badopen
-#: en/messages:1743
+#: en/messages:1741
 msgid "Unable to open input file '%s'."
 msgstr ""
 
 # err.badlibopen
-#: en/messages:1744
+#: en/messages:1742
 msgid "Unable to open library file '%s'."
 msgstr ""
 
 # err.nomark
-#: en/messages:1746
+#: en/messages:1744
 msgid ""
 "Please set a mark with the left mouse button before selecting a component "
 "type."
 msgstr ""
 
 # err.badgate
-#: en/messages:1747
+#: en/messages:1745
 msgid "Unknown component type '%s'."
 msgstr ""
 
 # err.badportadd
-#: en/messages:1749
+#: en/messages:1747
 msgid "Can't add ports to components of this type."
 msgstr ""
 
 # err.modmissing
-#: en/messages:1751
+#: en/messages:1749
 msgid "HDL module text missing for module \"%s\"."
 msgstr ""
 
 # err.modtoomany
-#: en/messages:1752
+#: en/messages:1750
 msgid "Excess module definitions in module \"%s\"."
 msgstr ""
 
 # err.modmismatch
-#: en/messages:1753
+#: en/messages:1751
 msgid "Name mismatch between text definition and module name in \"%s\"."
 msgstr ""
 
 # err.manypages
-#: en/messages:1755
+#: en/messages:1753
 msgid ""
 "There are an awful lot of\n"
 "pages in this document. Are\n"
@@ -4574,7 +4605,7 @@ msgid ""
 msgstr ""
 
 # err.nojump
-#: en/messages:1761
+#: en/messages:1759
 msgid ""
 "The 'jump-to-module' feature can not be used\n"
 "in simulation or critical path analysis mode.\n"
@@ -4585,224 +4616,224 @@ msgid ""
 msgstr ""
 
 # err.nomod
-#: en/messages:1770
+#: en/messages:1768
 msgid "Module '%s' is not defined."
 msgstr ""
 
 # err.modlock
-#: en/messages:1771
+#: en/messages:1769
 msgid "Logic Block is Locked!"
 msgstr ""
 
 # err.closeroot
-#: en/messages:1772
+#: en/messages:1770
 msgid "No higher level module opened on the module stack."
 msgstr ""
 
 # err.editonly
-#: en/messages:1773
+#: en/messages:1771
 msgid "Command not valid when in simulation mode."
 msgstr ""
 
 # err.simonly
-#: en/messages:1774
+#: en/messages:1772
 msgid "Command valid only in simulation mode."
 msgstr ""
 
 # err.deltop
-#: en/messages:1776
+#: en/messages:1774
 msgid "Can not delete top-level module '%s'."
 msgstr ""
 
 # err.delprot
-#: en/messages:1777
+#: en/messages:1775
 msgid "Can not delete protected module '%s'."
 msgstr ""
 
 # err.nodel
-#: en/messages:1778
+#: en/messages:1776
 msgid "No deletable selection."
 msgstr ""
 
 # err.modnotdef
-#: en/messages:1779
+#: en/messages:1777
 msgid "Module '%s' is undefined."
 msgstr ""
 
 # err.moddef
-#: en/messages:1780
+#: en/messages:1778
 msgid "The module '%s' already exists."
 msgstr ""
 
 # err.primredef
-#: en/messages:1781
+#: en/messages:1779
 msgid "Built-in element name '%s' can not be redefined."
 msgstr ""
 
 # err.primprefix
-#: en/messages:1782
+#: en/messages:1780
 msgid "Illegal module name '%s' begins with built-in prefix '%s'."
 msgstr ""
 
 # err.iskeyword
-#: en/messages:1783
+#: en/messages:1781
 msgid "Verilog keyword '%s' can not be used as an identifier."
 msgstr ""
 
 # err.noprop
-#: en/messages:1784
+#: en/messages:1782
 msgid "Selected component has no editable properites."
 msgstr ""
 
 # err.openscript
-#: en/messages:1785
+#: en/messages:1783
 msgid "Can't open simulation script file '%s'"
 msgstr ""
 
 # err.oldversion
-#: en/messages:1786
+#: en/messages:1784
 msgid ""
 "Loaded file '%s' with obsolete version number %s (current version is %s)."
 msgstr ""
 
 # err.futureversion
-#: en/messages:1787
+#: en/messages:1785
 msgid ""
 "Loaded file '%s' saved by future TkGate version %s (this version is %s)."
 msgstr ""
 
 # err.badversion
-#: en/messages:1788
+#: en/messages:1786
 msgid "Unknown version number. Use at your own risk."
 msgstr ""
 
 # err.nodrive
-#: en/messages:1789
+#: en/messages:1787
 msgid "Net %s has no driver in module %s."
 msgstr ""
 
 # err.noconn
-#: en/messages:1790
+#: en/messages:1788
 msgid "Wire %s{%d} has no connections - deleted."
 msgstr ""
 
 # err.oldportact
-#: en/messages:1791
+#: en/messages:1789
 msgid "Please right click on port or module edge to add/change port."
 msgstr ""
 
 # err.nomodule
-#: en/messages:1792
+#: en/messages:1790
 msgid "No selected module."
 msgstr ""
 
 # err.nomodop
-#: en/messages:1793
+#: en/messages:1791
 msgid "No suitable modules for operation."
 msgstr ""
 
 # err.protexec
-#: en/messages:1794
+#: en/messages:1792
 msgid "Attempted execution of protected command '%s' in $tkg$exec()."
 msgstr ""
 
 # err.notwritable
-#: en/messages:1796
+#: en/messages:1794
 msgid "File '%s' is not writable."
 msgstr ""
 
 # err.backupfail
-#: en/messages:1797
+#: en/messages:1795
 msgid "Unable to create backup file '%s'."
 msgstr ""
 
 # err.yy.badprop
-#: en/messages:1799
+#: en/messages:1797
 msgid "Ignoring unknown circuit property '%s'."
 msgstr ""
 
 # err.yy.badpropval
-#: en/messages:1800
+#: en/messages:1798
 msgid "Bad value '%s' for circuit property '%s'."
 msgstr ""
 
 # err.yy.baddata
-#: en/messages:1801
+#: en/messages:1799
 msgid "Bad data type supplied for circuit property '%s'."
 msgstr ""
 
 # err.yy.nosym
-#: en/messages:1802
+#: en/messages:1800
 msgid "No current module symbol."
 msgstr ""
 
 # err.yy.badicon
-#: en/messages:1803
+#: en/messages:1801
 msgid "Bad icon type '%s'."
 msgstr ""
 
 # err.yy.toomuchdata
-#: en/messages:1804
+#: en/messages:1802
 msgid "Too much icon data."
 msgstr ""
 
 # err.yy.nosyminst
-#: en/messages:1805
+#: en/messages:1803
 msgid "Missing symbol %d on instance %s of %s."
 msgstr ""
 
 # err.yy.badmodprop
-#: en/messages:1806
+#: en/messages:1804
 msgid "Ignoring unknown module property '%s'."
 msgstr ""
 
 # err.yy.badmoddata
-#: en/messages:1807
+#: en/messages:1805
 msgid "Bad data type supplied for module property '%s'."
 msgstr ""
 
 # err.yy.badprim
-#: en/messages:1808
+#: en/messages:1806
 msgid "Unknown primitive name '%s'."
 msgstr ""
 
 # err.yy.nonet
-#: en/messages:1809
+#: en/messages:1807
 msgid "Undeclared net '%s'."
 msgstr ""
 
 # err.yy.bogussave
-#: en/messages:1810
+#: en/messages:1808
 msgid "Bogus save data detected. circuit may be damaged."
 msgstr ""
 
 # err.yy.pinformat
-#: en/messages:1811
+#: en/messages:1809
 msgid "Illegal pin name format '%s'."
 msgstr ""
 
 # err.yy.pinname
-#: en/messages:1812
+#: en/messages:1810
 msgid "Pin name '%s' not defined for component type '%s'"
 msgstr ""
 
 # err.yy.nonetpos
-#: en/messages:1813
+#: en/messages:1811
 msgid "No net for position %d on component %s."
 msgstr ""
 
 # err.yy.baddirective
-#: en/messages:1814
+#: en/messages:1812
 msgid "Illegal or badly formed directive '%s'."
 msgstr ""
 
 # err.yy.badlocale
-#: en/messages:1815
+#: en/messages:1813
 msgid "Unknown locale '%s' in save file. Using English locale."
 msgstr ""
 
 # err.corruptnewsave
-#: en/messages:1817
+#: en/messages:1815
 msgid ""
 "TkGate was able to save your file in '%s', but it appears\n"
 "to be corrupted. If you have checkpointing enabled try\n"
@@ -4811,7 +4842,7 @@ msgid ""
 msgstr ""
 
 # err.corruptsave
-#: en/messages:1824
+#: en/messages:1822
 msgid ""
 "TkGate detetected a problem while trying to save the file '%s'.\n"
 "The existing file has been left unmodified and the damaged file has\n"
@@ -4821,14 +4852,14 @@ msgid ""
 msgstr ""
 
 # err.badsave
-#: en/messages:1832
+#: en/messages:1830
 msgid ""
 "A problem has occured trying to open or write the file '%s'. Check\n"
 "file/directory protections and or disk space."
 msgstr ""
 
 # err.nosafesave
-#: en/messages:1837
+#: en/messages:1835
 msgid ""
 "A problem has occured attempting to save '%s'. If you wish, you can\n"
 "try again without save validation. If you say \"no\", the original file\n"
@@ -4838,7 +4869,7 @@ msgid ""
 msgstr ""
 
 # err.noback
-#: en/messages:1845
+#: en/messages:1843
 msgid ""
 "File '%s' was created by TkGate\n"
 "%s, and may not be readable\n"
@@ -4848,906 +4879,910 @@ msgid ""
 msgstr ""
 
 # err.viewfile
-#: en/messages:1853
+#: en/messages:1851
 msgid "Can not open file '%s'."
 msgstr ""
 
 # err.internal.nomod
-#: en/messages:1860
+#: en/messages:1858
 msgid "internal error: Failed to find module '%s'."
 msgstr ""
 
 # msg.selwire
+#: en/messages:1864
+msgid "Selected wire %s named '%s'."
+msgstr ""
+
 # msg.selgate
-#: en/messages:1866 en/messages:1867
-msgid "Selected %s named '%s'."
+#: en/messages:1865
+msgid "Selected gate %s named '%s'."
 msgstr ""
 
 # msg.selblock
-#: en/messages:1868
+#: en/messages:1866
 msgid "Selected %s block named '%s'."
 msgstr ""
 
 # msg.iselwire
-#: en/messages:1869
+#: en/messages:1867
 msgid "Selected port '%s' on block '%s'."
 msgstr ""
 
 # msg.iselgate
-#: en/messages:1870
+#: en/messages:1868
 msgid "Selected %s named '%s' (huh? this message should be impossible)."
 msgstr ""
 
 # msg.iselblock
-#: en/messages:1871
+#: en/messages:1869
 msgid "Selected module interface for '%s'."
 msgstr ""
 
 # msg.modoverwt
-#: en/messages:1873
+#: en/messages:1871
 msgid "Destination module '%s' already exists. Overwrite?"
 msgstr ""
 
 # msg.foundgate
-#: en/messages:1874
+#: en/messages:1872
 msgid "Found component named '%s'."
 msgstr ""
 
 # msg.foundwire
-#: en/messages:1875
+#: en/messages:1873
 msgid "Found wire named '%s'."
 msgstr ""
 
 # msg.searchagn
-#: en/messages:1876
+#: en/messages:1874
 msgid "Target string '%s' not found. Hit 'find' to restart search again."
 msgstr ""
 
 # msg.sim.chgtoroot
-#: en/messages:1877
+#: en/messages:1875
 msgid "Simulation mode requires root module at top of edit stack."
 msgstr ""
 
 # msg.sim.nogatemod
-#: en/messages:1878
+#: en/messages:1876
 msgid "Simulation mode requires concrete module stack."
 msgstr ""
 
 # msg.setinterface
-#: en/messages:1879
+#: en/messages:1877
 msgid "Set module interface for '%s'."
 msgstr ""
 
 # msg.needsel
-#: en/messages:1880
+#: en/messages:1878
 msgid "Please select a module instance."
 msgstr ""
 
 # msg.wroteckpt
-#: en/messages:1881
+#: en/messages:1879
 msgid "Checkpointed to %s..."
 msgstr ""
 
 # msg.save
-#: en/messages:1882
+#: en/messages:1880
 msgid "Saved circuit to '%s'."
 msgstr ""
 
 # msg.reallynew
-#: en/messages:1883
+#: en/messages:1881
 msgid ""
 "Circuit has been modified. Do you really want to discard your changes and "
 "create a new circuit?"
 msgstr ""
 
 # msg.reallyquit
-#: en/messages:1884
+#: en/messages:1882
 msgid "Circuit has been modified. Do you really want to exit?"
 msgstr ""
 
 # msg.notlib
-#: en/messages:1885
+#: en/messages:1883
 msgid "Module '%s' is not a library module."
 msgstr ""
 
 # miles.msg1
-#: en/messages:1890
+#: en/messages:1888
 msgid "Only a fool would put %s%s there, Miles."
 msgstr ""
 
 # miles.msg2
-#: en/messages:1891
+#: en/messages:1889
 msgid "That's a really stupid place to put %s%s, Miles."
 msgstr ""
 
 # miles.msg3
-#: en/messages:1892
+#: en/messages:1890
 msgid "That's a terrible place for %s%s, Miles."
 msgstr ""
 
 # miles.msg4
-#: en/messages:1893
+#: en/messages:1891
 msgid "Miles, you are a fool for putting %s%s there."
 msgstr ""
 
 # miles.msg5
-#: en/messages:1894
+#: en/messages:1892
 msgid "Only you would put %s%s there, Miles."
 msgstr ""
 
 # miles.msg6
-#: en/messages:1895
+#: en/messages:1893
 msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
 msgstr ""
 
 # miles.msg7
-#: en/messages:1896
+#: en/messages:1894
 msgid "Why don't you give up Miles, this is a stupid circuit."
 msgstr ""
 
 # miles.msg8a
-#: en/messages:1897
+#: en/messages:1895
 msgid "It's pointless to continue, Miles."
 msgstr ""
 
 # miles.msg8b
-#: en/messages:1898
+#: en/messages:1896
 msgid "It's obvious you can't design a circuit"
 msgstr ""
 
 # verga.err.OK
-#: en/messages:1905
+#: en/messages:1903
 msgid "Don't worry, be happy."
 msgstr ""
 
 # verga.err.INPORT
-#: en/messages:1906
+#: en/messages:1904
 msgid "Port size mismatch on input port '%s'."
 msgstr ""
 
 # verga.err.OUTPORT
-#: en/messages:1907
+#: en/messages:1905
 msgid "Port size mismatch on output port '%s'."
 msgstr ""
 
 # verga.err.FLOATNET
-#: en/messages:1908
+#: en/messages:1906
 msgid "Net '%s' has no drivers (floating net)."
 msgstr ""
 
 # verga.err.DIRECTCONN
-#: en/messages:1909
+#: en/messages:1907
 msgid "Direct connect operator '=>' unsupported. Treated as '*>'."
 msgstr ""
 
 # verga.err.MEMADDR
-#: en/messages:1910
+#: en/messages:1908
 msgid "Attempt to write to memory %s with unknown address."
 msgstr ""
 
 # verga.err.MEMBITS
-#: en/messages:1911
+#: en/messages:1909
 msgid "Attempt to write to memory %s with unknown bitrange."
 msgstr ""
 
 # verga.err.BADARRAYUSG
-#: en/messages:1912
+#: en/messages:1910
 msgid "Array '%s' used in expression without index."
 msgstr ""
 
 # verga.err.BADARRAYLHS
-#: en/messages:1913
+#: en/messages:1911
 msgid "Array '%s' used without index on left-hand-side."
 msgstr ""
 
 # verga.err.BADCLOSE
-#: en/messages:1914
+#: en/messages:1912
 msgid "Attempt to close non-open descriptor in task '%s'."
 msgstr ""
 
 # verga.err.BADAUTORNG
-#: en/messages:1915
+#: en/messages:1913
 msgid "Auto range [*] is only valid with 'wire' declaration."
 msgstr ""
 
 # verga.err.BADGATERNG
-#: en/messages:1916
+#: en/messages:1914
 msgid "Bad component instance range expression."
 msgstr ""
 
 # verga.err.BADARGVALUE
-#: en/messages:1917
+#: en/messages:1915
 msgid "Bad value for argument '%s' in task '%s'."
 msgstr ""
 
 # verga.err.DIVZERO
-#: en/messages:1918
+#: en/messages:1916
 msgid "Divide by zero."
 msgstr ""
 
 # verga.err.NODIV
-#: en/messages:1919
+#: en/messages:1917
 msgid "Divide/module unsupported on this machine - sizeof(short) must be 2."
 msgstr ""
 
 # verga.err.BADEDGEEVENT
-#: en/messages:1920
+#: en/messages:1918
 msgid "Event on multi-bit net '%s' can not have posedge/negedge."
 msgstr ""
 
 # verga.err.NEEDEDGE
-#: en/messages:1921
+#: en/messages:1919
 msgid "Must specify posedge or negedge on event for %s."
 msgstr ""
 
 # verga.err.ASGNEVENT
-#: en/messages:1922
+#: en/messages:1920
 msgid "Event wait on assign is illegal."
 msgstr ""
 
 # verga.err.PROTTASK
-#: en/messages:1923
+#: en/messages:1921
 msgid "Execution of protected system task '%s' blocked."
 msgstr ""
 
 # verga.err.NEEDIDENT
-#: en/messages:1924
+#: en/messages:1922
 msgid "Expecting identifier for argument %s of task '%s'."
 msgstr ""
 
 # verga.err.BADOP
-#: en/messages:1925
+#: en/messages:1923
 msgid "Expression operator error in '%s'."
 msgstr ""
 
 # verga.err.NOREAD
-#: en/messages:1926
+#: en/messages:1924
 msgid "Failed to load source file '%s'."
 msgstr ""
 
 # verga.err.MEMFILE
-#: en/messages:1927
+#: en/messages:1925
 msgid "Failed to open memory file '%s'."
 msgstr ""
 
 # verga.err.WRONGMOD
-#: en/messages:1928
+#: en/messages:1926
 msgid "Found module '%s' when expecting '%s'."
 msgstr ""
 
 # verga.err.NOTPARM
-#: en/messages:1929
+#: en/messages:1927
 msgid "Identifier '%s' in constant expression is not a parameter."
 msgstr ""
 
 # verga.err.BADADDR
-#: en/messages:1930
+#: en/messages:1928
 msgid "Illegal address range on port '%s'."
 msgstr ""
 
 # verga.err.BADADDRSPEC
-#: en/messages:1931
+#: en/messages:1929
 msgid "Illegal address range specification '%s'."
 msgstr ""
 
 # verga.err.BADCHAR
-#: en/messages:1932
+#: en/messages:1930
 msgid "Illegal character (%s) '%s'."
 msgstr ""
 
 # verga.err.BADEVENT
-#: en/messages:1933
+#: en/messages:1931
 msgid "Illegal event control expression."
 msgstr ""
 
 # verga.err.BADCONSTOP
-#: en/messages:1934
+#: en/messages:1932
 msgid "Illegal operator in constant expression."
 msgstr ""
 
 # verga.err.BADXOP
-#: en/messages:1935
+#: en/messages:1933
 msgid "Illegal operator in expression."
 msgstr ""
 
 # verga.err.NETREDEF
-#: en/messages:1936
+#: en/messages:1934
 msgid "Illegal redefinition of net '%s'."
 msgstr ""
 
 # verga.err.BADINOUT
-#: en/messages:1937
+#: en/messages:1935
 msgid "Inout connections must be net-to-net on port '%s'."
 msgstr ""
 
 # verga.err.MODUNDEF
-#: en/messages:1938
+#: en/messages:1936
 msgid "Instance of undefined module '%s'."
 msgstr ""
 
 # verga.err.BADASGNLHS
-#: en/messages:1939
+#: en/messages:1937
 msgid "Invalid left-hand-side in 'assign'."
 msgstr ""
 
 # verga.err.LHSNOTREG
-#: en/messages:1940
+#: en/messages:1938
 msgid "Illegal use of '%s' in left-hand-side of assignment."
 msgstr ""
 
 # verga.err.BADLHS
-#: en/messages:1941
+#: en/messages:1939
 msgid "Invalid left-hand-side in assignment."
 msgstr ""
 
 # verga.err.BADOUT
-#: en/messages:1942
+#: en/messages:1940
 msgid "Invalid output assignment."
 msgstr ""
 
 # verga.err.NOTREG
-#: en/messages:1943
+#: en/messages:1941
 msgid "Memories must be declared as register."
 msgstr ""
 
 # verga.err.PORTMIX
-#: en/messages:1944
+#: en/messages:1942
 msgid "Mixed named and unnamed ports on interface '%s' of '%s'."
 msgstr ""
 
 # verga.err.REPCASE
-#: en/messages:1945
+#: en/messages:1943
 msgid "More than one default: in case statement."
 msgstr ""
 
 # verga.err.NOMEM
-#: en/messages:1946
+#: en/messages:1944
 msgid "No current memory in memory file read."
 msgstr ""
 
 # verga.err.BADCMD
-#: en/messages:1947
+#: en/messages:1945
 msgid "No such command '%s'."
 msgstr ""
 
 # verga.err.CMDNOTNET
-#: en/messages:1948
+#: en/messages:1946
 msgid "No such net '%s' in '%s' command."
 msgstr ""
 
 # verga.err.MEMNONBLK
-#: en/messages:1949
+#: en/messages:1947
 msgid "Non-blocking assignments to memories not implemented."
 msgstr ""
 
 # verga.err.NOTPPORT
-#: en/messages:1950
+#: en/messages:1948
 msgid "Parameter '%s' is not declared as a port."
 msgstr ""
 
 # verga.err.REDEFP
-#: en/messages:1951
+#: en/messages:1949
 msgid "Parameter redefines identifier '%s'."
 msgstr ""
 
 # verga.err.PORTNOTDEF
-#: en/messages:1952
+#: en/messages:1950
 msgid "Port '%s' on interface '%s' is not defined in module '%s'."
 msgstr ""
 
 # verga.err.NOCONN
-#: en/messages:1953
+#: en/messages:1951
 msgid "Port '%s' has no connections on interface '%s' of '%s'."
 msgstr ""
 
 # verga.err.MULTCONN
-#: en/messages:1954
+#: en/messages:1952
 msgid "Port '%s' has multiple connections on interface '%s' of '%s'."
 msgstr ""
 
 # verga.err.PORTCOUNT
-#: en/messages:1955
+#: en/messages:1953
 msgid "Port count does not match definition on interface '%s' of '%s'."
 msgstr ""
 
 # verga.err.BADPRTRANGE
-#: en/messages:1956
+#: en/messages:1954
 msgid "Range on port '%s' is not numeric."
 msgstr ""
 
 # verga.err.BADARRAYRNG
-#: en/messages:1957
+#: en/messages:1955
 msgid "Range specification not allowed for memory reference of '%s'."
 msgstr ""
 
 # verga.err.CMDMODREDEF
-#: en/messages:1958
+#: en/messages:1956
 msgid "Redefinition of dynamic module '%s'."
 msgstr ""
 
 # verga.err.REDEF
-#: en/messages:1959
+#: en/messages:1957
 msgid "Redefinition of identifier %s."
 msgstr ""
 
 # verga.err.PROTTASKSTOP
-#: en/messages:1960
+#: en/messages:1958
 msgid ""
 "Simulation stopped on attempted execution of protected system task '%s'."
 msgstr ""
 
 # verga.err.NOTMEM
-#: en/messages:1961
+#: en/messages:1959
 msgid "Specified net '%s' is not a memory."
 msgstr ""
 
 # verga.err.CMDNOTMEM
-#: en/messages:1962
+#: en/messages:1960
 msgid "Specified net '%s' is not a memory in '%s' command."
 msgstr ""
 
 # verga.err.SYNTAX
-#: en/messages:1963
+#: en/messages:1961
 msgid "Syntax error."
 msgstr ""
 
 # verga.err.TOOFEWPP
-#: en/messages:1964
+#: en/messages:1962
 msgid "Too few parameter ports on instance %s."
 msgstr ""
 
 # verga.err.OPENTOOMANY
-#: en/messages:1965
+#: en/messages:1963
 msgid "Too many files open in task '%s'."
 msgstr ""
 
 # verga.err.TOOMANYPP
-#: en/messages:1966
+#: en/messages:1964
 msgid "Too many parameter ports on instance %s."
 msgstr ""
 
 # verga.err.NOTOP
-#: en/messages:1967
+#: en/messages:1965
 msgid "Top-module '%s' not defined."
 msgstr ""
 
 # verga.err.BADOPEN
-#: en/messages:1968
+#: en/messages:1966
 msgid "Unable to open output file '%s' in task '%s'."
 msgstr ""
 
 # verga.err.CMDNOMOD
-#: en/messages:1969
+#: en/messages:1967
 msgid "Undefined dynamic module '%s' in '%s' command."
 msgstr ""
 
 # verga.err.BADEVENTNET
-#: en/messages:1970
+#: en/messages:1968
 msgid "Undefined net '%s' in event control expression."
 msgstr ""
 
 # verga.err.NOTASK
-#: en/messages:1971
+#: en/messages:1969
 msgid "Undefined task '%s'."
 msgstr ""
 
 # verga.err.NOTDEF
-#: en/messages:1972
+#: en/messages:1970
 msgid "Undefined variable '%s'."
 msgstr ""
 
 # verga.err.BADRANGE
-#: en/messages:1973
+#: en/messages:1971
 msgid "Unsupported bit range [%s] on net '%s' (must be of form [n:0])."
 msgstr ""
 
 # verga.err.GATEUNIMP
-#: en/messages:1974
+#: en/messages:1972
 msgid "Unimplemented primitive component type on instance '%s'."
 msgstr ""
 
 # verga.err.USAGE
-#: en/messages:1975
+#: en/messages:1973
 msgid "Usage: thyme [options][files...]"
 msgstr ""
 
 # verga.err.CLSDWRITE
-#: en/messages:1976
+#: en/messages:1974
 msgid "Write to closed descriptor."
 msgstr ""
 
 # verga.err.PRIMPTCOUNT
-#: en/messages:1977
+#: en/messages:1975
 msgid "Wrong number of ports on primitive component instance '%s'."
 msgstr ""
 
 # verga.err.CMDARGS
-#: en/messages:1978
+#: en/messages:1976
 msgid "Wrong number of arguments in '%s' command."
 msgstr ""
 
 # verga.err.YYERROR
-#: en/messages:1979
+#: en/messages:1977
 msgid "YYError - %s."
 msgstr ""
 
 # verga.err.TASKARGS
-#: en/messages:1980
+#: en/messages:1978
 msgid "Task '%s' called with wrong number of arguments."
 msgstr ""
 
 # verga.err.BADSTART
-#: en/messages:1981
+#: en/messages:1979
 msgid "Illegal start value in task '%s'."
 msgstr ""
 
 # verga.err.BADSTOP
-#: en/messages:1982
+#: en/messages:1980
 msgid "Illegal stop value in $readmemb."
 msgstr ""
 
 # verga.err.SPECTASKUSG
-#: en/messages:1983
+#: en/messages:1981
 msgid "Task '%s' must be used in a specify block."
 msgstr ""
 
 # verga.err.BADSPECTASK
-#: en/messages:1984
+#: en/messages:1982
 msgid "Task '%s' can not be used in a specify block."
 msgstr ""
 
 # verga.err.TIMING
-#: en/messages:1985
+#: en/messages:1983
 msgid "Timing violation in %s[%s] %s."
 msgstr ""
 
 # verga.err.RAMDCHG
-#: en/messages:1986
+#: en/messages:1984
 msgid "Data line changed while write enabled on %s"
 msgstr ""
 
 # verga.err.RAMACHG
-#: en/messages:1987
+#: en/messages:1985
 msgid "Address line changed while write enabled on %s"
 msgstr ""
 
 # verga.err.NOIFDEF
-#: en/messages:1988
+#: en/messages:1986
 msgid "No matching `ifdef/`ifndef for %s declaration."
 msgstr ""
 
 # verga.err.BADSPECLVAL
-#: en/messages:1989
+#: en/messages:1987
 msgid "Bit-ranges on path delay specifiers unsupported."
 msgstr ""
 
 # verga.err.PATHDITEM
-#: en/messages:1990
+#: en/messages:1988
 msgid "Unsupported construct in module with path-delay specification."
 msgstr ""
 
 # verga.err.PATHDINOUT
-#: en/messages:1991
+#: en/messages:1989
 msgid "Use of 'inout' in module with path-delay specification is unsupported."
 msgstr ""
 
 # verga.err.PATHDLOOP
-#: en/messages:1992
+#: en/messages:1990
 msgid "Loops in modules with path-delay specification are unsupported."
 msgstr ""
 
 # verga.err.TASKREDEF
-#: en/messages:1994
+#: en/messages:1992
 msgid "Redefinition of task or function '%s' in module '%s'."
 msgstr ""
 
 # verga.err.TASKASFUNC
-#: en/messages:1995
+#: en/messages:1993
 msgid "Task '%s' used as function."
 msgstr ""
 
 # verga.err.FUNCASTASK
-#: en/messages:1996
+#: en/messages:1994
 msgid "Function '%s' used as task."
 msgstr ""
 
 # verga.err.TASKBADTYPE
-#: en/messages:1997
+#: en/messages:1995
 msgid "Non-register type used in task or function."
 msgstr ""
 
 # verga.err.TASKBADPORT
-#: en/messages:1998
+#: en/messages:1996
 msgid "Only input ports are allowed on functions."
 msgstr ""
 
 # verga.err.TIMESCALEU
-#: en/messages:1999
+#: en/messages:1997
 msgid "Invalid units '%s' in `timescale declaration."
 msgstr ""
 
 # verga.err.TIMESCALEN
-#: en/messages:2000
+#: en/messages:1998
 msgid "Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100)."
 msgstr ""
 
 # verga.err.TIMESCALES
-#: en/messages:2001
+#: en/messages:1999
 msgid "Invalid syntax in `timescale declaration."
 msgstr ""
 
 # verga.err.TIMESCALEX
-#: en/messages:2002
+#: en/messages:2000
 msgid "Units must be larger than precision in `timescale declaration."
 msgstr ""
 
 # verga.err.TIMESCALEAN
-#: en/messages:2003
+#: en/messages:2001
 msgid "Design contains some modules with `timescale and some without."
 msgstr ""
 
 # verga.err.BADPORTTYPE
-#: en/messages:2004
+#: en/messages:2002
 msgid "Invalid type declaration used on port '%s'"
 msgstr ""
 
 # verga.err.BADVALUE
-#: en/messages:2005
+#: en/messages:2003
 msgid "Bad numeric value '%s'."
 msgstr ""
 
 # verga.err.NONEXPCTL
-#: en/messages:2006
+#: en/messages:2004
 msgid "Event control @(*) applied to non-expression."
 msgstr ""
 
 # verga.err.NONSTATCTL
-#: en/messages:2007
+#: en/messages:2005
 msgid "Event control @(*) applied to non-statment."
 msgstr ""
 
 # verga.err.MODREDEF
-#: en/messages:2008
+#: en/messages:2006
 msgid "Redefinition of module '%s'."
 msgstr ""
 
 # verga.err.IE_TASK
-#: en/messages:2009
+#: en/messages:2007
 msgid "Task definition '%s' found outside module - internal error."
 msgstr ""
 
 # verga.err.IE_NONET
-#: en/messages:2010
+#: en/messages:2008
 msgid "Failed to find net '%s' - internal error."
 msgstr ""
 
 # verga.err.IE_NOOP
-#: en/messages:2011
+#: en/messages:2009
 msgid "Can not find operator description -- internal error."
 msgstr ""
 
 # verga.err.IE_BADEXP
-#: en/messages:2012
+#: en/messages:2010
 msgid "Unexpected expression type %s - internal error."
 msgstr ""
 
 # verga.err.IE_BADVAR
-#: en/messages:2013
+#: en/messages:2011
 msgid "Undefined variable or unknown net - internal error."
 msgstr ""
 
 # verga.err.IE_BADSTATE
-#: en/messages:2014
+#: en/messages:2012
 msgid "Unexpected internal state at %s - internal error."
 msgstr ""
 
 # verga.err.IE_RETURN
-#: en/messages:2015
+#: en/messages:2013
 msgid "Executed BCReturn bytecode with empty return stack - internal error."
 msgstr ""
 
 # primitive.err.missing
-#: en/messages:2022
+#: en/messages:2020
 msgid "Internal Error: primitive definition for '%s' is missing."
 msgstr ""
 
 # primitive.err.nomodule
-#: en/messages:2023
+#: en/messages:2021
 msgid "Internal Error: primitive definition for '%s' is missing 'module'."
 msgstr ""
 
 # primitive.err.nomodname
-#: en/messages:2024
+#: en/messages:2022
 msgid "Internal Error: missing module name in definition of '%s' module."
 msgstr ""
 
 # primitive.err.wrongname
-#: en/messages:2025
+#: en/messages:2023
 msgid "Internal Error: module name mismatch in definition of '%s' module."
 msgstr ""
 
 # cprt.about
-#: en/messages:2031
+#: en/messages:2029
 msgid "About TkGate"
 msgstr ""
 
 # cprt.lic
-#: en/messages:2032
+#: en/messages:2030
 msgid "TkGate license"
 msgstr ""
 
 # cprt.descr
-#: en/messages:2033
+#: en/messages:2031
 msgid "Digital Circuit Editor and Simulator"
 msgstr ""
 
 # ho.setsel.allr
-#: en/messages:2044
+#: en/messages:2042
 msgid "Move all items to selected list."
 msgstr ""
 
 # ho.setsel.alll
-#: en/messages:2045
+#: en/messages:2043
 msgid "Move all items to unselected list."
 msgstr ""
 
 # ho.setsel.ltor
-#: en/messages:2046
+#: en/messages:2044
 msgid "Move highlighted items to selected list."
 msgstr ""
 
 # ho.setsel.rtol
-#: en/messages:2047
+#: en/messages:2045
 msgid "Move highlighted items to unselected list."
 msgstr ""
 
 # ho.net.in
-#: en/messages:2049
+#: en/messages:2047
 msgid "Single-Bit Input"
 msgstr ""
 
 # ho.net.out
-#: en/messages:2050
+#: en/messages:2048
 msgid "Single-Bit Output"
 msgstr ""
 
 # ho.net.inout
-#: en/messages:2051
+#: en/messages:2049
 msgid "Single-Bit Inout"
 msgstr ""
 
 # ho.net.in2
-#: en/messages:2052
+#: en/messages:2050
 msgid "Multi-Bit Input"
 msgstr ""
 
 # ho.net.out2
-#: en/messages:2053
+#: en/messages:2051
 msgid "Multi-Bit Output"
 msgstr ""
 
 # ho.net.inout2
-#: en/messages:2054
+#: en/messages:2052
 msgid "Multi-Bit Inout"
 msgstr ""
 
 # ho.net.wire
-#: en/messages:2055
+#: en/messages:2053
 msgid "Single-Bit Wire (Name Visible)"
 msgstr ""
 
 # ho.net.wire2
-#: en/messages:2056
+#: en/messages:2054
 msgid "Multi-Bit Wire (Name Visible)"
 msgstr ""
 
 # ho.net.hwire
-#: en/messages:2057
+#: en/messages:2055
 msgid "Single-Bit Wire (Name Hidden)"
 msgstr ""
 
 # ho.net.hwire2
-#: en/messages:2058
+#: en/messages:2056
 msgid "Multi-Bit Wire (Name Hidden)"
 msgstr ""
 
 # ho.net.reg
-#: en/messages:2059
+#: en/messages:2057
 msgid "Single-Bit Register"
 msgstr ""
 
 # ho.net.reg2
-#: en/messages:2060
+#: en/messages:2058
 msgid "Multi-Bit Register"
 msgstr ""
 
 # ho.opt.tool.file
-#: en/messages:2063
+#: en/messages:2061
 msgid "Save, load of circuit files"
 msgstr ""
 
 # ho.opt.tool.edit
-#: en/messages:2064
+#: en/messages:2062
 msgid "Cut, Paste and Find operations"
 msgstr ""
 
 # ho.opt.tool.gateopt
-#: en/messages:2065
+#: en/messages:2063
 msgid "Component rotation and alignment operations"
 msgstr ""
 
 # ho.opt.tool.gateprop
-#: en/messages:2066
+#: en/messages:2064
 msgid "Basic editing of components"
 msgstr ""
 
 # ho.opt.tool.undo
-#: en/messages:2067
+#: en/messages:2065
 msgid "Undo and redo operations"
 msgstr ""
 
 # ho.opt.tool.zoom
-#: en/messages:2068
+#: en/messages:2066
 msgid "Zoom in and zoom out"
 msgstr ""
 
 # ho.opt.tool.mode
-#: en/messages:2069
+#: en/messages:2067
 msgid "Select the editing tool"
 msgstr ""
 
 # ho.opt.tool.module
-#: en/messages:2070
+#: en/messages:2068
 msgid "Create, delete, rename,etc. of module definitions"
 msgstr ""
 
 # ho.opt.tool.tech
-#: en/messages:2071
+#: en/messages:2069
 msgid "Select default technology for components"
 msgstr ""
 
 # ho.opt.tool.simctl
-#: en/messages:2072
+#: en/messages:2070
 msgid "Start, stop and pause of simulator"
 msgstr ""
 
 # ho.opt.tool.simaux
-#: en/messages:2073
+#: en/messages:2071
 msgid "Auxliary simulator commands (read/write memory files, etc.)"
 msgstr ""
 
 # ho.opt.tool.simmode
-#: en/messages:2074
+#: en/messages:2072
 msgid "Choose between the select and scroll tool in simulator."
 msgstr ""
 
 # ho.opt.tool.symmode
-#: en/messages:2075
+#: en/messages:2073
 msgid "Selecting editing tool in symbol editor"
 msgstr ""
 
 # ho.opt.tool.symedit
-#: en/messages:2076
+#: en/messages:2074
 msgid "Cut and paste operations for symbol editor"
 msgstr ""
 
 # ho.opt.tool.symport
-#: en/messages:2077
+#: en/messages:2075
 msgid "Port rotation operations for symbol editor"
 msgstr ""
 
 # ho.opt.tool.symshift
-#: en/messages:2078
+#: en/messages:2076
 msgid "Shift the bit map or portion of bitmap"
 msgstr ""
 
 # ho.opt.tool.symopr
-#: en/messages:2079
+#: en/messages:2077
 msgid "Miscellaneous symbol editor operations"
 msgstr ""
 
 # ho.opt.editor.movesel
-#: en/messages:2081
+#: en/messages:2079
 msgid ""
 "If this option is enabled, a selected block of\n"
 "text can be grabbed with the mouse pointer and\n"
@@ -5755,19 +5790,19 @@ msgid ""
 msgstr ""
 
 # ho.opt.editor.format
-#: en/messages:2087
+#: en/messages:2085
 msgid ""
 "If enabled, verilog source code will be automatically\n"
 "indented when pressing the tab key."
 msgstr ""
 
 # ho.opt.editor.indent
-#: en/messages:2092
+#: en/messages:2090
 msgid "Number of spaces to indent per level."
 msgstr ""
 
 # ho.opt.editor.rtab
-#: en/messages:2096
+#: en/messages:2094
 msgid ""
 "Automatically indent the current line\n"
 "and tab to the appropriate level when\n"
@@ -5775,21 +5810,21 @@ msgid ""
 msgstr ""
 
 # ho.opt.editor.beginindent
-#: en/messages:2102
+#: en/messages:2100
 msgid ""
 "Causes a begin..end block to be indented\n"
 "to the same level as its parent block."
 msgstr ""
 
 # ho.opt.editor.colorize
-#: en/messages:2107
+#: en/messages:2105
 msgid ""
 "Enable context-dependent colorization of\n"
 "code according to the options listed below."
 msgstr ""
 
 # ho.hdl.splitexp
-#: en/messages:2112
+#: en/messages:2110
 msgid ""
 "Multiple modules in the HDL text will\n"
 "be split into different modules defining\n"
@@ -5799,7 +5834,7 @@ msgid ""
 msgstr ""
 
 # ho.hdl.commentexp
-#: en/messages:2120
+#: en/messages:2118
 msgid ""
 "Modules other than the first module or\n"
 "module matching the expected name will\n"
@@ -5807,70 +5842,70 @@ msgid ""
 msgstr ""
 
 # ho.hdl.autoeditexp
-#: en/messages:2126
+#: en/messages:2124
 msgid ""
 "Automatically edit the HDL description\n"
 "to fix the module name."
 msgstr ""
 
 # ho.hdl.cancelexp
-#: en/messages:2131
+#: en/messages:2129
 msgid ""
 "Take no action and continue editing\n"
 "the current module."
 msgstr ""
 
 # ho.hdl.ignoreexp
-#: en/messages:2136
+#: en/messages:2134
 msgid ""
 "Ignore the inconsistency and continue\n"
 "with the selected action."
 msgstr ""
 
 # ho.new
-#: en/messages:2141
+#: en/messages:2139
 msgid ""
 "Clear the current circuit,\n"
 "and start editing a new one."
 msgstr ""
 
 # ho.open
-#: en/messages:2146
+#: en/messages:2144
 msgid "Open a circuit from a file."
 msgstr ""
 
 # ho.save
-#: en/messages:2147
+#: en/messages:2145
 msgid "Save circuit to current file."
 msgstr ""
 
 # ho.saveas
-#: en/messages:2148
+#: en/messages:2146
 msgid "Save circuit to specified file."
 msgstr ""
 
 # ho.print
-#: en/messages:2149
+#: en/messages:2147
 msgid "Print current circuit."
 msgstr ""
 
 # ho.library
-#: en/messages:2150
+#: en/messages:2148
 msgid "Open the library manager."
 msgstr ""
 
 # ho.symed.tab.normal
-#: en/messages:2152
+#: en/messages:2150
 msgid "Edit the unselected symbol bitmap."
 msgstr ""
 
 # ho.symed.tab.select
-#: en/messages:2156
+#: en/messages:2154
 msgid "Edit the selected symbol bitmap."
 msgstr ""
 
 # ho.simmove
-#: en/messages:2160
+#: en/messages:2158
 msgid ""
 "Select wires and modules, flip\n"
 "switches and enter dip values.\n"
@@ -5879,7 +5914,7 @@ msgid ""
 msgstr ""
 
 # ho.move
-#: en/messages:2168
+#: en/messages:2166
 msgid ""
 "Move/Connect - By clicking and dragging you can:\n"
 "Set the position for a new component\n"
@@ -5891,28 +5926,28 @@ msgid ""
 msgstr ""
 
 # ho.delgat
-#: en/messages:2178
+#: en/messages:2176
 msgid ""
 "Delete Component - Use this\n"
 "tool to delete components."
 msgstr ""
 
 # ho.cutw
-#: en/messages:2183
+#: en/messages:2181
 msgid ""
 "Cut Wire - Use this\n"
 "tool to cut wires."
 msgstr ""
 
 # ho.scroll
-#: en/messages:2188
+#: en/messages:2186
 msgid ""
 "Scroll - Grab and drag the\n"
 "editing canvas."
 msgstr ""
 
 # ho.inv
-#: en/messages:2193
+#: en/messages:2191
 msgid ""
 "Invert - Use this tool to\n"
 "add or remove inverters\n"
@@ -5920,7 +5955,7 @@ msgid ""
 msgstr ""
 
 # ho.bitw
-#: en/messages:2199
+#: en/messages:2197
 msgid ""
 "Net Attributes - Use this tool to change\n"
 "the attributes of a net. The bit size\n"
@@ -5930,7 +5965,7 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.select
-#: en/messages:2207
+#: en/messages:2205
 msgid ""
 "Use \"standard\" modules\n"
 "for regular rectangular\n"
@@ -5940,7 +5975,7 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.addport
-#: en/messages:2215
+#: en/messages:2213
 msgid ""
 "Add a port to the module. You\n"
 "can also double-click after the\n"
@@ -5948,12 +5983,12 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.deleteport
-#: en/messages:2221
+#: en/messages:2219
 msgid "Delete the selected port."
 msgstr ""
 
 # ho.ipanel.editport
-#: en/messages:2225
+#: en/messages:2223
 msgid ""
 "Edit the selected port. You\n"
 "can also double-click to edit\n"
@@ -5961,7 +5996,7 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.generate
-#: en/messages:2231
+#: en/messages:2229
 msgid ""
 "Generate a new interface for a\n"
 "module based on ports in the\n"
@@ -5970,7 +6005,7 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.updateall
-#: en/messages:2238
+#: en/messages:2236
 msgid ""
 "Replace the interface on all\n"
 "instances of this module with\n"
@@ -5979,21 +6014,21 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.prot
-#: en/messages:2246
+#: en/messages:2244
 msgid ""
 "Do not allow the definition of\n"
 "a module to be modified."
 msgstr ""
 
 # ho.ipanel.protint
-#: en/messages:2251
+#: en/messages:2249
 msgid ""
 "Do not allow the interface of\n"
 "a module to be modified."
 msgstr ""
 
 # ho.ipanel.proted
-#: en/messages:2256
+#: en/messages:2254
 msgid ""
 "Do not allow the interface of a module to\n"
 "be modified except through the interface\n"
@@ -6003,130 +6038,130 @@ msgid ""
 msgstr ""
 
 # ho.ipanel.scale
-#: en/messages:2264
+#: en/messages:2262
 msgid ""
 "Scale the distance between ports\n"
 "as a module is resized."
 msgstr ""
 
 # ho.ipanel.fix
-#: en/messages:2269
+#: en/messages:2267
 msgid ""
 "Keep the distance between ports\n"
 "fixed even if the module is resized."
 msgstr ""
 
 # ho.mod.open
-#: en/messages:2274
+#: en/messages:2272
 msgid "Open the selected module."
 msgstr ""
 
 # ho.mod.close
-#: en/messages:2275
+#: en/messages:2273
 msgid "Close the current module."
 msgstr ""
 
 # ho.mod.new
-#: en/messages:2277
+#: en/messages:2275
 msgid "Create a new module type."
 msgstr ""
 
 # ho.mod.del
-#: en/messages:2278
+#: en/messages:2276
 msgid "Delete a module."
 msgstr ""
 
 # ho.mod.copy
-#: en/messages:2279
+#: en/messages:2277
 msgid "Copy a module."
 msgstr ""
 
 # ho.mod.rename
-#: en/messages:2280
+#: en/messages:2278
 msgid "Rename a module."
 msgstr ""
 
 # ho.mod.claim
-#: en/messages:2281
+#: en/messages:2279
 msgid ""
 "Convert a library module to\n"
 "a regular module."
 msgstr ""
 
 # ho.mod.setroot
-#: en/messages:2285
+#: en/messages:2283
 msgid ""
 "Designate a module to\n"
 "be the root module."
 msgstr ""
 
 # ho.mod.type.allparts
-#: en/messages:2290
+#: en/messages:2288
 msgid "Set of Libraries"
 msgstr ""
 
 # ho.mod.type.part
-#: en/messages:2292
+#: en/messages:2290
 msgid "Library module"
 msgstr ""
 
 # ho.mod.type.unknown
-#: en/messages:2293
+#: en/messages:2291
 msgid "Unknown module type"
 msgstr ""
 
 # ho.mod.type.unused
-#: en/messages:2294
+#: en/messages:2292
 msgid "Set of unused modules"
 msgstr ""
 
 # ho.mod.type.conflict
-#: en/messages:2295
+#: en/messages:2293
 msgid "Module recursion"
 msgstr ""
 
 # ho.mod.type.root
-#: en/messages:2296
+#: en/messages:2294
 msgid "Top-level module"
 msgstr ""
 
 # ho.mod.type.netlist
-#: en/messages:2297
+#: en/messages:2295
 msgid "Netlist module"
 msgstr ""
 
 # ho.mod.type.Lnetlist
-#: en/messages:2298
+#: en/messages:2296
 msgid "Netlist module (locked)"
 msgstr ""
 
 # ho.mod.type.hdl
-#: en/messages:2299
+#: en/messages:2297
 msgid "HDL module"
 msgstr ""
 
 # ho.mod.type.Lhdl
-#: en/messages:2300
+#: en/messages:2298
 msgid "HDL module (locked)"
 msgstr ""
 
 # ho.undo
-#: en/messages:2302
+#: en/messages:2300
 msgid "Undo previous action(s)"
 msgstr ""
 
 # ho.redo
-#: en/messages:2303
+#: en/messages:2301
 msgid "Redo undone action(s)"
 msgstr ""
 
 # ho.tab.edit
-#: en/messages:2305
+#: en/messages:2303
 msgid "Primary editing mode."
 msgstr ""
 
 # ho.tab.interface
-#: en/messages:2310
+#: en/messages:2308
 msgid ""
 "Edit module interfaces. While in interface\n"
 "mode, double click on a module in the module\n"
@@ -6135,19 +6170,19 @@ msgid ""
 msgstr ""
 
 # ho.tab.simulate
-#: en/messages:2318
+#: en/messages:2316
 msgid ""
 "Start the simulator, open the logic analyzer\n"
 "and execute any initialization scripts if defined."
 msgstr ""
 
 # ho.tab.cpath
-#: en/messages:2324
+#: en/messages:2322
 msgid "Find critical paths in a circuit."
 msgstr ""
 
 # ho.log
-#: en/messages:2328
+#: en/messages:2326
 msgid ""
 "Log of TkGate messages including\n"
 "error messages, information messages\n"
@@ -6155,7 +6190,7 @@ msgid ""
 msgstr ""
 
 # ho.simgo
-#: en/messages:2334
+#: en/messages:2332
 msgid ""
 "Run simulator in continuous execution mode.\n"
 "Note that combinational circuits simulate\n"
@@ -6163,12 +6198,12 @@ msgid ""
 msgstr ""
 
 # ho.simpause
-#: en/messages:2340
+#: en/messages:2338
 msgid "Pause a continuously running simulation."
 msgstr ""
 
 # ho.simstep
-#: en/messages:2344
+#: en/messages:2342
 msgid ""
 "Step a fixed interval of time.\n"
 "Open the simulation options\n"
@@ -6176,7 +6211,7 @@ msgid ""
 msgstr ""
 
 # ho.simclock
-#: en/messages:2350
+#: en/messages:2348
 msgid ""
 "Step a fixed number of clock\n"
 "cycles. Open the simulation options\n"
@@ -6184,14 +6219,14 @@ msgid ""
 msgstr ""
 
 # ho.simstop
-#: en/messages:2356
+#: en/messages:2354
 msgid ""
 "End the current simulation\n"
 "and return to edit mode."
 msgstr ""
 
 # ho.simbreak
-#: en/messages:2361
+#: en/messages:2359
 msgid ""
 "Edit the current breakpoints. Simulation\n"
 "will be halted when a breakpoint condition\n"
@@ -6200,38 +6235,38 @@ msgid ""
 msgstr ""
 
 # ho.simexec
-#: en/messages:2368
+#: en/messages:2366
 msgid "Manage the set of active scripts."
 msgstr ""
 
 # ho.simoptions
-#: en/messages:2372
+#: en/messages:2370
 msgid "Set various options that control the simulation."
 msgstr ""
 
 # ho.simload
-#: en/messages:2376
+#: en/messages:2374
 msgid ""
 "Load memory with contents of\n"
 "a .mem file."
 msgstr ""
 
 # ho.simdump
-#: en/messages:2381
+#: en/messages:2379
 msgid ""
 "Dump the contents of a memory\n"
 "to a .mem file."
 msgstr ""
 
 # ho.simview
-#: en/messages:2386
+#: en/messages:2384
 msgid ""
 "View/modify the contents\n"
 "of a memory (RAM or ROM)."
 msgstr ""
 
 # ho.modlist
-#: en/messages:2392
+#: en/messages:2390
 msgid ""
 "List of all modules currently loaded in\n"
 "alphabetical order. Drag modules to the\n"
@@ -6239,7 +6274,7 @@ msgid ""
 msgstr ""
 
 # ho.modtree
-#: en/messages:2398
+#: en/messages:2396
 msgid ""
 "List of all modules currently in\n"
 "a hierarchical list. Drag modules to the\n"
@@ -6247,7 +6282,7 @@ msgid ""
 msgstr ""
 
 # ho.netlist
-#: en/messages:2404
+#: en/messages:2402
 msgid ""
 "List of nets in the current module.\n"
 "The symbol to the left of the name\n"
@@ -6259,7 +6294,7 @@ msgid ""
 msgstr ""
 
 # ho.ports
-#: en/messages:2414
+#: en/messages:2412
 msgid ""
 "List of ports on the interface\n"
 "of the module displayed in the\n"
@@ -6269,7 +6304,7 @@ msgid ""
 msgstr ""
 
 # ho.status.logo
-#: en/messages:2422
+#: en/messages:2420
 msgid ""
 "Simulation status indicator. If the iron gate\n"
 "logo is shown, TkGate is in edit mode. If the\n"
@@ -6280,17 +6315,17 @@ msgid ""
 msgstr ""
 
 # ho.status.msg
-#: en/messages:2431
+#: en/messages:2429
 msgid "Messages from TkGate are displayed here."
 msgstr ""
 
 # ho.status.block
-#: en/messages:2433
+#: en/messages:2431
 msgid "The stack of modules being edited."
 msgstr ""
 
 # ho.status.file
-#: en/messages:2435
+#: en/messages:2433
 msgid ""
 "The current file being edited. A '*' indicates\n"
 "that the buffer has been modifed since\n"
@@ -6298,29 +6333,29 @@ msgid ""
 msgstr ""
 
 # ho.print.selall
-#: en/messages:2441
+#: en/messages:2439
 msgid "Print all modules currently loaded by TkGate."
 msgstr ""
 
 # ho.print.selcur
-#: en/messages:2442
+#: en/messages:2440
 msgid "Print only the current module in the TkGate edit window."
 msgstr ""
 
 # ho.print.seluse
-#: en/messages:2443
+#: en/messages:2441
 msgid ""
 "Print all modules \"in use\". In use modues are\n"
 "those that are a decendent of the root module."
 msgstr ""
 
 # ho.print.fulltrace
-#: en/messages:2448
+#: en/messages:2446
 msgid "Print the entire trace."
 msgstr ""
 
 # ho.print.parttrace
-#: en/messages:2450
+#: en/messages:2448
 msgid ""
 "Print a portion of the trace. Enter the starting\n"
 "and stopping times in the entry windows below, or\n"
@@ -6329,29 +6364,29 @@ msgid ""
 msgstr ""
 
 # ho.print.parttracestart
-#: en/messages:2457
+#: en/messages:2455
 msgid "Starting time of trace output."
 msgstr ""
 
 # ho.print.parttraceend
-#: en/messages:2458
+#: en/messages:2456
 msgid "Ending time of trace output."
 msgstr ""
 
 # ho.print.selsel
-#: en/messages:2461
+#: en/messages:2459
 msgid ""
 "Print only the modules selected below. Use\n"
 "the control key to select multiple modules."
 msgstr ""
 
 # ho.print.modlist
-#: en/messages:2466
+#: en/messages:2464
 msgid "Select the modules to be printed."
 msgstr ""
 
 # ho.print.timegraph
-#: en/messages:2468
+#: en/messages:2466
 msgid ""
 "The display of the region selected\n"
 "to be printed is shown here. The\n"
@@ -6365,14 +6400,14 @@ msgid ""
 msgstr ""
 
 # ho.circuit.discchg
-#: en/messages:2480
+#: en/messages:2478
 msgid ""
 "TkGate will not display a warning if you\n"
 "discard changes without saving."
 msgstr ""
 
 # ho.circuit.extbar
-#: en/messages:2485
+#: en/messages:2483
 msgid ""
 "Newly created basic gates (AND, OR,\n"
 "XOR) will use extender bars to handle\n"
@@ -6380,7 +6415,7 @@ msgid ""
 msgstr ""
 
 # ho.circuit.shownet
-#: en/messages:2491
+#: en/messages:2489
 msgid ""
 "Newly created switches and dips will\n"
 "initially show the net name next to\n"
@@ -6388,47 +6423,47 @@ msgid ""
 msgstr ""
 
 # ho.circuit.autostart
-#: en/messages:2498
+#: en/messages:2496
 msgid ""
 "If enabled, simulation will begin as\n"
 "soon as the simulation pane is selected."
 msgstr ""
 
 # ho.circuit.file
-#: en/messages:2503
+#: en/messages:2501
 msgid ""
 "This is the file name from which the current\n"
 "circuit was loaded."
 msgstr ""
 
 # ho.circuit.ver
-#: en/messages:2508
+#: en/messages:2506
 msgid ""
 "This is the version of TkGate that created\n"
 "the file that is currently loaded."
 msgstr ""
 
 # ho.circuit.encoding
-#: en/messages:2513
+#: en/messages:2511
 msgid "Use this encoding for save files."
 msgstr ""
 
 # ho.circuit.language
-#: en/messages:2517
+#: en/messages:2515
 msgid ""
 "Use fonts for this encoding to display\n"
 "circuit data."
 msgstr ""
 
 # ho.circuit.title
-#: en/messages:2522
+#: en/messages:2520
 msgid ""
 "Description of your circuit. This title is\n"
 "used on printed output."
 msgstr ""
 
 # ho.cmd.bitw
-#: en/messages:2527
+#: en/messages:2525
 msgid ""
 "Wires selected with the ribbon\n"
 "cable tool will be set to this\n"
@@ -6436,7 +6471,7 @@ msgid ""
 msgstr ""
 
 # ho.edgat.signam
-#: en/messages:2533
+#: en/messages:2531
 msgid ""
 "The name of the selected signal\n"
 "on the selected component. You\n"
@@ -6445,7 +6480,7 @@ msgid ""
 msgstr ""
 
 # ho.edgat.port
-#: en/messages:2540
+#: en/messages:2538
 msgid ""
 "The name of the port for this\n"
 "signal on the component. This\n"
@@ -6454,7 +6489,7 @@ msgid ""
 msgstr ""
 
 # ho.edgat.iolab
-#: en/messages:2547
+#: en/messages:2545
 msgid ""
 "The direction of the selected\n"
 "signal on the selected component.\n"
@@ -6463,7 +6498,7 @@ msgid ""
 msgstr ""
 
 # ho.edgat.bitlab
-#: en/messages:2554
+#: en/messages:2552
 msgid ""
 "The bit width of the selected\n"
 "signal on the selected component.\n"
@@ -6472,90 +6507,90 @@ msgid ""
 msgstr ""
 
 # ho.edgat.cycle
-#: en/messages:2561
+#: en/messages:2559
 msgid "The total number of epochs in a clock cycle."
 msgstr ""
 
 # ho.edgat.phase
-#: en/messages:2562
+#: en/messages:2560
 msgid "The starting point of the cycle (in percent)."
 msgstr ""
 
 # ho.edgat.duty
-#: en/messages:2563
+#: en/messages:2561
 msgid "The percent of the cycle, the clock is low."
 msgstr ""
 
 # ho.edgat.hide
-#: en/messages:2566
+#: en/messages:2564
 msgid ""
 "Set this flag to disable\n"
 "display of component names."
 msgstr ""
 
 # ho.edgat.gtype
-#: en/messages:2571
+#: en/messages:2569
 msgid "Type of the component."
 msgstr ""
 
 # ho.edgat.gname
-#: en/messages:2572
+#: en/messages:2570
 msgid "Name of this component instance."
 msgstr ""
 
 # ho.edgat.ganchor
-#: en/messages:2573
+#: en/messages:2571
 msgid "Set this flag to anchor the position of a component."
 msgstr ""
 
 # ho.edgat.gx
-#: en/messages:2574
+#: en/messages:2572
 msgid "X coordinate of component."
 msgstr ""
 
 # ho.edgat.gy
-#: en/messages:2575
+#: en/messages:2573
 msgid "Y coordinate of component."
 msgstr ""
 
 # ho.edgat.swstate
-#: en/messages:2577
+#: en/messages:2575
 msgid ""
 "The initial state of the switch to use when\n"
 "starting a simulation."
 msgstr ""
 
 # ho.edgat.dipstate
-#: en/messages:2582
+#: en/messages:2580
 msgid ""
 "The initial state of the dip switch to use\n"
 "when starting a simulation."
 msgstr ""
 
 # ho.edgat.range
-#: en/messages:2587
+#: en/messages:2585
 msgid "The range of bits to pull off a bus."
 msgstr ""
 
 # ho.edgat.memfile
-#: en/messages:2589
+#: en/messages:2587
 msgid ""
 "The file with the initial state for this memory.\n"
 "This file is read when the simulator is started."
 msgstr ""
 
 # ho.edgat.func
-#: en/messages:2594
+#: en/messages:2592
 msgid "The function type of this module."
 msgstr ""
 
 # ho.edgat.frame
-#: en/messages:2595
+#: en/messages:2593
 msgid "The frame label."
 msgstr ""
 
 # ho.traceprint
-#: en/messages:2597
+#: en/messages:2595
 msgid ""
 "Print the logic trace range selected\n"
 "using the right mouse button. Shift-right\n"
@@ -6565,14 +6600,14 @@ msgid ""
 msgstr ""
 
 # ho.showxhair
-#: en/messages:2605
+#: en/messages:2603
 msgid ""
 "If this button is depressed, a vertical crosshair\n"
 "line will be displayed in the scope window."
 msgstr ""
 
 # ho.opt.general.fontset
-#: en/messages:2610
+#: en/messages:2608
 msgid ""
 "Specifies the basic font size to\n"
 "use in the TkGate interface. This\n"
@@ -6581,7 +6616,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.send
-#: en/messages:2617
+#: en/messages:2615
 msgid ""
 "Enabling the $tkg$command() system task will allow\n"
 "user circuits to send arbitrary simulator control\n"
@@ -6593,7 +6628,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.open
-#: en/messages:2627
+#: en/messages:2625
 msgid ""
 "Enabling the $fopen() system task will allow user\n"
 "circuits to write to any file that the user invoking\n"
@@ -6602,7 +6637,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.writemem
-#: en/messages:2634
+#: en/messages:2632
 msgid ""
 "Enabling the $writememb() and $writememh() system tasks\n"
 "will allow user circuits to write to any file that the\n"
@@ -6611,7 +6646,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.enqueue
-#: en/messages:2641
+#: en/messages:2639
 msgid ""
 "Enabling the $tkg$recv() and $tkg$send() system tasks\n"
 "will enable virtual peripheral devices to send messages\n"
@@ -6620,7 +6655,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.ssave
-#: en/messages:2648
+#: en/messages:2646
 msgid ""
 "Perform consistency checks on circuit\n"
 "files before overwriting existing save\n"
@@ -6629,7 +6664,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.exec
-#: en/messages:2655
+#: en/messages:2653
 msgid ""
 "Fully enabling the $tkg$exec() system task allows user\n"
 "circuit to execute arbitrary tcl/tk commands including\n"
@@ -6638,7 +6673,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.regexec
-#: en/messages:2662
+#: en/messages:2660
 msgid ""
 "Enabling the $tkg$exec() system task for registered functions\n"
 "allows user circuits to execute only tcl/tk commands that have\n"
@@ -6649,7 +6684,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.noexec
-#: en/messages:2671
+#: en/messages:2669
 msgid ""
 "Fully disabling the $tkg$exec() command will prevent user\n"
 "circuits from executing tcl/tk commands. This will make it\n"
@@ -6658,7 +6693,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.stop
-#: en/messages:2678
+#: en/messages:2676
 msgid ""
 "If this setting is enabled, the simulation will be terminated\n"
 "as soon as any attempt is made by the user circuit to execute\n"
@@ -6666,7 +6701,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.warn
-#: en/messages:2684
+#: en/messages:2682
 msgid ""
 "If this setting is enabled, the simulation will continue, but\n"
 "an error message will be displayed when any attempt is made by\n"
@@ -6674,14 +6709,14 @@ msgid ""
 msgstr ""
 
 # ho.opt.sec.ignore
-#: en/messages:2690
+#: en/messages:2688
 msgid ""
 "If this setting is enabled, use of any disabled features will\n"
 "be ignored and no error messages will be displayed."
 msgstr ""
 
 # ho.opt.html.browser
-#: en/messages:2695
+#: en/messages:2693
 msgid ""
 "Command to be execute when the user clicks on a link to\n"
 "an html file. A \"%s\" in the command will be replaced\n"
@@ -6689,7 +6724,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.html.email
-#: en/messages:2701
+#: en/messages:2699
 msgid ""
 "Command to be execute when the user clicks on a link to\n"
 "send an e-mail message. A \"%s\" in the command will be\n"
@@ -6697,7 +6732,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.fsave
-#: en/messages:2707
+#: en/messages:2705
 msgid ""
 "Save TkGate internal cells with circuit\n"
 "data. This will increase save file size\n"
@@ -6707,7 +6742,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sorttraces
-#: en/messages:2715
+#: en/messages:2713
 msgid ""
 "If this option is enabled, traces on the\n"
 "scope window will be displayed in sorted\n"
@@ -6717,7 +6752,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.noglitch
-#: en/messages:2723
+#: en/messages:2721
 msgid ""
 "If this option is enabled, rapidly changing\n"
 "inputs to a component will cause the component to\n"
@@ -6728,7 +6763,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.savetraces
-#: en/messages:2732
+#: en/messages:2730
 msgid ""
 "Probes placed during a simulation run will\n"
 "be remembered and replaced when restarting\n"
@@ -6736,7 +6771,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.tech
-#: en/messages:2739
+#: en/messages:2737
 msgid ""
 "List of files to load as potential \"technology\"\n"
 "files. Technology files specify delay and area\n"
@@ -6744,14 +6779,14 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.err
-#: en/messages:2745
+#: en/messages:2743
 msgid ""
 "Select how warnings from the simulator\n"
 "should be handled."
 msgstr ""
 
 # ho.opt.sim.err.stopany
-#: en/messages:2750
+#: en/messages:2748
 msgid ""
 "Do not simulate the circuit if there are any\n"
 "warnings in the circuit, even if there are no\n"
@@ -6759,7 +6794,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.err.showall
-#: en/messages:2756
+#: en/messages:2754
 msgid ""
 "Always show warnings in the circuit, even if\n"
 "there are no errors. If there are only warnings,\n"
@@ -6768,7 +6803,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.err.showiferr
-#: en/messages:2763
+#: en/messages:2761
 msgid ""
 "Show warnings only if there are also errors\n"
 "in the circuit. If a circuit contains only\n"
@@ -6777,14 +6812,14 @@ msgid ""
 msgstr ""
 
 # ho.opt.sim.err.ignore
-#: en/messages:2770
+#: en/messages:2768
 msgid ""
 "Never display warning messages, even if there\n"
 "are errors in the circuit."
 msgstr ""
 
 # ho.opt.lib.vpath
-#: en/messages:2775
+#: en/messages:2773
 msgid ""
 "List of directories to search for TkGate library\n"
 "files. Library files should have a .v extention\n"
@@ -6792,14 +6827,14 @@ msgid ""
 msgstr ""
 
 # ho.opt.lib.vlib
-#: en/messages:2781
+#: en/messages:2779
 msgid ""
 "List of libaries that should automatically be loaded\n"
 "when TkGate starts."
 msgstr ""
 
 # ho.opt.lib.vpd
-#: en/messages:2786
+#: en/messages:2784
 msgid ""
 "List of directories to search for virtual peripheral\n"
 "devices. Virtual peripheral devices have a .tcl\n"
@@ -6809,19 +6844,19 @@ msgid ""
 msgstr ""
 
 # ho.opt.undolen
-#: en/messages:2794
+#: en/messages:2792
 msgid "Maximum number of undo actions to retain."
 msgstr ""
 
 # ho.opt.name
-#: en/messages:2798
+#: en/messages:2796
 msgid ""
 "User name to be used on TkGate generated\n"
 "reports such as circuit printouts."
 msgstr ""
 
 # ho.opt.site
-#: en/messages:2803
+#: en/messages:2801
 msgid ""
 "The name of the site where TkGate is\n"
 "installed. This name will be used on\n"
@@ -6829,7 +6864,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.smooth
-#: en/messages:2809
+#: en/messages:2807
 msgid ""
 "If this option is enabled, scrolling will\n"
 "be optimized by using bitmap copies instead\n"
@@ -6838,7 +6873,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.clip
-#: en/messages:2816
+#: en/messages:2814
 msgid ""
 "If this option is enabled, clipping will be\n"
 "used to update only the exposed portion of\n"
@@ -6849,7 +6884,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.showimage
-#: en/messages:2825
+#: en/messages:2823
 msgid ""
 "Unset this option to suppress display of\n"
 "the image and explanitory text at the\n"
@@ -6857,7 +6892,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.outmove
-#: en/messages:2832
+#: en/messages:2830
 msgid ""
 "If this option is enabled, only an outline\n"
 "of module instances being moved will be displayed\n"
@@ -6866,7 +6901,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.bhelp
-#: en/messages:2839
+#: en/messages:2837
 msgid ""
 "If this option is enabled, help balloons will\n"
 "be activated. Help balloons, such as this one,\n"
@@ -6875,7 +6910,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.tearawaymenus
-#: en/messages:2846
+#: en/messages:2844
 msgid ""
 "If enabled, the main menues will be detachable\n"
 "from the interface. This option will take effect\n"
@@ -6883,7 +6918,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.novice
-#: en/messages:2852
+#: en/messages:2850
 msgid ""
 "If no other circuit is specified on the command\n"
 "line. A TkGate tutorial will be disaplyed as\n"
@@ -6891,31 +6926,31 @@ msgid ""
 msgstr ""
 
 # ho.opt.blockDropConnect
-#: en/messages:2858
+#: en/messages:2856
 msgid ""
 "Allow ports on module interfaces to be created\n"
 "by dropping free wires near an edge."
 msgstr ""
 
 # ho.opt.debug
-#: en/messages:2863
+#: en/messages:2861
 msgid ""
 "Enables several debugging features\n"
 "only useful to TkGate developers."
 msgstr ""
 
 # ho.opt.ckpt
-#: en/messages:2868
+#: en/messages:2866
 msgid "Enable checkpointing of unsaved circuits."
 msgstr ""
 
 # ho.opt.ckptfreq
-#: en/messages:2869
+#: en/messages:2867
 msgid "Frequency of checkpoints in seconds."
 msgstr ""
 
 # ho.opt.beak
-#: en/messages:2871
+#: en/messages:2869
 msgid ""
 "Enable these totally useless features.\n"
 "If you disable this option, the useless\n"
@@ -6926,7 +6961,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.miles
-#: en/messages:2880
+#: en/messages:2878
 msgid ""
 "If this mode is enabled, TkGate will\n"
 "periodically insult the intelligence of\n"
@@ -6934,7 +6969,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.bat
-#: en/messages:2886
+#: en/messages:2884
 msgid ""
 "If this mode is enabled, TkGate will\n"
 "set up an enviornment for designing a\n"
@@ -6942,26 +6977,26 @@ msgid ""
 msgstr ""
 
 # ho.opt.trek
-#: en/messages:2892
+#: en/messages:2890
 msgid "Beam me up Scoty!"
 msgstr ""
 
 # ho.opt.simstep
-#: en/messages:2894
+#: en/messages:2892
 msgid ""
 "The number of epochs to advance when\n"
 "the step command is issued."
 msgstr ""
 
 # ho.opt.ckstep
-#: en/messages:2899
+#: en/messages:2897
 msgid ""
 "The number of clock cycles to advance\n"
 "when the clock step command is issued."
 msgstr ""
 
 # ho.opt.ckover
-#: en/messages:2904
+#: en/messages:2902
 msgid ""
 "The number of epochs past rising edge\n"
 "of the clock to advance when the clock\n"
@@ -6969,7 +7004,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.vpopupdelay
-#: en/messages:2910
+#: en/messages:2908
 msgid ""
 "The delay in milliseconds between pressing\n"
 "and holding the mouse button and the display\n"
@@ -6981,7 +7016,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.init
-#: en/messages:2920
+#: en/messages:2918
 msgid ""
 "A simulation script file to execute\n"
 "automatically when simulation of any\n"
@@ -6991,7 +7026,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.ckall
-#: en/messages:2928
+#: en/messages:2926
 msgid ""
 "If this mode is enabled, the clock step\n"
 "command will pause the simulation on the\n"
@@ -6999,7 +7034,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.ckspec
-#: en/messages:2934
+#: en/messages:2932
 msgid ""
 "If this mode is enabled, the clock step\n"
 "command will pause the simulation only on\n"
@@ -7009,7 +7044,7 @@ msgid ""
 msgstr ""
 
 # ho.opt.keybind
-#: en/messages:2942
+#: en/messages:2940
 msgid ""
 "Specifies the basic style for key\n"
 "bindings. If you change this\n"
@@ -7020,7 +7055,7 @@ msgid ""
 msgstr ""
 
 # ho.deftech
-#: en/messages:2951
+#: en/messages:2949
 msgid ""
 "Default technology for new components.\n"
 "Affects delay of components. To change\n"
@@ -7030,7 +7065,7 @@ msgid ""
 msgstr ""
 
 # ho.techbut
-#: en/messages:2959
+#: en/messages:2957
 msgid ""
 "Use delays from standard technology\n"
 "definition file. To add custom\n"
@@ -7040,26 +7075,26 @@ msgid ""
 msgstr ""
 
 # ho.custbut
-#: en/messages:2967
+#: en/messages:2965
 msgid "Set custom delay values for this component."
 msgstr ""
 
 # ho.contver
-#: en/messages:2971
+#: en/messages:2969
 msgid ""
 "Continuously verify the integrity of internal\n"
 "data structures after every operation."
 msgstr ""
 
 # ho.simwatch
-#: en/messages:2976
+#: en/messages:2974
 msgid ""
 "Display commands sent between\n"
 "the GUI and the simulator."
 msgstr ""
 
 # ho.symed.point
-#: en/messages:2981
+#: en/messages:2979
 msgid ""
 "Pixel edit mode. Use the left\n"
 "mouse button to set pixels and\n"
@@ -7067,7 +7102,7 @@ msgid ""
 msgstr ""
 
 # ho.symed.line
-#: en/messages:2987
+#: en/messages:2985
 msgid ""
 "Line mode. Use the left\n"
 "mouse button to set pixels and\n"
@@ -7075,7 +7110,7 @@ msgid ""
 msgstr ""
 
 # ho.symed.rect
-#: en/messages:2993
+#: en/messages:2991
 msgid ""
 "Rectangle mode. Use the left\n"
 "mouse button to set pixels and\n"
@@ -7083,7 +7118,7 @@ msgid ""
 msgstr ""
 
 # ho.symed.fillrect
-#: en/messages:2999
+#: en/messages:2997
 msgid ""
 "Filled rectangle mode. Use the\n"
 "left mouse button to set pixels\n"
@@ -7091,7 +7126,7 @@ msgid ""
 msgstr ""
 
 # ho.symed.select
-#: en/messages:3005
+#: en/messages:3003
 msgid ""
 "Bitmap select mode. Use the left\n"
 "mouse buttons to select regions of\n"
@@ -7100,64 +7135,64 @@ msgid ""
 msgstr ""
 
 # ho.symed.port
-#: en/messages:3012
+#: en/messages:3010
 msgid ""
 "Port select mode. Select ports and\n"
 "move them or rotate them."
 msgstr ""
 
 # ho.symed.rshift
-#: en/messages:3017
+#: en/messages:3015
 msgid "Shift selected pixels right."
 msgstr ""
 
 # ho.symed.lshift
-#: en/messages:3018
+#: en/messages:3016
 msgid "Shift selected pixels left."
 msgstr ""
 
 # ho.symed.ushift
-#: en/messages:3019
+#: en/messages:3017
 msgid "Shift selected pixels up."
 msgstr ""
 
 # ho.symed.dshift
-#: en/messages:3020
+#: en/messages:3018
 msgid "Shift selected pixels down."
 msgstr ""
 
 # ho.symed.cwrotate
-#: en/messages:3021
+#: en/messages:3019
 msgid "Rotate selected pixels clockwise."
 msgstr ""
 
 # ho.symed.ccwrotate
-#: en/messages:3022
+#: en/messages:3020
 msgid "Rotate selected pixels counter-clockwise."
 msgstr ""
 
 # ho.symed.autobold
-#: en/messages:3023
+#: en/messages:3021
 msgid "Make selected image bold."
 msgstr ""
 
 # ho.symed.resize
-#: en/messages:3024
+#: en/messages:3022
 msgid "Resize the image editor."
 msgstr ""
 
 # ho.symed.import
-#: en/messages:3025
+#: en/messages:3023
 msgid "Import image from file."
 msgstr ""
 
 # ho.symed.export
-#: en/messages:3026
+#: en/messages:3024
 msgid "Export image to file."
 msgstr ""
 
 # ho.tool.currot
-#: en/messages:3028
+#: en/messages:3026
 msgid ""
 "Displays the current default\n"
 "rotation. Click on this\n"
@@ -7166,76 +7201,76 @@ msgid ""
 msgstr ""
 
 # ho.tool.zoomin
-#: en/messages:3036
+#: en/messages:3034
 msgid "Zoom in"
 msgstr ""
 
 # ho.tool.zoomout
-#: en/messages:3037
+#: en/messages:3035
 msgid "Zoom out"
 msgstr ""
 
 # ho.tool.rotate
-#: en/messages:3038
+#: en/messages:3036
 msgid "Rotate selected component(s) counter-clockwise."
 msgstr ""
 
 # ho.tool.brotate
-#: en/messages:3039
+#: en/messages:3037
 msgid "Rotate selected component(s) clockwise."
 msgstr ""
 
 # ho.tool.valgn
-#: en/messages:3040
+#: en/messages:3038
 msgid "Align selected component(s) vertically."
 msgstr ""
 
 # ho.tool.halgn
-#: en/messages:3041
+#: en/messages:3039
 msgid "Align selected component(s) horizontally."
 msgstr ""
 
 # ho.tool.cut
-#: en/messages:3043
+#: en/messages:3041
 msgid "Cut selection."
 msgstr ""
 
 # ho.tool.copy
-#: en/messages:3044
+#: en/messages:3042
 msgid "Copy selection."
 msgstr ""
 
 # ho.tool.paste
-#: en/messages:3045
+#: en/messages:3043
 msgid "Paste from cut buffer."
 msgstr ""
 
 # ho.tool.find
-#: en/messages:3046
+#: en/messages:3044
 msgid "Find component, wire or text."
 msgstr ""
 
 # ho.tool.addport
-#: en/messages:3048
+#: en/messages:3046
 msgid "Add a port to the selected component."
 msgstr ""
 
 # ho.tool.anchor
-#: en/messages:3049
+#: en/messages:3047
 msgid "Anchor the selected component(s)."
 msgstr ""
 
 # ho.tool.unanchor
-#: en/messages:3050
+#: en/messages:3048
 msgid "Unanchor the selected component(s)."
 msgstr ""
 
 # ho.tool.replicate
-#: en/messages:3051
+#: en/messages:3049
 msgid "Replicate a component."
 msgstr ""
 
 # ho.tool.delete
-#: en/messages:3052
+#: en/messages:3050
 msgid "Delete the selection."
 msgstr ""

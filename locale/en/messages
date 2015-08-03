@@ -592,7 +592,7 @@ db.mod.smod.1	Module has been modified since saving.
 db.mod.islib.1	Module is part of [%s] library.
 db.mod.islib.0	Module is not a library module.
 db.mod.netlist	Netlist
-db.mod.hdl	HDL
+db.mod.hdl	Verilog HDL
 
 db.mod.netexpl	-begin-
 Define module using a
@@ -781,9 +781,7 @@ db.gate.tab.CONCAT.cap		Concat Properties
 db.gate.tab.COMMENT.cap		Text Properties
 db.gate.tab.FF.cap		D Flip-Flop Properties
 db.gate.tab.JKFF.cap		JK Flip-Flop Properties
-db.gate.tab.SCRIPT.cap		Verilog Script
-
-
+db.gate.tab.SCRIPT.cap		Verilog Script Properties
 
 db.gate.tab.General.exp	-fillbegin-
 View and modify basic properties of an instance.
@@ -1007,7 +1005,7 @@ on the right.
 
 db.hdl.autoedit		Auto Edit
 db.hdl.split		Split
-db.hdl.comment		Comment
+db.hdl.comment		Comment out
 db.hdl.cancel		Cancel
 db.hdl.ignore		Ignore
 
@@ -1021,7 +1019,7 @@ an option to the right to handle the discrepancy.
 
 db.dip.title		TkGate: Dip Value
 
-cpath.cloops -fillbegin-
+cpath.cloops	-fillbegin-
 Combinational loops were detected in your circuit.
 In order to do delay analysis on this circuit, you
 must either break the loop, or mark some of the
@@ -1055,7 +1053,7 @@ print.all		All
 print.avail		Available
 print.cur		Current
 print.use		Used
-print.sel		Selected
+print.sel		Picked
 print.inclib		Include library modules.
 print.incunused		Include unused modules.
 print.papsz		Paper Size
@@ -1147,7 +1145,7 @@ opt.toolbars		Toolbars
 opt.toolbars.edit	Editor
 opt.toolbars.sim	Simulation
 opt.toolbars.symed	Symbol Editor
-opt.editor		HDL
+opt.editor		Verilog HDL
 opt.print		Print
 opt.print.output	Output
 opt.print.content	Content
@@ -1255,7 +1253,7 @@ opt.simulator.ignore	Ignore all warnings.
 opt.tool.file		File
 opt.tool.edit		Edit
 opt.tool.gateopt	Rotation/Alignment
-opt.tool.gateprop	Gate
+opt.tool.gateprop	Components
 opt.tool.undo		Undo/Redo
 opt.tool.zoom		Zoom
 opt.tool.mode		Editor Tools
@@ -1349,7 +1347,7 @@ igen.add		Add
 igen.delete		Delete
 igen.edit		Edit
 
-#igen.in			in
+#igen.in		in
 #igen.out		out
 #igen.inout		inout
 
@@ -1523,9 +1521,9 @@ find.qual.ends		Ends with...
 find.qual.matches	Matches...
 
 find.dom.label		Look for objects in:
-find.dom.gates		Components
-find.dom.nets		Nets
-find.dom.text		Comment Text
+find.dom.gates		components
+find.dom.nets		nets
+find.dom.text		comment text
 
 find.search		Find:
 find.target		Target
@@ -1863,8 +1861,8 @@ err.internal.nomod	internal error: Failed to find module '%s'.
 ##############################################################################
 # Informational messages
 #
-msg.selwire		Selected %s named '%s'.
-msg.selgate		Selected %s named '%s'.
+msg.selwire		Selected wire %s named '%s'.
+msg.selgate		Selected gate %s named '%s'.
 msg.selblock		Selected %s block named '%s'.
 msg.iselwire		Selected port '%s' on block '%s'.
 msg.iselgate		Selected %s named '%s' (huh? this message should be impossible).
