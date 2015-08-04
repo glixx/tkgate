@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
-"POT-Creation-Date: 2015-08-04 00:58+0300\n"
-"PO-Revision-Date: 2015-08-04 00:58+0300\n"
+"POT-Creation-Date: 2015-08-04 09:14+0300\n"
+"PO-Revision-Date: 2015-08-04 09:14+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -124,11 +124,8 @@ msgstr "Anwenden"
 # b.anchor
 # db.gate.anchor
 #: de/messages:52 de/messages:587
-#, fuzzy
 msgid "Anchor"
-msgstr ""
-"Anker\n"
-"Verankern"
+msgstr "Verankern"
 
 # b.tech
 # opt.simulate.tech
@@ -810,13 +807,8 @@ msgstr "Speicher"
 # opt.tool.module
 # find.result.module
 #: de/messages:263 de/messages:480 de/messages:1168 de/messages:1406
-#, fuzzy
 msgid "Module"
-msgstr ""
-"Module\n"
-"Modul\n"
-"Module\n"
-"Modul"
+msgstr "Modul"
 
 # gm.comment
 #: de/messages:264
@@ -1067,22 +1059,22 @@ msgstr "1-8 Demultiplexer"
 # gm.mod.inst
 #: de/messages:330
 msgid "Module Instance"
-msgstr "Module Instanz"
+msgstr "Modul Instanz"
 
 # gm.mod.in
 #: de/messages:331
 msgid "Module Input"
-msgstr "Module Eingang"
+msgstr "Modul Eingang"
 
 # gm.mod.out
 #: de/messages:332
 msgid "Module Output"
-msgstr "Module Ausgang"
+msgstr "Modul Ausgang"
 
 # gm.mod.inout
 #: de/messages:333
 msgid "Module Input-Output"
-msgstr "Module Ein/Ausgang"
+msgstr "Modul Ein/Ausgang"
 
 # tutorial.prev
 #: de/messages:335
@@ -1107,11 +1099,8 @@ msgstr "NEU LADEN"
 # pop.make
 # opt.tool.gateprop
 #: de/messages:344 de/messages:1164
-#, fuzzy
 msgid "Components"
-msgstr ""
-"Bausteine\n"
-"Gatter"
+msgstr "Bausteine"
 
 # pop.tool
 #: de/messages:345
@@ -1353,16 +1342,8 @@ msgstr "Ersetzen"
 # find.result.type
 #: de/messages:408 de/messages:491 de/messages:575 de/messages:584
 #: de/messages:593 de/messages:1247 de/messages:1407
-#, fuzzy
 msgid "Type"
-msgstr ""
-"Typ\n"
-"Typ\n"
-"Typ\n"
-"Gattertyp\n"
-"TyP\n"
-"Typ\n"
-"Typ"
+msgstr "Typ"
 
 # pop.igen.side
 # db.gate.side
@@ -1410,11 +1391,8 @@ msgstr "Bibliotheksmanager..."
 # pop.library.close
 # libmgr.unload
 #: de/messages:422 de/messages:1548
-#, fuzzy
 msgid "Unload"
-msgstr ""
-"Schließen\n"
-"Entfernen"
+msgstr "Entfernen"
 
 # symed.tab.normal
 #: de/messages:451
@@ -1472,7 +1450,7 @@ msgstr "Datei"
 # opt.mods
 #: de/messages:481 de/messages:1031 de/messages:1086
 msgid "Modules"
-msgstr "Module"
+msgstr "Modul"
 
 # ibits
 #: de/messages:483
@@ -1650,11 +1628,8 @@ msgstr "Netzname"
 # db.net.hide
 # db.gate.hidenam
 #: de/messages:544 de/messages:586
-#, fuzzy
 msgid "Hide Name"
-msgstr ""
-"Name verstecken\n"
-"Namen verstecken"
+msgstr "Name verstecken"
 
 # db.net.bits
 # db.gate.bitw
@@ -1857,11 +1832,8 @@ msgstr ""
 # db.gate.ff.reverse.hdr
 # db.gate.jkff.reverse.hdr
 #: de/messages:613 de/messages:625
-#, fuzzy
 msgid "Reversed"
-msgstr ""
-"Umgekehrt\n"
-"Reversed"
+msgstr "Umgekehrt"
 
 # db.gate.ff.reverse.exp
 #: de/messages:614
@@ -2262,11 +2234,8 @@ msgstr "Schalter beginnt Simulation im Aus-Zustand."
 # db.gate.switch.shownet
 # db.gate.dip.shownet
 #: de/messages:781 de/messages:792
-#, fuzzy
 msgid "Show Net Name"
-msgstr ""
-"Zeige den Netznamen an\n"
-"Zeige den Netznamen"
+msgstr "Zeige den Netznamen"
 
 # db.gate.switch.shownet.on.hdr
 # db.gate.dip.shownet.on.hdr
@@ -2363,23 +2332,15 @@ msgstr "Eingangsordnung"
 # db.gate.demux.ord1.hdr
 # db.gate.decoder.ord1.hdr
 #: de/messages:806 de/messages:828 de/messages:848
-#, fuzzy
 msgid "Left-to-Right"
-msgstr ""
-"Links-rechts\n"
-"Links-rechts\n"
-"Links-nach-rechts"
+msgstr "Links-nach-rechts"
 
 # db.gate.mux.ord2.hdr
 # db.gate.demux.ord2.hdr
 # db.gate.decoder.ord2.hdr
 #: de/messages:807 de/messages:829 de/messages:849
-#, fuzzy
 msgid "Right-to-Left"
-msgstr ""
-"Rechts-links\n"
-"Rechts-links\n"
-"Rechts-nach-links"
+msgstr "Rechts-nach-links"
 
 # db.gate.mux.ord1.exp
 #: de/messages:808
@@ -2400,23 +2361,15 @@ msgstr "Auswahlstil"
 # db.gate.demux.sel1.hdr
 # db.gate.decoder.sel1.hdr
 #: de/messages:816 de/messages:838 de/messages:858
-#, fuzzy
 msgid "On Left"
-msgstr ""
-"Selektor links\n"
-"Auf der Linken\n"
-"Links"
+msgstr "Auf der Linken"
 
 # db.gate.mux.sel2.hdr
 # db.gate.demux.sel2.hdr
 # db.gate.decoder.sel2.hdr
 #: de/messages:817 de/messages:839 de/messages:859
-#, fuzzy
 msgid "On Right"
-msgstr ""
-"Selektor rechts\n"
-"Auf der Rechten\n"
-"Rechts"
+msgstr "Auf der Rechten"
 
 # db.gate.mux.sel1.exp
 #: de/messages:818
@@ -2439,11 +2392,8 @@ msgstr ""
 # db.gate.demux.dataorder
 # db.gate.decoder.dataorder
 #: de/messages:827 de/messages:847
-#, fuzzy
 msgid "Output Ordering"
-msgstr ""
-"Ausgangsordnung\n"
-"Ausgangsreihenfolge"
+msgstr "Ausgangsordnung"
 
 # db.gate.demux.ord1.exp
 #: de/messages:830
@@ -2753,7 +2703,7 @@ msgstr "Bibliotheksmodule einbeziehen."
 # print.incunused
 #: de/messages:974
 msgid "Include unused modules."
-msgstr "Unbenutzte Module einfügen."
+msgstr "Unbenutzte Modul einfügen."
 
 # print.papsz
 #: de/messages:975
@@ -2788,12 +2738,12 @@ msgstr "Optionen"
 # print.scale
 #: de/messages:981
 msgid "Scale large modules to fit page."
-msgstr "Anpassen großer Module auf eine Seite."
+msgstr "Anpassen großer Modul auf eine Seite."
 
 # print.partition
 #: de/messages:982
 msgid "Partition large modules into multiple pages."
-msgstr "Aufteilen großer Module auf mehrere Seiten."
+msgstr "Aufteilen großer Modul auf mehrere Seiten."
 
 # print.incidx
 #: de/messages:983
@@ -2808,7 +2758,7 @@ msgstr "Hierarchiegraph hinzufügen."
 # print.4up
 #: de/messages:985
 msgid "Print small modules four per page."
-msgstr "Kleine Module: vier auf eine Seite drucken."
+msgstr "Kleine Modul: vier auf eine Seite drucken."
 
 # print.rangeselection
 #: de/messages:986
@@ -2916,7 +2866,7 @@ msgid ""
 "presentation."
 msgstr ""
 "Auswahl der zu druckenden\n"
-"Module, Einstellung der\n"
+"Modul, Einstellung der\n"
 "Optionen für die Darstellung."
 
 # print.printtrace.trace.exp
@@ -3036,11 +2986,8 @@ msgstr "Analyse"
 # opt.color
 # opt.editor.color
 #: de/messages:1070 de/messages:1188
-#, fuzzy
 msgid "Color"
-msgstr ""
-"Farben\n"
-"Farbe"
+msgstr "Farbe"
 
 # opt.color.title
 #: de/messages:1071

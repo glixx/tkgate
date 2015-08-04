@@ -327,10 +327,10 @@ gm.msi.12demux	1-2 Demultiplexer
 gm.msi.14demux	1-4 Demultiplexer
 gm.msi.18demux	1-8 Demultiplexer
 
-gm.mod.inst	Module Instanz
-gm.mod.in	Module Eingang
-gm.mod.out	Module Ausgang
-gm.mod.inout	Module Ein/Ausgang
+gm.mod.inst	Modul Instanz
+gm.mod.in	Modul Eingang
+gm.mod.out	Modul Ausgang
+gm.mod.inout	Modul Ein/Ausgang
 
 tutorial.prev		ZURÜCK
 tutorial.next		WEITER
@@ -419,7 +419,7 @@ pop.igen.bottom		unten
 pop.igen.other		sonstige
 
 pop.library.mgr		Bibliotheksmanager...
-pop.library.close	Schließen
+pop.library.close	Entfernen
 
 ##############################################################################
 #
@@ -478,7 +478,7 @@ comment.empty	[Text hinzufügen mit Doppelklick.]
 #
 ifile		Datei
 imodule		Modul
-iblmodule	Module
+iblmodule	Modul
 iports		Ports
 ibits		Bits:
 itype		Typ:
@@ -581,16 +581,16 @@ db.gate.waveform	Takt-Signalform
 db.gate.port		Port
 db.gate.bitws		Bits
 db.gate.side		Seite
-db.gate.gtype		Gattertyp
+db.gate.gtype		Typ
 db.gate.gname		Gattername
-db.gate.hidenam		Namen verstecken
+db.gate.hidenam		Name verstecken
 db.gate.anchor		Verankern
 db.gate.cpbreak		Aufteilung des kritischen Pfades
 db.gate.butstate	Schalterzustand
 db.gate.dipval		Schalterstellung
 db.gate.range		Bitbereich
 db.gate.memfilenam	Dateiname f. Speicherinhalt
-db.gate.modname		TyP
+db.gate.modname		Typ
 db.gate.general		Allgemein
 db.gate.details		Details
 db.gate.text		Text
@@ -622,7 +622,7 @@ db.gate.jkff.normal.exp		-fillbegin-
 Datenfluß im JK-Flipflop
 von links nach rechts.
 -end-
-db.gate.jkff.reverse.hdr	Reversed
+db.gate.jkff.reverse.hdr	Umgekehrt
 db.gate.jkff.reverse.exp	-fillbegin-
 Datenfluß im JK-Flipflop
 von rechts nach links.
@@ -778,7 +778,7 @@ db.gate.switch.state.on.exp	Schalter beginnt Simulation im Ein-Zustand.
 db.gate.switch.state.off.hdr	Schalter Aus
 db.gate.switch.state.off.exp	Schalter beginnt Simulation im Aus-Zustand.
 
-db.gate.switch.shownet		Zeige den Netznamen an
+db.gate.switch.shownet		Zeige den Netznamen
 db.gate.switch.shownet.on.hdr	Zeigen
 db.gate.switch.shownet.on.exp	Zeige den Netznamen direkt neben dem Schalter an.
 db.gate.switch.shownet.off.hdr	Verstecken
@@ -803,8 +803,8 @@ db.gate.tap.lbl.bus		LSB:
 @db.gate.tap.exp.width		*180
 
 db.gate.mux.dataorder	Eingangsordnung
-db.gate.mux.ord1.hdr	Links-rechts
-db.gate.mux.ord2.hdr	Rechts-links
+db.gate.mux.ord1.hdr	Links-nach-rechts
+db.gate.mux.ord2.hdr	Rechts-nach-links
 db.gate.mux.ord1.exp	-fillbegin-
 Ordne MUX-Eingänge von links nach rechts.
 -end-
@@ -813,8 +813,8 @@ Ordne MUX-Eingänge von rechts nach links.
 -end-
 
 db.gate.mux.select	Auswahlstil
-db.gate.mux.sel1.hdr	Selektor links
-db.gate.mux.sel2.hdr	Selektor rechts
+db.gate.mux.sel1.hdr	Auf der Linken
+db.gate.mux.sel2.hdr	Auf der Rechten
 db.gate.mux.sel1.exp	-fillbegin-
 Setze den Datenselektor auf der linken Seite
 des Gatters.
@@ -825,8 +825,8 @@ des Gatters.
 -end-
 
 db.gate.demux.dataorder	Ausgangsordnung
-db.gate.demux.ord1.hdr	Links-rechts
-db.gate.demux.ord2.hdr	Rechts-links
+db.gate.demux.ord1.hdr	Links-nach-rechts
+db.gate.demux.ord2.hdr	Rechts-nach-links
 db.gate.demux.ord1.exp	-fillbegin-
 Ordne DEMUX-Ausgänge von links nach rechts.
 -end-
@@ -844,7 +844,7 @@ db.gate.demux.sel2.exp	-fillbegin-
 Plaziere den Select-Eingang auf der rechten Seite des DEMUX.
 -end-
 
-db.gate.decoder.dataorder	Ausgangsreihenfolge
+db.gate.decoder.dataorder	Ausgangsordnung
 db.gate.decoder.ord1.hdr	Links-nach-rechts
 db.gate.decoder.ord2.hdr	Rechts-nach-links
 db.gate.decoder.ord1.exp	-fillbegin-
@@ -855,8 +855,8 @@ Ordne die Decoderausgänge von rechts nach links.
 -end-
 
 db.gate.decoder.select		Plazierung des Enable-Eingangs
-db.gate.decoder.sel1.hdr	Links
-db.gate.decoder.sel2.hdr	Rechts
+db.gate.decoder.sel1.hdr	Auf der Linken
+db.gate.decoder.sel2.hdr	Auf der Rechten
 db.gate.decoder.sel1.exp	-fillbegin-
 Plaziere den Enable-Eingang auf der linken DECODER-Seite.
 -end-
@@ -971,18 +971,18 @@ print.cur		Aktuelle
 print.use		Benutzte
 print.sel		Ausgewählte
 print.inclib		Bibliotheksmodule einbeziehen.
-print.incunused		Unbenutzte Module einfügen.
+print.incunused		Unbenutzte Modul einfügen.
 print.papsz		Papiergröße
 print.orient		Orientierung
 print.portrait		Hochformat
 print.landscape		Querformat
 print.2side		Duplexdruck
 print.opts		Optionen
-print.scale		Anpassen großer Module auf eine Seite.
-print.partition		Aufteilen großer Module auf mehrere Seiten.
+print.scale		Anpassen großer Modul auf eine Seite.
+print.partition		Aufteilen großer Modul auf mehrere Seiten.
 print.incidx		Index hinzufügen.
 print.incgraph		Hierarchiegraph hinzufügen.
-print.4up		Kleine Module: vier auf eine Seite drucken.
+print.4up		Kleine Modul: vier auf eine Seite drucken.
 print.rangeselection	Wahl des Bereichs
 print.scaleselect	Wahl der Skalierung
 print.fulltr		Vollständiges Signaldiagramm
@@ -1016,7 +1016,7 @@ Seitenaufbau und den Drucker.
 
 print.printcirc.mod.exp		-fillbegin-
 Auswahl der zu druckenden
-Module, Einstellung der
+Modul, Einstellung der
 Optionen für die Darstellung.
 -end-
 
@@ -1028,7 +1028,7 @@ Seitenzahl zu berechnen.
 
 print.tab.output	Ausgabe
 #print.tab.page		Seite
-print.tab.modules	Module
+print.tab.modules	Modul
 print.tab.content	Inhalt
 print.tab.advanced	Einstellungen
 
@@ -1067,7 +1067,7 @@ opt.library.path	Pfad
 opt.library.load	Autom. Laden
 opt.library.vpd		VPD
 opt.analysis		Analyse
-opt.color		Farben
+opt.color		Farbe
 opt.color.title		TkGate: Farbauswahl
 opt.color.edit		Editor
 opt.color.scope		Scope
@@ -1083,7 +1083,7 @@ opt.site		Netzadresse
 opt.username		Benutzername
 opt.libname		Bibliotheksname:
 opt.inst		Instanzen
-opt.mods		Module
+opt.mods		Modul
 opt.modports		Modul-Ports
 opt.frames		Rahmen
 opt.comment		Kommentare
@@ -1161,11 +1161,11 @@ opt.simulator.ignore	Alle Warnungen ignorieren.
 opt.tool.file		Datei
 opt.tool.edit		Editieren
 opt.tool.gateopt	Drehen/Ausrichten
-opt.tool.gateprop	Gatter
+opt.tool.gateprop	Bausteine
 opt.tool.undo		Undo/Redo
 opt.tool.zoom		Zoom
 opt.tool.mode		Modus
-opt.tool.module		Module
+opt.tool.module		Modul
 opt.tool.tech		Technologie
 opt.tool.simctl		Simulatorsteuerung
 opt.tool.simaux		Simulatorbefehle
