@@ -39,7 +39,7 @@ b.cancel	Abbrechen
 #b.bitw		Bitbreite
 b.in		Eingang
 b.out		Ausgang
-b.inout		Bidirektional
+b.inout		Ein/Ausgang
 b.browse	Durchsuchen...
 b.label		Marke
 b.find		Suchen
@@ -49,7 +49,7 @@ b.delete	Löschen
 #b.deleteb	Löschen...
 b.remove	Entfernen
 b.apply		Anwenden
-b.anchor	Anker
+b.anchor	Verankern
 b.tech		Technologie
 #b.enable	Freischalten
 #b.disable	Sperren
@@ -260,7 +260,7 @@ gm.rgate	Reduktion
 gm.msi		MSI
 gm.alu		ALU
 gm.mem		Speicher
-gm.mod		Module
+gm.mod		Modul
 gm.comment	Kommentar
 gm.script Verilogskript
 gm.frame	Rahmen
@@ -459,8 +459,8 @@ scope.title TkGate: Scope
 ##############################################################################
 ### memory viewer
 #
-memview.title Speicherauszug
-memview.exp -fillbegin-
+memview.title	Speicherauszug
+memview.exp	-fillbegin-
 Ansehen und Modifizieren des
 Speicherinhalts von RAM oder ROM.
 Zum Ändern des Speicherinhalts wähle
@@ -716,7 +716,7 @@ definiert sind. Modulparameter werden zur Definition von
 Verzögerungen und konstanten Werten in Moduln verwendet.
 -end-
 
-db.gate.tab.details.exp -fillbegin-
+db.gate.tab.details.exp		-fillbegin-
 Genaue Festlegung der typspezifischen
 Eigenschaften eines Gatters.
 -end-
@@ -784,7 +784,7 @@ db.gate.switch.shownet.on.exp	Zeige den Netznamen direkt neben dem Schalter an.
 db.gate.switch.shownet.off.hdr	Verstecken
 db.gate.switch.shownet.off.exp	Zeige keinen Netznamen neben dem Schalter an.
 
-db.gate.dip.value Initialer	DIP-Schalter-Wert
+db.gate.dip.value		Initialer DIP-Schalter-Wert
 db.gate.dip.value.exp		Initialer Wert des DIP-Schalters zu Simulationsbeginn.
 db.gate.dip.value.hex		Hexwert:
 @db.gate.dip.value.exp.width	150
@@ -864,8 +864,6 @@ db.gate.decoder.sel2.exp	-fillbegin-
 Plaziere den Enable-Eingang auf der rechten DECODER-Seite.
 -end-
 
-
-
 db.gate.aox.extbaruse	Nutzung von Erweiterungsbalken
 db.gate.aox.use.hdr	Erweiterungsbalken
 db.gate.aox.nouse.hdr	Keine Erweiterungsbalken
@@ -875,12 +873,12 @@ Grundgattern (AND, OR, etc.) werden
 diese an Erweiterungsbalken
 angebracht.
 -end-
+
 db.gate.aox.nouse.exp	-fillbegin-
 Beim Hinzufügen von Eingängen an
 Grundgattern (AND, OR, etc.) werden
 keine Erweiterungsbalken verwendet.
 -end-
-
 
 db.gate.led.type	LED Typ
 db.gate.led.bit.hdr	Bit
@@ -1258,14 +1256,14 @@ igen.add		Hinzufügen
 igen.delete		Löschen
 igen.edit		Editieren
 
-igen.in			Eingang
-igen.out		Ausgang
-igen.inout		Ein/Ausgang
+#igen.in		Eingang
+#igen.out		Ausgang
+#igen.inout		Ein/Ausgang
 
-igen.left		links
-igen.right		rechts
-igen.top		oben
-igen.bottom		unten
+#igen.left		links
+#igen.right		rechts
+#igen.top		oben
+#igen.bottom		unten
 
 #igen.other		andere
 
@@ -1810,7 +1808,7 @@ miles.msg6	%s%s hierhin zu setzen beweist, daß Du ein totaler Trottel bist, Hei
 miles.msg7	Warum gibst Du nicht auf, Heinrich, das ist eine hirnrissige Schaltung.
 miles.msg8a	Es hat keinen Sinn weiterzumachen, Heinrich.
 miles.msg8b	Heinrich, Du hast keine Ahnung wie man eine Schaltung baut.
-miles.msg8c	Heinrich, mir graut vor Dir.
+#miles.msg8c	Heinrich, mir graut vor Dir.
 
 #############################################################################
 #
@@ -2093,7 +2091,7 @@ Leitung trennen - Werkzeug zum
 Durchschneiden von Leitungen.
 -end-
 
-ho.scroll -begin-
+ho.scroll	-begin-
 Scrollen - zum Einfangen und Ziehen
 des Editier-Canvas.
 -end-
