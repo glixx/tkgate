@@ -717,7 +717,7 @@ flowing right to left.
 -end-
 
 db.gate.cat.asc.hdr	Ascending
-db.gate.cat.dec.hdr	Decending
+db.gate.cat.dec.hdr	Descending
 db.gate.cat.asc.exp	-fillbegin-
 Bits are concatenated in ascending order from top to bottom.
 -end-
@@ -980,7 +980,7 @@ db.gate.led.bar.exp	-fillbegin-
 LED bar graph with one bar per bit.
 -end-
 db.gate.led.hex.exp	-fillbegin-
-Display signal in hexidecimal.
+Display signal in hexadecimal.
 -end-
 db.gate.led.dec.exp	-fillbegin-
 Display signal in decimal.
@@ -1241,7 +1241,7 @@ opt.cpflash		Display with Flashing Path
 
 opt.general.fontset	Font Set
 
-opt.simulator.savetraces	Save probe locations between simlation runs.
+opt.simulator.savetraces	Save probe locations between simulation runs.
 opt.simulator.noglitch	Enable simulator glitch suppression.
 
 opt.simulator.err	Error Handling
@@ -1359,7 +1359,7 @@ igen.edit		Edit
 #igen.other		other
 
 igen.mod		Use ports used in module only.
-igen.int		Use ports from exisiting interface only.
+igen.int		Use ports from existing interface only.
 igen.modint		Use both module and interface ports.
 
 igen.portsel		Port Selection
@@ -1611,7 +1611,7 @@ you load this circuit.
 
 circ.exp.script	-fillbegin-
 Add any simulation scripts that should be
-automatically read and excuted when this
+automatically read and executed when this
 circuit is simulated.
 -end-
 
@@ -1710,12 +1710,12 @@ err.badconsame		Connection refused because wires are part of the same net.
 err.badconptsp		Connection refused because both wires are module ports or supply.
 err.badconbitw		Connection refused because bit widths do not match.
 err.badrange		Non-positive range for scope trace is not allowed.
-err.badlprcmd		Unable to exectute printer command '%s'.
+err.badlprcmd		Unable to execute printer command '%s'.
 err.badpsopen		Unable to open file '%s' for postscript output.
 err.badid		Illegal identifier '%s'.
 err.noinvgate		Inverters are not allowed on components of this type.
 
-err.protintf		Can't modifiy protected interface on module '%s'.
+err.protintf		Can't modify protected interface on module '%s'.
 
 err.bkpt.badexp		Syntax error in breakpoint expression. Must be one of: 'net', '!net', 'net==value', 'net!=value'
 err.bkpt.badnet		Invalid net name '%s'. Names must start with a letter and contain only letters, digits and '.'.
@@ -1729,7 +1729,7 @@ err.sim.badedge		Illegal edge indicator '%c' in clock command.
 err.sim.nobkpt		No such breakpoint '%s'.
 err.sim.nonet		Can't find net '%s'.
 err.sim.nogate		Can't find component '%s'.
-err.sim.badbin		Illegal charcter in binary constant '%s'.
+err.sim.badbin		Illegal character in binary constant '%s'.
 err.sim.notswitch	Component '%s' is not a switch, dip or register.
 err.sim.badcmd		Unrecognized command '%s' in simulation script.
 err.sim.isrun		Simulator is already running (Use 'Ctrl-s e' to end).
@@ -1759,7 +1759,7 @@ you sure you want to print it?
 err.nojump		-fillbegin-
 The 'jump-to-module' feature can not be used
 in simulation or critical path analysis mode.
-Please navigate manully to the target block
+Please navigate manually to the target block
 by selecting modules and opening them with the
 '>' keyboard command. You can leave a module
 you are in with the '<' keyboard command.
@@ -2002,7 +2002,7 @@ verga.err.TIMESCALEAN		Design contains some modules with `timescale and some wit
 verga.err.BADPORTTYPE		Invalid type declaration used on port '%s'
 verga.err.BADVALUE		Bad numeric value '%s'.
 verga.err.NONEXPCTL		Event control @(*) applied to non-expression.
-verga.err.NONSTATCTL		Event control @(*) applied to non-statment.
+verga.err.NONSTATCTL		Event control @(*) applied to non-statement.
 verga.err.MODREDEF		Redefinition of module '%s'.
 verga.err.IE_TASK		Task definition '%s' found outside module - internal error.
 verga.err.IE_NONET		Failed to find net '%s' - internal error.
@@ -2068,7 +2068,7 @@ ho.opt.tool.mode		Select the editing tool
 ho.opt.tool.module		Create, delete, rename,etc. of module definitions
 ho.opt.tool.tech		Select default technology for components
 ho.opt.tool.simctl		Start, stop and pause of simulator
-ho.opt.tool.simaux		Auxliary simulator commands (read/write memory files, etc.)
+ho.opt.tool.simaux		Auxiliary simulator commands (read/write memory files, etc.)
 ho.opt.tool.simmode		Choose between the select and scroll tool in simulator.
 ho.opt.tool.symmode		Selecting editing tool in symbol editor
 ho.opt.tool.symedit		Cut and paste operations for symbol editor
@@ -2777,7 +2777,7 @@ and contain modules useful for use in user circuits.
 -end-
 
 ho.opt.lib.vlib			-begin-
-List of libaries that should automatically be loaded
+List of libraries that should automatically be loaded
 when TkGate starts.
 -end-
 
@@ -2883,7 +2883,7 @@ the user.
 
 ho.opt.bat		-begin-
 If this mode is enabled, TkGate will
-set up an enviornment for designing a
+set up an environment for designing a
 bat computer.
 -end-
 
