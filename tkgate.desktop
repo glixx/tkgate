@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=TkGate
 GenericName=Digital circuit editor and simulator
-GenericName[ru]=Редактор и симулятор цифровых схем
 GenericName[de]=Digitaler Schaltkreis Editor und Simulator
+GenericName[ru]=Редактор и симулятор цифровых схем
+GenericName[ua]=Редактор и симулятор цифровых схем
 Comment=Event driven digital circuit simulator with a tcl/tk-based graphical editor
 Comment[ru]=Управляемый событиями симулятор цифровых схем с основанным на tcl/tk графическим редактором
 Type=Application
