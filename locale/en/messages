@@ -1816,11 +1816,11 @@ err.corruptnewsave	-fillbegin-
 TkGate was able to save your file in '%s', but it appears
 to be corrupted. If you have checkpointing enabled try
 loading one of the checkpoint files. Use 'tkgate -V' to
-check the integrety of a save file.
+check the integrity of a save file.
 -end-
 
 err.corruptsave		-fillbegin-
-TkGate detetected a problem while trying to save the file '%s'.
+TkGate detected a problem while trying to save the file '%s'.
 The existing file has been left unmodified and the damaged file has
 been written to '%s'. If you have checkpointing enabled you
 can try loading one of the checkpoint files. You can also use
@@ -1833,7 +1833,7 @@ file/directory protections and or disk space.
 -end-
 
 err.nosafesave		-fillbegin-
-A problem has occured attempting to save '%s'. If you wish, you can
+A problem has occurred attempting to save '%s'. If you wish, you can
 try again without save validation. If you say "no", the original file
 will remain unmodified. If you say "yes" the original file will be
 overwritten, but may be destroyed if a problem occurs. Would you like
