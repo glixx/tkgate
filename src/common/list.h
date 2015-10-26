@@ -15,6 +15,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
+
 #ifndef __list_h
 #define __list_h
 
@@ -33,19 +34,24 @@ struct list {
   ListElem	*first,*last;
 };
 
-List *new_List();
-void delete_List(List*);
-List *copy_List(List*);
+List	*new_List();
 
-void List_init(List*);
-void List_flush(List*);
+void	 delete_List(List*);
 
-void List_sort(List*L,elemcmp_f*);
+List	*copy_List(List*);
 
-void List_append(List*L,List*A);
+void	List_init(List*);
 
-void List_addToHead(List*,void*);
-void List_addToTail(List*,void*);
+void	List_flush(List*);
+
+void	List_sort(List*L,elemcmp_f*);
+
+void	List_append(List*L,List*A);
+
+void	List_addToHead(List*,void*);
+
+void	List_addToTail(List*,void*);
+
 void *List_popHead(List*);
 void *List_popTail(List*);
 void *List_remove(List*,ListElem*);

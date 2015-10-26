@@ -22,6 +22,8 @@
 
 __BEGIN_DECLS
 
+#define MALLOC(T)	((T*) malloc(sizeof (T)))
+
 /*
  * Functions that we may need to provide ourself if they are not available
  * under this operating system.

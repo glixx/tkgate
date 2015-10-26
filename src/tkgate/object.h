@@ -52,7 +52,7 @@ void *ob_malloc(size_t s,const char *name);
 /**
  * Template macro for ob_malloc
  */
-#define OM_MALLOC(T) (T*) ob_malloc(sizeof (T), #T)
+#define OM_MALLOC(T) ((T*) ob_malloc(sizeof (T), #T))
 
 /*******************************************************************************
  * \brief Undoable object replacement for calloc()

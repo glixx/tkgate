@@ -124,7 +124,7 @@ proc tkg_startSim {fname initTime} {
   #
   # Construct the commmand line to use for starting the simulator.
   #
-  set simCmd "$simExec -i -B $basename -D [gat_computestrhash $fname] -W $tkg_warningMode -I $initTime $fname"
+  set simCmd "$simExec -i -B $basename -W $tkg_warningMode -I $initTime $fname"
 
   #
   # Start up the simulator
