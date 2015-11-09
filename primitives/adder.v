@@ -6,7 +6,7 @@ module adder #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
    output ${ABS_RANGE} S;
    wire   ${ABS_RANGE} _S;
    wire   _CO;
-   
+
    specify
       (A,B *> S) = Dab_s;
       (A,B *> CO) = Dab_co;

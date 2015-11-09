@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-04 09:14+0300\n"
+"POT-Creation-Date: 2015-11-09 18:57+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1904,7 +1904,7 @@ msgstr ""
 
 # db.gate.cat.dec.hdr
 #: en/messages:720
-msgid "Decending"
+msgid "Descending"
 msgstr ""
 
 # db.gate.cat.asc.exp
@@ -2510,7 +2510,7 @@ msgstr ""
 
 # db.gate.led.hex.exp
 #: en/messages:982
-msgid "Display signal in hexidecimal."
+msgid "Display signal in hexadecimal."
 msgstr ""
 
 # db.gate.led.dec.exp
@@ -3332,7 +3332,7 @@ msgstr ""
 
 # opt.simulator.savetraces
 #: en/messages:1244
-msgid "Save probe locations between simlation runs."
+msgid "Save probe locations between simulation runs."
 msgstr ""
 
 # opt.simulator.noglitch
@@ -3635,7 +3635,7 @@ msgstr ""
 
 # igen.int
 #: en/messages:1362
-msgid "Use ports from exisiting interface only."
+msgid "Use ports from existing interface only."
 msgstr ""
 
 # igen.modint
@@ -4170,7 +4170,7 @@ msgstr ""
 #: en/messages:1612
 msgid ""
 "Add any simulation scripts that should be\n"
-"automatically read and excuted when this\n"
+"automatically read and executed when this\n"
 "circuit is simulated."
 msgstr ""
 
@@ -4432,7 +4432,7 @@ msgstr ""
 
 # err.badlprcmd
 #: en/messages:1713
-msgid "Unable to exectute printer command '%s'."
+msgid "Unable to execute printer command '%s'."
 msgstr ""
 
 # err.badpsopen
@@ -4452,7 +4452,7 @@ msgstr ""
 
 # err.protintf
 #: en/messages:1718
-msgid "Can't modifiy protected interface on module '%s'."
+msgid "Can't modify protected interface on module '%s'."
 msgstr ""
 
 # err.bkpt.badexp
@@ -4516,7 +4516,7 @@ msgstr ""
 
 # err.sim.badbin
 #: en/messages:1732
-msgid "Illegal charcter in binary constant '%s'."
+msgid "Illegal character in binary constant '%s'."
 msgstr ""
 
 # err.sim.notswitch
@@ -4609,7 +4609,7 @@ msgstr ""
 msgid ""
 "The 'jump-to-module' feature can not be used\n"
 "in simulation or critical path analysis mode.\n"
-"Please navigate manully to the target block\n"
+"Please navigate manually to the target block\n"
 "by selecting modules and opening them with the\n"
 "'>' keyboard command. You can leave a module\n"
 "you are in with the '<' keyboard command."
@@ -4838,13 +4838,13 @@ msgid ""
 "TkGate was able to save your file in '%s', but it appears\n"
 "to be corrupted. If you have checkpointing enabled try\n"
 "loading one of the checkpoint files. Use 'tkgate -V' to\n"
-"check the integrety of a save file."
+"check the integrity of a save file."
 msgstr ""
 
 # err.corruptsave
 #: en/messages:1822
 msgid ""
-"TkGate detetected a problem while trying to save the file '%s'.\n"
+"TkGate detected a problem while trying to save the file '%s'.\n"
 "The existing file has been left unmodified and the damaged file has\n"
 "been written to '%s'. If you have checkpointing enabled you\n"
 "can try loading one of the checkpoint files. You can also use\n"
@@ -4861,7 +4861,7 @@ msgstr ""
 # err.nosafesave
 #: en/messages:1835
 msgid ""
-"A problem has occured attempting to save '%s'. If you wish, you can\n"
+"A problem has occurred attempting to save '%s'. If you wish, you can\n"
 "try again without save validation. If you say \"no\", the original file\n"
 "will remain unmodified. If you say \"yes\" the original file will be\n"
 "overwritten, but may be destroyed if a problem occurs. Would you like\n"
@@ -5538,7 +5538,7 @@ msgstr ""
 
 # verga.err.NONSTATCTL
 #: en/messages:2005
-msgid "Event control @(*) applied to non-statment."
+msgid "Event control @(*) applied to non-statement."
 msgstr ""
 
 # verga.err.MODREDEF
@@ -5748,7 +5748,7 @@ msgstr ""
 
 # ho.opt.tool.simaux
 #: en/messages:2071
-msgid "Auxliary simulator commands (read/write memory files, etc.)"
+msgid "Auxiliary simulator commands (read/write memory files, etc.)"
 msgstr ""
 
 # ho.opt.tool.simmode
@@ -6677,7 +6677,7 @@ msgstr ""
 msgid ""
 "Enabling the $tkg$exec() system task for registered functions\n"
 "allows user circuits to execute only tcl/tk commands that have\n"
-"been registered as safe. As long has all Virtual Peripheral\n"
+"been registered as safe. As long as all Virtual Peripheral\n"
 "Device files are trusted, enabling $tkg$exec() at this level\n"
 "should prevent dangerous commands from being executed. Enabling\n"
 "this option has a medium security risk."
@@ -6758,7 +6758,7 @@ msgid ""
 "inputs to a component will cause the component to\n"
 "output unknown rather simply the time shifted\n"
 "input signal. This can eliminate spurious\n"
-"events and prevent oscilations in gate-level\n"
+"events and prevent oscillations in gate-level\n"
 "sequential circuits."
 msgstr ""
 
@@ -6829,7 +6829,7 @@ msgstr ""
 # ho.opt.lib.vlib
 #: en/messages:2779
 msgid ""
-"List of libaries that should automatically be loaded\n"
+"List of libraries that should automatically be loaded\n"
 "when TkGate starts."
 msgstr ""
 
@@ -6972,13 +6972,13 @@ msgstr ""
 #: en/messages:2884
 msgid ""
 "If this mode is enabled, TkGate will\n"
-"set up an enviornment for designing a\n"
+"set up an environment for designing a\n"
 "bat computer."
 msgstr ""
 
 # ho.opt.trek
 #: en/messages:2890
-msgid "Beam me up Scoty!"
+msgid "Beam me up Scotty!"
 msgstr ""
 
 # ho.opt.simstep
