@@ -2662,7 +2662,7 @@ this option has a very high security risk.
 ho.opt.sec.regexec		-begin-
 Enabling the $tkg$exec() system task for registered functions
 allows user circuits to execute only tcl/tk commands that have
-been registered as safe.  As long has all Virtual Peripheral
+been registered as safe.  As long as all Virtual Peripheral
 Device files are trusted, enabling $tkg$exec() at this level
 should prevent dangerous commands from being executed.  Enabling
 this option has a medium security risk.
@@ -2725,7 +2725,7 @@ If this option is enabled, rapidly changing
 inputs to a component will cause the component to
 output unknown rather simply the time shifted
 input signal.  This can eliminate spurious
-events and prevent oscilations in gate-level
+events and prevent oscillations in gate-level
 sequential circuits.
 -end-
 
@@ -2889,7 +2889,7 @@ set up an environment for designing a
 bat computer.
 -end-
 
-ho.opt.trek		Beam me up Scoty!
+ho.opt.trek		Beam me up Scotty!
 
 ho.opt.simstep		-begin-
 The number of epochs to advance when
