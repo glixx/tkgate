@@ -2748,7 +2748,7 @@ should be handled.
 ho.opt.sim.err.stopany	-begin-
 Do not simulate the circuit if there are any
 warnings in the circuit, even if there are no
-actual erros.
+actual errors.
 -end-
 
 ho.opt.sim.err.showall	-begin-
@@ -3029,7 +3029,6 @@ rotation. Click on this
 button to change the current
 default rotation.
 -end-
-
 
 ho.tool.zoomin		Zoom in
 ho.tool.zoomout		Zoom out
