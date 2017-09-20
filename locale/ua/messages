@@ -17,7 +17,6 @@
 #   with this program; if not, write to the Free Software Foundation, Inc.,
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-#
 
 \font-encoding		koi8-u
 \display-encoding	KOI8-U
@@ -84,66 +83,62 @@ module.box.libraries	Бібліотеки
 # Tabs for Nets/Ports
 #
 sidetab.nets	Ланцюжки
-sidetab.ports	Ports
+sidetab.ports	Порти
 
 #############################################################################
 #
 # MsgMgr strings (including breakpoint and script handling)
 #
 @mm.width	7
-mm.add		Add...
-mm.delete	Delete
-mm.edit		Edit...
-mm.enable	Enable
-mm.disable	Disable
+mm.add		Додати…
+mm.delete	Вилучити
+mm.edit		Змінити…
+mm.enable	Увімкнути
+mm.disable	Вимкнути
 
 ##############################################################################
+#
 # Menu strings
 #
-# Menu strings (tags beginning with "menu.") can take an option prefix consisting
-# of a number and a colon. If this prefix exists, it indicates the character
-# position in the string that will be underlined. This enables keyboard shortcuts
-# using the Alt key.
-#
-menu.file	0:File
-menu.edit	0:Edit
-menu.tool	0:Tool
+menu.file	0:Файл
+menu.edit	0:Зміни
+menu.tool	0:Інструмент
 menu.symbol	0:Символ
 menu.simulate	0:Імітувати
 menu.module	0:Модуль
-menu.interface	0:Interface
-menu.format	0:Format
-menu.make	0:Components
-menu.help	0:Help
+menu.interface	0:Інтерфейс
+menu.format	0:Формат
+menu.make	0:Компоненти
+menu.help	0:Довідка
 
-menu.file.new		0:New...
-menu.file.open		0:Open...
-menu.file.openlib	0:Library Manager...
-menu.file.save		0:Save
-menu.file.saveas	5:Save As...
-menu.file.print		0:Print...
-menu.file.quit		0:Quit
-menu.file.cprop		0:Circuit Properties...
-menu.file.import	0:Import Image...
-menu.file.export	0:Export Image...
+menu.file.new		0:Створити…
+menu.file.open		0:Відкрити…
+menu.file.openlib	0:Керування бібліотеками…
+menu.file.save		0:Зберегти
+menu.file.saveas	5:Зберегти як…
+menu.file.print		0:Надрукувати…
+menu.file.quit		0:Вийти
+menu.file.cprop		0:Властивості схеми…
+menu.file.import	0:Імпортувати зображення…
+menu.file.export	0:Експортувати зображення…
 
-menu.edit.undo		0:Undo
-menu.edit.redo		0:Redo
-menu.edit.cut		0:Cut
-menu.edit.copy		3:Copy
-menu.edit.paste		0:Paste
-menu.edit.overlay	0:Overlay Paste
-menu.edit.selall	0:Select All
-menu.edit.find		0:Find...
-menu.edit.zoomin	5:Zoom In
-menu.edit.zoomout	5:Zoom Out
+menu.edit.undo		0:Вернути
+menu.edit.redo		0:Повторити
+menu.edit.cut		0:Вирізати
+menu.edit.copy		3:Копіювати
+menu.edit.paste		0:Вставити
+menu.edit.overlay	0:Вставити накладку
+menu.edit.selall	0:Позначити все
+menu.edit.find		0:Знайти…
+menu.edit.zoomin	5:Збільшити
+menu.edit.zoomout	5:Зменшити
 
-menu.edit.rshift	10:Bit Shift Right
-menu.edit.lshift	10:Bit Shift Left
-menu.edit.ushift	10:Bit Shift Up
-menu.edit.dshift	10:Bit Shift Down
-menu.edit.cwrotate	11:Bit Rotate C-W
-menu.edit.ccwrotate	15:Bit Rotate C-C-W
+menu.edit.rshift	10:Бітовий зсув праворуч
+menu.edit.lshift	10:Бітовий зсув ліворуч
+menu.edit.ushift	10:Бітовий зсув вгору
+menu.edit.dshift	10:Бітовий зсув вниз
+menu.edit.cwrotate	11:Бітове обертання за год. стрілкою
+menu.edit.ccwrotate	15:Бітове обертання проти год. стрілки
 menu.edit.pcwrotate	12:Port Rotate C-W
 menu.edit.pccwrotate	16:Port Rotate C-C-W
 menu.edit.autobold	Boldify Bits
@@ -199,7 +194,7 @@ menu.simulate.view	1:View Memory...
 
 menu.module.open	0:Open
 menu.module.close	0:Close
-menu.module.new		0:New...
+menu.module.new		0:Створити…
 menu.module.del		0:Delete...
 menu.module.copy	1:Copy...
 menu.module.rename	0:Rename...
@@ -224,10 +219,10 @@ menu.help.example	1:Examples
 #############################################################################
 # Scope Menu
 #
-menu.scope_file			0:File
+menu.scope_file			0:Файл
 menu.scope_sim			0:Імітувати
 menu.scope_trace		0:Trace
-menu.scope_help			0:Help
+menu.scope_help			0:Довідка
 
 menu.scope_file.ptrace		0:Print Trace...
 menu.scope_file.close		0:Close
@@ -380,7 +375,7 @@ pop.gate.addout		Add Output...
 pop.gate.addinout	Add InOut...
 pop.gate.anchor		Anchor/Unanchor
 pop.gate.settech	Set Technology
-pop.gate.delete		Delete
+pop.gate.delete		Вилучити
 pop.gate.ioset		Set Type
 
 pop.module.new		Створити…
@@ -418,7 +413,7 @@ pop.interface.replace	Replace
 pop.igen.type		Type
 pop.igen.side		Side
 pop.igen.size		Size
-pop.igen.delete		Delete
+pop.igen.delete		Вилучити
 pop.igen.in		вхід
 pop.igen.out		вихід
 pop.igen.inout		вхід-вихід
@@ -609,7 +604,7 @@ db.gate.stddelay	Standard Delay
 db.gate.custdelay	Custom Delay
 db.gate.catdiruse	Port Placement
 db.gate.edit		Edit
-db.gate.delete		Delete
+db.gate.delete		Вилучити
 db.gate.add		Add
 
 db.gate.ff.type		D Flip-Flop Orientation
@@ -1183,7 +1178,7 @@ opt.tool.simaux		Simulator Commands
 opt.tool.simmode	Simulator Tools
 opt.tool.symmode	Symbol Editor Tools
 opt.tool.symedit	Cut/Paste
-opt.tool.symport	Ports
+opt.tool.symport	Порти
 opt.tool.symshift	Bit Shift
 opt.tool.symopr		Bit Ops
 
@@ -1263,7 +1258,7 @@ igen.modname		Module Name:
 
 #igen.resort		Re-sort
 igen.add		Add
-igen.delete		Delete
+igen.delete		Вилучити
 igen.edit		Edit
 
 #igen.in		in

@@ -26,6 +26,7 @@ package require cmdline
 # Parse string of the messages file
 # State machine with state variables currentKey and currentValue
 # \param line: text line to parse
+# \param sourceLine
 # \param msgHash: Hash id to use
 #
 proc parseString {line sourceLine msgHash} {
