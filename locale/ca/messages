@@ -32,8 +32,8 @@ b.close		Tancar
 b.ok		OK
 b.clear		Esborrar
 b.cancel	Cancel·lar
-b.open		Obrir...
-b.bitw		Amplada bus
+#b.open		Obrir...
+#b.bitw		Amplada bus
 b.in		entrada
 b.out		sortida
 b.inout		bidireccional
@@ -43,7 +43,7 @@ b.find		Cercar
 b.edit		Editar...
 b.add		Afegir...
 b.delete	Esborrar
-b.deleteb	Esborrar...
+#b.deleteb	Esborrar...
 b.apply		Aplicar
 b.anchor	Anclar
 b.tech		Tecnologia
@@ -51,182 +51,182 @@ b.tech		Tecnologia
 ##############################################################################
 # Menú strings
 #
-file		Fitxer
-edit		Editar
-tool		Eines
-simulate	Simular
-module		Mòdul
-gate		Porta
-make		Inserir
-circ		Circuit
+menu.file	0:Fitxer
+menu.edit	0:Editar
+menu.tool	0:Eines
+menu.simulate	0:Simular
+menu.module	0:Mòdul
+#gate		Porta
+menu.make	0:Inserir
+#circ		Circuit
 
-new			Nou
-open		Obrir...
-openlib		Obrir llibreria...
-save		Guardar
-saveas		Guardar com...
-print		Imprimir...
-options		Opcions...
-quit		Sortir
+menu.file.new		0:Nou...
+menu.file.open		0:Obrir...
+menu.file.openlib	0:Obrir llibreria...
+menu.file.save		0:Guardar
+menu.file.saveas	5:Guardar com...
+menu.file.print		0:Imprimir...
+#options		Opcions...
+menu.file.quit		0:Sortir
 
-cut			Tallar
-copy		Copiar
-paste		Enganxar
-selall		Seleccionar tot
-find		Cercar...
-algnv		Situar en columna
-algnh		Situar en fila
-zoomin		Zoom +
-zoomout		Zoom -
+menu.edit.cut		0:	Tallar
+menu.edit.copy		3:Copiar
+menu.edit.paste		0:Enganxar
+menu.edit.selall	0:Seleccionar tot
+menu.edit.find		0:Cercar...
+menu.format.algnv	6:Situar en columna
+menu.format.algnh	6:Situar en fila
+menu.edit.zoomin	5:Apropar
+menu.edit.zoomout	5:Allunyar
 
-move		Moure/Connectar
-delg		Esborrar porta
-cutw		Tallar cable
-inv			Invertir
-bitw		Amplada del bus
-debug		Depurar
-rot0		Orientació 0º
-rot90		Orientació 90º
-rot180		Orientació 180º
-rot270		Orientació 270º
+menu.tool.move		0:Moure/Connectar
+menu.tool.delg		0:Esborrar porta
+menu.tool.cutw		0:Tallar cable
+menu.tool.inv		0:	Invertir
+menu.tool.bitw		0:Amplada del bus
+menu.tool.debug		0:Depurar
+#rot0		rientació 0º
+#rot90		Orientació 90º
+#rot180		Orientació 180º
+#rot270		Orientació 270º
 
-simbegin	Començar simulació
-simend		Acabar simulació
-simrun		Mode continu
-simpause	Pausa
-simstep		Pas a pas (temps)
-simcycle	Pas a pas (nº cicles)
-simbreak	Punt de ruptura...
-simscript	Executar Guió...
-simload		Fitxer -> Memoria...
-simdump		Memòria -> Fitxer...
+menu.simulate.begin	0:Començar simulació
+menu.simulate.end	0:Acabar simulació
+menu.simulate.run	0:Mode continu
+menu.simulate.pause	0:Pausa
+menu.simulate.step	0:Pas a pas (temps)
+menu.simulate.cycle	5:Pas a pas (nº cicles)
+menu.simulate.break	0:Punt de ruptura...
+menu.simulate.script	1:Executar Guió...
+menu.simulate.load	1:Fitxer -> Memoria...
+menu.simulate.dump	1:Memòria -> Fitxer...
 
-modopen		Obrir
-modclose	Tancar
-modseti		Ajustar interficie
-modediti	Editar interficies...
-modnew		Nou...
-moddel		Esborra...
-modcopy		Copia...
-modrename	Canvia el nom...
-modclaim	Mòdul llibreria -> Mòdul usuari...
-circprop	Propietats del circuit...
-cpath		Camí crític...
+menu.module.open	0:Obrir
+menu.module.close	0:Tancar
+#modseti		Ajustar interficie
+#modediti	Editar interficies...
+menu.module.new		0:Nou...
+menu.module.del		0:Esborra...
+menu.module.copy	1:Copia...
+menu.module.rename	0:Canvia el nom...
+menu.module.claim	1:Mòdul llibreria -> Mòdul usuari...
+#circprop	Propietats del circuit...
+#cpath		Camí crític...
 
-gataddin	Afegeix entrada
-gataddout	Afegeix sortida
-gataddinout	Afegeix bidireccional
-gatiochg	Canviar tipus
-gatanchor	Fixar selecció
-gatunanchor	Alliberar selecció
-gatprop		Propietats...
-gatrep		Rèplica
-gatdel		Esborrar
-gatsettech	Seleccionar tecnologia
+#gataddin	Afegeix entrada
+#gataddout	Afegeix sortida
+#gataddinout	Afegeix bidireccional
+#gatiochg	Canviar tipus
+#gatanchor	Fixar selecció
+#gatunanchor	Alliberar selecció
+#gatprop		Propietats...
+#gatrep		Rèplica
+#gatdel		Esborrar
+#gatsettech	Seleccionar tecnologia
 
-gmswitch	Entrada/Sortida
-gmgate		Porta
-gmredgate	Reducció
-gmmsi		MSI
-gmalu		ALU
-gmmem		Memòria
-gmmod		Mòdul
-gmcomment	Comentari
-gmframe		Marc
+gm.io		Entrada/Sortida
+gm.gate		Porta
+gm.rgate	Reducció
+gm.msi		MSI
+gm.alu		ALU
+gm.mem		Memòria
+gm.mod		Mòdul
+gm.comment	Comentari
+gm.frame	Marc
 
-gmxswitch	Commutador
-gmdip		Interruptors DIP
-gmground	Massa
-gmvdd		Vdd
-gmmerge		Línies <-> Bus
-gmclock		Senyal de rellotge
+gm.io.switch	Commutador
+gm.io.dip	Interruptors DIP
+#gmground	Massa
+#gmvdd		Vdd
+gm.io.merge	Línies <-> Bus
+gm.io.clock	Senyal de rellotge
 
-gm.led		LED
-gm.ledbar	Barra de LEDs
-gm.ledhex	7-Seg. LED (HEXADECIMAL)
-gm.leddec	7-Seg. LED (DECIMAL)
-gm.ledseg	7-Seg. LED (Directe)
+gm.io.led	LED
+gm.io.ledbar	Barra de LEDs
+gm.io.ledhex	7-Seg. LED (HEXADECIMAL)
+gm.io.leddec	7-Seg. LED (DECIMAL)
+gm.io.ledseg	7-Seg. LED (Directe)
 
-gmtty		TTY (Terminal)
+gm.io.tty	TTY (Terminal)
 
-gmand		AND  (Y)
-gmnand		NAND (NO-Y)
-gmor		OR   (O)
-gmnor		NOR  (NO-O)
-gmxor		XOR  (O-EX)
-gmxnor		XNOR (NO-O-EX)
-gmbuf		Buffer
-gminv		Inversor
-gmtribuf	Buffer-Triestat
-gmnmos		NMOS
-gmpmos		PMOS
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Buffer
+gm.gate.inv	Inversor
+gm.gate.tribuf	Buffer-Triestat
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
 
-gmrand		AND
-gmrnand		NAND
-gmror		OR
-gmrnor		NOR
-gmrxor		XOR
-gmrxnor		XNOR
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
 
-gmadd		Sumador
-gmmult		Multiplicador
-gmdiv		Divisor
-gmlshift	Despl. Esquerra
-gmrshift	Despl. Dreta
-gmarshift	Despl. Arit. Dreta
-gmroll	    Despl. Cíclic
+gm.alu.add	Sumador
+gm.alu.mult	Multiplicador
+gm.alu.div	Divisor
+gm.alu.lshift	Despl. Esquerra
+gm.alu.rshift	Despl. Dreta
+gm.alu.arshift	Despl. Arit. Dreta
+#gmroll	    Despl. Cíclic
 
-gmreg		Registre
-gmff		Biestable D
-gmram		RAM
-gmrom		ROM
+gm.mem.reg	Registre
+gm.mem.ff	Biestable D
+gm.mem.ram	RAM
+gm.mem.rom	ROM
 
-gm21mux		2-1 Multiplexor
-gm41mux		4-1 Multiplexor
-gm81mux		8-1 Multiplexor
-gm12dec		1-2 Decodificador
-gm14dec		1-4 Decodificador
-gm18dec		1-8 Decodificador
+gm.msi.21mux	2-1 Multiplexor
+gm.msi.41mux	4-1 Multiplexor
+gm.msi.81mux	8-1 Multiplexor
+gm.msi.12dec	1-2 Decodificador
+gm.msi.14dec	1-4 Decodificador
+gm.msi.18dec	1-8 Decodificador
 
-gmmodinst	Insereix mòdul
-gmmodin		Entrada mòdul
-gmmodout	Sortida mòdul
-gmmodinout	Mòdul bidireccional
+gm.mod.inst	Insereix mòdul
+gm.mod.in	Entrada mòdul
+gm.mod.out	Sortida mòdul
+gm.mod.inout	Mòdul bidireccional
 
-addwireseg	Afegir segment de cable
+#addwireseg	Afegir segment de cable
 
-help		Ajuda
-hlpabout	A propòsit de...
-hlplicense	Llicència...
-hlpdoc		Documentació...
-hlptut		Tutorials
-hlpexample	Exemples
-exampcomb	Lògica combinacional
-examp3bit	Comptador de 3 bits
-examp8bit	Comptador de 8 bits
-examptrff	FF a nivell de transistors
-exampcpu	CPU
-tutwelcome	Introducció al TkGate
-tutcreate	Creant un circuit
-tutedit1	Editant un circuit (1)
-tutedit2	Editant un circuit (2)
-tutmods		Usant els mòduls
+#help		Ajuda
+menu.help.about		0:A propòsit de...
+menu.help.license	0:Llicència...
+menu.help.doc		0:Documentació...
+menu.help.tut		1:Tutorials
+menu.help.example	1:Exemples
+#exampcomb	Lògica combinacional
+#examp3bit	Comptador de 3 bits
+#examp8bit	Comptador de 8 bits
+#examptrff	FF a nivell de transistors
+#exampcpu	CPU
+#tutwelcome	Introducció al TkGate
+#tutcreate	Creant un circuit
+#tutedit1	Editant un circuit (1)
+#tutedit2	Editant un circuit (2)
+#tutmods		Usant els mòduls
 
-tutsim		Simulant un circuit
+#tutsim		Simulant un circuit
 
 # Scope Menu
-menu.sc.prtrace	Visualizant senyal...
-menu.sc.close	Tancar
-menu.sc.trace	Senyal
-menu.sc.zoomin	Apropar
-menu.sc.zoomout	Allunyar
+menu.scope_file.ptrace		0:Visualizant senyal...
+menu.scope_file.close		0:Tancar
+#menu.sc.trace	Senyal
+menu.scope_trace.zoomin		5:Apropar
+menu.scope_trace.zoomout	5:Allunyar
 
 ##############################################################################
 # Interface strings
 #
 ifile		Fitxer
 imodule		Mòdul
-iblmodule	Mòduls:
+iblmodule	Mòduls
 iports		Ports:
 ibits		Bits:
 
@@ -235,7 +235,7 @@ ibits		Bits:
 #
 db.net.name		Nom connexió
 db.net.hide		Ocultar
-db.net.bits		Amplada bus
+db.net.bits		Amplada del bus
 db.net.port		Tipus de pota
 db.net.in		entrada
 db.net.out		sortida
@@ -254,20 +254,20 @@ db.gate.phase		Fase
 db.gate.duty		Funció
 db.gate.port		Pota
 db.gate.bitws		Bits
-db.gate.gtype		Tipus de porta
+db.gate.gtype		Tipus
 db.gate.gname		Nom de la porta
 db.gate.hidenam		Ocultar
-db.gate.anchor		Anclada
+db.gate.anchor		Anclar
 db.gate.cpbreak		Ruptura del camí crític
 db.gate.butstate	Estat del botó
 db.gate.dipval		Valor del commutador
 db.gate.memfilenam	Fitxer de memòria
-db.gate.modname		Funció
-db.gate.islink		El text és un link
-db.gate.link		Enllaç a fitxer
-db.gate.findw		Cerca només cables
-db.gate.findg		Cerca només portes
-db.gate.findwg		Cerca cables i portes
+db.gate.modname		Tipus
+#db.gate.islink		El text és un link
+#db.gate.link		Enllaç a fitxer
+#db.gate.findw		Cerca només cables
+#db.gate.findg		Cerca només portes
+#db.gate.findwg		Cerca cables i portes
 db.gate.general		General
 db.gate.details		Detalls
 db.gate.ports		Pota
@@ -275,12 +275,12 @@ db.gate.delay		Retard
 db.gate.stddelay	Retard normal
 db.gate.custdelay	Retard personalitzat
 
-db.led.type		Tipus de LED
-db.led.bit		Bit
-db.led.bar		Barra gràfica
-db.led.hex		7-Segments (HEXADECIMAL)
-db.led.dec		7-Segments (DECIMAL)
-db.led.seg		7-Segments (Directe)
+db.gate.led.type	Tipus de LED
+db.gate.led.bit.hdr	Bit
+db.gate.led.bar.hdr	Barra gràfica
+db.gate.led.hex.hdr	7-Segments (HEXADECIMAL)
+db.gate.led.dec.hdr	7-Segments (DECIMAL)
+db.gate.led.seg.hdr	7-Segments (Directe)
 
 cpath.cloops -begin-
 S'ha detectat un bucle de realimentació en el seu circuit.
@@ -293,14 +293,14 @@ Les connexions detectades com bucle es mostren a sota.
 ##############################################################################
 # Print dialog box
 #
-print.outto			Sortida a
+#print.outto			Sortida a
 print.printer		Impressora
 print.file			Fitxer
 print.prcmd			Comanda d'Impressió
 print.filename		Nom del Fitxer
 print.epssave		Salvar com a EPS.
-print.doctit		Títol del Document
-print.prmod			Imprimir Mòduls
+#print.doctit		Títol del Document
+#print.prmod			Imprimir Mòduls
 print.epcm			Període de temps/cm
 print.estpg			Pàgines estimades
 print.all			Tot
@@ -323,7 +323,7 @@ print.range		Rang
 print.fulltr		Traçat complet
 print.parttr		Traçat parcial
 print.start		Començar
-print.end		Fi
+#print.end		Fi
 
 ##############################################################################
 #
@@ -351,24 +351,24 @@ opt.zled		LED flotant
 opt.restdef		Restaura opcions per defecte
 opt.regudate		Refrescar Regió
 opt.smoothscroll	Desplaçament Suau
-opt.outmove		Mostra només el requadre al moure'l
+#opt.outmove		Mostra només el requadre al moure'l
 opt.balloon		Habilitar globus d'ajuda
 opt.debug		Habilitar depuració
 opt.novice		Mode Principiant
-opt.ckpoint		Realitzar comprovació de punts
+#opt.ckpoint		Realitzar comprovació de punts
 opt.freq		Freqüència
 opt.beak		Habilitar mode especial
-opt.mode		Mode
-opt.normal		Normal
+#opt.mode		Mode
+#opt.normal		Normal
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Miles
 opt.showsimcmd	Visualitzar cadena simulada
-opt.logfile		Fitxer de missatges del simulador
+#opt.logfile		Fitxer de missatges del simulador
 opt.estepsz		Ajust de temps (simulació pas a pas)
 opt.cstepsz		Ajust nº cicles (simulació pas a pas)
 opt.overstep	Excedir rellotge
-opt.initscript	Guió d'inicialització
+#opt.initscript	Guió d'inicialització
 opt.posedge		El rellotge s'atura després de cada flanc
 opt.setclock	El rellotge s'atura a cada flanc
 opt.delayfilepath	Fitxers de retard
@@ -391,35 +391,35 @@ d'una connexió permanent a la xarxa.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Mòdul nou
-blklst.delmod		Borra mòdul
-blklst.frommod		Copia mòdul de
-blklst.tomod		a
-blklst.oldname		Nombre anterior
-blklst.newname		Nombre nou
-blklst.claim		Mòdul llibreria -> Mòdul usuari
+blklst.new.cap		Mòdul nou
+blklst.del.cap		Borra mòdul
+blklst.from		Copia mòdul de
+blklst.to		a
+#blklst.oldname		Nombre anterior
+#blklst.newname		Nombre nou
+blklst.claim.cap	Mòdul llibreria -> Mòdul usuari
 ##############################################################################
 #
 # Circuit Dialog box
 #
-circ.topmod			Mòdul principal
+#circ.topmod			Mòdul principal
 circ.discchg		Descartar canvis
 circ.iniscript		Guions d'inicializació
-circ.noscript		No ha seleccionat fitxers de guió.
-circ.really1		Realment vol esborrar-ho
-circ.really2		de la llista de guions d'inicializació
+#circ.noscript		No ha seleccionat fitxers de guió.
+#circ.really1		Realment vol esborrar-ho
+#circ.really2		de la llista de guions d'inicializació
 
 ##############################################################################
 # Simulator
 #
-sim.breakpt		Punt de ruptura
+#sim.breakpt		Punt de ruptura
 
 ##############################################################################
 #
 # Command box
 #
-cmd.file		Nom del fitxer
-cmd.topname		Nom del mòdul principal
+#cmd.file		Nom del fitxer
+#cmd.topname		Nom del mòdul principal
 
 ##############################################################################
 #
@@ -433,17 +433,17 @@ cp.recompute		Recalcular
 ##############################################################################
 # Error messages
 #
-err.verilog			Errors en fitxer:
+#err.verilog			Errors en fitxer:
 err.nopin			No puc canviar la pota seleccionada.
 err.badhex			Valor hexadecimal incorrecte. Ignoro '%s'.
 err.gatanchor		Les portes anclades no poden moure's.
-err.libmode			Operació il·legal en mòdul de llibreria (convertir a mòdul normal per editar).
+#err.libmode			Operació il·legal en mòdul de llibreria (convertir a mòdul normal per editar).
 err.badfind			No puc trobar '%s' com a destí.
 err.badopendel		No puc esborrar un mòdul obert.
 err.nosrcmod		No puc trobar '%s' com a mòdul font.
 err.noerr			Error desconegut.
 err.misserr			Error, informació incompleta (s'ha penjat el simulador?)
-err.pounimpl		Informació d'error no implementada
+#err.pounimpl		Informació d'error no implementada
 
 err.badinadd		No puc afegir més entrades a la porta seleccionada.
 err.badoutadd		No puc afegir més sortides a la porta seleccionada.
@@ -469,7 +469,7 @@ err.bkpt.toomany	Masses punts de ruptura.  El màxim és de %d.
 err.sim.badtmp		No puc salvar el fitxer temporal '%s' per la simulació ( ¿ Disc ple ? )
 err.sim.syntx		Error de sintaxis en la comanda '%s'.
 err.sim.noincl		El fitxer Include '%s' no es troba.
-err.sim.clockbadedge	Indicador il·legal en el pols '%c' de rellotge.
+#err.sim.clockbadedge	Indicador il·legal en el pols '%c' de rellotge.
 err.sim.nobkpt		No existeix punt de ruptura '%s'.
 err.sim.nonet		No puc trobar la connexió '%s'.
 err.sim.nogate		No puc trobar la porta '%s'.
@@ -484,7 +484,7 @@ err.badlibopen		No puc obrir la llibreria '%s'.
 
 err.nomark		Per favor marca amb el botó esquerra abans de seleccionar el tipus de porta.
 err.badgate		No connexió aquest tipus de porta.
-err.badmake		No puc crear la porta.
+#err.badmake		No puc crear la porta.
 
 err.manypages		-begin-
 Hi ha MOLTES pàgines en aquest
@@ -507,7 +507,7 @@ err.nomod		Mòdul '%s' no està definit.
 err.modlock		!Aquest bloc lògic l'està visualitzant!
 err.closeroot		No puc tancar el mòdul principal. Usa l'opció Sortir del menú Fitxer.
 err.sim.isrun		El simulador està executant-se en aquests moments (Usa 'Ctrl-s e' per acabar).
-err.sim.isnotrun	El simulador no està funcionant (Usa 'Ctrl-s b' per començar).
+#err.sim.isnotrun	El simulador no està funcionant (Usa 'Ctrl-s b' per començar).
 err.editonly		Comanda incorrecta en el mode de simulació.
 err.simonly		Comanda només vàlida en mode simulació.
 
@@ -545,7 +545,7 @@ msg.setinterface	Ajustar l'interficie del mòdul per '%s'.
 msg.needsel		Per favor selecciona una instància de mòdul.
 msg.wroteckpt		Comprova punt a %s...
 msg.save		Salva circuit com a '%s'.
-msg.badsave		Falla fitxer de sortida '%s'.
+#msg.badsave		Falla fitxer de sortida '%s'.
 msg.reallynew		El circuit s'ha modificat. ¿ Realment vols perdre els canvis i crear un de nou ?
 msg.reallyquit		El circuit s'ha modificat. ¿ Realment vols sortir ?
 msg.notlib		'%s' no és un mòdul de llibreria.
@@ -610,8 +610,8 @@ Bus. Introdueix l'esmentat nombre en la
 part inferior dreta de la finestra.
 -end-
 
-ho.modopen	Obre el mòdul seleccionat.
-ho.modclose	Tanca el mòdul actual.
+#ho.modopen	Obre el mòdul seleccionat.
+#ho.modclose	Tanca el mòdul actual.
 
 ho.simgo	-begin-
 Si no estem simulant, inicia la
@@ -662,7 +662,7 @@ Emmagatzema el contingut de la memòria
 en un fitxer amb extensió .mem.
 -end-
 
-ho.sim.break	-begin-
+#ho.sim.break	-begin-
 Introdueix un punt de ruptura. Un punt de ruptura és una expressió
 que atura la simulació quan l'avaluació resulta certa.
 Les expressions suportades per el programa son del tipus
@@ -670,7 +670,7 @@ operador lògic simple : "w1 == 0" o "w7 != 8". També es
 contemplen expressions en les que es nega la connexió: "!w2".
 -end-
 
-ho.f.modlist	-begin-
+ho.modlist	-begin-
 Llista tots els mòduls actualment carregats.
 El mòdul principal, el superior en la jerarquia,
 s'indica amb el signe "+". Els mòduls de llibreria
@@ -760,13 +760,13 @@ aquesta porta. Es pot canviar editant aquí.
 ho.edgat.cycle		El nombre total de períodes de temps en un cicle de rellotge.
 ho.edgat.phase		El punt inicial del cicle (en %).
 ho.edgat.duty		El % del cicle que el rellotge està en flanc de baixada.
-ho.edgat.cname		Nom de la connexió a la que s'uneix.
-ho.edgat.cport		Pota de la connexió a la que s'uneix.
-ho.edgat.ctype		Tipus de connexió.
-ho.edgat.cbitw		Amplada del Bus de la connexió a la que s'uneix.
-ho.edgat.cedit		Edita la pota seleccionada.
-ho.edgat.cadd		Afegeix una pota.
-ho.edgat.cdel		Borra la pota seleccionada.
+#ho.edgat.cname		Nom de la connexió a la que s'uneix.
+#ho.edgat.cport		Pota de la connexió a la que s'uneix.
+#ho.edgat.ctype		Tipus de connexió.
+#ho.edgat.cbitw		Amplada del Bus de la connexió a la que s'uneix.
+#ho.edgat.cedit		Edita la pota seleccionada.
+#ho.edgat.cadd		Afegeix una pota.
+#ho.edgat.cdel		Borra la pota seleccionada.
 
 ho.edgat.hide		-begin-
 Activa aquest flag per no
@@ -865,7 +865,7 @@ partir de mòduls.
 -end-
 
 ho.opt.trek		Ajuda Scoty!
-ho.opt.normal	Fora conyes.
+#ho.opt.normal	Fora conyes.
 
 ho.opt.simstep		-begin-
 El nombre de períodes de temps que avancem
@@ -925,13 +925,13 @@ Visualitzar comandes enviades entre l'entorn
 de visualització (GUI) i el simulador.
 -end-
 
-ho.simlog		-begin-
+#ho.simlog		-begin-
 Escriu comandes emeses pel simulador a un
 log. Aquest log pot usar-se com a fitxer d'entrada
 al simulador en la depuració.
 -end-
 
-ho.cpathanal		-begin-
+#ho.cpathanal		-begin-
 Toba camins crítics en el circuit.
 -end-
 

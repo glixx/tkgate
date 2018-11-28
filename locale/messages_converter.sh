@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="cs/messages"
+file="ca/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file
@@ -222,3 +222,9 @@ sed -i "s|^ho.opt.rememberprobes	|#ho.opt.rememberprobes	|g" $file
 sed -i "s|^ho.opt.normal		|#ho.opt.normal		|g" $file
 sed -i "s|^ho.simlog		|#ho.simlog		|g" $file
 sed -i "s|^ho.cpathanal		|#ho.cpathanal		|g" $file
+sed -i "s|^gmroll	    |#gmroll	    |g" $file
+sed -i "s|^menu.sc.zoomin	|menu.scope_trace.zoomin		5:|g" $file
+sed -i "s|^menu.sc.zoomout	|menu.scope_trace.zoomout	5:|g" $file
+sed -i "s|^opt.initscript	|#opt.initscript	|g" $file
+sed -i "s|^msg.badsave		|#msg.badsave		|g" $file
+sed -i "s|^ho.opt.normal	|#ho.opt.normal	|g" $file
