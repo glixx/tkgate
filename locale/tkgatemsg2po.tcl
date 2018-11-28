@@ -29,6 +29,8 @@ package require cmdline
 # \param sourceLine
 # \param msgHash: Hash id to use
 #
+# You need tcl-tcllib installed
+#
 proc parseString {line sourceLine msgHash} {
 
 	global messagesHash

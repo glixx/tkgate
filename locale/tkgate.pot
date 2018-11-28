@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-09 18:57+0300\n"
+"POT-Creation-Date: 2018-11-28 15:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6790,7 +6790,7 @@ msgstr ""
 msgid ""
 "Do not simulate the circuit if there are any\n"
 "warnings in the circuit, even if there are no\n"
-"actual erros."
+"actual errors."
 msgstr ""
 
 # ho.opt.sim.err.showall
@@ -7201,76 +7201,76 @@ msgid ""
 msgstr ""
 
 # ho.tool.zoomin
-#: en/messages:3034
+#: en/messages:3033
 msgid "Zoom in"
 msgstr ""
 
 # ho.tool.zoomout
-#: en/messages:3035
+#: en/messages:3034
 msgid "Zoom out"
 msgstr ""
 
 # ho.tool.rotate
-#: en/messages:3036
+#: en/messages:3035
 msgid "Rotate selected component(s) counter-clockwise."
 msgstr ""
 
 # ho.tool.brotate
-#: en/messages:3037
+#: en/messages:3036
 msgid "Rotate selected component(s) clockwise."
 msgstr ""
 
 # ho.tool.valgn
-#: en/messages:3038
+#: en/messages:3037
 msgid "Align selected component(s) vertically."
 msgstr ""
 
 # ho.tool.halgn
-#: en/messages:3039
+#: en/messages:3038
 msgid "Align selected component(s) horizontally."
 msgstr ""
 
 # ho.tool.cut
-#: en/messages:3041
+#: en/messages:3040
 msgid "Cut selection."
 msgstr ""
 
 # ho.tool.copy
-#: en/messages:3042
+#: en/messages:3041
 msgid "Copy selection."
 msgstr ""
 
 # ho.tool.paste
-#: en/messages:3043
+#: en/messages:3042
 msgid "Paste from cut buffer."
 msgstr ""
 
 # ho.tool.find
-#: en/messages:3044
+#: en/messages:3043
 msgid "Find component, wire or text."
 msgstr ""
 
 # ho.tool.addport
-#: en/messages:3046
+#: en/messages:3045
 msgid "Add a port to the selected component."
 msgstr ""
 
 # ho.tool.anchor
-#: en/messages:3047
+#: en/messages:3046
 msgid "Anchor the selected component(s)."
 msgstr ""
 
 # ho.tool.unanchor
-#: en/messages:3048
+#: en/messages:3047
 msgid "Unanchor the selected component(s)."
 msgstr ""
 
 # ho.tool.replicate
-#: en/messages:3049
+#: en/messages:3048
 msgid "Replicate a component."
 msgstr ""
 
 # ho.tool.delete
-#: en/messages:3050
+#: en/messages:3049
 msgid "Delete the selection."
 msgstr ""

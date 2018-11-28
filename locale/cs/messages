@@ -34,8 +34,8 @@ b.close		Zavřít
 b.ok		OK
 b.clear		Znova
 b.cancel	Zrušit
-b.open		Otevřít...
-b.bitw		Bitová Šířka
+#b.open		Otevřít...
+#b.bitw		Bitová Šířka
 b.in		Vstup
 b.out		Výstup
 b.inout		Vst./Výst.
@@ -45,7 +45,7 @@ b.find		Najít
 b.edit		Upravit...
 b.add		Přidat...
 b.delete	Smazat
-b.deleteb	Smazat...
+#b.deleteb	Smazat...
 b.apply		Použít
 b.anchor	Ukotvit
 b.tech		Technologie
@@ -53,180 +53,180 @@ b.tech		Technologie
 ##############################################################################
 # Menu strings
 #
-file		Soubor
-edit		Úpravy
-tool		Nástroje
-simulate	Simulace
-module		Modul
-gate		Hradlo
-make		Přidat
-circ		Obvod
+menu.file	0:Soubor
+menu.edit	0:Úpravy
+menu.tool	0:Nástroje
+menu.simulate	0:Simulace
+menu.module	0:Modul
+#gate		Hradlo
+menu.make	0:Přidat
+#circ		Obvod
 
-new		Nový
-open		Otevřít...
-openlib		Otevřít Knihovnu...
-save		Uložit
-saveas		Uložit Jako...
-print		Tisk...
-options		Možnosti...
-quit		Ukončit
+menu.file.new		0:Nový...
+menu.file.open		0:Otevřít...
+menu.file.openlib	0:Otevřít Knihovnu...
+menu.file.save		0:Uložit
+menu.file.saveas	5:Uložit Jako...
+menu.file.print		0:Tisk...
+#options		Možnosti...
+menu.file.quit		0:Ukončit
 
-undo		Zpět
-redo		Znovu
-cut		Vyjmout
-copy		Kopírovat
-paste		Vložit
-selall		Vybrat Vše
-find		Najít...
-algnv		Uspořádat Ver.
-algnh		Uspořádat Horiz.
-zoomin		Zvětšit
-zoomout		Zmenšit
+menu.edit.undo		0:Zpět
+menu.edit.redo		0:Znovu
+menu.edit.cut		0:Vyjmout
+menu.edit.copy		3:Kopírovat
+menu.edit.paste		0:Vložit
+menu.edit.selall	0:Vybrat Vše
+menu.edit.find		0:Najít...
+menu.format.algnv	6:Uspořádat Ver.
+menu.format.algnh	6:Uspořádat Horiz.
+menu.edit.zoomin	5:Zvětšit
+menu.edit.zoomout	5:Zmenšit
 
-move		Přesunout/Spojit
-delg		Smazat Hradlo
-cutw		Přerušit Vodič
-inv		Invertovat
-bitw		Bitová Šířka
-debug		Debug
-rot0		Otočit 0
-rot90		Otočit 90
-rot180		Otočit 180
-rot270		Otočit 270
+menu.tool.move		0:Přesunout/Spojit
+menu.tool.delg		0:Smazat Hradlo
+menu.tool.cutw		0:Přerušit Vodič
+menu.tool.inv		0:Invertovat
+menu.tool.bitw		0:Bitová Šířka
+menu.tool.debug		0:Debug
+#rot0		točit 0
+#rot90		Otočit 90
+#rot180		Otočit 180
+#rot270		Otočit 270
 
-simbegin	Začít Simulaci
-simend		Ukončit Simulaci
-simadprobe	Přidat/Smazat Sondu
-simrun		Spustit
-simpause	Přerušit
-simstep		Posun o Jednotku(y) Času
-simcycle	Posun o Hodinový Cyklus
-simbreak	Kontrolní Bod...
-simscript	Spustit Skript...
-simload		Nahrát Obraz Paměti...
-simdump		Uložit Obraz Paměti...
+menu.simulate.begin	0:Začít Simulaci
+menu.simulate.end	0:Ukončit Simulaci
+menu.simulate.addprobe	0:Přidat/Smazat Sondu
+menu.simulate.run	0:Spustit
+menu.simulate.pause	0:Přerušit
+menu.simulate.step	0:Posun o Jednotku(y) Času
+menu.simulate.cycle	5:Posun o Hodinový Cyklus
+menu.simulate.break	0:Kontrolní Bod...
+menu.simulate.script	1:Spustit Skript...
+menu.simulate.load	1:Nahrát Obraz Paměti...
+menu.simulate.dump	1:Uložit Obraz Paměti...
 
-modopen		Otevřít
-modclose	Zavřít
-modseti		Nastavit Rozhraní
-modediti	Upravit Rozhraní...
-modnew		Nový...
-moddel		Smazat...
-modcopy		Kopírovat...
-modrename	Přejmenovat...
-modclaim	Konvertovat...
-circprop	Vlastnosti Obvodu...
-cpath		Citlivá Cesta...
+menu.module.open	0:Otevřít
+menu.module.close	0:Zavřít
+#modseti		Nastavit Rozhraní
+#modediti	Upravit Rozhraní...
+menu.module.new		0:Nový...
+menu.module.del		0:Smazat...
+menu.module.copy	1:Kopírovat...
+menu.module.rename	0:Přejmenovat...
+menu.module.claim	1:Konvertovat...
+#circprop	Vlastnosti Obvodu...
+#cpath		Citlivá Cesta...
 
-gataddin	Přidat Vstup
-gataddout	Přidat Výstup
-gataddinout	Přidat Vst./Výst.
-gatiochg	Změnit Typ
-gatanchor	Ukotvit Vybrané
-gatunanchor	Uvolnit Vybrané
-gatprop		Vlastnosti...
-gatrep		Vytvořit Kopii
-gatdel		Smazat
-gatsettech	Nastavit Technologii
+#gataddin	Přidat Vstup
+#gataddout	Přidat Výstup
+#gataddinout	Přidat Vst./Výst.
+#gatiochg	Změnit Typ
+#gatanchor	Ukotvit Vybrané
+#gatunanchor	Uvolnit Vybrané
+#gatprop		Vlastnosti...
+#gatrep		Vytvořit Kopii
+#gatdel		Smazat
+#gatsettech	Nastavit Technologii
 
-gmswitch	I/O
-gmgate		Hradlo
-gmredgate	Redukce
-gmmsi		MSI
-gmalu		ALU
-gmmem		Paměť
-gmmod		Modul
-gmcomment	Komentář
-gmframe		Rámec
+gm.io		I/O
+gm.gate		Hradlo
+gm.rgate	Redukce
+gm.msi		MSI
+gm.alu		ALU
+gm.mem		Paměť
+gm.mod		Modul
+gm.comment	Komentář
+gm.frame	Rámec
 
-gmxswitch	Spínač
-gmdip		DIP Spínač
-gmground	Uzemnění
-gmvdd		Vdd
-gmmerge		Spojení Vodičů
-gmclock		Hodiny
+gm.io.switch	Spínač
+gm.io.dip	DIP Spínač
+#gmground	Uzemnění
+#gmvdd		Vdd
+gm.io.merge	Spojení Vodičů
+gm.io.clock	Hodiny
 
-gm.led		LED
-gm.ledbar	LED Panel
-gm.ledhex	7-Seg. LED (HEX)
-gm.leddec	7-Seg. LED (DEC)
-gm.ledseg	7-Seg. LED (Přímý kód)
+gm.io.led	LED
+gm.io.ledbar	LED Panel
+gm.io.ledhex	7-Seg. LED (HEX)
+gm.io.leddec	7-Seg. LED (DEC)
+gm.io.ledseg	7-Seg. LED (Přímý kód)
 
-gmtty		TTY
+gm.io.tty	TTY
 
-gmand		AND
-gmnand		NAND
-gmor		OR
-gmnor		NOR
-gmxor		XOR
-gmxnor		XNOR
-gmbuf		Budič Sběrnice
-gminv		Invertor
-gmtribuf	3stav. Budič Sběrnice
-gmnmos		NMOS
-gmpmos		PMOS
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Budič Sběrnice
+gm.gate.inv	Invertor
+gm.gate.tribuf	3stav. Budič Sběrnice
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
 
-gmrand		AND
-gmrnand		NAND
-gmror		OR
-gmrnor		NOR
-gmrxor		XOR
-gmrxnor		XNOR
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
 
-gmadd		Sčítačka
-gmmult		Násobička
-gmdiv		Dělička
-gmlshift	Posun Doleva
-gmrshift	Posun Doprava
-gmarshift	Arit.Posun Doprava
-gmroll		Rotace
+gm.alu.add	Sčítačka
+gm.alu.mult	Násobička
+gm.alu.div	Dělička
+gm.alu.lshift	Posun Doleva
+gm.alu.rshift	Posun Doprava
+gm.alu.arshift	Arit.Posun Doprava
+gm.alu.roll	Rotace
 
-gmreg		Registr
-gmff		Klopný Obvod
-gmram		RAM
-gmrom		ROM
+gm.mem.reg	Registr
+gm.mem.ff	Klopný Obvod
+gm.mem.ram	RAM
+gm.mem.rom	ROM
 
-gm21mux		2-1 Multiplexor
-gm41mux		4-1 Multiplexor
-gm81mux		8-1 Multiplexor
-gm12dec		1-2 Dekodér
-gm14dec		1-4 Dekodér
-gm18dec		1-8 Dekodér
+gm.msi.21mux	2-1 Multiplexor
+gm.msi.41mux	4-1 Multiplexor
+gm.msi.81mux	8-1 Multiplexor
+gm.msi.12dec	1-2 Dekodér
+gm.msi.14dec	1-4 Dekodér
+gm.msi.18dec	1-8 Dekodér
 
-gmmodinst	Instance Modulu
-gmmodin		Vstup Modulu
-gmmodout	Výstup Module
-gmmodinout	Vst./Výst. Modulu
+gm.mod.inst	Instance Modulu
+gm.mod.in	Vstup Modulu
+gm.mod.out	Výstup Module
+gm.mod.inout	Vst./Výst. Modulu
 
-addwireseg	Přidat Segment Vodiče
+#addwireseg	Přidat Segment Vodiče
 
-help		Nápověda
-hlpabout	O programu...
-hlplicense	Licence...
-hlpdoc		Dokumentace...
-hlptut		Návody
-hlpexample	Příklady
-exampcomb	Kombinační Logika
-examp3bit	3-Bitový Čítač
-examp8bit	8-Bitový Čítač
-examptrff	Transistorový KO
-exampcpu	Cvičný CPU
-tutwelcome	TkGate Intro
-tutcreate	Vytvoření Obvodu
-tutedit1	Úpravy Obvodu (1)
-tutedit2	Úpravy Obvodu (2)
-tutmods		Použití Modulů
-tutsim		Simulace Obvodu
+#help		Nápověda
+menu.help.about		0:O programu...
+menu.help.license	0:Licence...
+menu.help.doc		0:Dokumentace...
+menu.help.tut		1:Návody
+menu.help.example	1:Příklady
+#exampcomb	Kombinační Logika
+#examp3bit	3-Bitový Čítač
+#examp8bit	8-Bitový Čítač
+#examptrff	Transistorový KO
+#exampcpu	Cvičný CPU
+#tutwelcome	TkGate Intro
+#tutcreate	Vytvoření Obvodu
+#tutedit1	Úpravy Obvodu (1)
+#tutedit2	Úpravy Obvodu (2)
+#tutmods		Použití Modulů
+#tutsim		Simulace Obvodu
 
 # Scope Menu
-menu.sc.prtrace	Tisknout Stopu...
-menu.sc.close	Zavřít
-menu.sc.trace	Stopa
-menu.sc.zoomin Zvětšit
-menu.sc.zoomout Zmenšit
+menu.scope_file.ptrace		0:Tisknout Stopu...
+menu.scope_file.close		0:Zavřít
+#menu.sc.trace	Stopa
+menu.scope_trace.zoomin		5:Zvětšit
+menu.scope_trace.zoomout	5:Zmenšit
 
-scope.emptymsg	Dvojitým kliknutím na vodič přidejte nebo smažte stopu.
-comment.empty	[Dvojitým kliknutím přidejte text.]
+#scope.emptymsg	Dvojitým kliknutím na vodič přidejte nebo smažte stopu.
+#comment.empty	[Dvojitým kliknutím přidejte text.]
 ##############################################################################
 # Interface strings
 #
@@ -240,7 +240,7 @@ ibits		Bity
 # Net Dialog Box
 #
 db.net.name	Název Sítě
-db.net.hide	Skrýt Jméno
+db.net.hide	Skrýt Název
 db.net.bits	Bitová Šířka
 db.net.port	Typ Konektoru
 db.net.in	Vstup
@@ -260,7 +260,7 @@ db.gate.phase		Fáze
 db.gate.duty		Střída
 db.gate.port		Konektor
 db.gate.bitws		Bity
-db.gate.gtype		Typ Hradla
+db.gate.gtype		Typ
 db.gate.gname		Název Hradla
 db.gate.hidenam		Skrýt Název
 db.gate.anchor		Ukotvit
@@ -268,26 +268,26 @@ db.gate.cpbreak		Přerušení Citlivé Cesty
 db.gate.butstate	Stav Tlačítka
 db.gate.dipval		Hodnota Přepínače
 db.gate.memfilenam	Soubor s Obsahem Paměti
-db.gate.modname		Funkce
-db.gate.islink		Text Je Hypertextový Odkaz
-db.gate.link		Odkaz na Soubor
-db.gate.findw		Hledat Pouze Vodiče
-db.gate.findg		Hledat Pouze Hradla
-db.gate.findwg		Hledat Vodiče i Hradla
+db.gate.modname		Typ
+#db.gate.islink		Text Je Hypertextový Odkaz
+#db.gate.link		Odkaz na Soubor
+#db.gate.findw		Hledat Pouze Vodiče
+#db.gate.findg		Hledat Pouze Hradla
+#db.gate.findwg		Hledat Vodiče i Hradla
 db.gate.general		Obecné
 db.gate.details		Detaily
-db.gate.ports		Konektory
+db.gate.ports		Konektor
 db.gate.delay		Zpoždění
 db.gate.stddelay	Standardní Zpoždění
 db.gate.custdelay	Definované Zpoždění
-db.gate.extbar		Použít Rozšiřující Lišty
+#db.gate.extbar		Použít Rozšiřující Lišty
 
-db.led.type		Typ LED
-db.led.bit		Dioda
-db.led.bar		Panel diod
-db.led.hex		7-Segment (HEX)
-db.led.dec		7-Segment (DEC)
-db.led.seg		7-Segment (Přímý kód)
+db.gate.led.type	Typ LED
+db.gate.led.bit.hdr	Dioda
+db.gate.led.bar.hdr	Panel diod
+db.gate.led.hex.hdr	7-Segment (HEX)
+db.gate.led.dec.hdr	7-Segment (DEC)
+db.gate.led.seg.hdr	7-Segment (Přímý kód)
 
 cpath.cloops -begin-
 Ve vašem obvodu byla zjištěna kombinační smyčka.
@@ -301,14 +301,14 @@ vypsány níže.
 ##############################################################################
 # Print dialog box
 #
-print.outto		Výstup do
+#print.outto		Výstup do
 print.printer		Tiskárna
 print.file		Soubor
 print.prcmd		Příkaz k Tisku
 print.filename		Název Souboru
 print.epssave		Uložit jako Encapsulated Postscript
-print.doctit		Název Dokumentu
-print.prmod		Tisknout Moduly
+#print.doctit		Název Dokumentu
+#print.prmod		Tisknout Moduly
 print.epcm		Jedn. času/cm
 print.estpg		Odhad Počtu Stránek
 print.all		Všechny
@@ -331,7 +331,7 @@ print.range		Výběr Rozsahu
 print.fulltr		Úplná Stopa
 print.parttr		Část Stopy
 print.start		Start
-print.end		Konec
+#print.end		Konec
 
 ##############################################################################
 #
@@ -359,28 +359,28 @@ opt.zled		Plovoucí LED
 opt.restdef		Obnovit původní nastavení
 opt.regudate		Aktualizace oblastí
 opt.smoothscroll	Plynulé posouvání
-opt.outmove		Pohyb popisků modulu
+#opt.outmove		Pohyb popisků modulu
 opt.balloon		Povolit bublinovou nápovědu
 opt.debug		Povolit debugování
 opt.novice		Začátečnický režim
-opt.ckpoint		Provádět průběžné ukládání
+#opt.ckpoint		Provádět průběžné ukládání
 opt.freq		Interval
 opt.beak		Povolit speciální režimy
-opt.mode		Režim
-opt.normal		Normální
+#opt.mode		Režim
+#opt.normal		Normální
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Miles
 opt.contver		Automatická kontrola integrity
 opt.showsimcmd		Zaznamenat průběh simulace
-opt.logfile		Logovací soubor simulátoru
+#opt.logfile		Logovací soubor simulátoru
 opt.estepsz		Jednotky času/krok
 opt.cstepsz		Hodinové cykly/krok
 opt.overstep		Přesah hodin
 opt.sorttraces		Seřadit stopy podle abecedy
-opt.rememberprobes	Pamatovat si umístění sond
+#opt.rememberprobes	Pamatovat si umístění sond
 opt.vpopupdelay		Zpoždění zobrazení hodnoty
-opt.initscript		Inicializační skript
+#opt.initscript		Inicializační skript
 opt.posedge		Ukončit hodinový cyklus na vzestupné hraně
 opt.setclock		Ukončit hodinový cyklus na
 opt.delayfilepath	Soubor se zpožděními
@@ -404,37 +404,37 @@ stálý přístup k Internetu.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Nový Modul
-blklst.delmod		Smazat Modul
-blklst.frommod		Kopírovat Modul Z
-blklst.tomod		Do
-blklst.oldname		Starý Název
-blklst.newname		Nový Název
-blklst.claim		Konvertovat Modul
+blklst.new.cap		Nový Modul
+blklst.del.cap		Smazat Modul
+blklst.from		Kopírovat Modul Z
+blklst.to		Do
+#blklst.oldname		Starý Název
+#blklst.newname		Nový Název
+blklst.claim.cap	Konvertovat Modul
 
 ##############################################################################
 #
 # Circuit Dialog box
 #
-circ.topmod		Hlavní Modul
+#circ.topmod		Hlavní Modul
 circ.discchg		Zrušit Změny
 circ.iniscript		Inicializační Skripty
-circ.noscript		Nebyli vybrány žádné soubory se skripty.
-circ.really1		Opravdu chcete odstranit
-circ.really2		ze seznamu inicializačních skriptů.
+#circ.noscript		Nebyli vybrány žádné soubory se skripty.
+#circ.really1		Opravdu chcete odstranit
+#circ.really2		ze seznamu inicializačních skriptů.
 circ.extbar		Použít Rozšiřující Lišty
 
 ##############################################################################
 # Simulator
 #
-sim.breakpt		Kontrolní Bod
+#sim.breakpt		Kontrolní Bod
 
 ##############################################################################
 #
 # Command box
 #
-cmd.file		Název Souboru
-cmd.topname		Název Hlavního Modulu
+#cmd.file		Název Souboru
+#cmd.topname		Název Hlavního Modulu
 
 ##############################################################################
 #
@@ -448,17 +448,17 @@ cp.recompute		Přepočítat
 ##############################################################################
 # Error messages
 #
-err.verilog		Chyby v souboru:
+#err.verilog		Chyby v souboru:
 err.nopin		Vybraný konektor není možno změnit.
 err.badhex		Neplatná hexadecimální hodnota '%s' byla ignorována.
 err.gatanchor		Hradlo(a) jsou ukotveny a nelze je přemístit.
-err.libmode		Neplatná operace s knihovním modulem (pro úpravy jej změňtě na uživatelský modul).
+#err.libmode		Neplatná operace s knihovním modulem (pro úpravy jej změňtě na uživatelský modul).
 err.badfind		Nelze najít cíl '%s'.
 err.badopendel		Nelze smazat otevřený modul.
 err.nosrcmod		Zdrojový modul '%s' nebyl nalezen.
 err.noerr		Chybu nelze lokalizovat.
 err.misserr		Informace o chybě nejsou kompletní (spadl simulátor?).
-err.pounimpl		Neimplementovaná chyba v ParseOption
+#err.pounimpl		Neimplementovaná chyba v ParseOption
 
 err.badinadd	     Nelze přidat další vstup k vybranému hradlu.
 err.badoutadd	     	Nelze přidat další výstup z vybraného hradla.
@@ -485,7 +485,7 @@ err.bkpt.toomany	Příliš mnoho kontrolních bodů.  Maximální počet je %d.
 err.sim.badtmp		Nelze uložit dočasný soubor '%s' simulátoru (plný disk?).
 err.sim.syntx		Syntaktická chyba v příkazu '%s'.
 err.sim.noincl		Vkládaný soubor '%s' nenalezen.
-err.sim.clockbadedge	Neplatná definice hrany '%c' v příkazu pro hodiny.
+#err.sim.clockbadedge	Neplatná definice hrany '%c' v příkazu pro hodiny.
 err.sim.nobkpt		Neexistující kontrolní bod '%s'.
 err.sim.nonet		Síť '%s' nebyla nalezena.
 err.sim.nogate		Hradlo '%s' nebylo nalezeno.
@@ -500,12 +500,12 @@ err.badlibopen		Nelze otevřít knihovní soubor '%s'.
 
 err.nomark		Před výběrem typu hradla nastavte značku levým tlačítkem myši.
 err.badgate		Neznámý typ hradla.
-err.badmake		Hradlo nelze vytvořit.
+#err.badmake		Hradlo nelze vytvořit.
 
 err.badportadd		Nelze přidat konektory k hradlům tohoto typu.
-err.badportdel		Vybraný konektor nelze smazat.
-err.badportedit		Vybraný konektor nelze upravovat.
-err.noport		Nebyly vybrány žádné konektory.
+#err.badportdel		Vybraný konektor nelze smazat.
+#err.badportedit		Vybraný konektor nelze upravovat.
+#err.noport		Nebyly vybrány žádné konektory.
 
 err.manypages		-begin-
 V tomto dokumentu je příšerně
@@ -526,7 +526,7 @@ err.nomod		Modul '%s' není definován.
 err.modlock		Logický blok je uzamčen!
 err.closeroot		Nelze zavřít hlavní modul. Použijte funkci 'Ukončit' v hlavním menu.
 err.sim.isrun		Simulátor už běží (Použijte 'Ctrl-s e' pro ukončení).
-err.sim.isnotrun	Simulátor neběží (Použijte 'Ctrl-s b' pro start).
+#err.sim.isnotrun	Simulátor neběží (Použijte 'Ctrl-s b' pro start).
 err.editonly		Neplatný příkaz v režimu simulace.
 err.simonly		Příkaz platný jen v režimu simulace.
 
@@ -658,13 +658,13 @@ na změnu bitové šířky vodičů.  Vložte počet
 bitů do políčka v pravém dolním rohu okna.
 -end-
 
-ho.modopen	Otevřít vybraný modul.
-ho.modclose	Zavřít aktuální modul.
+#ho.modopen	Otevřít vybraný modul.
+#ho.modclose	Zavřít aktuální modul.
 
 ho.undo	Zpět o předchozí krok(y).
 ho.redo	Vpřed o zrušený krok(y).
 
-ho.simstart	-begin-
+#ho.simstart	-begin-
 Spustit simulátor, otevřít logický analyzátor
 a vykonat inicializační skripty, pokud jsou definovány.
 -end-
@@ -714,7 +714,7 @@ Uložit obsah paměti
 do .mem souboru.
 -end-
 
-ho.sim.break	-begin-
+#ho.sim.break	-begin-
 Vložit kontrolní bod simulace.  Kontrolní body jsou výrazy,
 které, pokud se stanou pravdivými, způsobí zastavení
 simulace.  Momentálně jsou podporovány jenom jednoduché
@@ -723,7 +723,7 @@ nebo "w7 != 8". Výrazy jako "w8" nebo "!w2" můžou být
 rovněž použity pro test na nenulovou resp. nulovou hodnotu.
 -end-
 
-ho.f.modlist	-begin-
+ho.modlist	-begin-
 Seznam všech aktuálně nahraných modulů.
 Hlavní modul je označen znaménkém "+",
 knihovní moduly jsou v závorkách.
@@ -803,7 +803,7 @@ Vodiče vybrané kurzorem budou
 nastaveny na tuto bitovou šířku
 -end-
 
-ho.edgat.extbar		-begin-
+#ho.edgat.extbar		-begin-
 Při této volbě budou vícevstupová
 základní hradla používat rozšiřující
 lišty při přidání dalších vstupů
@@ -838,13 +838,13 @@ ho.edgat.cycle		Celkový počet časových jednotek v hodinovém cyklu.
 ho.edgat.phase		Počáteční bod cyklu (v procentech).
 ho.edgat.duty		Část cyklu kde jsou hodiny na nižší hodnotě.
 
-ho.edgat.cname		Název připojené sítě.
-ho.edgat.cport		Konektor ke kterému je připojena síť.
-ho.edgat.ctype		Typ připojení.
-ho.edgat.cbitw		Bitová šířka připojené sítě.
-ho.edgat.cedit		Upravit vybraný konektor.
-ho.edgat.cadd		Přidat konektor.
-ho.edgat.cdel		Smazat vybraný konektor.
+#ho.edgat.cname		Název připojené sítě.
+#ho.edgat.cport		Konektor ke kterému je připojena síť.
+#ho.edgat.ctype		Typ připojení.
+#ho.edgat.cbitw		Bitová šířka připojené sítě.
+#ho.edgat.cedit		Upravit vybraný konektor.
+#ho.edgat.cadd		Přidat konektor.
+#ho.edgat.cdel		Smazat vybraný konektor.
 
 ho.edgat.hide		-begin-
 Nastavte tento příznak pro zakázání
@@ -892,7 +892,7 @@ simulace se zobrazí v tom pořadí, v jakém
 byly nastaveny sondy.
 -end-
 
-ho.opt.rememberprobes	-begin-
+#ho.opt.rememberprobes	-begin-
 Je-li tato možnost aktivní, všechny sondy
 nastaveny v režimu simulace se zapamatují
 a budou automaticky přidány při opětovném
@@ -975,7 +975,7 @@ bat computer.
 -end-
 
 ho.opt.trek		Beam me up Scoty!
-ho.opt.normal		Disable fun Stuff.
+#ho.opt.normal		Disable fun Stuff.
 
 ho.opt.simstep		-begin-
 Počet jednotek času, o které se při
@@ -1048,7 +1048,7 @@ Zaznamenat příkazy zasílané mezi
 GUI a simulátorem.
 -end-
 
-ho.simlog		-begin-
+#ho.simlog		-begin-
 Zapsat příkaz použitý v simulátoru
 do logovacího souboru. Logovací
 soubor může být potom použit jako
@@ -1056,6 +1056,6 @@ vstup simulátoru v debugovacím
 režimu.
 -end-
 
-ho.cpathanal		-begin-
+#ho.cpathanal		-begin-
 Najít citlivou cestu v obvodu.
 -end-
