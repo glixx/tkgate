@@ -31,8 +31,8 @@ b.close		Cau
 b.ok		Iawn
 b.clear		Clirio
 b.cancel	Diddymu
-b.open		Agor...
-b.bitw		Lled Did
+#b.open		Agor...
+#b.bitw		Lled Did
 b.in		i mewn
 b.out		allan
 b.inout		mewnallan
@@ -42,7 +42,7 @@ b.find		Canfod
 b.edit		Golygu...
 b.add		Ychanegu...
 b.delete	Dileu
-b.deleteb	Dileu...
+#b.deleteb	Dileu...
 b.apply		Gweithredu
 b.anchor	Angor
 b.tech		Technoleg
@@ -50,184 +50,184 @@ b.tech		Technoleg
 ##############################################################################
 # Menu strings
 #
-file		Ffeil
-edit		Golygu
-tool		Erfyn
-simulate	Efelychu
-module		Modiwl
-gate		Giat
-make		Gwneud
-circ		Cylched
+menu.file	0:Ffeil
+menu.edit	0:Golygu
+menu.tool	0:Erfyn
+menu.simulate	0:Efelychu
+menu.module	0:Modiwl
+#gate		Giat
+menu.make	0:Gwneud
+#circ		Cylched
 
-new		Newydd
-open		Agor...
-openlib		Agor Rhaglengell...
-save		Cadw
-saveas		Cadw...
-print		Argraffu...
-options		Dewisiadau...
-quit		Gadael
+menu.file.new		0:Newydd...
+menu.file.open		0:Agor...
+menu.file.openlib	0:Agor Rhaglengell...
+menu.file.save		0:Cadw
+menu.file.saveas	5:Cadw...
+menu.file.print		0:Argraffu...
+#options		Dewisiadau...
+menu.file.quit		0:Gadael
 
-undo		Dadwneud
-redo		Ailwneud
-cut		Torri
-copy		Copio
-paste		Gludo
-selall		Dewis Popeth
-find		Canfod...
-algnv		Cyfunio Fert.
-algnh		Cyfunio Llor.
-zoomin		Chwyddo
-zoomout		Pellhau
+menu.edit.undo		0:Dadwneud
+menu.edit.redo		0:Ailwneud
+menu.edit.cut		0:Torri
+menu.edit.copy		3:Copio
+menu.edit.paste		0:Gludo
+menu.edit.selall	0:Dewis Popeth
+menu.edit.find		0:Canfod...
+menu.format.algnv	6:Cyfunio Fert.
+menu.format.algnh	6:Cyfunio Llor.
+menu.edit.zoomin	5:Chwyddo
+menu.edit.zoomout	5:Pellhau
 
-move		Symud/Cysylltu
-delg		Dileu Giat
-cutw		Torri Gwifren
-inv		Gwrth-droi
-bitw		Lled Did
-debug		Datnamu
-rot0		Cylchdroi 0
-rot90		Cylchdroi 90
-rot180		Cylchdroi 180
-rot270		Cylchdroi 270
+menu.tool.move		0:Symud/Cysylltu
+menu.tool.delg		0:Dileu Giat
+menu.tool.cutw		0:Torri Gwifren
+menu.tool.inv		0:Gwrth-droi
+menu.tool.bitw		0:Lled Did
+menu.tool.debug		0:Datnamu
+#rot0		Cylchdroi 0
+#rot90		Cylchdroi 90
+#rot180		Cylchdroi 180
+#rot270		Cylchdroi 270
 
-simbegin	Dechrau Efelychiad
-simend		Gorffen Efelychiad
-simadprobe	Ychanegu/Dileu Holiad
-simrun		Rhedeg
-simpause	Seibio
-simstep		Cam Cyfnod(au)
-simcycle	Cam Cylchred
-simbreak	Torbwynt...
-simscript	Gweith. Sgript...
-simload		Llwytho Cof...
-simdump		Dadlwytho...
+menu.simulate.begin	0:Dechrau Efelychiad
+menu.simulate.end	0:Gorffen Efelychiad
+menu.simulate.addprobe	0:Ychanegu/Dileu Holiad
+menu.simulate.run	0:Rhedeg
+menu.simulate.pause	0:Seibio
+menu.simulate.step	0:Cam Cyfnod(au)
+menu.simulate.cycle	5:Cam Cylchred
+menu.simulate.break	0:Torbwynt...
+menu.simulate.script	1:Gweith. Sgript...
+menu.simulate.load	1:Llwytho Cof...
+menu.simulate.dump	1:Dadlwytho...
 
-modopen		Agor
-modclose	Cau
-modseti		Gosod Rhyngwyneb
-modediti	Golygu Rhyngwynebau...
-modnew		Newydd...
-moddel		Dileu...
-modcopy		Copio...
-modrename	Ailenwi...
-modclaim	Honni...
-circprop	Priodweddau Cylched...
-cpath		Llwybr Allweddol...
+menu.module.open	0:Agor
+menu.module.close	0:Cau
+#modseti		Gosod Rhyngwyneb
+#modediti	Golygu Rhyngwynebau...
+menu.module.new		0:Newydd...
+menu.module.del		0:Dileu...
+menu.module.copy	1:Copio...
+menu.module.rename	0:Ailenwi...
+menu.module.claim	1:Honni...
+#circprop	Priodweddau Cylched...
+#cpath		Llwybr Allweddol...
 
-gataddin	Ychwanegu Mewnbwn
-gataddout	Ychwanegu Allbwn
-gataddinout	Ychwanegu Deugyfeiriad
-gatiochg	Newid Math
-gatanchor	Anghori'r Dewis
-gatunanchor	Dadanghori'r Dewis
-gatprop		Priodweddau...
-gatrep		Dyblygu
-gatdel		Dileu
-gatsettech	Gosod Technoleg
+#gataddin	Ychwanegu Mewnbwn
+#gataddout	Ychwanegu Allbwn
+#gataddinout	Ychwanegu Deugyfeiriad
+#gatiochg	Newid Math
+#gatanchor	Anghori'r Dewis
+#gatunanchor	Dadanghori'r Dewis
+#gatprop		Priodweddau...
+#gatrep		Dyblygu
+#gatdel		Dileu
+#gatsettech	Gosod Technoleg
 
-gmswitch	I/O
-gmgate		Giat
-gmredgate	Lleihad
-gmmsi		MSI
-gmalu		ALU
-gmmem		Cof
-gmmod		Modiwl
-gmcomment	Sylwad
-gmframe		Ffram
+gm.io		I/O
+gm.gate		Giat
+gm.rgate	Lleihad
+gm.msi		MSI
+gm.alu		ALU
+gm.mem		Cof
+gm.mod		Modiwl
+gm.comment	Sylwad
+gm.frame	Ffram
 
-gmxswitch	Swits
-gmdip		Swits DIP
-gmground	Llawr
-gmvdd		Vdd
-gmmerge		Cyfunio Gwifren
-gmclock		Cloc
+gm.io.switch	Swits
+gm.io.dip	Swits DIP
+#gmground	Llawr
+#gmvdd		Vdd
+gm.io.merge	Cyfunio Gwifren
+gm.io.clock	Cloc
 
-gm.led		LED
-gm.ledbar	Bar LED
-gm.ledhex	LED 7-Rhan (HEX)
-gm.leddec	LED 7-Rhan (DEC)
-gm.ledseg	LED 7-Rhan (Syth)
+gm.io.led	LED
+gm.io.ledbar	Bar LED
+gm.io.ledhex	LED 7-Rhan (HEX)
+gm.io.leddec	LED 7-Rhan (DEC)
+gm.io.ledseg	LED 7-Rhan (Syth)
 
-gmtty		TTY
+gm.io.tty	TTY
 
-gmand		AND
-gmnand		NAND
-gmor		OR
-gmnor		NOR
-gmxor		XOR
-gmxnor		XNOR
-gmbuf		Byffer
-gminv		Gwrth-droydd
-gmtribuf	Tri-Byffer
-gmnmos		NMOS
-gmpmos		PMOS
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Byffer
+gm.gate.inv	Gwrth-droydd
+gm.gate.tribuf	Tri-Byffer
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
 
-gmrand		AND
-gmrnand		NAND
-gmror		OR
-gmrnor		NOR
-gmrxor		XOR
-gmrxnor		XNOR
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
 
-gmadd		Ychwanegydd
-gmmult		Lluosydd
-gmdiv		Rhannydd
-gmlshift	Syfliad i'r Chwith
-gmrshift	Syfliad i'r De
-gmarshift	Syfliad Rhifyddol i'r De
-gmroll		Rholio
+gm.alu.add	Ychwanegydd
+gm.alu.mult	Lluosydd
+gm.alu.div	Rhannydd
+gm.alu.lshift	Syfliad i'r Chwith
+gm.alu.rshift	Syfliad i'r De
+gm.alu.arshift	Syfliad Rhifyddol i'r De
+gm.alu.roll	Rholio
 
-gmreg		Cofrestru
-gmff		Fflip-Fflop
-gmram		RAM
-gmrom		ROM
+gm.mem.reg	Cofrestru
+gm.mem.ff	Fflip-Fflop
+gm.mem.ram	RAM
+gm.mem.rom	ROM
 
-gm21mux		2-1 Amlblygydd
-gm41mux		4-1 Amlblygydd
-gm81mux		8-1 Amlblygydd
-gm12dec		1-2 Datgodiwr
-gm14dec		1-4 Datgodiwr
-gm18dec		1-8 Datgodiwr
+gm.msi.21mux	2-1 Amlblygydd
+gm.msi.41mux	4-1 Amlblygydd
+gm.msi.81mux	8-1 Amlblygydd
+gm.msi.12dec	1-2 Datgodiwr
+gm.msi.14dec	1-4 Datgodiwr
+gm.msi.18dec	1-8 Datgodiwr
 
-gmmodinst	Enghraifft y Modiwl
-gmmodin		Mewnbwn y Modiwl
-gmmodout	Allbwn y Modiwl
-gmmodinout	Mewnallan y Modiwl
+gm.mod.inst	Enghraifft y Modiwl
+gm.mod.in	Mewnbwn y Modiwl
+gm.mod.out	Allbwn y Modiwl
+gm.mod.inout	Mewnallan y Modiwl
 
-addwireseg	Ychwanegu Segment Gwifren
+#addwireseg	Ychwanegu Segment Gwifren
 
-help		Cymorth
-hlpabout	Ynghylch...
-hlplicense	Trwydded...
-hlpdoc		Dogfennaeth...
-hlptut		Tiwtorialau
-hlpexample	Enghraifftiau
-exampcomb	Rhesymeg Gyfuniadol
-examp3bit	Rhifydd 3-Did
-examp8bit	Rhifydd 8-Did
-examptrff	FF Safon-Transistor
-exampcpu	Menagerie CPU
-tutwelcome	Rhagymadrodd TkGate
-tutcreate	Creu Cylched
-tutedit1	Golygu Cylched (1)
-tutedit2	Golygu Cylched (2)
-tutmods		Defnyddio Modiwlau
-tutsim		Efelychu Cylched
+#help		Cymorth
+menu.help.about		0:Ynghylch...
+menu.help.license	0:Trwydded...
+menu.help.doc		0:Dogfennaeth...
+menu.help.tut		1:Tiwtorialau
+menu.help.example	1:Enghraifftiau
+#exampcomb	Rhesymeg Gyfuniadol
+#examp3bit	Rhifydd 3-Did
+#examp8bit	Rhifydd 8-Did
+#examptrff	FF Safon-Transistor
+#exampcpu	Menagerie CPU
+#tutwelcome	Rhagymadrodd TkGate
+#tutcreate	Creu Cylched
+#tutedit1	Golygu Cylched (1)
+#tutedit2	Golygu Cylched (2)
+#tutmods		Defnyddio Modiwlau
+#tutsim		Efelychu Cylched
 
 # Scope Menu
-menu.sc.prtrace	Argraffu Olin...
-menu.sc.close	Cau
-menu.sc.trace	Olinio
-menu.sc.zoomin	Chwyddo
-menu.sc.zoomout	Pellhau
+menu.scope_file.ptrace		0:Argraffu Olin...
+menu.scope_file.close		0:Cau
+#menu.sc.trace	Olinio
+menu.scope_trace.zoomin		5:Chwyddo
+menu.scope_trace.zoomout	5:Pellhau
 
 ##############################################################################
 # Interface strings
 #
 ifile		Ffeil
 imodule		Modiwl
-iblmodule	Modiwlau:
+iblmodule	Modiwlau
 iports		Pyrth:
 ibits		Didau:
 
@@ -235,7 +235,7 @@ ibits		Didau:
 # Net Dialog Box
 #
 db.net.name	Enw Rhwyd
-db.net.hide	Cuddio'r Enw
+db.net.hide	Cuddio Enw
 db.net.bits	Lled Did
 db.net.port	Math Porth
 db.net.in	i mewn
@@ -255,7 +255,7 @@ db.gate.phase		Cydwedd
 db.gate.duty		Dyletswydd
 db.gate.port		Porth
 db.gate.bitws		Didau
-db.gate.gtype		Math Giat
+db.gate.gtype		Math
 db.gate.gname		Enw Giat
 db.gate.hidenam		Cuddio Enw
 db.gate.anchor		Angor
@@ -263,26 +263,26 @@ db.gate.cpbreak		Rhaniad Llwybr Allweddol
 db.gate.butstate	Cyflwr Botwm
 db.gate.dipval		Gwerth Swits
 db.gate.memfilenam	Ffeil Cof
-db.gate.modname		Ffwythiant
-db.gate.islink		Gorgyswllt yw'r Testun
-db.gate.link		Cyswllt i Ffeil
-db.gate.findw		Chwilio am wifrau yn unig
-db.gate.findg		Chwilio am giatiau yn unig
-db.gate.findwg		Chwilio am wifrau a giatiau
+db.gate.modname		Math
+#db.gate.islink		Gorgyswllt yw'r Testun
+#db.gate.link		Cyswllt i Ffeil
+#db.gate.findw		Chwilio am wifrau yn unig
+#db.gate.findg		Chwilio am giatiau yn unig
+#db.gate.findwg		Chwilio am wifrau a giatiau
 db.gate.general		Cyffredinol
 db.gate.details		Manylion
 db.gate.ports		Porth
 db.gate.delay		Oediad
 db.gate.stddelay	Oediad Safonol
 db.gate.custdelay	Oediad Dewisiadol
-db.gate.extbar		Defnyddion bariau estynadol
+#db.gate.extbar		Defnyddion bariau estynadol
 
-db.led.type		Math LED
-db.led.bit		Did
-db.led.bar		Graff Bar
-db.led.hex		LED 7-Rhan (HEX)
-db.led.dec		LED 7-Rhan (DEC)
-db.led.seg		LED 7-Rhan (Syth)
+db.gate.led.type	Math LED
+db.gate.led.bit.hdr	Did
+db.gate.led.bar.hdr	Graff Bar
+db.gate.led.hex.hdr	LED 7-Rhan (HEX)
+db.gate.led.dec.hdr	LED 7-Rhan (DEC)
+db.gate.led.seg.hdr	LED 7-Rhan (Syth)
 
 cpath.cloops -begin-
 Darganfuwyd dolennau cyfuniadol yn eich cylched.
@@ -296,14 +296,14 @@ dolen yn cael eu rhestru isod.
 ##############################################################################
 # Print dialog box
 #
-print.outto		Allbwn i
+#print.outto		Allbwn i
 print.printer		Argraffydd
 print.file		Ffeil
 print.prcmd		Gorchymyn Argraffu
 print.filename		Enw Ffeil
 print.epssave		Cadw fel Encapsulated Postscript.
-print.doctit		Teitl Dogfen
-print.prmod		Modiwlau Argraffu
+#print.doctit		Teitl Dogfen
+#print.prmod		Modiwlau Argraffu
 print.epcm		Cyfnodau/cm
 print.estpg		Tudalennau (amcangyfrif)
 print.all		Popeth
@@ -326,7 +326,7 @@ print.range		Dewis Amrediad
 print.fulltr		Oliniad Cyflawn
 print.parttr		oliniad Rhannol
 print.start		Dechrau
-print.end		Diwedd
+#print.end		Diwedd
 
 ##############################################################################
 #
@@ -354,26 +354,26 @@ opt.zled		LED Arnofio
 opt.restdef		Adfer Rhagosodiadau
 opt.regudate		Diweddaru Ardal
 opt.smoothscroll	Sgrolio Llyfn
-opt.outmove		Amlinellu Modiwlau Symud
+#opt.outmove		Amlinellu Modiwlau Symud
 opt.balloon		Alluogi Balwnau Cymorth
 opt.debug		Alluogi Datnamu
 opt.novice		Modd Dechreuwr
-opt.ckpoint		Rheolfeydd
+#opt.ckpoint		Rheolfeydd
 opt.freq		Saib
 opt.beak		Alluogi Moddau Arbennig
-opt.mode		Modd
-opt.normal		Arferol
+#opt.mode		Modd
+#opt.normal		Arferol
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Milltiroedd
 opt.contver		Cywiro Cyfanrwydd yn Awtomatig
 opt.showsimcmd		Dangos Llif Efelychydd
-opt.logfile		Ffeil Cofnod Efelychydd
+#opt.logfile		Ffeil Cofnod Efelychydd
 opt.estepsz		Maint Cam Cyfnod
 opt.cstepsz		Maint Cam Cylchred Cloc
 opt.overstep		Drosgam Cloc
 opt.vpopupdelay		Oediad Newidlen Gwerthoedd
-opt.initscript		Sgript Ymgychwyn
+#opt.initscript		Sgript Ymgychwyn
 opt.posedge		Mae'r cam cloc yn aros ar bob ymyl positif y cloc.
 opt.setclock		Mae'r cam cloc yn aros ar gloc
 opt.delayfilepath	Ffeiliau Oediad
@@ -397,37 +397,37 @@ i'r Rhyngrwyd.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Modiwl Newydd
-blklst.delmod		Dileu Modiwl
-blklst.frommod		Copio Modiwl Oddiwrth
-blklst.tomod		I
-blklst.oldname		Hen Enw
-blklst.newname		Enw Newydd
-blklst.claim		Hawlio Modiwl
+blklst.new.cap		Modiwl Newydd
+blklst.del.cap		Dileu Modiwl
+blklst.from		Copio Modiwl Oddiwrth
+blklst.to		I
+#blklst.oldname		Hen Enw
+#blklst.newname		Enw Newydd
+blklst.claim.cap	Hawlio Modiwl
 
 ##############################################################################
 #
 # Circuit Dialog box
 #
-circ.topmod		Modiwl Safon Pennaf
+#circ.topmod		Modiwl Safon Pennaf
 circ.discchg		Diddymu Newidiadau
 circ.iniscript		Sgriptiau Ymgychwyn
-circ.noscript		Ni ddewiswyd unrhyw ffeil sgript.
-circ.really1		Ydych wir eisiau gwaredu
-circ.really2		o'r rhestr sgriptiau ymgychwyn
+#circ.noscript		Ni ddewiswyd unrhyw ffeil sgript.
+#circ.really1		Ydych wir eisiau gwaredu
+#circ.really2		o'r rhestr sgriptiau ymgychwyn
 circ.extbar		Defnyddio Bariau Estynnol
 
 ##############################################################################
 # Simulator
 #
-sim.breakpt		Torbwynt
+#sim.breakpt		Torbwynt
 
 ##############################################################################
 #
 # Command box
 #
-cmd.file		Enw Ffeil
-cmd.topname		Enw'r Modiwl Pennaf
+#cmd.file		Enw Ffeil
+#cmd.topname		Enw'r Modiwl Pennaf
 
 ##############################################################################
 #
@@ -441,17 +441,17 @@ cp.recompute		Ail-gyfrifiannu
 ##############################################################################
 # Error messages
 #
-err.verilog		Gwallau yn y ffeil:
+#err.verilog		Gwallau yn y ffeil:
 err.nopin		Methu newid pin penodol.
 err.badhex		Gwerth hex annilys '%s' wedi ei anwybyddu.
 err.gatanchor		Mae'r giat(iau) wedi'i anghori - ni ellir ei symud.
-err.libmode		Gweithrediad annilys ar fodiwl rhaglengell (trosi i fodiwl areferol i'w olygu).
+#err.libmode		Gweithrediad annilys ar fodiwl rhaglengell (trosi i fodiwl areferol i'w olygu).
 err.badfind		Methu canfod cyrchfan '%s'.
 err.badopendel		Methu dileu modiwl ar agor.
 err.nosrcmod		Methu canfod modiwl tarddiad '%s'.
 err.noerr		Methu lleoli'r gwall.
 err.misserr		Gwybodaeth gwall anghyflawn (chwalodd yr efelychydd?)
-err.pounimpl		Gwall heb ei weithredu yn ParseOption
+#err.pounimpl		Gwall heb ei weithredu yn ParseOption
 
 err.badinadd		Methu ychwanegu rhagor o fewnbynnau i'r giat penodol.
 err.badoutadd		Methu ychwanegu rhagor o allbynnau i'r giat penodol.
@@ -478,7 +478,7 @@ err.bkpt.toomany	Gormod o dorbwyntiau.  Yr uchafswm yw %d.
 err.sim.badtmp		Methu cadw ffeil dros dro '%s' am yr efelychydd (disg lawn?)
 err.sim.syntx		Gwall cystrawen yn y gorchymyn '%s'.
 err.sim.noincl		Methu canfod ffeil cynwysadwy '%s'.
-err.sim.clockbadedge	Dynodydd ymyl annilys '%c' yn y gorchymyn cloc.
+#err.sim.clockbadedge	Dynodydd ymyl annilys '%c' yn y gorchymyn cloc.
 err.sim.nobkpt		Dim torbwynt '%s'.
 err.sim.nonet		Methu canfod rhwyd '%s'.
 err.sim.nogate		Methu canfod giat '%s'.
@@ -493,12 +493,12 @@ err.badlibopen		Methu agor ffeil rhaglengell '%s'.
 
 err.nomark		Gosodwch nod efo botwm chwith y llygoden cyn dewis math o giat.
 err.badgate		Math giat anhysbys.
-err.badmake		Methu creu giat.
+#err.badmake		Methu creu giat.
 
 err.badportadd		Methu ychwanegu pyrth i giatiau o'r math yma.
-err.badportdel		Methu dileu'r borth benodol.
-err.badportedit		Methu golygu'r borth benodol.
-err.noport		Dim porth wedi ei dewis.
+#err.badportdel		Methu dileu'r borth benodol.
+#err.badportedit		Methu golygu'r borth benodol.
+#err.noport		Dim porth wedi ei dewis.
 
 err.manypages		-begin-
 Mae 'na gryn dipyn o dudalennau
@@ -519,7 +519,7 @@ err.nomod		Ni ddiffinir y modiwl '%s'.
 err.modlock		Mae'r y Bloc Rhesymeg ar glo!
 err.closeroot		Methu cau modiwl safon fennaf.  Defnyddiwch Gadael.
 err.sim.isrun		Mae'r efelychydd yn rhedeg yn barod.  (Defnyddiwch 'Ctrl-s e' i derfynu).
-err.sim.isnotrun	Nid yw'r efelychydd yn rhedeg.  (Defnyddiwch 'Ctrl-s b' i gychwyn).
+#err.sim.isnotrun	Nid yw'r efelychydd yn rhedeg.  (Defnyddiwch 'Ctrl-s b' i gychwyn).
 err.editonly		Nid yw'r gorchymyn yn ddilys mewn modd efelychu.
 err.simonly		Mae'r gorchymyn yn ddilys dim ond mewn modd efelychu.
 
@@ -559,7 +559,7 @@ msg.setinterface	Gosod rhyngrwyd modiwl am '%s'.
 msg.needsel		Dewiswch enghraifft modiwl.
 msg.wroteckpt		Rheolfa wrth %s...
 msg.save		Wedi cadw cylched i '%s'.
-msg.badsave		Methu agor ffeil allbwn '%s'.
+#msg.badsave		Methu agor ffeil allbwn '%s'.
 msg.reallynew		Newidwyd y gylched.  Ydych wir eisiau ei dileu a creu cylched newydd?
 msg.reallyquit		Newidwyd y gylched.  Ydych wir eisiau terfynnu?
 msg.notlib		Nid yw modiwl '%s' yn fodiwl rhaglengell.
@@ -624,8 +624,8 @@ didau yn y blwch mewnosodi yng nghornel
 dde isaf y ffenest.
 -end-
 
-ho.modopen	Agor y modiwl penodol.
-ho.modclose	Cau y modiwl cyfredol.
+#ho.modopen	Agor y modiwl penodol.
+#ho.modclose	Cau y modiwl cyfredol.
 
 ho.undo		Datwneud gweithrediad(au) cynt.
 ho.redo		Ailwneud gweithrediad(au) a chafodd ei datwneud.
@@ -676,7 +676,7 @@ Dadlwytho cynnwys cof i
 ffeil .mem.
 -end-
 
-ho.sim.break	-begin-
+#ho.sim.break	-begin-
 Mewnosodwch torbwynt efelychiad.  Mae torbwyntiau yn
 fynegiadau sy'n achosi'r efelychydd i seibio gweithredu
 pan y maent yn dod yn wir.  Ar hyn o bryd, cynhelir dim
@@ -686,7 +686,7 @@ mynegiadau fel "w8" neu "!w2" i arbrofi am werthoedd
 di-sero a sero yn eu tro.
 -end-
 
-ho.f.modlist	-begin-
+ho.modlist	-begin-
 Rhestr o bob modiwl sydd wedi ei lwytho ar hyn o bryd.
 Dynodir y modiwl safon pennaf gan "+" sy'n dilyn,
 a dangosir modiwlau rhaglengell mewn cromfachau.
@@ -758,7 +758,7 @@ cyrchwr yn cael eu gosod i'r
 lled did yma.
 -end-
 
-ho.edgat.extbar		-begin-
+#ho.edgat.extbar		-begin-
 Os dewisir, bydd giatiau sylfaenol
 aml-fewnbwn yn defnyddio bariau
 estynnol fel ychwanegir mewnbynnau
@@ -793,13 +793,13 @@ ho.edgat.cycle		Nifer cyflawn o gyfnodau mewn cylchred cloc.
 ho.edgat.phase		Pwynt cychwyn y cylchred (y cant).
 ho.edgat.duty		Canran y cylchred, mae'r cloc yn isel.
 
-ho.edgat.cname		Enw'r rhwyd cysylltiedig.
-ho.edgat.cport		Porth y mae'r rhwyd wedi'i cysylltu iddo.
-ho.edgat.ctype		Math cysylltiad.
-ho.edgat.cbitw		Lled did y rhwyd cysylltiedig.
-ho.edgat.cedit		Golygu'r porth penodol.
-ho.edgat.cadd		Ychanegu porth.
-ho.edgat.cdel		Dileu'r porth penodol.
+#ho.edgat.cname		Enw'r rhwyd cysylltiedig.
+#ho.edgat.cport		Porth y mae'r rhwyd wedi'i cysylltu iddo.
+#ho.edgat.ctype		Math cysylltiad.
+#ho.edgat.cbitw		Lled did y rhwyd cysylltiedig.
+#ho.edgat.cedit		Golygu'r porth penodol.
+#ho.edgat.cadd		Ychanegu porth.
+#ho.edgat.cdel		Dileu'r porth penodol.
 
 ho.edgat.hide		-begin-
 Set this flag to disable
@@ -905,7 +905,7 @@ gosod amgylchedd i ddylunio cyfrifiadur bat.
 -end-
 
 ho.opt.trek		Pelydra fi i fyny Scotty!
-ho.opt.normal		Analluogi pethau hwyl.
+#ho.opt.normal		Analluogi pethau hwyl.
 
 ho.opt.simstep		-begin-
 Y nifer o gyfnodau i flaenu
@@ -982,13 +982,13 @@ Dangos gorchymynau a anfonir
 rhwng y GUI a'r efelychydd.
 -end-
 
-ho.simlog		-begin-
+#ho.simlog		-begin-
 Ysgrifennu'r gorchymynau a rhoir i'r
 efelychydd i ffeil cofnod.  Gellir y
 ffeil cofnod ei ddefnyddio wedyn fel
 mewnbwn i'r efelychydd mewn datnamydd.
 -end-
 
-ho.cpathanal		-begin-
+#ho.cpathanal		-begin-
 Canfod llwybrau allweddol mewn cylched.
 -end-

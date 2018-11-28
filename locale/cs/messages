@@ -89,7 +89,7 @@ menu.tool.cutw		0:Přerušit Vodič
 menu.tool.inv		0:Invertovat
 menu.tool.bitw		0:Bitová Šířka
 menu.tool.debug		0:Debug
-#rot0		točit 0
+#rot0		Otočit 0
 #rot90		Otočit 90
 #rot180		Otočit 180
 #rot270		Otočit 270

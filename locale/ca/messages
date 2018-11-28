@@ -85,7 +85,7 @@ menu.tool.cutw		0:Tallar cable
 menu.tool.inv		0:	Invertir
 menu.tool.bitw		0:Amplada del bus
 menu.tool.debug		0:Depurar
-#rot0		rientació 0º
+#rot0		Orientació 0º
 #rot90		Orientació 90º
 #rot180		Orientació 180º
 #rot270		Orientació 270º

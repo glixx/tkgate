@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="ca/messages"
+file="cy/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file
@@ -36,7 +36,7 @@ sed -i "s|^cutw		|menu.tool.cutw		0:|g" $file
 sed -i "s|^inv		|menu.tool.inv		0:|g" $file
 sed -i "s|^bitw		|menu.tool.bitw		0:|g" $file
 sed -i "s|^debug		|menu.tool.debug		0:|g" $file
-sed -i "s|^rot0		O|#rot0		|g" $file
+sed -i "s|^rot0		|#rot0		|g" $file
 sed -i "s|^rot90		|#rot90		|g" $file
 sed -i "s|^rot180		|#rot180		|g" $file
 sed -i "s|^rot270		|#rot270		|g" $file
