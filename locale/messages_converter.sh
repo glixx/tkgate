@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="de/messages"
+file="es/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file
@@ -226,3 +226,9 @@ sed -i "s|^menu.sc.zoomout	|menu.scope_trace.zoomout	5:|g" $file
 sed -i "s|^opt.initscript	|#opt.initscript	|g" $file
 sed -i "s|^msg.badsave		|#msg.badsave		|g" $file
 sed -i "s|^ho.opt.normal	|#ho.opt.normal	|g" $file
+sed -i "s|^@|#|g" $file
+sed -i "s|^db.err.explain		|#db.err.explain		|g" $file
+sed -i "s|||g" $file
+sed -i "s|||g" $file
+sed -i "s|||g" $file
+#sed -i "s|||g" $file

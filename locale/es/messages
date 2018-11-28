@@ -113,13 +113,13 @@ tab.editintr		TODO: Interface
 tab.simulate		Simular
 tab.cpath		TODO: Critical Path
 # Width of mode selection tabs
-@tab.width		150
+#tab.width		150
 
 #############################################################################
 #
 # MsgMgr strings (including breakpoint and script handling)
 #
-@mm.width		7
+#mm.width		7
 mm.add		TODO: Add...
 mm.delete		TODO: Delete
 mm.edit		TODO: Edit...
@@ -472,7 +472,7 @@ symed.tab.normal		TODO: UnSelected
 symed.tab.select		TODO: Selected
 symed.link		TODO: Link selected to unselected
 # width of symbol editor tabs
-@symed.tab.width		125
+#symed.tab.width		125
 
 
 ##############################################################################
@@ -524,7 +524,7 @@ TODO: Modules of this type are described in text format. A text editor is used t
 # Error List Dialog box
 #
 db.err.caption		TODO: Error List
-db.err.explain		-fillbegin-
+#db.err.explain		-fillbegin-
 TODO: I am unable to enter simulation mode due to errors in your circuit.  Select an error message to see the error location.
 -end-
 db.err.neededit		-fillbegin-
@@ -561,11 +561,11 @@ db.newcirc.topname		Nombre del mdulo principal
 ##############################################################################
 # Gate dialog box
 #
-@db.gate.tabwidth		*80
-@db.gate.width			*600
-@db.gate.height			*400
-@db.gate.comment.width		*900
-@db.gate.comment.height		*500
+#db.gate.tabwidth		*80
+#db.gate.width			*600
+#db.gate.height			*400
+#db.gate.comment.width		*900
+#db.gate.comment.height		*500
 
 db.gate.signam		Nombre de la Seal
 db.gate.portnam		Nombre de la Patilla
@@ -892,16 +892,16 @@ print.tab.advanced		TODO: Advanced
 #
 # Circuit print dialog box
 #
-@print.dlgbox.width		*450
-@print.dlgbox.height		*450
-@print.dlgbox.tabwidth		*95
+#print.dlgbox.width		*450
+#print.dlgbox.height		*450
+#print.dlgbox.tabwidth		*95
 
 #
 # Scope print dialog box
 #
-@print.scopedlg.width		*475
-@print.scopedlg.height		*400
-@print.scopedlg.tabwidth	*95
+#print.scopedlg.width		*475
+#print.scopedlg.height		*400
+#print.scopedlg.tabwidth	*95
 
 ##############################################################################
 #
@@ -909,19 +909,19 @@ print.tab.advanced		TODO: Advanced
 #
 
 # Width of options dialog box (not including image sidebar)
-@opt.width		700
+#opt.width		700
 # Height of options dialog box
-@opt.height		450
+#opt.height		450
 # Width of tabs on options dialog box
-@opt.tabwidth		95
+#opt.tabwidth		95
 # Number of columns in list of toolbars
-@opt.tool.columns		3
+#opt.tool.columns		3
 # Width of columns in list of toolbars
-@opt.tool.colwidth		30
+#opt.tool.colwidth		30
 # Width of image sidebar
-@opt.sidebar.width		*170
+#opt.sidebar.width		*170
 #
-@opt.tree.width		*135
+#opt.tree.width		*135
 
 opt.general		General
 opt.interface		TODO: Interface
@@ -984,8 +984,8 @@ opt.saveCells		TODO: Include cells in save files
 opt.showimage		TODO: Show side-bar images in dialog boxes
 opt.novice		Modo Novato
 opt.blockDropConnect		TODO: Wire drop port creation
-opt.ckpoint.1		TODO: Do Checkpointing every
-opt.ckpoint.2		TODO: commands.
+#opt.ckpoint.1		TODO: Do Checkpointing every
+#opt.ckpoint.2		TODO: commands.
 opt.freq		Frecuencia
 opt.beak		Habilitar Modo Especial
 opt.bat		Bat
@@ -1072,108 +1072,6 @@ opt.vercheck		-begin-
 Chequea de forma peridica si existen nuevas versiones del programa TKGATE en Internet. No habilitarla si no se dispone  de una conexin permanente a la RED.
 -end-
 
-opt.general.cap		TODO: General Options
-opt.editor.cap		TODO: HDL Text Editor
-opt.interface.cap		TODO: Interface Options
-opt.toolbars.cap		TODO: Toolbar Options
-opt.print.cap		TODO: Print Options
-opt.analysis.cap		-begin-
-TODO: Critical Path Options
--end-
-opt.simulator.cap		TODO: Simulator Options
-opt.security.cap		TODO: Security Options
-opt.color.cap		TODO: Color Options
-opt.html.cap		TODO: HTML/HTTP Options
-opt.debug.cap		TODO: Debug Options
-opt.library.cap		TODO: Library Options
-
-opt.sec.execlevel		TODO: The $tkg$exec() system task is
-opt.sec.exec		TODO: fully enabled.
-opt.sec.regexec		TODO: enabled only for registered functions.
-opt.sec.noexec		TODO: disabled.
-
-opt.sec.simfeatures		TODO: Simulator Features
-opt.sec.send		TODO: Enable the $tkg$command() system task.
-opt.sec.open		TODO: Enable the $fopen() system task.
-opt.sec.writemem		TODO: Enable the $writememb() and $writememh() system tasks.
-opt.sec.enqueue		TODO: Enable the $tkg$recv() and $tkg$send() system tasks.
-
-opt.sec.handle		TODO: Security Violation Handling
-opt.sec.stop		TODO: Stop simulator when disabled feature is used.
-opt.sec.warn		TODO: Display warning message when disabled feature is used.
-opt.sec.ignore		TODO: Ignore attempted usage of disabled features.
-
-opt.html.linkopts		TODO: Link Options
-opt.html.browser		TODO: Browser Command
-opt.html.email		TODO: e-Mail Command
-
-opt.debug.opt		TODO: Debugging Options
-
-opt.color.editwin		TODO: Edit Window Colors
-opt.color.scopewin		TODO: Scope Window Colors
-
-opt.vlibadd.cap		TODO: Add Library
-opt.vlibadd.exp		-fillbegin-
-TODO: Enter the name of a TkGate Verilog library.  Libraries named in the autoload list will be automatically loaded on startup.
--end-
-
-opt.editor.exp		-fillbegin-
-TODO: Set options for the HDL text editor.
--end-
-
-opt.general.exp		-fillbegin-
-TODO: Set personal identification and basic TkGate options on this page.  The personal identification will be used on printed output.
--end-
-
-opt.interface.exp		-fillbegin-
-TODO: Set options controlling the look and feel of the interface.
--end-
-
-opt.toolbars.exp		-fillbegin-
-TODO: Specify which toolbars to display.
--end-
-
-opt.print.exp		-fillbegin-
-TODO: Set default printer options on this page.
--end-
-
-opt.analysis.exp		-fillbegin-
-TODO: These options control the critical path analysis function.
--end-
-
-opt.simulator.exp		-fillbegin-
-TODO: These options control the functioning of the simulator.
--end-
-
-opt.library.exp		-fillbegin-
-TODO: Set search paths for User Device and Verilog library files.
--end-
-
-
-opt.security.exp		-fillbegin-
-TODO: Set the simulator security options by enabling or disabling features that may be a risk when simulating circuits from untrusted sources.
--end-
-
-opt.color.exp		-fillbegin-
-TODO: Use these options to set the color scheme to use in TkGate.
--end-
-
-opt.html.exp		-fillbegin-
-TODO: Set options pertaining to html commands in tkgate circuit comments.
--end-
-
-
-opt.debug.exp		-fillbegin-
-TODO: Debugging options can be set here.
--end-
-
-
-opt.gen.basetoolbar		TODO: Core Editor Toolbars
-opt.gen.simtoolbar		TODO: Simulation Mode Toolbars
-opt.gen.symedtoolbar		TODO: Symbol Editor Toolbars
-
-opt.bbar.restore		TODO: Restore Page Defaults
-opt.bbar.restoreall		TODO: Restore All Defaults
 
 ##############################################################################
 #
@@ -1191,15 +1089,6 @@ igen.modname		TODO: Module Name:
 igen.add		TODO: Add
 igen.delete		TODO: Delete
 igen.edit		TODO: Edit
-
-igen.in		TODO: in
-igen.out		TODO: out
-igen.inout		TODO: inout
-
-igen.left		TODO: left
-igen.right		TODO: right
-igen.top		TODO: top
-igen.bottom		TODO: bottom
 
 #igen.other		other
 
@@ -1253,7 +1142,7 @@ TODO: You are about to change the interface type for this module to "symbol".  T
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.claim		Mdulo libreria -> Mdulo ususario
+blklst.claim.cap	Mdulo libreria -> Mdulo ususario
 blklst.to		a
 blklst.from		TODO: From
 blklst.name		TODO: Name
@@ -1303,9 +1192,9 @@ find.result.name		TODO: Object Name
 #
 # These are special tags used by the search feature.  Do not change their value.
 #
-@find.type.gate		gate
-@find.type.net		net
-@find.type.comment		comment
+#find.type.gate		gate
+#find.type.net		net
+#find.type.comment		comment
 
 find.options		TODO: Search Options
 find.results		TODO: Search Results
@@ -1315,7 +1204,7 @@ find.results		TODO: Search Results
 # should be "before" or "after" the text entry box.  Use the keywords before
 # or after to indicate the position.
 #
-@find.qual.pos		before
+#find.qual.pos		before
 
 find.qual.contains		TODO: Contains...
 find.qual.begins		TODO: Begins with...
@@ -1334,12 +1223,12 @@ find.target		TODO: Target
 # These are special tags used to indicate the image file to be used for
 # displaying port types.
 #
-@portlist.in		port_in1.gif
-@portlist.out		port_out1.gif
-@portlist.inout		port_inout1.gif
-@portlist.in2		port_in2.gif
-@portlist.out2		port_out2.gif
-@portlist.inout2		port_inout2.gif
+#portlist.in		port_in1.gif
+#portlist.out		port_out1.gif
+#portlist.inout		port_inout1.gif
+#portlist.in2		port_in2.gif
+#portlist.out2		port_out2.gif
+#portlist.inout2		port_inout2.gif
 
 
 ##############################################################################
@@ -1358,18 +1247,13 @@ circ.iniscript		Guiones de Inicializacin
 #circ.noscript		No script files selected.
 #circ.really		Do you really want to remove '%s' from the list of initialization scripts.
 
-circ.script.cap		TODO: Edit Script
-circ.script.label		TODO: Edit script name:
-circ.vlib.cap		TODO: Edit Library
-circ.vlib.label		TODO: Library script name:
-
 circ.reallyupdate		-fillbegin-
 TODO: Do you really want to update the interface of all '%s' instances?
 -end-
 
-@circ.tabwidth		100
-@circ.width		650
-@circ.height		400
+#circ.tabwidth		100
+#circ.width		650
+#circ.height		400
 
 circ.general		TODO: General
 circ.library		TODO: Libraries
@@ -2024,12 +1908,8 @@ ho.simdump		-begin-
 Almacena el contenido de la memoria en un fichero con extensin mem.
 -end-
 
-ho.f.modlist		-begin-
+ho.modlist		-begin-
 Lista todos los mulos actualmente cargados. El mdulo principal, el superior en la jerarquia se indica con el signo "+", los mdulos de libreria se visualizan entre par-Aéntesis.$)B
--end-
-
-ho.f.modlisttab		-begin-
-TODO: List of all modules currently loaded. You can display the list in either alphabetical or hierarchical form by selecting the appropriate tab. Drag modules to the edit window to create new instances.
 -end-
 
 ho.netlist		-begin-
