@@ -34,8 +34,8 @@ b.close		Fermer
 b.ok		OK
 b.clear		Effacer
 b.cancel	Annuler
-b.open		Ouvrir...
-b.bitw		Largeur de bus
+#b.open		Ouvrir...
+#b.bitw		Largeur de bus
 b.in		entrée
 b.out		sortie
 b.inout		E/S
@@ -45,9 +45,9 @@ b.find		Chercher
 b.edit		Éditer...
 b.add		Ajouter...
 b.delete	Supprimer
-b.deleteb	Supprimer...
+#b.deleteb	Supprimer...
 b.apply		Appliquer
-b.anchor	Ancre
+b.anchor	Ancré
 b.tech		Technologie
 
 ##############################################################################
@@ -60,9 +60,9 @@ menu.simulate		Simuler
 menu.module		Module
 menu.format		Élément
 menu.make		Ajouter
-menu.circ		Circuit
+#menu.circ		Circuit
 
-menu.file.new		Nouveau circuit
+menu.file.new		Nouveau...
 menu.file.open		Ouvrir...
 menu.file.openlib	Ouvrir bibliothèque...
 menu.file.save		Sauver
@@ -79,8 +79,8 @@ menu.edit.selall	Tout sélectionner
 menu.edit.find		Chercher...
 menu.format.algnv		Aligner Vert.
 menu.format.algnh		Aligner Horz.
-menu.edit.zoomin	Zoom +
-menu.edit.zoomout	Zoom -
+menu.edit.zoomin	5:Zoom +
+menu.edit.zoomout	5:Zoom -
 
 menu.tool.move		Déplacer/Connecter
 menu.tool.delg		Supprimer élément
@@ -105,22 +105,22 @@ menu.simulate.load	Charger mémoire...
 menu.simulate.dump	Sauver mémoire...
 
 menu.module.open	Ouvrir
-menu.module.close	Fermer
+menu.module.close	0:Fermer
 menu.module.new		Nouveau...
 menu.module.del		Supprimer...
 menu.module.copy	Copier...
 menu.module.rename	Renommer...
 menu.module.claim	Claim...
 
-menu.interface.set	Appliquer interface
-menu.interface.edit	Éditer interfaces...
+#menu.interface.set	Appliquer interface
+#menu.interface.edit	Éditer interfaces...
 
-menu.circ.path		Chemin critique...
+#menu.circ.path		Chemin critique...
 
-menu.gate.addin		Ajouter entrée
-menu.gate.addout	Ajouter sortie
-menu.gate.addinout	Ajouter E/S
-menu.gate.iochg		Changer type
+#menu.gate.addin		Ajouter entrée
+#menu.gate.addout	Ajouter sortie
+#menu.gate.addinout	Ajouter E/S
+#menu.gate.iochg		Changer type
 menu.format.anchor	Ancrer la sélection
 menu.format.unanchor	Dé-ancrer la sélection
 menu.format.prop		Propriétés...
@@ -129,13 +129,13 @@ menu.format.del		Supprimer
 menu.format.settech	Choisir technologie
 
 # Scope Menu
-menu.scope.prtrace	Imprimer chronogramme...
-menu.scope.close	Fermer
-menu.scope.trace	Chronogramme
-menu.scope.zoomin	Zoom +
-menu.scope.zoomout	Zoom -
+#menu.scope_file.ptrace		0:Imprimer chronogramme...
+menu.scope_file.close		0:Fermer
+menu.scope_trace		0:	0:	0:	0:Chronogramme
+menu.scope_trace.zoomin		5:Zoom +
+menu.scope_trace.zoomout	5:Zoom -
 
-gm.switch	E/S
+#gm.switch	E/S
 gm.gate		Porte
 gm.rgate	Réduction
 gm.msi		MSI
@@ -205,25 +205,25 @@ gm.mod.in		Module Input
 gm.mod.out	Module Output
 gm.mod.inout	Module InOut
 
-addwireseg	Ajouter une dérivation
+#addwireseg	Ajouter une dérivation
 
-help		Aide
-hlpabout	À propos...
-hlplicense	License...
-hlpdoc		Documentation...
-hlptut		Didacticiel
-hlpexample	Exemples
-exampcomb	Logique combinatoire
-examp3bit	Compteur 3 bits
-examp8bit	Compteur 8 bits
-examptrff	FF niveau transistor
-exampcpu	Processeur "Ménagerie"
-tutwelcome	Introduction à TkGate
-tutcreate	Création d'un circuit
-tutedit1	Édition d'un circuit (1)
-tutedit2	Édition d'un circuit (2)
-tutmods		Utilisation des modules
-tutsim		Simulation d'un circuit
+#help		Aide
+menu.help.about		0:À propos...
+menu.help.license	0:License...
+menu.help.doc		0:Documentation...
+menu.help.tut		1:Didacticiel
+menu.help.example	1:Exemples
+#exampcomb	Logique combinatoire
+#examp3bit	Compteur 3 bits
+#examp8bit	Compteur 8 bits
+#examptrff	FF niveau transistor
+#exampcpu	Processeur "Ménagerie"
+#tutwelcome	Introduction à TkGate
+#tutcreate	Création d'un circuit
+#tutedit1	Édition d'un circuit (1)
+#tutedit2	Édition d'un circuit (2)
+#tutmods		Utilisation des modules
+#tutsim		Simulation d'un circuit
 
 
 ##############################################################################
@@ -231,16 +231,16 @@ tutsim		Simulation d'un circuit
 #
 ifile		Fichier
 imodule		Module
-iblmodule	Modules :
-iports		Ports :
-ibits		Bits :
+iblmodule	Modules
+iports		Ports
+ibits		Bits:
 
 #############################################################################
 # Net Dialog Box
 #
 db.net.name	Nom de la connexion
 db.net.hide	Cacher le nom
-db.net.bits	Largeur de bus
+db.net.bits	Nombre de bits
 db.net.port	Type de port
 db.net.in	entrée
 db.net.out	sortie
@@ -259,7 +259,7 @@ db.gate.phase		Phase
 db.gate.duty		Duty
 db.gate.port		Port
 db.gate.bitws		Bits
-db.gate.gtype		Type d'élément
+db.gate.gtype		Type
 db.gate.gname		Nom de l'élément
 db.gate.hidenam		Cacher le nom
 db.gate.anchor		Ancré
@@ -267,12 +267,12 @@ db.gate.cpbreak		Partition du chemin critique
 db.gate.butstate	État de l'interrupteur
 db.gate.dipval		Valeur de l'interrupteur
 db.gate.memfilenam	Fichier de la mémoire
-db.gate.modname		Fonction
-db.gate.islink		Hypertexte
-db.gate.link		Lier au fichier
-db.gate.findw		Chercher des connexions uniquement
-db.gate.findg		Chercher des éléments uniquement
-db.gate.findwg		Chercher des connexions et des éléments
+db.gate.modname		Type
+#db.gate.islink		Hypertexte
+#db.gate.link		Lier au fichier
+#db.gate.findw		Chercher des connexions uniquement
+#db.gate.findg		Chercher des éléments uniquement
+#db.gate.findwg		Chercher des connexions et des éléments
 db.gate.general		Général
 db.gate.details		Détails
 db.gate.ports		Port
@@ -280,12 +280,12 @@ db.gate.delay		Délai
 db.gate.stddelay	Délai standard
 db.gate.custdelay	Délai personnalisé
 
-db.led.type		Type de diode
-db.led.bit		Bit
-db.led.bar		Bar Graph
-db.led.hex		chiffre (hexa)
-db.led.dec		chiffre (décimal)
-db.led.seg		chiffre (Direct)
+db.gate.led.type	Type de diode
+db.gate.led.bit.hdr	Bit
+db.gate.led.bar.hdr	Bar Graph
+db.gate.led.hex.hdr	chiffre (hexa)
+db.gate.led.dec.hdr	chiffre (décimal)
+db.gate.led.seg.hdr	chiffre (Direct)
 
 cpath.cloops -begin-
 Une boucle a été détectée dans votre circuit.
@@ -301,14 +301,14 @@ ci-dessous.
 ##############################################################################
 # Print dialog box
 #
-print.outto		Imprimer vers
+#print.outto		Imprimer vers
 print.printer		Imprimante
 print.file		Fichier
 print.prcmd		Commande d'impression
 print.filename		Nom de fichier
 print.epssave		Sauver en Postscript encapsulé
-print.doctit		Titre du document
-print.prmod		Impression des modules :
+#print.doctit		Titre du document
+#print.prmod		Impression des modules :
 print.epcm		Quanta/cm
 print.estpg		Nombre de pages estimé
 print.all		Tous
@@ -331,7 +331,7 @@ print.range		Sélection d'intervalle
 print.fulltr		Trace complète
 print.parttr		Trace partielle
 print.start		Démarrer
-print.end		Fin
+#print.end		Fin
 
 ##############################################################################
 #
@@ -359,24 +359,24 @@ opt.zled		Floating LED
 opt.restdef		Restaurer valeurs par défaut
 opt.regudate		Réaffichage minimal
 opt.smoothscroll	Défilement fluide
-opt.outmove		Déplacement d'un fantôme
+#opt.outmove		Déplacement d'un fantôme
 opt.balloon		Activer les infobulles
 opt.debug		Activer la mise au point
 opt.novice		Mode débutant
-opt.ckpoint		Sauvegarde automatique
+#opt.ckpoint		Sauvegarde automatique
 opt.freq		intervalle
 opt.beak		Activer les modes spéciaux
-opt.mode		Mode
-opt.normal		Normal
+#opt.mode		Mode
+#opt.normal		Normal
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Miles
 opt.showsimcmd		Afficher les commandes du simulateur
-opt.logfile		Fichier journal du simulateur
+#opt.logfile		Fichier journal du simulateur
 opt.estepsz		Avance rapide par quanta (nombre de quanta)
 opt.cstepsz		Avance rapide par cycles d'horloges (nombre de cycles)
 opt.overstep		Arrêt débordant sur cycle d'horloge (nombre de quanta)
-opt.initscript		Script d'initialisation
+#opt.initscript		Script d'initialisation
 opt.posedge		Le mode pas à pas sur les cycles d'horloge s'arrête sur tous les fronts montants
 opt.setclock		Le mode pas à pas sur les cycles d'horloge s'arrête sur l'horloge
 opt.delayfilepath	Fichiers contenant les délais
@@ -399,36 +399,36 @@ une connexion permanente à Internet.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Nouveau module
-blklst.delmod		Supprimer module
-blklst.frommod		Copier module depuis
-blklst.tomod		Vers
-blklst.oldname		Ancien nom
-blklst.newname		Nouveau nom
-blklst.claim		Claim Module
+blklst.new.cap		Nouveau module
+blklst.del.cap		Supprimer module
+blklst.from		Copier module depuis
+blklst.to		Vers
+#blklst.oldname		Ancien nom
+#blklst.newname		Nouveau nom
+blklst.claim.cap	Claim Module
 
 ##############################################################################
 #
 # Circuit Dialog box
 #
-circ.topmod		Module principal
+#circ.topmod		Module principal
 circ.discchg		annuler changements
 circ.iniscript		Scripts d'initialisation
-circ.noscript		Pas de fichier script sélectionné.
-circ.really1		Voulez-vous vraiment supprimer
-circ.really2		de la liste des scripts d'initialisation ?
+#circ.noscript		Pas de fichier script sélectionné.
+#circ.really1		Voulez-vous vraiment supprimer
+#circ.really2		de la liste des scripts d'initialisation ?
 
 ##############################################################################
 # Simulator
 #
-sim.breakpt		Point d'arrêt
+#sim.breakpt		Point d'arrêt
 
 ##############################################################################
 #
 # Command box
 #
-cmd.file		Nom du fichier
-cmd.topname		Nom du module principal
+#cmd.file		Nom du fichier
+#cmd.topname		Nom du module principal
 
 ##############################################################################
 #
@@ -442,17 +442,17 @@ cp.recompute		Recalculer
 ##############################################################################
 # Error messages - Messages d'erreur
 #
-err.verilog		Erreurs dans le fichier :
+#err.verilog		Erreurs dans le fichier :
 err.nopin		Impossible de changer la patte sélectionnée.
 err.badhex		Valeur hexadécimale illégale ('%s') ignorée.
 err.gatanchor		Les éléments sont ancrés et ne peuvent pas être déplacés.
-err.libmode		Opération illégale sur un module de bibliothèque (convertir le module en module normal pour pouvoir l'éditer).
+#err.libmode		Opération illégale sur un module de bibliothèque (convertir le module en module normal pour pouvoir l'éditer).
 err.badfind		Impossible de trouver la cible '%s'.
 err.badopendel		Impossible de supprimer un module ouvert.
 err.nosrcmod		Module source '%s' non trouvé.
 err.noerr		Impossible de trouver l'erreur.
 err.misserr		Information sur l'erreur incomplète (plantage du simulateur ?)
-err.pounimpl		Erreur non implémentée dans ParseOption
+#err.pounimpl		Erreur non implémentée dans ParseOption
 
 err.badinadd		Impossible d'ajouter plus d'entrées à l'élément sélectionné.
 err.badoutadd		Impossible d'ajouter plus de sorties à l'élément sélectionné.
@@ -478,7 +478,7 @@ err.bkpt.toomany	Trop de points d'arrêt.  Le maximum est %d.
 err.sim.badtmp		Impossible de sauver dans le fichier temporaire '%s' (disque plein ?)
 err.sim.syntx		Erreur de syntaxe dans la commande '%s'.
 err.sim.noincl		Fichier include '%s' non trouvé.
-err.sim.clockbadedge	Illegal edge indicator '%c' in clock command.
+#err.sim.clockbadedge	Illegal edge indicator '%c' in clock command.
 err.sim.nobkpt		Point d'arrêt '%s' inconnu.
 err.sim.nonet		Connexion '%s' inconnue.
 err.sim.nogate		Élément '%s' inconnu.
@@ -493,7 +493,7 @@ err.badlibopen		Impossible d'ouvrir la bibliothèque '%s'.
 
 err.nomark		Poser une marque avec le bouton gauche de la souris avant de choisir un type d'élément, SVP.
 err.badgate		Type d'élément inconnu.
-err.badmake		Impossible de créer un élément.
+#err.badmake		Impossible de créer un élément.
 
 err.manypages		-begin-
 Le document que vous voulez imprimer
@@ -513,7 +513,7 @@ err.nomod		Le module '%s' n'est pas défini.
 err.modlock		Ce bloc logique est vérouillé !
 err.closeroot		Impossible de fermer le module principal.  Quitter tkgate.
 err.sim.isrun		Le simulateur est déjà lancé (Taper 'Ctrl-s e' pour le tuer).
-err.sim.isnotrun	Le simulateur ne tourne pas (Taper 'Ctrl-s b' pour le démarrer).
+#err.sim.isnotrun	Le simulateur ne tourne pas (Taper 'Ctrl-s b' pour le démarrer).
 err.editonly		Commande invalide en mode de simulation.
 err.simonly		Commande valide seulement en mode de simulation.
 
@@ -551,7 +551,7 @@ msg.setinterface	L'interface du module '%s' a été appliquée.
 msg.needsel		Choisir une instance de module SVP.
 msg.wroteckpt		Sauvegarde automatique dans %s...
 msg.save		Circuit sauvé dans '%s'.
-msg.badsave		Impossible de créer le fichier '%s'.
+#msg.badsave		Impossible de créer le fichier '%s'.
 msg.reallynew		Le circuit a été modifié.  Voulez-vous vraiment le supprimer et créer un nouveau circuit ?
 msg.reallyquit		Le circuit a été modifié.  Voulez-vous vraiment quitter ?
 msg.notlib		Le module '%s' ne fait pas partie d'une bibliothèque.
@@ -617,8 +617,8 @@ Entrer le nombre de bits souhaité dans la petite boîte
 en bas à droite de la fenêtre principale.
 -end-
 
-ho.modopen	Ouvrir le module sélectionné.
-ho.modclose	Fermer le module courant.
+#ho.modopen	Ouvrir le module sélectionné.
+#ho.modclose	Fermer le module courant.
 
 ho.simgo	-begin-
 Si la simulation n'est pas active,
@@ -671,7 +671,7 @@ Sauver le contenu d'une mémoire
 dans un fichier ".mem".
 -end-
 
-ho.sim.break	-begin-
+#ho.sim.break	-begin-
 Définir un point d'arrêt du simulateur.  Un point d'arrêt est une expression
 qui si elle devient vraie, stoppe la simulation.  Seules des expressions avec
 un seul opérateur relationnel sont supportées, par exemple "w1==0" ou "w7!=8".
@@ -679,7 +679,7 @@ Des expressions comme "w8" ou "!w2" peuvent aussi être utilisée sur un signal
 booléen.
 -end-
 
-ho.f.modlist	-begin-
+ho.modlist	-begin-
 Les de tous les modules chargés.
  - Le module principal est indiqué par un + ajouté à son nom,
  - Les modules de bibliothèques sont indiqués entre parenthèses.
@@ -769,13 +769,13 @@ ho.edgat.cycle		Le nombre total de quanta de temps dans un cycle d'horloge.
 ho.edgat.phase		Le point de départ du cycle (en pourcentage).
 ho.edgat.duty		Le pourcentage du cycle pendant lequel le signal d'horloge est bas.
 
-ho.edgat.cname		Nom de la connexion.
-ho.edgat.cport		Port auquel la connexion est attachée.
-ho.edgat.ctype		Type de connexion.
-ho.edgat.cbitw		Nombre de bits de la connexion.
-ho.edgat.cedit		Éditer le port sélectionné.
-ho.edgat.cadd		Ajouter un port.
-ho.edgat.cdel		Supprimer le port sélectionné.
+#ho.edgat.cname		Nom de la connexion.
+#ho.edgat.cport		Port auquel la connexion est attachée.
+#ho.edgat.ctype		Type de connexion.
+#ho.edgat.cbitw		Nombre de bits de la connexion.
+#ho.edgat.cedit		Éditer le port sélectionné.
+#ho.edgat.cadd		Ajouter un port.
+#ho.edgat.cdel		Supprimer le port sélectionné.
 
 ho.edgat.hide		-begin-
 Désactive l'affichage du nom de l'élément.
@@ -878,7 +878,7 @@ bat computer.
 -end-
 
 ho.opt.trek		Beam me up Scoty!
-ho.opt.normal		Disable fun Stuff.
+#ho.opt.normal		Disable fun Stuff.
 
 ho.opt.simstep		-begin-
 Le nombre de quanta de temps
@@ -941,13 +941,13 @@ Affichage des commandes échangées
 entre le simulateur et l'interface graphique.
 -end-
 
-ho.simlog		-begin-
+#ho.simlog		-begin-
 Écrire les commandes envoyées au simulateur
 dans un fichier journal.
 Le journal peut ensuite être utilisé
 en entrée du simulateur à des fins de mise au point.
 -end-
 
-ho.cpathanal		-begin-
+#ho.cpathanal		-begin-
 Calculer les chemins critiques du circuit.
 -end-

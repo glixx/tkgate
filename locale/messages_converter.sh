@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="es/messages"
+file="fr/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file
@@ -228,7 +228,18 @@ sed -i "s|^msg.badsave		|#msg.badsave		|g" $file
 sed -i "s|^ho.opt.normal	|#ho.opt.normal	|g" $file
 sed -i "s|^@|#|g" $file
 sed -i "s|^db.err.explain		|#db.err.explain		|g" $file
-sed -i "s|||g" $file
-sed -i "s|||g" $file
-sed -i "s|||g" $file
+sed -i "s|^menu.circ		|#menu.circ		|g" $file
+sed -i "s|^menu.interface.set	|#menu.interface.set	|g" $file
+sed -i "s|^menu.interface.edit	|#menu.interface.edit	|g" $file
+sed -i "s|^menu.circ.path		|#menu.circ.path		|g" $file
+sed -i "s|^menu.gate.addin		|#menu.gate.addin		|g" $file
+sed -i "s|^menu.gate.addout	|#menu.gate.addout	|g" $file
+sed -i "s|^menu.gate.addinout	|#menu.gate.addinout	|g" $file
+sed -i "s|^menu.gate.iochg		|#menu.gate.iochg		|g" $file
+sed -i "s|^menu.scope.prtrace	|#menu.scope_file.ptrace		0:|g" $file
+sed -i "s|^menu.scope.close	|menu.scope_file.close		0:|g" $file
+sed -i "s|^menu.scope.trace	|menu.scope_trace		0:|g" $file
+sed -i "s|^menu.scope.zoomin	|menu.scope_trace.zoomin		5:|g" $file
+sed -i "s|^menu.scope.zoomout	|menu.scope_trace.zoomout	5:|g" $file
+sed -i "s|^gm.switch	|#gm.switch	|g" $file
 #sed -i "s|||g" $file
