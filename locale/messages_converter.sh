@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="cy/messages"
+file="de/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file
@@ -156,8 +156,6 @@ sed -i "s|^menu.sc.close	|menu.scope_file.close		0:|g" $file
 sed -i "s|^menu.sc.trace	|#menu.sc.trace	|g" $file
 sed -i "s|^menu.sc.zoomin |menu.scope_trace.zoomin		5:|g" $file
 sed -i "s|^menu.sc.zoomout |menu.scope_trace.zoomout	5:|g" $file
-sed -i "s|^scope.emptymsg	|#scope.emptymsg	|g" $file
-sed -i "s|^comment.empty	|#comment.empty	|g" $file
 sed -i "s|^db.gate.islink		|#db.gate.islink		|g" $file
 sed -i "s|^db.gate.link		|#db.gate.link		|g" $file
 sed -i "s|^db.gate.findw		|#db.gate.findw		|g" $file

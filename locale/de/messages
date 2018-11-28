@@ -470,7 +470,7 @@ neue Hex-Werte ein.
 
 ##############################################################################
 
-scope.emptymsg	Doppelklick auf eine Leitung fügt ein Signal ein oder löscht es
+scope.emptymsg	Doppelklick auf eine Leitung fügt ein Signal ein oder löscht es.
 comment.empty	[Text hinzufügen mit Doppelklick.]
 
 ##############################################################################
@@ -1111,8 +1111,8 @@ opt.saveCells		Zellen in abgespeicherte Dateien einbeziehen
 opt.showimage		Zeige Randstreifenbilder in Dialogboxen
 opt.novice		Novizenmodus
 opt.blockDropConnect	Porterzeugung mit Fallenlassen von Leitungen
-opt.ckpoint.1		Checkpointing alle
-opt.ckpoint.2		Kommandos ausführen.
+#opt.ckpoint.1		Checkpointing alle
+#opt.ckpoint.2		Kommandos ausführen.
 opt.freq		Intervall
 opt.beak		Sondermodi einstellen
 opt.bat			Bat
@@ -1341,7 +1341,7 @@ blklst.claim.title	TKGate: Modul aneignen
 blklst.setroot.title	TKGate: Wurzel-Modul festlegen
 blklst.new.title	TKGate: Neues Modul
 
-blklst.claim		Modul aneignen
+blklst.claim.cap	Modul aneignen
 blklst.to		Nach
 blklst.from		Von
 blklst.name		Name

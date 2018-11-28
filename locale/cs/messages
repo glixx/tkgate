@@ -225,8 +225,8 @@ menu.scope_file.close		0:Zavřít
 menu.scope_trace.zoomin		5:Zvětšit
 menu.scope_trace.zoomout	5:Zmenšit
 
-#scope.emptymsg	Dvojitým kliknutím na vodič přidejte nebo smažte stopu.
-#comment.empty	[Dvojitým kliknutím přidejte text.]
+scope.emptymsg	Dvojitým kliknutím na vodič přidejte nebo smažte stopu.
+comment.empty	[Dvojitým kliknutím přidejte text.]
 ##############################################################################
 # Interface strings
 #
