@@ -6,12 +6,13 @@
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Andrey V. Skvotsov <starling13@gmail.com>, 2015
 # psyca, 2015
+# psyca, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-28 17:50+0300\n"
-"PO-Revision-Date: 2018-11-29 01:09+0000\n"
+"POT-Creation-Date: 2018-11-29 14:40+0300\n"
+"PO-Revision-Date: 2018-11-29 05:00+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/Magic/tkgate/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -223,11 +224,6 @@ msgstr "Netze"
 #: en/messages:167 en/messages:571 en/messages:1267
 msgid "Ports"
 msgstr "Ports"
-
-# @mm.width
-#: en/messages:173
-msgid "7"
-msgstr "7"
 
 # mm.enable
 #: en/messages:177
@@ -1972,16 +1968,6 @@ msgid ""
 "be connected to switches or registers."
 msgstr "Bidirektionaler Signalfluß (transmission)\nist erlaubt. Kann nicht mit Schaltern\noder Registern verbunden werden."
 
-# @db.gate.comment.width
-#: en/messages:758
-msgid "*900"
-msgstr "*500"
-
-# @db.gate.comment.height
-#: en/messages:759
-msgid "*550"
-msgstr "*450"
-
 # db.gate.tab.General.cap
 #: en/messages:761
 msgid "General Properties"
@@ -2273,11 +2259,6 @@ msgstr "Initialer Wert des DIP-Schalters zu Simulationsbeginn."
 msgid "Hex Value:"
 msgstr "Hexwert:"
 
-# @db.gate.dip.value.exp.width
-#: en/messages:874
-msgid "150"
-msgstr "150"
-
 # db.gate.dip.shownet.on.exp
 #: en/messages:878
 msgid "Show the name of the net next to dip."
@@ -2314,11 +2295,6 @@ msgstr "Bit:"
 #: en/messages:887
 msgid "LSB:"
 msgstr "LSB:"
-
-# @db.gate.tap.exp.width
-#: en/messages:888
-msgid "*180"
-msgstr "*180"
 
 # db.gate.mux.dataorder
 #: en/messages:890
@@ -2873,31 +2849,6 @@ msgstr "Inhalt"
 #: en/messages:1121
 msgid "Advanced"
 msgstr "Einstellungen"
-
-# @opt.tool.columns
-#: en/messages:1128
-msgid "2"
-msgstr "2"
-
-# @opt.tool.colwidth
-#: en/messages:1130
-msgid "30"
-msgstr "30"
-
-# @opt.sidebar.width
-#: en/messages:1132
-msgid "*200"
-msgstr "*250"
-
-# @opt.tree.width
-#: en/messages:1134
-msgid "*150"
-msgstr "*150"
-
-# @opt.editor.catwidth
-#: en/messages:1136
-msgid "15"
-msgstr "15"
 
 # opt.title
 #: en/messages:1138
@@ -3894,21 +3845,6 @@ msgstr "Groß/Kleinschreibung ignorieren"
 msgid "Object Name"
 msgstr "Objektname"
 
-# @find.type.gate
-#: en/messages:1504
-msgid "gate"
-msgstr "gate"
-
-# @find.type.net
-#: en/messages:1505
-msgid "net"
-msgstr "net"
-
-# @find.type.comment
-#: en/messages:1506
-msgid "comment"
-msgstr "comment"
-
 # find.options
 #: en/messages:1508
 msgid "Search Options"
@@ -3918,11 +3854,6 @@ msgstr "Suchoptionen"
 #: en/messages:1509
 msgid "Search Results"
 msgstr "Suchresultate"
-
-# @find.qual.pos
-#: en/messages:1516
-msgid "before"
-msgstr "before"
 
 # find.qual.contains
 #: en/messages:1518
@@ -3973,36 +3904,6 @@ msgstr "Suchen:"
 #: en/messages:1529
 msgid "Target"
 msgstr "Ziel"
-
-# @portlist.in
-#: en/messages:1535
-msgid "port_in1.gif"
-msgstr "port_in1.gif"
-
-# @portlist.out
-#: en/messages:1536
-msgid "port_out1.gif"
-msgstr "port_out1.gif"
-
-# @portlist.inout
-#: en/messages:1537
-msgid "port_inout1.gif"
-msgstr "port_inout1.gif"
-
-# @portlist.in2
-#: en/messages:1538
-msgid "port_in2.gif"
-msgstr "port_in2.gif"
-
-# @portlist.out2
-#: en/messages:1539
-msgid "port_out2.gif"
-msgstr "port_out2.gif"
-
-# @portlist.inout2
-#: en/messages:1540
-msgid "port_inout2.gif"
-msgstr "port_inout2.gif"
 
 # circ.wintitle
 #: en/messages:1547
@@ -4078,16 +3979,6 @@ msgstr "Sollen wirklich alle '%s' Instanzen der Schnittstelle geändert werden?"
 #: en/messages:1569
 msgid "Do you really want to overwrite the existing file '%s'?"
 msgstr "Soll die bereits existierende Datei '%s' wirklich überschrieben werden?"
-
-# @circ.library.width
-#: en/messages:1573
-msgid "*500"
-msgstr "*500"
-
-# @circ.library.height
-#: en/messages:1574
-msgid "*350"
-msgstr "*350"
 
 # circ.script
 #: en/messages:1579

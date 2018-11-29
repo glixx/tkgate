@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-28 17:50+0300\n"
-"PO-Revision-Date: 2018-11-28 21:31+0000\n"
+"POT-Creation-Date: 2018-11-29 14:40+0300\n"
+"PO-Revision-Date: 2018-11-29 05:03+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/Magic/tkgate/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -222,11 +222,6 @@ msgstr ""
 #: en/messages:167 en/messages:571 en/messages:1267
 msgid "Ports"
 msgstr "Portas"
-
-# @mm.width
-#: en/messages:173
-msgid "7"
-msgstr "7"
 
 # mm.enable
 #: en/messages:177
@@ -1971,16 +1966,6 @@ msgid ""
 "be connected to switches or registers."
 msgstr ""
 
-# @db.gate.comment.width
-#: en/messages:758
-msgid "*900"
-msgstr ""
-
-# @db.gate.comment.height
-#: en/messages:759
-msgid "*550"
-msgstr ""
-
 # db.gate.tab.General.cap
 #: en/messages:761
 msgid "General Properties"
@@ -2272,11 +2257,6 @@ msgstr ""
 msgid "Hex Value:"
 msgstr ""
 
-# @db.gate.dip.value.exp.width
-#: en/messages:874
-msgid "150"
-msgstr ""
-
 # db.gate.dip.shownet.on.exp
 #: en/messages:878
 msgid "Show the name of the net next to dip."
@@ -2312,11 +2292,6 @@ msgstr ""
 # db.gate.tap.lbl.bus
 #: en/messages:887
 msgid "LSB:"
-msgstr ""
-
-# @db.gate.tap.exp.width
-#: en/messages:888
-msgid "*180"
 msgstr ""
 
 # db.gate.mux.dataorder
@@ -2871,31 +2846,6 @@ msgstr ""
 # print.tab.advanced
 #: en/messages:1121
 msgid "Advanced"
-msgstr ""
-
-# @opt.tool.columns
-#: en/messages:1128
-msgid "2"
-msgstr ""
-
-# @opt.tool.colwidth
-#: en/messages:1130
-msgid "30"
-msgstr ""
-
-# @opt.sidebar.width
-#: en/messages:1132
-msgid "*200"
-msgstr ""
-
-# @opt.tree.width
-#: en/messages:1134
-msgid "*150"
-msgstr ""
-
-# @opt.editor.catwidth
-#: en/messages:1136
-msgid "15"
 msgstr ""
 
 # opt.title
@@ -3893,21 +3843,6 @@ msgstr ""
 msgid "Object Name"
 msgstr ""
 
-# @find.type.gate
-#: en/messages:1504
-msgid "gate"
-msgstr ""
-
-# @find.type.net
-#: en/messages:1505
-msgid "net"
-msgstr ""
-
-# @find.type.comment
-#: en/messages:1506
-msgid "comment"
-msgstr ""
-
 # find.options
 #: en/messages:1508
 msgid "Search Options"
@@ -3916,11 +3851,6 @@ msgstr ""
 # find.results
 #: en/messages:1509
 msgid "Search Results"
-msgstr ""
-
-# @find.qual.pos
-#: en/messages:1516
-msgid "before"
 msgstr ""
 
 # find.qual.contains
@@ -3971,36 +3901,6 @@ msgstr ""
 # find.target
 #: en/messages:1529
 msgid "Target"
-msgstr ""
-
-# @portlist.in
-#: en/messages:1535
-msgid "port_in1.gif"
-msgstr ""
-
-# @portlist.out
-#: en/messages:1536
-msgid "port_out1.gif"
-msgstr ""
-
-# @portlist.inout
-#: en/messages:1537
-msgid "port_inout1.gif"
-msgstr ""
-
-# @portlist.in2
-#: en/messages:1538
-msgid "port_in2.gif"
-msgstr ""
-
-# @portlist.out2
-#: en/messages:1539
-msgid "port_out2.gif"
-msgstr ""
-
-# @portlist.inout2
-#: en/messages:1540
-msgid "port_inout2.gif"
 msgstr ""
 
 # circ.wintitle
@@ -4076,16 +3976,6 @@ msgstr ""
 # circ.reallyoverwrite
 #: en/messages:1569
 msgid "Do you really want to overwrite the existing file '%s'?"
-msgstr ""
-
-# @circ.library.width
-#: en/messages:1573
-msgid "*500"
-msgstr ""
-
-# @circ.library.height
-#: en/messages:1574
-msgid "*350"
 msgstr ""
 
 # circ.script
