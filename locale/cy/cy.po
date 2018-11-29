@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
 "POT-Creation-Date: 2018-11-28 16:19+0300\n"
-"PO-Revision-Date: 2018-11-28 16:19+0300\n"
+"PO-Revision-Date: 2018-11-29 10:19+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: tkgatemsg2po script\n"
+"X-Generator: Poedit 2.0.9\n"
+"Language-Team: \n"
 
 # b.dismiss
 #: cy/messages:29
@@ -653,7 +653,7 @@ msgstr "Modiwlau"
 # iports
 #: cy/messages:231
 msgid "Ports"
-msgstr "Pyrth:"
+msgstr "Pyrth"
 
 # ibits
 #: cy/messages:232
@@ -814,12 +814,12 @@ msgstr "LED 7-Rhan (Syth)"
 # print.printer
 #: cy/messages:300
 msgid "Printer:"
-msgstr "Argraffydd"
+msgstr "Argraffydd:"
 
 # print.prcmd
 #: cy/messages:302
 msgid "Print Command:"
-msgstr "Gorchymyn Argraffu"
+msgstr "Gorchymyn Argraffu:"
 
 # print.filename
 #: cy/messages:303
@@ -934,7 +934,7 @@ msgstr "Oliniad Cyflawn"
 # print.parttr
 #: cy/messages:327
 msgid "Partial Trace"
-msgstr "oliniad Rhannol"
+msgstr "Oliniad Rhannol"
 
 # print.start
 #: cy/messages:328
@@ -1119,7 +1119,7 @@ msgstr "Oediad Newidlen Gwerthoedd"
 # opt.posedge
 #: cy/messages:377
 msgid "Clock step stops on all clock posedges"
-msgstr "Mae'r cam cloc yn aros ar bob ymyl positif y cloc."
+msgstr "Mae'r cam cloc yn aros ar bob ymyl positif y cloc"
 
 # opt.setclock
 #: cy/messages:378
@@ -1159,7 +1159,7 @@ msgstr "Datwneud Uchafrif"
 # opt.cpopts
 #: cy/messages:387
 msgid "Critical Path Options"
-msgstr "Dewisiadau Llwybr Allweddol:"
+msgstr "Dewisiadau Llwybr Allweddol"
 
 # opt.maxpath
 #: cy/messages:388
@@ -1210,7 +1210,7 @@ msgstr "Hawlio Modiwl"
 # circ.discchg
 #: cy/messages:413
 msgid "Do not warn about discarding changes."
-msgstr "Diddymu Newidiadau"
+msgstr "Diddymu Newidiadau."
 
 # circ.iniscript
 #: cy/messages:414
@@ -1220,7 +1220,7 @@ msgstr "Sgriptiau Ymgychwyn"
 # circ.extbar
 #: cy/messages:418
 msgid "Use extender bars on AND, OR and XOR gates."
-msgstr "Defnyddio Bariau Estynnol"
+msgstr ""
 
 # cp.delay
 #: cy/messages:436
@@ -1320,7 +1320,7 @@ msgstr "Dynodydd wedi eu ail-enwi i '%s' o achos gwrthdaro."
 # err.netconfgat
 #: cy/messages:463
 msgid "Identifier renamed to avoid conflict with built-in component name"
-msgstr "Dynodydd wedi eu ail-enwi i osgoi gwrthdaro efo enw giat cyntefig."
+msgstr "Dynodydd wedi eu ail-enwi i osgoi gwrthdaro efo enw giat cyntefig"
 
 # err.netconfkw
 #: cy/messages:464
@@ -1738,7 +1738,7 @@ msgstr "'Sdim pwynt mynd ymlaen, Miles."
 # miles.msg8b
 #: cy/messages:578
 msgid "It's obvious you can't design a circuit"
-msgstr "Mae'n amlwg na alli di ddylunio cylched."
+msgstr "Mae'n amlwg na alli di ddylunio cylched"
 
 # ho.new
 #: cy/messages:585

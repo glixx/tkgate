@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
 "POT-Creation-Date: 2018-11-28 16:10+0300\n"
-"PO-Revision-Date: 2018-11-28 16:10+0300\n"
+"PO-Revision-Date: 2018-11-29 10:10+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: tkgatemsg2po script\n"
+"X-Generator: Poedit 2.0.9\n"
+"Language-Team: \n"
 
 # b.dismiss
 #: ca/messages:30
@@ -176,7 +176,7 @@ msgstr "0:Sortir"
 # menu.edit.cut
 #: ca/messages:72
 msgid "0:Cut"
-msgstr "Tallar"
+msgstr "0:Tallar"
 
 # menu.edit.copy
 #: ca/messages:73
@@ -238,7 +238,7 @@ msgstr "0:Tallar cable"
 # menu.tool.inv
 #: ca/messages:85
 msgid "0:Invert"
-msgstr "Invertir"
+msgstr "0:Invertir"
 
 # menu.tool.bitw
 #: ca/messages:86
@@ -390,12 +390,12 @@ msgstr "Interruptors DIP"
 # gm.io.merge
 #: ca/messages:141
 msgid "Concat"
-msgstr "Línies <-> Bus"
+msgstr ""
 
 # gm.io.clock
 #: ca/messages:142
 msgid "Clock"
-msgstr "Senyal de rellotge"
+msgstr ""
 
 # gm.io.led
 #: ca/messages:144
@@ -633,7 +633,7 @@ msgstr "Mòduls"
 # iports
 #: ca/messages:230
 msgid "Ports"
-msgstr "Ports:"
+msgstr "Ports"
 
 # ibits
 #: ca/messages:231
@@ -794,12 +794,12 @@ msgstr "7-Segments (Directe)"
 # print.printer
 #: ca/messages:297
 msgid "Printer:"
-msgstr "Impressora"
+msgstr "Impressora:"
 
 # print.prcmd
 #: ca/messages:299
 msgid "Print Command:"
-msgstr "Comanda d'Impressió"
+msgstr "Comanda d'Impressió:"
 
 # print.filename
 #: ca/messages:300
@@ -1124,7 +1124,7 @@ msgstr "Color"
 # opt.cpopts
 #: ca/messages:381
 msgid "Critical Path Options"
-msgstr "Opcions dels camins crítics:"
+msgstr "Opcions dels camins crítics"
 
 # opt.maxpath
 #: ca/messages:382
@@ -1175,7 +1175,7 @@ msgstr "Mòdul llibreria -> Mòdul usuari"
 # circ.discchg
 #: ca/messages:406
 msgid "Do not warn about discarding changes."
-msgstr "Descartar canvis"
+msgstr "Descartar canvis."
 
 # circ.iniscript
 #: ca/messages:407
@@ -1255,7 +1255,7 @@ msgstr "No puc afegir més sortides a la porta seleccionada."
 # err.badinoutadd
 #: ca/messages:450
 msgid "Can't add any more inout pins to selected component."
-msgstr "No puc afegir més línies bidireccionals a la porta"
+msgstr "No puc afegir més línies bidireccionals a la porta."
 
 # err.badpinchg
 #: ca/messages:451
@@ -1280,7 +1280,7 @@ msgstr "Identificador canvia a '%s' degut a un conflicte."
 # err.netconfgat
 #: ca/messages:455
 msgid "Identifier renamed to avoid conflict with built-in component name"
-msgstr "Identificador canvia degut a conflicte amb nom de porta bàsica."
+msgstr "Identificador canvia degut a conflicte amb nom de porta bàsica"
 
 # err.netconfkw
 #: ca/messages:456
@@ -1690,7 +1690,7 @@ msgstr "És inútil continuar, Miles."
 # miles.msg8b
 #: ca/messages:564
 msgid "It's obvious you can't design a circuit"
-msgstr "És obvi que no pots dissenyar un circuit."
+msgstr "És obvi que no pots dissenyar un circuit"
 
 # ho.new
 #: ca/messages:571
@@ -1704,17 +1704,17 @@ msgstr ""
 # ho.open
 #: ca/messages:576
 msgid "Open a circuit from a file."
-msgstr "Fitxer -> Circuit"
+msgstr ""
 
 # ho.save
 #: ca/messages:577
 msgid "Save circuit to current file."
-msgstr "Circuit -> Fitxer actual"
+msgstr ""
 
 # ho.print
 #: ca/messages:578
 msgid "Print current circuit."
-msgstr "Circuit -> Impressora"
+msgstr ""
 
 # ho.move
 #: ca/messages:580

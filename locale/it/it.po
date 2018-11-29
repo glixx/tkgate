@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
 "POT-Creation-Date: 2018-11-29 08:18+0300\n"
-"PO-Revision-Date: 2018-11-29 08:29+0300\n"
+"PO-Revision-Date: 2018-11-29 10:44+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -1388,7 +1388,7 @@ msgid ""
 "Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
 "'net==value', 'net!=value'"
 msgstr ""
-"Errore di sintassi nell'espressione di breakpoint.  Devi scegliere fra: "
+"Errore di sintassi nell'espressione di breakpoint. Devi scegliere fra: "
 "'net', '!net', 'net==value', 'net!=value'"
 
 # err.bkpt.badnet
@@ -1404,13 +1404,13 @@ msgstr ""
 #: it/messages:484
 msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
 msgstr ""
-"Errore di sintassi nel valore '%s'.  Deve essere un decimale o una costante "
+"Errore di sintassi nel valore '%s'. Deve essere un decimale o una costante "
 "in stile verilog."
 
 # err.bkpt.toomany
 #: it/messages:485
 msgid "Too many breakpoints. Maximum is %d."
-msgstr "Troppi breakpoints.  Al massimo %d."
+msgstr "Troppi breakpoints. Al massimo %d."
 
 # err.sim.badtmp
 #: it/messages:487
@@ -1452,9 +1452,7 @@ msgstr "Carattere non ammesso nella costante binaria '%s'."
 # err.sim.notswitch
 #: it/messages:495
 msgid "Component '%s' is not a switch, dip or register."
-msgstr ""
-"Il gate '%s' non è uno switch, un dip o un registro. Il comando \"Set\" si "
-"applica solo a questi componenti."
+msgstr "Il gate '%s' non è uno switch, un dip o un registro."
 
 # err.sim.badcmd
 #: it/messages:496
@@ -1493,7 +1491,7 @@ msgstr ""
 # err.badgate
 #: it/messages:504
 msgid "Unknown component type '%s'."
-msgstr "Tipo di gate sconosciuto."
+msgstr ""
 
 # err.badportadd
 #: it/messages:507
@@ -1542,7 +1540,7 @@ msgstr "Il blocco logico è bloccato (\"locked\")!"
 # err.closeroot
 #: it/messages:530
 msgid "No higher level module opened on the module stack."
-msgstr "Non posso chiudere il modulo \"top\".  Usa \"quit\"."
+msgstr "Non posso chiudere il modulo \"top\". Usa \"quit\"."
 
 # err.sim.isrun
 #: it/messages:531
@@ -1603,7 +1601,7 @@ msgstr ""
 # err.badversion
 #: it/messages:543
 msgid "Unknown version number. Use at your own risk."
-msgstr "Numero di versione sconosciuto.  Usa a tuo rischio."
+msgstr "Numero di versione sconosciuto. Usa a tuo rischio."
 
 # err.nodrive
 #: it/messages:544
@@ -1637,7 +1635,7 @@ msgid ""
 msgstr ""
 "TkGate è riuscito a salvare il file '%s', ma sembra rovinato.\n"
 "Se hai abilitato la modalità \"checkpointing\" prova a caricare\n"
-"uno dei files di \"checkpoint\".  Usa 'tkgate -V' per verificare\n"
+"uno dei files di \"checkpoint\". Usa 'tkgate -V' per verificare\n"
 "l'integrità di un file di salvataggio."
 
 # err.corruptsave
@@ -1674,7 +1672,7 @@ msgid ""
 "overwritten, but may be destroyed if a problem occurs. Would you like\n"
 "to attempt an unvalidated save?"
 msgstr ""
-"C'è un problema a salvare '%s'.  Se vuoi, puoi ritentare senza validazione.\n"
+"C'è un problema a salvare '%s'. Se vuoi, puoi ritentare senza validazione.\n"
 "Se rispondi \"no\", il file originale rimane inalterato.\n"
 "Se rispondi \"yes\" il file originale verrà sovrascritto, ma potrebbe venir "
 "distrutto se si verifica un problema.\n"
@@ -1726,7 +1724,7 @@ msgstr "Trovato un collegamento con il nome '%s'."
 # msg.searchagn
 #: it/messages:593
 msgid "Target string '%s' not found. Hit 'find' to restart search again."
-msgstr "Stringa '%s' non trovata.  Inserisci 'find' per riavviare la ricerca."
+msgstr "Stringa '%s' non trovata. Inserisci 'find' per riavviare la ricerca."
 
 # msg.sim.chgtoroot
 #: it/messages:594
@@ -2049,7 +2047,7 @@ msgid ""
 "that the buffer has been modifed since\n"
 "the last save."
 msgstr ""
-"Il file in lavorazione.  Un '*' indica\n"
+"Il file in lavorazione. Un '*' indica\n"
 "che il buffer è stato modificato dall'ultima\n"
 "volta che è stato salvato."
 

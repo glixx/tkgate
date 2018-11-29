@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
 "POT-Creation-Date: 2018-11-28 17:50+0300\n"
-"PO-Revision-Date: 2018-11-28 17:53+0300\n"
+"PO-Revision-Date: 2018-11-29 10:37+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -110,118 +110,118 @@ msgstr "Technologie"
 # menu.file
 #: fr/messages:56
 msgid "0:File"
-msgstr "Fichier"
+msgstr "0:Fichier"
 
 # menu.edit
 #: fr/messages:57
 msgid "0:Edit"
-msgstr "Éditer"
+msgstr "0:Éditer"
 
 # menu.tool
 #: fr/messages:58
 msgid "0:Tool"
-msgstr "Outils"
+msgstr "0:Outils"
 
 # menu.simulate
 #: fr/messages:59
 msgid "0:Simulate"
-msgstr "Simuler"
+msgstr "0:Simuler"
 
 # menu.module
 #: fr/messages:60
 msgid "0:Module"
-msgstr "Module"
+msgstr "0:Module"
 
 # menu.format
 #: fr/messages:61
 msgid "0:Format"
-msgstr "Élément"
+msgstr "0:Élément"
 
 # menu.make
 #: fr/messages:62
 msgid "0:Components"
-msgstr "Ajouter"
+msgstr "0:Ajouter"
 
 # menu.file.new
 # menu.module.new
 #: fr/messages:65 fr/messages:109
 msgid "0:New..."
-msgstr "Nouveau..."
+msgstr "0:Nouveau..."
 
 # menu.file.open
 #: fr/messages:66
 msgid "0:Open..."
-msgstr "Ouvrir..."
+msgstr "0:Ouvrir..."
 
 # menu.file.openlib
 #: fr/messages:67
 msgid "0:Library Manager..."
-msgstr "Ouvrir bibliothèque..."
+msgstr "0:Ouvrir bibliothèque..."
 
 # menu.file.save
 #: fr/messages:68
 msgid "0:Save"
-msgstr "Sauver"
+msgstr "0:Sauver"
 
 # menu.file.saveas
 #: fr/messages:69
 msgid "5:Save As..."
-msgstr "Sauver..."
+msgstr "5:Sauver..."
 
 # menu.file.print
 #: fr/messages:70
 msgid "0:Print..."
-msgstr "Imprimer..."
+msgstr "0:Imprimer..."
 
 # menu.tool.options
 #: fr/messages:71
 msgid "0:Options..."
-msgstr "Options..."
+msgstr "0:Options..."
 
 # menu.file.quit
 #: fr/messages:72
 msgid "0:Quit"
-msgstr "Quitter"
+msgstr "0:Quitter"
 
 # menu.file.cprop
 #: fr/messages:73
 msgid "0:Circuit Properties..."
-msgstr "Propriétés du circuit..."
+msgstr "0:Propriétés du circuit..."
 
 # menu.edit.cut
 #: fr/messages:75
 msgid "0:Cut"
-msgstr "Couper"
+msgstr "0:Couper"
 
 # menu.edit.copy
 #: fr/messages:76
 msgid "3:Copy"
-msgstr "Copier"
+msgstr "3:Copier"
 
 # menu.edit.paste
 #: fr/messages:77
 msgid "0:Paste"
-msgstr "Coller"
+msgstr "0:Coller"
 
 # menu.edit.selall
 #: fr/messages:78
 msgid "0:Select All"
-msgstr "Tout sélectionner"
+msgstr "0:Tout sélectionner"
 
 # menu.edit.find
 #: fr/messages:79
 msgid "0:Find..."
-msgstr "Chercher..."
+msgstr "0:Chercher..."
 
 # menu.format.algnv
 #: fr/messages:80
 msgid "6:Align Ver."
-msgstr "Aligner Vert."
+msgstr "6:Aligner Vert."
 
 # menu.format.algnh
 #: fr/messages:81
 msgid "6:Align Horz."
-msgstr "Aligner Horz."
+msgstr "6:Aligner Horz."
 
 # menu.edit.zoomin
 # menu.scope_trace.zoomin
@@ -238,32 +238,32 @@ msgstr "5:Zoom -"
 # menu.tool.move
 #: fr/messages:85
 msgid "0:Move/Connect"
-msgstr "Déplacer/Connecter"
+msgstr "0:Déplacer/Connecter"
 
 # menu.tool.delg
 #: fr/messages:86
 msgid "0:Delete Component"
-msgstr "Supprimer élément"
+msgstr "0:Supprimer élément"
 
 # menu.tool.cutw
 #: fr/messages:87
 msgid "0:Cut Wire"
-msgstr "Couper connexion"
+msgstr "0:Couper connexion"
 
 # menu.tool.inv
 #: fr/messages:88
 msgid "0:Invert"
-msgstr "Poser inverseurs"
+msgstr "0:Poser inverseurs"
 
 # menu.tool.bitw
 #: fr/messages:89
 msgid "0:Bit Width"
-msgstr "Largeur de connexion"
+msgstr "0:Largeur de connexion"
 
 # menu.tool.debug
 #: fr/messages:90
 msgid "0:Debug"
-msgstr "Debug"
+msgstr "0:Debug"
 
 # menu.format.rot.0
 #: fr/messages:91
@@ -288,57 +288,57 @@ msgstr "Rot. 270"
 # menu.simulate.begin
 #: fr/messages:96
 msgid "0:Begin Simulation"
-msgstr "Commencer simulation"
+msgstr "0:Commencer simulation"
 
 # menu.simulate.end
 #: fr/messages:97
 msgid "0:End Simulation"
-msgstr "Terminer simulation"
+msgstr "0:Terminer simulation"
 
 # menu.simulate.run
 #: fr/messages:98
 msgid "0:Run"
-msgstr "Lancer"
+msgstr "0:Lancer"
 
 # menu.simulate.pause
 #: fr/messages:99
 msgid "0:Pause"
-msgstr "Pause"
+msgstr "0:Pause"
 
 # menu.simulate.step
 #: fr/messages:100
 msgid "0:Step Epoch(s)"
-msgstr "Avancer d'un quantum"
+msgstr "0:Avancer d'un quantum"
 
 # menu.simulate.cycle
 #: fr/messages:101
 msgid "5:Step Cycle"
-msgstr "Avancer d'un cycle"
+msgstr "5:Avancer d'un cycle"
 
 # menu.simulate.break
 #: fr/messages:102
 msgid "0:Breakpoint..."
-msgstr "Point d'arrêt..."
+msgstr "0:Point d'arrêt..."
 
 # menu.simulate.script
 #: fr/messages:103
 msgid "1:Exec. Script..."
-msgstr "Exécuter Script..."
+msgstr "1:Exécuter Script..."
 
 # menu.simulate.load
 #: fr/messages:104
 msgid "1:Load Memory..."
-msgstr "Charger mémoire..."
+msgstr "1:Charger mémoire..."
 
 # menu.simulate.dump
 #: fr/messages:105
 msgid "1:Dump Memory..."
-msgstr "Sauver mémoire..."
+msgstr "1:Sauver mémoire..."
 
 # menu.module.open
 #: fr/messages:107
 msgid "0:Open"
-msgstr "Ouvrir"
+msgstr "0:Ouvrir"
 
 # menu.module.close
 # menu.scope_file.close
@@ -349,52 +349,52 @@ msgstr "0:Fermer"
 # menu.module.del
 #: fr/messages:110
 msgid "0:Delete..."
-msgstr "Supprimer..."
+msgstr "0:Supprimer..."
 
 # menu.module.copy
 #: fr/messages:111
 msgid "1:Copy..."
-msgstr "Copier..."
+msgstr "1:Copier..."
 
 # menu.module.rename
 #: fr/messages:112
 msgid "0:Rename..."
-msgstr "Renommer..."
+msgstr "0:Renommer..."
 
 # menu.module.claim
 #: fr/messages:113
 msgid "1:Claim..."
-msgstr "Claim..."
+msgstr "1:Claim..."
 
 # menu.format.anchor
 #: fr/messages:124
 msgid "0:Anchor Selected"
-msgstr "Ancrer la sélection"
+msgstr "0:Ancrer la sélection"
 
 # menu.format.unanchor
 #: fr/messages:125
 msgid "0:Unanchor Selected"
-msgstr "Dé-ancrer la sélection"
+msgstr "0:Dé-ancrer la sélection"
 
 # menu.format.prop
 #: fr/messages:126
 msgid "0:Instance Properties..."
-msgstr "Propriétés..."
+msgstr "0:Propriétés..."
 
 # menu.tool.rep
 #: fr/messages:127
 msgid "0:Replicate"
-msgstr "Répliquer"
+msgstr "0:Répliquer"
 
 # menu.format.del
 #: fr/messages:128
 msgid "0:Delete"
-msgstr "Supprimer"
+msgstr "0:Supprimer"
 
 # menu.format.settech
 #: fr/messages:129
 msgid "0:Set Technology"
-msgstr "Choisir technologie"
+msgstr "0:Choisir technologie"
 
 # menu.scope_trace
 #: fr/messages:134
@@ -1119,7 +1119,7 @@ msgstr "Mode débutant"
 # opt.freq
 #: fr/messages:367
 msgid "Interval"
-msgstr "intervalle"
+msgstr "Intervalle"
 
 # opt.beak
 #: fr/messages:368
@@ -1252,7 +1252,7 @@ msgstr "Claim Module"
 # circ.discchg
 #: fr/messages:415
 msgid "Do not warn about discarding changes."
-msgstr "annuler changements."
+msgstr ""
 
 # circ.iniscript
 #: fr/messages:416

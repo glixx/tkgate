@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
 "POT-Creation-Date: 2018-11-29 08:11+0300\n"
-"PO-Revision-Date: 2018-11-29 08:11+0300\n"
+"PO-Revision-Date: 2018-11-29 10:26+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: tkgatemsg2po script\n"
+"X-Generator: Poedit 2.0.9\n"
+"Language-Team: \n"
 
 # b.dismiss
 #: es/messages:27
@@ -1160,7 +1160,7 @@ msgstr "Borra Módulo"
 # blklst.from
 #: es/messages:393
 msgid "From"
-msgstr "Copia Módulo de"
+msgstr ""
 
 # blklst.to
 #: es/messages:394

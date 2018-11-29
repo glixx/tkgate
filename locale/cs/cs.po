@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: TkGate 2.0\n"
 "Report-Msgid-Bugs-To: starling13@gmail.com\n"
 "POT-Creation-Date: 2018-11-28 16:33+0300\n"
-"PO-Revision-Date: 2018-11-28 16:33+0300\n"
+"PO-Revision-Date: 2018-11-29 10:16+0300\n"
 "Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: tkgatemsg2po script\n"
+"X-Generator: Poedit 2.0.9\n"
+"Language-Team: \n"
 
 # b.dismiss
 #: cs/messages:32
@@ -668,7 +668,7 @@ msgstr "Konektory"
 # ibits
 #: cs/messages:237
 msgid "Bits:"
-msgstr "Bity"
+msgstr "Bity:"
 
 # db.net.name
 #: cs/messages:242
@@ -824,12 +824,12 @@ msgstr "7-Segment (Přímý kód)"
 # print.printer
 #: cs/messages:305
 msgid "Printer:"
-msgstr "Tiskárna"
+msgstr "Tiskárna:"
 
 # print.prcmd
 #: cs/messages:307
 msgid "Print Command:"
-msgstr "Příkaz k Tisku"
+msgstr "Příkaz k Tisku:"
 
 # print.filename
 #: cs/messages:308
@@ -839,7 +839,7 @@ msgstr "Název Souboru"
 # print.epssave
 #: cs/messages:309
 msgid "Save as Encapsulated Postscript."
-msgstr "Uložit jako Encapsulated Postscript"
+msgstr "Uložit jako Encapsulated Postscript."
 
 # print.epcm
 #: cs/messages:312
@@ -1174,7 +1174,7 @@ msgstr "Max počet kroků zpět (Undo)"
 # opt.cpopts
 #: cs/messages:394
 msgid "Critical Path Options"
-msgstr "Možnosti citlivé cesty:"
+msgstr "Možnosti citlivé cesty"
 
 # opt.maxpath
 #: cs/messages:395
@@ -1210,7 +1210,7 @@ msgstr "Smazat Modul"
 # blklst.from
 #: cs/messages:409
 msgid "From"
-msgstr "Kopírovat Modul Z"
+msgstr ""
 
 # blklst.to
 #: cs/messages:410
@@ -1225,7 +1225,7 @@ msgstr "Konvertovat Modul"
 # circ.discchg
 #: cs/messages:420
 msgid "Do not warn about discarding changes."
-msgstr "Zrušit Změny"
+msgstr "Zrušit Změny."
 
 # circ.iniscript
 #: cs/messages:421
@@ -1235,7 +1235,7 @@ msgstr "Inicializační Skripty"
 # circ.extbar
 #: cs/messages:425
 msgid "Use extender bars on AND, OR and XOR gates."
-msgstr "Použít Rozšiřující Lišty"
+msgstr ""
 
 # cp.delay
 #: cs/messages:443
@@ -1335,7 +1335,7 @@ msgstr "Identifikátor přejmenován na '%s' kvůli konfliktu."
 # err.netconfgat
 #: cs/messages:470
 msgid "Identifier renamed to avoid conflict with built-in component name"
-msgstr "Identifikátor přejmenován kvůli konfliktu s primitivním názvem hradla."
+msgstr "Identifikátor přejmenován kvůli konfliktu s primitivním názvem hradla"
 
 # err.netconfkw
 #: cs/messages:471
@@ -1588,7 +1588,7 @@ msgstr "Nahraný soubor byl uložen novější verzí TkGate %s (tato verze je %
 # err.badversion
 #: cs/messages:540
 msgid "Unknown version number. Use at your own risk."
-msgstr "Neznámé číslo verze TkGate. Používejte na vlastní riziko"
+msgstr "Neznámé číslo verze TkGate. Používejte na vlastní riziko."
 
 # err.nodrive
 #: cs/messages:541
@@ -1911,7 +1911,7 @@ msgid ""
 msgstr ""
 "Spustit simulátor v režimu stálého běhu.\n"
 "Poznámka: Simulace kombinačních obvodů\n"
-"probíhá jen dokud obvod nedosáhne ustálený stav"
+"probíhá jen dokud obvod nedosáhne ustálený stav."
 
 # ho.simpause
 #: cs/messages:678
@@ -2039,7 +2039,7 @@ msgstr ""
 "TkGate je v editovacím režimu. Pokud ukazuje AND hradlo\n"
 "na čtyřech nožičkách, TkGate je v režimu simulace. Pokud\n"
 "hradlo AND stojí, simulace je pozastavena a pokud kráčí,\n"
-"simulace běží"
+"simulace běží."
 
 # ho.status.msg
 #: cs/messages:754
@@ -2150,7 +2150,7 @@ msgid ""
 "bit width."
 msgstr ""
 "Vodiče vybrané kurzorem budou\n"
-"nastaveny na tuto bitovou šířku"
+"nastaveny na tuto bitovou šířku."
 
 # ho.edgat.signam
 #: cs/messages:813
@@ -2299,7 +2299,7 @@ msgid ""
 "click can be used to expand the selected\n"
 "region. The range visible in the scope\n"
 "view is used when there is no selection."
-msgstr "Vytisknout logickou stopu"
+msgstr ""
 
 # ho.showxhair
 #: cs/messages:882
