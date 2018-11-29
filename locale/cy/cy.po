@@ -1,0 +1,2485 @@
+# This file is part of TkGate project
+# Copyright (C) 1987-2015 by Jeffery P. Hansen
+# This file is distributed under the same license as the TkGate package.
+#
+# Translators:
+# Andrey V. Skvotsov <starling13@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: TkGate 2.0\n"
+"Report-Msgid-Bugs-To: starling13@gmail.com\n"
+"POT-Creation-Date: 2018-11-28 16:19+0300\n"
+"PO-Revision-Date: 2018-11-28 16:19+0300\n"
+"Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tkgatemsg2po script\n"
+
+# b.dismiss
+#: cy/messages:29
+msgid "Dismiss"
+msgstr "Gwaredu"
+
+# b.close
+#: cy/messages:30
+msgid "Close"
+msgstr "Cau"
+
+# b.ok
+#: cy/messages:31
+msgid "OK"
+msgstr "Iawn"
+
+# b.clear
+#: cy/messages:32
+msgid "Clear"
+msgstr "Clirio"
+
+# b.cancel
+#: cy/messages:33
+msgid "Cancel"
+msgstr "Diddymu"
+
+# b.in
+# db.net.in
+#: cy/messages:36 cy/messages:241
+msgid "in"
+msgstr "i mewn"
+
+# b.out
+# db.net.out
+#: cy/messages:37 cy/messages:242
+msgid "out"
+msgstr "allan"
+
+# b.inout
+# db.net.inout
+#: cy/messages:38 cy/messages:243
+msgid "inout"
+msgstr "mewnallan"
+
+# b.browse
+#: cy/messages:39
+msgid "Browse..."
+msgstr "Pori..."
+
+# b.label
+#: cy/messages:40
+msgid "Label"
+msgstr "Label"
+
+# b.find
+#: cy/messages:41
+msgid "Find"
+msgstr "Canfod"
+
+# b.edit
+#: cy/messages:42
+msgid "Edit..."
+msgstr "Golygu..."
+
+# b.add
+#: cy/messages:43
+msgid "Add..."
+msgstr "Ychanegu..."
+
+# b.delete
+#: cy/messages:44
+msgid "Delete"
+msgstr "Dileu"
+
+# b.apply
+#: cy/messages:46
+msgid "Apply"
+msgstr "Gweithredu"
+
+# b.anchor
+# db.gate.anchor
+#: cy/messages:47 cy/messages:261
+msgid "Anchor"
+msgstr "Angor"
+
+# b.tech
+#: cy/messages:48
+msgid "Technology"
+msgstr "Technoleg"
+
+# menu.file
+#: cy/messages:53
+msgid "0:File"
+msgstr "0:Ffeil"
+
+# menu.edit
+#: cy/messages:54
+msgid "0:Edit"
+msgstr "0:Golygu"
+
+# menu.tool
+#: cy/messages:55
+msgid "0:Tool"
+msgstr "0:Erfyn"
+
+# menu.simulate
+#: cy/messages:56
+msgid "0:Simulate"
+msgstr "0:Efelychu"
+
+# menu.module
+#: cy/messages:57
+msgid "0:Module"
+msgstr "0:Modiwl"
+
+# menu.make
+#: cy/messages:59
+msgid "0:Components"
+msgstr "0:Gwneud"
+
+# menu.file.new
+# menu.module.new
+#: cy/messages:62 cy/messages:110
+msgid "0:New..."
+msgstr "0:Newydd..."
+
+# menu.file.open
+#: cy/messages:63
+msgid "0:Open..."
+msgstr "0:Agor..."
+
+# menu.file.openlib
+#: cy/messages:64
+msgid "0:Library Manager..."
+msgstr "0:Agor Rhaglengell..."
+
+# menu.file.save
+#: cy/messages:65
+msgid "0:Save"
+msgstr "0:Cadw"
+
+# menu.file.saveas
+#: cy/messages:66
+msgid "5:Save As..."
+msgstr "5:Cadw..."
+
+# menu.file.print
+#: cy/messages:67
+msgid "0:Print..."
+msgstr "0:Argraffu..."
+
+# menu.file.quit
+#: cy/messages:69
+msgid "0:Quit"
+msgstr "0:Gadael"
+
+# menu.edit.undo
+#: cy/messages:71
+msgid "0:Undo"
+msgstr "0:Dadwneud"
+
+# menu.edit.redo
+#: cy/messages:72
+msgid "0:Redo"
+msgstr "0:Ailwneud"
+
+# menu.edit.cut
+#: cy/messages:73
+msgid "0:Cut"
+msgstr "0:Torri"
+
+# menu.edit.copy
+#: cy/messages:74
+msgid "3:Copy"
+msgstr "3:Copio"
+
+# menu.edit.paste
+#: cy/messages:75
+msgid "0:Paste"
+msgstr "0:Gludo"
+
+# menu.edit.selall
+#: cy/messages:76
+msgid "0:Select All"
+msgstr "0:Dewis Popeth"
+
+# menu.edit.find
+#: cy/messages:77
+msgid "0:Find..."
+msgstr "0:Canfod..."
+
+# menu.format.algnv
+#: cy/messages:78
+msgid "6:Align Ver."
+msgstr "6:Cyfunio Fert."
+
+# menu.format.algnh
+#: cy/messages:79
+msgid "6:Align Horz."
+msgstr "6:Cyfunio Llor."
+
+# menu.edit.zoomin
+# menu.scope_trace.zoomin
+#: cy/messages:80 cy/messages:222
+msgid "5:Zoom In"
+msgstr "5:Chwyddo"
+
+# menu.edit.zoomout
+# menu.scope_trace.zoomout
+#: cy/messages:81 cy/messages:223
+msgid "5:Zoom Out"
+msgstr "5:Pellhau"
+
+# menu.tool.move
+#: cy/messages:83
+msgid "0:Move/Connect"
+msgstr "0:Symud/Cysylltu"
+
+# menu.tool.delg
+#: cy/messages:84
+msgid "0:Delete Component"
+msgstr "0:Dileu Giat"
+
+# menu.tool.cutw
+#: cy/messages:85
+msgid "0:Cut Wire"
+msgstr "0:Torri Gwifren"
+
+# menu.tool.inv
+#: cy/messages:86
+msgid "0:Invert"
+msgstr "0:Gwrth-droi"
+
+# menu.tool.bitw
+#: cy/messages:87
+msgid "0:Bit Width"
+msgstr "0:Lled Did"
+
+# menu.tool.debug
+#: cy/messages:88
+msgid "0:Debug"
+msgstr "0:Datnamu"
+
+# menu.simulate.begin
+#: cy/messages:94
+msgid "0:Begin Simulation"
+msgstr "0:Dechrau Efelychiad"
+
+# menu.simulate.end
+#: cy/messages:95
+msgid "0:End Simulation"
+msgstr "0:Gorffen Efelychiad"
+
+# menu.simulate.addprobe
+#: cy/messages:96
+msgid "0:Add/Delete Probe"
+msgstr "0:Ychanegu/Dileu Holiad"
+
+# menu.simulate.run
+#: cy/messages:97
+msgid "0:Run"
+msgstr "0:Rhedeg"
+
+# menu.simulate.pause
+#: cy/messages:98
+msgid "0:Pause"
+msgstr "0:Seibio"
+
+# menu.simulate.step
+#: cy/messages:99
+msgid "0:Step Epoch(s)"
+msgstr "0:Cam Cyfnod(au)"
+
+# menu.simulate.cycle
+#: cy/messages:100
+msgid "5:Step Cycle"
+msgstr "5:Cam Cylchred"
+
+# menu.simulate.break
+#: cy/messages:101
+msgid "0:Breakpoint..."
+msgstr "0:Torbwynt..."
+
+# menu.simulate.script
+#: cy/messages:102
+msgid "1:Exec. Script..."
+msgstr "1:Gweith. Sgript..."
+
+# menu.simulate.load
+#: cy/messages:103
+msgid "1:Load Memory..."
+msgstr "1:Llwytho Cof..."
+
+# menu.simulate.dump
+#: cy/messages:104
+msgid "1:Dump Memory..."
+msgstr "1:Dadlwytho..."
+
+# menu.module.open
+#: cy/messages:106
+msgid "0:Open"
+msgstr "0:Agor"
+
+# menu.module.close
+# menu.scope_file.close
+#: cy/messages:107 cy/messages:220
+msgid "0:Close"
+msgstr "0:Cau"
+
+# menu.module.del
+#: cy/messages:111
+msgid "0:Delete..."
+msgstr "0:Dileu..."
+
+# menu.module.copy
+#: cy/messages:112
+msgid "1:Copy..."
+msgstr "1:Copio..."
+
+# menu.module.rename
+#: cy/messages:113
+msgid "0:Rename..."
+msgstr "0:Ailenwi..."
+
+# menu.module.claim
+#: cy/messages:114
+msgid "1:Claim..."
+msgstr "1:Honni..."
+
+# gm.io
+#: cy/messages:129
+msgid "I/O"
+msgstr "I/O"
+
+# gm.gate
+#: cy/messages:130
+msgid "Gate"
+msgstr "Giat"
+
+# gm.rgate
+#: cy/messages:131
+msgid "Reduction"
+msgstr "Lleihad"
+
+# gm.msi
+#: cy/messages:132
+msgid "MSI"
+msgstr "MSI"
+
+# gm.alu
+#: cy/messages:133
+msgid "ALU"
+msgstr "ALU"
+
+# gm.mem
+#: cy/messages:134
+msgid "Memory"
+msgstr "Cof"
+
+# gm.mod
+# imodule
+#: cy/messages:135 cy/messages:229
+msgid "Module"
+msgstr "Modiwl"
+
+# gm.comment
+#: cy/messages:136
+msgid "Comment"
+msgstr "Sylwad"
+
+# gm.frame
+#: cy/messages:137
+msgid "Frame"
+msgstr "Ffram"
+
+# gm.io.switch
+#: cy/messages:139
+msgid "Switch"
+msgstr "Swits"
+
+# gm.io.dip
+#: cy/messages:140
+msgid "DIP Switch"
+msgstr "Swits DIP"
+
+# gm.io.merge
+#: cy/messages:143
+msgid "Concat"
+msgstr "Cyfunio Gwifren"
+
+# gm.io.clock
+#: cy/messages:144
+msgid "Clock"
+msgstr "Cloc"
+
+# gm.io.led
+#: cy/messages:146
+msgid "LED"
+msgstr "LED"
+
+# gm.io.ledbar
+#: cy/messages:147
+msgid "LED Bar"
+msgstr "Bar LED"
+
+# gm.io.ledhex
+#: cy/messages:148
+msgid "7-Seg. LED (HEX)"
+msgstr "LED 7-Rhan (HEX)"
+
+# gm.io.leddec
+#: cy/messages:149
+msgid "7-Seg. LED (DEC)"
+msgstr "LED 7-Rhan (DEC)"
+
+# gm.io.ledseg
+#: cy/messages:150
+msgid "7-Seg. LED (Direct)"
+msgstr "LED 7-Rhan (Syth)"
+
+# gm.io.tty
+#: cy/messages:152
+msgid "TTY"
+msgstr "TTY"
+
+# gm.gate.and
+# gm.rgate.and
+#: cy/messages:154 cy/messages:166
+msgid "AND"
+msgstr "AND"
+
+# gm.gate.nand
+# gm.rgate.nand
+#: cy/messages:155 cy/messages:167
+msgid "NAND"
+msgstr "NAND"
+
+# gm.gate.or
+# gm.rgate.or
+#: cy/messages:156 cy/messages:168
+msgid "OR"
+msgstr "OR"
+
+# gm.gate.nor
+# gm.rgate.nor
+#: cy/messages:157 cy/messages:169
+msgid "NOR"
+msgstr "NOR"
+
+# gm.gate.xor
+# gm.rgate.xor
+#: cy/messages:158 cy/messages:170
+msgid "XOR"
+msgstr "XOR"
+
+# gm.gate.xnor
+# gm.rgate.xnor
+#: cy/messages:159 cy/messages:171
+msgid "XNOR"
+msgstr "XNOR"
+
+# gm.gate.buf
+#: cy/messages:160
+msgid "Buffer"
+msgstr "Byffer"
+
+# gm.gate.inv
+#: cy/messages:161
+msgid "Inverter"
+msgstr "Gwrth-droydd"
+
+# gm.gate.tribuf
+#: cy/messages:162
+msgid "Tri-Buffer"
+msgstr "Tri-Byffer"
+
+# gm.gate.nmos
+#: cy/messages:163
+msgid "NMOS"
+msgstr "NMOS"
+
+# gm.gate.pmos
+#: cy/messages:164
+msgid "PMOS"
+msgstr "PMOS"
+
+# gm.alu.add
+#: cy/messages:173
+msgid "Adder"
+msgstr "Ychwanegydd"
+
+# gm.alu.mult
+#: cy/messages:174
+msgid "Multiplier"
+msgstr "Lluosydd"
+
+# gm.alu.div
+#: cy/messages:175
+msgid "Divider"
+msgstr "Rhannydd"
+
+# gm.alu.lshift
+#: cy/messages:176
+msgid "Left Shift"
+msgstr "Syfliad i'r Chwith"
+
+# gm.alu.rshift
+#: cy/messages:177
+msgid "Right Shift"
+msgstr "Syfliad i'r De"
+
+# gm.alu.arshift
+#: cy/messages:178
+msgid "Arith. Right Shift"
+msgstr "Syfliad Rhifyddol i'r De"
+
+# gm.alu.roll
+#: cy/messages:179
+msgid "Roll"
+msgstr "Rholio"
+
+# gm.mem.reg
+#: cy/messages:181
+msgid "Register"
+msgstr "Cofrestru"
+
+# gm.mem.ff
+#: cy/messages:182
+msgid "D Flip-Flop"
+msgstr "Fflip-Fflop"
+
+# gm.mem.ram
+#: cy/messages:183
+msgid "RAM"
+msgstr "RAM"
+
+# gm.mem.rom
+#: cy/messages:184
+msgid "ROM"
+msgstr "ROM"
+
+# gm.msi.21mux
+#: cy/messages:186
+msgid "2-1 Multiplexor"
+msgstr "2-1 Amlblygydd"
+
+# gm.msi.41mux
+#: cy/messages:187
+msgid "4-1 Multiplexor"
+msgstr "4-1 Amlblygydd"
+
+# gm.msi.81mux
+#: cy/messages:188
+msgid "8-1 Multiplexor"
+msgstr "8-1 Amlblygydd"
+
+# gm.msi.12dec
+#: cy/messages:189
+msgid "1-2 Decoder"
+msgstr "1-2 Datgodiwr"
+
+# gm.msi.14dec
+#: cy/messages:190
+msgid "1-4 Decoder"
+msgstr "1-4 Datgodiwr"
+
+# gm.msi.18dec
+#: cy/messages:191
+msgid "1-8 Decoder"
+msgstr "1-8 Datgodiwr"
+
+# gm.mod.inst
+#: cy/messages:193
+msgid "Module Instance"
+msgstr "Enghraifft y Modiwl"
+
+# gm.mod.in
+#: cy/messages:194
+msgid "Module Input"
+msgstr "Mewnbwn y Modiwl"
+
+# gm.mod.out
+#: cy/messages:195
+msgid "Module Output"
+msgstr "Allbwn y Modiwl"
+
+# gm.mod.inout
+#: cy/messages:196
+msgid "Module Input-Output"
+msgstr "Mewnallan y Modiwl"
+
+# menu.help.about
+#: cy/messages:201
+msgid "0:About..."
+msgstr "0:Ynghylch..."
+
+# menu.help.license
+#: cy/messages:202
+msgid "0:License..."
+msgstr "0:Trwydded..."
+
+# menu.help.doc
+#: cy/messages:203
+msgid "0:Documentation..."
+msgstr "0:Dogfennaeth..."
+
+# menu.help.tut
+#: cy/messages:204
+msgid "1:Tutorials"
+msgstr "1:Tiwtorialau"
+
+# menu.help.example
+#: cy/messages:205
+msgid "1:Examples"
+msgstr "1:Enghraifftiau"
+
+# menu.scope_file.ptrace
+#: cy/messages:219
+msgid "0:Print Trace..."
+msgstr "0:Argraffu Olin..."
+
+# ifile
+# print.file
+#: cy/messages:228 cy/messages:301
+msgid "File"
+msgstr "Ffeil"
+
+# iblmodule
+# opt.mods
+#: cy/messages:230 cy/messages:337
+msgid "Modules"
+msgstr "Modiwlau"
+
+# iports
+#: cy/messages:231
+msgid "Ports"
+msgstr "Pyrth:"
+
+# ibits
+#: cy/messages:232
+msgid "Bits:"
+msgstr "Didau:"
+
+# db.net.name
+#: cy/messages:237
+msgid "Net Name"
+msgstr "Enw Rhwyd"
+
+# db.net.hide
+# db.gate.hidenam
+#: cy/messages:238 cy/messages:260
+msgid "Hide Name"
+msgstr "Cuddio Enw"
+
+# db.net.bits
+# db.gate.bitw
+#: cy/messages:239 cy/messages:252
+msgid "Bit Width"
+msgstr "Lled Did"
+
+# db.net.port
+#: cy/messages:240
+msgid "Port Type"
+msgstr "Math Porth"
+
+# db.net.inets
+#: cy/messages:244
+msgid "Nets"
+msgstr "Rhwydau"
+
+# db.gate.signam
+#: cy/messages:249
+msgid "Signal Name"
+msgstr "Enw Signal"
+
+# db.gate.portnam
+#: cy/messages:250
+msgid "Port Name"
+msgstr "Enw Porth"
+
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+#: cy/messages:251 cy/messages:258 cy/messages:266
+msgid "Type"
+msgstr "Math"
+
+# db.gate.cyclew
+#: cy/messages:253
+msgid "Period"
+msgstr "Lled Cylch"
+
+# db.gate.phase
+#: cy/messages:254
+msgid "Phase"
+msgstr "Cydwedd"
+
+# db.gate.duty
+#: cy/messages:255
+msgid "Duty"
+msgstr "Dyletswydd"
+
+# db.gate.port
+# db.gate.ports
+#: cy/messages:256 cy/messages:274
+msgid "Port"
+msgstr "Porth"
+
+# db.gate.bitws
+#: cy/messages:257
+msgid "Bits"
+msgstr "Didau"
+
+# db.gate.gname
+#: cy/messages:259
+msgid "Instance Name"
+msgstr "Enw Giat"
+
+# db.gate.cpbreak
+#: cy/messages:262
+msgid "Critical Path Partition"
+msgstr "Rhaniad Llwybr Allweddol"
+
+# db.gate.butstate
+#: cy/messages:263
+msgid "Button State"
+msgstr "Cyflwr Botwm"
+
+# db.gate.dipval
+#: cy/messages:264
+msgid "Switch Value"
+msgstr "Gwerth Swits"
+
+# db.gate.memfilenam
+#: cy/messages:265
+msgid "Memory File"
+msgstr "Ffeil Cof"
+
+# db.gate.general
+# opt.general
+#: cy/messages:272 cy/messages:380
+msgid "General"
+msgstr "Cyffredinol"
+
+# db.gate.details
+#: cy/messages:273
+msgid "Details"
+msgstr "Manylion"
+
+# db.gate.delay
+#: cy/messages:275
+msgid "Delay"
+msgstr "Oediad"
+
+# db.gate.stddelay
+#: cy/messages:276
+msgid "Standard Delay"
+msgstr "Oediad Safonol"
+
+# db.gate.custdelay
+#: cy/messages:277
+msgid "Custom Delay"
+msgstr "Oediad Dewisiadol"
+
+# db.gate.led.type
+#: cy/messages:280
+msgid "LED Type"
+msgstr "Math LED"
+
+# db.gate.led.bit.hdr
+#: cy/messages:281
+msgid "Bit"
+msgstr "Did"
+
+# db.gate.led.bar.hdr
+#: cy/messages:282
+msgid "Bar Graph"
+msgstr "Graff Bar"
+
+# db.gate.led.hex.hdr
+#: cy/messages:283
+msgid "7-Segment (HEX)"
+msgstr "LED 7-Rhan (HEX)"
+
+# db.gate.led.dec.hdr
+#: cy/messages:284
+msgid "7-Segment (DEC)"
+msgstr "LED 7-Rhan (DEC)"
+
+# db.gate.led.seg.hdr
+#: cy/messages:285
+msgid "7-Segment (Direct)"
+msgstr "LED 7-Rhan (Syth)"
+
+# print.printer
+#: cy/messages:300
+msgid "Printer:"
+msgstr "Argraffydd"
+
+# print.prcmd
+#: cy/messages:302
+msgid "Print Command:"
+msgstr "Gorchymyn Argraffu"
+
+# print.filename
+#: cy/messages:303
+msgid "File Name"
+msgstr "Enw Ffeil"
+
+# print.epssave
+#: cy/messages:304
+msgid "Save as Encapsulated Postscript."
+msgstr "Cadw fel Encapsulated Postscript."
+
+# print.epcm
+#: cy/messages:307
+msgid "Epochs/cm"
+msgstr "Cyfnodau/cm"
+
+# print.estpg
+#: cy/messages:308
+msgid "Estimated pages"
+msgstr "Tudalennau (amcangyfrif)"
+
+# print.all
+#: cy/messages:309
+msgid "All"
+msgstr "Popeth"
+
+# print.cur
+#: cy/messages:310
+msgid "Current"
+msgstr "Cyfredol"
+
+# print.use
+#: cy/messages:311
+msgid "Used"
+msgstr "Defnyddiwyd"
+
+# print.sel
+#: cy/messages:312
+msgid "Picked"
+msgstr "Dewisiedig"
+
+# print.inclib
+#: cy/messages:313
+msgid "Include library modules."
+msgstr "Cynnwys Modiwlau Rhaglengell."
+
+# print.papsz
+#: cy/messages:314
+msgid "Paper Size"
+msgstr "Maint Papur"
+
+# print.orient
+#: cy/messages:315
+msgid "Orientation"
+msgstr "Cyfeiriadaeth"
+
+# print.portrait
+#: cy/messages:316
+msgid "Portrait"
+msgstr "Darlun"
+
+# print.landscape
+#: cy/messages:317
+msgid "Landscape"
+msgstr "Tirlun"
+
+# print.2side
+#: cy/messages:318
+msgid "Print Double-Sided"
+msgstr "Argraffu ar y Ddwy Ochr"
+
+# print.opts
+#: cy/messages:319
+msgid "Content Options"
+msgstr "Dewisiadau"
+
+# print.scale
+#: cy/messages:320
+msgid "Scale large modules to fit page."
+msgstr "Graddio modiwlau mawr i ffitio ar y dudalen."
+
+# print.partition
+#: cy/messages:321
+msgid "Partition large modules into multiple pages."
+msgstr "Rhannu modiwlau mawr i wneud tudalennau lluosol."
+
+# print.incidx
+#: cy/messages:322
+msgid "Include index."
+msgstr "Cynnwys mynegai."
+
+# print.incgraph
+#: cy/messages:323
+msgid "Include hierarchy graph."
+msgstr "Cynnwys graff hierarchaeth."
+
+# print.4up
+#: cy/messages:324
+msgid "Print small modules four per page."
+msgstr "Argraffu modiwlau bach pedwar i'r dudalen."
+
+# print.range
+#: cy/messages:325
+msgid "Range"
+msgstr "Dewis Amrediad"
+
+# print.fulltr
+#: cy/messages:326
+msgid "Full Trace"
+msgstr "Oliniad Cyflawn"
+
+# print.parttr
+#: cy/messages:327
+msgid "Partial Trace"
+msgstr "oliniad Rhannol"
+
+# print.start
+#: cy/messages:328
+msgid "Start"
+msgstr "Dechrau"
+
+# opt.site
+#: cy/messages:335
+msgid "Site Name"
+msgstr "Enw Safle"
+
+# opt.inst
+#: cy/messages:336
+msgid "Instances"
+msgstr "Enghreifftiau"
+
+# opt.modports
+#: cy/messages:338
+msgid "Module Ports"
+msgstr "Pyrth Modiwlau"
+
+# opt.frames
+#: cy/messages:339
+msgid "Frames"
+msgstr "Fframau"
+
+# opt.comment
+#: cy/messages:340
+msgid "Comments"
+msgstr "Sylwadau"
+
+# opt.hlink
+#: cy/messages:341
+msgid "Hyperlinks"
+msgstr "Gorgysylltau"
+
+# opt.wire
+#: cy/messages:342
+msgid "Single-Bit Wires"
+msgstr "Gwifrau Did-Sengl"
+
+# opt.bus
+#: cy/messages:343
+msgid "Multi-Bit Wires"
+msgstr "Gwifrau Aml-Ddid"
+
+# opt.tools
+#: cy/messages:344
+msgid "Gate Tools"
+msgstr "Offer Giat"
+
+# opt.cpath
+#: cy/messages:345
+msgid "Critical Path"
+msgstr "Llwybr Allweddol"
+
+# opt.grid
+#: cy/messages:346
+msgid "Scope Grid"
+msgstr "Grid Sgop"
+
+# opt.logic1
+#: cy/messages:347
+msgid "Logic One"
+msgstr "Rhesymeg Un"
+
+# opt.logic0
+#: cy/messages:348
+msgid "Logic Zero"
+msgstr "Rhesymeg Sero"
+
+# opt.float
+#: cy/messages:349
+msgid "Float"
+msgstr "Arnofio"
+
+# opt.unknown
+#: cy/messages:350
+msgid "Unknown/Conflict"
+msgstr "Anhysbys/Gwrthdaro"
+
+# opt.offled
+#: cy/messages:351
+msgid "Off LED"
+msgstr "LED i Ffwrdd"
+
+# opt.onled
+#: cy/messages:352
+msgid "On LED"
+msgstr "LED Arnodd"
+
+# opt.zled
+#: cy/messages:353
+msgid "Floating LED"
+msgstr "LED Arnofio"
+
+# opt.restdef
+#: cy/messages:354
+msgid "Restore Defaults"
+msgstr "Adfer Rhagosodiadau"
+
+# opt.regudate
+#: cy/messages:355
+msgid "Region Update"
+msgstr "Diweddaru Ardal"
+
+# opt.smoothscroll
+#: cy/messages:356
+msgid "Smooth Scrolling"
+msgstr "Sgrolio Llyfn"
+
+# opt.balloon
+#: cy/messages:358
+msgid "Enable Help Balloons"
+msgstr "Alluogi Balwnau Cymorth"
+
+# opt.debug
+#: cy/messages:359
+msgid "Debug"
+msgstr "Alluogi Datnamu"
+
+# opt.novice
+#: cy/messages:360
+msgid "Novice mode"
+msgstr "Modd Dechreuwr"
+
+# opt.freq
+#: cy/messages:362
+msgid "Interval"
+msgstr "Saib"
+
+# opt.beak
+#: cy/messages:363
+msgid "Enable Special Modes"
+msgstr "Alluogi Moddau Arbennig"
+
+# opt.bat
+#: cy/messages:366
+msgid "Bat"
+msgstr "Bat"
+
+# opt.trek
+#: cy/messages:367
+msgid "Star Trek"
+msgstr "Star Trek"
+
+# opt.miles
+#: cy/messages:368
+msgid "Miles"
+msgstr "Milltiroedd"
+
+# opt.contver
+#: cy/messages:369
+msgid "Automatic Integrity Checking"
+msgstr "Cywiro Cyfanrwydd yn Awtomatig"
+
+# opt.showsimcmd
+#: cy/messages:370
+msgid "Display Simulator Stream"
+msgstr "Dangos Llif Efelychydd"
+
+# opt.estepsz
+#: cy/messages:372
+msgid "Epoch Step Size"
+msgstr "Maint Cam Cyfnod"
+
+# opt.cstepsz
+#: cy/messages:373
+msgid "Clock Cycle Step Size"
+msgstr "Maint Cam Cylchred Cloc"
+
+# opt.overstep
+#: cy/messages:374
+msgid "Clock Overstep"
+msgstr "Drosgam Cloc"
+
+# opt.vpopupdelay
+#: cy/messages:375
+msgid "Pop-Up Delay"
+msgstr "Oediad Newidlen Gwerthoedd"
+
+# opt.posedge
+#: cy/messages:377
+msgid "Clock step stops on all clock posedges"
+msgstr "Mae'r cam cloc yn aros ar bob ymyl positif y cloc."
+
+# opt.setclock
+#: cy/messages:378
+msgid "Clock step stops on clock"
+msgstr "Mae'r cam cloc yn aros ar gloc"
+
+# opt.delayfilepath
+#: cy/messages:379
+msgid "Technology Files"
+msgstr "Ffeiliau Oediad"
+
+# opt.print
+#: cy/messages:381
+msgid "Print"
+msgstr "Argraffu"
+
+# opt.simulate
+#: cy/messages:382
+msgid "Simulate"
+msgstr "Efelychu"
+
+# opt.analysis
+#: cy/messages:383
+msgid "Analysis"
+msgstr "Dadansoddiad"
+
+# opt.color
+#: cy/messages:384
+msgid "Color"
+msgstr "Lliw"
+
+# opt.undolen
+#: cy/messages:385
+msgid "Max Undo"
+msgstr "Datwneud Uchafrif"
+
+# opt.cpopts
+#: cy/messages:387
+msgid "Critical Path Options"
+msgstr "Dewisiadau Llwybr Allweddol:"
+
+# opt.maxpath
+#: cy/messages:388
+msgid "Maximum Number of Paths:"
+msgstr "Uchafrif o Lwybrau:"
+
+# opt.cpflash
+#: cy/messages:389
+msgid "Display with Flashing Path"
+msgstr "Dangos efo Llwybr sy'n Fflachio"
+
+# opt.vercheck
+#: cy/messages:391
+msgid ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+msgstr ""
+"Chwilio dros y Rhyngrwyd bob hyn a hyn am fersiynau newydd o tkgate.\n"
+"Peidiwch a galluogi os nid oes ganddoch cyrchiad parhaol\n"
+"i'r Rhyngrwyd."
+
+# blklst.new.cap
+#: cy/messages:400
+msgid "Create New Module"
+msgstr "Modiwl Newydd"
+
+# blklst.del.cap
+#: cy/messages:401
+msgid "Delete Module"
+msgstr "Dileu Modiwl"
+
+# blklst.from
+#: cy/messages:402
+msgid "From"
+msgstr "Copio Modiwl Oddiwrth"
+
+# blklst.to
+#: cy/messages:403
+msgid "To"
+msgstr "I"
+
+# blklst.claim.cap
+#: cy/messages:406
+msgid "Claim Module"
+msgstr "Hawlio Modiwl"
+
+# circ.discchg
+#: cy/messages:413
+msgid "Do not warn about discarding changes."
+msgstr "Diddymu Newidiadau"
+
+# circ.iniscript
+#: cy/messages:414
+msgid "Initialization Scripts"
+msgstr "Sgriptiau Ymgychwyn"
+
+# circ.extbar
+#: cy/messages:418
+msgid "Use extender bars on AND, OR and XOR gates."
+msgstr "Defnyddio Bariau Estynnol"
+
+# cp.delay
+#: cy/messages:436
+msgid "Path Delay:"
+msgstr "Oediad Llwybr:"
+
+# cp.pathl
+#: cy/messages:437
+msgid "Path List:"
+msgstr "Rhestr Llwybrau:"
+
+# cp.numpath
+#: cy/messages:438
+msgid "Number of Paths:"
+msgstr "Nifer Llwybrau:"
+
+# cp.recompute
+#: cy/messages:439
+msgid "Recompute"
+msgstr "Ail-gyfrifiannu"
+
+# err.nopin
+#: cy/messages:445
+msgid "Can't change selected pin."
+msgstr "Methu newid pin penodol."
+
+# err.badhex
+#: cy/messages:446
+msgid "Illegal hex value '%s' ignored."
+msgstr "Gwerth hex annilys '%s' wedi ei anwybyddu."
+
+# err.gatanchor
+#: cy/messages:447
+msgid "Components(s) are anchored and can not be moved."
+msgstr "Mae'r giat(iau) wedi'i anghori - ni ellir ei symud."
+
+# err.badfind
+#: cy/messages:449
+msgid "Can't find target '%s'."
+msgstr "Methu canfod cyrchfan '%s'."
+
+# err.badopendel
+#: cy/messages:450
+msgid "Can't delete open module."
+msgstr "Methu dileu modiwl ar agor."
+
+# err.nosrcmod
+#: cy/messages:451
+msgid "Source module '%s' not found."
+msgstr "Methu canfod modiwl tarddiad '%s'."
+
+# err.noerr
+#: cy/messages:452
+msgid "Can not locate error."
+msgstr "Methu lleoli'r gwall."
+
+# err.misserr
+#: cy/messages:453
+msgid "Error information incomplete (did the simulator crash?)"
+msgstr "Gwybodaeth gwall anghyflawn (chwalodd yr efelychydd?)"
+
+# err.badinadd
+#: cy/messages:456
+msgid "Can't add any more inputs to selected component."
+msgstr "Methu ychwanegu rhagor o fewnbynnau i'r giat penodol."
+
+# err.badoutadd
+#: cy/messages:457
+msgid "Can't add any more outputs to selected component."
+msgstr "Methu ychwanegu rhagor o allbynnau i'r giat penodol."
+
+# err.badinoutadd
+#: cy/messages:458
+msgid "Can't add any more inout pins to selected component."
+msgstr "Methu ychwanegu rhagor o pinnau mewnallan i'r giat penodol."
+
+# err.badpinchg
+#: cy/messages:459
+msgid "Can't change pin types on selected component."
+msgstr "Methu newid math y pin ar y giat penodol."
+
+# err.badnetname
+#: cy/messages:460
+msgid "Illegal characters in identifier deleted."
+msgstr "Wedi dileu nodau annilys yn y dynodydd."
+
+# err.netbcrename
+#: cy/messages:461
+msgid "Identifier renamed to '%s' because of illegal characters."
+msgstr "Dynodydd wedi eu ail-enwi i '%s' o achos nodau annilys."
+
+# err.netconfnet
+#: cy/messages:462
+msgid "Identifier renamed to '%s' because of conflict."
+msgstr "Dynodydd wedi eu ail-enwi i '%s' o achos gwrthdaro."
+
+# err.netconfgat
+#: cy/messages:463
+msgid "Identifier renamed to avoid conflict with built-in component name"
+msgstr "Dynodydd wedi eu ail-enwi i osgoi gwrthdaro efo enw giat cyntefig."
+
+# err.netconfkw
+#: cy/messages:464
+msgid "Identifier renamed to avoid conflict with reserved word."
+msgstr "Dynodydd wedi eu ail-enwi i osgoi gwrthdaro efo gair cadw."
+
+# err.badconsame
+#: cy/messages:465
+msgid "Connection refused because wires are part of the same net."
+msgstr "Gwrthodwyd y cysylltiad o achos mae gwifrau yn rhan o'r un un rhwyd."
+
+# err.badconptsp
+#: cy/messages:466
+msgid "Connection refused because both wires are module ports or supply."
+msgstr ""
+"Gwrthodwyd y cysylltiad o achos mae'r ddwy wifren yn byrth modiwl neu yn "
+"darparu."
+
+# err.badconbitw
+#: cy/messages:467
+msgid "Connection refused because bit widths do not match."
+msgstr "Gwrthodwyd y cysylltiad o achos nid yw'r lledau did yn cydweddu."
+
+# err.badrange
+#: cy/messages:468
+msgid "Non-positive range for scope trace is not allowed."
+msgstr "Ni chaniateir amrediad di-bositif i oliniad sgop."
+
+# err.badlprcmd
+#: cy/messages:469
+msgid "Unable to execute printer command '%s'."
+msgstr "Methu gweithredu gorchymyn argraffydd '%s'."
+
+# err.badpsopen
+#: cy/messages:470
+msgid "Unable to open file '%s' for postscript output."
+msgstr "Methu agor ffeil '%s' am allbwn postscript."
+
+# err.badid
+#: cy/messages:471
+msgid "Illegal identifier '%s'."
+msgstr "Dynodydd annilys '%s'."
+
+# err.bkpt.badexp
+#: cy/messages:473
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"Gwall cystrawen yn y mynegiad torbwynt.  Rhaid iddo fod yn un o: 'net', '!"
+"net', 'net==value', 'net!=value'"
+
+# err.bkpt.badnet
+#: cy/messages:474
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+"Enw rhwyd annilys '%s'. Rhaid i enwau ddechrau efo llythyren a cynnwys dim "
+"ond llythrennau, digidau a '.'."
+
+# err.bkpt.badval
+#: cy/messages:475
+msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+msgstr ""
+"Gwall cystrawen yn y gwerth '%s'.  Rhaid iddo fod yn gysonyn degol neu "
+"ardull verilog."
+
+# err.bkpt.toomany
+#: cy/messages:476
+msgid "Too many breakpoints. Maximum is %d."
+msgstr "Gormod o dorbwyntiau.  Yr uchafswm yw %d."
+
+# err.sim.badtmp
+#: cy/messages:478
+msgid "Could not save temporary file '%s' for simulator (disc full?)"
+msgstr "Methu cadw ffeil dros dro '%s' am yr efelychydd (disg lawn?)"
+
+# err.sim.syntx
+#: cy/messages:479
+msgid "Syntax error in '%s' command."
+msgstr "Gwall cystrawen yn y gorchymyn '%s'."
+
+# err.sim.noincl
+#: cy/messages:480
+msgid "Include file '%s' not found."
+msgstr "Methu canfod ffeil cynwysadwy '%s'."
+
+# err.sim.nobkpt
+#: cy/messages:482
+msgid "No such breakpoint '%s'."
+msgstr "Dim torbwynt '%s'."
+
+# err.sim.nonet
+#: cy/messages:483
+msgid "Can't find net '%s'."
+msgstr "Methu canfod rhwyd '%s'."
+
+# err.sim.nogate
+#: cy/messages:484
+msgid "Can't find component '%s'."
+msgstr "Methu canfod giat '%s'."
+
+# err.sim.badbin
+#: cy/messages:485
+msgid "Illegal character in binary constant '%s'."
+msgstr "Nod annilys mewn cysonyn deuaidd '%s'."
+
+# err.sim.notswitch
+#: cy/messages:486
+msgid "Component '%s' is not a switch, dip or register."
+msgstr "Nid yw giat '%s' yn swits, DIP neu cofrestr."
+
+# err.sim.badcmd
+#: cy/messages:487
+msgid "Unrecognized command '%s' in simulation script."
+msgstr "Gorchymyn di-adnabyddiedig '%s' yn y sgript efelychydd."
+
+# err.noteditpchg
+#: cy/messages:489
+msgid "Properties can only be changed in edit mode."
+msgstr "Ni ellir newid priodweddau ond mewn modd golygu."
+
+# err.badeditop
+#: cy/messages:490
+msgid "Illegal interface edit mode operation."
+msgstr "Gweithrediad annilys mewn modd golygu rhyngwyneb."
+
+# err.badopen
+#: cy/messages:491
+msgid "Unable to open input file '%s'."
+msgstr "Methu agor ffeil mewnbwn '%s'."
+
+# err.badlibopen
+#: cy/messages:492
+msgid "Unable to open library file '%s'."
+msgstr "Methu agor ffeil rhaglengell '%s'."
+
+# err.nomark
+#: cy/messages:494
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr "Gosodwch nod efo botwm chwith y llygoden cyn dewis math o giat."
+
+# err.badgate
+#: cy/messages:495
+msgid "Unknown component type '%s'."
+msgstr "Math giat anhysbys."
+
+# err.badportadd
+#: cy/messages:498
+msgid "Can't add ports to components of this type."
+msgstr "Methu ychwanegu pyrth i giatiau o'r math yma."
+
+# err.manypages
+#: cy/messages:503
+msgid ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+msgstr ""
+"Mae 'na gryn dipyn o dudalennau\n"
+"yn y ddogfen yma.  Ydych yn sicr\n"
+"yr ydych eisiau ei argraffu?"
+
+# err.nojump
+#: cy/messages:509
+msgid ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+msgstr ""
+"Ni ellir y nodwedd 'neidio-i-fodiwl' gael ei\n"
+"ddefnyddio mewn modd efelychu neu dadansoddiad\n"
+"llwybr allweddol.  Symudwch a llaw i'r bloc\n"
+"cyrchfan gan ddewis modiwlau ac eu agor efo'r\n"
+"gorchymyn allweddell '>'.  Cewch adael y\n"
+"modiwl lle rydych efo'r gorchymyn allwedell '<'."
+
+# err.nomod
+#: cy/messages:518
+msgid "Module '%s' is not defined."
+msgstr "Ni ddiffinir y modiwl '%s'."
+
+# err.modlock
+#: cy/messages:519
+msgid "Logic Block is Locked!"
+msgstr "Mae'r y Bloc Rhesymeg ar glo!"
+
+# err.closeroot
+#: cy/messages:520
+msgid "No higher level module opened on the module stack."
+msgstr "Methu cau modiwl safon fennaf.  Defnyddiwch Gadael."
+
+# err.sim.isrun
+#: cy/messages:521
+msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
+msgstr ""
+"Mae'r efelychydd yn rhedeg yn barod.  (Defnyddiwch 'Ctrl-s e' i derfynu)."
+
+# err.editonly
+#: cy/messages:523
+msgid "Command not valid when in simulation mode."
+msgstr "Nid yw'r gorchymyn yn ddilys mewn modd efelychu."
+
+# err.simonly
+#: cy/messages:524
+msgid "Command valid only in simulation mode."
+msgstr "Mae'r gorchymyn yn ddilys dim ond mewn modd efelychu."
+
+# err.nodel
+#: cy/messages:526
+msgid "No deletable selection."
+msgstr "Dim dewisiad a all ei ddileu."
+
+# err.modnotdef
+#: cy/messages:527
+msgid "Module '%s' is undefined."
+msgstr "Ni ddiffinir modiwl '%s'."
+
+# err.moddef
+#: cy/messages:528
+msgid "The module '%s' already exists."
+msgstr "Mae'r bloc '%s' yn bodoli yn barod."
+
+# err.noprop
+#: cy/messages:529
+msgid "Selected component has no editable properites."
+msgstr "Nid oes gan y giat penodol priodweddau golygadwy."
+
+# err.openscript
+#: cy/messages:530
+msgid "Can't open simulation script file '%s'"
+msgstr "Methu agor ffeil sgript efelychiad '%s'"
+
+# err.oldversion
+#: cy/messages:531
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr ""
+"Wedi llwytho ffeil efo fersiwn anarferedig %s (%s yw'r fersiwn cyfredol)."
+
+# err.futureversion
+#: cy/messages:532
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr ""
+"Wedi llwytho ffeil a chedwyd gan fersiwn tkgate dyfodol %s (mae'r fersiwn "
+"yma yn %s)."
+
+# err.badversion
+#: cy/messages:533
+msgid "Unknown version number. Use at your own risk."
+msgstr "Rhif fersiwn anhysbys.  Defnyddiwch ar eich menter eich hun."
+
+# err.nodrive
+#: cy/messages:534
+msgid "Net %s has no driver in module %s."
+msgstr "Nid oes gan rwyd %s yrrydd ym modiwl %s."
+
+# err.noconn
+#: cy/messages:535
+msgid "Wire %s{%d} has no connections - deleted."
+msgstr "Nid oes gan y wifren %s{%d} gysylltiadau - dileuwyd."
+
+# err.oldportact
+#: cy/messages:536
+msgid "Please right click on port or module edge to add/change port."
+msgstr "De-gliciwch ar ymyl y porth neu modiwl i ychwanegu/newid y porth."
+
+# err.noback
+#: cy/messages:538
+msgid ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+msgstr ""
+"Creuwyd y ffeil gan tkgate\n"
+"%s, ac efallai nid yw'n ddarllenadwy\n"
+"gan fersiynau cynharach na'r\n"
+"fersiwn cyfredol (%s) os byddwch\n"
+"yn cadw."
+
+# msg.selwire
+#: cy/messages:549
+msgid "Selected wire %s named '%s'."
+msgstr "Gwifren penodol o'r enw '%s'."
+
+# msg.selgate
+#: cy/messages:550
+msgid "Selected gate %s named '%s'."
+msgstr "%s penodol o'r enw '%s'."
+
+# msg.selblock
+#: cy/messages:551
+msgid "Selected %s block named '%s'."
+msgstr "Bloc %s penodol o'r enw '%s'."
+
+# msg.modoverwt
+#: cy/messages:552
+msgid "Destination module '%s' already exists. Overwrite?"
+msgstr "Modiwl cyrchfan '%s' yn bodoli yn barod.  Ysgrifennu drosto?"
+
+# msg.foundgate
+#: cy/messages:553
+msgid "Found component named '%s'."
+msgstr "Wedi canfod giat o'r enw '%s'."
+
+# msg.foundwire
+#: cy/messages:554
+msgid "Found wire named '%s'."
+msgstr "Wedi canfod gwifren o'r enw '%s'."
+
+# msg.searchagn
+#: cy/messages:555
+msgid "Target string '%s' not found. Hit 'find' to restart search again."
+msgstr ""
+"Methu canfod llinyn cyrchfan '%s'.  Gwthio 'canfod' i ail-ddechrau'r "
+"chwiliad."
+
+# msg.sim.chgtoroot
+#: cy/messages:556
+msgid "Simulation mode requires root module at top of edit stack."
+msgstr ""
+"Mae'r modd efelychu yn gorfod cael y modiwl gwraidd wrth pen y pentwr golygu."
+
+# msg.sim.nogatemod
+#: cy/messages:557
+msgid "Simulation mode requires concrete module stack."
+msgstr "Mae'r modd efelychu yn gorfod cael pentwr modiwl diriaethol."
+
+# msg.setinterface
+#: cy/messages:558
+msgid "Set module interface for '%s'."
+msgstr "Gosod rhyngrwyd modiwl am '%s'."
+
+# msg.needsel
+#: cy/messages:559
+msgid "Please select a module instance."
+msgstr "Dewiswch enghraifft modiwl."
+
+# msg.wroteckpt
+#: cy/messages:560
+msgid "Checkpointed to %s..."
+msgstr "Rheolfa wrth %s..."
+
+# msg.save
+#: cy/messages:561
+msgid "Saved circuit to '%s'."
+msgstr "Wedi cadw cylched i '%s'."
+
+# msg.reallynew
+#: cy/messages:563
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr "Newidwyd y gylched.  Ydych wir eisiau ei dileu a creu cylched newydd?"
+
+# msg.reallyquit
+#: cy/messages:564
+msgid "Circuit has been modified. Do you really want to exit?"
+msgstr "Newidwyd y gylched.  Ydych wir eisiau terfynnu?"
+
+# msg.notlib
+#: cy/messages:565
+msgid "Module '%s' is not a library module."
+msgstr "Nid yw modiwl '%s' yn fodiwl rhaglengell."
+
+# miles.msg1
+#: cy/messages:570
+msgid "Only a fool would put %s%s there, Miles."
+msgstr "'Mond twpsyn sy'n rhoi %s%s yna, Miles."
+
+# miles.msg2
+#: cy/messages:571
+msgid "That's a really stupid place to put %s%s, Miles."
+msgstr "Dyna le wir dwp i roi %s%s, Miles."
+
+# miles.msg3
+#: cy/messages:572
+msgid "That's a terrible place for %s%s, Miles."
+msgstr "Dyna le ofnadwy am %s%s, Miles."
+
+# miles.msg4
+#: cy/messages:573
+msgid "Miles, you are a fool for putting %s%s there."
+msgstr "Miles, roedd yn hollol dwp rhoi %s%s yna."
+
+# miles.msg5
+#: cy/messages:574
+msgid "Only you would put %s%s there, Miles."
+msgstr "Neb ond ti fuasai'n rhoi %s%s yna, Miles."
+
+# miles.msg6
+#: cy/messages:575
+msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
+msgstr "Mae rhoi %s%s yna yn brawf o dy dwpdra, Miles."
+
+# miles.msg7
+#: cy/messages:576
+msgid "Why don't you give up Miles, this is a stupid circuit."
+msgstr "Beth am roi'r ffidil yn y to, Miles, cylched gwirion yw hwn."
+
+# miles.msg8a
+#: cy/messages:577
+msgid "It's pointless to continue, Miles."
+msgstr "'Sdim pwynt mynd ymlaen, Miles."
+
+# miles.msg8b
+#: cy/messages:578
+msgid "It's obvious you can't design a circuit"
+msgstr "Mae'n amlwg na alli di ddylunio cylched."
+
+# ho.new
+#: cy/messages:585
+msgid ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+msgstr ""
+"Clirio'r cylched cyfredol,\n"
+"a dechrau golygu un newydd."
+
+# ho.open
+#: cy/messages:590
+msgid "Open a circuit from a file."
+msgstr "Agor cylched o ffeil."
+
+# ho.save
+#: cy/messages:591
+msgid "Save circuit to current file."
+msgstr "Cadw cylched i'r ffeil cyfredol."
+
+# ho.print
+#: cy/messages:592
+msgid "Print current circuit."
+msgstr "Argraffu cylched cyfredol."
+
+# ho.move
+#: cy/messages:594
+msgid ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+msgstr ""
+"Symud/Cysylltu - Gan glicio a tynnu cewch:\n"
+"Gosod y safle i giat newydd\n"
+"Symud giatiau a gwifrau\n"
+"Cysylltu gwifrau\n"
+"Gan ddwbl-glicio cewch:\n"
+"Golygu priodweddau giat, gwifren a porth\n"
+"Golygu testun sylwad"
+
+# ho.delgat
+#: cy/messages:604
+msgid ""
+"Delete Component - Use this\n"
+"tool to delete components."
+msgstr ""
+"Dileu Giat - Defnyddio'r efyn yma\n"
+"i ddileu giatiau."
+
+# ho.cutw
+#: cy/messages:609
+msgid ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+msgstr ""
+"Torri Gwifren - Defnyddio'r erfyn yma\n"
+"i dorri gwifrau."
+
+# ho.inv
+#: cy/messages:614
+msgid ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+msgstr ""
+"Gwrthdroi - Defnyddio'r erfyn i ychwanegu\n"
+"gwrthdroyddion i, neu eu gwaredu o,\n"
+"byrth giatiau."
+
+# ho.bitw
+#: cy/messages:620
+msgid ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+msgstr ""
+"Lled Did - Defnyddio'r erfyn yma i newid\n"
+"maint did gwifren.  Mewnosodwch nifer y\n"
+"didau yn y blwch mewnosodi yng nghornel\n"
+"dde isaf y ffenest."
+
+# ho.undo
+#: cy/messages:630
+msgid "Undo previous action(s)"
+msgstr "Datwneud gweithrediad(au) cynt."
+
+# ho.redo
+#: cy/messages:631
+msgid "Redo undone action(s)"
+msgstr "Ailwneud gweithrediad(au) a chafodd ei datwneud."
+
+# ho.simgo
+#: cy/messages:633
+msgid ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+msgstr ""
+"Os nid oes efelychiad yn rhedeg, dechrau'r\n"
+"efelychiad a gweithredu unrhyw sgriptiau\n"
+"ymgychwyn.  Os mae efelychiad yn rhedeg,\n"
+"rhedeg yr efelychiad yn barhaol."
+
+# ho.simpause
+#: cy/messages:640
+msgid "Pause a continuously running simulation."
+msgstr "Seibio efelychiad sy'n rhedeg yn barhaol."
+
+# ho.simstep
+#: cy/messages:644
+msgid ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Camu cyfnod penodol o amser.\n"
+"Agor y ffenest dewisiadau efelychiad\n"
+"er mwyn gosod maint y cam."
+
+# ho.simclock
+#: cy/messages:650
+msgid ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Camu rhif penodol o gylchredau cloc.\n"
+"Agor y ffenest dewisiadau efelychiad\n"
+"er mwyn gosod maint y cam."
+
+# ho.simstop
+#: cy/messages:656
+msgid ""
+"End the current simulation\n"
+"and return to edit mode."
+msgstr ""
+"Gorffen yr efelychiad cyfredol\n"
+"a dychwelyd i'r modd golygu."
+
+# ho.simbreak
+#: cy/messages:661
+msgid ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+msgstr ""
+"Golygu'r torbwyntiau cyfredol.  Arhosir\n"
+"yr efelychiad pan bydd amod torbwynt yn\n"
+"dod yn wir."
+
+# ho.simexec
+#: cy/messages:667
+msgid "Manage the set of active scripts."
+msgstr "Gweithredu sgript efelychiad."
+
+# ho.simload
+#: cy/messages:669
+msgid ""
+"Load memory with contents of\n"
+"a .mem file."
+msgstr ""
+"Llwytho cof efo cynnwys\n"
+"ffeil .mem."
+
+# ho.simdump
+#: cy/messages:674
+msgid ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+msgstr ""
+"Dadlwytho cynnwys cof i\n"
+"ffeil .mem."
+
+# ho.modlist
+#: cy/messages:689
+msgid ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"Rhestr o bob modiwl sydd wedi ei lwytho ar hyn o bryd.\n"
+"Dynodir y modiwl safon pennaf gan \"+\" sy'n dilyn,\n"
+"a dangosir modiwlau rhaglengell mewn cromfachau."
+
+# ho.netlist
+#: cy/messages:695
+msgid ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+msgstr ""
+"Rhestr o rhwydau yn y modiwl cyfredol.\n"
+"Mae gan rwydau a ddynodir efo '@' enwau\n"
+"cudd.  Dangosir rhwydau aml-did efo\n"
+"amrediad ar eu ol."
+
+# ho.ports
+#: cy/messages:702
+msgid ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+msgstr ""
+"Rhestr o byrth ar y modiwl cyfredol.\n"
+"Mae '>' yn dynodi mewnbwn, '<' yn dynodi\n"
+"allbwn, a '=' yn dynodi mewnallan."
+
+# ho.status.logo
+#: cy/messages:708
+msgid ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+msgstr ""
+"Dynodydd cyflwr yr efelychiad.  Os dangosir y\n"
+"logo giat haearn, mae tkgate mewn modd golygu.\n"
+"Os dangosir y giat AND pedwartroed, mae tkgate\n"
+"mewn modd efelychu.  Os mae'r giat AND yn stond,\n"
+"mae'r efelychiad wedi'i seibio, ac os mae'n\n"
+"cerdded, mae'r efelychiad yn rhedeg."
+
+# ho.status.msg
+#: cy/messages:717
+msgid "Messages from TkGate are displayed here."
+msgstr "Dangosir yma negeseuon oddiwrth TkGate."
+
+# ho.status.block
+#: cy/messages:719
+msgid "The stack of modules being edited."
+msgstr "Pentwr y modiwlau sy'n cael eu golygu."
+
+# ho.status.file
+#: cy/messages:721
+msgid ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+msgstr ""
+"Y ffeil cyfredol sy'n cael ei olygu.  Mae '*' yn\n"
+"dynodi bod a byffer wedi ei newid ers y cadw diwethaf."
+
+# ho.print.selall
+#: cy/messages:726
+msgid "Print all modules currently loaded by TkGate."
+msgstr "Argraffu pob modiwl sydd wedi ei lwytho ar hyn o bryd gan TKGate."
+
+# ho.print.selcur
+#: cy/messages:728
+msgid "Print only the current module in the TkGate edit window."
+msgstr "Argraffu dim ond y modiwl cyfredol yn y ffenest golygu TKGate."
+
+# ho.print.seluse
+#: cy/messages:730
+msgid ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+msgstr ""
+"Argraffu pob modiwl sy'n \"mewn defnydd\".\n"
+"Modiwlau mewn defnydd yw'r rhain sy'n ddisgynnydd\n"
+"o'r modiwl gwraidd."
+
+# ho.print.selsel
+#: cy/messages:736
+msgid ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+msgstr ""
+"Argraffu dim ond y modiwlau dewisiedig isod.\n"
+"Defnyddiwch y fysell Control i ddewis modiwlau\n"
+"lluosol."
+
+# ho.print.modlist
+#: cy/messages:742
+msgid "Select the modules to be printed."
+msgstr "Dewis y modiwlau i gael eu argraffu."
+
+# ho.circuit.discchg
+#: cy/messages:744
+msgid ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+msgstr ""
+"Ni fydd TkGate yn dangos rhybudd os byddwch\n"
+"yn taflu newidiadau heb gadw."
+
+# ho.circuit.extbar
+#: cy/messages:749
+msgid ""
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
+"many input gates."
+msgstr ""
+"Bydd giatiau sylfaenol (AND, OR, XOR) yn\n"
+"defnyddio bariau estynnol i drin llawer\n"
+"o giatiau mewnbwn."
+
+# ho.cmd.bitw
+#: cy/messages:755
+msgid ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+msgstr ""
+"Bydd gwifrau a ddewisir efo'r\n"
+"cyrchwr yn cael eu gosod i'r\n"
+"lled did yma."
+
+# ho.edgat.signam
+#: cy/messages:768
+msgid ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+msgstr ""
+"Enw'r signal penodol ar y giat\n"
+"penodol.  Cewch newid y lled did\n"
+"gan ei olygu yma."
+
+# ho.edgat.port
+#: cy/messages:774
+msgid ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+msgstr ""
+"Cyfeiriad y porth am y signal yma ar\n"
+"y giat.  Gellir golygu'r maes yma dim\n"
+"ond am enghreifftiau modiwl."
+
+# ho.edgat.iolab
+#: cy/messages:780
+msgid ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+msgstr ""
+"Cyfeiriad y signal penodol ar y giat\n"
+"penodol.  Gellir golygu'r maes yma dim\n"
+"ond am enghreifftiau modiwl."
+
+# ho.edgat.bitlab
+#: cy/messages:786
+msgid ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+msgstr ""
+"Lled did y signal penodol ar y giat\n"
+"penodol.  Cewch newid y lled did\n"
+"gan ei olygu yma."
+
+# ho.edgat.cycle
+#: cy/messages:792
+msgid "The total number of epochs in a clock cycle."
+msgstr "Nifer cyflawn o gyfnodau mewn cylchred cloc."
+
+# ho.edgat.phase
+#: cy/messages:793
+msgid "The starting point of the cycle (in percent)."
+msgstr "Pwynt cychwyn y cylchred (y cant)."
+
+# ho.edgat.duty
+#: cy/messages:794
+msgid "The percent of the cycle, the clock is low."
+msgstr "Canran y cylchred, mae'r cloc yn isel."
+
+# ho.edgat.hide
+#: cy/messages:804
+msgid ""
+"Set this flag to disable\n"
+"display of component names."
+msgstr ""
+"Set this flag to disable\n"
+"display of gate name."
+
+# ho.edgat.gtype
+#: cy/messages:809
+msgid "Type of the component."
+msgstr "Math y giat."
+
+# ho.edgat.gname
+#: cy/messages:810
+msgid "Name of this component instance."
+msgstr "Enw'r enghraifft yma o'r giat."
+
+# ho.edgat.ganchor
+#: cy/messages:811
+msgid "Set this flag to anchor the position of a component."
+msgstr "Set this flag to anchor the position of a gate."
+
+# ho.edgat.gx
+#: cy/messages:812
+msgid "X coordinate of component."
+msgstr "Cyfesuryn X y giat."
+
+# ho.edgat.gy
+#: cy/messages:813
+msgid "Y coordinate of component."
+msgstr "Cyfesuryn Y y giat."
+
+# ho.edgat.swstate
+#: cy/messages:815
+msgid ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+msgstr ""
+"Cyflwr cychwynnol y swits i ddefnyddio\n"
+"wrth ddechrau efelychiad."
+
+# ho.edgat.dipstate
+#: cy/messages:820
+msgid ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+msgstr ""
+"Cyflwr cychwynnol y swits DIP i ddefnyddio\n"
+"wrth ddechrau efelychiad."
+
+# ho.edgat.range
+#: cy/messages:825
+msgid "The range of bits to pull off a bus."
+msgstr "Amrediad didau i dynnu oddiar fws."
+
+# ho.edgat.memfile
+#: cy/messages:827
+msgid ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+msgstr ""
+"Y ffeil efo'r cyflwr cychwynnol i'r cof yma.\n"
+"Darllenir y ffeil yma pan ddechreuir yr efelychydd."
+
+# ho.edgat.func
+#: cy/messages:832
+msgid "The function type of this module."
+msgstr "Math ffwythiant y modiwl yma."
+
+# ho.edgat.frame
+#: cy/messages:833
+msgid "The frame label."
+msgstr "Label y ffram."
+
+# ho.opt.undolen
+#: cy/messages:835
+msgid "Maximum number of undo actions to retain."
+msgstr "Uchafrif gweithrediadau datwneud i gadw."
+
+# ho.opt.site
+#: cy/messages:839
+msgid ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+msgstr ""
+"Enw'r safle lle gosodir tkgate.  Defnyddir\n"
+"yr enw yma ar unrhyw allbwn argraffydd neu\n"
+"postscript."
+
+# ho.opt.smooth
+#: cy/messages:845
+msgid ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+msgstr ""
+"Os alluogir y dewisiad yma, gwellheuir\n"
+"sgrolio gan ddefnyddio copiau didfap yn lle\n"
+"ail-ddangosiad cyflawn.  Cewch analluogi hyn\n"
+"os oes problemau efo'ch gweinydd."
+
+# ho.opt.clip
+#: cy/messages:852
+msgid ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+msgstr ""
+"Os alluogir y dewisiad yma, defnyddir tocio\n"
+"i ddiweddaru dim ond y rhan agored o'r ffenest\n"
+"wrth ail-ddangos.  Fel arall, ail-luniadir\n"
+"y dangosiad cyfan i bob rhan agored."
+
+# ho.opt.outmove
+#: cy/messages:859
+msgid ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+msgstr ""
+"Os alluogir y dewisiad yma, dangosir dim ond\n"
+"amlinelliad o enghreifftiau modiwl sy'n cael\n"
+"eu symud wrth dynnu.  Defnyddiwch y nodwedd\n"
+"yma dim ond ar beiriannau efo dangosiadau araf."
+
+# ho.opt.bhelp
+#: cy/messages:866
+msgid ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+msgstr ""
+"Os alluogir y dewisiad yma, gweithredir balwnau\n"
+"cymorth.  Mae balwnau cymorth, fel ur un yma,\n"
+"yn darparu cyngor ar elfennau rhyngwyneb pan\n"
+"mae'r llygoden drostynt."
+
+# ho.opt.novice
+#: cy/messages:873
+msgid ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+msgstr ""
+"Os ni phenodir unrhyw cylched arall ar y llinell\n"
+"gorchymyn, dangosir tiwtorial TkGate fel y\n"
+"cylched cychwynnol wrth ddechrau."
+
+# ho.opt.debug
+#: cy/messages:879
+msgid ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+msgstr ""
+"Alluogi rhai nodweddau datnamu.  Mae hyn o ddefnydd\n"
+"i neb ond datblygwyr TkGate."
+
+# ho.opt.ckpt
+#: cy/messages:884
+msgid "Enable checkpointing of unsaved circuits."
+msgstr "Alluogi rheolfeydd i gylchredau sy ddim wedi'w cadw."
+
+# ho.opt.ckptfreq
+#: cy/messages:885
+msgid "Frequency of checkpoints in seconds."
+msgstr "Amlder rheolfeydd mewn eiliadau."
+
+# ho.opt.beak
+#: cy/messages:887
+msgid ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+msgstr ""
+"Alluogi'r nodweddau hollol di-ddefnydd yma.\n"
+"Os analluogir y nodwedd yma, ni ddangosir\n"
+"y moddau yma (neu'r blwch cywiro) yn y\n"
+"blwch dewisiadau.  Yr unig ffordd o\n"
+"ail-alluogi nhw fydd golygu eich ffeil\n"
+".tkgate-properties."
+
+# ho.opt.miles
+#: cy/messages:896
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+msgstr ""
+"Os alluogir y modd yma, bydd TkGate yn\n"
+"sarhau deallusrwydd y defnyddiwr bob\n"
+"hyn a hyn."
+
+# ho.opt.bat
+#: cy/messages:902
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+msgstr ""
+"Os alluogir y modd yma, bydd TkGate yn\n"
+"gosod amgylchedd i ddylunio cyfrifiadur bat."
+
+# ho.opt.trek
+#: cy/messages:907
+msgid "Beam me up Scotty!"
+msgstr "Pelydra fi i fyny Scotty!"
+
+# ho.opt.simstep
+#: cy/messages:910
+msgid ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+msgstr ""
+"Y nifer o gyfnodau i flaenu\n"
+"pan rhoir y gorchymyn cam cloc."
+
+# ho.opt.ckstep
+#: cy/messages:915
+msgid ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+msgstr ""
+"Y nifer o cylchredau cloc i flaenu\n"
+"pan rhoir y gorchymyn cam cloc."
+
+# ho.opt.ckover
+#: cy/messages:920
+msgid ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+msgstr ""
+"Y nifer o gyfnodau heibio'r ymyl codi\n"
+"o'r cloc i flaenu pan rhoir y gorchymyn\n"
+"cam cloc."
+
+# ho.opt.vpopupdelay
+#: cy/messages:926
+msgid ""
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
+"1 and 10000 are allowed."
+msgstr ""
+"Yr oediad mewn milfedau o eiliadau rhwng\n"
+"gwthio a gafael yn y botwm llygoden\n"
+"a dangos gwerth signal.  Ar rai cysodau,\n"
+"bydd gwerthoedd oediad byr yn ymyrru\n"
+"efo'r gallu i adnabod clic dwbl.  Os\n"
+"oes ganddoch y problem yma, cynyddwch\n"
+"y gwerth yma.  Caniateir gwerthoedd rhwng 1\n"
+"a 10000."
+
+# ho.opt.init
+#: cy/messages:937
+msgid ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+msgstr ""
+"Ffeil sgript efelychiad i weithredu yn\n"
+"awtomatig pan ddechreuir yr efelychiad."
+
+# ho.opt.ckall
+#: cy/messages:942
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+msgstr ""
+"Os alluogir y modd yma, bydd y gorchymyn\n"
+"cam cloc yn seibio'r efelychiad\n"
+"ar yr ymyl positif o unrhyw cloc yn y cylched."
+
+# ho.opt.ckspec
+#: cy/messages:948
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+msgstr ""
+"Os alluogir y modd yma, bydd y gorchymyn\n"
+"cam cloc yn seibio'r efelychiad dim ond\n"
+"ar yr ymyl positif o'r cloc penodol."
+
+# ho.deftech
+#: cy/messages:954
+msgid ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+msgstr ""
+"Technoleg rhagosodiedig am giatiau\n"
+"newydd.  Er mwyn newid technoleg\n"
+"rhyw giat penodol, agorwch ei flwch\n"
+"priodweddau (clic dwbl) a dewiswch\n"
+"y tab \"Oediad\"."
+
+# ho.techbut
+#: cy/messages:962
+msgid ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+msgstr ""
+"Defnyddio oediadau oddiwrth y ffeil diffiniad\n"
+"technoleg safonol.  Er mwyn ychwanegu\n"
+"technolegau dewisiedig, ychwanegwch nhw\n"
+"at y rhestr yn y dewislen \"Ffeil ->\n"
+"Dewisiadau -> Efelychu\"."
+
+# ho.custbut
+#: cy/messages:970
+msgid "Set custom delay values for this component."
+msgstr ""
+"Gosod gwerthoedd oediad dewisiedig am y\n"
+"giat yma."
+
+# ho.contver
+#: cy/messages:975
+msgid ""
+"Continuously verify the integrity of internal\n"
+"data structures after every operation."
+msgstr ""
+"Parhau i wirio cyfanrwydd yr adeileddau data\n"
+"mewnol ar ol pob gweithrediad."
+
+# ho.simwatch
+#: cy/messages:980
+msgid ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+msgstr ""
+"Dangos gorchymynau a anfonir\n"
+"rhwng y GUI a'r efelychydd."

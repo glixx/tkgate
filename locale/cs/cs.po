@@ -1,0 +1,2606 @@
+# This file is part of TkGate project
+# Copyright (C) 1987-2015 by Jeffery P. Hansen
+# This file is distributed under the same license as the TkGate package.
+#
+# Translators:
+# Andrey V. Skvotsov <starling13@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: TkGate 2.0\n"
+"Report-Msgid-Bugs-To: starling13@gmail.com\n"
+"POT-Creation-Date: 2018-11-28 16:33+0300\n"
+"PO-Revision-Date: 2018-11-28 16:33+0300\n"
+"Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tkgatemsg2po script\n"
+
+# b.dismiss
+#: cs/messages:32
+msgid "Dismiss"
+msgstr "Zrušit"
+
+# b.close
+#: cs/messages:33
+msgid "Close"
+msgstr "Zavřít"
+
+# b.ok
+#: cs/messages:34
+msgid "OK"
+msgstr "OK"
+
+# b.clear
+#: cs/messages:35
+msgid "Clear"
+msgstr "Znova"
+
+# b.cancel
+#: cs/messages:36
+msgid "Cancel"
+msgstr "Zrušit"
+
+# b.in
+# db.net.in
+#: cs/messages:39 cs/messages:246
+msgid "in"
+msgstr "Vstup"
+
+# b.out
+# db.net.out
+#: cs/messages:40 cs/messages:247
+msgid "out"
+msgstr "Výstup"
+
+# b.inout
+# db.net.inout
+#: cs/messages:41 cs/messages:248
+msgid "inout"
+msgstr "Vst./Výst."
+
+# b.browse
+#: cs/messages:42
+msgid "Browse..."
+msgstr "Procházet..."
+
+# b.label
+#: cs/messages:43
+msgid "Label"
+msgstr "Popisek"
+
+# b.find
+#: cs/messages:44
+msgid "Find"
+msgstr "Najít"
+
+# b.edit
+#: cs/messages:45
+msgid "Edit..."
+msgstr "Upravit..."
+
+# b.add
+#: cs/messages:46
+msgid "Add..."
+msgstr "Přidat..."
+
+# b.delete
+#: cs/messages:47
+msgid "Delete"
+msgstr "Smazat"
+
+# b.apply
+#: cs/messages:49
+msgid "Apply"
+msgstr "Použít"
+
+# b.anchor
+# db.gate.anchor
+#: cs/messages:50 cs/messages:266
+msgid "Anchor"
+msgstr "Ukotvit"
+
+# b.tech
+#: cs/messages:51
+msgid "Technology"
+msgstr "Technologie"
+
+# menu.file
+#: cs/messages:56
+msgid "0:File"
+msgstr "0:Soubor"
+
+# menu.edit
+#: cs/messages:57
+msgid "0:Edit"
+msgstr "0:Úpravy"
+
+# menu.tool
+#: cs/messages:58
+msgid "0:Tool"
+msgstr "0:Nástroje"
+
+# menu.simulate
+#: cs/messages:59
+msgid "0:Simulate"
+msgstr "0:Simulace"
+
+# menu.module
+#: cs/messages:60
+msgid "0:Module"
+msgstr "0:Modul"
+
+# menu.make
+#: cs/messages:62
+msgid "0:Components"
+msgstr "0:Přidat"
+
+# menu.file.new
+# menu.module.new
+#: cs/messages:65 cs/messages:113
+msgid "0:New..."
+msgstr "0:Nový..."
+
+# menu.file.open
+#: cs/messages:66
+msgid "0:Open..."
+msgstr "0:Otevřít..."
+
+# menu.file.openlib
+#: cs/messages:67
+msgid "0:Library Manager..."
+msgstr "0:Otevřít Knihovnu..."
+
+# menu.file.save
+#: cs/messages:68
+msgid "0:Save"
+msgstr "0:Uložit"
+
+# menu.file.saveas
+#: cs/messages:69
+msgid "5:Save As..."
+msgstr "5:Uložit Jako..."
+
+# menu.file.print
+#: cs/messages:70
+msgid "0:Print..."
+msgstr "0:Tisk..."
+
+# menu.file.quit
+#: cs/messages:72
+msgid "0:Quit"
+msgstr "0:Ukončit"
+
+# menu.edit.undo
+#: cs/messages:74
+msgid "0:Undo"
+msgstr "0:Zpět"
+
+# menu.edit.redo
+#: cs/messages:75
+msgid "0:Redo"
+msgstr "0:Znovu"
+
+# menu.edit.cut
+#: cs/messages:76
+msgid "0:Cut"
+msgstr "0:Vyjmout"
+
+# menu.edit.copy
+#: cs/messages:77
+msgid "3:Copy"
+msgstr "3:Kopírovat"
+
+# menu.edit.paste
+#: cs/messages:78
+msgid "0:Paste"
+msgstr "0:Vložit"
+
+# menu.edit.selall
+#: cs/messages:79
+msgid "0:Select All"
+msgstr "0:Vybrat Vše"
+
+# menu.edit.find
+#: cs/messages:80
+msgid "0:Find..."
+msgstr "0:Najít..."
+
+# menu.format.algnv
+#: cs/messages:81
+msgid "6:Align Ver."
+msgstr "6:Uspořádat Ver."
+
+# menu.format.algnh
+#: cs/messages:82
+msgid "6:Align Horz."
+msgstr "6:Uspořádat Horiz."
+
+# menu.edit.zoomin
+# menu.scope_trace.zoomin
+#: cs/messages:83 cs/messages:225
+msgid "5:Zoom In"
+msgstr "5:Zvětšit"
+
+# menu.edit.zoomout
+# menu.scope_trace.zoomout
+#: cs/messages:84 cs/messages:226
+msgid "5:Zoom Out"
+msgstr "5:Zmenšit"
+
+# menu.tool.move
+#: cs/messages:86
+msgid "0:Move/Connect"
+msgstr "0:Přesunout/Spojit"
+
+# menu.tool.delg
+#: cs/messages:87
+msgid "0:Delete Component"
+msgstr "0:Smazat Hradlo"
+
+# menu.tool.cutw
+#: cs/messages:88
+msgid "0:Cut Wire"
+msgstr "0:Přerušit Vodič"
+
+# menu.tool.inv
+#: cs/messages:89
+msgid "0:Invert"
+msgstr "0:Invertovat"
+
+# menu.tool.bitw
+#: cs/messages:90
+msgid "0:Bit Width"
+msgstr "0:Bitová Šířka"
+
+# menu.tool.debug
+#: cs/messages:91
+msgid "0:Debug"
+msgstr "0:Debug"
+
+# menu.simulate.begin
+#: cs/messages:97
+msgid "0:Begin Simulation"
+msgstr "0:Začít Simulaci"
+
+# menu.simulate.end
+#: cs/messages:98
+msgid "0:End Simulation"
+msgstr "0:Ukončit Simulaci"
+
+# menu.simulate.addprobe
+#: cs/messages:99
+msgid "0:Add/Delete Probe"
+msgstr "0:Přidat/Smazat Sondu"
+
+# menu.simulate.run
+#: cs/messages:100
+msgid "0:Run"
+msgstr "0:Spustit"
+
+# menu.simulate.pause
+#: cs/messages:101
+msgid "0:Pause"
+msgstr "0:Přerušit"
+
+# menu.simulate.step
+#: cs/messages:102
+msgid "0:Step Epoch(s)"
+msgstr "0:Posun o Jednotku(y) Času"
+
+# menu.simulate.cycle
+#: cs/messages:103
+msgid "5:Step Cycle"
+msgstr "5:Posun o Hodinový Cyklus"
+
+# menu.simulate.break
+#: cs/messages:104
+msgid "0:Breakpoint..."
+msgstr "0:Kontrolní Bod..."
+
+# menu.simulate.script
+#: cs/messages:105
+msgid "1:Exec. Script..."
+msgstr "1:Spustit Skript..."
+
+# menu.simulate.load
+#: cs/messages:106
+msgid "1:Load Memory..."
+msgstr "1:Nahrát Obraz Paměti..."
+
+# menu.simulate.dump
+#: cs/messages:107
+msgid "1:Dump Memory..."
+msgstr "1:Uložit Obraz Paměti..."
+
+# menu.module.open
+#: cs/messages:109
+msgid "0:Open"
+msgstr "0:Otevřít"
+
+# menu.module.close
+# menu.scope_file.close
+#: cs/messages:110 cs/messages:223
+msgid "0:Close"
+msgstr "0:Zavřít"
+
+# menu.module.del
+#: cs/messages:114
+msgid "0:Delete..."
+msgstr "0:Smazat..."
+
+# menu.module.copy
+#: cs/messages:115
+msgid "1:Copy..."
+msgstr "1:Kopírovat..."
+
+# menu.module.rename
+#: cs/messages:116
+msgid "0:Rename..."
+msgstr "0:Přejmenovat..."
+
+# menu.module.claim
+#: cs/messages:117
+msgid "1:Claim..."
+msgstr "1:Konvertovat..."
+
+# gm.io
+#: cs/messages:132
+msgid "I/O"
+msgstr "I/O"
+
+# gm.gate
+#: cs/messages:133
+msgid "Gate"
+msgstr "Hradlo"
+
+# gm.rgate
+#: cs/messages:134
+msgid "Reduction"
+msgstr "Redukce"
+
+# gm.msi
+#: cs/messages:135
+msgid "MSI"
+msgstr "MSI"
+
+# gm.alu
+#: cs/messages:136
+msgid "ALU"
+msgstr "ALU"
+
+# gm.mem
+#: cs/messages:137
+msgid "Memory"
+msgstr "Paměť"
+
+# gm.mod
+# imodule
+#: cs/messages:138 cs/messages:234
+msgid "Module"
+msgstr "Modul"
+
+# gm.comment
+#: cs/messages:139
+msgid "Comment"
+msgstr "Komentář"
+
+# gm.frame
+#: cs/messages:140
+msgid "Frame"
+msgstr "Rámec"
+
+# gm.io.switch
+#: cs/messages:142
+msgid "Switch"
+msgstr "Spínač"
+
+# gm.io.dip
+#: cs/messages:143
+msgid "DIP Switch"
+msgstr "DIP Spínač"
+
+# gm.io.merge
+#: cs/messages:146
+msgid "Concat"
+msgstr "Spojení Vodičů"
+
+# gm.io.clock
+#: cs/messages:147
+msgid "Clock"
+msgstr "Hodiny"
+
+# gm.io.led
+#: cs/messages:149
+msgid "LED"
+msgstr "LED"
+
+# gm.io.ledbar
+#: cs/messages:150
+msgid "LED Bar"
+msgstr "LED Panel"
+
+# gm.io.ledhex
+#: cs/messages:151
+msgid "7-Seg. LED (HEX)"
+msgstr "7-Seg. LED (HEX)"
+
+# gm.io.leddec
+#: cs/messages:152
+msgid "7-Seg. LED (DEC)"
+msgstr "7-Seg. LED (DEC)"
+
+# gm.io.ledseg
+#: cs/messages:153
+msgid "7-Seg. LED (Direct)"
+msgstr "7-Seg. LED (Přímý kód)"
+
+# gm.io.tty
+#: cs/messages:155
+msgid "TTY"
+msgstr "TTY"
+
+# gm.gate.and
+# gm.rgate.and
+#: cs/messages:157 cs/messages:169
+msgid "AND"
+msgstr "AND"
+
+# gm.gate.nand
+# gm.rgate.nand
+#: cs/messages:158 cs/messages:170
+msgid "NAND"
+msgstr "NAND"
+
+# gm.gate.or
+# gm.rgate.or
+#: cs/messages:159 cs/messages:171
+msgid "OR"
+msgstr "OR"
+
+# gm.gate.nor
+# gm.rgate.nor
+#: cs/messages:160 cs/messages:172
+msgid "NOR"
+msgstr "NOR"
+
+# gm.gate.xor
+# gm.rgate.xor
+#: cs/messages:161 cs/messages:173
+msgid "XOR"
+msgstr "XOR"
+
+# gm.gate.xnor
+# gm.rgate.xnor
+#: cs/messages:162 cs/messages:174
+msgid "XNOR"
+msgstr "XNOR"
+
+# gm.gate.buf
+#: cs/messages:163
+msgid "Buffer"
+msgstr "Budič Sběrnice"
+
+# gm.gate.inv
+#: cs/messages:164
+msgid "Inverter"
+msgstr "Invertor"
+
+# gm.gate.tribuf
+#: cs/messages:165
+msgid "Tri-Buffer"
+msgstr "3stav. Budič Sběrnice"
+
+# gm.gate.nmos
+#: cs/messages:166
+msgid "NMOS"
+msgstr "NMOS"
+
+# gm.gate.pmos
+#: cs/messages:167
+msgid "PMOS"
+msgstr "PMOS"
+
+# gm.alu.add
+#: cs/messages:176
+msgid "Adder"
+msgstr "Sčítačka"
+
+# gm.alu.mult
+#: cs/messages:177
+msgid "Multiplier"
+msgstr "Násobička"
+
+# gm.alu.div
+#: cs/messages:178
+msgid "Divider"
+msgstr "Dělička"
+
+# gm.alu.lshift
+#: cs/messages:179
+msgid "Left Shift"
+msgstr "Posun Doleva"
+
+# gm.alu.rshift
+#: cs/messages:180
+msgid "Right Shift"
+msgstr "Posun Doprava"
+
+# gm.alu.arshift
+#: cs/messages:181
+msgid "Arith. Right Shift"
+msgstr "Arit.Posun Doprava"
+
+# gm.alu.roll
+#: cs/messages:182
+msgid "Roll"
+msgstr "Rotace"
+
+# gm.mem.reg
+#: cs/messages:184
+msgid "Register"
+msgstr "Registr"
+
+# gm.mem.ff
+#: cs/messages:185
+msgid "D Flip-Flop"
+msgstr "Klopný Obvod"
+
+# gm.mem.ram
+#: cs/messages:186
+msgid "RAM"
+msgstr "RAM"
+
+# gm.mem.rom
+#: cs/messages:187
+msgid "ROM"
+msgstr "ROM"
+
+# gm.msi.21mux
+#: cs/messages:189
+msgid "2-1 Multiplexor"
+msgstr "2-1 Multiplexor"
+
+# gm.msi.41mux
+#: cs/messages:190
+msgid "4-1 Multiplexor"
+msgstr "4-1 Multiplexor"
+
+# gm.msi.81mux
+#: cs/messages:191
+msgid "8-1 Multiplexor"
+msgstr "8-1 Multiplexor"
+
+# gm.msi.12dec
+#: cs/messages:192
+msgid "1-2 Decoder"
+msgstr "1-2 Dekodér"
+
+# gm.msi.14dec
+#: cs/messages:193
+msgid "1-4 Decoder"
+msgstr "1-4 Dekodér"
+
+# gm.msi.18dec
+#: cs/messages:194
+msgid "1-8 Decoder"
+msgstr "1-8 Dekodér"
+
+# gm.mod.inst
+#: cs/messages:196
+msgid "Module Instance"
+msgstr "Instance Modulu"
+
+# gm.mod.in
+#: cs/messages:197
+msgid "Module Input"
+msgstr "Vstup Modulu"
+
+# gm.mod.out
+#: cs/messages:198
+msgid "Module Output"
+msgstr "Výstup Module"
+
+# gm.mod.inout
+#: cs/messages:199
+msgid "Module Input-Output"
+msgstr "Vst./Výst. Modulu"
+
+# menu.help.about
+#: cs/messages:204
+msgid "0:About..."
+msgstr "0:O programu..."
+
+# menu.help.license
+#: cs/messages:205
+msgid "0:License..."
+msgstr "0:Licence..."
+
+# menu.help.doc
+#: cs/messages:206
+msgid "0:Documentation..."
+msgstr "0:Dokumentace..."
+
+# menu.help.tut
+#: cs/messages:207
+msgid "1:Tutorials"
+msgstr "1:Návody"
+
+# menu.help.example
+#: cs/messages:208
+msgid "1:Examples"
+msgstr "1:Příklady"
+
+# menu.scope_file.ptrace
+#: cs/messages:222
+msgid "0:Print Trace..."
+msgstr "0:Tisknout Stopu..."
+
+# scope.emptymsg
+#: cs/messages:228
+msgid "Double-click on a wire to add or delete a trace."
+msgstr "Dvojitým kliknutím na vodič přidejte nebo smažte stopu."
+
+# comment.empty
+#: cs/messages:229
+msgid "[Double click to add text.]"
+msgstr "[Dvojitým kliknutím přidejte text.]"
+
+# ifile
+# print.file
+#: cs/messages:233 cs/messages:306
+msgid "File"
+msgstr "Soubor"
+
+# iblmodule
+# opt.mods
+#: cs/messages:235 cs/messages:342
+msgid "Modules"
+msgstr "Moduly"
+
+# iports
+#: cs/messages:236
+msgid "Ports"
+msgstr "Konektory"
+
+# ibits
+#: cs/messages:237
+msgid "Bits:"
+msgstr "Bity"
+
+# db.net.name
+#: cs/messages:242
+msgid "Net Name"
+msgstr "Název Sítě"
+
+# db.net.hide
+# db.gate.hidenam
+#: cs/messages:243 cs/messages:265
+msgid "Hide Name"
+msgstr "Skrýt Název"
+
+# db.net.bits
+# db.gate.bitw
+#: cs/messages:244 cs/messages:257
+msgid "Bit Width"
+msgstr "Bitová Šířka"
+
+# db.net.port
+#: cs/messages:245
+msgid "Port Type"
+msgstr "Typ Konektoru"
+
+# db.net.inets
+#: cs/messages:249
+msgid "Nets"
+msgstr "Sítě"
+
+# db.gate.signam
+#: cs/messages:254
+msgid "Signal Name"
+msgstr "Název Signálu"
+
+# db.gate.portnam
+#: cs/messages:255
+msgid "Port Name"
+msgstr "Název Konektoru"
+
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+#: cs/messages:256 cs/messages:263 cs/messages:271
+msgid "Type"
+msgstr "Typ"
+
+# db.gate.cyclew
+#: cs/messages:258
+msgid "Period"
+msgstr "Šířka Cyklu"
+
+# db.gate.phase
+#: cs/messages:259
+msgid "Phase"
+msgstr "Fáze"
+
+# db.gate.duty
+#: cs/messages:260
+msgid "Duty"
+msgstr "Střída"
+
+# db.gate.port
+# db.gate.ports
+#: cs/messages:261 cs/messages:279
+msgid "Port"
+msgstr "Konektor"
+
+# db.gate.bitws
+#: cs/messages:262
+msgid "Bits"
+msgstr "Bity"
+
+# db.gate.gname
+#: cs/messages:264
+msgid "Instance Name"
+msgstr "Název Hradla"
+
+# db.gate.cpbreak
+#: cs/messages:267
+msgid "Critical Path Partition"
+msgstr "Přerušení Citlivé Cesty"
+
+# db.gate.butstate
+#: cs/messages:268
+msgid "Button State"
+msgstr "Stav Tlačítka"
+
+# db.gate.dipval
+#: cs/messages:269
+msgid "Switch Value"
+msgstr "Hodnota Přepínače"
+
+# db.gate.memfilenam
+#: cs/messages:270
+msgid "Memory File"
+msgstr "Soubor s Obsahem Paměti"
+
+# db.gate.general
+# opt.general
+#: cs/messages:277 cs/messages:387
+msgid "General"
+msgstr "Obecné"
+
+# db.gate.details
+#: cs/messages:278
+msgid "Details"
+msgstr "Detaily"
+
+# db.gate.delay
+#: cs/messages:280
+msgid "Delay"
+msgstr "Zpoždění"
+
+# db.gate.stddelay
+#: cs/messages:281
+msgid "Standard Delay"
+msgstr "Standardní Zpoždění"
+
+# db.gate.custdelay
+#: cs/messages:282
+msgid "Custom Delay"
+msgstr "Definované Zpoždění"
+
+# db.gate.led.type
+#: cs/messages:285
+msgid "LED Type"
+msgstr "Typ LED"
+
+# db.gate.led.bit.hdr
+#: cs/messages:286
+msgid "Bit"
+msgstr "Dioda"
+
+# db.gate.led.bar.hdr
+#: cs/messages:287
+msgid "Bar Graph"
+msgstr "Panel diod"
+
+# db.gate.led.hex.hdr
+#: cs/messages:288
+msgid "7-Segment (HEX)"
+msgstr "7-Segment (HEX)"
+
+# db.gate.led.dec.hdr
+#: cs/messages:289
+msgid "7-Segment (DEC)"
+msgstr "7-Segment (DEC)"
+
+# db.gate.led.seg.hdr
+#: cs/messages:290
+msgid "7-Segment (Direct)"
+msgstr "7-Segment (Přímý kód)"
+
+# print.printer
+#: cs/messages:305
+msgid "Printer:"
+msgstr "Tiskárna"
+
+# print.prcmd
+#: cs/messages:307
+msgid "Print Command:"
+msgstr "Příkaz k Tisku"
+
+# print.filename
+#: cs/messages:308
+msgid "File Name"
+msgstr "Název Souboru"
+
+# print.epssave
+#: cs/messages:309
+msgid "Save as Encapsulated Postscript."
+msgstr "Uložit jako Encapsulated Postscript"
+
+# print.epcm
+#: cs/messages:312
+msgid "Epochs/cm"
+msgstr "Jedn. času/cm"
+
+# print.estpg
+#: cs/messages:313
+msgid "Estimated pages"
+msgstr "Odhad Počtu Stránek"
+
+# print.all
+#: cs/messages:314
+msgid "All"
+msgstr "Všechny"
+
+# print.cur
+#: cs/messages:315
+msgid "Current"
+msgstr "Aktuální"
+
+# print.use
+#: cs/messages:316
+msgid "Used"
+msgstr "Použité"
+
+# print.sel
+#: cs/messages:317
+msgid "Picked"
+msgstr "Vybrané"
+
+# print.inclib
+#: cs/messages:318
+msgid "Include library modules."
+msgstr "Vložit Knihovní Moduly."
+
+# print.papsz
+#: cs/messages:319
+msgid "Paper Size"
+msgstr "Velikost Papíru"
+
+# print.orient
+#: cs/messages:320
+msgid "Orientation"
+msgstr "Orientace"
+
+# print.portrait
+#: cs/messages:321
+msgid "Portrait"
+msgstr "Na Výšku"
+
+# print.landscape
+#: cs/messages:322
+msgid "Landscape"
+msgstr "Na Šířku"
+
+# print.2side
+#: cs/messages:323
+msgid "Print Double-Sided"
+msgstr "Tisknout Oboustranně"
+
+# print.opts
+#: cs/messages:324
+msgid "Content Options"
+msgstr "Možnosti"
+
+# print.scale
+#: cs/messages:325
+msgid "Scale large modules to fit page."
+msgstr "Přizpůsobit velké moduly velikosti stránky."
+
+# print.partition
+#: cs/messages:326
+msgid "Partition large modules into multiple pages."
+msgstr "Rozdělit velké moduly do více stránek."
+
+# print.incidx
+#: cs/messages:327
+msgid "Include index."
+msgstr "Vložit index."
+
+# print.incgraph
+#: cs/messages:328
+msgid "Include hierarchy graph."
+msgstr "Vložit graf hierarchie."
+
+# print.4up
+#: cs/messages:329
+msgid "Print small modules four per page."
+msgstr "Tisknout malé moduly 4 na stránku."
+
+# print.range
+#: cs/messages:330
+msgid "Range"
+msgstr "Výběr Rozsahu"
+
+# print.fulltr
+#: cs/messages:331
+msgid "Full Trace"
+msgstr "Úplná Stopa"
+
+# print.parttr
+#: cs/messages:332
+msgid "Partial Trace"
+msgstr "Část Stopy"
+
+# print.start
+#: cs/messages:333
+msgid "Start"
+msgstr "Start"
+
+# opt.site
+#: cs/messages:340
+msgid "Site Name"
+msgstr "Název Organizace"
+
+# opt.inst
+#: cs/messages:341
+msgid "Instances"
+msgstr "Instance"
+
+# opt.modports
+#: cs/messages:343
+msgid "Module Ports"
+msgstr "Konektory modulů"
+
+# opt.frames
+#: cs/messages:344
+msgid "Frames"
+msgstr "Rámce"
+
+# opt.comment
+#: cs/messages:345
+msgid "Comments"
+msgstr "Komentáře"
+
+# opt.hlink
+#: cs/messages:346
+msgid "Hyperlinks"
+msgstr "Hypertextové odkazy"
+
+# opt.wire
+#: cs/messages:347
+msgid "Single-Bit Wires"
+msgstr "1-bitové vodiče"
+
+# opt.bus
+#: cs/messages:348
+msgid "Multi-Bit Wires"
+msgstr "Vícebitové vodiče"
+
+# opt.tools
+#: cs/messages:349
+msgid "Gate Tools"
+msgstr "Nástroje pro práci s hradly"
+
+# opt.cpath
+#: cs/messages:350
+msgid "Critical Path"
+msgstr "Citlivá cesta"
+
+# opt.grid
+#: cs/messages:351
+msgid "Scope Grid"
+msgstr "Mřížka v simulátoru"
+
+# opt.logic1
+#: cs/messages:352
+msgid "Logic One"
+msgstr "Logická 1"
+
+# opt.logic0
+#: cs/messages:353
+msgid "Logic Zero"
+msgstr "Logická 0"
+
+# opt.float
+#: cs/messages:354
+msgid "Float"
+msgstr "Plovoucí"
+
+# opt.unknown
+#: cs/messages:355
+msgid "Unknown/Conflict"
+msgstr "Nedefinována/Konfliktní"
+
+# opt.offled
+#: cs/messages:356
+msgid "Off LED"
+msgstr "Nesvítící LED"
+
+# opt.onled
+#: cs/messages:357
+msgid "On LED"
+msgstr "Svítící LED"
+
+# opt.zled
+#: cs/messages:358
+msgid "Floating LED"
+msgstr "Plovoucí LED"
+
+# opt.restdef
+#: cs/messages:359
+msgid "Restore Defaults"
+msgstr "Obnovit původní nastavení"
+
+# opt.regudate
+#: cs/messages:360
+msgid "Region Update"
+msgstr "Aktualizace oblastí"
+
+# opt.smoothscroll
+#: cs/messages:361
+msgid "Smooth Scrolling"
+msgstr "Plynulé posouvání"
+
+# opt.balloon
+#: cs/messages:363
+msgid "Enable Help Balloons"
+msgstr "Povolit bublinovou nápovědu"
+
+# opt.debug
+#: cs/messages:364
+msgid "Debug"
+msgstr "Povolit debugování"
+
+# opt.novice
+#: cs/messages:365
+msgid "Novice mode"
+msgstr "Začátečnický režim"
+
+# opt.freq
+#: cs/messages:367
+msgid "Interval"
+msgstr "Interval"
+
+# opt.beak
+#: cs/messages:368
+msgid "Enable Special Modes"
+msgstr "Povolit speciální režimy"
+
+# opt.bat
+#: cs/messages:371
+msgid "Bat"
+msgstr "Bat"
+
+# opt.trek
+#: cs/messages:372
+msgid "Star Trek"
+msgstr "Star Trek"
+
+# opt.miles
+#: cs/messages:373
+msgid "Miles"
+msgstr "Miles"
+
+# opt.contver
+#: cs/messages:374
+msgid "Automatic Integrity Checking"
+msgstr "Automatická kontrola integrity"
+
+# opt.showsimcmd
+#: cs/messages:375
+msgid "Display Simulator Stream"
+msgstr "Zaznamenat průběh simulace"
+
+# opt.estepsz
+#: cs/messages:377
+msgid "Epoch Step Size"
+msgstr "Jednotky času/krok"
+
+# opt.cstepsz
+#: cs/messages:378
+msgid "Clock Cycle Step Size"
+msgstr "Hodinové cykly/krok"
+
+# opt.overstep
+#: cs/messages:379
+msgid "Clock Overstep"
+msgstr "Přesah hodin"
+
+# opt.sorttraces
+#: cs/messages:380
+msgid "Sort traces alphabetically on scope"
+msgstr "Seřadit stopy podle abecedy"
+
+# opt.vpopupdelay
+#: cs/messages:382
+msgid "Pop-Up Delay"
+msgstr "Zpoždění zobrazení hodnoty"
+
+# opt.posedge
+#: cs/messages:384
+msgid "Clock step stops on all clock posedges"
+msgstr "Ukončit hodinový cyklus na vzestupné hraně"
+
+# opt.setclock
+#: cs/messages:385
+msgid "Clock step stops on clock"
+msgstr "Ukončit hodinový cyklus na"
+
+# opt.delayfilepath
+#: cs/messages:386
+msgid "Technology Files"
+msgstr "Soubor se zpožděními"
+
+# opt.print
+#: cs/messages:388
+msgid "Print"
+msgstr "Tisk"
+
+# opt.simulate
+#: cs/messages:389
+msgid "Simulate"
+msgstr "Simulace"
+
+# opt.analysis
+#: cs/messages:390
+msgid "Analysis"
+msgstr "Analýza"
+
+# opt.color
+#: cs/messages:391
+msgid "Color"
+msgstr "Barvy"
+
+# opt.undolen
+#: cs/messages:392
+msgid "Max Undo"
+msgstr "Max počet kroků zpět (Undo)"
+
+# opt.cpopts
+#: cs/messages:394
+msgid "Critical Path Options"
+msgstr "Možnosti citlivé cesty:"
+
+# opt.maxpath
+#: cs/messages:395
+msgid "Maximum Number of Paths:"
+msgstr "Maximální počet cest:"
+
+# opt.cpflash
+#: cs/messages:396
+msgid "Display with Flashing Path"
+msgstr "Zobrazit blikající cestu"
+
+# opt.vercheck
+#: cs/messages:398
+msgid ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+msgstr ""
+"Pravidelně kontrolovat přítomnost nové verze TkGate\n"
+"na Internetu.  Nevybírejte tuto možnost pokud nemáte\n"
+"stálý přístup k Internetu."
+
+# blklst.new.cap
+#: cs/messages:407
+msgid "Create New Module"
+msgstr "Nový Modul"
+
+# blklst.del.cap
+#: cs/messages:408
+msgid "Delete Module"
+msgstr "Smazat Modul"
+
+# blklst.from
+#: cs/messages:409
+msgid "From"
+msgstr "Kopírovat Modul Z"
+
+# blklst.to
+#: cs/messages:410
+msgid "To"
+msgstr "Do"
+
+# blklst.claim.cap
+#: cs/messages:413
+msgid "Claim Module"
+msgstr "Konvertovat Modul"
+
+# circ.discchg
+#: cs/messages:420
+msgid "Do not warn about discarding changes."
+msgstr "Zrušit Změny"
+
+# circ.iniscript
+#: cs/messages:421
+msgid "Initialization Scripts"
+msgstr "Inicializační Skripty"
+
+# circ.extbar
+#: cs/messages:425
+msgid "Use extender bars on AND, OR and XOR gates."
+msgstr "Použít Rozšiřující Lišty"
+
+# cp.delay
+#: cs/messages:443
+msgid "Path Delay:"
+msgstr "Zpoždění Cesty:"
+
+# cp.pathl
+#: cs/messages:444
+msgid "Path List:"
+msgstr "Seznam Cest:"
+
+# cp.numpath
+#: cs/messages:445
+msgid "Number of Paths:"
+msgstr "Počet Cest:"
+
+# cp.recompute
+#: cs/messages:446
+msgid "Recompute"
+msgstr "Přepočítat"
+
+# err.nopin
+#: cs/messages:452
+msgid "Can't change selected pin."
+msgstr "Vybraný konektor není možno změnit."
+
+# err.badhex
+#: cs/messages:453
+msgid "Illegal hex value '%s' ignored."
+msgstr "Neplatná hexadecimální hodnota '%s' byla ignorována."
+
+# err.gatanchor
+#: cs/messages:454
+msgid "Components(s) are anchored and can not be moved."
+msgstr "Hradlo(a) jsou ukotveny a nelze je přemístit."
+
+# err.badfind
+#: cs/messages:456
+msgid "Can't find target '%s'."
+msgstr "Nelze najít cíl '%s'."
+
+# err.badopendel
+#: cs/messages:457
+msgid "Can't delete open module."
+msgstr "Nelze smazat otevřený modul."
+
+# err.nosrcmod
+#: cs/messages:458
+msgid "Source module '%s' not found."
+msgstr "Zdrojový modul '%s' nebyl nalezen."
+
+# err.noerr
+#: cs/messages:459
+msgid "Can not locate error."
+msgstr "Chybu nelze lokalizovat."
+
+# err.misserr
+#: cs/messages:460
+msgid "Error information incomplete (did the simulator crash?)"
+msgstr "Informace o chybě nejsou kompletní (spadl simulátor?)."
+
+# err.badinadd
+#: cs/messages:463
+msgid "Can't add any more inputs to selected component."
+msgstr "Nelze přidat další vstup k vybranému hradlu."
+
+# err.badoutadd
+#: cs/messages:464
+msgid "Can't add any more outputs to selected component."
+msgstr "Nelze přidat další výstup z vybraného hradla."
+
+# err.badinoutadd
+#: cs/messages:465
+msgid "Can't add any more inout pins to selected component."
+msgstr "Nelze přidat další vst./výst. konektory k vybranému hradlu."
+
+# err.badpinchg
+#: cs/messages:466
+msgid "Can't change pin types on selected component."
+msgstr "Nelze změnit typ konektoru na vybraném hradlu."
+
+# err.badnetname
+#: cs/messages:467
+msgid "Illegal characters in identifier deleted."
+msgstr "Neplatné znaky v identifikátoru byly smazány."
+
+# err.netbcrename
+#: cs/messages:468
+msgid "Identifier renamed to '%s' because of illegal characters."
+msgstr "Identifikátor přejmenován na '%s' kvůli neplatným znakům."
+
+# err.netconfnet
+#: cs/messages:469
+msgid "Identifier renamed to '%s' because of conflict."
+msgstr "Identifikátor přejmenován na '%s' kvůli konfliktu."
+
+# err.netconfgat
+#: cs/messages:470
+msgid "Identifier renamed to avoid conflict with built-in component name"
+msgstr "Identifikátor přejmenován kvůli konfliktu s primitivním názvem hradla."
+
+# err.netconfkw
+#: cs/messages:471
+msgid "Identifier renamed to avoid conflict with reserved word."
+msgstr "Identifikátor přejmenován kvůli konfliktu s rezervovaným slovem."
+
+# err.badconsame
+#: cs/messages:472
+msgid "Connection refused because wires are part of the same net."
+msgstr "Spojení nepovoleno. Vodiče jsou součástí stejné sítě."
+
+# err.badconptsp
+#: cs/messages:473
+msgid "Connection refused because both wires are module ports or supply."
+msgstr "Spojení nepovoleno. Vodiče jsou konektory modulu nebo jeho napájení."
+
+# err.badconbitw
+#: cs/messages:474
+msgid "Connection refused because bit widths do not match."
+msgstr "Spojení nepovoleno. Bitové šířky vodičů nejsou stejné."
+
+# err.badrange
+#: cs/messages:475
+msgid "Non-positive range for scope trace is not allowed."
+msgstr "Záporný rozsah stop není povolen."
+
+# err.badlprcmd
+#: cs/messages:476
+msgid "Unable to execute printer command '%s'."
+msgstr "Nelze vykonat příkaz k tisku '%s'."
+
+# err.badpsopen
+#: cs/messages:477
+msgid "Unable to open file '%s' for postscript output."
+msgstr "Nelze otevřít soubor '%s' pro postskriptový výstup."
+
+# err.badid
+#: cs/messages:478
+msgid "Illegal identifier '%s'."
+msgstr "Neplatný identifikátor '%s'."
+
+# err.bkpt.badexp
+#: cs/messages:480
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"Syntaktická chyba ve výrazu pro kontrolní bod. Výraz musí být jedno z: "
+"'net', '!net', 'net==hodnota', 'net!=hodnota'"
+
+# err.bkpt.badnet
+#: cs/messages:481
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+"Neplatný název sítě '%s'. Názvy musí začínat písmenem a obsahovat jenom "
+"písmena, číslice a '.'."
+
+# err.bkpt.badval
+#: cs/messages:482
+msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+msgstr ""
+"Syntaktická chyba v hodnotě '%s'. Hodnota musí být desítkové číslo nebo "
+"verilog-style konstanta."
+
+# err.bkpt.toomany
+#: cs/messages:483
+msgid "Too many breakpoints. Maximum is %d."
+msgstr "Příliš mnoho kontrolních bodů.  Maximální počet je %d."
+
+# err.sim.badtmp
+#: cs/messages:485
+msgid "Could not save temporary file '%s' for simulator (disc full?)"
+msgstr "Nelze uložit dočasný soubor '%s' simulátoru (plný disk?)."
+
+# err.sim.syntx
+#: cs/messages:486
+msgid "Syntax error in '%s' command."
+msgstr "Syntaktická chyba v příkazu '%s'."
+
+# err.sim.noincl
+#: cs/messages:487
+msgid "Include file '%s' not found."
+msgstr "Vkládaný soubor '%s' nenalezen."
+
+# err.sim.nobkpt
+#: cs/messages:489
+msgid "No such breakpoint '%s'."
+msgstr "Neexistující kontrolní bod '%s'."
+
+# err.sim.nonet
+#: cs/messages:490
+msgid "Can't find net '%s'."
+msgstr "Síť '%s' nebyla nalezena."
+
+# err.sim.nogate
+#: cs/messages:491
+msgid "Can't find component '%s'."
+msgstr "Hradlo '%s' nebylo nalezeno."
+
+# err.sim.badbin
+#: cs/messages:492
+msgid "Illegal character in binary constant '%s'."
+msgstr "Neplatný znak v binární konstantě '%s'."
+
+# err.sim.notswitch
+#: cs/messages:493
+msgid "Component '%s' is not a switch, dip or register."
+msgstr "Hradlo '%s' není přepínač, dip nebo registr."
+
+# err.sim.badcmd
+#: cs/messages:494
+msgid "Unrecognized command '%s' in simulation script."
+msgstr "Neznámý příkaz '%s' v simulačním skriptu."
+
+# err.noteditpchg
+#: cs/messages:496
+msgid "Properties can only be changed in edit mode."
+msgstr "Vlastnosti mohou být měněny pouze v režimu úprav."
+
+# err.badeditop
+#: cs/messages:497
+msgid "Illegal interface edit mode operation."
+msgstr "Neplatná operace v režimu úprav rozhraní."
+
+# err.badopen
+#: cs/messages:498
+msgid "Unable to open input file '%s'."
+msgstr "Nelze otevřít vstupní soubor '%s'."
+
+# err.badlibopen
+#: cs/messages:499
+msgid "Unable to open library file '%s'."
+msgstr "Nelze otevřít knihovní soubor '%s'."
+
+# err.nomark
+#: cs/messages:501
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr "Před výběrem typu hradla nastavte značku levým tlačítkem myši."
+
+# err.badgate
+#: cs/messages:502
+msgid "Unknown component type '%s'."
+msgstr "Neznámý typ hradla."
+
+# err.badportadd
+#: cs/messages:505
+msgid "Can't add ports to components of this type."
+msgstr "Nelze přidat konektory k hradlům tohoto typu."
+
+# err.manypages
+#: cs/messages:510
+msgid ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+msgstr ""
+"V tomto dokumentu je příšerně\n"
+"mnoho stránek.  Jste si jisti,\n"
+"že je chcete všechny tisknout?"
+
+# err.nojump
+#: cs/messages:516
+msgid ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+msgstr ""
+"Vlastnost 'jump-to-module' nemůže být použita\n"
+"v režimu simulace nebo analýzy citlivé cesty.\n"
+"Přemístěte se prosím ručně do cílového bloku\n"
+"tak, že vyberete příslušné moduly a otevřete je\n"
+"stiskem klávesy '>'. Z modulu, ve kterém  se\n"
+"nacházíte, je možno vyskočit stiskem klávesy '<'."
+
+# err.nomod
+#: cs/messages:525
+msgid "Module '%s' is not defined."
+msgstr "Modul '%s' není definován."
+
+# err.modlock
+#: cs/messages:526
+msgid "Logic Block is Locked!"
+msgstr "Logický blok je uzamčen!"
+
+# err.closeroot
+#: cs/messages:527
+msgid "No higher level module opened on the module stack."
+msgstr "Nelze zavřít hlavní modul. Použijte funkci 'Ukončit' v hlavním menu."
+
+# err.sim.isrun
+#: cs/messages:528
+msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
+msgstr "Simulátor už běží (Použijte 'Ctrl-s e' pro ukončení)."
+
+# err.editonly
+#: cs/messages:530
+msgid "Command not valid when in simulation mode."
+msgstr "Neplatný příkaz v režimu simulace."
+
+# err.simonly
+#: cs/messages:531
+msgid "Command valid only in simulation mode."
+msgstr "Příkaz platný jen v režimu simulace."
+
+# err.nodel
+#: cs/messages:533
+msgid "No deletable selection."
+msgstr "Nebyly vybrány objekty, které by bylo možno smazat."
+
+# err.modnotdef
+#: cs/messages:534
+msgid "Module '%s' is undefined."
+msgstr "Modul '%s' není definován."
+
+# err.moddef
+#: cs/messages:535
+msgid "The module '%s' already exists."
+msgstr "Blok '%s' již existuje."
+
+# err.noprop
+#: cs/messages:536
+msgid "Selected component has no editable properites."
+msgstr "Zvolené hradlo nemá vlastnosti, které by šlo měnit."
+
+# err.openscript
+#: cs/messages:537
+msgid "Can't open simulation script file '%s'"
+msgstr "Soubor se simulačním skriptem '%s' nelze otevřít."
+
+# err.oldversion
+#: cs/messages:538
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr ""
+"Nahrán soubor uložený ve starší verzi TkGate %s (aktuální verze je %s)."
+
+# err.futureversion
+#: cs/messages:539
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr "Nahraný soubor byl uložen novější verzí TkGate %s (tato verze je %s)."
+
+# err.badversion
+#: cs/messages:540
+msgid "Unknown version number. Use at your own risk."
+msgstr "Neznámé číslo verze TkGate. Používejte na vlastní riziko"
+
+# err.nodrive
+#: cs/messages:541
+msgid "Net %s has no driver in module %s."
+msgstr "Síť %s nemá žádný driver v modulu %s."
+
+# err.noconn
+#: cs/messages:542
+msgid "Wire %s{%d} has no connections - deleted."
+msgstr "Vodič %s{%d} není nikam připojen - byl smazán."
+
+# err.oldportact
+#: cs/messages:543
+msgid "Please right click on port or module edge to add/change port."
+msgstr ""
+"Pro přidání/úpravu konektoru klikněte pravým tlačítkem na konektor nebo "
+"okraj modulu."
+
+# err.backupfail
+#: cs/messages:545
+msgid "Unable to create backup file '%s'."
+msgstr "Nelze vytvořit záložní soubor '%s'."
+
+# err.corruptnewsave
+#: cs/messages:547
+msgid ""
+"TkGate was able to save your file in '%s', but it appears\n"
+"to be corrupted. If you have checkpointing enabled try\n"
+"loading one of the checkpoint files. Use 'tkgate -V' to\n"
+"check the integrity of a save file."
+msgstr ""
+"Aplikace TkGate uložila váš soubor jako '%s', ale zdá se být\n"
+"poškozený. Pokud máte povoleno průběžné ukládání, zkuste\n"
+"nahrát některý z průběžně uložených souboru. Pro kontrolu\n"
+"integrity uloženého souboru použijte příkaz 'TkGate -V'"
+
+# err.corruptsave
+#: cs/messages:554
+msgid ""
+"TkGate detected a problem while trying to save the file '%s'.\n"
+"The existing file has been left unmodified and the damaged file has\n"
+"been written to '%s'. If you have checkpointing enabled you\n"
+"can try loading one of the checkpoint files. You can also use\n"
+"'tkgate -V' to check the integrety of a save file."
+msgstr ""
+"Pří pokusu uložit soubor '%s' aplikace TkGate zjistila problém.\n"
+"Existující soubor nebyl změněn a poškozený soubor byl zapsán\n"
+"jako '%s'. Pokud máte povoleno průběžné ukládání, zkuste\n"
+"nahrát některý z průběžně uložených souboru. Pro kontrolu\n"
+"integrity uloženého souboru můžete použít příkaz 'TkGate -V'."
+
+# err.badsave
+#: cs/messages:562
+msgid ""
+"A problem has occured trying to open or write the file '%s'. Check\n"
+"file/directory protections and or disk space."
+msgstr ""
+"Při pokusu otevřít nebo uložit soubor '%s' došlo k chybě. Zkontrolujte\n"
+"přístupová práva souboru/adresáře a/nebo místo na disku."
+
+# err.nosafesave
+#: cs/messages:567
+msgid ""
+"A problem has occurred attempting to save '%s'. If you wish, you can\n"
+"try again without save validation. If you say \"no\", the original file\n"
+"will remain unmodified. If you say \"yes\" the original file will be\n"
+"overwritten, but may be destroyed if a problem occurs. Would you like\n"
+"to attempt an unvalidated save?"
+msgstr ""
+"Při pokusu uložit soubor '%s' se vyskytl problém.  Pokud chcete, zkuste\n"
+"to znova bez ověření korektnosti uložení. Pokud stisknete \"ne\", původní\n"
+"soubor zůstane nezměněn.  Pokus stisknete \"ano\", původní soubor bude\n"
+"přepsán, ale může být zničen, pokud se vyskytnou problémy. Chcete zkusit\n"
+"soubor uložit bez ověření korektnosti uložení?"
+
+# err.noback
+#: cs/messages:575
+msgid ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+msgstr ""
+"Soubor byl vytvořen v TkGate\n"
+"verze %s, a nemusí být čitelný\n"
+"verzemi staršími než aktuální\n"
+"verze (%s) bude-li uložen."
+
+# msg.selwire
+#: cs/messages:585
+msgid "Selected wire %s named '%s'."
+msgstr "Vybrán vodič s názvem '%s'."
+
+# msg.selgate
+#: cs/messages:586
+msgid "Selected gate %s named '%s'."
+msgstr "Vybráno hradlo s názvem '%s'."
+
+# msg.selblock
+#: cs/messages:587
+msgid "Selected %s block named '%s'."
+msgstr "Vybrán %s blok s názvem '%s'."
+
+# msg.modoverwt
+#: cs/messages:588
+msgid "Destination module '%s' already exists. Overwrite?"
+msgstr "Cílový modul '%s' již existuje.  Přepsat?"
+
+# msg.foundgate
+#: cs/messages:589
+msgid "Found component named '%s'."
+msgstr "Nalezeno hradlo '%s'."
+
+# msg.foundwire
+#: cs/messages:590
+msgid "Found wire named '%s'."
+msgstr "Nalezen vodič '%s'."
+
+# msg.searchagn
+#: cs/messages:591
+msgid "Target string '%s' not found. Hit 'find' to restart search again."
+msgstr "Cílový řetězec '%s' nenalezen.  Klikněte na 'Najít' pro nové hledání."
+
+# msg.sim.chgtoroot
+#: cs/messages:592
+msgid "Simulation mode requires root module at top of edit stack."
+msgstr ""
+"Režim simulace vyžaduje kořenový modul na vrcholu editovacího zásobníku."
+
+# msg.sim.nogatemod
+#: cs/messages:593
+msgid "Simulation mode requires concrete module stack."
+msgstr "Režim simulace vyžaduje konkrétní zásobník modulů."
+
+# msg.setinterface
+#: cs/messages:594
+msgid "Set module interface for '%s'."
+msgstr "Nastavení rozhraní modulu pro '%s'."
+
+# msg.needsel
+#: cs/messages:595
+msgid "Please select a module instance."
+msgstr "Zvolte prosím instanci modulu."
+
+# msg.wroteckpt
+#: cs/messages:596
+msgid "Checkpointed to %s..."
+msgstr "Průběžné ukládání %s..."
+
+# msg.save
+#: cs/messages:597
+msgid "Saved circuit to '%s'."
+msgstr "Obvod uložen jako '%s'."
+
+# msg.reallynew
+#: cs/messages:598
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr ""
+"Obvod byl změněn. Opravdu chcete zrušit všechny změny a vytvořit nový obvod?"
+
+# msg.reallyquit
+#: cs/messages:599
+msgid "Circuit has been modified. Do you really want to exit?"
+msgstr "Obvod byl změněn. Opravdu chcete ukončit aplikaci?"
+
+# msg.notlib
+#: cs/messages:600
+msgid "Module '%s' is not a library module."
+msgstr "Modul '%s' není knihovní modul."
+
+# miles.msg1
+#: cs/messages:605
+msgid "Only a fool would put %s%s there, Miles."
+msgstr "Only a fool would put %s%s there, Miles."
+
+# miles.msg2
+#: cs/messages:606
+msgid "That's a really stupid place to put %s%s, Miles."
+msgstr "That's a really stupid place to put %s%s, Miles."
+
+# miles.msg3
+#: cs/messages:607
+msgid "That's a terrible place for %s%s, Miles."
+msgstr "That's a terrible place for %s%s, Miles."
+
+# miles.msg4
+#: cs/messages:608
+msgid "Miles, you are a fool for putting %s%s there."
+msgstr "Miles, you are a fool for putting %s%s there."
+
+# miles.msg5
+#: cs/messages:609
+msgid "Only you would put %s%s there, Miles."
+msgstr "Only you would put %s%s there, Miles."
+
+# miles.msg6
+#: cs/messages:610
+msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
+msgstr "Putting %s%s there is proof of your absolute stupidity, Miles."
+
+# miles.msg7
+#: cs/messages:611
+msgid "Why don't you give up Miles, this is a stupid circuit."
+msgstr "Why don't you give up Miles, this is a stupid circuit."
+
+# miles.msg8a
+#: cs/messages:612
+msgid "It's pointless to continue, Miles."
+msgstr "It's pointless to continue, Miles."
+
+# miles.msg8b
+#: cs/messages:613
+msgid "It's obvious you can't design a circuit"
+msgstr "It's obvious you can't design a circuit"
+
+# ho.new
+#: cs/messages:620
+msgid ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+msgstr ""
+"Smazat aktuální obvod\n"
+"a začít editovat nový."
+
+# ho.open
+#: cs/messages:625
+msgid "Open a circuit from a file."
+msgstr "Otevřít obvod ze souboru."
+
+# ho.save
+#: cs/messages:626
+msgid "Save circuit to current file."
+msgstr "Uložit obvod do aktuálního souboru."
+
+# ho.print
+#: cs/messages:627
+msgid "Print current circuit."
+msgstr "Tisk aktuálního obvodu."
+
+# ho.move
+#: cs/messages:629
+msgid ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+msgstr ""
+"Move/Connect - Kliknutím myší a přetáhnutím můžete:\n"
+"Nastavit novou pozici hradla\n"
+"Přemístit hradla a vodiče\n"
+"Spojit vodiče\n"
+"Dvojitým kliknutím můžete :\n"
+"Upravit vlastnosti hradla, vodiče a konektoru\n"
+"Upravit text komentáře"
+
+# ho.delgat
+#: cs/messages:639
+msgid ""
+"Delete Component - Use this\n"
+"tool to delete components."
+msgstr ""
+"Smazat hradlo - Použijte tento nástroj\n"
+"na smazání hradel."
+
+# ho.cutw
+#: cs/messages:644
+msgid ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+msgstr ""
+"Přerušit vodič - Použijte tento nástroj\n"
+"na přerušení vodičů."
+
+# ho.inv
+#: cs/messages:649
+msgid ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+msgstr ""
+"Invertovat - Použijte tento nástroj\n"
+"na přidání nebo odebrání invertorů\n"
+"z konektorů hradel."
+
+# ho.bitw
+#: cs/messages:655
+msgid ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+msgstr ""
+"Bitová šířka - Použijte tento nástroj\n"
+"na změnu bitové šířky vodičů.  Vložte počet\n"
+"bitů do políčka v pravém dolním rohu okna."
+
+# ho.undo
+#: cs/messages:664
+msgid "Undo previous action(s)"
+msgstr "Zpět o předchozí krok(y)."
+
+# ho.redo
+#: cs/messages:665
+msgid "Redo undone action(s)"
+msgstr "Vpřed o zrušený krok(y)."
+
+# ho.simgo
+#: cs/messages:672
+msgid ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+msgstr ""
+"Spustit simulátor v režimu stálého běhu.\n"
+"Poznámka: Simulace kombinačních obvodů\n"
+"probíhá jen dokud obvod nedosáhne ustálený stav"
+
+# ho.simpause
+#: cs/messages:678
+msgid "Pause a continuously running simulation."
+msgstr "Pozastavit právě běžící simulaci."
+
+# ho.simstep
+#: cs/messages:682
+msgid ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Posunout se o pevný počet jednotek času.\n"
+"Otevřete okno s možnostmi simulace pro\n"
+"nastavení velikosti kroku."
+
+# ho.simclock
+#: cs/messages:688
+msgid ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Posunout se o pevný počet hodinových cyklů.\n"
+"Otevřete okno s možnostmi simulace pro\n"
+"nastavení velikosti kroku."
+
+# ho.simstop
+#: cs/messages:694
+msgid ""
+"End the current simulation\n"
+"and return to edit mode."
+msgstr ""
+"Ukončit právě běžící simulaci\n"
+"a vrátit se do editovacího režimu."
+
+# ho.simbreak
+#: cs/messages:699
+msgid ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+msgstr ""
+"Upravit aktuální kontrolní body. Simulace\n"
+"se zastaví ve chvíli, kdy se podmínka v\n"
+"kontrolním bodě stane pravdivou."
+
+# ho.simexec
+#: cs/messages:705
+msgid "Manage the set of active scripts."
+msgstr "Vykonat simulační skript."
+
+# ho.simload
+#: cs/messages:707
+msgid ""
+"Load memory with contents of\n"
+"a .mem file."
+msgstr ""
+"Nahrát obsah paměti\n"
+"z .mem souboru."
+
+# ho.simdump
+#: cs/messages:712
+msgid ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+msgstr ""
+"Uložit obsah paměti\n"
+"do .mem souboru."
+
+# ho.modlist
+#: cs/messages:726
+msgid ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"Seznam všech aktuálně nahraných modulů.\n"
+"Hlavní modul je označen znaménkém \"+\",\n"
+"knihovní moduly jsou v závorkách."
+
+# ho.netlist
+#: cs/messages:732
+msgid ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+msgstr ""
+"Seznam všech sítí v aktuálním modulu.\n"
+"Sítě označeny '@' mají skrytá jména\n"
+"Vícebitové sítě jsou zobrazeny s\n"
+"bitovou šířkou na konci."
+
+# ho.ports
+#: cs/messages:739
+msgid ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+msgstr ""
+"Seznam všech konektorů aktuálního\n"
+"modulu. Značka'>' označuje vstup,\n"
+"'<' označuje výstup a značka '='\n"
+"vstup-výstup.\""
+
+# ho.status.logo
+#: cs/messages:746
+msgid ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+msgstr ""
+"Indikátor stavu simulace. Pokud ukazuje železnou bránu,\n"
+"TkGate je v editovacím režimu. Pokud ukazuje AND hradlo\n"
+"na čtyřech nožičkách, TkGate je v režimu simulace. Pokud\n"
+"hradlo AND stojí, simulace je pozastavena a pokud kráčí,\n"
+"simulace běží"
+
+# ho.status.msg
+#: cs/messages:754
+msgid "Messages from TkGate are displayed here."
+msgstr "Zde se zobrazují zprávy TkGate."
+
+# ho.status.block
+#: cs/messages:756
+msgid "The stack of modules being edited."
+msgstr "Zásobník editovaných modulů."
+
+# ho.status.file
+#: cs/messages:758
+msgid ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+msgstr ""
+"Aktuálně editovaný soubor. Znak '*' ukazuje,\n"
+"že od posledního uložení byl soubor změněn."
+
+# ho.print.selall
+#: cs/messages:763
+msgid "Print all modules currently loaded by TkGate."
+msgstr "Vytisknout všechny moduly v aplikaci TkGate."
+
+# ho.print.selcur
+#: cs/messages:764
+msgid "Print only the current module in the TkGate edit window."
+msgstr "Vytisknout jen aktuální modul v editovacím okně aplikace TkGate."
+
+# ho.print.seluse
+#: cs/messages:765
+msgid ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+msgstr ""
+"Vytisknout všechny \"používané\" moduly. Používané moduly\n"
+"jsou takové, které jsou potomky kořenového modulu."
+
+# ho.print.fulltrace
+#: cs/messages:770
+msgid "Print the entire trace."
+msgstr "Vytisknout celou stopu."
+
+# ho.print.parttrace
+#: cs/messages:772
+msgid ""
+"Print a portion of the trace. Enter the starting\n"
+"and stopping times in the entry windows below, or\n"
+"use the right mouse button to select a range on the\n"
+"scope window (use shift-right to select long ranges)."
+msgstr ""
+"Vytisknout část stopy. Vložte čas začátku a konce\n"
+"stopy v okénku dole, nebo použijte pravé tlačítko\n"
+"myši pro výběr rozsahu v okně simulace (použijte\n"
+"klávesy shift-pravá šipka pro výběr velkých rozsahů)."
+
+# ho.print.parttracestart
+#: cs/messages:779
+msgid "Starting time of trace output."
+msgstr "Čas začátku výstupu stopy."
+
+# ho.print.parttraceend
+#: cs/messages:780
+msgid "Ending time of trace output."
+msgstr "Čas konce výstupu stopy."
+
+# ho.print.selsel
+#: cs/messages:783
+msgid ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+msgstr ""
+"Vytisknout jenom níže vybrané moduly. Použijte\n"
+"klávesu Ctrl pro výběr více modulů."
+
+# ho.print.modlist
+#: cs/messages:788
+msgid "Select the modules to be printed."
+msgstr "Vybrat moduly pro tisk."
+
+# ho.circuit.discchg
+#: cs/messages:790
+msgid ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+msgstr ""
+"TkGate nezobrazí varování pokud zrušíte\n"
+"změny bez toho, aby byly uloženy."
+
+# ho.circuit.extbar
+#: cs/messages:795
+msgid ""
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
+"many input gates."
+msgstr ""
+"Základní hradla (AND, OR, XOR) použijí\n"
+"rozšiřující lišty pro manipulaci s více\n"
+"vstupy."
+
+# ho.cmd.bitw
+#: cs/messages:801
+msgid ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+msgstr ""
+"Vodiče vybrané kurzorem budou\n"
+"nastaveny na tuto bitovou šířku"
+
+# ho.edgat.signam
+#: cs/messages:813
+msgid ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+msgstr ""
+"Název vybraného signálu na vybraném\n"
+"hradlu. Zde můžete změnit název signálu."
+
+# ho.edgat.port
+#: cs/messages:818
+msgid ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+msgstr ""
+"Název konektoru pro tento signál\n"
+"na tomto hradle. Toto pole může\n"
+"být upravováno pouze pro instance\n"
+"modulu."
+
+# ho.edgat.iolab
+#: cs/messages:825
+msgid ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+msgstr ""
+"Směr vybraného signálu na vybraném hradle\n"
+"Toto pole může být upravováno pouze pro\n"
+"instance modulu."
+
+# ho.edgat.bitlab
+#: cs/messages:831
+msgid ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+msgstr ""
+"Bitová šířka vybraného signálu na\n"
+"vybraném hradle. Zde můžete změnit\n"
+"bitovou šířku signálu."
+
+# ho.edgat.cycle
+#: cs/messages:837
+msgid "The total number of epochs in a clock cycle."
+msgstr "Celkový počet časových jednotek v hodinovém cyklu."
+
+# ho.edgat.phase
+#: cs/messages:838
+msgid "The starting point of the cycle (in percent)."
+msgstr "Počáteční bod cyklu (v procentech)."
+
+# ho.edgat.duty
+#: cs/messages:839
+msgid "The percent of the cycle, the clock is low."
+msgstr "Část cyklu kde jsou hodiny na nižší hodnotě."
+
+# ho.edgat.hide
+#: cs/messages:849
+msgid ""
+"Set this flag to disable\n"
+"display of component names."
+msgstr ""
+"Nastavte tento příznak pro zakázání\n"
+"zobrazení názvu hradla."
+
+# ho.edgat.gtype
+#: cs/messages:854
+msgid "Type of the component."
+msgstr "Typ hradla."
+
+# ho.edgat.gname
+#: cs/messages:855
+msgid "Name of this component instance."
+msgstr "Název této instance hradla."
+
+# ho.edgat.ganchor
+#: cs/messages:856
+msgid "Set this flag to anchor the position of a component."
+msgstr "Nastavte tento příznak pro ukotvení pozice hradla."
+
+# ho.edgat.gx
+#: cs/messages:857
+msgid "X coordinate of component."
+msgstr "X souřadnice hradla."
+
+# ho.edgat.gy
+#: cs/messages:858
+msgid "Y coordinate of component."
+msgstr "Y souřadnice hradla."
+
+# ho.edgat.swstate
+#: cs/messages:860
+msgid ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+msgstr ""
+"Výchozí stav spínače, který bude\n"
+"použit na začátku simulace."
+
+# ho.edgat.dipstate
+#: cs/messages:865
+msgid ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+msgstr ""
+"Výchozí stav dip spínače, který bude\n"
+"použit na začátku simulace."
+
+# ho.edgat.range
+#: cs/messages:870
+msgid "The range of bits to pull off a bus."
+msgstr "Bitový rozsah sběrnice."
+
+# ho.edgat.memfile
+#: cs/messages:872
+msgid ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+msgstr ""
+"Soubor s výchozím stavem paměti. Tento soubor\n"
+"je načten na začátku simulace."
+
+# ho.edgat.func
+#: cs/messages:877
+msgid "The function type of this module."
+msgstr "Typ funkce tohoto modulu."
+
+# ho.edgat.frame
+#: cs/messages:878
+msgid "The frame label."
+msgstr "Popisek rámce."
+
+# ho.traceprint
+#: cs/messages:880
+msgid ""
+"Print the logic trace range selected\n"
+"using the right mouse button. Shift-right\n"
+"click can be used to expand the selected\n"
+"region. The range visible in the scope\n"
+"view is used when there is no selection."
+msgstr "Vytisknout logickou stopu"
+
+# ho.showxhair
+#: cs/messages:882
+msgid ""
+"If this button is depressed, a vertical crosshair\n"
+"line will be displayed in the scope window."
+msgstr ""
+"Je-li toto tlačítko aktivní, v okně simulace\n"
+"se objeví vertikální čára."
+
+# ho.opt.sorttraces
+#: cs/messages:887
+msgid ""
+"If this option is enabled, traces on the\n"
+"scope window will be displayed in sorted\n"
+"order. If this option is disabled, traces\n"
+"on the scope window will be displayed in\n"
+"the order in which the probes were set."
+msgstr ""
+"Je-li tato možnost aktivní, stopy v okně\n"
+"simulace se zobrazí v setříděném pořadí.\n"
+"Není-li tato možnost aktivní, stopy v okně\n"
+"simulace se zobrazí v tom pořadí, v jakém\n"
+"byly nastaveny sondy."
+
+# ho.opt.undolen
+#: cs/messages:903
+msgid "Maximum number of undo actions to retain."
+msgstr "Maximální počet kroků zpátky, které se budou pamatovat."
+
+# ho.opt.site
+#: cs/messages:907
+msgid ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+msgstr ""
+"Jméno organizace, kde je TkGate nainstalováno.\n"
+"Toto jméno se použije na všech výstupech na\n"
+"tiskárnu nebo do postskriptového souboru."
+
+# ho.opt.smooth
+#: cs/messages:913
+msgid ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+msgstr ""
+"Je-li tato možnost aktivní, posouvání okna\n"
+"bude optimalizováno použitím kopie bitmapy\n"
+"místo úplného znovuzobrazení. Můžete tuto\n"
+"možnost vypnout, pokud máte jakékoliv problémy\n"
+"s vaším serverem."
+
+# ho.opt.clip
+#: cs/messages:921
+msgid ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+msgstr ""
+"Je-li tato možnost aktivní, při překreslování\n"
+"bude aktualizována jenom ta část okna, která se\n"
+"momentálně mění. Jinak bude překreslována vždy\n"
+"celá obrazovka."
+
+# ho.opt.outmove
+#: cs/messages:928
+msgid ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+msgstr ""
+"Je-li tato možnost aktivní, při přetahování bude\n"
+"zobrazen pouze popisek instance modulu, která se\n"
+"právě přemísťuje. Používejte tuto vlastnost na\n"
+"počítačích s pomalým displejem."
+
+# ho.opt.bhelp
+#: cs/messages:935
+msgid ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+msgstr ""
+"Je-li tato možnost aktivní, budou používány\n"
+"bubliny s nápovědou. Bubliny s nápovědou (jako\n"
+"tato) obsahují vysvětlení k jednotlivým položkám,\n"
+"když je nad nimi kurzor myši."
+
+# ho.opt.novice
+#: cs/messages:942
+msgid ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+msgstr ""
+"Pokud není na příkazovém řádku specifikován jiný\n"
+"obvod, při spuštění aplikace bude jako výchozí\n"
+"obvod zobrazen TkGate tutoriál."
+
+# ho.opt.debug
+#: cs/messages:948
+msgid ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+msgstr ""
+"Povolit několik debugovacích prvků\n"
+"(užitečné pouze pro TkGate vývojáře)."
+
+# ho.opt.ckpt
+#: cs/messages:953
+msgid "Enable checkpointing of unsaved circuits."
+msgstr "Povolit průběžné ukládání neuložených obvodů."
+
+# ho.opt.ckptfreq
+#: cs/messages:954
+msgid "Frequency of checkpoints in seconds."
+msgstr "Frekvence průběžného ukládání v sekundách."
+
+# ho.opt.beak
+#: cs/messages:956
+msgid ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+msgstr ""
+"Enable these totally useless features.\n"
+"If you disable this feature, these modes\n"
+"(and this checkbox) will no longer appear\n"
+"in the options box.  The only way to\n"
+"reenable them will be to edit\n"
+"your .TkGate-preferences file."
+
+# ho.opt.miles
+#: cs/messages:965
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+msgstr ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+
+# ho.opt.bat
+#: cs/messages:971
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+msgstr ""
+"If this mode is enabled, TkGate will\n"
+"set up an enviornment for designing a\n"
+"bat computer."
+
+# ho.opt.trek
+#: cs/messages:977
+msgid "Beam me up Scotty!"
+msgstr "Beam me up Scoty!"
+
+# ho.opt.simstep
+#: cs/messages:980
+msgid ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+msgstr ""
+"Počet jednotek času, o které se při\n"
+"jednom kroku postoupí dopředu."
+
+# ho.opt.ckstep
+#: cs/messages:985
+msgid ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+msgstr ""
+"Počet hodinových cyklů, o které se\n"
+"při jednom kroku postoupí dopředu."
+
+# ho.opt.ckover
+#: cs/messages:990
+msgid ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+msgstr ""
+"Počet jednotek času bezprostředně po\n"
+"vzestupné hraně hodin, o které se\n"
+"při jednom kroku postoupí dopředu."
+
+# ho.opt.vpopupdelay
+#: cs/messages:996
+msgid ""
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
+"1 and 10000 are allowed."
+msgstr ""
+"Zpoždění v milisekundách mezi stisknutím\n"
+"a přidržením tlačítka myši a zobrazením\n"
+"hodnoty signálu. Na některých systémech\n"
+"jsou hodnoty zpoždění v konfliktu se\n"
+"schopností rozpoznat dvouklik. Pokud máte\n"
+"tento problém, zvyšte tuto hodnotu. Jsou\n"
+"povoleny hodnoty mezi 1 and 10000."
+
+# ho.opt.init
+#: cs/messages:1006
+msgid ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+msgstr ""
+"Soubor se simulačním skriptem, který bude\n"
+"automaticky vykonán při spuštění simulace."
+
+# ho.opt.ckall
+#: cs/messages:1011
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+msgstr ""
+"Pokud je tento režim aktivní, posunutí o\n"
+"hodinový cyklus zastaví simulaci na vzestupné\n"
+"hraně kterýchkoliv hodin v obvodu."
+
+# ho.opt.ckspec
+#: cs/messages:1017
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+msgstr ""
+"Pokud je tento režim aktivní, posunutí o\n"
+"hodinový cyklus zastaví simulaci na vzestupné\n"
+"hraně specifikovaných hodin v obvodu."
+
+# ho.deftech
+#: cs/messages:1023
+msgid ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+msgstr ""
+"Přednastavená technologie pro nová\n"
+"hradla. Ovlivňuje zpoždění hradel.\n"
+"Pro změnu technologie konkrétního\n"
+"hradla otevřete okno s jeho vlastnostmi\n"
+"(dvouklikem) a vyberte záložku \"Zpoždění\"."
+
+# ho.techbut
+#: cs/messages:1031
+msgid ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+msgstr ""
+"Použít zpoždění ze souboru definujícího standardní\n"
+"technologii. Nové technologie můžete přidat v menu\n"
+"\"Soubor -> Možnosti -> Simulace\"."
+
+# ho.custbut
+#: cs/messages:1037
+msgid "Set custom delay values for this component."
+msgstr "Nastavit vlastní hodnoty zpoždění pro toto hradlo."
+
+# ho.contver
+#: cs/messages:1041
+msgid ""
+"Continuously verify the integrity of internal\n"
+"data structures after every operation."
+msgstr ""
+"Stále ověřovat integritu vnitřních\n"
+"datových struktur po každé operaci."
+
+# ho.simwatch
+#: cs/messages:1046
+msgid ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+msgstr ""
+"Zaznamenat příkazy zasílané mezi\n"
+"GUI a simulátorem."

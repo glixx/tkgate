@@ -1,0 +1,4279 @@
+# This file is part of TkGate project
+# Copyright (C) 1987-2015 by Jeffery P. Hansen
+# This file is distributed under the same license as the TkGate package.
+#
+# Translators:
+# Andrey V. Skvotsov <starling13@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: TkGate 2.0\n"
+"Report-Msgid-Bugs-To: starling13@gmail.com\n"
+"POT-Creation-Date: 2018-11-29 09:19+0300\n"
+"PO-Revision-Date: 2018-11-29 09:53+0300\n"
+"Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.9\n"
+"Language-Team: \n"
+
+# b.new
+# pop.module.new
+#: ja/messages.utf8:84 ja/messages.utf8:369
+msgid "New..."
+msgstr "新規く..."
+
+# b.dismiss
+#: ja/messages.utf8:85
+msgid "Dismiss"
+msgstr "閉じる"
+
+# b.close
+# pop.gate.close
+#: ja/messages.utf8:86 ja/messages.utf8:358
+msgid "Close"
+msgstr "閉じる"
+
+# b.ok
+#: ja/messages.utf8:87
+msgid "OK"
+msgstr "ＯＫ"
+
+# b.clear
+#: ja/messages.utf8:88
+msgid "Clear"
+msgstr "クリア"
+
+# b.cancel
+# db.hdl.cancel
+#: ja/messages.utf8:89 ja/messages.utf8:765
+msgid "Cancel"
+msgstr "キャンセル"
+
+# b.in
+# pop.igen.in
+# db.net.in
+#: ja/messages.utf8:92 ja/messages.utf8:401 ja/messages.utf8:500
+msgid "in"
+msgstr "入"
+
+# b.out
+# pop.igen.out
+# db.net.out
+#: ja/messages.utf8:93 ja/messages.utf8:402 ja/messages.utf8:501
+msgid "out"
+msgstr "出"
+
+# b.inout
+# pop.igen.inout
+# db.net.inout
+#: ja/messages.utf8:94 ja/messages.utf8:403 ja/messages.utf8:502
+msgid "inout"
+msgstr "入出"
+
+# b.browse
+#: ja/messages.utf8:95
+msgid "Browse..."
+msgstr "選択く..."
+
+# b.label
+#: ja/messages.utf8:96
+msgid "Label"
+msgstr "名前"
+
+# b.find
+#: ja/messages.utf8:97
+msgid "Find"
+msgstr "探索"
+
+# b.edit
+# mm.edit
+# pop.interface.edit
+#: ja/messages.utf8:98 ja/messages.utf8:128 ja/messages.utf8:393
+msgid "Edit..."
+msgstr "編集く..."
+
+# b.add
+# mm.add
+#: ja/messages.utf8:99 ja/messages.utf8:126
+msgid "Add..."
+msgstr "追加く..."
+
+# b.delete
+# mm.delete
+# pop.gate.delete
+# pop.igen.delete
+# db.gate.delete
+# igen.delete
+#: ja/messages.utf8:100 ja/messages.utf8:127 ja/messages.utf8:366
+#: ja/messages.utf8:400 ja/messages.utf8:555 ja/messages.utf8:1040
+msgid "Delete"
+msgstr "削除"
+
+# b.remove
+#: ja/messages.utf8:102
+msgid "Remove"
+msgstr "消す"
+
+# b.apply
+#: ja/messages.utf8:103
+msgid "Apply"
+msgstr "セット"
+
+# b.anchor
+# db.gate.anchor
+#: ja/messages.utf8:104 ja/messages.utf8:538
+msgid "Anchor"
+msgstr "移動不可"
+
+# b.tech
+# opt.tool.tech
+#: ja/messages.utf8:105 ja/messages.utf8:970
+msgid "Technology"
+msgstr "テクノロジー"
+
+# tab.edit
+#: ja/messages.utf8:114
+msgid "Editing"
+msgstr "編集"
+
+# tab.editintr
+# mod.intf
+# pop.interface
+# opt.interface
+#: ja/messages.utf8:115 ja/messages.utf8:269 ja/messages.utf8:391
+#: ja/messages.utf8:875
+msgid "Interface"
+msgstr "インタフェース"
+
+# tab.simulate
+# opt.simulate
+#: ja/messages.utf8:116 ja/messages.utf8:879
+msgid "Simulate"
+msgstr "シミュレート"
+
+# tab.cpath
+# opt.cpath
+#: ja/messages.utf8:117 ja/messages.utf8:902
+msgid "Critical Path"
+msgstr "遅延解析"
+
+# mm.enable
+#: ja/messages.utf8:129
+msgid "Enable"
+msgstr "有効にする"
+
+# mm.disable
+#: ja/messages.utf8:130
+msgid "Disable"
+msgstr "無効にする"
+
+# menu.file
+# menu.scope_file
+#: ja/messages.utf8:140 ja/messages.utf8:247
+msgid "0:File"
+msgstr "ファイル"
+
+# menu.edit
+#: ja/messages.utf8:141
+msgid "0:Edit"
+msgstr "編集"
+
+# menu.tool
+#: ja/messages.utf8:142
+msgid "0:Tool"
+msgstr "ツール"
+
+# menu.simulate
+# menu.scope_sim
+#: ja/messages.utf8:143 ja/messages.utf8:248
+msgid "0:Simulate"
+msgstr "シミュレート"
+
+# menu.module
+#: ja/messages.utf8:144
+msgid "0:Module"
+msgstr "モジュール"
+
+# menu.interface
+# menu.module.interface
+#: ja/messages.utf8:145 ja/messages.utf8:224
+msgid "0:Interface"
+msgstr "インタフェース"
+
+# menu.make
+#: ja/messages.utf8:147
+msgid "0:Components"
+msgstr "作成"
+
+# menu.help
+# menu.scope_help
+#: ja/messages.utf8:148 ja/messages.utf8:250
+msgid "0:Help"
+msgstr "ヘルプ"
+
+# menu.file.new
+# menu.module.new
+#: ja/messages.utf8:150 ja/messages.utf8:217
+msgid "0:New..."
+msgstr "新規作成く..."
+
+# menu.file.open
+#: ja/messages.utf8:151
+msgid "0:Open..."
+msgstr "開く..."
+
+# menu.file.openlib
+#: ja/messages.utf8:152
+msgid "0:Library Manager..."
+msgstr "ライブラリを開く..."
+
+# menu.file.save
+#: ja/messages.utf8:153
+msgid "0:Save"
+msgstr "保存"
+
+# menu.file.saveas
+#: ja/messages.utf8:154
+msgid "5:Save As..."
+msgstr "名前を付けて保存く..."
+
+# menu.file.print
+#: ja/messages.utf8:155
+msgid "0:Print..."
+msgstr "印刷く..."
+
+# menu.file.quit
+#: ja/messages.utf8:157
+msgid "0:Quit"
+msgstr "終了"
+
+# menu.file.cprop
+#: ja/messages.utf8:158
+msgid "0:Circuit Properties..."
+msgstr "回路の特徴く..."
+
+# menu.edit.cut
+#: ja/messages.utf8:160
+msgid "0:Cut"
+msgstr "カット"
+
+# menu.edit.copy
+#: ja/messages.utf8:161
+msgid "3:Copy"
+msgstr "コピー"
+
+# menu.edit.paste
+#: ja/messages.utf8:162
+msgid "0:Paste"
+msgstr "ペースト"
+
+# menu.edit.overlay
+#: ja/messages.utf8:163
+msgid "0:Overlay Paste"
+msgstr "Overlay張り付け"
+
+# menu.edit.selall
+#: ja/messages.utf8:164
+msgid "0:Select All"
+msgstr "全てを選択"
+
+# menu.edit.find
+#: ja/messages.utf8:165
+msgid "0:Find..."
+msgstr "回路を探索く..."
+
+# menu.edit.zoomin
+# menu.scope_trace.zoomin
+#: ja/messages.utf8:169 ja/messages.utf8:254
+msgid "5:Zoom In"
+msgstr "ズーム・イン"
+
+# menu.edit.zoomout
+# menu.scope_trace.zoomout
+#: ja/messages.utf8:170 ja/messages.utf8:255
+msgid "5:Zoom Out"
+msgstr "ズーム・アウト"
+
+# menu.edit.rshift
+#: ja/messages.utf8:172
+msgid "10:Bit Shift Right"
+msgstr "右シフト"
+
+# menu.edit.lshift
+#: ja/messages.utf8:173
+msgid "10:Bit Shift Left"
+msgstr "左シフト"
+
+# menu.edit.ushift
+#: ja/messages.utf8:174
+msgid "10:Bit Shift Up"
+msgstr "上シフト"
+
+# menu.edit.dshift
+#: ja/messages.utf8:175
+msgid "10:Bit Shift Down"
+msgstr "下シフト"
+
+# menu.edit.cwrotate
+#: ja/messages.utf8:176
+msgid "11:Bit Rotate C-W"
+msgstr "時計周り回転"
+
+# menu.edit.ccwrotate
+#: ja/messages.utf8:177
+msgid "15:Bit Rotate C-C-W"
+msgstr "時計反対周り回転"
+
+# menu.edit.pcwrotate
+#: ja/messages.utf8:178
+msgid "12:Port Rotate C-W"
+msgstr "ポートの時計周り回転"
+
+# menu.edit.pccwrotate
+#: ja/messages.utf8:179
+msgid "16:Port Rotate C-C-W"
+msgstr "ポートの非時計周り回転"
+
+# menu.edit.resize
+#: ja/messages.utf8:181
+msgid "Resize Bitmap"
+msgstr "再サイズ化"
+
+# menu.tool.move
+#: ja/messages.utf8:183
+msgid "0:Move/Connect"
+msgstr "移動／接続"
+
+# menu.tool.delg
+#: ja/messages.utf8:184
+msgid "0:Delete Component"
+msgstr "ゲートの削除"
+
+# menu.tool.cutw
+#: ja/messages.utf8:185
+msgid "0:Cut Wire"
+msgstr "ワイヤの切断"
+
+# menu.tool.inv
+#: ja/messages.utf8:186
+msgid "0:Invert"
+msgstr "否定"
+
+# menu.tool.bitw
+#: ja/messages.utf8:187
+msgid "0:Bit Width"
+msgstr "ビット幅"
+
+# menu.tool.debug
+#: ja/messages.utf8:188
+msgid "0:Debug"
+msgstr "デバッグ"
+
+# menu.tool.point
+#: ja/messages.utf8:189
+msgid "0:Point"
+msgstr "ポイント"
+
+# menu.tool.line
+#: ja/messages.utf8:190
+msgid "0:Line"
+msgstr "ライン"
+
+# menu.tool.rect
+#: ja/messages.utf8:191
+msgid "0:Rectangle"
+msgstr "長方形"
+
+# menu.tool.fillrect
+#: ja/messages.utf8:192
+msgid "0:Fill Rectangle"
+msgstr "色づけ長方形"
+
+# menu.tool.port
+#: ja/messages.utf8:193
+msgid "0:Port"
+msgstr "ポート"
+
+# menu.tool.select
+#: ja/messages.utf8:194
+msgid "0:Select Region"
+msgstr "免責選択"
+
+# menu.simulate.begin
+#: ja/messages.utf8:203
+msgid "0:Begin Simulation"
+msgstr "シミュレーションを開始"
+
+# menu.simulate.end
+#: ja/messages.utf8:204
+msgid "0:End Simulation"
+msgstr "シミュレーションを終了"
+
+# menu.simulate.addprobe
+# menu.scope_sim.addprobe
+#: ja/messages.utf8:205 ja/messages.utf8:256
+msgid "0:Add/Delete Probe"
+msgstr "プローブの追加／削除"
+
+# menu.simulate.run
+# menu.scope_sim.run
+#: ja/messages.utf8:206 ja/messages.utf8:257
+msgid "0:Run"
+msgstr ""
+
+# menu.simulate.pause
+# menu.scope_sim.pause
+#: ja/messages.utf8:207 ja/messages.utf8:258
+msgid "0:Pause"
+msgstr ""
+
+# menu.simulate.step
+# menu.scope_sim.step
+#: ja/messages.utf8:208 ja/messages.utf8:259
+msgid "0:Step Epoch(s)"
+msgstr ""
+
+# menu.simulate.cycle
+# menu.scope_sim.cycle
+#: ja/messages.utf8:209 ja/messages.utf8:260
+msgid "5:Step Cycle"
+msgstr ""
+
+# menu.simulate.break
+# menu.scope_sim.break
+#: ja/messages.utf8:210 ja/messages.utf8:261
+msgid "0:Breakpoint..."
+msgstr ""
+
+# menu.simulate.script
+# menu.scope_sim.script
+#: ja/messages.utf8:211 ja/messages.utf8:262
+msgid "1:Exec. Script..."
+msgstr ""
+
+# menu.simulate.load
+# menu.scope_sim.load
+#: ja/messages.utf8:212 ja/messages.utf8:263
+msgid "1:Load Memory..."
+msgstr "メモリの読み込みく..."
+
+# menu.simulate.dump
+# menu.scope_sim.dump
+#: ja/messages.utf8:213 ja/messages.utf8:264
+msgid "1:Dump Memory..."
+msgstr ""
+
+# menu.module.open
+#: ja/messages.utf8:215
+msgid "0:Open"
+msgstr "開く"
+
+# menu.module.close
+# menu.scope_file.close
+#: ja/messages.utf8:216 ja/messages.utf8:253
+msgid "0:Close"
+msgstr "閉じる"
+
+# menu.module.del
+#: ja/messages.utf8:218
+msgid "0:Delete..."
+msgstr "削除く..."
+
+# menu.module.copy
+#: ja/messages.utf8:219
+msgid "1:Copy..."
+msgstr "コピーく..."
+
+# menu.module.rename
+#: ja/messages.utf8:220
+msgid "0:Rename..."
+msgstr "名前の編集く..."
+
+# menu.module.claim
+#: ja/messages.utf8:221
+msgid "1:Claim..."
+msgstr "取得く..."
+
+# menu.module.setroot
+#: ja/messages.utf8:222
+msgid "1:Set As Root..."
+msgstr "ルートにするく..."
+
+# menu.module.prop
+#: ja/messages.utf8:223
+msgid "0:Properties..."
+msgstr "モジュールの設定く..."
+
+# menu.module.interface.set
+#: ja/messages.utf8:225
+msgid "0:Set As Default"
+msgstr "セット"
+
+# menu.module.interface.edit
+#: ja/messages.utf8:226
+msgid "0:Edit..."
+msgstr "編集く..."
+
+# menu.help.about
+# menu.scope_help.about
+#: ja/messages.utf8:237 ja/messages.utf8:265
+msgid "0:About..."
+msgstr ""
+
+# menu.help.license
+# menu.scope_help.license
+#: ja/messages.utf8:238 ja/messages.utf8:266
+msgid "0:License..."
+msgstr "ライセンスく..."
+
+# menu.help.doc
+# menu.scope_help.doc
+#: ja/messages.utf8:239 ja/messages.utf8:267
+msgid "0:Documentation..."
+msgstr "ドキュメンテーションく..."
+
+# menu.help.tut
+#: ja/messages.utf8:240
+msgid "1:Tutorials"
+msgstr "チュートリアル"
+
+# menu.help.home
+#: ja/messages.utf8:241
+msgid "1:Home Page"
+msgstr "ホーム・ページ"
+
+# menu.help.example
+#: ja/messages.utf8:242
+msgid "1:Examples"
+msgstr "回路の例"
+
+# menu.scope_trace
+#: ja/messages.utf8:249
+msgid "0:Trace"
+msgstr "トレース"
+
+# menu.scope_file.ptrace
+#: ja/messages.utf8:252
+msgid "0:Print Trace..."
+msgstr "トレース印刷く..."
+
+# port.parms
+#: ja/messages.utf8:271
+msgid "Port Parameters"
+msgstr "ポートのパラメタ"
+
+# port.in
+# pop.port.in
+#: ja/messages.utf8:272 ja/messages.utf8:344
+msgid "In"
+msgstr "入"
+
+# port.out
+# pop.port.out
+#: ja/messages.utf8:273 ja/messages.utf8:345
+msgid "Out"
+msgstr "出"
+
+# port.inout
+# pop.port.inout
+#: ja/messages.utf8:274 ja/messages.utf8:346
+msgid "InOut"
+msgstr "入出"
+
+# gm.gate
+#: ja/messages.utf8:282
+msgid "Gate"
+msgstr "ゲート"
+
+# gm.rgate
+#: ja/messages.utf8:283
+msgid "Reduction"
+msgstr "単項縮約ゲート"
+
+# gm.mem
+#: ja/messages.utf8:284
+msgid "Memory"
+msgstr "メモリー"
+
+# gm.mod
+# imodule
+# opt.tool.module
+# find.result.module
+#: ja/messages.utf8:285 ja/messages.utf8:445 ja/messages.utf8:969
+#: ja/messages.utf8:1102
+msgid "Module"
+msgstr "モジュール"
+
+# gm.comment
+#: ja/messages.utf8:286
+msgid "Comment"
+msgstr "コメント"
+
+# gm.frame
+#: ja/messages.utf8:287
+msgid "Frame"
+msgstr "フレーム"
+
+# gm.signals.ground
+#: ja/messages.utf8:289
+msgid "Ground"
+msgstr "アース"
+
+# gm.io.switch
+#: ja/messages.utf8:291
+msgid "Switch"
+msgstr "スイッチ"
+
+# gm.io.dip
+#: ja/messages.utf8:292
+msgid "DIP Switch"
+msgstr "DIPスイッチ"
+
+# gm.io.merge
+#: ja/messages.utf8:294
+msgid "Concat"
+msgstr "ワイヤのマージ"
+
+# gm.io.clock
+#: ja/messages.utf8:295
+msgid "Clock"
+msgstr "クロック"
+
+# gm.io.led
+#: ja/messages.utf8:297
+msgid "LED"
+msgstr "LEDビット"
+
+# gm.io.ledbar
+#: ja/messages.utf8:298
+msgid "LED Bar"
+msgstr "LED棒グラフ"
+
+# gm.gate.buf
+#: ja/messages.utf8:300
+msgid "Buffer"
+msgstr "バッファ"
+
+# gm.gate.inv
+#: ja/messages.utf8:301
+msgid "Inverter"
+msgstr "否定バッファ"
+
+# gm.gate.tribuf
+#: ja/messages.utf8:302
+msgid "Tri-Buffer"
+msgstr "トライ・バッファ"
+
+# gm.alu.add
+#: ja/messages.utf8:304
+msgid "Adder"
+msgstr "加算器"
+
+# gm.alu.mult
+#: ja/messages.utf8:305
+msgid "Multiplier"
+msgstr "乗算器"
+
+# gm.alu.div
+#: ja/messages.utf8:306
+msgid "Divider"
+msgstr "除算器"
+
+# gm.alu.lshift
+#: ja/messages.utf8:307
+msgid "Left Shift"
+msgstr "左シフト"
+
+# gm.alu.rshift
+#: ja/messages.utf8:308
+msgid "Right Shift"
+msgstr "右シフト"
+
+# gm.alu.arshift
+#: ja/messages.utf8:309
+msgid "Arith. Right Shift"
+msgstr "算数的右シフト"
+
+# gm.alu.roll
+#: ja/messages.utf8:310
+msgid "Roll"
+msgstr "ロール"
+
+# gm.mem.reg
+#: ja/messages.utf8:312
+msgid "Register"
+msgstr "レジスタ"
+
+# gm.mem.ff
+#: ja/messages.utf8:313
+msgid "D Flip-Flop"
+msgstr "フリップ・フロップ"
+
+# gm.mem.rff
+#: ja/messages.utf8:314
+msgid "Rev. D Flip-Flop"
+msgstr "鏡像フリップ・フロップ"
+
+# gm.msi.21mux
+#: ja/messages.utf8:316
+msgid "2-1 Multiplexor"
+msgstr "2-1 セレクター"
+
+# gm.msi.41mux
+#: ja/messages.utf8:317
+msgid "4-1 Multiplexor"
+msgstr "4-1 セレクター"
+
+# gm.msi.81mux
+#: ja/messages.utf8:318
+msgid "8-1 Multiplexor"
+msgstr "8-1 セレクター"
+
+# gm.msi.12dec
+#: ja/messages.utf8:319
+msgid "1-2 Decoder"
+msgstr "1-2 デコーダ"
+
+# gm.msi.14dec
+#: ja/messages.utf8:320
+msgid "1-4 Decoder"
+msgstr "1-4 デコーダ"
+
+# gm.msi.18dec
+#: ja/messages.utf8:321
+msgid "1-8 Decoder"
+msgstr "1-8 デコーダ"
+
+# gm.mod.inst
+#: ja/messages.utf8:323
+msgid "Module Instance"
+msgstr "モジュールのインスタンス"
+
+# gm.mod.in
+#: ja/messages.utf8:324
+msgid "Module Input"
+msgstr "モジュールの入力"
+
+# gm.mod.out
+#: ja/messages.utf8:325
+msgid "Module Output"
+msgstr "モジュールの出力"
+
+# gm.mod.inout
+#: ja/messages.utf8:326
+msgid "Module Input-Output"
+msgstr "モジュールの入出力"
+
+# tutorial.prev
+#: ja/messages.utf8:328
+msgid "PREVIOUS"
+msgstr "前へ"
+
+# tutorial.next
+#: ja/messages.utf8:329
+msgid "NEXT"
+msgstr "次へ"
+
+# tutorial.chapter
+#: ja/messages.utf8:330
+msgid "CHAPTER LIST"
+msgstr "章の一覧表"
+
+# tutorial.reload
+#: ja/messages.utf8:331
+msgid "RELOAD"
+msgstr "再読み込み"
+
+# pop.make
+# opt.tool.gateprop
+#: ja/messages.utf8:337 ja/messages.utf8:966
+msgid "Components"
+msgstr ""
+
+# pop.tool
+#: ja/messages.utf8:338
+msgid "Tool"
+msgstr "ツール"
+
+# pop.edit.paste
+#: ja/messages.utf8:340
+msgid "Paste"
+msgstr "ペースト"
+
+# pop.edit.cut
+#: ja/messages.utf8:341
+msgid "Cut"
+msgstr "カット"
+
+# pop.edit.copy
+#: ja/messages.utf8:342
+msgid "Copy"
+msgstr "コピー"
+
+# pop.wire.addseg
+#: ja/messages.utf8:348
+msgid "Add Wire Segment"
+msgstr "ワイヤの追加"
+
+# pop.wire.prop
+#: ja/messages.utf8:349
+msgid "Net Properties..."
+msgstr "ネットの特徴く..."
+
+# pop.wire.hidesize
+#: ja/messages.utf8:350
+msgid "Hide Bit Width"
+msgstr "ビット幅を隠す"
+
+# pop.wire.showsize
+#: ja/messages.utf8:351
+msgid "Show Bit Width"
+msgstr "ビット幅を示す"
+
+# pop.wire.hidelabel
+#: ja/messages.utf8:352
+msgid "Hide Label"
+msgstr "レーベルを隠す"
+
+# pop.wire.hidealllabel
+#: ja/messages.utf8:353
+msgid "Hide All Labels"
+msgstr "全てのレーベルを隠す"
+
+# pop.wire.clearalllabel
+#: ja/messages.utf8:354
+msgid "Clear All Labels"
+msgstr "全てのレーベルをクリア"
+
+# pop.wire.showlabel
+#: ja/messages.utf8:355
+msgid "Show Label"
+msgstr "レーベルを示す"
+
+# pop.gate.open
+#: ja/messages.utf8:357
+msgid "Open"
+msgstr "開く"
+
+# pop.gate.prop
+#: ja/messages.utf8:359
+msgid "Instance Properties..."
+msgstr "インスタンスの特徴く..."
+
+# pop.gate.addport
+#: ja/messages.utf8:360
+msgid "Add Port"
+msgstr "ポートの追加"
+
+# pop.gate.addin
+#: ja/messages.utf8:361
+msgid "Add Input..."
+msgstr "入力の追加く..."
+
+# pop.gate.addout
+#: ja/messages.utf8:362
+msgid "Add Output..."
+msgstr "出力の追加く..."
+
+# pop.gate.addinout
+#: ja/messages.utf8:363
+msgid "Add InOut..."
+msgstr "入出力の追加く..."
+
+# pop.gate.anchor
+#: ja/messages.utf8:364
+msgid "Anchor/Unanchor"
+msgstr "移動不可にする"
+
+# pop.gate.settech
+#: ja/messages.utf8:365
+msgid "Set Technology"
+msgstr "テクノロジ指定"
+
+# pop.gate.ioset
+#: ja/messages.utf8:367
+msgid "Set Type"
+msgstr "タイプの指定"
+
+# pop.module.del
+#: ja/messages.utf8:370
+msgid "Delete..."
+msgstr "削除く..."
+
+# pop.module.copy
+#: ja/messages.utf8:371
+msgid "Copy..."
+msgstr "コピーく..."
+
+# pop.module.rename
+#: ja/messages.utf8:372
+msgid "Rename..."
+msgstr "名前の変更く..."
+
+# pop.module.claim
+#: ja/messages.utf8:373
+msgid "Claim..."
+msgstr "モジュールの取得く..."
+
+# pop.module.setroot
+#: ja/messages.utf8:374
+msgid "Set As Root..."
+msgstr "ルート指定く..."
+
+# pop.module.prop
+#: ja/messages.utf8:375
+msgid "Module Properties..."
+msgstr "モジュールの特徴く..."
+
+# pop.module.int
+#: ja/messages.utf8:376
+msgid "Edit Interface..."
+msgstr "インタフェースの編集く..."
+
+# pop.simulate.end
+#: ja/messages.utf8:379
+msgid "End Simulation"
+msgstr "シミュレーションを終了"
+
+# pop.simulate.begin
+#: ja/messages.utf8:380
+msgid "Begin Simulation"
+msgstr "シミュレーションを開始"
+
+# pop.simulate.addprobe
+#: ja/messages.utf8:381
+msgid "Add/Delete Probe"
+msgstr "プローブを追加／削除"
+
+# pop.simulate.run
+#: ja/messages.utf8:382
+msgid "Run"
+msgstr "時効"
+
+# pop.simulate.pause
+#: ja/messages.utf8:383
+msgid "Pause"
+msgstr "一時停止"
+
+# pop.simulate.step
+#: ja/messages.utf8:384
+msgid "Step Epoch(s)"
+msgstr "エポック・ステップ"
+
+# pop.simulate.cycle
+#: ja/messages.utf8:385
+msgid "Step Cycle"
+msgstr "サイクル・ステップ"
+
+# pop.simulate.break
+#: ja/messages.utf8:386
+msgid "Breakpoint..."
+msgstr "ブレークポイントく..."
+
+# pop.simulate.script
+#: ja/messages.utf8:387
+msgid "Exec. Script..."
+msgstr "スクリプトの時効く..."
+
+# pop.simulate.load
+#: ja/messages.utf8:388
+msgid "Load Memory..."
+msgstr "メモリの読み込みく..."
+
+# pop.simulate.dump
+#: ja/messages.utf8:389
+msgid "Dump Memory..."
+msgstr "メモリの書き込みく..."
+
+# pop.interface.set
+#: ja/messages.utf8:392
+msgid "Set As Default"
+msgstr "指定"
+
+# pop.interface.auto
+# ipanel.autogen
+#: ja/messages.utf8:394 ja/messages.utf8:1065
+msgid "Auto Generate..."
+msgstr "自動作成く..."
+
+# pop.interface.replace
+#: ja/messages.utf8:395
+msgid "Replace"
+msgstr "取り換え"
+
+# pop.igen.type
+# db.mod.type
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+# igen.type
+# find.result.type
+#: ja/messages.utf8:397 ja/messages.utf8:458 ja/messages.utf8:527
+#: ja/messages.utf8:535 ja/messages.utf8:544 ja/messages.utf8:1031
+#: ja/messages.utf8:1103
+msgid "Type"
+msgstr "タイプ"
+
+# pop.igen.side
+# db.gate.side
+# igen.side
+#: ja/messages.utf8:398 ja/messages.utf8:534 ja/messages.utf8:1032
+msgid "Side"
+msgstr "サイド"
+
+# pop.igen.size
+# igen.size
+#: ja/messages.utf8:399 ja/messages.utf8:1033
+msgid "Size"
+msgstr ""
+
+# pop.igen.left
+#: ja/messages.utf8:404
+msgid "left"
+msgstr "左"
+
+# pop.igen.right
+#: ja/messages.utf8:405
+msgid "right"
+msgstr "右"
+
+# pop.igen.top
+#: ja/messages.utf8:406
+msgid "top"
+msgstr "上"
+
+# pop.igen.bottom
+#: ja/messages.utf8:407
+msgid "bottom"
+msgstr "下"
+
+# pop.igen.other
+#: ja/messages.utf8:408
+msgid "other"
+msgstr "他"
+
+# symed.tab.normal
+#: ja/messages.utf8:429
+msgid "UnSelected"
+msgstr "非セレクト"
+
+# symed.tab.select
+#: ja/messages.utf8:430
+msgid "Selected"
+msgstr "セレクト"
+
+# symed.link
+#: ja/messages.utf8:431
+msgid "Link selected to unselected"
+msgstr "セレクトと非セレクトを同時に編集する"
+
+# scope.emptymsg
+#: ja/messages.utf8:438
+msgid "Double-click on a wire to add or delete a trace."
+msgstr "ワイヤにダブル・クリックして、プローブに付けってください。"
+
+# comment.empty
+#: ja/messages.utf8:439
+msgid "[Double click to add text.]"
+msgstr "[ダブル・クリックして、テキストを編集してください。]"
+
+# ifile
+# print.file
+# opt.tool.file
+#: ja/messages.utf8:444 ja/messages.utf8:784 ja/messages.utf8:963
+msgid "File"
+msgstr "ファイル"
+
+# iblmodule
+# opt.mods
+#: ja/messages.utf8:446 ja/messages.utf8:893
+msgid "Modules"
+msgstr "モジュール"
+
+# iports
+# opt.tool.symport
+#: ja/messages.utf8:447 ja/messages.utf8:975
+msgid "Ports"
+msgstr "ポート"
+
+# ibits
+#: ja/messages.utf8:448
+msgid "Bits:"
+msgstr "ビット幅:"
+
+# itype
+#: ja/messages.utf8:449
+msgid "Type:"
+msgstr "タイプ:"
+
+# db.mod.name
+# blklst.name
+#: ja/messages.utf8:456 ja/messages.utf8:1087
+msgid "Name"
+msgstr "モジュール名"
+
+# db.mod.file
+# db.newcirc.file
+# print.filename
+# circ.file
+#: ja/messages.utf8:457 ja/messages.utf8:516 ja/messages.utf8:789
+#: ja/messages.utf8:1154
+msgid "File Name"
+msgstr "ファイル名"
+
+# db.mod.flags
+#: ja/messages.utf8:459
+msgid "Flags"
+msgstr "フラグ"
+
+# db.mod.dataprot
+#: ja/messages.utf8:460
+msgid "Prevent editing of module definition."
+msgstr "モジュールの定義の編集を不可能にする。"
+
+# db.mod.intfprot
+#: ja/messages.utf8:461
+msgid "Prevent all interface changes."
+msgstr "インタフェースの編集を不可能にする。"
+
+# db.mod.edprot
+#: ja/messages.utf8:462
+msgid "Prevent edit mode interface changes."
+msgstr "インタフェースの編集を専用エディタに限る。"
+
+# db.mod.props
+#: ja/messages.utf8:463
+msgid "Properties"
+msgstr "特徴"
+
+# db.mod.netlist
+#: ja/messages.utf8:464
+msgid "Netlist"
+msgstr "ネットリスト"
+
+# db.mod.hdl
+# opt.editor
+#: ja/messages.utf8:465 ja/messages.utf8:877
+msgid "Verilog HDL"
+msgstr "HDL"
+
+# db.mod.netexpl
+#: ja/messages.utf8:471
+msgid ""
+"Define module using a\n"
+"graphical editor to connect\n"
+"wires between components."
+msgstr ""
+"グラフィカルのエディタを\n"
+"利用して、モジュールの操作を\n"
+"定義する。"
+
+# db.mod.hdlexpl
+#: ja/messages.utf8:477
+msgid ""
+"Define module using a\n"
+"textual editor to describe\n"
+"behavior in Verilog."
+msgstr ""
+"Verilogのテキストを利用して、\n"
+"モジュールの操作を定義する。"
+
+# db.err.caption
+#: ja/messages.utf8:485
+msgid "Error List"
+msgstr "エラーの一覧表"
+
+# db.net.name
+#: ja/messages.utf8:495
+msgid "Net Name"
+msgstr "ネット名"
+
+# db.net.hide
+# db.gate.hidenam
+#: ja/messages.utf8:496 ja/messages.utf8:537
+msgid "Hide Name"
+msgstr ""
+
+# db.net.bits
+# db.gate.bitw
+#: ja/messages.utf8:497 ja/messages.utf8:528
+msgid "Bit Width"
+msgstr "ビット幅"
+
+# db.net.type
+#: ja/messages.utf8:498
+msgid "Net Type"
+msgstr "ネット・タイプ"
+
+# db.net.port
+#: ja/messages.utf8:499
+msgid "Port Type"
+msgstr "ポート・タイプ"
+
+# db.net.inets
+#: ja/messages.utf8:503
+msgid "Nets"
+msgstr "ネット"
+
+# db.newcirc.directory
+#: ja/messages.utf8:509
+msgid "Directory:"
+msgstr "ディレクトリ:"
+
+# db.newcirc.cap
+#: ja/messages.utf8:510
+msgid "New Circuit"
+msgstr "新規回路"
+
+# db.newcirc.exp
+#: ja/messages.utf8:511
+msgid ""
+"Discard the current circuit and start editing\n"
+"a new circuit."
+msgstr ""
+"現在の回路の編集を\n"
+"辞めて、新しい回路を\n"
+"編集し始める。"
+
+# db.newcirc.topname
+#: ja/messages.utf8:517
+msgid "Top Module Name"
+msgstr "トップのモジュール名"
+
+# db.gate.title
+#: ja/messages.utf8:524
+msgid "TKGate: Component Properties"
+msgstr "ゲートの設定"
+
+# db.gate.signam
+#: ja/messages.utf8:525
+msgid "Signal Name"
+msgstr "ネット名"
+
+# db.gate.portnam
+#: ja/messages.utf8:526
+msgid "Port Name"
+msgstr "ポート名"
+
+# db.gate.cyclew
+#: ja/messages.utf8:529
+msgid "Period"
+msgstr "サイクル幅"
+
+# db.gate.phase
+#: ja/messages.utf8:530
+msgid "Phase"
+msgstr "フェーズ"
+
+# db.gate.duty
+#: ja/messages.utf8:531
+msgid "Duty"
+msgstr "デューティー"
+
+# db.gate.port
+# db.gate.ports
+# igen.port
+#: ja/messages.utf8:532 ja/messages.utf8:548 ja/messages.utf8:1030
+msgid "Port"
+msgstr "ポート"
+
+# db.gate.bitws
+# igen.bits
+#: ja/messages.utf8:533 ja/messages.utf8:1034
+msgid "Bits"
+msgstr "ビット"
+
+# db.gate.gname
+#: ja/messages.utf8:536
+msgid "Instance Name"
+msgstr "ゲート名"
+
+# db.gate.cpbreak
+#: ja/messages.utf8:539
+msgid "Critical Path Partition"
+msgstr "クリティカル・パス分割点"
+
+# db.gate.butstate
+#: ja/messages.utf8:540
+msgid "Button State"
+msgstr "スイッチ状態"
+
+# db.gate.dipval
+#: ja/messages.utf8:541
+msgid "Switch Value"
+msgstr "DIP状態"
+
+# db.gate.range
+#: ja/messages.utf8:542
+msgid "Bit Range"
+msgstr "ビット範囲"
+
+# db.gate.memfilenam
+#: ja/messages.utf8:543
+msgid "Memory File"
+msgstr "メモリ・ファイル名"
+
+# db.gate.general
+# opt.general
+# circ.general
+#: ja/messages.utf8:545 ja/messages.utf8:874 ja/messages.utf8:1161
+msgid "General"
+msgstr "一般"
+
+# db.gate.details
+#: ja/messages.utf8:546
+msgid "Details"
+msgstr "詳細"
+
+# db.gate.text
+#: ja/messages.utf8:547
+msgid "Text"
+msgstr "テキスト"
+
+# db.gate.delay
+#: ja/messages.utf8:549
+msgid "Delay"
+msgstr "遅延"
+
+# db.gate.parameters
+#: ja/messages.utf8:550
+msgid "Parameters"
+msgstr "パラメタ"
+
+# db.gate.stddelay
+#: ja/messages.utf8:551
+msgid "Standard Delay"
+msgstr "標準の遅延"
+
+# db.gate.custdelay
+#: ja/messages.utf8:552
+msgid "Custom Delay"
+msgstr "カスタムの遅延"
+
+# db.gate.catdiruse
+#: ja/messages.utf8:553
+msgid "Port Placement"
+msgstr "ポートの位置付け"
+
+# db.gate.edit
+# opt.tool.edit
+# igen.edit
+#: ja/messages.utf8:554 ja/messages.utf8:964 ja/messages.utf8:1041
+msgid "Edit"
+msgstr "編集"
+
+# db.gate.add
+# igen.add
+#: ja/messages.utf8:556 ja/messages.utf8:1039
+msgid "Add"
+msgstr "追加"
+
+# db.gate.ff.type
+#: ja/messages.utf8:558
+msgid "D Flip-Flop Orientation"
+msgstr "フリップフロップの方位決定"
+
+# db.gate.ff.normal.hdr
+#: ja/messages.utf8:559
+msgid "Normal"
+msgstr "普通"
+
+# db.gate.ff.normal.exp
+#: ja/messages.utf8:560
+msgid ""
+"D Flip-Flop with data\n"
+"flowing left to right."
+msgstr ""
+"データが左から右へ\n"
+"流すフリップフロップ。"
+
+# db.gate.ff.reverse.hdr
+#: ja/messages.utf8:564
+msgid "Reversed"
+msgstr "反射"
+
+# db.gate.ff.reverse.exp
+#: ja/messages.utf8:565
+msgid ""
+"D Flip-Flop with data\n"
+"flowing right to left."
+msgstr ""
+"データが右から左へ\n"
+"流すフリップフロップ。"
+
+# db.gate.cat.asc.hdr
+#: ja/messages.utf8:570
+msgid "Ascending"
+msgstr "昇順"
+
+# db.gate.cat.dec.hdr
+#: ja/messages.utf8:571
+msgid "Descending"
+msgstr "降順"
+
+# db.gate.cat.asc.exp
+#: ja/messages.utf8:572
+msgid "Bits are concatenated in ascending order from top to bottom."
+msgstr "ビットは上下に昇順で連結する。"
+
+# db.gate.cat.dec.exp
+#: ja/messages.utf8:575
+msgid "Bits are concatenated in descending order from top to bottom."
+msgstr "ビットは上下に降順で連結する。"
+
+# db.gate.cat.sigdir
+#: ja/messages.utf8:579
+msgid "Signal Direction"
+msgstr "信号方向"
+
+# db.gate.cat.auto.hdr
+#: ja/messages.utf8:580
+msgid "Auto"
+msgstr "自動"
+
+# db.gate.cat.multin.hdr
+#: ja/messages.utf8:581
+msgid "Multi-Input"
+msgstr "多入力"
+
+# db.gate.cat.singin.hdr
+#: ja/messages.utf8:582
+msgid "Single-Input"
+msgstr "多出力"
+
+# db.gate.cat.tran.hdr
+#: ja/messages.utf8:583
+msgid "Bidirectional"
+msgstr "入出"
+
+# db.gate.cat.auto.exp
+#: ja/messages.utf8:586
+msgid ""
+"Determine signal direction automatically\n"
+"from connected nets."
+msgstr ""
+"信号の方向を自動的\n"
+"に判断する。"
+
+# db.gate.cat.multin.exp
+#: ja/messages.utf8:591
+msgid ""
+"Always assume multi-port side is the\n"
+"input."
+msgstr "いつも多ポート側が入力として扱う。"
+
+# db.gate.cat.singin.exp
+#: ja/messages.utf8:595
+msgid ""
+"Always assume single-port side is the\n"
+"input."
+msgstr "いつも単位のポート側が入力として扱う。"
+
+# db.gate.cat.tran.exp
+#: ja/messages.utf8:599
+msgid ""
+"Allow bidirectional (tran) signal flow. Cannot\n"
+"be connected to switches or registers."
+msgstr ""
+"双方向の信号の伝播(tran)を許す。\n"
+"スイッチやレジスタにの接続は不可です。"
+
+# db.gate.tab.General.cap
+#: ja/messages.utf8:603
+msgid "General Properties"
+msgstr "一般特徴"
+
+# db.gate.tab.Ports.cap
+#: ja/messages.utf8:604
+msgid "Port Properties"
+msgstr "ポート特徴"
+
+# db.gate.tab.Delay.cap
+#: ja/messages.utf8:605
+msgid "Delay Properties"
+msgstr "遅延特徴"
+
+# db.gate.tab.Parameters.cap
+#: ja/messages.utf8:606
+msgid "Module Parameters"
+msgstr "モジュール特徴"
+
+# db.gate.tab.CLOCK.cap
+#: ja/messages.utf8:607
+msgid "Clock Properties"
+msgstr "クロック特徴"
+
+# db.gate.tab.SWITCH.cap
+#: ja/messages.utf8:608
+msgid "Switch Properties"
+msgstr "スイッチ特徴"
+
+# db.gate.tab.DIP.cap
+#: ja/messages.utf8:609
+msgid "DIP Properties"
+msgstr "DIP特徴"
+
+# db.gate.tab.TAP.cap
+#: ja/messages.utf8:610
+msgid "Tran Properties"
+msgstr "Tran特徴"
+
+# db.gate.tab.RAM.cap
+#: ja/messages.utf8:611
+msgid "RAM Properties"
+msgstr "RAM特徴"
+
+# db.gate.tab.ROM.cap
+#: ja/messages.utf8:612
+msgid "ROM Properties"
+msgstr "ROM特徴"
+
+# db.gate.tab.MODULE.cap
+# module.props
+#: ja/messages.utf8:613 ja/messages.utf8:1056
+msgid "Module Properties"
+msgstr ""
+
+# db.gate.tab.FRAME.cap
+#: ja/messages.utf8:614
+msgid "Frame Properties"
+msgstr "フレーム特徴"
+
+# db.gate.tab.LED.cap
+#: ja/messages.utf8:615
+msgid "LED Properties"
+msgstr "LED特徴"
+
+# db.gate.tab.AND.cap
+#: ja/messages.utf8:616
+msgid "AND Properties"
+msgstr "AND特徴"
+
+# db.gate.tab.OR.cap
+#: ja/messages.utf8:617
+msgid "OR Properties"
+msgstr "OR特徴"
+
+# db.gate.tab.XOR.cap
+#: ja/messages.utf8:618
+msgid "XOR Properties"
+msgstr "XOR特徴"
+
+# db.gate.tab.MUX.cap
+#: ja/messages.utf8:619
+msgid "Mux Properties"
+msgstr "Mux特徴"
+
+# db.gate.tab.DEMUX.cap
+#: ja/messages.utf8:620
+msgid "Demux Properties"
+msgstr "Demux特徴"
+
+# db.gate.tab.CONCAT.cap
+#: ja/messages.utf8:621
+msgid "Concat Properties"
+msgstr "Concat特徴"
+
+# db.gate.tab.COMMENT.cap
+#: ja/messages.utf8:622
+msgid "Text Properties"
+msgstr "テキスト特徴"
+
+# db.gate.tab.FF.cap
+#: ja/messages.utf8:623
+msgid "D Flip-Flop Properties"
+msgstr "フリップフロップ特徴"
+
+# db.gate.tab.General.exp
+#: ja/messages.utf8:626
+msgid "View and modify basic properties of an instance."
+msgstr "インスタンスの基本特徴を表示、又は編集する。"
+
+# db.gate.tab.Ports.exp
+#: ja/messages.utf8:630
+msgid "Add, edit or delete ports on an instance."
+msgstr "インスタンスのポートを追加、編集、又は削除する。"
+
+# db.gate.tab.Delay.exp
+#: ja/messages.utf8:634
+msgid ""
+"Delay can be specified either as a technology or as specific values\n"
+"for this instance."
+msgstr "インスタンスの遅延はテクノロジでも、個々でも設定可能である。"
+
+# db.gate.tab.Parameters.exp
+#: ja/messages.utf8:638
+msgid ""
+"Set the module parameters for this instance of this module if any are\n"
+"defined. Module parameters are used to configure delays and constant values "
+"used in a module."
+msgstr ""
+"モジュールのパラメターが定義している場合、ここでその値を設定出来る。モ\n"
+"ジュールのパラメターは遅延値、コンスタントなどに利用されている。"
+
+# db.gate.tab.details.exp
+#: ja/messages.utf8:644
+msgid ""
+"Set detailed type-specific properties\n"
+"of a component here."
+msgstr "ゲート次第の設定を行う。"
+
+# db.gate.tab.CLOCK.exp
+# db.gate.tab.SWITCH.exp
+# db.gate.tab.DIP.exp
+# db.gate.tab.TAP.exp
+# db.gate.tab.RAM.exp
+# db.gate.tab.ROM.exp
+# db.gate.tab.MODULE.exp
+# db.gate.tab.FRAME.exp
+# db.gate.tab.LED.exp
+# db.gate.tab.AND.exp
+# db.gate.tab.OR.exp
+# db.gate.tab.XOR.exp
+# db.gate.tab.MUX.exp
+# db.gate.tab.DEMUX.exp
+# db.gate.tab.CONCAT.exp
+# db.gate.tab.FF.exp
+#: ja/messages.utf8:649 ja/messages.utf8:650 ja/messages.utf8:651
+#: ja/messages.utf8:652 ja/messages.utf8:653 ja/messages.utf8:654
+#: ja/messages.utf8:655 ja/messages.utf8:656 ja/messages.utf8:657
+#: ja/messages.utf8:658 ja/messages.utf8:659 ja/messages.utf8:660
+#: ja/messages.utf8:661 ja/messages.utf8:662 ja/messages.utf8:663
+#: ja/messages.utf8:664
+msgid "`db.gate.tab.details.exp"
+msgstr ""
+
+# db.gate.tab.COMMENT.exp
+#: ja/messages.utf8:666
+msgid ""
+"Set the text to be displayed in a comment.\n"
+"Limited html commands including links can be\n"
+"used here."
+msgstr ""
+"コメントのテキストを入力する。ある程度のhtmlやハイパーリンクなども利用出来"
+"る。"
+
+# db.gate.mparm.parameter
+#: ja/messages.utf8:670
+msgid "Parameter"
+msgstr "パラメタ"
+
+# db.gate.mparm.value
+# break.value
+#: ja/messages.utf8:671 ja/messages.utf8:1196
+msgid "Value"
+msgstr "値"
+
+# db.gate.mparm.exampleA
+#: ja/messages.utf8:672
+msgid ""
+"This module does not have any parameters. Parameters\n"
+"can be added to Verilog text modules. The value of\n"
+"each parameter can be customized for each instance\n"
+"through this dialog box. Module parameters are\n"
+"character. Below is an example module declaration\n"
+"with a parameter named \"base_value\" that has a\n"
+"default value of 1'b1."
+msgstr ""
+"このモジュールはパラメタを利用していない。\n"
+"パラメタはVerilogテキストのモジュールに\n"
+"利用出来る。このダイアログで、それぞれの\n"
+"パラメタの値が設定出来る。モジュールの\n"
+"パラメタを利用するため、テキストの定義に\n"
+"ください。以下の例題で、デフォルトの値が\n"
+"「1'b1」の「base_value」というパラメタを\n"
+"持つモジュールが示してある。"
+
+# db.gate.mux.dataorder
+#: ja/messages.utf8:684
+msgid "Input Ordering"
+msgstr "入力の順序"
+
+# db.gate.mux.ord1.hdr
+# db.gate.demux.ord1.hdr
+#: ja/messages.utf8:685 ja/messages.utf8:695
+msgid "Left-to-Right"
+msgstr "左から右へ"
+
+# db.gate.mux.ord2.hdr
+# db.gate.demux.ord2.hdr
+#: ja/messages.utf8:686 ja/messages.utf8:696
+msgid "Right-to-Left"
+msgstr "右から左へ"
+
+# db.gate.mux.ord1.exp
+#: ja/messages.utf8:687
+msgid "Order MUX inputs from left to right."
+msgstr "MUXの入力の順序を左から右へにする。"
+
+# db.gate.mux.ord2.exp
+#: ja/messages.utf8:690
+msgid "Order MUX inputs from right to left."
+msgstr "MUXの入力の順序を右から左へにする。"
+
+# db.gate.demux.dataorder
+#: ja/messages.utf8:694
+msgid "Output Ordering"
+msgstr "出力の順序"
+
+# db.gate.demux.ord1.exp
+#: ja/messages.utf8:697
+msgid "Order DEMUX outputs from left to right."
+msgstr "DEMUXの出力の順序を左から右へにする。"
+
+# db.gate.demux.ord2.exp
+#: ja/messages.utf8:700
+msgid "Order DEMUX outputs from right to left."
+msgstr "DEMUXの出力の順序を右から左へにする。"
+
+# db.gate.mux.select
+#: ja/messages.utf8:704
+msgid "Selector Placement"
+msgstr "セレクタの箇所"
+
+# db.gate.mux.sel1.hdr
+# db.gate.demux.sel1.hdr
+#: ja/messages.utf8:705 ja/messages.utf8:715
+msgid "On Left"
+msgstr ""
+
+# db.gate.mux.sel2.hdr
+# db.gate.demux.sel2.hdr
+#: ja/messages.utf8:706 ja/messages.utf8:716
+msgid "On Right"
+msgstr ""
+
+# db.gate.mux.sel1.exp
+#: ja/messages.utf8:707
+msgid ""
+"Place the data selector on the left side of\n"
+"the MUX."
+msgstr "セレクタの入力を左側におく。"
+
+# db.gate.mux.sel2.exp
+#: ja/messages.utf8:710
+msgid ""
+"Place the data selector on the right side of\n"
+"the MUX."
+msgstr "セレクタの入力を右側におく。"
+
+# db.gate.demux.select
+#: ja/messages.utf8:714
+msgid "Select Placement"
+msgstr ""
+
+# db.gate.demux.sel1.exp
+#: ja/messages.utf8:717
+msgid "Place the select input on the left side of the DEMUX."
+msgstr ""
+
+# db.gate.demux.sel2.exp
+#: ja/messages.utf8:718
+msgid "Place the select input on the right side of the DEMUX."
+msgstr ""
+
+# db.gate.aox.extbaruse
+#: ja/messages.utf8:722
+msgid "Extender Bar Use"
+msgstr "拡張バーを利用"
+
+# db.gate.aox.use.hdr
+#: ja/messages.utf8:723
+msgid "Extender Bars"
+msgstr "拡張バー"
+
+# db.gate.aox.nouse.hdr
+#: ja/messages.utf8:724
+msgid "No Extender Bars"
+msgstr "拡張バーを利用しない"
+
+# db.gate.aox.use.exp
+#: ja/messages.utf8:725
+msgid ""
+"Basic gates (AND, OR, etc.) will\n"
+"use extender bars as inputs\n"
+"are added."
+msgstr "基本ゲート(AND, OR, など)に入力を追加する時、拡張バーが利用される。"
+
+# db.gate.aox.nouse.exp
+#: ja/messages.utf8:728
+msgid ""
+"Basic gates (AND, OR, etc.) will\n"
+"not use extender bars as inputs\n"
+"are added."
+msgstr "基本ゲート(AND, OR, など)に入力を追加する時、拡張バーは利用されない。"
+
+# db.gate.led.type
+#: ja/messages.utf8:733
+msgid "LED Type"
+msgstr "LEDのタイプ"
+
+# db.gate.led.bit.hdr
+#: ja/messages.utf8:734
+msgid "Bit"
+msgstr "ビット"
+
+# db.gate.led.bar.hdr
+#: ja/messages.utf8:735
+msgid "Bar Graph"
+msgstr "バー・グラフ"
+
+# db.gate.led.bit.exp
+#: ja/messages.utf8:737
+msgid "Single-lamp LED display for 1-bit signals."
+msgstr "一ビットの信号の為の単位のLED。"
+
+# db.gate.led.bar.exp
+#: ja/messages.utf8:740
+msgid "LED bar graph with one bar per bit."
+msgstr "LEDのバー・グラフ。一ビットにつき、一つのバーが利用される。"
+
+# db.gate.led.hex.exp
+#: ja/messages.utf8:743
+msgid "Display signal in hexadecimal."
+msgstr "信号を16進数で表示する。"
+
+# db.gate.led.dec.exp
+#: ja/messages.utf8:746
+msgid "Display signal in decimal."
+msgstr "信号を10進数で表示する。"
+
+# db.gate.led.seg.exp
+#: ja/messages.utf8:749
+msgid "Signal bits directly control LED segments."
+msgstr "各セグメントを別々に制御する。"
+
+# db.seq.back
+#: ja/messages.utf8:753
+msgid "<Back"
+msgstr "<前へ"
+
+# db.seq.next
+#: ja/messages.utf8:754
+msgid "Next>"
+msgstr "次へ>"
+
+# db.hdl.savecap
+#: ja/messages.utf8:756
+msgid "Multiple Modules"
+msgstr "複数のモジュール"
+
+# db.hdl.saveexp
+#: ja/messages.utf8:758
+msgid ""
+"The text buffer for the module you have just edited contains more\n"
+"than one module definition. Please select one of the three actions "
+"described\n"
+"on the right."
+msgstr ""
+"テキストのバッファに複数のモジュールの定義がある。右側のアクションのいずれか"
+"を選択すてください。"
+
+# db.hdl.autoedit
+#: ja/messages.utf8:762
+msgid "Auto Edit"
+msgstr "自動変数"
+
+# db.hdl.split
+#: ja/messages.utf8:763
+msgid "Split"
+msgstr "分離"
+
+# db.hdl.comment
+#: ja/messages.utf8:764
+msgid "Comment out"
+msgstr "コメント"
+
+# db.hdl.ignore
+#: ja/messages.utf8:766
+msgid "Ignore"
+msgstr "無視する"
+
+# db.hdl.autoeditcap
+#: ja/messages.utf8:768
+msgid "Name Mismatch"
+msgstr "名前が一等しない"
+
+# db.hdl.autoeditexp
+#: ja/messages.utf8:770
+msgid ""
+"The textual description of the module does\n"
+"not match the expected name. Please select\n"
+"an option to the right to handle the discrepancy."
+msgstr ""
+"テキストでのモジュール名と期待した名前が一等しない。右側のアクションのいずれ"
+"かを選択すてください。"
+
+# cpath.cloops
+#: ja/messages.utf8:775
+msgid ""
+"Combinational loops were detected in your circuit.\n"
+"In order to do delay analysis on this circuit, you\n"
+"must either break the loop, or mark some of the\n"
+"components in the loop as a \"Critical Path Partition\"\n"
+"point. Nets at which a loop was detected are\n"
+"listed below."
+msgstr ""
+"回路に組合せのループが発見された。クリティカル ・パスの解析を行ないたけれ"
+"ば、ループ上のネット を切ったり、ループ上のゲートを「クリティカル・ パス分割"
+"点」にしたりする必要がある。"
+
+# print.printer
+#: ja/messages.utf8:783
+msgid "Printer:"
+msgstr "プリンター:"
+
+# print.prcmd
+#: ja/messages.utf8:785
+msgid "Print Command:"
+msgstr "印刷コマンド:"
+
+# print.prname
+#: ja/messages.utf8:786
+msgid "Printer"
+msgstr "プリンタ"
+
+# print.advanced
+#: ja/messages.utf8:787
+msgid "Advanced..."
+msgstr "オプションく..."
+
+# print.epssave
+#: ja/messages.utf8:790
+msgid "Save as Encapsulated Postscript."
+msgstr "Encapsulated Postscriptとしてセーブする."
+
+# print.epcm
+#: ja/messages.utf8:792
+msgid "Epochs/cm"
+msgstr "エポック/cm"
+
+# print.estpg
+#: ja/messages.utf8:793
+msgid "Estimated pages"
+msgstr "ページ数の見積もり"
+
+# print.all
+#: ja/messages.utf8:794
+msgid "All"
+msgstr "全て"
+
+# print.cur
+#: ja/messages.utf8:795
+msgid "Current"
+msgstr "現在"
+
+# print.use
+#: ja/messages.utf8:796
+msgid "Used"
+msgstr "使用中"
+
+# print.sel
+#: ja/messages.utf8:797
+msgid "Picked"
+msgstr "指定"
+
+# print.inclib
+#: ja/messages.utf8:798
+msgid "Include library modules."
+msgstr "ライブラリ・ファイルも印刷。"
+
+# print.papsz
+#: ja/messages.utf8:799
+msgid "Paper Size"
+msgstr "ページ・サイズ"
+
+# print.orient
+#: ja/messages.utf8:800
+msgid "Orientation"
+msgstr "オリエンテーション"
+
+# print.portrait
+#: ja/messages.utf8:801
+msgid "Portrait"
+msgstr "縦"
+
+# print.landscape
+#: ja/messages.utf8:802
+msgid "Landscape"
+msgstr "横"
+
+# print.2side
+#: ja/messages.utf8:803
+msgid "Print Double-Sided"
+msgstr "両面印刷"
+
+# print.opts
+#: ja/messages.utf8:804
+msgid "Content Options"
+msgstr "オプション"
+
+# print.scale
+#: ja/messages.utf8:805
+msgid "Scale large modules to fit page."
+msgstr "大きいモジュールをスケールして一ページで印刷する。"
+
+# print.partition
+#: ja/messages.utf8:806
+msgid "Partition large modules into multiple pages."
+msgstr "大きいモジュールを複数のページで印刷する。"
+
+# print.incidx
+#: ja/messages.utf8:807
+msgid "Include index."
+msgstr "インデックスを含む。"
+
+# print.incgraph
+#: ja/messages.utf8:808
+msgid "Include hierarchy graph."
+msgstr "階層グラフを含む。"
+
+# print.4up
+#: ja/messages.utf8:809
+msgid "Print small modules four per page."
+msgstr "小さいモジュールを一頁に四つずつ印刷する。"
+
+# print.range
+#: ja/messages.utf8:810
+msgid "Range"
+msgstr "レンジ"
+
+# print.scaleselect
+#: ja/messages.utf8:811
+msgid "Scale Selection"
+msgstr "選択範囲をスケールする"
+
+# print.fulltr
+#: ja/messages.utf8:812
+msgid "Full Trace"
+msgstr "全部"
+
+# print.parttr
+#: ja/messages.utf8:813
+msgid "Partial Trace"
+msgstr "部分"
+
+# print.start
+#: ja/messages.utf8:814
+msgid "Start"
+msgstr "スタート"
+
+# print.filesel
+#: ja/messages.utf8:816
+msgid "Output to file"
+msgstr "ファイルに印刷"
+
+# print.printersel
+#: ja/messages.utf8:817
+msgid "Output to printer"
+msgstr "プリンタに印刷"
+
+# print.defaultprinter
+#: ja/messages.utf8:818
+msgid "Default Printer"
+msgstr "デフォルトのプリンタ"
+
+# print.pageset
+#: ja/messages.utf8:819
+msgid "Page Setup"
+msgstr "ページ・setup"
+
+# print.modulesel
+#: ja/messages.utf8:820
+msgid "Module Selection"
+msgstr "モジュールの選択"
+
+# print.ok
+# opt.print
+#: ja/messages.utf8:826 ja/messages.utf8:878
+msgid "Print"
+msgstr "印刷"
+
+# print.printtrace.cap
+#: ja/messages.utf8:827
+msgid "Print Trace"
+msgstr "トレースの印刷"
+
+# print.printcirc.cap
+#: ja/messages.utf8:828
+msgid "Print Schematic"
+msgstr "回路図の印刷"
+
+# print.printcirc.out.exp
+#: ja/messages.utf8:829
+msgid ""
+"Choose whether to send\n"
+"your schematic to the\n"
+"printer or to a PostScript\n"
+"file."
+msgstr ""
+"回路図の印刷先が\n"
+"プリンタかファイル\n"
+"か選択する。"
+
+# print.printcirc.page.exp
+#: ja/messages.utf8:836
+msgid ""
+"Choose page and printer\n"
+"options here."
+msgstr ""
+
+# print.printcirc.mod.exp
+#: ja/messages.utf8:840
+msgid ""
+"Choose which modules are\n"
+"to be printed and set\n"
+"options controlling the\n"
+"presentation."
+msgstr ""
+"印刷するモジュール\n"
+"や印刷の様子を選択\n"
+"る。"
+
+# print.printtrace.trace.exp
+#: ja/messages.utf8:846
+msgid ""
+"Choose the time range\n"
+"over which to produce\n"
+"output. Also set the\n"
+"scale to compute the\n"
+"estimated page count."
+msgstr ""
+"時間の範囲を選択する。\n"
+"又、スケールによって、\n"
+"必要のページ数を表か\n"
+"評価する。"
+
+# print.tab.output
+#: ja/messages.utf8:853
+msgid "Output"
+msgstr "印刷先"
+
+# print.tab.content
+#: ja/messages.utf8:855
+msgid "Content"
+msgstr "内容"
+
+# opt.toolbars
+#: ja/messages.utf8:876
+msgid "Toolbars"
+msgstr "ツール・バー"
+
+# opt.library
+# circ.library
+#: ja/messages.utf8:880 ja/messages.utf8:1162
+msgid "Libraries"
+msgstr "ライブラリ"
+
+# opt.analysis
+#: ja/messages.utf8:881
+msgid "Analysis"
+msgstr "解析"
+
+# opt.color
+# opt.editor.color
+#: ja/messages.utf8:882 ja/messages.utf8:988
+msgid "Color"
+msgstr "色"
+
+# opt.html
+#: ja/messages.utf8:883
+msgid "HTML"
+msgstr ""
+
+# opt.debug
+#: ja/messages.utf8:884
+msgid "Debug"
+msgstr "デバッグ"
+
+# opt.security
+#: ja/messages.utf8:885
+msgid "Security"
+msgstr "セキュリティ"
+
+# opt.identity
+#: ja/messages.utf8:888
+msgid "Identity"
+msgstr "アイデンティティー"
+
+# opt.site
+#: ja/messages.utf8:889
+msgid "Site Name"
+msgstr "サイト名"
+
+# opt.username
+#: ja/messages.utf8:890
+msgid "User Name"
+msgstr "ユーザ名"
+
+# opt.libname
+#: ja/messages.utf8:891
+msgid "Library Name:"
+msgstr "ライブラリ名:"
+
+# opt.inst
+#: ja/messages.utf8:892
+msgid "Instances"
+msgstr "インスタンス"
+
+# opt.modports
+#: ja/messages.utf8:894
+msgid "Module Ports"
+msgstr "ポート"
+
+# opt.frames
+#: ja/messages.utf8:895
+msgid "Frames"
+msgstr "フレーム"
+
+# opt.comment
+# opt.editor.comments
+#: ja/messages.utf8:896 ja/messages.utf8:982
+msgid "Comments"
+msgstr "コメント"
+
+# opt.hlink
+#: ja/messages.utf8:897
+msgid "Hyperlinks"
+msgstr "リンク"
+
+# opt.wire
+#: ja/messages.utf8:898
+msgid "Single-Bit Wires"
+msgstr "1ビットのワイヤ"
+
+# opt.bus
+#: ja/messages.utf8:899
+msgid "Multi-Bit Wires"
+msgstr "多ビットのワイヤ"
+
+# opt.tools
+#: ja/messages.utf8:900
+msgid "Gate Tools"
+msgstr "ツール"
+
+# opt.background
+#: ja/messages.utf8:901
+msgid "Background"
+msgstr "バックグラウンド"
+
+# opt.grid
+#: ja/messages.utf8:903
+msgid "Scope Grid"
+msgstr "スコープのグリッド"
+
+# opt.logic1
+#: ja/messages.utf8:904
+msgid "Logic One"
+msgstr "論理１"
+
+# opt.logic0
+#: ja/messages.utf8:905
+msgid "Logic Zero"
+msgstr "論理０"
+
+# opt.float
+#: ja/messages.utf8:906
+msgid "Float"
+msgstr "フロート"
+
+# opt.unknown
+#: ja/messages.utf8:907
+msgid "Unknown/Conflict"
+msgstr "不明"
+
+# opt.offled
+#: ja/messages.utf8:908
+msgid "Off LED"
+msgstr "オフのLED"
+
+# opt.onled
+#: ja/messages.utf8:909
+msgid "On LED"
+msgstr "オンのLED"
+
+# opt.zled
+#: ja/messages.utf8:910
+msgid "Floating LED"
+msgstr "フロートのLED"
+
+# opt.restdef
+#: ja/messages.utf8:911
+msgid "Restore Defaults"
+msgstr "デフォールト"
+
+# opt.regudate
+#: ja/messages.utf8:912
+msgid "Region Update"
+msgstr "リージョン・アップデート"
+
+# opt.smoothscroll
+#: ja/messages.utf8:913
+msgid "Smooth Scrolling"
+msgstr "スムーズ・スクロール"
+
+# opt.balloon
+#: ja/messages.utf8:914
+msgid "Enable Help Balloons"
+msgstr "バルーン・ヘルプを利用"
+
+# opt.safeSave
+#: ja/messages.utf8:915
+msgid "Do safe file saving"
+msgstr "安全書き込み"
+
+# opt.saveCells
+#: ja/messages.utf8:916
+msgid "Include cells in save files"
+msgstr "セーブファイルにセルを含む"
+
+# opt.showimage
+#: ja/messages.utf8:917
+msgid "Show side-bar images in dialog boxes"
+msgstr "ダイアログボックスの説明欄を表示する"
+
+# opt.novice
+#: ja/messages.utf8:918
+msgid "Novice mode"
+msgstr "初心者モード"
+
+# opt.blockDropConnect
+#: ja/messages.utf8:919
+msgid "Wire drop port creation"
+msgstr "ワイヤ・ドロップでのポートの作成"
+
+# opt.freq
+#: ja/messages.utf8:921
+msgid "Interval"
+msgstr "期間"
+
+# opt.beak
+#: ja/messages.utf8:922
+msgid "Enable Special Modes"
+msgstr "特別モードを可能にする"
+
+# opt.bat
+#: ja/messages.utf8:923
+msgid "Bat"
+msgstr "バットマン"
+
+# opt.trek
+#: ja/messages.utf8:924
+msgid "Star Trek"
+msgstr "スター・トレック"
+
+# opt.miles
+#: ja/messages.utf8:925
+msgid "Miles"
+msgstr "マイルス"
+
+# opt.contver
+#: ja/messages.utf8:926
+msgid "Automatic Integrity Checking"
+msgstr "内部構造の自動確認"
+
+# opt.showsimcmd
+#: ja/messages.utf8:927
+msgid "Display Simulator Stream"
+msgstr "シミュレートのコマンドを表示する"
+
+# opt.estepsz
+#: ja/messages.utf8:928
+msgid "Epoch Step Size"
+msgstr "エポックのステップ数"
+
+# opt.cstepsz
+#: ja/messages.utf8:929
+msgid "Clock Cycle Step Size"
+msgstr "クロックのサイクル数"
+
+# opt.overstep
+#: ja/messages.utf8:930
+msgid "Clock Overstep"
+msgstr "クロックのオバーステップ"
+
+# opt.sorttraces
+#: ja/messages.utf8:931
+msgid "Sort traces alphabetically on scope"
+msgstr "スコープで信号をABC順で表示する"
+
+# opt.vpopupdelay
+#: ja/messages.utf8:932
+msgid "Pop-Up Delay"
+msgstr "信号値ウィンドの表示遅延"
+
+# opt.posedge
+#: ja/messages.utf8:934
+msgid "Clock step stops on all clock posedges"
+msgstr "全てのクロックで停止する"
+
+# opt.setclock
+#: ja/messages.utf8:935
+msgid "Clock step stops on clock"
+msgstr "指定のクロックで停止する"
+
+# opt.delayfilepath
+#: ja/messages.utf8:936
+msgid "Technology Files"
+msgstr "遅延ファイル"
+
+# opt.devfilepath
+#: ja/messages.utf8:937
+msgid "VPD (Virtual Peripheral Device) File Path"
+msgstr "VPD(Virtual Periperal Device)ファイルのパス"
+
+# opt.vlibpath
+#: ja/messages.utf8:938
+msgid "Verilog Library Path"
+msgstr "Verilogのライブラリのパス"
+
+# opt.vlibnames
+#: ja/messages.utf8:939
+msgid "Base Libraries"
+msgstr "ベースのライブラリ"
+
+# opt.display
+#: ja/messages.utf8:940
+msgid "Display"
+msgstr "画面"
+
+# opt.input
+#: ja/messages.utf8:941
+msgid "Input"
+msgstr "入力"
+
+# opt.undolen
+#: ja/messages.utf8:942
+msgid "Max Undo"
+msgstr "最大Undo"
+
+# opt.keybind
+#: ja/messages.utf8:943
+msgid "Key Binding Style"
+msgstr "キー・バインディングのスタイル"
+
+# opt.useless
+#: ja/messages.utf8:944
+msgid "Enable Useless Features"
+msgstr "役に立たない機能を有効にする"
+
+# opt.features
+#: ja/messages.utf8:945
+msgid "Save File Features"
+msgstr "基本の機能"
+
+# opt.simbase
+#: ja/messages.utf8:946
+msgid "Basic Simulator Options"
+msgstr "基本のシミュレータのオプション"
+
+# opt.simclock
+#: ja/messages.utf8:947
+msgid "Clock Options"
+msgstr "クロックのオプション"
+
+# opt.cpopts
+#: ja/messages.utf8:949
+msgid "Critical Path Options"
+msgstr "クリティカル・パス設定"
+
+# opt.maxpath
+#: ja/messages.utf8:950
+msgid "Maximum Number of Paths:"
+msgstr "最大パス数:"
+
+# opt.cpflash
+#: ja/messages.utf8:951
+msgid "Display with Flashing Path"
+msgstr "パスの点滅表示"
+
+# opt.general.fontset
+#: ja/messages.utf8:953
+msgid "Font Set"
+msgstr "フォント・サイズ"
+
+# opt.simulator.noglitch
+#: ja/messages.utf8:955
+msgid "Enable simulator glitch suppression."
+msgstr "シミュレータのグリッチの抑制。"
+
+# opt.simulator.err
+#: ja/messages.utf8:957
+msgid "Error Handling"
+msgstr "エラー扱い"
+
+# opt.simulator.stopany
+#: ja/messages.utf8:958
+msgid "Treat warnings as errors."
+msgstr "シミュレーションの忠告をエラーとして扱える。"
+
+# opt.simulator.showall
+#: ja/messages.utf8:959
+msgid "Always display warnings."
+msgstr "シミュレーションの忠告を表示する。"
+
+# opt.simulator.showiferr
+#: ja/messages.utf8:960
+msgid "Display warnings only with errors."
+msgstr "エラーのある時のみ、忠告を表示する。"
+
+# opt.simulator.ignore
+#: ja/messages.utf8:961
+msgid "Ignore all warnings."
+msgstr "シミュレーションの忠告を無視する。"
+
+# opt.tool.gateopt
+#: ja/messages.utf8:965
+msgid "Rotation/Alignment"
+msgstr "回転／整列化"
+
+# opt.tool.zoom
+#: ja/messages.utf8:967
+msgid "Zoom"
+msgstr "ズーム"
+
+# opt.tool.mode
+#: ja/messages.utf8:968
+msgid "Editor Tools"
+msgstr "モード"
+
+# opt.tool.simctl
+#: ja/messages.utf8:971
+msgid "Simulator Control"
+msgstr "シミュレータの制御"
+
+# opt.tool.simaux
+#: ja/messages.utf8:972
+msgid "Simulator Commands"
+msgstr "シミュレータのコマンド"
+
+# opt.tool.symmode
+#: ja/messages.utf8:973
+msgid "Symbol Editor Tools"
+msgstr "モード"
+
+# opt.tool.symedit
+#: ja/messages.utf8:974
+msgid "Cut/Paste"
+msgstr "カット／ペースト"
+
+# opt.tool.symshift
+#: ja/messages.utf8:976
+msgid "Bit Shift"
+msgstr "ビット・マップのシフト"
+
+# opt.tool.symopr
+#: ja/messages.utf8:977
+msgid "Bit Ops"
+msgstr "ビット・マップの演算"
+
+# opt.editor.features
+#: ja/messages.utf8:979
+msgid "Basic Editor Features"
+msgstr "基礎的なエディターの機能"
+
+# opt.editor.format
+#: ja/messages.utf8:980
+msgid "Enable Automatic Indenting"
+msgstr "自動インデントを有効にする"
+
+# opt.editor.colorize
+#: ja/messages.utf8:981
+msgid "Enable Code Colorization"
+msgstr "自動色付けを有効にする"
+
+# opt.editor.strings
+#: ja/messages.utf8:983
+msgid "Strings"
+msgstr "文字列"
+
+# opt.editor.reserved
+#: ja/messages.utf8:984
+msgid "Reserved Words"
+msgstr "キーワード"
+
+# opt.editor.gateword
+#: ja/messages.utf8:985
+msgid "Built-in Gates"
+msgstr "ゲート名"
+
+# opt.editor.instword
+#: ja/messages.utf8:986
+msgid "Module Instances"
+msgstr "モジュール名"
+
+# opt.editor.taskword
+#: ja/messages.utf8:987
+msgid "System Tasks"
+msgstr "システム・タスク"
+
+# opt.editor.bold
+#: ja/messages.utf8:989
+msgid "Bold"
+msgstr "太字"
+
+# opt.editor.italic
+#: ja/messages.utf8:990
+msgid "Italic"
+msgstr "イタリック"
+
+# opt.editor.indentlevel
+#: ja/messages.utf8:991
+msgid "Indentation per level:"
+msgstr "レブル毎のインデントのスペース数:"
+
+# opt.editor.beginindent
+#: ja/messages.utf8:992
+msgid "Make begin...end flush with enclosing level."
+msgstr "「begin..end」のインデントを囲まれるれべると会わせる。"
+
+# opt.editor.movesel
+#: ja/messages.utf8:993
+msgid "Enable drag-and-drop of selection."
+msgstr "選択のドラッグ・アンド・ドロップを有効にする。"
+
+# opt.editor.returntab
+#: ja/messages.utf8:994
+msgid "Auto indent after return."
+msgstr "リターンを押す時、自動インデントを有効にする。"
+
+# opt.vercheck
+#: ja/messages.utf8:998
+msgid ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+msgstr ""
+"定期的に tkgate の新しいバージョンをインターネットで チェックする。常時接続"
+"でなければ有効にしないこと。"
+
+# opt.color.editwin
+#: ja/messages.utf8:1014
+msgid "Edit Window Colors"
+msgstr "編集ウィンドウの色づけ"
+
+# opt.color.scopewin
+#: ja/messages.utf8:1015
+msgid "Scope Window Colors"
+msgstr "スコープ・ウィンドウの色づけ"
+
+# opt.bbar.restore
+#: ja/messages.utf8:1023
+msgid "Restore Page Defaults"
+msgstr "ページの設定をデフォルトにする"
+
+# opt.bbar.restoreall
+#: ja/messages.utf8:1024
+msgid "Restore All Defaults"
+msgstr "全ての設定をデフォルトにする"
+
+# igen.modname
+#: ja/messages.utf8:1036
+msgid "Module Name:"
+msgstr "モジュール名:"
+
+# info.script.error
+#: ja/messages.utf8:1054
+msgid "Script Errors"
+msgstr "スクリプトのエラー"
+
+# ipanel.plist
+#: ja/messages.utf8:1058
+msgid "Port List"
+msgstr "ポートの一覧表"
+
+# ipanel.props
+#: ja/messages.utf8:1059
+msgid "Interface Properties"
+msgstr "インタフェースの特徴"
+
+# ipanel.block
+#: ja/messages.utf8:1062
+msgid "Standard"
+msgstr "ブロック"
+
+# ipanel.symbol
+#: ja/messages.utf8:1063
+msgid "Symbol"
+msgstr "シンボル"
+
+# ipanel.itype.select
+#: ja/messages.utf8:1067
+msgid "Interface Type"
+msgstr "インタフェス・タイプ"
+
+# ipanel.ppos.label
+#: ja/messages.utf8:1076
+msgid "Block resize port position handling:"
+msgstr "ブロックのサイズを変更する時のポートの取り扱い:"
+
+# ipanel.ppos.fix
+#: ja/messages.utf8:1077
+msgid "Fixed"
+msgstr "指定"
+
+# ipanel.ppos.scale
+#: ja/messages.utf8:1078
+msgid "Scaled"
+msgstr "スケール"
+
+# blklst.claim.cap
+#: ja/messages.utf8:1084 ja/messages.utf8:1092
+msgid "Claim Module"
+msgstr "モジュールの取得"
+
+# blklst.to
+#: ja/messages.utf8:1085
+msgid "To"
+msgstr "新規モジュール名"
+
+# blklst.from
+#: ja/messages.utf8:1086
+msgid "From"
+msgstr "現在モジュール名"
+
+# blklst.new.cap
+#: ja/messages.utf8:1088
+msgid "Create New Module"
+msgstr "モジュールの新規作成"
+
+# blklst.del.cap
+#: ja/messages.utf8:1089
+msgid "Delete Module"
+msgstr "削除するモジュール名"
+
+# blklst.copy.cap
+#: ja/messages.utf8:1090
+msgid "Copy Module"
+msgstr "コピー・モジュール"
+
+# blklst.rename.cap
+#: ja/messages.utf8:1091
+msgid "Rename Module"
+msgstr "モジュールの改名"
+
+# blklst.setroot.cap
+#: ja/messages.utf8:1093
+msgid "Set Root Module"
+msgstr "トップ・モジュールの選択"
+
+# find.label
+#: ja/messages.utf8:1095
+msgid "Find Objects"
+msgstr "探索"
+
+# find.exp
+#: ja/messages.utf8:1096
+msgid ""
+"Look for text either in\n"
+"a component name, a wire name\n"
+"or in the text of a comment.\n"
+"Double click on a result to\n"
+"go to that item."
+msgstr "ゲート名、ネット名、 コメントなどの中に 指定ストリングを 探索する。"
+
+# find.ignorecase
+#: ja/messages.utf8:1100
+msgid "Ignore Case"
+msgstr "ケースを無視する"
+
+# find.result.name
+#: ja/messages.utf8:1104
+msgid "Object Name"
+msgstr "オブジェクト名"
+
+# find.options
+#: ja/messages.utf8:1113
+msgid "Search Options"
+msgstr "探索のオプション"
+
+# find.results
+#: ja/messages.utf8:1114
+msgid "Search Results"
+msgstr "探索の結果"
+
+# find.qual.contains
+#: ja/messages.utf8:1123
+msgid "Contains..."
+msgstr "を含むく..."
+
+# find.qual.begins
+#: ja/messages.utf8:1124
+msgid "Begins with..."
+msgstr "から始まるく..."
+
+# find.qual.ends
+#: ja/messages.utf8:1125
+msgid "Ends with..."
+msgstr "で終るく..."
+
+# find.qual.matches
+#: ja/messages.utf8:1126
+msgid "Matches..."
+msgstr "同等するく..."
+
+# find.dom.label
+#: ja/messages.utf8:1128
+msgid "Look for objects in:"
+msgstr "以下の場所を探索する:"
+
+# find.dom.gates
+#: ja/messages.utf8:1129
+msgid "components"
+msgstr "ゲート"
+
+# find.dom.nets
+#: ja/messages.utf8:1130
+msgid "nets"
+msgstr "ネット"
+
+# find.dom.text
+#: ja/messages.utf8:1131
+msgid "comment text"
+msgstr "コメントのテキスト"
+
+# find.search
+#: ja/messages.utf8:1133
+msgid "Find:"
+msgstr "探索:"
+
+# find.target
+#: ja/messages.utf8:1134
+msgid "Target"
+msgstr "探索の範囲"
+
+# circ.label
+#: ja/messages.utf8:1152
+msgid "Circuit Properties"
+msgstr "回路の特徴"
+
+# circ.filev
+#: ja/messages.utf8:1153
+msgid "File Version"
+msgstr "ファイルのバージョン"
+
+# circ.title
+#: ja/messages.utf8:1155
+msgid "Circuit Title"
+msgstr "回路名"
+
+# circ.discchg
+#: ja/messages.utf8:1156
+msgid "Do not warn about discarding changes."
+msgstr "変更を無視する。"
+
+# circ.extbar
+#: ja/messages.utf8:1157
+msgid "Use extender bars on AND, OR and XOR gates."
+msgstr "拡張バーを利用する。"
+
+# circ.autostart
+#: ja/messages.utf8:1158
+msgid "Enable auto-start of simulation."
+msgstr "シミュレーションの自動開始を有効にする。"
+
+# circ.iniscript
+#: ja/messages.utf8:1159
+msgid "Initialization Scripts"
+msgstr "初期化スクリプト"
+
+# circ.script
+#: ja/messages.utf8:1163
+msgid "Scripts"
+msgstr "スクリプト"
+
+# circ.simulator
+#: ja/messages.utf8:1164
+msgid "Simulation"
+msgstr "シミュレーション"
+
+# libmgr.cap
+#: ja/messages.utf8:1170
+msgid "Library Manager"
+msgstr "ライブラリ・マネジャー"
+
+# libmgr.library
+#: ja/messages.utf8:1171
+msgid "Library"
+msgstr "ライブラリ名"
+
+# libmgr.description
+#: ja/messages.utf8:1172
+msgid "Description"
+msgstr "説明"
+
+# libmgr.status
+#: ja/messages.utf8:1173
+msgid "Status"
+msgstr "状態"
+
+# libmgr.status.load
+#: ja/messages.utf8:1174
+msgid "Loaded"
+msgstr "利用"
+
+# libmgr.status.unload
+#: ja/messages.utf8:1175
+msgid "Not Loaded"
+msgstr "非利用"
+
+# libmgr.exp
+#: ja/messages.utf8:1176
+msgid "Select libraries to be loaded or unloaded."
+msgstr "利用するライブラリを選択する。"
+
+# libmgr.load
+#: ja/messages.utf8:1179
+msgid "Load"
+msgstr "利用"
+
+# libmgr.unload
+#: ja/messages.utf8:1180
+msgid "Unload"
+msgstr "非利用"
+
+# libmgr.unloadall
+#: ja/messages.utf8:1181
+msgid "Unload All"
+msgstr "全てを非利用"
+
+# libmgr.notedit
+#: ja/messages.utf8:1183
+msgid "Must be in circuit edit mode to open library manager."
+msgstr ""
+"回路図のエディタが開いている時のみ、\n"
+"ライブラリのマネジャーが利用出来る。"
+
+# break.tab
+#: ja/messages.utf8:1192
+msgid "Breakpoints"
+msgstr "ブレークポイント"
+
+# break.id
+#: ja/messages.utf8:1193
+msgid "ID"
+msgstr "番号"
+
+# break.state
+#: ja/messages.utf8:1194
+msgid "S"
+msgstr "状"
+
+# break.condition
+#: ja/messages.utf8:1195
+msgid "Condition"
+msgstr "条件"
+
+# cp.delay
+#: ja/messages.utf8:1208
+msgid "Path Delay:"
+msgstr "パス遅延:"
+
+# cp.pathl
+#: ja/messages.utf8:1209
+msgid "Path List:"
+msgstr "パスの一覧:"
+
+# cp.numpath
+#: ja/messages.utf8:1210
+msgid "Number of Paths:"
+msgstr "パス数:"
+
+# cp.recompute
+#: ja/messages.utf8:1211
+msgid "Recompute"
+msgstr "再計算"
+
+# err.nopin
+#: ja/messages.utf8:1216
+msgid "Can't change selected pin."
+msgstr "選択されたピンのタイプを変更出来ない。"
+
+# err.badhex
+#: ja/messages.utf8:1217
+msgid "Illegal hex value '%s' ignored."
+msgstr ""
+
+# err.gatanchor
+#: ja/messages.utf8:1218
+msgid "Components(s) are anchored and can not be moved."
+msgstr "ゲートが移動不可にマークされている為、移動出来ない。"
+
+# err.badfind
+#: ja/messages.utf8:1219
+msgid "Can't find target '%s'."
+msgstr "探索ストリング「%s」が見つからない。"
+
+# err.badopendel
+#: ja/messages.utf8:1220
+msgid "Can't delete open module."
+msgstr "使用中のモジュールを削除出来ない。"
+
+# err.nosrcmod
+#: ja/messages.utf8:1221
+msgid "Source module '%s' not found."
+msgstr "ソース・モジュール'%s'が見つからない。"
+
+# err.noerr
+#: ja/messages.utf8:1222
+msgid "Can not locate error."
+msgstr "エラー・メッセージが見つからない。"
+
+# err.misserr
+#: ja/messages.utf8:1223
+msgid "Error information incomplete (did the simulator crash?)"
+msgstr "エラー情報が不完全である。(シミュレータが落ちた？)"
+
+# err.badinadd
+#: ja/messages.utf8:1225
+msgid "Can't add any more inputs to selected component."
+msgstr "選択のゲートにもう入力追加が出来ない。"
+
+# err.badoutadd
+#: ja/messages.utf8:1226
+msgid "Can't add any more outputs to selected component."
+msgstr "選択のゲートにもう出力追加が出来ない。"
+
+# err.badinoutadd
+#: ja/messages.utf8:1227
+msgid "Can't add any more inout pins to selected component."
+msgstr "選択のゲートにもう入出力追加が出来ない。"
+
+# err.badpinchg
+#: ja/messages.utf8:1228
+msgid "Can't change pin types on selected component."
+msgstr "選択のゲートのピンのタイプが変更出来ない。"
+
+# err.badnetname
+#: ja/messages.utf8:1229
+msgid "Illegal characters in identifier deleted."
+msgstr "名前に不正の文字がある為削除された。"
+
+# err.netbcrename
+#: ja/messages.utf8:1230
+msgid "Identifier renamed to '%s' because of illegal characters."
+msgstr "指定の名前に不正の文字がある為、「%s」に変更された。"
+
+# err.netconfnet
+#: ja/messages.utf8:1231
+msgid "Identifier renamed to '%s' because of conflict."
+msgstr "指定の名前が別の名前と衝突する為、「%s」に変更された。"
+
+# err.netconfgat
+#: ja/messages.utf8:1232
+msgid "Identifier renamed to avoid conflict with built-in component name"
+msgstr ""
+
+# err.netconfkw
+#: ja/messages.utf8:1233
+msgid "Identifier renamed to avoid conflict with reserved word."
+msgstr ""
+
+# err.badconsame
+#: ja/messages.utf8:1234
+msgid "Connection refused because wires are part of the same net."
+msgstr "ネットが同じなので、接続出来ない。"
+
+# err.badconptsp
+#: ja/messages.utf8:1235
+msgid "Connection refused because both wires are module ports or supply."
+msgstr "ネットの両方がポート又は電力なので、接続出来ない。"
+
+# err.badconbitw
+#: ja/messages.utf8:1236
+msgid "Connection refused because bit widths do not match."
+msgstr "ネットのビット幅が異なるので、接続出来ない。"
+
+# err.badrange
+#: ja/messages.utf8:1237
+msgid "Non-positive range for scope trace is not allowed."
+msgstr "指定された時間のレンジが不正である。"
+
+# err.badlprcmd
+#: ja/messages.utf8:1238
+msgid "Unable to execute printer command '%s'."
+msgstr "印刷コマンド「%s」が実行出来ない。"
+
+# err.badpsopen
+#: ja/messages.utf8:1239
+msgid "Unable to open file '%s' for postscript output."
+msgstr "ポスト・スクリプトを「%s」に書き込めない。"
+
+# err.badid
+#: ja/messages.utf8:1240
+msgid "Illegal identifier '%s'."
+msgstr "「%s」は不正の名前である。"
+
+# err.bkpt.badexp
+#: ja/messages.utf8:1242
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"不正なブレークポイントの条件である。「net」, 「!net」, 「net==value」, "
+"「net!=value」のどれかでなければならない。"
+
+# err.bkpt.badnet
+#: ja/messages.utf8:1243
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+
+# err.bkpt.badval
+#: ja/messages.utf8:1244
+msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+msgstr ""
+
+# err.bkpt.toomany
+#: ja/messages.utf8:1245
+msgid "Too many breakpoints. Maximum is %d."
+msgstr "ブレークポイントが多過ぎる。制限は%dである。"
+
+# err.sim.badtmp
+#: ja/messages.utf8:1247
+msgid "Could not save temporary file '%s' for simulator (disc full?)"
+msgstr ""
+
+# err.sim.syntx
+#: ja/messages.utf8:1248
+msgid "Syntax error in '%s' command."
+msgstr "不正の「%s」コマンド"
+
+# err.sim.noincl
+#: ja/messages.utf8:1249
+msgid "Include file '%s' not found."
+msgstr "インクルード・ファイル「%s」が見つからなかった。"
+
+# err.sim.badedge
+#: ja/messages.utf8:1250
+msgid "Illegal edge indicator '%c' in clock command."
+msgstr "clockコマンドのエッジ'%c'が不正である。"
+
+# err.sim.nobkpt
+#: ja/messages.utf8:1251
+msgid "No such breakpoint '%s'."
+msgstr "ブレーク・ポイント「%s」が見つからない。"
+
+# err.sim.nonet
+#: ja/messages.utf8:1252
+msgid "Can't find net '%s'."
+msgstr "ネット「%s」は定義していない。"
+
+# err.sim.nogate
+#: ja/messages.utf8:1253
+msgid "Can't find component '%s'."
+msgstr "ゲート「%s」は定義していない。"
+
+# err.sim.badbin
+#: ja/messages.utf8:1254
+msgid "Illegal character in binary constant '%s'."
+msgstr ""
+
+# err.sim.notswitch
+#: ja/messages.utf8:1255
+msgid "Component '%s' is not a switch, dip or register."
+msgstr "ゲート'%s'はスイッチ、DIP、レジスタのどれかでなければならない。"
+
+# err.sim.badcmd
+#: ja/messages.utf8:1256
+msgid "Unrecognized command '%s' in simulation script."
+msgstr "シミュレーション・スクリプトに不正のコマンド「%s」がある。"
+
+# err.sim.isrun
+#: ja/messages.utf8:1257
+msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
+msgstr "シミュレータは既に実行している。 ('Ctrl-s e'で終了する)."
+
+# err.noteditpchg
+#: ja/messages.utf8:1259
+msgid "Properties can only be changed in edit mode."
+msgstr "設定は編集モード以外、変更不可。"
+
+# err.badeditop
+#: ja/messages.utf8:1260
+msgid "Illegal interface edit mode operation."
+msgstr "編集コマンドに不正がある。"
+
+# err.badopen
+#: ja/messages.utf8:1261
+msgid "Unable to open input file '%s'."
+msgstr "回路ファイル「%s」が見つからない。"
+
+# err.badlibopen
+#: ja/messages.utf8:1262
+msgid "Unable to open library file '%s'."
+msgstr "ライブラリ・ファイル「%s」が見つからない。"
+
+# err.nomark
+#: ja/messages.utf8:1264
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr "ゲート種を選ぶ前に、マウスで位置を設定してください。"
+
+# err.badgate
+#: ja/messages.utf8:1265
+msgid "Unknown component type '%s'."
+msgstr ""
+
+# err.badportadd
+#: ja/messages.utf8:1267
+msgid "Can't add ports to components of this type."
+msgstr "選択されたゲートにポートは追加不可。"
+
+# err.manypages
+#: ja/messages.utf8:1269
+msgid ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+msgstr "ページ数が極めて大きい。 本当に印刷しますか?"
+
+# err.nojump
+#: ja/messages.utf8:1273
+msgid ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+msgstr ""
+"現在、'jump-to-module'機能はシミュレーション・モードで使用出来ない。 トッ"
+"プ・モジュールより、「>」や「<」のコマンドでモジュールを開けてください。"
+
+# err.nomod
+#: ja/messages.utf8:1277
+msgid "Module '%s' is not defined."
+msgstr "モジュール「%s」は定義していない。"
+
+# err.modlock
+#: ja/messages.utf8:1278
+msgid "Logic Block is Locked!"
+msgstr "モジュールがロックしている!"
+
+# err.closeroot
+#: ja/messages.utf8:1279
+msgid "No higher level module opened on the module stack."
+msgstr "トップ・モジュールが閉じれない。"
+
+# err.editonly
+#: ja/messages.utf8:1280
+msgid "Command not valid when in simulation mode."
+msgstr "コマンドは、シミュレーション・モードで使えない。"
+
+# err.simonly
+#: ja/messages.utf8:1281
+msgid "Command valid only in simulation mode."
+msgstr "コマンドは、シミュレーション・モードでしか使えない。"
+
+# err.nodel
+#: ja/messages.utf8:1283
+msgid "No deletable selection."
+msgstr "ゲートを選択していない。"
+
+# err.modnotdef
+#: ja/messages.utf8:1284
+msgid "Module '%s' is undefined."
+msgstr "モジュール「%s」は定義していない。"
+
+# err.moddef
+#: ja/messages.utf8:1285
+msgid "The module '%s' already exists."
+msgstr "モジュール「%s」が既に定義している。"
+
+# err.noprop
+#: ja/messages.utf8:1286
+msgid "Selected component has no editable properites."
+msgstr "選択されたゲートは編集出来る設定がない。"
+
+# err.openscript
+#: ja/messages.utf8:1287
+msgid "Can't open simulation script file '%s'"
+msgstr "シミュレーション・スクリプト「%s」が見つからない。"
+
+# err.oldversion
+#: ja/messages.utf8:1288
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr "回路ファイルのバージョン(%s)が古い。(現在のバージョンは%s)."
+
+# err.futureversion
+#: ja/messages.utf8:1289
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr ""
+"未来のバージョン（%s）のtkgateファイルである。（現在のバージョンは%s）"
+
+# err.badversion
+#: ja/messages.utf8:1290
+msgid "Unknown version number. Use at your own risk."
+msgstr "回路ファイルのバージョンが認識出来ない。注意して利用下さい。"
+
+# err.nodrive
+#: ja/messages.utf8:1291
+msgid "Net %s has no driver in module %s."
+msgstr "ネット%sはモジュール%sに信号のソースがない。"
+
+# err.noconn
+#: ja/messages.utf8:1292
+msgid "Wire %s{%d} has no connections - deleted."
+msgstr "ワイヤ%s{%d}は接続がない（削除した）。"
+
+# err.oldportact
+#: ja/messages.utf8:1293
+msgid "Please right click on port or module edge to add/change port."
+msgstr "ポートやモジュールの端に右クリックして下さい。"
+
+# err.backupfail
+#: ja/messages.utf8:1294
+msgid "Unable to create backup file '%s'."
+msgstr "バックアップ・ファイル'%s'が作成出来なかった。"
+
+# err.corruptnewsave
+#: ja/messages.utf8:1297
+msgid ""
+"TkGate was able to save your file in '%s', but it appears\n"
+"to be corrupted. If you have checkpointing enabled try\n"
+"loading one of the checkpoint files. Use 'tkgate -V' to\n"
+"check the integrity of a save file."
+msgstr ""
+"TkGateは'%s'にセーブ出来たが、ファイルが混乱されているみたい。もしチェッ "
+"ク・ポイントを利用していれば、チェック・ポイントのファイルを使ってみてく だ"
+"さい。'tkgate -V'でファイルをチェック出来る。"
+
+# err.corruptsave
+#: ja/messages.utf8:1301
+msgid ""
+"TkGate detected a problem while trying to save the file '%s'.\n"
+"The existing file has been left unmodified and the damaged file has\n"
+"been written to '%s'. If you have checkpointing enabled you\n"
+"can try loading one of the checkpoint files. You can also use\n"
+"'tkgate -V' to check the integrety of a save file."
+msgstr ""
+"'%s'をセーブしようとしている時、TkGateに内部問題が発見した。元々のファイ ル"
+"はそのまま残してある。混乱されている可能性のあるファイルは'%s'にセーブ し"
+"た。もしチェック・ポイントを利用していれば、チェック・ポイントのファイ ルを"
+"使ってみてください。'tkgate -V'でファイルをチェック出来る。"
+
+# err.badsave
+#: ja/messages.utf8:1305
+msgid ""
+"A problem has occured trying to open or write the file '%s'. Check\n"
+"file/directory protections and or disk space."
+msgstr ""
+"'%s'をセーブ出来なかった。ファイルのプロテクションや空きディスク量を確認 し"
+"てください。"
+
+# err.nosafesave
+#: ja/messages.utf8:1309
+msgid ""
+"A problem has occurred attempting to save '%s'. If you wish, you can\n"
+"try again without save validation. If you say \"no\", the original file\n"
+"will remain unmodified. If you say \"yes\" the original file will be\n"
+"overwritten, but may be destroyed if a problem occurs. Would you like\n"
+"to attempt an unvalidated save?"
+msgstr ""
+"'%s'の安全セーブを行うための一時のファイルが作成出来なかったから、直接セー "
+"ブしなくてはならない。「NO」にクリックすれば、元々のファイルはそのまま残 "
+"す。「YES」にクリックすれば、セーブするが、セーブ途中に問題が起こったら、 回"
+"路データが破壊される可能性がある。直接セーブしてみましょうか?"
+
+# err.noback
+#: ja/messages.utf8:1313
+msgid ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+msgstr ""
+"tkgateバージョン%sで作られたファイルである。保存すると、 tkgateの古いバー"
+"ジョンに読み込めないことがある（現在の バージョンは%sである）。"
+
+# msg.selwire
+#: ja/messages.utf8:1328
+msgid "Selected wire %s named '%s'."
+msgstr "%sというワイヤが選択された。"
+
+# msg.selgate
+#: ja/messages.utf8:1329
+msgid "Selected gate %s named '%s'."
+msgstr ""
+
+# msg.selblock
+#: ja/messages.utf8:1330
+msgid "Selected %s block named '%s'."
+msgstr ""
+
+# msg.modoverwt
+#: ja/messages.utf8:1332
+msgid "Destination module '%s' already exists. Overwrite?"
+msgstr "モジュール「%s」が既に定義されている。定義しなおしますか?"
+
+# msg.foundgate
+#: ja/messages.utf8:1333
+msgid "Found component named '%s'."
+msgstr "%sというゲートが見つかった。"
+
+# msg.foundwire
+#: ja/messages.utf8:1334
+msgid "Found wire named '%s'."
+msgstr "%sというワイヤが見つかった。"
+
+# msg.searchagn
+#: ja/messages.utf8:1335
+msgid "Target string '%s' not found. Hit 'find' to restart search again."
+msgstr ""
+"探索ストリング「%s」が見つからなかった。もう一度「探索」を押すと、探索しなお"
+"す。"
+
+# msg.sim.chgtoroot
+#: ja/messages.utf8:1336
+msgid "Simulation mode requires root module at top of edit stack."
+msgstr ""
+"シミュレーション・モードでは、トップ・モジュールがモジュール・スタックのトッ"
+"プでなければならない。"
+
+# msg.sim.nogatemod
+#: ja/messages.utf8:1337
+msgid "Simulation mode requires concrete module stack."
+msgstr ""
+"シミュレーション・モードで、具体的なモジュール・スタックが必要である。"
+
+# msg.setinterface
+#: ja/messages.utf8:1338
+msgid "Set module interface for '%s'."
+msgstr "モジュール「%s」のインタフェースをセットした。"
+
+# msg.needsel
+#: ja/messages.utf8:1339
+msgid "Please select a module instance."
+msgstr "モジュールのインスタンスを選んでください。"
+
+# msg.wroteckpt
+#: ja/messages.utf8:1340
+msgid "Checkpointed to %s..."
+msgstr "「%s」にチェックポイントを書き込んだく..."
+
+# msg.save
+#: ja/messages.utf8:1341
+msgid "Saved circuit to '%s'."
+msgstr "「%s」に保存した。"
+
+# msg.reallynew
+#: ja/messages.utf8:1342
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr "回路に変更がある。本当に保存しないで、新しい回路を開きますか?"
+
+# msg.reallyquit
+#: ja/messages.utf8:1343
+msgid "Circuit has been modified. Do you really want to exit?"
+msgstr "回路に変更がある。本当に保存しないで、終了しますか?"
+
+# msg.notlib
+#: ja/messages.utf8:1344
+msgid "Module '%s' is not a library module."
+msgstr "モジュール「%s」はライブラリ・モジュールではない。"
+
+# miles.msg1
+#: ja/messages.utf8:1349
+msgid "Only a fool would put %s%s there, Miles."
+msgstr ""
+
+# miles.msg2
+#: ja/messages.utf8:1350
+msgid "That's a really stupid place to put %s%s, Miles."
+msgstr ""
+
+# miles.msg3
+#: ja/messages.utf8:1351
+msgid "That's a terrible place for %s%s, Miles."
+msgstr ""
+
+# miles.msg4
+#: ja/messages.utf8:1352
+msgid "Miles, you are a fool for putting %s%s there."
+msgstr ""
+
+# miles.msg5
+#: ja/messages.utf8:1353
+msgid "Only you would put %s%s there, Miles."
+msgstr ""
+
+# miles.msg6
+#: ja/messages.utf8:1354
+msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
+msgstr ""
+
+# miles.msg7
+#: ja/messages.utf8:1355
+msgid "Why don't you give up Miles, this is a stupid circuit."
+msgstr "このロクでなし回路の設計を諦めよ、マイスル。"
+
+# miles.msg8a
+#: ja/messages.utf8:1356
+msgid "It's pointless to continue, Miles."
+msgstr "続けても、無駄だよ、マイルス。"
+
+# miles.msg8b
+#: ja/messages.utf8:1357
+msgid "It's obvious you can't design a circuit"
+msgstr "お前が回路を設計出来ないというのは、誰でも分かるよ。"
+
+# verga.err.OK
+#: ja/messages.utf8:1364
+msgid "Don't worry, be happy."
+msgstr "心配しないで、笑ってください。"
+
+# ho.new
+#: ja/messages.utf8:1370
+msgid ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+msgstr "現在の回路を消して、新しい 回路を作成する。"
+
+# ho.open
+#: ja/messages.utf8:1374
+msgid "Open a circuit from a file."
+msgstr "回路ファイルを開く。"
+
+# ho.save
+#: ja/messages.utf8:1375
+msgid "Save circuit to current file."
+msgstr "回路ファイルを保存する。"
+
+# ho.print
+#: ja/messages.utf8:1376
+msgid "Print current circuit."
+msgstr "回路ファイルを印刷する。"
+
+# ho.move
+#: ja/messages.utf8:1378
+msgid ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+msgstr ""
+"移動／接続 - このツールで以下の機能が使える   新しいゲートの位置を設定す"
+"る   ゲートを移動する   ワイヤを移動する   ワイヤを接続する ダブル・クリック"
+"で以下の機能が使える   ゲートの属性を編集する   ワイヤの属性を編集する   "
+"ポートの属性を編集する   コメントのテキストの属性を編集する"
+
+# ho.delgat
+#: ja/messages.utf8:1382
+msgid ""
+"Delete Component - Use this\n"
+"tool to delete components."
+msgstr "このツールでゲートを削除する。"
+
+# ho.cutw
+#: ja/messages.utf8:1386
+msgid ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+msgstr "このツールでワイヤを切断する。"
+
+# ho.inv
+#: ja/messages.utf8:1390
+msgid ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+msgstr "このツールで、ゲートの入出力に 否定を付けたり、消したりする。"
+
+# ho.bitw
+#: ja/messages.utf8:1394
+msgid ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+msgstr ""
+"このツールでワイヤのビット幅を 変更する。ビット幅を右下の入力 ボックスに入力"
+"してください。"
+
+# ho.mod.open
+#: ja/messages.utf8:1398
+msgid "Open the selected module."
+msgstr "選択されたモジュールを開く。"
+
+# ho.mod.close
+#: ja/messages.utf8:1399
+msgid "Close the current module."
+msgstr "現在のモジュールを閉じる。"
+
+# ho.undo
+#: ja/messages.utf8:1401
+msgid "Undo previous action(s)"
+msgstr "最近行った変化を元通りにする。"
+
+# ho.redo
+#: ja/messages.utf8:1402
+msgid "Redo undone action(s)"
+msgstr "undoした変化をやり直す"
+
+# ho.tab.simulate
+#: ja/messages.utf8:1404
+msgid ""
+"Start the simulator, open the logic analyzer\n"
+"and execute any initialization scripts if defined."
+msgstr ""
+"シミュレータを開始し、論理アナライザのウィンドを 開き、そして初期化スクリプ"
+"トが定義している場合、 そのスクリプトを実行する。"
+
+# ho.tab.cpath
+#: ja/messages.utf8:1409
+msgid "Find critical paths in a circuit."
+msgstr "回路のクリティカル・パスを探索する。"
+
+# ho.simgo
+#: ja/messages.utf8:1413
+msgid ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+msgstr ""
+"シミュレータを動かす。組合せ回路の場合、 信号が変わらなくなる時、シミュレー"
+"ションの時間 が一時停止する。"
+
+# ho.simpause
+#: ja/messages.utf8:1417
+msgid "Pause a continuously running simulation."
+msgstr "シミュレータの一時停止。"
+
+# ho.simstep
+#: ja/messages.utf8:1421
+msgid ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"シミュレータを一定数のエポックだけ動かす。 ステップ数はシミュレートの設定に"
+"よる。"
+
+# ho.simclock
+#: ja/messages.utf8:1425
+msgid ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"シミュレータを一定数のクロック・サイクル だけ動かす。 ステップ数はシミュレー"
+"トの設定による。"
+
+# ho.simstop
+#: ja/messages.utf8:1429
+msgid ""
+"End the current simulation\n"
+"and return to edit mode."
+msgstr "シミュレータを停止して、 編集モードに戻る。"
+
+# ho.simbreak
+#: ja/messages.utf8:1433
+msgid ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+msgstr "シミュレータのブレークポイント を編集する。"
+
+# ho.simexec
+#: ja/messages.utf8:1437
+msgid "Manage the set of active scripts."
+msgstr "スクリプトを実行する。"
+
+# ho.simload
+#: ja/messages.utf8:1441
+msgid ""
+"Load memory with contents of\n"
+"a .mem file."
+msgstr "メモリ・ファイルを読み込む。"
+
+# ho.simdump
+#: ja/messages.utf8:1445
+msgid ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+msgstr "メモリ・ファイルに書き出す。"
+
+# ho.modlist
+#: ja/messages.utf8:1449
+msgid ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"読み込んであるモジュールの一覧表。 トップのモジュールの名前に「+」が 付いて"
+"いる。ライブラリのモジュール は括弧に囲まれている。"
+
+# ho.netlist
+#: ja/messages.utf8:1453
+msgid ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+msgstr ""
+"現在のモジュールの一覧表。名前を隠して いるネットの名前に「@」が付いてい"
+"る。 マルチ・ビットのネットの名前の後に ビットのレンジを表示している。"
+
+# ho.ports
+#: ja/messages.utf8:1457
+msgid ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+msgstr ""
+"現在のモジュールのポートの一覧表。 入力に「>」、出力に「<」、入出力に 「=」"
+"が付いている。"
+
+# ho.status.logo
+#: ja/messages.utf8:1461
+msgid ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+msgstr ""
+"現在のモードが表示されている。鉄のゲート は編集モードを表す。ANDゲートはシ"
+"ミュレー ション・モードを表す。ANDゲートが走って いる時、シミュレーションの"
+"時間が動いている。"
+
+# ho.status.msg
+#: ja/messages.utf8:1465
+msgid "Messages from TkGate are displayed here."
+msgstr "tkgateよりのメッセージがここに表示される。"
+
+# ho.status.block
+#: ja/messages.utf8:1467
+msgid "The stack of modules being edited."
+msgstr "現在のモジュールのパス。"
+
+# ho.status.file
+#: ja/messages.utf8:1469
+msgid ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+msgstr ""
+"現在編集中のファイル名が表示されている。「*」 という記号がついている時、保存"
+"していない変更 がある。"
+
+# ho.print.selall
+#: ja/messages.utf8:1473
+msgid "Print all modules currently loaded by TkGate."
+msgstr "全ての読み込んでいるモジュールを印刷する。"
+
+# ho.print.selcur
+#: ja/messages.utf8:1474
+msgid "Print only the current module in the TkGate edit window."
+msgstr "現在のモジュールのみを印刷する。"
+
+# ho.print.seluse
+#: ja/messages.utf8:1475
+msgid ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+msgstr "使用中のモジュールのみ印刷する。"
+
+# ho.print.selsel
+#: ja/messages.utf8:1479
+msgid ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+msgstr ""
+"以下にマークしているモジュールのみを印刷する。 コントロール・キーで複数のモ"
+"ジュールを選択 出来る。"
+
+# ho.print.modlist
+#: ja/messages.utf8:1483
+msgid "Select the modules to be printed."
+msgstr "印刷するモジュールを選択する。"
+
+# ho.circuit.discchg
+#: ja/messages.utf8:1485
+msgid ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+msgstr "有効にすると、変更ありの回路を 保存しないで閉じるとき警告しない。"
+
+# ho.circuit.extbar
+#: ja/messages.utf8:1489
+msgid ""
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
+"many input gates."
+msgstr "基本ゲート(AND, OR, XOR)の入力数が 3本以上の時、拡張バーは利用する。"
+
+# ho.cmd.bitw
+#: ja/messages.utf8:1493
+msgid ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+msgstr "カーソルで選択されたワイヤは表示 されているビット幅に設定される。"
+
+# ho.edgat.signam
+#: ja/messages.utf8:1497
+msgid ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+msgstr "選択されたゲートの選択された ネットである。名前が変更出来る。"
+
+# ho.edgat.port
+#: ja/messages.utf8:1501
+msgid ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+msgstr ""
+"選択されたゲートの選択された ネットのポート名である。モジュール のゲートの場"
+"合のみ変更出来る。"
+
+# ho.edgat.iolab
+#: ja/messages.utf8:1505
+msgid ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+msgstr ""
+"選択されたゲートの選択された ネットのポート方向である。モジュール のゲートの"
+"場合のみ変更出来る。"
+
+# ho.edgat.bitlab
+#: ja/messages.utf8:1509
+msgid ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+msgstr "選択されたゲートの選択された ネットのビット幅である。変更出来る。"
+
+# ho.edgat.cycle
+#: ja/messages.utf8:1513
+msgid "The total number of epochs in a clock cycle."
+msgstr "一サイクルのエポック数。"
+
+# ho.edgat.phase
+#: ja/messages.utf8:1514
+msgid "The starting point of the cycle (in percent)."
+msgstr "クロックのフェーズ（パーセントで設定する）"
+
+# ho.edgat.duty
+#: ja/messages.utf8:1515
+msgid "The percent of the cycle, the clock is low."
+msgstr "クロック・サイクルの何パーセントが論理0であるか。"
+
+# ho.edgat.hide
+#: ja/messages.utf8:1518
+msgid ""
+"Set this flag to disable\n"
+"display of component names."
+msgstr "有効にするとゲート名が表示されない。"
+
+# ho.edgat.gtype
+#: ja/messages.utf8:1522
+msgid "Type of the component."
+msgstr "ゲートの種類。"
+
+# ho.edgat.gname
+#: ja/messages.utf8:1523
+msgid "Name of this component instance."
+msgstr "ゲートの名前。"
+
+# ho.edgat.ganchor
+#: ja/messages.utf8:1524
+msgid "Set this flag to anchor the position of a component."
+msgstr "有効にすると、ゲートが移動不可になる。"
+
+# ho.edgat.gx
+#: ja/messages.utf8:1525
+msgid "X coordinate of component."
+msgstr "ゲートのX位置。"
+
+# ho.edgat.gy
+#: ja/messages.utf8:1526
+msgid "Y coordinate of component."
+msgstr "ゲートのY位置。"
+
+# ho.edgat.swstate
+#: ja/messages.utf8:1528
+msgid ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+msgstr "シミュレーションを始める時の初期の値である。"
+
+# ho.edgat.dipstate
+#: ja/messages.utf8:1532
+msgid ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+msgstr "シミュレーションを始める時の初期の値である。"
+
+# ho.edgat.range
+#: ja/messages.utf8:1536
+msgid "The range of bits to pull off a bus."
+msgstr "マルチビットの信号のサブ・レンジである。"
+
+# ho.edgat.memfile
+#: ja/messages.utf8:1538
+msgid ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+msgstr ""
+"メモリの初期の値のファイルを指定する。 シミュレーションを始める時、このファ"
+"イル が読み込まれる。"
+
+# ho.edgat.func
+#: ja/messages.utf8:1542
+msgid "The function type of this module."
+msgstr "モジュールの機能。"
+
+# ho.edgat.frame
+#: ja/messages.utf8:1543
+msgid "The frame label."
+msgstr "フレームのラベル。"
+
+# ho.opt.site
+#: ja/messages.utf8:1545
+msgid ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+msgstr "回路などを印刷する時、このサイト名が表示される。"
+
+# ho.opt.smooth
+#: ja/messages.utf8:1549
+msgid ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+msgstr ""
+"この設定を有効にすると、回路をスクロールする時、 ビットマップのコピーを利用"
+"して、効率よく スクロールできる。Xサーバの問題があれば、この 設定を無効にす"
+"れば良い。"
+
+# ho.opt.clip
+#: ja/messages.utf8:1553
+msgid ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+msgstr ""
+"有効にすると、ウインドウの部分領域の 再描画を行なう。そうでなければ常に 全領"
+"域を再描画する。"
+
+# ho.opt.outmove
+#: ja/messages.utf8:1557
+msgid ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+msgstr ""
+"有効にすると、モジュールを移動する時、 ワイヤなどはマウスのボタンを離すまで "
+"移動しない。画面の表示が遅い時に便利である。"
+
+# ho.opt.bhelp
+#: ja/messages.utf8:1561
+msgid ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+msgstr "有効にすると、このメッセージの様な「ヘルプ・ バルーン」が表示される。"
+
+# ho.opt.novice
+#: ja/messages.utf8:1565
+msgid ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+msgstr ""
+"有効にすると、初心者モードになる。 初心者モードでは、tkgateが立ち上がる時、 "
+"チュートリアルが自動的に読み込まれる。"
+
+# ho.opt.debug
+#: ja/messages.utf8:1569
+msgid ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+msgstr "有効にすると、デバグ機能が使える。 開発者以外に、あまり役に立たない。"
+
+# ho.opt.ckpt
+#: ja/messages.utf8:1573
+msgid "Enable checkpointing of unsaved circuits."
+msgstr "有効にすると、tkgateはチェックポイント保存のファイルを作る。"
+
+# ho.opt.ckptfreq
+#: ja/messages.utf8:1574
+msgid "Frequency of checkpoints in seconds."
+msgstr "チェックポイント保存を何クリック毎に行なうか。"
+
+# ho.opt.beak
+#: ja/messages.utf8:1576
+msgid ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+msgstr ""
+"全然役に立たない機能を有効にする。この機能を 無効にすると、このスイッチはダ"
+"イアログ ボックスから消え、.tkgate2-propertiesを編集しない限り 戻らない。"
+
+# ho.opt.miles
+#: ja/messages.utf8:1580
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+msgstr "有効にすると、tkgateは時々ユーザを 馬鹿にしたり、悪口を言ったりする。"
+
+# ho.opt.bat
+#: ja/messages.utf8:1584
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+msgstr ""
+"有効にすると、バットマンのコンピュータを 設計する為に「役にたつ」機能が使え"
+"る。"
+
+# ho.opt.trek
+#: ja/messages.utf8:1588
+msgid "Beam me up Scotty!"
+msgstr "転送しろ、スコッティ！"
+
+# ho.opt.simstep
+#: ja/messages.utf8:1590
+msgid ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+msgstr ""
+"シミュレータのステップ・コマンドで\n"
+"何エポック進むかを指定する。"
+
+# ho.opt.ckstep
+#: ja/messages.utf8:1595
+msgid ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+msgstr ""
+"シミュレータのクロックステップ・\n"
+"コマンドで 何サイクル進むかを指定する。"
+
+# ho.opt.ckover
+#: ja/messages.utf8:1600
+msgid ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+msgstr ""
+"シミュレータのクロック・コマンドは\n"
+"クロックのエッジより更に何エポック\n"
+"進むかを指定する。"
+
+# ho.opt.vpopupdelay
+#: ja/messages.utf8:1606
+msgid ""
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
+"1 and 10000 are allowed."
+msgstr ""
+"マウスボタンを押してから、何ミリ秒経って\n"
+"から信号の値が表示される遅延である。 この\n"
+"遅延が短過ぎる時、ダブルクリックが 認知\n"
+"できなくなる問題があるシステムは ある。\n"
+"この問題が起こらなければ、遅延 をより\n"
+"短くしても良い。"
+
+# ho.opt.init
+#: ja/messages.utf8:1615
+msgid ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+msgstr ""
+"シミュレータを立ち上げる時に\n"
+"自動的に実行するスクリプト・\n"
+"ファイルを指定する。"
+
+# ho.opt.ckall
+#: ja/messages.utf8:1621
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+msgstr ""
+"有効にすると、クロック・コマンドは\n"
+"どのクロックのエッジでも停止する。"
+
+# ho.opt.ckspec
+#: ja/messages.utf8:1626
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+msgstr ""
+"有効にすると、クロック・コマンドは\n"
+"指定したクロックのエッジのみに停止する。"
+
+# ho.deftech
+#: ja/messages.utf8:1631
+msgid ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+msgstr ""
+"新しいゲートのデフォルトのテクノロジー。\n"
+"ゲートの遅延に影響する。任意のゲート の\n"
+"テクノロジーを変更するには、ゲートの設定\n"
+"ボックスを開いて、「遅延」のタブ を選択\n"
+"して下さい。"
+
+# ho.techbut
+#: ja/messages.utf8:1639
+msgid ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+msgstr ""
+"指定したテクノロジー・ファイルからの\n"
+"遅延値を 利用する。新しいテクノロジーを\n"
+"追加する為、「ファイル」→「設定」→\n"
+"「シミュレート」 のメニューを開いて、\n"
+"ファイルのリストに追加 して下さい。"
+
+# ho.custbut
+#: ja/messages.utf8:1647
+msgid "Set custom delay values for this component."
+msgstr "このゲート専用の遅延値を指定する。"
+
+# ho.contver
+#: ja/messages.utf8:1651
+msgid ""
+"Continuously verify the integrity of internal\n"
+"data structures after every operation."
+msgstr "マウス操作を行なう時、内部構造を自動的に 確認して、不正の所を知らす。"
+
+# ho.simwatch
+#: ja/messages.utf8:1655
+msgid ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+msgstr "シミュレータとGUIの間のコマンドを表示する。"
+
+# ho.tool.zoomin
+#: ja/messages.utf8:1659
+msgid "Zoom in"
+msgstr "ズーム・イン"
+
+# ho.tool.zoomout
+#: ja/messages.utf8:1660
+msgid "Zoom out"
+msgstr "ズーム・アウト"
+
+# ho.tool.rotate
+#: ja/messages.utf8:1661
+msgid "Rotate selected component(s) counter-clockwise."
+msgstr "選択のゲートを非時計周りに回転する。"
+
+# ho.tool.brotate
+#: ja/messages.utf8:1662
+msgid "Rotate selected component(s) clockwise."
+msgstr "選択のゲートを時計周りに回転する。"
+
+# ho.tool.valgn
+#: ja/messages.utf8:1663
+msgid "Align selected component(s) vertically."
+msgstr "選択のゲートを縦に一列に並ぶ。"
+
+# ho.tool.halgn
+#: ja/messages.utf8:1664
+msgid "Align selected component(s) horizontally."
+msgstr "選択のゲートを翌に一列に並ぶ。"
+
+# ho.tool.cut
+#: ja/messages.utf8:1666
+msgid "Cut selection."
+msgstr "選択のゲートをバッファにカットする。"
+
+# ho.tool.copy
+#: ja/messages.utf8:1667
+msgid "Copy selection."
+msgstr "選択のゲートをバッファにコピーする。"
+
+# ho.tool.paste
+#: ja/messages.utf8:1668
+msgid "Paste from cut buffer."
+msgstr "カットバッファのゲートを張り付ける。"
+
+# ho.tool.find
+#: ja/messages.utf8:1669
+msgid "Find component, wire or text."
+msgstr "ゲート、ワイヤ、テキストなどを探索する。"
+
+# ho.tool.addport
+#: ja/messages.utf8:1671
+msgid "Add a port to the selected component."
+msgstr "選択のゲートにポートを追加する。"
+
+# ho.tool.anchor
+#: ja/messages.utf8:1672
+msgid "Anchor the selected component(s)."
+msgstr "選択のゲートを移動不可にする。"
+
+# ho.tool.unanchor
+#: ja/messages.utf8:1673
+msgid "Unanchor the selected component(s)."
+msgstr "選択のゲートを移動可能にする。"
+
+# ho.tool.replicate
+#: ja/messages.utf8:1674
+msgid "Replicate a component."
+msgstr "ゲートを複製する。"
+
+# ho.tool.delete
+#: ja/messages.utf8:1675
+msgid "Delete the selection."
+msgstr "選択のゲートを削除する。"

@@ -1,0 +1,2582 @@
+# This file is part of TkGate project
+# Copyright (C) 1987-2015 by Jeffery P. Hansen
+# This file is distributed under the same license as the TkGate package.
+#
+# Translators:
+# Andrey V. Skvotsov <starling13@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: TkGate 2.0\n"
+"Report-Msgid-Bugs-To: starling13@gmail.com\n"
+"POT-Creation-Date: 2018-11-29 08:18+0300\n"
+"PO-Revision-Date: 2018-11-29 08:29+0300\n"
+"Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.9\n"
+"Language-Team: \n"
+
+# b.dismiss
+#: it/messages:27
+msgid "Dismiss"
+msgstr ""
+
+# b.close
+#: it/messages:28
+msgid "Close"
+msgstr ""
+
+# b.ok
+#: it/messages:29
+msgid "OK"
+msgstr ""
+
+# b.clear
+#: it/messages:30
+msgid "Clear"
+msgstr ""
+
+# b.cancel
+#: it/messages:31
+msgid "Cancel"
+msgstr ""
+
+# b.in
+# db.net.in
+#: it/messages:34 it/messages:241
+msgid "in"
+msgstr ""
+
+# b.out
+# db.net.out
+#: it/messages:35 it/messages:242
+msgid "out"
+msgstr ""
+
+# b.inout
+# db.net.inout
+#: it/messages:36 it/messages:243
+msgid "inout"
+msgstr ""
+
+# b.browse
+#: it/messages:37
+msgid "Browse..."
+msgstr ""
+
+# b.label
+#: it/messages:38
+msgid "Label"
+msgstr ""
+
+# b.find
+#: it/messages:39
+msgid "Find"
+msgstr ""
+
+# b.edit
+#: it/messages:40
+msgid "Edit..."
+msgstr ""
+
+# b.add
+#: it/messages:41
+msgid "Add..."
+msgstr ""
+
+# b.delete
+#: it/messages:42
+msgid "Delete"
+msgstr ""
+
+# b.apply
+#: it/messages:44
+msgid "Apply"
+msgstr ""
+
+# b.anchor
+# db.gate.anchor
+#: it/messages:45 it/messages:261
+msgid "Anchor"
+msgstr ""
+
+# b.tech
+#: it/messages:46
+msgid "Technology"
+msgstr ""
+
+# menu.file
+#: it/messages:51
+msgid "0:File"
+msgstr ""
+
+# menu.edit
+#: it/messages:52
+msgid "0:Edit"
+msgstr ""
+
+# menu.tool
+#: it/messages:53
+msgid "0:Tool"
+msgstr ""
+
+# menu.simulate
+#: it/messages:54
+msgid "0:Simulate"
+msgstr ""
+
+# menu.module
+#: it/messages:55
+msgid "0:Module"
+msgstr ""
+
+# menu.make
+#: it/messages:57
+msgid "0:Components"
+msgstr ""
+
+# menu.file.new
+# menu.module.new
+#: it/messages:60 it/messages:108
+msgid "0:New..."
+msgstr ""
+
+# menu.file.open
+#: it/messages:61
+msgid "0:Open..."
+msgstr ""
+
+# menu.file.openlib
+#: it/messages:62
+msgid "0:Library Manager..."
+msgstr ""
+
+# menu.file.save
+#: it/messages:63
+msgid "0:Save"
+msgstr ""
+
+# menu.file.saveas
+#: it/messages:64
+msgid "5:Save As..."
+msgstr ""
+
+# menu.file.print
+#: it/messages:65
+msgid "0:Print..."
+msgstr ""
+
+# menu.file.quit
+#: it/messages:67
+msgid "0:Quit"
+msgstr ""
+
+# menu.edit.undo
+#: it/messages:69
+msgid "0:Undo"
+msgstr ""
+
+# menu.edit.redo
+#: it/messages:70
+msgid "0:Redo"
+msgstr ""
+
+# menu.edit.cut
+#: it/messages:71
+msgid "0:Cut"
+msgstr ""
+
+# menu.edit.copy
+#: it/messages:72
+msgid "3:Copy"
+msgstr ""
+
+# menu.edit.paste
+#: it/messages:73
+msgid "0:Paste"
+msgstr ""
+
+# menu.edit.selall
+#: it/messages:74
+msgid "0:Select All"
+msgstr ""
+
+# menu.edit.find
+#: it/messages:75
+msgid "0:Find..."
+msgstr ""
+
+# menu.format.algnv
+#: it/messages:76
+msgid "6:Align Ver."
+msgstr ""
+
+# menu.format.algnh
+#: it/messages:77
+msgid "6:Align Horz."
+msgstr ""
+
+# menu.edit.zoomin
+# menu.scope_trace.zoomin
+#: it/messages:78 it/messages:220
+msgid "5:Zoom In"
+msgstr ""
+
+# menu.edit.zoomout
+# menu.scope_trace.zoomout
+#: it/messages:79 it/messages:221
+msgid "5:Zoom Out"
+msgstr ""
+
+# menu.tool.move
+#: it/messages:81
+msgid "0:Move/Connect"
+msgstr ""
+
+# menu.tool.delg
+#: it/messages:82
+msgid "0:Delete Component"
+msgstr ""
+
+# menu.tool.cutw
+#: it/messages:83
+msgid "0:Cut Wire"
+msgstr ""
+
+# menu.tool.inv
+#: it/messages:84
+msgid "0:Invert"
+msgstr ""
+
+# menu.tool.bitw
+#: it/messages:85
+msgid "0:Bit Width"
+msgstr ""
+
+# menu.tool.debug
+#: it/messages:86
+msgid "0:Debug"
+msgstr ""
+
+# menu.simulate.begin
+#: it/messages:92
+msgid "0:Begin Simulation"
+msgstr ""
+
+# menu.simulate.end
+#: it/messages:93
+msgid "0:End Simulation"
+msgstr ""
+
+# menu.simulate.addprobe
+#: it/messages:94
+msgid "0:Add/Delete Probe"
+msgstr ""
+
+# menu.simulate.run
+#: it/messages:95
+msgid "0:Run"
+msgstr ""
+
+# menu.simulate.pause
+#: it/messages:96
+msgid "0:Pause"
+msgstr ""
+
+# menu.simulate.step
+#: it/messages:97
+msgid "0:Step Epoch(s)"
+msgstr ""
+
+# menu.simulate.cycle
+#: it/messages:98
+msgid "5:Step Cycle"
+msgstr ""
+
+# menu.simulate.break
+#: it/messages:99
+msgid "0:Breakpoint..."
+msgstr ""
+
+# menu.simulate.script
+#: it/messages:100
+msgid "1:Exec. Script..."
+msgstr ""
+
+# menu.simulate.load
+#: it/messages:101
+msgid "1:Load Memory..."
+msgstr ""
+
+# menu.simulate.dump
+#: it/messages:102
+msgid "1:Dump Memory..."
+msgstr ""
+
+# menu.module.open
+#: it/messages:104
+msgid "0:Open"
+msgstr ""
+
+# menu.module.close
+# menu.scope_file.close
+#: it/messages:105 it/messages:218
+msgid "0:Close"
+msgstr ""
+
+# menu.module.del
+#: it/messages:109
+msgid "0:Delete..."
+msgstr ""
+
+# menu.module.copy
+#: it/messages:110
+msgid "1:Copy..."
+msgstr ""
+
+# menu.module.rename
+#: it/messages:111
+msgid "0:Rename..."
+msgstr ""
+
+# menu.module.claim
+#: it/messages:112
+msgid "1:Claim..."
+msgstr ""
+
+# gm.io
+#: it/messages:127
+msgid "I/O"
+msgstr ""
+
+# gm.gate
+#: it/messages:128
+msgid "Gate"
+msgstr ""
+
+# gm.rgate
+#: it/messages:129
+msgid "Reduction"
+msgstr ""
+
+# gm.msi
+#: it/messages:130
+msgid "MSI"
+msgstr ""
+
+# gm.alu
+#: it/messages:131
+msgid "ALU"
+msgstr ""
+
+# gm.mem
+#: it/messages:132
+msgid "Memory"
+msgstr ""
+
+# gm.mod
+# imodule
+#: it/messages:133 it/messages:229
+msgid "Module"
+msgstr ""
+
+# gm.comment
+#: it/messages:134
+msgid "Comment"
+msgstr ""
+
+# gm.frame
+#: it/messages:135
+msgid "Frame"
+msgstr ""
+
+# gm.io.switch
+#: it/messages:137
+msgid "Switch"
+msgstr ""
+
+# gm.io.dip
+#: it/messages:138
+msgid "DIP Switch"
+msgstr ""
+
+# gm.io.merge
+#: it/messages:141
+msgid "Concat"
+msgstr ""
+
+# gm.io.clock
+#: it/messages:142
+msgid "Clock"
+msgstr ""
+
+# gm.io.led
+#: it/messages:144
+msgid "LED"
+msgstr ""
+
+# gm.io.ledbar
+#: it/messages:145
+msgid "LED Bar"
+msgstr ""
+
+# gm.io.ledhex
+#: it/messages:146
+msgid "7-Seg. LED (HEX)"
+msgstr ""
+
+# gm.io.leddec
+#: it/messages:147
+msgid "7-Seg. LED (DEC)"
+msgstr ""
+
+# gm.io.ledseg
+#: it/messages:148
+msgid "7-Seg. LED (Direct)"
+msgstr ""
+
+# gm.io.tty
+#: it/messages:150
+msgid "TTY"
+msgstr ""
+
+# gm.gate.and
+# gm.rgate.and
+#: it/messages:152 it/messages:164
+msgid "AND"
+msgstr ""
+
+# gm.gate.nand
+# gm.rgate.nand
+#: it/messages:153 it/messages:165
+msgid "NAND"
+msgstr ""
+
+# gm.gate.or
+# gm.rgate.or
+#: it/messages:154 it/messages:166
+msgid "OR"
+msgstr ""
+
+# gm.gate.nor
+# gm.rgate.nor
+#: it/messages:155 it/messages:167
+msgid "NOR"
+msgstr ""
+
+# gm.gate.xor
+# gm.rgate.xor
+#: it/messages:156 it/messages:168
+msgid "XOR"
+msgstr ""
+
+# gm.gate.xnor
+# gm.rgate.xnor
+#: it/messages:157 it/messages:169
+msgid "XNOR"
+msgstr ""
+
+# gm.gate.buf
+#: it/messages:158
+msgid "Buffer"
+msgstr ""
+
+# gm.gate.inv
+#: it/messages:159
+msgid "Inverter"
+msgstr ""
+
+# gm.gate.tribuf
+#: it/messages:160
+msgid "Tri-Buffer"
+msgstr ""
+
+# gm.gate.nmos
+#: it/messages:161
+msgid "NMOS"
+msgstr ""
+
+# gm.gate.pmos
+#: it/messages:162
+msgid "PMOS"
+msgstr ""
+
+# gm.alu.add
+#: it/messages:171
+msgid "Adder"
+msgstr ""
+
+# gm.alu.mult
+#: it/messages:172
+msgid "Multiplier"
+msgstr ""
+
+# gm.alu.div
+#: it/messages:173
+msgid "Divider"
+msgstr ""
+
+# gm.alu.lshift
+#: it/messages:174
+msgid "Left Shift"
+msgstr ""
+
+# gm.alu.rshift
+#: it/messages:175
+msgid "Right Shift"
+msgstr ""
+
+# gm.alu.arshift
+#: it/messages:176
+msgid "Arith. Right Shift"
+msgstr ""
+
+# gm.alu.roll
+#: it/messages:177
+msgid "Roll"
+msgstr ""
+
+# gm.mem.reg
+#: it/messages:179
+msgid "Register"
+msgstr ""
+
+# gm.mem.ff
+#: it/messages:180
+msgid "D Flip-Flop"
+msgstr ""
+
+# gm.mem.ram
+#: it/messages:181
+msgid "RAM"
+msgstr ""
+
+# gm.mem.rom
+#: it/messages:182
+msgid "ROM"
+msgstr ""
+
+# gm.msi.21mux
+#: it/messages:184
+msgid "2-1 Multiplexor"
+msgstr ""
+
+# gm.msi.41mux
+#: it/messages:185
+msgid "4-1 Multiplexor"
+msgstr ""
+
+# gm.msi.81mux
+#: it/messages:186
+msgid "8-1 Multiplexor"
+msgstr ""
+
+# gm.msi.12dec
+#: it/messages:187
+msgid "1-2 Decoder"
+msgstr ""
+
+# gm.msi.14dec
+#: it/messages:188
+msgid "1-4 Decoder"
+msgstr ""
+
+# gm.msi.18dec
+#: it/messages:189
+msgid "1-8 Decoder"
+msgstr ""
+
+# gm.mod.inst
+#: it/messages:191
+msgid "Module Instance"
+msgstr ""
+
+# gm.mod.in
+#: it/messages:192
+msgid "Module Input"
+msgstr ""
+
+# gm.mod.out
+#: it/messages:193
+msgid "Module Output"
+msgstr ""
+
+# gm.mod.inout
+#: it/messages:194
+msgid "Module Input-Output"
+msgstr ""
+
+# menu.help.about
+#: it/messages:199
+msgid "0:About..."
+msgstr ""
+
+# menu.help.license
+#: it/messages:200
+msgid "0:License..."
+msgstr ""
+
+# menu.help.doc
+#: it/messages:201
+msgid "0:Documentation..."
+msgstr ""
+
+# menu.help.tut
+#: it/messages:202
+msgid "1:Tutorials"
+msgstr ""
+
+# menu.help.example
+#: it/messages:203
+msgid "1:Examples"
+msgstr ""
+
+# menu.scope_file.ptrace
+#: it/messages:217
+msgid "0:Print Trace..."
+msgstr ""
+
+# scope.emptymsg
+#: it/messages:223
+msgid "Double-click on a wire to add or delete a trace."
+msgstr "Doppio click su un collegamento per agganciare o togliere una sonda."
+
+# comment.empty
+#: it/messages:224
+msgid "[Double click to add text.]"
+msgstr "[Doppio click per aggiungere testo.]"
+
+# ifile
+# print.file
+#: it/messages:228 it/messages:308
+msgid "File"
+msgstr ""
+
+# iblmodule
+# opt.mods
+#: it/messages:230 it/messages:344
+msgid "Modules"
+msgstr ""
+
+# iports
+#: it/messages:231
+msgid "Ports"
+msgstr ""
+
+# ibits
+#: it/messages:232
+msgid "Bits:"
+msgstr ""
+
+# db.net.name
+#: it/messages:237
+msgid "Net Name"
+msgstr ""
+
+# db.net.hide
+# db.gate.hidenam
+#: it/messages:238 it/messages:260
+msgid "Hide Name"
+msgstr ""
+
+# db.net.bits
+# db.gate.bitw
+#: it/messages:239 it/messages:252
+msgid "Bit Width"
+msgstr ""
+
+# db.net.port
+#: it/messages:240
+msgid "Port Type"
+msgstr ""
+
+# db.net.inets
+#: it/messages:244
+msgid "Nets"
+msgstr ""
+
+# db.gate.signam
+#: it/messages:249
+msgid "Signal Name"
+msgstr ""
+
+# db.gate.portnam
+#: it/messages:250
+msgid "Port Name"
+msgstr ""
+
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+#: it/messages:251 it/messages:258 it/messages:266
+msgid "Type"
+msgstr ""
+
+# db.gate.cyclew
+#: it/messages:253
+msgid "Period"
+msgstr ""
+
+# db.gate.phase
+#: it/messages:254
+msgid "Phase"
+msgstr ""
+
+# db.gate.duty
+#: it/messages:255
+msgid "Duty"
+msgstr ""
+
+# db.gate.port
+# db.gate.ports
+#: it/messages:256 it/messages:274
+msgid "Port"
+msgstr ""
+
+# db.gate.bitws
+#: it/messages:257
+msgid "Bits"
+msgstr ""
+
+# db.gate.gname
+#: it/messages:259
+msgid "Instance Name"
+msgstr ""
+
+# db.gate.cpbreak
+#: it/messages:262
+msgid "Critical Path Partition"
+msgstr ""
+
+# db.gate.butstate
+#: it/messages:263
+msgid "Button State"
+msgstr ""
+
+# db.gate.dipval
+#: it/messages:264
+msgid "Switch Value"
+msgstr ""
+
+# db.gate.memfilenam
+#: it/messages:265
+msgid "Memory File"
+msgstr ""
+
+# db.gate.general
+# opt.general
+#: it/messages:272 it/messages:389
+msgid "General"
+msgstr ""
+
+# db.gate.details
+#: it/messages:273
+msgid "Details"
+msgstr ""
+
+# db.gate.delay
+#: it/messages:275
+msgid "Delay"
+msgstr ""
+
+# db.gate.stddelay
+#: it/messages:276
+msgid "Standard Delay"
+msgstr ""
+
+# db.gate.custdelay
+#: it/messages:277
+msgid "Custom Delay"
+msgstr ""
+
+# db.gate.led.type
+#: it/messages:280
+msgid "LED Type"
+msgstr ""
+
+# db.gate.led.bit.hdr
+#: it/messages:281
+msgid "Bit"
+msgstr ""
+
+# db.gate.led.bar.hdr
+#: it/messages:282
+msgid "Bar Graph"
+msgstr ""
+
+# db.gate.led.hex.hdr
+#: it/messages:283
+msgid "7-Segment (HEX)"
+msgstr ""
+
+# db.gate.led.dec.hdr
+#: it/messages:284
+msgid "7-Segment (DEC)"
+msgstr ""
+
+# db.gate.led.seg.hdr
+#: it/messages:285
+msgid "7-Segment (Direct)"
+msgstr ""
+
+# print.printer
+#: it/messages:307
+msgid "Printer:"
+msgstr ""
+
+# print.prcmd
+#: it/messages:309
+msgid "Print Command:"
+msgstr ""
+
+# print.filename
+#: it/messages:310
+msgid "File Name"
+msgstr ""
+
+# print.epssave
+#: it/messages:311
+msgid "Save as Encapsulated Postscript."
+msgstr ""
+
+# print.epcm
+#: it/messages:314
+msgid "Epochs/cm"
+msgstr ""
+
+# print.estpg
+#: it/messages:315
+msgid "Estimated pages"
+msgstr ""
+
+# print.all
+#: it/messages:316
+msgid "All"
+msgstr ""
+
+# print.cur
+#: it/messages:317
+msgid "Current"
+msgstr ""
+
+# print.use
+#: it/messages:318
+msgid "Used"
+msgstr ""
+
+# print.sel
+#: it/messages:319
+msgid "Picked"
+msgstr ""
+
+# print.inclib
+#: it/messages:320
+msgid "Include library modules."
+msgstr ""
+
+# print.papsz
+#: it/messages:321
+msgid "Paper Size"
+msgstr ""
+
+# print.orient
+#: it/messages:322
+msgid "Orientation"
+msgstr ""
+
+# print.portrait
+#: it/messages:323
+msgid "Portrait"
+msgstr ""
+
+# print.landscape
+#: it/messages:324
+msgid "Landscape"
+msgstr ""
+
+# print.2side
+#: it/messages:325
+msgid "Print Double-Sided"
+msgstr ""
+
+# print.opts
+#: it/messages:326
+msgid "Content Options"
+msgstr ""
+
+# print.scale
+#: it/messages:327
+msgid "Scale large modules to fit page."
+msgstr ""
+
+# print.partition
+#: it/messages:328
+msgid "Partition large modules into multiple pages."
+msgstr ""
+
+# print.incidx
+#: it/messages:329
+msgid "Include index."
+msgstr ""
+
+# print.incgraph
+#: it/messages:330
+msgid "Include hierarchy graph."
+msgstr ""
+
+# print.4up
+#: it/messages:331
+msgid "Print small modules four per page."
+msgstr ""
+
+# print.range
+#: it/messages:332
+msgid "Range"
+msgstr ""
+
+# print.fulltr
+#: it/messages:333
+msgid "Full Trace"
+msgstr ""
+
+# print.parttr
+#: it/messages:334
+msgid "Partial Trace"
+msgstr ""
+
+# print.start
+#: it/messages:335
+msgid "Start"
+msgstr ""
+
+# opt.site
+#: it/messages:342
+msgid "Site Name"
+msgstr ""
+
+# opt.inst
+#: it/messages:343
+msgid "Instances"
+msgstr ""
+
+# opt.modports
+#: it/messages:345
+msgid "Module Ports"
+msgstr ""
+
+# opt.frames
+#: it/messages:346
+msgid "Frames"
+msgstr ""
+
+# opt.comment
+#: it/messages:347
+msgid "Comments"
+msgstr ""
+
+# opt.hlink
+#: it/messages:348
+msgid "Hyperlinks"
+msgstr ""
+
+# opt.wire
+#: it/messages:349
+msgid "Single-Bit Wires"
+msgstr ""
+
+# opt.bus
+#: it/messages:350
+msgid "Multi-Bit Wires"
+msgstr ""
+
+# opt.tools
+#: it/messages:351
+msgid "Gate Tools"
+msgstr ""
+
+# opt.cpath
+#: it/messages:352
+msgid "Critical Path"
+msgstr ""
+
+# opt.grid
+#: it/messages:353
+msgid "Scope Grid"
+msgstr ""
+
+# opt.logic1
+#: it/messages:354
+msgid "Logic One"
+msgstr ""
+
+# opt.logic0
+#: it/messages:355
+msgid "Logic Zero"
+msgstr ""
+
+# opt.float
+#: it/messages:356
+msgid "Float"
+msgstr ""
+
+# opt.unknown
+#: it/messages:357
+msgid "Unknown/Conflict"
+msgstr ""
+
+# opt.offled
+#: it/messages:358
+msgid "Off LED"
+msgstr ""
+
+# opt.onled
+#: it/messages:359
+msgid "On LED"
+msgstr ""
+
+# opt.zled
+#: it/messages:360
+msgid "Floating LED"
+msgstr ""
+
+# opt.restdef
+#: it/messages:361
+msgid "Restore Defaults"
+msgstr ""
+
+# opt.regudate
+#: it/messages:362
+msgid "Region Update"
+msgstr ""
+
+# opt.smoothscroll
+#: it/messages:363
+msgid "Smooth Scrolling"
+msgstr ""
+
+# opt.balloon
+#: it/messages:365
+msgid "Enable Help Balloons"
+msgstr ""
+
+# opt.debug
+#: it/messages:366
+msgid "Debug"
+msgstr ""
+
+# opt.novice
+#: it/messages:367
+msgid "Novice mode"
+msgstr ""
+
+# opt.freq
+#: it/messages:369
+msgid "Interval"
+msgstr ""
+
+# opt.beak
+#: it/messages:370
+msgid "Enable Special Modes"
+msgstr ""
+
+# opt.bat
+#: it/messages:373
+msgid "Bat"
+msgstr ""
+
+# opt.trek
+#: it/messages:374
+msgid "Star Trek"
+msgstr ""
+
+# opt.miles
+#: it/messages:375
+msgid "Miles"
+msgstr ""
+
+# opt.contver
+#: it/messages:376
+msgid "Automatic Integrity Checking"
+msgstr ""
+
+# opt.showsimcmd
+#: it/messages:377
+msgid "Display Simulator Stream"
+msgstr ""
+
+# opt.estepsz
+#: it/messages:379
+msgid "Epoch Step Size"
+msgstr ""
+
+# opt.cstepsz
+#: it/messages:380
+msgid "Clock Cycle Step Size"
+msgstr ""
+
+# opt.overstep
+#: it/messages:381
+msgid "Clock Overstep"
+msgstr ""
+
+# opt.sorttraces
+#: it/messages:382
+msgid "Sort traces alphabetically on scope"
+msgstr ""
+
+# opt.vpopupdelay
+#: it/messages:384
+msgid "Pop-Up Delay"
+msgstr ""
+
+# opt.posedge
+#: it/messages:386
+msgid "Clock step stops on all clock posedges"
+msgstr ""
+
+# opt.setclock
+#: it/messages:387
+msgid "Clock step stops on clock"
+msgstr ""
+
+# opt.delayfilepath
+#: it/messages:388
+msgid "Technology Files"
+msgstr ""
+
+# opt.print
+#: it/messages:390
+msgid "Print"
+msgstr ""
+
+# opt.simulate
+#: it/messages:391
+msgid "Simulate"
+msgstr ""
+
+# opt.analysis
+#: it/messages:392
+msgid "Analysis"
+msgstr ""
+
+# opt.color
+#: it/messages:393
+msgid "Color"
+msgstr ""
+
+# opt.undolen
+#: it/messages:394
+msgid "Max Undo"
+msgstr ""
+
+# opt.cpopts
+#: it/messages:396
+msgid "Critical Path Options"
+msgstr ""
+
+# opt.maxpath
+#: it/messages:397
+msgid "Maximum Number of Paths:"
+msgstr ""
+
+# opt.cpflash
+#: it/messages:398
+msgid "Display with Flashing Path"
+msgstr ""
+
+# opt.vercheck
+#: it/messages:400
+msgid ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+msgstr ""
+"Controlla di tanto in tanto se ci sono nuove versioni\n"
+"di TkGate in rete. Non abilitare se non hai accesso\n"
+"continuo a Internet."
+
+# blklst.new.cap
+#: it/messages:409
+msgid "Create New Module"
+msgstr ""
+
+# blklst.del.cap
+#: it/messages:410
+msgid "Delete Module"
+msgstr ""
+
+# blklst.from
+#: it/messages:411
+msgid "From"
+msgstr ""
+
+# blklst.to
+#: it/messages:412
+msgid "To"
+msgstr ""
+
+# blklst.claim.cap
+#: it/messages:415
+msgid "Claim Module"
+msgstr ""
+
+# circ.discchg
+#: it/messages:422
+msgid "Do not warn about discarding changes."
+msgstr ""
+
+# circ.iniscript
+#: it/messages:423
+msgid "Initialization Scripts"
+msgstr ""
+
+# circ.extbar
+#: it/messages:427
+msgid "Use extender bars on AND, OR and XOR gates."
+msgstr ""
+
+# cp.delay
+#: it/messages:445
+msgid "Path Delay:"
+msgstr ""
+
+# cp.pathl
+#: it/messages:446
+msgid "Path List:"
+msgstr ""
+
+# cp.numpath
+#: it/messages:447
+msgid "Number of Paths:"
+msgstr ""
+
+# cp.recompute
+#: it/messages:448
+msgid "Recompute"
+msgstr ""
+
+# err.nopin
+#: it/messages:454
+msgid "Can't change selected pin."
+msgstr "Non posso modificare il pin selezionato."
+
+# err.badhex
+#: it/messages:455
+msgid "Illegal hex value '%s' ignored."
+msgstr "Valore hex '%s' errato: viene ignorato."
+
+# err.gatanchor
+#: it/messages:456
+msgid "Components(s) are anchored and can not be moved."
+msgstr "Le porte sono ancorate: non possono essere spostate."
+
+# err.badfind
+#: it/messages:458
+msgid "Can't find target '%s'."
+msgstr "Non trovo il target '%s'."
+
+# err.badopendel
+#: it/messages:459
+msgid "Can't delete open module."
+msgstr "Non posso cancellare un modulo aperto."
+
+# err.nosrcmod
+#: it/messages:460
+msgid "Source module '%s' not found."
+msgstr "Non ho trovato il modulo '%s'."
+
+# err.noerr
+#: it/messages:461
+msgid "Can not locate error."
+msgstr "Non so localizzare l'errore."
+
+# err.misserr
+#: it/messages:462
+msgid "Error information incomplete (did the simulator crash?)"
+msgstr "Errore informazione incompleta (il simulatore è caduto?)"
+
+# err.badinadd
+#: it/messages:465
+msgid "Can't add any more inputs to selected component."
+msgstr "Non posso aggiungere ulteriori pin di input alla porta selezionata."
+
+# err.badoutadd
+#: it/messages:466
+msgid "Can't add any more outputs to selected component."
+msgstr "Non posso aggiungere ulteriori pin di output alla porta selezionata."
+
+# err.badinoutadd
+#: it/messages:467
+msgid "Can't add any more inout pins to selected component."
+msgstr "Non posso aggiungere ulteriori pin inout alla porta selezionata."
+
+# err.badpinchg
+#: it/messages:468
+msgid "Can't change pin types on selected component."
+msgstr "Non posso modificare il tipo di pin della porta selezionata."
+
+# err.badnetname
+#: it/messages:469
+msgid "Illegal characters in identifier deleted."
+msgstr "Carattere non ammesso cancellato dall'identificatore."
+
+# err.netbcrename
+#: it/messages:470
+msgid "Identifier renamed to '%s' because of illegal characters."
+msgstr ""
+"Identificatore rinominato con '%s' a causa di un carattere non ammesso."
+
+# err.netconfnet
+#: it/messages:471
+msgid "Identifier renamed to '%s' because of conflict."
+msgstr "Identificatore rinominato con '%s' a causa di un conflitto."
+
+# err.netconfgat
+#: it/messages:472
+msgid "Identifier renamed to avoid conflict with built-in component name"
+msgstr ""
+"Identificatore rinominato per evitare conflitti con nomi di porte primitive"
+
+# err.netconfkw
+#: it/messages:473
+msgid "Identifier renamed to avoid conflict with reserved word."
+msgstr "Identificatore rinominato per evitare conflitti con parole riservate."
+
+# err.badconsame
+#: it/messages:474
+msgid "Connection refused because wires are part of the same net."
+msgstr ""
+"Collegamento rifiutato perchè i fili appartengono allo stesso collegamento."
+
+# err.badconptsp
+#: it/messages:475
+msgid "Connection refused because both wires are module ports or supply."
+msgstr ""
+"Collegamento rifiutato perchè ambedue i fili sono porte di moduli o "
+"alimentazioni."
+
+# err.badconbitw
+#: it/messages:476
+msgid "Connection refused because bit widths do not match."
+msgstr "Collegamento rifiutato perchè il numero di bit non coincide."
+
+# err.badrange
+#: it/messages:477
+msgid "Non-positive range for scope trace is not allowed."
+msgstr ""
+
+# err.badlprcmd
+#: it/messages:478
+msgid "Unable to execute printer command '%s'."
+msgstr "Non posso eseguire il comando di stampa '%s'."
+
+# err.badpsopen
+#: it/messages:479
+msgid "Unable to open file '%s' for postscript output."
+msgstr "Non posso aprire il '%s' per output in postscript."
+
+# err.badid
+#: it/messages:480
+msgid "Illegal identifier '%s'."
+msgstr "Identificatore non ammesso '%s'."
+
+# err.bkpt.badexp
+#: it/messages:482
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"Errore di sintassi nell'espressione di breakpoint.  Devi scegliere fra: "
+"'net', '!net', 'net==value', 'net!=value'"
+
+# err.bkpt.badnet
+#: it/messages:483
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+"Errore nel nome del collegamento '%s'. I nomi devono iniziare con una "
+"lettera e contengono solo lettere, numeri e '.'."
+
+# err.bkpt.badval
+#: it/messages:484
+msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+msgstr ""
+"Errore di sintassi nel valore '%s'.  Deve essere un decimale o una costante "
+"in stile verilog."
+
+# err.bkpt.toomany
+#: it/messages:485
+msgid "Too many breakpoints. Maximum is %d."
+msgstr "Troppi breakpoints.  Al massimo %d."
+
+# err.sim.badtmp
+#: it/messages:487
+msgid "Could not save temporary file '%s' for simulator (disc full?)"
+msgstr ""
+"Non ho potuto salvare il file temporaneo '%s' per il simulatore (disco "
+"pieno?)"
+
+# err.sim.syntx
+#: it/messages:488
+msgid "Syntax error in '%s' command."
+msgstr "Errore di sintassi nel comando '%s'."
+
+# err.sim.noincl
+#: it/messages:489
+msgid "Include file '%s' not found."
+msgstr "Non trovo il file '%s' da includere."
+
+# err.sim.nobkpt
+#: it/messages:491
+msgid "No such breakpoint '%s'."
+msgstr "Il breakpoint '%s' non esiste."
+
+# err.sim.nonet
+#: it/messages:492
+msgid "Can't find net '%s'."
+msgstr "Non trovo il collegamento '%s'."
+
+# err.sim.nogate
+#: it/messages:493
+msgid "Can't find component '%s'."
+msgstr "Non trovo il gate '%s'."
+
+# err.sim.badbin
+#: it/messages:494
+msgid "Illegal character in binary constant '%s'."
+msgstr "Carattere non ammesso nella costante binaria '%s'."
+
+# err.sim.notswitch
+#: it/messages:495
+msgid "Component '%s' is not a switch, dip or register."
+msgstr ""
+"Il gate '%s' non è uno switch, un dip o un registro. Il comando \"Set\" si "
+"applica solo a questi componenti."
+
+# err.sim.badcmd
+#: it/messages:496
+msgid "Unrecognized command '%s' in simulation script."
+msgstr "Comando sconosciuto '%s' nello script di simulazione."
+
+# err.noteditpchg
+#: it/messages:498
+msgid "Properties can only be changed in edit mode."
+msgstr "Le proprietà possono venir cambiata solo in modalità di edizione."
+
+# err.badeditop
+#: it/messages:499
+msgid "Illegal interface edit mode operation."
+msgstr "Operazione non ammessa in modalità di edizione di interfaccia."
+
+# err.badopen
+#: it/messages:500
+msgid "Unable to open input file '%s'."
+msgstr "Impossibile aprire il file '%s'."
+
+# err.badlibopen
+#: it/messages:501
+msgid "Unable to open library file '%s'."
+msgstr "Impossibile aprire il file di libreria '%s'."
+
+# err.nomark
+#: it/messages:503
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr ""
+"Posiziona un punto di riferimento con il tasto sinstro del mouse prima di "
+"scegliere un gate."
+
+# err.badgate
+#: it/messages:504
+msgid "Unknown component type '%s'."
+msgstr "Tipo di gate sconosciuto."
+
+# err.badportadd
+#: it/messages:507
+msgid "Can't add ports to components of this type."
+msgstr "Impossibile aggiungere porte a un gate di questo tipo."
+
+# err.manypages
+#: it/messages:512
+msgid ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+msgstr ""
+"C'è una quantità tremenda di pagine\n"
+"in questo documento!\n"
+"Sei sicuro di volerlo stampare?"
+
+# err.nojump
+#: it/messages:518
+msgid ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+msgstr ""
+"L'opzione 'jump-to-module' non è disponibile\n"
+"nella modalità di simulazione o di analisi del\n"
+"percorso critico.\n"
+"Spostati manualmente nel blocco desiderato\n"
+"selezionando moduli e aprendoli con\n"
+"il carattere '>' da tastiera. Puoi abbandonare\n"
+"un modulo inserendo il carattere '<' da tastiera."
+
+# err.nomod
+#: it/messages:528
+msgid "Module '%s' is not defined."
+msgstr "Il modulo '%s' non è definito."
+
+# err.modlock
+#: it/messages:529
+msgid "Logic Block is Locked!"
+msgstr "Il blocco logico è bloccato (\"locked\")!"
+
+# err.closeroot
+#: it/messages:530
+msgid "No higher level module opened on the module stack."
+msgstr "Non posso chiudere il modulo \"top\".  Usa \"quit\"."
+
+# err.sim.isrun
+#: it/messages:531
+msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
+msgstr "Il simulatore è già attivo (Usa 'Ctrl-s e' per terminare)."
+
+# err.editonly
+#: it/messages:533
+msgid "Command not valid when in simulation mode."
+msgstr "Comando non ammesso in modalità di simulazione."
+
+# err.simonly
+#: it/messages:534
+msgid "Command valid only in simulation mode."
+msgstr "Comando ammesso solo in modalità di simulazione."
+
+# err.nodel
+#: it/messages:536
+msgid "No deletable selection."
+msgstr "Non è selezionato alcun elemento cancellabile."
+
+# err.modnotdef
+#: it/messages:537
+msgid "Module '%s' is undefined."
+msgstr "Il module '%s' non è definito."
+
+# err.moddef
+#: it/messages:538
+msgid "The module '%s' already exists."
+msgstr "Il blocco '%s' esiste già."
+
+# err.noprop
+#: it/messages:539
+msgid "Selected component has no editable properites."
+msgstr "Il gate selezionato non ha proprietà editabili."
+
+# err.openscript
+#: it/messages:540
+msgid "Can't open simulation script file '%s'"
+msgstr "Non posso aprire lo script di simulazione '%s'"
+
+# err.oldversion
+#: it/messages:541
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr ""
+"Caricato un file con l'identificatore di versione obsoleta %s (la versione "
+"attuale è %s)."
+
+# err.futureversion
+#: it/messages:542
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr ""
+"Caricato un file salvato dalla versione futura %s di TkGate (questa versione "
+"è %s)."
+
+# err.badversion
+#: it/messages:543
+msgid "Unknown version number. Use at your own risk."
+msgstr "Numero di versione sconosciuto.  Usa a tuo rischio."
+
+# err.nodrive
+#: it/messages:544
+msgid "Net %s has no driver in module %s."
+msgstr "Il collegamento %s non ha driver nel modulo %s."
+
+# err.noconn
+#: it/messages:545
+msgid "Wire %s{%d} has no connections - deleted."
+msgstr "Il filo %s{%d} non ha collegamenti - cancellato."
+
+# err.oldportact
+#: it/messages:546
+msgid "Please right click on port or module edge to add/change port."
+msgstr ""
+"Clicca con il tasto destro sul port o sul bordo del modulo per aggiungere/"
+"modificare un port."
+
+# err.backupfail
+#: it/messages:548
+msgid "Unable to create backup file '%s'."
+msgstr "Non riesco a creare il file di backup '%s'."
+
+# err.corruptnewsave
+#: it/messages:550
+msgid ""
+"TkGate was able to save your file in '%s', but it appears\n"
+"to be corrupted. If you have checkpointing enabled try\n"
+"loading one of the checkpoint files. Use 'tkgate -V' to\n"
+"check the integrity of a save file."
+msgstr ""
+"TkGate è riuscito a salvare il file '%s', ma sembra rovinato.\n"
+"Se hai abilitato la modalità \"checkpointing\" prova a caricare\n"
+"uno dei files di \"checkpoint\".  Usa 'tkgate -V' per verificare\n"
+"l'integrità di un file di salvataggio."
+
+# err.corruptsave
+#: it/messages:557
+msgid ""
+"TkGate detected a problem while trying to save the file '%s'.\n"
+"The existing file has been left unmodified and the damaged file has\n"
+"been written to '%s'. If you have checkpointing enabled you\n"
+"can try loading one of the checkpoint files. You can also use\n"
+"'tkgate -V' to check the integrety of a save file."
+msgstr ""
+"TkGate ha riscontrato un problema nel salvataggio del file '%s'.\n"
+"Il file esistente è stato lasciato intatto e il file danneggiato\n"
+"è stato salvato in '%s'. Se hai abilitato la modalità \"checkpointing\"\n"
+"puoi provare a caricare uno dei files di \"checkpoint\".\n"
+"Puoi anche usare 'tkgate -V' per verificare l'integrità\n"
+"di un file di salvataggio."
+
+# err.badsave
+#: it/messages:566
+msgid ""
+"A problem has occured trying to open or write the file '%s'. Check\n"
+"file/directory protections and or disk space."
+msgstr ""
+"C'è un problema ad aprire o a salvare il file '%s'.\n"
+"Controlla le protezioni del file/directory e/o lo spazio disco."
+
+# err.nosafesave
+#: it/messages:571
+msgid ""
+"A problem has occurred attempting to save '%s'. If you wish, you can\n"
+"try again without save validation. If you say \"no\", the original file\n"
+"will remain unmodified. If you say \"yes\" the original file will be\n"
+"overwritten, but may be destroyed if a problem occurs. Would you like\n"
+"to attempt an unvalidated save?"
+msgstr ""
+"C'è un problema a salvare '%s'.  Se vuoi, puoi ritentare senza validazione.\n"
+"Se rispondi \"no\", il file originale rimane inalterato.\n"
+"Se rispondi \"yes\" il file originale verrà sovrascritto, ma potrebbe venir "
+"distrutto se si verifica un problema.\n"
+"Vuoi tentare un salvataggio senza validazione?"
+
+# err.noback
+#: it/messages:578
+msgid ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+msgstr ""
+"Il file è stato creato con TkGate %s.\n"
+"Se lo salvi, è probabile che non possa venir\n"
+"riletto da versioni precedenti a questa (%s)."
+
+# msg.selwire
+#: it/messages:587
+msgid "Selected wire %s named '%s'."
+msgstr "Nome del collegamento: '%s'"
+
+# msg.selgate
+#: it/messages:588
+msgid "Selected gate %s named '%s'."
+msgstr "Hai selezionato %s con il nome '%s'."
+
+# msg.selblock
+#: it/messages:589
+msgid "Selected %s block named '%s'."
+msgstr "Hai selezionato il blocco %s denominato '%s'."
+
+# msg.modoverwt
+#: it/messages:590
+msgid "Destination module '%s' already exists. Overwrite?"
+msgstr "Il modulo '%s' esiste già. Sovrascrivere?"
+
+# msg.foundgate
+#: it/messages:591
+msgid "Found component named '%s'."
+msgstr "Trovato una porta con il nome '%s'."
+
+# msg.foundwire
+#: it/messages:592
+msgid "Found wire named '%s'."
+msgstr "Trovato un collegamento con il nome '%s'."
+
+# msg.searchagn
+#: it/messages:593
+msgid "Target string '%s' not found. Hit 'find' to restart search again."
+msgstr "Stringa '%s' non trovata.  Inserisci 'find' per riavviare la ricerca."
+
+# msg.sim.chgtoroot
+#: it/messages:594
+msgid "Simulation mode requires root module at top of edit stack."
+msgstr ""
+"La modalità di simulazione richiede il modulo \"root\" in cima allo stack di "
+"edizione."
+
+# msg.sim.nogatemod
+#: it/messages:595
+msgid "Simulation mode requires concrete module stack."
+msgstr ""
+"La modalità di simulazione richiede moduli istanziati (\"Concrete module "
+"stack)."
+
+# msg.setinterface
+#: it/messages:596
+msgid "Set module interface for '%s'."
+msgstr "Impostato interfaccia per il modulo '%s'"
+
+# msg.needsel
+#: it/messages:597
+msgid "Please select a module instance."
+msgstr "Seleziona un'istanza di modulo."
+
+# msg.wroteckpt
+#: it/messages:598
+msgid "Checkpointed to %s..."
+msgstr "\"Checkpointed\" in %s..."
+
+# msg.save
+#: it/messages:599
+msgid "Saved circuit to '%s'."
+msgstr "Circuito salvato in '%s'"
+
+# msg.reallynew
+#: it/messages:600
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr ""
+"Il circuito è stato modificato. Vuoi veramente scartare le tue modifiche e "
+"creare un circuito nuovo?"
+
+# msg.reallyquit
+#: it/messages:601
+msgid "Circuit has been modified. Do you really want to exit?"
+msgstr "Il circuito è stato modificato. Vuoi veramente uscire senza salvare?"
+
+# msg.notlib
+#: it/messages:602
+msgid "Module '%s' is not a library module."
+msgstr "Il modulo '%s' non è un modulo di libreria."
+
+# miles.msg1
+#: it/messages:607
+msgid "Only a fool would put %s%s there, Miles."
+msgstr "Dumà un cücümar al metaresa ul %s%s lì, Giuan."
+
+# miles.msg2
+#: it/messages:608
+msgid "That's a really stupid place to put %s%s, Miles."
+msgstr "L'è propi un post stupit par met ul %s%s, Giuan."
+
+# miles.msg3
+#: it/messages:609
+msgid "That's a terrible place for %s%s, Miles."
+msgstr ""
+
+# miles.msg4
+#: it/messages:610
+msgid "Miles, you are a fool for putting %s%s there."
+msgstr "Ma no Giuan, lè mia ul post par ul %s%s linscì."
+
+# miles.msg5
+#: it/messages:611
+msgid "Only you would put %s%s there, Miles."
+msgstr "Propi dumà ti ta po met ul %s%s lì, Giuan."
+
+# miles.msg6
+#: it/messages:612
+msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
+msgstr ""
+"S'al metat lì da fa 'stu %s%s?! Ta see propi dür da cumprendoni, Giuan."
+
+# miles.msg7
+#: it/messages:613
+msgid "Why don't you give up Miles, this is a stupid circuit."
+msgstr "Pianta lì Giuan, l'è propi un lavur da ciola."
+
+# miles.msg8a
+#: it/messages:614
+msgid "It's pointless to continue, Miles."
+msgstr "L'è propi mia ul to mestee Giuan, lasa pert."
+
+# miles.msg8b
+#: it/messages:615
+msgid "It's obvious you can't design a circuit"
+msgstr "Ta se propi mia bun da met giò 'stu schema"
+
+# ho.new
+#: it/messages:621
+msgid ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+msgstr ""
+"Abbandona il circuito attuale\n"
+"e inizia a disegnarne uno nuovo."
+
+# ho.open
+#: it/messages:626
+msgid "Open a circuit from a file."
+msgstr "Carica (open) un circuito da un file."
+
+# ho.save
+#: it/messages:627
+msgid "Save circuit to current file."
+msgstr "Salva il circuito nel file corrente."
+
+# ho.print
+#: it/messages:628
+msgid "Print current circuit."
+msgstr "Stampa il circuito corrente."
+
+# ho.move
+#: it/messages:630
+msgid ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+msgstr ""
+
+# ho.delgat
+#: it/messages:640
+msgid ""
+"Delete Component - Use this\n"
+"tool to delete components."
+msgstr ""
+
+# ho.cutw
+#: it/messages:644
+msgid ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+msgstr ""
+
+# ho.inv
+#: it/messages:648
+msgid ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+msgstr ""
+
+# ho.bitw
+#: it/messages:653
+msgid ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+msgstr ""
+
+# ho.undo
+#: it/messages:662
+msgid "Undo previous action(s)"
+msgstr "Annulla operazioni precedenti (\"Undo\")"
+
+# ho.redo
+#: it/messages:663
+msgid "Redo undone action(s)"
+msgstr "Ripristina operazioni annullate (\"Redo\")"
+
+# ho.simgo
+#: it/messages:670
+msgid ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+msgstr ""
+"Mette il simulatore in modalità di simulazione continua.\n"
+"Nota che per circuiti combinatori il simulatore calcola\n"
+"solo fino al raggiungimento dello stato stazionario."
+
+# ho.simpause
+#: it/messages:676
+msgid "Pause a continuously running simulation."
+msgstr "Mette in pausa il simulatore."
+
+# ho.simstep
+#: it/messages:680
+msgid ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Avanza per un intervallo di tempo fisso.\n"
+"Definisci la durata dell'intervallo (\"Epoch Step Size\")\n"
+"nel formulario di opzioni del simulatore."
+
+# ho.simclock
+#: it/messages:686
+msgid ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Avanza per una quantità fissa di cicli di clock.\n"
+"Definisci la durata dell'intervallo (\"Step size\")\n"
+"nel formulario di opzioni del simulatore."
+
+# ho.simstop
+#: it/messages:692
+msgid ""
+"End the current simulation\n"
+"and return to edit mode."
+msgstr "Termina la simulazione e torna alla modalità di disegno."
+
+# ho.simbreak
+#: it/messages:696
+msgid ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+msgstr ""
+"Modifica i breakpoints.\n"
+"La simulazione viene sospesa non appena\n"
+"la condizione di un breakpoint è verificata."
+
+# ho.simload
+#: it/messages:704
+msgid ""
+"Load memory with contents of\n"
+"a .mem file."
+msgstr "Carica un file.mem in memoria."
+
+# ho.simdump
+#: it/messages:708
+msgid ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+msgstr "Scarica il contenuto di una memoria in un file.mem."
+
+# ho.modlist
+#: it/messages:723
+msgid ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"Elenco di tutti i moduli caricati.\n"
+"Il modulo \"top-level\" è indicato con il segno \"+\".\n"
+"Moduli di libreria sono fra parentesi."
+
+# ho.netlist
+#: it/messages:729
+msgid ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+msgstr ""
+"Elenco dei collegamenti nel modulo attuale.\n"
+"Collegamenti segnati con '@' hanno nomi nascosti.\n"
+"Collegamenti multi-bit sono mostrati con il range."
+
+# ho.ports
+#: it/messages:735
+msgid ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+msgstr ""
+"Elenco delle porte del modulo attuale.\n"
+"Il segno '>' indica un input mentre\n"
+"'<' indica un output; il segno '=' indica inout."
+
+# ho.status.logo
+#: it/messages:741
+msgid ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+msgstr ""
+"Indicatore di stato del simulatore.\n"
+"Se appare il cancello, TkGate è in modalità di disegno.\n"
+"Se si vede la porta AND a quattro zampe, TkGate\n"
+"si trova in modalità di simulazione: se la AND\n"
+"è ferma, la simulazione è in pausa mentre se\n"
+"cammina, la simulazione sta procedendo."
+
+# ho.status.msg
+#: it/messages:750
+msgid "Messages from TkGate are displayed here."
+msgstr "Messaggi di TkGate vengono mostrati qui."
+
+# ho.status.block
+#: it/messages:752
+msgid "The stack of modules being edited."
+msgstr "La pila di moduli in lavorazione."
+
+# ho.status.file
+#: it/messages:754
+msgid ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+msgstr ""
+"Il file in lavorazione.  Un '*' indica\n"
+"che il buffer è stato modificato dall'ultima\n"
+"volta che è stato salvato."
+
+# ho.print.selall
+#: it/messages:760
+msgid "Print all modules currently loaded by TkGate."
+msgstr "Stampa tutti i moduli attualmente caricati in TKGate."
+
+# ho.print.selcur
+#: it/messages:761
+msgid "Print only the current module in the TkGate edit window."
+msgstr "Stampa solo il modulo attualmente nella finestra di edit."
+
+# ho.print.seluse
+#: it/messages:762
+msgid ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+msgstr ""
+"Stampa tutti i moduli \"attivi\". I moduli \"attivi\" sono\n"
+"quelli nella gerarchia del modulo \"root\"."
+
+# ho.print.fulltrace
+#: it/messages:767
+msgid "Print the entire trace."
+msgstr "Stampa tutta la traccia."
+
+# ho.print.parttrace
+#: it/messages:769
+msgid ""
+"Print a portion of the trace. Enter the starting\n"
+"and stopping times in the entry windows below, or\n"
+"use the right mouse button to select a range on the\n"
+"scope window (use shift-right to select long ranges)."
+msgstr ""
+"Stampa una parte della traccia. Inserisci gli istanti di inizio\n"
+"e di fine nei campi qui sotto o usa il bottone destro\n"
+"del mouse per selezionare una parte della finestra\n"
+"delle tracce (usa shift-right per selezionare pezzi lunghi)."
+
+# ho.print.parttracestart
+#: it/messages:776
+msgid "Starting time of trace output."
+msgstr "Istante di inizio per la traccia da stampare."
+
+# ho.print.parttraceend
+#: it/messages:777
+msgid "Ending time of trace output."
+msgstr "Istante finale per la traccia da stampare."
+
+# ho.print.selsel
+#: it/messages:780
+msgid ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+msgstr ""
+"Stampa solo i moduli selezionati qua sotto.\n"
+"Usa il tasto <ctrl> per selezionare più moduli."
+
+# ho.print.modlist
+#: it/messages:785
+msgid "Select the modules to be printed."
+msgstr "Seleziona i moduli da stampare."
+
+# ho.circuit.discchg
+#: it/messages:787
+msgid ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+msgstr ""
+"TkGate non mostrerà avvertimenti se\n"
+"elimini cambiamenti senza salvare."
+
+# ho.circuit.extbar
+#: it/messages:792
+msgid ""
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
+"many input gates."
+msgstr ""
+"Porte logiche di base (AND, OR, XOR) useranno\n"
+"barre di estensione per dar posto a molti input."
+
+# ho.cmd.bitw
+#: it/messages:797
+msgid ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+msgstr ""
+"Fili selezionati con il puntatore verranno\n"
+"trasformati in bus con questo numero di bit."
+
+# ho.edgat.signam
+#: it/messages:808
+msgid ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+msgstr ""
+"Nome del segnale collegato al port selezionato.\n"
+"Qui puoi cambiare il nome del segnale."
+
+# ho.edgat.port
+#: it/messages:813
+msgid ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+msgstr ""
+"Nome del port selezionato sul gate.\n"
+"Questo campo può venir modificato solo per istanze di moduli."
+
+# ho.edgat.iolab
+#: it/messages:818
+msgid ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+msgstr ""
+"Direzione del port selezionato sul gate.\n"
+"Questo campo può venir modificato solo per istanze di moduli."
+
+# ho.edgat.bitlab
+#: it/messages:823
+msgid ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+msgstr ""
+"Larghezza del port e del segnale.\n"
+"Qui puoi cambiare il numero di bit del segnale."
+
+# ho.edgat.cycle
+#: it/messages:828
+msgid "The total number of epochs in a clock cycle."
+msgstr "Il numero di epoche in un ciclo di clock."
+
+# ho.edgat.phase
+#: it/messages:829
+msgid "The starting point of the cycle (in percent)."
+msgstr "L'inizio del ciclo (in percento)."
+
+# ho.edgat.duty
+#: it/messages:830
+msgid "The percent of the cycle, the clock is low."
+msgstr "La percentuale del ciclo, il clock è basso."
+
+# ho.edgat.hide
+#: it/messages:840
+msgid ""
+"Set this flag to disable\n"
+"display of component names."
+msgstr "Attiva questo flag per nascondere il nome della porta logica."
+
+# ho.edgat.gtype
+#: it/messages:844
+msgid "Type of the component."
+msgstr "Tipo di porta."
+
+# ho.edgat.gname
+#: it/messages:845
+msgid "Name of this component instance."
+msgstr "Nome di questa istanza di porta logica."
+
+# ho.edgat.ganchor
+#: it/messages:846
+msgid "Set this flag to anchor the position of a component."
+msgstr "Attiva questo flag per fissare la posizione di una porta logica."
+
+# ho.edgat.gx
+#: it/messages:847
+msgid "X coordinate of component."
+msgstr "Coordinata X del gate."
+
+# ho.edgat.gy
+#: it/messages:848
+msgid "Y coordinate of component."
+msgstr "Coordinata Y del gate."
+
+# ho.edgat.swstate
+#: it/messages:850
+msgid ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+msgstr ""
+"Stato iniziale del commutatore da usare\n"
+"all'inizio della simulazione."
+
+# ho.edgat.dipstate
+#: it/messages:855
+msgid ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+msgstr ""
+"Stato iniziale del dip switch da usare\n"
+"all'inizio della simulazione."
+
+# ho.edgat.range
+#: it/messages:860
+msgid "The range of bits to pull off a bus."
+msgstr "Il range di bits da estrarre dal bus."
+
+# ho.edgat.memfile
+#: it/messages:862
+msgid ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+msgstr ""
+"Il file con lo stato iniziale di questa memoria.\n"
+"Il file viene letto quando il simulatore viene attivato."
+
+# ho.edgat.func
+#: it/messages:867
+msgid "The function type of this module."
+msgstr "Il tipo di funzione di questo modulo."
+
+# ho.edgat.frame
+#: it/messages:868
+msgid "The frame label."
+msgstr "L'etichetta del riquadro."
+
+# ho.traceprint
+#: it/messages:870
+msgid ""
+"Print the logic trace range selected\n"
+"using the right mouse button. Shift-right\n"
+"click can be used to expand the selected\n"
+"region. The range visible in the scope\n"
+"view is used when there is no selection."
+msgstr "Stampa la traccia."
+
+# ho.showxhair
+#: it/messages:872
+msgid ""
+"If this button is depressed, a vertical crosshair\n"
+"line will be displayed in the scope window."
+msgstr ""
+"Se questo pulsante è attivato, nella finestra\n"
+"delle tracce il cursore è una linea verticale."
+
+# ho.opt.sorttraces
+#: it/messages:877
+msgid ""
+"If this option is enabled, traces on the\n"
+"scope window will be displayed in sorted\n"
+"order. If this option is disabled, traces\n"
+"on the scope window will be displayed in\n"
+"the order in which the probes were set."
+msgstr ""
+"Se questa opzione è abilitata, le tracce\n"
+"nella finestra del logic analyzer vengono\n"
+"ordinate in ordine alfabetico.\n"
+"Se l'opzione è disabilitata, le tracce vengono\n"
+"mostrate nell'ordine in cui sono state richiamate."
+
+# ho.opt.undolen
+#: it/messages:892
+msgid "Maximum number of undo actions to retain."
+msgstr "Quantità massima di comandi da mantenere nella lista \"undo\"."
+
+# ho.opt.site
+#: it/messages:896
+msgid ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+msgstr ""
+"Nome del sito di istallazione di TkGate.\n"
+"Questo nome appare sui documenti stampati."
+
+# ho.opt.smooth
+#: it/messages:901
+msgid ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+msgstr ""
+"Se questa opzione è abilitata, lo scrolling\n"
+"è ottimizzato usando copie bitmap invece di\n"
+"fare un redisplay completo.\n"
+"Spegni questa opzione se vi sono problemi\n"
+"con il tuo server."
+
+# ho.opt.clip
+#: it/messages:909
+msgid ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+msgstr ""
+"Se questa opzione è abilitata, verrà usato\n"
+"il meccanismo di clipping per aggiornare solo\n"
+"la parte visibile della finestra in caso di\n"
+"un rinfresco. Altrimenti tutto il display viene\n"
+"ridisegnato."
+
+# ho.opt.outmove
+#: it/messages:917
+msgid ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+msgstr ""
+"Se questa opzione è abilitata, in caso di spostamento\n"
+"di moduli ne verrà mostrata solo la sagoma.\n"
+"Usa questa opzione solo su macchine con grafica lenta."
+
+# ho.opt.bhelp
+#: it/messages:923
+msgid ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+msgstr ""
+"Se questa opzione è abilitata, verranno mostrati\n"
+"messaggi di aiuto (balloons) sugli oggetti\n"
+"toccati dal puntatore."
+
+# ho.opt.novice
+#: it/messages:929
+msgid ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+msgstr ""
+"Se non è specificato alcun circuito sulla linea\n"
+"di comando, all'inizio verrà caricato\n"
+"un tutorial di TkGate."
+
+# ho.opt.debug
+#: it/messages:935
+msgid ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+msgstr ""
+"Abilita diverse opzioni di debugging\n"
+"utili solo per gli sviluppatori di TkGate."
+
+# ho.opt.ckpt
+#: it/messages:940
+msgid "Enable checkpointing of unsaved circuits."
+msgstr "Abilita checkpointing di circuiti non ancora salvati."
+
+# ho.opt.ckptfreq
+#: it/messages:941
+msgid "Frequency of checkpoints in seconds."
+msgstr "Frequenza di checkpointing in secondi."
+
+# ho.opt.beak
+#: it/messages:943
+msgid ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+msgstr ""
+"Disabilita queste opzioni inutili!\n"
+"Se lo fai, questa rubrica e questo checkbox non appariranno più.\n"
+"Per riattivarle, dovrai editare il tuo file .tkgate-preferences."
+
+# ho.opt.miles
+#: it/messages:949
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+msgstr ""
+"Se questa opzione è attiva, TkGate commenterà\n"
+"periodicamente l'intelligenza delle operazioni\n"
+"dell'utente;-)"
+
+# ho.opt.bat
+#: it/messages:955
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+msgstr ""
+"Se questa opzione è attiva, TkGate si predispone\n"
+"per progettare un computer di Batman..."
+
+# ho.opt.trek
+#: it/messages:960
+msgid "Beam me up Scotty!"
+msgstr "Lanciami Scoty! (...da Star Trek...)"
+
+# ho.opt.simstep
+#: it/messages:963
+msgid ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+msgstr "Quantità di epoche di avanzamento per il comando \"Step Epoch(s)\"."
+
+# ho.opt.ckstep
+#: it/messages:967
+msgid ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+msgstr ""
+"Quantità di cicli di clock di avanzamento per il comando \"Step Cycle\"."
+
+# ho.opt.ckover
+#: it/messages:971
+msgid ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+msgstr ""
+"La quantità di epoche da simulare oltre il fianco positivo\n"
+"del clock per il comando \"Step Cycle\"."
+
+# ho.opt.vpopupdelay
+#: it/messages:976
+msgid ""
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
+"1 and 10000 are allowed."
+msgstr ""
+"Il ritardo in millisecondi fra un click e la\n"
+"visualizzazione del valore di un segnale.\n"
+"Su alcuni sistemi, ritardi brevi compromettono\n"
+"la possibilità di riconoscere il doppio click.\n"
+"Se hai questo problema, aumenta questo valore.\n"
+"Sono ammessi valori fra 1 e 10000."
+
+# ho.opt.init
+#: it/messages:985
+msgid ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+msgstr ""
+"Script da eseguire automaticamente\n"
+"quando si attiva la simulazione."
+
+# ho.opt.ckall
+#: it/messages:990
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+msgstr ""
+"Se questa opzione è abilitata, il comando\n"
+"\"Step Cycle\" mette in pausa il simulatore\n"
+"al fianco positivo di ogni clock del circuito."
+
+# ho.opt.ckspec
+#: it/messages:996
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+msgstr ""
+"Se questa opzione è abilitata, il comando\n"
+"\"Step Cycle\" mette in pausa il simulatore\n"
+"unicamente al fianco positivo del segnale\n"
+"di clock specificato.\n"
+"Fa stato il nome del gate, non del net."
+
+# ho.deftech
+#: it/messages:1004
+msgid ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+msgstr ""
+"Tecnologia di default per nuove porte logiche.\n"
+"Influenza il delay delle porte. Per cambiare\n"
+"la tecnologia di un gate specifico, apri\n"
+"il formulario delle sue proprietà (doppio\n"
+"click) e seleziona l'opzione \"Delay\"."
+
+# ho.techbut
+#: it/messages:1012
+msgid ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+msgstr ""
+"Usa i ritardi codificati nel file di\n"
+"definizione della tecnologia standard.\n"
+"Per aggiungere tecnologie personalizzate,\n"
+"inseriscile nella lista nel menu\n"
+"\"File -> Options -> Simulate\"."
+
+# ho.custbut
+#: it/messages:1020
+msgid "Set custom delay values for this component."
+msgstr "Imposta valori di ritardo personalizzati per questa porta."
+
+# ho.contver
+#: it/messages:1024
+msgid ""
+"Continuously verify the integrity of internal\n"
+"data structures after every operation."
+msgstr ""
+"Verifica continuamente l'integrità delle strutture dati\n"
+"interne dopo ogni operazione."
+
+# ho.simwatch
+#: it/messages:1029
+msgid ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+msgstr "Visualizza i comandi scambiati fra GUI e simulatore."

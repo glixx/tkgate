@@ -1,0 +1,7800 @@
+# This file is part of TkGate project
+# Copyright (C) 1987-2015 by Jeffery P. Hansen
+# This file is distributed under the same license as the TkGate package.
+#
+# Translators:
+# Andrey V. Skvotsov <starling13@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: TkGate 2.0\n"
+"Report-Msgid-Bugs-To: starling13@gmail.com\n"
+"POT-Creation-Date: 2018-11-29 10:03+0300\n"
+"PO-Revision-Date: 2018-11-29 10:03+0300\n"
+"Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tkgatemsg2po script\n"
+
+# b.new
+# pop.module.new
+#: uk/messages:33 uk/messages:381
+msgid "New..."
+msgstr "Створити…"
+
+# b.dismiss
+#: uk/messages:34
+msgid "Dismiss"
+msgstr "Відкинути"
+
+# b.close
+# pop.gate.close
+#: uk/messages:35 uk/messages:370
+msgid "Close"
+msgstr "Закрити"
+
+# b.ok
+#: uk/messages:36
+msgid "OK"
+msgstr "Гаразд"
+
+# b.clear
+#: uk/messages:37
+msgid "Clear"
+msgstr "Спорожнити"
+
+# b.cancel
+# db.hdl.cancel
+#: uk/messages:38 uk/messages:924
+msgid "Cancel"
+msgstr "Скасувати"
+
+# b.in
+# pop.igen.in
+# db.net.in
+#: uk/messages:39 uk/messages:417 uk/messages:551
+msgid "in"
+msgstr "вхід"
+
+# b.out
+# pop.igen.out
+# db.net.out
+#: uk/messages:40 uk/messages:418 uk/messages:552
+msgid "out"
+msgstr "вихід"
+
+# b.inout
+# pop.igen.inout
+# db.net.inout
+#: uk/messages:41 uk/messages:419 uk/messages:553
+msgid "inout"
+msgstr "вхід-вихід"
+
+# b.browse
+#: uk/messages:42
+msgid "Browse..."
+msgstr "Вибрати…"
+
+# b.label
+#: uk/messages:43
+msgid "Label"
+msgstr "Мітка"
+
+# b.find
+#: uk/messages:44
+msgid "Find"
+msgstr "Знайти"
+
+# b.edit
+# mm.edit
+# pop.interface.edit
+#: uk/messages:45 uk/messages:95 uk/messages:409
+#, fuzzy
+msgid "Edit..."
+msgstr ""
+"Змінити…\n"
+"Змінити…\n"
+"Edit..."
+
+# b.add
+# mm.add
+#: uk/messages:46 uk/messages:93
+msgid "Add..."
+msgstr "Додати…"
+
+# b.delete
+# mm.delete
+# pop.gate.delete
+# pop.igen.delete
+# db.gate.delete
+# igen.delete
+#: uk/messages:47 uk/messages:94 uk/messages:378 uk/messages:416
+#: uk/messages:607 uk/messages:1261
+msgid "Delete"
+msgstr "Вилучити"
+
+# b.remove
+#: uk/messages:48
+msgid "Remove"
+msgstr "Вилучити"
+
+# b.apply
+#: uk/messages:49
+msgid "Apply"
+msgstr "Застосувати"
+
+# b.anchor
+# db.gate.anchor
+#: uk/messages:50 uk/messages:590
+msgid "Anchor"
+msgstr "Зафіксувати"
+
+# b.tech
+# opt.simulate.tech
+# opt.tool.tech
+#: uk/messages:51 uk/messages:1068 uk/messages:1175
+msgid "Technology"
+msgstr "Технологія"
+
+# tab.edit
+#: uk/messages:57
+msgid "Editing"
+msgstr "Редагування"
+
+# tab.editintr
+# mod.intf
+# pop.interface
+# opt.interface
+#: uk/messages:58 uk/messages:244 uk/messages:405 uk/messages:1057
+msgid "Interface"
+msgstr "Інтерфейс"
+
+# tab.simulate
+# opt.simulate
+#: uk/messages:59 uk/messages:1066
+msgid "Simulate"
+msgstr "Імітувати"
+
+# tab.cpath
+# opt.cpath
+#: uk/messages:60 uk/messages:1100
+#, fuzzy
+msgid "Critical Path"
+msgstr ""
+"Критичний ланцюжок\n"
+"Critical Path"
+
+# fpattern.v
+#: uk/messages:66
+msgid "Verilog Netlist"
+msgstr "Список з’єднань Verilog"
+
+# fpattern.vs
+#: uk/messages:67
+msgid "Verilog Script Files"
+msgstr "файли скриптів Verilog"
+
+# fpattern.gdf
+#: uk/messages:68
+msgid "TkGate Delay File"
+msgstr "файл затримок TkGate"
+
+# fpattern.xbm
+#: uk/messages:69
+msgid "X11 bitmap"
+msgstr "растр X11"
+
+# fpattern.mem
+#: uk/messages:70
+msgid "TkGate Memory Image Files"
+msgstr "файли образів пам’яті TkGate"
+
+# fpattern.all
+#: uk/messages:71
+msgid "All Files"
+msgstr "усі файли"
+
+# module.tree
+#: uk/messages:77
+msgid "Tree"
+msgstr "Дерево"
+
+# module.list
+#: uk/messages:78
+msgid "List"
+msgstr "Список"
+
+# module.box.libraries
+# opt.library
+# circ.library
+#: uk/messages:79 uk/messages:1070 uk/messages:1492
+msgid "Libraries"
+msgstr "Бібліотеки"
+
+# sidetab.nets
+# db.net.inets
+#: uk/messages:85 uk/messages:554
+msgid "Nets"
+msgstr "Ланцюжки"
+
+# sidetab.ports
+# iports
+# opt.tool.symport
+#: uk/messages:86 uk/messages:486 uk/messages:1181
+#, fuzzy
+msgid "Ports"
+msgstr ""
+"Порти\n"
+"Ports\n"
+"Порти"
+
+# mm.enable
+#: uk/messages:96
+msgid "Enable"
+msgstr "Увімкнути"
+
+# mm.disable
+#: uk/messages:97
+msgid "Disable"
+msgstr "Вимкнути"
+
+# menu.file
+# menu.scope_file
+#: uk/messages:103 uk/messages:222
+msgid "0:File"
+msgstr "0:Файл"
+
+# menu.edit
+#: uk/messages:104
+msgid "0:Edit"
+msgstr "0:Зміни"
+
+# menu.tool
+#: uk/messages:105
+msgid "0:Tool"
+msgstr "0:Інструмент"
+
+# menu.symbol
+#: uk/messages:106
+msgid "0:Symbol"
+msgstr "0:Символ"
+
+# menu.simulate
+# menu.scope_sim
+#: uk/messages:107 uk/messages:223
+msgid "0:Simulate"
+msgstr "0:Імітувати"
+
+# menu.module
+#: uk/messages:108
+msgid "0:Module"
+msgstr "0:Модуль"
+
+# menu.interface
+# menu.module.interface
+#: uk/messages:109 uk/messages:204
+#, fuzzy
+msgid "0:Interface"
+msgstr ""
+"0:Інтерфейс\n"
+"0:Interface"
+
+# menu.format
+#: uk/messages:110
+msgid "0:Format"
+msgstr "0:Формат"
+
+# menu.make
+#: uk/messages:111
+msgid "0:Components"
+msgstr "0:Компоненти"
+
+# menu.help
+# menu.scope_help
+#: uk/messages:112 uk/messages:225
+msgid "0:Help"
+msgstr "0:Довідка"
+
+# menu.file.new
+# menu.module.new
+#: uk/messages:114 uk/messages:197
+msgid "0:New..."
+msgstr "0:Створити…"
+
+# menu.file.open
+#: uk/messages:115
+msgid "0:Open..."
+msgstr "0:Відкрити…"
+
+# menu.file.openlib
+#: uk/messages:116
+msgid "0:Library Manager..."
+msgstr "0:Керування бібліотеками…"
+
+# menu.file.save
+#: uk/messages:117
+msgid "0:Save"
+msgstr "0:Зберегти"
+
+# menu.file.saveas
+#: uk/messages:118
+msgid "5:Save As..."
+msgstr "5:Зберегти як…"
+
+# menu.file.print
+#: uk/messages:119
+msgid "0:Print..."
+msgstr "0:Надрукувати…"
+
+# menu.file.quit
+#: uk/messages:120
+msgid "0:Quit"
+msgstr "0:Вийти"
+
+# menu.file.cprop
+#: uk/messages:121
+msgid "0:Circuit Properties..."
+msgstr "0:Властивості схеми…"
+
+# menu.file.import
+#: uk/messages:122
+msgid "0:Import Image..."
+msgstr "0:Імпортувати зображення…"
+
+# menu.file.export
+#: uk/messages:123
+msgid "0:Export Image..."
+msgstr "0:Експортувати зображення…"
+
+# menu.edit.undo
+#: uk/messages:125
+msgid "0:Undo"
+msgstr "0:Вернути"
+
+# menu.edit.redo
+#: uk/messages:126
+msgid "0:Redo"
+msgstr "0:Повторити"
+
+# menu.edit.cut
+#: uk/messages:127
+msgid "0:Cut"
+msgstr "0:Вирізати"
+
+# menu.edit.copy
+#: uk/messages:128
+msgid "3:Copy"
+msgstr "3:Копіювати"
+
+# menu.edit.paste
+#: uk/messages:129
+msgid "0:Paste"
+msgstr "0:Вставити"
+
+# menu.edit.overlay
+#: uk/messages:130
+msgid "0:Overlay Paste"
+msgstr "0:Вставити накладку"
+
+# menu.edit.selall
+#: uk/messages:131
+msgid "0:Select All"
+msgstr "0:Позначити все"
+
+# menu.edit.find
+#: uk/messages:132
+msgid "0:Find..."
+msgstr "0:Знайти…"
+
+# menu.edit.zoomin
+# menu.scope_trace.zoomin
+#: uk/messages:133 uk/messages:229
+#, fuzzy
+msgid "5:Zoom In"
+msgstr ""
+"5:Збільшити\n"
+"5:Zoom In"
+
+# menu.edit.zoomout
+# menu.scope_trace.zoomout
+#: uk/messages:134 uk/messages:230
+#, fuzzy
+msgid "5:Zoom Out"
+msgstr ""
+"5:Зменшити\n"
+"5:Zoom Out"
+
+# menu.edit.rshift
+#: uk/messages:136
+msgid "10:Bit Shift Right"
+msgstr "10:Бітовий зсув праворуч"
+
+# menu.edit.lshift
+#: uk/messages:137
+msgid "10:Bit Shift Left"
+msgstr "10:Бітовий зсув ліворуч"
+
+# menu.edit.ushift
+#: uk/messages:138
+msgid "10:Bit Shift Up"
+msgstr "10:Бітовий зсув вгору"
+
+# menu.edit.dshift
+#: uk/messages:139
+msgid "10:Bit Shift Down"
+msgstr "10:Бітовий зсув вниз"
+
+# menu.edit.cwrotate
+#: uk/messages:140
+msgid "11:Bit Rotate C-W"
+msgstr "11:Бітове обертання за год. стрілкою"
+
+# menu.edit.ccwrotate
+#: uk/messages:141
+msgid "15:Bit Rotate C-C-W"
+msgstr "15:Бітове обертання проти год. стрілки"
+
+# menu.edit.pcwrotate
+#: uk/messages:142
+msgid "12:Port Rotate C-W"
+msgstr "12:Port Rotate C-W"
+
+# menu.edit.pccwrotate
+#: uk/messages:143
+msgid "16:Port Rotate C-C-W"
+msgstr "16:Port Rotate C-C-W"
+
+# menu.edit.autobold
+#: uk/messages:144
+msgid "Boldify Bits"
+msgstr "Boldify Bits"
+
+# menu.edit.resize
+#: uk/messages:145
+msgid "Resize Bitmap"
+msgstr "Resize Bitmap"
+
+# menu.tool.move
+#: uk/messages:147
+msgid "0:Move/Connect"
+msgstr "0:Move/Connect"
+
+# menu.tool.delg
+#: uk/messages:148
+msgid "0:Delete Component"
+msgstr "0:Delete Component"
+
+# menu.tool.cutw
+#: uk/messages:149
+msgid "0:Cut Wire"
+msgstr "0:Cut Wire"
+
+# menu.tool.inv
+#: uk/messages:150
+msgid "0:Invert"
+msgstr "0:Invert"
+
+# menu.tool.bitw
+#: uk/messages:151
+msgid "0:Bit Width"
+msgstr "0:Bit Width"
+
+# menu.tool.debug
+#: uk/messages:152
+msgid "0:Debug"
+msgstr "0:Debug"
+
+# menu.tool.point
+#: uk/messages:153
+msgid "0:Point"
+msgstr "0:Point"
+
+# menu.tool.line
+#: uk/messages:154
+msgid "0:Line"
+msgstr "0:Line"
+
+# menu.tool.rect
+#: uk/messages:155
+msgid "0:Rectangle"
+msgstr "0:Rectangle"
+
+# menu.tool.fillrect
+#: uk/messages:156
+msgid "0:Fill Rectangle"
+msgstr "0:Fill Rectangle"
+
+# menu.tool.port
+#: uk/messages:157
+msgid "0:Port"
+msgstr "0:Port"
+
+# menu.tool.select
+#: uk/messages:158
+msgid "0:Select Region"
+msgstr "0:Select Region"
+
+# menu.tool.options
+#: uk/messages:159
+msgid "0:Options..."
+msgstr "0:Options..."
+
+# menu.format.addport
+#: uk/messages:161
+msgid "4:Add Port"
+msgstr "4:Add Port"
+
+# menu.format.ioset
+#: uk/messages:162
+msgid "0:Set Type"
+msgstr "0:Set Type"
+
+# menu.format.anchor
+#: uk/messages:163
+msgid "0:Anchor Selected"
+msgstr "0:Anchor Selected"
+
+# menu.format.unanchor
+#: uk/messages:164
+msgid "0:Unanchor Selected"
+msgstr "0:Unanchor Selected"
+
+# menu.format.prop
+#: uk/messages:165
+msgid "0:Instance Properties..."
+msgstr "0:Instance Properties..."
+
+# menu.format.del
+#: uk/messages:166
+msgid "0:Delete"
+msgstr "0:Delete"
+
+# menu.format.settech
+#: uk/messages:167
+msgid "0:Set Technology"
+msgstr "0:Set Technology"
+
+# menu.format.rot
+#: uk/messages:168
+msgid "0:Rotation"
+msgstr "0:Rotation"
+
+# menu.format.rot.0
+#: uk/messages:169
+msgid "17:Default Rotation 0"
+msgstr "17:Default Rotation 0"
+
+# menu.format.rot.90
+#: uk/messages:170
+msgid "17:Default Rotation 90"
+msgstr "17:Default Rotation 90"
+
+# menu.format.rot.180
+#: uk/messages:171
+msgid "17:Default Rotation 180"
+msgstr "17:Default Rotation 180"
+
+# menu.format.rot.270
+#: uk/messages:172
+msgid "17:Default Rotation 270"
+msgstr "17:Default Rotation 270"
+
+# menu.format.rot.rotate
+#: uk/messages:173
+msgid "10:Clockwise Rotate"
+msgstr "10:Clockwise Rotate"
+
+# menu.format.rot.brotate
+#: uk/messages:174
+msgid "0:Counter-Clockwise Rotate"
+msgstr "0:Counter-Clockwise Rotate"
+
+# menu.format.algnv
+#: uk/messages:175
+msgid "6:Align Ver."
+msgstr "6:Align Ver."
+
+# menu.format.algnh
+#: uk/messages:176
+msgid "6:Align Horz."
+msgstr "6:Align Horz."
+
+# menu.tool.tclshell
+#: uk/messages:179
+msgid "0:Tcl Shell"
+msgstr "0:Tcl Shell"
+
+# menu.tool.rep
+#: uk/messages:180
+msgid "0:Replicate"
+msgstr "0:Replicate"
+
+# menu.simulate.begin
+#: uk/messages:182
+msgid "0:Begin Simulation"
+msgstr "0:Begin Simulation"
+
+# menu.simulate.end
+#: uk/messages:183
+msgid "0:End Simulation"
+msgstr "0:End Simulation"
+
+# menu.simulate.addprobe
+# menu.scope_sim.addprobe
+#: uk/messages:184 uk/messages:231
+msgid "0:Add/Delete Probe"
+msgstr "0:Add/Delete Probe"
+
+# menu.simulate.run
+# menu.scope_sim.run
+#: uk/messages:185 uk/messages:232
+msgid "0:Run"
+msgstr "0:Run"
+
+# menu.simulate.pause
+# menu.scope_sim.pause
+#: uk/messages:186 uk/messages:233
+msgid "0:Pause"
+msgstr "0:Pause"
+
+# menu.simulate.step
+# menu.scope_sim.step
+#: uk/messages:187 uk/messages:234
+msgid "0:Step Epoch(s)"
+msgstr "0:Step Epoch(s)"
+
+# menu.simulate.cycle
+# menu.scope_sim.cycle
+#: uk/messages:188 uk/messages:235
+msgid "5:Step Cycle"
+msgstr "5:Step Cycle"
+
+# menu.simulate.break
+# menu.scope_sim.break
+#: uk/messages:189 uk/messages:236
+msgid "0:Breakpoint..."
+msgstr "0:Breakpoint..."
+
+# menu.simulate.script
+# menu.scope_sim.script
+#: uk/messages:190 uk/messages:237
+msgid "1:Exec. Script..."
+msgstr "1:Exec. Script..."
+
+# menu.simulate.load
+# menu.scope_sim.load
+#: uk/messages:191 uk/messages:238
+msgid "1:Load Memory..."
+msgstr "1:Load Memory..."
+
+# menu.simulate.dump
+# menu.scope_sim.dump
+#: uk/messages:192 uk/messages:239
+msgid "1:Dump Memory..."
+msgstr "1:Dump Memory..."
+
+# menu.simulate.view
+#: uk/messages:193
+msgid "1:View Memory..."
+msgstr "1:View Memory..."
+
+# menu.module.open
+#: uk/messages:195
+msgid "0:Open"
+msgstr "0:Open"
+
+# menu.module.close
+# menu.scope_file.close
+#: uk/messages:196 uk/messages:228
+msgid "0:Close"
+msgstr "0:Close"
+
+# menu.module.del
+#: uk/messages:198
+msgid "0:Delete..."
+msgstr "0:Delete..."
+
+# menu.module.copy
+#: uk/messages:199
+msgid "1:Copy..."
+msgstr "1:Copy..."
+
+# menu.module.rename
+#: uk/messages:200
+msgid "0:Rename..."
+msgstr "0:Rename..."
+
+# menu.module.claim
+#: uk/messages:201
+msgid "1:Claim..."
+msgstr "1:Claim..."
+
+# menu.module.setroot
+#: uk/messages:202
+msgid "1:Set As Root..."
+msgstr "1:Set As Root..."
+
+# menu.module.prop
+#: uk/messages:203
+msgid "0:Properties..."
+msgstr "0:Properties..."
+
+# menu.module.interface.set
+#: uk/messages:205
+msgid "0:Set As Default"
+msgstr "0:Set As Default"
+
+# menu.module.interface.update
+#: uk/messages:206
+msgid "1:Sync. to Default"
+msgstr "1:Sync. to Default"
+
+# menu.module.interface.updateall
+#: uk/messages:207
+msgid "6:Sync. All to Default..."
+msgstr "6:Sync. All to Default..."
+
+# menu.module.interface.edit
+#: uk/messages:208
+msgid "0:Edit..."
+msgstr "0:Edit..."
+
+# menu.module.interface.auto
+#: uk/messages:209
+msgid "5:Auto Generate..."
+msgstr "5:Auto Generate..."
+
+# menu.help.about
+# menu.scope_help.about
+#: uk/messages:212 uk/messages:240
+msgid "0:About..."
+msgstr "0:About..."
+
+# menu.help.license
+# menu.scope_help.license
+#: uk/messages:213 uk/messages:241
+msgid "0:License..."
+msgstr "0:License..."
+
+# menu.help.doc
+# menu.scope_help.doc
+#: uk/messages:214 uk/messages:242
+msgid "0:Documentation..."
+msgstr "0:Documentation..."
+
+# menu.help.tut
+#: uk/messages:215
+msgid "1:Tutorials"
+msgstr "1:Tutorials"
+
+# menu.help.home
+#: uk/messages:216
+msgid "1:Home Page"
+msgstr "1:Home Page"
+
+# menu.help.example
+#: uk/messages:217
+msgid "1:Examples"
+msgstr "1:Examples"
+
+# menu.scope_trace
+#: uk/messages:224
+msgid "0:Trace"
+msgstr "0:Trace"
+
+# menu.scope_file.ptrace
+#: uk/messages:227
+msgid "0:Print Trace..."
+msgstr "0:Print Trace..."
+
+# port.title
+#: uk/messages:246
+msgid "TkGate: Port Properties"
+msgstr "TkGate: Port Properties"
+
+# port.parms
+#: uk/messages:247
+msgid "Port Parameters"
+msgstr "Port Parameters"
+
+# port.in
+# pop.port.in
+#: uk/messages:248 uk/messages:356
+msgid "In"
+msgstr "In"
+
+# port.out
+# pop.port.out
+#: uk/messages:249 uk/messages:357
+msgid "Out"
+msgstr "Out"
+
+# port.inout
+# pop.port.inout
+#: uk/messages:250 uk/messages:358
+msgid "InOut"
+msgstr "InOut"
+
+# gm.signals
+#: uk/messages:258
+msgid "Signals"
+msgstr "Signals"
+
+# gm.io
+#: uk/messages:259
+msgid "I/O"
+msgstr "I/O"
+
+# gm.gate
+#: uk/messages:260
+msgid "Gate"
+msgstr "Gate"
+
+# gm.rgate
+#: uk/messages:261
+msgid "Reduction"
+msgstr "Reduction"
+
+# gm.msi
+#: uk/messages:262
+msgid "MSI"
+msgstr "MSI"
+
+# gm.alu
+#: uk/messages:263
+msgid "ALU"
+msgstr "ALU"
+
+# gm.mem
+#: uk/messages:264
+msgid "Memory"
+msgstr "Memory"
+
+# gm.mod
+# imodule
+# opt.tool.module
+# find.result.module
+#: uk/messages:265 uk/messages:484 uk/messages:1174 uk/messages:1411
+msgid "Module"
+msgstr "Module"
+
+# gm.comment
+#: uk/messages:266
+msgid "Comment"
+msgstr "Comment"
+
+# gm.script
+#: uk/messages:267
+msgid "Verilog Script"
+msgstr "Verilog Script"
+
+# gm.frame
+#: uk/messages:268
+msgid "Frame"
+msgstr "Frame"
+
+# gm.signals.pullup
+#: uk/messages:270
+msgid "Pullup"
+msgstr "Pullup"
+
+# gm.signals.pulldown
+#: uk/messages:271
+msgid "Pulldown"
+msgstr "Pulldown"
+
+# gm.signals.ground
+#: uk/messages:272
+msgid "Ground"
+msgstr "Ground"
+
+# gm.signals.vdd
+#: uk/messages:273
+msgid "Vdd"
+msgstr "Vdd"
+
+# gm.io.switch
+#: uk/messages:275
+msgid "Switch"
+msgstr "Switch"
+
+# gm.io.dip
+#: uk/messages:276
+msgid "DIP Switch"
+msgstr "DIP Switch"
+
+# gm.io.merge
+#: uk/messages:278
+msgid "Concat"
+msgstr "Concat"
+
+# gm.io.clock
+#: uk/messages:279
+msgid "Clock"
+msgstr "Clock"
+
+# gm.io.led
+#: uk/messages:281
+msgid "LED"
+msgstr "LED"
+
+# gm.io.ledbar
+#: uk/messages:282
+msgid "LED Bar"
+msgstr "LED Bar"
+
+# gm.io.ledhex
+#: uk/messages:283
+msgid "7-Seg. LED (HEX)"
+msgstr "7-Seg. LED (HEX)"
+
+# gm.io.leddec
+#: uk/messages:284
+msgid "7-Seg. LED (DEC)"
+msgstr "7-Seg. LED (DEC)"
+
+# gm.io.ledseg
+#: uk/messages:285
+msgid "7-Seg. LED (Direct)"
+msgstr "7-Seg. LED (Direct)"
+
+# gm.io.tty
+#: uk/messages:287
+msgid "TTY"
+msgstr "TTY"
+
+# gm.gate.and
+# gm.rgate.and
+#: uk/messages:289 uk/messages:301
+msgid "AND"
+msgstr "AND"
+
+# gm.gate.nand
+# gm.rgate.nand
+#: uk/messages:290 uk/messages:302
+msgid "NAND"
+msgstr "NAND"
+
+# gm.gate.or
+# gm.rgate.or
+#: uk/messages:291 uk/messages:303
+msgid "OR"
+msgstr "OR"
+
+# gm.gate.nor
+# gm.rgate.nor
+#: uk/messages:292 uk/messages:304
+msgid "NOR"
+msgstr "NOR"
+
+# gm.gate.xor
+# gm.rgate.xor
+#: uk/messages:293 uk/messages:305
+msgid "XOR"
+msgstr "XOR"
+
+# gm.gate.xnor
+# gm.rgate.xnor
+#: uk/messages:294 uk/messages:306
+msgid "XNOR"
+msgstr "XNOR"
+
+# gm.gate.buf
+#: uk/messages:295
+msgid "Buffer"
+msgstr "Buffer"
+
+# gm.gate.inv
+#: uk/messages:296
+msgid "Inverter"
+msgstr "Inverter"
+
+# gm.gate.tribuf
+#: uk/messages:297
+msgid "Tri-Buffer"
+msgstr "Tri-Buffer"
+
+# gm.gate.nmos
+#: uk/messages:298
+msgid "NMOS"
+msgstr "NMOS"
+
+# gm.gate.pmos
+#: uk/messages:299
+msgid "PMOS"
+msgstr "PMOS"
+
+# gm.alu.add
+#: uk/messages:308
+msgid "Adder"
+msgstr "Adder"
+
+# gm.alu.mult
+#: uk/messages:309
+msgid "Multiplier"
+msgstr "Multiplier"
+
+# gm.alu.div
+#: uk/messages:310
+msgid "Divider"
+msgstr "Divider"
+
+# gm.alu.lshift
+#: uk/messages:311
+msgid "Left Shift"
+msgstr "Left Shift"
+
+# gm.alu.rshift
+#: uk/messages:312
+msgid "Right Shift"
+msgstr "Right Shift"
+
+# gm.alu.arshift
+#: uk/messages:313
+msgid "Arith. Right Shift"
+msgstr "Arith. Right Shift"
+
+# gm.alu.roll
+#: uk/messages:314
+msgid "Roll"
+msgstr "Roll"
+
+# gm.mem.reg
+#: uk/messages:316
+msgid "Register"
+msgstr "Register"
+
+# gm.mem.ff
+#: uk/messages:317
+msgid "D Flip-Flop"
+msgstr "D Flip-Flop"
+
+# gm.mem.rff
+#: uk/messages:318
+msgid "Rev. D Flip-Flop"
+msgstr "Rev. D Flip-Flop"
+
+# gm.mem.ram
+#: uk/messages:319
+msgid "RAM"
+msgstr "RAM"
+
+# gm.mem.rom
+#: uk/messages:320
+msgid "ROM"
+msgstr "ROM"
+
+# gm.mem.jkff
+#: uk/messages:322
+msgid "JK Flip-Flop"
+msgstr "JK Flip-Flop"
+
+# gm.mem.rjkff
+#: uk/messages:323
+msgid "Rev. JK Flip-Flop"
+msgstr "Rev. JK Flip-Flop"
+
+# gm.msi.21mux
+#: uk/messages:325
+msgid "2-1 Multiplexor"
+msgstr "2-1 Multiplexor"
+
+# gm.msi.41mux
+#: uk/messages:326
+msgid "4-1 Multiplexor"
+msgstr "4-1 Multiplexor"
+
+# gm.msi.81mux
+#: uk/messages:327
+msgid "8-1 Multiplexor"
+msgstr "8-1 Multiplexor"
+
+# gm.msi.12dec
+#: uk/messages:328
+msgid "1-2 Decoder"
+msgstr "1-2 Decoder"
+
+# gm.msi.14dec
+#: uk/messages:329
+msgid "1-4 Decoder"
+msgstr "1-4 Decoder"
+
+# gm.msi.18dec
+#: uk/messages:330
+msgid "1-8 Decoder"
+msgstr "1-8 Decoder"
+
+# gm.msi.12demux
+#: uk/messages:331
+msgid "1-2 Demultiplexor"
+msgstr "1-2 Demultiplexor"
+
+# gm.msi.14demux
+#: uk/messages:332
+msgid "1-4 Demultiplexor"
+msgstr "1-4 Demultiplexor"
+
+# gm.msi.18demux
+#: uk/messages:333
+msgid "1-8 Demultiplexor"
+msgstr "1-8 Demultiplexor"
+
+# gm.mod.inst
+#: uk/messages:335
+msgid "Module Instance"
+msgstr "Module Instance"
+
+# gm.mod.in
+#: uk/messages:336
+msgid "Module Input"
+msgstr "Module Input"
+
+# gm.mod.out
+#: uk/messages:337
+msgid "Module Output"
+msgstr "Module Output"
+
+# gm.mod.inout
+#: uk/messages:338
+msgid "Module Input-Output"
+msgstr "Module Input-Output"
+
+# tutorial.prev
+#: uk/messages:340
+msgid "PREVIOUS"
+msgstr "PREVIOUS"
+
+# tutorial.next
+#: uk/messages:341
+msgid "NEXT"
+msgstr "NEXT"
+
+# tutorial.chapter
+#: uk/messages:342
+msgid "CHAPTER LIST"
+msgstr "CHAPTER LIST"
+
+# tutorial.reload
+#: uk/messages:343
+msgid "RELOAD"
+msgstr "RELOAD"
+
+# pop.make
+# opt.tool.gateprop
+#: uk/messages:349 uk/messages:1170
+msgid "Components"
+msgstr "Components"
+
+# pop.tool
+#: uk/messages:350
+msgid "Tool"
+msgstr "Tool"
+
+# pop.edit.paste
+#: uk/messages:352
+msgid "Paste"
+msgstr "Paste"
+
+# pop.edit.cut
+#: uk/messages:353
+msgid "Cut"
+msgstr "Cut"
+
+# pop.edit.copy
+#: uk/messages:354
+msgid "Copy"
+msgstr "Copy"
+
+# pop.wire.addseg
+#: uk/messages:360
+msgid "Add Wire Segment"
+msgstr "Add Wire Segment"
+
+# pop.wire.prop
+#: uk/messages:361
+msgid "Net Properties..."
+msgstr "Net Properties..."
+
+# pop.wire.hidesize
+#: uk/messages:362
+msgid "Hide Bit Width"
+msgstr "Hide Bit Width"
+
+# pop.wire.showsize
+#: uk/messages:363
+msgid "Show Bit Width"
+msgstr "Show Bit Width"
+
+# pop.wire.hidelabel
+#: uk/messages:364
+msgid "Hide Label"
+msgstr "Hide Label"
+
+# pop.wire.hidealllabel
+#: uk/messages:365
+msgid "Hide All Labels"
+msgstr "Hide All Labels"
+
+# pop.wire.clearalllabel
+#: uk/messages:366
+msgid "Clear All Labels"
+msgstr "Clear All Labels"
+
+# pop.wire.showlabel
+#: uk/messages:367
+msgid "Show Label"
+msgstr "Show Label"
+
+# pop.gate.open
+#: uk/messages:369
+msgid "Open"
+msgstr "Open"
+
+# pop.gate.prop
+#: uk/messages:371
+msgid "Instance Properties..."
+msgstr "Instance Properties..."
+
+# pop.gate.addport
+#: uk/messages:372
+msgid "Add Port"
+msgstr "Add Port"
+
+# pop.gate.addin
+#: uk/messages:373
+msgid "Add Input..."
+msgstr "Add Input..."
+
+# pop.gate.addout
+#: uk/messages:374
+msgid "Add Output..."
+msgstr "Add Output..."
+
+# pop.gate.addinout
+#: uk/messages:375
+msgid "Add InOut..."
+msgstr "Add InOut..."
+
+# pop.gate.anchor
+#: uk/messages:376
+msgid "Anchor/Unanchor"
+msgstr "Anchor/Unanchor"
+
+# pop.gate.settech
+#: uk/messages:377
+msgid "Set Technology"
+msgstr "Set Technology"
+
+# pop.gate.ioset
+#: uk/messages:379
+msgid "Set Type"
+msgstr "Set Type"
+
+# pop.module.del
+#: uk/messages:382
+msgid "Delete..."
+msgstr "Delete..."
+
+# pop.module.copy
+#: uk/messages:383
+msgid "Copy..."
+msgstr "Copy..."
+
+# pop.module.rename
+#: uk/messages:384
+msgid "Rename..."
+msgstr "Rename..."
+
+# pop.module.claim
+#: uk/messages:385
+msgid "Claim..."
+msgstr "Claim..."
+
+# pop.module.setroot
+#: uk/messages:386
+msgid "Set As Root..."
+msgstr "Set As Root..."
+
+# pop.module.prop
+#: uk/messages:387
+msgid "Module Properties..."
+msgstr "Module Properties..."
+
+# pop.module.int
+#: uk/messages:388
+msgid "Edit Interface..."
+msgstr "Edit Interface..."
+
+# pop.simulate.end
+#: uk/messages:391
+msgid "End Simulation"
+msgstr "End Simulation"
+
+# pop.simulate.begin
+#: uk/messages:392
+msgid "Begin Simulation"
+msgstr "Begin Simulation"
+
+# pop.simulate.addprobe
+#: uk/messages:393
+msgid "Add/Delete Probe"
+msgstr "Add/Delete Probe"
+
+# pop.simulate.delprobe
+#: uk/messages:394
+msgid "Delete Probe"
+msgstr "Delete Probe"
+
+# pop.simulate.run
+#: uk/messages:395
+msgid "Run"
+msgstr "Run"
+
+# pop.simulate.pause
+#: uk/messages:396
+msgid "Pause"
+msgstr "Pause"
+
+# pop.simulate.step
+#: uk/messages:397
+msgid "Step Epoch(s)"
+msgstr "Step Epoch(s)"
+
+# pop.simulate.cycle
+#: uk/messages:398
+msgid "Step Cycle"
+msgstr "Step Cycle"
+
+# pop.simulate.break
+#: uk/messages:399
+msgid "Breakpoint..."
+msgstr "Breakpoint..."
+
+# pop.simulate.script
+#: uk/messages:400
+msgid "Exec. Script..."
+msgstr "Exec. Script..."
+
+# pop.simulate.load
+#: uk/messages:401
+msgid "Load Memory..."
+msgstr "Load Memory..."
+
+# pop.simulate.dump
+#: uk/messages:402
+msgid "Dump Memory..."
+msgstr "Dump Memory..."
+
+# pop.simulate.view
+#: uk/messages:403
+msgid "View Memory..."
+msgstr "View Memory..."
+
+# pop.interface.set
+#: uk/messages:406
+msgid "Set As Default"
+msgstr "Set As Default"
+
+# pop.interface.update
+#: uk/messages:407
+msgid "Sync. to Default"
+msgstr "Sync. to Default"
+
+# pop.interface.updateall
+#: uk/messages:408
+msgid "Sync. All to Default..."
+msgstr "Sync. All to Default..."
+
+# pop.interface.auto
+# ipanel.autogen
+#: uk/messages:410 uk/messages:1303
+msgid "Auto Generate..."
+msgstr "Auto Generate..."
+
+# pop.interface.replace
+#: uk/messages:411
+msgid "Replace"
+msgstr "Replace"
+
+# pop.igen.type
+# db.mod.type
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+# igen.type
+# find.result.type
+#: uk/messages:413 uk/messages:495 uk/messages:578 uk/messages:587
+#: uk/messages:596 uk/messages:1252 uk/messages:1412
+msgid "Type"
+msgstr "Type"
+
+# pop.igen.side
+# db.gate.side
+# igen.side
+#: uk/messages:414 uk/messages:586 uk/messages:1253
+msgid "Side"
+msgstr "Side"
+
+# pop.igen.size
+# igen.size
+#: uk/messages:415 uk/messages:1254
+msgid "Size"
+msgstr "Size"
+
+# pop.igen.left
+#: uk/messages:420
+msgid "left"
+msgstr "left"
+
+# pop.igen.right
+#: uk/messages:421
+msgid "right"
+msgstr "right"
+
+# pop.igen.top
+#: uk/messages:422
+msgid "top"
+msgstr "top"
+
+# pop.igen.bottom
+#: uk/messages:423
+msgid "bottom"
+msgstr "bottom"
+
+# pop.igen.other
+#: uk/messages:424
+msgid "other"
+msgstr "other"
+
+# pop.library.mgr
+#: uk/messages:426
+msgid "Library Manager..."
+msgstr "Library Manager..."
+
+# pop.library.close
+# libmgr.unload
+#: uk/messages:427 uk/messages:1553
+msgid "Unload"
+msgstr "Unload"
+
+# symed.tab.normal
+#: uk/messages:456
+msgid "UnSelected"
+msgstr "UnSelected"
+
+# symed.tab.select
+#: uk/messages:457
+msgid "Selected"
+msgstr "Selected"
+
+# symed.link
+#: uk/messages:458
+msgid "Link selected to unselected"
+msgstr "Link selected to unselected"
+
+# memview.title
+#: uk/messages:466
+msgid "Memory Viewer"
+msgstr "Memory Viewer"
+
+# memview.exp
+#: uk/messages:467
+msgid ""
+"View and modify the contents of a RAM\n"
+"or ROM component. Select memory page,\n"
+"then type new hex values to change\n"
+"memory content."
+msgstr ""
+"View and modify the contents of a RAM\n"
+"or ROM component. Select memory page,\n"
+"then type new hex values to change\n"
+"memory content."
+
+# scope.title
+#: uk/messages:476
+msgid "TkGate: Scope"
+msgstr "TkGate: Scope"
+
+# scope.emptymsg
+#: uk/messages:477
+msgid "Double-click on a wire to add or delete a trace."
+msgstr "Double-click on a wire to add or delete a trace."
+
+# comment.empty
+#: uk/messages:478
+msgid "[Double click to add text.]"
+msgstr "[Double click to add text.]"
+
+# ifile
+# print.file
+# opt.tool.file
+#: uk/messages:483 uk/messages:956 uk/messages:1167
+msgid "File"
+msgstr "File"
+
+# iblmodule
+# print.tab.modules
+# opt.mods
+#: uk/messages:485 uk/messages:1034 uk/messages:1091
+msgid "Modules"
+msgstr "Modules"
+
+# ibits
+#: uk/messages:487
+msgid "Bits:"
+msgstr "Bits:"
+
+# itype
+#: uk/messages:488
+msgid "Type:"
+msgstr "Type:"
+
+# db.mod.name
+# blklst.name
+#: uk/messages:493 uk/messages:1352
+msgid "Name"
+msgstr "Name"
+
+# db.mod.file
+# db.newcirc.file
+# print.filename
+# circ.file
+#: uk/messages:494 uk/messages:567 uk/messages:961 uk/messages:1465
+msgid "File Name"
+msgstr "File Name"
+
+# db.mod.flags
+#: uk/messages:496
+msgid "Flags"
+msgstr "Flags"
+
+# db.mod.dataprot
+#: uk/messages:497
+msgid "Prevent editing of module definition."
+msgstr "Prevent editing of module definition."
+
+# db.mod.intfprot
+#: uk/messages:498
+msgid "Prevent all interface changes."
+msgstr "Prevent all interface changes."
+
+# db.mod.edprot
+#: uk/messages:499
+msgid "Prevent edit mode interface changes."
+msgstr "Prevent edit mode interface changes."
+
+# db.mod.props
+#: uk/messages:500
+msgid "Properties"
+msgstr "Properties"
+
+# db.mod.inuse.0
+#: uk/messages:501
+msgid "Module is not in use."
+msgstr "Module is not in use."
+
+# db.mod.inuse.1
+#: uk/messages:502
+msgid "Module is in use."
+msgstr "Module is in use."
+
+# db.mod.lmod.0
+#: uk/messages:503
+msgid "Module has not been modified since loading."
+msgstr "Module has not been modified since loading."
+
+# db.mod.lmod.1
+#: uk/messages:504
+msgid "Module has been modified since loading."
+msgstr "Module has been modified since loading."
+
+# db.mod.smod.0
+#: uk/messages:505
+msgid "Module has not been modified since saving."
+msgstr "Module has not been modified since saving."
+
+# db.mod.smod.1
+#: uk/messages:506
+msgid "Module has been modified since saving."
+msgstr "Module has been modified since saving."
+
+# db.mod.islib.1
+#: uk/messages:507
+msgid "Module is part of [%s] library."
+msgstr "Module is part of [%s] library."
+
+# db.mod.islib.0
+#: uk/messages:508
+msgid "Module is not a library module."
+msgstr "Module is not a library module."
+
+# db.mod.netlist
+#: uk/messages:509
+msgid "Netlist"
+msgstr "Netlist"
+
+# db.mod.hdl
+# opt.editor
+#: uk/messages:510 uk/messages:1062
+msgid "Verilog HDL"
+msgstr "Verilog HDL"
+
+# db.mod.netexpl
+#: uk/messages:512
+msgid ""
+"Define module using a\n"
+"graphical editor to connect\n"
+"wires between components."
+msgstr ""
+"Define module using a\n"
+"graphical editor to connect\n"
+"wires between components."
+
+# db.mod.hdlexpl
+#: uk/messages:518
+msgid ""
+"Define module using a\n"
+"textual editor to describe\n"
+"behavior in Verilog."
+msgstr ""
+"Define module using a\n"
+"textual editor to describe\n"
+"behavior in Verilog."
+
+# db.err.title
+#: uk/messages:527
+msgid "TkGate: Error List"
+msgstr "TkGate: Error List"
+
+# db.err.caption
+#: uk/messages:528
+msgid "Error List"
+msgstr "Error List"
+
+# db.err.explain.warn
+#: uk/messages:529
+msgid ""
+"There were warnings in your circuit, but simulation will continue. Return to "
+"edit mode\n"
+"to examine the warnings."
+msgstr ""
+"There were warnings in your circuit, but simulation will continue. Return to "
+"edit mode\n"
+"to examine the warnings."
+
+# db.err.explain.err
+#: uk/messages:533
+msgid ""
+"There were errors in your circuit. TkGate is unable to continue the "
+"simulation."
+msgstr ""
+"There were errors in your circuit. TkGate is unable to continue the "
+"simulation."
+
+# db.err.neededit
+#: uk/messages:537
+msgid "You must first switch to Edit mode before navigating to warnings."
+msgstr "You must first switch to Edit mode before navigating to warnings."
+
+# db.net.title
+#: uk/messages:544
+msgid "TkGate: Net Properties"
+msgstr "TkGate: Net Properties"
+
+# db.net.caption
+#: uk/messages:545
+msgid "Net Properties"
+msgstr "Net Properties"
+
+# db.net.name
+#: uk/messages:546
+msgid "Net Name"
+msgstr "Net Name"
+
+# db.net.hide
+# db.gate.hidenam
+#: uk/messages:547 uk/messages:589
+msgid "Hide Name"
+msgstr "Hide Name"
+
+# db.net.bits
+# db.gate.bitw
+#: uk/messages:548 uk/messages:579
+msgid "Bit Width"
+msgstr "Bit Width"
+
+# db.net.type
+#: uk/messages:549
+msgid "Net Type"
+msgstr "Net Type"
+
+# db.net.port
+#: uk/messages:550
+msgid "Port Type"
+msgstr "Port Type"
+
+# db.newcirc.title
+#: uk/messages:560
+msgid "TkGate: New Circuit"
+msgstr "TkGate: New Circuit"
+
+# db.newcirc.directory
+#: uk/messages:561
+msgid "Directory:"
+msgstr "Directory:"
+
+# db.newcirc.cap
+#: uk/messages:562
+msgid "New Circuit"
+msgstr "New Circuit"
+
+# db.newcirc.exp
+#: uk/messages:563
+msgid ""
+"Discard the current circuit and start editing\n"
+"a new circuit."
+msgstr ""
+"Discard the current circuit and start editing\n"
+"a new circuit."
+
+# db.newcirc.topname
+#: uk/messages:568
+msgid "Top Module Name"
+msgstr "Top Module Name"
+
+# db.gate.title
+#: uk/messages:575
+msgid "TKGate: Component Properties"
+msgstr "TKGate: Component Properties"
+
+# db.gate.signam
+#: uk/messages:576
+msgid "Signal Name"
+msgstr "Signal Name"
+
+# db.gate.portnam
+#: uk/messages:577
+msgid "Port Name"
+msgstr "Port Name"
+
+# db.gate.cyclew
+#: uk/messages:580
+msgid "Period"
+msgstr "Period"
+
+# db.gate.phase
+#: uk/messages:581
+msgid "Phase"
+msgstr "Phase"
+
+# db.gate.duty
+#: uk/messages:582
+msgid "Duty"
+msgstr "Duty"
+
+# db.gate.waveform
+#: uk/messages:583
+msgid "Clock Waveform"
+msgstr "Clock Waveform"
+
+# db.gate.port
+# db.gate.ports
+# igen.port
+#: uk/messages:584 uk/messages:600 uk/messages:1251
+msgid "Port"
+msgstr "Port"
+
+# db.gate.bitws
+# igen.bits
+#: uk/messages:585 uk/messages:1255
+msgid "Bits"
+msgstr "Bits"
+
+# db.gate.gname
+#: uk/messages:588
+msgid "Instance Name"
+msgstr "Instance Name"
+
+# db.gate.cpbreak
+#: uk/messages:591
+msgid "Critical Path Partition"
+msgstr "Critical Path Partition"
+
+# db.gate.butstate
+#: uk/messages:592
+msgid "Button State"
+msgstr "Button State"
+
+# db.gate.dipval
+#: uk/messages:593
+msgid "Switch Value"
+msgstr "Switch Value"
+
+# db.gate.range
+#: uk/messages:594
+msgid "Bit Range"
+msgstr "Bit Range"
+
+# db.gate.memfilenam
+#: uk/messages:595
+msgid "Memory File"
+msgstr "Memory File"
+
+# db.gate.general
+# opt.general
+# circ.general
+#: uk/messages:597 uk/messages:1056 uk/messages:1491
+msgid "General"
+msgstr "General"
+
+# db.gate.details
+#: uk/messages:598
+msgid "Details"
+msgstr "Details"
+
+# db.gate.text
+#: uk/messages:599
+msgid "Text"
+msgstr "Text"
+
+# db.gate.delay
+#: uk/messages:601
+msgid "Delay"
+msgstr "Delay"
+
+# db.gate.parameters
+#: uk/messages:602
+msgid "Parameters"
+msgstr "Parameters"
+
+# db.gate.stddelay
+#: uk/messages:603
+msgid "Standard Delay"
+msgstr "Standard Delay"
+
+# db.gate.custdelay
+#: uk/messages:604
+msgid "Custom Delay"
+msgstr "Custom Delay"
+
+# db.gate.catdiruse
+#: uk/messages:605
+msgid "Port Placement"
+msgstr "Port Placement"
+
+# db.gate.edit
+# opt.tool.edit
+# igen.edit
+#: uk/messages:606 uk/messages:1168 uk/messages:1262
+msgid "Edit"
+msgstr "Edit"
+
+# db.gate.add
+# igen.add
+#: uk/messages:608 uk/messages:1260
+msgid "Add"
+msgstr "Add"
+
+# db.gate.ff.type
+#: uk/messages:610
+msgid "D Flip-Flop Orientation"
+msgstr "D Flip-Flop Orientation"
+
+# db.gate.ff.normal.hdr
+# db.gate.jkff.normal.hdr
+#: uk/messages:611 uk/messages:623
+msgid "Normal"
+msgstr "Normal"
+
+# db.gate.ff.normal.exp
+#: uk/messages:612
+msgid ""
+"D Flip-Flop with data\n"
+"flowing left to right."
+msgstr ""
+"D Flip-Flop with data\n"
+"flowing left to right."
+
+# db.gate.ff.reverse.hdr
+# db.gate.jkff.reverse.hdr
+#: uk/messages:616 uk/messages:628
+msgid "Reversed"
+msgstr "Reversed"
+
+# db.gate.ff.reverse.exp
+#: uk/messages:617
+msgid ""
+"D Flip-Flop with data\n"
+"flowing right to left."
+msgstr ""
+"D Flip-Flop with data\n"
+"flowing right to left."
+
+# db.gate.jkff.type
+#: uk/messages:622
+msgid "JK Flip-Flop Orientation"
+msgstr "JK Flip-Flop Orientation"
+
+# db.gate.jkff.normal.exp
+#: uk/messages:624
+msgid ""
+"JK Flip-Flop with data\n"
+"flowing left to right."
+msgstr ""
+"JK Flip-Flop with data\n"
+"flowing left to right."
+
+# db.gate.jkff.reverse.exp
+#: uk/messages:629
+msgid ""
+"JK Flip-Flop with data\n"
+"flowing right to left."
+msgstr ""
+"JK Flip-Flop with data\n"
+"flowing right to left."
+
+# db.gate.cat.asc.hdr
+#: uk/messages:634
+msgid "Ascending"
+msgstr "Ascending"
+
+# db.gate.cat.dec.hdr
+#: uk/messages:635
+msgid "Descending"
+msgstr "Descending"
+
+# db.gate.cat.asc.exp
+#: uk/messages:636
+msgid "Bits are concatenated in ascending order from top to bottom."
+msgstr "Bits are concatenated in ascending order from top to bottom."
+
+# db.gate.cat.dec.exp
+#: uk/messages:639
+msgid "Bits are concatenated in descending order from top to bottom."
+msgstr "Bits are concatenated in descending order from top to bottom."
+
+# db.gate.cat.sigdir
+#: uk/messages:643
+msgid "Signal Direction"
+msgstr "Signal Direction"
+
+# db.gate.cat.auto.hdr
+#: uk/messages:644
+msgid "Auto"
+msgstr "Auto"
+
+# db.gate.cat.multin.hdr
+#: uk/messages:645
+msgid "Multi-Input"
+msgstr "Multi-Input"
+
+# db.gate.cat.singin.hdr
+#: uk/messages:646
+msgid "Single-Input"
+msgstr "Single-Input"
+
+# db.gate.cat.tran.hdr
+#: uk/messages:647
+msgid "Bidirectional"
+msgstr "Bidirectional"
+
+# db.gate.cat.auto.exp
+#: uk/messages:650
+msgid ""
+"Determine signal direction automatically\n"
+"from connected nets."
+msgstr ""
+"Determine signal direction automatically\n"
+"from connected nets."
+
+# db.gate.cat.multin.exp
+#: uk/messages:655
+msgid ""
+"Always assume multi-port side is the\n"
+"input."
+msgstr ""
+"Always assume multi-port side is the\n"
+"input."
+
+# db.gate.cat.singin.exp
+#: uk/messages:660
+msgid ""
+"Always assume single-port side is the\n"
+"input."
+msgstr ""
+"Always assume single-port side is the\n"
+"input."
+
+# db.gate.cat.tran.exp
+#: uk/messages:665
+msgid ""
+"Allow bidirectional (tran) signal flow. Cannot\n"
+"be connected to switches or registers."
+msgstr ""
+"Allow bidirectional (tran) signal flow. Cannot\n"
+"be connected to switches or registers."
+
+# db.gate.tab.General.cap
+#: uk/messages:676
+msgid "General Properties"
+msgstr "General Properties"
+
+# db.gate.tab.Ports.cap
+#: uk/messages:677
+msgid "Port Properties"
+msgstr "Port Properties"
+
+# db.gate.tab.Delay.cap
+#: uk/messages:678
+msgid "Delay Properties"
+msgstr "Delay Properties"
+
+# db.gate.tab.Parameters.cap
+#: uk/messages:679
+msgid "Module Parameters"
+msgstr "Module Parameters"
+
+# db.gate.tab.CLOCK.cap
+#: uk/messages:680
+msgid "Clock Properties"
+msgstr "Clock Properties"
+
+# db.gate.tab.SWITCH.cap
+#: uk/messages:681
+msgid "Switch Properties"
+msgstr "Switch Properties"
+
+# db.gate.tab.DIP.cap
+#: uk/messages:682
+msgid "DIP Properties"
+msgstr "DIP Properties"
+
+# db.gate.tab.TAP.cap
+#: uk/messages:683
+msgid "Tran Properties"
+msgstr "Tran Properties"
+
+# db.gate.tab.RAM.cap
+#: uk/messages:684
+msgid "RAM Properties"
+msgstr "RAM Properties"
+
+# db.gate.tab.ROM.cap
+#: uk/messages:685
+msgid "ROM Properties"
+msgstr "ROM Properties"
+
+# db.gate.tab.MODULE.cap
+# module.props
+#: uk/messages:686 uk/messages:1294
+msgid "Module Properties"
+msgstr "Module Properties"
+
+# db.gate.tab.FRAME.cap
+#: uk/messages:687
+msgid "Frame Properties"
+msgstr "Frame Properties"
+
+# db.gate.tab.LED.cap
+#: uk/messages:688
+msgid "LED Properties"
+msgstr "LED Properties"
+
+# db.gate.tab.AND.cap
+#: uk/messages:689
+msgid "AND Properties"
+msgstr "AND Properties"
+
+# db.gate.tab.OR.cap
+#: uk/messages:690
+msgid "OR Properties"
+msgstr "OR Properties"
+
+# db.gate.tab.XOR.cap
+#: uk/messages:691
+msgid "XOR Properties"
+msgstr "XOR Properties"
+
+# db.gate.tab.MUX.cap
+#: uk/messages:692
+msgid "Mux Properties"
+msgstr "Mux Properties"
+
+# db.gate.tab.DEMUX.cap
+#: uk/messages:693
+msgid "Demux Properties"
+msgstr "Demux Properties"
+
+# db.gate.tab.DECODER.cap
+#: uk/messages:694
+msgid "Decoder Properties"
+msgstr "Decoder Properties"
+
+# db.gate.tab.CONCAT.cap
+#: uk/messages:695
+msgid "Concat Properties"
+msgstr "Concat Properties"
+
+# db.gate.tab.COMMENT.cap
+#: uk/messages:696
+msgid "Text Properties"
+msgstr "Text Properties"
+
+# db.gate.tab.FF.cap
+#: uk/messages:697
+msgid "D Flip-Flop Properties"
+msgstr "D Flip-Flop Properties"
+
+# db.gate.tab.JKFF.cap
+#: uk/messages:698
+msgid "JK Flip-Flop Properties"
+msgstr "JK Flip-Flop Properties"
+
+# db.gate.tab.SCRIPT.cap
+#: uk/messages:699
+msgid "Verilog Script Properties"
+msgstr "Verilog Script Properties"
+
+# db.gate.tab.General.exp
+#: uk/messages:701
+msgid "View and modify basic properties of an instance."
+msgstr "View and modify basic properties of an instance."
+
+# db.gate.tab.Ports.exp
+#: uk/messages:705
+msgid "Add, edit or delete ports on an instance."
+msgstr "Add, edit or delete ports on an instance."
+
+# db.gate.tab.Delay.exp
+#: uk/messages:709
+msgid ""
+"Delay can be specified either as a technology or as specific values\n"
+"for this instance."
+msgstr ""
+"Delay can be specified either as a technology or as specific values\n"
+"for this instance."
+
+# db.gate.tab.Parameters.exp
+#: uk/messages:714
+msgid ""
+"Set the module parameters for this instance of this module if any are\n"
+"defined. Module parameters are used to configure delays and constant values "
+"used in a module."
+msgstr ""
+"Set the module parameters for this instance of this module if any are\n"
+"defined. Module parameters are used to configure delays and constant values "
+"used in a module."
+
+# db.gate.tab.details.exp
+#: uk/messages:719
+msgid ""
+"Set detailed type-specific properties\n"
+"of a component here."
+msgstr ""
+"Set detailed type-specific properties\n"
+"of a component here."
+
+# db.gate.tab.CLOCK.exp
+# db.gate.tab.SWITCH.exp
+# db.gate.tab.DIP.exp
+# db.gate.tab.TAP.exp
+# db.gate.tab.RAM.exp
+# db.gate.tab.ROM.exp
+# db.gate.tab.MODULE.exp
+# db.gate.tab.FRAME.exp
+# db.gate.tab.LED.exp
+# db.gate.tab.AND.exp
+# db.gate.tab.OR.exp
+# db.gate.tab.XOR.exp
+# db.gate.tab.MUX.exp
+# db.gate.tab.DEMUX.exp
+# db.gate.tab.DECODER.exp
+# db.gate.tab.CONCAT.exp
+# db.gate.tab.FF.exp
+# db.gate.tab.JKFF.exp
+#: uk/messages:725 uk/messages:726 uk/messages:727 uk/messages:728
+#: uk/messages:729 uk/messages:730 uk/messages:731 uk/messages:732
+#: uk/messages:733 uk/messages:734 uk/messages:735 uk/messages:736
+#: uk/messages:737 uk/messages:738 uk/messages:739 uk/messages:740
+#: uk/messages:741 uk/messages:742
+msgid "`db.gate.tab.details.exp"
+msgstr "`db.gate.tab.details.exp"
+
+# db.gate.tab.COMMENT.exp
+#: uk/messages:744
+msgid ""
+"Set the text to be displayed in a comment.\n"
+"Limited html commands including links can be\n"
+"used here."
+msgstr ""
+"Set the text to be displayed in a comment.\n"
+"Limited html commands including links can be\n"
+"used here."
+
+# db.gate.tab.SCRIPT.exp
+#: uk/messages:750
+msgid ""
+"Enter free-form Verilog code here to\n"
+"be included as part of this module."
+msgstr ""
+"Enter free-form Verilog code here to\n"
+"be included as part of this module."
+
+# db.gate.mparm.parameter
+#: uk/messages:755
+msgid "Parameter"
+msgstr "Parameter"
+
+# db.gate.mparm.value
+# break.value
+#: uk/messages:756 uk/messages:1568
+msgid "Value"
+msgstr "Value"
+
+# db.gate.mparm.exampleA
+#: uk/messages:757
+msgid ""
+"This module does not have any parameters. Parameters\n"
+"can be added to Verilog text modules. The value of\n"
+"each parameter can be customized for each instance\n"
+"through this dialog box. Module parameters are\n"
+"character. Below is an example module declaration\n"
+"with a parameter named \"base_value\" that has a\n"
+"default value of 1'b1."
+msgstr ""
+"This module does not have any parameters. Parameters\n"
+"can be added to Verilog text modules. The value of\n"
+"each parameter can be customized for each instance\n"
+"through this dialog box. Module parameters are\n"
+"character. Below is an example module declaration\n"
+"with a parameter named \"base_value\" that has a\n"
+"default value of 1'b1."
+
+# db.gate.mparm.exampleB
+#: uk/messages:767
+msgid ""
+"assign Z = A ^ B ^ base_value;\n"
+"endmodule"
+msgstr ""
+"assign Z = A ^ B ^ base_value;\n"
+"endmodule"
+
+# db.gate.switch.state
+#: uk/messages:773
+msgid "Initial Switch State"
+msgstr "Initial Switch State"
+
+# db.gate.switch.state.on.hdr
+#: uk/messages:774
+msgid "Switch On"
+msgstr "Switch On"
+
+# db.gate.switch.state.on.exp
+#: uk/messages:775
+msgid "Switch begins simulation in the \"on\" state."
+msgstr "Switch begins simulation in the \"on\" state."
+
+# db.gate.switch.state.off.hdr
+#: uk/messages:776
+msgid "Switch Off"
+msgstr "Switch Off"
+
+# db.gate.switch.state.off.exp
+#: uk/messages:777
+msgid "Switch begins simulation in the \"off\" state."
+msgstr "Switch begins simulation in the \"off\" state."
+
+# db.gate.switch.shownet
+# db.gate.dip.shownet
+#: uk/messages:779 uk/messages:791
+msgid "Show Net Name"
+msgstr "Show Net Name"
+
+# db.gate.switch.shownet.on.hdr
+# db.gate.dip.shownet.on.hdr
+#: uk/messages:780 uk/messages:792
+msgid "Show"
+msgstr "Show"
+
+# db.gate.switch.shownet.on.exp
+#: uk/messages:781
+msgid "Show the name of the net next to switch."
+msgstr "Show the name of the net next to switch."
+
+# db.gate.switch.shownet.off.hdr
+# db.gate.dip.shownet.off.hdr
+#: uk/messages:782 uk/messages:794
+msgid "Hide"
+msgstr "Hide"
+
+# db.gate.switch.shownet.off.exp
+#: uk/messages:783
+msgid "Do not show the name of the net next to switch."
+msgstr "Do not show the name of the net next to switch."
+
+# db.gate.dip.value
+#: uk/messages:786
+msgid "Initial DIP Value"
+msgstr "Initial DIP Value"
+
+# db.gate.dip.value.exp
+#: uk/messages:787
+msgid "Initial value of DIP switch at start of simulation."
+msgstr "Initial value of DIP switch at start of simulation."
+
+# db.gate.dip.value.hex
+#: uk/messages:788
+msgid "Hex Value:"
+msgstr "Hex Value:"
+
+# db.gate.dip.shownet.on.exp
+#: uk/messages:793
+msgid "Show the name of the net next to dip."
+msgstr "Show the name of the net next to dip."
+
+# db.gate.dip.shownet.off.exp
+#: uk/messages:795
+msgid "Do not show the name of the net next to dip."
+msgstr "Do not show the name of the net next to dip."
+
+# db.gate.tap.select
+#: uk/messages:798
+msgid "Bit Tap Selection"
+msgstr "Bit Tap Selection"
+
+# db.gate.tap.exp.bit
+#: uk/messages:799
+msgid "Select the bit to pull off of the multi-bit bus."
+msgstr "Select the bit to pull off of the multi-bit bus."
+
+# db.gate.tap.exp.bus
+#: uk/messages:800
+msgid ""
+"Select the least-significant bit of the bit range to pull off of the multi-"
+"bit bus."
+msgstr ""
+"Select the least-significant bit of the bit range to pull off of the multi-"
+"bit bus."
+
+# db.gate.tap.lbl.bit
+#: uk/messages:801
+msgid "Bit:"
+msgstr "Bit:"
+
+# db.gate.tap.lbl.bus
+#: uk/messages:802
+msgid "LSB:"
+msgstr "LSB:"
+
+# db.gate.mux.dataorder
+#: uk/messages:805
+msgid "Input Ordering"
+msgstr "Input Ordering"
+
+# db.gate.mux.ord1.hdr
+# db.gate.demux.ord1.hdr
+# db.gate.decoder.ord1.hdr
+#: uk/messages:806 uk/messages:828 uk/messages:848
+msgid "Left-to-Right"
+msgstr "Left-to-Right"
+
+# db.gate.mux.ord2.hdr
+# db.gate.demux.ord2.hdr
+# db.gate.decoder.ord2.hdr
+#: uk/messages:807 uk/messages:829 uk/messages:849
+msgid "Right-to-Left"
+msgstr "Right-to-Left"
+
+# db.gate.mux.ord1.exp
+#: uk/messages:808
+msgid "Order MUX inputs from left to right."
+msgstr "Order MUX inputs from left to right."
+
+# db.gate.mux.ord2.exp
+#: uk/messages:811
+msgid "Order MUX inputs from right to left."
+msgstr "Order MUX inputs from right to left."
+
+# db.gate.mux.select
+#: uk/messages:815
+msgid "Selector Placement"
+msgstr "Selector Placement"
+
+# db.gate.mux.sel1.hdr
+# db.gate.demux.sel1.hdr
+# db.gate.decoder.sel1.hdr
+#: uk/messages:816 uk/messages:838 uk/messages:858
+msgid "On Left"
+msgstr "On Left"
+
+# db.gate.mux.sel2.hdr
+# db.gate.demux.sel2.hdr
+# db.gate.decoder.sel2.hdr
+#: uk/messages:817 uk/messages:839 uk/messages:859
+msgid "On Right"
+msgstr "On Right"
+
+# db.gate.mux.sel1.exp
+#: uk/messages:818
+msgid ""
+"Place the data selector on the left side of\n"
+"the MUX."
+msgstr ""
+"Place the data selector on the left side of\n"
+"the MUX."
+
+# db.gate.mux.sel2.exp
+#: uk/messages:822
+msgid ""
+"Place the data selector on the right side of\n"
+"the MUX."
+msgstr ""
+"Place the data selector on the right side of\n"
+"the MUX."
+
+# db.gate.demux.dataorder
+# db.gate.decoder.dataorder
+#: uk/messages:827 uk/messages:847
+msgid "Output Ordering"
+msgstr "Output Ordering"
+
+# db.gate.demux.ord1.exp
+#: uk/messages:830
+msgid "Order DEMUX outputs from left to right."
+msgstr "Order DEMUX outputs from left to right."
+
+# db.gate.demux.ord2.exp
+#: uk/messages:833
+msgid "Order DEMUX outputs from right to left."
+msgstr "Order DEMUX outputs from right to left."
+
+# db.gate.demux.select
+#: uk/messages:837
+msgid "Select Placement"
+msgstr "Select Placement"
+
+# db.gate.demux.sel1.exp
+#: uk/messages:840
+msgid "Place the select input on the left side of the DEMUX."
+msgstr "Place the select input on the left side of the DEMUX."
+
+# db.gate.demux.sel2.exp
+#: uk/messages:843
+msgid "Place the select input on the right side of the DEMUX."
+msgstr "Place the select input on the right side of the DEMUX."
+
+# db.gate.decoder.ord1.exp
+#: uk/messages:850
+msgid "Order DECODER outputs from left to right."
+msgstr "Order DECODER outputs from left to right."
+
+# db.gate.decoder.ord2.exp
+#: uk/messages:853
+msgid "Order DECODER outputs from right to left."
+msgstr "Order DECODER outputs from right to left."
+
+# db.gate.decoder.select
+#: uk/messages:857
+msgid "Enable Placement"
+msgstr "Enable Placement"
+
+# db.gate.decoder.sel1.exp
+#: uk/messages:860
+msgid "Place the enable input on the left side of the DECODER."
+msgstr "Place the enable input on the left side of the DECODER."
+
+# db.gate.decoder.sel2.exp
+#: uk/messages:863
+msgid "Place the enable input on the right side of the DECODER."
+msgstr "Place the enable input on the right side of the DECODER."
+
+# db.gate.aox.extbaruse
+#: uk/messages:869
+msgid "Extender Bar Use"
+msgstr "Extender Bar Use"
+
+# db.gate.aox.use.hdr
+#: uk/messages:870
+msgid "Extender Bars"
+msgstr "Extender Bars"
+
+# db.gate.aox.nouse.hdr
+#: uk/messages:871
+msgid "No Extender Bars"
+msgstr "No Extender Bars"
+
+# db.gate.aox.use.exp
+#: uk/messages:872
+msgid ""
+"Basic gates (AND, OR, etc.) will\n"
+"use extender bars as inputs\n"
+"are added."
+msgstr ""
+"Basic gates (AND, OR, etc.) will\n"
+"use extender bars as inputs\n"
+"are added."
+
+# db.gate.aox.nouse.exp
+#: uk/messages:877
+msgid ""
+"Basic gates (AND, OR, etc.) will\n"
+"not use extender bars as inputs\n"
+"are added."
+msgstr ""
+"Basic gates (AND, OR, etc.) will\n"
+"not use extender bars as inputs\n"
+"are added."
+
+# db.gate.led.type
+#: uk/messages:884
+msgid "LED Type"
+msgstr "LED Type"
+
+# db.gate.led.bit.hdr
+#: uk/messages:885
+msgid "Bit"
+msgstr "Bit"
+
+# db.gate.led.bar.hdr
+#: uk/messages:886
+msgid "Bar Graph"
+msgstr "Bar Graph"
+
+# db.gate.led.hex.hdr
+#: uk/messages:887
+msgid "7-Segment (HEX)"
+msgstr "7-Segment (HEX)"
+
+# db.gate.led.dec.hdr
+#: uk/messages:888
+msgid "7-Segment (DEC)"
+msgstr "7-Segment (DEC)"
+
+# db.gate.led.seg.hdr
+#: uk/messages:889
+msgid "7-Segment (Direct)"
+msgstr "7-Segment (Direct)"
+
+# db.gate.led.bit.exp
+#: uk/messages:891
+msgid "Single-lamp LED display for 1-bit signals."
+msgstr "Single-lamp LED display for 1-bit signals."
+
+# db.gate.led.bar.exp
+#: uk/messages:894
+msgid "LED bar graph with one bar per bit."
+msgstr "LED bar graph with one bar per bit."
+
+# db.gate.led.hex.exp
+#: uk/messages:897
+msgid "Display signal in hexadecimal."
+msgstr "Display signal in hexadecimal."
+
+# db.gate.led.dec.exp
+#: uk/messages:900
+msgid "Display signal in decimal."
+msgstr "Display signal in decimal."
+
+# db.gate.led.seg.exp
+#: uk/messages:903
+msgid "Signal bits directly control LED segments."
+msgstr "Signal bits directly control LED segments."
+
+# db.seq.back
+#: uk/messages:907
+msgid "<Back"
+msgstr "<Back"
+
+# db.seq.next
+#: uk/messages:908
+msgid "Next>"
+msgstr "Next>"
+
+# db.hdl.namechange.title
+#: uk/messages:910
+msgid "HDL Module Name Changed"
+msgstr "HDL Module Name Changed"
+
+# db.hdl.textdisp.title
+#: uk/messages:911
+msgid "HDL Text Disposition"
+msgstr "HDL Text Disposition"
+
+# db.hdl.savecap
+#: uk/messages:913
+msgid "Multiple Modules"
+msgstr "Multiple Modules"
+
+# db.hdl.saveexp
+#: uk/messages:915
+msgid ""
+"The text buffer for the module you have just edited contains more\n"
+"than one module definition. Please select one of the three actions "
+"described\n"
+"on the right."
+msgstr ""
+"The text buffer for the module you have just edited contains more\n"
+"than one module definition. Please select one of the three actions "
+"described\n"
+"on the right."
+
+# db.hdl.autoedit
+#: uk/messages:921
+msgid "Auto Edit"
+msgstr "Auto Edit"
+
+# db.hdl.split
+#: uk/messages:922
+msgid "Split"
+msgstr "Split"
+
+# db.hdl.comment
+#: uk/messages:923
+msgid "Comment out"
+msgstr "Comment out"
+
+# db.hdl.ignore
+#: uk/messages:925
+msgid "Ignore"
+msgstr "Ignore"
+
+# db.hdl.autoeditcap
+#: uk/messages:927
+msgid "Name Mismatch"
+msgstr "Name Mismatch"
+
+# db.hdl.autoeditexp
+#: uk/messages:929
+msgid ""
+"The textual description of the module does\n"
+"not match the expected name. Please select\n"
+"an option to the right to handle the discrepancy."
+msgstr ""
+"The textual description of the module does\n"
+"not match the expected name. Please select\n"
+"an option to the right to handle the discrepancy."
+
+# db.dip.title
+#: uk/messages:935
+msgid "TkGate: Dip Value"
+msgstr "TkGate: Dip Value"
+
+# cpath.cloops
+#: uk/messages:937
+msgid ""
+"Combinational loops were detected in your circuit.\n"
+"In order to do delay analysis on this circuit, you\n"
+"must either break the loop, or mark some of the\n"
+"components in the loop as a \"Critical Path Partition\"\n"
+"point. Nets at which a loop was detected are\n"
+"listed below."
+msgstr ""
+"Combinational loops were detected in your circuit.\n"
+"In order to do delay analysis on this circuit, you\n"
+"must either break the loop, or mark some of the\n"
+"components in the loop as a \"Critical Path Partition\"\n"
+"point. Nets at which a loop was detected are\n"
+"listed below."
+
+# print.title
+#: uk/messages:951
+msgid "TkGate: Print"
+msgstr "TkGate: Print"
+
+# print.config.title
+#: uk/messages:952
+msgid "TkGate: Printer Configuration"
+msgstr "TkGate: Printer Configuration"
+
+# print.scope.title
+#: uk/messages:953
+msgid "TkGate: Scope Print"
+msgstr "TkGate: Scope Print"
+
+# print.printer
+#: uk/messages:955
+msgid "Printer:"
+msgstr "Printer:"
+
+# print.prcmd
+#: uk/messages:957
+msgid "Print Command:"
+msgstr "Print Command:"
+
+# print.prname
+#: uk/messages:958
+msgid "Printer"
+msgstr "Printer"
+
+# print.advanced
+#: uk/messages:959
+msgid "Advanced..."
+msgstr "Advanced..."
+
+# print.epssave
+#: uk/messages:962
+msgid "Save as Encapsulated Postscript."
+msgstr "Save as Encapsulated Postscript."
+
+# print.epcm
+#: uk/messages:965
+msgid "Epochs/cm"
+msgstr "Epochs/cm"
+
+# print.estpg
+#: uk/messages:966
+msgid "Estimated pages"
+msgstr "Estimated pages"
+
+# print.all
+#: uk/messages:967
+msgid "All"
+msgstr "All"
+
+# print.avail
+#: uk/messages:968
+msgid "Available"
+msgstr "Available"
+
+# print.cur
+#: uk/messages:969
+msgid "Current"
+msgstr "Current"
+
+# print.use
+#: uk/messages:970
+msgid "Used"
+msgstr "Used"
+
+# print.sel
+#: uk/messages:971
+msgid "Picked"
+msgstr "Picked"
+
+# print.inclib
+#: uk/messages:972
+msgid "Include library modules."
+msgstr "Include library modules."
+
+# print.incunused
+#: uk/messages:973
+msgid "Include unused modules."
+msgstr "Include unused modules."
+
+# print.papsz
+#: uk/messages:974
+msgid "Paper Size"
+msgstr "Paper Size"
+
+# print.orient
+#: uk/messages:975
+msgid "Orientation"
+msgstr "Orientation"
+
+# print.portrait
+#: uk/messages:976
+msgid "Portrait"
+msgstr "Portrait"
+
+# print.landscape
+#: uk/messages:977
+msgid "Landscape"
+msgstr "Landscape"
+
+# print.2side
+#: uk/messages:978
+msgid "Print Double-Sided"
+msgstr "Print Double-Sided"
+
+# print.opts
+#: uk/messages:979
+msgid "Content Options"
+msgstr "Content Options"
+
+# print.scale
+#: uk/messages:980
+msgid "Scale large modules to fit page."
+msgstr "Scale large modules to fit page."
+
+# print.partition
+#: uk/messages:981
+msgid "Partition large modules into multiple pages."
+msgstr "Partition large modules into multiple pages."
+
+# print.incidx
+#: uk/messages:982
+msgid "Include index."
+msgstr "Include index."
+
+# print.incgraph
+#: uk/messages:983
+msgid "Include hierarchy graph."
+msgstr "Include hierarchy graph."
+
+# print.4up
+#: uk/messages:984
+msgid "Print small modules four per page."
+msgstr "Print small modules four per page."
+
+# print.rangeselection
+#: uk/messages:985
+msgid "Range Selection"
+msgstr "Range Selection"
+
+# print.scaleselect
+#: uk/messages:986
+msgid "Scale Selection"
+msgstr "Scale Selection"
+
+# print.fulltr
+#: uk/messages:987
+msgid "Full Trace"
+msgstr "Full Trace"
+
+# print.parttr
+#: uk/messages:988
+msgid "Partial Trace"
+msgstr "Partial Trace"
+
+# print.start
+#: uk/messages:989
+msgid "Start"
+msgstr "Start"
+
+# print.range
+#: uk/messages:990
+msgid "Range"
+msgstr "Range"
+
+# print.linelen
+#: uk/messages:991
+msgid "Line Length"
+msgstr "Line Length"
+
+# print.filesel
+#: uk/messages:992
+msgid "Output to file"
+msgstr "Output to file"
+
+# print.printersel
+#: uk/messages:993
+msgid "Output to printer"
+msgstr "Output to printer"
+
+# print.defaultprinter
+#: uk/messages:994
+msgid "Default Printer"
+msgstr "Default Printer"
+
+# print.pageset
+#: uk/messages:995
+msgid "Page Setup"
+msgstr "Page Setup"
+
+# print.modulesel
+#: uk/messages:996
+msgid "Module Selection"
+msgstr "Module Selection"
+
+# print.ok
+# opt.print
+#: uk/messages:1002 uk/messages:1063
+msgid "Print"
+msgstr "Print"
+
+# print.printtrace.cap
+#: uk/messages:1003
+msgid "Print Trace"
+msgstr "Print Trace"
+
+# print.printcirc.cap
+#: uk/messages:1004
+msgid "Print Schematic"
+msgstr "Print Schematic"
+
+# print.printcirc.out.exp
+#: uk/messages:1005
+msgid ""
+"Choose whether to send\n"
+"your schematic to the\n"
+"printer or to a PostScript\n"
+"file."
+msgstr ""
+"Choose whether to send\n"
+"your schematic to the\n"
+"printer or to a PostScript\n"
+"file."
+
+# print.printcirc.page.exp
+#: uk/messages:1012
+msgid ""
+"Choose page and printer\n"
+"options here."
+msgstr ""
+"Choose page and printer\n"
+"options here."
+
+# print.printcirc.mod.exp
+#: uk/messages:1017
+msgid ""
+"Choose which modules are\n"
+"to be printed and set\n"
+"options controlling the\n"
+"presentation."
+msgstr ""
+"Choose which modules are\n"
+"to be printed and set\n"
+"options controlling the\n"
+"presentation."
+
+# print.printtrace.trace.exp
+#: uk/messages:1024
+msgid ""
+"Choose the time range\n"
+"over which to produce\n"
+"output. Also set the\n"
+"scale to compute the\n"
+"estimated page count."
+msgstr ""
+"Choose the time range\n"
+"over which to produce\n"
+"output. Also set the\n"
+"scale to compute the\n"
+"estimated page count."
+
+# print.tab.output
+# opt.print.output
+#: uk/messages:1032 uk/messages:1064
+msgid "Output"
+msgstr "Output"
+
+# print.tab.content
+# opt.print.content
+#: uk/messages:1035 uk/messages:1065
+msgid "Content"
+msgstr "Content"
+
+# print.tab.advanced
+#: uk/messages:1036
+msgid "Advanced"
+msgstr "Advanced"
+
+# opt.title
+#: uk/messages:1053
+msgid "TkGate: Options"
+msgstr "TkGate: Options"
+
+# opt.treelabel
+# circ.flags
+#: uk/messages:1054 uk/messages:1470
+msgid "Options"
+msgstr "Options"
+
+# opt.toolbars
+#: uk/messages:1058
+msgid "Toolbars"
+msgstr "Toolbars"
+
+# opt.toolbars.edit
+# opt.color.edit
+#: uk/messages:1059 uk/messages:1077
+msgid "Editor"
+msgstr "Editor"
+
+# opt.toolbars.sim
+# circ.simulator
+#: uk/messages:1060 uk/messages:1494
+msgid "Simulation"
+msgstr "Simulation"
+
+# opt.toolbars.symed
+#: uk/messages:1061
+msgid "Symbol Editor"
+msgstr "Symbol Editor"
+
+# opt.simulate.basic
+#: uk/messages:1067
+msgid "Basic"
+msgstr "Basic"
+
+# opt.simulate.error
+# opt.simulator.err
+#: uk/messages:1069 uk/messages:1161
+msgid "Error Handling"
+msgstr "Error Handling"
+
+# opt.library.path
+#: uk/messages:1071
+msgid "Path"
+msgstr "Path"
+
+# opt.library.load
+#: uk/messages:1072
+msgid "Auto Loading"
+msgstr "Auto Loading"
+
+# opt.library.vpd
+#: uk/messages:1073
+msgid "VPD"
+msgstr "VPD"
+
+# opt.analysis
+#: uk/messages:1074
+msgid "Analysis"
+msgstr "Analysis"
+
+# opt.color
+# opt.editor.color
+#: uk/messages:1075 uk/messages:1194
+msgid "Color"
+msgstr "Color"
+
+# opt.color.title
+#: uk/messages:1076
+msgid "TkGate: Color Selection"
+msgstr "TkGate: Color Selection"
+
+# opt.color.scope
+#: uk/messages:1078
+msgid "Scope"
+msgstr "Scope"
+
+# opt.color.hdl
+#: uk/messages:1079
+msgid "HDL Editor"
+msgstr "HDL Editor"
+
+# opt.html
+#: uk/messages:1080
+msgid "HTML"
+msgstr "HTML"
+
+# opt.debug
+#: uk/messages:1081
+msgid "Debug"
+msgstr "Debug"
+
+# opt.lib.load.available
+#: uk/messages:1083
+msgid "Available Libraries"
+msgstr "Available Libraries"
+
+# opt.lib.load.selected
+#: uk/messages:1084
+msgid "Selected Libraries"
+msgstr "Selected Libraries"
+
+# opt.identity
+#: uk/messages:1086
+msgid "Identity"
+msgstr "Identity"
+
+# opt.site
+#: uk/messages:1087
+msgid "Site Name"
+msgstr "Site Name"
+
+# opt.username
+#: uk/messages:1088
+msgid "User Name"
+msgstr "User Name"
+
+# opt.libname
+#: uk/messages:1089
+msgid "Library Name:"
+msgstr "Library Name:"
+
+# opt.inst
+#: uk/messages:1090
+msgid "Instances"
+msgstr "Instances"
+
+# opt.modports
+#: uk/messages:1092
+msgid "Module Ports"
+msgstr "Module Ports"
+
+# opt.frames
+#: uk/messages:1093
+msgid "Frames"
+msgstr "Frames"
+
+# opt.comment
+# opt.editor.comments
+#: uk/messages:1094 uk/messages:1188
+msgid "Comments"
+msgstr "Comments"
+
+# opt.hlink
+#: uk/messages:1095
+msgid "Hyperlinks"
+msgstr "Hyperlinks"
+
+# opt.wire
+#: uk/messages:1096
+msgid "Single-Bit Wires"
+msgstr "Single-Bit Wires"
+
+# opt.bus
+#: uk/messages:1097
+msgid "Multi-Bit Wires"
+msgstr "Multi-Bit Wires"
+
+# opt.tools
+#: uk/messages:1098
+msgid "Gate Tools"
+msgstr "Gate Tools"
+
+# opt.background
+#: uk/messages:1099
+msgid "Background"
+msgstr "Background"
+
+# opt.grid
+#: uk/messages:1101
+msgid "Scope Grid"
+msgstr "Scope Grid"
+
+# opt.logic1
+#: uk/messages:1102
+msgid "Logic One"
+msgstr "Logic One"
+
+# opt.logic0
+#: uk/messages:1103
+msgid "Logic Zero"
+msgstr "Logic Zero"
+
+# opt.float
+#: uk/messages:1104
+msgid "Float"
+msgstr "Float"
+
+# opt.unknown
+#: uk/messages:1105
+msgid "Unknown/Conflict"
+msgstr "Unknown/Conflict"
+
+# opt.offled
+#: uk/messages:1106
+msgid "Off LED"
+msgstr "Off LED"
+
+# opt.onled
+#: uk/messages:1107
+msgid "On LED"
+msgstr "On LED"
+
+# opt.zled
+#: uk/messages:1108
+msgid "Floating LED"
+msgstr "Floating LED"
+
+# opt.restdef
+#: uk/messages:1109
+msgid "Restore Defaults"
+msgstr "Restore Defaults"
+
+# opt.regudate
+#: uk/messages:1110
+msgid "Region Update"
+msgstr "Region Update"
+
+# opt.smoothscroll
+#: uk/messages:1111
+msgid "Smooth Scrolling"
+msgstr "Smooth Scrolling"
+
+# opt.balloon
+#: uk/messages:1112
+msgid "Enable Help Balloons"
+msgstr "Enable Help Balloons"
+
+# opt.tearawaymenus
+#: uk/messages:1113
+msgid "Enable tear-away main menus"
+msgstr "Enable tear-away main menus"
+
+# opt.safeSave
+#: uk/messages:1114
+msgid "Do safe file saving"
+msgstr "Do safe file saving"
+
+# opt.saveCells
+#: uk/messages:1115
+msgid "Include cells in save files"
+msgstr "Include cells in save files"
+
+# opt.showimage
+#: uk/messages:1116
+msgid "Show side-bar images in dialog boxes"
+msgstr "Show side-bar images in dialog boxes"
+
+# opt.novice
+#: uk/messages:1117
+msgid "Novice mode"
+msgstr "Novice mode"
+
+# opt.blockDropConnect
+#: uk/messages:1118
+msgid "Wire drop port creation"
+msgstr "Wire drop port creation"
+
+# opt.freq
+#: uk/messages:1121
+msgid "Interval"
+msgstr "Interval"
+
+# opt.beak
+#: uk/messages:1122
+msgid "Enable Special Modes"
+msgstr "Enable Special Modes"
+
+# opt.bat
+#: uk/messages:1123
+msgid "Bat"
+msgstr "Bat"
+
+# opt.trek
+#: uk/messages:1124
+msgid "Star Trek"
+msgstr "Star Trek"
+
+# opt.miles
+#: uk/messages:1125
+msgid "Miles"
+msgstr "Miles"
+
+# opt.contver
+#: uk/messages:1126
+msgid "Automatic Integrity Checking"
+msgstr "Automatic Integrity Checking"
+
+# opt.showsimcmd
+#: uk/messages:1127
+msgid "Display Simulator Stream"
+msgstr "Display Simulator Stream"
+
+# opt.estepsz
+#: uk/messages:1128
+msgid "Epoch Step Size"
+msgstr "Epoch Step Size"
+
+# opt.cstepsz
+#: uk/messages:1129
+msgid "Clock Cycle Step Size"
+msgstr "Clock Cycle Step Size"
+
+# opt.overstep
+#: uk/messages:1130
+msgid "Clock Overstep"
+msgstr "Clock Overstep"
+
+# opt.sorttraces
+#: uk/messages:1131
+msgid "Sort traces alphabetically on scope"
+msgstr "Sort traces alphabetically on scope"
+
+# opt.vpopupdelay
+#: uk/messages:1132
+msgid "Pop-Up Delay"
+msgstr "Pop-Up Delay"
+
+# opt.posedge
+#: uk/messages:1134
+msgid "Clock step stops on all clock posedges"
+msgstr "Clock step stops on all clock posedges"
+
+# opt.setclock
+#: uk/messages:1135
+msgid "Clock step stops on clock"
+msgstr "Clock step stops on clock"
+
+# opt.delayfilepath
+#: uk/messages:1136
+msgid "Technology Files"
+msgstr "Technology Files"
+
+# opt.devfilepath
+#: uk/messages:1137
+msgid "VPD (Virtual Peripheral Device) File Path"
+msgstr "VPD (Virtual Peripheral Device) File Path"
+
+# opt.vlibpath
+#: uk/messages:1138
+msgid "Verilog Library Path"
+msgstr "Verilog Library Path"
+
+# opt.vlibnames
+#: uk/messages:1139
+msgid "Base Libraries"
+msgstr "Base Libraries"
+
+# opt.display
+#: uk/messages:1140
+msgid "Display"
+msgstr "Display"
+
+# opt.interaction
+#: uk/messages:1141
+msgid "Interaction"
+msgstr "Interaction"
+
+# opt.input
+#: uk/messages:1142
+msgid "Input"
+msgstr "Input"
+
+# opt.security
+#: uk/messages:1143
+msgid "Security"
+msgstr "Security"
+
+# opt.undolen
+#: uk/messages:1144
+msgid "Max Undo"
+msgstr "Max Undo"
+
+# opt.keybind
+#: uk/messages:1145
+msgid "Key Binding Style"
+msgstr "Key Binding Style"
+
+# opt.useless
+#: uk/messages:1146
+msgid "Enable Useless Features"
+msgstr "Enable Useless Features"
+
+# opt.features
+#: uk/messages:1147
+msgid "Save File Features"
+msgstr "Save File Features"
+
+# opt.simbase
+#: uk/messages:1148
+msgid "Basic Simulator Options"
+msgstr "Basic Simulator Options"
+
+# opt.simclock
+#: uk/messages:1149
+msgid "Clock Options"
+msgstr "Clock Options"
+
+# opt.cpopts
+#: uk/messages:1152
+msgid "Critical Path Options"
+msgstr "Critical Path Options"
+
+# opt.maxpath
+#: uk/messages:1153
+msgid "Maximum Number of Paths:"
+msgstr "Maximum Number of Paths:"
+
+# opt.cpflash
+#: uk/messages:1154
+msgid "Display with Flashing Path"
+msgstr "Display with Flashing Path"
+
+# opt.general.fontset
+#: uk/messages:1156
+msgid "Font Set"
+msgstr "Font Set"
+
+# opt.simulator.savetraces
+#: uk/messages:1158
+msgid "Save probe locations between simulation runs."
+msgstr "Save probe locations between simulation runs."
+
+# opt.simulator.noglitch
+#: uk/messages:1159
+msgid "Enable simulator glitch suppression."
+msgstr "Enable simulator glitch suppression."
+
+# opt.simulator.stopany
+#: uk/messages:1162
+msgid "Treat warnings as errors."
+msgstr "Treat warnings as errors."
+
+# opt.simulator.showall
+#: uk/messages:1163
+msgid "Always display warnings."
+msgstr "Always display warnings."
+
+# opt.simulator.showiferr
+#: uk/messages:1164
+msgid "Display warnings only with errors."
+msgstr "Display warnings only with errors."
+
+# opt.simulator.ignore
+#: uk/messages:1165
+msgid "Ignore all warnings."
+msgstr "Ignore all warnings."
+
+# opt.tool.gateopt
+#: uk/messages:1169
+msgid "Rotation/Alignment"
+msgstr "Rotation/Alignment"
+
+# opt.tool.undo
+#: uk/messages:1171
+msgid "Undo/Redo"
+msgstr "Undo/Redo"
+
+# opt.tool.zoom
+#: uk/messages:1172
+msgid "Zoom"
+msgstr "Zoom"
+
+# opt.tool.mode
+#: uk/messages:1173
+msgid "Editor Tools"
+msgstr "Editor Tools"
+
+# opt.tool.simctl
+#: uk/messages:1176
+msgid "Simulator Control"
+msgstr "Simulator Control"
+
+# opt.tool.simaux
+#: uk/messages:1177
+msgid "Simulator Commands"
+msgstr "Simulator Commands"
+
+# opt.tool.simmode
+#: uk/messages:1178
+msgid "Simulator Tools"
+msgstr "Simulator Tools"
+
+# opt.tool.symmode
+#: uk/messages:1179
+msgid "Symbol Editor Tools"
+msgstr "Symbol Editor Tools"
+
+# opt.tool.symedit
+#: uk/messages:1180
+msgid "Cut/Paste"
+msgstr "Cut/Paste"
+
+# opt.tool.symshift
+#: uk/messages:1182
+msgid "Bit Shift"
+msgstr "Bit Shift"
+
+# opt.tool.symopr
+#: uk/messages:1183
+msgid "Bit Ops"
+msgstr "Bit Ops"
+
+# opt.editor.features
+#: uk/messages:1185
+msgid "Basic Editor Features"
+msgstr "Basic Editor Features"
+
+# opt.editor.format
+#: uk/messages:1186
+msgid "Enable Automatic Indenting"
+msgstr "Enable Automatic Indenting"
+
+# opt.editor.colorize
+#: uk/messages:1187
+msgid "Enable Code Colorization"
+msgstr "Enable Code Colorization"
+
+# opt.editor.strings
+#: uk/messages:1189
+msgid "Strings"
+msgstr "Strings"
+
+# opt.editor.reserved
+#: uk/messages:1190
+msgid "Reserved Words"
+msgstr "Reserved Words"
+
+# opt.editor.gateword
+#: uk/messages:1191
+msgid "Built-in Gates"
+msgstr "Built-in Gates"
+
+# opt.editor.instword
+#: uk/messages:1192
+msgid "Module Instances"
+msgstr "Module Instances"
+
+# opt.editor.taskword
+#: uk/messages:1193
+msgid "System Tasks"
+msgstr "System Tasks"
+
+# opt.editor.bold
+#: uk/messages:1195
+msgid "Bold"
+msgstr "Bold"
+
+# opt.editor.italic
+#: uk/messages:1196
+msgid "Italic"
+msgstr "Italic"
+
+# opt.editor.indentlevel
+#: uk/messages:1197
+msgid "Indentation per level:"
+msgstr "Indentation per level:"
+
+# opt.editor.beginindent
+#: uk/messages:1198
+msgid "Make begin...end flush with enclosing level."
+msgstr "Make begin...end flush with enclosing level."
+
+# opt.editor.movesel
+#: uk/messages:1199
+msgid "Enable drag-and-drop of selection."
+msgstr "Enable drag-and-drop of selection."
+
+# opt.editor.returntab
+#: uk/messages:1200
+msgid "Auto indent after return."
+msgstr "Auto indent after return."
+
+# opt.vercheck
+#: uk/messages:1204
+msgid ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+msgstr ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+
+# opt.sec.execlevel
+#: uk/messages:1210
+msgid "The $tkg$exec() system task is"
+msgstr "The $tkg$exec() system task is"
+
+# opt.sec.exec
+#: uk/messages:1211
+msgid "fully enabled."
+msgstr "fully enabled."
+
+# opt.sec.regexec
+#: uk/messages:1212
+msgid "enabled only for registered functions."
+msgstr "enabled only for registered functions."
+
+# opt.sec.noexec
+#: uk/messages:1213
+msgid "disabled."
+msgstr "disabled."
+
+# opt.sec.simfeatures
+#: uk/messages:1215
+msgid "Simulator Features"
+msgstr "Simulator Features"
+
+# opt.sec.send
+#: uk/messages:1216
+msgid "Enable the $tkg$command() system task."
+msgstr "Enable the $tkg$command() system task."
+
+# opt.sec.open
+#: uk/messages:1217
+msgid "Enable the $fopen() system task."
+msgstr "Enable the $fopen() system task."
+
+# opt.sec.writemem
+#: uk/messages:1218
+msgid "Enable the $writememb() and $writememh() system tasks."
+msgstr "Enable the $writememb() and $writememh() system tasks."
+
+# opt.sec.enqueue
+#: uk/messages:1219
+msgid "Enable the $tkg$recv() and $tkg$send() system tasks."
+msgstr "Enable the $tkg$recv() and $tkg$send() system tasks."
+
+# opt.sec.handle
+#: uk/messages:1221
+msgid "Security Violation Handling"
+msgstr "Security Violation Handling"
+
+# opt.sec.stop
+#: uk/messages:1222
+msgid "Stop simulator when disabled feature is used."
+msgstr "Stop simulator when disabled feature is used."
+
+# opt.sec.warn
+#: uk/messages:1223
+msgid "Display warning message when disabled feature is used."
+msgstr "Display warning message when disabled feature is used."
+
+# opt.sec.ignore
+#: uk/messages:1224
+msgid "Ignore attempted usage of disabled features."
+msgstr "Ignore attempted usage of disabled features."
+
+# opt.html.linkopts
+#: uk/messages:1226
+msgid "Link Options"
+msgstr "Link Options"
+
+# opt.html.browser
+#: uk/messages:1227
+msgid "Browser Command"
+msgstr "Browser Command"
+
+# opt.html.email
+#: uk/messages:1228
+msgid "e-Mail Command"
+msgstr "e-Mail Command"
+
+# opt.debug.opt
+#: uk/messages:1230
+msgid "Debugging Options"
+msgstr "Debugging Options"
+
+# opt.color.editwin
+#: uk/messages:1232
+msgid "Edit Window Colors"
+msgstr "Edit Window Colors"
+
+# opt.color.scopewin
+#: uk/messages:1233
+msgid "Scope Window Colors"
+msgstr "Scope Window Colors"
+
+# opt.vlibadd.title
+#: uk/messages:1235
+msgid "TkGate: Add Library"
+msgstr "TkGate: Add Library"
+
+# opt.gen.basetoolbar
+#: uk/messages:1238
+msgid "Core Editor Toolbars"
+msgstr "Core Editor Toolbars"
+
+# opt.gen.simtoolbar
+#: uk/messages:1239
+msgid "Simulation Mode Toolbars"
+msgstr "Simulation Mode Toolbars"
+
+# opt.gen.symedtoolbar
+#: uk/messages:1240
+msgid "Symbol Editor Toolbars"
+msgstr "Symbol Editor Toolbars"
+
+# opt.bbar.restore
+#: uk/messages:1242
+msgid "Restore Page Defaults"
+msgstr "Restore Page Defaults"
+
+# opt.bbar.restoreall
+#: uk/messages:1243
+msgid "Restore All Defaults"
+msgstr "Restore All Defaults"
+
+# igen.title
+#: uk/messages:1249
+msgid "TkGate: Module Interface Generation"
+msgstr "TkGate: Module Interface Generation"
+
+# igen.modname
+#: uk/messages:1257
+msgid "Module Name:"
+msgstr "Module Name:"
+
+# igen.mod
+#: uk/messages:1275
+msgid "Use ports used in module only."
+msgstr "Use ports used in module only."
+
+# igen.int
+#: uk/messages:1276
+msgid "Use ports from existing interface only."
+msgstr "Use ports from existing interface only."
+
+# igen.modint
+#: uk/messages:1277
+msgid "Use both module and interface ports."
+msgstr "Use both module and interface ports."
+
+# igen.portsel
+#: uk/messages:1279
+msgid "Port Selection"
+msgstr "Port Selection"
+
+# igen.portpos
+#: uk/messages:1280
+msgid "Port Positions"
+msgstr "Port Positions"
+
+# igen.portpos.keep
+#: uk/messages:1281
+msgid "Keep exiting port positions when possible."
+msgstr "Keep exiting port positions when possible."
+
+# igen.portpos.renew
+#: uk/messages:1282
+msgid "Regenerate all port positionings."
+msgstr "Regenerate all port positionings."
+
+# igen.caption
+#: uk/messages:1284
+msgid "Generate Interface"
+msgstr "Generate Interface"
+
+# igen.description
+#: uk/messages:1286
+msgid ""
+"Create a new interface\n"
+"for a module."
+msgstr ""
+"Create a new interface\n"
+"for a module."
+
+# info.script.error
+#: uk/messages:1291
+msgid "Script Errors"
+msgstr "Script Errors"
+
+# module.props.title
+#: uk/messages:1293
+msgid "TkGate: Module Properties"
+msgstr "TkGate: Module Properties"
+
+# ipanel.plist
+#: uk/messages:1296
+msgid "Port List"
+msgstr "Port List"
+
+# ipanel.props
+#: uk/messages:1297
+msgid "Interface Properties"
+msgstr "Interface Properties"
+
+# ipanel.block
+#: uk/messages:1300
+msgid "Standard"
+msgstr "Standard"
+
+# ipanel.symbol
+#: uk/messages:1301
+msgid "Symbol"
+msgstr "Symbol"
+
+# ipanel.updateall
+#: uk/messages:1304
+msgid "Synchronize All..."
+msgstr "Synchronize All..."
+
+# ipanel.itype.select
+#: uk/messages:1306
+msgid "Interface Type"
+msgstr "Interface Type"
+
+# ipanel.ppos.label
+#: uk/messages:1311
+msgid "Block resize port position handling:"
+msgstr "Block resize port position handling:"
+
+# ipanel.ppos.fix
+#: uk/messages:1312
+msgid "Fixed"
+msgstr "Fixed"
+
+# ipanel.ppos.scale
+#: uk/messages:1313
+msgid "Scaled"
+msgstr "Scaled"
+
+# ipanel.warn.toblock
+#: uk/messages:1316
+msgid ""
+"You are about to change the\n"
+"interface type for this module\n"
+"to \"block\". This will result\n"
+"in the current interface data\n"
+"being destroyed.\n"
+"Are you sure you want to do this?"
+msgstr ""
+"You are about to change the\n"
+"interface type for this module\n"
+"to \"block\". This will result\n"
+"in the current interface data\n"
+"being destroyed.\n"
+"Are you sure you want to do this?"
+
+# ipanel.warn.tosymbol
+#: uk/messages:1326
+msgid ""
+"You are about to change the\n"
+"interface type for this module\n"
+"to \"symbol\". This will result\n"
+"in the current interface data\n"
+"being destroyed. You will also\n"
+"need to create a bitmap image\n"
+"for your new symbol.\n"
+"Are you sure you want to do this?"
+msgstr ""
+"You are about to change the\n"
+"interface type for this module\n"
+"to \"symbol\". This will result\n"
+"in the current interface data\n"
+"being destroyed. You will also\n"
+"need to create a bitmap image\n"
+"for your new symbol.\n"
+"Are you sure you want to do this?"
+
+# blklst.delete.title
+#: uk/messages:1342
+msgid "TKGate: Module Delete"
+msgstr "TKGate: Module Delete"
+
+# blklst.copy.title
+#: uk/messages:1343
+msgid "TKGate: Module Copy"
+msgstr "TKGate: Module Copy"
+
+# blklst.rename.title
+#: uk/messages:1344
+msgid "TKGate: Module Rename"
+msgstr "TKGate: Module Rename"
+
+# blklst.claim.title
+#: uk/messages:1345
+msgid "TKGate: Claim Module"
+msgstr "TKGate: Claim Module"
+
+# blklst.setroot.title
+#: uk/messages:1346
+msgid "TKGate: Set Root Module"
+msgstr "TKGate: Set Root Module"
+
+# blklst.new.title
+#: uk/messages:1347
+msgid "TKGate: Module New"
+msgstr "TKGate: Module New"
+
+# blklst.claim.cap
+#: uk/messages:1349 uk/messages:1357
+msgid "Claim Module"
+msgstr "Claim Module"
+
+# blklst.to
+#: uk/messages:1350
+msgid "To"
+msgstr "To"
+
+# blklst.from
+#: uk/messages:1351
+msgid "From"
+msgstr "From"
+
+# blklst.new.cap
+#: uk/messages:1353
+msgid "Create New Module"
+msgstr "Create New Module"
+
+# blklst.del.cap
+#: uk/messages:1354
+msgid "Delete Module"
+msgstr "Delete Module"
+
+# blklst.copy.cap
+#: uk/messages:1355
+msgid "Copy Module"
+msgstr "Copy Module"
+
+# blklst.rename.cap
+#: uk/messages:1356
+msgid "Rename Module"
+msgstr "Rename Module"
+
+# blklst.setroot.cap
+#: uk/messages:1358
+msgid "Set Root Module"
+msgstr "Set Root Module"
+
+# blklst.new.exp
+#: uk/messages:1360
+msgid ""
+"Use this dialog box to create\n"
+"a new module definition. You\n"
+"can create the module as a\n"
+"netlist or an HDL module, but\n"
+"once created you will not be\n"
+"able to modify the type without\n"
+"deleting and rebuilding the\n"
+"module."
+msgstr ""
+"Use this dialog box to create\n"
+"a new module definition. You\n"
+"can create the module as a\n"
+"netlist or an HDL module, but\n"
+"once created you will not be\n"
+"able to modify the type without\n"
+"deleting and rebuilding the\n"
+"module."
+
+# blklst.del.exp
+#: uk/messages:1371
+msgid ""
+"Delete the definition and interface data\n"
+"for the specified module. Existing instances\n"
+"of the deleted module will be retained but\n"
+"will be marked as undefined."
+msgstr ""
+"Delete the definition and interface data\n"
+"for the specified module. Existing instances\n"
+"of the deleted module will be retained but\n"
+"will be marked as undefined."
+
+# blklst.copy.exp
+#: uk/messages:1378
+msgid ""
+"Create a copy of the specified module definition. Use this to create\n"
+"a new variant of an existing module."
+msgstr ""
+"Create a copy of the specified module definition. Use this to create\n"
+"a new variant of an existing module."
+
+# blklst.rename.exp
+#: uk/messages:1383
+msgid ""
+"Rename a module definition. This operation will affect only the\n"
+"definition, any existing instances of this module will continue to\n"
+"point to the old module name."
+msgstr ""
+"Rename a module definition. This operation will affect only the\n"
+"definition, any existing instances of this module will continue to\n"
+"point to the old module name."
+
+# blklst.claim.exp
+#: uk/messages:1389
+msgid ""
+"Convert a library module to a user module. This allows the module to be\n"
+"edited and to be saved with the user circuit."
+msgstr ""
+"Convert a library module to a user module. This allows the module to be\n"
+"edited and to be saved with the user circuit."
+
+# blklst.setroot.exp
+#: uk/messages:1394
+msgid "Make the specified module the top-level module."
+msgstr "Make the specified module the top-level module."
+
+# find.title
+#: uk/messages:1399
+msgid "TkGate: Find Object"
+msgstr "TkGate: Find Object"
+
+# find.label
+#: uk/messages:1400
+msgid "Find Objects"
+msgstr "Find Objects"
+
+# find.exp
+#: uk/messages:1401
+msgid ""
+"Look for text either in\n"
+"a component name, a wire name\n"
+"or in the text of a comment.\n"
+"Double click on a result to\n"
+"go to that item."
+msgstr ""
+"Look for text either in\n"
+"a component name, a wire name\n"
+"or in the text of a comment.\n"
+"Double click on a result to\n"
+"go to that item."
+
+# find.ignorecase
+#: uk/messages:1409
+msgid "Ignore Case"
+msgstr "Ignore Case"
+
+# find.result.name
+#: uk/messages:1413
+msgid "Object Name"
+msgstr "Object Name"
+
+# find.options
+#: uk/messages:1422
+msgid "Search Options"
+msgstr "Search Options"
+
+# find.results
+#: uk/messages:1423
+msgid "Search Results"
+msgstr "Search Results"
+
+# find.qual.contains
+#: uk/messages:1432
+msgid "Contains..."
+msgstr "Contains..."
+
+# find.qual.begins
+#: uk/messages:1433
+msgid "Begins with..."
+msgstr "Begins with..."
+
+# find.qual.ends
+#: uk/messages:1434
+msgid "Ends with..."
+msgstr "Ends with..."
+
+# find.qual.matches
+#: uk/messages:1435
+msgid "Matches..."
+msgstr "Matches..."
+
+# find.dom.label
+#: uk/messages:1437
+msgid "Look for objects in:"
+msgstr "Look for objects in:"
+
+# find.dom.gates
+#: uk/messages:1438
+msgid "components"
+msgstr "components"
+
+# find.dom.nets
+#: uk/messages:1439
+msgid "nets"
+msgstr "nets"
+
+# find.dom.text
+#: uk/messages:1440
+msgid "comment text"
+msgstr "comment text"
+
+# find.search
+#: uk/messages:1442
+msgid "Find:"
+msgstr "Find:"
+
+# find.target
+#: uk/messages:1443
+msgid "Target"
+msgstr "Target"
+
+# circ.wintitle
+#: uk/messages:1461
+msgid "TkGate: Circuit Properties"
+msgstr "TkGate: Circuit Properties"
+
+# circ.label
+#: uk/messages:1462
+msgid "Circuit Properties"
+msgstr "Circuit Properties"
+
+# circ.ident
+#: uk/messages:1463
+msgid "Identification"
+msgstr "Identification"
+
+# circ.filev
+#: uk/messages:1464
+msgid "File Version"
+msgstr "File Version"
+
+# circ.title
+#: uk/messages:1466
+msgid "Circuit Title"
+msgstr "Circuit Title"
+
+# circ.encoding
+#: uk/messages:1467
+msgid "File Encoding"
+msgstr "File Encoding"
+
+# circ.lang
+#: uk/messages:1468
+msgid "File Language"
+msgstr "File Language"
+
+# circ.discchg
+#: uk/messages:1469
+msgid "Do not warn about discarding changes."
+msgstr "Do not warn about discarding changes."
+
+# circ.defaults
+#: uk/messages:1471
+msgid "Component Defaults"
+msgstr "Component Defaults"
+
+# circ.extbar
+#: uk/messages:1472
+msgid "Use extender bars on AND, OR and XOR gates."
+msgstr "Use extender bars on AND, OR and XOR gates."
+
+# circ.shownet
+#: uk/messages:1473
+msgid "Show net name on switches and dips."
+msgstr "Show net name on switches and dips."
+
+# circ.autostart
+#: uk/messages:1474
+msgid "Enable auto-start of simulation."
+msgstr "Enable auto-start of simulation."
+
+# circ.iniscript
+#: uk/messages:1475
+msgid "Initialization Scripts"
+msgstr "Initialization Scripts"
+
+# circ.reallyupdate
+#: uk/messages:1479
+msgid "Do you really want to update the interface of all '%s' instances?"
+msgstr "Do you really want to update the interface of all '%s' instances?"
+
+# circ.reallyoverwrite
+#: uk/messages:1483
+msgid "Do you really want to overwrite the existing file '%s'?"
+msgstr "Do you really want to overwrite the existing file '%s'?"
+
+# circ.script
+#: uk/messages:1493
+msgid "Scripts"
+msgstr "Scripts"
+
+# circ.timescale
+#: uk/messages:1495
+msgid "Default Simulation Time Scale"
+msgstr "Default Simulation Time Scale"
+
+# circ.timescale.unit
+#: uk/messages:1496
+msgid "Units:"
+msgstr "Units:"
+
+# circ.timescale.prec
+#: uk/messages:1497
+msgid "Precision:"
+msgstr "Precision:"
+
+# circ.sim.features
+#: uk/messages:1499
+msgid "Features"
+msgstr "Features"
+
+# circ.sim.tv.title
+#: uk/messages:1507
+msgid "Timing Violation Handling"
+msgstr "Timing Violation Handling"
+
+# circ.sim.tv.all
+#: uk/messages:1508
+msgid "Report all timing violations."
+msgstr "Report all timing violations."
+
+# circ.sim.tv.after.1
+#: uk/messages:1509
+msgid "Report timing violations after"
+msgstr "Report timing violations after"
+
+# circ.sim.tv.after.2
+#: uk/messages:1510
+msgid "-empty-"
+msgstr "-empty-"
+
+# circ.sim.tv.never
+#: uk/messages:1511
+msgid "Never report timing violations."
+msgstr "Never report timing violations."
+
+# circ.exp.general
+#: uk/messages:1513
+msgid ""
+"View and modify circuit specific properties.\n"
+"These properties will be stored with the\n"
+"circuit when you save."
+msgstr ""
+"View and modify circuit specific properties.\n"
+"These properties will be stored with the\n"
+"circuit when you save."
+
+# circ.exp.library
+#: uk/messages:1519
+msgid ""
+"Select libraries required by this circuit.\n"
+"Library requirements are saved with the circuit\n"
+"and will be automatically loaded the next time\n"
+"you load this circuit."
+msgstr ""
+"Select libraries required by this circuit.\n"
+"Library requirements are saved with the circuit\n"
+"and will be automatically loaded the next time\n"
+"you load this circuit."
+
+# circ.exp.script
+#: uk/messages:1526
+msgid ""
+"Add any simulation scripts that should be\n"
+"automatically read and executed when this\n"
+"circuit is simulated."
+msgstr ""
+"Add any simulation scripts that should be\n"
+"automatically read and executed when this\n"
+"circuit is simulated."
+
+# circ.exp.simulator
+#: uk/messages:1533
+msgid "View and modify simulation preferences for this circuit."
+msgstr "View and modify simulation preferences for this circuit."
+
+# libmgr.cap
+#: uk/messages:1541
+msgid "Library Manager"
+msgstr "Library Manager"
+
+# libmgr.library
+# ho.mod.type.partlib
+#: uk/messages:1542 uk/messages:2203
+msgid "Library"
+msgstr "Library"
+
+# libmgr.description
+#: uk/messages:1543
+msgid "Description"
+msgstr "Description"
+
+# libmgr.status
+#: uk/messages:1544
+msgid "Status"
+msgstr "Status"
+
+# libmgr.status.load
+#: uk/messages:1545
+msgid "Loaded"
+msgstr "Loaded"
+
+# libmgr.status.unload
+#: uk/messages:1546
+msgid "Not Loaded"
+msgstr "Not Loaded"
+
+# libmgr.status.loadp
+#: uk/messages:1547
+msgid "[Loaded]"
+msgstr "[Loaded]"
+
+# libmgr.status.unloadp
+#: uk/messages:1548
+msgid "[Not Loaded]"
+msgstr "[Not Loaded]"
+
+# libmgr.exp
+#: uk/messages:1549
+msgid "Select libraries to be loaded or unloaded."
+msgstr "Select libraries to be loaded or unloaded."
+
+# libmgr.load
+#: uk/messages:1552
+msgid "Load"
+msgstr "Load"
+
+# libmgr.unloadall
+#: uk/messages:1554
+msgid "Unload All"
+msgstr "Unload All"
+
+# libmgr.notedit
+#: uk/messages:1556
+msgid "Must be in circuit edit mode to open library manager."
+msgstr "Must be in circuit edit mode to open library manager."
+
+# break.tab
+#: uk/messages:1564
+msgid "Breakpoints"
+msgstr "Breakpoints"
+
+# break.id
+#: uk/messages:1565
+msgid "ID"
+msgstr "ID"
+
+# break.state
+#: uk/messages:1566
+msgid "S"
+msgstr "S"
+
+# break.condition
+#: uk/messages:1567
+msgid "Condition"
+msgstr "Condition"
+
+# sim.recursive
+#: uk/messages:1576
+msgid ""
+"Recursive module definition found\n"
+"at '%s'. Can not start simulator or\n"
+"perform critical path analysis."
+msgstr ""
+"Recursive module definition found\n"
+"at '%s'. Can not start simulator or\n"
+"perform critical path analysis."
+
+# sim.hyperlinkstop
+#: uk/messages:1581
+msgid ""
+"The simulator is currently running. Would you like\n"
+"to stop the simulation and follow the link?"
+msgstr ""
+"The simulator is currently running. Would you like\n"
+"to stop the simulation and follow the link?"
+
+# cp.delay
+#: uk/messages:1591
+msgid "Path Delay:"
+msgstr "Path Delay:"
+
+# cp.pathl
+#: uk/messages:1592
+msgid "Path List:"
+msgstr "Path List:"
+
+# cp.numpath
+#: uk/messages:1593
+msgid "Number of Paths:"
+msgstr "Number of Paths:"
+
+# cp.recompute
+#: uk/messages:1594
+msgid "Recompute"
+msgstr "Recompute"
+
+# err.notinsim
+#: uk/messages:1599
+msgid "Not allowed while simulator is active."
+msgstr "Not allowed while simulator is active."
+
+# err.nomemselect
+#: uk/messages:1600
+msgid "Memory is not selected."
+msgstr "Memory is not selected."
+
+# err.rootinterface
+#: uk/messages:1601
+msgid "Can not set interface of root module."
+msgstr "Can not set interface of root module."
+
+# err.nopin
+#: uk/messages:1602
+msgid "Can't change selected pin."
+msgstr "Can't change selected pin."
+
+# err.badhex
+#: uk/messages:1603
+msgid "Illegal hex value '%s' ignored."
+msgstr "Illegal hex value '%s' ignored."
+
+# err.gatanchor
+#: uk/messages:1604
+msgid "Components(s) are anchored and can not be moved."
+msgstr "Components(s) are anchored and can not be moved."
+
+# err.protdata
+#: uk/messages:1605
+msgid "Can not modify contents of protected or library module."
+msgstr "Can not modify contents of protected or library module."
+
+# err.badfind
+#: uk/messages:1606
+msgid "Can't find target '%s'."
+msgstr "Can't find target '%s'."
+
+# err.badopendel
+#: uk/messages:1607
+msgid "Can't delete open module."
+msgstr "Can't delete open module."
+
+# err.nosrcmod
+#: uk/messages:1608
+msgid "Source module '%s' not found."
+msgstr "Source module '%s' not found."
+
+# err.noerr
+#: uk/messages:1609
+msgid "Can not locate error."
+msgstr "Can not locate error."
+
+# err.misserr
+#: uk/messages:1610
+msgid "Error information incomplete (did the simulator crash?)"
+msgstr "Error information incomplete (did the simulator crash?)"
+
+# err.nofunc
+#: uk/messages:1611
+msgid "Bad or missing function name for module interface."
+msgstr "Bad or missing function name for module interface."
+
+# err.wirerot
+#: uk/messages:1612
+msgid "Selection can not be rotated due to attaching wires."
+msgstr "Selection can not be rotated due to attaching wires."
+
+# err.badinadd
+#: uk/messages:1614
+msgid "Can't add any more inputs to selected component."
+msgstr "Can't add any more inputs to selected component."
+
+# err.badoutadd
+#: uk/messages:1615
+msgid "Can't add any more outputs to selected component."
+msgstr "Can't add any more outputs to selected component."
+
+# err.badinoutadd
+#: uk/messages:1616
+msgid "Can't add any more inout pins to selected component."
+msgstr "Can't add any more inout pins to selected component."
+
+# err.badpinchg
+#: uk/messages:1617
+msgid "Can't change pin types on selected component."
+msgstr "Can't change pin types on selected component."
+
+# err.badnetname
+#: uk/messages:1618
+msgid "Illegal characters in identifier deleted."
+msgstr "Illegal characters in identifier deleted."
+
+# err.netbcrename
+#: uk/messages:1619
+msgid "Identifier renamed to '%s' because of illegal characters."
+msgstr "Identifier renamed to '%s' because of illegal characters."
+
+# err.netconfnet
+#: uk/messages:1620
+msgid "Identifier renamed to '%s' because of conflict."
+msgstr "Identifier renamed to '%s' because of conflict."
+
+# err.netconfgat
+#: uk/messages:1621
+msgid "Identifier renamed to avoid conflict with built-in component name"
+msgstr "Identifier renamed to avoid conflict with built-in component name"
+
+# err.netconfkw
+#: uk/messages:1622
+msgid "Identifier renamed to avoid conflict with reserved word."
+msgstr "Identifier renamed to avoid conflict with reserved word."
+
+# err.badconsame
+#: uk/messages:1623
+msgid "Connection refused because wires are part of the same net."
+msgstr "Connection refused because wires are part of the same net."
+
+# err.badconptsp
+#: uk/messages:1624
+msgid "Connection refused because both wires are module ports or supply."
+msgstr "Connection refused because both wires are module ports or supply."
+
+# err.badconbitw
+#: uk/messages:1625
+msgid "Connection refused because bit widths do not match."
+msgstr "Connection refused because bit widths do not match."
+
+# err.badrange
+#: uk/messages:1626
+msgid "Non-positive range for scope trace is not allowed."
+msgstr "Non-positive range for scope trace is not allowed."
+
+# err.badlprcmd
+#: uk/messages:1627
+msgid "Unable to execute printer command '%s'."
+msgstr "Unable to execute printer command '%s'."
+
+# err.badpsopen
+#: uk/messages:1628
+msgid "Unable to open file '%s' for postscript output."
+msgstr "Unable to open file '%s' for postscript output."
+
+# err.badid
+#: uk/messages:1629
+msgid "Illegal identifier '%s'."
+msgstr "Illegal identifier '%s'."
+
+# err.noinvgate
+#: uk/messages:1630
+msgid "Inverters are not allowed on components of this type."
+msgstr "Inverters are not allowed on components of this type."
+
+# err.protintf
+#: uk/messages:1632
+msgid "Can't modify protected interface on module '%s'."
+msgstr "Can't modify protected interface on module '%s'."
+
+# err.bkpt.badexp
+#: uk/messages:1634
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+
+# err.bkpt.badnet
+#: uk/messages:1635
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+
+# err.bkpt.badval
+#: uk/messages:1636
+msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+msgstr "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+
+# err.bkpt.toomany
+#: uk/messages:1637
+msgid "Too many breakpoints. Maximum is %d."
+msgstr "Too many breakpoints. Maximum is %d."
+
+# err.sim.badtmp
+#: uk/messages:1639
+msgid "Could not save temporary file '%s' for simulator (disc full?)"
+msgstr "Could not save temporary file '%s' for simulator (disc full?)"
+
+# err.sim.syntx
+#: uk/messages:1640
+msgid "Syntax error in '%s' command."
+msgstr "Syntax error in '%s' command."
+
+# err.sim.noincl
+#: uk/messages:1641
+msgid "Include file '%s' not found."
+msgstr "Include file '%s' not found."
+
+# err.sim.badedge
+#: uk/messages:1642
+msgid "Illegal edge indicator '%c' in clock command."
+msgstr "Illegal edge indicator '%c' in clock command."
+
+# err.sim.nobkpt
+#: uk/messages:1643
+msgid "No such breakpoint '%s'."
+msgstr "No such breakpoint '%s'."
+
+# err.sim.nonet
+#: uk/messages:1644
+msgid "Can't find net '%s'."
+msgstr "Can't find net '%s'."
+
+# err.sim.nogate
+#: uk/messages:1645
+msgid "Can't find component '%s'."
+msgstr "Can't find component '%s'."
+
+# err.sim.badbin
+#: uk/messages:1646
+msgid "Illegal character in binary constant '%s'."
+msgstr "Illegal character in binary constant '%s'."
+
+# err.sim.notswitch
+#: uk/messages:1647
+msgid "Component '%s' is not a switch, dip or register."
+msgstr "Component '%s' is not a switch, dip or register."
+
+# err.sim.badcmd
+#: uk/messages:1648
+msgid "Unrecognized command '%s' in simulation script."
+msgstr "Unrecognized command '%s' in simulation script."
+
+# err.sim.isrun
+#: uk/messages:1649
+msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
+msgstr "Simulator is already running (Use 'Ctrl-s e' to end)."
+
+# err.sim.run
+#: uk/messages:1650
+msgid "Run-time error at time %s:"
+msgstr "Run-time error at time %s:"
+
+# err.sim.cmd
+#: uk/messages:1651
+msgid "Internal Command Error"
+msgstr "Internal Command Error"
+
+# err.noteditpchg
+#: uk/messages:1653
+msgid "Properties can only be changed in edit mode."
+msgstr "Properties can only be changed in edit mode."
+
+# err.badeditop
+#: uk/messages:1654
+msgid "Illegal interface edit mode operation."
+msgstr "Illegal interface edit mode operation."
+
+# err.badopen
+#: uk/messages:1655
+msgid "Unable to open input file '%s'."
+msgstr "Unable to open input file '%s'."
+
+# err.badlibopen
+#: uk/messages:1656
+msgid "Unable to open library file '%s'."
+msgstr "Unable to open library file '%s'."
+
+# err.nomark
+#: uk/messages:1658
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+
+# err.badgate
+#: uk/messages:1659
+msgid "Unknown component type '%s'."
+msgstr "Unknown component type '%s'."
+
+# err.badportadd
+#: uk/messages:1661
+msgid "Can't add ports to components of this type."
+msgstr "Can't add ports to components of this type."
+
+# err.modmissing
+#: uk/messages:1663
+msgid "HDL module text missing for module \"%s\"."
+msgstr "HDL module text missing for module \"%s\"."
+
+# err.modtoomany
+#: uk/messages:1664
+msgid "Excess module definitions in module \"%s\"."
+msgstr "Excess module definitions in module \"%s\"."
+
+# err.modmismatch
+#: uk/messages:1665
+msgid "Name mismatch between text definition and module name in \"%s\"."
+msgstr "Name mismatch between text definition and module name in \"%s\"."
+
+# err.manypages
+#: uk/messages:1667
+msgid ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+msgstr ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+
+# err.nojump
+#: uk/messages:1673
+msgid ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+msgstr ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+
+# err.nomod
+#: uk/messages:1682
+msgid "Module '%s' is not defined."
+msgstr "Module '%s' is not defined."
+
+# err.modlock
+#: uk/messages:1683
+msgid "Logic Block is Locked!"
+msgstr "Logic Block is Locked!"
+
+# err.closeroot
+#: uk/messages:1684
+msgid "No higher level module opened on the module stack."
+msgstr "No higher level module opened on the module stack."
+
+# err.editonly
+#: uk/messages:1685
+msgid "Command not valid when in simulation mode."
+msgstr "Command not valid when in simulation mode."
+
+# err.simonly
+#: uk/messages:1686
+msgid "Command valid only in simulation mode."
+msgstr "Command valid only in simulation mode."
+
+# err.deltop
+#: uk/messages:1688
+msgid "Can not delete top-level module '%s'."
+msgstr "Can not delete top-level module '%s'."
+
+# err.delprot
+#: uk/messages:1689
+msgid "Can not delete protected module '%s'."
+msgstr "Can not delete protected module '%s'."
+
+# err.nodel
+#: uk/messages:1690
+msgid "No deletable selection."
+msgstr "No deletable selection."
+
+# err.modnotdef
+#: uk/messages:1691
+msgid "Module '%s' is undefined."
+msgstr "Module '%s' is undefined."
+
+# err.moddef
+#: uk/messages:1692
+msgid "The module '%s' already exists."
+msgstr "The module '%s' already exists."
+
+# err.primredef
+#: uk/messages:1693
+msgid "Built-in element name '%s' can not be redefined."
+msgstr "Built-in element name '%s' can not be redefined."
+
+# err.primprefix
+#: uk/messages:1694
+msgid "Illegal module name '%s' begins with built-in prefix '%s'."
+msgstr "Illegal module name '%s' begins with built-in prefix '%s'."
+
+# err.iskeyword
+#: uk/messages:1695
+msgid "Verilog keyword '%s' can not be used as an identifier."
+msgstr "Verilog keyword '%s' can not be used as an identifier."
+
+# err.noprop
+#: uk/messages:1696
+msgid "Selected component has no editable properites."
+msgstr "Selected component has no editable properites."
+
+# err.openscript
+#: uk/messages:1697
+msgid "Can't open simulation script file '%s'"
+msgstr "Can't open simulation script file '%s'"
+
+# err.oldversion
+#: uk/messages:1698
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+
+# err.futureversion
+#: uk/messages:1699
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+
+# err.badversion
+#: uk/messages:1700
+msgid "Unknown version number. Use at your own risk."
+msgstr "Unknown version number. Use at your own risk."
+
+# err.nodrive
+#: uk/messages:1701
+msgid "Net %s has no driver in module %s."
+msgstr "Net %s has no driver in module %s."
+
+# err.noconn
+#: uk/messages:1702
+msgid "Wire %s{%d} has no connections - deleted."
+msgstr "Wire %s{%d} has no connections - deleted."
+
+# err.oldportact
+#: uk/messages:1703
+msgid "Please right click on port or module edge to add/change port."
+msgstr "Please right click on port or module edge to add/change port."
+
+# err.nomodule
+#: uk/messages:1704
+msgid "No selected module."
+msgstr "No selected module."
+
+# err.nomodop
+#: uk/messages:1705
+msgid "No suitable modules for operation."
+msgstr "No suitable modules for operation."
+
+# err.protexec
+#: uk/messages:1706
+msgid "Attempted execution of protected command '%s' in $tkg$exec()."
+msgstr "Attempted execution of protected command '%s' in $tkg$exec()."
+
+# err.notwritable
+#: uk/messages:1708
+msgid "File '%s' is not writable."
+msgstr "File '%s' is not writable."
+
+# err.backupfail
+#: uk/messages:1709
+msgid "Unable to create backup file '%s'."
+msgstr "Unable to create backup file '%s'."
+
+# err.yy.badprop
+#: uk/messages:1711
+msgid "Ignoring unknown circuit property '%s'."
+msgstr "Ignoring unknown circuit property '%s'."
+
+# err.yy.badpropval
+#: uk/messages:1712
+msgid "Bad value '%s' for circuit property '%s'."
+msgstr "Bad value '%s' for circuit property '%s'."
+
+# err.yy.baddata
+#: uk/messages:1713
+msgid "Bad data type supplied for circuit property '%s'."
+msgstr "Bad data type supplied for circuit property '%s'."
+
+# err.yy.nosym
+#: uk/messages:1714
+msgid "No current module symbol."
+msgstr "No current module symbol."
+
+# err.yy.badicon
+#: uk/messages:1715
+msgid "Bad icon type '%s'."
+msgstr "Bad icon type '%s'."
+
+# err.yy.toomuchdata
+#: uk/messages:1716
+msgid "Too much icon data."
+msgstr "Too much icon data."
+
+# err.yy.nosyminst
+#: uk/messages:1717
+msgid "Missing symbol %d on instance %s of %s."
+msgstr "Missing symbol %d on instance %s of %s."
+
+# err.yy.badmodprop
+#: uk/messages:1718
+msgid "Ignoring unknown module property '%s'."
+msgstr "Ignoring unknown module property '%s'."
+
+# err.yy.badmoddata
+#: uk/messages:1719
+msgid "Bad data type supplied for module property '%s'."
+msgstr "Bad data type supplied for module property '%s'."
+
+# err.yy.badprim
+#: uk/messages:1720
+msgid "Unknown primitive name '%s'."
+msgstr "Unknown primitive name '%s'."
+
+# err.yy.nonet
+#: uk/messages:1721
+msgid "Undeclared net '%s'."
+msgstr "Undeclared net '%s'."
+
+# err.yy.bogussave
+#: uk/messages:1722
+msgid "Bogus save data detected. circuit may be damaged."
+msgstr "Bogus save data detected. circuit may be damaged."
+
+# err.yy.pinformat
+#: uk/messages:1723
+msgid "Illegal pin name format '%s'."
+msgstr "Illegal pin name format '%s'."
+
+# err.yy.pinname
+#: uk/messages:1724
+msgid "Pin name '%s' not defined for component type '%s'"
+msgstr "Pin name '%s' not defined for component type '%s'"
+
+# err.yy.nonetpos
+#: uk/messages:1725
+msgid "No net for position %d on component %s."
+msgstr "No net for position %d on component %s."
+
+# err.yy.baddirective
+#: uk/messages:1726
+msgid "Illegal or badly formed directive '%s'."
+msgstr "Illegal or badly formed directive '%s'."
+
+# err.yy.badlocale
+#: uk/messages:1727
+msgid "Unknown locale '%s' in save file. Using English locale."
+msgstr "Unknown locale '%s' in save file. Using English locale."
+
+# err.corruptnewsave
+#: uk/messages:1729
+msgid ""
+"TkGate was able to save your file in '%s', but it appears\n"
+"to be corrupted. If you have checkpointing enabled try\n"
+"loading one of the checkpoint files. Use 'tkgate -V' to\n"
+"check the integrity of a save file."
+msgstr ""
+"TkGate was able to save your file in '%s', but it appears\n"
+"to be corrupted. If you have checkpointing enabled try\n"
+"loading one of the checkpoint files. Use 'tkgate -V' to\n"
+"check the integrity of a save file."
+
+# err.corruptsave
+#: uk/messages:1736
+msgid ""
+"TkGate detected a problem while trying to save the file '%s'.\n"
+"The existing file has been left unmodified and the damaged file has\n"
+"been written to '%s'. If you have checkpointing enabled you\n"
+"can try loading one of the checkpoint files. You can also use\n"
+"'tkgate -V' to check the integrety of a save file."
+msgstr ""
+"TkGate detected a problem while trying to save the file '%s'.\n"
+"The existing file has been left unmodified and the damaged file has\n"
+"been written to '%s'. If you have checkpointing enabled you\n"
+"can try loading one of the checkpoint files. You can also use\n"
+"'tkgate -V' to check the integrety of a save file."
+
+# err.badsave
+#: uk/messages:1744
+msgid ""
+"A problem has occured trying to open or write the file '%s'. Check\n"
+"file/directory protections and or disk space."
+msgstr ""
+"A problem has occured trying to open or write the file '%s'. Check\n"
+"file/directory protections and or disk space."
+
+# err.nosafesave
+#: uk/messages:1749
+msgid ""
+"A problem has occurred attempting to save '%s'. If you wish, you can\n"
+"try again without save validation. If you say \"no\", the original file\n"
+"will remain unmodified. If you say \"yes\" the original file will be\n"
+"overwritten, but may be destroyed if a problem occurs. Would you like\n"
+"to attempt an unvalidated save?"
+msgstr ""
+"A problem has occurred attempting to save '%s'. If you wish, you can\n"
+"try again without save validation. If you say \"no\", the original file\n"
+"will remain unmodified. If you say \"yes\" the original file will be\n"
+"overwritten, but may be destroyed if a problem occurs. Would you like\n"
+"to attempt an unvalidated save?"
+
+# err.noback
+#: uk/messages:1757
+msgid ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+msgstr ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+
+# err.viewfile
+#: uk/messages:1765
+msgid "Can not open file '%s'."
+msgstr "Can not open file '%s'."
+
+# err.internal.nomod
+#: uk/messages:1772
+msgid "internal error: Failed to find module '%s'."
+msgstr "internal error: Failed to find module '%s'."
+
+# msg.selwire
+#: uk/messages:1778
+msgid "Selected wire %s named '%s'."
+msgstr "Selected wire %s named '%s'."
+
+# msg.selgate
+#: uk/messages:1779
+msgid "Selected gate %s named '%s'."
+msgstr "Selected gate %s named '%s'."
+
+# msg.selblock
+#: uk/messages:1780
+msgid "Selected %s block named '%s'."
+msgstr "Selected %s block named '%s'."
+
+# msg.iselwire
+#: uk/messages:1781
+msgid "Selected port '%s' on block '%s'."
+msgstr "Selected port '%s' on block '%s'."
+
+# msg.iselgate
+#: uk/messages:1782
+msgid "Selected %s named '%s' (huh? this message should be impossible)."
+msgstr "Selected %s named '%s' (huh? this message should be impossible)."
+
+# msg.iselblock
+#: uk/messages:1783
+msgid "Selected module interface for '%s'."
+msgstr "Selected module interface for '%s'."
+
+# msg.modoverwt
+#: uk/messages:1785
+msgid "Destination module '%s' already exists. Overwrite?"
+msgstr "Destination module '%s' already exists. Overwrite?"
+
+# msg.foundgate
+#: uk/messages:1786
+msgid "Found component named '%s'."
+msgstr "Found component named '%s'."
+
+# msg.foundwire
+#: uk/messages:1787
+msgid "Found wire named '%s'."
+msgstr "Found wire named '%s'."
+
+# msg.searchagn
+#: uk/messages:1788
+msgid "Target string '%s' not found. Hit 'find' to restart search again."
+msgstr "Target string '%s' not found. Hit 'find' to restart search again."
+
+# msg.sim.chgtoroot
+#: uk/messages:1789
+msgid "Simulation mode requires root module at top of edit stack."
+msgstr "Simulation mode requires root module at top of edit stack."
+
+# msg.sim.nogatemod
+#: uk/messages:1790
+msgid "Simulation mode requires concrete module stack."
+msgstr "Simulation mode requires concrete module stack."
+
+# msg.setinterface
+#: uk/messages:1791
+msgid "Set module interface for '%s'."
+msgstr "Set module interface for '%s'."
+
+# msg.needsel
+#: uk/messages:1792
+msgid "Please select a module instance."
+msgstr "Please select a module instance."
+
+# msg.wroteckpt
+#: uk/messages:1793
+msgid "Checkpointed to %s..."
+msgstr "Checkpointed to %s..."
+
+# msg.save
+#: uk/messages:1794
+msgid "Saved circuit to '%s'."
+msgstr "Saved circuit to '%s'."
+
+# msg.reallynew
+#: uk/messages:1795
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+
+# msg.reallyquit
+#: uk/messages:1796
+msgid "Circuit has been modified. Do you really want to exit?"
+msgstr "Circuit has been modified. Do you really want to exit?"
+
+# msg.notlib
+#: uk/messages:1797
+msgid "Module '%s' is not a library module."
+msgstr "Module '%s' is not a library module."
+
+# miles.msg1
+#: uk/messages:1802
+msgid "Only a fool would put %s%s there, Miles."
+msgstr "Only a fool would put %s%s there, Miles."
+
+# miles.msg2
+#: uk/messages:1803
+msgid "That's a really stupid place to put %s%s, Miles."
+msgstr "That's a really stupid place to put %s%s, Miles."
+
+# miles.msg3
+#: uk/messages:1804
+msgid "That's a terrible place for %s%s, Miles."
+msgstr "That's a terrible place for %s%s, Miles."
+
+# miles.msg4
+#: uk/messages:1805
+msgid "Miles, you are a fool for putting %s%s there."
+msgstr "Miles, you are a fool for putting %s%s there."
+
+# miles.msg5
+#: uk/messages:1806
+msgid "Only you would put %s%s there, Miles."
+msgstr "Only you would put %s%s there, Miles."
+
+# miles.msg6
+#: uk/messages:1807
+msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
+msgstr "Putting %s%s there is proof of your absolute stupidity, Miles."
+
+# miles.msg7
+#: uk/messages:1808
+msgid "Why don't you give up Miles, this is a stupid circuit."
+msgstr "Why don't you give up Miles, this is a stupid circuit."
+
+# miles.msg8a
+#: uk/messages:1809
+msgid "It's pointless to continue, Miles."
+msgstr "It's pointless to continue, Miles."
+
+# miles.msg8b
+#: uk/messages:1810
+msgid "It's obvious you can't design a circuit"
+msgstr "It's obvious you can't design a circuit"
+
+# verga.err.OK
+#: uk/messages:1817
+msgid "Don't worry, be happy."
+msgstr "Don't worry, be happy."
+
+# verga.err.INPORT
+#: uk/messages:1818
+msgid "Port size mismatch on input port '%s'."
+msgstr "Port size mismatch on input port '%s'."
+
+# verga.err.OUTPORT
+#: uk/messages:1819
+msgid "Port size mismatch on output port '%s'."
+msgstr "Port size mismatch on output port '%s'."
+
+# verga.err.FLOATNET
+#: uk/messages:1820
+msgid "Net '%s' has no drivers (floating net)."
+msgstr "Net '%s' has no drivers (floating net)."
+
+# verga.err.DIRECTCONN
+#: uk/messages:1821
+msgid "Direct connect operator '=>' unsupported. Treated as '*>'."
+msgstr "Direct connect operator '=>' unsupported. Treated as '*>'."
+
+# verga.err.MEMADDR
+#: uk/messages:1822
+msgid "Attempt to write to memory %s with unknown address."
+msgstr "Attempt to write to memory %s with unknown address."
+
+# verga.err.MEMBITS
+#: uk/messages:1823
+msgid "Attempt to write to memory %s with unknown bitrange."
+msgstr "Attempt to write to memory %s with unknown bitrange."
+
+# verga.err.BADARRAYUSG
+#: uk/messages:1824
+msgid "Array '%s' used in expression without index."
+msgstr "Array '%s' used in expression without index."
+
+# verga.err.BADARRAYLHS
+#: uk/messages:1825
+msgid "Array '%s' used without index on left-hand-side."
+msgstr "Array '%s' used without index on left-hand-side."
+
+# verga.err.BADCLOSE
+#: uk/messages:1826
+msgid "Attempt to close non-open descriptor in task '%s'."
+msgstr "Attempt to close non-open descriptor in task '%s'."
+
+# verga.err.BADAUTORNG
+#: uk/messages:1827
+msgid "Auto range [*] is only valid with 'wire' declaration."
+msgstr "Auto range [*] is only valid with 'wire' declaration."
+
+# verga.err.BADGATERNG
+#: uk/messages:1828
+msgid "Bad component instance range expression."
+msgstr "Bad component instance range expression."
+
+# verga.err.BADARGVALUE
+#: uk/messages:1829
+msgid "Bad value for argument '%s' in task '%s'."
+msgstr "Bad value for argument '%s' in task '%s'."
+
+# verga.err.DIVZERO
+#: uk/messages:1830
+msgid "Divide by zero."
+msgstr "Divide by zero."
+
+# verga.err.NODIV
+#: uk/messages:1831
+msgid "Divide/module unsupported on this machine - sizeof(short) must be 2."
+msgstr "Divide/module unsupported on this machine - sizeof(short) must be 2."
+
+# verga.err.BADEDGEEVENT
+#: uk/messages:1832
+msgid "Event on multi-bit net '%s' can not have posedge/negedge."
+msgstr "Event on multi-bit net '%s' can not have posedge/negedge."
+
+# verga.err.NEEDEDGE
+#: uk/messages:1833
+msgid "Must specify posedge or negedge on event for %s."
+msgstr "Must specify posedge or negedge on event for %s."
+
+# verga.err.ASGNEVENT
+#: uk/messages:1834
+msgid "Event wait on assign is illegal."
+msgstr "Event wait on assign is illegal."
+
+# verga.err.PROTTASK
+#: uk/messages:1835
+msgid "Execution of protected system task '%s' blocked."
+msgstr "Execution of protected system task '%s' blocked."
+
+# verga.err.NEEDIDENT
+#: uk/messages:1836
+msgid "Expecting identifier for argument %s of task '%s'."
+msgstr "Expecting identifier for argument %s of task '%s'."
+
+# verga.err.BADOP
+#: uk/messages:1837
+msgid "Expression operator error in '%s'."
+msgstr "Expression operator error in '%s'."
+
+# verga.err.NOREAD
+#: uk/messages:1838
+msgid "Failed to load source file '%s'."
+msgstr "Failed to load source file '%s'."
+
+# verga.err.MEMFILE
+#: uk/messages:1839
+msgid "Failed to open memory file '%s'."
+msgstr "Failed to open memory file '%s'."
+
+# verga.err.WRONGMOD
+#: uk/messages:1840
+msgid "Found module '%s' when expecting '%s'."
+msgstr "Found module '%s' when expecting '%s'."
+
+# verga.err.NOTPARM
+#: uk/messages:1841
+msgid "Identifier '%s' in constant expression is not a parameter."
+msgstr "Identifier '%s' in constant expression is not a parameter."
+
+# verga.err.BADADDR
+#: uk/messages:1842
+msgid "Illegal address range on port '%s'."
+msgstr "Illegal address range on port '%s'."
+
+# verga.err.BADADDRSPEC
+#: uk/messages:1843
+msgid "Illegal address range specification '%s'."
+msgstr "Illegal address range specification '%s'."
+
+# verga.err.BADCHAR
+#: uk/messages:1844
+msgid "Illegal character (%s) '%s'."
+msgstr "Illegal character (%s) '%s'."
+
+# verga.err.BADEVENT
+#: uk/messages:1845
+msgid "Illegal event control expression."
+msgstr "Illegal event control expression."
+
+# verga.err.BADCONSTOP
+#: uk/messages:1846
+msgid "Illegal operator in constant expression."
+msgstr "Illegal operator in constant expression."
+
+# verga.err.BADXOP
+#: uk/messages:1847
+msgid "Illegal operator in expression."
+msgstr "Illegal operator in expression."
+
+# verga.err.NETREDEF
+#: uk/messages:1848
+msgid "Illegal redefinition of net '%s'."
+msgstr "Illegal redefinition of net '%s'."
+
+# verga.err.BADINOUT
+#: uk/messages:1849
+msgid "Inout connections must be net-to-net on port '%s'."
+msgstr "Inout connections must be net-to-net on port '%s'."
+
+# verga.err.MODUNDEF
+#: uk/messages:1850
+msgid "Instance of undefined module '%s'."
+msgstr "Instance of undefined module '%s'."
+
+# verga.err.BADASGNLHS
+#: uk/messages:1851
+msgid "Invalid left-hand-side in 'assign'."
+msgstr "Invalid left-hand-side in 'assign'."
+
+# verga.err.LHSNOTREG
+#: uk/messages:1852
+msgid "Illegal use of '%s' in left-hand-side of assignment."
+msgstr "Illegal use of '%s' in left-hand-side of assignment."
+
+# verga.err.BADLHS
+#: uk/messages:1853
+msgid "Invalid left-hand-side in assignment."
+msgstr "Invalid left-hand-side in assignment."
+
+# verga.err.BADOUT
+#: uk/messages:1854
+msgid "Invalid output assignment."
+msgstr "Invalid output assignment."
+
+# verga.err.NOTREG
+#: uk/messages:1855
+msgid "Memories must be declared as register."
+msgstr "Memories must be declared as register."
+
+# verga.err.PORTMIX
+#: uk/messages:1856
+msgid "Mixed named and unnamed ports on interface '%s' of '%s'."
+msgstr "Mixed named and unnamed ports on interface '%s' of '%s'."
+
+# verga.err.REPCASE
+#: uk/messages:1857
+msgid "More than one default: in case statement."
+msgstr "More than one default: in case statement."
+
+# verga.err.NOMEM
+#: uk/messages:1858
+msgid "No current memory in memory file read."
+msgstr "No current memory in memory file read."
+
+# verga.err.BADCMD
+#: uk/messages:1859
+msgid "No such command '%s'."
+msgstr "No such command '%s'."
+
+# verga.err.CMDNOTNET
+#: uk/messages:1860
+msgid "No such net '%s' in '%s' command."
+msgstr "No such net '%s' in '%s' command."
+
+# verga.err.MEMNONBLK
+#: uk/messages:1861
+msgid "Non-blocking assignments to memories not implemented."
+msgstr "Non-blocking assignments to memories not implemented."
+
+# verga.err.NOTPPORT
+#: uk/messages:1862
+msgid "Parameter '%s' is not declared as a port."
+msgstr "Parameter '%s' is not declared as a port."
+
+# verga.err.REDEFP
+#: uk/messages:1863
+msgid "Parameter redefines identifier '%s'."
+msgstr "Parameter redefines identifier '%s'."
+
+# verga.err.PORTNOTDEF
+#: uk/messages:1864
+msgid "Port '%s' on interface '%s' is not defined in module '%s'."
+msgstr "Port '%s' on interface '%s' is not defined in module '%s'."
+
+# verga.err.NOCONN
+#: uk/messages:1865
+msgid "Port '%s' has no connections on interface '%s' of '%s'."
+msgstr "Port '%s' has no connections on interface '%s' of '%s'."
+
+# verga.err.MULTCONN
+#: uk/messages:1866
+msgid "Port '%s' has multiple connections on interface '%s' of '%s'."
+msgstr "Port '%s' has multiple connections on interface '%s' of '%s'."
+
+# verga.err.PORTCOUNT
+#: uk/messages:1867
+msgid "Port count does not match definition on interface '%s' of '%s'."
+msgstr "Port count does not match definition on interface '%s' of '%s'."
+
+# verga.err.BADPRTRANGE
+#: uk/messages:1868
+msgid "Range on port '%s' is not numeric."
+msgstr "Range on port '%s' is not numeric."
+
+# verga.err.BADARRAYRNG
+#: uk/messages:1869
+msgid "Range specification not allowed for memory reference of '%s'."
+msgstr "Range specification not allowed for memory reference of '%s'."
+
+# verga.err.CMDMODREDEF
+#: uk/messages:1870
+msgid "Redefinition of dynamic module '%s'."
+msgstr "Redefinition of dynamic module '%s'."
+
+# verga.err.REDEF
+#: uk/messages:1871
+msgid "Redefinition of identifier %s."
+msgstr "Redefinition of identifier %s."
+
+# verga.err.PROTTASKSTOP
+#: uk/messages:1872
+msgid ""
+"Simulation stopped on attempted execution of protected system task '%s'."
+msgstr ""
+"Simulation stopped on attempted execution of protected system task '%s'."
+
+# verga.err.NOTMEM
+#: uk/messages:1873
+msgid "Specified net '%s' is not a memory."
+msgstr "Specified net '%s' is not a memory."
+
+# verga.err.CMDNOTMEM
+#: uk/messages:1874
+msgid "Specified net '%s' is not a memory in '%s' command."
+msgstr "Specified net '%s' is not a memory in '%s' command."
+
+# verga.err.SYNTAX
+#: uk/messages:1875
+msgid "Syntax error."
+msgstr "Syntax error."
+
+# verga.err.TOOFEWPP
+#: uk/messages:1876
+msgid "Too few parameter ports on instance %s."
+msgstr "Too few parameter ports on instance %s."
+
+# verga.err.OPENTOOMANY
+#: uk/messages:1877
+msgid "Too many files open in task '%s'."
+msgstr "Too many files open in task '%s'."
+
+# verga.err.TOOMANYPP
+#: uk/messages:1878
+msgid "Too many parameter ports on instance %s."
+msgstr "Too many parameter ports on instance %s."
+
+# verga.err.NOTOP
+#: uk/messages:1879
+msgid "Top-module '%s' not defined."
+msgstr "Top-module '%s' not defined."
+
+# verga.err.BADOPEN
+#: uk/messages:1880
+msgid "Unable to open output file '%s' in task '%s'."
+msgstr "Unable to open output file '%s' in task '%s'."
+
+# verga.err.CMDNOMOD
+#: uk/messages:1881
+msgid "Undefined dynamic module '%s' in '%s' command."
+msgstr "Undefined dynamic module '%s' in '%s' command."
+
+# verga.err.BADEVENTNET
+#: uk/messages:1882
+msgid "Undefined net '%s' in event control expression."
+msgstr "Undefined net '%s' in event control expression."
+
+# verga.err.NOTASK
+#: uk/messages:1883
+msgid "Undefined task '%s'."
+msgstr "Undefined task '%s'."
+
+# verga.err.NOTDEF
+#: uk/messages:1884
+msgid "Undefined variable '%s'."
+msgstr "Undefined variable '%s'."
+
+# verga.err.BADRANGE
+#: uk/messages:1885
+msgid "Unsupported bit range [%s] on net '%s' (must be of form [n:0])."
+msgstr "Unsupported bit range [%s] on net '%s' (must be of form [n:0])."
+
+# verga.err.GATEUNIMP
+#: uk/messages:1886
+msgid "Unimplemented primitive component type on instance '%s'."
+msgstr "Unimplemented primitive component type on instance '%s'."
+
+# verga.err.USAGE
+#: uk/messages:1887
+msgid "Usage: thyme [options][files...]"
+msgstr "Usage: thyme [options][files...]"
+
+# verga.err.CLSDWRITE
+#: uk/messages:1888
+msgid "Write to closed descriptor."
+msgstr "Write to closed descriptor."
+
+# verga.err.PRIMPTCOUNT
+#: uk/messages:1889
+msgid "Wrong number of ports on primitive component instance '%s'."
+msgstr "Wrong number of ports on primitive component instance '%s'."
+
+# verga.err.CMDARGS
+#: uk/messages:1890
+msgid "Wrong number of arguments in '%s' command."
+msgstr "Wrong number of arguments in '%s' command."
+
+# verga.err.YYERROR
+#: uk/messages:1891
+msgid "YYError - %s."
+msgstr "YYError - %s."
+
+# verga.err.TASKARGS
+#: uk/messages:1892
+msgid "Task '%s' called with wrong number of arguments."
+msgstr "Task '%s' called with wrong number of arguments."
+
+# verga.err.BADSTART
+#: uk/messages:1893
+msgid "Illegal start value in task '%s'."
+msgstr "Illegal start value in task '%s'."
+
+# verga.err.BADSTOP
+#: uk/messages:1894
+msgid "Illegal stop value in $readmemb."
+msgstr "Illegal stop value in $readmemb."
+
+# verga.err.SPECTASKUSG
+#: uk/messages:1895
+msgid "Task '%s' must be used in a specify block."
+msgstr "Task '%s' must be used in a specify block."
+
+# verga.err.BADSPECTASK
+#: uk/messages:1896
+msgid "Task '%s' can not be used in a specify block."
+msgstr "Task '%s' can not be used in a specify block."
+
+# verga.err.TIMING
+#: uk/messages:1897
+msgid "Timing violation in %s[%s] %s."
+msgstr "Timing violation in %s[%s] %s."
+
+# verga.err.RAMDCHG
+#: uk/messages:1898
+msgid "Data line changed while write enabled on %s"
+msgstr "Data line changed while write enabled on %s"
+
+# verga.err.RAMACHG
+#: uk/messages:1899
+msgid "Address line changed while write enabled on %s"
+msgstr "Address line changed while write enabled on %s"
+
+# verga.err.NOIFDEF
+#: uk/messages:1900
+msgid "No matching `ifdef/`ifndef for %s declaration."
+msgstr "No matching `ifdef/`ifndef for %s declaration."
+
+# verga.err.BADSPECLVAL
+#: uk/messages:1901
+msgid "Bit-ranges on path delay specifiers unsupported."
+msgstr "Bit-ranges on path delay specifiers unsupported."
+
+# verga.err.PATHDITEM
+#: uk/messages:1902
+msgid "Unsupported construct in module with path-delay specification."
+msgstr "Unsupported construct in module with path-delay specification."
+
+# verga.err.PATHDINOUT
+#: uk/messages:1903
+msgid "Use of 'inout' in module with path-delay specification is unsupported."
+msgstr "Use of 'inout' in module with path-delay specification is unsupported."
+
+# verga.err.PATHDLOOP
+#: uk/messages:1904
+msgid "Loops in modules with path-delay specification are unsupported."
+msgstr "Loops in modules with path-delay specification are unsupported."
+
+# verga.err.TASKREDEF
+#: uk/messages:1906
+msgid "Redefinition of task or function '%s' in module '%s'."
+msgstr "Redefinition of task or function '%s' in module '%s'."
+
+# verga.err.TASKASFUNC
+#: uk/messages:1907
+msgid "Task '%s' used as function."
+msgstr "Task '%s' used as function."
+
+# verga.err.FUNCASTASK
+#: uk/messages:1908
+msgid "Function '%s' used as task."
+msgstr "Function '%s' used as task."
+
+# verga.err.TASKBADTYPE
+#: uk/messages:1909
+msgid "Non-register type used in task or function."
+msgstr "Non-register type used in task or function."
+
+# verga.err.TASKBADPORT
+#: uk/messages:1910
+msgid "Only input ports are allowed on functions."
+msgstr "Only input ports are allowed on functions."
+
+# verga.err.TIMESCALEU
+#: uk/messages:1911
+msgid "Invalid units '%s' in `timescale declaration."
+msgstr "Invalid units '%s' in `timescale declaration."
+
+# verga.err.TIMESCALEN
+#: uk/messages:1912
+msgid "Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100)."
+msgstr "Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100)."
+
+# verga.err.TIMESCALES
+#: uk/messages:1913
+msgid "Invalid syntax in `timescale declaration."
+msgstr "Invalid syntax in `timescale declaration."
+
+# verga.err.TIMESCALEX
+#: uk/messages:1914
+msgid "Units must be larger than precision in `timescale declaration."
+msgstr "Units must be larger than precision in `timescale declaration."
+
+# verga.err.TIMESCALEAN
+#: uk/messages:1915
+msgid "Design contains some modules with `timescale and some without."
+msgstr "Design contains some modules with `timescale and some without."
+
+# verga.err.BADPORTTYPE
+#: uk/messages:1916
+msgid "Invalid type declaration used on port '%s'"
+msgstr "Invalid type declaration used on port '%s'"
+
+# verga.err.BADVALUE
+#: uk/messages:1917
+msgid "Bad numeric value '%s'."
+msgstr "Bad numeric value '%s'."
+
+# verga.err.NONEXPCTL
+#: uk/messages:1918
+msgid "Event control @(*) applied to non-expression."
+msgstr "Event control @(*) applied to non-expression."
+
+# verga.err.NONSTATCTL
+#: uk/messages:1919
+msgid "Event control @(*) applied to non-statement."
+msgstr "Event control @(*) applied to non-statement."
+
+# verga.err.MODREDEF
+#: uk/messages:1920
+msgid "Redefinition of module '%s'."
+msgstr "Redefinition of module '%s'."
+
+# verga.err.IE_TASK
+#: uk/messages:1921
+msgid "Task definition '%s' found outside module - internal error."
+msgstr "Task definition '%s' found outside module - internal error."
+
+# verga.err.IE_NONET
+#: uk/messages:1922
+msgid "Failed to find net '%s' - internal error."
+msgstr "Failed to find net '%s' - internal error."
+
+# verga.err.IE_NOOP
+#: uk/messages:1923
+msgid "Can not find operator description -- internal error."
+msgstr "Can not find operator description -- internal error."
+
+# verga.err.IE_BADEXP
+#: uk/messages:1924
+msgid "Unexpected expression type %s - internal error."
+msgstr "Unexpected expression type %s - internal error."
+
+# verga.err.IE_BADVAR
+#: uk/messages:1925
+msgid "Undefined variable or unknown net - internal error."
+msgstr "Undefined variable or unknown net - internal error."
+
+# verga.err.IE_BADSTATE
+#: uk/messages:1926
+msgid "Unexpected internal state at %s - internal error."
+msgstr "Unexpected internal state at %s - internal error."
+
+# verga.err.IE_RETURN
+#: uk/messages:1927
+msgid "Executed BCReturn bytecode with empty return stack - internal error."
+msgstr "Executed BCReturn bytecode with empty return stack - internal error."
+
+# primitive.err.missing
+#: uk/messages:1934
+msgid "Internal Error: primitive definition for '%s' is missing."
+msgstr "Internal Error: primitive definition for '%s' is missing."
+
+# primitive.err.nomodule
+#: uk/messages:1935
+msgid "Internal Error: primitive definition for '%s' is missing 'module'."
+msgstr "Internal Error: primitive definition for '%s' is missing 'module'."
+
+# primitive.err.nomodname
+#: uk/messages:1936
+msgid "Internal Error: missing module name in definition of '%s' module."
+msgstr "Internal Error: missing module name in definition of '%s' module."
+
+# primitive.err.wrongname
+#: uk/messages:1937
+msgid "Internal Error: module name mismatch in definition of '%s' module."
+msgstr "Internal Error: module name mismatch in definition of '%s' module."
+
+# cprt.about
+#: uk/messages:1943
+msgid "About TkGate"
+msgstr "About TkGate"
+
+# cprt.lic
+#: uk/messages:1944
+msgid "TkGate license"
+msgstr "TkGate license"
+
+# cprt.descr
+#: uk/messages:1945
+msgid "Digital Circuit Editor and Simulator"
+msgstr "Digital Circuit Editor and Simulator"
+
+# ho.setsel.allr
+#: uk/messages:1956
+msgid "Move all items to selected list."
+msgstr "Move all items to selected list."
+
+# ho.setsel.alll
+#: uk/messages:1957
+msgid "Move all items to unselected list."
+msgstr "Move all items to unselected list."
+
+# ho.setsel.ltor
+#: uk/messages:1958
+msgid "Move highlighted items to selected list."
+msgstr "Move highlighted items to selected list."
+
+# ho.setsel.rtol
+#: uk/messages:1959
+msgid "Move highlighted items to unselected list."
+msgstr "Move highlighted items to unselected list."
+
+# ho.net.in
+#: uk/messages:1961
+msgid "Single-Bit Input"
+msgstr "Single-Bit Input"
+
+# ho.net.out
+#: uk/messages:1962
+msgid "Single-Bit Output"
+msgstr "Single-Bit Output"
+
+# ho.net.inout
+#: uk/messages:1963
+msgid "Single-Bit Inout"
+msgstr "Single-Bit Inout"
+
+# ho.net.in2
+#: uk/messages:1964
+msgid "Multi-Bit Input"
+msgstr "Multi-Bit Input"
+
+# ho.net.out2
+#: uk/messages:1965
+msgid "Multi-Bit Output"
+msgstr "Multi-Bit Output"
+
+# ho.net.inout2
+#: uk/messages:1966
+msgid "Multi-Bit Inout"
+msgstr "Multi-Bit Inout"
+
+# ho.net.wire
+#: uk/messages:1967
+msgid "Single-Bit Wire (Name Visible)"
+msgstr "Single-Bit Wire (Name Visible)"
+
+# ho.net.wire2
+#: uk/messages:1968
+msgid "Multi-Bit Wire (Name Visible)"
+msgstr "Multi-Bit Wire (Name Visible)"
+
+# ho.net.hwire
+#: uk/messages:1969
+msgid "Single-Bit Wire (Name Hidden)"
+msgstr "Single-Bit Wire (Name Hidden)"
+
+# ho.net.hwire2
+#: uk/messages:1970
+msgid "Multi-Bit Wire (Name Hidden)"
+msgstr "Multi-Bit Wire (Name Hidden)"
+
+# ho.net.reg
+#: uk/messages:1971
+msgid "Single-Bit Register"
+msgstr "Single-Bit Register"
+
+# ho.net.reg2
+#: uk/messages:1972
+msgid "Multi-Bit Register"
+msgstr "Multi-Bit Register"
+
+# ho.opt.tool.file
+#: uk/messages:1975
+msgid "Save, load of circuit files"
+msgstr "Save, load of circuit files"
+
+# ho.opt.tool.edit
+#: uk/messages:1976
+msgid "Cut, Paste and Find operations"
+msgstr "Cut, Paste and Find operations"
+
+# ho.opt.tool.gateopt
+#: uk/messages:1977
+msgid "Component rotation and alignment operations"
+msgstr "Component rotation and alignment operations"
+
+# ho.opt.tool.gateprop
+#: uk/messages:1978
+msgid "Basic editing of components"
+msgstr "Basic editing of components"
+
+# ho.opt.tool.undo
+#: uk/messages:1979
+msgid "Undo and redo operations"
+msgstr "Undo and redo operations"
+
+# ho.opt.tool.zoom
+#: uk/messages:1980
+msgid "Zoom in and zoom out"
+msgstr "Zoom in and zoom out"
+
+# ho.opt.tool.mode
+#: uk/messages:1981
+msgid "Select the editing tool"
+msgstr "Select the editing tool"
+
+# ho.opt.tool.module
+#: uk/messages:1982
+msgid "Create, delete, rename,etc. of module definitions"
+msgstr "Create, delete, rename,etc. of module definitions"
+
+# ho.opt.tool.tech
+#: uk/messages:1983
+msgid "Select default technology for components"
+msgstr "Select default technology for components"
+
+# ho.opt.tool.simctl
+#: uk/messages:1984
+msgid "Start, stop and pause of simulator"
+msgstr "Start, stop and pause of simulator"
+
+# ho.opt.tool.simaux
+#: uk/messages:1985
+msgid "Auxiliary simulator commands (read/write memory files, etc.)"
+msgstr "Auxiliary simulator commands (read/write memory files, etc.)"
+
+# ho.opt.tool.simmode
+#: uk/messages:1986
+msgid "Choose between the select and scroll tool in simulator."
+msgstr "Choose between the select and scroll tool in simulator."
+
+# ho.opt.tool.symmode
+#: uk/messages:1987
+msgid "Selecting editing tool in symbol editor"
+msgstr "Selecting editing tool in symbol editor"
+
+# ho.opt.tool.symedit
+#: uk/messages:1988
+msgid "Cut and paste operations for symbol editor"
+msgstr "Cut and paste operations for symbol editor"
+
+# ho.opt.tool.symport
+#: uk/messages:1989
+msgid "Port rotation operations for symbol editor"
+msgstr "Port rotation operations for symbol editor"
+
+# ho.opt.tool.symshift
+#: uk/messages:1990
+msgid "Shift the bit map or portion of bitmap"
+msgstr "Shift the bit map or portion of bitmap"
+
+# ho.opt.tool.symopr
+#: uk/messages:1991
+msgid "Miscellaneous symbol editor operations"
+msgstr "Miscellaneous symbol editor operations"
+
+# ho.opt.editor.movesel
+#: uk/messages:1993
+msgid ""
+"If this option is enabled, a selected block of\n"
+"text can be grabbed with the mouse pointer and\n"
+"moved to a new location."
+msgstr ""
+"If this option is enabled, a selected block of\n"
+"text can be grabbed with the mouse pointer and\n"
+"moved to a new location."
+
+# ho.opt.editor.format
+#: uk/messages:1999
+msgid ""
+"If enabled, verilog source code will be automatically\n"
+"indented when pressing the tab key."
+msgstr ""
+"If enabled, verilog source code will be automatically\n"
+"indented when pressing the tab key."
+
+# ho.opt.editor.indent
+#: uk/messages:2004
+msgid "Number of spaces to indent per level."
+msgstr "Number of spaces to indent per level."
+
+# ho.opt.editor.rtab
+#: uk/messages:2008
+msgid ""
+"Automatically indent the current line\n"
+"and tab to the appropriate level when\n"
+"pressing the return key."
+msgstr ""
+"Automatically indent the current line\n"
+"and tab to the appropriate level when\n"
+"pressing the return key."
+
+# ho.opt.editor.beginindent
+#: uk/messages:2014
+msgid ""
+"Causes a begin..end block to be indented\n"
+"to the same level as its parent block."
+msgstr ""
+"Causes a begin..end block to be indented\n"
+"to the same level as its parent block."
+
+# ho.opt.editor.colorize
+#: uk/messages:2019
+msgid ""
+"Enable context-dependent colorization of\n"
+"code according to the options listed below."
+msgstr ""
+"Enable context-dependent colorization of\n"
+"code according to the options listed below."
+
+# ho.hdl.splitexp
+#: uk/messages:2024
+msgid ""
+"Multiple modules in the HDL text will\n"
+"be split into different modules defining\n"
+"new modules as necessary. Any name\n"
+"conflicts will be resolved by slightly\n"
+"modifying module names as necessary."
+msgstr ""
+"Multiple modules in the HDL text will\n"
+"be split into different modules defining\n"
+"new modules as necessary. Any name\n"
+"conflicts will be resolved by slightly\n"
+"modifying module names as necessary."
+
+# ho.hdl.commentexp
+#: uk/messages:2032
+msgid ""
+"Modules other than the first module or\n"
+"module matching the expected name will\n"
+"be converted to HDL comments."
+msgstr ""
+"Modules other than the first module or\n"
+"module matching the expected name will\n"
+"be converted to HDL comments."
+
+# ho.hdl.autoeditexp
+#: uk/messages:2038
+msgid ""
+"Automatically edit the HDL description\n"
+"to fix the module name."
+msgstr ""
+"Automatically edit the HDL description\n"
+"to fix the module name."
+
+# ho.hdl.cancelexp
+#: uk/messages:2043
+msgid ""
+"Take no action and continue editing\n"
+"the current module."
+msgstr ""
+"Take no action and continue editing\n"
+"the current module."
+
+# ho.hdl.ignoreexp
+#: uk/messages:2048
+msgid ""
+"Ignore the inconsistency and continue\n"
+"with the selected action."
+msgstr ""
+"Ignore the inconsistency and continue\n"
+"with the selected action."
+
+# ho.new
+#: uk/messages:2053
+msgid ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+msgstr ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+
+# ho.open
+#: uk/messages:2058
+msgid "Open a circuit from a file."
+msgstr "Open a circuit from a file."
+
+# ho.save
+#: uk/messages:2059
+msgid "Save circuit to current file."
+msgstr "Save circuit to current file."
+
+# ho.saveas
+#: uk/messages:2060
+msgid "Save circuit to specified file."
+msgstr "Save circuit to specified file."
+
+# ho.print
+#: uk/messages:2061
+msgid "Print current circuit."
+msgstr "Print current circuit."
+
+# ho.library
+#: uk/messages:2062
+msgid "Open the library manager."
+msgstr "Open the library manager."
+
+# ho.symed.tab.normal
+#: uk/messages:2064
+msgid "Edit the unselected symbol bitmap."
+msgstr "Edit the unselected symbol bitmap."
+
+# ho.symed.tab.select
+#: uk/messages:2068
+msgid "Edit the selected symbol bitmap."
+msgstr "Edit the selected symbol bitmap."
+
+# ho.simmove
+#: uk/messages:2072
+msgid ""
+"Select wires and modules, flip\n"
+"switches and enter dip values.\n"
+"Clicking and holding on a wire\n"
+"will show its current value."
+msgstr ""
+"Select wires and modules, flip\n"
+"switches and enter dip values.\n"
+"Clicking and holding on a wire\n"
+"will show its current value."
+
+# ho.move
+#: uk/messages:2080
+msgid ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+msgstr ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+
+# ho.delgat
+#: uk/messages:2090
+msgid ""
+"Delete Component - Use this\n"
+"tool to delete components."
+msgstr ""
+"Delete Component - Use this\n"
+"tool to delete components."
+
+# ho.cutw
+#: uk/messages:2095
+msgid ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+msgstr ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+
+# ho.scroll
+#: uk/messages:2100
+msgid ""
+"Scroll - Grab and drag the\n"
+"editing canvas."
+msgstr ""
+"Scroll - Grab and drag the\n"
+"editing canvas."
+
+# ho.inv
+#: uk/messages:2105
+msgid ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+msgstr ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+
+# ho.bitw
+#: uk/messages:2111
+msgid ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+msgstr ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+
+# ho.ipanel.select
+#: uk/messages:2119
+msgid ""
+"Use \"standard\" modules\n"
+"for regular rectangular\n"
+"interfaces. Use \"symbol\"\n"
+"modules for custom\n"
+"bitmaped symbols."
+msgstr ""
+"Use \"standard\" modules\n"
+"for regular rectangular\n"
+"interfaces. Use \"symbol\"\n"
+"modules for custom\n"
+"bitmaped symbols."
+
+# ho.ipanel.addport
+#: uk/messages:2127
+msgid ""
+"Add a port to the module. You\n"
+"can also double-click after the\n"
+"last item to add port."
+msgstr ""
+"Add a port to the module. You\n"
+"can also double-click after the\n"
+"last item to add port."
+
+# ho.ipanel.deleteport
+#: uk/messages:2133
+msgid "Delete the selected port."
+msgstr "Delete the selected port."
+
+# ho.ipanel.editport
+#: uk/messages:2137
+msgid ""
+"Edit the selected port. You\n"
+"can also double-click to edit\n"
+"a field in a port."
+msgstr ""
+"Edit the selected port. You\n"
+"can also double-click to edit\n"
+"a field in a port."
+
+# ho.ipanel.generate
+#: uk/messages:2143
+msgid ""
+"Generate a new interface for a\n"
+"module based on ports in the\n"
+"port list and port elements used\n"
+"in the module definition."
+msgstr ""
+"Generate a new interface for a\n"
+"module based on ports in the\n"
+"port list and port elements used\n"
+"in the module definition."
+
+# ho.ipanel.updateall
+#: uk/messages:2150
+msgid ""
+"Replace the interface on all\n"
+"instances of this module with\n"
+"the canonical interface shown\n"
+"here."
+msgstr ""
+"Replace the interface on all\n"
+"instances of this module with\n"
+"the canonical interface shown\n"
+"here."
+
+# ho.ipanel.prot
+#: uk/messages:2158
+msgid ""
+"Do not allow the definition of\n"
+"a module to be modified."
+msgstr ""
+"Do not allow the definition of\n"
+"a module to be modified."
+
+# ho.ipanel.protint
+#: uk/messages:2163
+msgid ""
+"Do not allow the interface of\n"
+"a module to be modified."
+msgstr ""
+"Do not allow the interface of\n"
+"a module to be modified."
+
+# ho.ipanel.proted
+#: uk/messages:2168
+msgid ""
+"Do not allow the interface of a module to\n"
+"be modified except through the interface\n"
+"editor. Use this to prevent accidental\n"
+"modification of the interface in the\n"
+"main edit window."
+msgstr ""
+"Do not allow the interface of a module to\n"
+"be modified except through the interface\n"
+"editor. Use this to prevent accidental\n"
+"modification of the interface in the\n"
+"main edit window."
+
+# ho.ipanel.scale
+#: uk/messages:2176
+msgid ""
+"Scale the distance between ports\n"
+"as a module is resized."
+msgstr ""
+"Scale the distance between ports\n"
+"as a module is resized."
+
+# ho.ipanel.fix
+#: uk/messages:2181
+msgid ""
+"Keep the distance between ports\n"
+"fixed even if the module is resized."
+msgstr ""
+"Keep the distance between ports\n"
+"fixed even if the module is resized."
+
+# ho.mod.open
+#: uk/messages:2186
+msgid "Open the selected module."
+msgstr "Open the selected module."
+
+# ho.mod.close
+#: uk/messages:2187
+msgid "Close the current module."
+msgstr "Close the current module."
+
+# ho.mod.new
+#: uk/messages:2189
+msgid "Create a new module type."
+msgstr "Create a new module type."
+
+# ho.mod.del
+#: uk/messages:2190
+msgid "Delete a module."
+msgstr "Delete a module."
+
+# ho.mod.copy
+#: uk/messages:2191
+msgid "Copy a module."
+msgstr "Copy a module."
+
+# ho.mod.rename
+#: uk/messages:2192
+msgid "Rename a module."
+msgstr "Rename a module."
+
+# ho.mod.claim
+#: uk/messages:2193
+msgid ""
+"Convert a library module to\n"
+"a regular module."
+msgstr ""
+"Convert a library module to\n"
+"a regular module."
+
+# ho.mod.setroot
+#: uk/messages:2197
+msgid ""
+"Designate a module to\n"
+"be the root module."
+msgstr ""
+"Designate a module to\n"
+"be the root module."
+
+# ho.mod.type.allparts
+#: uk/messages:2202
+msgid "Set of Libraries"
+msgstr "Set of Libraries"
+
+# ho.mod.type.part
+#: uk/messages:2204
+msgid "Library module"
+msgstr "Library module"
+
+# ho.mod.type.unknown
+#: uk/messages:2205
+msgid "Unknown module type"
+msgstr "Unknown module type"
+
+# ho.mod.type.unused
+#: uk/messages:2206
+msgid "Set of unused modules"
+msgstr "Set of unused modules"
+
+# ho.mod.type.conflict
+#: uk/messages:2207
+msgid "Module recursion"
+msgstr "Module recursion"
+
+# ho.mod.type.root
+#: uk/messages:2208
+msgid "Top-level module"
+msgstr "Top-level module"
+
+# ho.mod.type.netlist
+#: uk/messages:2209
+msgid "Netlist module"
+msgstr "Netlist module"
+
+# ho.mod.type.Lnetlist
+#: uk/messages:2210
+msgid "Netlist module (locked)"
+msgstr "Netlist module (locked)"
+
+# ho.mod.type.hdl
+#: uk/messages:2211
+msgid "HDL module"
+msgstr "HDL module"
+
+# ho.mod.type.Lhdl
+#: uk/messages:2212
+msgid "HDL module (locked)"
+msgstr "HDL module (locked)"
+
+# ho.undo
+#: uk/messages:2214
+msgid "Undo previous action(s)"
+msgstr "Undo previous action(s)"
+
+# ho.redo
+#: uk/messages:2215
+msgid "Redo undone action(s)"
+msgstr "Redo undone action(s)"
+
+# ho.tab.edit
+#: uk/messages:2217
+msgid "Primary editing mode."
+msgstr "Primary editing mode."
+
+# ho.tab.interface
+#: uk/messages:2222
+msgid ""
+"Edit module interfaces. While in interface\n"
+"mode, double click on a module in the module\n"
+"list to edit its interface, or on the root\n"
+"module to display all interface."
+msgstr ""
+"Edit module interfaces. While in interface\n"
+"mode, double click on a module in the module\n"
+"list to edit its interface, or on the root\n"
+"module to display all interface."
+
+# ho.tab.simulate
+#: uk/messages:2230
+msgid ""
+"Start the simulator, open the logic analyzer\n"
+"and execute any initialization scripts if defined."
+msgstr ""
+"Start the simulator, open the logic analyzer\n"
+"and execute any initialization scripts if defined."
+
+# ho.tab.cpath
+#: uk/messages:2236
+msgid "Find critical paths in a circuit."
+msgstr "Find critical paths in a circuit."
+
+# ho.log
+#: uk/messages:2240
+msgid ""
+"Log of TkGate messages including\n"
+"error messages, information messages\n"
+"and simulator console output."
+msgstr ""
+"Log of TkGate messages including\n"
+"error messages, information messages\n"
+"and simulator console output."
+
+# ho.simgo
+#: uk/messages:2246
+msgid ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+msgstr ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+
+# ho.simpause
+#: uk/messages:2252
+msgid "Pause a continuously running simulation."
+msgstr "Pause a continuously running simulation."
+
+# ho.simstep
+#: uk/messages:2256
+msgid ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+
+# ho.simclock
+#: uk/messages:2262
+msgid ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+
+# ho.simstop
+#: uk/messages:2268
+msgid ""
+"End the current simulation\n"
+"and return to edit mode."
+msgstr ""
+"End the current simulation\n"
+"and return to edit mode."
+
+# ho.simbreak
+#: uk/messages:2273
+msgid ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+msgstr ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+
+# ho.simexec
+#: uk/messages:2280
+msgid "Manage the set of active scripts."
+msgstr "Manage the set of active scripts."
+
+# ho.simoptions
+#: uk/messages:2284
+msgid "Set various options that control the simulation."
+msgstr "Set various options that control the simulation."
+
+# ho.simload
+#: uk/messages:2288
+msgid ""
+"Load memory with contents of\n"
+"a .mem file."
+msgstr ""
+"Load memory with contents of\n"
+"a .mem file."
+
+# ho.simdump
+#: uk/messages:2293
+msgid ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+msgstr ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+
+# ho.simview
+#: uk/messages:2298
+msgid ""
+"View/modify the contents\n"
+"of a memory (RAM or ROM)."
+msgstr ""
+"View/modify the contents\n"
+"of a memory (RAM or ROM)."
+
+# ho.modlist
+#: uk/messages:2304
+msgid ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+
+# ho.modtree
+#: uk/messages:2310
+msgid ""
+"List of all modules currently in\n"
+"a hierarchical list. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"List of all modules currently in\n"
+"a hierarchical list. Drag modules to the\n"
+"edit window to create new instances."
+
+# ho.netlist
+#: uk/messages:2316
+msgid ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+msgstr ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+
+# ho.ports
+#: uk/messages:2326
+msgid ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+msgstr ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+
+# ho.status.logo
+#: uk/messages:2334
+msgid ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+msgstr ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+
+# ho.status.msg
+#: uk/messages:2343
+msgid "Messages from TkGate are displayed here."
+msgstr "Messages from TkGate are displayed here."
+
+# ho.status.block
+#: uk/messages:2345
+msgid "The stack of modules being edited."
+msgstr "The stack of modules being edited."
+
+# ho.status.file
+#: uk/messages:2347
+msgid ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+msgstr ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+
+# ho.print.selall
+#: uk/messages:2353
+msgid "Print all modules currently loaded by TkGate."
+msgstr "Print all modules currently loaded by TkGate."
+
+# ho.print.selcur
+#: uk/messages:2354
+msgid "Print only the current module in the TkGate edit window."
+msgstr "Print only the current module in the TkGate edit window."
+
+# ho.print.seluse
+#: uk/messages:2355
+msgid ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+msgstr ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+
+# ho.print.fulltrace
+#: uk/messages:2360
+msgid "Print the entire trace."
+msgstr "Print the entire trace."
+
+# ho.print.parttrace
+#: uk/messages:2362
+msgid ""
+"Print a portion of the trace. Enter the starting\n"
+"and stopping times in the entry windows below, or\n"
+"use the right mouse button to select a range on the\n"
+"scope window (use shift-right to select long ranges)."
+msgstr ""
+"Print a portion of the trace. Enter the starting\n"
+"and stopping times in the entry windows below, or\n"
+"use the right mouse button to select a range on the\n"
+"scope window (use shift-right to select long ranges)."
+
+# ho.print.parttracestart
+#: uk/messages:2369
+msgid "Starting time of trace output."
+msgstr "Starting time of trace output."
+
+# ho.print.parttraceend
+#: uk/messages:2370
+msgid "Ending time of trace output."
+msgstr "Ending time of trace output."
+
+# ho.print.selsel
+#: uk/messages:2373
+msgid ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+msgstr ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+
+# ho.print.modlist
+#: uk/messages:2378
+msgid "Select the modules to be printed."
+msgstr "Select the modules to be printed."
+
+# ho.print.timegraph
+#: uk/messages:2380
+msgid ""
+"The display of the region selected\n"
+"to be printed is shown here. The\n"
+"green area is the entire range of\n"
+"trace data available, and the grey\n"
+"area shows the area to be printed.\n"
+"Use the selectors to the left to\n"
+"select a region, or select the region\n"
+"in the scope window before bringing\n"
+"up this diaglog box."
+msgstr ""
+"The display of the region selected\n"
+"to be printed is shown here. The\n"
+"green area is the entire range of\n"
+"trace data available, and the grey\n"
+"area shows the area to be printed.\n"
+"Use the selectors to the left to\n"
+"select a region, or select the region\n"
+"in the scope window before bringing\n"
+"up this diaglog box."
+
+# ho.circuit.discchg
+#: uk/messages:2392
+msgid ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+msgstr ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+
+# ho.circuit.extbar
+#: uk/messages:2397
+msgid ""
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
+"many input gates."
+msgstr ""
+"Newly created basic gates (AND, OR,\n"
+"XOR) will use extender bars to handle\n"
+"many input gates."
+
+# ho.circuit.shownet
+#: uk/messages:2403
+msgid ""
+"Newly created switches and dips will\n"
+"initially show the net name next to\n"
+"them."
+msgstr ""
+"Newly created switches and dips will\n"
+"initially show the net name next to\n"
+"them."
+
+# ho.circuit.autostart
+#: uk/messages:2410
+msgid ""
+"If enabled, simulation will begin as\n"
+"soon as the simulation pane is selected."
+msgstr ""
+"If enabled, simulation will begin as\n"
+"soon as the simulation pane is selected."
+
+# ho.circuit.file
+#: uk/messages:2415
+msgid ""
+"This is the file name from which the current\n"
+"circuit was loaded."
+msgstr ""
+"This is the file name from which the current\n"
+"circuit was loaded."
+
+# ho.circuit.ver
+#: uk/messages:2420
+msgid ""
+"This is the version of TkGate that created\n"
+"the file that is currently loaded."
+msgstr ""
+"This is the version of TkGate that created\n"
+"the file that is currently loaded."
+
+# ho.circuit.encoding
+#: uk/messages:2425
+msgid "Use this encoding for save files."
+msgstr "Use this encoding for save files."
+
+# ho.circuit.language
+#: uk/messages:2429
+msgid ""
+"Use fonts for this encoding to display\n"
+"circuit data."
+msgstr ""
+"Use fonts for this encoding to display\n"
+"circuit data."
+
+# ho.circuit.title
+#: uk/messages:2434
+msgid ""
+"Description of your circuit. This title is\n"
+"used on printed output."
+msgstr ""
+"Description of your circuit. This title is\n"
+"used on printed output."
+
+# ho.cmd.bitw
+#: uk/messages:2439
+msgid ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+msgstr ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+
+# ho.edgat.signam
+#: uk/messages:2445
+msgid ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+msgstr ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+
+# ho.edgat.port
+#: uk/messages:2452
+msgid ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+msgstr ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+
+# ho.edgat.iolab
+#: uk/messages:2459
+msgid ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+msgstr ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+
+# ho.edgat.bitlab
+#: uk/messages:2466
+msgid ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+msgstr ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+
+# ho.edgat.cycle
+#: uk/messages:2473
+msgid "The total number of epochs in a clock cycle."
+msgstr "The total number of epochs in a clock cycle."
+
+# ho.edgat.phase
+#: uk/messages:2474
+msgid "The starting point of the cycle (in percent)."
+msgstr "The starting point of the cycle (in percent)."
+
+# ho.edgat.duty
+#: uk/messages:2475
+msgid "The percent of the cycle, the clock is low."
+msgstr "The percent of the cycle, the clock is low."
+
+# ho.edgat.hide
+#: uk/messages:2478
+msgid ""
+"Set this flag to disable\n"
+"display of component names."
+msgstr ""
+"Set this flag to disable\n"
+"display of component names."
+
+# ho.edgat.gtype
+#: uk/messages:2483
+msgid "Type of the component."
+msgstr "Type of the component."
+
+# ho.edgat.gname
+#: uk/messages:2484
+msgid "Name of this component instance."
+msgstr "Name of this component instance."
+
+# ho.edgat.ganchor
+#: uk/messages:2485
+msgid "Set this flag to anchor the position of a component."
+msgstr "Set this flag to anchor the position of a component."
+
+# ho.edgat.gx
+#: uk/messages:2486
+msgid "X coordinate of component."
+msgstr "X coordinate of component."
+
+# ho.edgat.gy
+#: uk/messages:2487
+msgid "Y coordinate of component."
+msgstr "Y coordinate of component."
+
+# ho.edgat.swstate
+#: uk/messages:2489
+msgid ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+msgstr ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+
+# ho.edgat.dipstate
+#: uk/messages:2494
+msgid ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+msgstr ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+
+# ho.edgat.range
+#: uk/messages:2499
+msgid "The range of bits to pull off a bus."
+msgstr "The range of bits to pull off a bus."
+
+# ho.edgat.memfile
+#: uk/messages:2501
+msgid ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+msgstr ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+
+# ho.edgat.func
+#: uk/messages:2506
+msgid "The function type of this module."
+msgstr "The function type of this module."
+
+# ho.edgat.frame
+#: uk/messages:2507
+msgid "The frame label."
+msgstr "The frame label."
+
+# ho.traceprint
+#: uk/messages:2509
+msgid ""
+"Print the logic trace range selected\n"
+"using the right mouse button. Shift-right\n"
+"click can be used to expand the selected\n"
+"region. The range visible in the scope\n"
+"view is used when there is no selection."
+msgstr ""
+"Print the logic trace range selected\n"
+"using the right mouse button. Shift-right\n"
+"click can be used to expand the selected\n"
+"region. The range visible in the scope\n"
+"view is used when there is no selection."
+
+# ho.showxhair
+#: uk/messages:2517
+msgid ""
+"If this button is depressed, a vertical crosshair\n"
+"line will be displayed in the scope window."
+msgstr ""
+"If this button is depressed, a vertical crosshair\n"
+"line will be displayed in the scope window."
+
+# ho.opt.general.fontset
+#: uk/messages:2522
+msgid ""
+"Specifies the basic font size to\n"
+"use in the TkGate interface. This\n"
+"option will not take effect until\n"
+"restarting TkGate."
+msgstr ""
+"Specifies the basic font size to\n"
+"use in the TkGate interface. This\n"
+"option will not take effect until\n"
+"restarting TkGate."
+
+# ho.opt.sec.send
+#: uk/messages:2529
+msgid ""
+"Enabling the $tkg$command() system task will allow\n"
+"user circuits to send arbitrary simulator control\n"
+"commands to the TkGate GUI. This includes the ability\n"
+"to execute arbitrary shell commands. If the simulator\n"
+"will be used to execute untrusted circuits, it is\n"
+"recommended that this task be disabled. Enabling this\n"
+"option has a very high security risk."
+msgstr ""
+"Enabling the $tkg$command() system task will allow\n"
+"user circuits to send arbitrary simulator control\n"
+"commands to the TkGate GUI. This includes the ability\n"
+"to execute arbitrary shell commands. If the simulator\n"
+"will be used to execute untrusted circuits, it is\n"
+"recommended that this task be disabled. Enabling this\n"
+"option has a very high security risk."
+
+# ho.opt.sec.open
+#: uk/messages:2539
+msgid ""
+"Enabling the $fopen() system task will allow user\n"
+"circuits to write to any file that the user invoking\n"
+"TkGate has access to. Enabling this option has a\n"
+"high security risk."
+msgstr ""
+"Enabling the $fopen() system task will allow user\n"
+"circuits to write to any file that the user invoking\n"
+"TkGate has access to. Enabling this option has a\n"
+"high security risk."
+
+# ho.opt.sec.writemem
+#: uk/messages:2546
+msgid ""
+"Enabling the $writememb() and $writememh() system tasks\n"
+"will allow user circuits to write to any file that the\n"
+"user invoking TkGate has access to. Enabling this option\n"
+"has a high security risk."
+msgstr ""
+"Enabling the $writememb() and $writememh() system tasks\n"
+"will allow user circuits to write to any file that the\n"
+"user invoking TkGate has access to. Enabling this option\n"
+"has a high security risk."
+
+# ho.opt.sec.enqueue
+#: uk/messages:2553
+msgid ""
+"Enabling the $tkg$recv() and $tkg$send() system tasks\n"
+"will enable virtual peripheral devices to send messages\n"
+"to TkGate circuits. Enabling this option has a low\n"
+"security risk."
+msgstr ""
+"Enabling the $tkg$recv() and $tkg$send() system tasks\n"
+"will enable virtual peripheral devices to send messages\n"
+"to TkGate circuits. Enabling this option has a low\n"
+"security risk."
+
+# ho.opt.ssave
+#: uk/messages:2560
+msgid ""
+"Perform consistency checks on circuit\n"
+"files before overwriting existing save\n"
+"file to verify that there are no problems\n"
+"with the save file."
+msgstr ""
+"Perform consistency checks on circuit\n"
+"files before overwriting existing save\n"
+"file to verify that there are no problems\n"
+"with the save file."
+
+# ho.opt.sec.exec
+#: uk/messages:2567
+msgid ""
+"Fully enabling the $tkg$exec() system task allows user\n"
+"circuit to execute arbitrary tcl/tk commands including\n"
+"the ability to execute arbitrary shell commands. Enabling\n"
+"this option has a very high security risk."
+msgstr ""
+"Fully enabling the $tkg$exec() system task allows user\n"
+"circuit to execute arbitrary tcl/tk commands including\n"
+"the ability to execute arbitrary shell commands. Enabling\n"
+"this option has a very high security risk."
+
+# ho.opt.sec.regexec
+#: uk/messages:2574
+msgid ""
+"Enabling the $tkg$exec() system task for registered functions\n"
+"allows user circuits to execute only tcl/tk commands that have\n"
+"been registered as safe. As long as all Virtual Peripheral\n"
+"Device files are trusted, enabling $tkg$exec() at this level\n"
+"should prevent dangerous commands from being executed. Enabling\n"
+"this option has a medium security risk."
+msgstr ""
+"Enabling the $tkg$exec() system task for registered functions\n"
+"allows user circuits to execute only tcl/tk commands that have\n"
+"been registered as safe. As long as all Virtual Peripheral\n"
+"Device files are trusted, enabling $tkg$exec() at this level\n"
+"should prevent dangerous commands from being executed. Enabling\n"
+"this option has a medium security risk."
+
+# ho.opt.sec.noexec
+#: uk/messages:2583
+msgid ""
+"Fully disabling the $tkg$exec() command will prevent user\n"
+"circuits from executing tcl/tk commands. This will make it\n"
+"impossible to use Virtual Peripheral Devices. Selecting this\n"
+"option has a minimal security risk."
+msgstr ""
+"Fully disabling the $tkg$exec() command will prevent user\n"
+"circuits from executing tcl/tk commands. This will make it\n"
+"impossible to use Virtual Peripheral Devices. Selecting this\n"
+"option has a minimal security risk."
+
+# ho.opt.sec.stop
+#: uk/messages:2590
+msgid ""
+"If this setting is enabled, the simulation will be terminated\n"
+"as soon as any attempt is made by the user circuit to execute\n"
+"a disabled feature."
+msgstr ""
+"If this setting is enabled, the simulation will be terminated\n"
+"as soon as any attempt is made by the user circuit to execute\n"
+"a disabled feature."
+
+# ho.opt.sec.warn
+#: uk/messages:2596
+msgid ""
+"If this setting is enabled, the simulation will continue, but\n"
+"an error message will be displayed when any attempt is made by\n"
+"the user circuit to execute a disabled feature."
+msgstr ""
+"If this setting is enabled, the simulation will continue, but\n"
+"an error message will be displayed when any attempt is made by\n"
+"the user circuit to execute a disabled feature."
+
+# ho.opt.sec.ignore
+#: uk/messages:2602
+msgid ""
+"If this setting is enabled, use of any disabled features will\n"
+"be ignored and no error messages will be displayed."
+msgstr ""
+"If this setting is enabled, use of any disabled features will\n"
+"be ignored and no error messages will be displayed."
+
+# ho.opt.html.browser
+#: uk/messages:2607
+msgid ""
+"Command to be execute when the user clicks on a link to\n"
+"an html file. A \"%s\" in the command will be replaced\n"
+"with the link URL."
+msgstr ""
+"Command to be execute when the user clicks on a link to\n"
+"an html file. A \"%s\" in the command will be replaced\n"
+"with the link URL."
+
+# ho.opt.html.email
+#: uk/messages:2613
+msgid ""
+"Command to be execute when the user clicks on a link to\n"
+"send an e-mail message. A \"%s\" in the command will be\n"
+"replaced with the link URL."
+msgstr ""
+"Command to be execute when the user clicks on a link to\n"
+"send an e-mail message. A \"%s\" in the command will be\n"
+"replaced with the link URL."
+
+# ho.opt.fsave
+#: uk/messages:2619
+msgid ""
+"Save TkGate internal cells with circuit\n"
+"data. This will increase save file size\n"
+"by about 20% for a typical circuit, but\n"
+"will result in save files that can be\n"
+"exported to third party tools."
+msgstr ""
+"Save TkGate internal cells with circuit\n"
+"data. This will increase save file size\n"
+"by about 20% for a typical circuit, but\n"
+"will result in save files that can be\n"
+"exported to third party tools."
+
+# ho.opt.sorttraces
+#: uk/messages:2627
+msgid ""
+"If this option is enabled, traces on the\n"
+"scope window will be displayed in sorted\n"
+"order. If this option is disabled, traces\n"
+"on the scope window will be displayed in\n"
+"the order in which the probes were set."
+msgstr ""
+"If this option is enabled, traces on the\n"
+"scope window will be displayed in sorted\n"
+"order. If this option is disabled, traces\n"
+"on the scope window will be displayed in\n"
+"the order in which the probes were set."
+
+# ho.opt.sim.noglitch
+#: uk/messages:2635
+msgid ""
+"If this option is enabled, rapidly changing\n"
+"inputs to a component will cause the component to\n"
+"output unknown rather simply the time shifted\n"
+"input signal. This can eliminate spurious\n"
+"events and prevent oscillations in gate-level\n"
+"sequential circuits."
+msgstr ""
+"If this option is enabled, rapidly changing\n"
+"inputs to a component will cause the component to\n"
+"output unknown rather simply the time shifted\n"
+"input signal. This can eliminate spurious\n"
+"events and prevent oscillations in gate-level\n"
+"sequential circuits."
+
+# ho.opt.sim.savetraces
+#: uk/messages:2644
+msgid ""
+"Probes placed during a simulation run will\n"
+"be remembered and replaced when restarting\n"
+"the simulation of the same circuit."
+msgstr ""
+"Probes placed during a simulation run will\n"
+"be remembered and replaced when restarting\n"
+"the simulation of the same circuit."
+
+# ho.opt.sim.tech
+#: uk/messages:2651
+msgid ""
+"List of files to load as potential \"technology\"\n"
+"files. Technology files specify delay and area\n"
+"estimates for built-in components."
+msgstr ""
+"List of files to load as potential \"technology\"\n"
+"files. Technology files specify delay and area\n"
+"estimates for built-in components."
+
+# ho.opt.sim.err
+#: uk/messages:2657
+msgid ""
+"Select how warnings from the simulator\n"
+"should be handled."
+msgstr ""
+"Select how warnings from the simulator\n"
+"should be handled."
+
+# ho.opt.sim.err.stopany
+#: uk/messages:2662
+msgid ""
+"Do not simulate the circuit if there are any\n"
+"warnings in the circuit, even if there are no\n"
+"actual errors."
+msgstr ""
+"Do not simulate the circuit if there are any\n"
+"warnings in the circuit, even if there are no\n"
+"actual errors."
+
+# ho.opt.sim.err.showall
+#: uk/messages:2668
+msgid ""
+"Always show warnings in the circuit, even if\n"
+"there are no errors. If there are only warnings,\n"
+"the simualtor will be started and the list of\n"
+"warnings will be displayed in a separate window."
+msgstr ""
+"Always show warnings in the circuit, even if\n"
+"there are no errors. If there are only warnings,\n"
+"the simualtor will be started and the list of\n"
+"warnings will be displayed in a separate window."
+
+# ho.opt.sim.err.showiferr
+#: uk/messages:2675
+msgid ""
+"Show warnings only if there are also errors\n"
+"in the circuit. If a circuit contains only\n"
+"warnings, they will be ignored and the simulator\n"
+"will be started."
+msgstr ""
+"Show warnings only if there are also errors\n"
+"in the circuit. If a circuit contains only\n"
+"warnings, they will be ignored and the simulator\n"
+"will be started."
+
+# ho.opt.sim.err.ignore
+#: uk/messages:2682
+msgid ""
+"Never display warning messages, even if there\n"
+"are errors in the circuit."
+msgstr ""
+"Never display warning messages, even if there\n"
+"are errors in the circuit."
+
+# ho.opt.lib.vpath
+#: uk/messages:2687
+msgid ""
+"List of directories to search for TkGate library\n"
+"files. Library files should have a .v extention\n"
+"and contain modules useful for use in user circuits."
+msgstr ""
+"List of directories to search for TkGate library\n"
+"files. Library files should have a .v extention\n"
+"and contain modules useful for use in user circuits."
+
+# ho.opt.lib.vlib
+#: uk/messages:2693
+msgid ""
+"List of libraries that should automatically be loaded\n"
+"when TkGate starts."
+msgstr ""
+"List of libraries that should automatically be loaded\n"
+"when TkGate starts."
+
+# ho.opt.lib.vpd
+#: uk/messages:2698
+msgid ""
+"List of directories to search for virtual peripheral\n"
+"devices. Virtual peripheral devices have a .tcl\n"
+"extension and typically implement a GUI representing\n"
+"a peripheral device that can be controlled by a user\n"
+"circuit."
+msgstr ""
+"List of directories to search for virtual peripheral\n"
+"devices. Virtual peripheral devices have a .tcl\n"
+"extension and typically implement a GUI representing\n"
+"a peripheral device that can be controlled by a user\n"
+"circuit."
+
+# ho.opt.undolen
+#: uk/messages:2706
+msgid "Maximum number of undo actions to retain."
+msgstr "Maximum number of undo actions to retain."
+
+# ho.opt.name
+#: uk/messages:2710
+msgid ""
+"User name to be used on TkGate generated\n"
+"reports such as circuit printouts."
+msgstr ""
+"User name to be used on TkGate generated\n"
+"reports such as circuit printouts."
+
+# ho.opt.site
+#: uk/messages:2715
+msgid ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+msgstr ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+
+# ho.opt.smooth
+#: uk/messages:2721
+msgid ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+msgstr ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+
+# ho.opt.clip
+#: uk/messages:2728
+msgid ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+msgstr ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+
+# ho.opt.showimage
+#: uk/messages:2737
+msgid ""
+"Unset this option to suppress display of\n"
+"the image and explanitory text at the\n"
+"edge of dialog boxes."
+msgstr ""
+"Unset this option to suppress display of\n"
+"the image and explanitory text at the\n"
+"edge of dialog boxes."
+
+# ho.opt.outmove
+#: uk/messages:2744
+msgid ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+msgstr ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+
+# ho.opt.bhelp
+#: uk/messages:2751
+msgid ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+msgstr ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+
+# ho.opt.tearawaymenus
+#: uk/messages:2758
+msgid ""
+"If enabled, the main menues will be detachable\n"
+"from the interface. This option will take effect\n"
+"next time you restart TkGate."
+msgstr ""
+"If enabled, the main menues will be detachable\n"
+"from the interface. This option will take effect\n"
+"next time you restart TkGate."
+
+# ho.opt.novice
+#: uk/messages:2764
+msgid ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+msgstr ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+
+# ho.opt.blockDropConnect
+#: uk/messages:2770
+msgid ""
+"Allow ports on module interfaces to be created\n"
+"by dropping free wires near an edge."
+msgstr ""
+"Allow ports on module interfaces to be created\n"
+"by dropping free wires near an edge."
+
+# ho.opt.debug
+#: uk/messages:2775
+msgid ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+msgstr ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+
+# ho.opt.ckpt
+#: uk/messages:2780
+msgid "Enable checkpointing of unsaved circuits."
+msgstr "Enable checkpointing of unsaved circuits."
+
+# ho.opt.ckptfreq
+#: uk/messages:2781
+msgid "Frequency of checkpoints in seconds."
+msgstr "Frequency of checkpoints in seconds."
+
+# ho.opt.beak
+#: uk/messages:2783
+msgid ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+msgstr ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+
+# ho.opt.miles
+#: uk/messages:2792
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+msgstr ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+
+# ho.opt.bat
+#: uk/messages:2798
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+msgstr ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+
+# ho.opt.trek
+#: uk/messages:2804
+msgid "Beam me up Scotty!"
+msgstr "Beam me up Scotty!"
+
+# ho.opt.simstep
+#: uk/messages:2806
+msgid ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+msgstr ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+
+# ho.opt.ckstep
+#: uk/messages:2811
+msgid ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+msgstr ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+
+# ho.opt.ckover
+#: uk/messages:2816
+msgid ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+msgstr ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+
+# ho.opt.vpopupdelay
+#: uk/messages:2822
+msgid ""
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
+"1 and 10000 are allowed."
+msgstr ""
+"The delay in milliseconds between pressing\n"
+"and holding the mouse button and the display\n"
+"of a signal value. On some systems, short\n"
+"delay values interfere with the ability to\n"
+"recognize a double click. If you have this\n"
+"problem, increase this value. Values between\n"
+"1 and 10000 are allowed."
+
+# ho.opt.init
+#: uk/messages:2832
+msgid ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+msgstr ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+
+# ho.opt.ckall
+#: uk/messages:2840
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+msgstr ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+
+# ho.opt.ckspec
+#: uk/messages:2846
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+msgstr ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+
+# ho.opt.keybind
+#: uk/messages:2854
+msgid ""
+"Specifies the basic style for key\n"
+"bindings. If you change this\n"
+"option, bindings will be updated\n"
+"immediately, but you will need to\n"
+"restart TkGate to see any user\n"
+"defined keybindings."
+msgstr ""
+"Specifies the basic style for key\n"
+"bindings. If you change this\n"
+"option, bindings will be updated\n"
+"immediately, but you will need to\n"
+"restart TkGate to see any user\n"
+"defined keybindings."
+
+# ho.deftech
+#: uk/messages:2863
+msgid ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+msgstr ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+
+# ho.techbut
+#: uk/messages:2871
+msgid ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+msgstr ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+
+# ho.custbut
+#: uk/messages:2879
+msgid "Set custom delay values for this component."
+msgstr "Set custom delay values for this component."
+
+# ho.contver
+#: uk/messages:2883
+msgid ""
+"Continuously verify the integrity of internal\n"
+"data structures after every operation."
+msgstr ""
+"Continuously verify the integrity of internal\n"
+"data structures after every operation."
+
+# ho.simwatch
+#: uk/messages:2888
+msgid ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+msgstr ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+
+# ho.symed.point
+#: uk/messages:2893
+msgid ""
+"Pixel edit mode. Use the left\n"
+"mouse button to set pixels and\n"
+"the right button to clear them."
+msgstr ""
+"Pixel edit mode. Use the left\n"
+"mouse button to set pixels and\n"
+"the right button to clear them."
+
+# ho.symed.line
+#: uk/messages:2899
+msgid ""
+"Line mode. Use the left\n"
+"mouse button to set pixels and\n"
+"the right button to clear them."
+msgstr ""
+"Line mode. Use the left\n"
+"mouse button to set pixels and\n"
+"the right button to clear them."
+
+# ho.symed.rect
+#: uk/messages:2905
+msgid ""
+"Rectangle mode. Use the left\n"
+"mouse button to set pixels and\n"
+"the right button to clear them."
+msgstr ""
+"Rectangle mode. Use the left\n"
+"mouse button to set pixels and\n"
+"the right button to clear them."
+
+# ho.symed.fillrect
+#: uk/messages:2911
+msgid ""
+"Filled rectangle mode. Use the\n"
+"left mouse button to set pixels\n"
+"and the right button to clear them."
+msgstr ""
+"Filled rectangle mode. Use the\n"
+"left mouse button to set pixels\n"
+"and the right button to clear them."
+
+# ho.symed.select
+#: uk/messages:2917
+msgid ""
+"Bitmap select mode. Use the left\n"
+"mouse buttons to select regions of\n"
+"the bitmap and do cut and paste\n"
+"operations on the selection."
+msgstr ""
+"Bitmap select mode. Use the left\n"
+"mouse buttons to select regions of\n"
+"the bitmap and do cut and paste\n"
+"operations on the selection."
+
+# ho.symed.port
+#: uk/messages:2924
+msgid ""
+"Port select mode. Select ports and\n"
+"move them or rotate them."
+msgstr ""
+"Port select mode. Select ports and\n"
+"move them or rotate them."
+
+# ho.symed.rshift
+#: uk/messages:2929
+msgid "Shift selected pixels right."
+msgstr "Shift selected pixels right."
+
+# ho.symed.lshift
+#: uk/messages:2930
+msgid "Shift selected pixels left."
+msgstr "Shift selected pixels left."
+
+# ho.symed.ushift
+#: uk/messages:2931
+msgid "Shift selected pixels up."
+msgstr "Shift selected pixels up."
+
+# ho.symed.dshift
+#: uk/messages:2932
+msgid "Shift selected pixels down."
+msgstr "Shift selected pixels down."
+
+# ho.symed.cwrotate
+#: uk/messages:2933
+msgid "Rotate selected pixels clockwise."
+msgstr "Rotate selected pixels clockwise."
+
+# ho.symed.ccwrotate
+#: uk/messages:2934
+msgid "Rotate selected pixels counter-clockwise."
+msgstr "Rotate selected pixels counter-clockwise."
+
+# ho.symed.autobold
+#: uk/messages:2935
+msgid "Make selected image bold."
+msgstr "Make selected image bold."
+
+# ho.symed.resize
+#: uk/messages:2936
+msgid "Resize the image editor."
+msgstr "Resize the image editor."
+
+# ho.symed.import
+#: uk/messages:2937
+msgid "Import image from file."
+msgstr "Import image from file."
+
+# ho.symed.export
+#: uk/messages:2938
+msgid "Export image to file."
+msgstr "Export image to file."
+
+# ho.tool.currot
+#: uk/messages:2940
+msgid ""
+"Displays the current default\n"
+"rotation. Click on this\n"
+"button to change the current\n"
+"default rotation."
+msgstr ""
+"Displays the current default\n"
+"rotation. Click on this\n"
+"button to change the current\n"
+"default rotation."
+
+# ho.tool.zoomin
+#: uk/messages:2947
+msgid "Zoom in"
+msgstr "Zoom in"
+
+# ho.tool.zoomout
+#: uk/messages:2948
+msgid "Zoom out"
+msgstr "Zoom out"
+
+# ho.tool.rotate
+#: uk/messages:2949
+msgid "Rotate selected component(s) counter-clockwise."
+msgstr "Rotate selected component(s) counter-clockwise."
+
+# ho.tool.brotate
+#: uk/messages:2950
+msgid "Rotate selected component(s) clockwise."
+msgstr "Rotate selected component(s) clockwise."
+
+# ho.tool.valgn
+#: uk/messages:2951
+msgid "Align selected component(s) vertically."
+msgstr "Align selected component(s) vertically."
+
+# ho.tool.halgn
+#: uk/messages:2952
+msgid "Align selected component(s) horizontally."
+msgstr "Align selected component(s) horizontally."
+
+# ho.tool.cut
+#: uk/messages:2954
+msgid "Cut selection."
+msgstr "Cut selection."
+
+# ho.tool.copy
+#: uk/messages:2955
+msgid "Copy selection."
+msgstr "Copy selection."
+
+# ho.tool.paste
+#: uk/messages:2956
+msgid "Paste from cut buffer."
+msgstr "Paste from cut buffer."
+
+# ho.tool.find
+#: uk/messages:2957
+msgid "Find component, wire or text."
+msgstr "Find component, wire or text."
+
+# ho.tool.addport
+#: uk/messages:2959
+msgid "Add a port to the selected component."
+msgstr "Add a port to the selected component."
+
+# ho.tool.anchor
+#: uk/messages:2960
+msgid "Anchor the selected component(s)."
+msgstr "Anchor the selected component(s)."
+
+# ho.tool.unanchor
+#: uk/messages:2961
+msgid "Unanchor the selected component(s)."
+msgstr "Unanchor the selected component(s)."
+
+# ho.tool.replicate
+#: uk/messages:2962
+msgid "Replicate a component."
+msgstr "Replicate a component."
+
+# ho.tool.delete
+#: uk/messages:2963
+msgid "Delete the selection."
+msgstr "Delete the selection."

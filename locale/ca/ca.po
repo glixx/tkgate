@@ -1,0 +1,2380 @@
+# This file is part of TkGate project
+# Copyright (C) 1987-2015 by Jeffery P. Hansen
+# This file is distributed under the same license as the TkGate package.
+#
+# Translators:
+# Andrey V. Skvotsov <starling13@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: TkGate 2.0\n"
+"Report-Msgid-Bugs-To: starling13@gmail.com\n"
+"POT-Creation-Date: 2018-11-28 16:10+0300\n"
+"PO-Revision-Date: 2018-11-28 16:10+0300\n"
+"Last-Translator: Andrey Skvortsov <starling13@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tkgatemsg2po script\n"
+
+# b.dismiss
+#: ca/messages:30
+msgid "Dismiss"
+msgstr "Tornar"
+
+# b.close
+#: ca/messages:31
+msgid "Close"
+msgstr "Tancar"
+
+# b.ok
+#: ca/messages:32
+msgid "OK"
+msgstr "OK"
+
+# b.clear
+#: ca/messages:33
+msgid "Clear"
+msgstr "Esborrar"
+
+# b.cancel
+#: ca/messages:34
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+# b.in
+# db.net.in
+#: ca/messages:37 ca/messages:240
+msgid "in"
+msgstr "entrada"
+
+# b.out
+# db.net.out
+#: ca/messages:38 ca/messages:241
+msgid "out"
+msgstr "sortida"
+
+# b.inout
+# db.net.inout
+#: ca/messages:39 ca/messages:242
+msgid "inout"
+msgstr "bidireccional"
+
+# b.browse
+#: ca/messages:40
+msgid "Browse..."
+msgstr "Visualitzar..."
+
+# b.label
+#: ca/messages:41
+msgid "Label"
+msgstr "Etiqueta"
+
+# b.find
+#: ca/messages:42
+msgid "Find"
+msgstr "Cercar"
+
+# b.edit
+#: ca/messages:43
+msgid "Edit..."
+msgstr "Editar..."
+
+# b.add
+#: ca/messages:44
+msgid "Add..."
+msgstr "Afegir..."
+
+# b.delete
+#: ca/messages:45
+msgid "Delete"
+msgstr "Esborrar"
+
+# b.apply
+#: ca/messages:47
+msgid "Apply"
+msgstr "Aplicar"
+
+# b.anchor
+# db.gate.anchor
+#: ca/messages:48 ca/messages:260
+msgid "Anchor"
+msgstr "Anclar"
+
+# b.tech
+#: ca/messages:49
+msgid "Technology"
+msgstr "Tecnologia"
+
+# menu.file
+#: ca/messages:54
+msgid "0:File"
+msgstr "0:Fitxer"
+
+# menu.edit
+#: ca/messages:55
+msgid "0:Edit"
+msgstr "0:Editar"
+
+# menu.tool
+#: ca/messages:56
+msgid "0:Tool"
+msgstr "0:Eines"
+
+# menu.simulate
+#: ca/messages:57
+msgid "0:Simulate"
+msgstr "0:Simular"
+
+# menu.module
+#: ca/messages:58
+msgid "0:Module"
+msgstr "0:Mòdul"
+
+# menu.make
+#: ca/messages:60
+msgid "0:Components"
+msgstr "0:Inserir"
+
+# menu.file.new
+# menu.module.new
+#: ca/messages:63 ca/messages:108
+msgid "0:New..."
+msgstr "0:Nou..."
+
+# menu.file.open
+#: ca/messages:64
+msgid "0:Open..."
+msgstr "0:Obrir..."
+
+# menu.file.openlib
+#: ca/messages:65
+msgid "0:Library Manager..."
+msgstr "0:Obrir llibreria..."
+
+# menu.file.save
+#: ca/messages:66
+msgid "0:Save"
+msgstr "0:Guardar"
+
+# menu.file.saveas
+#: ca/messages:67
+msgid "5:Save As..."
+msgstr "5:Guardar com..."
+
+# menu.file.print
+#: ca/messages:68
+msgid "0:Print..."
+msgstr "0:Imprimir..."
+
+# menu.file.quit
+#: ca/messages:70
+msgid "0:Quit"
+msgstr "0:Sortir"
+
+# menu.edit.cut
+#: ca/messages:72
+msgid "0:Cut"
+msgstr "Tallar"
+
+# menu.edit.copy
+#: ca/messages:73
+msgid "3:Copy"
+msgstr "3:Copiar"
+
+# menu.edit.paste
+#: ca/messages:74
+msgid "0:Paste"
+msgstr "0:Enganxar"
+
+# menu.edit.selall
+#: ca/messages:75
+msgid "0:Select All"
+msgstr "0:Seleccionar tot"
+
+# menu.edit.find
+#: ca/messages:76
+msgid "0:Find..."
+msgstr "0:Cercar..."
+
+# menu.format.algnv
+#: ca/messages:77
+msgid "6:Align Ver."
+msgstr "6:Situar en columna"
+
+# menu.format.algnh
+#: ca/messages:78
+msgid "6:Align Horz."
+msgstr "6:Situar en fila"
+
+# menu.edit.zoomin
+# menu.scope_trace.zoomin
+#: ca/messages:79 ca/messages:221
+msgid "5:Zoom In"
+msgstr "5:Apropar"
+
+# menu.edit.zoomout
+# menu.scope_trace.zoomout
+#: ca/messages:80 ca/messages:222
+msgid "5:Zoom Out"
+msgstr "5:Allunyar"
+
+# menu.tool.move
+#: ca/messages:82
+msgid "0:Move/Connect"
+msgstr "0:Moure/Connectar"
+
+# menu.tool.delg
+#: ca/messages:83
+msgid "0:Delete Component"
+msgstr "0:Esborrar porta"
+
+# menu.tool.cutw
+#: ca/messages:84
+msgid "0:Cut Wire"
+msgstr "0:Tallar cable"
+
+# menu.tool.inv
+#: ca/messages:85
+msgid "0:Invert"
+msgstr "Invertir"
+
+# menu.tool.bitw
+#: ca/messages:86
+msgid "0:Bit Width"
+msgstr "0:Amplada del bus"
+
+# menu.tool.debug
+#: ca/messages:87
+msgid "0:Debug"
+msgstr "0:Depurar"
+
+# menu.simulate.begin
+#: ca/messages:93
+msgid "0:Begin Simulation"
+msgstr "0:Començar simulació"
+
+# menu.simulate.end
+#: ca/messages:94
+msgid "0:End Simulation"
+msgstr "0:Acabar simulació"
+
+# menu.simulate.run
+#: ca/messages:95
+msgid "0:Run"
+msgstr "0:Mode continu"
+
+# menu.simulate.pause
+#: ca/messages:96
+msgid "0:Pause"
+msgstr "0:Pausa"
+
+# menu.simulate.step
+#: ca/messages:97
+msgid "0:Step Epoch(s)"
+msgstr "0:Pas a pas (temps)"
+
+# menu.simulate.cycle
+#: ca/messages:98
+msgid "5:Step Cycle"
+msgstr "5:Pas a pas (nº cicles)"
+
+# menu.simulate.break
+#: ca/messages:99
+msgid "0:Breakpoint..."
+msgstr "0:Punt de ruptura..."
+
+# menu.simulate.script
+#: ca/messages:100
+msgid "1:Exec. Script..."
+msgstr "1:Executar Guió..."
+
+# menu.simulate.load
+#: ca/messages:101
+msgid "1:Load Memory..."
+msgstr "1:Fitxer -> Memoria..."
+
+# menu.simulate.dump
+#: ca/messages:102
+msgid "1:Dump Memory..."
+msgstr "1:Memòria -> Fitxer..."
+
+# menu.module.open
+#: ca/messages:104
+msgid "0:Open"
+msgstr "0:Obrir"
+
+# menu.module.close
+# menu.scope_file.close
+#: ca/messages:105 ca/messages:219
+msgid "0:Close"
+msgstr "0:Tancar"
+
+# menu.module.del
+#: ca/messages:109
+msgid "0:Delete..."
+msgstr "0:Esborra..."
+
+# menu.module.copy
+#: ca/messages:110
+msgid "1:Copy..."
+msgstr "1:Copia..."
+
+# menu.module.rename
+#: ca/messages:111
+msgid "0:Rename..."
+msgstr "0:Canvia el nom..."
+
+# menu.module.claim
+#: ca/messages:112
+msgid "1:Claim..."
+msgstr "1:Mòdul llibreria -> Mòdul usuari..."
+
+# gm.io
+#: ca/messages:127
+msgid "I/O"
+msgstr "Entrada/Sortida"
+
+# gm.gate
+#: ca/messages:128
+msgid "Gate"
+msgstr "Porta"
+
+# gm.rgate
+#: ca/messages:129
+msgid "Reduction"
+msgstr "Reducció"
+
+# gm.msi
+#: ca/messages:130
+msgid "MSI"
+msgstr "MSI"
+
+# gm.alu
+#: ca/messages:131
+msgid "ALU"
+msgstr "ALU"
+
+# gm.mem
+#: ca/messages:132
+msgid "Memory"
+msgstr "Memòria"
+
+# gm.mod
+# imodule
+#: ca/messages:133 ca/messages:228
+msgid "Module"
+msgstr "Mòdul"
+
+# gm.comment
+#: ca/messages:134
+msgid "Comment"
+msgstr "Comentari"
+
+# gm.frame
+#: ca/messages:135
+msgid "Frame"
+msgstr "Marc"
+
+# gm.io.switch
+#: ca/messages:137
+msgid "Switch"
+msgstr "Commutador"
+
+# gm.io.dip
+#: ca/messages:138
+msgid "DIP Switch"
+msgstr "Interruptors DIP"
+
+# gm.io.merge
+#: ca/messages:141
+msgid "Concat"
+msgstr "Línies <-> Bus"
+
+# gm.io.clock
+#: ca/messages:142
+msgid "Clock"
+msgstr "Senyal de rellotge"
+
+# gm.io.led
+#: ca/messages:144
+msgid "LED"
+msgstr "LED"
+
+# gm.io.ledbar
+#: ca/messages:145
+msgid "LED Bar"
+msgstr "Barra de LEDs"
+
+# gm.io.ledhex
+#: ca/messages:146
+msgid "7-Seg. LED (HEX)"
+msgstr "7-Seg. LED (HEXADECIMAL)"
+
+# gm.io.leddec
+#: ca/messages:147
+msgid "7-Seg. LED (DEC)"
+msgstr "7-Seg. LED (DECIMAL)"
+
+# gm.io.ledseg
+#: ca/messages:148
+msgid "7-Seg. LED (Direct)"
+msgstr "7-Seg. LED (Directe)"
+
+# gm.io.tty
+#: ca/messages:150
+msgid "TTY"
+msgstr "TTY (Terminal)"
+
+# gm.gate.and
+# gm.rgate.and
+#: ca/messages:152 ca/messages:164
+msgid "AND"
+msgstr "AND"
+
+# gm.gate.nand
+# gm.rgate.nand
+#: ca/messages:153 ca/messages:165
+msgid "NAND"
+msgstr "NAND"
+
+# gm.gate.or
+# gm.rgate.or
+#: ca/messages:154 ca/messages:166
+msgid "OR"
+msgstr "OR"
+
+# gm.gate.nor
+# gm.rgate.nor
+#: ca/messages:155 ca/messages:167
+msgid "NOR"
+msgstr "NOR"
+
+# gm.gate.xor
+# gm.rgate.xor
+#: ca/messages:156 ca/messages:168
+msgid "XOR"
+msgstr "XOR"
+
+# gm.gate.xnor
+# gm.rgate.xnor
+#: ca/messages:157 ca/messages:169
+msgid "XNOR"
+msgstr "XNOR"
+
+# gm.gate.buf
+#: ca/messages:158
+msgid "Buffer"
+msgstr "Buffer"
+
+# gm.gate.inv
+#: ca/messages:159
+msgid "Inverter"
+msgstr "Inversor"
+
+# gm.gate.tribuf
+#: ca/messages:160
+msgid "Tri-Buffer"
+msgstr "Buffer-Triestat"
+
+# gm.gate.nmos
+#: ca/messages:161
+msgid "NMOS"
+msgstr "NMOS"
+
+# gm.gate.pmos
+#: ca/messages:162
+msgid "PMOS"
+msgstr "PMOS"
+
+# gm.alu.add
+#: ca/messages:171
+msgid "Adder"
+msgstr "Sumador"
+
+# gm.alu.mult
+#: ca/messages:172
+msgid "Multiplier"
+msgstr "Multiplicador"
+
+# gm.alu.div
+#: ca/messages:173
+msgid "Divider"
+msgstr "Divisor"
+
+# gm.alu.lshift
+#: ca/messages:174
+msgid "Left Shift"
+msgstr "Despl. Esquerra"
+
+# gm.alu.rshift
+#: ca/messages:175
+msgid "Right Shift"
+msgstr "Despl. Dreta"
+
+# gm.alu.arshift
+#: ca/messages:176
+msgid "Arith. Right Shift"
+msgstr "Despl. Arit. Dreta"
+
+# gm.mem.reg
+#: ca/messages:179
+msgid "Register"
+msgstr "Registre"
+
+# gm.mem.ff
+#: ca/messages:180
+msgid "D Flip-Flop"
+msgstr "Biestable D"
+
+# gm.mem.ram
+#: ca/messages:181
+msgid "RAM"
+msgstr "RAM"
+
+# gm.mem.rom
+#: ca/messages:182
+msgid "ROM"
+msgstr "ROM"
+
+# gm.msi.21mux
+#: ca/messages:184
+msgid "2-1 Multiplexor"
+msgstr "2-1 Multiplexor"
+
+# gm.msi.41mux
+#: ca/messages:185
+msgid "4-1 Multiplexor"
+msgstr "4-1 Multiplexor"
+
+# gm.msi.81mux
+#: ca/messages:186
+msgid "8-1 Multiplexor"
+msgstr "8-1 Multiplexor"
+
+# gm.msi.12dec
+#: ca/messages:187
+msgid "1-2 Decoder"
+msgstr "1-2 Decodificador"
+
+# gm.msi.14dec
+#: ca/messages:188
+msgid "1-4 Decoder"
+msgstr "1-4 Decodificador"
+
+# gm.msi.18dec
+#: ca/messages:189
+msgid "1-8 Decoder"
+msgstr "1-8 Decodificador"
+
+# gm.mod.inst
+#: ca/messages:191
+msgid "Module Instance"
+msgstr "Insereix mòdul"
+
+# gm.mod.in
+#: ca/messages:192
+msgid "Module Input"
+msgstr "Entrada mòdul"
+
+# gm.mod.out
+#: ca/messages:193
+msgid "Module Output"
+msgstr "Sortida mòdul"
+
+# gm.mod.inout
+#: ca/messages:194
+msgid "Module Input-Output"
+msgstr "Mòdul bidireccional"
+
+# menu.help.about
+#: ca/messages:199
+msgid "0:About..."
+msgstr "0:A propòsit de..."
+
+# menu.help.license
+#: ca/messages:200
+msgid "0:License..."
+msgstr "0:Llicència..."
+
+# menu.help.doc
+#: ca/messages:201
+msgid "0:Documentation..."
+msgstr "0:Documentació..."
+
+# menu.help.tut
+#: ca/messages:202
+msgid "1:Tutorials"
+msgstr "1:Tutorials"
+
+# menu.help.example
+#: ca/messages:203
+msgid "1:Examples"
+msgstr "1:Exemples"
+
+# menu.scope_file.ptrace
+#: ca/messages:218
+msgid "0:Print Trace..."
+msgstr "0:Visualizant senyal..."
+
+# ifile
+# print.file
+#: ca/messages:227 ca/messages:298
+msgid "File"
+msgstr "Fitxer"
+
+# iblmodule
+# opt.mods
+#: ca/messages:229 ca/messages:334
+msgid "Modules"
+msgstr "Mòduls"
+
+# iports
+#: ca/messages:230
+msgid "Ports"
+msgstr "Ports:"
+
+# ibits
+#: ca/messages:231
+msgid "Bits:"
+msgstr "Bits:"
+
+# db.net.name
+#: ca/messages:236
+msgid "Net Name"
+msgstr "Nom connexió"
+
+# db.net.hide
+# db.gate.hidenam
+#: ca/messages:237 ca/messages:259
+msgid "Hide Name"
+msgstr "Ocultar"
+
+# db.net.bits
+# db.gate.bitw
+#: ca/messages:238 ca/messages:251
+msgid "Bit Width"
+msgstr "Amplada del bus"
+
+# db.net.port
+#: ca/messages:239
+msgid "Port Type"
+msgstr "Tipus de pota"
+
+# db.net.inets
+#: ca/messages:243
+msgid "Nets"
+msgstr "Connexions"
+
+# db.gate.signam
+#: ca/messages:248
+msgid "Signal Name"
+msgstr "Nom del senyal"
+
+# db.gate.portnam
+#: ca/messages:249
+msgid "Port Name"
+msgstr "Nom de la pota"
+
+# db.gate.iotype
+# db.gate.gtype
+# db.gate.modname
+#: ca/messages:250 ca/messages:257 ca/messages:265
+msgid "Type"
+msgstr "Tipus"
+
+# db.gate.cyclew
+#: ca/messages:252
+msgid "Period"
+msgstr "Amplada del cicle"
+
+# db.gate.phase
+#: ca/messages:253
+msgid "Phase"
+msgstr "Fase"
+
+# db.gate.duty
+#: ca/messages:254
+msgid "Duty"
+msgstr "Funció"
+
+# db.gate.port
+# db.gate.ports
+#: ca/messages:255 ca/messages:273
+msgid "Port"
+msgstr "Pota"
+
+# db.gate.bitws
+#: ca/messages:256
+msgid "Bits"
+msgstr "Bits"
+
+# db.gate.gname
+#: ca/messages:258
+msgid "Instance Name"
+msgstr "Nom de la porta"
+
+# db.gate.cpbreak
+#: ca/messages:261
+msgid "Critical Path Partition"
+msgstr "Ruptura del camí crític"
+
+# db.gate.butstate
+#: ca/messages:262
+msgid "Button State"
+msgstr "Estat del botó"
+
+# db.gate.dipval
+#: ca/messages:263
+msgid "Switch Value"
+msgstr "Valor del commutador"
+
+# db.gate.memfilenam
+#: ca/messages:264
+msgid "Memory File"
+msgstr "Fitxer de memòria"
+
+# db.gate.general
+# opt.general
+#: ca/messages:271 ca/messages:375
+msgid "General"
+msgstr "General"
+
+# db.gate.details
+#: ca/messages:272
+msgid "Details"
+msgstr "Detalls"
+
+# db.gate.delay
+#: ca/messages:274
+msgid "Delay"
+msgstr "Retard"
+
+# db.gate.stddelay
+#: ca/messages:275
+msgid "Standard Delay"
+msgstr "Retard normal"
+
+# db.gate.custdelay
+#: ca/messages:276
+msgid "Custom Delay"
+msgstr "Retard personalitzat"
+
+# db.gate.led.type
+#: ca/messages:278
+msgid "LED Type"
+msgstr "Tipus de LED"
+
+# db.gate.led.bit.hdr
+#: ca/messages:279
+msgid "Bit"
+msgstr "Bit"
+
+# db.gate.led.bar.hdr
+#: ca/messages:280
+msgid "Bar Graph"
+msgstr "Barra gràfica"
+
+# db.gate.led.hex.hdr
+#: ca/messages:281
+msgid "7-Segment (HEX)"
+msgstr "7-Segments (HEXADECIMAL)"
+
+# db.gate.led.dec.hdr
+#: ca/messages:282
+msgid "7-Segment (DEC)"
+msgstr "7-Segments (DECIMAL)"
+
+# db.gate.led.seg.hdr
+#: ca/messages:283
+msgid "7-Segment (Direct)"
+msgstr "7-Segments (Directe)"
+
+# print.printer
+#: ca/messages:297
+msgid "Printer:"
+msgstr "Impressora"
+
+# print.prcmd
+#: ca/messages:299
+msgid "Print Command:"
+msgstr "Comanda d'Impressió"
+
+# print.filename
+#: ca/messages:300
+msgid "File Name"
+msgstr "Nom del Fitxer"
+
+# print.epssave
+#: ca/messages:301
+msgid "Save as Encapsulated Postscript."
+msgstr "Salvar com a EPS."
+
+# print.epcm
+#: ca/messages:304
+msgid "Epochs/cm"
+msgstr "Període de temps/cm"
+
+# print.estpg
+#: ca/messages:305
+msgid "Estimated pages"
+msgstr "Pàgines estimades"
+
+# print.all
+#: ca/messages:306
+msgid "All"
+msgstr "Tot"
+
+# print.cur
+#: ca/messages:307
+msgid "Current"
+msgstr "Actual"
+
+# print.use
+#: ca/messages:308
+msgid "Used"
+msgstr "Usats"
+
+# print.sel
+#: ca/messages:309
+msgid "Picked"
+msgstr "Seleccionats"
+
+# print.inclib
+#: ca/messages:310
+msgid "Include library modules."
+msgstr "Inclou mòduls de llibreria."
+
+# print.papsz
+#: ca/messages:311
+msgid "Paper Size"
+msgstr "Dimensions del paper"
+
+# print.orient
+#: ca/messages:312
+msgid "Orientation"
+msgstr "Orientació"
+
+# print.portrait
+#: ca/messages:313
+msgid "Portrait"
+msgstr "Vertical"
+
+# print.landscape
+#: ca/messages:314
+msgid "Landscape"
+msgstr "Apaisada"
+
+# print.2side
+#: ca/messages:315
+msgid "Print Double-Sided"
+msgstr "Imprimir a doble cara"
+
+# print.opts
+#: ca/messages:316
+msgid "Content Options"
+msgstr "Opcions"
+
+# print.scale
+#: ca/messages:317
+msgid "Scale large modules to fit page."
+msgstr "Escalar mòduls fins a completar pàgina."
+
+# print.partition
+#: ca/messages:318
+msgid "Partition large modules into multiple pages."
+msgstr "Dividir mòduls grans en varies pàgines."
+
+# print.incidx
+#: ca/messages:319
+msgid "Include index."
+msgstr "Inclou índex."
+
+# print.incgraph
+#: ca/messages:320
+msgid "Include hierarchy graph."
+msgstr "Inclou gràfic de jerarquia."
+
+# print.4up
+#: ca/messages:321
+msgid "Print small modules four per page."
+msgstr "Imprimir quatre pàgines en una."
+
+# print.range
+#: ca/messages:322
+msgid "Range"
+msgstr "Rang"
+
+# print.fulltr
+#: ca/messages:323
+msgid "Full Trace"
+msgstr "Traçat complet"
+
+# print.parttr
+#: ca/messages:324
+msgid "Partial Trace"
+msgstr "Traçat parcial"
+
+# print.start
+#: ca/messages:325
+msgid "Start"
+msgstr "Començar"
+
+# opt.site
+#: ca/messages:332
+msgid "Site Name"
+msgstr "Nom de l'empresa"
+
+# opt.inst
+#: ca/messages:333
+msgid "Instances"
+msgstr "Instàncies"
+
+# opt.modports
+#: ca/messages:335
+msgid "Module Ports"
+msgstr "Potes de mòduls"
+
+# opt.frames
+#: ca/messages:336
+msgid "Frames"
+msgstr "Marcs"
+
+# opt.comment
+#: ca/messages:337
+msgid "Comments"
+msgstr "Comentaris"
+
+# opt.hlink
+#: ca/messages:338
+msgid "Hyperlinks"
+msgstr "Hiperenllaços"
+
+# opt.wire
+#: ca/messages:339
+msgid "Single-Bit Wires"
+msgstr "Cables simples (1 Bit)"
+
+# opt.bus
+#: ca/messages:340
+msgid "Multi-Bit Wires"
+msgstr "Busos"
+
+# opt.tools
+#: ca/messages:341
+msgid "Gate Tools"
+msgstr "Eines de porta"
+
+# opt.cpath
+#: ca/messages:342
+msgid "Critical Path"
+msgstr "Camins crítics"
+
+# opt.grid
+#: ca/messages:343
+msgid "Scope Grid"
+msgstr "Visualitzar Reixeta"
+
+# opt.logic1
+#: ca/messages:344
+msgid "Logic One"
+msgstr "Lògica '1'"
+
+# opt.logic0
+#: ca/messages:345
+msgid "Logic Zero"
+msgstr "Lògica '0' (negada)"
+
+# opt.float
+#: ca/messages:346
+msgid "Float"
+msgstr "Flotant"
+
+# opt.unknown
+#: ca/messages:347
+msgid "Unknown/Conflict"
+msgstr "Conflicte Desconegut"
+
+# opt.offled
+#: ca/messages:348
+msgid "Off LED"
+msgstr "LED apagat"
+
+# opt.onled
+#: ca/messages:349
+msgid "On LED"
+msgstr "LED encès"
+
+# opt.zled
+#: ca/messages:350
+msgid "Floating LED"
+msgstr "LED flotant"
+
+# opt.restdef
+#: ca/messages:351
+msgid "Restore Defaults"
+msgstr "Restaura opcions per defecte"
+
+# opt.regudate
+#: ca/messages:352
+msgid "Region Update"
+msgstr "Refrescar Regió"
+
+# opt.smoothscroll
+#: ca/messages:353
+msgid "Smooth Scrolling"
+msgstr "Desplaçament Suau"
+
+# opt.balloon
+#: ca/messages:355
+msgid "Enable Help Balloons"
+msgstr "Habilitar globus d'ajuda"
+
+# opt.debug
+#: ca/messages:356
+msgid "Debug"
+msgstr "Habilitar depuració"
+
+# opt.novice
+#: ca/messages:357
+msgid "Novice mode"
+msgstr "Mode Principiant"
+
+# opt.freq
+#: ca/messages:359
+msgid "Interval"
+msgstr "Freqüència"
+
+# opt.beak
+#: ca/messages:360
+msgid "Enable Special Modes"
+msgstr "Habilitar mode especial"
+
+# opt.bat
+#: ca/messages:363
+msgid "Bat"
+msgstr "Bat"
+
+# opt.trek
+#: ca/messages:364
+msgid "Star Trek"
+msgstr "Star Trek"
+
+# opt.miles
+#: ca/messages:365
+msgid "Miles"
+msgstr "Miles"
+
+# opt.showsimcmd
+#: ca/messages:366
+msgid "Display Simulator Stream"
+msgstr "Visualitzar cadena simulada"
+
+# opt.estepsz
+#: ca/messages:368
+msgid "Epoch Step Size"
+msgstr "Ajust de temps (simulació pas a pas)"
+
+# opt.cstepsz
+#: ca/messages:369
+msgid "Clock Cycle Step Size"
+msgstr "Ajust nº cicles (simulació pas a pas)"
+
+# opt.overstep
+#: ca/messages:370
+msgid "Clock Overstep"
+msgstr "Excedir rellotge"
+
+# opt.posedge
+#: ca/messages:372
+msgid "Clock step stops on all clock posedges"
+msgstr "El rellotge s'atura després de cada flanc"
+
+# opt.setclock
+#: ca/messages:373
+msgid "Clock step stops on clock"
+msgstr "El rellotge s'atura a cada flanc"
+
+# opt.delayfilepath
+#: ca/messages:374
+msgid "Technology Files"
+msgstr "Fitxers de retard"
+
+# opt.print
+#: ca/messages:376
+msgid "Print"
+msgstr "Imprimir"
+
+# opt.simulate
+#: ca/messages:377
+msgid "Simulate"
+msgstr "Simular"
+
+# opt.analysis
+#: ca/messages:378
+msgid "Analysis"
+msgstr "Anàlisi"
+
+# opt.color
+#: ca/messages:379
+msgid "Color"
+msgstr "Color"
+
+# opt.cpopts
+#: ca/messages:381
+msgid "Critical Path Options"
+msgstr "Opcions dels camins crítics:"
+
+# opt.maxpath
+#: ca/messages:382
+msgid "Maximum Number of Paths:"
+msgstr "Màxim nº de camins:"
+
+# opt.cpflash
+#: ca/messages:383
+msgid "Display with Flashing Path"
+msgstr "Veure amb ruta ressaltada"
+
+# opt.vercheck
+#: ca/messages:385
+msgid ""
+"Periodically check for new versions of TkGate over\n"
+"the Internet. Do not enable unless you have continuous\n"
+"access to the Internet."
+msgstr ""
+"Comprova de forma periòdica si existeixen noves versions del\n"
+"programa TkGate a Internet. No activar si no es disposa\n"
+"d'una connexió permanent a la xarxa."
+
+# blklst.new.cap
+#: ca/messages:394
+msgid "Create New Module"
+msgstr "Mòdul nou"
+
+# blklst.del.cap
+#: ca/messages:395
+msgid "Delete Module"
+msgstr "Borra mòdul"
+
+# blklst.from
+#: ca/messages:396
+msgid "From"
+msgstr "Copia mòdul de"
+
+# blklst.to
+#: ca/messages:397
+msgid "To"
+msgstr "a"
+
+# blklst.claim.cap
+#: ca/messages:400
+msgid "Claim Module"
+msgstr "Mòdul llibreria -> Mòdul usuari"
+
+# circ.discchg
+#: ca/messages:406
+msgid "Do not warn about discarding changes."
+msgstr "Descartar canvis"
+
+# circ.iniscript
+#: ca/messages:407
+msgid "Initialization Scripts"
+msgstr "Guions d'inicializació"
+
+# cp.delay
+#: ca/messages:428
+msgid "Path Delay:"
+msgstr "Retard del camí:"
+
+# cp.pathl
+#: ca/messages:429
+msgid "Path List:"
+msgstr "Llista de camins:"
+
+# cp.numpath
+#: ca/messages:430
+msgid "Number of Paths:"
+msgstr "Nombre de camins:"
+
+# cp.recompute
+#: ca/messages:431
+msgid "Recompute"
+msgstr "Recalcular"
+
+# err.nopin
+#: ca/messages:437
+msgid "Can't change selected pin."
+msgstr "No puc canviar la pota seleccionada."
+
+# err.badhex
+#: ca/messages:438
+msgid "Illegal hex value '%s' ignored."
+msgstr "Valor hexadecimal incorrecte. Ignoro '%s'."
+
+# err.gatanchor
+#: ca/messages:439
+msgid "Components(s) are anchored and can not be moved."
+msgstr "Les portes anclades no poden moure's."
+
+# err.badfind
+#: ca/messages:441
+msgid "Can't find target '%s'."
+msgstr "No puc trobar '%s' com a destí."
+
+# err.badopendel
+#: ca/messages:442
+msgid "Can't delete open module."
+msgstr "No puc esborrar un mòdul obert."
+
+# err.nosrcmod
+#: ca/messages:443
+msgid "Source module '%s' not found."
+msgstr "No puc trobar '%s' com a mòdul font."
+
+# err.noerr
+#: ca/messages:444
+msgid "Can not locate error."
+msgstr "Error desconegut."
+
+# err.misserr
+#: ca/messages:445
+msgid "Error information incomplete (did the simulator crash?)"
+msgstr "Error, informació incompleta (s'ha penjat el simulador?)"
+
+# err.badinadd
+#: ca/messages:448
+msgid "Can't add any more inputs to selected component."
+msgstr "No puc afegir més entrades a la porta seleccionada."
+
+# err.badoutadd
+#: ca/messages:449
+msgid "Can't add any more outputs to selected component."
+msgstr "No puc afegir més sortides a la porta seleccionada."
+
+# err.badinoutadd
+#: ca/messages:450
+msgid "Can't add any more inout pins to selected component."
+msgstr "No puc afegir més línies bidireccionals a la porta"
+
+# err.badpinchg
+#: ca/messages:451
+msgid "Can't change pin types on selected component."
+msgstr "No puc canviar el tipus de potes de la porta."
+
+# err.badnetname
+#: ca/messages:452
+msgid "Illegal characters in identifier deleted."
+msgstr "He esborrat caràcters incorrectes en l'identificador."
+
+# err.netbcrename
+#: ca/messages:453
+msgid "Identifier renamed to '%s' because of illegal characters."
+msgstr "Identificador canvia a '%s' per caràcters incorrectes."
+
+# err.netconfnet
+#: ca/messages:454
+msgid "Identifier renamed to '%s' because of conflict."
+msgstr "Identificador canvia a '%s' degut a un conflicte."
+
+# err.netconfgat
+#: ca/messages:455
+msgid "Identifier renamed to avoid conflict with built-in component name"
+msgstr "Identificador canvia degut a conflicte amb nom de porta bàsica."
+
+# err.netconfkw
+#: ca/messages:456
+msgid "Identifier renamed to avoid conflict with reserved word."
+msgstr "Identificador canvia degut a conflicte amb paraula reservada."
+
+# err.badconsame
+#: ca/messages:457
+msgid "Connection refused because wires are part of the same net."
+msgstr ""
+"Unió refusada degut a que els cables formen part de la mateixa connexió."
+
+# err.badconptsp
+#: ca/messages:458
+msgid "Connection refused because both wires are module ports or supply."
+msgstr ""
+"Unió refusada degut a que ambdós cables son potes de mòduls o alimentació."
+
+# err.badconbitw
+#: ca/messages:459
+msgid "Connection refused because bit widths do not match."
+msgstr "Unió refusada per no poder-se aparellar l'amplada dels dos busos."
+
+# err.badrange
+#: ca/messages:460
+msgid "Non-positive range for scope trace is not allowed."
+msgstr "No es permet visualitzar el rang no positiu del senyal."
+
+# err.badlprcmd
+#: ca/messages:461
+msgid "Unable to execute printer command '%s'."
+msgstr "No puc executar la comanda  '%s' d'impressió."
+
+# err.badpsopen
+#: ca/messages:462
+msgid "Unable to open file '%s' for postscript output."
+msgstr "No puc obrir el fitxer '%s' per sortida postscript."
+
+# err.bkpt.badexp
+#: ca/messages:464
+msgid ""
+"Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
+"'net==value', 'net!=value'"
+msgstr ""
+"Error de sintaxis en expresió per punt de ruptura. Pot ésser una de les "
+"següents: 'connexió', '!connexió', 'connexió == valor', 'connexió != valor'"
+
+# err.bkpt.badnet
+#: ca/messages:465
+msgid ""
+"Invalid net name '%s'. Names must start with a letter and contain only "
+"letters, digits and '.'."
+msgstr ""
+"'%s' es un nom incorrecte de connexió. Els noms vàlids han de començar per "
+"una lletra i contenir només lletres, nombres y el signe '.'."
+
+# err.bkpt.badval
+#: ca/messages:466
+msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
+msgstr ""
+"Error de sintaxis en el valor '%s'.  Ha de ser decimal o una constant de "
+"l'estil de Verilog."
+
+# err.bkpt.toomany
+#: ca/messages:467
+msgid "Too many breakpoints. Maximum is %d."
+msgstr "Masses punts de ruptura.  El màxim és de %d."
+
+# err.sim.badtmp
+#: ca/messages:469
+msgid "Could not save temporary file '%s' for simulator (disc full?)"
+msgstr ""
+"No puc salvar el fitxer temporal '%s' per la simulació ( ¿ Disc ple ? )"
+
+# err.sim.syntx
+#: ca/messages:470
+msgid "Syntax error in '%s' command."
+msgstr "Error de sintaxis en la comanda '%s'."
+
+# err.sim.noincl
+#: ca/messages:471
+msgid "Include file '%s' not found."
+msgstr "El fitxer Include '%s' no es troba."
+
+# err.sim.nobkpt
+#: ca/messages:473
+msgid "No such breakpoint '%s'."
+msgstr "No existeix punt de ruptura '%s'."
+
+# err.sim.nonet
+#: ca/messages:474
+msgid "Can't find net '%s'."
+msgstr "No puc trobar la connexió '%s'."
+
+# err.sim.nogate
+#: ca/messages:475
+msgid "Can't find component '%s'."
+msgstr "No puc trobar la porta '%s'."
+
+# err.sim.badbin
+#: ca/messages:476
+msgid "Illegal character in binary constant '%s'."
+msgstr "'%s' es un caràcter incorrecte en constant binaria."
+
+# err.sim.notswitch
+#: ca/messages:477
+msgid "Component '%s' is not a switch, dip or register."
+msgstr "La porta '%s' no es un commutador, dip o registre."
+
+# err.sim.badcmd
+#: ca/messages:478
+msgid "Unrecognized command '%s' in simulation script."
+msgstr "No reconeixo la comanda '%s' en el guió de simulació."
+
+# err.noteditpchg
+#: ca/messages:480
+msgid "Properties can only be changed in edit mode."
+msgstr "Les propietats només es poden canviar en mode Edició."
+
+# err.badeditop
+#: ca/messages:481
+msgid "Illegal interface edit mode operation."
+msgstr "Operació il·legal en el mode d'Edició."
+
+# err.badopen
+#: ca/messages:482
+msgid "Unable to open input file '%s'."
+msgstr "No puc obrir el fitxer '%s'."
+
+# err.badlibopen
+#: ca/messages:483
+msgid "Unable to open library file '%s'."
+msgstr "No puc obrir la llibreria '%s'."
+
+# err.nomark
+#: ca/messages:485
+msgid ""
+"Please set a mark with the left mouse button before selecting a component "
+"type."
+msgstr ""
+"Per favor marca amb el botó esquerra abans de seleccionar el tipus de porta."
+
+# err.badgate
+#: ca/messages:486
+msgid "Unknown component type '%s'."
+msgstr "No connexió aquest tipus de porta."
+
+# err.manypages
+#: ca/messages:489
+msgid ""
+"There are an awful lot of\n"
+"pages in this document. Are\n"
+"you sure you want to print it?"
+msgstr ""
+"Hi ha MOLTES pàgines en aquest\n"
+"document. ¿ Estàs segur\n"
+"que vols imprimir-lo ?."
+
+# err.nojump
+#: ca/messages:495
+msgid ""
+"The 'jump-to-module' feature can not be used\n"
+"in simulation or critical path analysis mode.\n"
+"Please navigate manually to the target block\n"
+"by selecting modules and opening them with the\n"
+"'>' keyboard command. You can leave a module\n"
+"you are in with the '<' keyboard command."
+msgstr ""
+"La possibilitat de 'saltar al mòdul' no es\n"
+"pot usar en el mode de simulació o\n"
+"en l'anàlisi d'un camí crític. Per\n"
+"favor navega de forma manual fins al\n"
+"bloc de destí seleccionant els mòduls adequats\n"
+"y usant l'opció '>' del teclat. S'accedeix\n"
+"al mòdul de nivell superior en la\n"
+"jerarquia actuant sobre la tecla '<'."
+
+# err.nomod
+#: ca/messages:506
+msgid "Module '%s' is not defined."
+msgstr "Mòdul '%s' no està definit."
+
+# err.modlock
+#: ca/messages:507
+msgid "Logic Block is Locked!"
+msgstr "!Aquest bloc lògic l'està visualitzant!"
+
+# err.closeroot
+#: ca/messages:508
+msgid "No higher level module opened on the module stack."
+msgstr "No puc tancar el mòdul principal. Usa l'opció Sortir del menú Fitxer."
+
+# err.sim.isrun
+#: ca/messages:509
+msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
+msgstr ""
+"El simulador està executant-se en aquests moments (Usa 'Ctrl-s e' per "
+"acabar)."
+
+# err.editonly
+#: ca/messages:511
+msgid "Command not valid when in simulation mode."
+msgstr "Comanda incorrecta en el mode de simulació."
+
+# err.simonly
+#: ca/messages:512
+msgid "Command valid only in simulation mode."
+msgstr "Comanda només vàlida en mode simulació."
+
+# err.nodel
+#: ca/messages:514
+msgid "No deletable selection."
+msgstr "No es pot esborrar la selecció."
+
+# err.modnotdef
+#: ca/messages:515
+msgid "Module '%s' is undefined."
+msgstr "Mòdul '%s' no definit."
+
+# err.moddef
+#: ca/messages:516
+msgid "The module '%s' already exists."
+msgstr "El bloc '%s' ja existeix."
+
+# err.noprop
+#: ca/messages:517
+msgid "Selected component has no editable properites."
+msgstr "No es poden editar les propietats de la porta seleccionada."
+
+# err.openscript
+#: ca/messages:518
+msgid "Can't open simulation script file '%s'"
+msgstr "No puc obrir el fitxer de guió de simulació '%s'"
+
+# err.oldversion
+#: ca/messages:519
+msgid ""
+"Loaded file '%s' with obsolete version number %s (current version is %s)."
+msgstr ""
+"Carregat fitxer de la versió %s, obsoleta (la més recent es la versió %s)."
+
+# err.futureversion
+#: ca/messages:520
+msgid ""
+"Loaded file '%s' saved by future TkGate version %s (this version is %s)."
+msgstr ""
+"Fitxer salvat en la versió %s, futura versió del programa tkgate (la versió "
+"actual es %s)."
+
+# err.badversion
+#: ca/messages:521
+msgid "Unknown version number. Use at your own risk."
+msgstr "Es desconeix el número de versió.  Usada sota la seva responsabilitat."
+
+# err.nodrive
+#: ca/messages:522
+msgid "Net %s has no driver in module %s."
+msgstr "Connexió %s no posseeix entrada en el mòdul %s."
+
+# err.noconn
+#: ca/messages:523
+msgid "Wire %s{%d} has no connections - deleted."
+msgstr "Cable %s{%d} no posseeix connexions - l'esborrem."
+
+# err.noback
+#: ca/messages:525
+msgid ""
+"File '%s' was created by TkGate\n"
+"%s, and may not be readable\n"
+"by versions earlier than\n"
+"current version (%s) if you\n"
+"save."
+msgstr ""
+"El fitxer %s, es crearà per el\n"
+"programa tkgate, y no podrà llegir-se\n"
+"per a versions anteriors a l'actual\n"
+"(%s), si vol salvar-lo."
+
+# msg.selwire
+#: ca/messages:535
+msgid "Selected wire %s named '%s'."
+msgstr "Seleccionat cable denominat '%s'."
+
+# msg.selgate
+#: ca/messages:536
+msgid "Selected gate %s named '%s'."
+msgstr "Seleccionat %s denominat '%s'."
+
+# msg.selblock
+#: ca/messages:537
+msgid "Selected %s block named '%s'."
+msgstr "Seleccionat bloc %s denominat '%s'."
+
+# msg.modoverwt
+#: ca/messages:538
+msgid "Destination module '%s' already exists. Overwrite?"
+msgstr "Mòdul de destino '%s' existeix. ¿ Sobreescriure ?"
+
+# msg.foundgate
+#: ca/messages:539
+msgid "Found component named '%s'."
+msgstr "Trobada porta denominada '%s'."
+
+# msg.foundwire
+#: ca/messages:540
+msgid "Found wire named '%s'."
+msgstr "Trobat cable denominat '%s'."
+
+# msg.searchagn
+#: ca/messages:541
+msgid "Target string '%s' not found. Hit 'find' to restart search again."
+msgstr ""
+"Cadena destí '%s' no trobada.  Fes clic a 'Cercar' per reiniciar la cerca."
+
+# msg.sim.chgtoroot
+#: ca/messages:542
+msgid "Simulation mode requires root module at top of edit stack."
+msgstr ""
+"El mode simulació requereix el mòdul principal al capdamunt de la pila "
+"d'Edició."
+
+# msg.sim.nogatemod
+#: ca/messages:543
+msgid "Simulation mode requires concrete module stack."
+msgstr "Mode simulació requereix un mòdul concret de pila."
+
+# msg.setinterface
+#: ca/messages:544
+msgid "Set module interface for '%s'."
+msgstr "Ajustar l'interficie del mòdul per '%s'."
+
+# msg.needsel
+#: ca/messages:545
+msgid "Please select a module instance."
+msgstr "Per favor selecciona una instància de mòdul."
+
+# msg.wroteckpt
+#: ca/messages:546
+msgid "Checkpointed to %s..."
+msgstr "Comprova punt a %s..."
+
+# msg.save
+#: ca/messages:547
+msgid "Saved circuit to '%s'."
+msgstr "Salva circuit com a '%s'."
+
+# msg.reallynew
+#: ca/messages:549
+msgid ""
+"Circuit has been modified. Do you really want to discard your changes and "
+"create a new circuit?"
+msgstr ""
+"El circuit s'ha modificat. ¿ Realment vols perdre els canvis i crear un de "
+"nou ?"
+
+# msg.reallyquit
+#: ca/messages:550
+msgid "Circuit has been modified. Do you really want to exit?"
+msgstr "El circuit s'ha modificat. ¿ Realment vols sortir ?"
+
+# msg.notlib
+#: ca/messages:551
+msgid "Module '%s' is not a library module."
+msgstr "'%s' no és un mòdul de llibreria."
+
+# miles.msg1
+#: ca/messages:556
+msgid "Only a fool would put %s%s there, Miles."
+msgstr "Només un tarat col·locaria %s%s aquí, Miles."
+
+# miles.msg2
+#: ca/messages:557
+msgid "That's a really stupid place to put %s%s, Miles."
+msgstr "És realment un estúpid lloc on col·locar %s%s, Miles."
+
+# miles.msg3
+#: ca/messages:558
+msgid "That's a terrible place for %s%s, Miles."
+msgstr "És un lloc horrible per a col·locar %s%s, Miles."
+
+# miles.msg4
+#: ca/messages:559
+msgid "Miles, you are a fool for putting %s%s there."
+msgstr "Miles, deus estar malament del cap si col·loques %s%s aquí."
+
+# miles.msg5
+#: ca/messages:560
+msgid "Only you would put %s%s there, Miles."
+msgstr "Només tú pots col·locar %s%s aquí, Miles."
+
+# miles.msg6
+#: ca/messages:561
+msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
+msgstr ""
+"Col·locar %s%s aquí es una proba més de que ets absolutament estúpid, Miles."
+
+# miles.msg7
+#: ca/messages:562
+msgid "Why don't you give up Miles, this is a stupid circuit."
+msgstr "No saps què coi fas, Miles, es un circuit estúpid."
+
+# miles.msg8a
+#: ca/messages:563
+msgid "It's pointless to continue, Miles."
+msgstr "És inútil continuar, Miles."
+
+# miles.msg8b
+#: ca/messages:564
+msgid "It's obvious you can't design a circuit"
+msgstr "És obvi que no pots dissenyar un circuit."
+
+# ho.new
+#: ca/messages:571
+msgid ""
+"Clear the current circuit,\n"
+"and start editing a new one."
+msgstr ""
+"Esborra el circuit actual i\n"
+"n'edita un de nou."
+
+# ho.open
+#: ca/messages:576
+msgid "Open a circuit from a file."
+msgstr "Fitxer -> Circuit"
+
+# ho.save
+#: ca/messages:577
+msgid "Save circuit to current file."
+msgstr "Circuit -> Fitxer actual"
+
+# ho.print
+#: ca/messages:578
+msgid "Print current circuit."
+msgstr "Circuit -> Impressora"
+
+# ho.move
+#: ca/messages:580
+msgid ""
+"Move/Connect - By clicking and dragging you can:\n"
+"Set the position for a new component\n"
+"Move components and wires\n"
+"Connect wires\n"
+"By double-clicking you can:\n"
+"Edit component, wire and port properties\n"
+"Edit comment text"
+msgstr ""
+"Move/Connect - Fent clic i arrossegant el mouse pots:\n"
+"Ajustar la posició d'una porta recent inserida.\n"
+"Moure portes y connexions ja col·locades\n"
+"Connectar cables entre potes de portes\n"
+"Fent doble-clic pots:\n"
+"Editar les propietats de portes, connexions i ports\n"
+"Editar el text dels comentaris"
+
+# ho.delgat
+#: ca/messages:590
+msgid ""
+"Delete Component - Use this\n"
+"tool to delete components."
+msgstr ""
+"Esborrar porta - Usa aquesta eina\n"
+"per esborrar les portes."
+
+# ho.cutw
+#: ca/messages:595
+msgid ""
+"Cut Wire - Use this\n"
+"tool to cut wires."
+msgstr ""
+"Talla cables - Usa aquesta eina\n"
+"per desconnectar cables."
+
+# ho.inv
+#: ca/messages:600
+msgid ""
+"Invert - Use this tool to\n"
+"add or remove inverters\n"
+"from component ports."
+msgstr ""
+"Invertir - Usa aquesta eina\n"
+"per inserir o esborrar inversions\n"
+"de les potes de les portes."
+
+# ho.bitw
+#: ca/messages:606
+msgid ""
+"Net Attributes - Use this tool to change\n"
+"the attributes of a net. The bit size\n"
+"and wire type of nets selected with this\n"
+"tool will be changed to the those shown\n"
+"in the drop-down boxes to the right."
+msgstr ""
+"Amplada del Bus - Usa aquesta eina\n"
+"per canviar el número de línies del\n"
+"Bus. Introdueix l'esmentat nombre en la\n"
+"part inferior dreta de la finestra."
+
+# ho.simgo
+#: ca/messages:616
+msgid ""
+"Run simulator in continuous execution mode.\n"
+"Note that combinational circuits simulate\n"
+"only until the circuit reaches steady state."
+msgstr ""
+"Si no estem simulant, inicia la\n"
+"simulació y executa qualsevol\n"
+"guió d'inicializació. Si\n"
+"estem simulant, es col·loca en\n"
+"mode continu o interactiu."
+
+# ho.simpause
+#: ca/messages:624
+msgid "Pause a continuously running simulation."
+msgstr "Atura la simulació en curs."
+
+# ho.simstep
+#: ca/messages:628
+msgid ""
+"Step a fixed interval of time.\n"
+"Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Avança la simulació un\n"
+"interval de temps fix.\n"
+"Obre el submenú Opcions de\n"
+"simulació per ajustar-lo."
+
+# ho.simclock
+#: ca/messages:635
+msgid ""
+"Step a fixed number of clock\n"
+"cycles. Open the simulation options\n"
+"window to set the step size."
+msgstr ""
+"Avança la simulació un\n"
+"nombre fix de cicles de\n"
+"rellotge. Obre el submenú Opcions\n"
+"de simulació per ajustarlo."
+
+# ho.simstop
+#: ca/messages:642
+msgid ""
+"End the current simulation\n"
+"and return to edit mode."
+msgstr ""
+"Finalitza la simulació en curs\n"
+"i retorna al mode d'Edició."
+
+# ho.simbreak
+#: ca/messages:647
+msgid ""
+"Edit the current breakpoints. Simulation\n"
+"will be halted when a breakpoint condition\n"
+"becomes true. Breakpoints can be edited\n"
+"in both simulation mode and edit mode."
+msgstr ""
+"Edita els punts de ruptura. La simulació\n"
+"s'aturarà quan la condició especificada\n"
+"sigui certa."
+
+# ho.simexec
+#: ca/messages:653
+msgid "Manage the set of active scripts."
+msgstr "Executa un guió de simulació."
+
+# ho.simload
+#: ca/messages:655
+msgid ""
+"Load memory with contents of\n"
+"a .mem file."
+msgstr ""
+"Carrega la memòria amb el contingut\n"
+"d'un fitxer amb extensió .mem."
+
+# ho.simdump
+#: ca/messages:660
+msgid ""
+"Dump the contents of a memory\n"
+"to a .mem file."
+msgstr ""
+"Emmagatzema el contingut de la memòria\n"
+"en un fitxer amb extensió .mem."
+
+# ho.modlist
+#: ca/messages:673
+msgid ""
+"List of all modules currently loaded in\n"
+"alphabetical order. Drag modules to the\n"
+"edit window to create new instances."
+msgstr ""
+"Llista tots els mòduls actualment carregats.\n"
+"El mòdul principal, el superior en la jerarquia,\n"
+"s'indica amb el signe \"+\". Els mòduls de llibreria\n"
+"es visualitzen entre parèntesi."
+
+# ho.netlist
+#: ca/messages:680
+msgid ""
+"List of nets in the current module.\n"
+"The symbol to the left of the name\n"
+"indicates whether the net is single\n"
+"bit (green) or multi-bit (red). An\n"
+"\"A\" shown in the symbol indicates\n"
+"that the net name is marked as\n"
+"visible."
+msgstr ""
+"Llista totes les connexions del mòdul actual.\n"
+"Connexions marcades amb el signe \"@\" no presenten el\n"
+"seu nom en l'esquema (connexions ocultes). Les\n"
+"connexions BUS van seguides del nombre de línies\n"
+"que posseeixen."
+
+# ho.ports
+#: ca/messages:688
+msgid ""
+"List of ports on the interface\n"
+"of the module displayed in the\n"
+"edit window. The symbol before\n"
+"the port indicates the direction\n"
+"of the port."
+msgstr ""
+"Llista totes les potes del mòdul actual\n"
+"El signe '>' indica l'entrada, '<' indica la sortida,\n"
+"i '=' indica línia bidireccional."
+
+# ho.status.logo
+#: ca/messages:694
+msgid ""
+"Simulation status indicator. If the iron gate\n"
+"logo is shown, TkGate is in edit mode. If the\n"
+"quadrapedal AND gate is shown, TkGate is in\n"
+"simulation mode. If the AND gate is stationary,\n"
+"the simulation is paused, and if it is walking\n"
+"the simulation is running."
+msgstr ""
+"Estat de la simulació.  Si es presenta una\n"
+"porta de ferro estem en el mode d'Edició.\n"
+"Si es presenta una porta AND amb quatre potes\n"
+"estem en mode de simulació. Si la porta\n"
+"és estàtica, la simulació està aturada i\n"
+"si està en moviment, la simulació està en\n"
+"ple funcionamient."
+
+# ho.status.msg
+#: ca/messages:704
+msgid "Messages from TkGate are displayed here."
+msgstr "Els missatges del programa es presenten aquí."
+
+# ho.status.block
+#: ca/messages:706
+msgid "The stack of modules being edited."
+msgstr "La pila de mòduls que estan essent editats."
+
+# ho.status.file
+#: ca/messages:708
+msgid ""
+"The current file being edited. A '*' indicates\n"
+"that the buffer has been modifed since\n"
+"the last save."
+msgstr ""
+"Fitxer actualment editat.  El signe '*' indica\n"
+"que el buffer s'ha modificat des de l'últim cop\n"
+"que el fitxer que s'ha desat al disc."
+
+# ho.print.selall
+#: ca/messages:714
+msgid "Print all modules currently loaded by TkGate."
+msgstr "Imprimir tots els mòduls actualment carregats en TKGate."
+
+# ho.print.selcur
+#: ca/messages:715
+msgid "Print only the current module in the TkGate edit window."
+msgstr "Imprimir només el mòdul present en la finestra d'Edició de TKGate."
+
+# ho.print.seluse
+#: ca/messages:716
+msgid ""
+"Print all modules \"in use\". In use modues are\n"
+"those that are a decendent of the root module."
+msgstr ""
+"Imprimeix tots els mòduls \"en ús\". Els mòduls en ús son aquells que "
+"descendeixen del principal\n"
+"seguint la jerarquia d'arbre."
+
+# ho.print.selsel
+#: ca/messages:721
+msgid ""
+"Print only the modules selected below. Use\n"
+"the control key to select multiple modules."
+msgstr ""
+"Imprimeix només els mòduls seleccionats més a sota.\n"
+"Usa la tecla CONTROL per seleccionar més d'un."
+
+# ho.print.modlist
+#: ca/messages:726
+msgid "Select the modules to be printed."
+msgstr "Selecciona els mòduls a imprimir."
+
+# ho.circuit.discchg
+#: ca/messages:728
+msgid ""
+"TkGate will not display a warning if you\n"
+"discard changes without saving."
+msgstr ""
+"TkGate no presenta un avís si descartes\n"
+"els canvis sense salvar."
+
+# ho.cmd.bitw
+#: ca/messages:733
+msgid ""
+"Wires selected with the ribbon\n"
+"cable tool will be set to this\n"
+"bit width."
+msgstr ""
+"Els cables seleccionats amb el cursor\n"
+"poden ajustar-se a aquesta amplada de Bus."
+
+# ho.edgat.signam
+#: ca/messages:738
+msgid ""
+"The name of the selected signal\n"
+"on the selected component. You\n"
+"can change the name of the signal\n"
+"by editing it here."
+msgstr ""
+"El nom del senyal seleccionat a la porta.\n"
+"Pots canviar aquest nom editant aquí."
+
+# ho.edgat.port
+#: ca/messages:743
+msgid ""
+"The name of the port for this\n"
+"signal on the component. This\n"
+"field can only be edited for\n"
+"module instances."
+msgstr ""
+"El nom de la pota per aquesta senyal en aquesta\n"
+"porta. Aquest camp només pot ser editat per\n"
+"instàncies de mòduls."
+
+# ho.edgat.iolab
+#: ca/messages:749
+msgid ""
+"The direction of the selected\n"
+"signal on the selected component.\n"
+"This field can only be edited\n"
+"for module instances."
+msgstr ""
+"La direcció del senyal seleccionat d'aquesta\n"
+"porta. Aquest camp només pot editar-se en les\n"
+"instàncies de mòduls."
+
+# ho.edgat.bitlab
+#: ca/messages:755
+msgid ""
+"The bit width of the selected\n"
+"signal on the selected component.\n"
+"You can change the bitwidth by\n"
+"editing it here."
+msgstr ""
+"L'amplada del Bus de la senyal seleccionada d'\n"
+"aquesta porta. Es pot canviar editant aquí."
+
+# ho.edgat.cycle
+#: ca/messages:760
+msgid "The total number of epochs in a clock cycle."
+msgstr "El nombre total de períodes de temps en un cicle de rellotge."
+
+# ho.edgat.phase
+#: ca/messages:761
+msgid "The starting point of the cycle (in percent)."
+msgstr "El punt inicial del cicle (en %)."
+
+# ho.edgat.duty
+#: ca/messages:762
+msgid "The percent of the cycle, the clock is low."
+msgstr "El % del cicle que el rellotge està en flanc de baixada."
+
+# ho.edgat.hide
+#: ca/messages:771
+msgid ""
+"Set this flag to disable\n"
+"display of component names."
+msgstr ""
+"Activa aquest flag per no\n"
+"visualitzar el nom de la porta."
+
+# ho.edgat.gtype
+#: ca/messages:776
+msgid "Type of the component."
+msgstr "Tipus de porta."
+
+# ho.edgat.gname
+#: ca/messages:777
+msgid "Name of this component instance."
+msgstr "Nom d'aquesta instància de porta."
+
+# ho.edgat.ganchor
+#: ca/messages:778
+msgid "Set this flag to anchor the position of a component."
+msgstr "Activa aquest flag per anclar la posició de la porta."
+
+# ho.edgat.gx
+#: ca/messages:779
+msgid "X coordinate of component."
+msgstr "Coordenada X de la porta."
+
+# ho.edgat.gy
+#: ca/messages:780
+msgid "Y coordinate of component."
+msgstr "Coordenada Y de la porta."
+
+# ho.edgat.swstate
+#: ca/messages:782
+msgid ""
+"The initial state of the switch to use when\n"
+"starting a simulation."
+msgstr ""
+"Estat inicial del commutador quan\n"
+"s'inicia una sessió de simulació."
+
+# ho.edgat.dipstate
+#: ca/messages:787
+msgid ""
+"The initial state of the dip switch to use\n"
+"when starting a simulation."
+msgstr ""
+"Estat inicial dels interruptors DIP\n"
+"quan s'inicia una sessió de simulació."
+
+# ho.edgat.range
+#: ca/messages:792
+msgid "The range of bits to pull off a bus."
+msgstr "El rang de bits a col·locar en un bus."
+
+# ho.edgat.memfile
+#: ca/messages:794
+msgid ""
+"The file with the initial state for this memory.\n"
+"This file is read when the simulator is started."
+msgstr ""
+"El fitxer amb l'estat inicial d'aquesta memòria.\n"
+"Aquest fitxer es llegeix quan s'inicia el Simulador."
+
+# ho.edgat.func
+#: ca/messages:799
+msgid "The function type of this module."
+msgstr "El tipus de funció d'aquest mòdul."
+
+# ho.edgat.frame
+#: ca/messages:800
+msgid "The frame label."
+msgstr "L'etiqueta del plafó."
+
+# ho.opt.site
+#: ca/messages:802
+msgid ""
+"The name of the site where TkGate is\n"
+"installed. This name will be used on\n"
+"any printer or postscript output."
+msgstr ""
+"El nom del lloc on tkgate s'ha instal·lat.\n"
+"S'usa en la sortida impresa o fitxer postscript."
+
+# ho.opt.smooth
+#: ca/messages:807
+msgid ""
+"If this option is enabled, scrolling will\n"
+"be optimized by using bitmap copies instead\n"
+"of a complete redisplay. You can turn this\n"
+"off if there are any problems with your server."
+msgstr ""
+"Si aquesta opció està habilitada, el desplaçament\n"
+"s'optimitza al usar copies bitmap en comptes d'un\n"
+"re-dibuixat complert. Pots desactivar-la si\n"
+"hi ha problemes amb el seu servidor."
+
+# ho.opt.clip
+#: ca/messages:814
+msgid ""
+"If this option is enabled, clipping will be\n"
+"used to update only the exposed portion of\n"
+"the window on a redisplay. Otherwise the\n"
+"entire display will be redrawn for all\n"
+"exposures. Unset only if you are having\n"
+"problems on your display."
+msgstr ""
+"Si aquesta opció està habilitada, s'actualitza només\n"
+"la regió realment exposada de l'entorno d'Edició.\n"
+"En cas contrari, es re-dibuixa tot."
+
+# ho.opt.outmove
+#: ca/messages:820
+msgid ""
+"If this option is enabled, only an outline\n"
+"of module instances being moved will be displayed\n"
+"while dragging. Use this feature only on machines\n"
+"with slow displays."
+msgstr ""
+"Si aquesta opció està habilitada, només un requadre\n"
+"que envolta a les instàncies de mòduls es dibuixa\n"
+"mentre s'arrossega aquest. Usa aquesta opció en les\n"
+"màquines amb microprocessadors i tarjes gràfiques lentes."
+
+# ho.opt.bhelp
+#: ca/messages:827
+msgid ""
+"If this option is enabled, help balloons will\n"
+"be activated. Help balloons, such as this one,\n"
+"provide tips on interface elements when the\n"
+"mouse is over them."
+msgstr ""
+"Si aquesta opció està habilitada, els globus d'ajuda\n"
+"s'activen.  Els globus d'ajuda, com aquest mateix,\n"
+"proporcionen una ajuda resumida sobre els elements\n"
+"de la interficie, quan el mouse hi passa per sobre."
+
+# ho.opt.novice
+#: ca/messages:834
+msgid ""
+"If no other circuit is specified on the command\n"
+"line. A TkGate tutorial will be disaplyed as\n"
+"the initial circuit on start up."
+msgstr ""
+"Si no s'especifica cap circuit en la línia de\n"
+"comandes, TkGate presenta un tutorial\n"
+"per iniciar-se amb l'ús del programa."
+
+# ho.opt.debug
+#: ca/messages:840
+msgid ""
+"Enables several debugging features\n"
+"only useful to TkGate developers."
+msgstr ""
+"Habilita algunes opcions de depuració.  Només es\n"
+"útil per a programadors del TkGate."
+
+# ho.opt.ckpt
+#: ca/messages:845
+msgid "Enable checkpointing of unsaved circuits."
+msgstr "Habilitar els punts de chequeig per circuits no salvats."
+
+# ho.opt.ckptfreq
+#: ca/messages:846
+msgid "Frequency of checkpoints in seconds."
+msgstr "Freqüència dels punts de chequeig en segons."
+
+# ho.opt.beak
+#: ca/messages:848
+msgid ""
+"Enable these totally useless features.\n"
+"If you disable this option, the useless\n"
+"features checkbox will no longer appear\n"
+"in this dialog box. The only way to\n"
+"see the useless features again will be\n"
+"to edit your .tkgate2-properties file."
+msgstr ""
+"Habilitar totes aquestes opcions.\n"
+"Si deshabilita aquesta opció, aquests modes\n"
+"(i aquesta caixa de diàleg) no apareix en\n"
+"el menú opcions. Només pot recuperar-se\n"
+"editant el fitxer .tkgate-properties."
+
+# ho.opt.miles
+#: ca/messages:856
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"periodically insult the intelligence of\n"
+"the user."
+msgstr ""
+"Si aquest mode està habilitat, el programa insulta\n"
+"periòdicament la intel·ligència de l'usuari."
+
+# ho.opt.bat
+#: ca/messages:861
+msgid ""
+"If this mode is enabled, TkGate will\n"
+"set up an environment for designing a\n"
+"bat computer."
+msgstr ""
+"Si aquest mode està habilitat, el programa activarà\n"
+"l'entorn per dissenyar un computador senzill a\n"
+"partir de mòduls."
+
+# ho.opt.trek
+#: ca/messages:867
+msgid "Beam me up Scotty!"
+msgstr "Ajuda Scoty!"
+
+# ho.opt.simstep
+#: ca/messages:870
+msgid ""
+"The number of epochs to advance when\n"
+"the step command is issued."
+msgstr ""
+"El nombre de períodes de temps que avancem\n"
+"si hem activat el mode pas a pas per temps."
+
+# ho.opt.ckstep
+#: ca/messages:875
+msgid ""
+"The number of clock cycles to advance\n"
+"when the clock step command is issued."
+msgstr ""
+"El nombre de cicles de rellotge que avancem si\n"
+"hem activat el mode pas a pas per nº de cicles."
+
+# ho.opt.ckover
+#: ca/messages:880
+msgid ""
+"The number of epochs past rising edge\n"
+"of the clock to advance when the clock\n"
+"step command is issued."
+msgstr ""
+"El nombre de períodes de temps després d'un\n"
+"flanc de baixada de rellotge que avancem si\n"
+"hem activat el mode pas a pas."
+
+# ho.opt.init
+#: ca/messages:886
+msgid ""
+"A simulation script file to execute\n"
+"automatically when simulation of any\n"
+"circuit is initiated. Do not use this\n"
+"for circuit specific scripts, use the\n"
+"circuit properties instead."
+msgstr ""
+"El fitxer de guió que s'executa de forma\n"
+"automàtica al iniciar la simulació."
+
+# ho.opt.ckall
+#: ca/messages:891
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation on the\n"
+"positive edge of any clock in the circuit."
+msgstr ""
+"Si aquest mode s'habilita, la comanda pas a pas\n"
+"?¿?¿? la simulació en el flanc de pujada de\n"
+"qualssevol rellotge present en el circuit."
+
+# ho.opt.ckspec
+#: ca/messages:897
+msgid ""
+"If this mode is enabled, the clock step\n"
+"command will pause the simulation only on\n"
+"the positive edge of the specified clock.\n"
+"Use the name of the net to which the\n"
+"clock is attached."
+msgstr ""
+"Si aquest mode està habilitat, la comanda pas a pas\n"
+"?¿¿?¿ la simulació es el flanc de pujada de la\n"
+"senyal de rellotge especificada."
+
+# ho.deftech
+#: ca/messages:903
+msgid ""
+"Default technology for new components.\n"
+"Affects delay of components. To change\n"
+"the technology of a specific component,\n"
+"open its properties box (double\n"
+"click) and select the \"Delay\" tab."
+msgstr ""
+"La tecnologia per defecte emprada\n"
+"per las portes recent creades.\n"
+"Afecta al temps de retard de les\n"
+"portes. Per canviar la tecnologia\n"
+"d'una porta específica, obrir la\n"
+"caixa de propietats (doble clic)\n"
+"i seleccionar \"Retard\"."
+
+# ho.techbut
+#: ca/messages:913
+msgid ""
+"Use delays from standard technology\n"
+"definition file. To add custom\n"
+"technologies, add them to the list\n"
+"in the \"File -> Options -> Simulate\"\n"
+"menu."
+msgstr ""
+"Usa retards per la tecnologia estàndard d'un fitxer de\n"
+"definició. Per afegir tecnologies personalitzades, afegir-les\n"
+"a la llista del menú  \"Fitxer -> Opcions -> Simulador\"."
+
+# ho.custbut
+#: ca/messages:919
+msgid "Set custom delay values for this component."
+msgstr "Ajustar valors de retards personalitzats per aquesta porta."
+
+# ho.simwatch
+#: ca/messages:923
+msgid ""
+"Display commands sent between\n"
+"the GUI and the simulator."
+msgstr ""
+"Visualitzar comandes enviades entre l'entorn\n"
+"de visualització (GUI) i el simulador."
