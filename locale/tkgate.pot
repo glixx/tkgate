@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 10:03+0300\n"
+"POT-Creation-Date: 2018-11-29 13:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,11 +219,6 @@ msgstr ""
 # opt.tool.symport
 #: en/messages:167 en/messages:571 en/messages:1267
 msgid "Ports"
-msgstr ""
-
-# @mm.width
-#: en/messages:173
-msgid "7"
 msgstr ""
 
 # mm.enable
@@ -1970,16 +1965,6 @@ msgid ""
 "be connected to switches or registers."
 msgstr ""
 
-# @db.gate.comment.width
-#: en/messages:758
-msgid "*900"
-msgstr ""
-
-# @db.gate.comment.height
-#: en/messages:759
-msgid "*550"
-msgstr ""
-
 # db.gate.tab.General.cap
 #: en/messages:761
 msgid "General Properties"
@@ -2272,11 +2257,6 @@ msgstr ""
 msgid "Hex Value:"
 msgstr ""
 
-# @db.gate.dip.value.exp.width
-#: en/messages:874
-msgid "150"
-msgstr ""
-
 # db.gate.dip.shownet.on.exp
 #: en/messages:878
 msgid "Show the name of the net next to dip."
@@ -2312,11 +2292,6 @@ msgstr ""
 # db.gate.tap.lbl.bus
 #: en/messages:887
 msgid "LSB:"
-msgstr ""
-
-# @db.gate.tap.exp.width
-#: en/messages:888
-msgid "*180"
 msgstr ""
 
 # db.gate.mux.dataorder
@@ -2872,31 +2847,6 @@ msgstr ""
 # print.tab.advanced
 #: en/messages:1121
 msgid "Advanced"
-msgstr ""
-
-# @opt.tool.columns
-#: en/messages:1128
-msgid "2"
-msgstr ""
-
-# @opt.tool.colwidth
-#: en/messages:1130
-msgid "30"
-msgstr ""
-
-# @opt.sidebar.width
-#: en/messages:1132
-msgid "*200"
-msgstr ""
-
-# @opt.tree.width
-#: en/messages:1134
-msgid "*150"
-msgstr ""
-
-# @opt.editor.catwidth
-#: en/messages:1136
-msgid "15"
 msgstr ""
 
 # opt.title
@@ -3904,21 +3854,6 @@ msgstr ""
 msgid "Object Name"
 msgstr ""
 
-# @find.type.gate
-#: en/messages:1504
-msgid "gate"
-msgstr ""
-
-# @find.type.net
-#: en/messages:1505
-msgid "net"
-msgstr ""
-
-# @find.type.comment
-#: en/messages:1506
-msgid "comment"
-msgstr ""
-
 # find.options
 #: en/messages:1508
 msgid "Search Options"
@@ -3927,11 +3862,6 @@ msgstr ""
 # find.results
 #: en/messages:1509
 msgid "Search Results"
-msgstr ""
-
-# @find.qual.pos
-#: en/messages:1516
-msgid "before"
 msgstr ""
 
 # find.qual.contains
@@ -3982,36 +3912,6 @@ msgstr ""
 # find.target
 #: en/messages:1529
 msgid "Target"
-msgstr ""
-
-# @portlist.in
-#: en/messages:1535
-msgid "port_in1.gif"
-msgstr ""
-
-# @portlist.out
-#: en/messages:1536
-msgid "port_out1.gif"
-msgstr ""
-
-# @portlist.inout
-#: en/messages:1537
-msgid "port_inout1.gif"
-msgstr ""
-
-# @portlist.in2
-#: en/messages:1538
-msgid "port_in2.gif"
-msgstr ""
-
-# @portlist.out2
-#: en/messages:1539
-msgid "port_out2.gif"
-msgstr ""
-
-# @portlist.inout2
-#: en/messages:1540
-msgid "port_inout2.gif"
 msgstr ""
 
 # circ.wintitle
@@ -4087,16 +3987,6 @@ msgstr ""
 # circ.reallyoverwrite
 #: en/messages:1569
 msgid "Do you really want to overwrite the existing file '%s'?"
-msgstr ""
-
-# @circ.library.width
-#: en/messages:1573
-msgid "*500"
-msgstr ""
-
-# @circ.library.height
-#: en/messages:1574
-msgid "*350"
 msgstr ""
 
 # circ.script
@@ -4854,7 +4744,7 @@ msgstr ""
 # err.badsave
 #: en/messages:1830
 msgid ""
-"A problem has occured trying to open or write the file '%s'. Check\n"
+"A problem has occurred trying to open or write the file '%s'. Check\n"
 "file/directory protections and or disk space."
 msgstr ""
 
@@ -5529,16 +5419,6 @@ msgstr ""
 # verga.err.BADVALUE
 #: en/messages:2003
 msgid "Bad numeric value '%s'."
-msgstr ""
-
-# verga.err.NONEXPCTL
-#: en/messages:2004
-msgid "Event control @(*) applied to non-expression."
-msgstr ""
-
-# verga.err.NONSTATCTL
-#: en/messages:2005
-msgid "Event control @(*) applied to non-statement."
 msgstr ""
 
 # verga.err.MODREDEF
@@ -6328,7 +6208,7 @@ msgstr ""
 #: en/messages:2433
 msgid ""
 "The current file being edited. A '*' indicates\n"
-"that the buffer has been modifed since\n"
+"that the buffer has been modified since\n"
 "the last save."
 msgstr ""
 
@@ -6345,8 +6225,8 @@ msgstr ""
 # ho.print.seluse
 #: en/messages:2441
 msgid ""
-"Print all modules \"in use\". In use modues are\n"
-"those that are a decendent of the root module."
+"Print all modules \"in use\". In use modules are\n"
+"those that are a descendant of the root module."
 msgstr ""
 
 # ho.print.fulltrace
@@ -6396,7 +6276,7 @@ msgid ""
 "Use the selectors to the left to\n"
 "select a region, or select the region\n"
 "in the scope window before bringing\n"
-"up this diaglog box."
+"up this dialog box."
 msgstr ""
 
 # ho.circuit.discchg
@@ -6798,7 +6678,7 @@ msgstr ""
 msgid ""
 "Always show warnings in the circuit, even if\n"
 "there are no errors. If there are only warnings,\n"
-"the simualtor will be started and the list of\n"
+"the simulator will be started and the list of\n"
 "warnings will be displayed in a separate window."
 msgstr ""
 
@@ -6822,7 +6702,7 @@ msgstr ""
 #: en/messages:2773
 msgid ""
 "List of directories to search for TkGate library\n"
-"files. Library files should have a .v extention\n"
+"files. Library files should have a .v extension\n"
 "and contain modules useful for use in user circuits."
 msgstr ""
 
@@ -6887,7 +6767,7 @@ msgstr ""
 #: en/messages:2823
 msgid ""
 "Unset this option to suppress display of\n"
-"the image and explanitory text at the\n"
+"the image and explanatory text at the\n"
 "edge of dialog boxes."
 msgstr ""
 
@@ -6921,7 +6801,7 @@ msgstr ""
 #: en/messages:2850
 msgid ""
 "If no other circuit is specified on the command\n"
-"line. A TkGate tutorial will be disaplyed as\n"
+"line. A TkGate tutorial will be displayed as\n"
 "the initial circuit on start up."
 msgstr ""
 
