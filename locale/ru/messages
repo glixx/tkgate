@@ -102,7 +102,7 @@ sidetab.ports	Порты
 #
 # MsgMgr strings (including breakpoint and script handling)
 #
-@mm.width	17
+#mm.width	17
 mm.add		Добавить...
 mm.delete	Удалить
 mm.edit		Редактировать...
@@ -236,7 +236,7 @@ menu.help.example	1:Примеры
 #
 menu.scope_file			0:Файл
 menu.scope_sim			0:Симуляция
-menu.scope_trace		0:Трассировка
+menu.scope_trace		0:	0:Трассировка
 menu.scope_help			0:Справка
 
 menu.scope_file.ptrace		0:Печать трассировки...
@@ -679,8 +679,8 @@ db.gate.cat.tran.exp	-fillbegin-
 #
 # Минимальный размер поля ввода текста комментариев
 #
-@db.gate.comment.width		*900
-@db.gate.comment.height		*550
+#db.gate.comment.width		*900
+#db.gate.comment.height		*550
 
 db.gate.tab.General.cap		Общие свойства
 db.gate.tab.Ports.cap		Свойства порта
@@ -794,7 +794,7 @@ db.gate.switch.shownet.off.exp	Не отображать имя цепи ряд�
 db.gate.dip.value	Начальное значение
 db.gate.dip.value.exp	Начальное значение DIP-переключателя после начала симуляции.
 db.gate.dip.value.hex	16-ричное значение:
-@db.gate.dip.value.exp.width	150
+#db.gate.dip.value.exp.width	150
 
 db.gate.dip.shownet		Отображать имя цепи
 db.gate.dip.shownet.on.hdr	Показать
@@ -808,7 +808,7 @@ db.gate.tap.exp.bit	Выберите биты для ответвления от
 db.gate.tap.exp.bus	Выберите наименьший значащий бит из диапазона для ответвления от многоразрядной шины.
 db.gate.tap.lbl.bit	Бит:
 db.gate.tap.lbl.bus	МЗБ:
-@db.gate.tap.exp.width	*180
+#db.gate.tap.exp.width	*180
 
 db.gate.mux.dataorder	Упорядочивание входов
 db.gate.mux.ord1.hdr	Слева направо
@@ -1050,15 +1050,15 @@ print.tab.advanced	Дополнительно
 # Диалог настроек
 #
 # Number of columns in list of toolbars
-@opt.tool.columns	2
+#opt.tool.columns	2
 # Width of columns in list of toolbars
-@opt.tool.colwidth	30
+#opt.tool.colwidth	30
 # Width of image sidebar
-@opt.sidebar.width	*300
+#opt.sidebar.width	*300
 # Width of tree box with option categories
-@opt.tree.width		*200
+#opt.tree.width		*200
 # Width of text categoies column in the HDL editor color selection
-@opt.editor.catwidth	25
+#opt.editor.catwidth	25
 
 opt.title		TkGate: Настройки
 opt.treelabel		Настройки
@@ -1127,8 +1127,8 @@ opt.saveCells		Включать ячейки в сохранённые файл�
 opt.showimage		Показывать изображения в боковых панелях диалогов
 opt.novice		Режим новичка
 opt.blockDropConnect	Создание портов переносом проводника
-opt.ckpoint.1		Делать контрольные точки каждые
-opt.ckpoint.2		команд.
+#opt.ckpoint.1		Делать контрольные точки каждые
+#opt.ckpoint.2		команд.
 opt.freq		Интервал
 opt.beak		Разрешить специальные режимы
 opt.bat			Bat
@@ -1352,7 +1352,7 @@ blklst.claim.title	TKGate: Затребование модуля
 blklst.setroot.title	TKGate: Установка корневого модуля
 blklst.new.title	TKGate: Новый модуль
 
-blklst.claim		Затребовать модуль
+blklst.claim.cap	Затребовать модуль
 blklst.to		В
 blklst.from		Из
 blklst.name		Имя
@@ -1419,9 +1419,9 @@ find.result.name	Имя объекта
 #
 # These are special tags used by the search feature. Do not change their value.
 #
-@find.type.gate		вентиль
-@find.type.net		цепь
-@find.type.comment	комментарий
+#find.type.gate		вентиль
+#find.type.net		цепь
+#find.type.comment	комментарий
 
 find.options		Настройки поиска
 find.results		Результаты поиска
@@ -1431,7 +1431,7 @@ find.results		Результаты поиска
 # should be "before" or "after" the text entry box. Use the keywords before
 # or after to indicate the position.
 #
-@find.qual.pos		before
+#find.qual.pos		before
 
 find.qual.contains	Содержит...
 find.qual.begins	Начинается...
@@ -1450,12 +1450,12 @@ find.target		Цель поиска
 # These are special tags used to indicate the image file to be used for
 # displaying port types.
 #
-@portlist.in		port_in1.gif
-@portlist.out		port_out1.gif
-@portlist.inout		port_inout1.gif
-@portlist.in2		port_in2.gif
-@portlist.out2		port_out2.gif
-@portlist.inout2	port_inout2.gif
+#portlist.in		port_in1.gif
+#portlist.out		port_out1.gif
+#portlist.inout		port_inout1.gif
+#portlist.in2		port_in2.gif
+#portlist.out2		port_out2.gif
+#portlist.inout2	port_inout2.gif
 
 
 ##############################################################################
@@ -1488,8 +1488,8 @@ circ.reallyoverwrite	-fillbegin-
 Действительно перезаписать существующий файл '%s'?
 -end-
 
-@circ.library.width	*500
-@circ.library.height	*350
+#circ.library.width	*500
+#circ.library.height	*350
 
 circ.general		Общие
 circ.library		Библиотеки

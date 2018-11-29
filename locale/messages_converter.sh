@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="ja/messages.utf8"
+file="ru/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file
