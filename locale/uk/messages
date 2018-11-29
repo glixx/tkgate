@@ -89,7 +89,7 @@ sidetab.ports	Порти
 #
 # MsgMgr strings (including breakpoint and script handling)
 #
-@mm.width	7
+#mm.width	7
 mm.add		Додати…
 mm.delete	Вилучити
 mm.edit		Змінити…
@@ -221,7 +221,7 @@ menu.help.example	1:Examples
 #
 menu.scope_file			0:Файл
 menu.scope_sim			0:Імітувати
-menu.scope_trace		0:Trace
+menu.scope_trace		0:	0:Trace
 menu.scope_help			0:Довідка
 
 menu.scope_file.ptrace		0:Print Trace...
@@ -670,8 +670,8 @@ be connected to switches or registers.
 #
 # Minimum size of textbox for comment
 #
-@db.gate.comment.width		*900
-@db.gate.comment.height		*550
+#db.gate.comment.width		*900
+#db.gate.comment.height		*550
 
 db.gate.tab.General.cap		General Properties
 db.gate.tab.Ports.cap		Port Properties
@@ -786,7 +786,7 @@ db.gate.switch.shownet.off.exp	Do not show the name of the net next to switch.
 db.gate.dip.value	Initial DIP Value
 db.gate.dip.value.exp	Initial value of DIP switch at start of simulation.
 db.gate.dip.value.hex	Hex Value:
-@db.gate.dip.value.exp.width	150
+#db.gate.dip.value.exp.width	150
 
 db.gate.dip.shownet		Show Net Name
 db.gate.dip.shownet.on.hdr	Show
@@ -800,7 +800,7 @@ db.gate.tap.exp.bit	Select the bit to pull off of the multi-bit bus.
 db.gate.tap.exp.bus	Select the least-significant bit of the bit range to pull off of the multi-bit bus.
 db.gate.tap.lbl.bit	Bit:
 db.gate.tap.lbl.bus	LSB:
-@db.gate.tap.exp.width	*180
+#db.gate.tap.exp.width	*180
 
 db.gate.mux.dataorder	Input Ordering
 db.gate.mux.ord1.hdr	Left-to-Right
@@ -1040,15 +1040,15 @@ print.tab.advanced	Advanced
 # Options dialog
 #
 # Number of columns in list of toolbars
-@opt.tool.columns	2
+#opt.tool.columns	2
 # Width of columns in list of toolbars
-@opt.tool.colwidth	30
+#opt.tool.colwidth	30
 # Width of image sidebar
-@opt.sidebar.width	*200
+#opt.sidebar.width	*200
 # Width of tree box with option categories
-@opt.tree.width		*150
+#opt.tree.width		*150
 # Width of text categories column in the HDL editor color selection
-@opt.editor.catwidth	15
+#opt.editor.catwidth	15
 
 opt.title		TkGate: Options
 opt.treelabel		Options
@@ -1116,8 +1116,8 @@ opt.saveCells		Include cells in save files
 opt.showimage		Show side-bar images in dialog boxes
 opt.novice		Novice mode
 opt.blockDropConnect	Wire drop port creation
-opt.ckpoint.1		Do checkpointing every
-opt.ckpoint.2		commands.
+#opt.ckpoint.1		Do checkpointing every
+#opt.ckpoint.2		commands.
 opt.freq		Interval
 opt.beak		Enable Special Modes
 opt.bat			Bat
@@ -1346,7 +1346,7 @@ blklst.claim.title	TKGate: Claim Module
 blklst.setroot.title	TKGate: Set Root Module
 blklst.new.title	TKGate: Module New
 
-blklst.claim		Claim Module
+blklst.claim.cap	Claim Module
 blklst.to		To
 blklst.from		From
 blklst.name		Name
@@ -1415,9 +1415,9 @@ find.result.name	Object Name
 #
 # These are special tags used by the search feature. Do not change their value.
 #
-@find.type.gate		gate
-@find.type.net		net
-@find.type.comment	comment
+#find.type.gate		gate
+#find.type.net		net
+#find.type.comment	comment
 
 find.options		Search Options
 find.results		Search Results
@@ -1427,7 +1427,7 @@ find.results		Search Results
 # should be "before" or "after" the text entry box. Use the keywords before
 # or after to indicate the position.
 #
-@find.qual.pos		before
+#find.qual.pos		before
 
 find.qual.contains	Contains...
 find.qual.begins	Begins with...
@@ -1446,12 +1446,12 @@ find.target		Target
 # These are special tags used to indicate the image file to be used for
 # displaying port types.
 #
-@portlist.in		port_in1.gif
-@portlist.out		port_out1.gif
-@portlist.inout		port_inout1.gif
-@portlist.in2		port_in2.gif
-@portlist.out2		port_out2.gif
-@portlist.inout2	port_inout2.gif
+#portlist.in		port_in1.gif
+#portlist.out		port_out1.gif
+#portlist.inout		port_inout1.gif
+#portlist.in2		port_in2.gif
+#portlist.out2		port_out2.gif
+#portlist.inout2	port_inout2.gif
 
 
 ##############################################################################
@@ -1484,8 +1484,8 @@ circ.reallyoverwrite	-fillbegin-
 Do you really want to overwrite the existing file '%s'?
 -end-
 
-@circ.library.width	*500
-@circ.library.height	*350
+#circ.library.width	*500
+#circ.library.height	*350
 
 
 circ.general		General
