@@ -87,8 +87,8 @@ b.close			閉じる
 b.ok			ＯＫ
 b.clear			クリア
 b.cancel		キャンセル
-b.open			開く
-b.bitw			ビット幅
+#b.open			開く
+#b.bitw			ビット幅
 b.in			入
 b.out			出
 b.inout			入出
@@ -98,14 +98,14 @@ b.find			探索
 b.edit			編集...
 b.add			追加...
 b.delete		削除
-b.deleteb		削除...
+#b.deleteb		削除...
 b.remove		消す
 b.apply			セット
 b.anchor		移動不可
 b.tech			テクノロジー
-b.enable		可能にする
-b.disable		無能にする
-b.flush			クリア
+#b.enable		可能にする
+#b.disable		無能にする
+#b.flush			クリア
 
 ##############################################################################
 #
@@ -116,13 +116,13 @@ tab.editintr		インタフェース
 tab.simulate		シミュレート
 tab.cpath		遅延解析
 # Width of mode selection tabs
-@tab.width		150
+#tab.width		150
 
 #############################################################################
 #
 # MsgMgr strings (including breakpoint and script handling)
 #
-@mm.width		8
+#mm.width		8
 mm.add			追加...
 mm.delete		削除
 mm.edit			編集...
@@ -143,7 +143,7 @@ menu.tool		ツール
 menu.simulate		シミュレート
 menu.module		モジュール
 menu.interface		インタフェース
-menu.gate		ゲート
+#menu.gate		ゲート
 menu.make		作成
 menu.help		ヘルプ
 
@@ -153,21 +153,19 @@ menu.file.openlib	ライブラリを開く...
 menu.file.save		保存
 menu.file.saveas	名前を付けて保存...
 menu.file.print		印刷...
-menu.file.options	設定...
+#menu.file.options	設定...
 menu.file.quit		終了
 menu.file.cprop		回路の特徴...
 
-menu.edit.undo		Undo
-menu.edit.redo		Redo
 menu.edit.cut		カット
 menu.edit.copy		コピー
 menu.edit.paste		ペースト
 menu.edit.overlay	Overlay張り付け
 menu.edit.selall	全てを選択
 menu.edit.find		回路を探索...
-menu.edit.algnv		縦の一列
-menu.edit.algnh		横のー列
-menu.edit.rotate	回転
+#menu.edit.algnv		縦の一列
+#menu.edit.algnh		横のー列
+#menu.edit.rotate	回転
 menu.edit.zoomin	ズーム・イン
 menu.edit.zoomout	ズーム・アウト
 
@@ -196,11 +194,11 @@ menu.tool.port			ポート
 menu.tool.select		免責選択
 
 
-menu.tool.rot0			0度回転
-menu.tool.rot90			90度回転
-menu.tool.rot180		180度回転
-menu.tool.rot270		270度回転
-menu.tool.tclshell		0:Tcl Shell
+#menu.tool.rot0			0度回転
+#menu.tool.rot90			90度回転
+#menu.tool.rot180		180度回転
+#menu.tool.rot270		270度回転
+#menu.tool.tclshell		0:Tcl Shell
 
 menu.simulate.begin		シミュレーションを開始
 menu.simulate.end		シミュレーションを終了
@@ -227,14 +225,14 @@ menu.module.interface		インタフェース
 menu.module.interface.set	セット
 menu.module.interface.edit	編集
 
-menu.gate.addport		ポート追加
-menu.gate.ioset			タイプ指定
-menu.gate.anchor		選択を移動不可にする
-menu.gate.unanchor		選択を移動可にする
-menu.gate.prop			ゲートの設定...
-menu.gate.rep			複製
-menu.gate.del			削除
-menu.gate.settech		テクノロジーの設定
+#menu.gate.addport		ポート追加
+#menu.gate.ioset			タイプ指定
+#menu.gate.anchor		選択を移動不可にする
+#menu.gate.unanchor		選択を移動可にする
+#menu.gate.prop			ゲートの設定...
+#menu.gate.rep			複製
+#menu.gate.del			削除
+#menu.gate.settech		テクノロジーの設定
 
 menu.help.about			tkgateについて...
 menu.help.license		ライセンス...
@@ -248,7 +246,7 @@ menu.help.example		回路の例
 #
 menu.scope_file			ファイル
 menu.scope_sim			シミュレート
-menu.scope_trace		トレース
+menu.scope_trace		0:	0:	トレース
 menu.scope_help			ヘルプ
 
 menu.scope_file.ptrace		トレース印刷...
@@ -281,18 +279,14 @@ port.inout			入出
 # Tags for built-in gate types
 #
 
-gm.io			I/O
 gm.gate			ゲート
 gm.rgate		単項縮約ゲート
-gm.msi			MSI
-gm.alu			ALU
 gm.mem			メモリー
 gm.mod			モジュール
 gm.comment		コメント
 gm.frame		フレーム
 
 gm.signals.ground		アース
-gm.signals.vdd		Vdd
 
 gm.io.switch		スイッチ
 gm.io.dip		DIPスイッチ
@@ -302,30 +296,10 @@ gm.io.clock		クロック
 
 gm.io.led		LEDビット
 gm.io.ledbar		LED棒グラフ
-gm.io.ledhex		7-Seg. LED (HEX)
-gm.io.leddec		7-Seg. LED (DEC)
-gm.io.ledseg		7-Seg. LED (Direct)
 
-gm.io.tty		TTY
-
-gm.gate.and		AND
-gm.gate.nand		NAND
-gm.gate.or		OR
-gm.gate.nor		NOR
-gm.gate.xor		XOR
-gm.gate.xnor		XNOR
 gm.gate.buf		バッファ
 gm.gate.inv		否定バッファ
 gm.gate.tribuf		トライ・バッファ
-gm.gate.nmos		NMOS
-gm.gate.pmos		PMOS
-
-gm.rgate.and		単項縮約AND
-gm.rgate.nand		単項縮約NAND
-gm.rgate.or		単項縮約OR
-gm.rgate.nor		単項縮約NOR
-gm.rgate.xor		単項縮約XOR
-gm.rgate.xnor		単項縮約XNOR
 
 gm.alu.add		加算器
 gm.alu.mult		乗算器
@@ -338,8 +312,6 @@ gm.alu.roll		ロール
 gm.mem.reg		レジスタ
 gm.mem.ff		フリップ・フロップ
 gm.mem.rff		鏡像フリップ・フロップ
-gm.mem.ram		RAM
-gm.mem.rom		ROM
 
 gm.msi.21mux		2-1 セレクター
 gm.msi.41mux		4-1 セレクター
@@ -440,14 +412,6 @@ pop.igen.other			他
 #
 # Symbol editor strings
 #
-#symed.bsave			Store
-#symed.file			File
-#symed.file.load		Load Bitmap...
-#symed.file.save		Save Bitmap...
-#symed.file.updateclose		Close and Update
-#symed.file.discardclose	Close and Discard
-#symed.help			Help
-#symed.help.about		About...
 #symed.edit			編集
 #symed.edit.cut			カット
 #symed.edit.copy			コピー
@@ -460,14 +424,13 @@ pop.igen.other			他
 #symed.cutpaste			カット／ペースト
 #symed.rotate			ポートの回転
 #symed.zoom			ズーム
-#symed.update			Update
 
-symed.cancel			キャンセル
+#symed.cancel			キャンセル
 symed.tab.normal		非セレクト
 symed.tab.select		セレクト
 symed.link			セレクトと非セレクトを同時に編集する。
 # width of symbol editor tabs
-@symed.tab.width		115
+#symed.tab.width		115
 
 
 ##############################################################################
@@ -504,15 +467,6 @@ db.mod.hdl		HDL
 #
 # These are probably not used anymore.  Lets leave them as is.
 #
-db.mod.inuse.0		Module is not in use.
-db.mod.inuse.1		Module is in use.
-db.mod.lmod.0		Module has not been modified since loading.
-db.mod.lmod.1		Module has been modified since loading.
-db.mod.smod.0		Module has not been modified since saving.
-db.mod.smod.1		Module has been modified since saving.
-db.mod.islib.1		Module is part of [%s] library.
-db.mod.islib.0		Module is not a library module.
-
 
 db.mod.netexpl		-begin-
 グラフィカルのエディタを
@@ -529,7 +483,7 @@ Verilogのテキストを利用して、
 # Error List Dialog box
 #
 db.err.caption		エラーの一覧表
-db.err.explain		-begin-
+#db.err.explain		-begin-
 回路にエラーが発見されたので、シミュレータを開始
 出来なかった。以下のリストの中から、エラーを選択
 して、エラーの場所に移動してください。
@@ -726,11 +680,6 @@ db.gate.mparm.exampleA		-begin-
 「1'b1」の「base_value」というパラメタを
 持つモジュールが示してある。
 -end-
-db.gate.mparm.exampleB		-begin-
-module foo #(.base_value(1'b1)) (Z,A,B);
-   assign Z = A ^ B ^ base_value;
-endmodule
--end-
 
 db.gate.mux.dataorder		入力の順序
 db.gate.mux.ord1.hdr		左から右へ
@@ -784,9 +733,6 @@ db.gate.aox.nouse.exp		-fillbegin-
 db.gate.led.type		LEDのタイプ
 db.gate.led.bit.hdr		ビット
 db.gate.led.bar.hdr		バー・グラフ
-db.gate.led.hex.hdr		7-Segment (HEX)
-db.gate.led.dec.hdr		7-Segment (DEC)
-db.gate.led.seg.hdr		7-Segment (Direct)
 
 db.gate.led.bit.exp		-fillbegin-
 一ビットの信号の為の単位のLED
@@ -833,7 +779,7 @@ cpath.cloops		-fillbegin-
 ##############################################################################
 # Print dialog box
 #
-print.outto		出力先
+#print.outto		出力先
 print.printer		プリンター
 print.file		ファイル
 print.prcmd		印刷コマンド
@@ -842,7 +788,7 @@ print.advanced		オプション...
 
 print.filename		ファイル名
 print.epssave		Encapsulated Postscriptとしてセーブする.
-print.doctit		ドキュメントの題名
+#print.doctit		ドキュメントの題名
 print.epcm		エポック/cm
 print.estpg		ページ数の見積もり
 print.all		全て
@@ -866,7 +812,7 @@ print.scaleselect	選択範囲をスケールする
 print.fulltr		全部
 print.parttr		部分
 print.start		スタート
-print.end		ストップ
+#print.end		ストップ
 print.filesel		ファイルに印刷
 print.printersel	プリンタに印刷
 print.defaultprinter	デフォルトのプリンタ
@@ -905,7 +851,7 @@ print.printtrace.trace.exp		-fillbegin-
 -end-
 
 print.tab.output		印刷先
-print.tab.page			印刷
+#print.tab.page			印刷
 print.tab.content		内容
 
 ##############################################################################
@@ -914,15 +860,15 @@ print.tab.content		内容
 #
 
 # Width of options dialog box (not including image sidebar)
-@opt.width			600
+#opt.width			600
 # Height of options dialog box
-@opt.height			450
+#opt.height			450
 # Width of tabs on options dialog box
-@opt.tabwidth			115
+#opt.tabwidth			115
 # Number of columns in list of toolbars
-@opt.tool.columns		3
+#opt.tool.columns		3
 # Width of columns in list of toolbars
-@opt.tool.colwidth		30
+#opt.tool.colwidth		30
 
 
 opt.general		一般
@@ -971,7 +917,7 @@ opt.saveCells		セーブファイルにセルを含む。
 opt.showimage		ダイアログボックスの説明欄を表示する。
 opt.novice		初心者モード
 opt.blockDropConnect	ワイヤ・ドロップでのポートの作成。
-opt.ckpoint		チェックポイント保存
+#opt.ckpoint		チェックポイント保存
 opt.freq		期間
 opt.beak		特別モードを可能にする
 opt.bat			バットマン
@@ -984,7 +930,7 @@ opt.cstepsz		クロックのサイクル数
 opt.overstep		クロックのオバーステップ
 opt.sorttraces		スコープで信号をABC順で表示する。
 opt.vpopupdelay		信号値ウィンドの表示遅延
-opt.initscript		初期化スクリプト
+#opt.initscript		初期化スクリプト
 opt.posedge		全てのクロックで停止する
 opt.setclock		指定のクロックで停止する
 opt.delayfilepath	遅延ファイル
@@ -1018,7 +964,6 @@ opt.tool.file		ファイル
 opt.tool.edit		編集
 opt.tool.gateopt	回転／整列化
 opt.tool.gateprop	ゲート特徴
-opt.tool.undo		Undo/Redo
 opt.tool.zoom		ズーム
 opt.tool.mode		モード
 opt.tool.module		モジュール
@@ -1054,104 +999,26 @@ opt.vercheck		-begin-
 定期的に tkgate の新しいバージョンをインターネットで チェックする。常時接続でなければ有効にしないこと。
 -end-
 
-opt.general.cap		一般オプション
-opt.editor.cap		HDLテキスト・エディタ
-opt.interface.cap	インタフェス・オプション
-opt.toolbars.cap	ツールバー・オプション
-opt.print.cap		印刷オプション
-opt.analysis.cap		-begin-
-
-TODO: Critical Path Options
--end-
-opt.simulator.cap	シミュレータ・オプション
-opt.security.cap	セキュリティ・オプション
-opt.color.cap		色づけ・オプション
-opt.html.cap		HTML/HTTPオプション
-opt.debug.cap		デバッグ・オプション
-opt.library.cap		ライブラリ・オプション
-
-opt.sec.execlevel	TODO: The $tkg$exec() system task is
-opt.sec.exec		TODO: fully enabled.
-opt.sec.regexec		TODO: enabled only for registered functions.
-opt.sec.noexec		TODO: disabled.
-
-opt.sec.simfeatures	TODO: Simulator Features
-opt.sec.send		TODO: Enable the $tkg$command() system task.
-opt.sec.open		TODO: Enable the $fopen() system task.
-opt.sec.writemem	TODO: Enable the $writememb() and $writememh() system tasks.
-opt.sec.enqueue		TODO: Enable the $tkg$recv() and $tkg$send() system tasks.
-
-opt.sec.handle		TODO: Security Violation Handling
-opt.sec.stop		TODO: Stop simulator when disabled feature is used.
-opt.sec.warn		TODO: Display warning message when disabled feature is used.
-opt.sec.ignore		TODO: Ignore attempted usage of disabled features.
-
-opt.html.linkopts	TODO: Link Options
-opt.html.browser	TODO: Browser Command
-opt.html.email		TODO: e-Mail Command
+#opt.general.cap		一般オプション
+#opt.editor.cap		HDLテキスト・エディタ
+#opt.interface.cap	インタフェス・オプション
+#opt.toolbars.cap	ツールバー・オプション
+#opt.print.cap		印刷オプション
+#opt.simulator.cap	シミュレータ・オプション
+#opt.security.cap	セキュリティ・オプション
+#opt.color.cap		色づけ・オプション
+#opt.html.cap		HTML/HTTPオプション
+#opt.debug.cap		デバッグ・オプション
+#opt.library.cap		ライブラリ・オプション
 
 opt.color.editwin	編集ウィンドウの色づけ
 opt.color.scopewin	スコープ・ウィンドウの色づけ
 
-opt.vlibadd.cap		ライブラリ追加
-opt.vlibadd.exp		-fillbegin-
-TODO: Enter the name of a TkGate Verilog library.  Libraries named in the autoload list will be automatically loaded on startup.
--end-
+#opt.vlibadd.cap		ライブラリ追加
 
-opt.editor.exp		-fillbegin-
-TODO: Set options for the HDL text editor.
--end-
-
-opt.general.exp		-fillbegin-
+#opt.general.exp		-fillbegin-
 アイデンティティー、基本設定をする。アイデンティティーは印刷する時など用いられる。
 -end-
-
-opt.interface.exp		-fillbegin-
-TODO: Set options controlling the look and feel of the interface.
--end-
-
-opt.toolbars.exp		-fillbegin-
-TODO: Specify which toolbars to display.
--end-
-
-opt.print.exp		-fillbegin-
-TODO: Set default printer options on this page.
--end-
-
-opt.analysis.exp		-fillbegin-
-TODO: These options control the critical path analysis function.
--end-
-
-opt.simulator.exp		-fillbegin-
-TODO: These options control the functioning of the simulator.
--end-
-
-opt.library.exp		-fillbegin-
-TODO: Set search paths for User Device and Verilog library files.
--end-
-
-
-opt.security.exp		-fillbegin-
-TODO: Set the simulator security options by enabling or disabling features that may be a risk when simulating circuits from untrusted sources.
--end-
-
-opt.color.exp		-fillbegin-
-TODO: Use these options to set the color scheme to use in TkGate.
--end-
-
-opt.html.exp		-fillbegin-
-TODO: Set options pertaining to html commands in tkgate circuit comments.
--end-
-
-
-opt.debug.exp		-fillbegin-
-TODO: Debugging options can be set here.
--end-
-
-
-opt.gen.basetoolbar		TODO: Core Editor Toolbars
-opt.gen.simtoolbar		TODO: Simulation Mode Toolbars
-opt.gen.symedtoolbar		TODO: Symbol Editor Toolbars
 
 opt.bbar.restore		ページの設定をデフォルトにする
 opt.bbar.restoreall		全ての設定をデフォルトにする
@@ -1168,36 +1035,21 @@ igen.bits		ビット
 
 igen.modname		モジュール名:
 
-igen.resort		再ソート
+#igen.resort		再ソート
 igen.add		追加
 igen.delete		削除
 igen.edit		編集
 
-igen.in			入
-igen.out		出
-igen.inout		入出
+#igen.in			入
+#igen.out		出
+#igen.inout		入出
 
-igen.left		左
-igen.right		右
-igen.top		上
-igen.bottom		下
+#igen.left		左
+#igen.right		右
+#igen.top		上
+#igen.bottom		下
 
-igen.other		他
-
-igen.mod		TODO: Use ports used in module only.
-igen.int		TODO: Use ports from exisiting interface only.
-igen.modint		TODO: Use both module and interface ports.
-
-igen.portsel		TODO: Port Selection
-igen.portpos		TODO: Port Positions
-igen.portpos.keep	TODO: Keep exiting port positions when possible.
-igen.portpos.renew	TODO: Regenerate all port positionings.
-
-igen.caption		TODO: Generate Interface
-
-igen.description	-begin-
-TODO: Create a new interface for a module.
--end-
+#igen.other		他
 
 info.script.error	スクリプトのエラー
 
@@ -1205,15 +1057,15 @@ module.props		モジュールの特徴
 
 ipanel.plist		ポートの一覧表
 ipanel.props		インタフェースの特徴
-ipanel.itype.change	タイプの変更...
-ipanel.itype.edsymbol	シンプルの編集...
+#ipanel.itype.change	タイプの変更...
+#ipanel.itype.edsymbol	シンプルの編集...
 ipanel.block		ブロック
 ipanel.symbol		シンボル
 
 ipanel.autogen		自動作成...
 
 ipanel.itype.select	インタフェス・タイプ
-ipanel.itype.selectexp	-begin-
+#ipanel.itype.selectexp	-begin-
 長方形型の「ブロッ
 ク」か、ビットマッ
 プの「シンボル」、
@@ -1221,26 +1073,15 @@ ipanel.itype.selectexp	-begin-
 ください。
 -end-
 
-ipanel.block.description		TODO: Block Interface
-ipanel.symbol.description		TODO: Custom Symbol Interface
-
 ipanel.ppos.label		ブロックのサイズを変更する時のポートの取り扱い
 ipanel.ppos.fix			指定
 ipanel.ppos.scale		スケール
-ipanel.ppos.grid		グリッド
-
-ipanel.warn.toblock		-begin-
-TODO: You are about to change the interface type for this module to "block".  This will result in the current interface data being destroyed.  Are you sure you want to do this?
--end-
-
-ipanel.warn.tosymbol		-begin-
-TODO: You are about to change the interface type for this module to "symbol".  This will result in the current interface data being destroyed.  You will also need to create a bitmap image for your new symbol.  Are you sure you want to do this?
--end-
+#ipanel.ppos.grid		グリッド
 
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.claim			取得するモジュール名
+blklst.claim.cap		取得するモジュール名
 blklst.to			新規モジュール名
 blklst.from			現在モジュール名
 blklst.name			モジュール名
@@ -1250,31 +1091,6 @@ blklst.copy.cap			コピー・モジュール
 blklst.rename.cap		モジュールの改名
 blklst.claim.cap		モジュールの取得
 blklst.setroot.cap		トップ・モジュールの選択
-
-blklst.new.exp		-fillbegin-
-TODO: Use this dialog box to create a new module definition.  You can create the module as a netlist or an HDL module, but once created you will not be able to modify the type without deleting and rebuilding the module.
--end-
-
-blklst.del.exp		-fillbegin-
-TODO: Delete the definition and interface data for the specified module.  Existing instances of the deleted module will be retained but will be marked as undefined.
--end-
-
-blklst.copy.exp		-fillbegin-
-TODO: Create a copy of the specified module definition.  Use this to create a new variant of an existing module.
--end-
-
-blklst.rename.exp		-fillbegin-
-TODO: Rename a module definition.  This operation will affect only the definition, any existing instances of this module will continue to point to the old module name.
--end-
-
-blklst.claim.exp		-fillbegin-
-TODO: Convert a library module to a user module.  This allows the module to be edited and to be saved with the user circuit.
--end-
-
-blklst.setroot.exp		-fillbegin-
-TODO: Make the specified module the top-level module.
--end-
-
 
 find.label		探索
 find.exp		-fillbegin-
@@ -1290,9 +1106,9 @@ find.result.name		オブジェクト名
 #
 # These are special tags used by the search feature.  Do not change their value.
 #
-@find.type.gate		gate
-@find.type.net		net
-@find.type.comment	comment
+#find.type.gate		gate
+#find.type.net		net
+#find.type.comment	comment
 
 find.options		探索のオプション
 find.results		探索の結果
@@ -1302,7 +1118,7 @@ find.results		探索の結果
 # should be "before" or "after" the text entry box.  Use the keywords before
 # or after to indicate the position.
 #
-@find.qual.pos		after
+#find.qual.pos		after
 
 find.qual.contains	を含む
 find.qual.begins	から始まる
@@ -1321,12 +1137,12 @@ find.target		探索の範囲
 # These are special tags used to indicate the image file to be used for
 # displaying port types.
 #
-@portlist.in		port_in1.gif
-@portlist.out		port_out1.gif
-@portlist.inout		port_inout1.gif
-@portlist.in2		port_in2.gif
-@portlist.out2		port_out2.gif
-@portlist.inout2	port_inout2.gif
+#portlist.in		port_in1.gif
+#portlist.out		port_out1.gif
+#portlist.inout		port_inout1.gif
+#portlist.in2		port_in2.gif
+#portlist.out2		port_out2.gif
+#portlist.inout2	port_inout2.gif
 
 
 ##############################################################################
@@ -1334,7 +1150,6 @@ find.target		探索の範囲
 # Circuit Dialog box
 #
 circ.label		回路の特徴
-circ.ident		TODO: Identification
 circ.filev		ファイルのバージョン
 circ.file		ファイル名
 circ.title		回路名
@@ -1342,31 +1157,11 @@ circ.discchg		変更を無視する
 circ.extbar		拡張バーを利用する。
 circ.autostart		シミュレーションの自動開始を有効にする。
 circ.iniscript		初期化スクリプト
-circ.noscript		スクリプト・ファイルは指定されていない。
-circ.really		TODO: Do you really want to remove '%s' from the list of initialization scripts.
-
-circ.script.cap		TODO: Edit Script
-circ.script.label	TODO: Edit script name:
-circ.vlib.cap		TODO: Edit Library
-circ.vlib.label		TODO: Library script name:
-
-
-@circ.tabwidth		100
-@circ.width		650
-@circ.height		400
-
+#circ.noscript		スクリプト・ファイルは指定されていない。
 circ.general		一般
 circ.library		ライブラリ
 circ.script		スクリプト
 circ.simulator		シミュレーション
-circ.timescale		TODO: Default Simulation Time Scale
-circ.timescale.unit	TODO: Units:
-circ.timescale.prec	TODO: Precision:
-
-
-circ.exp		-fillbegin-
-TODO: View and modifiy circuit specific properties. These properties will be stored with the circuit when you save.
--end-
 
 ##############################################################################
 #
@@ -1378,8 +1173,6 @@ libmgr.description	説明
 libmgr.status		状態
 libmgr.status.load	利用
 libmgr.status.unload	非利用
-libmgr.status.loadp	TODO: [利用]
-libmgr.status.unloadp	TODO: [非利用]
 libmgr.exp		-begin-
 利用するライブラリを選択する。
 -end-
@@ -1406,14 +1199,7 @@ break.value		値
 ##############################################################################
 # Simulator
 #
-sim.breakpt		ブレークポイント
-sim.recursive		-fillbegin-
-TODO: Recursive module definition found at '%s'.  Can not start simulator or perform critical path analysis.
--end-
-sim.hyperlinkstop		-fillbegin-
-TODO: The simulator is currently running.  Would you like to stop the simulation and follow the link?
--end-
-
+#sim.breakpt		ブレークポイント
 
 ##############################################################################
 #
@@ -1427,11 +1213,9 @@ cp.recompute		再計算
 ##############################################################################
 # Error messages
 #
-err.rootinterface		TODO: Can not set interface of root module.
 err.nopin		選択されたピンのタイプを変更出来ない。
 err.badhex		不正の16進数の値は無視された。
 err.gatanchor		ゲートが移動不可にマークされている為、移動出来ない。
-err.protdata		TODO: Can not modify contents of protected or library module.
 err.badfind		探索ストリング「%s」が見つからない。
 err.badopendel		使用中のモジュールを削除出来ない。
 err.nosrcmod		ソース・モジュール'%s'が見つからない。
@@ -1455,8 +1239,6 @@ err.badlprcmd		印刷コマンド「%s」が実行出来ない。
 err.badpsopen		ポスト・スクリプトを「%s」に書き込めない。
 err.badid		「%s」は不正の名前である。
 
-err.protintf		TODO: Can't modifiy protected interface on module '%s'.
-
 err.bkpt.badexp		不正なブレークポイントの条件である。「net」, 「!net」, 「net==value」, 「net!=value」のどれかでなければならない。
 err.bkpt.badnet		不正のネット名である。
 err.bkpt.badval		不正の値である。10進数あるいは、verilog形式の値しか認識されていない。
@@ -1473,8 +1255,6 @@ err.sim.badbin		2進数の値に不正の文字がある。
 err.sim.notswitch		ゲート'%s'はスイッチ、DIP、レジスタのどれかでなければならない。
 err.sim.badcmd		シミュレーション・スクリプトに不正のコマンド「%s」がある。
 err.sim.isrun		シミュレータは既に実行している。 ('Ctrl-s e'で終了する).
-err.sim.run		TODO: Run-time Error
-err.sim.cmd		TODO: Internal Command Error
 
 err.noteditpchg		設定は編集モード以外、変更不可。
 err.badeditop		編集コマンドに不正がある。
@@ -1485,10 +1265,6 @@ err.nomark		ゲート種を選ぶ前に、マウスで位置を設定してく�
 err.badgate		ゲート種が未定義である。
 
 err.badportadd		選択されたゲートにポートは追加不可。
-
-err.modmissing		TODO: HDL module text missing for module "%s".
-err.modtoomany		TODO: Excess module definitions in module "%s".
-err.modmismatch		TODO: Name mismatch between text definition and module name in "%s".
 
 err.manypages		-fillbegin-
 ページ数が極めて大きい。 本当に印刷しますか?
@@ -1504,12 +1280,9 @@ err.closeroot		トップ・モジュールが閉じれない。
 err.editonly		コマンドは、シミュレーション・モードで使えない。
 err.simonly		コマンドは、シミュレーション・モードでしか使えない。
 
-err.deltop		TODO: Can not delete top-level module '%s'.
-err.delprot		TODO: Can not delete protected module '%s'.
 err.nodel		ゲートを選択していない。
 err.modnotdef		モジュール「%s」は定義していない。
 err.moddef		モジュール「%s」が既に定義している。
-err.primredef		TODO: Built-in element name '%s' can not be redefined.
 err.noprop		選択されたゲートは編集出来る設定がない。
 err.openscript		シミュレーション・スクリプト「%s」が見つからない。
 err.oldversion		回路ファイルのバージョン(%s)が古い。(現在のバージョンは%s).
@@ -1518,28 +1291,8 @@ err.badversion		回路ファイルのバージョンが認識出来ない。注�
 err.nodrive		ネット%sはモジュール%sに信号のソースがない。
 err.noconn		ワイヤ%s{%d}は接続がない（削除した）。
 err.oldportact		ポートやモジュールの端に右クリックして下さい。
-err.nomodule		TODO: No selected module.
-err.nomodop		TODO: No suitable modules for operation.
-err.protexec		TODO: Attempted execution of protected command '%s' in $tkg$exec().
-
-err.notwritable		TODO: File '%s' is not writable.
 err.backupfail		バックアップ・ファイル'%s'が作成出来なかった。
 
-err.yy.badprop		TODO: Ignoring unknown circuit property '%s'.
-err.yy.baddata		TODO: Bad data type supplied for circuit property '%s'.
-err.yy.nosym		TODO: No current module symbol.
-err.yy.badicon		TODO: Bad icon type '%s'.
-err.yy.toomuchdata		TODO: Too much icon data.
-err.yy.nosyminst		TODO: Missing symbol %d on instance %s of %s.
-err.yy.badmodprop		TODO: Ignoring unknown module property '%s'.
-err.yy.badmoddata		TODO: Bad data type supplied for module property '%s'.
-err.yy.badprim		TODO: Unknown primitive name '%s'.
-err.yy.nonet		TODO: Undeclared net '%s'.
-err.yy.bogussave		TODO: Bogus save data detected. circuit may be damaged.
-err.yy.pinformat		TODO: Illegal pin name format '%s'.
-err.yy.pinname		TODO: Pin name '%s' not defined for gate type '%s'
-err.yy.nonetpos		TODO: No net for position %d on gate %s.
-err.yy.baddirective		TODO: Illegal or badly formed directive '%s'.
 
 err.corruptnewsave		-fillbegin-
 TkGateは'%s'にセーブ出来たが、ファイルが混乱されているみたい。もしチェッ ク・ポイントを利用していれば、チェック・ポイントのファイルを使ってみてく ださい。'tkgate -V'でファイルをチェック出来る。
@@ -1561,14 +1314,12 @@ err.noback		-fillbegin-
 tkgateバージョン%sで作られたファイルである。保存すると、 tkgateの古いバージョンに読み込めないことがある（現在の バージョンは%sである）。
 -end-
 
-err.viewfile		TODO: Can not open file '%s'.
 
 
 ##############################################################################
 #
 # Internal error messages (indicating a problem with tkgate)
 #
-err.internal.nomod		TODO: internal error: Failed to find module '%s'.
 
 
 ##############################################################################
@@ -1577,9 +1328,6 @@ err.internal.nomod		TODO: internal error: Failed to find module '%s'.
 msg.selwire		%sというワイヤが選択された。
 msg.selgate		%2$sという%1$sゲートが選択された。
 msg.selblock		%2$sという%1$sモジュールが選択された。
-msg.iselwire		TODO: Selected port '%s' on block '%s'.
-msg.iselgate		TODO: Selected %s named '%s' (huh? this message should be impossible).
-msg.iselblock		TODO: Selected module interface for '%s'.
 
 msg.modoverwt		モジュール「%s」が既に定義されている。定義しなおしますか?
 msg.foundgate		%sというゲートが見つかった。
@@ -1614,191 +1362,10 @@ miles.msg8b		お前が回路を設計出来ないというのは、誰でも分�
 # Error messages generated by verga
 #
 verga.err.OK			心配しないで、笑ってください。
-verga.err.INPORT		TODO: Port size mismatch on input port '%s'.
-verga.err.OUTPORT		TODO: Port size mismatch on output port '%s'.
-verga.err.FLOATNET		TODO: Net '%s' has no drivers (floating net).
-verga.err.DIRECTCONN		TODO: Direct connect operator '=>' unsupported.  Treated as '*>'.
-verga.err.MEMADDR		TODO: Attempt to write to memory %s with unknown address.
-verga.err.MEMBITS		TODO: Attempt to write to memory %s with unknown bitrange.
-verga.err.BADARRAYUSG		TODO: Array '%s' used in expression without index.
-verga.err.BADARRAYLHS		TODO: Array '%s' used without index on left-hand-side.
-verga.err.BADCLOSE		TODO: Attempt to close non-open descriptor in task '%s'.
-verga.err.BADAUTORNG		TODO: Auto range [*] is only valid with 'wire' declaration.
-verga.err.BADGATERNG		TODO: Bad gate instance range expression.
-verga.err.BADARGVALUE		TODO: Bad value for argument %s in task %s.
-verga.err.DIVZERO		TODO: Divide by zero.
-verga.err.NODIV		TODO: Divide/module unsupported on this machine - sizeof(short) must be 2.
-verga.err.BADEDGEEVENT		TODO: Event on multi-bit net '%s' can not have posedge/negedge.
-verga.err.NEEDEDGE		TODO: Must specify posedge or negedge on event for %s.
-verga.err.ASGNEVENT		TODO: Event wait on assign is illegal.
-verga.err.PROTTASK		TODO: Execution of protected system task '%s' blocked.
-verga.err.NEEDIDENT		TODO: Expecting identifier for argument %s of task '%s'.
-verga.err.BADOP		TODO: Expression operator error in '%s'.
-verga.err.NOREAD		TODO: Failed to load source file '%s'.
-verga.err.MEMFILE		TODO: Failed to open memory file '%s'.
-verga.err.WRONGMOD		TODO: Found module '%s' when expecting '%s'.
-verga.err.NOTPARM		TODO: Identifier '%s' in constant expression is not a parameter.
-verga.err.BADADDR		TODO: Illegal address range on port '%s'.
-verga.err.BADADDRSPEC		TODO: Illegal address range specification '%s'.
-verga.err.BADCHAR		TODO: Illegal character (%s) '%s'.
-verga.err.BADEVENT		TODO: Illegal event control expression.
-verga.err.BADCONSTOP		TODO: Illegal operator in constant expression.
-verga.err.BADXOP		TODO: Illegal operator in expression.
-verga.err.NETREDEF		TODO: Illegal redefinition of net '%s'.
-verga.err.BADINOUT		TODO: Inout connections must be net-to-net on port '%s'.
-verga.err.MODUNDEF		TODO: Instance of undefined module '%s'.
-verga.err.BADASGNLHS		TODO: Invalid left-hand-side in 'assign'.
-verga.err.LHSNOTREG		TODO: Illegal use of '%s' in left-hand-side of assignment.
-verga.err.BADLHS		TODO: Invalid left-hand-side in assignment.
-verga.err.BADOUT		TODO: Invalid output assignment.
-verga.err.NOTREG		TODO: Memories must be declared as register.
-verga.err.PORTMIX		TODO: Mixed named and unnamed ports on interface '%s' of '%s'.
-verga.err.REPCASE		TODO: More than one default: in case statement.
-verga.err.NOMEM		TODO: No current memory in memory file read.
-verga.err.BADCMD		TODO: No such command '%s'.
-verga.err.CMDNOTNET		TODO: No such net '%s' in '%s' command.
-verga.err.MEMNONBLK		TODO: Non-blocking assignments to memories not implemented.
-verga.err.NOTPPORT		TODO: Parameter '%s' is not declared as a port.
-verga.err.REDEFP		TODO: Parameter redefines identifier '%s'.
-verga.err.PORTNOTDEF		TODO: Port '%s' on interface '%s' is not defined in module '%s'.
-verga.err.NOCONN		TODO: Port '%s' has no connections on interface '%s' of '%s'.
-verga.err.MULTCONN		TODO: Port '%s' has multiple connections on interface '%s' of '%s'.
-verga.err.PORTCOUNT		TODO: Port count does not match definition on interface '%s' of '%s'.
-verga.err.BADPRTRANGE		TODO: Range on port '%s' is not numeric.
-verga.err.BADARRAYRNG		TODO: Range specification not allowed for memory reference of '%s'.
-verga.err.CMDMODREDEF		TODO: Redefinition of dynamic module '%s'.
-verga.err.REDEF		TODO: Redefinition of identifier %s.
-verga.err.PROTTASKSTOP		TODO: Simulation stopped on attempted execution of protected system task '%s'.
-verga.err.NOTMEM		TODO: Specified net '%s' is not a memory.
-verga.err.CMDNOTMEM		TODO: Specified net '%s' is not a memory in '%s' command.
-verga.err.SYNTAX		TODO: Syntax error.
-verga.err.TOOFEWPP		TODO: Too few parameter ports on instance %s.
-verga.err.OPENTOOMANY		TODO: Too many files open in task '%s'.
-verga.err.TOOMANYPP		TODO: Too many parameter ports on instance %s.
-verga.err.NOTOP		TODO: Top-module '%s' not defined.
-verga.err.BADOPEN		TODO: Unable to open output file '%s' in task '%s'.
-verga.err.CMDNOMOD		TODO: Undefined dynamic module '%s' in '%s' command.
-verga.err.BADEVENTNET		TODO: Undefined net '%s' in event control expression.
-verga.err.NOTASK		TODO: Undefined task '%s'.
-verga.err.NOTDEF		TODO: Undefined variable '%s'.
-verga.err.BADRANGE		TODO: Unsupported bit range [%s] on net %s (must be of form [n:0]).
-verga.err.GATEUNIMP		TODO: Unimplemented primitive gate instance type.
-verga.err.USAGE		TODO: Usage: thyme [options][files...]
-verga.err.CLSDWRITE		TODO: Write to closed descriptor.
-verga.err.PRIMPTCOUNT		TODO: Wrong number of ports on primitive gate instance '%s'.
-verga.err.CMDARGS		TODO: Wrong number of arguments in '%s' command.
-verga.err.YYERROR		TODO: YYError - %s.
-verga.err.TASKARGS		TODO: Task '%s' called with wrong number of arguments.
-verga.err.BADSTART		TODO: Illegal start value in task '%s'.
-verga.err.BADSTOP		TODO: Illegal stop value in $readmemb.
-verga.err.SPECTASKUSG		TODO: Task %s must be used in a specify block.
-verga.err.BADSPECTASK		TODO: Task %s can not be used in a specify block.
-verga.err.TIMING		TODO: Timing violation at %s in %s[%s] %s.
-verga.err.NOIFDEF		TODO: No matching `ifdef/`ifndef for %s declaration.
-verga.err.BADSPECLVAL		TODO: Bit-ranges on path delay specifiers unsupported.
-verga.err.PATHDITEM		TODO: Unsupported construct in module with path-delay specification.
-verga.err.PATHDINOUT		TODO: Use of 'inout' in module with path-delay specification is unsupported.
-verga.err.PATHDLOOP		TODO: Loops in modules with path-delay specification are unsupported.
-verga.err.TASKREDEF		TODO: Redefinition of task or function '%s' in module '%s'.
-verga.err.TASKASFUNC		TODO: Task '%s' used as function.
-verga.err.FUNCASTASK		TODO: Function '%s' used as task.
-verga.err.TASKBADTYPE		TODO: Non-register type used in task or function.
-verga.err.TASKBADPORT		TODO: Only input ports are allowed on functions.
-verga.err.TIMESCALEU		TODO: Invalid units '%s' in `timescale declaration.
-verga.err.TIMESCALEN		TODO: Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100).
-verga.err.TIMESCALES		TODO: Invalid syntax in `timescale declartion.
-verga.err.TIMESCALEX		TODO: Units must be larger than precision in `timescale declartion.
-verga.err.TIMESCALEAN		TODO: Design contains some modules with `timescale and some without.
-verga.err.IE_TASK		TODO: Task definition '%s' found outside module - internal error.
-verga.err.IE_NONET		TODO: Failed to find net '%s' - internal error.
-verga.err.IE_BADTYPE		TODO: Bogus port type for port '%s' - internal error.
-verga.err.IE_NOOP		TODO: Can not find operator description -- internal error.
-verga.err.IE_NONEXPCTL		TODO: Event control @(*) applied to non-expression - internal error.
-verga.err.IE_NONSTATCTL		TODO: Event control @(*) applied to non-statment - internal error.
-verga.err.IE_BADEXP		TODO: Unexpected expression type %s - internal error.
-verga.err.IE_BADVAR		TODO: Undefined variable or unknown net - internal error.
-verga.err.IE_BADSTATE		TODO: Unexpected internal state at %s  - internal error.
-verga.err.IE_RETURN		TODO: Executed BCReturn bytecode with empty return stack - internal error.
-
 
 ##############################################################################
 # Balloon Help
 #
-
-ho.net.in		TODO: Single-Bit Input
-ho.net.out		TODO: Single-Bit Output
-ho.net.inout		TODO: Single-Bit Inout
-ho.net.in2		TODO: Multi-Bit Input
-ho.net.out2		TODO: Multi-Bit Output
-ho.net.inout2		TODO: Multi-Bit Inout
-ho.net.wire		TODO: Single-Bit Wire (Name Visible)
-ho.net.wire2		TODO: Multi-Bit Wire (Name Visible)
-ho.net.hwire		TODO: Single-Bit Wire (Name Hidden)
-ho.net.hwire2		TODO: Multi-Bit Wire (Name Hidden)
-ho.net.reg		TODO: Single-Bit Reg
-ho.net.reg2		TODO: Multi-Bit Reg
-
-
-ho.opt.tool.file		TODO: Save, load of circuit files
-ho.opt.tool.edit		TODO: Cut, Paste and Find operations
-ho.opt.tool.gateopt		TODO: Gate rotation and alignment operations
-ho.opt.tool.gateprop		TODO: Basic editing of gates
-ho.opt.tool.undo		TODO: Undo and redo operations
-ho.opt.tool.zoom		TODO: Zoom in and zoom out
-ho.opt.tool.mode		TODO: Select the editing tool
-ho.opt.tool.module		TODO: Create, delete, rename,etc. of module definitions
-ho.opt.tool.tech		TODO: Select default technology for gates
-ho.opt.tool.simctl		TODO: Start, stop and pause of simulator
-ho.opt.tool.simaux		TODO: Auxliary simulator commands (read/write memory files, etc.)
-ho.opt.tool.symmode		TODO: Selecting editing tool in symbol editor
-ho.opt.tool.symedit		TODO: Cut and paste operations for symbol editor
-ho.opt.tool.symport		TODO: Port rotation operations for symbol editor
-ho.opt.tool.symshift		TODO: Shift the bit map or portion of bitmap
-ho.opt.tool.symopr		TODO: Miscellaneous symbol editor operations
-
-ho.opt.editor.movesel		-begin-
-TODO: If this option is enabled, a selected block of text can be grabbed with the mouse pointer and moved to a new location.
--end-
-
-ho.opt.editor.format		-begin-
-TODO: If enabled, verilog source code will be automatically indented when pressing the tab key.
--end-
-
-ho.opt.editor.indent		-begin-
-TODO: Number of spaces to indent per level.
--end-
-
-ho.opt.editor.rtab		-begin-
-TODO: Automatically indent the current line and tab to the appropriate level when pressing the return key.
--end-
-
-ho.opt.editor.beginindent		-begin-
-TODO: Causes a begin..end block to be indented to the same level as its parent block.
--end-
-
-ho.opt.editor.colorize		-begin-
-TODO: Enable context-dependent colorization of code according to the options listed below.
--end-
-
-ho.hdl.splitexp		-begin-
-TODO: Multiple modules in the HDL text will be split into different modules defining new modules as necessary.  Any name conflicts will be resolved by slightly modifying module names as necessary.
--end-
-
-ho.hdl.commentexp		-begin-
-TODO: Modules other than the first module or module matching the expected name will be converted to HDL comments.
--end-
-
-ho.hdl.autoeditexp		-begin-
-TODO: Automatically edit the HDL description to fix the module name.
--end-
-
-ho.hdl.cancelexp		-begin-
-TODO: Take no action and continue editing the current module.
--end-
-
-ho.hdl.ignoreexp		-begin-
-TODO: Ignore the inconsistency and continue with the selected action.
--end-
 
 ho.new		-begin-
 現在の回路を消して、新しい 回路を作成する。
@@ -1806,17 +1373,7 @@ ho.new		-begin-
 
 ho.open		回路ファイルを開く
 ho.save		回路ファイルを保存する
-ho.saveas		TODO: Save circuit to specified file.
 ho.print		回路ファイルを印刷する
-ho.library		TODO: Open the library manager.
-
-ho.symed.tab.normal		-begin-
-TODO: Edit the unselected symbol bitmap.
--end-
-
-ho.symed.tab.select		-begin-
-TODO: Edit the selected symbol bitmap.
--end-
 
 ho.move		-begin-
 移動／接続 - このツールで以下の機能が使える   新しいゲートの位置を設定する   ゲートを移動する   ワイヤを移動する   ワイヤを接続する ダブル・クリックで以下の機能が使える   ゲートの属性を編集する   ワイヤの属性を編集する   ポートの属性を編集する   コメントのテキストの属性を編集する
@@ -1838,64 +1395,11 @@ ho.bitw		-begin-
 このツールでワイヤのビット幅を 変更する。ビット幅を右下の入力 ボックスに入力してください。
 -end-
 
-ho.ipanel.prot		-begin-
-TODO: Do not allow the definition of a module to be modified.
--end-
-
-ho.ipanel.protint		-begin-
-TODO: Do not allow the interface of a module to be modified.
--end-
-
-ho.ipanel.proted		-begin-
-TODO: Do not allow the interface of a module to be modified except through the interface editor.  Use this to prevent accidental modification of the interface in the main edit window.
--end-
-
-ho.ipanel.scale		-begin-
-TODO: Scale the distance between ports as a module is resized.
--end-
-
-ho.ipanel.fix		-begin-
-TODO: Keep the distance between ports fixed even if the module is resized.
--end-
-
 ho.mod.open		選択されたモジュールを開く
 ho.mod.close		現在のモジュールを閉じる
 
-ho.mod.new		TODO: Create a new module type.
-ho.mod.del		TODO: Delete a module.
-ho.mod.copy		TODO: Copy a module.
-ho.mod.rename		TODO: Rename a module.
-ho.mod.claim		-begin-
-TODO: Convert a library module to a regular module.
--end-
-ho.mod.setroot		-begin-
-TODO: Designate a module to be the root module.
--end-
-
-ho.mod.type.allparts		TODO: Set of Libraries
-ho.mod.type.partlib		TODO: Library
-ho.mod.type.part		TODO: Library module
-ho.mod.type.unknown		TODO: Unknown module type
-ho.mod.type.unused		TODO: Set of unused modules
-ho.mod.type.conflict		TODO: Module recursion
-ho.mod.type.root		TODO: Top-level module
-ho.mod.type.netlist		TODO: Netlist module
-ho.mod.type.Lnetlist		TODO: Netlist module (locked)
-ho.mod.type.hdl		TODO: HDL module
-ho.mod.type.Lhdl		TODO: HDL module (locked)
-
 ho.undo		最近行った変化を元通りにする。
 ho.redo		undoした変化をやり直す。
-
-ho.tab.edit		-begin-
-TODO: Primary editing mode.
--end-
-
-
-ho.tab.interface		-begin-
-TODO: Edit module interfaces.  While in interface mode, double click on a module in the module list to edit its interface, or on the root module to display all interface.
--end-
-
 
 ho.tab.simulate		-begin-
 シミュレータを開始し、論理アナライザのウィンドを 開き、そして初期化スクリプトが定義している場合、 そのスクリプトを実行する。
@@ -1904,10 +1408,6 @@ ho.tab.simulate		-begin-
 
 ho.tab.cpath		-begin-
 回路のクリティカル・パスを探索する。
--end-
-
-ho.log		-begin-
-TODO: Log of tkgate messages including error messages, information messages and simulator console output.
 -end-
 
 ho.simgo		-begin-
@@ -1938,10 +1438,6 @@ ho.simexec		-begin-
 スクリプトを実行する。
 -end-
 
-ho.simoptions		-begin-
-TODO: Set various options that control the simulation.
--end-
-
 ho.simload		-begin-
 メモリ・ファイルを読み込む
 -end-
@@ -1950,12 +1446,8 @@ ho.simdump		-begin-
 メモリ・ファイルに書き出す
 -end-
 
-ho.f.modlist		-begin-
+ho.modlist		-begin-
 読み込んであるモジュールの一覧表。 トップのモジュールの名前に「+」が 付いている。ライブラリのモジュール は括弧に囲まれている。
--end-
-
-ho.f.modlisttab		-begin-
-TODO: List of all modules currently loaded. You can display the list in either alphabetical or hierarchical form by selecting the appropriate tab. Drag modules to the edit window to create new instances.
 -end-
 
 ho.netlist		-begin-
@@ -1984,16 +1476,6 @@ ho.print.seluse		-begin-
 使用中のモジュールのみ印刷する。
 -end-
 
-ho.print.fulltrace		TODO: Print the entire trace.
-
-ho.print.parttrace		-begin-
-TODO: Print a portion of the trace.  Enter the starting and stopping times in the entry windows below, or use the right mouse button to select a range on the scope window (use shift-right to select long ranges).
--end-
-
-ho.print.parttracestart		TODO: Starting time of trace output.
-ho.print.parttraceend		TODO: Ending time of trace output.
-
-
 ho.print.selsel		-begin-
 以下にマークしているモジュールのみを印刷する。 コントロール・キーで複数のモジュールを選択 出来る。
 -end-
@@ -2006,10 +1488,6 @@ ho.circuit.discchg		-begin-
 
 ho.circuit.extbar		-begin-
 基本ゲート(AND, OR, XOR)の入力数が 3本以上の時、拡張バーは利用する。
--end-
-
-ho.circuit.autostart		-begin-
-TODO: If enabled, simulation will begin as soon as the simulation pane is selected.
 -end-
 
 ho.cmd.bitw		-begin-
@@ -2064,124 +1542,6 @@ ho.edgat.memfile		-begin-
 ho.edgat.func		モジュールの機能
 ho.edgat.frame		フレームのラベル
 
-ho.traceprint		TODO: Print trace logic trace.
-
-ho.showxhair		-begin-
-TODO: If this button is depressed, a vertical crosshair line will be displayed in the scope window.
--end-
-
-ho.opt.general.fontset		-begin-
-TODO: Specifies the basic font size to use in the tkgate interface.  This option will not take effect until restarting tkgate.
--end-
-
-ho.opt.sec.send		-begin-
-TODO: Enabling the $tkg$command() system task will allow user circuits to send arbitrary simulator control commands to the tkgate GUI.  This includes the ability to execute arbitrary shell commands.  If the simulator will be used to execute untrusted circuits, it is recommended that this task be disabled.  Enabling this option has a very high security risk.
--end-
-
-ho.opt.sec.open		-begin-
-TODO: Enabling the $fopen() system task will allow user circuits to write to any file that the user invoking tkgate has access to.  Enabling this option has a high security risk.
--end-
-
-ho.opt.sec.writemem		-begin-
-TODO: Enabling the $writememb() and $writememh() system tasks will allow user circuits to write to any file that the user invoking tkgate has access to.  Enabling this option has a high security risk.
--end-
-
-ho.opt.sec.enqueue		-begin-
-TODO: Enabling the $tkg$recv() and $tkg$send() system tasks will enable virtual peripheral devices to send messages to tkgate circuits.  Enabling this option has a low security risk.
--end-
-
-ho.opt.ssave		-begin-
-TODO: Perform consistency checks on circuit files before overwriting existing save file to verify that there are no problems with the save file.
--end-
-
-ho.opt.sec.exec		-begin-
-TODO: Fully enabling the $tkg$exec() system task allows user circuit to execute arbitrary tcl/tk commands including the ability to execute arbitrary shell commands.  Enabling this option has a very high security risk.
--end-
-
-ho.opt.sec.regexec		-begin-
-TODO: Enabling the $tkg$exec() system task for registered functions allows user circuits to execute only tcl/tk commands that have been registered as safe.  As long has all Virtual Peripheral Device files are trusted, enabling $tkg$exec() at this level should prevent dangerous commands from being executed.  Enabling this option has a medium security risk.
--end-
-
-ho.opt.sec.noexec		-begin-
-TODO: Fully disabling the $tkg$exec() command will prevent user circuits from executing tcl/tk commands.  This will make it impossible to use Virtual Peripheral Devices.  Selecting this option has a minimal security risk.
--end-
-
-ho.opt.sec.stop		-begin-
-TODO: If this setting is enabled, the simulation will be terminated as soon as any attempt is made by the user circuit to execute a disabled feature.
--end-
-
-ho.opt.sec.warn		-begin-
-TODO: If this setting is enabled, the simulation will continue, but an error message will be displayed when any attempt is made by the user circuit to execute a disabled feature.
--end-
-
-ho.opt.sec.ignore		-begin-
-TODO: If this setting is enabled, use of any disabled features will be ignored and no error messages will be displayed.
--end-
-
-ho.opt.html.browser		-begin-
-TODO: Command to be execute when the user clicks on a link to an html file.  A "%s" in the command will be replaced with the link URL.
--end-
-
-ho.opt.html.email		-begin-
-TODO: Command to be execute when the user clicks on a link to send an e-mail message.  A "%s" in the command will be replaced with the link URL.
--end-
-
-ho.opt.fsave		-begin-
-TODO: Save tkgate internal cells with circuit data.  This will increase save file size by about 20% for a typical circuit, but will result in save files that can be exported to third party tools.
--end-
-
-ho.opt.sorttraces		-begin-
-TODO: If this option is enabled, traces on the scope window will be displayed in sorted order.  If this option is disabled, traces on the scope window will be displayed in the order in which the probes were set.
--end-
-
-ho.opt.sim.noglitch		-begin-
-TODO: If this option is enabled, rapidly changing inputs to a gate will cause the gate to output unknown rather simply the time shifted input signal.  This can eliminate spurious events and prevent oscilations in gate-level sequential circuits.
--end-
-
-ho.opt.sim.tech		-begin-
-TODO: List of files to load as potential "technology" files.  Technology files specify delay and area estimates for built-in gates.
--end-
-
-ho.opt.sim.err		-begin-
-TODO: Select how warnings from the simulator should be handled.
--end-
-
-ho.opt.sim.err.stopany		-begin-
-TODO: Do not simulate the circuit if there are any warnings in the circuit, even if there are no actual erros.
--end-
-
-ho.opt.sim.err.showall		-begin-
-TODO: Always show warnings in the circuit, even if there are no errors.  If there are only warnings, the simualtor will be started and the list of warnings will be displayed in a separate window.
--end-
-
-ho.opt.sim.err.showiferr		-begin-
-TODO: Show warnings only if there are also errors in the circuit.  If a circuit contains only warnings, they will be ignored and the simulator will be started.
--end-
-
-ho.opt.sim.err.ignore		-begin-
-TODO: Never display warning messages, even if there are errors in the circuit.
--end-
-
-ho.opt.lib.vpath		-begin-
-TODO: List of directories to search for tkgate library files.  Library files should have a .v extention and contain modules useful for use in user circuits.
--end-
-
-ho.opt.lib.vlib		-begin-
-TODO: List of libaries that should automatically be loaded when tkgate starts.
--end-
-
-ho.opt.lib.vpd		-begin-
-TODO: List of directories to search for virtual peripheral devices.  Virtual peripheral devices have a .tcl extension and typically implement a GUI representing a peripheral device that can be controlled by a user circuit.
--end-
-
-ho.opt.undolen		-begin-
-undoのリストの長さ
--end-
-
-ho.opt.name		-begin-
-TODO: User name to be used on tkgate generated reports such as circuit printouts.
--end-
-
 ho.opt.site		-begin-
 回路などを印刷する時、このサイト名が表示される。
 -end-
@@ -2194,11 +1554,6 @@ ho.opt.clip		-begin-
 有効にすると、ウインドウの部分領域の 再描画を行なう。そうでなければ常に 全領域を再描画する。
 -end-
 
-ho.opt.showimage		-begin-
-TODO: Unset this option to suppress display of the image and explanitory text at the edge of dialog boxes.
--end-
-
-
 ho.opt.outmove		-begin-
 有効にすると、モジュールを移動する時、 ワイヤなどはマウスのボタンを離すまで 移動しない。画面の表示が遅い時に便利である。
 -end-
@@ -2209,10 +1564,6 @@ ho.opt.bhelp		-begin-
 
 ho.opt.novice		-begin-
 有効にすると、初心者モードになる。 初心者モードでは、tkgateが立ち上がる時、 チュートリアルが自動的に読み込まれる。
--end-
-
-ho.opt.blockDropConnect		-begin-
-TODO: Allow ports on module interfaces to be created by dropping free wires near an edge.
 -end-
 
 ho.opt.debug		-begin-
@@ -2277,10 +1628,6 @@ ho.opt.ckspec		-begin-
 指定したクロックのエッジのみに停止する。
 -end-
 
-ho.opt.keybind		-begin-
-TODO: Specifies the basic style for key bindings.  If you change this option, bindings will be updated immediately, but you will need to restart tkgate to see any user defined keybindings.
--end-
-
 ho.deftech		-begin-
 新しいゲートのデフォルトのテクノロジー。
  ゲートの遅延に影響する。任意のゲート の
@@ -2308,44 +1655,6 @@ ho.contver		-begin-
 ho.simwatch		-begin-
 シミュレータとGUIの間のコマンドを表示する。
 -end-
-
-ho.symed.point		-begin-
-TODO: Pixel edit mode.  Use the left mouse button to set pixels and the right button to clear them.
--end-
-
-ho.symed.line		-begin-
-TODO: Line mode.  Use the left mouse button to set pixels and the right button to clear them.
--end-
-
-ho.symed.rect		-begin-
-TODO: Rectangle mode.  Use the left mouse button to set pixels and the right button to clear them.
--end-
-
-ho.symed.fillrect		-begin-
-TODO: Filled rectangle mode.  Use the left mouse button to set pixels and the right button to clear them.
--end-
-
-ho.symed.select		-begin-
-TODO: Bitmap select mode.  Use the left mouse buttons to select regions of the bitmap and do cut and paste operations on the selection.
--end-
-
-ho.symed.port		-begin-
-TODO: Port select mode.  Select ports and move them or rotate them.
--end-
-
-ho.symed.rshift		TODO: Shift selected pixels right.
-ho.symed.lshift		TODO: Shift selected pixels left.
-ho.symed.ushift		TODO: Shift selected pixels up.
-ho.symed.dshift		TODO: Shift selected pixels down.
-ho.symed.cwrotate		TODO: Rotate selected pixels clockwise.
-ho.symed.ccwrotate		TODO: Rotate selected pixels counter-clockwise.
-ho.symed.autobold		TODO: Make selected image bold.
-ho.symed.resize		TODO: Resize the image editor.
-
-ho.tool.currot		-begin-
-TODO: Displays the current default rotation.  Click on this button to change the current default rotation.
--end-
-
 
 ho.tool.zoomin			ズーム・イン
 ho.tool.zoomout			ズーム・アウト
