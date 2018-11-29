@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-28 17:50+0300\n"
-"PO-Revision-Date: 2018-11-29 01:10+0000\n"
+"PO-Revision-Date: 2018-11-29 02:21+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/Magic/tkgate/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -6969,7 +6969,7 @@ msgstr "Se questa opzione è attiva, TkGate si predispone\nper progettare un com
 # ho.opt.trek
 #: en/messages:2890
 msgid "Beam me up Scotty!"
-msgstr "Lanciami Scoty! (...da Star Trek...)"
+msgstr "Lanciami Scotty! (...da Star Trek...)"
 
 # ho.opt.simstep
 #: en/messages:2892

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-28 17:50+0300\n"
-"PO-Revision-Date: 2018-11-29 01:07+0000\n"
+"PO-Revision-Date: 2018-11-29 02:21+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/Magic/tkgate/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -6968,7 +6968,7 @@ msgstr "If this mode is enabled, TkGate will\nset up an enviornment for designin
 # ho.opt.trek
 #: en/messages:2890
 msgid "Beam me up Scotty!"
-msgstr "Beam me up Scoty!"
+msgstr "Beam me up Scotty!"
 
 # ho.opt.simstep
 #: en/messages:2892
