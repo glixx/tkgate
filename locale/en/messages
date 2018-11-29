@@ -1828,7 +1828,7 @@ can try loading one of the checkpoint files. You can also use
 -end-
 
 err.badsave		-fillbegin-
-A problem has occured trying to open or write the file '%s'. Check
+A problem has occurred trying to open or write the file '%s'. Check
 file/directory protections and or disk space.
 -end-
 
@@ -2432,15 +2432,15 @@ ho.status.block		The stack of modules being edited.
 
 ho.status.file		-begin-
 The current file being edited. A '*' indicates
-that the buffer has been modifed since
+that the buffer has been modified since
 the last save.
 -end-
 
 ho.print.selall		Print all modules currently loaded by TkGate.
 ho.print.selcur		Print only the current module in the TkGate edit window.
 ho.print.seluse		-begin-
-Print all modules "in use". In use modues are
-those that are a decendent of the root module.
+Print all modules "in use". In use modules are
+those that are a descendant of the root module.
 -end-
 
 ho.print.fulltrace	Print the entire trace.
@@ -2472,7 +2472,7 @@ area shows the area to be printed.
 Use the selectors to the left to
 select a region, or select the region
 in the scope window before bringing
-up this diaglog box.
+up this dialog box.
 -end-
 
 ho.circuit.discchg	-begin-
@@ -2754,7 +2754,7 @@ actual errors.
 ho.opt.sim.err.showall	-begin-
 Always show warnings in the circuit, even if
 there are no errors. If there are only warnings,
-the simualtor will be started and the list of
+the simulator will be started and the list of
 warnings will be displayed in a separate window.
 -end-
 
@@ -2772,7 +2772,7 @@ are errors in the circuit.
 
 ho.opt.lib.vpath		-begin-
 List of directories to search for TkGate library
-files. Library files should have a .v extention
+files. Library files should have a .v extension
 and contain modules useful for use in user circuits.
 -end-
 
@@ -2822,7 +2822,7 @@ problems on your display.
 
 ho.opt.showimage	-begin-
 Unset this option to suppress display of
-the image and explanitory text at the
+the image and explanatory text at the
 edge of dialog boxes.
 -end-
 
@@ -2849,7 +2849,7 @@ next time you restart TkGate.
 
 ho.opt.novice		-begin-
 If no other circuit is specified on the command
-line. A TkGate tutorial will be disaplyed as
+line. A TkGate tutorial will be displayed as
 the initial circuit on start up.
 -end-
 
