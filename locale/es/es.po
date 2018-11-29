@@ -4844,7 +4844,7 @@ msgstr ""
 # err.badsave
 #: en/messages:1830
 msgid ""
-"A problem has occured trying to open or write the file '%s'. Check\n"
+"A problem has occurred trying to open or write the file '%s'. Check\n"
 "file/directory protections and or disk space."
 msgstr ""
 
@@ -6318,7 +6318,7 @@ msgstr "La pila de módulos que están siendo editados."
 #: en/messages:2433
 msgid ""
 "The current file being edited. A '*' indicates\n"
-"that the buffer has been modifed since\n"
+"that the buffer has been modified since\n"
 "the last save."
 msgstr "Fichero actualmente editado. El signo '*' indica\nque el buffer se ha modificado desde la última\nvez que el fichero se salvo en disco."
 
@@ -6335,8 +6335,8 @@ msgstr "Imprimir sólo el módulo presente en la ventana de Edición de TKGate."
 # ho.print.seluse
 #: en/messages:2441
 msgid ""
-"Print all modules \"in use\". In use modues are\n"
-"those that are a decendent of the root module."
+"Print all modules \"in use\". In use modules are\n"
+"those that are a descendant of the root module."
 msgstr "Imprime todos los módulos \"en uso\". Los módulos en uso son aquellos que descienden del principal siguiendo la jerarquia arborescente."
 
 # ho.print.fulltrace
@@ -6386,7 +6386,7 @@ msgid ""
 "Use the selectors to the left to\n"
 "select a region, or select the region\n"
 "in the scope window before bringing\n"
-"up this diaglog box."
+"up this dialog box."
 msgstr ""
 
 # ho.circuit.discchg
@@ -6788,7 +6788,7 @@ msgstr ""
 msgid ""
 "Always show warnings in the circuit, even if\n"
 "there are no errors. If there are only warnings,\n"
-"the simualtor will be started and the list of\n"
+"the simulator will be started and the list of\n"
 "warnings will be displayed in a separate window."
 msgstr ""
 
@@ -6812,7 +6812,7 @@ msgstr ""
 #: en/messages:2773
 msgid ""
 "List of directories to search for TkGate library\n"
-"files. Library files should have a .v extention\n"
+"files. Library files should have a .v extension\n"
 "and contain modules useful for use in user circuits."
 msgstr ""
 
@@ -6877,7 +6877,7 @@ msgstr "Si esta opción está habilitada, Se actualiza solo\nla región actualme
 #: en/messages:2823
 msgid ""
 "Unset this option to suppress display of\n"
-"the image and explanitory text at the\n"
+"the image and explanatory text at the\n"
 "edge of dialog boxes."
 msgstr ""
 
@@ -6911,7 +6911,7 @@ msgstr ""
 #: en/messages:2850
 msgid ""
 "If no other circuit is specified on the command\n"
-"line. A TkGate tutorial will be disaplyed as\n"
+"line. A TkGate tutorial will be displayed as\n"
 "the initial circuit on start up."
 msgstr "Si no se especifica ningún circuito en la linea de\ncomandos. El programa TkGate presenta un tutorial\npara iniciarse en el manejo del programa."
 

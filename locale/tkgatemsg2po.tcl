@@ -86,7 +86,7 @@ proc parseFile {msgFile msgHash} {
 		    ([string first @ $line] == -1) &&
 		    ([string first "\\" $line] == -1) &&
 		    ([string length $line] > 0)} {
-            set line [string map "zzzzz @(*)" $line]
+			set line [string map "zzzzz @(*)" $line]
 			parseString $line $sourceLine $msgHash
 		}
 		incr sourceLine

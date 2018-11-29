@@ -4843,7 +4843,7 @@ msgstr "TkGate столкнулся с проблемой во время сох
 # err.badsave
 #: en/messages:1830
 msgid ""
-"A problem has occured trying to open or write the file '%s'. Check\n"
+"A problem has occurred trying to open or write the file '%s'. Check\n"
 "file/directory protections and or disk space."
 msgstr "При попытке открытия или записи файла '%s' возникла проблема.\nПроверьте права доступа для файла и каталога, в котором он\nнаходится, а также наличие свободного места на диске."
 
@@ -6317,7 +6317,7 @@ msgstr "Стек модулей, которые редактируются."
 #: en/messages:2433
 msgid ""
 "The current file being edited. A '*' indicates\n"
-"that the buffer has been modifed since\n"
+"that the buffer has been modified since\n"
 "the last save."
 msgstr "Текущий редактируемый файл. Символ '*' показывает,\nчто файл был изменён с момента последнего сохранения."
 
@@ -6334,8 +6334,8 @@ msgstr "Печать только выбранного модуля в обла�
 # ho.print.seluse
 #: en/messages:2441
 msgid ""
-"Print all modules \"in use\". In use modues are\n"
-"those that are a decendent of the root module."
+"Print all modules \"in use\". In use modules are\n"
+"those that are a descendant of the root module."
 msgstr "Печать всех используемых модулей (тех, что\nявляются потомками модуля верхнего уровня)."
 
 # ho.print.fulltrace
@@ -6385,7 +6385,7 @@ msgid ""
 "Use the selectors to the left to\n"
 "select a region, or select the region\n"
 "in the scope window before bringing\n"
-"up this diaglog box."
+"up this dialog box."
 msgstr "Здесь представлена область, выбранная для\nпечати. Зелёная зона - это весь доступный\nдиапазон данных трассировки, а серая обозначает\nвыбранный для печати фрагмент. Используйте\nвыделители слева для обозначения требуемой\nобласти или выберите область в окне логического\nанализатора перед тем, как вызвать этот диалог."
 
 # ho.circuit.discchg
@@ -6787,7 +6787,7 @@ msgstr "Не симулировать схему если есть предуп�
 msgid ""
 "Always show warnings in the circuit, even if\n"
 "there are no errors. If there are only warnings,\n"
-"the simualtor will be started and the list of\n"
+"the simulator will be started and the list of\n"
 "warnings will be displayed in a separate window."
 msgstr "Всегда отображать предупреждения в схемах,\nдаже если нет ошибок. Если есть предупреждения,\nно нет ошибок, симулятор будет запущен, и в\nотдельном окне будет выведено предупреждение."
 
@@ -6811,7 +6811,7 @@ msgstr "Никогда не отображать предупреждения. �
 #: en/messages:2773
 msgid ""
 "List of directories to search for TkGate library\n"
-"files. Library files should have a .v extention\n"
+"files. Library files should have a .v extension\n"
 "and contain modules useful for use in user circuits."
 msgstr "Список каталогов для поиска файлов библиотек TkGate.\nБиблиотеки - это обычные схемы TkGate, содержащие\nполезные переиспользуемые модули."
 
@@ -6876,7 +6876,7 @@ msgstr "Если эта функция включена, то для обнов�
 #: en/messages:2823
 msgid ""
 "Unset this option to suppress display of\n"
-"the image and explanitory text at the\n"
+"the image and explanatory text at the\n"
 "edge of dialog boxes."
 msgstr "Отключите данную функцию для подавления\nотображения картинок и пояснительного текста\nв окнах диалога."
 
@@ -6910,7 +6910,7 @@ msgstr "Если включено, главные меню являются от
 #: en/messages:2850
 msgid ""
 "If no other circuit is specified on the command\n"
-"line. A TkGate tutorial will be disaplyed as\n"
+"line. A TkGate tutorial will be displayed as\n"
 "the initial circuit on start up."
 msgstr "Если файл схемы прямо не указан в командной строке,\nто при запуске будет открыто учебное руководство."
 
