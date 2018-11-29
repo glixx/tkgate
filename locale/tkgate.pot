@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 13:21+0300\n"
+"POT-Creation-Date: 2018-11-29 14:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5419,6 +5419,16 @@ msgstr ""
 # verga.err.BADVALUE
 #: en/messages:2003
 msgid "Bad numeric value '%s'."
+msgstr ""
+
+# verga.err.NONEXPCTL
+#: en/messages:2004
+msgid "Event control @(*) applied to non-expression."
+msgstr ""
+
+# verga.err.NONSTATCTL
+#: en/messages:2005
+msgid "Event control @(*) applied to non-statement."
 msgstr ""
 
 # verga.err.MODREDEF

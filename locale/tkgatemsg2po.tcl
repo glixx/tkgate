@@ -81,10 +81,12 @@ proc parseFile {msgFile msgHash} {
 		}
 		# trim line and reject of the comment and service lines
 		set line [string trim $line]
+		set line [string map "@(*) zzzzz" $line]
 		if {([string first # $line] == -1) &&
 		    ([string first @ $line] == -1) &&
 		    ([string first "\\" $line] == -1) &&
 		    ([string length $line] > 0)} {
+            set line [string map "zzzzz @(*)" $line]
 			parseString $line $sourceLine $msgHash
 		}
 		incr sourceLine
