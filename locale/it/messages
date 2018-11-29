@@ -29,8 +29,8 @@ b.close		Close
 b.ok		OK
 b.clear		Clear
 b.cancel	Cancel
-b.open		Open...
-b.bitw		Bit Width
+#b.open		Open...
+#b.bitw		Bit Width
 b.in		in
 b.out		out
 b.inout		inout
@@ -40,7 +40,7 @@ b.find		Find
 b.edit		Edit...
 b.add		Add...
 b.delete	Delete
-b.deleteb	Delete...
+#b.deleteb	Delete...
 b.apply		Apply
 b.anchor	Anchor
 b.tech		Technology
@@ -48,177 +48,177 @@ b.tech		Technology
 ##############################################################################
 # Menu strings
 #
-file		File
-edit		Edit
-tool		Tool
-simulate	Simulate
-module		Module
-gate		Gate
-make		Make
-circ		Circuit
+menu.file	0:File
+menu.edit	0:Edit
+menu.tool	0:Tool
+menu.simulate	0:Simulate
+menu.module	0:Module
+#gate		Gate
+menu.make	0:Make
+#circ		Circuit
 
-new		New
-open		Open...
-openlib		Open Library...
-save		Save
-saveas		Save...
-print		Print...
-options		Options...
-quit		Quit
+menu.file.new		0:New
+menu.file.open		0:Open...
+menu.file.openlib	0:Open Library...
+menu.file.save		0:Save
+menu.file.saveas	5:Save...
+menu.file.print		0:Print...
+#options		Options...
+menu.file.quit		0:Quit
 
-undo		Undo
-redo		Redo
-cut		Cut
-copy		Copy
-paste		Paste
-selall		Select All
-find		Find...
-algnv		Align Ver.
-algnh		Align Horz.
-zoomin		Zoom In
-zoomout		Zoom Out
+menu.edit.undo		0:Undo
+menu.edit.redo		0:Redo
+menu.edit.cut		0:Cut
+menu.edit.copy		3:Copy
+menu.edit.paste		0:Paste
+menu.edit.selall	0:Select All
+menu.edit.find		0:Find...
+menu.format.algnv	6:Align Ver.
+menu.format.algnh	6:Align Horz.
+menu.edit.zoomin	5:Zoom In
+menu.edit.zoomout	5:Zoom Out
 
-move		Move/Connect
-delg		Delete Gate
-cutw		Cut Wire
-inv		Invert
-bitw		Bit Width
-debug		Debug
-rot0		Rot 0
-rot90		Rot 90
-rot180		Rot 180
-rot270		Rot 270
+menu.tool.move		0:Move/Connect
+menu.tool.delg		0:Delete Gate
+menu.tool.cutw		0:Cut Wire
+menu.tool.inv		0:Invert
+menu.tool.bitw		0:Bit Width
+menu.tool.debug		0:Debug
+#rot0		Rot 0
+#rot90		Rot 90
+#rot180		Rot 180
+#rot270		Rot 270
 
-simbegin	Begin Simulation
-simend		End Simulation
-simadprobe	Add/Delete Probe
-simrun		Run
-simpause	Pause
-simstep		Step Epoch(s)
-simcycle	Step Cycle
-simbreak	Breakpoint...
-simscript	Exec. Script...
-simload		Load Memory...
-simdump		Dump Memory...
+menu.simulate.begin	0:Begin Simulation
+menu.simulate.end	0:End Simulation
+menu.simulate.addprobe	0:Add/Delete Probe
+menu.simulate.run	0:Run
+menu.simulate.pause	0:Pause
+menu.simulate.step	0:Step Epoch(s)
+menu.simulate.cycle	5:Step Cycle
+menu.simulate.break	0:Breakpoint...
+menu.simulate.script	1:Exec. Script...
+menu.simulate.load	1:Load Memory...
+menu.simulate.dump	1:Dump Memory...
 
-modopen		Open
-modclose	Close
-modseti		Set Interface
-modediti	Edit Interfaces...
-modnew		New...
-moddel		Delete...
-modcopy		Copy...
-modrename	Rename...
-modclaim	Claim...
-circprop	Circuit Properties...
-cpath		Critical Path...
+menu.module.open	0:Open
+menu.module.close	0:Close
+#modseti		Set Interface
+#modediti	Edit Interfaces...
+menu.module.new		0:New...
+menu.module.del		0:Delete...
+menu.module.copy	1:Copy...
+menu.module.rename	0:Rename...
+menu.module.claim	1:Claim...
+#circprop	Circuit Properties...
+#cpath		Critical Path...
 
-gataddin	Add Input
-gataddout	Add Output
-gataddinout	Add BiDir
-gatiochg	Change Type
-gatanchor	Anchor Selected
-gatunanchor	Unanchor Selected
-gatprop		Properties...
-gatrep		Replicate
-gatdel		Delete
-gatsettech	Set Technology
+#gataddin	Add Input
+#gataddout	Add Output
+#gataddinout	Add BiDir
+#gatiochg	Change Type
+#gatanchor	Anchor Selected
+#gatunanchor	Unanchor Selected
+#gatprop		Properties...
+#gatrep		Replicate
+#gatdel		Delete
+#gatsettech	Set Technology
 
-gmswitch	I/O
-gmgate		Gate
-gmredgate	Reduction
-gmmsi		MSI
-gmalu		ALU
-gmmem		Memory
-gmmod		Module
-gmcomment	Comment
-gmframe		Frame
+gm.io		I/O
+gm.gate		Gate
+gm.rgate	Reduction
+gm.msi		MSI
+gm.alu		ALU
+gm.mem		Memory
+gm.mod		Module
+gm.comment	Comment
+gm.frame	Frame
 
-gmxswitch	Switch
-gmdip		DIP Switch
-gmground	Ground
-gmvdd		Vdd
-gmmerge		Wire Merge
-gmclock		Clock
+gm.io.switch	Switch
+gm.io.dip	DIP Switch
+#gmground	Ground
+#gmvdd		Vdd
+gm.io.merge	Wire Merge
+gm.io.clock	Clock
 
-gm.led		LED
-gm.ledbar	LED Bar
-gm.ledhex	7-Seg. LED (HEX)
-gm.leddec	7-Seg. LED (DEC)
-gm.ledseg	7-Seg. LED (Direct)
+gm.io.led	LED
+gm.io.ledbar	LED Bar
+gm.io.ledhex	7-Seg. LED (HEX)
+gm.io.leddec	7-Seg. LED (DEC)
+gm.io.ledseg	7-Seg. LED (Direct)
 
-gmtty		TTY
+gm.io.tty	TTY
 
-gmand		AND
-gmnand		NAND
-gmor		OR
-gmnor		NOR
-gmxor		XOR
-gmxnor		XNOR
-gmbuf		Buffer
-gminv		Inverter
-gmtribuf	Tri-Buffer
-gmnmos		NMOS
-gmpmos		PMOS
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Buffer
+gm.gate.inv	Inverter
+gm.gate.tribuf	Tri-Buffer
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
 
-gmrand		AND
-gmrnand		NAND
-gmror		OR
-gmrnor		NOR
-gmrxor		XOR
-gmrxnor		XNOR
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
 
-gmadd		Adder
-gmmult		Multiplier
-gmdiv		Divider
-gmlshift	Left Shift
-gmrshift	Right Shift
-gmarshift	Arith. Right Shift
-gmroll		Roll
+gm.alu.add	Adder
+gm.alu.mult	Multiplier
+gm.alu.div	Divider
+gm.alu.lshift	Left Shift
+gm.alu.rshift	Right Shift
+gm.alu.arshift	Arith. Right Shift
+gm.alu.roll	Roll
 
-gmreg		Register
-gmff		Flip-Flop
-gmram		RAM
-gmrom		ROM
+gm.mem.reg	Register
+gm.mem.ff	Flip-Flop
+gm.mem.ram	RAM
+gm.mem.rom	ROM
 
-gm21mux		2-1 Multiplexor
-gm41mux		4-1 Multiplexor
-gm81mux		8-1 Multiplexor
-gm12dec		1-2 Decoder
-gm14dec		1-4 Decoder
-gm18dec		1-8 Decoder
+gm.msi.21mux	2-1 Multiplexor
+gm.msi.41mux	4-1 Multiplexor
+gm.msi.81mux	8-1 Multiplexor
+gm.msi.12dec	1-2 Decoder
+gm.msi.14dec	1-4 Decoder
+gm.msi.18dec	1-8 Decoder
 
-gmmodinst	Module Instance
-gmmodin		Module Input
-gmmodout	Module Output
-gmmodinout	Module InOut
+gm.mod.inst	Module Instance
+gm.mod.in	Module Input
+gm.mod.out	Module Output
+gm.mod.inout	Module InOut
 
-addwireseg	Add Wire Segment
+#addwireseg	Add Wire Segment
 
-help		Help
-hlpabout	About...
-hlplicense	License...
-hlpdoc		Documentation...
-hlptut		Tutorials
-hlpexample	Examples
-exampcomb	Combinational Logic
-examp3bit	3-Bit Counter
-examp8bit	8-Bit Counter
-examptrff	Transistor-Level FF
-exampcpu	Menagerie CPU
-tutwelcome	TkGate Intro
-tutcreate	Creating a Circuit
-tutedit1	Editing a Circuit (1)
-tutedit2	Editing a Circuit (2)
-tutmods		Using Modules
-tutsim		Simulating a Circuit
+#help		Help
+menu.help.about		0:About...
+menu.help.license	0:License...
+menu.help.doc		0:Documentation...
+menu.help.tut		1:Tutorials
+menu.help.example	1:Examples
+#exampcomb	Combinational Logic
+#examp3bit	3-Bit Counter
+#examp8bit	8-Bit Counter
+#examptrff	Transistor-Level FF
+#exampcpu	Menagerie CPU
+#tutwelcome	TkGate Intro
+#tutcreate	Creating a Circuit
+#tutedit1	Editing a Circuit (1)
+#tutedit2	Editing a Circuit (2)
+#tutmods		Using Modules
+#tutsim		Simulating a Circuit
 
 # Scope Menu
-menu.sc.prtrace	Print Trace...
-menu.sc.close	Close
-menu.sc.trace	Trace
-menu.sc.zoomin	Zoom In
-menu.sc.zoomout	Zoom Out
+menu.scope_file.ptrace		0:Print Trace...
+menu.scope_file.close		0:Close
+#menu.sc.trace	Trace
+menu.scope_trace.zoomin		5:Zoom In
+menu.scope_trace.zoomout	5:Zoom Out
 
 scope.emptymsg	Doppio click su un collegamento per agganciare o togliere una sonda.
 comment.empty	[Doppio click per aggiungere testo.]
@@ -264,25 +264,25 @@ db.gate.butstate	Button State
 db.gate.dipval		Switch Value
 db.gate.memfilenam	Memory File
 db.gate.modname		Function
-db.gate.islink		Text is Hyperlink
-db.gate.link		Link to File
-db.gate.findw		Search for wires only
-db.gate.findg		Search for gates only
-db.gate.findwg		Search for wires and gates
+#db.gate.islink		Text is Hyperlink
+#db.gate.link		Link to File
+#db.gate.findw		Search for wires only
+#db.gate.findg		Search for gates only
+#db.gate.findwg		Search for wires and gates
 db.gate.general		General
 db.gate.details		Details
 db.gate.ports		Port
 db.gate.delay		Delay
 db.gate.stddelay	Standard Delay
 db.gate.custdelay	Custom Delay
-db.gate.extbar		Use extender bars
+#db.gate.extbar		Use extender bars
 
-db.led.type		LED Type
-db.led.bit		Bit
-db.led.bar		Bar Graph
-db.led.hex		7-Segment (HEX)
-db.led.dec		7-Segment (DEC)
-db.led.seg		7-Segment (Direct)
+db.gate.led.type	LED Type
+db.gate.led.bit.hdr	Bit
+db.gate.led.bar.hdr	Bar Graph
+db.gate.led.hex.hdr	7-Segment (HEX)
+db.gate.led.dec.hdr	7-Segment (DEC)
+db.gate.led.seg.hdr	7-Segment (Direct)
 
 		## - Italian localization -
 		## - April 2004 P. Ceppi; SUPSI-DTI
@@ -303,14 +303,14 @@ sono elencati sotto.
 ##############################################################################
 # Print dialog box
 #
-print.outto		Output to
+#print.outto		Output to
 print.printer		Printer
 print.file		File
 print.prcmd		Print Command
 print.filename		File Name
 print.epssave		Save as Encapsulated Postscript.
-print.doctit		Document Title
-print.prmod		Print Modules
+#print.doctit		Document Title
+#print.prmod		Print Modules
 print.epcm		Epochs/cm
 print.estpg		Estimated pages
 print.all		All
@@ -333,7 +333,7 @@ print.range		Range Selection
 print.fulltr		Full Trace
 print.parttr		Partial Trace
 print.start		Start
-print.end		End
+#print.end		End
 
 ##############################################################################
 #
@@ -361,28 +361,28 @@ opt.zled		Floating LED
 opt.restdef		Restore Defaults
 opt.regudate		Region Update
 opt.smoothscroll	Smooth Scrolling
-opt.outmove		Outline Move modules
+#opt.outmove		Outline Move modules
 opt.balloon		Enable Help Balloons
 opt.debug		Enable Debugging
 opt.novice		Novice Mode
-opt.ckpoint		Do Checkpointing
+#opt.ckpoint		Do Checkpointing
 opt.freq		Interval
 opt.beak		Enable Special Modes
-opt.mode		Mode
-opt.normal		Normal
+#opt.mode		Mode
+#opt.normal		Normal
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Giuan
 opt.contver		Automatic Integrity Checking
 opt.showsimcmd		Display Simulator Stream
-opt.logfile		Simulator Log File
+#opt.logfile		Simulator Log File
 opt.estepsz		Epoch Step Size
 opt.cstepsz		Clock Cycle Step Size
 opt.overstep		Clock Overstep
 opt.sorttraces		Sort traces alphabetically on scope
-opt.rememberprobes	Remember Probe Placement
+#opt.rememberprobes	Remember Probe Placement
 opt.vpopupdelay		Value Pop-Up Delay
-opt.initscript		Initialization script
+#opt.initscript		Initialization script
 opt.posedge		Clock step stops on all clock posedges
 opt.setclock		Clock step stops on clock
 opt.delayfilepath	Delay Files
@@ -406,37 +406,37 @@ continuo a Internet.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		New Module
-blklst.delmod		Delete Module
-blklst.frommod		Copy Module From
-blklst.tomod		To
-blklst.oldname		Old Name
-blklst.newname		New Name
-blklst.claim		Claim Module
+blklst.new.cap		New Module
+blklst.del.cap		Delete Module
+blklst.from		Copy Module From
+blklst.to		To
+#blklst.oldname		Old Name
+#blklst.newname		New Name
+blklst.claim.cap	Claim Module
 
 ##############################################################################
 #
 # Circuit Dialog box
 #
-circ.topmod		Top-Level Module
+#circ.topmod		Top-Level Module
 circ.discchg		Discard Changes
 circ.iniscript		Initialization Scripts
-circ.noscript		No script files selected.
-circ.really1		Do you really want to remove
-circ.really2		from the list of initialization scripts
+#circ.noscript		No script files selected.
+#circ.really1		Do you really want to remove
+#circ.really2		from the list of initialization scripts
 circ.extbar		Use Extender Bars
 
 ##############################################################################
 # Simulator
 #
-sim.breakpt		Breakpoint
+#sim.breakpt		Breakpoint
 
 ##############################################################################
 #
 # Command box
 #
-cmd.file		File Name
-cmd.topname		Top Module Name
+#cmd.file		File Name
+#cmd.topname		Top Module Name
 
 ##############################################################################
 #
@@ -450,17 +450,17 @@ cp.recompute		Recompute
 ##############################################################################
 # Error messages
 #
-err.verilog		Errrori nel file:
+#err.verilog		Errrori nel file:
 err.nopin		Non posso modificare il pin selezionato.
 err.badhex		Valore hex '%s' errato: viene ignorato.
 err.gatanchor		Le porte sono ancorate: non possono essere spostate.
-err.libmode		Operazione non ammessa su un modulo di libreria (convertilo in un modulo normale per editarlo).
+#err.libmode		Operazione non ammessa su un modulo di libreria (convertilo in un modulo normale per editarlo).
 err.badfind		Non trovo il target '%s'.
 err.badopendel		Non posso cancellare un modulo aperto.
 err.nosrcmod		Non ho trovato il modulo '%s'.
 err.noerr		Non so localizzare l'errore.
 err.misserr		Errore informazione incompleta (il simulatore è caduto?)
-err.pounimpl		Errore non implementato in ParseOption
+#err.pounimpl		Errore non implementato in ParseOption
 
 err.badinadd		Non posso aggiungere ulteriori pin di input alla porta selezionata.
 err.badoutadd		Non posso aggiungere ulteriori pin di output alla porta selezionata.
@@ -487,7 +487,7 @@ err.bkpt.toomany	Troppi breakpoints.  Al massimo %d.
 err.sim.badtmp		Non ho potuto salvare il file temporaneo '%s' per il simulatore (disco pieno?)
 err.sim.syntx		Errore di sintassi nel comando '%s'.
 err.sim.noincl		Non trovo il file '%s' da includere.
-err.sim.clockbadedge	Specifica di fianco '%c' non ammessa nel comando di avanzamento della simulazione.
+#err.sim.clockbadedge	Specifica di fianco '%c' non ammessa nel comando di avanzamento della simulazione.
 err.sim.nobkpt		Il breakpoint '%s' non esiste.
 err.sim.nonet		Non trovo il collegamento '%s'.
 err.sim.nogate		Non trovo il gate '%s'.
@@ -502,12 +502,12 @@ err.badlibopen		Impossibile aprire il file di libreria '%s'.
 
 err.nomark		Posiziona un punto di riferimento con il tasto sinstro del mouse prima di scegliere un gate.
 err.badgate		Tipo di gate sconosciuto.
-err.badmake		Non posso a creare il gate.
+#err.badmake		Non posso a creare il gate.
 
 err.badportadd		Impossibile aggiungere porte a un gate di questo tipo.
-err.badportdel		La porta selezionata non può essere concellata.
-err.badportedit		La porta selezionata non può essere modificata.
-err.noport		Non è stata selezionato alcun port.
+#err.badportdel		La porta selezionata non può essere concellata.
+#err.badportedit		La porta selezionata non può essere modificata.
+#err.noport		Non è stata selezionato alcun port.
 
 err.manypages		-begin-
 C'è una quantità tremenda di pagine
@@ -528,8 +528,8 @@ un modulo inserendo il carattere '<' da tastiera.
 err.nomod		Il modulo '%s' non è definito.
 err.modlock		Il blocco logico è bloccato ("locked")!
 err.closeroot		Non posso chiudere il modulo "top".  Usa "quit".
-err.sim.isrun 		Il simulatore è già attivo (Usa 'Ctrl-s e' per terminare).
-err.sim.isnotrun	Il simulatore non è attivo (Usa 'Ctrl-s b' per avviarlo).
+err.sim.isrun		Il simulatore è già attivo (Usa 'Ctrl-s e' per terminare).
+#err.sim.isnotrun	Il simulatore non è attivo (Usa 'Ctrl-s b' per avviarlo).
 err.editonly		Comando non ammesso in modalità di simulazione.
 err.simonly		Comando ammesso solo in modalità di simulazione.
 
@@ -656,13 +656,13 @@ Inserisci il numero di bits nel box in basso
 a destra della finestra.
 -end-
 
-ho.modopen	Apre il modulo selezionato.
-ho.modclose	Chiude il modulo attuale.
+#ho.modopen	Apre il modulo selezionato.
+#ho.modclose	Chiude il modulo attuale.
 
 ho.undo	Annulla operazioni precedenti ("Undo")
 ho.redo	Ripristina operazioni annullate ("Redo")
 
-ho.simstart	-begin-
+#ho.simstart	-begin-
 Attiva il simulatore, apre l'analizzatore logico
 ed esegue eventuali script di inizializzazione.
 -end-
@@ -709,7 +709,7 @@ ho.simdump	-begin-
 Scarica il contenuto di una memoria in un file.mem.
 -end-
 
-ho.sim.break	-begin-
+#ho.sim.break	-begin-
 Inserisci un breakpoint per il simulatore.
 I breakpoints sono espressioni che causano la sospensione
 della simulazione quanto sono verificate.
@@ -720,7 +720,7 @@ per eseguire il test "diverso da zero", rispettivamente
 "uguale a zero".
 -end-
 
-ho.f.modlist	-begin-
+ho.modlist	-begin-
 Elenco di tutti i moduli caricati.
 Il modulo "top-level" è indicato con il segno "+".
 Moduli di libreria sono fra parentesi.
@@ -799,7 +799,7 @@ Fili selezionati con il puntatore verranno
 trasformati in bus con questo numero di bit.
 -end-
 
-ho.edgat.extbar		-begin-
+#ho.edgat.extbar		-begin-
 Se selezionato, porte logiche di base
 a più ingressi useranno barre di estensione
 man mano che vengono aggiunte entrate.
@@ -829,13 +829,13 @@ ho.edgat.cycle		Il numero di epoche in un ciclo di clock.
 ho.edgat.phase		L'inizio del ciclo (in percento).
 ho.edgat.duty		La percentuale del ciclo, il clock è basso.
 
-ho.edgat.cname		Nome del collegamento.
-ho.edgat.cport		Port a cui è collegato il net.
-ho.edgat.ctype		Tipo di collegamento.
-ho.edgat.cbitw		Larghezza del collegamento (bit width).
-ho.edgat.cedit		Modifica la porta selezionata.
-ho.edgat.cadd		Aggiungi un port.
-ho.edgat.cdel		Cancella il port selezionato.
+#ho.edgat.cname		Nome del collegamento.
+#ho.edgat.cport		Port a cui è collegato il net.
+#ho.edgat.ctype		Tipo di collegamento.
+#ho.edgat.cbitw		Larghezza del collegamento (bit width).
+#ho.edgat.cedit		Modifica la porta selezionata.
+#ho.edgat.cadd		Aggiungi un port.
+#ho.edgat.cdel		Cancella il port selezionato.
 
 ho.edgat.hide		-begin-
 Attiva questo flag per nascondere il nome della porta logica.
@@ -882,7 +882,7 @@ Se l'opzione è disabilitata, le tracce vengono
 mostrate nell'ordine in cui sono state richiamate.
 -end-
 
-ho.opt.rememberprobes	-begin-
+#ho.opt.rememberprobes	-begin-
 Se questa opzione è attiva, le sonde agganciate
 durante la simulazione verranno memorizzate e saranno
 riprese automaticamente al prossimo run di simulazione.
@@ -958,7 +958,7 @@ per progettare un computer di Batman...
 -end-
 
 ho.opt.trek		Lanciami Scoty! (...da Star Trek...)
-ho.opt.normal		Disabilita i divertimenti.
+#ho.opt.normal		Disabilita i divertimenti.
 
 ho.opt.simstep		-begin-
 Quantità di epoche di avanzamento per il comando "Step Epoch(s)".
@@ -1030,13 +1030,13 @@ ho.simwatch		-begin-
 Visualizza i comandi scambiati fra GUI e simulatore.
 -end-
 
-ho.simlog		-begin-
+#ho.simlog		-begin-
 Annota in un logfile i comandi passati al simulatore.
 Il log può venir usato senza GUI per passare comandi
 al simulatore. Applicazione: debugginig di TkGate.
 -end-
 
-ho.cpathanal		-begin-
+#ho.cpathanal		-begin-
 Trova i percorsi critici
 -end-
 
@@ -1045,5 +1045,5 @@ Trova i percorsi critici
 # P. Ceppi; SUPSI-DTI - April 2004
 ##
 
-ho.edgate.frame		Etichetta del riquadro di commento
-msg.backupfail		Non posso creare il file di backup (protezioni/disco pieno?)
+#ho.edgate.frame		Etichetta del riquadro di commento
+#msg.backupfail		Non posso creare il file di backup (protezioni/disco pieno?)
