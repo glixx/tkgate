@@ -1,6 +1,6 @@
 #/bin/sh
 
-file="fr/messages"
+file="es/messages"
 
 sed -i "s|^b.open|#b.open|g" $file
 sed -i "s|^b.bitw|#b.bitw|g" $file

@@ -29,8 +29,8 @@ b.close		Cerrar
 b.ok		OK
 b.clear		Borrar
 b.cancel	Cancelar
-b.open		Abrir...
-b.bitw		Anchura Bus
+#b.open		Abrir...
+#b.bitw		Anchura Bus
 b.in		entrada
 b.out		salida
 b.inout		bidireccional
@@ -40,7 +40,7 @@ b.find		Buscar
 b.edit		Editar...
 b.add		Añadir...
 b.delete	Borrar
-b.deleteb	Borrar...
+#b.deleteb	Borrar...
 b.apply		Aplicar
 b.anchor	Anclar
 b.tech		Tecnología
@@ -48,183 +48,183 @@ b.tech		Tecnología
 ##############################################################################
 # Menu strings
 #
-file		Fichero
-edit		Editar
-tool		Herramientas
-simulate	Simular
-module		Módulo
-gate		Puerta
-make		Insertar
-circ		Circuito
+menu.file	0:Fichero
+menu.edit	0:Editar
+menu.tool	0:Herramientas
+menu.simulate	0:Simular
+menu.module	0:Módulo
+#gate		Puerta
+menu.make	0:Insertar
+#circ		Circuito
 
-new		Nuevo
-open		Abrir...
-openlib		Abrir Libreria...
-save		Salvar
-saveas		Salvar como...
-print		Imprimir...
-options		Opciones...
-quit		Salir
+menu.file.new		0:Nuevo...
+menu.file.open		0:Abrir...
+menu.file.openlib	0:Abrir Libreria...
+menu.file.save		0:Salvar
+menu.file.saveas	5:Salvar como...
+menu.file.print		0:Imprimir...
+#options		Opciones...
+menu.file.quit		0:Salir
 
-cut		Cortar
-copy		Copiar
-paste		Pegar
-selall		Seleccionar Todo
-find		Buscar...
-algnv		Situar en Columna
-algnh		Situar en Fila
-zoomin		Zoom Acercar
-zoomout		Zoom Alejar
+menu.edit.cut		0:Cortar
+menu.edit.copy		3:Copiar
+menu.edit.paste		0:Pegar
+menu.edit.selall	0:Seleccionar Todo
+menu.edit.find		0:Buscar...
+menu.format.algnv	6:Situar en Columna
+menu.format.algnh	6:Situar en Fila
+menu.edit.zoomin	5:Acercar
+menu.edit.zoomout	5:Alejar
 
-move		Mover/Conectar
-delg		Borrar puerta
-cutw		Cortar cable
-inv		Invertir
-bitw		Anchura del bus
-debug		Depurar
-rot0		Orientación 0º
-rot90		Orientación 90º
-rot180		Orientación 180º
-rot270		Orientación 270º
+menu.tool.move		0:Mover/Conectar
+menu.tool.delg		0:Borrar puerta
+menu.tool.cutw		0:Cortar cable
+menu.tool.inv		0:Invertir
+menu.tool.bitw		0:Anchura del bus
+menu.tool.debug		0:Depurar
+#rot0		Orientación 0º
+#rot90		Orientación 90º
+#rot180		Orientación 180º
+#rot270		Orientación 270º
 
-simbegin	Empezar Simulación
-simend		Terminar Simulación
-simrun		Modo continuo
-simpause	Pausa
-simstep		Paso a paso (tiempo)
-simcycle	Paso a paso (nº ciclos)
-simbreak	Punto de ruptura...
-simscript	Ejecutar Guión...
-simload		Fichero -> Memoria...
-simdump		Memoria -> Fichero...
+menu.simulate.begin	0:Empezar Simulación
+menu.simulate.end	0:Terminar Simulación
+menu.simulate.run	0:Modo continuo
+menu.simulate.pause	0:Pausa
+menu.simulate.step	0:Paso a paso (tiempo)
+menu.simulate.cycle	5:Paso a paso (nº ciclos)
+menu.simulate.break	0:Punto de ruptura...
+menu.simulate.script	1:Ejecutar Guión...
+menu.simulate.load	1:Fichero -> Memoria...
+menu.simulate.dump	1:Memoria -> Fichero...
 
-modopen		Abrir
-modclose	Cerrar
-modseti		Ajustar Interface
-modediti	Editar Interfaces...
-modnew		Nuevo...
-moddel		Borra...
-modcopy		Copia...
-modrename	Renombra...
-modclaim	Módulo libreria -> Módulo usuario...
-circprop	Propiedades del circuito...
-cpath		Camino crítico...
+menu.module.open	0:Abrir
+menu.module.close	0:Cerrar
+#modseti		Ajustar Interface
+#modediti	Editar Interfaces...
+menu.module.new		0:Nuevo...
+menu.module.del		0:Borra...
+menu.module.copy	1:Copia...
+menu.module.rename	0:Renombra...
+menu.module.claim	1:Módulo libreria -> Módulo usuario...
+#circprop	Propiedades del circuito...
+#cpath		Camino crítico...
 
-gataddin	Añade Entrada
-gataddout	Añade Salida
-gataddinout	Añade Bidireccional
-gatiochg	Cambiar Tipo
-gatanchor	Anclar Selección
-gatunanchor	Liberar Selección
-gatprop		Propiedades...
-gatrep		Réplica
-gatdel		Borrar
-gatsettech	Seleccionar Tecnología
+#gataddin	Añade Entrada
+#gataddout	Añade Salida
+#gataddinout	Añade Bidireccional
+#gatiochg	Cambiar Tipo
+#gatanchor	Anclar Selección
+#gatunanchor	Liberar Selección
+#gatprop		Propiedades...
+#gatrep		Réplica
+#gatdel		Borrar
+#gatsettech	Seleccionar Tecnología
 
-gmswitch	Entrada/Salida
-gmgate		Puerta
-gmredgate	Reducción
-gmmsi		MSI
-gmalu		ALU
-gmmem		Memoria
-gmmod		Módulo
-gmcomment	Comentario
-gmframe		Marco
+gm.io		Entrada/Salida
+gm.gate		Puerta
+gm.rgate	Reducción
+gm.msi		MSI
+gm.alu		ALU
+gm.mem		Memoria
+gm.mod		Módulo
+gm.comment	Comentario
+gm.frame	Marco
 
-gmxswitch	Conmutador
-gmdip		Interruptores DIP
-gmground	Masa
-gmvdd		Vdd
-gmmerge		Lineas <-> Bus
-gmclock		Señal de Reloj
+gm.io.switch	Conmutador
+gm.io.dip	Interruptores DIP
+#gmground	Masa
+#gmvdd		Vdd
+gm.io.merge	Lineas <-> Bus
+gm.io.clock	Señal de Reloj
 
-gm.led		LED
-gm.ledbar	Barra de LEDs 
-gm.ledhex	7-Seg. LED (HEXADECIMAL)
-gm.leddec	7-Seg. LED (DECIMAL)
-gm.ledseg	7-Seg. LED (Directo)
+gm.io.led	LED
+gm.io.ledbar	Barra de LEDs 
+gm.io.ledhex	7-Seg. LED (HEXADECIMAL)
+gm.io.leddec	7-Seg. LED (DECIMAL)
+gm.io.ledseg	7-Seg. LED (Directo)
 
-gmtty		TTY (Terminal)
+gm.io.tty	TTY (Terminal)
 
-gmand		AND  (Y)
-gmnand		NAND (NO-Y)
-gmor		OR   (O)
-gmnor		NOR  (NO-O)
-gmxor		XOR  (O-EX)
-gmxnor		XNOR (NO-O-EX)
-gmbuf		Buffer 
-gminv		Inversor
-gmtribuf	Buffer-Triestado 
-gmnmos		NMOS
-gmpmos		PMOS
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Buffer 
+gm.gate.inv	Inversor
+gm.gate.tribuf	Buffer-Triestado 
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
 
-gmrand		AND
-gmrnand		NAND
-gmror		OR
-gmrnor		NOR
-gmrxor		XOR
-gmrxnor		XNOR
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
 
-gmadd		Sumador
-gmmult		Multiplicador
-gmdiv		Divisor
-gmlshift	DespL. Izquierda
-gmrshift	DespL. Derecha
-gmarshift	DespL. Arit. Derecha
-gmroll	        DespL. cíclico
+gm.alu.add	Sumador
+gm.alu.mult	Multiplicador
+gm.alu.div	Divisor
+gm.alu.lshift	DespL. Izquierda
+gm.alu.rshift	DespL. Derecha
+gm.alu.arshift	DespL. Arit. Derecha
+#gmroll	        DespL. cíclico
 
-gmreg		Registro
-gmff		Flip-Flop D
-gmram		RAM
-gmrom		ROM
+gm.mem.reg	Registro
+gm.mem.ff	Flip-Flop D
+gm.mem.ram	RAM
+gm.mem.rom	ROM
 
-gm21mux		2-1 Multiplexor
-gm41mux		4-1 Multiplexor
-gm81mux		8-1 Multiplexor
-gm12dec		1-2 Decodificador
-gm14dec		1-4 Decodificador
-gm18dec		1-8 Decodificador
+gm.msi.21mux	2-1 Multiplexor
+gm.msi.41mux	4-1 Multiplexor
+gm.msi.81mux	8-1 Multiplexor
+gm.msi.12dec	1-2 Decodificador
+gm.msi.14dec	1-4 Decodificador
+gm.msi.18dec	1-8 Decodificador
     
-gmmodinst	Inserta módulo
-gmmodin		Entrada Módulo
-gmmodout	Salida Módulo
-gmmodinout	Bidireccional Módulo
+gm.mod.inst	Inserta módulo
+gm.mod.in	Entrada Módulo
+gm.mod.out	Salida Módulo
+gm.mod.inout	Bidireccional Módulo
 
-addwireseg	Añadir segmento de cable
+#addwireseg	Añadir segmento de cable
 
-help		Ayuda
-hlpabout	Acerca de...
-hlplicense	Licencia...
-hlpdoc		Documentación...
-hlptut		Tutoriales
-hlpexample	Ejemplos
-exampcomb	Lógica Combinacional
-examp3bit	Contador de 3 bits
-examp8bit	Contador de 8 bits 
-examptrff	FF a nivel de Transistores
-exampcpu	CPU
-tutwelcome	Introducción al TkGate 
-tutcreate	Creando un Circuito
-tutedit1	Editando un Circuito (1)
-tutedit2	Editando un Circuito (2)
-tutmods		Usando los Módulos
+#help		Ayuda
+menu.help.about		0:Acerca de...
+menu.help.license	0:Licencia...
+menu.help.doc		0:Documentación...
+menu.help.tut		1:Tutoriales
+menu.help.example	1:Ejemplos
+#exampcomb	Lógica Combinacional
+#examp3bit	Contador de 3 bits
+#examp8bit	Contador de 8 bits 
+#examptrff	FF a nivel de Transistores
+#exampcpu	CPU
+#tutwelcome	Introducción al TkGate 
+#tutcreate	Creando un Circuito
+#tutedit1	Editando un Circuito (1)
+#tutedit2	Editando un Circuito (2)
+#tutmods		Usando los Módulos
 
-tutsim		Simulando un Circuito
+#tutsim		Simulando un Circuito
 
 # Scope Menu
-menu.sc.prtrace	Visualizando Señal...
-menu.sc.close	Cerrar
-menu.sc.trace	Señal
-menu.sc.zoomin	Acercar
-menu.sc.zoomout	Alejar
+menu.scope_file.ptrace		0:Visualizando Señal...
+menu.scope_file.close		0:Cerrar
+#menu.sc.trace	Señal
+menu.scope_trace.zoomin		5:Acercar
+menu.scope_trace.zoomout	5:Alejar
 
 ##############################################################################
 # Interface strings
 #
 ifile		Fichero
 imodule		Módulo
-iblmodule	Módulos:
-iports		Puertos:
+iblmodule	Módulos
+iports		Puertos
 ibits		Bits:
 
 #############################################################################
@@ -251,20 +251,20 @@ db.gate.phase		Fase
 db.gate.duty		Función
 db.gate.port		Patilla
 db.gate.bitws		Bits
-db.gate.gtype		Tipo de Puerta
+db.gate.gtype		Tipo
 db.gate.gname		Nombre de la Puerta
 db.gate.hidenam		Nombre Oculto
-db.gate.anchor		Anclada
+db.gate.anchor		Anclar
 db.gate.cpbreak		Ruptura del camino crítico
 db.gate.butstate	Estado del Botón
 db.gate.dipval		Valor del conmutador
 db.gate.memfilenam	Fichero de Memoria
-db.gate.modname		Función
-db.gate.islink		El Texto es un Hiperenlace
-db.gate.link		Enlace a Fichero
-db.gate.findw		Busca sólo cables
-db.gate.findg		Busca sólo puertas
-db.gate.findwg		Busca cables y puertas
+db.gate.modname		Tipo
+#db.gate.islink		El Texto es un Hiperenlace
+#db.gate.link		Enlace a Fichero
+#db.gate.findw		Busca sólo cables
+#db.gate.findg		Busca sólo puertas
+#db.gate.findwg		Busca cables y puertas
 db.gate.general		General
 db.gate.details		Detalles
 db.gate.ports		Patilla
@@ -272,12 +272,12 @@ db.gate.delay		Retraso
 db.gate.stddelay	Retraso Normal
 db.gate.custdelay	Retraso Personalizado
 
-db.led.type		Tipo de LED
-db.led.bit		Bit
-db.led.bar		Barra Grafica
-db.led.hex		7-Segment (HEXADECIMAL)
-db.led.dec		7-Segment (DECIMAL)
-db.led.seg		7-Segment (Directo)
+db.gate.led.type	Tipo de LED
+db.gate.led.bit.hdr	Bit
+db.gate.led.bar.hdr	Barra Grafica
+db.gate.led.hex.hdr	7-Segment (HEXADECIMAL)
+db.gate.led.dec.hdr	7-Segment (DECIMAL)
+db.gate.led.seg.hdr	7-Segment (Directo)
 
 cpath.cloops -begin-
 Se ha detectado un bucle de realimentación en su circuito.
@@ -290,14 +290,14 @@ Las conexiones detectadas como bucle se listan más abajo.
 ##############################################################################
 # Print dialog box
 #
-print.outto		Salida a
-print.printer		Impresora
+#print.outto		Salida a
+print.printer		Impresora:
 print.file		Fichero
-print.prcmd		Comando de Impresión
+print.prcmd		Comando de Impresión:
 print.filename		Nombre del Fichero
 print.epssave		Salvar como Postscript Encapsulado.
-print.doctit		Título del Documento
-print.prmod		Imprimir Módulos
+#print.doctit		Título del Documento
+#print.prmod		Imprimir Módulos
 print.epcm		Periodo de tiempo/cm
 print.estpg		Páginas estimadas
 print.all		Todo
@@ -320,7 +320,7 @@ print.range		Rango
 print.fulltr		Trazado completo
 print.parttr		Trazado parcial
 print.start		Empezar
-print.end		Fin
+#print.end		Fin
 
 ##############################################################################
 #
@@ -348,24 +348,24 @@ opt.zled		LED flotante
 opt.restdef		Restaura opciones por defecto
 opt.regudate		Actualizar Región
 opt.smoothscroll	Desplazamiento Suave
-opt.outmove		Recuadro en desplazamientos de Módulos
+#opt.outmove		Recuadro en desplazamientos de Módulos
 opt.balloon		Habilitar Globos de Ayuda
 opt.debug		Habilitar Depuración
 opt.novice		Modo Novato
-opt.ckpoint		Realizar Chequeo de Puntos
+#opt.ckpoint		Realizar Chequeo de Puntos
 opt.freq		Frecuencia
 opt.beak		Habilitar Modo Especial
-opt.mode		Modo
-opt.normal		Normal
+#opt.mode		Modo
+#opt.normal		Normal
 opt.bat			Bat
 opt.trek		Star Trek
 opt.miles		Miles
 opt.showsimcmd		Visualizar Cadena Simulada
-opt.logfile		Fichero de mensajes del Simulador
+#opt.logfile		Fichero de mensajes del Simulador
 opt.estepsz		Ajuste Tiempo (Simulación paso a paso)
 opt.cstepsz		Ajuste nº ciclos (Simulación paso a paso)
 opt.overstep		Exceder Reloj
-opt.initscript		Guión de inicialización
+#opt.initscript		Guión de inicialización
 opt.posedge		El reloj para después de todos los flancos
 opt.setclock		El reloj para en punto
 opt.delayfilepath	Ficheros de Retraso
@@ -375,7 +375,7 @@ opt.simulate		Simular
 opt.analysis		Análisis
 opt.color		Color
 
-opt.cpopts		Opciones de los caminos críticos:
+opt.cpopts		Opciones de los caminos críticos
 opt.maxpath		Máximo nº de caminos:
 opt.cpflash		Presentar como relampago
 
@@ -388,36 +388,36 @@ de una conexión permanente a la RED.
 ##############################################################################
 #
 # Block list dialog boxes
-blklst.newmod		Módulo nuevo 
-blklst.delmod		Borra Módulo
-blklst.frommod		Copia Módulo de
-blklst.tomod		a
-blklst.oldname		Nombre anterior
-blklst.newname		Nombre nuevo
-blklst.claim		Módulo libreria -> Módulo ususario
+blklst.new.cap		Módulo nuevo 
+blklst.del.cap		Borra Módulo
+blklst.from		Copia Módulo de
+blklst.to		a
+#blklst.oldname		Nombre anterior
+#blklst.newname		Nombre nuevo
+blklst.claim.cap	Módulo libreria -> Módulo ususario
 
 ##############################################################################
 #
 # Circuit Dialog box
 #
-circ.topmod		Módulo principal
-circ.discchg		Descartar cambios
+#circ.topmod		Módulo principal
+circ.discchg		Descartar cambios.
 circ.iniscript		Guiones de Inicialización
-circ.noscript		No ha seleccionado ficheros de guión.
-circ.really1		Quiere realmente borrarlo
-circ.really2		de la lista de guiones de inicialización
+#circ.noscript		No ha seleccionado ficheros de guión.
+#circ.really1		Quiere realmente borrarlo
+#circ.really2		de la lista de guiones de inicialización
 
 ##############################################################################
 # Simulator
 #
-sim.breakpt		Punto de ruptura
+#sim.breakpt		Punto de ruptura
 
 ##############################################################################
 #
 # Command box
 #
-cmd.file		Nombre del fichero
-cmd.topname		Nombre del módulo principal
+#cmd.file		Nombre del fichero
+#cmd.topname		Nombre del módulo principal
 
 ##############################################################################
 #
@@ -431,26 +431,26 @@ cp.recompute		Recómputo
 ##############################################################################
 # Error messages
 #
-err.verilog		Errores en fichero:
+#err.verilog		Errores en fichero:
 err.nopin		No puedo cambiar la patilla seleccionada.
 err.badhex		Valor hexadecimal incorrecto. Ignoro '%s'.
 err.gatanchor		Puertas Ancladas no pueden moverse.
-err.libmode		Operación imposible en módulo de libreria (convertir a módulo normal para editar).
+#err.libmode		Operación imposible en módulo de libreria (convertir a módulo normal para editar).
 err.badfind		No puedo encontrar '%s' como destino.
 err.badopendel		No puedo borrar el módulo abierto.
 err.nosrcmod		No puedo encontrar '%s' como módulo fuente.
 err.noerr		No puedo indicarle el error.
 err.misserr		Error información incompleta (did the simulator crash?)
-err.pounimpl		Información de error no implementada
+#err.pounimpl		Información de error no implementada
 
 err.badinadd		No puedo añadir más entradas a la puerta seleccionada.
 err.badoutadd		No puedo añadir más salidas a la puerta seleccionada.
-err.badinoutadd		No puedo añadir más lineas bidireccionales a la puerta
+err.badinoutadd		No puedo añadir más lineas bidireccionales a la puerta.
 err.badpinchg		No puedo cambiar el tipo de patillas de la puerta.
 err.badnetname		He borrado caracteres incorrectos en el identificador.
 err.netbcrename		Identificador cambia a '%s' por caracteres incorrectos.
 err.netconfnet		Identificador cambia a '%s' debido a un conflicto.
-err.netconfgat		Identificador cambia debido a conflicto con nombre de puerta básica.
+err.netconfgat		Identificador cambia debido a conflicto con nombre de puerta básica
 err.netconfkw		Identificador cambia debido a conflicto con palabra reservada.
 err.badconsame		Unión rechazada debido a que los cables forman parte de la misma conexión.
 err.badconptsp		Unión rechazada debido a que ambos cables son patillas de módulos o alimentación.
@@ -467,7 +467,7 @@ err.bkpt.toomany	Demasiados puntos de ruptura.  El máximo es de %d.
 err.sim.badtmp		No puedo salvar el fichero temporal '%s' para la simulación ( ¿ Disco lleno ? )
 err.sim.syntx		Error de sintaxis en el comando '%s'.
 err.sim.noincl		El fichero Include '%s' no se encuentra.
-err.sim.clockbadedge	Ilegal indicador en el pulso '%c' del comando de reloj.
+#err.sim.clockbadedge	Ilegal indicador en el pulso '%c' del comando de reloj.
 err.sim.nobkpt		No existe punto de ruptura '%s'.
 err.sim.nonet		No puedo encontrar la conexión '%s'.
 err.sim.nogate		No puedo encontrar la puerta '%s'.
@@ -482,7 +482,7 @@ err.badlibopen		No puedo abrir la libreria '%s'.
 
 err.nomark		Por favor marca con el botón izquierdo antes de seleccionar el tipo de puerta.
 err.badgate		No conozco ese tipo de puerta.
-err.badmake		No puedo crear la puerta.
+#err.badmake		No puedo crear la puerta.
 
 err.manypages		-begin-
 Hay un montón de páginas en
@@ -505,7 +505,7 @@ err.nomod		Módulo '%s' no está definido.
 err.modlock		!Este bloque lógico lo está visualizando!
 err.closeroot		No puedo cerrar el módulo principal. Utiliza la opción Salir del menú Fichero.
 err.sim.isrun		El simulador está ejecutandose en estos momentos (Utiliza 'Ctrl-s e' para terminar).
-err.sim.isnotrun	El simulador no está funcionando (Utiliza 'Ctrl-s b' para empezar).
+#err.sim.isnotrun	El simulador no está funcionando (Utiliza 'Ctrl-s b' para empezar).
 err.editonly		Comando incorrecto en el modo de Simulación.
 err.simonly		Comando sólo válido en modo Simulación.
 
@@ -543,7 +543,7 @@ msg.setinterface	Ajustar el interfaz del módulo para '%s'.
 msg.needsel		Por favor selecciona una instancia de módulo.
 msg.wroteckpt		Chequea punto a %s...
 msg.save		Salva circuito como '%s'.
-msg.badsave		Falla fichero de salida '%s'.
+#msg.badsave		Falla fichero de salida '%s'.
 msg.reallynew		El circuito se ha modificado. ¿ Realmente desea perder los cambios y crear uno nuevo ?
 msg.reallyquit		El circuito se ha modificado. ¿ Realmente desea salir ??
 msg.notlib		'%s' no es un módulo de libreria.
@@ -571,9 +571,9 @@ Borra el circuito actual y,
 empieza a editar uno nuevo.
 -end-
 
-ho.open		Fichero -> Circuito
-ho.save		Circuito -> Fichero actual
-ho.print	Circuito -> Impresora
+#ho.open		Fichero -> Circuito
+#ho.save		Circuito -> Fichero actual
+#ho.print	Circuito -> Impresora
 
 ho.move		-begin-
 Move/Connect - Pulsando y arrastrando el ratón puedes:
@@ -586,7 +586,7 @@ Realizando una doble pulsación puedes:
 -end-
 
 ho.delgat	-begin-
-borrar puerta - Usa esta herramienta
+Borrar puerta - Usa esta herramienta
 para borrar las puertas.
 -end-
 
@@ -608,8 +608,8 @@ Bus. Introduce dicho número en la
 parte inferior derecha de la ventana.
 -end-
 
-ho.modopen	Abre el módulo seleccionado.
-ho.modclose	Cierra el módulo actual.
+#ho.modopen	Abre el módulo seleccionado.
+#ho.modclose	Cierra el módulo actual.
 
 ho.simgo	-begin-
 Si no estamos simulando, inicia la 
@@ -660,7 +660,7 @@ Almacena el contenido de la memoria
 en un fichero con extensión mem.
 -end-
 
-ho.sim.break	-begin-
+#ho.sim.break	-begin-
 Introduce punto de ruptura.  Punto de ruptura es una expresión
 que detiene la simulación cuando su evaluación resulta
 verdadera. Las Expresiones soportadas por el programa son del tipo
@@ -668,7 +668,7 @@ operador relacional simple : "w1 == 0" o "w7 != 8". También se
 contempla expresiones en las que se niega la conexión: "!w2". 
 -end-
 
-ho.f.modlist	-begin-
+ho.modlist	-begin-
 Lista todos los móulos actualmente cargados.
 El módulo principal, el superior en la jerarquia
 se indica con el signo "+", los módulos de libreria
@@ -757,13 +757,13 @@ esta puerta. Se puede cambiar editandola aquí.
 ho.edgat.cycle		El número total de periodos de tiempo en un ciclo de reloj.
 ho.edgat.phase		El punto inicial del ciclo (en %).
 ho.edgat.duty		El % del ciclo que el reloj está en estado bajo.
-ho.edgat.cname		Nombre de la conexión a la que se une.
-ho.edgat.cport		Patilla de está conexión a la que se une.
-ho.edgat.ctype		Tipo de conexión.
-ho.edgat.cbitw		Anchura de Bus de la conexión a la que se une.
-ho.edgat.cedit		Edita la patilla seleccionada.
-ho.edgat.cadd		Añade una patilla.
-ho.edgat.cdel		Borra la patilla seleccionada.
+#ho.edgat.cname		Nombre de la conexión a la que se une.
+#ho.edgat.cport		Patilla de está conexión a la que se une.
+#ho.edgat.ctype		Tipo de conexión.
+#ho.edgat.cbitw		Anchura de Bus de la conexión a la que se une.
+#ho.edgat.cedit		Edita la patilla seleccionada.
+#ho.edgat.cadd		Añade una patilla.
+#ho.edgat.cdel		Borra la patilla seleccionada.
 
 ho.edgat.hide		-begin-
 Activa esta bandera para no 
@@ -862,7 +862,7 @@ partir de módulos.
 -end-
 
 ho.opt.trek		Ayudame Scoty!
-ho.opt.normal		Descartar el cachondeo.
+#ho.opt.normal		Descartar el cachondeo.
 
 ho.opt.simstep		-begin-
 El número de periodos de tiempo que avanzamos
@@ -922,12 +922,12 @@ Visualizar comandos enviados entre el entorno
 de visualización (GUI) y el Simulador.
 -end-
 
-ho.simlog		-begin-
+#ho.simlog		-begin-
 Escribe comandos emitidos por el simulador en un
 fichero de anotación. Este puede usarse como
 fichero de entrada al simulador en la depuración.
 -end-
 
-ho.cpathanal		-begin-
+#ho.cpathanal		-begin-
 Encuentra caminos críticos en el circuito.
 -end-
