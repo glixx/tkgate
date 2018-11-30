@@ -9,16 +9,15 @@
 # 
 # Translators:
 # AlexL <loginov.alex.valer@gmail.com>, 2018
-# 
-#, fuzzy
+# Arve Eriksson <031299870@telia.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 07:07+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
-"Language-Team: Swedish (https://www.transifex.com/Magic/teams/94089/sv/)\n"
+"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"Language-Team: Swedish (http://www.transifex.com/Magic/tkgate/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1607,11 +1606,7 @@ msgid ""
 "or ROM component. Select memory page,\n"
 "then type new hex values to change\n"
 "memory content."
-msgstr ""
-"Visa och ändra innehållet i en RAM-\n"
-"eller ROM-komponent. Välj minnessida,\n"
-"och skriva sedan nya hexvärden för att\n"
-"ändra minnets innehåll."
+msgstr "Visa och ändra innehållet i en RAM-\neller ROM-komponent. Välj minnessida,\noch skriva sedan nya hexvärden för att\nändra minnets innehåll."
 
 #: en/messages:561
 msgctxt "scope.title"
@@ -1621,8 +1616,7 @@ msgstr "TkGate: Scope"
 #: en/messages:562
 msgctxt "scope.emptymsg"
 msgid "Double-click on a wire to add or delete a trace."
-msgstr ""
-"Dubbelklicka på en kabel för att lägga till eller ta bort en spårning."
+msgstr "Dubbelklicka på en kabel för att lägga till eller ta bort en spårning."
 
 #: en/messages:563
 msgctxt "comment.empty"

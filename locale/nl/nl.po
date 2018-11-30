@@ -9,16 +9,15 @@
 # 
 # Translators:
 # AlexL <loginov.alex.valer@gmail.com>, 2018
-# 
-#, fuzzy
+# Heimen Stoffels <vistausss@outlook.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 07:07+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
-"Language-Team: Dutch (https://www.transifex.com/Magic/teams/94089/nl/)\n"
+"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/Magic/tkgate/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

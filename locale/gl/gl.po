@@ -9,16 +9,15 @@
 # 
 # Translators:
 # AlexL <loginov.alex.valer@gmail.com>, 2018
-# 
-#, fuzzy
+# Xurxo Guerra Perez <xguerrap@gmail.com>, 2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 07:07+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
-"Language-Team: Galician (https://www.transifex.com/Magic/teams/94089/gl/)\n"
+"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"Language-Team: Galician (http://www.transifex.com/Magic/tkgate/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1607,11 +1606,7 @@ msgid ""
 "or ROM component. Select memory page,\n"
 "then type new hex values to change\n"
 "memory content."
-msgstr ""
-"Ver e modificar os contidas da RAM\n"
-"ou da ROM. Seleccionar a páxina de memoria,\n"
-"e escribir os novos valores hex para\n"
-"mudar o contido da memoria."
+msgstr "Ver e modificar os contidas da RAM\nou da ROM. Seleccionar a páxina de memoria,\ne escribir os novos valores hex para\nmudar o contido da memoria."
 
 #: en/messages:561
 msgctxt "scope.title"
@@ -1868,9 +1863,7 @@ msgctxt "db.newcirc.exp"
 msgid ""
 "Discard the current circuit and start editing\n"
 "a new circuit."
-msgstr ""
-"Desbotar o circuíto actual e comezar a\n"
-"edición dun novo."
+msgstr "Desbotar o circuíto actual e comezar a\nedición dun novo."
 
 #: en/messages:652
 msgctxt "db.newcirc.file"

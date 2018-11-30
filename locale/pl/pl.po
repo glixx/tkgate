@@ -9,16 +9,15 @@
 # 
 # Translators:
 # AlexL <loginov.alex.valer@gmail.com>, 2018
-# 
-#, fuzzy
+# Begina Felicysym <begina.felicysym@wp.eu>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 07:07+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
-"Language-Team: Polish (https://www.transifex.com/Magic/teams/94089/pl/)\n"
+"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"Language-Team: Polish (http://www.transifex.com/Magic/tkgate/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -7622,11 +7621,7 @@ msgid ""
 "rotation. Click on this\n"
 "button to change the current\n"
 "default rotation."
-msgstr ""
-"Wyświetla aktualną domyślną\n"
-"rotację. Kliknij ten\n"
-"przycisk by zmienić aktualną\n"
-"domyślną rotację."
+msgstr "Wyświetla aktualną domyślną\nrotację. Kliknij ten\nprzycisk by zmienić aktualną\ndomyślną rotację."
 
 #: en/messages:3033
 msgctxt "ho.tool.zoomin"
