@@ -1,0 +1,9 @@
+\language deutsch
+\font-encoding  iso8859-1
+\messages-encoding utf-8
+\verilog-encoding iso8859-1
+\postscript-encoding iso8859-1
+\display-encoding iso8859-1
+@db.gate.comment.width		*500
+@db.gate.comment.height		*450
+@opt.sidebar.width	*250
