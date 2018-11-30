@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"POT-Creation-Date: 2018-11-30 13:05+0300\n"
+"PO-Revision-Date: 2018-11-30 06:03+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/Magic/tkgate/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -3499,6 +3499,16 @@ msgstr "Modo Novato"
 #: en/messages:1204
 msgctxt "opt.blockDropConnect"
 msgid "Wire drop port creation"
+msgstr ""
+
+#: en/messages:1205
+msgctxt "opt.ckpoint.1"
+msgid "Do checkpointing every"
+msgstr ""
+
+#: en/messages:1206
+msgctxt "opt.ckpoint.2"
+msgid "commands."
 msgstr ""
 
 #: en/messages:1207
@@ -7698,3 +7708,19 @@ msgstr ""
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr ""
+
+#: en/messages:3055
+msgctxt "license"
+msgid ""
+"TkGate is free software; you can redistribute it and/or modify it\n"
+"under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"TkGate is distributed in the hope that it will be useful, but\n"
+"WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"GNU General Public License for more details.\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with TkGate; if not, write to the Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+msgstr "TtGate es software libre; puede redistribuirlo y/o modificarlo bajo los términos\nde la Licencia Pública General de GNU publicada por la Free Software\nFoundation; ya sea en su versión 2 ó (a su criterio)en una versión posterior.\nTtGate se distribuye con la esperanza que sea útil, pero SIN GARANTÍA; sin\nninguna garantía implícita de COMERCIALIDAD o IDONEIDAD PARA UN FIN\nDETERMINADO. Mire la Licencia General GNU para más detalles.\nDebería haber recibido una copia de la Licencia Pública General de GNU junto\ncon TtGate; si no es el caso, escriba a la Free Software Foundation, Inc., 51\nFranklin Street, Fifth Floor, Boston, MA 02110-1301 EE. UU."

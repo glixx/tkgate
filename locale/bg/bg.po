@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"POT-Creation-Date: 2018-11-30 13:05+0300\n"
+"PO-Revision-Date: 2018-11-30 06:03+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/Magic/tkgate/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -3497,6 +3497,16 @@ msgstr ""
 #: en/messages:1204
 msgctxt "opt.blockDropConnect"
 msgid "Wire drop port creation"
+msgstr ""
+
+#: en/messages:1205
+msgctxt "opt.ckpoint.1"
+msgid "Do checkpointing every"
+msgstr ""
+
+#: en/messages:1206
+msgctxt "opt.ckpoint.2"
+msgid "commands."
 msgstr ""
 
 #: en/messages:1207
@@ -7696,3 +7706,19 @@ msgstr ""
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr ""
+
+#: en/messages:3055
+msgctxt "license"
+msgid ""
+"TkGate is free software; you can redistribute it and/or modify it\n"
+"under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"TkGate is distributed in the hope that it will be useful, but\n"
+"WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"GNU General Public License for more details.\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with TkGate; if not, write to the Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+msgstr "Тази програма (TtGate) е свободен софтуер. Можете да я разпространявате\nи/или променяте под условията на Общия публичен лиценз на GNU (GNU GPL),\nкакто е публикуван от Фондацията за свободен софтуер — версия 2 на лиценза\nили (по ваше решение) по-късна версия.\nТази програма се разпространява с надеждата, че ще бъде полезна, но БЕЗ\nНИКАКВИ ГАРАНЦИИ, дори и косвените за ПРОДАЖБА или СЪОТВЕТСТВИЕ С\nКАКВАТО И ДА Е УПОТРЕБА. За подробности погледнете Общия публичен\nлиценз на GNU.\nТрябва да сте получили копие от Общия публичен лиценз на GNU (GNU GPL)\nзаедно с тази програма. Ако не сте, пишете до Free Software Foundation, Inc., 51\nFranklin St, Fifth Floor, Boston, MA 02110-1301, USA."

@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"POT-Creation-Date: 2018-11-30 13:05+0300\n"
+"PO-Revision-Date: 2018-11-30 06:04+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/Magic/tkgate/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -3497,6 +3497,16 @@ msgstr ""
 #: en/messages:1204
 msgctxt "opt.blockDropConnect"
 msgid "Wire drop port creation"
+msgstr ""
+
+#: en/messages:1205
+msgctxt "opt.ckpoint.1"
+msgid "Do checkpointing every"
+msgstr ""
+
+#: en/messages:1206
+msgctxt "opt.ckpoint.2"
+msgid "commands."
 msgstr ""
 
 #: en/messages:1207
@@ -7696,3 +7706,19 @@ msgstr ""
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr ""
+
+#: en/messages:3055
+msgctxt "license"
+msgid ""
+"TkGate is free software; you can redistribute it and/or modify it\n"
+"under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"TkGate is distributed in the hope that it will be useful, but\n"
+"WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"GNU General Public License for more details.\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with TkGate; if not, write to the Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+msgstr "TtGate adalah perisian bebas; anda boleh mengedarkannya semula dan/atau\nmengubah suai di bawah syarat-syarat GNU General Public License seperti yang\nditerbitkan oleh Free Software Foundation; sama ada Lesen versi 2, atau (atas\npilihan anda) mana-mana versi selepas ini, \nTtGate diedarkan dengan harapan bahawa ia akan menjadi berguna, tetapi\nTANPA SEBARANG WARANTI; tanpa jaminan yang tersirat MERCHANTABILITY\natau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat Lesen Awam Am GNU\nuntuk maklumat lanjut.\nAnda sepatutunya telah menerima satu salinan Lesen GNU General Public\nbersama TtGate; jika tidak, tulis kepada Free Software Foundation, Inc., 51\nTemple Place, Suite 330, Boston, MA 02110-1301 USA."

@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"POT-Creation-Date: 2018-11-30 13:05+0300\n"
+"PO-Revision-Date: 2018-11-30 06:04+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/Magic/tkgate/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -3498,6 +3498,16 @@ msgstr ""
 #: en/messages:1204
 msgctxt "opt.blockDropConnect"
 msgid "Wire drop port creation"
+msgstr ""
+
+#: en/messages:1205
+msgctxt "opt.ckpoint.1"
+msgid "Do checkpointing every"
+msgstr ""
+
+#: en/messages:1206
+msgctxt "opt.ckpoint.2"
+msgid "commands."
 msgstr ""
 
 #: en/messages:1207
@@ -7697,3 +7707,19 @@ msgstr ""
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr ""
+
+#: en/messages:3055
+msgctxt "license"
+msgid ""
+"TkGate is free software; you can redistribute it and/or modify it\n"
+"under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"TkGate is distributed in the hope that it will be useful, but\n"
+"WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"GNU General Public License for more details.\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with TkGate; if not, write to the Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+msgstr "TtGate is vrije software; u mag het opnieuw distribueren en/of wijzigen\nonder de voorwaarden van de GNU General Public License zoals gepubliceerd\ndoor de Free Software Foundation; ofwel versie 2 van deze licentie of\n(zo u wilt) een latere versie.\nTtGate wordt gedistibueerd in de hoop dat het nuttig zal zijn,\nmaar ZONDER ENIGE GARANTIE; zonder zelfs de geïmpliceerde garantie\nvan VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.\nZie de GNU General Public License voor meer details.\nU moet een kopie van de GNU General Public License hebben gekregen\nsamen met TtGate; zoniet, schrijf dan naar de Free Software Foundation,\nInc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."

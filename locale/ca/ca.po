@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"POT-Creation-Date: 2018-11-30 13:05+0300\n"
+"PO-Revision-Date: 2018-11-30 06:03+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/Magic/tkgate/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -3500,6 +3500,16 @@ msgstr "Mode Principiant"
 #: en/messages:1204
 msgctxt "opt.blockDropConnect"
 msgid "Wire drop port creation"
+msgstr ""
+
+#: en/messages:1205
+msgctxt "opt.ckpoint.1"
+msgid "Do checkpointing every"
+msgstr ""
+
+#: en/messages:1206
+msgctxt "opt.ckpoint.2"
+msgid "commands."
 msgstr ""
 
 #: en/messages:1207
@@ -7699,3 +7709,19 @@ msgstr ""
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr ""
+
+#: en/messages:3055
+msgctxt "license"
+msgid ""
+"TkGate is free software; you can redistribute it and/or modify it\n"
+"under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"TkGate is distributed in the hope that it will be useful, but\n"
+"WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"GNU General Public License for more details.\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with TkGate; if not, write to the Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+msgstr "L'TtGate és programari lliure; podeu redistribuir-lo i/o modificar-lo sota els\ntermes de la Llicència Pública General GNU tal com ha estat publicada per\nla Free Software Foundation; ja sigui la versió 2 de la Llicència o bé (si ho\npreferiu) qualsevol altra versió posterior.\nL'TtGate es distribueix amb l'expectativa que serà útil, però SENSE CAP\nGARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o\nADEQUACIÓ PER UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública\nGeneral GNU per obtenir-ne més detalls.\nHauríeu d'haver rebut una còpia de la Llicència Pública General GNU\njuntament amb l'TtGate; en cas contrari, escriviu a la Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."

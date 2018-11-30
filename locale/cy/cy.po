@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 08:50+0300\n"
-"PO-Revision-Date: 2018-11-29 23:44+0000\n"
+"POT-Creation-Date: 2018-11-30 13:05+0300\n"
+"PO-Revision-Date: 2018-11-30 06:03+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Welsh (http://www.transifex.com/Magic/tkgate/language/cy/)\n"
 "MIME-Version: 1.0\n"
@@ -3498,6 +3498,16 @@ msgstr "Modd Dechreuwr"
 #: en/messages:1204
 msgctxt "opt.blockDropConnect"
 msgid "Wire drop port creation"
+msgstr ""
+
+#: en/messages:1205
+msgctxt "opt.ckpoint.1"
+msgid "Do checkpointing every"
+msgstr ""
+
+#: en/messages:1206
+msgctxt "opt.ckpoint.2"
+msgid "commands."
 msgstr ""
 
 #: en/messages:1207
@@ -7697,3 +7707,19 @@ msgstr ""
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr ""
+
+#: en/messages:3055
+msgctxt "license"
+msgid ""
+"TkGate is free software; you can redistribute it and/or modify it\n"
+"under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"TkGate is distributed in the hope that it will be useful, but\n"
+"WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+"GNU General Public License for more details.\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with TkGate; if not, write to the Free Software Foundation,\n"
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+msgstr "Mae TtGate yn feddalwedd rhydd; gallwch ei hailddosbarthu a/neu ei\nhaddasu dan delerau Trwydded Gyhoeddus Gyffredinol GNU fel y'i\ncyhoeddwyd gan y Free Software Foundation; naill ai fersiwn 2 y\nDrwydded, neu (yn ôl eich dewis) unrhyw fersiwn diweddarach.\nMae TtGate yn cael ei dosbarthu yn y gobaith y bydd yn\nddefnyddiol, ond HEB UNRHYW WARANT; heb hyd yn oed y warant\noblygedig o FARSIANDÏAETH neu FFITRWYDD AT BWRPAS ARBENNIG.\nGweler Trwydded Gyhoeddus Gyffredinol GNU am ragor o fanylion.\nDylech fod wedi derbyn copi o Drwydded Gyhoeddus Gyffredinol GNU ynghyd\nâ'r rhaglen hon; os na, ysgrifennwch at y Free Software Foundation, Inc.,\n51 Temple Place, Suite 330, Boston MA 02110-1301 USA."
