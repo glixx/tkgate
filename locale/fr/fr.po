@@ -11,6 +11,7 @@
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Andrey V. Skvotsov <starling13@gmail.com>, 2015
 # Chinchon Translate <chinchon@live.fr>, 2016
+# Laurent Bonnaud <Laurent.Bonnaud@iut2.upmf-grenoble.fr>, 2015
 # Neil Zeke <locecchini@gmail.com>, 2015
 # Nicolas Cuffia <cuffia.cuceglio@vivaldi.net>, 2016
 # Philippe Gilles <philippe.gilles@univ-avignon.fr>, 2016

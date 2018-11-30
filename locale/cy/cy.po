@@ -10,6 +10,7 @@
 # Translators:
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Andrey V. Skvotsov <starling13@gmail.com>, 2015
+# Kyfieithu <gyfieithu@kyfieithu.co.uk>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"

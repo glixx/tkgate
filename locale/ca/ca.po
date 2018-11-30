@@ -12,6 +12,7 @@
 # Andrey V. Skvotsov <starling13@gmail.com>, 2015
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015
+# Roman Valls <brainlinux@softhome.net>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
