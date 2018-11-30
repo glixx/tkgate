@@ -18,12 +18,12 @@ msgstr ""
 "POT-Creation-Date: 2018-11-30 08:50+0300\n"
 "PO-Revision-Date: 2018-11-29 07:07+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
-"Language-Team: Lithuanian (https://www.transifex.com/Magic/teams/94089/lt/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/Magic/teams/94089/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt\n"
-"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: en/messages:108
 msgctxt "b.new"
@@ -43,17 +43,17 @@ msgstr ""
 #: en/messages:111
 msgctxt "b.ok"
 msgid "OK"
-msgstr "Gerai"
+msgstr ""
 
 #: en/messages:112
 msgctxt "b.clear"
 msgid "Clear"
-msgstr "Išvalyti"
+msgstr ""
 
 #: en/messages:113
 msgctxt "b.cancel"
 msgid "Cancel"
-msgstr "Atsisakyti"
+msgstr ""
 
 #: en/messages:116
 msgctxt "b.in"
@@ -73,7 +73,7 @@ msgstr ""
 #: en/messages:119
 msgctxt "b.browse"
 msgid "Browse..."
-msgstr "Naršyti..."
+msgstr ""
 
 #: en/messages:120
 msgctxt "b.label"
@@ -93,22 +93,22 @@ msgstr ""
 #: en/messages:123
 msgctxt "b.add"
 msgid "Add..."
-msgstr "Pridėti..."
+msgstr ""
 
 #: en/messages:124
 msgctxt "b.delete"
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: en/messages:126
 msgctxt "b.remove"
 msgid "Remove"
-msgstr "Šalinti"
+msgstr ""
 
 #: en/messages:127
 msgctxt "b.apply"
 msgid "Apply"
-msgstr "Taikyti"
+msgstr ""
 
 #: en/messages:128
 msgctxt "b.anchor"
@@ -198,12 +198,12 @@ msgstr ""
 #: en/messages:174
 msgctxt "mm.add"
 msgid "Add..."
-msgstr "Pridėti..."
+msgstr ""
 
 #: en/messages:175
 msgctxt "mm.delete"
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: en/messages:176
 msgctxt "mm.edit"
@@ -1363,7 +1363,7 @@ msgstr ""
 #: en/messages:463
 msgctxt "pop.gate.delete"
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: en/messages:464
 msgctxt "pop.gate.ioset"
@@ -1528,7 +1528,7 @@ msgstr ""
 #: en/messages:501
 msgctxt "pop.igen.delete"
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: en/messages:502
 msgctxt "pop.igen.in"
@@ -1627,7 +1627,7 @@ msgstr ""
 #: en/messages:568
 msgctxt "ifile"
 msgid "File"
-msgstr "Failas"
+msgstr ""
 
 #: en/messages:569
 msgctxt "imodule"
@@ -2034,12 +2034,12 @@ msgstr ""
 #: en/messages:691
 msgctxt "db.gate.edit"
 msgid "Edit"
-msgstr "Redaguoti"
+msgstr ""
 
 #: en/messages:692
 msgctxt "db.gate.delete"
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: en/messages:693
 msgctxt "db.gate.add"
@@ -2870,7 +2870,7 @@ msgstr ""
 #: en/messages:1009
 msgctxt "db.hdl.cancel"
 msgid "Cancel"
-msgstr "Atsisakyti"
+msgstr ""
 
 #: en/messages:1010
 msgctxt "db.hdl.ignore"
@@ -2929,7 +2929,7 @@ msgstr ""
 #: en/messages:1041
 msgctxt "print.file"
 msgid "File"
-msgstr "Failas"
+msgstr ""
 
 #: en/messages:1042
 msgctxt "print.prcmd"
@@ -3194,7 +3194,7 @@ msgstr ""
 #: en/messages:1139
 msgctxt "opt.treelabel"
 msgid "Options"
-msgstr "Parinktys"
+msgstr ""
 
 #: en/messages:1141
 msgctxt "opt.general"
@@ -3699,12 +3699,12 @@ msgstr ""
 #: en/messages:1253
 msgctxt "opt.tool.file"
 msgid "File"
-msgstr "Failas"
+msgstr ""
 
 #: en/messages:1254
 msgctxt "opt.tool.edit"
 msgid "Edit"
-msgstr "Redaguoti"
+msgstr ""
 
 #: en/messages:1255
 msgctxt "opt.tool.gateopt"
@@ -4037,12 +4037,12 @@ msgstr ""
 #: en/messages:1347
 msgctxt "igen.delete"
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: en/messages:1348
 msgctxt "igen.edit"
 msgid "Edit"
-msgstr "Redaguoti"
+msgstr ""
 
 #: en/messages:1361
 msgctxt "igen.mod"
@@ -4457,7 +4457,7 @@ msgstr ""
 #: en/messages:1556
 msgctxt "circ.flags"
 msgid "Options"
-msgstr "Parinktys"
+msgstr ""
 
 #: en/messages:1557
 msgctxt "circ.defaults"
@@ -4607,7 +4607,7 @@ msgstr ""
 #: en/messages:1630
 msgctxt "libmgr.status"
 msgid "Status"
-msgstr "Būsena"
+msgstr ""
 
 #: en/messages:1631
 msgctxt "libmgr.status.load"
@@ -6033,7 +6033,7 @@ msgstr ""
 #: en/messages:2031
 msgctxt "cprt.descr"
 msgid "Digital Circuit Editor and Simulator"
-msgstr ""
+msgstr "Editor circuito digital e simulador"
 
 #: en/messages:2042
 msgctxt "ho.setsel.allr"
@@ -7627,12 +7627,12 @@ msgstr ""
 #: en/messages:3033
 msgctxt "ho.tool.zoomin"
 msgid "Zoom in"
-msgstr "Didinti"
+msgstr ""
 
 #: en/messages:3034
 msgctxt "ho.tool.zoomout"
 msgid "Zoom out"
-msgstr "Mažinti"
+msgstr ""
 
 #: en/messages:3035
 msgctxt "ho.tool.rotate"
