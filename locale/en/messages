@@ -1,5 +1,6 @@
 #
 #   Copyright (C) 1987-2015 by Jeffery P. Hansen
+#   Copyright (C) 2015-2018 by Andrey V. Skvortsov
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -8,33 +9,30 @@
 #
 #   This program is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License along
 #   with this program; if not, write to the Free Software Foundation, Inc.,
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-# Last edit by hansen on Sun Feb 22 19:51:17 2009
-#
-
 ##############################################################################
 #
-# Explaination of file format.
+# Explanations of file format.
 #
 # Messages files are used to "localize" tkgate so that it can run under
-# different languages.  Lines beginning with a '#' character are comments.
+# different languages. Lines beginning with a '#' character are comments.
 # Most entries in the file are of the form:
 #
 # tag value
 #
-# A tag is any abitrary string of non-whitespace characters.  By convention
-# a dot notation is used to suggest groups of related tags.  The value of the
+# A tag is any arbitrary string of non-whitespace characters. By convention
+# a dot notation is used to suggest groups of related tags. The value of the
 # tag begins at the first non-whitespace character after the tag and can include
-# white space.  Normally the value is the localized text message.  By convension,
+# white space. Normally the value is the localized text message. By convension,
 # tags beginning with a '@' character are used to control interface layout
-# as opposed to being actual text.  Explainations for this tags will be given
-# in preceeding comments.
+# as opposed to being actual text. Explanations for this tags will be given
+# in preceding comments.
 #
 # Multi-line comments have the form:
 #
@@ -50,19 +48,19 @@
 # line2
 # -end-
 #
-# When -begin- is used, the newlines in the text are preserved as is.  When
+# When -begin- is used, the newlines in the text are preserved as is. When
 # -fillbegin- is used the newlines are replaced with spaces and it is assumed
 # that the text will be automatically justified.
 #
 # If the first character of a value is a back-quote, then it is interpreted
-# as a reference to another tag.  For example:
+# as a reference to another tag. For example:
 #
 # foo	This is tag foo.
 # bar	`foo
 #
 # In this instance both 'foo' and 'bar' will translate to 'This is tag foo'.
 #
-# The last type of entry that can occur in the file are declarations.  The
+# The last type of entry that can occur in the file are declarations. The
 # declarations should normally be specified before any tags are specified.
 # The currently supported declarations are:
 #
@@ -71,7 +69,7 @@
 # \verilog-encoding	code
 # \language		name
 #
-# where "code" is a font encoding.  Typical encodings are:
+# where "code" is a font encoding. Typical encodings are:
 #
 #   iso8859-1		English and many European languages
 #   iso8859-2 		Some other European languages (e.g., Bosnian, Czech, Polish)
@@ -79,7 +77,7 @@
 #   utf-8		Unicode
 #
 # "\font-encoding" selects the encoding to use when displaying strings from
-# comments and frames in the main edit window.  It should be "iso8859-1" or
+# comments and frames in the main edit window. It should be "iso8859-1" or
 # "iso8859-2".
 #
 # "\messages-encoding" specifies the encoding of this messages file.
@@ -87,16 +85,16 @@
 # "\verilog-encoding" specifies the default encoding to use for verilog files
 # when editing files in this locale.
 #
-# "\language" specifies the full language name of this messages file.  It should
+# "\language" specifies the full language name of this messages file. It should
 # be after the \messages-encoding delcaration so that it will be processed
 # using the correct encoding.
 #
 ##############################################################################
 
-\font-encoding		iso8859-1
-\display-encoding       iso8859-1
-\messages-encoding	iso8859-1
-\verilog-encoding	iso8859-1
+\font-encoding			iso8859-1
+\display-encoding		iso8859-1
+\messages-encoding		iso8859-1
+\verilog-encoding		iso8859-1
 \postscript-encoding	iso8859-1
 
 \language		English
@@ -111,8 +109,6 @@ b.close		Close
 b.ok		OK
 b.clear		Clear
 b.cancel	Cancel
-#b.open		Open...
-#b.bitw		Bit Width
 b.in		in
 b.out		out
 b.inout		inout
@@ -122,14 +118,10 @@ b.find		Find
 b.edit		Edit...
 b.add		Add...
 b.delete	Delete
-#b.deleteb	Delete...
 b.remove	Remove
 b.apply		Apply
 b.anchor	Anchor
 b.tech		Technology
-#b.enable	Enable
-#b.disable	Disable
-#b.flush	Clear
 
 ##############################################################################
 #
@@ -515,35 +507,9 @@ pop.library.close	Unload
 #
 # Symbol editor strings
 #
-#symed.bsave		Store
-#symed.file		File
-#symed.file.load		Load Bitmap...
-#symed.file.save		Save Bitmap...
-#symed.file.updateclose	Close and Update
-#symed.file.discardclose	Close and Discard
-#symed.help		Help
-#symed.help.about	About...
-#symed.edit		Edit
-#symed.edit.cut		Cut
-#symed.edit.copy		Copy
-#symed.edit.paste	Paste
-#symed.edit.overlay	Overlay Paste
-#symed.edit.rclock	Rotate Clockwise
-#symed.edit.rcclock	Rotate Counter-Clockwise
-#symed.module		Module
-#symed.modes		Modes
-#symed.cutpaste		Cut/Paste
-#symed.rotate		Port Rotation
-#symed.zoom		Zoom
-#symed.cancel		Cancel
-
-#symed.update		Update
 symed.tab.normal	UnSelected
 symed.tab.select	Selected
 symed.link		Link selected to unselected
-# width of symbol editor tabs
-
-
 
 ##############################################################################
 ## memory viewer
@@ -1031,8 +997,6 @@ listed below.
 ##############################################################################
 # Print dialog box
 #
-#print.outto		Output to
-
 print.title		TkGate: Print
 print.config.title	TkGate: Printer Configuration
 print.scope.title	TkGate: Scope Print
@@ -1045,8 +1009,6 @@ print.advanced		Advanced...
 
 print.filename		File Name
 print.epssave		Save as Encapsulated Postscript.
-#print.doctit		Document Title
-#print.prmod		Print Modules
 print.epcm		Epochs/cm
 print.estpg		Estimated pages
 print.all		All
@@ -1115,7 +1077,6 @@ estimated page count.
 -end-
 
 print.tab.output	Output
-#print.tab.page		Page
 print.tab.modules	Modules
 print.tab.content	Content
 print.tab.advanced	Advanced
@@ -1140,7 +1101,6 @@ opt.treelabel		Options
 
 opt.general		General
 opt.interface		Interface
-# opt.circuit		Circuit Defaults
 opt.toolbars		Toolbars
 opt.toolbars.edit	Editor
 opt.toolbars.sim	Simulation
@@ -1216,7 +1176,6 @@ opt.cstepsz		Clock Cycle Step Size
 opt.overstep		Clock Overstep
 opt.sorttraces		Sort traces alphabetically on scope
 opt.vpopupdelay		Pop-Up Delay
-#opt.initscript		Global Initialization Script
 opt.posedge		Clock step stops on all clock posedges
 opt.setclock		Clock step stops on clock
 opt.delayfilepath	Technology Files
@@ -1233,7 +1192,6 @@ opt.useless		Enable Useless Features
 opt.features		Save File Features
 opt.simbase		Basic Simulator Options
 opt.simclock		Clock Options
-#opt.circdefaults	Circuit Defaults
 
 opt.cpopts		Critical Path Options
 opt.maxpath		Maximum Number of Paths:
@@ -1342,21 +1300,9 @@ igen.bits		Bits
 
 igen.modname		Module Name:
 
-#igen.resort		Re-sort
 igen.add		Add
 igen.delete		Delete
 igen.edit		Edit
-
-#igen.in		in
-#igen.out		out
-#igen.inout		inout
-
-#igen.left		left
-#igen.right		right
-#igen.top		top
-#igen.bottom		bottom
-
-#igen.other		other
 
 igen.mod		Use ports used in module only.
 igen.int		Use ports from existing interface only.
@@ -1381,8 +1327,6 @@ module.props		Module Properties
 
 ipanel.plist		Port List
 ipanel.props		Interface Properties
-#ipanel.itype.change	Change Type...
-#ipanel.itype.edsymbol	Edit Symbol...
 ipanel.block		Standard
 ipanel.symbol		Symbol
 
@@ -1391,13 +1335,9 @@ ipanel.updateall	Synchronize All...
 
 ipanel.itype.select	Interface Type
 
-#ipanel.block.description	Standard Interface
-#ipanel.symbol.description	Custom Symbol Interface
-
 ipanel.ppos.label	Block resize port position handling:
 ipanel.ppos.fix		Fixed
 ipanel.ppos.scale	Scaled
-#ipanel.ppos.grid	Grid
 
 ipanel.warn.toblock		-begin-
 You are about to change the
@@ -1559,8 +1499,6 @@ circ.extbar		Use extender bars on AND, OR and XOR gates.
 circ.shownet		Show net name on switches and dips.
 circ.autostart		Enable auto-start of simulation.
 circ.iniscript		Initialization Scripts
-#circ.noscript		No script files selected.
-#circ.really		Do you really want to remove '%s' from the list of initialization scripts.
 
 circ.reallyupdate	-fillbegin-
 Do you really want to update the interface of all '%s' instances?
@@ -1657,7 +1595,6 @@ break.value		Value
 ##############################################################################
 # Simulator
 #
-#sim.breakpt		Breakpoint
 
 sim.recursive	-fillbegin-
 Recursive module definition found
@@ -3047,10 +2984,6 @@ ho.tool.anchor		Anchor the selected component(s).
 ho.tool.unanchor	Unanchor the selected component(s).
 ho.tool.replicate	Replicate a component.
 ho.tool.delete		Delete the selection.
-
-#ho.opt.circuit.extbar	TODO
-#ho.opt.circuit.shownet	TODO
-#ho.circuit.shownet	TODO
 
 license	-begin-
 TkGate is free software; you can redistribute it and/or modify it
