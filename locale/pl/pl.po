@@ -10,13 +10,14 @@
 # Translators:
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Begina Felicysym <begina.felicysym@wp.eu>, 2015
+# Dominik Adrian Grzywak, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-30 13:05+0300\n"
-"PO-Revision-Date: 2018-11-30 06:04+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"PO-Revision-Date: 2018-11-30 13:41+0000\n"
+"Last-Translator: Dominik Adrian Grzywak\n"
 "Language-Team: Polish (http://www.transifex.com/Magic/tkgate/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +33,7 @@ msgstr "Nowy..."
 #: en/messages:109
 msgctxt "b.dismiss"
 msgid "Dismiss"
-msgstr ""
+msgstr "Odwołaj"
 
 #: en/messages:110
 msgctxt "b.close"
@@ -147,22 +148,22 @@ msgstr ""
 #: en/messages:148
 msgctxt "fpattern.vs"
 msgid "Verilog Script Files"
-msgstr ""
+msgstr "Pliki Skryptu Verilog"
 
 #: en/messages:149
 msgctxt "fpattern.gdf"
 msgid "TkGate Delay File"
-msgstr ""
+msgstr "Plik Opóźnienia TkGate"
 
 #: en/messages:150
 msgctxt "fpattern.xbm"
 msgid "X11 bitmap"
-msgstr ""
+msgstr "Bitmapa X11"
 
 #: en/messages:151
 msgctxt "fpattern.mem"
 msgid "TkGate Memory Image Files"
-msgstr ""
+msgstr "Pliki Obrazów Pamięci TkGate"
 
 #: en/messages:152
 msgctxt "fpattern.all"
@@ -222,127 +223,127 @@ msgstr "Wyłacz"
 #: en/messages:188
 msgctxt "menu.file"
 msgid "0:File"
-msgstr ""
+msgstr "0:Plik"
 
 #: en/messages:189
 msgctxt "menu.edit"
 msgid "0:Edit"
-msgstr ""
+msgstr "0:Edycja"
 
 #: en/messages:190
 msgctxt "menu.tool"
 msgid "0:Tool"
-msgstr ""
+msgstr "0:Narzędzie"
 
 #: en/messages:191
 msgctxt "menu.symbol"
 msgid "0:Symbol"
-msgstr ""
+msgstr "0:Symbol"
 
 #: en/messages:192
 msgctxt "menu.simulate"
 msgid "0:Simulate"
-msgstr ""
+msgstr "0:Symuluj"
 
 #: en/messages:193
 msgctxt "menu.module"
 msgid "0:Module"
-msgstr ""
+msgstr "0:Moduł"
 
 #: en/messages:194
 msgctxt "menu.interface"
 msgid "0:Interface"
-msgstr ""
+msgstr "0:Interfejs"
 
 #: en/messages:195
 msgctxt "menu.format"
 msgid "0:Format"
-msgstr ""
+msgstr "0:Format"
 
 #: en/messages:196
 msgctxt "menu.make"
 msgid "0:Components"
-msgstr ""
+msgstr "0:Komponenty"
 
 #: en/messages:197
 msgctxt "menu.help"
 msgid "0:Help"
-msgstr ""
+msgstr "0:Pomoc"
 
 #: en/messages:199
 msgctxt "menu.file.new"
 msgid "0:New..."
-msgstr ""
+msgstr "0:Nowy..."
 
 #: en/messages:200
 msgctxt "menu.file.open"
 msgid "0:Open..."
-msgstr ""
+msgstr "0:Otwórz..."
 
 #: en/messages:201
 msgctxt "menu.file.openlib"
 msgid "0:Library Manager..."
-msgstr ""
+msgstr "0:Menedżer Biblioteki..."
 
 #: en/messages:202
 msgctxt "menu.file.save"
 msgid "0:Save"
-msgstr ""
+msgstr "0:Zapisz"
 
 #: en/messages:203
 msgctxt "menu.file.saveas"
 msgid "5:Save As..."
-msgstr ""
+msgstr "5:Zapisz Jako..."
 
 #: en/messages:204
 msgctxt "menu.file.print"
 msgid "0:Print..."
-msgstr ""
+msgstr "0:Drukuj..."
 
 #: en/messages:205
 msgctxt "menu.file.quit"
 msgid "0:Quit"
-msgstr ""
+msgstr "0:Wyjdź"
 
 #: en/messages:206
 msgctxt "menu.file.cprop"
 msgid "0:Circuit Properties..."
-msgstr ""
+msgstr "0:Właściwości Obwodu..."
 
 #: en/messages:207
 msgctxt "menu.file.import"
 msgid "0:Import Image..."
-msgstr ""
+msgstr "0:Importuj Obraz..."
 
 #: en/messages:208
 msgctxt "menu.file.export"
 msgid "0:Export Image..."
-msgstr ""
+msgstr "0:Eksportuj Obraz..."
 
 #: en/messages:210
 msgctxt "menu.edit.undo"
 msgid "0:Undo"
-msgstr ""
+msgstr "0:Cofnij"
 
 #: en/messages:211
 msgctxt "menu.edit.redo"
 msgid "0:Redo"
-msgstr ""
+msgstr "0:Powtórz"
 
 #: en/messages:212
 msgctxt "menu.edit.cut"
 msgid "0:Cut"
-msgstr ""
+msgstr "0:Wytnij"
 
 #: en/messages:213
 msgctxt "menu.edit.copy"
 msgid "3:Copy"
-msgstr ""
+msgstr "3:Kopiuj"
 
 #: en/messages:214
 msgctxt "menu.edit.paste"
 msgid "0:Paste"
-msgstr ""
+msgstr "0:Wklej"
 
 #: en/messages:215
 msgctxt "menu.edit.overlay"
@@ -352,22 +353,22 @@ msgstr ""
 #: en/messages:216
 msgctxt "menu.edit.selall"
 msgid "0:Select All"
-msgstr ""
+msgstr "0:Zaznacz Wszystko"
 
 #: en/messages:217
 msgctxt "menu.edit.find"
 msgid "0:Find..."
-msgstr ""
+msgstr "0:Znajdź..."
 
 #: en/messages:218
 msgctxt "menu.edit.zoomin"
 msgid "5:Zoom In"
-msgstr ""
+msgstr "5:Przybliż Zoom"
 
 #: en/messages:219
 msgctxt "menu.edit.zoomout"
 msgid "5:Zoom Out"
-msgstr ""
+msgstr "5:Oddal Zoom"
 
 #: en/messages:221
 msgctxt "menu.edit.rshift"
@@ -422,22 +423,22 @@ msgstr ""
 #: en/messages:232
 msgctxt "menu.tool.move"
 msgid "0:Move/Connect"
-msgstr ""
+msgstr "0:Przenieś/Połącz"
 
 #: en/messages:233
 msgctxt "menu.tool.delg"
 msgid "0:Delete Component"
-msgstr ""
+msgstr "0:Usuń Komponent"
 
 #: en/messages:234
 msgctxt "menu.tool.cutw"
 msgid "0:Cut Wire"
-msgstr ""
+msgstr "0:Wytnij Przewód"
 
 #: en/messages:235
 msgctxt "menu.tool.inv"
 msgid "0:Invert"
-msgstr ""
+msgstr "0:Odwróć"
 
 #: en/messages:236
 msgctxt "menu.tool.bitw"
@@ -447,52 +448,52 @@ msgstr ""
 #: en/messages:237
 msgctxt "menu.tool.debug"
 msgid "0:Debug"
-msgstr ""
+msgstr "0:Debuguj"
 
 #: en/messages:238
 msgctxt "menu.tool.point"
 msgid "0:Point"
-msgstr ""
+msgstr "0:Punkt"
 
 #: en/messages:239
 msgctxt "menu.tool.line"
 msgid "0:Line"
-msgstr ""
+msgstr "0:Linia"
 
 #: en/messages:240
 msgctxt "menu.tool.rect"
 msgid "0:Rectangle"
-msgstr ""
+msgstr "0:Prostokąt"
 
 #: en/messages:241
 msgctxt "menu.tool.fillrect"
 msgid "0:Fill Rectangle"
-msgstr ""
+msgstr "0:Wypełnij Prostokąt"
 
 #: en/messages:242
 msgctxt "menu.tool.port"
 msgid "0:Port"
-msgstr ""
+msgstr "0:Port"
 
 #: en/messages:243
 msgctxt "menu.tool.select"
 msgid "0:Select Region"
-msgstr ""
+msgstr "0:Wybierz Region"
 
 #: en/messages:244
 msgctxt "menu.tool.options"
 msgid "0:Options..."
-msgstr ""
+msgstr "0:Opcje..."
 
 #: en/messages:246
 msgctxt "menu.format.addport"
 msgid "4:Add Port"
-msgstr ""
+msgstr "4:Dodaj Port"
 
 #: en/messages:247
 msgctxt "menu.format.ioset"
 msgid "0:Set Type"
-msgstr ""
+msgstr "0:Ustaw Typ"
 
 #: en/messages:248
 msgctxt "menu.format.anchor"
@@ -512,77 +513,77 @@ msgstr ""
 #: en/messages:251
 msgctxt "menu.format.del"
 msgid "0:Delete"
-msgstr ""
+msgstr "0:Usuń"
 
 #: en/messages:252
 msgctxt "menu.format.settech"
 msgid "0:Set Technology"
-msgstr ""
+msgstr "0:Ustaw Technologię"
 
 #: en/messages:253
 msgctxt "menu.format.rot"
 msgid "0:Rotation"
-msgstr ""
+msgstr "0:Obrót"
 
 #: en/messages:254
 msgctxt "menu.format.rot.0"
 msgid "17:Default Rotation 0"
-msgstr ""
+msgstr "17:Domyślny Obrót wynosi 0"
 
 #: en/messages:255
 msgctxt "menu.format.rot.90"
 msgid "17:Default Rotation 90"
-msgstr ""
+msgstr "17:Domyślny Obrót wynosi 90"
 
 #: en/messages:256
 msgctxt "menu.format.rot.180"
 msgid "17:Default Rotation 180"
-msgstr ""
+msgstr "17:Domyślny Obrót wynosi 180"
 
 #: en/messages:257
 msgctxt "menu.format.rot.270"
 msgid "17:Default Rotation 270"
-msgstr ""
+msgstr "17:Domyślny Obrót wynosi 270"
 
 #: en/messages:258
 msgctxt "menu.format.rot.rotate"
 msgid "10:Clockwise Rotate"
-msgstr ""
+msgstr "10:Obrót w Prawo"
 
 #: en/messages:259
 msgctxt "menu.format.rot.brotate"
 msgid "0:Counter-Clockwise Rotate"
-msgstr ""
+msgstr "0:Obrót w Lewo"
 
 #: en/messages:260
 msgctxt "menu.format.algnv"
 msgid "6:Align Ver."
-msgstr ""
+msgstr "6:Wyrównaj Pion."
 
 #: en/messages:261
 msgctxt "menu.format.algnh"
 msgid "6:Align Horz."
-msgstr ""
+msgstr "6:Wyrównaj Poź."
 
 #: en/messages:264
 msgctxt "menu.tool.tclshell"
 msgid "0:Tcl Shell"
-msgstr ""
+msgstr "0:Powłoka Tcl"
 
 #: en/messages:265
 msgctxt "menu.tool.rep"
 msgid "0:Replicate"
-msgstr ""
+msgstr "0:Replikuj"
 
 #: en/messages:267
 msgctxt "menu.simulate.begin"
 msgid "0:Begin Simulation"
-msgstr ""
+msgstr "0:Zacznij Symulację"
 
 #: en/messages:268
 msgctxt "menu.simulate.end"
 msgid "0:End Simulation"
-msgstr ""
+msgstr "0:Skończ Symulację"
 
 #: en/messages:269
 msgctxt "menu.simulate.addprobe"
@@ -592,12 +593,12 @@ msgstr ""
 #: en/messages:270
 msgctxt "menu.simulate.run"
 msgid "0:Run"
-msgstr ""
+msgstr "0:Uruchom"
 
 #: en/messages:271
 msgctxt "menu.simulate.pause"
 msgid "0:Pause"
-msgstr ""
+msgstr "0:Pauza"
 
 #: en/messages:272
 msgctxt "menu.simulate.step"
@@ -637,32 +638,32 @@ msgstr ""
 #: en/messages:280
 msgctxt "menu.module.open"
 msgid "0:Open"
-msgstr ""
+msgstr "0:Otwórz"
 
 #: en/messages:281
 msgctxt "menu.module.close"
 msgid "0:Close"
-msgstr ""
+msgstr "0:Zamknij"
 
 #: en/messages:282
 msgctxt "menu.module.new"
 msgid "0:New..."
-msgstr ""
+msgstr "0:Nowy..."
 
 #: en/messages:283
 msgctxt "menu.module.del"
 msgid "0:Delete..."
-msgstr ""
+msgstr "0:Usuń..."
 
 #: en/messages:284
 msgctxt "menu.module.copy"
 msgid "1:Copy..."
-msgstr ""
+msgstr "1:Kopiuj..."
 
 #: en/messages:285
 msgctxt "menu.module.rename"
 msgid "0:Rename..."
-msgstr ""
+msgstr "0:Zmień Nazwę..."
 
 #: en/messages:286
 msgctxt "menu.module.claim"
@@ -677,12 +678,12 @@ msgstr ""
 #: en/messages:288
 msgctxt "menu.module.prop"
 msgid "0:Properties..."
-msgstr ""
+msgstr "0:Właściwości..."
 
 #: en/messages:289
 msgctxt "menu.module.interface"
 msgid "0:Interface"
-msgstr ""
+msgstr "0:Interfejs"
 
 #: en/messages:290
 msgctxt "menu.module.interface.set"
@@ -702,7 +703,7 @@ msgstr ""
 #: en/messages:293
 msgctxt "menu.module.interface.edit"
 msgid "0:Edit..."
-msgstr ""
+msgstr "0:Edycja..."
 
 #: en/messages:294
 msgctxt "menu.module.interface.auto"
@@ -712,42 +713,42 @@ msgstr ""
 #: en/messages:297
 msgctxt "menu.help.about"
 msgid "0:About..."
-msgstr ""
+msgstr "0:O Programie..."
 
 #: en/messages:298
 msgctxt "menu.help.license"
 msgid "0:License..."
-msgstr ""
+msgstr "0:Licencja..."
 
 #: en/messages:299
 msgctxt "menu.help.doc"
 msgid "0:Documentation..."
-msgstr ""
+msgstr "0:Dokumentacja..."
 
 #: en/messages:300
 msgctxt "menu.help.tut"
 msgid "1:Tutorials"
-msgstr ""
+msgstr "1:Poradniki"
 
 #: en/messages:301
 msgctxt "menu.help.home"
 msgid "1:Home Page"
-msgstr ""
+msgstr "1:Strona Domowa"
 
 #: en/messages:302
 msgctxt "menu.help.example"
 msgid "1:Examples"
-msgstr ""
+msgstr "1:Przykłady"
 
 #: en/messages:307
 msgctxt "menu.scope_file"
 msgid "0:File"
-msgstr ""
+msgstr "0:Plik"
 
 #: en/messages:308
 msgctxt "menu.scope_sim"
 msgid "0:Simulate"
-msgstr ""
+msgstr "0:Symuluj"
 
 #: en/messages:309
 msgctxt "menu.scope_trace"
@@ -757,7 +758,7 @@ msgstr ""
 #: en/messages:310
 msgctxt "menu.scope_help"
 msgid "0:Help"
-msgstr ""
+msgstr "0:Pomoc"
 
 #: en/messages:312
 msgctxt "menu.scope_file.ptrace"
@@ -767,17 +768,17 @@ msgstr ""
 #: en/messages:313
 msgctxt "menu.scope_file.close"
 msgid "0:Close"
-msgstr ""
+msgstr "0:Zamknij"
 
 #: en/messages:314
 msgctxt "menu.scope_trace.zoomin"
 msgid "5:Zoom In"
-msgstr ""
+msgstr "5:Przybliż Zoom"
 
 #: en/messages:315
 msgctxt "menu.scope_trace.zoomout"
 msgid "5:Zoom Out"
-msgstr ""
+msgstr "5:Oddal Zoom"
 
 #: en/messages:316
 msgctxt "menu.scope_sim.addprobe"
@@ -787,12 +788,12 @@ msgstr ""
 #: en/messages:317
 msgctxt "menu.scope_sim.run"
 msgid "0:Run"
-msgstr ""
+msgstr "0:Uruchom"
 
 #: en/messages:318
 msgctxt "menu.scope_sim.pause"
 msgid "0:Pause"
-msgstr ""
+msgstr "0:Pauza"
 
 #: en/messages:319
 msgctxt "menu.scope_sim.step"
