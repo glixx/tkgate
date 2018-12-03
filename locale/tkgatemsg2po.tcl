@@ -83,7 +83,7 @@ proc parseFile {msgFile msgHash} {
 		set line [string trim $line]
 		if {([string index $line 0] != "#") &&
 		    ([string index $line 0] != "@") &&
-		    ([string first "\\" $line] == -1) &&
+		    ([string index $line 0] != "\\") &&
 		    ([string length $line] > 0)} {
 			parseString $line $sourceLine $msgHash
 		}
@@ -184,18 +184,20 @@ foreach pair $messagesLine2Key(m) {
 	set keyName [lindex $pair 1]
 	set msgVal $messagesHash($keyName,m)
 	regsub -all "\"" $msgVal "\\\"" msgVal
-	puts $f0 ""
-	puts $f0 "#: $options(m):$str"
-	puts $f0 "msgctxt \"$keyName\""
-	set line "msgid "
-	set strList [split $msgVal "\n"]
-	if {[llength $strList] > 1} {
-		set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
-	} else {
-		set line "$line\"[lindex $strList 0]\""
-	}
-	puts $f0 $line
-	puts $f0 "msgstr \"\""
+	if {([string index $msgVal 0] != "`")} {
+		puts $f0 ""
+		puts $f0 "#: $options(m):$str"
+		puts $f0 "msgctxt \"$keyName\""
+		set line "msgid "
+		set strList [split $msgVal "\n"]
+		if {[llength $strList] > 1} {
+			set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
+		} else {
+			set line "$line\"[lindex $strList 0]\""
+		}
+		puts $f0 $line
+		puts $f0 "msgstr \"\""
+    }
 }
 
 close $f0

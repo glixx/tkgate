@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-03 10:00+0300\n"
+"POT-Creation-Date: 2018-12-03 10:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2320,96 +2320,6 @@ msgctxt "db.gate.tab.details.exp"
 msgid ""
 "Set detailed type-specific properties\n"
 "of a component here."
-msgstr ""
-
-#: en/messages:776
-msgctxt "db.gate.tab.CLOCK.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:777
-msgctxt "db.gate.tab.SWITCH.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:778
-msgctxt "db.gate.tab.DIP.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:779
-msgctxt "db.gate.tab.TAP.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:780
-msgctxt "db.gate.tab.RAM.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:781
-msgctxt "db.gate.tab.ROM.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:782
-msgctxt "db.gate.tab.MODULE.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:783
-msgctxt "db.gate.tab.FRAME.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:784
-msgctxt "db.gate.tab.LED.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:785
-msgctxt "db.gate.tab.AND.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:786
-msgctxt "db.gate.tab.OR.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:787
-msgctxt "db.gate.tab.XOR.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:788
-msgctxt "db.gate.tab.MUX.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:789
-msgctxt "db.gate.tab.DEMUX.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:790
-msgctxt "db.gate.tab.DECODER.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:791
-msgctxt "db.gate.tab.CONCAT.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:792
-msgctxt "db.gate.tab.FF.exp"
-msgid "`db.gate.tab.details.exp"
-msgstr ""
-
-#: en/messages:793
-msgctxt "db.gate.tab.JKFF.exp"
-msgid "`db.gate.tab.details.exp"
 msgstr ""
 
 #: en/messages:795
