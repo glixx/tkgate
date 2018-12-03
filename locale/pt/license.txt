@@ -1,0 +1,11 @@
+TtGate é uma aplicação livre; pode redistribuí-la e/ou alterá-la sob os termos
+da Licença Pública Genérica GNU tal como publicada pela Free Software
+Foundation; ou a versão 2 da Licença ou (à sua discrição) qualquer versão
+posterior.
+TtGate é distribuído na expectativa de que possa ser útil, mas SEM
+QUALQUER GARANTIA; sem sequer a garantia implícita de
+COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Consulte
+a Licença Pública Genérica GNU para mais detalhes.
+Deverá ter recebido uma cópia da Licença Pública Genérica GNU juntamente
+com o TtGate; caso contrário, escreva para a Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA (em inglês).

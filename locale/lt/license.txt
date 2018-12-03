@@ -1,0 +1,11 @@
+TtGate yra laisva programinė įranga; galite ją platinti ir/ar modifikuoti GNU
+bendrosios viešosios licencijos sąlygomis, kurios paskelbtos Laisvosios
+programinės įrangos fondo; 2-osios arba (savo pasirinkimu) bet kurios vėlesnės
+licencijos versijos sąlygomis.
+TtGate yra platinama tikintis, kad ji bus naudinga, bet NETEIKIANT JOKIŲ
+GARANTIJŲ; netgi be numanomų PARDAVIMO arba TINKAMUMO KONKREČIAM
+TIKSLUI garantijų. Dėl išsamesnės informacijos žiūrėkite GNU bendrąją
+viešąją licenciją.
+Turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su TtGate;
+jeigu negavote, rašykite The Free Software Foundation, Inc., 51 Franklin
+Street, Fifth Floor, Boston, MA 02110-1301 USA.
