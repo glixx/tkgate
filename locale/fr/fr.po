@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-04 12:16+0300\n"
-"PO-Revision-Date: 2018-12-04 02:55+0000\n"
+"PO-Revision-Date: 2018-12-04 06:29+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/Magic/tkgate/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -4763,7 +4763,7 @@ msgstr "Connexion refusée car les fils font partie du même bus."
 #: en/messages:1646
 msgctxt "err.badconptsp"
 msgid "Connection refused because both wires are module ports or supply."
-msgstr "Connexion refusée car les deux fils sont des ports de modules ou des ??."
+msgstr "Connexion refusée car les deux fils sont des ports de modules ou des ?."
 
 #: en/messages:1647
 msgctxt "err.badconbitw"
@@ -6685,7 +6685,7 @@ msgid ""
 "The current file being edited. A '*' indicates\n"
 "that the buffer has been modified since\n"
 "the last save."
-msgstr "Le fichier en cours d'édition.\nUne * indique que le circuit a été modifié\ndepuis la dernière sauvegarde."
+msgstr "Le fichier en cours d'édition.\nUne '*' indique que le circuit a été modifié\ndepuis la dernière sauvegarde."
 
 #: en/messages:2375
 msgctxt "ho.print.selall"

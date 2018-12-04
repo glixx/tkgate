@@ -653,7 +653,7 @@ err.netconfnet Identificateur renommé en '%s' à cause d'un conflit de noms.
 err.netconfgat Identificateur renommé pour éviter un conflit avec un nom d'élément
 err.netconfkw Identificateur renommé pour éviter un conflit avec mot réservé.
 err.badconsame Connexion refusée car les fils font partie du même bus.
-err.badconptsp Connexion refusée car les deux fils sont des ports de modules ou des ??.
+err.badconptsp Connexion refusée car les deux fils sont des ports de modules ou des ?.
 err.badconbitw Connexion refusée car les largeurs des bus sont différentes.
 err.badlprcmd Impossible d'exécuter la commande d'impression '%s'.
 err.badpsopen Impossible d'ouvrir le fichier '%s' pour une sortie PostScript.
@@ -824,7 +824,7 @@ ho.status.msg Les messages de tkgate sont affichés ici.
 ho.status.block Le nom du module en cours d'édition.
 ho.status.file -begin-
 Le fichier en cours d'édition.
-Une ar az bg ca cs cy da de en es fr gl hr id is it ja lt ms nl oc pl pt pt_BR ru sk sr sv tkgatemsg2pot.tcl tkgatepo2msg.sh tkgate.pot tr uk indique que le circuit a été modifié
+Une '*' indique que le circuit a été modifié
 depuis la dernière sauvegarde.
 -end-
 ho.print.selall Imprimer tous les modules chargés actuellement dans TKGate.

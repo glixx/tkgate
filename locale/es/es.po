@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-04 12:16+0300\n"
-"PO-Revision-Date: 2018-12-04 02:55+0000\n"
+"PO-Revision-Date: 2018-12-04 06:30+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/Magic/tkgate/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -5319,7 +5319,7 @@ msgstr "El circuito se ha modificado. ¿ Realmente desea perder los cambios y cr
 #: en/messages:1818
 msgctxt "msg.reallyquit"
 msgid "Circuit has been modified. Do you really want to exit?"
-msgstr "El circuito se ha modificado. ¿ Realmente desea salir ??"
+msgstr "El circuito se ha modificado. ¿ Realmente desea salir ?"
 
 #: en/messages:1819
 msgctxt "msg.notlib"

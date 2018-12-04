@@ -499,7 +499,7 @@ msg.needsel Por favor selecciona una instancia de módulo.
 msg.wroteckpt Chequea punto a %s...
 msg.save Salva circuito como '%s'.
 msg.reallynew El circuito se ha modificado. ¿ Realmente desea perder los cambios y crear uno nuevo ?
-msg.reallyquit El circuito se ha modificado. ¿ Realmente desea salir ar az bg ca cs cy da de en es fr gl hr id is it ja lt ms nl oc pl pt ru sk sr sv tr uk
+msg.reallyquit El circuito se ha modificado. ¿ Realmente desea salir ?
 msg.notlib '%s' no es un módulo de libreria.
 miles.msg1 Sólo un loco colocaria %s%s aquí, Miles.
 miles.msg2 Es realmente un estúpido lugar donde colocar %s%s, Miles.
