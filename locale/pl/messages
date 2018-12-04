@@ -1,193 +1,194 @@
-\language		polski
-\font-encoding		iso8859-2
-\display-encoding	iso8859-2
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				polski
+\font-encoding			iso8859-2
+\display-encoding		iso8859-2
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8
-b.new Nowy...
-b.dismiss Odwołaj
-b.close Zamknij
-b.ok OK
-b.clear Czyść
-b.cancel Anuluj
-b.in wej
-b.out wyj
-b.inout wejwyj
-b.browse Przeglądaj...
-b.label Etykieta
-b.find Znajdź
-b.edit Edytuj...
-b.add Dodaj...
-b.delete Skasuj
-b.remove Usuń
-b.apply Zastosuj
-b.tech Technika
-tab.edit Edycja
-tab.editintr Interfejs
-tab.simulate Symuluj
-tab.cpath Ścieżka Krytyczna
-fpattern.vs Pliki Skryptu Verilog
-fpattern.gdf Plik Opóźnienia TkGate
-fpattern.xbm Bitmapa X11
-fpattern.mem Pliki Obrazów Pamięci TkGate
-fpattern.all Wszystkie Pliki
-module.tree Drzewo
-module.list Lista
-module.box.libraries Biblioteki
-sidetab.nets Sirci
-sidetab.ports Porty
-mm.add Dodaj...
-mm.delete Skasuj
-mm.edit Edytuj...
-mm.enable Włącz
-mm.disable Wyłacz
-menu.file 0:Plik
-menu.edit 0:Edycja
-menu.tool 0:Narzędzie
-menu.symbol 0:Symbol
-menu.simulate 0:Symuluj
-menu.module 0:Moduł
-menu.interface 0:Interfejs
-menu.format 0:Format
-menu.make 0:Komponenty
-menu.help 0:Pomoc
-menu.file.new 0:Nowy...
-menu.file.open 0:Otwórz...
-menu.file.openlib 0:Menedżer Biblioteki...
-menu.file.save 0:Zapisz
-menu.file.saveas 5:Zapisz Jako...
-menu.file.print 0:Drukuj...
-menu.file.quit 0:Wyjdź
-menu.file.cprop 0:Właściwości Obwodu...
-menu.file.import 0:Importuj Obraz...
-menu.file.export 0:Eksportuj Obraz...
-menu.edit.undo 0:Cofnij
-menu.edit.redo 0:Powtórz
-menu.edit.cut 0:Wytnij
-menu.edit.copy 3:Kopiuj
-menu.edit.paste 0:Wklej
-menu.edit.selall 0:Zaznacz Wszystko
-menu.edit.find 0:Znajdź...
-menu.edit.zoomin 5:Przybliż Zoom
-menu.edit.zoomout 5:Oddal Zoom
-menu.tool.move 0:Przenieś/Połącz
-menu.tool.delg 0:Usuń Komponent
-menu.tool.cutw 0:Wytnij Przewód
-menu.tool.inv 0:Odwróć
-menu.tool.debug 0:Debuguj
-menu.tool.point 0:Punkt
-menu.tool.line 0:Linia
-menu.tool.rect 0:Prostokąt
-menu.tool.fillrect 0:Wypełnij Prostokąt
-menu.tool.port 0:Port
-menu.tool.select 0:Wybierz Region
-menu.tool.options 0:Opcje...
-menu.format.addport 4:Dodaj Port
-menu.format.ioset 0:Ustaw Typ
-menu.format.del 0:Usuń
-menu.format.settech 0:Ustaw Technologię
-menu.format.rot 0:Obrót
-menu.format.rot.0 17:Domyślny Obrót wynosi 0
-menu.format.rot.90 17:Domyślny Obrót wynosi 90
-menu.format.rot.180 17:Domyślny Obrót wynosi 180
-menu.format.rot.270 17:Domyślny Obrót wynosi 270
-menu.format.rot.rotate 10:Obrót w Prawo
-menu.format.rot.brotate 0:Obrót w Lewo
-menu.format.algnv 6:Wyrównaj Pion.
-menu.format.algnh 6:Wyrównaj Poź.
-menu.tool.tclshell 0:Powłoka Tcl
-menu.tool.rep 0:Replikuj
-menu.simulate.begin 0:Zacznij Symulację
-menu.simulate.end 0:Skończ Symulację
-menu.simulate.run 0:Uruchom
-menu.simulate.pause 0:Pauza
-menu.module.open 0:Otwórz
-menu.module.close 0:Zamknij
-menu.module.new 0:Nowy...
-menu.module.del 0:Usuń...
-menu.module.copy 1:Kopiuj...
-menu.module.rename 0:Zmień Nazwę...
-menu.module.prop 0:Właściwości...
-menu.module.interface 0:Interfejs
-menu.module.interface.edit 0:Edycja...
-menu.help.about 0:O Programie...
-menu.help.license 0:Licencja...
-menu.help.doc 0:Dokumentacja...
-menu.help.tut 1:Poradniki
-menu.help.home 1:Strona Domowa
-menu.help.example 1:Przykłady
-menu.scope_file 0:Plik
-menu.scope_sim 0:Symuluj
-menu.scope_help 0:Pomoc
-menu.scope_file.close 0:Zamknij
-menu.scope_trace.zoomin 5:Przybliż Zoom
-menu.scope_trace.zoomout 5:Oddal Zoom
-menu.scope_sim.run 0:Uruchom
-menu.scope_sim.pause 0:Pauza
-mod.intf Interfejs
-pop.gate.close Zamknij
-pop.gate.delete Skasuj
-pop.module.new Nowy...
-pop.simulate.pause Pauza
-pop.interface Interfejs
-pop.interface.edit Edytuj...
-pop.igen.delete Skasuj
-pop.igen.in wej
-pop.igen.out wyj
-pop.igen.inout wejwyj
-iports Porty
-db.net.in wej
-db.net.out wyj
-db.net.inout wejwyj
-db.net.inets Sirci
-db.gate.general Ogólne
-db.gate.delete Skasuj
-db.hdl.cancel Anuluj
-opt.general Ogólne
-opt.interface Interfejs
-opt.simulate Symuluj
-opt.simulate.tech Technika
-opt.library Biblioteki
-opt.cpath Ścieżka Krytyczna
-opt.tool.tech Technika
-opt.tool.symport Porty
-igen.delete Skasuj
-circ.general Ogólne
-circ.library Biblioteki
-cprt.descr Symulator i edytor układów cyfrowych
-ho.symed.import Importuj obraz z pliku.
-ho.symed.export Eksportuj obraz do pliku.
-ho.tool.currot -begin-
+
+b.new	Nowy...
+b.dismiss	Odwołaj
+b.close	Zamknij
+b.ok	OK
+b.clear	Czyść
+b.cancel	Anuluj
+b.in	wej
+b.out	wyj
+b.inout	wejwyj
+b.browse	Przeglądaj...
+b.label	Etykieta
+b.find	Znajdź
+b.edit	Edytuj...
+b.add	Dodaj...
+b.delete	Skasuj
+b.remove	Usuń
+b.apply	Zastosuj
+b.tech	Technika
+tab.edit	Edycja
+tab.editintr	Interfejs
+tab.simulate	Symuluj
+tab.cpath	Ścieżka Krytyczna
+fpattern.vs	Pliki Skryptu Verilog
+fpattern.gdf	Plik Opóźnienia TkGate
+fpattern.xbm	Bitmapa X11
+fpattern.mem	Pliki Obrazów Pamięci TkGate
+fpattern.all	Wszystkie Pliki
+module.tree	Drzewo
+module.list	Lista
+module.box.libraries	Biblioteki
+sidetab.nets	Sirci
+sidetab.ports	Porty
+mm.add	Dodaj...
+mm.delete	Skasuj
+mm.edit	Edytuj...
+mm.enable	Włącz
+mm.disable	Wyłacz
+menu.file	0:Plik
+menu.edit	0:Edycja
+menu.tool	0:Narzędzie
+menu.symbol	0:Symbol
+menu.simulate	0:Symuluj
+menu.module	0:Moduł
+menu.interface	0:Interfejs
+menu.format	0:Format
+menu.make	0:Komponenty
+menu.help	0:Pomoc
+menu.file.new	0:Nowy...
+menu.file.open	0:Otwórz...
+menu.file.openlib	0:Menedżer Biblioteki...
+menu.file.save	0:Zapisz
+menu.file.saveas	5:Zapisz Jako...
+menu.file.print	0:Drukuj...
+menu.file.quit	0:Wyjdź
+menu.file.cprop	0:Właściwości Obwodu...
+menu.file.import	0:Importuj Obraz...
+menu.file.export	0:Eksportuj Obraz...
+menu.edit.undo	0:Cofnij
+menu.edit.redo	0:Powtórz
+menu.edit.cut	0:Wytnij
+menu.edit.copy	3:Kopiuj
+menu.edit.paste	0:Wklej
+menu.edit.selall	0:Zaznacz Wszystko
+menu.edit.find	0:Znajdź...
+menu.edit.zoomin	5:Przybliż Zoom
+menu.edit.zoomout	5:Oddal Zoom
+menu.tool.move	0:Przenieś/Połącz
+menu.tool.delg	0:Usuń Komponent
+menu.tool.cutw	0:Wytnij Przewód
+menu.tool.inv	0:Odwróć
+menu.tool.debug	0:Debuguj
+menu.tool.point	0:Punkt
+menu.tool.line	0:Linia
+menu.tool.rect	0:Prostokąt
+menu.tool.fillrect	0:Wypełnij Prostokąt
+menu.tool.port	0:Port
+menu.tool.select	0:Wybierz Region
+menu.tool.options	0:Opcje...
+menu.format.addport	4:Dodaj Port
+menu.format.ioset	0:Ustaw Typ
+menu.format.del	0:Usuń
+menu.format.settech	0:Ustaw Technologię
+menu.format.rot	0:Obrót
+menu.format.rot.0	17:Domyślny Obrót wynosi 0
+menu.format.rot.90	17:Domyślny Obrót wynosi 90
+menu.format.rot.180	17:Domyślny Obrót wynosi 180
+menu.format.rot.270	17:Domyślny Obrót wynosi 270
+menu.format.rot.rotate	10:Obrót w Prawo
+menu.format.rot.brotate	0:Obrót w Lewo
+menu.format.algnv	6:Wyrównaj Pion.
+menu.format.algnh	6:Wyrównaj Poź.
+menu.tool.tclshell	0:Powłoka Tcl
+menu.tool.rep	0:Replikuj
+menu.simulate.begin	0:Zacznij Symulację
+menu.simulate.end	0:Skończ Symulację
+menu.simulate.run	0:Uruchom
+menu.simulate.pause	0:Pauza
+menu.module.open	0:Otwórz
+menu.module.close	0:Zamknij
+menu.module.new	0:Nowy...
+menu.module.del	0:Usuń...
+menu.module.copy	1:Kopiuj...
+menu.module.rename	0:Zmień Nazwę...
+menu.module.prop	0:Właściwości...
+menu.module.interface	0:Interfejs
+menu.module.interface.edit	0:Edycja...
+menu.help.about	0:O Programie...
+menu.help.license	0:Licencja...
+menu.help.doc	0:Dokumentacja...
+menu.help.tut	1:Poradniki
+menu.help.home	1:Strona Domowa
+menu.help.example	1:Przykłady
+menu.scope_file	0:Plik
+menu.scope_sim	0:Symuluj
+menu.scope_help	0:Pomoc
+menu.scope_file.close	0:Zamknij
+menu.scope_trace.zoomin	5:Przybliż Zoom
+menu.scope_trace.zoomout	5:Oddal Zoom
+menu.scope_sim.run	0:Uruchom
+menu.scope_sim.pause	0:Pauza
+mod.intf	Interfejs
+pop.gate.close	Zamknij
+pop.gate.delete	Skasuj
+pop.module.new	Nowy...
+pop.simulate.pause	Pauza
+pop.interface	Interfejs
+pop.interface.edit	Edytuj...
+pop.igen.delete	Skasuj
+pop.igen.in	wej
+pop.igen.out	wyj
+pop.igen.inout	wejwyj
+iports	Porty
+db.net.in	wej
+db.net.out	wyj
+db.net.inout	wejwyj
+db.net.inets	Sirci
+db.gate.general	Ogólne
+db.gate.delete	Skasuj
+db.hdl.cancel	Anuluj
+opt.general	Ogólne
+opt.interface	Interfejs
+opt.simulate	Symuluj
+opt.simulate.tech	Technika
+opt.library	Biblioteki
+opt.cpath	Ścieżka Krytyczna
+opt.tool.tech	Technika
+opt.tool.symport	Porty
+igen.delete	Skasuj
+circ.general	Ogólne
+circ.library	Biblioteki
+cprt.descr	Symulator i edytor układów cyfrowych
+ho.symed.import	Importuj obraz z pliku.
+ho.symed.export	Eksportuj obraz do pliku.
+ho.tool.currot	-begin-
 Wyświetla aktualną domyślną
 rotację. Kliknij ten
 przycisk by zmienić aktualną
 domyślną rotację.
 -end-
-ho.tool.zoomin Powiększ
-ho.tool.zoomout Pomniejsz
-ho.tool.valgn Wyrównaj zaznaczone element(y) pionowo.
-ho.tool.halgn Wyrównaj zaznaczone element(y) poziomo.
-ho.tool.cut Wytnij zaznaczenie.
-ho.tool.copy Skopiuj zaznaczenie.
-ho.tool.paste Wklej z buforu wycięcia.
-ho.tool.addport Dodaj port do zaznaczonego komponentu.
-ho.tool.replicate Replikuj komponent.
-ho.tool.delete Usuń zaznaczenie.
-license1 -begin-
+ho.tool.zoomin	Powiększ
+ho.tool.zoomout	Pomniejsz
+ho.tool.valgn	Wyrównaj zaznaczone element(y) pionowo.
+ho.tool.halgn	Wyrównaj zaznaczone element(y) poziomo.
+ho.tool.cut	Wytnij zaznaczenie.
+ho.tool.copy	Skopiuj zaznaczenie.
+ho.tool.paste	Wklej z buforu wycięcia.
+ho.tool.addport	Dodaj port do zaznaczonego komponentu.
+ho.tool.replicate	Replikuj komponent.
+ho.tool.delete	Usuń zaznaczenie.
+license1	-begin-
 Program TtGate jest wolnym oprogramowaniem; można go rozprowadzać
 dalej i/lub modyfikować na warunkach Powszechnej Licencji Publicznej
 GNU, wydanej przez Fundację Wolnego Oprogramowania (Free Software
 Foundation) - według wersji drugiej tej Licencji lub którejś z późniejszych
 wersji.
 -end-
-license2 -begin-
+license2	-begin-
 Program TtGate rozpowszechniany jest z nadzieją, iż będzie on użyteczny -
 jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji
 PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH
 ZASTOSOWAŃ. W celu uzyskania bliższych informacji należy zapoznać się
 z Powszechną Licencją Publiczną GNU.
 -end-
-license3 -begin-
+license3	-begin-
 Z pewnością wraz z programem TtGate dostarczono także egzemplar
 zPowszechnej Licencji Publicznej GNU (GNU General Public License); jeśli
 nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin Street,

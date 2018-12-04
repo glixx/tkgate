@@ -1,27 +1,28 @@
-\language		slovenčina
-\font-encoding		iso8859-2
-\display-encoding	iso8859-2
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				slovenčina
+\font-encoding			iso8859-2
+\display-encoding		iso8859-2
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8
-itype Typ:
-db.gate.details Podrobnosti
-opt.treelabel Voľby
-circ.flags Voľby
-license1 -begin-
+
+itype	Typ:
+db.gate.details	Podrobnosti
+opt.treelabel	Voľby
+circ.flags	Voľby
+license1	-begin-
 TtGate je slobodný softvér. Môžete ho ďalej šíriť a/alebo upravovať podľa
 ustanovení licencie GNU General Public License (Všeobecnej zverejňovacej
 licencie GNU) tak, ako bola vydaná organizáciou Free Software Foundation, a
 to buď verzie 2 tejto licencie, alebo (podľa vášho uváženia) ktorejkoľvek
 neskoršej verzie.
 -end-
-license2 -begin-
+license2	-begin-
 TtGate je rozširovaný v nádeji, že bude užitočný, avšak BEZ AKEJKOĽVEK
 ZÁRUKY. Neposkytujú sa ani odvodené záruky OBCHODOVATEĽNOSTI
 alebo VHODNOSTI PRE URČITÝ ÚČEL. Ďalšie podrobnosti hľadajte v licencii
 GNU General Public License.
 -end-
-license3 -begin-
+license3	-begin-
 Kópiu licencie GNU General Public License ste mali dostať spolu s týmto
 programom. Ak sa tak nestalo, napíšte na adresu Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

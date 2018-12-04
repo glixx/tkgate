@@ -1,55 +1,56 @@
-\language		bahasa Melayu
-\font-encoding		iso8859-6
-\display-encoding	iso8859-6
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				bahasa Melayu
+\font-encoding			iso8859-6
+\display-encoding		iso8859-6
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8
-b.close Tutup
-b.ok OK
-b.clear Kosongkan
-b.cancel Batal
-b.delete Padam
-mm.delete Padam
-pop.gate.open Buka
-pop.gate.close Tutup
-pop.gate.delete Padam
-pop.igen.delete Padam
-ifile Fail
-itype Jenis:
-db.mod.name Nama
-db.gate.details Perincian
-db.gate.edit Sunting
-db.gate.delete Padam
-db.gate.switch.shownet.on.hdr Tunjuk
-db.gate.dip.shownet.on.hdr Tunjuk
-db.hdl.cancel Batal
-print.file Fail
-print.ok Cetak
-opt.treelabel Pilihan
-opt.print Cetak
-opt.tool.file Fail
-opt.tool.edit Sunting
-igen.delete Padam
-igen.edit Sunting
-blklst.to Ke
-blklst.from Dari
-blklst.name Nama
-circ.flags Pilihan
-ho.tool.zoomin Zum masuk
-ho.tool.zoomout Zum keluar
-license1 -begin-
+
+b.close	Tutup
+b.ok	OK
+b.clear	Kosongkan
+b.cancel	Batal
+b.delete	Padam
+mm.delete	Padam
+pop.gate.open	Buka
+pop.gate.close	Tutup
+pop.gate.delete	Padam
+pop.igen.delete	Padam
+ifile	Fail
+itype	Jenis:
+db.mod.name	Nama
+db.gate.details	Perincian
+db.gate.edit	Sunting
+db.gate.delete	Padam
+db.gate.switch.shownet.on.hdr	Tunjuk
+db.gate.dip.shownet.on.hdr	Tunjuk
+db.hdl.cancel	Batal
+print.file	Fail
+print.ok	Cetak
+opt.treelabel	Pilihan
+opt.print	Cetak
+opt.tool.file	Fail
+opt.tool.edit	Sunting
+igen.delete	Padam
+igen.edit	Sunting
+blklst.to	Ke
+blklst.from	Dari
+blklst.name	Nama
+circ.flags	Pilihan
+ho.tool.zoomin	Zum masuk
+ho.tool.zoomout	Zum keluar
+license1	-begin-
 TtGate adalah perisian bebas; anda boleh mengedarkannya semula dan/atau
 mengubah suai di bawah syarat-syarat GNU General Public License seperti yang
 diterbitkan oleh Free Software Foundation; sama ada Lesen versi 2, atau (atas
 pilihan anda) mana-mana versi selepas ini.
 -end-
-license2 -begin-
+license2	-begin-
 TtGate diedarkan dengan harapan bahawa ia akan menjadi berguna, tetapi
 TANPA SEBARANG WARANTI; tanpa jaminan yang tersirat MERCHANTABILITY
 atau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat Lesen Awam Am GNU
 untuk maklumat lanjut.
 -end-
-license3 -begin-
+license3	-begin-
 Anda sepatutunya telah menerima satu salinan Lesen GNU General Public
 bersama TtGate; jika tidak, tulis kepada Free Software Foundation, Inc., 51
 Temple Place, Suite 330, Boston, MA 02110-1301 USA.

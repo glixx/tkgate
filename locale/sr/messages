@@ -1,26 +1,27 @@
-\language		српски
-\font-encoding		iso8859-5
-\display-encoding	iso8859-5
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				српски
+\font-encoding			iso8859-5
+\display-encoding		iso8859-5
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8
-b.apply Примени
-opt.treelabel Опције
-circ.flags Опције
-cprt.descr Симулатор и уређивач дигиталних електричних кола
-license1 -begin-
+
+b.apply	Примени
+opt.treelabel	Опције
+circ.flags	Опције
+cprt.descr	Симулатор и уређивач дигиталних електричних кола
+license1	-begin-
 TkGate је слободан софтвер; можете га расподељивати и/или мењати под
 условима Гну-ове Опште јавне лиценце, коју је објавила Задужбина слободног
 софтвера; било верзије 2 те Лиценце, или (по вашем мишљењу) неке новије
 верзије.
 -end-
-license2 -begin-
+license2	-begin-
 TkGate се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ
 ГАРАНЦИЈЕ; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или
 ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ. Погледајте ГНУ Општу јавну
 лиценцу за више детаља.
 -end-
-license3 -begin-
+license3	-begin-
 Требали сте да добијете примерак Опште јавне лиценце уз TkGate; ако нисте,
 пишите Задужбини слободног софтвера на адресу: „Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA“.

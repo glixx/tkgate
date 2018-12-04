@@ -1,6 +1,6 @@
-\language		galego
-\font-encoding		iso8859-3
-\display-encoding	iso8859-3
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				galego
+\font-encoding			iso8859-3
+\display-encoding		iso8859-3
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8

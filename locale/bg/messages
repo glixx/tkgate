@@ -1,26 +1,27 @@
-\language		български
-\font-encoding		iso8859-5
-\display-encoding	iso8859-5
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				български
+\font-encoding			iso8859-5
+\display-encoding		iso8859-5
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8
-itype Тип:
-db.gate.details Подробности
-opt.treelabel Опции
-circ.flags Опции
-license1 -begin-
+
+itype	Тип:
+db.gate.details	Подробности
+opt.treelabel	Опции
+circ.flags	Опции
+license1	-begin-
 Тази програма (TtGate) е свободен софтуер. Можете да я разпространявате
 и/или променяте под условията на Общия публичен лиценз на GNU (GNU GPL),
 както е публикуван от Фондацията за свободен софтуер — версия 2 на лиценза
 или (по ваше решение) по-късна версия.
 -end-
-license2 -begin-
+license2	-begin-
 Тази програма се разпространява с надеждата, че ще бъде полезна,
 но БЕЗ НИКАКВИ ГАРАНЦИИ, дори и косвените за ПРОДАЖБА или
 СЪОТВЕТСТВИЕ С КАКВАТО И ДА Е УПОТРЕБА. За подробности
 погледнете Общия публичен лиценз на GNU.
 -end-
-license3 -begin-
+license3	-begin-
 Трябва да сте получили копие от Общия публичен лиценз на GNU GPL
 заедно с тази програма. Ако не сте, пишете до Free Software Foundation,
 Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.

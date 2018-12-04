@@ -1,253 +1,254 @@
-\language		português
-\font-encoding		iso8859-1
-\display-encoding	iso8859-1
-\messages-encoding	utf-8
-\verilog-encoding	utf-8
+\language				português
+\font-encoding			iso8859-1
+\display-encoding		iso8859-1
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
 \postscript-encoding	utf-8
-b.new Novo...
-b.dismiss Rejeitar
-b.close Fechar
-b.ok OK
-b.clear Limpar
-b.cancel Cancelar
-b.browse Explorar...
-b.label Etiqueta
-b.find Encontrar
-b.edit Editar...
-b.add Adicionar...
-b.delete Eliminar
-b.remove Remover
-b.apply Aplicar
-b.tech Tecnologia
-tab.edit Edição
-tab.editintr Interface
-tab.simulate Simular
-tab.cpath Caminho Crítico
-fpattern.all Todos os Ficheiros
-module.tree Árvore
-module.list Lista
-module.box.libraries Bibliotecas
-sidetab.ports Portas
-mm.add Adicionar...
-mm.delete Eliminar
-mm.edit Editar...
-mm.enable Ativar
-mm.disable Desativar
-menu.file 0:Ficheiro
-menu.edit 0:Editar
-menu.tool 0:Ferramenta
-menu.symbol 0:Símbolo
-menu.simulate 0:Simular
-menu.module 0:Módulo
-menu.interface 0:Interface
-menu.format 0:Formato
-menu.make 0:Componentes
-menu.help 0:Ajuda
-menu.file.new 0:Novo...
-menu.file.open 0:Abrir...
-menu.file.openlib 0:Gestor de Biblioteca...
-menu.file.save 0:Guardar
-menu.file.saveas 5:Guardar Como...
-menu.file.print 0:Imprimir...
-menu.file.quit 0:Sair
-menu.file.cprop 0:Propriedades do Circuito...
-menu.file.import 0:Importar Imagem...
-menu.file.export 0:Exportar Imagem...
-menu.edit.undo 0:Anular
-menu.edit.redo 0:Refazer
-menu.edit.cut 0:Cortar
-menu.edit.copy 3:Copiar
-menu.edit.paste 0:Colar
-menu.edit.selall 0:Selecionar Tudo
-menu.edit.find 0:Encontrar...
-menu.edit.zoomin 5:Zoom +
-menu.edit.zoomout 5:Zoom -
-menu.tool.inv 0:Inverter
-menu.tool.debug 0:Depurar
-menu.tool.line 0:Linha
-menu.tool.rect 0:Retângulo
-menu.tool.port 0:Porta
-menu.tool.select 0:Selecionar Região
-menu.tool.options 0:Opções...
-menu.format.addport 4:Adicionar Porta
-menu.format.ioset 0:Definir Tipo
-menu.format.del 0:Eliminar
-menu.format.settech 0:Definir Tecnologia
-menu.format.rot 0:Rotação
-menu.simulate.run 0:Executar
-menu.simulate.pause 0:Pausar
-menu.module.open 0:Abrir
-menu.module.close 0:Fechar
-menu.module.new 0:Novo...
-menu.module.del 0:Eliminar...
-menu.module.copy 1:Copiar...
-menu.module.rename 0:Renomear...
-menu.module.interface 0:Interface
-menu.module.interface.edit 0:Editar...
-menu.module.interface.auto 5:Gerar Automaticamente...
-menu.help.about 0:Sobre...
-menu.help.license 0:Licença...
-menu.help.doc 0:Documentação...
-menu.help.tut 1:Tutoriais
-menu.help.home 1:Página Inicial
-menu.help.example 1:Exemplos
-menu.scope_file 0:Ficheiro
-menu.scope_sim 0:Simular
-menu.scope_help 0:Ajuda
-menu.scope_file.close 0:Fechar
-menu.scope_trace.zoomin 5:Zoom +
-menu.scope_trace.zoomout 5:Zoom -
-menu.scope_sim.run 0:Executar
-menu.scope_sim.pause 0:Pausar
-menu.scope_help.about 0:Sobre...
-menu.scope_help.license 0:Licença...
-menu.scope_help.doc 0:Documentação...
-mod.intf Interface
-port.parms Parâmetros de Porta
-gm.signals Sinais
-gm.io I/O
-gm.rgate Redução
-gm.msi MSI
-gm.alu ALU
-gm.mem Memória
-gm.mod Módulo
-gm.comment Comentário
-gm.io.led LED
-gm.io.ledbar Barra de LED
-gm.gate.and E
-gm.gate.or OU
-gm.gate.buf Buffer
-gm.rgate.and E
-gm.rgate.or OU
-gm.alu.mult Multiplicador
-gm.alu.div Divisor
-gm.mem.ram RAM
-gm.mem.rom ROM
-tutorial.prev ANTERIOR
-tutorial.next SEGUINTE
-tutorial.reload RECARREGAR
-pop.make Componentes
-pop.tool Ferramenta
-pop.edit.paste Colar
-pop.edit.cut Cortar
-pop.edit.copy Copiar
-pop.gate.open Abrir
-pop.gate.close Fechar
-pop.gate.prop Propriedades de Instância...
-pop.gate.addport Adicionar Porta
-pop.gate.settech Definir Tecnologia
-pop.gate.delete Eliminar
-pop.gate.ioset Definir Tipo
-pop.module.new Novo...
-pop.module.del Eliminar...
-pop.module.copy Copiar...
-pop.module.rename Renomear...
-pop.module.setroot Definir Como Root...
-pop.module.prop Propriedades do Módulo...
-pop.module.int Editar Interface...
-pop.simulate.end Terminar Simulação
-pop.simulate.begin Iniciar Simulação
-pop.simulate.run Executar
-pop.simulate.pause Pausar
-pop.simulate.load Carregar Memória...
-pop.interface Interface
-pop.interface.set Definir Como Predefinição
-pop.interface.edit Editar...
-pop.interface.auto Gerar Automaticamente...
-pop.interface.replace Substituir
-pop.igen.type Tipo
-pop.igen.size Tamanho
-pop.igen.delete Eliminar
-pop.igen.left esquerda
-pop.igen.right direita
-pop.igen.top topo
-pop.igen.bottom base
-pop.igen.other outro
-pop.library.mgr Gestor de Biblioteca...
-ifile Ficheiro
-imodule Módulo
-iblmodule Módulos
-iports Portas
-ibits Bits:
-itype Tipo:
-db.mod.name Nome
-db.mod.file Nome de Ficheiro
-db.mod.type Tipo
-db.mod.props Propriedades
-db.net.port Tipo de Porta
-db.newcirc.directory Diretoria:
-db.newcirc.cap Novo Circuito
-db.newcirc.file Nome de Ficheiro
-db.gate.signam Nome do Sinal
-db.gate.portnam Nome da Porta
-db.gate.iotype Tipo
-db.gate.cyclew Período
-db.gate.phase Fase
-db.gate.port Porta
-db.gate.bitws Bits
-db.gate.gtype Tipo
-db.gate.gname Nome da Instância
-db.gate.dipval Mudar Valor
-db.gate.modname Tipo
-db.gate.general Geral
-db.gate.details Detalhes
-db.gate.text Texto
-db.gate.ports Porta
-db.gate.delay Atraso
-db.gate.parameters Parâmetros
-db.gate.edit Editar
-db.gate.delete Eliminar
-db.gate.add Adicionar
-db.gate.ff.normal.hdr Normal
-db.gate.jkff.normal.hdr Normal
-db.gate.cat.asc.hdr Ascendente
-db.gate.cat.sigdir Direção do Sinal
-db.gate.cat.auto.hdr Automático
-db.gate.cat.tran.hdr Bidirecional
-db.hdl.cancel Cancelar
-print.file Ficheiro
-print.filename Nome de Ficheiro
-print.tab.modules Módulos
-opt.general Geral
-opt.interface Interface
-opt.simulate Simular
-opt.simulate.tech Tecnologia
-opt.library Bibliotecas
-opt.mods Módulos
-opt.cpath Caminho Crítico
-opt.tool.file Ficheiro
-opt.tool.edit Editar
-opt.tool.gateprop Componentes
-opt.tool.module Módulo
-opt.tool.tech Tecnologia
-opt.tool.symport Portas
-igen.port Porta
-igen.type Tipo
-igen.size Tamanho
-igen.bits Bits
-igen.add Adicionar
-igen.delete Eliminar
-igen.edit Editar
-ipanel.autogen Gerar Automaticamente...
-blklst.name Nome
-find.result.module Módulo
-find.result.type Tipo
-circ.file Nome de Ficheiro
-circ.general Geral
-circ.library Bibliotecas
-license1 -begin-
+
+b.new	Novo...
+b.dismiss	Rejeitar
+b.close	Fechar
+b.ok	OK
+b.clear	Limpar
+b.cancel	Cancelar
+b.browse	Explorar...
+b.label	Etiqueta
+b.find	Encontrar
+b.edit	Editar...
+b.add	Adicionar...
+b.delete	Eliminar
+b.remove	Remover
+b.apply	Aplicar
+b.tech	Tecnologia
+tab.edit	Edição
+tab.editintr	Interface
+tab.simulate	Simular
+tab.cpath	Caminho Crítico
+fpattern.all	Todos os Ficheiros
+module.tree	Árvore
+module.list	Lista
+module.box.libraries	Bibliotecas
+sidetab.ports	Portas
+mm.add	Adicionar...
+mm.delete	Eliminar
+mm.edit	Editar...
+mm.enable	Ativar
+mm.disable	Desativar
+menu.file	0:Ficheiro
+menu.edit	0:Editar
+menu.tool	0:Ferramenta
+menu.symbol	0:Símbolo
+menu.simulate	0:Simular
+menu.module	0:Módulo
+menu.interface	0:Interface
+menu.format	0:Formato
+menu.make	0:Componentes
+menu.help	0:Ajuda
+menu.file.new	0:Novo...
+menu.file.open	0:Abrir...
+menu.file.openlib	0:Gestor de Biblioteca...
+menu.file.save	0:Guardar
+menu.file.saveas	5:Guardar Como...
+menu.file.print	0:Imprimir...
+menu.file.quit	0:Sair
+menu.file.cprop	0:Propriedades do Circuito...
+menu.file.import	0:Importar Imagem...
+menu.file.export	0:Exportar Imagem...
+menu.edit.undo	0:Anular
+menu.edit.redo	0:Refazer
+menu.edit.cut	0:Cortar
+menu.edit.copy	3:Copiar
+menu.edit.paste	0:Colar
+menu.edit.selall	0:Selecionar Tudo
+menu.edit.find	0:Encontrar...
+menu.edit.zoomin	5:Zoom +
+menu.edit.zoomout	5:Zoom -
+menu.tool.inv	0:Inverter
+menu.tool.debug	0:Depurar
+menu.tool.line	0:Linha
+menu.tool.rect	0:Retângulo
+menu.tool.port	0:Porta
+menu.tool.select	0:Selecionar Região
+menu.tool.options	0:Opções...
+menu.format.addport	4:Adicionar Porta
+menu.format.ioset	0:Definir Tipo
+menu.format.del	0:Eliminar
+menu.format.settech	0:Definir Tecnologia
+menu.format.rot	0:Rotação
+menu.simulate.run	0:Executar
+menu.simulate.pause	0:Pausar
+menu.module.open	0:Abrir
+menu.module.close	0:Fechar
+menu.module.new	0:Novo...
+menu.module.del	0:Eliminar...
+menu.module.copy	1:Copiar...
+menu.module.rename	0:Renomear...
+menu.module.interface	0:Interface
+menu.module.interface.edit	0:Editar...
+menu.module.interface.auto	5:Gerar Automaticamente...
+menu.help.about	0:Sobre...
+menu.help.license	0:Licença...
+menu.help.doc	0:Documentação...
+menu.help.tut	1:Tutoriais
+menu.help.home	1:Página Inicial
+menu.help.example	1:Exemplos
+menu.scope_file	0:Ficheiro
+menu.scope_sim	0:Simular
+menu.scope_help	0:Ajuda
+menu.scope_file.close	0:Fechar
+menu.scope_trace.zoomin	5:Zoom +
+menu.scope_trace.zoomout	5:Zoom -
+menu.scope_sim.run	0:Executar
+menu.scope_sim.pause	0:Pausar
+menu.scope_help.about	0:Sobre...
+menu.scope_help.license	0:Licença...
+menu.scope_help.doc	0:Documentação...
+mod.intf	Interface
+port.parms	Parâmetros de Porta
+gm.signals	Sinais
+gm.io	I/O
+gm.rgate	Redução
+gm.msi	MSI
+gm.alu	ALU
+gm.mem	Memória
+gm.mod	Módulo
+gm.comment	Comentário
+gm.io.led	LED
+gm.io.ledbar	Barra de LED
+gm.gate.and	E
+gm.gate.or	OU
+gm.gate.buf	Buffer
+gm.rgate.and	E
+gm.rgate.or	OU
+gm.alu.mult	Multiplicador
+gm.alu.div	Divisor
+gm.mem.ram	RAM
+gm.mem.rom	ROM
+tutorial.prev	ANTERIOR
+tutorial.next	SEGUINTE
+tutorial.reload	RECARREGAR
+pop.make	Componentes
+pop.tool	Ferramenta
+pop.edit.paste	Colar
+pop.edit.cut	Cortar
+pop.edit.copy	Copiar
+pop.gate.open	Abrir
+pop.gate.close	Fechar
+pop.gate.prop	Propriedades de Instância...
+pop.gate.addport	Adicionar Porta
+pop.gate.settech	Definir Tecnologia
+pop.gate.delete	Eliminar
+pop.gate.ioset	Definir Tipo
+pop.module.new	Novo...
+pop.module.del	Eliminar...
+pop.module.copy	Copiar...
+pop.module.rename	Renomear...
+pop.module.setroot	Definir Como Root...
+pop.module.prop	Propriedades do Módulo...
+pop.module.int	Editar Interface...
+pop.simulate.end	Terminar Simulação
+pop.simulate.begin	Iniciar Simulação
+pop.simulate.run	Executar
+pop.simulate.pause	Pausar
+pop.simulate.load	Carregar Memória...
+pop.interface	Interface
+pop.interface.set	Definir Como Predefinição
+pop.interface.edit	Editar...
+pop.interface.auto	Gerar Automaticamente...
+pop.interface.replace	Substituir
+pop.igen.type	Tipo
+pop.igen.size	Tamanho
+pop.igen.delete	Eliminar
+pop.igen.left	esquerda
+pop.igen.right	direita
+pop.igen.top	topo
+pop.igen.bottom	base
+pop.igen.other	outro
+pop.library.mgr	Gestor de Biblioteca...
+ifile	Ficheiro
+imodule	Módulo
+iblmodule	Módulos
+iports	Portas
+ibits	Bits:
+itype	Tipo:
+db.mod.name	Nome
+db.mod.file	Nome de Ficheiro
+db.mod.type	Tipo
+db.mod.props	Propriedades
+db.net.port	Tipo de Porta
+db.newcirc.directory	Diretoria:
+db.newcirc.cap	Novo Circuito
+db.newcirc.file	Nome de Ficheiro
+db.gate.signam	Nome do Sinal
+db.gate.portnam	Nome da Porta
+db.gate.iotype	Tipo
+db.gate.cyclew	Período
+db.gate.phase	Fase
+db.gate.port	Porta
+db.gate.bitws	Bits
+db.gate.gtype	Tipo
+db.gate.gname	Nome da Instância
+db.gate.dipval	Mudar Valor
+db.gate.modname	Tipo
+db.gate.general	Geral
+db.gate.details	Detalhes
+db.gate.text	Texto
+db.gate.ports	Porta
+db.gate.delay	Atraso
+db.gate.parameters	Parâmetros
+db.gate.edit	Editar
+db.gate.delete	Eliminar
+db.gate.add	Adicionar
+db.gate.ff.normal.hdr	Normal
+db.gate.jkff.normal.hdr	Normal
+db.gate.cat.asc.hdr	Ascendente
+db.gate.cat.sigdir	Direção do Sinal
+db.gate.cat.auto.hdr	Automático
+db.gate.cat.tran.hdr	Bidirecional
+db.hdl.cancel	Cancelar
+print.file	Ficheiro
+print.filename	Nome de Ficheiro
+print.tab.modules	Módulos
+opt.general	Geral
+opt.interface	Interface
+opt.simulate	Simular
+opt.simulate.tech	Tecnologia
+opt.library	Bibliotecas
+opt.mods	Módulos
+opt.cpath	Caminho Crítico
+opt.tool.file	Ficheiro
+opt.tool.edit	Editar
+opt.tool.gateprop	Componentes
+opt.tool.module	Módulo
+opt.tool.tech	Tecnologia
+opt.tool.symport	Portas
+igen.port	Porta
+igen.type	Tipo
+igen.size	Tamanho
+igen.bits	Bits
+igen.add	Adicionar
+igen.delete	Eliminar
+igen.edit	Editar
+ipanel.autogen	Gerar Automaticamente...
+blklst.name	Nome
+find.result.module	Módulo
+find.result.type	Tipo
+circ.file	Nome de Ficheiro
+circ.general	Geral
+circ.library	Bibliotecas
+license1	-begin-
 TtGate é uma aplicação livre; pode redistribuí-la e/ou alterá-la sob os termos
 da Licença Pública Genérica GNU tal como publicada pela Free Software
 Foundation; ou a versão 2 da Licença ou (à sua discrição) qualquer versão
 posterior.
 -end-
-license2 -begin-
+license2	-begin-
 TtGate é distribuído na expectativa de que possa ser útil, mas SEM
 QUALQUER GARANTIA; sem sequer a garantia implícita de
 COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Consulte
 a Licença Pública Genérica GNU para mais detalhes.
 -end-
-license3 -begin-
+license3	-begin-
 Deverá ter recebido uma cópia da Licença Pública Genérica GNU juntamente
 com o TtGate; caso contrário, escreva para a Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA (em inglês).

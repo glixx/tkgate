@@ -1,913 +1,914 @@
-\language               ÆüËÜ¸ì
-\font-encoding          iso8859-1
-\messages-encoding	euc-jp
-\verilog-encoding	euc-jp
-\display-encoding       euc-jp
-@mm.width		8
+\language				æ—¥æœ¬èª
+\font-encoding			iso8859-1
+\messages-encoding		euc-jp
+\verilog-encoding		euc-jp
+\display-encoding		euc-jp
+@mm.width					8
 @db.gate.comment.width		600
 @db.gate.comment.height		450
-@opt.tool.columns		2
-@opt.tool.colwidth		30
-@opt.sidebar.width		*200
-@find.qual.pos		after
-b.new ¿·µ¬¤¯...
-b.dismiss ÊÄ¤¸¤ë
-b.close ÊÄ¤¸¤ë
-b.ok £Ï£Ë
-b.clear ¥¯¥ê¥¢
-b.cancel ¥­¥ã¥ó¥»¥ë
-b.in Æş
-b.out ½Ğ
-b.inout Æş½Ğ
-b.browse ÁªÂò¤¯...
-b.label Ì¾Á°
-b.find Ãµº÷
-b.edit ÊÔ½¸¤¯...
-b.add ÄÉ²Ã¤¯...
-b.delete ºï½ü
-b.remove ¾Ã¤¹
-b.apply ¥»¥Ã¥È
-b.anchor °ÜÆ°ÉÔ²Ä
-b.tech ¥Æ¥¯¥Î¥í¥¸¡¼
-tab.edit ÊÔ½¸
-tab.editintr ¥¤¥ó¥¿¥Õ¥§¡¼¥¹
-tab.simulate ¥·¥ß¥å¥ì¡¼¥È
-tab.cpath ÃÙ±ä²òÀÏ
-module.box.libraries ¥é¥¤¥Ö¥é¥ê
-sidetab.nets ¥Í¥Ã¥È
-sidetab.ports ¥İ¡¼¥È
-mm.add ÄÉ²Ã¤¯...
-mm.delete ºï½ü
-mm.edit ÊÔ½¸¤¯...
-mm.enable Í­¸ú¤Ë¤¹¤ë
-mm.disable Ìµ¸ú¤Ë¤¹¤ë
-menu.file ¥Õ¥¡¥¤¥ë
-menu.edit ÊÔ½¸
-menu.tool ¥Ä¡¼¥ë
-menu.simulate ¥·¥ß¥å¥ì¡¼¥È
-menu.module ¥â¥¸¥å¡¼¥ë
-menu.interface ¥¤¥ó¥¿¥Õ¥§¡¼¥¹
-menu.make ºîÀ®
-menu.help ¥Ø¥ë¥×
-menu.file.new ¿·µ¬ºîÀ®¤¯...
-menu.file.open ³«¤¯...
-menu.file.openlib ¥é¥¤¥Ö¥é¥ê¤ò³«¤¯...
-menu.file.save ÊİÂ¸
-menu.file.saveas Ì¾Á°¤òÉÕ¤±¤ÆÊİÂ¸¤¯...
-menu.file.print °õºş¤¯...
-menu.file.quit ½ªÎ»
-menu.file.cprop ²óÏ©¤ÎÆÃÄ§¤¯...
-menu.edit.cut ¥«¥Ã¥È
-menu.edit.copy ¥³¥Ô¡¼
-menu.edit.paste ¥Ú¡¼¥¹¥È
-menu.edit.overlay OverlayÄ¥¤êÉÕ¤±
-menu.edit.selall Á´¤Æ¤òÁªÂò
-menu.edit.find ²óÏ©¤òÃµº÷¤¯...
-menu.edit.zoomin ¥º¡¼¥à¡¦¥¤¥ó
-menu.edit.zoomout ¥º¡¼¥à¡¦¥¢¥¦¥È
-menu.edit.rshift ±¦¥·¥Õ¥È
-menu.edit.lshift º¸¥·¥Õ¥È
-menu.edit.ushift ¾å¥·¥Õ¥È
-menu.edit.dshift ²¼¥·¥Õ¥È
-menu.edit.cwrotate »ş·×¼ş¤ê²óÅ¾
-menu.edit.ccwrotate »ş·×È¿ÂĞ¼ş¤ê²óÅ¾
-menu.edit.pcwrotate ¥İ¡¼¥È¤Î»ş·×¼ş¤ê²óÅ¾
-menu.edit.pccwrotate ¥İ¡¼¥È¤ÎÈó»ş·×¼ş¤ê²óÅ¾
-menu.edit.resize ºÆ¥µ¥¤¥º²½
-menu.tool.move °ÜÆ°¡¿ÀÜÂ³
-menu.tool.delg ¥²¡¼¥È¤Îºï½ü
-menu.tool.cutw ¥ï¥¤¥ä¤ÎÀÚÃÇ
-menu.tool.inv ÈİÄê
-menu.tool.bitw ¥Ó¥Ã¥ÈÉı
-menu.tool.debug ¥Ç¥Ğ¥Ã¥°
-menu.tool.point ¥İ¥¤¥ó¥È
-menu.tool.line ¥é¥¤¥ó
-menu.tool.rect Ä¹Êı·Á
-menu.tool.fillrect ¿§¤Å¤±Ä¹Êı·Á
-menu.tool.port ¥İ¡¼¥È
-menu.tool.select ÌÈÀÕÁªÂò
-menu.simulate.begin ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò³«»Ï
-menu.simulate.end ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò½ªÎ»
-menu.simulate.addprobe ¥×¥í¡¼¥Ö¤ÎÄÉ²Ã¡¿ºï½ü
-menu.simulate.load ¥á¥â¥ê¤ÎÆÉ¤ß¹ş¤ß¤¯...
-menu.module.open ³«¤¯
-menu.module.close ÊÄ¤¸¤ë
-menu.module.new ¿·µ¬ºîÀ®¤¯...
-menu.module.del ºï½ü¤¯...
-menu.module.copy ¥³¥Ô¡¼¤¯...
-menu.module.rename Ì¾Á°¤ÎÊÔ½¸¤¯...
-menu.module.claim ¼èÆÀ¤¯...
-menu.module.setroot ¥ë¡¼¥È¤Ë¤¹¤ë¤¯...
-menu.module.prop ¥â¥¸¥å¡¼¥ë¤ÎÀßÄê¤¯...
-menu.module.interface ¥¤¥ó¥¿¥Õ¥§¡¼¥¹
-menu.module.interface.set ¥»¥Ã¥È
-menu.module.interface.edit ÊÔ½¸¤¯...
-menu.help.license ¥é¥¤¥»¥ó¥¹¤¯...
-menu.help.doc ¥É¥­¥å¥á¥ó¥Æ¡¼¥·¥ç¥ó¤¯...
-menu.help.tut ¥Á¥å¡¼¥È¥ê¥¢¥ë
-menu.help.home ¥Û¡¼¥à¡¦¥Ú¡¼¥¸
-menu.help.example ²óÏ©¤ÎÎã
-menu.scope_file ¥Õ¥¡¥¤¥ë
-menu.scope_sim ¥·¥ß¥å¥ì¡¼¥È
-menu.scope_trace ¥È¥ì¡¼¥¹
-menu.scope_help ¥Ø¥ë¥×
-menu.scope_file.ptrace ¥È¥ì¡¼¥¹°õºş¤¯...
-menu.scope_file.close ÊÄ¤¸¤ë
-menu.scope_trace.zoomin ¥º¡¼¥à¡¦¥¤¥ó
-menu.scope_trace.zoomout ¥º¡¼¥à¡¦¥¢¥¦¥È
-menu.scope_sim.addprobe ¥×¥í¡¼¥Ö¤ÎÄÉ²Ã¡¿ºï½ü
-menu.scope_sim.load ¥á¥â¥ê¤ÎÆÉ¤ß¹ş¤ß¤¯...
-menu.scope_help.license ¥é¥¤¥»¥ó¥¹¤¯...
-menu.scope_help.doc ¥É¥­¥å¥á¥ó¥Æ¡¼¥·¥ç¥ó¤¯...
-mod.intf ¥¤¥ó¥¿¥Õ¥§¡¼¥¹
-port.parms ¥İ¡¼¥È¤Î¥Ñ¥é¥á¥¿
-port.in Æş
-port.out ½Ğ
-port.inout Æş½Ğ
-gm.gate ¥²¡¼¥È
-gm.rgate Ã±¹à½ÌÌó¥²¡¼¥È
-gm.mem ¥á¥â¥ê¡¼
-gm.mod ¥â¥¸¥å¡¼¥ë
-gm.comment ¥³¥á¥ó¥È
-gm.frame ¥Õ¥ì¡¼¥à
-gm.signals.ground ¥¢¡¼¥¹
-gm.io.switch ¥¹¥¤¥Ã¥Á
-gm.io.dip DIP¥¹¥¤¥Ã¥Á
-gm.io.merge ¥ï¥¤¥ä¤Î¥Ş¡¼¥¸
-gm.io.clock ¥¯¥í¥Ã¥¯
-gm.io.led LED¥Ó¥Ã¥È
-gm.io.ledbar LEDËÀ¥°¥é¥Õ
-gm.gate.buf ¥Ğ¥Ã¥Õ¥¡
-gm.gate.inv ÈİÄê¥Ğ¥Ã¥Õ¥¡
-gm.gate.tribuf ¥È¥é¥¤¡¦¥Ğ¥Ã¥Õ¥¡
-gm.alu.add ²Ã»»´ï
-gm.alu.mult ¾è»»´ï
-gm.alu.div ½ü»»´ï
-gm.alu.lshift º¸¥·¥Õ¥È
-gm.alu.rshift ±¦¥·¥Õ¥È
-gm.alu.arshift »»¿ôÅª±¦¥·¥Õ¥È
-gm.alu.roll ¥í¡¼¥ë
-gm.mem.reg ¥ì¥¸¥¹¥¿
-gm.mem.ff ¥Õ¥ê¥Ã¥×¡¦¥Õ¥í¥Ã¥×
-gm.mem.rff ¶ÀÁü¥Õ¥ê¥Ã¥×¡¦¥Õ¥í¥Ã¥×
-gm.msi.21mux 2-1 ¥»¥ì¥¯¥¿¡¼
-gm.msi.41mux 4-1 ¥»¥ì¥¯¥¿¡¼
-gm.msi.81mux 8-1 ¥»¥ì¥¯¥¿¡¼
-gm.msi.12dec 1-2 ¥Ç¥³¡¼¥À
-gm.msi.14dec 1-4 ¥Ç¥³¡¼¥À
-gm.msi.18dec 1-8 ¥Ç¥³¡¼¥À
-gm.mod.inst ¥â¥¸¥å¡¼¥ë¤Î¥¤¥ó¥¹¥¿¥ó¥¹
-gm.mod.in ¥â¥¸¥å¡¼¥ë¤ÎÆşÎÏ
-gm.mod.out ¥â¥¸¥å¡¼¥ë¤Î½ĞÎÏ
-gm.mod.inout ¥â¥¸¥å¡¼¥ë¤ÎÆş½ĞÎÏ
-tutorial.prev Á°¤Ø
-tutorial.next ¼¡¤Ø
-tutorial.chapter ¾Ï¤Î°ìÍ÷É½
-tutorial.reload ºÆÆÉ¤ß¹ş¤ß
-pop.tool ¥Ä¡¼¥ë
-pop.edit.paste ¥Ú¡¼¥¹¥È
-pop.edit.cut ¥«¥Ã¥È
-pop.edit.copy ¥³¥Ô¡¼
-pop.port.in Æş
-pop.port.out ½Ğ
-pop.port.inout Æş½Ğ
-pop.wire.addseg ¥ï¥¤¥ä¤ÎÄÉ²Ã
-pop.wire.prop ¥Í¥Ã¥È¤ÎÆÃÄ§¤¯...
-pop.wire.hidesize ¥Ó¥Ã¥ÈÉı¤ò±£¤¹
-pop.wire.showsize ¥Ó¥Ã¥ÈÉı¤ò¼¨¤¹
-pop.wire.hidelabel ¥ì¡¼¥Ù¥ë¤ò±£¤¹
-pop.wire.hidealllabel Á´¤Æ¤Î¥ì¡¼¥Ù¥ë¤ò±£¤¹
-pop.wire.clearalllabel Á´¤Æ¤Î¥ì¡¼¥Ù¥ë¤ò¥¯¥ê¥¢
-pop.wire.showlabel ¥ì¡¼¥Ù¥ë¤ò¼¨¤¹
-pop.gate.open ³«¤¯
-pop.gate.close ÊÄ¤¸¤ë
-pop.gate.prop ¥¤¥ó¥¹¥¿¥ó¥¹¤ÎÆÃÄ§¤¯...
-pop.gate.addport ¥İ¡¼¥È¤ÎÄÉ²Ã
-pop.gate.addin ÆşÎÏ¤ÎÄÉ²Ã¤¯...
-pop.gate.addout ½ĞÎÏ¤ÎÄÉ²Ã¤¯...
-pop.gate.addinout Æş½ĞÎÏ¤ÎÄÉ²Ã¤¯...
-pop.gate.anchor °ÜÆ°ÉÔ²Ä¤Ë¤¹¤ë
-pop.gate.settech ¥Æ¥¯¥Î¥í¥¸»ØÄê
-pop.gate.delete ºï½ü
-pop.gate.ioset ¥¿¥¤¥×¤Î»ØÄê
-pop.module.new ¿·µ¬¤¯...
-pop.module.del ºï½ü¤¯...
-pop.module.copy ¥³¥Ô¡¼¤¯...
-pop.module.rename Ì¾Á°¤ÎÊÑ¹¹¤¯...
-pop.module.claim ¥â¥¸¥å¡¼¥ë¤Î¼èÆÀ¤¯...
-pop.module.setroot ¥ë¡¼¥È»ØÄê¤¯...
-pop.module.prop ¥â¥¸¥å¡¼¥ë¤ÎÆÃÄ§¤¯...
-pop.module.int ¥¤¥ó¥¿¥Õ¥§¡¼¥¹¤ÎÊÔ½¸¤¯...
-pop.simulate.end ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò½ªÎ»
-pop.simulate.begin ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò³«»Ï
-pop.simulate.addprobe ¥×¥í¡¼¥Ö¤òÄÉ²Ã¡¿ºï½ü
-pop.simulate.run »ş¸ú
-pop.simulate.pause °ì»şÄä»ß
-pop.simulate.step ¥¨¥İ¥Ã¥¯¡¦¥¹¥Æ¥Ã¥×
-pop.simulate.cycle ¥µ¥¤¥¯¥ë¡¦¥¹¥Æ¥Ã¥×
-pop.simulate.break ¥Ö¥ì¡¼¥¯¥İ¥¤¥ó¥È¤¯...
-pop.simulate.script ¥¹¥¯¥ê¥×¥È¤Î»ş¸ú¤¯...
-pop.simulate.load ¥á¥â¥ê¤ÎÆÉ¤ß¹ş¤ß¤¯...
-pop.simulate.dump ¥á¥â¥ê¤Î½ñ¤­¹ş¤ß¤¯...
-pop.interface ¥¤¥ó¥¿¥Õ¥§¡¼¥¹
-pop.interface.set »ØÄê
-pop.interface.edit ÊÔ½¸¤¯...
-pop.interface.auto ¼«Æ°ºîÀ®¤¯...
-pop.interface.replace ¼è¤ê´¹¤¨
-pop.igen.type ¥¿¥¤¥×
-pop.igen.side ¥µ¥¤¥É
-pop.igen.delete ºï½ü
-pop.igen.in Æş
-pop.igen.out ½Ğ
-pop.igen.inout Æş½Ğ
-pop.igen.left º¸
-pop.igen.right ±¦
-pop.igen.top ¾å
-pop.igen.bottom ²¼
-pop.igen.other Â¾
-pop.library.close ÈóÍøÍÑ
-symed.tab.normal Èó¥»¥ì¥¯¥È
-symed.tab.select ¥»¥ì¥¯¥È
-symed.link ¥»¥ì¥¯¥È¤ÈÈó¥»¥ì¥¯¥È¤òÆ±»ş¤ËÊÔ½¸¤¹¤ë
-scope.emptymsg ¥ï¥¤¥ä¤Ë¥À¥Ö¥ë¡¦¥¯¥ê¥Ã¥¯¤·¤Æ¡¢¥×¥í¡¼¥Ö¤ËÉÕ¤±¤Ã¤Æ¤¯¤À¤µ¤¤¡£
-comment.empty [¥À¥Ö¥ë¡¦¥¯¥ê¥Ã¥¯¤·¤Æ¡¢¥Æ¥­¥¹¥È¤òÊÔ½¸¤·¤Æ¤¯¤À¤µ¤¤¡£]
-ifile ¥Õ¥¡¥¤¥ë
-imodule ¥â¥¸¥å¡¼¥ë
-iblmodule ¥â¥¸¥å¡¼¥ë
-iports ¥İ¡¼¥È
-ibits ¥Ó¥Ã¥ÈÉı:
-itype ¥¿¥¤¥×:
-db.mod.name ¥â¥¸¥å¡¼¥ëÌ¾
-db.mod.file ¥Õ¥¡¥¤¥ëÌ¾
-db.mod.type ¥¿¥¤¥×
-db.mod.flags ¥Õ¥é¥°
-db.mod.dataprot ¥â¥¸¥å¡¼¥ë¤ÎÄêµÁ¤ÎÊÔ½¸¤òÉÔ²ÄÇ½¤Ë¤¹¤ë¡£
-db.mod.intfprot ¥¤¥ó¥¿¥Õ¥§¡¼¥¹¤ÎÊÔ½¸¤òÉÔ²ÄÇ½¤Ë¤¹¤ë¡£
-db.mod.edprot ¥¤¥ó¥¿¥Õ¥§¡¼¥¹¤ÎÊÔ½¸¤òÀìÍÑ¥¨¥Ç¥£¥¿¤Ë¸Â¤ë¡£
-db.mod.props ÆÃÄ§
-db.mod.netlist ¥Í¥Ã¥È¥ê¥¹¥È
-db.mod.hdl HDL
-db.mod.netexpl -begin-
-¥°¥é¥Õ¥£¥«¥ë¤Î¥¨¥Ç¥£¥¿¤ò
-ÍøÍÑ¤·¤Æ¡¢¥â¥¸¥å¡¼¥ë¤ÎÁàºî¤ò
-ÄêµÁ¤¹¤ë¡£
+@opt.tool.columns			2
+@opt.tool.colwidth			30
+@opt.sidebar.width			*200
+@find.qual.pos			after
+
+b.new	æ–°è¦ã...
+b.dismiss	é–‰ã˜ã‚‹
+b.close	é–‰ã˜ã‚‹
+b.ok	ï¼¯ï¼«
+b.clear	ã‚¯ãƒªã‚¢
+b.cancel	ã‚­ãƒ£ãƒ³ã‚»ãƒ«
+b.in	å…¥
+b.out	å‡º
+b.inout	å…¥å‡º
+b.browse	é¸æŠã...
+b.label	åå‰
+b.find	æ¢ç´¢
+b.edit	ç·¨é›†ã...
+b.add	è¿½åŠ ã...
+b.delete	å‰Šé™¤
+b.remove	æ¶ˆã™
+b.apply	ã‚»ãƒƒãƒˆ
+b.anchor	ç§»å‹•ä¸å¯
+b.tech	ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼
+tab.edit	ç·¨é›†
+tab.editintr	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹
+tab.simulate	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆ
+tab.cpath	é…å»¶è§£æ
+module.box.libraries	ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+sidetab.nets	ãƒãƒƒãƒˆ
+sidetab.ports	ãƒãƒ¼ãƒˆ
+mm.add	è¿½åŠ ã...
+mm.delete	å‰Šé™¤
+mm.edit	ç·¨é›†ã...
+mm.enable	æœ‰åŠ¹ã«ã™ã‚‹
+mm.disable	ç„¡åŠ¹ã«ã™ã‚‹
+menu.file	ãƒ•ã‚¡ã‚¤ãƒ«
+menu.edit	ç·¨é›†
+menu.tool	ãƒ„ãƒ¼ãƒ«
+menu.simulate	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆ
+menu.module	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+menu.interface	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹
+menu.make	ä½œæˆ
+menu.help	ãƒ˜ãƒ«ãƒ—
+menu.file.new	æ–°è¦ä½œæˆã...
+menu.file.open	é–‹ã...
+menu.file.openlib	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’é–‹ã...
+menu.file.save	ä¿å­˜
+menu.file.saveas	åå‰ã‚’ä»˜ã‘ã¦ä¿å­˜ã...
+menu.file.print	å°åˆ·ã...
+menu.file.quit	çµ‚äº†
+menu.file.cprop	å›è·¯ã®ç‰¹å¾´ã...
+menu.edit.cut	ã‚«ãƒƒãƒˆ
+menu.edit.copy	ã‚³ãƒ”ãƒ¼
+menu.edit.paste	ãƒšãƒ¼ã‚¹ãƒˆ
+menu.edit.overlay	Overlayå¼µã‚Šä»˜ã‘
+menu.edit.selall	å…¨ã¦ã‚’é¸æŠ
+menu.edit.find	å›è·¯ã‚’æ¢ç´¢ã...
+menu.edit.zoomin	ã‚ºãƒ¼ãƒ ãƒ»ã‚¤ãƒ³
+menu.edit.zoomout	ã‚ºãƒ¼ãƒ ãƒ»ã‚¢ã‚¦ãƒˆ
+menu.edit.rshift	å³ã‚·ãƒ•ãƒˆ
+menu.edit.lshift	å·¦ã‚·ãƒ•ãƒˆ
+menu.edit.ushift	ä¸Šã‚·ãƒ•ãƒˆ
+menu.edit.dshift	ä¸‹ã‚·ãƒ•ãƒˆ
+menu.edit.cwrotate	æ™‚è¨ˆå‘¨ã‚Šå›è»¢
+menu.edit.ccwrotate	æ™‚è¨ˆåå¯¾å‘¨ã‚Šå›è»¢
+menu.edit.pcwrotate	ãƒãƒ¼ãƒˆã®æ™‚è¨ˆå‘¨ã‚Šå›è»¢
+menu.edit.pccwrotate	ãƒãƒ¼ãƒˆã®éæ™‚è¨ˆå‘¨ã‚Šå›è»¢
+menu.edit.resize	å†ã‚µã‚¤ã‚ºåŒ–
+menu.tool.move	ç§»å‹•ï¼æ¥ç¶š
+menu.tool.delg	ã‚²ãƒ¼ãƒˆã®å‰Šé™¤
+menu.tool.cutw	ãƒ¯ã‚¤ãƒ¤ã®åˆ‡æ–­
+menu.tool.inv	å¦å®š
+menu.tool.bitw	ãƒ“ãƒƒãƒˆå¹…
+menu.tool.debug	ãƒ‡ãƒãƒƒã‚°
+menu.tool.point	ãƒã‚¤ãƒ³ãƒˆ
+menu.tool.line	ãƒ©ã‚¤ãƒ³
+menu.tool.rect	é•·æ–¹å½¢
+menu.tool.fillrect	è‰²ã¥ã‘é•·æ–¹å½¢
+menu.tool.port	ãƒãƒ¼ãƒˆ
+menu.tool.select	å…è²¬é¸æŠ
+menu.simulate.begin	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’é–‹å§‹
+menu.simulate.end	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’çµ‚äº†
+menu.simulate.addprobe	ãƒ—ãƒ­ãƒ¼ãƒ–ã®è¿½åŠ ï¼å‰Šé™¤
+menu.simulate.load	ãƒ¡ãƒ¢ãƒªã®èª­ã¿è¾¼ã¿ã...
+menu.module.open	é–‹ã
+menu.module.close	é–‰ã˜ã‚‹
+menu.module.new	æ–°è¦ä½œæˆã...
+menu.module.del	å‰Šé™¤ã...
+menu.module.copy	ã‚³ãƒ”ãƒ¼ã...
+menu.module.rename	åå‰ã®ç·¨é›†ã...
+menu.module.claim	å–å¾—ã...
+menu.module.setroot	ãƒ«ãƒ¼ãƒˆã«ã™ã‚‹ã...
+menu.module.prop	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®è¨­å®šã...
+menu.module.interface	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹
+menu.module.interface.set	ã‚»ãƒƒãƒˆ
+menu.module.interface.edit	ç·¨é›†ã...
+menu.help.license	ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã...
+menu.help.doc	ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã...
+menu.help.tut	ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«
+menu.help.home	ãƒ›ãƒ¼ãƒ ãƒ»ãƒšãƒ¼ã‚¸
+menu.help.example	å›è·¯ã®ä¾‹
+menu.scope_file	ãƒ•ã‚¡ã‚¤ãƒ«
+menu.scope_sim	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆ
+menu.scope_trace	ãƒˆãƒ¬ãƒ¼ã‚¹
+menu.scope_help	ãƒ˜ãƒ«ãƒ—
+menu.scope_file.ptrace	ãƒˆãƒ¬ãƒ¼ã‚¹å°åˆ·ã...
+menu.scope_file.close	é–‰ã˜ã‚‹
+menu.scope_trace.zoomin	ã‚ºãƒ¼ãƒ ãƒ»ã‚¤ãƒ³
+menu.scope_trace.zoomout	ã‚ºãƒ¼ãƒ ãƒ»ã‚¢ã‚¦ãƒˆ
+menu.scope_sim.addprobe	ãƒ—ãƒ­ãƒ¼ãƒ–ã®è¿½åŠ ï¼å‰Šé™¤
+menu.scope_sim.load	ãƒ¡ãƒ¢ãƒªã®èª­ã¿è¾¼ã¿ã...
+menu.scope_help.license	ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã...
+menu.scope_help.doc	ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã...
+mod.intf	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹
+port.parms	ãƒãƒ¼ãƒˆã®ãƒ‘ãƒ©ãƒ¡ã‚¿
+port.in	å…¥
+port.out	å‡º
+port.inout	å…¥å‡º
+gm.gate	ã‚²ãƒ¼ãƒˆ
+gm.rgate	å˜é …ç¸®ç´„ã‚²ãƒ¼ãƒˆ
+gm.mem	ãƒ¡ãƒ¢ãƒªãƒ¼
+gm.mod	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+gm.comment	ã‚³ãƒ¡ãƒ³ãƒˆ
+gm.frame	ãƒ•ãƒ¬ãƒ¼ãƒ 
+gm.signals.ground	ã‚¢ãƒ¼ã‚¹
+gm.io.switch	ã‚¹ã‚¤ãƒƒãƒ
+gm.io.dip	DIPã‚¹ã‚¤ãƒƒãƒ
+gm.io.merge	ãƒ¯ã‚¤ãƒ¤ã®ãƒãƒ¼ã‚¸
+gm.io.clock	ã‚¯ãƒ­ãƒƒã‚¯
+gm.io.led	LEDãƒ“ãƒƒãƒˆ
+gm.io.ledbar	LEDæ£’ã‚°ãƒ©ãƒ•
+gm.gate.buf	ãƒãƒƒãƒ•ã‚¡
+gm.gate.inv	å¦å®šãƒãƒƒãƒ•ã‚¡
+gm.gate.tribuf	ãƒˆãƒ©ã‚¤ãƒ»ãƒãƒƒãƒ•ã‚¡
+gm.alu.add	åŠ ç®—å™¨
+gm.alu.mult	ä¹—ç®—å™¨
+gm.alu.div	é™¤ç®—å™¨
+gm.alu.lshift	å·¦ã‚·ãƒ•ãƒˆ
+gm.alu.rshift	å³ã‚·ãƒ•ãƒˆ
+gm.alu.arshift	ç®—æ•°çš„å³ã‚·ãƒ•ãƒˆ
+gm.alu.roll	ãƒ­ãƒ¼ãƒ«
+gm.mem.reg	ãƒ¬ã‚¸ã‚¹ã‚¿
+gm.mem.ff	ãƒ•ãƒªãƒƒãƒ—ãƒ»ãƒ•ãƒ­ãƒƒãƒ—
+gm.mem.rff	é¡åƒãƒ•ãƒªãƒƒãƒ—ãƒ»ãƒ•ãƒ­ãƒƒãƒ—
+gm.msi.21mux	2-1 ã‚»ãƒ¬ã‚¯ã‚¿ãƒ¼
+gm.msi.41mux	4-1 ã‚»ãƒ¬ã‚¯ã‚¿ãƒ¼
+gm.msi.81mux	8-1 ã‚»ãƒ¬ã‚¯ã‚¿ãƒ¼
+gm.msi.12dec	1-2 ãƒ‡ã‚³ãƒ¼ãƒ€
+gm.msi.14dec	1-4 ãƒ‡ã‚³ãƒ¼ãƒ€
+gm.msi.18dec	1-8 ãƒ‡ã‚³ãƒ¼ãƒ€
+gm.mod.inst	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
+gm.mod.in	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å…¥åŠ›
+gm.mod.out	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å‡ºåŠ›
+gm.mod.inout	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å…¥å‡ºåŠ›
+tutorial.prev	å‰ã¸
+tutorial.next	æ¬¡ã¸
+tutorial.chapter	ç« ã®ä¸€è¦§è¡¨
+tutorial.reload	å†èª­ã¿è¾¼ã¿
+pop.tool	ãƒ„ãƒ¼ãƒ«
+pop.edit.paste	ãƒšãƒ¼ã‚¹ãƒˆ
+pop.edit.cut	ã‚«ãƒƒãƒˆ
+pop.edit.copy	ã‚³ãƒ”ãƒ¼
+pop.port.in	å…¥
+pop.port.out	å‡º
+pop.port.inout	å…¥å‡º
+pop.wire.addseg	ãƒ¯ã‚¤ãƒ¤ã®è¿½åŠ 
+pop.wire.prop	ãƒãƒƒãƒˆã®ç‰¹å¾´ã...
+pop.wire.hidesize	ãƒ“ãƒƒãƒˆå¹…ã‚’éš ã™
+pop.wire.showsize	ãƒ“ãƒƒãƒˆå¹…ã‚’ç¤ºã™
+pop.wire.hidelabel	ãƒ¬ãƒ¼ãƒ™ãƒ«ã‚’éš ã™
+pop.wire.hidealllabel	å…¨ã¦ã®ãƒ¬ãƒ¼ãƒ™ãƒ«ã‚’éš ã™
+pop.wire.clearalllabel	å…¨ã¦ã®ãƒ¬ãƒ¼ãƒ™ãƒ«ã‚’ã‚¯ãƒªã‚¢
+pop.wire.showlabel	ãƒ¬ãƒ¼ãƒ™ãƒ«ã‚’ç¤ºã™
+pop.gate.open	é–‹ã
+pop.gate.close	é–‰ã˜ã‚‹
+pop.gate.prop	ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®ç‰¹å¾´ã...
+pop.gate.addport	ãƒãƒ¼ãƒˆã®è¿½åŠ 
+pop.gate.addin	å…¥åŠ›ã®è¿½åŠ ã...
+pop.gate.addout	å‡ºåŠ›ã®è¿½åŠ ã...
+pop.gate.addinout	å…¥å‡ºåŠ›ã®è¿½åŠ ã...
+pop.gate.anchor	ç§»å‹•ä¸å¯ã«ã™ã‚‹
+pop.gate.settech	ãƒ†ã‚¯ãƒãƒ­ã‚¸æŒ‡å®š
+pop.gate.delete	å‰Šé™¤
+pop.gate.ioset	ã‚¿ã‚¤ãƒ—ã®æŒ‡å®š
+pop.module.new	æ–°è¦ã...
+pop.module.del	å‰Šé™¤ã...
+pop.module.copy	ã‚³ãƒ”ãƒ¼ã...
+pop.module.rename	åå‰ã®å¤‰æ›´ã...
+pop.module.claim	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å–å¾—ã...
+pop.module.setroot	ãƒ«ãƒ¼ãƒˆæŒ‡å®šã...
+pop.module.prop	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ç‰¹å¾´ã...
+pop.module.int	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®ç·¨é›†ã...
+pop.simulate.end	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’çµ‚äº†
+pop.simulate.begin	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’é–‹å§‹
+pop.simulate.addprobe	ãƒ—ãƒ­ãƒ¼ãƒ–ã‚’è¿½åŠ ï¼å‰Šé™¤
+pop.simulate.run	æ™‚åŠ¹
+pop.simulate.pause	ä¸€æ™‚åœæ­¢
+pop.simulate.step	ã‚¨ãƒãƒƒã‚¯ãƒ»ã‚¹ãƒ†ãƒƒãƒ—
+pop.simulate.cycle	ã‚µã‚¤ã‚¯ãƒ«ãƒ»ã‚¹ãƒ†ãƒƒãƒ—
+pop.simulate.break	ãƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆã...
+pop.simulate.script	ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®æ™‚åŠ¹ã...
+pop.simulate.load	ãƒ¡ãƒ¢ãƒªã®èª­ã¿è¾¼ã¿ã...
+pop.simulate.dump	ãƒ¡ãƒ¢ãƒªã®æ›¸ãè¾¼ã¿ã...
+pop.interface	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹
+pop.interface.set	æŒ‡å®š
+pop.interface.edit	ç·¨é›†ã...
+pop.interface.auto	è‡ªå‹•ä½œæˆã...
+pop.interface.replace	å–ã‚Šæ›ãˆ
+pop.igen.type	ã‚¿ã‚¤ãƒ—
+pop.igen.side	ã‚µã‚¤ãƒ‰
+pop.igen.delete	å‰Šé™¤
+pop.igen.in	å…¥
+pop.igen.out	å‡º
+pop.igen.inout	å…¥å‡º
+pop.igen.left	å·¦
+pop.igen.right	å³
+pop.igen.top	ä¸Š
+pop.igen.bottom	ä¸‹
+pop.igen.other	ä»–
+pop.library.close	éåˆ©ç”¨
+symed.tab.normal	éã‚»ãƒ¬ã‚¯ãƒˆ
+symed.tab.select	ã‚»ãƒ¬ã‚¯ãƒˆ
+symed.link	ã‚»ãƒ¬ã‚¯ãƒˆã¨éã‚»ãƒ¬ã‚¯ãƒˆã‚’åŒæ™‚ã«ç·¨é›†ã™ã‚‹
+scope.emptymsg	ãƒ¯ã‚¤ãƒ¤ã«ãƒ€ãƒ–ãƒ«ãƒ»ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã€ãƒ—ãƒ­ãƒ¼ãƒ–ã«ä»˜ã‘ã£ã¦ãã ã•ã„ã€‚
+comment.empty	[ãƒ€ãƒ–ãƒ«ãƒ»ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã€ãƒ†ã‚­ã‚¹ãƒˆã‚’ç·¨é›†ã—ã¦ãã ã•ã„ã€‚]
+ifile	ãƒ•ã‚¡ã‚¤ãƒ«
+imodule	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+iblmodule	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+iports	ãƒãƒ¼ãƒˆ
+ibits	ãƒ“ãƒƒãƒˆå¹…:
+itype	ã‚¿ã‚¤ãƒ—:
+db.mod.name	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+db.mod.file	ãƒ•ã‚¡ã‚¤ãƒ«å
+db.mod.type	ã‚¿ã‚¤ãƒ—
+db.mod.flags	ãƒ•ãƒ©ã‚°
+db.mod.dataprot	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å®šç¾©ã®ç·¨é›†ã‚’ä¸å¯èƒ½ã«ã™ã‚‹ã€‚
+db.mod.intfprot	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®ç·¨é›†ã‚’ä¸å¯èƒ½ã«ã™ã‚‹ã€‚
+db.mod.edprot	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®ç·¨é›†ã‚’å°‚ç”¨ã‚¨ãƒ‡ã‚£ã‚¿ã«é™ã‚‹ã€‚
+db.mod.props	ç‰¹å¾´
+db.mod.netlist	ãƒãƒƒãƒˆãƒªã‚¹ãƒˆ
+db.mod.hdl	HDL
+db.mod.netexpl	-begin-
+ã‚°ãƒ©ãƒ•ã‚£ã‚«ãƒ«ã®ã‚¨ãƒ‡ã‚£ã‚¿ã‚’
+åˆ©ç”¨ã—ã¦ã€ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ“ä½œã‚’
+å®šç¾©ã™ã‚‹ã€‚
 -end-
-db.mod.hdlexpl -begin-
-Verilog¤Î¥Æ¥­¥¹¥È¤òÍøÍÑ¤·¤Æ¡¢
-¥â¥¸¥å¡¼¥ë¤ÎÁàºî¤òÄêµÁ¤¹¤ë¡£
+db.mod.hdlexpl	-begin-
+Verilogã®ãƒ†ã‚­ã‚¹ãƒˆã‚’åˆ©ç”¨ã—ã¦ã€
+ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ“ä½œã‚’å®šç¾©ã™ã‚‹ã€‚
 -end-
-db.err.caption ¥¨¥é¡¼¤Î°ìÍ÷É½
-db.net.name ¥Í¥Ã¥ÈÌ¾
-db.net.bits ¥Ó¥Ã¥ÈÉı
-db.net.type ¥Í¥Ã¥È¡¦¥¿¥¤¥×
-db.net.port ¥İ¡¼¥È¡¦¥¿¥¤¥×
-db.net.in Æş
-db.net.out ½Ğ
-db.net.inout Æş½Ğ
-db.net.inets ¥Í¥Ã¥È
-db.newcirc.directory ¥Ç¥£¥ì¥¯¥È¥ê:
-db.newcirc.cap ¿·µ¬²óÏ©
-db.newcirc.exp -begin-
-¸½ºß¤Î²óÏ©¤ÎÊÔ½¸¤ò
-¼­¤á¤Æ¡¢¿·¤·¤¤²óÏ©¤ò
-ÊÔ½¸¤·»Ï¤á¤ë¡£
+db.err.caption	ã‚¨ãƒ©ãƒ¼ã®ä¸€è¦§è¡¨
+db.net.name	ãƒãƒƒãƒˆå
+db.net.bits	ãƒ“ãƒƒãƒˆå¹…
+db.net.type	ãƒãƒƒãƒˆãƒ»ã‚¿ã‚¤ãƒ—
+db.net.port	ãƒãƒ¼ãƒˆãƒ»ã‚¿ã‚¤ãƒ—
+db.net.in	å…¥
+db.net.out	å‡º
+db.net.inout	å…¥å‡º
+db.net.inets	ãƒãƒƒãƒˆ
+db.newcirc.directory	ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª:
+db.newcirc.cap	æ–°è¦å›è·¯
+db.newcirc.exp	-begin-
+ç¾åœ¨ã®å›è·¯ã®ç·¨é›†ã‚’
+è¾ã‚ã¦ã€æ–°ã—ã„å›è·¯ã‚’
+ç·¨é›†ã—å§‹ã‚ã‚‹ã€‚
 -end-
-db.newcirc.file ¥Õ¥¡¥¤¥ëÌ¾
-db.newcirc.topname ¥È¥Ã¥×¤Î¥â¥¸¥å¡¼¥ëÌ¾
-db.gate.title ¥²¡¼¥È¤ÎÀßÄê
-db.gate.signam ¥Í¥Ã¥ÈÌ¾
-db.gate.portnam ¥İ¡¼¥ÈÌ¾
-db.gate.iotype ¥¿¥¤¥×
-db.gate.bitw ¥Ó¥Ã¥ÈÉı
-db.gate.cyclew ¥µ¥¤¥¯¥ëÉı
-db.gate.phase ¥Õ¥§¡¼¥º
-db.gate.duty ¥Ç¥å¡¼¥Æ¥£¡¼
-db.gate.port ¥İ¡¼¥È
-db.gate.bitws ¥Ó¥Ã¥È
-db.gate.side ¥µ¥¤¥É
-db.gate.gtype ¥¿¥¤¥×
-db.gate.gname ¥²¡¼¥ÈÌ¾
-db.gate.anchor °ÜÆ°ÉÔ²Ä
-db.gate.cpbreak ¥¯¥ê¥Æ¥£¥«¥ë¡¦¥Ñ¥¹Ê¬³äÅÀ
-db.gate.butstate ¥¹¥¤¥Ã¥Á¾õÂÖ
-db.gate.dipval DIP¾õÂÖ
-db.gate.range ¥Ó¥Ã¥ÈÈÏ°Ï
-db.gate.memfilenam ¥á¥â¥ê¡¦¥Õ¥¡¥¤¥ëÌ¾
-db.gate.modname ¥¿¥¤¥×
-db.gate.general °ìÈÌ
-db.gate.details ¾ÜºÙ
-db.gate.text ¥Æ¥­¥¹¥È
-db.gate.ports ¥İ¡¼¥È
-db.gate.delay ÃÙ±ä
-db.gate.parameters ¥Ñ¥é¥á¥¿
-db.gate.stddelay É¸½à¤ÎÃÙ±ä
-db.gate.custdelay ¥«¥¹¥¿¥à¤ÎÃÙ±ä
-db.gate.catdiruse ¥İ¡¼¥È¤Î°ÌÃÖÉÕ¤±
-db.gate.edit ÊÔ½¸
-db.gate.delete ºï½ü
-db.gate.add ÄÉ²Ã
-db.gate.ff.type ¥Õ¥ê¥Ã¥×¥Õ¥í¥Ã¥×¤ÎÊı°Ì·èÄê
-db.gate.ff.normal.hdr ÉáÄÌ
-db.gate.ff.normal.exp -begin-
-¥Ç¡¼¥¿¤¬º¸¤«¤é±¦¤Ø
-Î®¤¹¥Õ¥ê¥Ã¥×¥Õ¥í¥Ã¥×¡£
+db.newcirc.file	ãƒ•ã‚¡ã‚¤ãƒ«å
+db.newcirc.topname	ãƒˆãƒƒãƒ—ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+db.gate.title	ã‚²ãƒ¼ãƒˆã®è¨­å®š
+db.gate.signam	ãƒãƒƒãƒˆå
+db.gate.portnam	ãƒãƒ¼ãƒˆå
+db.gate.iotype	ã‚¿ã‚¤ãƒ—
+db.gate.bitw	ãƒ“ãƒƒãƒˆå¹…
+db.gate.cyclew	ã‚µã‚¤ã‚¯ãƒ«å¹…
+db.gate.phase	ãƒ•ã‚§ãƒ¼ã‚º
+db.gate.duty	ãƒ‡ãƒ¥ãƒ¼ãƒ†ã‚£ãƒ¼
+db.gate.port	ãƒãƒ¼ãƒˆ
+db.gate.bitws	ãƒ“ãƒƒãƒˆ
+db.gate.side	ã‚µã‚¤ãƒ‰
+db.gate.gtype	ã‚¿ã‚¤ãƒ—
+db.gate.gname	ã‚²ãƒ¼ãƒˆå
+db.gate.anchor	ç§»å‹•ä¸å¯
+db.gate.cpbreak	ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ãƒ»ãƒ‘ã‚¹åˆ†å‰²ç‚¹
+db.gate.butstate	ã‚¹ã‚¤ãƒƒãƒçŠ¶æ…‹
+db.gate.dipval	DIPçŠ¶æ…‹
+db.gate.range	ãƒ“ãƒƒãƒˆç¯„å›²
+db.gate.memfilenam	ãƒ¡ãƒ¢ãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«å
+db.gate.modname	ã‚¿ã‚¤ãƒ—
+db.gate.general	ä¸€èˆ¬
+db.gate.details	è©³ç´°
+db.gate.text	ãƒ†ã‚­ã‚¹ãƒˆ
+db.gate.ports	ãƒãƒ¼ãƒˆ
+db.gate.delay	é…å»¶
+db.gate.parameters	ãƒ‘ãƒ©ãƒ¡ã‚¿
+db.gate.stddelay	æ¨™æº–ã®é…å»¶
+db.gate.custdelay	ã‚«ã‚¹ã‚¿ãƒ ã®é…å»¶
+db.gate.catdiruse	ãƒãƒ¼ãƒˆã®ä½ç½®ä»˜ã‘
+db.gate.edit	ç·¨é›†
+db.gate.delete	å‰Šé™¤
+db.gate.add	è¿½åŠ 
+db.gate.ff.type	ãƒ•ãƒªãƒƒãƒ—ãƒ•ãƒ­ãƒƒãƒ—ã®æ–¹ä½æ±ºå®š
+db.gate.ff.normal.hdr	æ™®é€š
+db.gate.ff.normal.exp	-begin-
+ãƒ‡ãƒ¼ã‚¿ãŒå·¦ã‹ã‚‰å³ã¸
+æµã™ãƒ•ãƒªãƒƒãƒ—ãƒ•ãƒ­ãƒƒãƒ—ã€‚
 -end-
-db.gate.ff.reverse.hdr È¿¼Í
-db.gate.ff.reverse.exp -begin-
-¥Ç¡¼¥¿¤¬±¦¤«¤éº¸¤Ø
-Î®¤¹¥Õ¥ê¥Ã¥×¥Õ¥í¥Ã¥×¡£
+db.gate.ff.reverse.hdr	åå°„
+db.gate.ff.reverse.exp	-begin-
+ãƒ‡ãƒ¼ã‚¿ãŒå³ã‹ã‚‰å·¦ã¸
+æµã™ãƒ•ãƒªãƒƒãƒ—ãƒ•ãƒ­ãƒƒãƒ—ã€‚
 -end-
-db.gate.jkff.normal.hdr ÉáÄÌ
-db.gate.jkff.reverse.hdr È¿¼Í
-db.gate.cat.asc.hdr ¾º½ç
-db.gate.cat.dec.hdr ¹ß½ç
-db.gate.cat.asc.exp ¥Ó¥Ã¥È¤Ï¾å²¼¤Ë¾º½ç¤ÇÏ¢·ë¤¹¤ë¡£
-db.gate.cat.dec.exp ¥Ó¥Ã¥È¤Ï¾å²¼¤Ë¹ß½ç¤ÇÏ¢·ë¤¹¤ë¡£
-db.gate.cat.sigdir ¿®¹æÊı¸ş
-db.gate.cat.auto.hdr ¼«Æ°
-db.gate.cat.multin.hdr Â¿ÆşÎÏ
-db.gate.cat.singin.hdr Â¿½ĞÎÏ
-db.gate.cat.tran.hdr Æş½Ğ
-db.gate.cat.auto.exp -begin-
-¿®¹æ¤ÎÊı¸ş¤ò¼«Æ°Åª
-¤ËÈ½ÃÇ¤¹¤ë¡£
+db.gate.jkff.normal.hdr	æ™®é€š
+db.gate.jkff.reverse.hdr	åå°„
+db.gate.cat.asc.hdr	æ˜‡é †
+db.gate.cat.dec.hdr	é™é †
+db.gate.cat.asc.exp	ãƒ“ãƒƒãƒˆã¯ä¸Šä¸‹ã«æ˜‡é †ã§é€£çµã™ã‚‹ã€‚
+db.gate.cat.dec.exp	ãƒ“ãƒƒãƒˆã¯ä¸Šä¸‹ã«é™é †ã§é€£çµã™ã‚‹ã€‚
+db.gate.cat.sigdir	ä¿¡å·æ–¹å‘
+db.gate.cat.auto.hdr	è‡ªå‹•
+db.gate.cat.multin.hdr	å¤šå…¥åŠ›
+db.gate.cat.singin.hdr	å¤šå‡ºåŠ›
+db.gate.cat.tran.hdr	å…¥å‡º
+db.gate.cat.auto.exp	-begin-
+ä¿¡å·ã®æ–¹å‘ã‚’è‡ªå‹•çš„
+ã«åˆ¤æ–­ã™ã‚‹ã€‚
 -end-
-db.gate.cat.multin.exp ¤¤¤Ä¤âÂ¿¥İ¡¼¥ÈÂ¦¤¬ÆşÎÏ¤È¤·¤Æ°·¤¦¡£
-db.gate.cat.singin.exp ¤¤¤Ä¤âÃ±°Ì¤Î¥İ¡¼¥ÈÂ¦¤¬ÆşÎÏ¤È¤·¤Æ°·¤¦¡£
-db.gate.cat.tran.exp -begin-
-ÁĞÊı¸ş¤Î¿®¹æ¤ÎÅÁÇÅ(tran)¤òµö¤¹¡£
-¥¹¥¤¥Ã¥Á¤ä¥ì¥¸¥¹¥¿¤Ë¤ÎÀÜÂ³¤ÏÉÔ²Ä¤Ç¤¹¡£
+db.gate.cat.multin.exp	ã„ã¤ã‚‚å¤šãƒãƒ¼ãƒˆå´ãŒå…¥åŠ›ã¨ã—ã¦æ‰±ã†ã€‚
+db.gate.cat.singin.exp	ã„ã¤ã‚‚å˜ä½ã®ãƒãƒ¼ãƒˆå´ãŒå…¥åŠ›ã¨ã—ã¦æ‰±ã†ã€‚
+db.gate.cat.tran.exp	-begin-
+åŒæ–¹å‘ã®ä¿¡å·ã®ä¼æ’­(tran)ã‚’è¨±ã™ã€‚
+ã‚¹ã‚¤ãƒƒãƒã‚„ãƒ¬ã‚¸ã‚¹ã‚¿ã«ã®æ¥ç¶šã¯ä¸å¯ã§ã™ã€‚
 -end-
-db.gate.tab.General.cap °ìÈÌÆÃÄ§
-db.gate.tab.Ports.cap ¥İ¡¼¥ÈÆÃÄ§
-db.gate.tab.Delay.cap ÃÙ±äÆÃÄ§
-db.gate.tab.Parameters.cap ¥â¥¸¥å¡¼¥ëÆÃÄ§
-db.gate.tab.CLOCK.cap ¥¯¥í¥Ã¥¯ÆÃÄ§
-db.gate.tab.SWITCH.cap ¥¹¥¤¥Ã¥ÁÆÃÄ§
-db.gate.tab.DIP.cap DIPÆÃÄ§
-db.gate.tab.TAP.cap TranÆÃÄ§
-db.gate.tab.RAM.cap RAMÆÃÄ§
-db.gate.tab.ROM.cap ROMÆÃÄ§
-db.gate.tab.FRAME.cap ¥Õ¥ì¡¼¥àÆÃÄ§
-db.gate.tab.LED.cap LEDÆÃÄ§
-db.gate.tab.AND.cap ANDÆÃÄ§
-db.gate.tab.OR.cap ORÆÃÄ§
-db.gate.tab.XOR.cap XORÆÃÄ§
-db.gate.tab.MUX.cap MuxÆÃÄ§
-db.gate.tab.DEMUX.cap DemuxÆÃÄ§
-db.gate.tab.CONCAT.cap ConcatÆÃÄ§
-db.gate.tab.COMMENT.cap ¥Æ¥­¥¹¥ÈÆÃÄ§
-db.gate.tab.FF.cap ¥Õ¥ê¥Ã¥×¥Õ¥í¥Ã¥×ÆÃÄ§
-db.gate.tab.General.exp ¥¤¥ó¥¹¥¿¥ó¥¹¤Î´ğËÜÆÃÄ§¤òÉ½¼¨¡¢Ëô¤ÏÊÔ½¸¤¹¤ë¡£
-db.gate.tab.Ports.exp ¥¤¥ó¥¹¥¿¥ó¥¹¤Î¥İ¡¼¥È¤òÄÉ²Ã¡¢ÊÔ½¸¡¢Ëô¤Ïºï½ü¤¹¤ë¡£
-db.gate.tab.Delay.exp ¥¤¥ó¥¹¥¿¥ó¥¹¤ÎÃÙ±ä¤Ï¥Æ¥¯¥Î¥í¥¸¤Ç¤â¡¢¸Ä¡¹¤Ç¤âÀßÄê²ÄÇ½¤Ç¤¢¤ë¡£
-db.gate.tab.Parameters.exp -begin-
-¥â¥¸¥å¡¼¥ë¤Î¥Ñ¥é¥á¥¿¡¼¤¬ÄêµÁ¤·¤Æ¤¤¤ë¾ì¹ç¡¢¤³¤³¤Ç¤½¤ÎÃÍ¤òÀßÄê½ĞÍè¤ë¡£¥â
-¥¸¥å¡¼¥ë¤Î¥Ñ¥é¥á¥¿¡¼¤ÏÃÙ±äÃÍ¡¢¥³¥ó¥¹¥¿¥ó¥È¤Ê¤É¤ËÍøÍÑ¤µ¤ì¤Æ¤¤¤ë¡£
+db.gate.tab.General.cap	ä¸€èˆ¬ç‰¹å¾´
+db.gate.tab.Ports.cap	ãƒãƒ¼ãƒˆç‰¹å¾´
+db.gate.tab.Delay.cap	é…å»¶ç‰¹å¾´
+db.gate.tab.Parameters.cap	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ç‰¹å¾´
+db.gate.tab.CLOCK.cap	ã‚¯ãƒ­ãƒƒã‚¯ç‰¹å¾´
+db.gate.tab.SWITCH.cap	ã‚¹ã‚¤ãƒƒãƒç‰¹å¾´
+db.gate.tab.DIP.cap	DIPç‰¹å¾´
+db.gate.tab.TAP.cap	Tranç‰¹å¾´
+db.gate.tab.RAM.cap	RAMç‰¹å¾´
+db.gate.tab.ROM.cap	ROMç‰¹å¾´
+db.gate.tab.FRAME.cap	ãƒ•ãƒ¬ãƒ¼ãƒ ç‰¹å¾´
+db.gate.tab.LED.cap	LEDç‰¹å¾´
+db.gate.tab.AND.cap	ANDç‰¹å¾´
+db.gate.tab.OR.cap	ORç‰¹å¾´
+db.gate.tab.XOR.cap	XORç‰¹å¾´
+db.gate.tab.MUX.cap	Muxç‰¹å¾´
+db.gate.tab.DEMUX.cap	Demuxç‰¹å¾´
+db.gate.tab.CONCAT.cap	Concatç‰¹å¾´
+db.gate.tab.COMMENT.cap	ãƒ†ã‚­ã‚¹ãƒˆç‰¹å¾´
+db.gate.tab.FF.cap	ãƒ•ãƒªãƒƒãƒ—ãƒ•ãƒ­ãƒƒãƒ—ç‰¹å¾´
+db.gate.tab.General.exp	ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®åŸºæœ¬ç‰¹å¾´ã‚’è¡¨ç¤ºã€åˆã¯ç·¨é›†ã™ã‚‹ã€‚
+db.gate.tab.Ports.exp	ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®ãƒãƒ¼ãƒˆã‚’è¿½åŠ ã€ç·¨é›†ã€åˆã¯å‰Šé™¤ã™ã‚‹ã€‚
+db.gate.tab.Delay.exp	ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®é…å»¶ã¯ãƒ†ã‚¯ãƒãƒ­ã‚¸ã§ã‚‚ã€å€‹ã€…ã§ã‚‚è¨­å®šå¯èƒ½ã§ã‚ã‚‹ã€‚
+db.gate.tab.Parameters.exp	-begin-
+ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ãƒ‘ãƒ©ãƒ¡ã‚¿ãƒ¼ãŒå®šç¾©ã—ã¦ã„ã‚‹å ´åˆã€ã“ã“ã§ãã®å€¤ã‚’è¨­å®šå‡ºæ¥ã‚‹ã€‚ãƒ¢
+ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ãƒ‘ãƒ©ãƒ¡ã‚¿ãƒ¼ã¯é…å»¶å€¤ã€ã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãªã©ã«åˆ©ç”¨ã•ã‚Œã¦ã„ã‚‹ã€‚
 -end-
-db.gate.tab.details.exp ¥²¡¼¥È¼¡Âè¤ÎÀßÄê¤ò¹Ô¤¦¡£
-db.gate.tab.COMMENT.exp ¥³¥á¥ó¥È¤Î¥Æ¥­¥¹¥È¤òÆşÎÏ¤¹¤ë¡£¤¢¤ëÄøÅÙ¤Îhtml¤ä¥Ï¥¤¥Ñ¡¼¥ê¥ó¥¯¤Ê¤É¤âÍøÍÑ½ĞÍè¤ë¡£
-db.gate.mparm.parameter ¥Ñ¥é¥á¥¿
-db.gate.mparm.value ÃÍ
-db.gate.mparm.exampleA -begin-
-¤³¤Î¥â¥¸¥å¡¼¥ë¤Ï¥Ñ¥é¥á¥¿¤òÍøÍÑ¤·¤Æ¤¤¤Ê¤¤¡£
-¥Ñ¥é¥á¥¿¤ÏVerilog¥Æ¥­¥¹¥È¤Î¥â¥¸¥å¡¼¥ë¤Ë
-ÍøÍÑ½ĞÍè¤ë¡£¤³¤Î¥À¥¤¥¢¥í¥°¤Ç¡¢¤½¤ì¤¾¤ì¤Î
-¥Ñ¥é¥á¥¿¤ÎÃÍ¤¬ÀßÄê½ĞÍè¤ë¡£¥â¥¸¥å¡¼¥ë¤Î
-¥Ñ¥é¥á¥¿¤òÍøÍÑ¤¹¤ë¤¿¤á¡¢¥Æ¥­¥¹¥È¤ÎÄêµÁ¤Ë
-¡Ö#¡×¤«¤é»Ï¤Ş¤ë¥Ñ¥é¥á¥¿¤Î¥ê¥¹¥È¤ò½ñ¤¤¤Æ
-¤¯¤À¤µ¤¤¡£°Ê²¼¤ÎÎãÂê¤Ç¡¢¥Ç¥Õ¥©¥ë¥È¤ÎÃÍ¤¬
-¡Ö1'b1¡×¤Î¡Öbase_value¡×¤È¤¤¤¦¥Ñ¥é¥á¥¿¤ò
-»ı¤Ä¥â¥¸¥å¡¼¥ë¤¬¼¨¤·¤Æ¤¢¤ë¡£
+db.gate.tab.details.exp	ã‚²ãƒ¼ãƒˆæ¬¡ç¬¬ã®è¨­å®šã‚’è¡Œã†ã€‚
+db.gate.tab.COMMENT.exp	ã‚³ãƒ¡ãƒ³ãƒˆã®ãƒ†ã‚­ã‚¹ãƒˆã‚’å…¥åŠ›ã™ã‚‹ã€‚ã‚ã‚‹ç¨‹åº¦ã®htmlã‚„ãƒã‚¤ãƒ‘ãƒ¼ãƒªãƒ³ã‚¯ãªã©ã‚‚åˆ©ç”¨å‡ºæ¥ã‚‹ã€‚
+db.gate.mparm.parameter	ãƒ‘ãƒ©ãƒ¡ã‚¿
+db.gate.mparm.value	å€¤
+db.gate.mparm.exampleA	-begin-
+ã“ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã¯ãƒ‘ãƒ©ãƒ¡ã‚¿ã‚’åˆ©ç”¨ã—ã¦ã„ãªã„ã€‚
+ãƒ‘ãƒ©ãƒ¡ã‚¿ã¯Verilogãƒ†ã‚­ã‚¹ãƒˆã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã«
+åˆ©ç”¨å‡ºæ¥ã‚‹ã€‚ã“ã®ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã§ã€ãã‚Œãã‚Œã®
+ãƒ‘ãƒ©ãƒ¡ã‚¿ã®å€¤ãŒè¨­å®šå‡ºæ¥ã‚‹ã€‚ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®
+ãƒ‘ãƒ©ãƒ¡ã‚¿ã‚’åˆ©ç”¨ã™ã‚‹ãŸã‚ã€ãƒ†ã‚­ã‚¹ãƒˆã®å®šç¾©ã«
+ã€Œ#ã€ã‹ã‚‰å§‹ã¾ã‚‹ãƒ‘ãƒ©ãƒ¡ã‚¿ã®ãƒªã‚¹ãƒˆã‚’æ›¸ã„ã¦
+ãã ã•ã„ã€‚ä»¥ä¸‹ã®ä¾‹é¡Œã§ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®å€¤ãŒ
+ã€Œ1'b1ã€ã®ã€Œbase_valueã€ã¨ã„ã†ãƒ‘ãƒ©ãƒ¡ã‚¿ã‚’
+æŒã¤ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒç¤ºã—ã¦ã‚ã‚‹ã€‚
 -end-
-db.gate.mux.dataorder ÆşÎÏ¤Î½ç½ø
-db.gate.mux.ord1.hdr º¸¤«¤é±¦¤Ø
-db.gate.mux.ord2.hdr ±¦¤«¤éº¸¤Ø
-db.gate.mux.ord1.exp MUX¤ÎÆşÎÏ¤Î½ç½ø¤òº¸¤«¤é±¦¤Ø¤Ë¤¹¤ë¡£
-db.gate.mux.ord2.exp MUX¤ÎÆşÎÏ¤Î½ç½ø¤ò±¦¤«¤éº¸¤Ø¤Ë¤¹¤ë¡£
-db.gate.mux.select ¥»¥ì¥¯¥¿¤Î²Õ½ê
-db.gate.mux.sel1.exp ¥»¥ì¥¯¥¿¤ÎÆşÎÏ¤òº¸Â¦¤Ë¤ª¤¯¡£
-db.gate.mux.sel2.exp ¥»¥ì¥¯¥¿¤ÎÆşÎÏ¤ò±¦Â¦¤Ë¤ª¤¯¡£
-db.gate.demux.dataorder ½ĞÎÏ¤Î½ç½ø
-db.gate.demux.ord1.hdr º¸¤«¤é±¦¤Ø
-db.gate.demux.ord2.hdr ±¦¤«¤éº¸¤Ø
-db.gate.demux.ord1.exp DEMUX¤Î½ĞÎÏ¤Î½ç½ø¤òº¸¤«¤é±¦¤Ø¤Ë¤¹¤ë¡£
-db.gate.demux.ord2.exp DEMUX¤Î½ĞÎÏ¤Î½ç½ø¤ò±¦¤«¤éº¸¤Ø¤Ë¤¹¤ë¡£
-db.gate.decoder.dataorder ½ĞÎÏ¤Î½ç½ø
-db.gate.decoder.ord1.hdr º¸¤«¤é±¦¤Ø
-db.gate.decoder.ord2.hdr ±¦¤«¤éº¸¤Ø
-db.gate.aox.extbaruse ³ÈÄ¥¥Ğ¡¼¤òÍøÍÑ
-db.gate.aox.use.hdr ³ÈÄ¥¥Ğ¡¼
-db.gate.aox.nouse.hdr ³ÈÄ¥¥Ğ¡¼¤òÍøÍÑ¤·¤Ê¤¤
-db.gate.aox.use.exp ´ğËÜ¥²¡¼¥È(AND, OR, ¤Ê¤É)¤ËÆşÎÏ¤òÄÉ²Ã¤¹¤ë»ş¡¢³ÈÄ¥¥Ğ¡¼¤¬ÍøÍÑ¤µ¤ì¤ë¡£
-db.gate.aox.nouse.exp ´ğËÜ¥²¡¼¥È(AND, OR, ¤Ê¤É)¤ËÆşÎÏ¤òÄÉ²Ã¤¹¤ë»ş¡¢³ÈÄ¥¥Ğ¡¼¤ÏÍøÍÑ¤µ¤ì¤Ê¤¤¡£
-db.gate.led.type LED¤Î¥¿¥¤¥×
-db.gate.led.bit.hdr ¥Ó¥Ã¥È
-db.gate.led.bar.hdr ¥Ğ¡¼¡¦¥°¥é¥Õ
-db.gate.led.bit.exp °ì¥Ó¥Ã¥È¤Î¿®¹æ¤Î°Ù¤ÎÃ±°Ì¤ÎLED¡£
-db.gate.led.bar.exp LED¤Î¥Ğ¡¼¡¦¥°¥é¥Õ¡£°ì¥Ó¥Ã¥È¤Ë¤Ä¤­¡¢°ì¤Ä¤Î¥Ğ¡¼¤¬ÍøÍÑ¤µ¤ì¤ë¡£
-db.gate.led.hex.exp ¿®¹æ¤ò16¿Ê¿ô¤ÇÉ½¼¨¤¹¤ë¡£
-db.gate.led.dec.exp ¿®¹æ¤ò10¿Ê¿ô¤ÇÉ½¼¨¤¹¤ë¡£
-db.gate.led.seg.exp ³Æ¥»¥°¥á¥ó¥È¤òÊÌ¡¹¤ËÀ©¸æ¤¹¤ë¡£
-db.seq.back <Á°¤Ø
-db.seq.next ¼¡¤Ø>
-db.hdl.savecap Ê£¿ô¤Î¥â¥¸¥å¡¼¥ë
-db.hdl.saveexp ¥Æ¥­¥¹¥È¤Î¥Ğ¥Ã¥Õ¥¡¤ËÊ£¿ô¤Î¥â¥¸¥å¡¼¥ë¤ÎÄêµÁ¤¬¤¢¤ë¡£±¦Â¦¤Î¥¢¥¯¥·¥ç¥ó¤Î¤¤¤º¤ì¤«¤òÁªÂò¤¹¤Æ¤¯¤À¤µ¤¤¡£
-db.hdl.autoedit ¼«Æ°ÊÑ¿ô
-db.hdl.split Ê¬Î¥
-db.hdl.comment ¥³¥á¥ó¥È
-db.hdl.cancel ¥­¥ã¥ó¥»¥ë
-db.hdl.ignore Ìµ»ë¤¹¤ë
-db.hdl.autoeditcap Ì¾Á°¤¬°ìÅù¤·¤Ê¤¤
-db.hdl.autoeditexp ¥Æ¥­¥¹¥È¤Ç¤Î¥â¥¸¥å¡¼¥ëÌ¾¤È´üÂÔ¤·¤¿Ì¾Á°¤¬°ìÅù¤·¤Ê¤¤¡£±¦Â¦¤Î¥¢¥¯¥·¥ç¥ó¤Î¤¤¤º¤ì¤«¤òÁªÂò¤¹¤Æ¤¯¤À¤µ¤¤¡£
-cpath.cloops ²óÏ©¤ËÁÈ¹ç¤»¤Î¥ë¡¼¥×¤¬È¯¸«¤µ¤ì¤¿¡£¥¯¥ê¥Æ¥£¥«¥ë ¡¦¥Ñ¥¹¤Î²òÀÏ¤ò¹Ô¤Ê¤¤¤¿¤±¤ì¤Ğ¡¢¥ë¡¼¥×¾å¤Î¥Í¥Ã¥È ¤òÀÚ¤Ã¤¿¤ê¡¢¥ë¡¼¥×¾å¤Î¥²¡¼¥È¤ò¡Ö¥¯¥ê¥Æ¥£¥«¥ë¡¦ ¥Ñ¥¹Ê¬³äÅÀ¡×¤Ë¤·¤¿¤ê¤¹¤ëÉ¬Í×¤¬¤¢¤ë¡£
-print.printer ¥×¥ê¥ó¥¿¡¼:
-print.file ¥Õ¥¡¥¤¥ë
-print.prcmd °õºş¥³¥Ş¥ó¥É:
-print.prname ¥×¥ê¥ó¥¿
-print.advanced ¥ª¥×¥·¥ç¥ó¤¯...
-print.filename ¥Õ¥¡¥¤¥ëÌ¾
-print.epssave Encapsulated Postscript¤È¤·¤Æ¥»¡¼¥Ö¤¹¤ë.
-print.epcm ¥¨¥İ¥Ã¥¯/cm
-print.estpg ¥Ú¡¼¥¸¿ô¤Î¸«ÀÑ¤â¤ê
-print.all Á´¤Æ
-print.cur ¸½ºß
-print.use »ÈÍÑÃæ
-print.sel »ØÄê
-print.inclib ¥é¥¤¥Ö¥é¥ê¡¦¥Õ¥¡¥¤¥ë¤â°õºş¡£
-print.papsz ¥Ú¡¼¥¸¡¦¥µ¥¤¥º
-print.orient ¥ª¥ê¥¨¥ó¥Æ¡¼¥·¥ç¥ó
-print.portrait ½Ä
-print.landscape ²£
-print.2side Î¾ÌÌ°õºş
-print.opts ¥ª¥×¥·¥ç¥ó
-print.scale Âç¤­¤¤¥â¥¸¥å¡¼¥ë¤ò¥¹¥±¡¼¥ë¤·¤Æ°ì¥Ú¡¼¥¸¤Ç°õºş¤¹¤ë¡£
-print.partition Âç¤­¤¤¥â¥¸¥å¡¼¥ë¤òÊ£¿ô¤Î¥Ú¡¼¥¸¤Ç°õºş¤¹¤ë¡£
-print.incidx ¥¤¥ó¥Ç¥Ã¥¯¥¹¤ò´Ş¤à¡£
-print.incgraph ³¬ÁØ¥°¥é¥Õ¤ò´Ş¤à¡£
-print.4up ¾®¤µ¤¤¥â¥¸¥å¡¼¥ë¤ò°ìÊÇ¤Ë»Í¤Ä¤º¤Ä°õºş¤¹¤ë¡£
-print.scaleselect ÁªÂòÈÏ°Ï¤ò¥¹¥±¡¼¥ë¤¹¤ë
-print.fulltr Á´Éô
-print.parttr ÉôÊ¬
-print.start ¥¹¥¿¡¼¥È
-print.range ¥ì¥ó¥¸
-print.filesel ¥Õ¥¡¥¤¥ë¤Ë°õºş
-print.printersel ¥×¥ê¥ó¥¿¤Ë°õºş
-print.defaultprinter ¥Ç¥Õ¥©¥ë¥È¤Î¥×¥ê¥ó¥¿
-print.pageset ¥Ú¡¼¥¸¡¦setup
-print.modulesel ¥â¥¸¥å¡¼¥ë¤ÎÁªÂò
-print.ok °õºş
-print.printtrace.cap ¥È¥ì¡¼¥¹¤Î°õºş
-print.printcirc.cap ²óÏ©¿Ş¤Î°õºş
-print.printcirc.out.exp -begin-
-²óÏ©¿Ş¤Î°õºşÀè¤¬
-¥×¥ê¥ó¥¿¤«¥Õ¥¡¥¤¥ë
-¤«ÁªÂò¤¹¤ë¡£
+db.gate.mux.dataorder	å…¥åŠ›ã®é †åº
+db.gate.mux.ord1.hdr	å·¦ã‹ã‚‰å³ã¸
+db.gate.mux.ord2.hdr	å³ã‹ã‚‰å·¦ã¸
+db.gate.mux.ord1.exp	MUXã®å…¥åŠ›ã®é †åºã‚’å·¦ã‹ã‚‰å³ã¸ã«ã™ã‚‹ã€‚
+db.gate.mux.ord2.exp	MUXã®å…¥åŠ›ã®é †åºã‚’å³ã‹ã‚‰å·¦ã¸ã«ã™ã‚‹ã€‚
+db.gate.mux.select	ã‚»ãƒ¬ã‚¯ã‚¿ã®ç®‡æ‰€
+db.gate.mux.sel1.exp	ã‚»ãƒ¬ã‚¯ã‚¿ã®å…¥åŠ›ã‚’å·¦å´ã«ãŠãã€‚
+db.gate.mux.sel2.exp	ã‚»ãƒ¬ã‚¯ã‚¿ã®å…¥åŠ›ã‚’å³å´ã«ãŠãã€‚
+db.gate.demux.dataorder	å‡ºåŠ›ã®é †åº
+db.gate.demux.ord1.hdr	å·¦ã‹ã‚‰å³ã¸
+db.gate.demux.ord2.hdr	å³ã‹ã‚‰å·¦ã¸
+db.gate.demux.ord1.exp	DEMUXã®å‡ºåŠ›ã®é †åºã‚’å·¦ã‹ã‚‰å³ã¸ã«ã™ã‚‹ã€‚
+db.gate.demux.ord2.exp	DEMUXã®å‡ºåŠ›ã®é †åºã‚’å³ã‹ã‚‰å·¦ã¸ã«ã™ã‚‹ã€‚
+db.gate.decoder.dataorder	å‡ºåŠ›ã®é †åº
+db.gate.decoder.ord1.hdr	å·¦ã‹ã‚‰å³ã¸
+db.gate.decoder.ord2.hdr	å³ã‹ã‚‰å·¦ã¸
+db.gate.aox.extbaruse	æ‹¡å¼µãƒãƒ¼ã‚’åˆ©ç”¨
+db.gate.aox.use.hdr	æ‹¡å¼µãƒãƒ¼
+db.gate.aox.nouse.hdr	æ‹¡å¼µãƒãƒ¼ã‚’åˆ©ç”¨ã—ãªã„
+db.gate.aox.use.exp	åŸºæœ¬ã‚²ãƒ¼ãƒˆ(AND, OR, ãªã©)ã«å…¥åŠ›ã‚’è¿½åŠ ã™ã‚‹æ™‚ã€æ‹¡å¼µãƒãƒ¼ãŒåˆ©ç”¨ã•ã‚Œã‚‹ã€‚
+db.gate.aox.nouse.exp	åŸºæœ¬ã‚²ãƒ¼ãƒˆ(AND, OR, ãªã©)ã«å…¥åŠ›ã‚’è¿½åŠ ã™ã‚‹æ™‚ã€æ‹¡å¼µãƒãƒ¼ã¯åˆ©ç”¨ã•ã‚Œãªã„ã€‚
+db.gate.led.type	LEDã®ã‚¿ã‚¤ãƒ—
+db.gate.led.bit.hdr	ãƒ“ãƒƒãƒˆ
+db.gate.led.bar.hdr	ãƒãƒ¼ãƒ»ã‚°ãƒ©ãƒ•
+db.gate.led.bit.exp	ä¸€ãƒ“ãƒƒãƒˆã®ä¿¡å·ã®ç‚ºã®å˜ä½ã®LEDã€‚
+db.gate.led.bar.exp	LEDã®ãƒãƒ¼ãƒ»ã‚°ãƒ©ãƒ•ã€‚ä¸€ãƒ“ãƒƒãƒˆã«ã¤ãã€ä¸€ã¤ã®ãƒãƒ¼ãŒåˆ©ç”¨ã•ã‚Œã‚‹ã€‚
+db.gate.led.hex.exp	ä¿¡å·ã‚’16é€²æ•°ã§è¡¨ç¤ºã™ã‚‹ã€‚
+db.gate.led.dec.exp	ä¿¡å·ã‚’10é€²æ•°ã§è¡¨ç¤ºã™ã‚‹ã€‚
+db.gate.led.seg.exp	å„ã‚»ã‚°ãƒ¡ãƒ³ãƒˆã‚’åˆ¥ã€…ã«åˆ¶å¾¡ã™ã‚‹ã€‚
+db.seq.back	<å‰ã¸
+db.seq.next	æ¬¡ã¸>
+db.hdl.savecap	è¤‡æ•°ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+db.hdl.saveexp	ãƒ†ã‚­ã‚¹ãƒˆã®ãƒãƒƒãƒ•ã‚¡ã«è¤‡æ•°ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å®šç¾©ãŒã‚ã‚‹ã€‚å³å´ã®ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ã®ã„ãšã‚Œã‹ã‚’é¸æŠã™ã¦ãã ã•ã„ã€‚
+db.hdl.autoedit	è‡ªå‹•å¤‰æ•°
+db.hdl.split	åˆ†é›¢
+db.hdl.comment	ã‚³ãƒ¡ãƒ³ãƒˆ
+db.hdl.cancel	ã‚­ãƒ£ãƒ³ã‚»ãƒ«
+db.hdl.ignore	ç„¡è¦–ã™ã‚‹
+db.hdl.autoeditcap	åå‰ãŒä¸€ç­‰ã—ãªã„
+db.hdl.autoeditexp	ãƒ†ã‚­ã‚¹ãƒˆã§ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åã¨æœŸå¾…ã—ãŸåå‰ãŒä¸€ç­‰ã—ãªã„ã€‚å³å´ã®ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ã®ã„ãšã‚Œã‹ã‚’é¸æŠã™ã¦ãã ã•ã„ã€‚
+cpath.cloops	å›è·¯ã«çµ„åˆã›ã®ãƒ«ãƒ¼ãƒ—ãŒç™ºè¦‹ã•ã‚ŒãŸã€‚ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ« ãƒ»ãƒ‘ã‚¹ã®è§£æã‚’è¡Œãªã„ãŸã‘ã‚Œã°ã€ãƒ«ãƒ¼ãƒ—ä¸Šã®ãƒãƒƒãƒˆ ã‚’åˆ‡ã£ãŸã‚Šã€ãƒ«ãƒ¼ãƒ—ä¸Šã®ã‚²ãƒ¼ãƒˆã‚’ã€Œã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ãƒ» ãƒ‘ã‚¹åˆ†å‰²ç‚¹ã€ã«ã—ãŸã‚Šã™ã‚‹å¿…è¦ãŒã‚ã‚‹ã€‚
+print.printer	ãƒ—ãƒªãƒ³ã‚¿ãƒ¼:
+print.file	ãƒ•ã‚¡ã‚¤ãƒ«
+print.prcmd	å°åˆ·ã‚³ãƒãƒ³ãƒ‰:
+print.prname	ãƒ—ãƒªãƒ³ã‚¿
+print.advanced	ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã...
+print.filename	ãƒ•ã‚¡ã‚¤ãƒ«å
+print.epssave	Encapsulated Postscriptã¨ã—ã¦ã‚»ãƒ¼ãƒ–ã™ã‚‹.
+print.epcm	ã‚¨ãƒãƒƒã‚¯/cm
+print.estpg	ãƒšãƒ¼ã‚¸æ•°ã®è¦‹ç©ã‚‚ã‚Š
+print.all	å…¨ã¦
+print.cur	ç¾åœ¨
+print.use	ä½¿ç”¨ä¸­
+print.sel	æŒ‡å®š
+print.inclib	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã‚‚å°åˆ·ã€‚
+print.papsz	ãƒšãƒ¼ã‚¸ãƒ»ã‚µã‚¤ã‚º
+print.orient	ã‚ªãƒªã‚¨ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
+print.portrait	ç¸¦
+print.landscape	æ¨ª
+print.2side	ä¸¡é¢å°åˆ·
+print.opts	ã‚ªãƒ—ã‚·ãƒ§ãƒ³
+print.scale	å¤§ãã„ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’ã‚¹ã‚±ãƒ¼ãƒ«ã—ã¦ä¸€ãƒšãƒ¼ã‚¸ã§å°åˆ·ã™ã‚‹ã€‚
+print.partition	å¤§ãã„ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’è¤‡æ•°ã®ãƒšãƒ¼ã‚¸ã§å°åˆ·ã™ã‚‹ã€‚
+print.incidx	ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å«ã‚€ã€‚
+print.incgraph	éšå±¤ã‚°ãƒ©ãƒ•ã‚’å«ã‚€ã€‚
+print.4up	å°ã•ã„ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’ä¸€é ã«å››ã¤ãšã¤å°åˆ·ã™ã‚‹ã€‚
+print.scaleselect	é¸æŠç¯„å›²ã‚’ã‚¹ã‚±ãƒ¼ãƒ«ã™ã‚‹
+print.fulltr	å…¨éƒ¨
+print.parttr	éƒ¨åˆ†
+print.start	ã‚¹ã‚¿ãƒ¼ãƒˆ
+print.range	ãƒ¬ãƒ³ã‚¸
+print.filesel	ãƒ•ã‚¡ã‚¤ãƒ«ã«å°åˆ·
+print.printersel	ãƒ—ãƒªãƒ³ã‚¿ã«å°åˆ·
+print.defaultprinter	ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ—ãƒªãƒ³ã‚¿
+print.pageset	ãƒšãƒ¼ã‚¸ãƒ»setup
+print.modulesel	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®é¸æŠ
+print.ok	å°åˆ·
+print.printtrace.cap	ãƒˆãƒ¬ãƒ¼ã‚¹ã®å°åˆ·
+print.printcirc.cap	å›è·¯å›³ã®å°åˆ·
+print.printcirc.out.exp	-begin-
+å›è·¯å›³ã®å°åˆ·å…ˆãŒ
+ãƒ—ãƒªãƒ³ã‚¿ã‹ãƒ•ã‚¡ã‚¤ãƒ«
+ã‹é¸æŠã™ã‚‹ã€‚
 -end-
-print.printcirc.mod.exp -begin-
-°õºş¤¹¤ë¥â¥¸¥å¡¼¥ë
-¤ä°õºş¤ÎÍÍ»Ò¤òÁªÂò
-¤ë¡£
+print.printcirc.mod.exp	-begin-
+å°åˆ·ã™ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+ã‚„å°åˆ·ã®æ§˜å­ã‚’é¸æŠ
+ã‚‹ã€‚
 -end-
-print.printtrace.trace.exp -begin-
-»ş´Ö¤ÎÈÏ°Ï¤òÁªÂò¤¹¤ë¡£
-Ëô¡¢¥¹¥±¡¼¥ë¤Ë¤è¤Ã¤Æ¡¢
-É¬Í×¤Î¥Ú¡¼¥¸¿ô¤òÉ½¤«
-É¾²Á¤¹¤ë¡£
+print.printtrace.trace.exp	-begin-
+æ™‚é–“ã®ç¯„å›²ã‚’é¸æŠã™ã‚‹ã€‚
+åˆã€ã‚¹ã‚±ãƒ¼ãƒ«ã«ã‚ˆã£ã¦ã€
+å¿…è¦ã®ãƒšãƒ¼ã‚¸æ•°ã‚’è¡¨ã‹
+è©•ä¾¡ã™ã‚‹ã€‚
 -end-
-print.tab.output °õºşÀè
-print.tab.modules ¥â¥¸¥å¡¼¥ë
-print.tab.content ÆâÍÆ
-opt.general °ìÈÌ
-opt.interface ¥¤¥ó¥¿¥Õ¥§¡¼¥¹
-opt.toolbars ¥Ä¡¼¥ë¡¦¥Ğ¡¼
-opt.toolbars.sim ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó
-opt.editor HDL
-opt.print °õºş
-opt.print.output °õºşÀè
-opt.print.content ÆâÍÆ
-opt.simulate ¥·¥ß¥å¥ì¡¼¥È
-opt.simulate.tech ¥Æ¥¯¥Î¥í¥¸¡¼
-opt.simulate.error ¥¨¥é¡¼°·¤¤
-opt.library ¥é¥¤¥Ö¥é¥ê
-opt.analysis ²òÀÏ
-opt.color ¿§
-opt.debug ¥Ç¥Ğ¥Ã¥°
-opt.identity ¥¢¥¤¥Ç¥ó¥Æ¥£¥Æ¥£¡¼
-opt.site ¥µ¥¤¥ÈÌ¾
-opt.username ¥æ¡¼¥¶Ì¾
-opt.libname ¥é¥¤¥Ö¥é¥êÌ¾:
-opt.inst ¥¤¥ó¥¹¥¿¥ó¥¹
-opt.mods ¥â¥¸¥å¡¼¥ë
-opt.modports ¥İ¡¼¥È
-opt.frames ¥Õ¥ì¡¼¥à
-opt.comment ¥³¥á¥ó¥È
-opt.hlink ¥ê¥ó¥¯
-opt.wire 1¥Ó¥Ã¥È¤Î¥ï¥¤¥ä
-opt.bus Â¿¥Ó¥Ã¥È¤Î¥ï¥¤¥ä
-opt.tools ¥Ä¡¼¥ë
-opt.background ¥Ğ¥Ã¥¯¥°¥é¥¦¥ó¥É
-opt.cpath ÃÙ±ä²òÀÏ
-opt.grid ¥¹¥³¡¼¥×¤Î¥°¥ê¥Ã¥É
-opt.logic1 ÏÀÍı£±
-opt.logic0 ÏÀÍı£°
-opt.float ¥Õ¥í¡¼¥È
-opt.unknown ÉÔÌÀ
-opt.offled ¥ª¥Õ¤ÎLED
-opt.onled ¥ª¥ó¤ÎLED
-opt.zled ¥Õ¥í¡¼¥È¤ÎLED
-opt.restdef ¥Ç¥Õ¥©¡¼¥ë¥È
-opt.regudate ¥ê¡¼¥¸¥ç¥ó¡¦¥¢¥Ã¥×¥Ç¡¼¥È
-opt.smoothscroll ¥¹¥à¡¼¥º¡¦¥¹¥¯¥í¡¼¥ë
-opt.balloon ¥Ğ¥ë¡¼¥ó¡¦¥Ø¥ë¥×¤òÍøÍÑ
-opt.safeSave °ÂÁ´½ñ¤­¹ş¤ß
-opt.saveCells ¥»¡¼¥Ö¥Õ¥¡¥¤¥ë¤Ë¥»¥ë¤ò´Ş¤à
-opt.showimage ¥À¥¤¥¢¥í¥°¥Ü¥Ã¥¯¥¹¤ÎÀâÌÀÍó¤òÉ½¼¨¤¹¤ë
-opt.novice ½é¿´¼Ô¥â¡¼¥É
-opt.blockDropConnect ¥ï¥¤¥ä¡¦¥É¥í¥Ã¥×¤Ç¤Î¥İ¡¼¥È¤ÎºîÀ®
-opt.freq ´ü´Ö
-opt.beak ÆÃÊÌ¥â¡¼¥É¤ò²ÄÇ½¤Ë¤¹¤ë
-opt.bat ¥Ğ¥Ã¥È¥Ş¥ó
-opt.trek ¥¹¥¿¡¼¡¦¥È¥ì¥Ã¥¯
-opt.miles ¥Ş¥¤¥ë¥¹
-opt.contver ÆâÉô¹½Â¤¤Î¼«Æ°³ÎÇ§
-opt.showsimcmd ¥·¥ß¥å¥ì¡¼¥È¤Î¥³¥Ş¥ó¥É¤òÉ½¼¨¤¹¤ë
-opt.estepsz ¥¨¥İ¥Ã¥¯¤Î¥¹¥Æ¥Ã¥×¿ô
-opt.cstepsz ¥¯¥í¥Ã¥¯¤Î¥µ¥¤¥¯¥ë¿ô
-opt.overstep ¥¯¥í¥Ã¥¯¤Î¥ª¥Ğ¡¼¥¹¥Æ¥Ã¥×
-opt.sorttraces ¥¹¥³¡¼¥×¤Ç¿®¹æ¤òABC½ç¤ÇÉ½¼¨¤¹¤ë
-opt.vpopupdelay ¿®¹æÃÍ¥¦¥£¥ó¥É¤ÎÉ½¼¨ÃÙ±ä
-opt.posedge Á´¤Æ¤Î¥¯¥í¥Ã¥¯¤ÇÄä»ß¤¹¤ë
-opt.setclock »ØÄê¤Î¥¯¥í¥Ã¥¯¤ÇÄä»ß¤¹¤ë
-opt.delayfilepath ÃÙ±ä¥Õ¥¡¥¤¥ë
-opt.devfilepath VPD(Virtual Periperal Device)¥Õ¥¡¥¤¥ë¤Î¥Ñ¥¹
-opt.vlibpath Verilog¤Î¥é¥¤¥Ö¥é¥ê¤Î¥Ñ¥¹
-opt.vlibnames ¥Ù¡¼¥¹¤Î¥é¥¤¥Ö¥é¥ê
-opt.display ²èÌÌ
-opt.input ÆşÎÏ
-opt.security ¥»¥­¥å¥ê¥Æ¥£
-opt.undolen ºÇÂçUndo
-opt.keybind ¥­¡¼¡¦¥Ğ¥¤¥ó¥Ç¥£¥ó¥°¤Î¥¹¥¿¥¤¥ë
-opt.useless Ìò¤ËÎ©¤¿¤Ê¤¤µ¡Ç½¤òÍ­¸ú¤Ë¤¹¤ë
-opt.features ´ğËÜ¤Îµ¡Ç½
-opt.simbase ´ğËÜ¤Î¥·¥ß¥å¥ì¡¼¥¿¤Î¥ª¥×¥·¥ç¥ó
-opt.simclock ¥¯¥í¥Ã¥¯¤Î¥ª¥×¥·¥ç¥ó
-opt.cpopts ¥¯¥ê¥Æ¥£¥«¥ë¡¦¥Ñ¥¹ÀßÄê
-opt.maxpath ºÇÂç¥Ñ¥¹¿ô:
-opt.cpflash ¥Ñ¥¹¤ÎÅÀÌÇÉ½¼¨
-opt.general.fontset ¥Õ¥©¥ó¥È¡¦¥µ¥¤¥º
-opt.simulator.noglitch ¥·¥ß¥å¥ì¡¼¥¿¤Î¥°¥ê¥Ã¥Á¤ÎÍŞÀ©¡£
-opt.simulator.err ¥¨¥é¡¼°·¤¤
-opt.simulator.stopany ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ÎÃé¹ğ¤ò¥¨¥é¡¼¤È¤·¤Æ°·¤¨¤ë¡£
-opt.simulator.showall ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ÎÃé¹ğ¤òÉ½¼¨¤¹¤ë¡£
-opt.simulator.showiferr ¥¨¥é¡¼¤Î¤¢¤ë»ş¤Î¤ß¡¢Ãé¹ğ¤òÉ½¼¨¤¹¤ë¡£
-opt.simulator.ignore ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ÎÃé¹ğ¤òÌµ»ë¤¹¤ë¡£
-opt.tool.file ¥Õ¥¡¥¤¥ë
-opt.tool.edit ÊÔ½¸
-opt.tool.gateopt ²óÅ¾¡¿À°Îó²½
-opt.tool.zoom ¥º¡¼¥à
-opt.tool.mode ¥â¡¼¥É
-opt.tool.module ¥â¥¸¥å¡¼¥ë
-opt.tool.tech ¥Æ¥¯¥Î¥í¥¸¡¼
-opt.tool.simctl ¥·¥ß¥å¥ì¡¼¥¿¤ÎÀ©¸æ
-opt.tool.simaux ¥·¥ß¥å¥ì¡¼¥¿¤Î¥³¥Ş¥ó¥É
-opt.tool.symmode ¥â¡¼¥É
-opt.tool.symedit ¥«¥Ã¥È¡¿¥Ú¡¼¥¹¥È
-opt.tool.symport ¥İ¡¼¥È
-opt.tool.symshift ¥Ó¥Ã¥È¡¦¥Ş¥Ã¥×¤Î¥·¥Õ¥È
-opt.tool.symopr ¥Ó¥Ã¥È¡¦¥Ş¥Ã¥×¤Î±é»»
-opt.editor.features ´ğÁÃÅª¤Ê¥¨¥Ç¥£¥¿¡¼¤Îµ¡Ç½
-opt.editor.format ¼«Æ°¥¤¥ó¥Ç¥ó¥È¤òÍ­¸ú¤Ë¤¹¤ë
-opt.editor.colorize ¼«Æ°¿§ÉÕ¤±¤òÍ­¸ú¤Ë¤¹¤ë
-opt.editor.comments ¥³¥á¥ó¥È
-opt.editor.strings Ê¸»úÎó
-opt.editor.reserved ¥­¡¼¥ï¡¼¥É
-opt.editor.gateword ¥²¡¼¥ÈÌ¾
-opt.editor.instword ¥â¥¸¥å¡¼¥ëÌ¾
-opt.editor.taskword ¥·¥¹¥Æ¥à¡¦¥¿¥¹¥¯
-opt.editor.color ¿§
-opt.editor.bold ÂÀ»ú
-opt.editor.italic ¥¤¥¿¥ê¥Ã¥¯
-opt.editor.indentlevel ¥ì¥Ö¥ëËè¤Î¥¤¥ó¥Ç¥ó¥È¤Î¥¹¥Ú¡¼¥¹¿ô:
-opt.editor.beginindent ¡Öbegin..end¡×¤Î¥¤¥ó¥Ç¥ó¥È¤ò°Ï¤Ş¤ì¤ë¤ì¤Ù¤ë¤È²ñ¤ï¤»¤ë¡£
-opt.editor.movesel ÁªÂò¤Î¥É¥é¥Ã¥°¡¦¥¢¥ó¥É¡¦¥É¥í¥Ã¥×¤òÍ­¸ú¤Ë¤¹¤ë¡£
-opt.editor.returntab ¥ê¥¿¡¼¥ó¤ò²¡¤¹»ş¡¢¼«Æ°¥¤¥ó¥Ç¥ó¥È¤òÍ­¸ú¤Ë¤¹¤ë¡£
-opt.vercheck Äê´üÅª¤Ë tkgate ¤Î¿·¤·¤¤¥Ğ¡¼¥¸¥ç¥ó¤ò¥¤¥ó¥¿¡¼¥Í¥Ã¥È¤Ç ¥Á¥§¥Ã¥¯¤¹¤ë¡£¾ï»şÀÜÂ³¤Ç¤Ê¤±¤ì¤ĞÍ­¸ú¤Ë¤·¤Ê¤¤¤³¤È¡£
-opt.color.editwin ÊÔ½¸¥¦¥£¥ó¥É¥¦¤Î¿§¤Å¤±
-opt.color.scopewin ¥¹¥³¡¼¥×¡¦¥¦¥£¥ó¥É¥¦¤Î¿§¤Å¤±
-opt.bbar.restore ¥Ú¡¼¥¸¤ÎÀßÄê¤ò¥Ç¥Õ¥©¥ë¥È¤Ë¤¹¤ë
-opt.bbar.restoreall Á´¤Æ¤ÎÀßÄê¤ò¥Ç¥Õ¥©¥ë¥È¤Ë¤¹¤ë
-igen.port ¥İ¡¼¥È
-igen.type ¥¿¥¤¥×
-igen.side ¥µ¥¤¥É
-igen.bits ¥Ó¥Ã¥È
-igen.modname ¥â¥¸¥å¡¼¥ëÌ¾:
-igen.add ÄÉ²Ã
-igen.delete ºï½ü
-igen.edit ÊÔ½¸
-info.script.error ¥¹¥¯¥ê¥×¥È¤Î¥¨¥é¡¼
-ipanel.plist ¥İ¡¼¥È¤Î°ìÍ÷É½
-ipanel.props ¥¤¥ó¥¿¥Õ¥§¡¼¥¹¤ÎÆÃÄ§
-ipanel.block ¥Ö¥í¥Ã¥¯
-ipanel.symbol ¥·¥ó¥Ü¥ë
-ipanel.autogen ¼«Æ°ºîÀ®¤¯...
-ipanel.itype.select ¥¤¥ó¥¿¥Õ¥§¥¹¡¦¥¿¥¤¥×
-ipanel.ppos.label ¥Ö¥í¥Ã¥¯¤Î¥µ¥¤¥º¤òÊÑ¹¹¤¹¤ë»ş¤Î¥İ¡¼¥È¤Î¼è¤ê°·¤¤:
-ipanel.ppos.fix »ØÄê
-ipanel.ppos.scale ¥¹¥±¡¼¥ë
-blklst.claim ¥â¥¸¥å¡¼¥ë¤Î¼èÆÀ
-blklst.to ¿·µ¬¥â¥¸¥å¡¼¥ëÌ¾
-blklst.from ¸½ºß¥â¥¸¥å¡¼¥ëÌ¾
-blklst.name ¥â¥¸¥å¡¼¥ëÌ¾
-blklst.new.cap ¥â¥¸¥å¡¼¥ë¤Î¿·µ¬ºîÀ®
-blklst.del.cap ºï½ü¤¹¤ë¥â¥¸¥å¡¼¥ëÌ¾
-blklst.copy.cap ¥³¥Ô¡¼¡¦¥â¥¸¥å¡¼¥ë
-blklst.rename.cap ¥â¥¸¥å¡¼¥ë¤Î²şÌ¾
-blklst.claim.cap ¥â¥¸¥å¡¼¥ë¤Î¼èÆÀ
-blklst.setroot.cap ¥È¥Ã¥×¡¦¥â¥¸¥å¡¼¥ë¤ÎÁªÂò
-find.label Ãµº÷
-find.exp ¥²¡¼¥ÈÌ¾¡¢¥Í¥Ã¥ÈÌ¾¡¢ ¥³¥á¥ó¥È¤Ê¤É¤ÎÃæ¤Ë »ØÄê¥¹¥È¥ê¥ó¥°¤ò Ãµº÷¤¹¤ë¡£
-find.ignorecase ¥±¡¼¥¹¤òÌµ»ë¤¹¤ë
-find.result.module ¥â¥¸¥å¡¼¥ë
-find.result.type ¥¿¥¤¥×
-find.result.name ¥ª¥Ö¥¸¥§¥¯¥ÈÌ¾
-find.options Ãµº÷¤Î¥ª¥×¥·¥ç¥ó
-find.results Ãµº÷¤Î·ë²Ì
-find.qual.contains ¤ò´Ş¤à¤¯...
-find.qual.begins ¤«¤é»Ï¤Ş¤ë¤¯...
-find.qual.ends ¤Ç½ª¤ë¤¯...
-find.qual.matches Æ±Åù¤¹¤ë¤¯...
-find.dom.label °Ê²¼¤Î¾ì½ê¤òÃµº÷¤¹¤ë:
-find.dom.gates ¥²¡¼¥È
-find.dom.nets ¥Í¥Ã¥È
-find.dom.text ¥³¥á¥ó¥È¤Î¥Æ¥­¥¹¥È
-find.search Ãµº÷:
-find.target Ãµº÷¤ÎÈÏ°Ï
-circ.label ²óÏ©¤ÎÆÃÄ§
-circ.filev ¥Õ¥¡¥¤¥ë¤Î¥Ğ¡¼¥¸¥ç¥ó
-circ.file ¥Õ¥¡¥¤¥ëÌ¾
-circ.title ²óÏ©Ì¾
-circ.discchg ÊÑ¹¹¤òÌµ»ë¤¹¤ë¡£
-circ.extbar ³ÈÄ¥¥Ğ¡¼¤òÍøÍÑ¤¹¤ë¡£
-circ.autostart ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤Î¼«Æ°³«»Ï¤òÍ­¸ú¤Ë¤¹¤ë¡£
-circ.iniscript ½é´ü²½¥¹¥¯¥ê¥×¥È
-circ.general °ìÈÌ
-circ.library ¥é¥¤¥Ö¥é¥ê
-circ.script ¥¹¥¯¥ê¥×¥È
-circ.simulator ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó
-libmgr.cap ¥é¥¤¥Ö¥é¥ê¡¦¥Ş¥Í¥¸¥ã¡¼
-libmgr.library ¥é¥¤¥Ö¥é¥êÌ¾
-libmgr.description ÀâÌÀ
-libmgr.status ¾õÂÖ
-libmgr.status.load ÍøÍÑ
-libmgr.status.unload ÈóÍøÍÑ
-libmgr.exp ÍøÍÑ¤¹¤ë¥é¥¤¥Ö¥é¥ê¤òÁªÂò¤¹¤ë¡£
-libmgr.load ÍøÍÑ
-libmgr.unload ÈóÍøÍÑ
-libmgr.unloadall Á´¤Æ¤òÈóÍøÍÑ
-libmgr.notedit -begin-
-²óÏ©¿Ş¤Î¥¨¥Ç¥£¥¿¤¬³«¤¤¤Æ¤¤¤ë»ş¤Î¤ß¡¢
-¥é¥¤¥Ö¥é¥ê¤Î¥Ş¥Í¥¸¥ã¡¼¤¬ÍøÍÑ½ĞÍè¤ë¡£
+print.tab.output	å°åˆ·å…ˆ
+print.tab.modules	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+print.tab.content	å†…å®¹
+opt.general	ä¸€èˆ¬
+opt.interface	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹
+opt.toolbars	ãƒ„ãƒ¼ãƒ«ãƒ»ãƒãƒ¼
+opt.toolbars.sim	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³
+opt.editor	HDL
+opt.print	å°åˆ·
+opt.print.output	å°åˆ·å…ˆ
+opt.print.content	å†…å®¹
+opt.simulate	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆ
+opt.simulate.tech	ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼
+opt.simulate.error	ã‚¨ãƒ©ãƒ¼æ‰±ã„
+opt.library	ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+opt.analysis	è§£æ
+opt.color	è‰²
+opt.debug	ãƒ‡ãƒãƒƒã‚°
+opt.identity	ã‚¢ã‚¤ãƒ‡ãƒ³ãƒ†ã‚£ãƒ†ã‚£ãƒ¼
+opt.site	ã‚µã‚¤ãƒˆå
+opt.username	ãƒ¦ãƒ¼ã‚¶å
+opt.libname	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå:
+opt.inst	ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
+opt.mods	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+opt.modports	ãƒãƒ¼ãƒˆ
+opt.frames	ãƒ•ãƒ¬ãƒ¼ãƒ 
+opt.comment	ã‚³ãƒ¡ãƒ³ãƒˆ
+opt.hlink	ãƒªãƒ³ã‚¯
+opt.wire	1ãƒ“ãƒƒãƒˆã®ãƒ¯ã‚¤ãƒ¤
+opt.bus	å¤šãƒ“ãƒƒãƒˆã®ãƒ¯ã‚¤ãƒ¤
+opt.tools	ãƒ„ãƒ¼ãƒ«
+opt.background	ãƒãƒƒã‚¯ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰
+opt.cpath	é…å»¶è§£æ
+opt.grid	ã‚¹ã‚³ãƒ¼ãƒ—ã®ã‚°ãƒªãƒƒãƒ‰
+opt.logic1	è«–ç†ï¼‘
+opt.logic0	è«–ç†ï¼
+opt.float	ãƒ•ãƒ­ãƒ¼ãƒˆ
+opt.unknown	ä¸æ˜
+opt.offled	ã‚ªãƒ•ã®LED
+opt.onled	ã‚ªãƒ³ã®LED
+opt.zled	ãƒ•ãƒ­ãƒ¼ãƒˆã®LED
+opt.restdef	ãƒ‡ãƒ•ã‚©ãƒ¼ãƒ«ãƒˆ
+opt.regudate	ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ãƒ»ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ
+opt.smoothscroll	ã‚¹ãƒ ãƒ¼ã‚ºãƒ»ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«
+opt.balloon	ãƒãƒ«ãƒ¼ãƒ³ãƒ»ãƒ˜ãƒ«ãƒ—ã‚’åˆ©ç”¨
+opt.safeSave	å®‰å…¨æ›¸ãè¾¼ã¿
+opt.saveCells	ã‚»ãƒ¼ãƒ–ãƒ•ã‚¡ã‚¤ãƒ«ã«ã‚»ãƒ«ã‚’å«ã‚€
+opt.showimage	ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ãƒœãƒƒã‚¯ã‚¹ã®èª¬æ˜æ¬„ã‚’è¡¨ç¤ºã™ã‚‹
+opt.novice	åˆå¿ƒè€…ãƒ¢ãƒ¼ãƒ‰
+opt.blockDropConnect	ãƒ¯ã‚¤ãƒ¤ãƒ»ãƒ‰ãƒ­ãƒƒãƒ—ã§ã®ãƒãƒ¼ãƒˆã®ä½œæˆ
+opt.freq	æœŸé–“
+opt.beak	ç‰¹åˆ¥ãƒ¢ãƒ¼ãƒ‰ã‚’å¯èƒ½ã«ã™ã‚‹
+opt.bat	ãƒãƒƒãƒˆãƒãƒ³
+opt.trek	ã‚¹ã‚¿ãƒ¼ãƒ»ãƒˆãƒ¬ãƒƒã‚¯
+opt.miles	ãƒã‚¤ãƒ«ã‚¹
+opt.contver	å†…éƒ¨æ§‹é€ ã®è‡ªå‹•ç¢ºèª
+opt.showsimcmd	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆã®ã‚³ãƒãƒ³ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹
+opt.estepsz	ã‚¨ãƒãƒƒã‚¯ã®ã‚¹ãƒ†ãƒƒãƒ—æ•°
+opt.cstepsz	ã‚¯ãƒ­ãƒƒã‚¯ã®ã‚µã‚¤ã‚¯ãƒ«æ•°
+opt.overstep	ã‚¯ãƒ­ãƒƒã‚¯ã®ã‚ªãƒãƒ¼ã‚¹ãƒ†ãƒƒãƒ—
+opt.sorttraces	ã‚¹ã‚³ãƒ¼ãƒ—ã§ä¿¡å·ã‚’ABCé †ã§è¡¨ç¤ºã™ã‚‹
+opt.vpopupdelay	ä¿¡å·å€¤ã‚¦ã‚£ãƒ³ãƒ‰ã®è¡¨ç¤ºé…å»¶
+opt.posedge	å…¨ã¦ã®ã‚¯ãƒ­ãƒƒã‚¯ã§åœæ­¢ã™ã‚‹
+opt.setclock	æŒ‡å®šã®ã‚¯ãƒ­ãƒƒã‚¯ã§åœæ­¢ã™ã‚‹
+opt.delayfilepath	é…å»¶ãƒ•ã‚¡ã‚¤ãƒ«
+opt.devfilepath	VPD(Virtual Periperal Device)ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‘ã‚¹
+opt.vlibpath	Verilogã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒ‘ã‚¹
+opt.vlibnames	ãƒ™ãƒ¼ã‚¹ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+opt.display	ç”»é¢
+opt.input	å…¥åŠ›
+opt.security	ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£
+opt.undolen	æœ€å¤§Undo
+opt.keybind	ã‚­ãƒ¼ãƒ»ãƒã‚¤ãƒ³ãƒ‡ã‚£ãƒ³ã‚°ã®ã‚¹ã‚¿ã‚¤ãƒ«
+opt.useless	å½¹ã«ç«‹ãŸãªã„æ©Ÿèƒ½ã‚’æœ‰åŠ¹ã«ã™ã‚‹
+opt.features	åŸºæœ¬ã®æ©Ÿèƒ½
+opt.simbase	åŸºæœ¬ã®ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³
+opt.simclock	ã‚¯ãƒ­ãƒƒã‚¯ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³
+opt.cpopts	ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ãƒ»ãƒ‘ã‚¹è¨­å®š
+opt.maxpath	æœ€å¤§ãƒ‘ã‚¹æ•°:
+opt.cpflash	ãƒ‘ã‚¹ã®ç‚¹æ»…è¡¨ç¤º
+opt.general.fontset	ãƒ•ã‚©ãƒ³ãƒˆãƒ»ã‚µã‚¤ã‚º
+opt.simulator.noglitch	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ã‚°ãƒªãƒƒãƒã®æŠ‘åˆ¶ã€‚
+opt.simulator.err	ã‚¨ãƒ©ãƒ¼æ‰±ã„
+opt.simulator.stopany	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã®å¿ å‘Šã‚’ã‚¨ãƒ©ãƒ¼ã¨ã—ã¦æ‰±ãˆã‚‹ã€‚
+opt.simulator.showall	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã®å¿ å‘Šã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+opt.simulator.showiferr	ã‚¨ãƒ©ãƒ¼ã®ã‚ã‚‹æ™‚ã®ã¿ã€å¿ å‘Šã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+opt.simulator.ignore	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã®å¿ å‘Šã‚’ç„¡è¦–ã™ã‚‹ã€‚
+opt.tool.file	ãƒ•ã‚¡ã‚¤ãƒ«
+opt.tool.edit	ç·¨é›†
+opt.tool.gateopt	å›è»¢ï¼æ•´åˆ—åŒ–
+opt.tool.zoom	ã‚ºãƒ¼ãƒ 
+opt.tool.mode	ãƒ¢ãƒ¼ãƒ‰
+opt.tool.module	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+opt.tool.tech	ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼
+opt.tool.simctl	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®åˆ¶å¾¡
+opt.tool.simaux	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ã‚³ãƒãƒ³ãƒ‰
+opt.tool.symmode	ãƒ¢ãƒ¼ãƒ‰
+opt.tool.symedit	ã‚«ãƒƒãƒˆï¼ãƒšãƒ¼ã‚¹ãƒˆ
+opt.tool.symport	ãƒãƒ¼ãƒˆ
+opt.tool.symshift	ãƒ“ãƒƒãƒˆãƒ»ãƒãƒƒãƒ—ã®ã‚·ãƒ•ãƒˆ
+opt.tool.symopr	ãƒ“ãƒƒãƒˆãƒ»ãƒãƒƒãƒ—ã®æ¼”ç®—
+opt.editor.features	åŸºç¤çš„ãªã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ã®æ©Ÿèƒ½
+opt.editor.format	è‡ªå‹•ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’æœ‰åŠ¹ã«ã™ã‚‹
+opt.editor.colorize	è‡ªå‹•è‰²ä»˜ã‘ã‚’æœ‰åŠ¹ã«ã™ã‚‹
+opt.editor.comments	ã‚³ãƒ¡ãƒ³ãƒˆ
+opt.editor.strings	æ–‡å­—åˆ—
+opt.editor.reserved	ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰
+opt.editor.gateword	ã‚²ãƒ¼ãƒˆå
+opt.editor.instword	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+opt.editor.taskword	ã‚·ã‚¹ãƒ†ãƒ ãƒ»ã‚¿ã‚¹ã‚¯
+opt.editor.color	è‰²
+opt.editor.bold	å¤ªå­—
+opt.editor.italic	ã‚¤ã‚¿ãƒªãƒƒã‚¯
+opt.editor.indentlevel	ãƒ¬ãƒ–ãƒ«æ¯ã®ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã®ã‚¹ãƒšãƒ¼ã‚¹æ•°:
+opt.editor.beginindent	ã€Œbegin..endã€ã®ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’å›²ã¾ã‚Œã‚‹ã‚Œã¹ã‚‹ã¨ä¼šã‚ã›ã‚‹ã€‚
+opt.editor.movesel	é¸æŠã®ãƒ‰ãƒ©ãƒƒã‚°ãƒ»ã‚¢ãƒ³ãƒ‰ãƒ»ãƒ‰ãƒ­ãƒƒãƒ—ã‚’æœ‰åŠ¹ã«ã™ã‚‹ã€‚
+opt.editor.returntab	ãƒªã‚¿ãƒ¼ãƒ³ã‚’æŠ¼ã™æ™‚ã€è‡ªå‹•ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’æœ‰åŠ¹ã«ã™ã‚‹ã€‚
+opt.vercheck	å®šæœŸçš„ã« tkgate ã®æ–°ã—ã„ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ã‚¤ãƒ³ã‚¿ãƒ¼ãƒãƒƒãƒˆã§ ãƒã‚§ãƒƒã‚¯ã™ã‚‹ã€‚å¸¸æ™‚æ¥ç¶šã§ãªã‘ã‚Œã°æœ‰åŠ¹ã«ã—ãªã„ã“ã¨ã€‚
+opt.color.editwin	ç·¨é›†ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®è‰²ã¥ã‘
+opt.color.scopewin	ã‚¹ã‚³ãƒ¼ãƒ—ãƒ»ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®è‰²ã¥ã‘
+opt.bbar.restore	ãƒšãƒ¼ã‚¸ã®è¨­å®šã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã«ã™ã‚‹
+opt.bbar.restoreall	å…¨ã¦ã®è¨­å®šã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã«ã™ã‚‹
+igen.port	ãƒãƒ¼ãƒˆ
+igen.type	ã‚¿ã‚¤ãƒ—
+igen.side	ã‚µã‚¤ãƒ‰
+igen.bits	ãƒ“ãƒƒãƒˆ
+igen.modname	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å:
+igen.add	è¿½åŠ 
+igen.delete	å‰Šé™¤
+igen.edit	ç·¨é›†
+info.script.error	ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®ã‚¨ãƒ©ãƒ¼
+ipanel.plist	ãƒãƒ¼ãƒˆã®ä¸€è¦§è¡¨
+ipanel.props	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®ç‰¹å¾´
+ipanel.block	ãƒ–ãƒ­ãƒƒã‚¯
+ipanel.symbol	ã‚·ãƒ³ãƒœãƒ«
+ipanel.autogen	è‡ªå‹•ä½œæˆã...
+ipanel.itype.select	ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ã‚¹ãƒ»ã‚¿ã‚¤ãƒ—
+ipanel.ppos.label	ãƒ–ãƒ­ãƒƒã‚¯ã®ã‚µã‚¤ã‚ºã‚’å¤‰æ›´ã™ã‚‹æ™‚ã®ãƒãƒ¼ãƒˆã®å–ã‚Šæ‰±ã„:
+ipanel.ppos.fix	æŒ‡å®š
+ipanel.ppos.scale	ã‚¹ã‚±ãƒ¼ãƒ«
+blklst.claim	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å–å¾—
+blklst.to	æ–°è¦ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+blklst.from	ç¾åœ¨ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+blklst.name	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+blklst.new.cap	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ–°è¦ä½œæˆ
+blklst.del.cap	å‰Šé™¤ã™ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å
+blklst.copy.cap	ã‚³ãƒ”ãƒ¼ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+blklst.rename.cap	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ”¹å
+blklst.claim.cap	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®å–å¾—
+blklst.setroot.cap	ãƒˆãƒƒãƒ—ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®é¸æŠ
+find.label	æ¢ç´¢
+find.exp	ã‚²ãƒ¼ãƒˆåã€ãƒãƒƒãƒˆåã€ ã‚³ãƒ¡ãƒ³ãƒˆãªã©ã®ä¸­ã« æŒ‡å®šã‚¹ãƒˆãƒªãƒ³ã‚°ã‚’ æ¢ç´¢ã™ã‚‹ã€‚
+find.ignorecase	ã‚±ãƒ¼ã‚¹ã‚’ç„¡è¦–ã™ã‚‹
+find.result.module	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+find.result.type	ã‚¿ã‚¤ãƒ—
+find.result.name	ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå
+find.options	æ¢ç´¢ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³
+find.results	æ¢ç´¢ã®çµæœ
+find.qual.contains	ã‚’å«ã‚€ã...
+find.qual.begins	ã‹ã‚‰å§‹ã¾ã‚‹ã...
+find.qual.ends	ã§çµ‚ã‚‹ã...
+find.qual.matches	åŒç­‰ã™ã‚‹ã...
+find.dom.label	ä»¥ä¸‹ã®å ´æ‰€ã‚’æ¢ç´¢ã™ã‚‹:
+find.dom.gates	ã‚²ãƒ¼ãƒˆ
+find.dom.nets	ãƒãƒƒãƒˆ
+find.dom.text	ã‚³ãƒ¡ãƒ³ãƒˆã®ãƒ†ã‚­ã‚¹ãƒˆ
+find.search	æ¢ç´¢:
+find.target	æ¢ç´¢ã®ç¯„å›²
+circ.label	å›è·¯ã®ç‰¹å¾´
+circ.filev	ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³
+circ.file	ãƒ•ã‚¡ã‚¤ãƒ«å
+circ.title	å›è·¯å
+circ.discchg	å¤‰æ›´ã‚’ç„¡è¦–ã™ã‚‹ã€‚
+circ.extbar	æ‹¡å¼µãƒãƒ¼ã‚’åˆ©ç”¨ã™ã‚‹ã€‚
+circ.autostart	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã®è‡ªå‹•é–‹å§‹ã‚’æœ‰åŠ¹ã«ã™ã‚‹ã€‚
+circ.iniscript	åˆæœŸåŒ–ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
+circ.general	ä¸€èˆ¬
+circ.library	ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+circ.script	ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
+circ.simulator	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³
+libmgr.cap	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ»ãƒãƒã‚¸ãƒ£ãƒ¼
+libmgr.library	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå
+libmgr.description	èª¬æ˜
+libmgr.status	çŠ¶æ…‹
+libmgr.status.load	åˆ©ç”¨
+libmgr.status.unload	éåˆ©ç”¨
+libmgr.exp	åˆ©ç”¨ã™ã‚‹ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’é¸æŠã™ã‚‹ã€‚
+libmgr.load	åˆ©ç”¨
+libmgr.unload	éåˆ©ç”¨
+libmgr.unloadall	å…¨ã¦ã‚’éåˆ©ç”¨
+libmgr.notedit	-begin-
+å›è·¯å›³ã®ã‚¨ãƒ‡ã‚£ã‚¿ãŒé–‹ã„ã¦ã„ã‚‹æ™‚ã®ã¿ã€
+ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒãƒã‚¸ãƒ£ãƒ¼ãŒåˆ©ç”¨å‡ºæ¥ã‚‹ã€‚
 -end-
-break.tab ¥Ö¥ì¡¼¥¯¥İ¥¤¥ó¥È
-break.id ÈÖ¹æ
-break.state ¾õ
-break.condition ¾ò·ï
-break.value ÃÍ
-cp.delay ¥Ñ¥¹ÃÙ±ä:
-cp.pathl ¥Ñ¥¹¤Î°ìÍ÷:
-cp.numpath ¥Ñ¥¹¿ô:
-cp.recompute ºÆ·×»»
-err.nopin ÁªÂò¤µ¤ì¤¿¥Ô¥ó¤Î¥¿¥¤¥×¤òÊÑ¹¹½ĞÍè¤Ê¤¤¡£
-err.gatanchor ¥²¡¼¥È¤¬°ÜÆ°ÉÔ²Ä¤Ë¥Ş¡¼¥¯¤µ¤ì¤Æ¤¤¤ë°Ù¡¢°ÜÆ°½ĞÍè¤Ê¤¤¡£
-err.badfind Ãµº÷¥¹¥È¥ê¥ó¥°¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.badopendel »ÈÍÑÃæ¤Î¥â¥¸¥å¡¼¥ë¤òºï½ü½ĞÍè¤Ê¤¤¡£
-err.nosrcmod ¥½¡¼¥¹¡¦¥â¥¸¥å¡¼¥ë'%s'¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.noerr ¥¨¥é¡¼¡¦¥á¥Ã¥»¡¼¥¸¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.misserr ¥¨¥é¡¼¾ğÊó¤¬ÉÔ´°Á´¤Ç¤¢¤ë¡£(¥·¥ß¥å¥ì¡¼¥¿¤¬Íî¤Á¤¿¡©)
-err.badinadd ÁªÂò¤Î¥²¡¼¥È¤Ë¤â¤¦ÆşÎÏÄÉ²Ã¤¬½ĞÍè¤Ê¤¤¡£
-err.badoutadd ÁªÂò¤Î¥²¡¼¥È¤Ë¤â¤¦½ĞÎÏÄÉ²Ã¤¬½ĞÍè¤Ê¤¤¡£
-err.badinoutadd ÁªÂò¤Î¥²¡¼¥È¤Ë¤â¤¦Æş½ĞÎÏÄÉ²Ã¤¬½ĞÍè¤Ê¤¤¡£
-err.badpinchg ÁªÂò¤Î¥²¡¼¥È¤Î¥Ô¥ó¤Î¥¿¥¤¥×¤¬ÊÑ¹¹½ĞÍè¤Ê¤¤¡£
-err.badnetname Ì¾Á°¤ËÉÔÀµ¤ÎÊ¸»ú¤¬¤¢¤ë°Ùºï½ü¤µ¤ì¤¿¡£
-err.netbcrename »ØÄê¤ÎÌ¾Á°¤ËÉÔÀµ¤ÎÊ¸»ú¤¬¤¢¤ë°Ù¡¢¡Ö%s¡×¤ËÊÑ¹¹¤µ¤ì¤¿¡£
-err.netconfnet »ØÄê¤ÎÌ¾Á°¤¬ÊÌ¤ÎÌ¾Á°¤È¾×ÆÍ¤¹¤ë°Ù¡¢¡Ö%s¡×¤ËÊÑ¹¹¤µ¤ì¤¿¡£
-err.badconsame ¥Í¥Ã¥È¤¬Æ±¤¸¤Ê¤Î¤Ç¡¢ÀÜÂ³½ĞÍè¤Ê¤¤¡£
-err.badconptsp ¥Í¥Ã¥È¤ÎÎ¾Êı¤¬¥İ¡¼¥ÈËô¤ÏÅÅÎÏ¤Ê¤Î¤Ç¡¢ÀÜÂ³½ĞÍè¤Ê¤¤¡£
-err.badconbitw ¥Í¥Ã¥È¤Î¥Ó¥Ã¥ÈÉı¤¬°Û¤Ê¤ë¤Î¤Ç¡¢ÀÜÂ³½ĞÍè¤Ê¤¤¡£
-err.badrange »ØÄê¤µ¤ì¤¿»ş´Ö¤Î¥ì¥ó¥¸¤¬ÉÔÀµ¤Ç¤¢¤ë¡£
-err.badlprcmd °õºş¥³¥Ş¥ó¥É¡Ö%s¡×¤¬¼Â¹Ô½ĞÍè¤Ê¤¤¡£
-err.badpsopen ¥İ¥¹¥È¡¦¥¹¥¯¥ê¥×¥È¤ò¡Ö%s¡×¤Ë½ñ¤­¹ş¤á¤Ê¤¤¡£
-err.badid ¡Ö%s¡×¤ÏÉÔÀµ¤ÎÌ¾Á°¤Ç¤¢¤ë¡£
-err.bkpt.badexp ÉÔÀµ¤Ê¥Ö¥ì¡¼¥¯¥İ¥¤¥ó¥È¤Î¾ò·ï¤Ç¤¢¤ë¡£¡Önet¡×, ¡Ö!net¡×, ¡Önet==value¡×, ¡Önet!=value¡×¤Î¤É¤ì¤«¤Ç¤Ê¤±¤ì¤Ğ¤Ê¤é¤Ê¤¤¡£
-err.bkpt.toomany ¥Ö¥ì¡¼¥¯¥İ¥¤¥ó¥È¤¬Â¿²á¤®¤ë¡£À©¸Â¤Ï%d¤Ç¤¢¤ë¡£
-err.sim.syntx ÉÔÀµ¤Î¡Ö%s¡×¥³¥Ş¥ó¥É¡£
-err.sim.noincl ¥¤¥ó¥¯¥ë¡¼¥É¡¦¥Õ¥¡¥¤¥ë¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤«¤Ã¤¿¡£
-err.sim.badedge clock¥³¥Ş¥ó¥É¤Î¥¨¥Ã¥¸'%c'¤¬ÉÔÀµ¤Ç¤¢¤ë¡£
-err.sim.nobkpt ¥Ö¥ì¡¼¥¯¡¦¥İ¥¤¥ó¥È¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.sim.nonet ¥Í¥Ã¥È¡Ö%s¡×¤ÏÄêµÁ¤·¤Æ¤¤¤Ê¤¤¡£
-err.sim.nogate ¥²¡¼¥È¡Ö%s¡×¤ÏÄêµÁ¤·¤Æ¤¤¤Ê¤¤¡£
-err.sim.notswitch ¥²¡¼¥È'%s'¤Ï¥¹¥¤¥Ã¥Á¡¢DIP¡¢¥ì¥¸¥¹¥¿¤Î¤É¤ì¤«¤Ç¤Ê¤±¤ì¤Ğ¤Ê¤é¤Ê¤¤¡£
-err.sim.badcmd ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥¹¥¯¥ê¥×¥È¤ËÉÔÀµ¤Î¥³¥Ş¥ó¥É¡Ö%s¡×¤¬¤¢¤ë¡£
-err.sim.isrun ¥·¥ß¥å¥ì¡¼¥¿¤Ï´û¤Ë¼Â¹Ô¤·¤Æ¤¤¤ë¡£ ('Ctrl-s e'¤Ç½ªÎ»¤¹¤ë).
-err.noteditpchg ÀßÄê¤ÏÊÔ½¸¥â¡¼¥É°Ê³°¡¢ÊÑ¹¹ÉÔ²Ä¡£
-err.badeditop ÊÔ½¸¥³¥Ş¥ó¥É¤ËÉÔÀµ¤¬¤¢¤ë¡£
-err.badopen ²óÏ©¥Õ¥¡¥¤¥ë¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.badlibopen ¥é¥¤¥Ö¥é¥ê¡¦¥Õ¥¡¥¤¥ë¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.nomark ¥²¡¼¥È¼ï¤òÁª¤ÖÁ°¤Ë¡¢¥Ş¥¦¥¹¤Ç°ÌÃÖ¤òÀßÄê¤·¤Æ¤¯¤À¤µ¤¤¡£
-err.badportadd ÁªÂò¤µ¤ì¤¿¥²¡¼¥È¤Ë¥İ¡¼¥È¤ÏÄÉ²ÃÉÔ²Ä¡£
-err.manypages ¥Ú¡¼¥¸¿ô¤¬¶Ë¤á¤ÆÂç¤­¤¤¡£ ËÜÅö¤Ë°õºş¤·¤Ş¤¹¤«?
-err.nojump ¸½ºß¡¢'jump-to-module'µ¡Ç½¤Ï¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥â¡¼¥É¤Ç»ÈÍÑ½ĞÍè¤Ê¤¤¡£ ¥È¥Ã¥×¡¦¥â¥¸¥å¡¼¥ë¤è¤ê¡¢¡Ö>¡×¤ä¡Ö<¡×¤Î¥³¥Ş¥ó¥É¤Ç¥â¥¸¥å¡¼¥ë¤ò³«¤±¤Æ¤¯¤À¤µ¤¤¡£
-err.nomod ¥â¥¸¥å¡¼¥ë¡Ö%s¡×¤ÏÄêµÁ¤·¤Æ¤¤¤Ê¤¤¡£
-err.modlock ¥â¥¸¥å¡¼¥ë¤¬¥í¥Ã¥¯¤·¤Æ¤¤¤ë!
-err.closeroot ¥È¥Ã¥×¡¦¥â¥¸¥å¡¼¥ë¤¬ÊÄ¤¸¤ì¤Ê¤¤¡£
-err.editonly ¥³¥Ş¥ó¥É¤Ï¡¢¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥â¡¼¥É¤Ç»È¤¨¤Ê¤¤¡£
-err.simonly ¥³¥Ş¥ó¥É¤Ï¡¢¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥â¡¼¥É¤Ç¤·¤«»È¤¨¤Ê¤¤¡£
-err.nodel ¥²¡¼¥È¤òÁªÂò¤·¤Æ¤¤¤Ê¤¤¡£
-err.modnotdef ¥â¥¸¥å¡¼¥ë¡Ö%s¡×¤ÏÄêµÁ¤·¤Æ¤¤¤Ê¤¤¡£
-err.moddef ¥â¥¸¥å¡¼¥ë¡Ö%s¡×¤¬´û¤ËÄêµÁ¤·¤Æ¤¤¤ë¡£
-err.noprop ÁªÂò¤µ¤ì¤¿¥²¡¼¥È¤ÏÊÔ½¸½ĞÍè¤ëÀßÄê¤¬¤Ê¤¤¡£
-err.openscript ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥¹¥¯¥ê¥×¥È¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤¤¡£
-err.oldversion ²óÏ©¥Õ¥¡¥¤¥ë¤Î¥Ğ¡¼¥¸¥ç¥ó(%s)¤¬¸Å¤¤¡£(¸½ºß¤Î¥Ğ¡¼¥¸¥ç¥ó¤Ï%s).
-err.futureversion Ì¤Íè¤Î¥Ğ¡¼¥¸¥ç¥ó¡Ê%s¡Ë¤Îtkgate¥Õ¥¡¥¤¥ë¤Ç¤¢¤ë¡£¡Ê¸½ºß¤Î¥Ğ¡¼¥¸¥ç¥ó¤Ï%s¡Ë
-err.badversion ²óÏ©¥Õ¥¡¥¤¥ë¤Î¥Ğ¡¼¥¸¥ç¥ó¤¬Ç§¼±½ĞÍè¤Ê¤¤¡£Ãí°Õ¤·¤ÆÍøÍÑ²¼¤µ¤¤¡£
-err.nodrive ¥Í¥Ã¥È%s¤Ï¥â¥¸¥å¡¼¥ë%s¤Ë¿®¹æ¤Î¥½¡¼¥¹¤¬¤Ê¤¤¡£
-err.noconn ¥ï¥¤¥ä%s{%d}¤ÏÀÜÂ³¤¬¤Ê¤¤¡Êºï½ü¤·¤¿¡Ë¡£
-err.oldportact ¥İ¡¼¥È¤ä¥â¥¸¥å¡¼¥ë¤ÎÃ¼¤Ë±¦¥¯¥ê¥Ã¥¯¤·¤Æ²¼¤µ¤¤¡£
-err.backupfail ¥Ğ¥Ã¥¯¥¢¥Ã¥×¡¦¥Õ¥¡¥¤¥ë'%s'¤¬ºîÀ®½ĞÍè¤Ê¤«¤Ã¤¿¡£
-err.corruptnewsave TkGate¤Ï'%s'¤Ë¥»¡¼¥Ö½ĞÍè¤¿¤¬¡¢¥Õ¥¡¥¤¥ë¤¬º®Íğ¤µ¤ì¤Æ¤¤¤ë¤ß¤¿¤¤¡£¤â¤·¥Á¥§¥Ã ¥¯¡¦¥İ¥¤¥ó¥È¤òÍøÍÑ¤·¤Æ¤¤¤ì¤Ğ¡¢¥Á¥§¥Ã¥¯¡¦¥İ¥¤¥ó¥È¤Î¥Õ¥¡¥¤¥ë¤ò»È¤Ã¤Æ¤ß¤Æ¤¯ ¤À¤µ¤¤¡£'tkgate -V'¤Ç¥Õ¥¡¥¤¥ë¤ò¥Á¥§¥Ã¥¯½ĞÍè¤ë¡£
-err.corruptsave '%s'¤ò¥»¡¼¥Ö¤·¤è¤¦¤È¤·¤Æ¤¤¤ë»ş¡¢TkGate¤ËÆâÉôÌäÂê¤¬È¯¸«¤·¤¿¡£¸µ¡¹¤Î¥Õ¥¡¥¤ ¥ë¤Ï¤½¤Î¤Ş¤Ş»Ä¤·¤Æ¤¢¤ë¡£º®Íğ¤µ¤ì¤Æ¤¤¤ë²ÄÇ½À­¤Î¤¢¤ë¥Õ¥¡¥¤¥ë¤Ï'%s'¤Ë¥»¡¼¥Ö ¤·¤¿¡£¤â¤·¥Á¥§¥Ã¥¯¡¦¥İ¥¤¥ó¥È¤òÍøÍÑ¤·¤Æ¤¤¤ì¤Ğ¡¢¥Á¥§¥Ã¥¯¡¦¥İ¥¤¥ó¥È¤Î¥Õ¥¡¥¤ ¥ë¤ò»È¤Ã¤Æ¤ß¤Æ¤¯¤À¤µ¤¤¡£'tkgate -V'¤Ç¥Õ¥¡¥¤¥ë¤ò¥Á¥§¥Ã¥¯½ĞÍè¤ë¡£
-err.badsave '%s'¤ò¥»¡¼¥Ö½ĞÍè¤Ê¤«¤Ã¤¿¡£¥Õ¥¡¥¤¥ë¤Î¥×¥í¥Æ¥¯¥·¥ç¥ó¤ä¶õ¤­¥Ç¥£¥¹¥¯ÎÌ¤ò³ÎÇ§ ¤·¤Æ¤¯¤À¤µ¤¤¡£
-err.nosafesave '%s'¤Î°ÂÁ´¥»¡¼¥Ö¤ò¹Ô¤¦¤¿¤á¤Î°ì»ş¤Î¥Õ¥¡¥¤¥ë¤¬ºîÀ®½ĞÍè¤Ê¤«¤Ã¤¿¤«¤é¡¢Ä¾ÀÜ¥»¡¼ ¥Ö¤·¤Ê¤¯¤Æ¤Ï¤Ê¤é¤Ê¤¤¡£¡ÖNO¡×¤Ë¥¯¥ê¥Ã¥¯¤¹¤ì¤Ğ¡¢¸µ¡¹¤Î¥Õ¥¡¥¤¥ë¤Ï¤½¤Î¤Ş¤Ş»Ä ¤¹¡£¡ÖYES¡×¤Ë¥¯¥ê¥Ã¥¯¤¹¤ì¤Ğ¡¢¥»¡¼¥Ö¤¹¤ë¤¬¡¢¥»¡¼¥ÖÅÓÃæ¤ËÌäÂê¤¬µ¯¤³¤Ã¤¿¤é¡¢ ²óÏ©¥Ç¡¼¥¿¤¬ÇË²õ¤µ¤ì¤ë²ÄÇ½À­¤¬¤¢¤ë¡£Ä¾ÀÜ¥»¡¼¥Ö¤·¤Æ¤ß¤Ş¤·¤ç¤¦¤«?
-err.noback tkgate¥Ğ¡¼¥¸¥ç¥ó%s¤Çºî¤é¤ì¤¿¥Õ¥¡¥¤¥ë¤Ç¤¢¤ë¡£ÊİÂ¸¤¹¤ë¤È¡¢ tkgate¤Î¸Å¤¤¥Ğ¡¼¥¸¥ç¥ó¤ËÆÉ¤ß¹ş¤á¤Ê¤¤¤³¤È¤¬¤¢¤ë¡Ê¸½ºß¤Î ¥Ğ¡¼¥¸¥ç¥ó¤Ï%s¤Ç¤¢¤ë¡Ë¡£
-msg.selwire %s¤È¤¤¤¦¥ï¥¤¥ä¤¬ÁªÂò¤µ¤ì¤¿¡£
-msg.modoverwt ¥â¥¸¥å¡¼¥ë¡Ö%s¡×¤¬´û¤ËÄêµÁ¤µ¤ì¤Æ¤¤¤ë¡£ÄêµÁ¤·¤Ê¤ª¤·¤Ş¤¹¤«?
-msg.foundgate %s¤È¤¤¤¦¥²¡¼¥È¤¬¸«¤Ä¤«¤Ã¤¿¡£
-msg.foundwire %s¤È¤¤¤¦¥ï¥¤¥ä¤¬¸«¤Ä¤«¤Ã¤¿¡£
-msg.searchagn Ãµº÷¥¹¥È¥ê¥ó¥°¡Ö%s¡×¤¬¸«¤Ä¤«¤é¤Ê¤«¤Ã¤¿¡£¤â¤¦°ìÅÙ¡ÖÃµº÷¡×¤ò²¡¤¹¤È¡¢Ãµº÷¤·¤Ê¤ª¤¹¡£
-msg.sim.chgtoroot ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥â¡¼¥É¤Ç¤Ï¡¢¥È¥Ã¥×¡¦¥â¥¸¥å¡¼¥ë¤¬¥â¥¸¥å¡¼¥ë¡¦¥¹¥¿¥Ã¥¯¤Î¥È¥Ã¥×¤Ç¤Ê¤±¤ì¤Ğ¤Ê¤é¤Ê¤¤¡£
-msg.sim.nogatemod ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¡¦¥â¡¼¥É¤Ç¡¢¶ñÂÎÅª¤Ê¥â¥¸¥å¡¼¥ë¡¦¥¹¥¿¥Ã¥¯¤¬É¬Í×¤Ç¤¢¤ë¡£
-msg.setinterface ¥â¥¸¥å¡¼¥ë¡Ö%s¡×¤Î¥¤¥ó¥¿¥Õ¥§¡¼¥¹¤ò¥»¥Ã¥È¤·¤¿¡£
-msg.needsel ¥â¥¸¥å¡¼¥ë¤Î¥¤¥ó¥¹¥¿¥ó¥¹¤òÁª¤ó¤Ç¤¯¤À¤µ¤¤¡£
-msg.wroteckpt ¡Ö%s¡×¤Ë¥Á¥§¥Ã¥¯¥İ¥¤¥ó¥È¤ò½ñ¤­¹ş¤ó¤À¤¯...
-msg.save ¡Ö%s¡×¤ËÊİÂ¸¤·¤¿¡£
-msg.reallynew ²óÏ©¤ËÊÑ¹¹¤¬¤¢¤ë¡£ËÜÅö¤ËÊİÂ¸¤·¤Ê¤¤¤Ç¡¢¿·¤·¤¤²óÏ©¤ò³«¤­¤Ş¤¹¤«?
-msg.reallyquit ²óÏ©¤ËÊÑ¹¹¤¬¤¢¤ë¡£ËÜÅö¤ËÊİÂ¸¤·¤Ê¤¤¤Ç¡¢½ªÎ»¤·¤Ş¤¹¤«?
-msg.notlib ¥â¥¸¥å¡¼¥ë¡Ö%s¡×¤Ï¥é¥¤¥Ö¥é¥ê¡¦¥â¥¸¥å¡¼¥ë¤Ç¤Ï¤Ê¤¤¡£
-miles.msg7 ¤³¤Î¥í¥¯¤Ç¤Ê¤·²óÏ©¤ÎÀß·×¤òÄü¤á¤è¡¢¥Ş¥¤¥¹¥ë¡£
-miles.msg8a Â³¤±¤Æ¤â¡¢ÌµÂÌ¤À¤è¡¢¥Ş¥¤¥ë¥¹¡£
-miles.msg8b ¤ªÁ°¤¬²óÏ©¤òÀß·×½ĞÍè¤Ê¤¤¤È¤¤¤¦¤Î¤Ï¡¢Ã¯¤Ç¤âÊ¬¤«¤ë¤è
-verga.err.OK ¿´ÇÛ¤·¤Ê¤¤¤Ç¡¢¾Ğ¤Ã¤Æ¤¯¤À¤µ¤¤¡£
-ho.new ¸½ºß¤Î²óÏ©¤ò¾Ã¤·¤Æ¡¢¿·¤·¤¤ ²óÏ©¤òºîÀ®¤¹¤ë¡£
-ho.open ²óÏ©¥Õ¥¡¥¤¥ë¤ò³«¤¯¡£
-ho.save ²óÏ©¥Õ¥¡¥¤¥ë¤òÊİÂ¸¤¹¤ë¡£
-ho.print ²óÏ©¥Õ¥¡¥¤¥ë¤ò°õºş¤¹¤ë¡£
-ho.move °ÜÆ°¡¿ÀÜÂ³ - ¤³¤Î¥Ä¡¼¥ë¤Ç°Ê²¼¤Îµ¡Ç½¤¬»È¤¨¤ë ¿·¤·¤¤¥²¡¼¥È¤Î°ÌÃÖ¤òÀßÄê¤¹¤ë ¥²¡¼¥È¤ò°ÜÆ°¤¹¤ë ¥ï¥¤¥ä¤ò°ÜÆ°¤¹¤ë ¥ï¥¤¥ä¤òÀÜÂ³¤¹¤ë ¥À¥Ö¥ë¡¦¥¯¥ê¥Ã¥¯¤Ç°Ê²¼¤Îµ¡Ç½¤¬»È¤¨¤ë ¥²¡¼¥È¤ÎÂ°À­¤òÊÔ½¸¤¹¤ë ¥ï¥¤¥ä¤ÎÂ°À­¤òÊÔ½¸¤¹¤ë ¥İ¡¼¥È¤ÎÂ°À­¤òÊÔ½¸¤¹¤ë ¥³¥á¥ó¥È¤Î¥Æ¥­¥¹¥È¤ÎÂ°À­¤òÊÔ½¸¤¹¤ë
-ho.delgat ¤³¤Î¥Ä¡¼¥ë¤Ç¥²¡¼¥È¤òºï½ü¤¹¤ë¡£
-ho.cutw ¤³¤Î¥Ä¡¼¥ë¤Ç¥ï¥¤¥ä¤òÀÚÃÇ¤¹¤ë¡£
-ho.inv ¤³¤Î¥Ä¡¼¥ë¤Ç¡¢¥²¡¼¥È¤ÎÆş½ĞÎÏ¤Ë ÈİÄê¤òÉÕ¤±¤¿¤ê¡¢¾Ã¤·¤¿¤ê¤¹¤ë¡£
-ho.bitw ¤³¤Î¥Ä¡¼¥ë¤Ç¥ï¥¤¥ä¤Î¥Ó¥Ã¥ÈÉı¤ò ÊÑ¹¹¤¹¤ë¡£¥Ó¥Ã¥ÈÉı¤ò±¦²¼¤ÎÆşÎÏ ¥Ü¥Ã¥¯¥¹¤ËÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£
-ho.mod.open ÁªÂò¤µ¤ì¤¿¥â¥¸¥å¡¼¥ë¤ò³«¤¯¡£
-ho.mod.close ¸½ºß¤Î¥â¥¸¥å¡¼¥ë¤òÊÄ¤¸¤ë¡£
-ho.mod.type.partlib ¥é¥¤¥Ö¥é¥êÌ¾
-ho.undo ºÇ¶á¹Ô¤Ã¤¿ÊÑ²½¤ò¸µÄÌ¤ê¤Ë¤¹¤ë¡£
-ho.redo undo¤·¤¿ÊÑ²½¤ò¤ä¤êÄ¾¤¹
-ho.tab.simulate ¥·¥ß¥å¥ì¡¼¥¿¤ò³«»Ï¤·¡¢ÏÀÍı¥¢¥Ê¥é¥¤¥¶¤Î¥¦¥£¥ó¥É¤ò ³«¤­¡¢¤½¤·¤Æ½é´ü²½¥¹¥¯¥ê¥×¥È¤¬ÄêµÁ¤·¤Æ¤¤¤ë¾ì¹ç¡¢ ¤½¤Î¥¹¥¯¥ê¥×¥È¤ò¼Â¹Ô¤¹¤ë¡£
-ho.tab.cpath ²óÏ©¤Î¥¯¥ê¥Æ¥£¥«¥ë¡¦¥Ñ¥¹¤òÃµº÷¤¹¤ë¡£
-ho.simgo ¥·¥ß¥å¥ì¡¼¥¿¤òÆ°¤«¤¹¡£ÁÈ¹ç¤»²óÏ©¤Î¾ì¹ç¡¢ ¿®¹æ¤¬ÊÑ¤ï¤é¤Ê¤¯¤Ê¤ë»ş¡¢¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤Î»ş´Ö ¤¬°ì»şÄä»ß¤¹¤ë¡£
-ho.simpause ¥·¥ß¥å¥ì¡¼¥¿¤Î°ì»şÄä»ß¡£
-ho.simstep ¥·¥ß¥å¥ì¡¼¥¿¤ò°ìÄê¿ô¤Î¥¨¥İ¥Ã¥¯¤À¤±Æ°¤«¤¹¡£ ¥¹¥Æ¥Ã¥×¿ô¤Ï¥·¥ß¥å¥ì¡¼¥È¤ÎÀßÄê¤Ë¤è¤ë¡£
-ho.simclock ¥·¥ß¥å¥ì¡¼¥¿¤ò°ìÄê¿ô¤Î¥¯¥í¥Ã¥¯¡¦¥µ¥¤¥¯¥ë ¤À¤±Æ°¤«¤¹¡£ ¥¹¥Æ¥Ã¥×¿ô¤Ï¥·¥ß¥å¥ì¡¼¥È¤ÎÀßÄê¤Ë¤è¤ë¡£
-ho.simstop ¥·¥ß¥å¥ì¡¼¥¿¤òÄä»ß¤·¤Æ¡¢ ÊÔ½¸¥â¡¼¥É¤ËÌá¤ë¡£
-ho.simbreak ¥·¥ß¥å¥ì¡¼¥¿¤Î¥Ö¥ì¡¼¥¯¥İ¥¤¥ó¥È ¤òÊÔ½¸¤¹¤ë¡£
-ho.simexec ¥¹¥¯¥ê¥×¥È¤ò¼Â¹Ô¤¹¤ë¡£
-ho.simload ¥á¥â¥ê¡¦¥Õ¥¡¥¤¥ë¤òÆÉ¤ß¹ş¤à¡£
-ho.simdump ¥á¥â¥ê¡¦¥Õ¥¡¥¤¥ë¤Ë½ñ¤­½Ğ¤¹¡£
-ho.modlist ÆÉ¤ß¹ş¤ó¤Ç¤¢¤ë¥â¥¸¥å¡¼¥ë¤Î°ìÍ÷É½¡£ ¥È¥Ã¥×¤Î¥â¥¸¥å¡¼¥ë¤ÎÌ¾Á°¤Ë¡Ö+¡×¤¬ ÉÕ¤¤¤Æ¤¤¤ë¡£¥é¥¤¥Ö¥é¥ê¤Î¥â¥¸¥å¡¼¥ë ¤Ï³ç¸Ì¤Ë°Ï¤Ş¤ì¤Æ¤¤¤ë¡£
-ho.netlist ¸½ºß¤Î¥â¥¸¥å¡¼¥ë¤Î°ìÍ÷É½¡£Ì¾Á°¤ò±£¤·¤Æ ¤¤¤ë¥Í¥Ã¥È¤ÎÌ¾Á°¤Ë¡Ö@¡×¤¬ÉÕ¤¤¤Æ¤¤¤ë¡£ ¥Ş¥ë¥Á¡¦¥Ó¥Ã¥È¤Î¥Í¥Ã¥È¤ÎÌ¾Á°¤Î¸å¤Ë ¥Ó¥Ã¥È¤Î¥ì¥ó¥¸¤òÉ½¼¨¤·¤Æ¤¤¤ë¡£
-ho.ports ¸½ºß¤Î¥â¥¸¥å¡¼¥ë¤Î¥İ¡¼¥È¤Î°ìÍ÷É½¡£ ÆşÎÏ¤Ë¡Ö>¡×¡¢½ĞÎÏ¤Ë¡Ö<¡×¡¢Æş½ĞÎÏ¤Ë ¡Ö=¡×¤¬ÉÕ¤¤¤Æ¤¤¤ë¡£
-ho.status.logo ¸½ºß¤Î¥â¡¼¥É¤¬É½¼¨¤µ¤ì¤Æ¤¤¤ë¡£Å´¤Î¥²¡¼¥È ¤ÏÊÔ½¸¥â¡¼¥É¤òÉ½¤¹¡£AND¥²¡¼¥È¤Ï¥·¥ß¥å¥ì¡¼ ¥·¥ç¥ó¡¦¥â¡¼¥É¤òÉ½¤¹¡£AND¥²¡¼¥È¤¬Áö¤Ã¤Æ ¤¤¤ë»ş¡¢¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤Î»ş´Ö¤¬Æ°¤¤¤Æ¤¤¤ë¡£
-ho.status.msg tkgate¤è¤ê¤Î¥á¥Ã¥»¡¼¥¸¤¬¤³¤³¤ËÉ½¼¨¤µ¤ì¤ë¡£
-ho.status.block ¸½ºß¤Î¥â¥¸¥å¡¼¥ë¤Î¥Ñ¥¹¡£
-ho.status.file ¸½ºßÊÔ½¸Ãæ¤Î¥Õ¥¡¥¤¥ëÌ¾¤¬É½¼¨¤µ¤ì¤Æ¤¤¤ë¡£¡Ö*¡× ¤È¤¤¤¦µ­¹æ¤¬¤Ä¤¤¤Æ¤¤¤ë»ş¡¢ÊİÂ¸¤·¤Æ¤¤¤Ê¤¤ÊÑ¹¹ ¤¬¤¢¤ë¡£
-ho.print.selall Á´¤Æ¤ÎÆÉ¤ß¹ş¤ó¤Ç¤¤¤ë¥â¥¸¥å¡¼¥ë¤ò°õºş¤¹¤ë¡£
-ho.print.selcur ¸½ºß¤Î¥â¥¸¥å¡¼¥ë¤Î¤ß¤ò°õºş¤¹¤ë¡£
-ho.print.seluse »ÈÍÑÃæ¤Î¥â¥¸¥å¡¼¥ë¤Î¤ß°õºş¤¹¤ë¡£
-ho.print.selsel °Ê²¼¤Ë¥Ş¡¼¥¯¤·¤Æ¤¤¤ë¥â¥¸¥å¡¼¥ë¤Î¤ß¤ò°õºş¤¹¤ë¡£ ¥³¥ó¥È¥í¡¼¥ë¡¦¥­¡¼¤ÇÊ£¿ô¤Î¥â¥¸¥å¡¼¥ë¤òÁªÂò ½ĞÍè¤ë¡£
-ho.print.modlist °õºş¤¹¤ë¥â¥¸¥å¡¼¥ë¤òÁªÂò¤¹¤ë¡£
-ho.circuit.discchg Í­¸ú¤Ë¤¹¤ë¤È¡¢ÊÑ¹¹¤¢¤ê¤Î²óÏ©¤ò ÊİÂ¸¤·¤Ê¤¤¤ÇÊÄ¤¸¤ë¤È¤­·Ù¹ğ¤·¤Ê¤¤¡£
-ho.circuit.extbar ´ğËÜ¥²¡¼¥È(AND, OR, XOR)¤ÎÆşÎÏ¿ô¤¬ 3ËÜ°Ê¾å¤Î»ş¡¢³ÈÄ¥¥Ğ¡¼¤ÏÍøÍÑ¤¹¤ë¡£
-ho.cmd.bitw ¥«¡¼¥½¥ë¤ÇÁªÂò¤µ¤ì¤¿¥ï¥¤¥ä¤ÏÉ½¼¨ ¤µ¤ì¤Æ¤¤¤ë¥Ó¥Ã¥ÈÉı¤ËÀßÄê¤µ¤ì¤ë¡£
-ho.edgat.signam ÁªÂò¤µ¤ì¤¿¥²¡¼¥È¤ÎÁªÂò¤µ¤ì¤¿ ¥Í¥Ã¥È¤Ç¤¢¤ë¡£Ì¾Á°¤¬ÊÑ¹¹½ĞÍè¤ë¡£
-ho.edgat.port ÁªÂò¤µ¤ì¤¿¥²¡¼¥È¤ÎÁªÂò¤µ¤ì¤¿ ¥Í¥Ã¥È¤Î¥İ¡¼¥ÈÌ¾¤Ç¤¢¤ë¡£¥â¥¸¥å¡¼¥ë ¤Î¥²¡¼¥È¤Î¾ì¹ç¤Î¤ßÊÑ¹¹½ĞÍè¤ë¡£
-ho.edgat.iolab ÁªÂò¤µ¤ì¤¿¥²¡¼¥È¤ÎÁªÂò¤µ¤ì¤¿ ¥Í¥Ã¥È¤Î¥İ¡¼¥ÈÊı¸ş¤Ç¤¢¤ë¡£¥â¥¸¥å¡¼¥ë ¤Î¥²¡¼¥È¤Î¾ì¹ç¤Î¤ßÊÑ¹¹½ĞÍè¤ë¡£
-ho.edgat.bitlab ÁªÂò¤µ¤ì¤¿¥²¡¼¥È¤ÎÁªÂò¤µ¤ì¤¿ ¥Í¥Ã¥È¤Î¥Ó¥Ã¥ÈÉı¤Ç¤¢¤ë¡£ÊÑ¹¹½ĞÍè¤ë¡£
-ho.edgat.cycle °ì¥µ¥¤¥¯¥ë¤Î¥¨¥İ¥Ã¥¯¿ô¡£
-ho.edgat.phase ¥¯¥í¥Ã¥¯¤Î¥Õ¥§¡¼¥º¡Ê¥Ñ¡¼¥»¥ó¥È¤ÇÀßÄê¤¹¤ë¡Ë
-ho.edgat.duty ¥¯¥í¥Ã¥¯¡¦¥µ¥¤¥¯¥ë¤Î²¿¥Ñ¡¼¥»¥ó¥È¤¬ÏÀÍı0¤Ç¤¢¤ë¤«¡£
-ho.edgat.hide Í­¸ú¤Ë¤¹¤ë¤È¥²¡¼¥ÈÌ¾¤¬É½¼¨¤µ¤ì¤Ê¤¤¡£
-ho.edgat.gtype ¥²¡¼¥È¤Î¼ïÎà¡£
-ho.edgat.gname ¥²¡¼¥È¤ÎÌ¾Á°¡£
-ho.edgat.ganchor Í­¸ú¤Ë¤¹¤ë¤È¡¢¥²¡¼¥È¤¬°ÜÆ°ÉÔ²Ä¤Ë¤Ê¤ë¡£
-ho.edgat.gx ¥²¡¼¥È¤ÎX°ÌÃÖ¡£
-ho.edgat.gy ¥²¡¼¥È¤ÎY°ÌÃÖ¡£
-ho.edgat.swstate ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò»Ï¤á¤ë»ş¤Î½é´ü¤ÎÃÍ¤Ç¤¢¤ë¡£
-ho.edgat.dipstate ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò»Ï¤á¤ë»ş¤Î½é´ü¤ÎÃÍ¤Ç¤¢¤ë¡£
-ho.edgat.range ¥Ş¥ë¥Á¥Ó¥Ã¥È¤Î¿®¹æ¤Î¥µ¥Ö¡¦¥ì¥ó¥¸¤Ç¤¢¤ë¡£
-ho.edgat.memfile ¥á¥â¥ê¤Î½é´ü¤ÎÃÍ¤Î¥Õ¥¡¥¤¥ë¤ò»ØÄê¤¹¤ë¡£ ¥·¥ß¥å¥ì¡¼¥·¥ç¥ó¤ò»Ï¤á¤ë»ş¡¢¤³¤Î¥Õ¥¡¥¤¥ë ¤¬ÆÉ¤ß¹ş¤Ş¤ì¤ë¡£
-ho.edgat.func ¥â¥¸¥å¡¼¥ë¤Îµ¡Ç½¡£
-ho.edgat.frame ¥Õ¥ì¡¼¥à¤Î¥é¥Ù¥ë¡£
-ho.opt.site ²óÏ©¤Ê¤É¤ò°õºş¤¹¤ë»ş¡¢¤³¤Î¥µ¥¤¥ÈÌ¾¤¬É½¼¨¤µ¤ì¤ë¡£
-ho.opt.smooth ¤³¤ÎÀßÄê¤òÍ­¸ú¤Ë¤¹¤ë¤È¡¢²óÏ©¤ò¥¹¥¯¥í¡¼¥ë¤¹¤ë»ş¡¢ ¥Ó¥Ã¥È¥Ş¥Ã¥×¤Î¥³¥Ô¡¼¤òÍøÍÑ¤·¤Æ¡¢¸úÎ¨¤è¤¯ ¥¹¥¯¥í¡¼¥ë¤Ç¤­¤ë¡£X¥µ¡¼¥Ğ¤ÎÌäÂê¤¬¤¢¤ì¤Ğ¡¢¤³¤Î ÀßÄê¤òÌµ¸ú¤Ë¤¹¤ì¤ĞÎÉ¤¤¡£
-ho.opt.clip Í­¸ú¤Ë¤¹¤ë¤È¡¢¥¦¥¤¥ó¥É¥¦¤ÎÉôÊ¬ÎÎ°è¤Î ºÆÉÁ²è¤ò¹Ô¤Ê¤¦¡£¤½¤¦¤Ç¤Ê¤±¤ì¤Ğ¾ï¤Ë Á´ÎÎ°è¤òºÆÉÁ²è¤¹¤ë¡£
-ho.opt.outmove Í­¸ú¤Ë¤¹¤ë¤È¡¢¥â¥¸¥å¡¼¥ë¤ò°ÜÆ°¤¹¤ë»ş¡¢ ¥ï¥¤¥ä¤Ê¤É¤Ï¥Ş¥¦¥¹¤Î¥Ü¥¿¥ó¤òÎ¥¤¹¤Ş¤Ç °ÜÆ°¤·¤Ê¤¤¡£²èÌÌ¤ÎÉ½¼¨¤¬ÃÙ¤¤»ş¤ËÊØÍø¤Ç¤¢¤ë¡£
-ho.opt.bhelp Í­¸ú¤Ë¤¹¤ë¤È¡¢¤³¤Î¥á¥Ã¥»¡¼¥¸¤ÎÍÍ¤Ê¡Ö¥Ø¥ë¥×¡¦ ¥Ğ¥ë¡¼¥ó¡×¤¬É½¼¨¤µ¤ì¤ë¡£
-ho.opt.novice Í­¸ú¤Ë¤¹¤ë¤È¡¢½é¿´¼Ô¥â¡¼¥É¤Ë¤Ê¤ë¡£ ½é¿´¼Ô¥â¡¼¥É¤Ç¤Ï¡¢tkgate¤¬Î©¤Á¾å¤¬¤ë»ş¡¢ ¥Á¥å¡¼¥È¥ê¥¢¥ë¤¬¼«Æ°Åª¤ËÆÉ¤ß¹ş¤Ş¤ì¤ë¡£
-ho.opt.debug Í­¸ú¤Ë¤¹¤ë¤È¡¢¥Ç¥Ğ¥°µ¡Ç½¤¬»È¤¨¤ë¡£ ³«È¯¼Ô°Ê³°¤Ë¡¢¤¢¤Ş¤êÌò¤ËÎ©¤¿¤Ê¤¤¡£
-ho.opt.ckpt Í­¸ú¤Ë¤¹¤ë¤È¡¢tkgate¤Ï¥Á¥§¥Ã¥¯¥İ¥¤¥ó¥ÈÊİÂ¸¤Î¥Õ¥¡¥¤¥ë¤òºî¤ë¡£
-ho.opt.ckptfreq ¥Á¥§¥Ã¥¯¥İ¥¤¥ó¥ÈÊİÂ¸¤ò²¿¥¯¥ê¥Ã¥¯Ëè¤Ë¹Ô¤Ê¤¦¤«¡£
-ho.opt.beak Á´Á³Ìò¤ËÎ©¤¿¤Ê¤¤µ¡Ç½¤òÍ­¸ú¤Ë¤¹¤ë¡£¤³¤Îµ¡Ç½¤ò Ìµ¸ú¤Ë¤¹¤ë¤È¡¢¤³¤Î¥¹¥¤¥Ã¥Á¤Ï¥À¥¤¥¢¥í¥° ¥Ü¥Ã¥¯¥¹¤«¤é¾Ã¤¨¡¢.tkgate2-properties¤òÊÔ½¸¤·¤Ê¤¤¸Â¤ê Ìá¤é¤Ê¤¤¡£
-ho.opt.miles Í­¸ú¤Ë¤¹¤ë¤È¡¢tkgate¤Ï»ş¡¹¥æ¡¼¥¶¤ò ÇÏ¼¯¤Ë¤·¤¿¤ê¡¢°­¸ı¤ò¸À¤Ã¤¿¤ê¤¹¤ë¡£
-ho.opt.bat Í­¸ú¤Ë¤¹¤ë¤È¡¢¥Ğ¥Ã¥È¥Ş¥ó¤Î¥³¥ó¥Ô¥å¡¼¥¿¤ò Àß·×¤¹¤ë°Ù¤Ë¡ÖÌò¤Ë¤¿¤Ä¡×µ¡Ç½¤¬»È¤¨¤ë¡£
-ho.opt.trek Å¾Á÷¤·¤í¡¢¥¹¥³¥Ã¥Æ¥£¡ª
-ho.opt.simstep -begin-
-¥·¥ß¥å¥ì¡¼¥¿¤Î¥¹¥Æ¥Ã¥×¡¦¥³¥Ş¥ó¥É¤Ç
-²¿¥¨¥İ¥Ã¥¯¿Ê¤à¤«¤ò»ØÄê¤¹¤ë¡£
+break.tab	ãƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆ
+break.id	ç•ªå·
+break.state	çŠ¶
+break.condition	æ¡ä»¶
+break.value	å€¤
+cp.delay	ãƒ‘ã‚¹é…å»¶:
+cp.pathl	ãƒ‘ã‚¹ã®ä¸€è¦§:
+cp.numpath	ãƒ‘ã‚¹æ•°:
+cp.recompute	å†è¨ˆç®—
+err.nopin	é¸æŠã•ã‚ŒãŸãƒ”ãƒ³ã®ã‚¿ã‚¤ãƒ—ã‚’å¤‰æ›´å‡ºæ¥ãªã„ã€‚
+err.gatanchor	ã‚²ãƒ¼ãƒˆãŒç§»å‹•ä¸å¯ã«ãƒãƒ¼ã‚¯ã•ã‚Œã¦ã„ã‚‹ç‚ºã€ç§»å‹•å‡ºæ¥ãªã„ã€‚
+err.badfind	æ¢ç´¢ã‚¹ãƒˆãƒªãƒ³ã‚°ã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.badopendel	ä½¿ç”¨ä¸­ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’å‰Šé™¤å‡ºæ¥ãªã„ã€‚
+err.nosrcmod	ã‚½ãƒ¼ã‚¹ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«'%s'ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.noerr	ã‚¨ãƒ©ãƒ¼ãƒ»ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.misserr	ã‚¨ãƒ©ãƒ¼æƒ…å ±ãŒä¸å®Œå…¨ã§ã‚ã‚‹ã€‚(ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ãŒè½ã¡ãŸï¼Ÿ)
+err.badinadd	é¸æŠã®ã‚²ãƒ¼ãƒˆã«ã‚‚ã†å…¥åŠ›è¿½åŠ ãŒå‡ºæ¥ãªã„ã€‚
+err.badoutadd	é¸æŠã®ã‚²ãƒ¼ãƒˆã«ã‚‚ã†å‡ºåŠ›è¿½åŠ ãŒå‡ºæ¥ãªã„ã€‚
+err.badinoutadd	é¸æŠã®ã‚²ãƒ¼ãƒˆã«ã‚‚ã†å…¥å‡ºåŠ›è¿½åŠ ãŒå‡ºæ¥ãªã„ã€‚
+err.badpinchg	é¸æŠã®ã‚²ãƒ¼ãƒˆã®ãƒ”ãƒ³ã®ã‚¿ã‚¤ãƒ—ãŒå¤‰æ›´å‡ºæ¥ãªã„ã€‚
+err.badnetname	åå‰ã«ä¸æ­£ã®æ–‡å­—ãŒã‚ã‚‹ç‚ºå‰Šé™¤ã•ã‚ŒãŸã€‚
+err.netbcrename	æŒ‡å®šã®åå‰ã«ä¸æ­£ã®æ–‡å­—ãŒã‚ã‚‹ç‚ºã€ã€Œ%sã€ã«å¤‰æ›´ã•ã‚ŒãŸã€‚
+err.netconfnet	æŒ‡å®šã®åå‰ãŒåˆ¥ã®åå‰ã¨è¡çªã™ã‚‹ç‚ºã€ã€Œ%sã€ã«å¤‰æ›´ã•ã‚ŒãŸã€‚
+err.badconsame	ãƒãƒƒãƒˆãŒåŒã˜ãªã®ã§ã€æ¥ç¶šå‡ºæ¥ãªã„ã€‚
+err.badconptsp	ãƒãƒƒãƒˆã®ä¸¡æ–¹ãŒãƒãƒ¼ãƒˆåˆã¯é›»åŠ›ãªã®ã§ã€æ¥ç¶šå‡ºæ¥ãªã„ã€‚
+err.badconbitw	ãƒãƒƒãƒˆã®ãƒ“ãƒƒãƒˆå¹…ãŒç•°ãªã‚‹ã®ã§ã€æ¥ç¶šå‡ºæ¥ãªã„ã€‚
+err.badrange	æŒ‡å®šã•ã‚ŒãŸæ™‚é–“ã®ãƒ¬ãƒ³ã‚¸ãŒä¸æ­£ã§ã‚ã‚‹ã€‚
+err.badlprcmd	å°åˆ·ã‚³ãƒãƒ³ãƒ‰ã€Œ%sã€ãŒå®Ÿè¡Œå‡ºæ¥ãªã„ã€‚
+err.badpsopen	ãƒã‚¹ãƒˆãƒ»ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ã€Œ%sã€ã«æ›¸ãè¾¼ã‚ãªã„ã€‚
+err.badid	ã€Œ%sã€ã¯ä¸æ­£ã®åå‰ã§ã‚ã‚‹ã€‚
+err.bkpt.badexp	ä¸æ­£ãªãƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆã®æ¡ä»¶ã§ã‚ã‚‹ã€‚ã€Œnetã€, ã€Œ!netã€, ã€Œnet==valueã€, ã€Œnet!=valueã€ã®ã©ã‚Œã‹ã§ãªã‘ã‚Œã°ãªã‚‰ãªã„ã€‚
+err.bkpt.toomany	ãƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆãŒå¤šéãã‚‹ã€‚åˆ¶é™ã¯%dã§ã‚ã‚‹ã€‚
+err.sim.syntx	ä¸æ­£ã®ã€Œ%sã€ã‚³ãƒãƒ³ãƒ‰ã€‚
+err.sim.noincl	ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸã€‚
+err.sim.badedge	clockã‚³ãƒãƒ³ãƒ‰ã®ã‚¨ãƒƒã‚¸'%c'ãŒä¸æ­£ã§ã‚ã‚‹ã€‚
+err.sim.nobkpt	ãƒ–ãƒ¬ãƒ¼ã‚¯ãƒ»ãƒã‚¤ãƒ³ãƒˆã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.sim.nonet	ãƒãƒƒãƒˆã€Œ%sã€ã¯å®šç¾©ã—ã¦ã„ãªã„ã€‚
+err.sim.nogate	ã‚²ãƒ¼ãƒˆã€Œ%sã€ã¯å®šç¾©ã—ã¦ã„ãªã„ã€‚
+err.sim.notswitch	ã‚²ãƒ¼ãƒˆ'%s'ã¯ã‚¹ã‚¤ãƒƒãƒã€DIPã€ãƒ¬ã‚¸ã‚¹ã‚¿ã®ã©ã‚Œã‹ã§ãªã‘ã‚Œã°ãªã‚‰ãªã„ã€‚
+err.sim.badcmd	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ã‚¹ã‚¯ãƒªãƒ—ãƒˆã«ä¸æ­£ã®ã‚³ãƒãƒ³ãƒ‰ã€Œ%sã€ãŒã‚ã‚‹ã€‚
+err.sim.isrun	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã¯æ—¢ã«å®Ÿè¡Œã—ã¦ã„ã‚‹ã€‚ ('Ctrl-s e'ã§çµ‚äº†ã™ã‚‹).
+err.noteditpchg	è¨­å®šã¯ç·¨é›†ãƒ¢ãƒ¼ãƒ‰ä»¥å¤–ã€å¤‰æ›´ä¸å¯ã€‚
+err.badeditop	ç·¨é›†ã‚³ãƒãƒ³ãƒ‰ã«ä¸æ­£ãŒã‚ã‚‹ã€‚
+err.badopen	å›è·¯ãƒ•ã‚¡ã‚¤ãƒ«ã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.badlibopen	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.nomark	ã‚²ãƒ¼ãƒˆç¨®ã‚’é¸ã¶å‰ã«ã€ãƒã‚¦ã‚¹ã§ä½ç½®ã‚’è¨­å®šã—ã¦ãã ã•ã„ã€‚
+err.badportadd	é¸æŠã•ã‚ŒãŸã‚²ãƒ¼ãƒˆã«ãƒãƒ¼ãƒˆã¯è¿½åŠ ä¸å¯ã€‚
+err.manypages	ãƒšãƒ¼ã‚¸æ•°ãŒæ¥µã‚ã¦å¤§ãã„ã€‚ æœ¬å½“ã«å°åˆ·ã—ã¾ã™ã‹?
+err.nojump	ç¾åœ¨ã€'jump-to-module'æ©Ÿèƒ½ã¯ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ãƒ¢ãƒ¼ãƒ‰ã§ä½¿ç”¨å‡ºæ¥ãªã„ã€‚ ãƒˆãƒƒãƒ—ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚ˆã‚Šã€ã€Œ>ã€ã‚„ã€Œ<ã€ã®ã‚³ãƒãƒ³ãƒ‰ã§ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’é–‹ã‘ã¦ãã ã•ã„ã€‚
+err.nomod	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã€Œ%sã€ã¯å®šç¾©ã—ã¦ã„ãªã„ã€‚
+err.modlock	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒãƒ­ãƒƒã‚¯ã—ã¦ã„ã‚‹!
+err.closeroot	ãƒˆãƒƒãƒ—ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒé–‰ã˜ã‚Œãªã„ã€‚
+err.editonly	ã‚³ãƒãƒ³ãƒ‰ã¯ã€ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ãƒ¢ãƒ¼ãƒ‰ã§ä½¿ãˆãªã„ã€‚
+err.simonly	ã‚³ãƒãƒ³ãƒ‰ã¯ã€ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ãƒ¢ãƒ¼ãƒ‰ã§ã—ã‹ä½¿ãˆãªã„ã€‚
+err.nodel	ã‚²ãƒ¼ãƒˆã‚’é¸æŠã—ã¦ã„ãªã„ã€‚
+err.modnotdef	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã€Œ%sã€ã¯å®šç¾©ã—ã¦ã„ãªã„ã€‚
+err.moddef	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã€Œ%sã€ãŒæ—¢ã«å®šç¾©ã—ã¦ã„ã‚‹ã€‚
+err.noprop	é¸æŠã•ã‚ŒãŸã‚²ãƒ¼ãƒˆã¯ç·¨é›†å‡ºæ¥ã‚‹è¨­å®šãŒãªã„ã€‚
+err.openscript	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ã‚¹ã‚¯ãƒªãƒ—ãƒˆã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€‚
+err.oldversion	å›è·¯ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³(%s)ãŒå¤ã„ã€‚(ç¾åœ¨ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯%s).
+err.futureversion	æœªæ¥ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ï¼ˆ%sï¼‰ã®tkgateãƒ•ã‚¡ã‚¤ãƒ«ã§ã‚ã‚‹ã€‚ï¼ˆç¾åœ¨ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯%sï¼‰
+err.badversion	å›è·¯ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãŒèªè­˜å‡ºæ¥ãªã„ã€‚æ³¨æ„ã—ã¦åˆ©ç”¨ä¸‹ã•ã„ã€‚
+err.nodrive	ãƒãƒƒãƒˆ%sã¯ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«%sã«ä¿¡å·ã®ã‚½ãƒ¼ã‚¹ãŒãªã„ã€‚
+err.noconn	ãƒ¯ã‚¤ãƒ¤%s{%d}ã¯æ¥ç¶šãŒãªã„ï¼ˆå‰Šé™¤ã—ãŸï¼‰ã€‚
+err.oldportact	ãƒãƒ¼ãƒˆã‚„ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ç«¯ã«å³ã‚¯ãƒªãƒƒã‚¯ã—ã¦ä¸‹ã•ã„ã€‚
+err.backupfail	ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ»ãƒ•ã‚¡ã‚¤ãƒ«'%s'ãŒä½œæˆå‡ºæ¥ãªã‹ã£ãŸã€‚
+err.corruptnewsave	TkGateã¯'%s'ã«ã‚»ãƒ¼ãƒ–å‡ºæ¥ãŸãŒã€ãƒ•ã‚¡ã‚¤ãƒ«ãŒæ··ä¹±ã•ã‚Œã¦ã„ã‚‹ã¿ãŸã„ã€‚ã‚‚ã—ãƒã‚§ãƒƒ ã‚¯ãƒ»ãƒã‚¤ãƒ³ãƒˆã‚’åˆ©ç”¨ã—ã¦ã„ã‚Œã°ã€ãƒã‚§ãƒƒã‚¯ãƒ»ãƒã‚¤ãƒ³ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½¿ã£ã¦ã¿ã¦ã ã ã•ã„ã€‚'tkgate -V'ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒã‚§ãƒƒã‚¯å‡ºæ¥ã‚‹ã€‚
+err.corruptsave	'%s'ã‚’ã‚»ãƒ¼ãƒ–ã—ã‚ˆã†ã¨ã—ã¦ã„ã‚‹æ™‚ã€TkGateã«å†…éƒ¨å•é¡ŒãŒç™ºè¦‹ã—ãŸã€‚å…ƒã€…ã®ãƒ•ã‚¡ã‚¤ ãƒ«ã¯ãã®ã¾ã¾æ®‹ã—ã¦ã‚ã‚‹ã€‚æ··ä¹±ã•ã‚Œã¦ã„ã‚‹å¯èƒ½æ€§ã®ã‚ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã¯'%s'ã«ã‚»ãƒ¼ãƒ– ã—ãŸã€‚ã‚‚ã—ãƒã‚§ãƒƒã‚¯ãƒ»ãƒã‚¤ãƒ³ãƒˆã‚’åˆ©ç”¨ã—ã¦ã„ã‚Œã°ã€ãƒã‚§ãƒƒã‚¯ãƒ»ãƒã‚¤ãƒ³ãƒˆã®ãƒ•ã‚¡ã‚¤ ãƒ«ã‚’ä½¿ã£ã¦ã¿ã¦ãã ã•ã„ã€‚'tkgate -V'ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒã‚§ãƒƒã‚¯å‡ºæ¥ã‚‹ã€‚
+err.badsave	'%s'ã‚’ã‚»ãƒ¼ãƒ–å‡ºæ¥ãªã‹ã£ãŸã€‚ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ—ãƒ­ãƒ†ã‚¯ã‚·ãƒ§ãƒ³ã‚„ç©ºããƒ‡ã‚£ã‚¹ã‚¯é‡ã‚’ç¢ºèª ã—ã¦ãã ã•ã„ã€‚
+err.nosafesave	'%s'ã®å®‰å…¨ã‚»ãƒ¼ãƒ–ã‚’è¡Œã†ãŸã‚ã®ä¸€æ™‚ã®ãƒ•ã‚¡ã‚¤ãƒ«ãŒä½œæˆå‡ºæ¥ãªã‹ã£ãŸã‹ã‚‰ã€ç›´æ¥ã‚»ãƒ¼ ãƒ–ã—ãªãã¦ã¯ãªã‚‰ãªã„ã€‚ã€ŒNOã€ã«ã‚¯ãƒªãƒƒã‚¯ã™ã‚Œã°ã€å…ƒã€…ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯ãã®ã¾ã¾æ®‹ ã™ã€‚ã€ŒYESã€ã«ã‚¯ãƒªãƒƒã‚¯ã™ã‚Œã°ã€ã‚»ãƒ¼ãƒ–ã™ã‚‹ãŒã€ã‚»ãƒ¼ãƒ–é€”ä¸­ã«å•é¡ŒãŒèµ·ã“ã£ãŸã‚‰ã€ å›è·¯ãƒ‡ãƒ¼ã‚¿ãŒç ´å£Šã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ã€‚ç›´æ¥ã‚»ãƒ¼ãƒ–ã—ã¦ã¿ã¾ã—ã‚‡ã†ã‹?
+err.noback	tkgateãƒãƒ¼ã‚¸ãƒ§ãƒ³%sã§ä½œã‚‰ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ã§ã‚ã‚‹ã€‚ä¿å­˜ã™ã‚‹ã¨ã€ tkgateã®å¤ã„ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã«èª­ã¿è¾¼ã‚ãªã„ã“ã¨ãŒã‚ã‚‹ï¼ˆç¾åœ¨ã® ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯%sã§ã‚ã‚‹ï¼‰ã€‚
+msg.selwire	%sã¨ã„ã†ãƒ¯ã‚¤ãƒ¤ãŒé¸æŠã•ã‚ŒãŸã€‚
+msg.modoverwt	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã€Œ%sã€ãŒæ—¢ã«å®šç¾©ã•ã‚Œã¦ã„ã‚‹ã€‚å®šç¾©ã—ãªãŠã—ã¾ã™ã‹?
+msg.foundgate	%sã¨ã„ã†ã‚²ãƒ¼ãƒˆãŒè¦‹ã¤ã‹ã£ãŸã€‚
+msg.foundwire	%sã¨ã„ã†ãƒ¯ã‚¤ãƒ¤ãŒè¦‹ã¤ã‹ã£ãŸã€‚
+msg.searchagn	æ¢ç´¢ã‚¹ãƒˆãƒªãƒ³ã‚°ã€Œ%sã€ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸã€‚ã‚‚ã†ä¸€åº¦ã€Œæ¢ç´¢ã€ã‚’æŠ¼ã™ã¨ã€æ¢ç´¢ã—ãªãŠã™ã€‚
+msg.sim.chgtoroot	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ãƒ¢ãƒ¼ãƒ‰ã§ã¯ã€ãƒˆãƒƒãƒ—ãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ»ã‚¹ã‚¿ãƒƒã‚¯ã®ãƒˆãƒƒãƒ—ã§ãªã‘ã‚Œã°ãªã‚‰ãªã„ã€‚
+msg.sim.nogatemod	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ãƒ»ãƒ¢ãƒ¼ãƒ‰ã§ã€å…·ä½“çš„ãªãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ»ã‚¹ã‚¿ãƒƒã‚¯ãŒå¿…è¦ã§ã‚ã‚‹ã€‚
+msg.setinterface	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã€Œ%sã€ã®ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã‚’ã‚»ãƒƒãƒˆã—ãŸã€‚
+msg.needsel	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’é¸ã‚“ã§ãã ã•ã„ã€‚
+msg.wroteckpt	ã€Œ%sã€ã«ãƒã‚§ãƒƒã‚¯ãƒã‚¤ãƒ³ãƒˆã‚’æ›¸ãè¾¼ã‚“ã ã...
+msg.save	ã€Œ%sã€ã«ä¿å­˜ã—ãŸã€‚
+msg.reallynew	å›è·¯ã«å¤‰æ›´ãŒã‚ã‚‹ã€‚æœ¬å½“ã«ä¿å­˜ã—ãªã„ã§ã€æ–°ã—ã„å›è·¯ã‚’é–‹ãã¾ã™ã‹?
+msg.reallyquit	å›è·¯ã«å¤‰æ›´ãŒã‚ã‚‹ã€‚æœ¬å½“ã«ä¿å­˜ã—ãªã„ã§ã€çµ‚äº†ã—ã¾ã™ã‹?
+msg.notlib	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã€Œ%sã€ã¯ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã§ã¯ãªã„ã€‚
+miles.msg7	ã“ã®ãƒ­ã‚¯ã§ãªã—å›è·¯ã®è¨­è¨ˆã‚’è«¦ã‚ã‚ˆã€ãƒã‚¤ã‚¹ãƒ«ã€‚
+miles.msg8a	ç¶šã‘ã¦ã‚‚ã€ç„¡é§„ã ã‚ˆã€ãƒã‚¤ãƒ«ã‚¹ã€‚
+miles.msg8b	ãŠå‰ãŒå›è·¯ã‚’è¨­è¨ˆå‡ºæ¥ãªã„ã¨ã„ã†ã®ã¯ã€èª°ã§ã‚‚åˆ†ã‹ã‚‹ã‚ˆ
+verga.err.OK	å¿ƒé…ã—ãªã„ã§ã€ç¬‘ã£ã¦ãã ã•ã„ã€‚
+ho.new	ç¾åœ¨ã®å›è·¯ã‚’æ¶ˆã—ã¦ã€æ–°ã—ã„ å›è·¯ã‚’ä½œæˆã™ã‚‹ã€‚
+ho.open	å›è·¯ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã€‚
+ho.save	å›è·¯ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¿å­˜ã™ã‚‹ã€‚
+ho.print	å›è·¯ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å°åˆ·ã™ã‚‹ã€‚
+ho.move	ç§»å‹•ï¼æ¥ç¶š - ã“ã®ãƒ„ãƒ¼ãƒ«ã§ä»¥ä¸‹ã®æ©Ÿèƒ½ãŒä½¿ãˆã‚‹ æ–°ã—ã„ã‚²ãƒ¼ãƒˆã®ä½ç½®ã‚’è¨­å®šã™ã‚‹ ã‚²ãƒ¼ãƒˆã‚’ç§»å‹•ã™ã‚‹ ãƒ¯ã‚¤ãƒ¤ã‚’ç§»å‹•ã™ã‚‹ ãƒ¯ã‚¤ãƒ¤ã‚’æ¥ç¶šã™ã‚‹ ãƒ€ãƒ–ãƒ«ãƒ»ã‚¯ãƒªãƒƒã‚¯ã§ä»¥ä¸‹ã®æ©Ÿèƒ½ãŒä½¿ãˆã‚‹ ã‚²ãƒ¼ãƒˆã®å±æ€§ã‚’ç·¨é›†ã™ã‚‹ ãƒ¯ã‚¤ãƒ¤ã®å±æ€§ã‚’ç·¨é›†ã™ã‚‹ ãƒãƒ¼ãƒˆã®å±æ€§ã‚’ç·¨é›†ã™ã‚‹ ã‚³ãƒ¡ãƒ³ãƒˆã®ãƒ†ã‚­ã‚¹ãƒˆã®å±æ€§ã‚’ç·¨é›†ã™ã‚‹
+ho.delgat	ã“ã®ãƒ„ãƒ¼ãƒ«ã§ã‚²ãƒ¼ãƒˆã‚’å‰Šé™¤ã™ã‚‹ã€‚
+ho.cutw	ã“ã®ãƒ„ãƒ¼ãƒ«ã§ãƒ¯ã‚¤ãƒ¤ã‚’åˆ‡æ–­ã™ã‚‹ã€‚
+ho.inv	ã“ã®ãƒ„ãƒ¼ãƒ«ã§ã€ã‚²ãƒ¼ãƒˆã®å…¥å‡ºåŠ›ã« å¦å®šã‚’ä»˜ã‘ãŸã‚Šã€æ¶ˆã—ãŸã‚Šã™ã‚‹ã€‚
+ho.bitw	ã“ã®ãƒ„ãƒ¼ãƒ«ã§ãƒ¯ã‚¤ãƒ¤ã®ãƒ“ãƒƒãƒˆå¹…ã‚’ å¤‰æ›´ã™ã‚‹ã€‚ãƒ“ãƒƒãƒˆå¹…ã‚’å³ä¸‹ã®å…¥åŠ› ãƒœãƒƒã‚¯ã‚¹ã«å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚
+ho.mod.open	é¸æŠã•ã‚ŒãŸãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’é–‹ãã€‚
+ho.mod.close	ç¾åœ¨ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’é–‰ã˜ã‚‹ã€‚
+ho.mod.type.partlib	ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå
+ho.undo	æœ€è¿‘è¡Œã£ãŸå¤‰åŒ–ã‚’å…ƒé€šã‚Šã«ã™ã‚‹ã€‚
+ho.redo	undoã—ãŸå¤‰åŒ–ã‚’ã‚„ã‚Šç›´ã™
+ho.tab.simulate	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã‚’é–‹å§‹ã—ã€è«–ç†ã‚¢ãƒŠãƒ©ã‚¤ã‚¶ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚’ é–‹ãã€ãã—ã¦åˆæœŸåŒ–ã‚¹ã‚¯ãƒªãƒ—ãƒˆãŒå®šç¾©ã—ã¦ã„ã‚‹å ´åˆã€ ãã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’å®Ÿè¡Œã™ã‚‹ã€‚
+ho.tab.cpath	å›è·¯ã®ã‚¯ãƒªãƒ†ã‚£ã‚«ãƒ«ãƒ»ãƒ‘ã‚¹ã‚’æ¢ç´¢ã™ã‚‹ã€‚
+ho.simgo	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã‚’å‹•ã‹ã™ã€‚çµ„åˆã›å›è·¯ã®å ´åˆã€ ä¿¡å·ãŒå¤‰ã‚ã‚‰ãªããªã‚‹æ™‚ã€ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã®æ™‚é–“ ãŒä¸€æ™‚åœæ­¢ã™ã‚‹ã€‚
+ho.simpause	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ä¸€æ™‚åœæ­¢ã€‚
+ho.simstep	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã‚’ä¸€å®šæ•°ã®ã‚¨ãƒãƒƒã‚¯ã ã‘å‹•ã‹ã™ã€‚ ã‚¹ãƒ†ãƒƒãƒ—æ•°ã¯ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆã®è¨­å®šã«ã‚ˆã‚‹ã€‚
+ho.simclock	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã‚’ä¸€å®šæ•°ã®ã‚¯ãƒ­ãƒƒã‚¯ãƒ»ã‚µã‚¤ã‚¯ãƒ« ã ã‘å‹•ã‹ã™ã€‚ ã‚¹ãƒ†ãƒƒãƒ—æ•°ã¯ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆã®è¨­å®šã«ã‚ˆã‚‹ã€‚
+ho.simstop	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã‚’åœæ­¢ã—ã¦ã€ ç·¨é›†ãƒ¢ãƒ¼ãƒ‰ã«æˆ»ã‚‹ã€‚
+ho.simbreak	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ãƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆ ã‚’ç·¨é›†ã™ã‚‹ã€‚
+ho.simexec	ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’å®Ÿè¡Œã™ã‚‹ã€‚
+ho.simload	ãƒ¡ãƒ¢ãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€ã€‚
+ho.simdump	ãƒ¡ãƒ¢ãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãå‡ºã™ã€‚
+ho.modlist	èª­ã¿è¾¼ã‚“ã§ã‚ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ä¸€è¦§è¡¨ã€‚ ãƒˆãƒƒãƒ—ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®åå‰ã«ã€Œ+ã€ãŒ ä»˜ã„ã¦ã„ã‚‹ã€‚ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ« ã¯æ‹¬å¼§ã«å›²ã¾ã‚Œã¦ã„ã‚‹ã€‚
+ho.netlist	ç¾åœ¨ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ä¸€è¦§è¡¨ã€‚åå‰ã‚’éš ã—ã¦ ã„ã‚‹ãƒãƒƒãƒˆã®åå‰ã«ã€Œ@ã€ãŒä»˜ã„ã¦ã„ã‚‹ã€‚ ãƒãƒ«ãƒãƒ»ãƒ“ãƒƒãƒˆã®ãƒãƒƒãƒˆã®åå‰ã®å¾Œã« ãƒ“ãƒƒãƒˆã®ãƒ¬ãƒ³ã‚¸ã‚’è¡¨ç¤ºã—ã¦ã„ã‚‹ã€‚
+ho.ports	ç¾åœ¨ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ãƒãƒ¼ãƒˆã®ä¸€è¦§è¡¨ã€‚ å…¥åŠ›ã«ã€Œ>ã€ã€å‡ºåŠ›ã«ã€Œ<ã€ã€å…¥å‡ºåŠ›ã« ã€Œ=ã€ãŒä»˜ã„ã¦ã„ã‚‹ã€‚
+ho.status.logo	ç¾åœ¨ã®ãƒ¢ãƒ¼ãƒ‰ãŒè¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹ã€‚é‰„ã®ã‚²ãƒ¼ãƒˆ ã¯ç·¨é›†ãƒ¢ãƒ¼ãƒ‰ã‚’è¡¨ã™ã€‚ANDã‚²ãƒ¼ãƒˆã¯ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ ã‚·ãƒ§ãƒ³ãƒ»ãƒ¢ãƒ¼ãƒ‰ã‚’è¡¨ã™ã€‚ANDã‚²ãƒ¼ãƒˆãŒèµ°ã£ã¦ ã„ã‚‹æ™‚ã€ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã®æ™‚é–“ãŒå‹•ã„ã¦ã„ã‚‹ã€‚
+ho.status.msg	tkgateã‚ˆã‚Šã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒã“ã“ã«è¡¨ç¤ºã•ã‚Œã‚‹ã€‚
+ho.status.block	ç¾åœ¨ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ãƒ‘ã‚¹ã€‚
+ho.status.file	ç¾åœ¨ç·¨é›†ä¸­ã®ãƒ•ã‚¡ã‚¤ãƒ«åãŒè¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹ã€‚ã€Œ*ã€ ã¨ã„ã†è¨˜å·ãŒã¤ã„ã¦ã„ã‚‹æ™‚ã€ä¿å­˜ã—ã¦ã„ãªã„å¤‰æ›´ ãŒã‚ã‚‹ã€‚
+ho.print.selall	å…¨ã¦ã®èª­ã¿è¾¼ã‚“ã§ã„ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’å°åˆ·ã™ã‚‹ã€‚
+ho.print.selcur	ç¾åœ¨ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ã¿ã‚’å°åˆ·ã™ã‚‹ã€‚
+ho.print.seluse	ä½¿ç”¨ä¸­ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ã¿å°åˆ·ã™ã‚‹ã€‚
+ho.print.selsel	ä»¥ä¸‹ã«ãƒãƒ¼ã‚¯ã—ã¦ã„ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ã¿ã‚’å°åˆ·ã™ã‚‹ã€‚ ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ãƒ»ã‚­ãƒ¼ã§è¤‡æ•°ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’é¸æŠ å‡ºæ¥ã‚‹ã€‚
+ho.print.modlist	å°åˆ·ã™ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’é¸æŠã™ã‚‹ã€‚
+ho.circuit.discchg	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€å¤‰æ›´ã‚ã‚Šã®å›è·¯ã‚’ ä¿å­˜ã—ãªã„ã§é–‰ã˜ã‚‹ã¨ãè­¦å‘Šã—ãªã„ã€‚
+ho.circuit.extbar	åŸºæœ¬ã‚²ãƒ¼ãƒˆ(AND, OR, XOR)ã®å…¥åŠ›æ•°ãŒ 3æœ¬ä»¥ä¸Šã®æ™‚ã€æ‹¡å¼µãƒãƒ¼ã¯åˆ©ç”¨ã™ã‚‹ã€‚
+ho.cmd.bitw	ã‚«ãƒ¼ã‚½ãƒ«ã§é¸æŠã•ã‚ŒãŸãƒ¯ã‚¤ãƒ¤ã¯è¡¨ç¤º ã•ã‚Œã¦ã„ã‚‹ãƒ“ãƒƒãƒˆå¹…ã«è¨­å®šã•ã‚Œã‚‹ã€‚
+ho.edgat.signam	é¸æŠã•ã‚ŒãŸã‚²ãƒ¼ãƒˆã®é¸æŠã•ã‚ŒãŸ ãƒãƒƒãƒˆã§ã‚ã‚‹ã€‚åå‰ãŒå¤‰æ›´å‡ºæ¥ã‚‹ã€‚
+ho.edgat.port	é¸æŠã•ã‚ŒãŸã‚²ãƒ¼ãƒˆã®é¸æŠã•ã‚ŒãŸ ãƒãƒƒãƒˆã®ãƒãƒ¼ãƒˆåã§ã‚ã‚‹ã€‚ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ« ã®ã‚²ãƒ¼ãƒˆã®å ´åˆã®ã¿å¤‰æ›´å‡ºæ¥ã‚‹ã€‚
+ho.edgat.iolab	é¸æŠã•ã‚ŒãŸã‚²ãƒ¼ãƒˆã®é¸æŠã•ã‚ŒãŸ ãƒãƒƒãƒˆã®ãƒãƒ¼ãƒˆæ–¹å‘ã§ã‚ã‚‹ã€‚ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ« ã®ã‚²ãƒ¼ãƒˆã®å ´åˆã®ã¿å¤‰æ›´å‡ºæ¥ã‚‹ã€‚
+ho.edgat.bitlab	é¸æŠã•ã‚ŒãŸã‚²ãƒ¼ãƒˆã®é¸æŠã•ã‚ŒãŸ ãƒãƒƒãƒˆã®ãƒ“ãƒƒãƒˆå¹…ã§ã‚ã‚‹ã€‚å¤‰æ›´å‡ºæ¥ã‚‹ã€‚
+ho.edgat.cycle	ä¸€ã‚µã‚¤ã‚¯ãƒ«ã®ã‚¨ãƒãƒƒã‚¯æ•°ã€‚
+ho.edgat.phase	ã‚¯ãƒ­ãƒƒã‚¯ã®ãƒ•ã‚§ãƒ¼ã‚ºï¼ˆãƒ‘ãƒ¼ã‚»ãƒ³ãƒˆã§è¨­å®šã™ã‚‹ï¼‰
+ho.edgat.duty	ã‚¯ãƒ­ãƒƒã‚¯ãƒ»ã‚µã‚¤ã‚¯ãƒ«ã®ä½•ãƒ‘ãƒ¼ã‚»ãƒ³ãƒˆãŒè«–ç†0ã§ã‚ã‚‹ã‹ã€‚
+ho.edgat.hide	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã‚²ãƒ¼ãƒˆåãŒè¡¨ç¤ºã•ã‚Œãªã„ã€‚
+ho.edgat.gtype	ã‚²ãƒ¼ãƒˆã®ç¨®é¡ã€‚
+ho.edgat.gname	ã‚²ãƒ¼ãƒˆã®åå‰ã€‚
+ho.edgat.ganchor	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ã‚²ãƒ¼ãƒˆãŒç§»å‹•ä¸å¯ã«ãªã‚‹ã€‚
+ho.edgat.gx	ã‚²ãƒ¼ãƒˆã®Xä½ç½®ã€‚
+ho.edgat.gy	ã‚²ãƒ¼ãƒˆã®Yä½ç½®ã€‚
+ho.edgat.swstate	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å§‹ã‚ã‚‹æ™‚ã®åˆæœŸã®å€¤ã§ã‚ã‚‹ã€‚
+ho.edgat.dipstate	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å§‹ã‚ã‚‹æ™‚ã®åˆæœŸã®å€¤ã§ã‚ã‚‹ã€‚
+ho.edgat.range	ãƒãƒ«ãƒãƒ“ãƒƒãƒˆã®ä¿¡å·ã®ã‚µãƒ–ãƒ»ãƒ¬ãƒ³ã‚¸ã§ã‚ã‚‹ã€‚
+ho.edgat.memfile	ãƒ¡ãƒ¢ãƒªã®åˆæœŸã®å€¤ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æŒ‡å®šã™ã‚‹ã€‚ ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å§‹ã‚ã‚‹æ™‚ã€ã“ã®ãƒ•ã‚¡ã‚¤ãƒ« ãŒèª­ã¿è¾¼ã¾ã‚Œã‚‹ã€‚
+ho.edgat.func	ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ©Ÿèƒ½ã€‚
+ho.edgat.frame	ãƒ•ãƒ¬ãƒ¼ãƒ ã®ãƒ©ãƒ™ãƒ«ã€‚
+ho.opt.site	å›è·¯ãªã©ã‚’å°åˆ·ã™ã‚‹æ™‚ã€ã“ã®ã‚µã‚¤ãƒˆåãŒè¡¨ç¤ºã•ã‚Œã‚‹ã€‚
+ho.opt.smooth	ã“ã®è¨­å®šã‚’æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€å›è·¯ã‚’ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹æ™‚ã€ ãƒ“ãƒƒãƒˆãƒãƒƒãƒ—ã®ã‚³ãƒ”ãƒ¼ã‚’åˆ©ç”¨ã—ã¦ã€åŠ¹ç‡ã‚ˆã ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã§ãã‚‹ã€‚Xã‚µãƒ¼ãƒã®å•é¡ŒãŒã‚ã‚Œã°ã€ã“ã® è¨­å®šã‚’ç„¡åŠ¹ã«ã™ã‚Œã°è‰¯ã„ã€‚
+ho.opt.clip	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®éƒ¨åˆ†é ˜åŸŸã® å†æç”»ã‚’è¡Œãªã†ã€‚ãã†ã§ãªã‘ã‚Œã°å¸¸ã« å…¨é ˜åŸŸã‚’å†æç”»ã™ã‚‹ã€‚
+ho.opt.outmove	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’ç§»å‹•ã™ã‚‹æ™‚ã€ ãƒ¯ã‚¤ãƒ¤ãªã©ã¯ãƒã‚¦ã‚¹ã®ãƒœã‚¿ãƒ³ã‚’é›¢ã™ã¾ã§ ç§»å‹•ã—ãªã„ã€‚ç”»é¢ã®è¡¨ç¤ºãŒé…ã„æ™‚ã«ä¾¿åˆ©ã§ã‚ã‚‹ã€‚
+ho.opt.bhelp	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ã“ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®æ§˜ãªã€Œãƒ˜ãƒ«ãƒ—ãƒ» ãƒãƒ«ãƒ¼ãƒ³ã€ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã€‚
+ho.opt.novice	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€åˆå¿ƒè€…ãƒ¢ãƒ¼ãƒ‰ã«ãªã‚‹ã€‚ åˆå¿ƒè€…ãƒ¢ãƒ¼ãƒ‰ã§ã¯ã€tkgateãŒç«‹ã¡ä¸ŠãŒã‚‹æ™‚ã€ ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«ãŒè‡ªå‹•çš„ã«èª­ã¿è¾¼ã¾ã‚Œã‚‹ã€‚
+ho.opt.debug	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ãƒ‡ãƒã‚°æ©Ÿèƒ½ãŒä½¿ãˆã‚‹ã€‚ é–‹ç™ºè€…ä»¥å¤–ã«ã€ã‚ã¾ã‚Šå½¹ã«ç«‹ãŸãªã„ã€‚
+ho.opt.ckpt	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€tkgateã¯ãƒã‚§ãƒƒã‚¯ãƒã‚¤ãƒ³ãƒˆä¿å­˜ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œã‚‹ã€‚
+ho.opt.ckptfreq	ãƒã‚§ãƒƒã‚¯ãƒã‚¤ãƒ³ãƒˆä¿å­˜ã‚’ä½•ã‚¯ãƒªãƒƒã‚¯æ¯ã«è¡Œãªã†ã‹ã€‚
+ho.opt.beak	å…¨ç„¶å½¹ã«ç«‹ãŸãªã„æ©Ÿèƒ½ã‚’æœ‰åŠ¹ã«ã™ã‚‹ã€‚ã“ã®æ©Ÿèƒ½ã‚’ ç„¡åŠ¹ã«ã™ã‚‹ã¨ã€ã“ã®ã‚¹ã‚¤ãƒƒãƒã¯ãƒ€ã‚¤ã‚¢ãƒ­ã‚° ãƒœãƒƒã‚¯ã‚¹ã‹ã‚‰æ¶ˆãˆã€.tkgate2-propertiesã‚’ç·¨é›†ã—ãªã„é™ã‚Š æˆ»ã‚‰ãªã„ã€‚
+ho.opt.miles	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€tkgateã¯æ™‚ã€…ãƒ¦ãƒ¼ã‚¶ã‚’ é¦¬é¹¿ã«ã—ãŸã‚Šã€æ‚ªå£ã‚’è¨€ã£ãŸã‚Šã™ã‚‹ã€‚
+ho.opt.bat	æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ãƒãƒƒãƒˆãƒãƒ³ã®ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ã‚’ è¨­è¨ˆã™ã‚‹ç‚ºã«ã€Œå½¹ã«ãŸã¤ã€æ©Ÿèƒ½ãŒä½¿ãˆã‚‹ã€‚
+ho.opt.trek	è»¢é€ã—ã‚ã€ã‚¹ã‚³ãƒƒãƒ†ã‚£ï¼
+ho.opt.simstep	-begin-
+ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ã‚¹ãƒ†ãƒƒãƒ—ãƒ»ã‚³ãƒãƒ³ãƒ‰ã§
+ä½•ã‚¨ãƒãƒƒã‚¯é€²ã‚€ã‹ã‚’æŒ‡å®šã™ã‚‹ã€‚
 -end-
-ho.opt.ckstep -begin-
-¥·¥ß¥å¥ì¡¼¥¿¤Î¥¯¥í¥Ã¥¯¥¹¥Æ¥Ã¥×¡¦
-¥³¥Ş¥ó¥É¤Ç ²¿¥µ¥¤¥¯¥ë¿Ê¤à¤«¤ò»ØÄê¤¹¤ë¡£
+ho.opt.ckstep	-begin-
+ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ã‚¯ãƒ­ãƒƒã‚¯ã‚¹ãƒ†ãƒƒãƒ—ãƒ»
+ã‚³ãƒãƒ³ãƒ‰ã§ ä½•ã‚µã‚¤ã‚¯ãƒ«é€²ã‚€ã‹ã‚’æŒ‡å®šã™ã‚‹ã€‚
 -end-
-ho.opt.ckover -begin-
-¥·¥ß¥å¥ì¡¼¥¿¤Î¥¯¥í¥Ã¥¯¡¦¥³¥Ş¥ó¥É¤Ï
-¥¯¥í¥Ã¥¯¤Î¥¨¥Ã¥¸¤è¤ê¹¹¤Ë²¿¥¨¥İ¥Ã¥¯
-¿Ê¤à¤«¤ò»ØÄê¤¹¤ë¡£
+ho.opt.ckover	-begin-
+ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®ã‚¯ãƒ­ãƒƒã‚¯ãƒ»ã‚³ãƒãƒ³ãƒ‰ã¯
+ã‚¯ãƒ­ãƒƒã‚¯ã®ã‚¨ãƒƒã‚¸ã‚ˆã‚Šæ›´ã«ä½•ã‚¨ãƒãƒƒã‚¯
+é€²ã‚€ã‹ã‚’æŒ‡å®šã™ã‚‹ã€‚
 -end-
-ho.opt.vpopupdelay -begin-
-¥Ş¥¦¥¹¥Ü¥¿¥ó¤ò²¡¤·¤Æ¤«¤é¡¢²¿¥ß¥êÉÃ·Ğ¤Ã¤Æ
-¤«¤é¿®¹æ¤ÎÃÍ¤¬É½¼¨¤µ¤ì¤ëÃÙ±ä¤Ç¤¢¤ë¡£ ¤³¤Î
-ÃÙ±ä¤¬Ã»²á¤®¤ë»ş¡¢¥À¥Ö¥ë¥¯¥ê¥Ã¥¯¤¬ Ç§ÃÎ
-¤Ç¤­¤Ê¤¯¤Ê¤ëÌäÂê¤¬¤¢¤ë¥·¥¹¥Æ¥à¤Ï ¤¢¤ë¡£
-¤³¤ÎÌäÂê¤¬µ¯¤³¤é¤Ê¤±¤ì¤Ğ¡¢ÃÙ±ä ¤ò¤è¤ê
-Ã»¤¯¤·¤Æ¤âÎÉ¤¤¡£
+ho.opt.vpopupdelay	-begin-
+ãƒã‚¦ã‚¹ãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã¦ã‹ã‚‰ã€ä½•ãƒŸãƒªç§’çµŒã£ã¦
+ã‹ã‚‰ä¿¡å·ã®å€¤ãŒè¡¨ç¤ºã•ã‚Œã‚‹é…å»¶ã§ã‚ã‚‹ã€‚ ã“ã®
+é…å»¶ãŒçŸ­éãã‚‹æ™‚ã€ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ãŒ èªçŸ¥
+ã§ããªããªã‚‹å•é¡ŒãŒã‚ã‚‹ã‚·ã‚¹ãƒ†ãƒ ã¯ ã‚ã‚‹ã€‚
+ã“ã®å•é¡ŒãŒèµ·ã“ã‚‰ãªã‘ã‚Œã°ã€é…å»¶ ã‚’ã‚ˆã‚Š
+çŸ­ãã—ã¦ã‚‚è‰¯ã„ã€‚
 -end-
-ho.opt.init -begin-
-¥·¥ß¥å¥ì¡¼¥¿¤òÎ©¤Á¾å¤²¤ë»ş¤Ë
-¼«Æ°Åª¤Ë¼Â¹Ô¤¹¤ë¥¹¥¯¥ê¥×¥È¡¦
-¥Õ¥¡¥¤¥ë¤ò»ØÄê¤¹¤ë¡£
+ho.opt.init	-begin-
+ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã‚’ç«‹ã¡ä¸Šã’ã‚‹æ™‚ã«
+è‡ªå‹•çš„ã«å®Ÿè¡Œã™ã‚‹ã‚¹ã‚¯ãƒªãƒ—ãƒˆãƒ»
+ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æŒ‡å®šã™ã‚‹ã€‚
 -end-
-ho.opt.ckall -begin-
-Í­¸ú¤Ë¤¹¤ë¤È¡¢¥¯¥í¥Ã¥¯¡¦¥³¥Ş¥ó¥É¤Ï
-¤É¤Î¥¯¥í¥Ã¥¯¤Î¥¨¥Ã¥¸¤Ç¤âÄä»ß¤¹¤ë¡£
+ho.opt.ckall	-begin-
+æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ã‚¯ãƒ­ãƒƒã‚¯ãƒ»ã‚³ãƒãƒ³ãƒ‰ã¯
+ã©ã®ã‚¯ãƒ­ãƒƒã‚¯ã®ã‚¨ãƒƒã‚¸ã§ã‚‚åœæ­¢ã™ã‚‹ã€‚
 -end-
-ho.opt.ckspec -begin-
-Í­¸ú¤Ë¤¹¤ë¤È¡¢¥¯¥í¥Ã¥¯¡¦¥³¥Ş¥ó¥É¤Ï
-»ØÄê¤·¤¿¥¯¥í¥Ã¥¯¤Î¥¨¥Ã¥¸¤Î¤ß¤ËÄä»ß¤¹¤ë¡£
+ho.opt.ckspec	-begin-
+æœ‰åŠ¹ã«ã™ã‚‹ã¨ã€ã‚¯ãƒ­ãƒƒã‚¯ãƒ»ã‚³ãƒãƒ³ãƒ‰ã¯
+æŒ‡å®šã—ãŸã‚¯ãƒ­ãƒƒã‚¯ã®ã‚¨ãƒƒã‚¸ã®ã¿ã«åœæ­¢ã™ã‚‹ã€‚
 -end-
-ho.deftech -begin-
-¿·¤·¤¤¥²¡¼¥È¤Î¥Ç¥Õ¥©¥ë¥È¤Î¥Æ¥¯¥Î¥í¥¸¡¼¡£
-¥²¡¼¥È¤ÎÃÙ±ä¤Ë±Æ¶Á¤¹¤ë¡£Ç¤°Õ¤Î¥²¡¼¥È ¤Î
-¥Æ¥¯¥Î¥í¥¸¡¼¤òÊÑ¹¹¤¹¤ë¤Ë¤Ï¡¢¥²¡¼¥È¤ÎÀßÄê
-¥Ü¥Ã¥¯¥¹¤ò³«¤¤¤Æ¡¢¡ÖÃÙ±ä¡×¤Î¥¿¥Ö ¤òÁªÂò
-¤·¤Æ²¼¤µ¤¤¡£
+ho.deftech	-begin-
+æ–°ã—ã„ã‚²ãƒ¼ãƒˆã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼ã€‚
+ã‚²ãƒ¼ãƒˆã®é…å»¶ã«å½±éŸ¿ã™ã‚‹ã€‚ä»»æ„ã®ã‚²ãƒ¼ãƒˆ ã®
+ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼ã‚’å¤‰æ›´ã™ã‚‹ã«ã¯ã€ã‚²ãƒ¼ãƒˆã®è¨­å®š
+ãƒœãƒƒã‚¯ã‚¹ã‚’é–‹ã„ã¦ã€ã€Œé…å»¶ã€ã®ã‚¿ãƒ– ã‚’é¸æŠ
+ã—ã¦ä¸‹ã•ã„ã€‚
 -end-
-ho.techbut -begin-
-»ØÄê¤·¤¿¥Æ¥¯¥Î¥í¥¸¡¼¡¦¥Õ¥¡¥¤¥ë¤«¤é¤Î
-ÃÙ±äÃÍ¤ò ÍøÍÑ¤¹¤ë¡£¿·¤·¤¤¥Æ¥¯¥Î¥í¥¸¡¼¤ò
-ÄÉ²Ã¤¹¤ë°Ù¡¢¡Ö¥Õ¥¡¥¤¥ë¡×¢ª¡ÖÀßÄê¡×¢ª
-¡Ö¥·¥ß¥å¥ì¡¼¥È¡× ¤Î¥á¥Ë¥å¡¼¤ò³«¤¤¤Æ¡¢
-¥Õ¥¡¥¤¥ë¤Î¥ê¥¹¥È¤ËÄÉ²Ã ¤·¤Æ²¼¤µ¤¤¡£
+ho.techbut	-begin-
+æŒ‡å®šã—ãŸãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼ãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã®
+é…å»¶å€¤ã‚’ åˆ©ç”¨ã™ã‚‹ã€‚æ–°ã—ã„ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼ã‚’
+è¿½åŠ ã™ã‚‹ç‚ºã€ã€Œãƒ•ã‚¡ã‚¤ãƒ«ã€â†’ã€Œè¨­å®šã€â†’
+ã€Œã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆã€ ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’é–‹ã„ã¦ã€
+ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒªã‚¹ãƒˆã«è¿½åŠ  ã—ã¦ä¸‹ã•ã„ã€‚
 -end-
-ho.custbut ¤³¤Î¥²¡¼¥ÈÀìÍÑ¤ÎÃÙ±äÃÍ¤ò»ØÄê¤¹¤ë¡£
-ho.contver ¥Ş¥¦¥¹Áàºî¤ò¹Ô¤Ê¤¦»ş¡¢ÆâÉô¹½Â¤¤ò¼«Æ°Åª¤Ë ³ÎÇ§¤·¤Æ¡¢ÉÔÀµ¤Î½ê¤òÃÎ¤é¤¹¡£
-ho.simwatch ¥·¥ß¥å¥ì¡¼¥¿¤ÈGUI¤Î´Ö¤Î¥³¥Ş¥ó¥É¤òÉ½¼¨¤¹¤ë¡£
-ho.tool.zoomin ¥º¡¼¥à¡¦¥¤¥ó
-ho.tool.zoomout ¥º¡¼¥à¡¦¥¢¥¦¥È
-ho.tool.rotate ÁªÂò¤Î¥²¡¼¥È¤òÈó»ş·×¼ş¤ê¤Ë²óÅ¾¤¹¤ë¡£
-ho.tool.brotate ÁªÂò¤Î¥²¡¼¥È¤ò»ş·×¼ş¤ê¤Ë²óÅ¾¤¹¤ë¡£
-ho.tool.valgn ÁªÂò¤Î¥²¡¼¥È¤ò½Ä¤Ë°ìÎó¤ËÊÂ¤Ö¡£
-ho.tool.halgn ÁªÂò¤Î¥²¡¼¥È¤òÍâ¤Ë°ìÎó¤ËÊÂ¤Ö¡£
-ho.tool.cut ÁªÂò¤Î¥²¡¼¥È¤ò¥Ğ¥Ã¥Õ¥¡¤Ë¥«¥Ã¥È¤¹¤ë¡£
-ho.tool.copy ÁªÂò¤Î¥²¡¼¥È¤ò¥Ğ¥Ã¥Õ¥¡¤Ë¥³¥Ô¡¼¤¹¤ë¡£
-ho.tool.paste ¥«¥Ã¥È¥Ğ¥Ã¥Õ¥¡¤Î¥²¡¼¥È¤òÄ¥¤êÉÕ¤±¤ë¡£
-ho.tool.find ¥²¡¼¥È¡¢¥ï¥¤¥ä¡¢¥Æ¥­¥¹¥È¤Ê¤É¤òÃµº÷¤¹¤ë¡£
-ho.tool.addport ÁªÂò¤Î¥²¡¼¥È¤Ë¥İ¡¼¥È¤òÄÉ²Ã¤¹¤ë¡£
-ho.tool.anchor ÁªÂò¤Î¥²¡¼¥È¤ò°ÜÆ°ÉÔ²Ä¤Ë¤¹¤ë¡£
-ho.tool.unanchor ÁªÂò¤Î¥²¡¼¥È¤ò°ÜÆ°²ÄÇ½¤Ë¤¹¤ë¡£
-ho.tool.replicate ¥²¡¼¥È¤òÊ£À½¤¹¤ë¡£
-ho.tool.delete ÁªÂò¤Î¥²¡¼¥È¤òºï½ü¤¹¤ë¡£
-license1 -begin-
-TtGate ¤Ï¥Õ¥ê¡¼¥½¥Õ¥È¥¦¥§¥¢¤Ç¤¹; ¥Õ¥ê¡¼¥½¥Õ¥È¥¦¥§¥¢ºâÃÄ¤¬È¯¹Ô¤¹¤ë GNU°ì
-ÈÌ¸ø½°ÍøÍÑµöÂú·ÀÌó½ñ¤ÎÂèÆóÈÇ¡¢¤¢¤ë¤¤¤Ï¤½¤ì°Ê¹ß¤ÎÈÇ¤¬Äê¤á¤ë¾ò¹à¤Î²¼¤ÇËÜ¥×¥í¥°¥é
-¥à¤òºÆÈÒÉÛ¤Ş¤¿¤ÏÊÑ¹¹¤¹¤ë¤³¤È¤¬¤Ç¤­¤Ş¤¹¡£
+ho.custbut	ã“ã®ã‚²ãƒ¼ãƒˆå°‚ç”¨ã®é…å»¶å€¤ã‚’æŒ‡å®šã™ã‚‹ã€‚
+ho.contver	ãƒã‚¦ã‚¹æ“ä½œã‚’è¡Œãªã†æ™‚ã€å†…éƒ¨æ§‹é€ ã‚’è‡ªå‹•çš„ã« ç¢ºèªã—ã¦ã€ä¸æ­£ã®æ‰€ã‚’çŸ¥ã‚‰ã™ã€‚
+ho.simwatch	ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã¨GUIã®é–“ã®ã‚³ãƒãƒ³ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
+ho.tool.zoomin	ã‚ºãƒ¼ãƒ ãƒ»ã‚¤ãƒ³
+ho.tool.zoomout	ã‚ºãƒ¼ãƒ ãƒ»ã‚¢ã‚¦ãƒˆ
+ho.tool.rotate	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’éæ™‚è¨ˆå‘¨ã‚Šã«å›è»¢ã™ã‚‹ã€‚
+ho.tool.brotate	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’æ™‚è¨ˆå‘¨ã‚Šã«å›è»¢ã™ã‚‹ã€‚
+ho.tool.valgn	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’ç¸¦ã«ä¸€åˆ—ã«ä¸¦ã¶ã€‚
+ho.tool.halgn	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’ç¿Œã«ä¸€åˆ—ã«ä¸¦ã¶ã€‚
+ho.tool.cut	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’ãƒãƒƒãƒ•ã‚¡ã«ã‚«ãƒƒãƒˆã™ã‚‹ã€‚
+ho.tool.copy	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’ãƒãƒƒãƒ•ã‚¡ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹ã€‚
+ho.tool.paste	ã‚«ãƒƒãƒˆãƒãƒƒãƒ•ã‚¡ã®ã‚²ãƒ¼ãƒˆã‚’å¼µã‚Šä»˜ã‘ã‚‹ã€‚
+ho.tool.find	ã‚²ãƒ¼ãƒˆã€ãƒ¯ã‚¤ãƒ¤ã€ãƒ†ã‚­ã‚¹ãƒˆãªã©ã‚’æ¢ç´¢ã™ã‚‹ã€‚
+ho.tool.addport	é¸æŠã®ã‚²ãƒ¼ãƒˆã«ãƒãƒ¼ãƒˆã‚’è¿½åŠ ã™ã‚‹ã€‚
+ho.tool.anchor	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’ç§»å‹•ä¸å¯ã«ã™ã‚‹ã€‚
+ho.tool.unanchor	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’ç§»å‹•å¯èƒ½ã«ã™ã‚‹ã€‚
+ho.tool.replicate	ã‚²ãƒ¼ãƒˆã‚’è¤‡è£½ã™ã‚‹ã€‚
+ho.tool.delete	é¸æŠã®ã‚²ãƒ¼ãƒˆã‚’å‰Šé™¤ã™ã‚‹ã€‚
+license1	-begin-
+TtGate ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™; ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡å›£ãŒç™ºè¡Œã™ã‚‹ GNUä¸€
+èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã®ç¬¬äºŒç‰ˆã€ã‚ã‚‹ã„ã¯ãã‚Œä»¥é™ã®ç‰ˆãŒå®šã‚ã‚‹æ¡é …ã®ä¸‹ã§æœ¬ãƒ—ãƒ­ã‚°ãƒ©
+ãƒ ã‚’å†é ’å¸ƒã¾ãŸã¯å¤‰æ›´ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 -end-
-license2 -begin-
-TtGate ¤ÏÌòÎ©¤Ä¤â¤Î¤Ç¤¢¤ë¤³¤È¤ò´üÂÔ¤·¤ÆÇÛÉÛ¤µ¤ì¤Æ¤¤¤Ş¤¹¤¬¡¢´°Á´¤ËÌµÊİ¾Ú¤Ç¤¹¡£
-¾¦ÍÑÍøÍÑ¤Ş¤¿¤ÏÆÃÄê¤ÎÌÜÅª¤Ë¤ª¤±¤ëÅ¬¹çÀ­¤ÎÊİ¾Ú¤Ï¤¢¤ê¤Ş¤»¤ó¡£
-¾ÜºÙ¤Ï GNU °ìÈÌ¸ø½°ÍøÍÑµöÂú·ÀÌó½ñ¤ò¤´Í÷¤¯¤À¤µ¤¤¡£
+license2	-begin-
+TtGate ã¯å½¹ç«‹ã¤ã‚‚ã®ã§ã‚ã‚‹ã“ã¨ã‚’æœŸå¾…ã—ã¦é…å¸ƒã•ã‚Œã¦ã„ã¾ã™ãŒã€å®Œå…¨ã«ç„¡ä¿è¨¼ã§ã™ã€‚
+å•†ç”¨åˆ©ç”¨ã¾ãŸã¯ç‰¹å®šã®ç›®çš„ã«ãŠã‘ã‚‹é©åˆæ€§ã®ä¿è¨¼ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+è©³ç´°ã¯ GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 -end-
-license3 -begin-
-¤¢¤Ê¤¿¤Ï¡¢ËÜ¥×¥í¥°¥é¥à¤È°ì½ï¤Ë GNU °ìÈÌ¸ø½°ÍøÍÑµöÂú·ÀÌó½ñ¤Î¼Ì¤·¤ò¼õ¤±¼è¤Ã¤Æ¤¤¤ë¤Ï¤º¤Ç¤¹¡£
-¤½¤¦¤Ç¤Ê¤¤¾ì¹ç¤Ï¡¢Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
-MA 02110-1301 USA ¤Ş¤Ç¼ê»æ¤ò½ñ¤¤¤Æ¤¯¤À¤µ¤¤¡£
+license3	-begin-
+ã‚ãªãŸã¯ã€æœ¬ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨ä¸€ç·’ã« GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã®å†™ã—ã‚’å—ã‘å–ã£ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚
+ãã†ã§ãªã„å ´åˆã¯ã€Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
+MA 02110-1301 USA ã¾ã§æ‰‹ç´™ã‚’æ›¸ã„ã¦ãã ã•ã„ã€‚
 -end-

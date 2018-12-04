@@ -77,6 +77,8 @@ do
     rm -f $lang/messages.utf8
     # copying from config.txt
     cat $lang/config.txt >> $lang/messages.utf8
+    # add EOL
+    echo "" >> $lang/messages.utf8
     # read prepared PO file
     cat $lang/$lang2.po|while read line
     do
@@ -91,8 +93,8 @@ do
     then
         # msgctxt entry
         a1=`echo $line|cut -d "\"" --fields=2`
-        # print msgctxt entry and space into file
-        printf "$a1 " >> $lang/messages.utf8
+        # print msgctxt entry and tab into file
+        printf "$a1\t" >> $lang/messages.utf8
     fi
     # if msgstr is not empty (has translation)
     if [ ! -z "$b" ]
