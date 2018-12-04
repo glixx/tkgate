@@ -1,4 +1,9 @@
 \language français
+\font-encoding		iso8859-1
+\display-encoding	iso8859-1
+\messages-encoding	utf-8
+\verilog-encoding	utf-8
+\postscript-encoding	utf-8
 b.new Nouveau...
 b.dismiss Annuler
 b.close Fermer
@@ -819,7 +824,7 @@ ho.status.msg Les messages de tkgate sont affichés ici.
 ho.status.block Le nom du module en cours d'édition.
 ho.status.file -begin-
 Le fichier en cours d'édition.
-Une ar az bg ca cs cy da de en es fr gl hr id is it ja lt ms nl oc pl pt pt_BR ru sk sr sv tkgatemsg2po.tcl tkgatemsg2pot.tcl tkgatepo2msg.sh tkgatepo2msg.tcl tkgate.pot tr uk indique que le circuit a été modifié
+Une ar az bg ca cs cy da de en es fr gl hr id is it ja lt ms nl oc pl pt pt_BR ru sk sr sv tkgatemsg2pot.tcl tkgatepo2msg.sh tkgate.pot tr uk indique que le circuit a été modifié
 depuis la dernière sauvegarde.
 -end-
 ho.print.selall Imprimer tous les modules chargés actuellement dans TKGate.

@@ -1,4 +1,9 @@
 \language		português
+\font-encoding		iso8859-1
+\display-encoding	iso8859-1
+\messages-encoding	utf-8
+\verilog-encoding	utf-8
+\postscript-encoding	utf-8
 b.new Novo...
 b.dismiss Rejeitar
 b.close Fechar

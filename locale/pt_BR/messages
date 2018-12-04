@@ -1,4 +1,9 @@
 \language		português do Brasil
+\font-encoding		iso8859-1
+\display-encoding	iso8859-1
+\messages-encoding	utf-8
+\verilog-encoding	utf-8
+\postscript-encoding	utf-8
 cprt.descr Editor circuito digital e simulador
 license1 -begin-
 TtGate é um software livre; você pode redistribuí-lo e/ou modificá-lo sob os

@@ -1,1 +1,6 @@
 \language		العربية
+\font-encoding		iso8859-6
+\display-encoding	iso8859-6
+\messages-encoding	utf-8
+\verilog-encoding	utf-8
+\postscript-encoding	utf-8

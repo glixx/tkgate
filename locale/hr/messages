@@ -1,4 +1,9 @@
 \language		hrvatski
+\font-encoding		iso8859-2
+\display-encoding	iso8859-2
+\messages-encoding	utf-8
+\verilog-encoding	utf-8
+\postscript-encoding	utf-8
 b.close Zatvori
 b.ok U redu
 b.cancel Otkaži

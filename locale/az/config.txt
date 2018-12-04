@@ -1,1 +1,6 @@
 \language		azərbaycanca
+\font-encoding		iso8859-9
+\display-encoding	iso8859-9
+\messages-encoding	utf-8
+\verilog-encoding	utf-8
+\postscript-encoding	utf-8
