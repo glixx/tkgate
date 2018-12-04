@@ -32,15 +32,19 @@ blklst.name Nama
 circ.flags Pilihan
 ho.tool.zoomin Zum masuk
 ho.tool.zoomout Zum keluar
-license -begin-
+license1 -begin-
 TtGate adalah perisian bebas; anda boleh mengedarkannya semula dan/atau
 mengubah suai di bawah syarat-syarat GNU General Public License seperti yang
 diterbitkan oleh Free Software Foundation; sama ada Lesen versi 2, atau (atas
-pilihan anda) mana-mana versi selepas ini, 
+pilihan anda) mana-mana versi selepas ini.
+-end-
+license2 -begin-
 TtGate diedarkan dengan harapan bahawa ia akan menjadi berguna, tetapi
 TANPA SEBARANG WARANTI; tanpa jaminan yang tersirat MERCHANTABILITY
 atau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat Lesen Awam Am GNU
 untuk maklumat lanjut.
+-end-
+license3 -begin-
 Anda sepatutunya telah menerima satu salinan Lesen GNU General Public
 bersama TtGate; jika tidak, tulis kepada Free Software Foundation, Inc., 51
 Temple Place, Suite 330, Boston, MA 02110-1301 USA.

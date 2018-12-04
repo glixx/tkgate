@@ -1,15 +1,19 @@
 \language		íslenska
 itype Gerð:
 db.gate.details Ítarlegar
-license -begin-
+license1 -begin-
 TkGate er frjáls hugbúnaður; þú mátt endurrita hann og/eða breyta
 samkvæmt skilmálum "GNU General Public License" eins og það er
 útgefið af "Free Software Foundation"; annað hvort útgáfa 2 af leyfinu,
 eða (að þínu vali) einhver síðari útgáfa.
+-end-
+license2 -begin-
 TkGate er dreift í þeirri von að það sé gagnlegt, en ÁN
 NOKKURAR ÁBYRGÐAR; einnig án óbeinnar SÖLUÁBYRGÐAR eða
 HÆFNI TIL NOKKURS HLUTAR. Sjá nánar í "GNU General Public
 License" leyfinu.
+-end-
+license3 -begin-
 Þú ættir að hafa fengið afrit af "GNU General Public License" með
 þessu forriti; ef ekki, skrifaðu til Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.

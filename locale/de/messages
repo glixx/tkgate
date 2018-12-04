@@ -2213,15 +2213,19 @@ ho.tool.anchor Die ausgewählten Gatter verankern.
 ho.tool.unanchor Die ausgewählten Gatter loslassen.
 ho.tool.replicate Replizieren eines Gatters.
 ho.tool.delete Löschen der Auswahl.
-license -begin-
+license1 -begin-
 TtGate ist freie Software. Sie können es unter den Bedingungen der GNU General
 Public License, wie von der Free Software Foundation veröffentlicht, weitergeben
 und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer
 Option) jeder späteren Version.
+-end-
+license2 -begin-
 Die Veröffentlichung von TtGate erfolgt in der Hoffnung, dass es Ihnen von Nutzen
 sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der
 MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details
 finden Sie in der GNU General Public License.
+-end-
+license3 -begin-
 Sie sollten ein Exemplar der GNU General Public License zusammen mit TtGate
 erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

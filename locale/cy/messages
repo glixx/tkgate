@@ -719,16 +719,20 @@ ho.simwatch -begin-
 Dangos gorchymynau a anfonir
 rhwng y GUI a'r efelychydd.
 -end-
-license -begin-
+license1 -begin-
 Mae TtGate yn feddalwedd rhydd; gallwch ei hailddosbarthu a/neu ei
 haddasu dan delerau Trwydded Gyhoeddus Gyffredinol GNU fel y'i
 cyhoeddwyd gan y Free Software Foundation; naill ai fersiwn 2 y
 Drwydded, neu (yn ôl eich dewis) unrhyw fersiwn diweddarach.
+-end-
+license2 -begin-
 Mae TtGate yn cael ei dosbarthu yn y gobaith y bydd yn
 ddefnyddiol, ond HEB UNRHYW WARANT; heb hyd yn oed y warant
 oblygedig o FARSIANDÏAETH neu FFITRWYDD AT BWRPAS ARBENNIG.
 Gweler Trwydded Gyhoeddus Gyffredinol GNU am ragor o fanylion.
-Dylech fod wedi derbyn copi o Drwydded Gyhoeddus Gyffredinol GNU ynghyd
-â'r rhaglen hon; os na, ysgrifennwch at y Free Software Foundation, Inc.,
-51 Temple Place, Suite 330, Boston MA 02110-1301 USA.
+-end-
+license3 -begin-
+Dylech fod wedi derbyn copi o Drwydded Gyhoeddus Gyffredinol GNU
+ynghyd â'r rhaglen hon; os na, ysgrifennwch at y Free Software
+Foundation, Inc., 51 Temple Place, Suite 330, Boston MA 02110-1301 USA.
 -end-

@@ -255,14 +255,19 @@ cprt.descr Digitalt kredsløbsredigeringsprogram og simulator
 ho.mod.type.unknown Ukendt modultype
 ho.mod.type.hdl HDL-modul
 ho.tool.delete Slet markeringen.
-license -begin-
+license1 -begin-
 TtGate er fri software. Du kan redistribuere og/eller ændre programmet
 under betingelserne givet i GNU General Public License som udgives af
 Free Software Foundation; enten version 2 af licensen, eller (hvis du ønsker
 det) enhver senere version.
-Gossip distribueres i håb om at programmet er nyttigt, men uden NOGEN
-GARANTI, ikke engang underforstået garanti om at det er SALGBART eller
-PASSER TIL ET BESTEMT FORMÅL. Se GNU General Public License for detaljer.
+-end-
+license2 -begin-
+Gossip distribueres i håb om at programmet er nyttigt, men uden
+NOGEN GARANTI, ikke engang underforstået garanti om at det er
+SALGBART eller PASSER TIL ET BESTEMT FORMÅL. Se GNU
+General Public License for detaljer.
+-end-
+license3 -begin-
 Du bør have modtaget en kopi af GNU General Public License sammen med
 TtGate. Hvis du ikke har det, kan du skrive til Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

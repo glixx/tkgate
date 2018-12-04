@@ -38,15 +38,20 @@ blklst.from De
 blklst.name Nom
 circ.flags Opcions
 circ.library Bibliotèca
-license -begin-
+license1 -begin-
 TkGate es liure, lo podètz redistribuir e/o lo modificar segon los tèrmes
-de la Licéncia Publica Generala GNU publicada per la Free Software Foundation
-(version 2 o alara tota autra version ulteriora causida per vos).
-TkGate es distribuit perque es potencialament utile, mas SENS CAP DE GARANTIDA,
-ni explicita ni implicita, inclusas las garantidas de comercializacion o d'adaptacion
-dins una tòca especifica. Reportatz-vos a la Licéncia Publica Generala GNU per mai
-de detalhs.
-Vos cal aver recebut una còpia de la Licéncia Publica Generala GNU en meteis temps
-qu'aqueste programa; foguèsse pas lo cas, escrivètz a la Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, Estats Units.
+de la Licéncia Publica Generala GNU publicada per la Free Software
+Foundation (version 2 o alara tota autra version ulteriora causida per vos).
+-end-
+license2 -begin-
+TkGate es distribuit perque es potencialament utile, mas SENS CAP DE
+GARANTIDA, ni explicita ni implicita, inclusas las garantidas de
+comercializacion o d'adaptacion dins una tòca especifica. Reportatz-vos
+a la Licéncia Publica Generala GNU per mai de detalhs.
+-end-
+license3 -begin-
+Vos cal aver recebut una còpia de la Licéncia Publica Generala GNU en
+meteis temps qu'aqueste programa; foguèsse pas lo cas, escrivètz a la
+Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+MA 02110-1301, Estats Units.
 -end-

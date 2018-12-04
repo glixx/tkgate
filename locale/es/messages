@@ -772,13 +772,17 @@ ho.simwatch -begin-
 Visualizar comandos enviados entre el entorno
 de visualización (GUI) y el Simulador.
 -end-
-license -begin-
+license1 -begin-
 TtGate es software libre; puede redistribuirlo y/o modificarlo bajo los términos
 de la Licencia Pública General de GNU publicada por la Free Software
 Foundation; ya sea en su versión 2 ó (a su criterio)en una versión posterior.
+-end-
+license2 -begin-
 TtGate se distribuye con la esperanza que sea útil, pero SIN GARANTÍA; sin
 ninguna garantía implícita de COMERCIALIDAD o IDONEIDAD PARA UN FIN
 DETERMINADO. Mire la Licencia General GNU para más detalles.
+-end-
+license3 -begin-
 Debería haber recibido una copia de la Licencia Pública General de GNU junto
 con TtGate; si no es el caso, escriba a la Free Software Foundation, Inc., 51
 Franklin Street, Fifth Floor, Boston, MA 02110-1301 EE. UU.

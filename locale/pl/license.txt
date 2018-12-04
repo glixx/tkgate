@@ -3,11 +3,13 @@ dalej i/lub modyfikować na warunkach Powszechnej Licencji Publicznej
 GNU, wydanej przez Fundację Wolnego Oprogramowania (Free Software
 Foundation) - według wersji drugiej tej Licencji lub którejś z późniejszych
 wersji.
+
 Program TtGate rozpowszechniany jest z nadzieją, iż będzie on użyteczny -
 jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji
 PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH
 ZASTOSOWAŃ. W celu uzyskania bliższych informacji należy zapoznać się
 z Powszechną Licencją Publiczną GNU.
+
 Z pewnością wraz z programem TtGate dostarczono także egzemplar
 zPowszechnej Licencji Publicznej GNU (GNU General Public License); jeśli
 nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin Street,

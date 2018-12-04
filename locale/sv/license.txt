@@ -1,10 +1,12 @@
 TtGate är fri programvara. Du kan distribuera det och/eller modifiera det under
 villkoren i GNU General Public License, publicerad av Free Software Foundation,
 antingen version 2 eller (om du så vill) någon senare version.
+
 TtGate distribueras i hopp om att det ska vara användbart, men UTAN NÅGON
 SOM HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET eller
 LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License
 för ytterligare information.
+
 Du bör ha fått en kopia av GNU General Public License tillsammans med TtGate.
 Om inte, skriv till Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301 USA.

@@ -108,15 +108,19 @@ circ.flags Opties
 circ.library Bibliotheken
 ho.tool.zoomin Inzoomen
 ho.tool.zoomout Uitzoemen
-license -begin-
+license1 -begin-
 TtGate is vrije software; u mag het opnieuw distribueren en/of wijzigen
 onder de voorwaarden van de GNU General Public License zoals gepubliceerd
 door de Free Software Foundation; ofwel versie 2 van deze licentie of
 (zo u wilt) een latere versie.
+-end-
+license2 -begin-
 TtGate wordt gedistibueerd in de hoop dat het nuttig zal zijn,
 maar ZONDER ENIGE GARANTIE; zonder zelfs de geïmpliceerde garantie
 van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.
 Zie de GNU General Public License voor meer details.
+-end-
+license3 -begin-
 U moet een kopie van de GNU General Public License hebben gekregen
 samen met TtGate; zoniet, schrijf dan naar de Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

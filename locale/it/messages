@@ -449,13 +449,17 @@ Verifica continuamente l'integrità delle strutture dati
 interne dopo ogni operazione.
 -end-
 ho.simwatch Visualizza i comandi scambiati fra GUI e simulatore.
-license -begin-
+license1 -begin-
 TtGate è software libero: è possibile redistribuirlo o modificarlo sotto i termini
 della licenza GNU GPL, pubblicata dalla Free Software Foundation, versione 2
 o (a propria scelta) successiva.
+-end-
+license2 -begin-
 TtGate è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA,
 senza neppure l'implicita garanzia di COMMERCIABILITÀ o IDONEITÀ A UNO
 SCOPO PARTICOLARE. Consultare la licenza GNU GPL per maggiori dettagli.
+-end-
+license3 -begin-
 Insieme a TtGate dovrebbe essere stata fornita anche una copia della licenza
 GNU GPL, in caso contrario è possibile richiederla scrivendo a: Free Software
 Foundation Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

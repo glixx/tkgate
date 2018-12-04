@@ -17,16 +17,20 @@ opt.tool.file Datoteka
 opt.tool.edit Uredi
 igen.edit Uredi
 circ.flags Mogućnosti
-license -begin-
+license1 -begin-
 TkGate je besplatni softver; možete ga redistribuirati i/ili modificirati
 pod uvjetima GNU Općenite javne licence koju je objavila
 Fondacija za besplatni softver; bilo verzija 2 licence, ili
 (na Vaše biranje) bilo koja kasnija verzija.
+-end-
+license2 -begin-
 TkGate se distribuira u nadi da će biti koristan,
 ali BEZ IKAKVE GARANCIJE; čak i bez pretpostavljene garancije
 TRGOVINE ili POGODNOSTI ZA POJEDINU SVRHU. Pogledajte
 GNU Općenitu javnu licencu za više detalja.
+-end-
+license3 -begin-
 Zajedno s TkGate trebali ste primiti i kopiju GNU Općenite
-javne licence; a ako niste, pišite nam na Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+javne licence; a ako niste, pišite nam na Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 -end-
