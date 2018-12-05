@@ -18,6 +18,7 @@
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+convert="false"
 lang_param="$1"
 # if commandline parameter is present
 if [ ! -z "$lang_param" ]
@@ -139,19 +140,25 @@ do
     # delete resulted files
     rm -f $lang/messages
 
-    # determine messages-encoding
-    enc=`cat $lang/config.txt|sed "s|\t\t| |g" |grep messages-encoding|cut -d " " --fields=2`
-    # if messages-encoding is not empty
-    if [ ! -z $enc ]
+    if [ "$convert" = "true" ]
     then
-       echo "Converting $lang/messages.utf8 in $enc -> $lang/messages"
-    # if messages-encoding is empty
+        # determine messages-encoding
+        enc=`cat $lang/config.txt|sed "s|\t\t| |g" |grep messages-encoding|cut -d " " --fields=2`
+        # if messages-encoding is not empty
+        if [ ! -z $enc ]
+        then
+        echo "Converting $lang/messages.utf8 in $enc -> $lang/messages"
+        # if messages-encoding is empty
+        else
+        echo "Missing messages-encoding in $lang/config.txt, using utf-8"
+        enc="utf-8"
+        fi
+        # converting
+        iconv -f UTF-8 -t $enc//TRANSLIT $lang/messages.utf8 > $lang/messages
     else
-       echo "Missing messages-encoding in $lang/config.txt, using utf-8"
-       enc="utf-8"
+        echo "Doing $lang/messages.utf8 -> $lang/messages"
+        cp -f $lang/messages.utf8 $lang/messages
     fi
-    # converting
-    iconv -f UTF-8 -t $enc//TRANSLIT $lang/messages.utf8 > $lang/messages
 
     rm -f $lang/messages.utf8
 done
