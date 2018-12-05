@@ -9,7 +9,7 @@ rm -f $result_file
 
 for lang in `ls -1|grep -v pot|grep -v tcl |grep -v sh|cut -d "/" --fields=1|grep -v en`
 do
-./tkgatemsg2po.tcl -m en/messages -l $lang/messages -pot 1.pot -po $lang/"$lang"1.po
+./tkgatemsg2po.tcl -m en/messages -l $lang/messages -po $lang/"$lang"1.po -lang $lang
 msguniq "$lang/$lang"1.po -o "$lang/$lang"3.po
 msguniq "$lang/$lang".po -o "$lang/$lang"2.po
 cat $lang/"$lang"3.po |sed '1,/#: / d' > $lang/"$lang"4.po
@@ -25,7 +25,6 @@ sed -i "s|4.po|.po|g" $lang/2.diff
 sed -i "s|5.po|.po|g" $lang/2.diff
 cat $lang/2.diff >> $result_file
 # cleanup
-rm -f 1.pot
 rm -f $lang/"$lang"1.po
 rm -f $lang/"$lang"2.po
 rm -f $lang/"$lang"3.po
