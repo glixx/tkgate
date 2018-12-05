@@ -7,5 +7,5 @@ TtGate は役立つものであることを期待して配布されています�
 詳細は GNU 一般公衆利用許諾契約書をご覧ください。
 
 あなたは、本プログラムと一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずです。
-そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
+そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 MA 02110-1301 USA まで手紙を書いてください。

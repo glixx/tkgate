@@ -529,22 +529,7 @@ Seznam všech aktuálně nahraných modulů.
 Hlavní modul je označen znaménkém "+",
 knihovní moduly jsou v závorkách.
 -end-
-ho.netlist	-begin-
-Seznam všech sítí v aktuálním modulu.
-Sítě označeny '@' mají skrytá jména
-Vícebitové sítě jsou zobrazeny s
-bitovou šířkou na konci.
--end-
-ho.ports	Seznam všech konektorů aktuálního
-modulu. Značka'>' označuje vstup,
-'<' označuje výstup a značka '='
-vstup-výstup.msgctxt 	-begin-
-Seznam všech konektorů aktuálního
-modulu. Značka'>' označuje vstup,
-'<' označuje výstup a značka '='
-vstup-výstup.msgctxt
--end-
--begin-
+ho.status.logo	-begin-
 Indikátor stavu simulace. Pokud ukazuje železnou bránu,
 TkGate je v editovacím režimu. Pokud ukazuje AND hradlo
 na čtyřech nožičkách, TkGate je v režimu simulace. Pokud

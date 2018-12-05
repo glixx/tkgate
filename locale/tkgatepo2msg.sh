@@ -47,20 +47,26 @@ do
     cat $lang/$lang.po |sed '1,/#: en\/messages/ d' > $lang/$lang1.po
     # delete comments
     sed -i '/en\/messages/d' $lang/$lang1.po
+    # screened quotes \" -> YYYYY
+    sed -i 's|\\"|YYYYY|g' $lang/$lang1.po
+    # [ -> AAAAA
+    sed -i 's|\[|AAAAA|g' $lang/$lang1.po
+    # ] -> BBBBB
+    sed -i 's|\]|BBBBB|g' $lang/$lang1.po
     # ""EOL" -> "
     sed -i "s|\"\"/\n\"|\"|g" $lang/$lang1.po
     # delete empty strings
     cat $lang/$lang1.po | tr -d '\n' > $lang/$lang2.po
-    # \n -> zzzzz
-    sed -i 's|\\n|zzzzz|g' $lang/$lang2.po
-    # msgstr "" -> xxxxx
-    sed -i 's|msgstr ""|xxxxx|g' $lang/$lang2.po
+    # \n -> ZZZZZ
+    sed -i 's|\\n|ZZZZZ|g' $lang/$lang2.po
+    # msgstr "" -> XXXXX
+    sed -i 's|msgstr ""|XXXXX|g' $lang/$lang2.po
     # delete double ""
     sed -i 's|""||g' $lang/$lang2.po
     # add EOL before msgctxt
     sed -i "s|msgctxt|\nmsgctxt|g" $lang/$lang2.po
-    # delete all xxxxx strings (not translated)
-    sed -i '/xxxxx/d' $lang/$lang2.po
+    # delete all XXXXX strings (not translated)
+    sed -i '/XXXXX/d' $lang/$lang2.po
     # add EOL before msgid
     sed -i "s|msgid|\nmsgid|g" $lang/$lang2.po
     # add EOL before msgstr
@@ -69,8 +75,6 @@ do
     sed -i '/msgid/d' $lang/$lang2.po
     # delete the first string
     sed -i -e "1d" $lang/$lang2.po
-    # screened quotes \" -> yyyyy
-    sed -i 's|\\"|yyyyy|g' $lang/$lang2.po
     # add EOL
     echo >> $lang/$lang2.po
     # delete file
@@ -86,8 +90,8 @@ do
     a=`echo $line|grep msgctxt`
     # line contents msgstr or not
     b=`echo $line|grep msgstr`
-    # line contents zzzzz (multiline) or not
-    c=`echo $line|grep zzzzz`
+    # line contents ZZZZZ (multiline) or not
+    c=`echo $line|grep ZZZZZ`
     # if msgctxt is not empty
     if [ ! -z "$a" ]
     then
@@ -121,9 +125,13 @@ do
     done
 
     # restore EOL
-    sed -i 's|zzzzz|\n|g' $lang/messages.utf8
+    sed -i 's|ZZZZZ|\n|g' $lang/messages.utf8
     # restore screened quotes \"
-    sed -i 's|yyyyy|\"|g' $lang/messages.utf8
+    sed -i 's|YYYYY|\"|g' $lang/messages.utf8
+    # restore [
+    sed -i 's|AAAAA|[|g' $lang/messages.utf8
+    # restore ]
+    sed -i 's|BBBBB|]|g' $lang/messages.utf8
     # delete temporary files
     rm -f $lang/$lang1.po
     rm -f $lang/$lang2.po

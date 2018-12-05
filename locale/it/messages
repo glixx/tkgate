@@ -440,7 +440,7 @@ Tecnologia di default per nuove porte logiche.
 Influenza il delay delle porte. Per cambiare
 la tecnologia di un gate specifico, apri
 il formulario delle sue proprietà (doppio
-click) e seleziona l'opzione "Dela"y.
+click) e seleziona l'opzione "Delay".
 -end-
 ho.techbut	-begin-
 Usa i ritardi codificati nel file di

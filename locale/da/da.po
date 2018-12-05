@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-04 12:16+0300\n"
-"PO-Revision-Date: 2018-12-04 02:55+0000\n"
+"PO-Revision-Date: 2018-12-05 00:05+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/Magic/tkgate/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -1726,7 +1726,7 @@ msgstr "Modul er blevet ændret siden sidste lagring."
 #: en/messages:558
 msgctxt "db.mod.islib.1"
 msgid "Module is part of [%s] library."
-msgstr "Modul er en del af  [%s]-biblioteket."
+msgstr "Modul er en del af [%s]-biblioteket."
 
 #: en/messages:559
 msgctxt "db.mod.islib.0"

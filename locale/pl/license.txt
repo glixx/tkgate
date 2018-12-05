@@ -10,7 +10,7 @@ PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH
 ZASTOSOWAŃ. W celu uzyskania bliższych informacji należy zapoznać się
 z Powszechną Licencją Publiczną GNU.
 
-Z pewnością wraz z programem TtGate dostarczono także egzemplar
-zPowszechnej Licencji Publicznej GNU (GNU General Public License); jeśli
+Z pewnością wraz z programem TtGate dostarczono także egzemplarz
+Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli
 nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin Street,
 Fifth Floor, Boston, MA 02110-1301 USA.

@@ -524,8 +524,8 @@ db.gate.mparm.value	Wert
 db.gate.mparm.exampleA	-begin-
 Dieses Modul hat keinerlei Parameter. Parameter
 können zu Verilog-Textmodulen hinzugefügt werden.
-Der Wert jedes Parameters kann für jede Instan
-zdurch diese Dialogbox konfiguriert werden. Modul-
+Der Wert jedes Parameters kann für jede Instanz
+durch diese Dialogbox konfiguriert werden. Modul-
 Parameter werden als geklammerte Liste deklariert,
 die mit einem # beginnt. Hier ist ein Beispiel einer
 Moduldeklaration mit einem Parameter namens
@@ -1330,7 +1330,7 @@ verga.err.NOTASK	Undefinierte Task '%s'.
 verga.err.NOTDEF	Undefinierte Variable '%s'.
 verga.err.BADRANGE	Nicht unterstützter Bitbereich [%s] in Netz %s (muss von der Form [n:0] sein).
 verga.err.GATEUNIMP	Unimplementierter primitiver Gatter-Instanz-Typ.
-verga.err.USAGE	Usage: thyme is nl pl
+verga.err.USAGE	Usage: thyme [options][files...]
 verga.err.CLSDWRITE	Schreiben auf einen bereits geschlossenen Deskriptor.
 verga.err.PRIMPTCOUNT	Falsche Anzahl von Ports bei der primitiven Gatter-Intsanz '%s'.
 verga.err.CMDARGS	Falsche Zahl von Argumenten im '%s' Befehl.
@@ -2069,8 +2069,8 @@ geht über das Editieren der
 -end-
 ho.opt.miles	-begin-
 Ist dieser Modus eingeschaltet, wird
-TkGate periodisch die Intelligen
-zdes Benutzers anzweifeln.
+TkGate periodisch die Intelligenz
+des Benutzers anzweifeln.
 -end-
 ho.opt.bat	-begin-
 Falls dieser Modus eingeschaltet ist,
@@ -2134,7 +2134,7 @@ Beeinflußt die Verzögerungszeit der
 Gatter. Um die Technologie eines
 bestimmten Gatters zu ändern, öffnet
 mann die Eigenschafts-Box mit Doppelklick
-und wählt "Dela"y an.
+und wählt "Delay" an.
 -end-
 ho.techbut	-begin-
 Benutze Verzögerungszeiten aus der

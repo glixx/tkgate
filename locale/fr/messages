@@ -342,8 +342,8 @@ en Verilog.
 db.err.title	TkGate: Erreurs
 db.err.caption	Erreurs
 db.err.explain.warn	-begin-
-Des avertissements sont présents dans le circuit, mais la simulation va continuer. Retourne
-zen mode édition pour examiner les avertissements.
+Des avertissements sont présents dans le circuit, mais la simulation va continuer. Retournez
+en mode édition pour examiner les avertissements.
 -end-
 db.err.explain.err	Erreurs présentes dans le circuit. TkGate ne peut pas poursuivre la simulation.
 db.err.neededit	Vous devez aller en mode Édition avant d'examiner les avertissements.
