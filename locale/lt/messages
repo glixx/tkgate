@@ -32,10 +32,10 @@ libmgr.status	Būsena
 ho.tool.zoomin	Didinti
 ho.tool.zoomout	Mažinti
 license1	-begin-
-TtGate yra laisva programinė įranga; galite ją platinti ir/ar modifikuoti GNU
-bendrosios viešosios licencijos sąlygomis, kurios paskelbtos Laisvosios
-programinės įrangos fondo; 2-osios arba (savo pasirinkimu) bet kurios vėlesnės
-licencijos versijos sąlygomis.
+TtGate yra laisva programinė įranga; galite ją platinti ir/ar modifikuoti
+GNU bendrosios viešosios licencijos sąlygomis, kurios paskelbtos
+Laisvosios programinės įrangos fondo; 2-osios arba (savo pasirinkimu)
+bet kurios vėlesnės licencijos versijos sąlygomis.
 -end-
 license2	-begin-
 TtGate yra platinama tikintis, kad ji bus naudinga, bet NETEIKIANT JOKIŲ

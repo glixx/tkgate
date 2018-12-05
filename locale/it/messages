@@ -456,9 +456,9 @@ interne dopo ogni operazione.
 -end-
 ho.simwatch	Visualizza i comandi scambiati fra GUI e simulatore.
 license1	-begin-
-TtGate è software libero: è possibile redistribuirlo o modificarlo sotto i termini
-della licenza GNU GPL, pubblicata dalla Free Software Foundation, versione 2
-o (a propria scelta) successiva.
+TtGate è software libero: è possibile redistribuirlo o modificarlo sotto
+i termini della licenza GNU GPL, pubblicata dalla Free Software
+Foundation, versione 2 o (a propria scelta) successiva.
 -end-
 license2	-begin-
 TtGate è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA,

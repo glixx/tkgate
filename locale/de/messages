@@ -1030,7 +1030,6 @@ circ.sim.features	Merkmale
 circ.sim.tv.title	Verletzung von Zeitbedingungen: Behandlung
 circ.sim.tv.all	Über alle Verletzungen von Zeitbedingungen informieren.
 circ.sim.tv.after.1	Über Verletzungen von Zeitbedingungen nachher informieren
-circ.sim.tv.after.2	-empty-
 circ.exp.general	-begin-
 Betrachten und Modifizieren schaltungsspezifischer Eigenschaften.
 Diese Eigenschaften werden beim Speichern der Schaltung mitgesichert.
@@ -2221,13 +2220,14 @@ und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer
 Option) jeder späteren Version.
 -end-
 license2	-begin-
-Die Veröffentlichung von TtGate erfolgt in der Hoffnung, dass es Ihnen von Nutzen
-sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der
-MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details
-finden Sie in der GNU General Public License.
+Die Veröffentlichung von TtGate erfolgt in der Hoffnung, dass es Ihnen
+von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne
+die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT
+FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU
+General Public License.
 -end-
 license3	-begin-
 Sie sollten ein Exemplar der GNU General Public License zusammen mit TtGate
-erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 -end-

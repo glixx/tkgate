@@ -570,7 +570,6 @@ circ.simulator	Simulació
 circ.timescale.unit	Unitats:
 circ.timescale.prec	Precissió:
 circ.sim.features	Característiques
-circ.sim.tv.after.2	-buit-
 libmgr.cap	Gestor de biblioteques
 libmgr.library	Biblioteca
 libmgr.description	Descripció

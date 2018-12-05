@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-04 12:16+0300\n"
-"PO-Revision-Date: 2018-12-05 00:43+0000\n"
+"POT-Creation-Date: 2018-12-05 17:04+0300\n"
+"PO-Revision-Date: 2018-12-05 07:15+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/Magic/tkgate/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -3413,376 +3413,371 @@ msgid "Wire drop port creation"
 msgstr "Створення портів перенесенням дроту"
 
 #: en/messages:1164
-msgctxt "opt.ckpoint.1"
-msgid "Do checkpointing every"
+msgctxt "opt.ckpoint"
+msgid "Do checkpointing every %s commands"
 msgstr ""
 
 #: en/messages:1165
-msgctxt "opt.ckpoint.2"
-msgid "commands."
-msgstr ""
-
-#: en/messages:1166
 msgctxt "opt.freq"
 msgid "Interval"
 msgstr "Інтервал"
 
-#: en/messages:1167
+#: en/messages:1166
 msgctxt "opt.beak"
 msgid "Enable Special Modes"
 msgstr "Увімкнути спеціальні режими"
 
-#: en/messages:1168
+#: en/messages:1167
 msgctxt "opt.bat"
 msgid "Bat"
 msgstr "Bat"
 
-#: en/messages:1169
+#: en/messages:1168
 msgctxt "opt.trek"
 msgid "Star Trek"
 msgstr "Star Trek"
 
-#: en/messages:1170
+#: en/messages:1169
 msgctxt "opt.miles"
 msgid "Miles"
 msgstr "Майлзе"
 
-#: en/messages:1171
+#: en/messages:1170
 msgctxt "opt.contver"
 msgid "Automatic Integrity Checking"
 msgstr "Автоматична перевірка цілісності"
 
-#: en/messages:1172
+#: en/messages:1171
 msgctxt "opt.showsimcmd"
 msgid "Display Simulator Stream"
 msgstr "Показувати потік імітації"
 
-#: en/messages:1173
+#: en/messages:1172
 msgctxt "opt.estepsz"
 msgid "Epoch Step Size"
 msgstr "Розмір кроку епохи"
 
-#: en/messages:1174
+#: en/messages:1173
 msgctxt "opt.cstepsz"
 msgid "Clock Cycle Step Size"
 msgstr "Розмір кроку циклу годинника"
 
-#: en/messages:1175
+#: en/messages:1174
 msgctxt "opt.overstep"
 msgid "Clock Overstep"
 msgstr "Переступання годинника"
 
-#: en/messages:1176
+#: en/messages:1175
 msgctxt "opt.sorttraces"
 msgid "Sort traces alphabetically on scope"
 msgstr "Упорядкувати трасування за абеткою"
 
-#: en/messages:1177
+#: en/messages:1176
 msgctxt "opt.vpopupdelay"
 msgid "Pop-Up Delay"
 msgstr "Затримка появи підказок"
 
-#: en/messages:1178
+#: en/messages:1177
 msgctxt "opt.posedge"
 msgid "Clock step stops on all clock posedges"
 msgstr "Крок завершується на фронті будь-якого сигналу"
 
-#: en/messages:1179
+#: en/messages:1178
 msgctxt "opt.setclock"
 msgid "Clock step stops on clock"
 msgstr "Крок завершується на фронті сигналу"
 
-#: en/messages:1180
+#: en/messages:1179
 msgctxt "opt.delayfilepath"
 msgid "Technology Files"
 msgstr "Файли технологій"
 
-#: en/messages:1181
+#: en/messages:1180
 msgctxt "opt.devfilepath"
 msgid "VPD (Virtual Peripheral Device) File Path"
 msgstr "Шлях до файла віртуальних периферійних пристроїв"
 
-#: en/messages:1182
+#: en/messages:1181
 msgctxt "opt.vlibpath"
 msgid "Verilog Library Path"
 msgstr "Шлях до бібліотек Verilog"
 
-#: en/messages:1183
+#: en/messages:1182
 msgctxt "opt.vlibnames"
 msgid "Base Libraries"
 msgstr "Основні бібліотеки"
 
-#: en/messages:1184
+#: en/messages:1183
 msgctxt "opt.display"
 msgid "Display"
 msgstr "Показ"
 
-#: en/messages:1185
+#: en/messages:1184
 msgctxt "opt.interaction"
 msgid "Interaction"
 msgstr "Взаємодія"
 
-#: en/messages:1186
+#: en/messages:1185
 msgctxt "opt.input"
 msgid "Input"
 msgstr "Введення"
 
-#: en/messages:1187
+#: en/messages:1186
 msgctxt "opt.security"
 msgid "Security"
 msgstr "Безпека"
 
-#: en/messages:1188
+#: en/messages:1187
 msgctxt "opt.undolen"
 msgid "Max Undo"
 msgstr "Максимальна кількість дій для скасовування"
 
-#: en/messages:1189
+#: en/messages:1188
 msgctxt "opt.keybind"
 msgid "Key Binding Style"
 msgstr "Стиль прив’язування клавіш"
 
-#: en/messages:1190
+#: en/messages:1189
 msgctxt "opt.useless"
 msgid "Enable Useless Features"
 msgstr "Увімкнути непотрібні можливості"
 
-#: en/messages:1191
+#: en/messages:1190
 msgctxt "opt.features"
 msgid "Save File Features"
 msgstr "Параметри збереження файлів"
 
-#: en/messages:1192
+#: en/messages:1191
 msgctxt "opt.simbase"
 msgid "Basic Simulator Options"
 msgstr "Основні параметри імітації"
 
-#: en/messages:1193
+#: en/messages:1192
 msgctxt "opt.simclock"
 msgid "Clock Options"
 msgstr "Параметри годинника"
 
-#: en/messages:1195
+#: en/messages:1194
 msgctxt "opt.cpopts"
 msgid "Critical Path Options"
 msgstr "Параметри критичного шляху"
 
-#: en/messages:1196
+#: en/messages:1195
 msgctxt "opt.maxpath"
 msgid "Maximum Number of Paths:"
 msgstr "Максимальна кількість шляхів:"
 
-#: en/messages:1197
+#: en/messages:1196
 msgctxt "opt.cpflash"
 msgid "Display with Flashing Path"
 msgstr "Показувати блиманням шляху"
 
-#: en/messages:1199
+#: en/messages:1198
 msgctxt "opt.general.fontset"
 msgid "Font Set"
 msgstr "Набір шрифтів"
 
-#: en/messages:1201
+#: en/messages:1200
 msgctxt "opt.simulator.savetraces"
 msgid "Save probe locations between simulation runs."
 msgstr "Зберігати позиції зондування між запусками імітації."
 
-#: en/messages:1202
+#: en/messages:1201
 msgctxt "opt.simulator.noglitch"
 msgid "Enable simulator glitch suppression."
 msgstr "Увімкнути придушення похибок імітатора."
 
-#: en/messages:1204
+#: en/messages:1203
 msgctxt "opt.simulator.err"
 msgid "Error Handling"
 msgstr "Обробка помилок"
 
-#: en/messages:1205
+#: en/messages:1204
 msgctxt "opt.simulator.stopany"
 msgid "Treat warnings as errors."
 msgstr "Вважати попередження помилками."
 
-#: en/messages:1206
+#: en/messages:1205
 msgctxt "opt.simulator.showall"
 msgid "Always display warnings."
 msgstr "Показувати попередження завжди."
 
-#: en/messages:1207
+#: en/messages:1206
 msgctxt "opt.simulator.showiferr"
 msgid "Display warnings only with errors."
 msgstr "Показувати лише попередження пов’язані із помилками."
 
-#: en/messages:1208
+#: en/messages:1207
 msgctxt "opt.simulator.ignore"
 msgid "Ignore all warnings."
 msgstr "Ігнорувати усі попередження."
 
-#: en/messages:1210
+#: en/messages:1209
 msgctxt "opt.tool.file"
 msgid "File"
 msgstr "Файл"
 
-#: en/messages:1211
+#: en/messages:1210
 msgctxt "opt.tool.edit"
 msgid "Edit"
 msgstr "Змінити"
 
-#: en/messages:1212
+#: en/messages:1211
 msgctxt "opt.tool.gateopt"
 msgid "Rotation/Alignment"
 msgstr "Обертання/Вирівнювання"
 
-#: en/messages:1213
+#: en/messages:1212
 msgctxt "opt.tool.gateprop"
 msgid "Components"
 msgstr "Компоненти"
 
-#: en/messages:1214
+#: en/messages:1213
 msgctxt "opt.tool.undo"
 msgid "Undo/Redo"
 msgstr "Скасування/Повторення"
 
-#: en/messages:1215
+#: en/messages:1214
 msgctxt "opt.tool.zoom"
 msgid "Zoom"
 msgstr "Масштаб"
 
-#: en/messages:1216
+#: en/messages:1215
 msgctxt "opt.tool.mode"
 msgid "Editor Tools"
 msgstr "Засоби редактора"
 
-#: en/messages:1217
+#: en/messages:1216
 msgctxt "opt.tool.module"
 msgid "Module"
 msgstr "Модуль"
 
-#: en/messages:1218
+#: en/messages:1217
 msgctxt "opt.tool.tech"
 msgid "Technology"
 msgstr "Технологія"
 
-#: en/messages:1219
+#: en/messages:1218
 msgctxt "opt.tool.simctl"
 msgid "Simulator Control"
 msgstr "Керування імітатором"
 
-#: en/messages:1220
+#: en/messages:1219
 msgctxt "opt.tool.simaux"
 msgid "Simulator Commands"
 msgstr "Команди імітатора"
 
-#: en/messages:1221
+#: en/messages:1220
 msgctxt "opt.tool.simmode"
 msgid "Simulator Tools"
 msgstr "Засоби імітації"
 
-#: en/messages:1222
+#: en/messages:1221
 msgctxt "opt.tool.symmode"
 msgid "Symbol Editor Tools"
 msgstr "Засоби редактора символів"
 
-#: en/messages:1223
+#: en/messages:1222
 msgctxt "opt.tool.symedit"
 msgid "Cut/Paste"
 msgstr "Вирізати/Вставити"
 
-#: en/messages:1224
+#: en/messages:1223
 msgctxt "opt.tool.symport"
 msgid "Ports"
 msgstr "Порти"
 
-#: en/messages:1225
+#: en/messages:1224
 msgctxt "opt.tool.symshift"
 msgid "Bit Shift"
 msgstr "Бітовий зсув"
 
-#: en/messages:1226
+#: en/messages:1225
 msgctxt "opt.tool.symopr"
 msgid "Bit Ops"
 msgstr "Бітові налаштування"
 
-#: en/messages:1228
+#: en/messages:1227
 msgctxt "opt.editor.features"
 msgid "Basic Editor Features"
 msgstr "Основні можливості редактора"
 
-#: en/messages:1229
+#: en/messages:1228
 msgctxt "opt.editor.format"
 msgid "Enable Automatic Indenting"
 msgstr "Увімкнути автоматичні відступи"
 
-#: en/messages:1230
+#: en/messages:1229
 msgctxt "opt.editor.colorize"
 msgid "Enable Code Colorization"
 msgstr "Увімкнути розфарбовування коду"
 
-#: en/messages:1231
+#: en/messages:1230
 msgctxt "opt.editor.comments"
 msgid "Comments"
 msgstr "Коментарі"
 
-#: en/messages:1232
+#: en/messages:1231
 msgctxt "opt.editor.strings"
 msgid "Strings"
 msgstr "Рядки"
 
-#: en/messages:1233
+#: en/messages:1232
 msgctxt "opt.editor.reserved"
 msgid "Reserved Words"
 msgstr "Зарезервовані слова"
 
-#: en/messages:1234
+#: en/messages:1233
 msgctxt "opt.editor.gateword"
 msgid "Built-in Gates"
 msgstr "Вбудовані шлюзи"
 
-#: en/messages:1235
+#: en/messages:1234
 msgctxt "opt.editor.instword"
 msgid "Module Instances"
 msgstr "Екземпляри модулів"
 
-#: en/messages:1236
+#: en/messages:1235
 msgctxt "opt.editor.taskword"
 msgid "System Tasks"
 msgstr "Завдання системи"
 
-#: en/messages:1237
+#: en/messages:1236
 msgctxt "opt.editor.color"
 msgid "Color"
 msgstr "Колір"
 
-#: en/messages:1238
+#: en/messages:1237
 msgctxt "opt.editor.bold"
 msgid "Bold"
 msgstr "Жирний"
 
-#: en/messages:1239
+#: en/messages:1238
 msgctxt "opt.editor.italic"
 msgid "Italic"
 msgstr "Курсив"
 
-#: en/messages:1240
+#: en/messages:1239
 msgctxt "opt.editor.indentlevel"
 msgid "Indentation per level:"
 msgstr "Відступ на рівень:"
 
-#: en/messages:1241
+#: en/messages:1240
 msgctxt "opt.editor.beginindent"
 msgid "Make begin...end flush with enclosing level."
 msgstr "begin...end на одному рівні із батьківським рівнем."
 
-#: en/messages:1242
+#: en/messages:1241
 msgctxt "opt.editor.movesel"
 msgid "Enable drag-and-drop of selection."
 msgstr "Увімкнути перетягування зі скиданням позначеного."
 
-#: en/messages:1243
+#: en/messages:1242
 msgctxt "opt.editor.returntab"
 msgid "Auto indent after return."
 msgstr "Автовідступ після розриву рядка."
 
-#: en/messages:1247
+#: en/messages:1246
 msgctxt "opt.vercheck"
 msgid ""
 "Periodically check for new versions of TkGate over\n"
@@ -3790,294 +3785,294 @@ msgid ""
 "access to the Internet."
 msgstr "Періодично шукати нові версії TkGate у інтернеті.\nНе вмикайте, якщо у комп’ютера немає постійного\nз’єднання із інтернетом."
 
-#: en/messages:1253
+#: en/messages:1252
 msgctxt "opt.sec.execlevel"
 msgid "The $tkg$exec() system task is"
 msgstr "Завдання системи $tkg$exec()"
 
-#: en/messages:1254
+#: en/messages:1253
 msgctxt "opt.sec.exec"
 msgid "fully enabled."
 msgstr "повністю увімкнено."
 
-#: en/messages:1255
+#: en/messages:1254
 msgctxt "opt.sec.regexec"
 msgid "enabled only for registered functions."
 msgstr "увімкнено лише для зареєстрованих функцій."
 
-#: en/messages:1256
+#: en/messages:1255
 msgctxt "opt.sec.noexec"
 msgid "disabled."
 msgstr "вимкнено."
 
-#: en/messages:1258
+#: en/messages:1257
 msgctxt "opt.sec.simfeatures"
 msgid "Simulator Features"
 msgstr "Можливості імітатора"
 
-#: en/messages:1259
+#: en/messages:1258
 msgctxt "opt.sec.send"
 msgid "Enable the $tkg$command() system task."
 msgstr "Уможливити системне завдання $tkg$command()."
 
-#: en/messages:1260
+#: en/messages:1259
 msgctxt "opt.sec.open"
 msgid "Enable the $fopen() system task."
 msgstr "Уможливити системне завдання $fopen()."
 
-#: en/messages:1261
+#: en/messages:1260
 msgctxt "opt.sec.writemem"
 msgid "Enable the $writememb() and $writememh() system tasks."
 msgstr "Уможливити системні завдання $writememb() і $writememh()."
 
-#: en/messages:1262
+#: en/messages:1261
 msgctxt "opt.sec.enqueue"
 msgid "Enable the $tkg$recv() and $tkg$send() system tasks."
 msgstr "Уможливити системні завдання $tkg$recv() і $tkg$send()."
 
-#: en/messages:1264
+#: en/messages:1263
 msgctxt "opt.sec.handle"
 msgid "Security Violation Handling"
 msgstr "Обробка порушень захисту"
 
-#: en/messages:1265
+#: en/messages:1264
 msgctxt "opt.sec.stop"
 msgid "Stop simulator when disabled feature is used."
 msgstr "Зупиняти імітатор, якщо використано вимкнену можливість."
 
-#: en/messages:1266
+#: en/messages:1265
 msgctxt "opt.sec.warn"
 msgid "Display warning message when disabled feature is used."
 msgstr "Показувати попередження, якщо використано вимкнену можливість."
 
-#: en/messages:1267
+#: en/messages:1266
 msgctxt "opt.sec.ignore"
 msgid "Ignore attempted usage of disabled features."
 msgstr "Ігнорувати спроби використання вимкнених можливостей."
 
-#: en/messages:1269
+#: en/messages:1268
 msgctxt "opt.html.linkopts"
 msgid "Link Options"
 msgstr "Параметри зв’язку"
 
-#: en/messages:1270
+#: en/messages:1269
 msgctxt "opt.html.browser"
 msgid "Browser Command"
 msgstr "Команда браузера"
 
-#: en/messages:1271
+#: en/messages:1270
 msgctxt "opt.html.email"
 msgid "e-Mail Command"
 msgstr "Команда ел. пошти"
 
-#: en/messages:1273
+#: en/messages:1272
 msgctxt "opt.debug.opt"
 msgid "Debugging Options"
 msgstr "Параметри діагностики"
 
-#: en/messages:1275
+#: en/messages:1274
 msgctxt "opt.color.editwin"
 msgid "Edit Window Colors"
 msgstr "Кольори вікна редагування"
 
-#: en/messages:1276
+#: en/messages:1275
 msgctxt "opt.color.scopewin"
 msgid "Scope Window Colors"
 msgstr "Кольори вікна логічного аналізатора"
 
-#: en/messages:1278
+#: en/messages:1277
 msgctxt "opt.vlibadd.title"
 msgid "TkGate: Add Library"
 msgstr "TkGate: Додавання бібліотеки"
 
-#: en/messages:1281
+#: en/messages:1280
 msgctxt "opt.gen.basetoolbar"
 msgid "Core Editor Toolbars"
 msgstr "Панелі редактора"
 
-#: en/messages:1282
+#: en/messages:1281
 msgctxt "opt.gen.simtoolbar"
 msgid "Simulation Mode Toolbars"
 msgstr "Панелі режиму імітації"
 
-#: en/messages:1283
+#: en/messages:1282
 msgctxt "opt.gen.symedtoolbar"
 msgid "Symbol Editor Toolbars"
 msgstr "Панелі редактора символів"
 
-#: en/messages:1285
+#: en/messages:1284
 msgctxt "opt.bbar.restore"
 msgid "Restore Page Defaults"
 msgstr "Відновити типові параметри сторінки"
 
-#: en/messages:1286
+#: en/messages:1285
 msgctxt "opt.bbar.restoreall"
 msgid "Restore All Defaults"
 msgstr "Відновити усі типові значення"
 
-#: en/messages:1292
+#: en/messages:1291
 msgctxt "igen.title"
 msgid "TkGate: Module Interface Generation"
 msgstr "TkGate: Створення інтерфейсу модулів"
 
-#: en/messages:1294
+#: en/messages:1293
 msgctxt "igen.port"
 msgid "Port"
 msgstr "Порт"
 
-#: en/messages:1295
+#: en/messages:1294
 msgctxt "igen.type"
 msgid "Type"
 msgstr "Тип"
 
-#: en/messages:1296
+#: en/messages:1295
 msgctxt "igen.side"
 msgid "Side"
 msgstr "Бік"
 
-#: en/messages:1297
+#: en/messages:1296
 msgctxt "igen.size"
 msgid "Size"
 msgstr "Розмір"
 
-#: en/messages:1298
+#: en/messages:1297
 msgctxt "igen.bits"
 msgid "Bits"
 msgstr "Розр."
 
-#: en/messages:1300
+#: en/messages:1299
 msgctxt "igen.modname"
 msgid "Module Name:"
 msgstr "Назва модуля:"
 
-#: en/messages:1302
+#: en/messages:1301
 msgctxt "igen.add"
 msgid "Add"
 msgstr "Додати"
 
-#: en/messages:1303
+#: en/messages:1302
 msgctxt "igen.delete"
 msgid "Delete"
 msgstr "Вилучити"
 
-#: en/messages:1304
+#: en/messages:1303
 msgctxt "igen.edit"
 msgid "Edit"
 msgstr "Змінити"
 
-#: en/messages:1306
+#: en/messages:1305
 msgctxt "igen.mod"
 msgid "Use ports used in module only."
 msgstr "Використовувати лише використані у модулі порти."
 
-#: en/messages:1307
+#: en/messages:1306
 msgctxt "igen.int"
 msgid "Use ports from existing interface only."
 msgstr "Використовувати лише порти із наявного інтерфейсу."
 
-#: en/messages:1308
+#: en/messages:1307
 msgctxt "igen.modint"
 msgid "Use both module and interface ports."
 msgstr "Використовувати порти з модуля і інтерфейсу."
 
-#: en/messages:1310
+#: en/messages:1309
 msgctxt "igen.portsel"
 msgid "Port Selection"
 msgstr "Вибір портів"
 
-#: en/messages:1311
+#: en/messages:1310
 msgctxt "igen.portpos"
 msgid "Port Positions"
 msgstr "Розташування портів"
 
-#: en/messages:1312
+#: en/messages:1311
 msgctxt "igen.portpos.keep"
 msgid "Keep exiting port positions when possible."
 msgstr "Зберігати наявні розташування портів, якщо можна."
 
-#: en/messages:1313
+#: en/messages:1312
 msgctxt "igen.portpos.renew"
 msgid "Regenerate all port positionings."
 msgstr "Повторно визначити розташування усіх портів."
 
-#: en/messages:1315
+#: en/messages:1314
 msgctxt "igen.caption"
 msgid "Generate Interface"
 msgstr "Створення інтерфейсу"
 
-#: en/messages:1317
+#: en/messages:1316
 msgctxt "igen.description"
 msgid ""
 "Create a new interface\n"
 "for a module."
 msgstr "Створити інтерфейс для\nмодуля."
 
-#: en/messages:1322
+#: en/messages:1321
 msgctxt "info.script.error"
 msgid "Script Errors"
 msgstr "Помилки у скрипті"
 
-#: en/messages:1324
+#: en/messages:1323
 msgctxt "module.props.title"
 msgid "TkGate: Module Properties"
 msgstr "TkGate: Властивості модуля"
 
-#: en/messages:1325
+#: en/messages:1324
 msgctxt "module.props"
 msgid "Module Properties"
 msgstr "Властивості модуля"
 
-#: en/messages:1327
+#: en/messages:1326
 msgctxt "ipanel.plist"
 msgid "Port List"
 msgstr "Список портів"
 
-#: en/messages:1328
+#: en/messages:1327
 msgctxt "ipanel.props"
 msgid "Interface Properties"
 msgstr "Властивості інтерфейсу"
 
-#: en/messages:1329
+#: en/messages:1328
 msgctxt "ipanel.block"
 msgid "Standard"
 msgstr "Стандартний"
 
-#: en/messages:1330
+#: en/messages:1329
 msgctxt "ipanel.symbol"
 msgid "Symbol"
 msgstr "Символ"
 
-#: en/messages:1332
+#: en/messages:1331
 msgctxt "ipanel.autogen"
 msgid "Auto Generate..."
 msgstr "Автоматично створити…"
 
-#: en/messages:1333
+#: en/messages:1332
 msgctxt "ipanel.updateall"
 msgid "Synchronize All..."
 msgstr "Синхронізувати усе…"
 
-#: en/messages:1335
+#: en/messages:1334
 msgctxt "ipanel.itype.select"
 msgid "Interface Type"
 msgstr "Тип інтерфейсу"
 
-#: en/messages:1337
+#: en/messages:1336
 msgctxt "ipanel.ppos.label"
 msgid "Block resize port position handling:"
 msgstr "Розташування портів при зміні розмірів блока:"
 
-#: en/messages:1338
+#: en/messages:1337
 msgctxt "ipanel.ppos.fix"
 msgid "Fixed"
 msgstr "Фіксоване"
 
-#: en/messages:1339
+#: en/messages:1338
 msgctxt "ipanel.ppos.scale"
 msgid "Scaled"
 msgstr "Масштабоване"
 
-#: en/messages:1341
+#: en/messages:1340
 msgctxt "ipanel.warn.toblock"
 msgid ""
 "You are about to change the\n"
@@ -4088,7 +4083,7 @@ msgid ""
 "Are you sure you want to do this?"
 msgstr "Зараз тип інтерфейсу для цього\nмодуля буде змінено на «Блок».\nЦе призведе до втрати даних\nпоточного інтерфейсу.\nВи справді цього хочете?"
 
-#: en/messages:1351
+#: en/messages:1350
 msgctxt "ipanel.warn.tosymbol"
 msgid ""
 "You are about to change the\n"
@@ -4101,87 +4096,87 @@ msgid ""
 "Are you sure you want to do this?"
 msgstr "Зараз тип інтерфейсу цього\nмодуля може бути змінено на\n«символ». Це призведе до знищення\nпоточних даних інтерфейсу.\nВам також доведеться створити\nрастрове зображення для нового\nсимволу.\nВи справді цього хочете?"
 
-#: en/messages:1367
+#: en/messages:1366
 msgctxt "blklst.delete.title"
 msgid "TKGate: Module Delete"
 msgstr "TKGate: Вилучення модуля"
 
-#: en/messages:1368
+#: en/messages:1367
 msgctxt "blklst.copy.title"
 msgid "TKGate: Module Copy"
 msgstr "TKGate: Копіювання модуля"
 
-#: en/messages:1369
+#: en/messages:1368
 msgctxt "blklst.rename.title"
 msgid "TKGate: Module Rename"
 msgstr "TKGate: Перейменування модуля"
 
-#: en/messages:1370
+#: en/messages:1369
 msgctxt "blklst.claim.title"
 msgid "TKGate: Claim Module"
 msgstr "TKGate: Вимагання модуля"
 
-#: en/messages:1371
+#: en/messages:1370
 msgctxt "blklst.setroot.title"
 msgid "TKGate: Set Root Module"
 msgstr "TKGate: Встановлення кореневого модуля"
 
-#: en/messages:1372
+#: en/messages:1371
 msgctxt "blklst.new.title"
 msgid "TKGate: Module New"
 msgstr "TKGate: Новий модуль"
 
-#: en/messages:1374
+#: en/messages:1373
 msgctxt "blklst.claim"
 msgid "Claim Module"
 msgstr "Вимагати модуль"
 
-#: en/messages:1375
+#: en/messages:1374
 msgctxt "blklst.to"
 msgid "To"
 msgstr "У"
 
-#: en/messages:1376
+#: en/messages:1375
 msgctxt "blklst.from"
 msgid "From"
 msgstr "З"
 
-#: en/messages:1377
+#: en/messages:1376
 msgctxt "blklst.name"
 msgid "Name"
 msgstr "Назва"
 
-#: en/messages:1378
+#: en/messages:1377
 msgctxt "blklst.new.cap"
 msgid "Create New Module"
 msgstr "Створити модуль"
 
-#: en/messages:1379
+#: en/messages:1378
 msgctxt "blklst.del.cap"
 msgid "Delete Module"
 msgstr "Вилучити модуль"
 
-#: en/messages:1380
+#: en/messages:1379
 msgctxt "blklst.copy.cap"
 msgid "Copy Module"
 msgstr "Копіювати модуль"
 
-#: en/messages:1381
+#: en/messages:1380
 msgctxt "blklst.rename.cap"
 msgid "Rename Module"
 msgstr "Перейменувати модуль"
 
-#: en/messages:1382
+#: en/messages:1381
 msgctxt "blklst.claim.cap"
 msgid "Claim Module"
 msgstr "Вимагати модуль"
 
-#: en/messages:1383
+#: en/messages:1382
 msgctxt "blklst.setroot.cap"
 msgid "Set Root Module"
 msgstr "Зробити модуль кореневим"
 
-#: en/messages:1385
+#: en/messages:1384
 msgctxt "blklst.new.exp"
 msgid ""
 "Use this dialog box to create\n"
@@ -4194,7 +4189,7 @@ msgid ""
 "module."
 msgstr "Цим діалоговим вікном можна\nскористатися для створення\nвизначення нового модуля. Ви\nможете створити модуль як\nсписок ланцюгів або модуль HDL,\nале після створення ви не зможете\nзмінити тип модуля без вилучення\nі повторного збирання модуля."
 
-#: en/messages:1396
+#: en/messages:1395
 msgctxt "blklst.del.exp"
 msgid ""
 "Delete the definition and interface data\n"
@@ -4203,14 +4198,14 @@ msgid ""
 "will be marked as undefined."
 msgstr "Вилучити визначення і дані інтерфейсу для\nвказаного модуля. Наявні екземпляри\nвилученого модуля буде збережено, але\nїх буде позначено як невизначені."
 
-#: en/messages:1403
+#: en/messages:1402
 msgctxt "blklst.copy.exp"
 msgid ""
 "Create a copy of the specified module definition. Use this to create\n"
 "a new variant of an existing module."
 msgstr "Створити копію вказаного визначення модуля. Цією дією можна скористатися\nдля створення нового варіанта наявного модуля."
 
-#: en/messages:1408
+#: en/messages:1407
 msgctxt "blklst.rename.exp"
 msgid ""
 "Rename a module definition. This operation will affect only the\n"
@@ -4218,29 +4213,29 @@ msgid ""
 "point to the old module name."
 msgstr "Змінити назву визначення модуля. Ця дія вплине на визначення,\nусі екземпляри цього модуля вказуватимуть на стару назву\nмодуля."
 
-#: en/messages:1414
+#: en/messages:1413
 msgctxt "blklst.claim.exp"
 msgid ""
 "Convert a library module to a user module. This allows the module to be\n"
 "edited and to be saved with the user circuit."
 msgstr "Перетворити модуль бібліотеки на модуль користувача. Таке перетворення\nнадасть змогу редагувати та зберігати модуль разом із ланцюгом користувача."
 
-#: en/messages:1419
+#: en/messages:1418
 msgctxt "blklst.setroot.exp"
 msgid "Make the specified module the top-level module."
 msgstr "Зробити вказаний модуль модулем найвищого рівня."
 
-#: en/messages:1424
+#: en/messages:1423
 msgctxt "find.title"
 msgid "TkGate: Find Object"
 msgstr "TkGate: Знайти об’єкт"
 
-#: en/messages:1425
+#: en/messages:1424
 msgctxt "find.label"
 msgid "Find Objects"
 msgstr "Знайти об’єкти"
 
-#: en/messages:1426
+#: en/messages:1425
 msgctxt "find.exp"
 msgid ""
 "Look for text either in\n"
@@ -4250,237 +4245,232 @@ msgid ""
 "go to that item."
 msgstr "Пошук тексту у назвах\nкомпонентів, назвах дротів\nта у тексті коментарів.\nДвічі клацніть на пункті\nрезультату, щоб перейти до\nвідповідного запису."
 
-#: en/messages:1434
+#: en/messages:1433
 msgctxt "find.ignorecase"
 msgid "Ignore Case"
 msgstr "Без урахування регістру"
 
-#: en/messages:1436
+#: en/messages:1435
 msgctxt "find.result.module"
 msgid "Module"
 msgstr "Модуль"
 
-#: en/messages:1437
+#: en/messages:1436
 msgctxt "find.result.type"
 msgid "Type"
 msgstr "Тип"
 
-#: en/messages:1438
+#: en/messages:1437
 msgctxt "find.result.name"
 msgid "Object Name"
 msgstr "Назва об'єкта"
 
-#: en/messages:1447
+#: en/messages:1446
 msgctxt "find.options"
 msgid "Search Options"
 msgstr "Параметри пошуку"
 
-#: en/messages:1448
+#: en/messages:1447
 msgctxt "find.results"
 msgid "Search Results"
 msgstr "Результати пошуку"
 
-#: en/messages:1457
+#: en/messages:1456
 msgctxt "find.qual.contains"
 msgid "Contains..."
 msgstr "Містить…"
 
-#: en/messages:1458
+#: en/messages:1457
 msgctxt "find.qual.begins"
 msgid "Begins with..."
 msgstr "Починається з…"
 
-#: en/messages:1459
+#: en/messages:1458
 msgctxt "find.qual.ends"
 msgid "Ends with..."
 msgstr "Закінчується на…"
 
-#: en/messages:1460
+#: en/messages:1459
 msgctxt "find.qual.matches"
 msgid "Matches..."
 msgstr "Є відповідником…"
 
-#: en/messages:1462
+#: en/messages:1461
 msgctxt "find.dom.label"
 msgid "Look for objects in:"
 msgstr "Шукати об’єкти у:"
 
-#: en/messages:1463
+#: en/messages:1462
 msgctxt "find.dom.gates"
 msgid "components"
 msgstr "компонентах"
 
-#: en/messages:1464
+#: en/messages:1463
 msgctxt "find.dom.nets"
 msgid "nets"
 msgstr "ланцюжках"
 
-#: en/messages:1465
+#: en/messages:1464
 msgctxt "find.dom.text"
 msgid "comment text"
 msgstr "тексті коментарів"
 
-#: en/messages:1467
+#: en/messages:1466
 msgctxt "find.search"
 msgid "Find:"
 msgstr "Знайти:"
 
-#: en/messages:1468
+#: en/messages:1467
 msgctxt "find.target"
 msgid "Target"
 msgstr "Мета пошуку"
 
-#: en/messages:1486
+#: en/messages:1485
 msgctxt "circ.wintitle"
 msgid "TkGate: Circuit Properties"
 msgstr "TkGate: Властивості схеми"
 
-#: en/messages:1487
+#: en/messages:1486
 msgctxt "circ.label"
 msgid "Circuit Properties"
 msgstr "Властивості схеми"
 
-#: en/messages:1488
+#: en/messages:1487
 msgctxt "circ.ident"
 msgid "Identification"
 msgstr "Ідентифікація"
 
-#: en/messages:1489
+#: en/messages:1488
 msgctxt "circ.filev"
 msgid "File Version"
 msgstr "Версія файла"
 
-#: en/messages:1490
+#: en/messages:1489
 msgctxt "circ.file"
 msgid "File Name"
 msgstr "Назва файла"
 
-#: en/messages:1491
+#: en/messages:1490
 msgctxt "circ.title"
 msgid "Circuit Title"
 msgstr "Заголовок схеми"
 
-#: en/messages:1492
+#: en/messages:1491
 msgctxt "circ.encoding"
 msgid "File Encoding"
 msgstr "Кодування файла"
 
-#: en/messages:1493
+#: en/messages:1492
 msgctxt "circ.lang"
 msgid "File Language"
 msgstr "Мова файла"
 
-#: en/messages:1494
+#: en/messages:1493
 msgctxt "circ.discchg"
 msgid "Do not warn about discarding changes."
 msgstr "Не попереджати про відкидання змін."
 
-#: en/messages:1495
+#: en/messages:1494
 msgctxt "circ.flags"
 msgid "Options"
 msgstr "Параметри"
 
-#: en/messages:1496
+#: en/messages:1495
 msgctxt "circ.defaults"
 msgid "Component Defaults"
 msgstr "Типові параметри компонента"
 
-#: en/messages:1497
+#: en/messages:1496
 msgctxt "circ.extbar"
 msgid "Use extender bars on AND, OR and XOR gates."
 msgstr "Використовувати смуги розширення для шлюзів AND, OR і XOR."
 
-#: en/messages:1498
+#: en/messages:1497
 msgctxt "circ.shownet"
 msgid "Show net name on switches and dips."
 msgstr "Показувати назву ланцюга на перемикачах."
 
-#: en/messages:1499
+#: en/messages:1498
 msgctxt "circ.autostart"
 msgid "Enable auto-start of simulation."
 msgstr "Увімкнути автозапуск для імітації."
 
-#: en/messages:1500
+#: en/messages:1499
 msgctxt "circ.iniscript"
 msgid "Initialization Scripts"
 msgstr "Скрипти ініціалізації"
 
-#: en/messages:1502
+#: en/messages:1501
 msgctxt "circ.reallyupdate"
 msgid "Do you really want to update the interface of all '%s' instances?"
 msgstr "Ви справді хочете оновити інтерфейс усіх екземплярів «%s»?"
 
-#: en/messages:1506
+#: en/messages:1505
 msgctxt "circ.reallyoverwrite"
 msgid "Do you really want to overwrite the existing file '%s'?"
 msgstr "Ви справді хочете перезаписати наявний файл «%s»?"
 
-#: en/messages:1514
+#: en/messages:1513
 msgctxt "circ.general"
 msgid "General"
 msgstr "Загальне"
 
-#: en/messages:1515
+#: en/messages:1514
 msgctxt "circ.library"
 msgid "Libraries"
 msgstr "Бібліотеки"
 
-#: en/messages:1516
+#: en/messages:1515
 msgctxt "circ.script"
 msgid "Scripts"
 msgstr "Скрипти"
 
-#: en/messages:1517
+#: en/messages:1516
 msgctxt "circ.simulator"
 msgid "Simulation"
 msgstr "Моделювання"
 
-#: en/messages:1518
+#: en/messages:1517
 msgctxt "circ.timescale"
 msgid "Default Simulation Time Scale"
 msgstr "Типовий масштаб за часом імітації"
 
-#: en/messages:1519
+#: en/messages:1518
 msgctxt "circ.timescale.unit"
 msgid "Units:"
 msgstr "Одиниця:"
 
-#: en/messages:1520
+#: en/messages:1519
 msgctxt "circ.timescale.prec"
 msgid "Precision:"
 msgstr "Точність:"
 
-#: en/messages:1522
+#: en/messages:1521
 msgctxt "circ.sim.features"
 msgid "Features"
 msgstr "Можливості"
 
-#: en/messages:1530
+#: en/messages:1529
 msgctxt "circ.sim.tv.title"
 msgid "Timing Violation Handling"
 msgstr "Обробка порушень обмежень за часом"
 
-#: en/messages:1531
+#: en/messages:1530
 msgctxt "circ.sim.tv.all"
 msgid "Report all timing violations."
 msgstr "Повідомляти про усі порушення часового режиму."
 
-#: en/messages:1532
+#: en/messages:1531
 msgctxt "circ.sim.tv.after.1"
 msgid "Report timing violations after"
 msgstr "Повідомляти про порушення після"
 
 #: en/messages:1533
-msgctxt "circ.sim.tv.after.2"
-msgid "-empty-"
-msgstr "-порожньо-"
-
-#: en/messages:1534
 msgctxt "circ.sim.tv.never"
 msgid "Never report timing violations."
 msgstr "Ніколи не звітувати щодо порушення часових обмежень."
 
-#: en/messages:1536
+#: en/messages:1535
 msgctxt "circ.exp.general"
 msgid ""
 "View and modify circuit specific properties.\n"
@@ -4488,7 +4478,7 @@ msgid ""
 "circuit when you save."
 msgstr "Перегляд і внесення змін до специфічних\nвластивостей ланцюга. Ці властивості буде\nзбережено із ланцюгом."
 
-#: en/messages:1542
+#: en/messages:1541
 msgctxt "circ.exp.library"
 msgid ""
 "Select libraries required by this circuit.\n"
@@ -4497,7 +4487,7 @@ msgid ""
 "you load this circuit."
 msgstr "Виберіть бібліотеки, потрібні для цього ланцюга.\nВимоги щодо бібліотек зберігаються разом із\nланцюгом, їх буде автоматично завантажено під\nчас завантаження цього ланцюга."
 
-#: en/messages:1549
+#: en/messages:1548
 msgctxt "circ.exp.script"
 msgid ""
 "Add any simulation scripts that should be\n"
@@ -4505,102 +4495,102 @@ msgid ""
 "circuit is simulated."
 msgstr "Додайте скрипти імітації, які має бути\nавтоматично прочитано і виконано під\nімітації цього ланцюга."
 
-#: en/messages:1556
+#: en/messages:1555
 msgctxt "circ.exp.simulator"
 msgid "View and modify simulation preferences for this circuit."
 msgstr "Перегляд налаштувань імітації цієї схеми і внесення до них змін."
 
-#: en/messages:1564
+#: en/messages:1563
 msgctxt "libmgr.cap"
 msgid "Library Manager"
 msgstr "Керування бібліотеками"
 
-#: en/messages:1565
+#: en/messages:1564
 msgctxt "libmgr.library"
 msgid "Library"
 msgstr "Бібліотека"
 
-#: en/messages:1566
+#: en/messages:1565
 msgctxt "libmgr.description"
 msgid "Description"
 msgstr "Опис"
 
-#: en/messages:1567
+#: en/messages:1566
 msgctxt "libmgr.status"
 msgid "Status"
 msgstr "Стан"
 
-#: en/messages:1568
+#: en/messages:1567
 msgctxt "libmgr.status.load"
 msgid "Loaded"
 msgstr "Завантажено"
 
-#: en/messages:1569
+#: en/messages:1568
 msgctxt "libmgr.status.unload"
 msgid "Not Loaded"
 msgstr "Не завантажено"
 
-#: en/messages:1570
+#: en/messages:1569
 msgctxt "libmgr.status.loadp"
 msgid "[Loaded]"
 msgstr "[Завантажено]"
 
-#: en/messages:1571
+#: en/messages:1570
 msgctxt "libmgr.status.unloadp"
 msgid "[Not Loaded]"
 msgstr "[Не завантажено]"
 
-#: en/messages:1572
+#: en/messages:1571
 msgctxt "libmgr.exp"
 msgid "Select libraries to be loaded or unloaded."
 msgstr "Позначте бібліотеки, які слід завантажити або вивантажити."
 
-#: en/messages:1575
+#: en/messages:1574
 msgctxt "libmgr.load"
 msgid "Load"
 msgstr "Завантажити"
 
-#: en/messages:1576
+#: en/messages:1575
 msgctxt "libmgr.unload"
 msgid "Unload"
 msgstr "Вивантажити"
 
-#: en/messages:1577
+#: en/messages:1576
 msgctxt "libmgr.unloadall"
 msgid "Unload All"
 msgstr "Вивантажити усе"
 
-#: en/messages:1579
+#: en/messages:1578
 msgctxt "libmgr.notedit"
 msgid "Must be in circuit edit mode to open library manager."
 msgstr "Для відкриття вікна засобу керування бібліотекою слід перейти у режим редагування схеми."
 
-#: en/messages:1587
+#: en/messages:1586
 msgctxt "break.tab"
 msgid "Breakpoints"
 msgstr "Точки зупинки"
 
-#: en/messages:1588
+#: en/messages:1587
 msgctxt "break.id"
 msgid "ID"
 msgstr "Ід."
 
-#: en/messages:1589
+#: en/messages:1588
 msgctxt "break.state"
 msgid "S"
 msgstr "S"
 
-#: en/messages:1590
+#: en/messages:1589
 msgctxt "break.condition"
 msgid "Condition"
 msgstr "Умова"
 
-#: en/messages:1591
+#: en/messages:1590
 msgctxt "break.value"
 msgid "Value"
 msgstr "Значення"
 
-#: en/messages:1598
+#: en/messages:1597
 msgctxt "sim.recursive"
 msgid ""
 "Recursive module definition found\n"
@@ -4608,335 +4598,335 @@ msgid ""
 "perform critical path analysis."
 msgstr "Виявлено рекурсивне визначення модулів\nу «%s». Запуск імітації або аналіз\nкритичного шляху неможливий."
 
-#: en/messages:1603
+#: en/messages:1602
 msgctxt "sim.hyperlinkstop"
 msgid ""
 "The simulator is currently running. Would you like\n"
 "to stop the simulation and follow the link?"
 msgstr "Зараз працює імітатор. Хочете зупинити\nімітацію і перейти за посиланням?"
 
-#: en/messages:1613
+#: en/messages:1612
 msgctxt "cp.delay"
 msgid "Path Delay:"
 msgstr "Затримка шляху:"
 
-#: en/messages:1614
+#: en/messages:1613
 msgctxt "cp.pathl"
 msgid "Path List:"
 msgstr "Список шляхів:"
 
-#: en/messages:1615
+#: en/messages:1614
 msgctxt "cp.numpath"
 msgid "Number of Paths:"
 msgstr "Кількість шляхів:"
 
-#: en/messages:1616
+#: en/messages:1615
 msgctxt "cp.recompute"
 msgid "Recompute"
 msgstr "Переобчислити"
 
-#: en/messages:1621
+#: en/messages:1620
 msgctxt "err.notinsim"
 msgid "Not allowed while simulator is active."
 msgstr "Заборонено, доки працює імітатор."
 
-#: en/messages:1622
+#: en/messages:1621
 msgctxt "err.nomemselect"
 msgid "Memory is not selected."
 msgstr "Пам’ять не вказано."
 
-#: en/messages:1623
+#: en/messages:1622
 msgctxt "err.rootinterface"
 msgid "Can not set interface of root module."
 msgstr "Неможливо встановити інтерфейс кореневого модуля."
 
-#: en/messages:1624
+#: en/messages:1623
 msgctxt "err.nopin"
 msgid "Can't change selected pin."
 msgstr "Не можна змінювати позначене виведення."
 
-#: en/messages:1625
+#: en/messages:1624
 msgctxt "err.badhex"
 msgid "Illegal hex value '%s' ignored."
 msgstr "Некоректне шістнадцяткове значення «%s» проігноровано."
 
-#: en/messages:1626
+#: en/messages:1625
 msgctxt "err.gatanchor"
 msgid "Components(s) are anchored and can not be moved."
 msgstr "Компоненти зафіксовано, їх не можна пересувати."
 
-#: en/messages:1627
+#: en/messages:1626
 msgctxt "err.protdata"
 msgid "Can not modify contents of protected or library module."
 msgstr "Не можна вносити зміни до захищеного модуля або модуля бібліотеки."
 
-#: en/messages:1628
+#: en/messages:1627
 msgctxt "err.badfind"
 msgid "Can't find target '%s'."
 msgstr "Не вдалося знайти ціль «%s»."
 
-#: en/messages:1629
+#: en/messages:1628
 msgctxt "err.badopendel"
 msgid "Can't delete open module."
 msgstr "Не можна вилучати відкриті модулі."
 
-#: en/messages:1630
+#: en/messages:1629
 msgctxt "err.nosrcmod"
 msgid "Source module '%s' not found."
 msgstr "Не знайдено модуля походження «%s»."
 
-#: en/messages:1631
+#: en/messages:1630
 msgctxt "err.noerr"
 msgid "Can not locate error."
 msgstr "Не вдалося знайти місце помилки."
 
-#: en/messages:1632
+#: en/messages:1631
 msgctxt "err.misserr"
 msgid "Error information incomplete (did the simulator crash?)"
 msgstr "Дані щодо помилки є неповними (аварійне завершення імітації?)"
 
-#: en/messages:1633
+#: en/messages:1632
 msgctxt "err.nofunc"
 msgid "Bad or missing function name for module interface."
 msgstr "Помилкова назва функції для інтерфейсу модуля або не вказано таку назву."
 
-#: en/messages:1634
+#: en/messages:1633
 msgctxt "err.wirerot"
 msgid "Selection can not be rotated due to attaching wires."
 msgstr "Позначений фрагмент не можна обертати через наявні з’єднання."
 
-#: en/messages:1636
+#: en/messages:1635
 msgctxt "err.badinadd"
 msgid "Can't add any more inputs to selected component."
 msgstr "До позначеного компонента неможливо додати ще входи."
 
-#: en/messages:1637
+#: en/messages:1636
 msgctxt "err.badoutadd"
 msgid "Can't add any more outputs to selected component."
 msgstr "До позначеного компонента неможливо додати ще виходи."
 
-#: en/messages:1638
+#: en/messages:1637
 msgctxt "err.badinoutadd"
 msgid "Can't add any more inout pins to selected component."
 msgstr "До позначеного компонента неможливо додати ще входи-виходи."
 
-#: en/messages:1639
+#: en/messages:1638
 msgctxt "err.badpinchg"
 msgid "Can't change pin types on selected component."
 msgstr "Не можна змінювати тип виведення для позначеного компонента."
 
-#: en/messages:1640
+#: en/messages:1639
 msgctxt "err.badnetname"
 msgid "Illegal characters in identifier deleted."
 msgstr "З ідентифікатора вилучено некоректні символи."
 
-#: en/messages:1641
+#: en/messages:1640
 msgctxt "err.netbcrename"
 msgid "Identifier renamed to '%s' because of illegal characters."
 msgstr "Назву ідентифікатора змінено на «%s» через наявність некоректних символів."
 
-#: en/messages:1642
+#: en/messages:1641
 msgctxt "err.netconfnet"
 msgid "Identifier renamed to '%s' because of conflict."
 msgstr "Назву ідентифікатора змінено на «%s» через конфлікт назв."
 
-#: en/messages:1643
+#: en/messages:1642
 msgctxt "err.netconfgat"
 msgid "Identifier renamed to avoid conflict with built-in component name"
 msgstr "Назву ідентифікатора змінено для запобігання конфлікту із назвою вбудованого компонента"
 
-#: en/messages:1644
+#: en/messages:1643
 msgctxt "err.netconfkw"
 msgid "Identifier renamed to avoid conflict with reserved word."
 msgstr "Назву ідентифікатора змінено з метою запобігання конфлікту із зарезервованим словом."
 
-#: en/messages:1645
+#: en/messages:1644
 msgctxt "err.badconsame"
 msgid "Connection refused because wires are part of the same net."
 msgstr "У з’єднанні відмовлено, оскільки дроти є частинами одного ланцюга."
 
-#: en/messages:1646
+#: en/messages:1645
 msgctxt "err.badconptsp"
 msgid "Connection refused because both wires are module ports or supply."
 msgstr "У з’єднанні відмовлено, оскільки обидва дроти є портами модуля або живлення."
 
-#: en/messages:1647
+#: en/messages:1646
 msgctxt "err.badconbitw"
 msgid "Connection refused because bit widths do not match."
 msgstr "У з’єднанні відмовлено, оскільки не збігаються бітові ширини."
 
-#: en/messages:1648
+#: en/messages:1647
 msgctxt "err.badrange"
 msgid "Non-positive range for scope trace is not allowed."
 msgstr "Не можна використовувати недодатний діапазон для трасування області."
 
-#: en/messages:1649
+#: en/messages:1648
 msgctxt "err.badlprcmd"
 msgid "Unable to execute printer command '%s'."
 msgstr "Не вдалося виконати команду друку «%s»."
 
-#: en/messages:1650
+#: en/messages:1649
 msgctxt "err.badpsopen"
 msgid "Unable to open file '%s' for postscript output."
 msgstr "Не вдалося відкрити файл «%s» для виведення даних PostScript."
 
-#: en/messages:1651
+#: en/messages:1650
 msgctxt "err.badid"
 msgid "Illegal identifier '%s'."
 msgstr "Некоректний ідентифікатор «%s»."
 
-#: en/messages:1652
+#: en/messages:1651
 msgctxt "err.noinvgate"
 msgid "Inverters are not allowed on components of this type."
 msgstr "Інвертори не можна використовувати для компонентів цього типу."
 
-#: en/messages:1654
+#: en/messages:1653
 msgctxt "err.protintf"
 msgid "Can't modify protected interface on module '%s'."
 msgstr "Не вдалося змінити захищений інтерфейс модуля «%s»."
 
-#: en/messages:1656
+#: en/messages:1655
 msgctxt "err.bkpt.badexp"
 msgid ""
 "Syntax error in breakpoint expression. Must be one of: 'net', '!net', "
 "'net==value', 'net!=value'"
 msgstr "Синтаксична помилка у виразі для точки зупинки.. У виразі мало бути використано один з таких варіантів: «ланцюг», «!ланцюг», «ланцюг==значення», «ланцюг!=значення»"
 
-#: en/messages:1657
+#: en/messages:1656
 msgctxt "err.bkpt.badnet"
 msgid ""
 "Invalid net name '%s'. Names must start with a letter and contain only "
 "letters, digits and '.'."
 msgstr "Некоректна назва ланцюга, «%s». Назви мають починатися з літери і містити лише літери, цифри та символи «.»."
 
-#: en/messages:1658
+#: en/messages:1657
 msgctxt "err.bkpt.badval"
 msgid "Syntax error in value '%s'. Must be decimal or verilog-style constant."
 msgstr "Синтаксична помилка у значенні «%s». Має бути стала у десятковому форматі або форматі verilog."
 
-#: en/messages:1659
+#: en/messages:1658
 msgctxt "err.bkpt.toomany"
 msgid "Too many breakpoints. Maximum is %d."
 msgstr "Забагато точок зупинки. Максимальна можлива кількість — %d."
 
-#: en/messages:1661
+#: en/messages:1660
 msgctxt "err.sim.badtmp"
 msgid "Could not save temporary file '%s' for simulator (disc full?)"
 msgstr "Не вдалося зберегти тимчасовий файл «%s» для імітатора (немає місця на диску?)"
 
-#: en/messages:1662
+#: en/messages:1661
 msgctxt "err.sim.syntx"
 msgid "Syntax error in '%s' command."
 msgstr "Синтаксична помилка у команді «%s»."
 
-#: en/messages:1663
+#: en/messages:1662
 msgctxt "err.sim.noincl"
 msgid "Include file '%s' not found."
 msgstr "Включений файл «%s» не знайдено."
 
-#: en/messages:1664
+#: en/messages:1663
 msgctxt "err.sim.badedge"
 msgid "Illegal edge indicator '%c' in clock command."
 msgstr "Некоректний індикатор краю, «%c», у команді синхронізації."
 
-#: en/messages:1665
+#: en/messages:1664
 msgctxt "err.sim.nobkpt"
 msgid "No such breakpoint '%s'."
 msgstr "Немає такої точки зупинки, «%s»."
 
-#: en/messages:1666
+#: en/messages:1665
 msgctxt "err.sim.nonet"
 msgid "Can't find net '%s'."
 msgstr "Не вдалося знайти ланцюга «%s»."
 
-#: en/messages:1667
+#: en/messages:1666
 msgctxt "err.sim.nogate"
 msgid "Can't find component '%s'."
 msgstr "Не вдалося знайти компонент «%s»."
 
-#: en/messages:1668
+#: en/messages:1667
 msgctxt "err.sim.badbin"
 msgid "Illegal character in binary constant '%s'."
 msgstr "Некоректний символ у бінарній сталій, «%s»."
 
-#: en/messages:1669
+#: en/messages:1668
 msgctxt "err.sim.notswitch"
 msgid "Component '%s' is not a switch, dip or register."
 msgstr "Компонент «%s» не є перемикачем або регістром."
 
-#: en/messages:1670
+#: en/messages:1669
 msgctxt "err.sim.badcmd"
 msgid "Unrecognized command '%s' in simulation script."
 msgstr "Нерозпізнана команда «%s» у скрипті імітації."
 
-#: en/messages:1671
+#: en/messages:1670
 msgctxt "err.sim.isrun"
 msgid "Simulator is already running (Use 'Ctrl-s e' to end)."
 msgstr "Імітатор вже запущено (скористайтеся «Ctrl-s e», щоб завершити)."
 
-#: en/messages:1672
+#: en/messages:1671
 msgctxt "err.sim.run"
 msgid "Run-time error at time %s:"
 msgstr "Помилка під час виконання у момент %s:"
 
-#: en/messages:1673
+#: en/messages:1672
 msgctxt "err.sim.cmd"
 msgid "Internal Command Error"
 msgstr "Помилка внутрішньої команди"
 
-#: en/messages:1675
+#: en/messages:1674
 msgctxt "err.noteditpchg"
 msgid "Properties can only be changed in edit mode."
 msgstr "Властивості можна змінювати у режимі редагування."
 
-#: en/messages:1676
+#: en/messages:1675
 msgctxt "err.badeditop"
 msgid "Illegal interface edit mode operation."
 msgstr "Неприпустима дія у режимі редагування інтерфейсу."
 
-#: en/messages:1677
+#: en/messages:1676
 msgctxt "err.badopen"
 msgid "Unable to open input file '%s'."
 msgstr "Не вдалося відкрити файл вхідних даних «%s»."
 
-#: en/messages:1678
+#: en/messages:1677
 msgctxt "err.badlibopen"
 msgid "Unable to open library file '%s'."
 msgstr "Не вдалося відкрити файл бібліотеки «%s»."
 
-#: en/messages:1680
+#: en/messages:1679
 msgctxt "err.nomark"
 msgid ""
 "Please set a mark with the left mouse button before selecting a component "
 "type."
 msgstr "Будь ласка, встановіть позначку за допомогою клацання лівою кнопкою миші, перш ніж вибирати тип компонента."
 
-#: en/messages:1681
+#: en/messages:1680
 msgctxt "err.badgate"
 msgid "Unknown component type '%s'."
 msgstr "Невідомий тип компонента «%s»."
 
-#: en/messages:1683
+#: en/messages:1682
 msgctxt "err.badportadd"
 msgid "Can't add ports to components of this type."
 msgstr "До компонентів цього типу не можна додавати порти."
 
-#: en/messages:1685
+#: en/messages:1684
 msgctxt "err.modmissing"
 msgid "HDL module text missing for module \"%s\"."
 msgstr "Немає тексту модуля HDL для модуля «%s»."
 
-#: en/messages:1686
+#: en/messages:1685
 msgctxt "err.modtoomany"
 msgid "Excess module definitions in module \"%s\"."
 msgstr "Зайві визначення модуля у модулі «%s»."
 
-#: en/messages:1687
+#: en/messages:1686
 msgctxt "err.modmismatch"
 msgid "Name mismatch between text definition and module name in \"%s\"."
 msgstr "Невідповідність назв між текстовим визначенням і назвою модуля у «%s»."
 
-#: en/messages:1689
+#: en/messages:1688
 msgctxt "err.manypages"
 msgid ""
 "There are an awful lot of\n"
@@ -4944,7 +4934,7 @@ msgid ""
 "you sure you want to print it?"
 msgstr "У цьому документі надто багато\nсторінок. Ви справді хочете\nйого надрукувати?"
 
-#: en/messages:1695
+#: en/messages:1694
 msgctxt "err.nojump"
 msgid ""
 "The 'jump-to-module' feature can not be used\n"
@@ -4955,224 +4945,224 @@ msgid ""
 "you are in with the '<' keyboard command."
 msgstr "Можливістю переходу до модуля не можна скористатися\nу режимах імітації або аналізу критичного шляху.\nБудь ласка, перейдіть вручну до блоку призначення\nпозначенням модулів і відкриттям їх за\nдопомогою натискання клавіші «>». Полишити\nмодуль можна за допомогою натискання клавіші «<»."
 
-#: en/messages:1704
+#: en/messages:1703
 msgctxt "err.nomod"
 msgid "Module '%s' is not defined."
 msgstr "Модуль «%s» не визначено."
 
-#: en/messages:1705
+#: en/messages:1704
 msgctxt "err.modlock"
 msgid "Logic Block is Locked!"
 msgstr "Логічний блок заблоковано!"
 
-#: en/messages:1706
+#: en/messages:1705
 msgctxt "err.closeroot"
 msgid "No higher level module opened on the module stack."
 msgstr "У стосі модулів не відкрито модулів вищого рівня."
 
-#: en/messages:1707
+#: en/messages:1706
 msgctxt "err.editonly"
 msgid "Command not valid when in simulation mode."
 msgstr "Команда не є коректною у режимі імітації."
 
-#: en/messages:1708
+#: en/messages:1707
 msgctxt "err.simonly"
 msgid "Command valid only in simulation mode."
 msgstr "Команда є коректною лише у режимі імітації."
 
-#: en/messages:1710
+#: en/messages:1709
 msgctxt "err.deltop"
 msgid "Can not delete top-level module '%s'."
 msgstr "Не можна вилучати модуль вищого рівня «%s»."
 
-#: en/messages:1711
+#: en/messages:1710
 msgctxt "err.delprot"
 msgid "Can not delete protected module '%s'."
 msgstr "Не можна вилучати захищений модуль «%s»."
 
-#: en/messages:1712
+#: en/messages:1711
 msgctxt "err.nodel"
 msgid "No deletable selection."
 msgstr "Немає придатних до вилучення позначених фрагментів."
 
-#: en/messages:1713
+#: en/messages:1712
 msgctxt "err.modnotdef"
 msgid "Module '%s' is undefined."
 msgstr "Модуль «%s» не визначено."
 
-#: en/messages:1714
+#: en/messages:1713
 msgctxt "err.moddef"
 msgid "The module '%s' already exists."
 msgstr "Модуль «%s» вже існує."
 
-#: en/messages:1715
+#: en/messages:1714
 msgctxt "err.primredef"
 msgid "Built-in element name '%s' can not be redefined."
 msgstr "Назву вбудованого елемента «%s» не можна перевизначати."
 
-#: en/messages:1716
+#: en/messages:1715
 msgctxt "err.primprefix"
 msgid "Illegal module name '%s' begins with built-in prefix '%s'."
 msgstr "Неприпустима назва модуля «%s» починається із вбудованого префікса «%s»."
 
-#: en/messages:1717
+#: en/messages:1716
 msgctxt "err.iskeyword"
 msgid "Verilog keyword '%s' can not be used as an identifier."
 msgstr "Ключове слово Verilog «%s» не можна використовувати як ідентифікатор."
 
-#: en/messages:1718
+#: en/messages:1717
 msgctxt "err.noprop"
 msgid "Selected component has no editable properites."
 msgstr "У позначеного компонента немає придатних до редагування властивостей."
 
-#: en/messages:1719
+#: en/messages:1718
 msgctxt "err.openscript"
 msgid "Can't open simulation script file '%s'"
 msgstr "Не вдалося відкрити файл скрипту імітації «%s»"
 
-#: en/messages:1720
+#: en/messages:1719
 msgctxt "err.oldversion"
 msgid ""
 "Loaded file '%s' with obsolete version number %s (current version is %s)."
 msgstr "Завантажено файл «%s» із застарілим номером версії %s (поточна версія — %s)."
 
-#: en/messages:1721
+#: en/messages:1720
 msgctxt "err.futureversion"
 msgid ""
 "Loaded file '%s' saved by future TkGate version %s (this version is %s)."
 msgstr "Завантажений файл «%s» збережено у новішій версії TkGate %s (поточна версії — %s)."
 
-#: en/messages:1722
+#: en/messages:1721
 msgctxt "err.badversion"
 msgid "Unknown version number. Use at your own risk."
 msgstr "Невідомий номер версії. Можливі непередбачувані наслідки використання."
 
-#: en/messages:1723
+#: en/messages:1722
 msgctxt "err.nodrive"
 msgid "Net %s has no driver in module %s."
 msgstr "У ланцюга %s немає збуджувача у модулі %s."
 
-#: en/messages:1724
+#: en/messages:1723
 msgctxt "err.noconn"
 msgid "Wire %s{%d} has no connections - deleted."
 msgstr "Дріт %s{%d} ні з чим не з’єднано. Вилучаємо."
 
-#: en/messages:1725
+#: en/messages:1724
 msgctxt "err.oldportact"
 msgid "Please right click on port or module edge to add/change port."
 msgstr "Будь ласка, клацніть правою кнопкою миші на порті або краю модуля для додавання порту або внесення змін до нього."
 
-#: en/messages:1726
+#: en/messages:1725
 msgctxt "err.nomodule"
 msgid "No selected module."
 msgstr "Немає позначеного модуля."
 
-#: en/messages:1727
+#: en/messages:1726
 msgctxt "err.nomodop"
 msgid "No suitable modules for operation."
 msgstr "Для дії немає відповідних модулів."
 
-#: en/messages:1728
+#: en/messages:1727
 msgctxt "err.protexec"
 msgid "Attempted execution of protected command '%s' in $tkg$exec()."
 msgstr "Спроба виконання захищеної команди «%s» у $tkg$exec()."
 
-#: en/messages:1730
+#: en/messages:1729
 msgctxt "err.notwritable"
 msgid "File '%s' is not writable."
 msgstr "Файл «%s» є непридатним до запису."
 
-#: en/messages:1731
+#: en/messages:1730
 msgctxt "err.backupfail"
 msgid "Unable to create backup file '%s'."
 msgstr "Не вдалося створити файл резервної копії, «%s»."
 
-#: en/messages:1733
+#: en/messages:1732
 msgctxt "err.yy.badprop"
 msgid "Ignoring unknown circuit property '%s'."
 msgstr "Ігноруємо невідому властивість схеми «%s»."
 
-#: en/messages:1734
+#: en/messages:1733
 msgctxt "err.yy.badpropval"
 msgid "Bad value '%s' for circuit property '%s'."
 msgstr "Помилкове значення «%s» властивості ланцюга «%s»."
 
-#: en/messages:1735
+#: en/messages:1734
 msgctxt "err.yy.baddata"
 msgid "Bad data type supplied for circuit property '%s'."
 msgstr "Визначено помилковий тип даних для властивості ланцюга «%s»."
 
-#: en/messages:1736
+#: en/messages:1735
 msgctxt "err.yy.nosym"
 msgid "No current module symbol."
 msgstr "Немає символу для поточного модуля."
 
-#: en/messages:1737
+#: en/messages:1736
 msgctxt "err.yy.badicon"
 msgid "Bad icon type '%s'."
 msgstr "Помилковий тип піктограми, «%s»."
 
-#: en/messages:1738
+#: en/messages:1737
 msgctxt "err.yy.toomuchdata"
 msgid "Too much icon data."
 msgstr "Забагато даних піктограми."
 
-#: en/messages:1739
+#: en/messages:1738
 msgctxt "err.yy.nosyminst"
 msgid "Missing symbol %d on instance %s of %s."
 msgstr "Пропущено символ %d у екземплярі %s %s."
 
-#: en/messages:1740
+#: en/messages:1739
 msgctxt "err.yy.badmodprop"
 msgid "Ignoring unknown module property '%s'."
 msgstr "Ігноруємо невідому властивість модуля «%s»."
 
-#: en/messages:1741
+#: en/messages:1740
 msgctxt "err.yy.badmoddata"
 msgid "Bad data type supplied for module property '%s'."
 msgstr "Визначено помилковий тип даних для властивості модуля «%s»."
 
-#: en/messages:1742
+#: en/messages:1741
 msgctxt "err.yy.badprim"
 msgid "Unknown primitive name '%s'."
 msgstr "Невідома назва примітива «%s»."
 
-#: en/messages:1743
+#: en/messages:1742
 msgctxt "err.yy.nonet"
 msgid "Undeclared net '%s'."
 msgstr "Неоголошений ланцюг «%s»."
 
-#: en/messages:1744
+#: en/messages:1743
 msgctxt "err.yy.bogussave"
 msgid "Bogus save data detected. circuit may be damaged."
 msgstr "Виявлено зайві дані. Ймовірно, ланцюг пошкоджено."
 
-#: en/messages:1745
+#: en/messages:1744
 msgctxt "err.yy.pinformat"
 msgid "Illegal pin name format '%s'."
 msgstr "Некоректний формат назви входу «%s»."
 
-#: en/messages:1746
+#: en/messages:1745
 msgctxt "err.yy.pinname"
 msgid "Pin name '%s' not defined for component type '%s'"
 msgstr "Назви виходу «%s» не визначено для компонента типу «%s»"
 
-#: en/messages:1747
+#: en/messages:1746
 msgctxt "err.yy.nonetpos"
 msgid "No net for position %d on component %s."
 msgstr "Немає ланцюга для позиції %d у компоненті %s."
 
-#: en/messages:1748
+#: en/messages:1747
 msgctxt "err.yy.baddirective"
 msgid "Illegal or badly formed directive '%s'."
 msgstr "Помилкова інструкція «%s» або формат інструкції є помилковим."
 
-#: en/messages:1749
+#: en/messages:1748
 msgctxt "err.yy.badlocale"
 msgid "Unknown locale '%s' in save file. Using English locale."
 msgstr "Невідома локаль «%s» у збереженому файлі. Використовуємо англійську."
 
-#: en/messages:1751
+#: en/messages:1750
 msgctxt "err.corruptnewsave"
 msgid ""
 "TkGate was able to save your file in '%s', but it appears\n"
@@ -5181,7 +5171,7 @@ msgid ""
 "check the integrity of a save file."
 msgstr "TkGate вдалося зберегти ваш файл до «%s», але дані,\nздається, пошкоджено. Якщо увімкнено режим створення\nконтрольних точок, спробуйте завантажити один з\nфайлів контрольних точок. Скористайтеся командою\n«tkgate -V» для перевірки цілісності збереженого файла."
 
-#: en/messages:1758
+#: en/messages:1757
 msgctxt "err.corruptsave"
 msgid ""
 "TkGate detected a problem while trying to save the file '%s'.\n"
@@ -5191,14 +5181,14 @@ msgid ""
 "'tkgate -V' to check the integrety of a save file."
 msgstr "TkGate виявлено проблему під час спроби зберегти файл «%s».\nНаявний файл не змінено, а пошкоджений файл було записано\nдо «%s». Якщо увімкнено режим контрольних точок, ви\nможете спробувати завантажити один з файлів контрольних\nточок. Ви також можете скористатися командою «tkgate -V»\nдля перевірки цілісності збереженого файла."
 
-#: en/messages:1766
+#: en/messages:1765
 msgctxt "err.badsave"
 msgid ""
 "A problem has occurred trying to open or write the file '%s'. Check\n"
 "file/directory protections and or disk space."
 msgstr "Під час спроби відрити файл «%s» для читання чи запису. Переконайтеся,\nщо правильно встановлено права доступу до файла або каталогу, а на диску досить місця."
 
-#: en/messages:1771
+#: en/messages:1770
 msgctxt "err.nosafesave"
 msgid ""
 "A problem has occurred attempting to save '%s'. If you wish, you can\n"
@@ -5208,7 +5198,7 @@ msgid ""
 "to attempt an unvalidated save?"
 msgstr "Під час спроби зберегти «%s» виникли проблеми. Якщо хочете, можете\nспробувати зберегти дані без перевірки. Якщо ви виберете варіант\n«ні», початковий файл залишиться незмінним. Якщо буде вибрано\nваріант «так», початковий файл буде перезаписано, а дані може\nбути знищено, якщо виникнуть проблеми. Хочете спробувати\nзберегти дані без перевірки?"
 
-#: en/messages:1779
+#: en/messages:1778
 msgctxt "err.noback"
 msgid ""
 "File '%s' was created by TkGate\n"
@@ -5218,915 +5208,915 @@ msgid ""
 "save."
 msgstr "Файл «%s» було створено у TkGate\n%s, отже його, ймовірно, не\nможна буде прочитати у версіях,\nщо передують поточній версії (%s)\nпісля збереження."
 
-#: en/messages:1787
+#: en/messages:1786
 msgctxt "err.viewfile"
 msgid "Can not open file '%s'."
 msgstr "Не вдалося відкрити файл «%s»."
 
-#: en/messages:1794
+#: en/messages:1793
 msgctxt "err.internal.nomod"
 msgid "internal error: Failed to find module '%s'."
 msgstr "внутрішня помилка: не вдалося знайти модуль «%s»."
 
-#: en/messages:1800
+#: en/messages:1799
 msgctxt "msg.selwire"
 msgid "Selected wire %s named '%s'."
 msgstr "Позначено дріт %s із назвою «%s»."
 
-#: en/messages:1801
+#: en/messages:1800
 msgctxt "msg.selgate"
 msgid "Selected gate %s named '%s'."
 msgstr "Позначено шлюз %s із назвою «%s»."
 
-#: en/messages:1802
+#: en/messages:1801
 msgctxt "msg.selblock"
 msgid "Selected %s block named '%s'."
 msgstr "Позначено блок %s із назвою «%s»."
 
-#: en/messages:1803
+#: en/messages:1802
 msgctxt "msg.iselwire"
 msgid "Selected port '%s' on block '%s'."
 msgstr "Позначено порт «%s» у блоці «%s»."
 
-#: en/messages:1804
+#: en/messages:1803
 msgctxt "msg.iselgate"
 msgid "Selected %s named '%s' (huh? this message should be impossible)."
 msgstr "Позначено %s із назвою «%s» (Що? Цього повідомлення не мало б бути)."
 
-#: en/messages:1805
+#: en/messages:1804
 msgctxt "msg.iselblock"
 msgid "Selected module interface for '%s'."
 msgstr "Позначено інтерфейсу модуля для «%s»."
 
-#: en/messages:1807
+#: en/messages:1806
 msgctxt "msg.modoverwt"
 msgid "Destination module '%s' already exists. Overwrite?"
 msgstr "Модуль призначення «%s» вже існує. Перезаписати?"
 
-#: en/messages:1808
+#: en/messages:1807
 msgctxt "msg.foundgate"
 msgid "Found component named '%s'."
 msgstr "Знайдено компонент із назвою «%s»."
 
-#: en/messages:1809
+#: en/messages:1808
 msgctxt "msg.foundwire"
 msgid "Found wire named '%s'."
 msgstr "Знайдено дріт із назвою «%s»."
 
-#: en/messages:1810
+#: en/messages:1809
 msgctxt "msg.searchagn"
 msgid "Target string '%s' not found. Hit 'find' to restart search again."
 msgstr "Рядок призначення «%s» не знайдено. Натисніть «Знайти», щоб перезапустити пошук."
 
-#: en/messages:1811
+#: en/messages:1810
 msgctxt "msg.sim.chgtoroot"
 msgid "Simulation mode requires root module at top of edit stack."
 msgstr "Для режиму імітації кореневий модуль має бути на верхівці стосу редагування."
 
-#: en/messages:1812
+#: en/messages:1811
 msgctxt "msg.sim.nogatemod"
 msgid "Simulation mode requires concrete module stack."
 msgstr "Для режиму імітації потрібне конкретний стос модулів."
 
-#: en/messages:1813
+#: en/messages:1812
 msgctxt "msg.setinterface"
 msgid "Set module interface for '%s'."
 msgstr "Встановити інтерфейс модуля для «%s»."
 
-#: en/messages:1814
+#: en/messages:1813
 msgctxt "msg.needsel"
 msgid "Please select a module instance."
 msgstr "Будь ласка, виберіть екземпляр модуля."
 
-#: en/messages:1815
+#: en/messages:1814
 msgctxt "msg.wroteckpt"
 msgid "Checkpointed to %s..."
 msgstr "Створено контрольну точку у %s…"
 
-#: en/messages:1816
+#: en/messages:1815
 msgctxt "msg.save"
 msgid "Saved circuit to '%s'."
 msgstr "Ланцюг збережено до «%s»."
 
-#: en/messages:1817
+#: en/messages:1816
 msgctxt "msg.reallynew"
 msgid ""
 "Circuit has been modified. Do you really want to discard your changes and "
 "create a new circuit?"
 msgstr "До ланцюга було внесено зміни. Ви справді хочете відкинути внесені зміни і створити новий ланцюг?"
 
-#: en/messages:1818
+#: en/messages:1817
 msgctxt "msg.reallyquit"
 msgid "Circuit has been modified. Do you really want to exit?"
 msgstr "До ланцюга було внесено зміни. Ви справді хочете завершити роботу програми?"
 
-#: en/messages:1819
+#: en/messages:1818
 msgctxt "msg.notlib"
 msgid "Module '%s' is not a library module."
 msgstr "Модуль «%s» не є модулем бібліотеки."
 
-#: en/messages:1824
+#: en/messages:1823
 msgctxt "miles.msg1"
 msgid "Only a fool would put %s%s there, Miles."
 msgstr "Лише дурень розташував би %s%s там, Майлзе."
 
-#: en/messages:1825
+#: en/messages:1824
 msgctxt "miles.msg2"
 msgid "That's a really stupid place to put %s%s, Miles."
 msgstr "Це насправді дуже погане місце для %s%s, Майлзе."
 
-#: en/messages:1826
+#: en/messages:1825
 msgctxt "miles.msg3"
 msgid "That's a terrible place for %s%s, Miles."
 msgstr "Це жахливе місце для %s%s, Майлзе."
 
-#: en/messages:1827
+#: en/messages:1826
 msgctxt "miles.msg4"
 msgid "Miles, you are a fool for putting %s%s there."
 msgstr "Майлзе, не будь дурнем, не розташовуй там %s%s."
 
-#: en/messages:1828
+#: en/messages:1827
 msgctxt "miles.msg5"
 msgid "Only you would put %s%s there, Miles."
 msgstr "Лише ти розташував би %s%s там. Майлзе."
 
-#: en/messages:1829
+#: en/messages:1828
 msgctxt "miles.msg6"
 msgid "Putting %s%s there is proof of your absolute stupidity, Miles."
 msgstr "Розташовування там %s%s вказує на твою абсолютну тупість, Майлзе."
 
-#: en/messages:1830
+#: en/messages:1829
 msgctxt "miles.msg7"
 msgid "Why don't you give up Miles, this is a stupid circuit."
 msgstr "Чи не час полишити спроби? Це дуже тупо складений ланцюг."
 
-#: en/messages:1831
+#: en/messages:1830
 msgctxt "miles.msg8a"
 msgid "It's pointless to continue, Miles."
 msgstr "Немає сенсу продовжувати, Майлзе."
 
-#: en/messages:1832
+#: en/messages:1831
 msgctxt "miles.msg8b"
 msgid "It's obvious you can't design a circuit"
 msgstr "Очевидно, тобі не судилося створювати ланцюги"
 
-#: en/messages:1839
+#: en/messages:1838
 msgctxt "verga.err.OK"
 msgid "Don't worry, be happy."
 msgstr "Не переймайся, насолоджуйся життям."
 
-#: en/messages:1840
+#: en/messages:1839
 msgctxt "verga.err.INPORT"
 msgid "Port size mismatch on input port '%s'."
 msgstr "Невідповідність розміру порту на вхідному порту «%s»."
 
-#: en/messages:1841
+#: en/messages:1840
 msgctxt "verga.err.OUTPORT"
 msgid "Port size mismatch on output port '%s'."
 msgstr "Невідповідність розміру порту на вихідному порту «%s»."
 
-#: en/messages:1842
+#: en/messages:1841
 msgctxt "verga.err.FLOATNET"
 msgid "Net '%s' has no drivers (floating net)."
 msgstr "Ланцюг «%s» не має збуджувачів (невстановлений ланцюг)."
 
-#: en/messages:1843
+#: en/messages:1842
 msgctxt "verga.err.DIRECTCONN"
 msgid "Direct connect operator '=>' unsupported. Treated as '*>'."
 msgstr "Підтримки безпосереднього оператора з’єднання, «=>», не передбачено. Вважаємо, що вказано «*>»."
 
-#: en/messages:1844
+#: en/messages:1843
 msgctxt "verga.err.MEMADDR"
 msgid "Attempt to write to memory %s with unknown address."
 msgstr "Спроба запису до пам’яті %s із невідомою адресою."
 
-#: en/messages:1845
+#: en/messages:1844
 msgctxt "verga.err.MEMBITS"
 msgid "Attempt to write to memory %s with unknown bitrange."
 msgstr "Спроба запису до пам’яті %s із невідомим діапазоном бітів."
 
-#: en/messages:1846
+#: en/messages:1845
 msgctxt "verga.err.BADARRAYUSG"
 msgid "Array '%s' used in expression without index."
 msgstr "Масив «%s» використано у виразі без індексу."
 
-#: en/messages:1847
+#: en/messages:1846
 msgctxt "verga.err.BADARRAYLHS"
 msgid "Array '%s' used without index on left-hand-side."
 msgstr "Масив «%s» використано без індексу лівій частині рівності."
 
-#: en/messages:1848
+#: en/messages:1847
 msgctxt "verga.err.BADCLOSE"
 msgid "Attempt to close non-open descriptor in task '%s'."
 msgstr "Спроба закриття невідкритого дескриптора у завданні «%s»."
 
-#: en/messages:1849
+#: en/messages:1848
 msgctxt "verga.err.BADAUTORNG"
 msgid "Auto range [*] is only valid with 'wire' declaration."
 msgstr "Автодіапазон [*] можна використовувати лише разом із оголошенням «wire»."
 
-#: en/messages:1850
+#: en/messages:1849
 msgctxt "verga.err.BADGATERNG"
 msgid "Bad component instance range expression."
 msgstr "Некоректний вираз діапазону екземплярів компонента."
 
-#: en/messages:1851
+#: en/messages:1850
 msgctxt "verga.err.BADARGVALUE"
 msgid "Bad value for argument '%s' in task '%s'."
 msgstr "Помилкове значення аргументу «%s» у завданні «%s»."
 
-#: en/messages:1852
+#: en/messages:1851
 msgctxt "verga.err.DIVZERO"
 msgid "Divide by zero."
 msgstr "Ділення на нуль."
 
-#: en/messages:1853
+#: en/messages:1852
 msgctxt "verga.err.NODIV"
 msgid "Divide/module unsupported on this machine - sizeof(short) must be 2."
 msgstr "Підтримки ділення або модуля на цій машині не передбачено — sizeof(short) має бути рівним 2."
 
-#: en/messages:1854
+#: en/messages:1853
 msgctxt "verga.err.BADEDGEEVENT"
 msgid "Event on multi-bit net '%s' can not have posedge/negedge."
 msgstr "Подія у багаторозрядному ланцюгу «%s» не може мати posedge/negedge."
 
-#: en/messages:1855
+#: en/messages:1854
 msgctxt "verga.err.NEEDEDGE"
 msgid "Must specify posedge or negedge on event for %s."
 msgstr "Слід вказати posedge або negedge для події %s."
 
-#: en/messages:1856
+#: en/messages:1855
 msgctxt "verga.err.ASGNEVENT"
 msgid "Event wait on assign is illegal."
 msgstr "Не можна використовувати очікування події у інструкції надання значення."
 
-#: en/messages:1857
+#: en/messages:1856
 msgctxt "verga.err.PROTTASK"
 msgid "Execution of protected system task '%s' blocked."
 msgstr "Виконання захищеного системного завдання «%s» заблоковано."
 
-#: en/messages:1858
+#: en/messages:1857
 msgctxt "verga.err.NEEDIDENT"
 msgid "Expecting identifier for argument %s of task '%s'."
 msgstr "Мало бути вказано ідентифікатор аргументу %s завдання «%s»."
 
-#: en/messages:1859
+#: en/messages:1858
 msgctxt "verga.err.BADOP"
 msgid "Expression operator error in '%s'."
 msgstr "Помилковий оператор у виразі «%s»."
 
-#: en/messages:1860
+#: en/messages:1859
 msgctxt "verga.err.NOREAD"
 msgid "Failed to load source file '%s'."
 msgstr "Не вдалося завантажити файл із початковим кодом «%s»."
 
-#: en/messages:1861
+#: en/messages:1860
 msgctxt "verga.err.MEMFILE"
 msgid "Failed to open memory file '%s'."
 msgstr "Не вдалося відкрити файл пам’яті «%s»."
 
-#: en/messages:1862
+#: en/messages:1861
 msgctxt "verga.err.WRONGMOD"
 msgid "Found module '%s' when expecting '%s'."
 msgstr "Знайдено модуль «%s», хоча мав бути «%s»."
 
-#: en/messages:1863
+#: en/messages:1862
 msgctxt "verga.err.NOTPARM"
 msgid "Identifier '%s' in constant expression is not a parameter."
 msgstr "Ідентифікатор «%s» у сталому виразі не є параметром."
 
-#: en/messages:1864
+#: en/messages:1863
 msgctxt "verga.err.BADADDR"
 msgid "Illegal address range on port '%s'."
 msgstr "Некоректний діапазон адрес на порту «%s»."
 
-#: en/messages:1865
+#: en/messages:1864
 msgctxt "verga.err.BADADDRSPEC"
 msgid "Illegal address range specification '%s'."
 msgstr "Некоректна специфікація діапазону адрес «%s»."
 
-#: en/messages:1866
+#: en/messages:1865
 msgctxt "verga.err.BADCHAR"
 msgid "Illegal character (%s) '%s'."
 msgstr "Некоректний символ (%s) «%s»."
 
-#: en/messages:1867
+#: en/messages:1866
 msgctxt "verga.err.BADEVENT"
 msgid "Illegal event control expression."
 msgstr "Некоректний вираз керування подіями."
 
-#: en/messages:1868
+#: en/messages:1867
 msgctxt "verga.err.BADCONSTOP"
 msgid "Illegal operator in constant expression."
 msgstr "Некоректний оператор у сталому виразі."
 
-#: en/messages:1869
+#: en/messages:1868
 msgctxt "verga.err.BADXOP"
 msgid "Illegal operator in expression."
 msgstr "Некоректний оператор у виразі."
 
-#: en/messages:1870
+#: en/messages:1869
 msgctxt "verga.err.NETREDEF"
 msgid "Illegal redefinition of net '%s'."
 msgstr "Некоректне перевизначення ланцюга «%s»."
 
-#: en/messages:1871
+#: en/messages:1870
 msgctxt "verga.err.BADINOUT"
 msgid "Inout connections must be net-to-net on port '%s'."
 msgstr "З’єднання входів-виходів на порту «%s» мають належати до типу «ланцюг-ланцюг»."
 
-#: en/messages:1872
+#: en/messages:1871
 msgctxt "verga.err.MODUNDEF"
 msgid "Instance of undefined module '%s'."
 msgstr "Екземпляр невизначеного модуля «%s»."
 
-#: en/messages:1873
+#: en/messages:1872
 msgctxt "verga.err.BADASGNLHS"
 msgid "Invalid left-hand-side in 'assign'."
 msgstr "Помилкова ліва частина у «assign»."
 
-#: en/messages:1874
+#: en/messages:1873
 msgctxt "verga.err.LHSNOTREG"
 msgid "Illegal use of '%s' in left-hand-side of assignment."
 msgstr "Некоректне використання «%s» у лівій частині виразу встановлення значення."
 
-#: en/messages:1875
+#: en/messages:1874
 msgctxt "verga.err.BADLHS"
 msgid "Invalid left-hand-side in assignment."
 msgstr "Некоректна ліва частина виразу встановлення значення."
 
-#: en/messages:1876
+#: en/messages:1875
 msgctxt "verga.err.BADOUT"
 msgid "Invalid output assignment."
 msgstr "Некоректне встановлення значення виходу."
 
-#: en/messages:1877
+#: en/messages:1876
 msgctxt "verga.err.NOTREG"
 msgid "Memories must be declared as register."
 msgstr "Пам’ять слід оголошувати як регістр."
 
-#: en/messages:1878
+#: en/messages:1877
 msgctxt "verga.err.PORTMIX"
 msgid "Mixed named and unnamed ports on interface '%s' of '%s'."
 msgstr "Суміш іменованих і неіменованих портів на інтерфейсі «%s» «%s»."
 
-#: en/messages:1879
+#: en/messages:1878
 msgctxt "verga.err.REPCASE"
 msgid "More than one default: in case statement."
 msgstr "Декілька default: у інструкції case."
 
-#: en/messages:1880
+#: en/messages:1879
 msgctxt "verga.err.NOMEM"
 msgid "No current memory in memory file read."
 msgstr "У прочитаному файлі немає даних поточного вмісту пам’яті."
 
-#: en/messages:1881
+#: en/messages:1880
 msgctxt "verga.err.BADCMD"
 msgid "No such command '%s'."
 msgstr "Немає такої команди: «%s»."
 
-#: en/messages:1882
+#: en/messages:1881
 msgctxt "verga.err.CMDNOTNET"
 msgid "No such net '%s' in '%s' command."
 msgstr "Немає ланцюга «%s» у команді «%s»."
 
-#: en/messages:1883
+#: en/messages:1882
 msgctxt "verga.err.MEMNONBLK"
 msgid "Non-blocking assignments to memories not implemented."
 msgstr "Встановлення значень у пам’яті без блокування не реалізовано."
 
-#: en/messages:1884
+#: en/messages:1883
 msgctxt "verga.err.NOTPPORT"
 msgid "Parameter '%s' is not declared as a port."
 msgstr "Параметр «%s» не оголошено як порт."
 
-#: en/messages:1885
+#: en/messages:1884
 msgctxt "verga.err.REDEFP"
 msgid "Parameter redefines identifier '%s'."
 msgstr "Параметр перевизначає ідентифікатор «%s»."
 
-#: en/messages:1886
+#: en/messages:1885
 msgctxt "verga.err.PORTNOTDEF"
 msgid "Port '%s' on interface '%s' is not defined in module '%s'."
 msgstr "Порт «%s» на інтерфейсі «%s» не визначено у модулі «%s»."
 
-#: en/messages:1887
+#: en/messages:1886
 msgctxt "verga.err.NOCONN"
 msgid "Port '%s' has no connections on interface '%s' of '%s'."
 msgstr "Порт «%s» не з’єднано на інтерфейс «%s» «%s»."
 
-#: en/messages:1888
+#: en/messages:1887
 msgctxt "verga.err.MULTCONN"
 msgid "Port '%s' has multiple connections on interface '%s' of '%s'."
 msgstr "У порту «%s» є декілька з’єднань на інтерфейсі «%s» «%s»."
 
-#: en/messages:1889
+#: en/messages:1888
 msgctxt "verga.err.PORTCOUNT"
 msgid "Port count does not match definition on interface '%s' of '%s'."
 msgstr "Кількість портів не відповідає визначенню інтерфейсу «%s» «%s»."
 
-#: en/messages:1890
+#: en/messages:1889
 msgctxt "verga.err.BADPRTRANGE"
 msgid "Range on port '%s' is not numeric."
 msgstr "Діапазон на порту «%s» не є числовим."
 
-#: en/messages:1891
+#: en/messages:1890
 msgctxt "verga.err.BADARRAYRNG"
 msgid "Range specification not allowed for memory reference of '%s'."
 msgstr "Специфікацію діапазону заборонено для посилань на пам’ять у «%s»."
 
-#: en/messages:1892
+#: en/messages:1891
 msgctxt "verga.err.CMDMODREDEF"
 msgid "Redefinition of dynamic module '%s'."
 msgstr "Перевизначення динамічного модуля «%s»."
 
-#: en/messages:1893
+#: en/messages:1892
 msgctxt "verga.err.REDEF"
 msgid "Redefinition of identifier %s."
 msgstr "Перевизначення ідентифікатора %s."
 
-#: en/messages:1894
+#: en/messages:1893
 msgctxt "verga.err.PROTTASKSTOP"
 msgid ""
 "Simulation stopped on attempted execution of protected system task '%s'."
 msgstr "Імітацію припинено під час спроби виконання захищеного завдання системи «%s»."
 
-#: en/messages:1895
+#: en/messages:1894
 msgctxt "verga.err.NOTMEM"
 msgid "Specified net '%s' is not a memory."
 msgstr "Вказаний ланцюг «%s» не є ланцюгом пам’яті."
 
-#: en/messages:1896
+#: en/messages:1895
 msgctxt "verga.err.CMDNOTMEM"
 msgid "Specified net '%s' is not a memory in '%s' command."
 msgstr "Вказаний ланцюг «%s» не є ланцюгом пам’яті у команді «%s»."
 
-#: en/messages:1897
+#: en/messages:1896
 msgctxt "verga.err.SYNTAX"
 msgid "Syntax error."
 msgstr "Синтаксична помилка."
 
-#: en/messages:1898
+#: en/messages:1897
 msgctxt "verga.err.TOOFEWPP"
 msgid "Too few parameter ports on instance %s."
 msgstr "Занадто мало портів параметрів у екземплярі %s."
 
-#: en/messages:1899
+#: en/messages:1898
 msgctxt "verga.err.OPENTOOMANY"
 msgid "Too many files open in task '%s'."
 msgstr "У завданні «%s» відкрито забагато файлів."
 
-#: en/messages:1900
+#: en/messages:1899
 msgctxt "verga.err.TOOMANYPP"
 msgid "Too many parameter ports on instance %s."
 msgstr "Забагато портів параметрів у екземплярі %s."
 
-#: en/messages:1901
+#: en/messages:1900
 msgctxt "verga.err.NOTOP"
 msgid "Top-module '%s' not defined."
 msgstr "Модуль верхнього рівня «%s» не визначено."
 
-#: en/messages:1902
+#: en/messages:1901
 msgctxt "verga.err.BADOPEN"
 msgid "Unable to open output file '%s' in task '%s'."
 msgstr "Не вдалося відкрити файл виведення даних «%s» у завданні «%s»."
 
-#: en/messages:1903
+#: en/messages:1902
 msgctxt "verga.err.CMDNOMOD"
 msgid "Undefined dynamic module '%s' in '%s' command."
 msgstr "Невизначений динамічний модуль «%s» у команді «%s»."
 
-#: en/messages:1904
+#: en/messages:1903
 msgctxt "verga.err.BADEVENTNET"
 msgid "Undefined net '%s' in event control expression."
 msgstr "Невизначений ланцюг «%s» у виразі керування подіями."
 
-#: en/messages:1905
+#: en/messages:1904
 msgctxt "verga.err.NOTASK"
 msgid "Undefined task '%s'."
 msgstr "Невизначене завдання «%s»."
 
-#: en/messages:1906
+#: en/messages:1905
 msgctxt "verga.err.NOTDEF"
 msgid "Undefined variable '%s'."
 msgstr "Невизначена змінна «%s»."
 
-#: en/messages:1907
+#: en/messages:1906
 msgctxt "verga.err.BADRANGE"
 msgid "Unsupported bit range [%s] on net '%s' (must be of form [n:0])."
 msgstr "Непідтримуваний діапазон бітів [%s] у ланцюгу «%s» (має бути вказано у формі [n:0])."
 
-#: en/messages:1908
+#: en/messages:1907
 msgctxt "verga.err.GATEUNIMP"
 msgid "Unimplemented primitive component type on instance '%s'."
 msgstr "Нереалізований тип компонента примітива у екземплярі «%s»."
 
-#: en/messages:1909
+#: en/messages:1908
 msgctxt "verga.err.USAGE"
 msgid "Usage: thyme [options][files...]"
 msgstr "Користування: thyme [параметри][файли...]"
 
-#: en/messages:1910
+#: en/messages:1909
 msgctxt "verga.err.CLSDWRITE"
 msgid "Write to closed descriptor."
 msgstr "Запис до закритого дескриптора."
 
-#: en/messages:1911
+#: en/messages:1910
 msgctxt "verga.err.PRIMPTCOUNT"
 msgid "Wrong number of ports on primitive component instance '%s'."
 msgstr "Помилкова кількість портів у екземпляра компонента примітива «%s»."
 
-#: en/messages:1912
+#: en/messages:1911
 msgctxt "verga.err.CMDARGS"
 msgid "Wrong number of arguments in '%s' command."
 msgstr "Помилкова кількість аргументів у команді «%s»."
 
-#: en/messages:1913
+#: en/messages:1912
 msgctxt "verga.err.YYERROR"
 msgid "YYError - %s."
 msgstr "YYError — %s."
 
-#: en/messages:1914
+#: en/messages:1913
 msgctxt "verga.err.TASKARGS"
 msgid "Task '%s' called with wrong number of arguments."
 msgstr "Завдання «%s» викликано із помилковою кількістю аргументів."
 
-#: en/messages:1915
+#: en/messages:1914
 msgctxt "verga.err.BADSTART"
 msgid "Illegal start value in task '%s'."
 msgstr "Некоректне початкове значення у завданні «%s»."
 
-#: en/messages:1916
+#: en/messages:1915
 msgctxt "verga.err.BADSTOP"
 msgid "Illegal stop value in $readmemb."
 msgstr "Помилкове кінцеве значення у $readmemb."
 
-#: en/messages:1917
+#: en/messages:1916
 msgctxt "verga.err.SPECTASKUSG"
 msgid "Task '%s' must be used in a specify block."
 msgstr "Завдання «%s» слід використовувати у блоці specify."
 
-#: en/messages:1918
+#: en/messages:1917
 msgctxt "verga.err.BADSPECTASK"
 msgid "Task '%s' can not be used in a specify block."
 msgstr "Завдання «%s» не можна використовувати у блоці specify."
 
-#: en/messages:1919
+#: en/messages:1918
 msgctxt "verga.err.TIMING"
 msgid "Timing violation in %s[%s] %s."
 msgstr "Порушення часових обмежень у %s[%s] %s."
 
-#: en/messages:1920
+#: en/messages:1919
 msgctxt "verga.err.RAMDCHG"
 msgid "Data line changed while write enabled on %s"
 msgstr "Зміни у каналі даних під час дозволу на запис до %s"
 
-#: en/messages:1921
+#: en/messages:1920
 msgctxt "verga.err.RAMACHG"
 msgid "Address line changed while write enabled on %s"
 msgstr "Зміни у каналі адресування під час дозволу на запис до %s"
 
-#: en/messages:1922
+#: en/messages:1921
 msgctxt "verga.err.NOIFDEF"
 msgid "No matching `ifdef/`ifndef for %s declaration."
 msgstr "Немає відповідної пари `ifdef/`ifndef для оголошення %s."
 
-#: en/messages:1923
+#: en/messages:1922
 msgctxt "verga.err.BADSPECLVAL"
 msgid "Bit-ranges on path delay specifiers unsupported."
 msgstr "Підтримки бітових діапазонів у дескрипторах затримок шляхів не передбачено."
 
-#: en/messages:1924
+#: en/messages:1923
 msgctxt "verga.err.PATHDITEM"
 msgid "Unsupported construct in module with path-delay specification."
 msgstr "Непідтримувана конструкція у модулі із специфікацією затримок шляхів."
 
-#: en/messages:1925
+#: en/messages:1924
 msgctxt "verga.err.PATHDINOUT"
 msgid "Use of 'inout' in module with path-delay specification is unsupported."
 msgstr "Підтримки використання «inout» у модулі із специфікацією затримки шляху не передбачено."
 
-#: en/messages:1926
+#: en/messages:1925
 msgctxt "verga.err.PATHDLOOP"
 msgid "Loops in modules with path-delay specification are unsupported."
 msgstr "Підтримки петель у модулях із специфікацією затримки шляхів не передбачено."
 
-#: en/messages:1927
+#: en/messages:1926
 msgctxt "verga.err.PATHDCOND"
 msgid "Delays must set through both # expression and specify block."
 msgstr "Запис затримки має складатися із виразу з # та визначення блоку."
 
-#: en/messages:1928
+#: en/messages:1927
 msgctxt "verga.err.TASKREDEF"
 msgid "Redefinition of task or function '%s' in module '%s'."
 msgstr "Перевизначення завдання або функції «%s» у модулі «%s»."
 
-#: en/messages:1929
+#: en/messages:1928
 msgctxt "verga.err.TASKASFUNC"
 msgid "Task '%s' used as function."
 msgstr "Завдання «%s» використано як функцію."
 
-#: en/messages:1930
+#: en/messages:1929
 msgctxt "verga.err.FUNCASTASK"
 msgid "Function '%s' used as task."
 msgstr "Функцію «%s» використано як завдання."
 
-#: en/messages:1931
+#: en/messages:1930
 msgctxt "verga.err.TASKBADTYPE"
 msgid "Non-register type used in task or function."
 msgstr "У завданні або функції використано нерегістровий тип."
 
-#: en/messages:1932
+#: en/messages:1931
 msgctxt "verga.err.TASKBADPORT"
 msgid "Only input ports are allowed on functions."
 msgstr "У функціях можна використовувати лише вхідні порти."
 
-#: en/messages:1933
+#: en/messages:1932
 msgctxt "verga.err.TIMESCALEU"
 msgid "Invalid units '%s' in `timescale declaration."
 msgstr "Некоректні одиниці «%s» у оголошенні `timescale."
 
-#: en/messages:1934
+#: en/messages:1933
 msgctxt "verga.err.TIMESCALEN"
 msgid "Invalid scale '%s' in `timescale declaration (must be 1, 10 or 100)."
 msgstr "Некоректний масштаб «%s» у оголошенні `timescale (має бути 1, 10 або 100)."
 
-#: en/messages:1935
+#: en/messages:1934
 msgctxt "verga.err.TIMESCALES"
 msgid "Invalid syntax in `timescale declaration."
 msgstr "Некоректна синтаксична конструкція у оголошенні `timescale."
 
-#: en/messages:1936
+#: en/messages:1935
 msgctxt "verga.err.TIMESCALEX"
 msgid "Units must be larger than precision in `timescale declaration."
 msgstr "Одиниці виміру мають бути більшими за точність у оголошенні `timescale."
 
-#: en/messages:1937
+#: en/messages:1936
 msgctxt "verga.err.TIMESCALEAN"
 msgid "Design contains some modules with `timescale and some without."
 msgstr "У проекті є модулі з `timescale і без цього оголошення."
 
-#: en/messages:1938
+#: en/messages:1937
 msgctxt "verga.err.BADPORTTYPE"
 msgid "Invalid type declaration used on port '%s'"
 msgstr "Для порту «%s» використано оголошення некоректного типу"
 
-#: en/messages:1939
+#: en/messages:1938
 msgctxt "verga.err.BADVALUE"
 msgid "Bad numeric value '%s'."
 msgstr "Помилкове числове значення «%s»."
 
-#: en/messages:1940
+#: en/messages:1939
 msgctxt "verga.err.NONEXPCTL"
 msgid "Event control @(*) applied to non-expression."
 msgstr "Керування подіями @(*) застосовано не до виразу."
 
-#: en/messages:1941
+#: en/messages:1940
 msgctxt "verga.err.NONSTATCTL"
 msgid "Event control @(*) applied to non-statement."
 msgstr "Керування подіями @(*) застосовано не до інструкції."
 
-#: en/messages:1942
+#: en/messages:1941
 msgctxt "verga.err.MODREDEF"
 msgid "Redefinition of module '%s'."
 msgstr "Перевизначення модуля «%s»."
 
-#: en/messages:1943
+#: en/messages:1942
 msgctxt "verga.err.IE_TASK"
 msgid "Task definition '%s' found outside module - internal error."
 msgstr "Визначення завдання «%s» виявлено поза модулем — внутрішня помилка."
 
-#: en/messages:1944
+#: en/messages:1943
 msgctxt "verga.err.IE_NONET"
 msgid "Failed to find net '%s' - internal error."
 msgstr "Не вдалося знайти ланцюг «%s» — внутрішня помилка."
 
-#: en/messages:1945
+#: en/messages:1944
 msgctxt "verga.err.IE_NOOP"
 msgid "Can not find operator description -- internal error."
 msgstr "Не вдалося знайти опису оператора — внутрішня помилка."
 
-#: en/messages:1946
+#: en/messages:1945
 msgctxt "verga.err.IE_BADEXP"
 msgid "Unexpected expression type %s - internal error."
 msgstr "Неочікуваний тип виразу %s — внутрішня помилка."
 
-#: en/messages:1947
+#: en/messages:1946
 msgctxt "verga.err.IE_BADVAR"
 msgid "Undefined variable or unknown net - internal error."
 msgstr "Невизначена змінна або невідомий ланцюг — внутрішня помилка."
 
-#: en/messages:1948
+#: en/messages:1947
 msgctxt "verga.err.IE_BADSTATE"
 msgid "Unexpected internal state at %s - internal error."
 msgstr "Неочікуваний внутрішній стан у %s — внутрішня помилка."
 
-#: en/messages:1949
+#: en/messages:1948
 msgctxt "verga.err.IE_RETURN"
 msgid "Executed BCReturn bytecode with empty return stack - internal error."
 msgstr "Виконано байтовий код BCReturn із порожнім стеком повернутих даних — внутрішня помилка."
 
-#: en/messages:1956
+#: en/messages:1955
 msgctxt "primitive.err.missing"
 msgid "Internal Error: primitive definition for '%s' is missing."
 msgstr "Внутрішня помилка: пропущено визначення примітива для «%s»."
 
-#: en/messages:1957
+#: en/messages:1956
 msgctxt "primitive.err.nomodule"
 msgid "Internal Error: primitive definition for '%s' is missing 'module'."
 msgstr "Внутрішня помилка: пропущено «module» у визначенні примітива для «%s»."
 
-#: en/messages:1958
+#: en/messages:1957
 msgctxt "primitive.err.nomodname"
 msgid "Internal Error: missing module name in definition of '%s' module."
 msgstr "Внутрішня помилка: не вказано назви модуля у визначенні модуля «%s»."
 
-#: en/messages:1959
+#: en/messages:1958
 msgctxt "primitive.err.wrongname"
 msgid "Internal Error: module name mismatch in definition of '%s' module."
 msgstr "Внутрішня помилка: невідповідність назв модулів у визначенні модуля «%s»."
 
-#: en/messages:1965
+#: en/messages:1964
 msgctxt "cprt.about"
 msgid "About TkGate"
 msgstr "Про TkGate"
 
-#: en/messages:1966
+#: en/messages:1965
 msgctxt "cprt.lic"
 msgid "TkGate license"
 msgstr "Умови ліцензування TkGate"
 
-#: en/messages:1967
+#: en/messages:1966
 msgctxt "cprt.descr"
 msgid "Digital Circuit Editor and Simulator"
 msgstr "Редактор та імітатор для цифрових схем"
 
-#: en/messages:1978
+#: en/messages:1977
 msgctxt "ho.setsel.allr"
 msgid "Move all items to selected list."
 msgstr "Пересунути усі записи до списку позначених."
 
-#: en/messages:1979
+#: en/messages:1978
 msgctxt "ho.setsel.alll"
 msgid "Move all items to unselected list."
 msgstr "Пересунути усі записи до списку непозначених."
 
-#: en/messages:1980
+#: en/messages:1979
 msgctxt "ho.setsel.ltor"
 msgid "Move highlighted items to selected list."
 msgstr "Пересунути підсвічені записи до списку позначених."
 
-#: en/messages:1981
+#: en/messages:1980
 msgctxt "ho.setsel.rtol"
 msgid "Move highlighted items to unselected list."
 msgstr "Пересунути підсвічені записи до списку непозначених."
 
-#: en/messages:1983
+#: en/messages:1982
 msgctxt "ho.net.in"
 msgid "Single-Bit Input"
 msgstr "Однорозрядний вхід"
 
-#: en/messages:1984
+#: en/messages:1983
 msgctxt "ho.net.out"
 msgid "Single-Bit Output"
 msgstr "Однорозрядний вихід"
 
-#: en/messages:1985
+#: en/messages:1984
 msgctxt "ho.net.inout"
 msgid "Single-Bit Inout"
 msgstr "Однорозрядний вхід-вихід"
 
-#: en/messages:1986
+#: en/messages:1985
 msgctxt "ho.net.in2"
 msgid "Multi-Bit Input"
 msgstr "Багаторозрядний вхід"
 
-#: en/messages:1987
+#: en/messages:1986
 msgctxt "ho.net.out2"
 msgid "Multi-Bit Output"
 msgstr "Багаторозрядний вихід"
 
-#: en/messages:1988
+#: en/messages:1987
 msgctxt "ho.net.inout2"
 msgid "Multi-Bit Inout"
 msgstr "Багаторозрядний вхід-вихід"
 
-#: en/messages:1989
+#: en/messages:1988
 msgctxt "ho.net.wire"
 msgid "Single-Bit Wire (Name Visible)"
 msgstr "Однорозрядний дріт (видима назва)"
 
-#: en/messages:1990
+#: en/messages:1989
 msgctxt "ho.net.wire2"
 msgid "Multi-Bit Wire (Name Visible)"
 msgstr "Багаторозрядний дріт (видима назва)"
 
-#: en/messages:1991
+#: en/messages:1990
 msgctxt "ho.net.hwire"
 msgid "Single-Bit Wire (Name Hidden)"
 msgstr "Однорозрядний дріт (прихована назва)"
 
-#: en/messages:1992
+#: en/messages:1991
 msgctxt "ho.net.hwire2"
 msgid "Multi-Bit Wire (Name Hidden)"
 msgstr "Багаторозрядний дріт (прихована назва)"
 
-#: en/messages:1993
+#: en/messages:1992
 msgctxt "ho.net.reg"
 msgid "Single-Bit Register"
 msgstr "Однорозрядний регістр"
 
-#: en/messages:1994
+#: en/messages:1993
 msgctxt "ho.net.reg2"
 msgid "Multi-Bit Register"
 msgstr "Багаторозрядний регістр"
 
-#: en/messages:1997
+#: en/messages:1996
 msgctxt "ho.opt.tool.file"
 msgid "Save, load of circuit files"
 msgstr "Збереження і завантаження файлів схем"
 
-#: en/messages:1998
+#: en/messages:1997
 msgctxt "ho.opt.tool.edit"
 msgid "Cut, Paste and Find operations"
 msgstr "Дії з вирізання, вставлення та пошуку"
 
-#: en/messages:1999
+#: en/messages:1998
 msgctxt "ho.opt.tool.gateopt"
 msgid "Component rotation and alignment operations"
 msgstr "Дії з обертання та вирівнювання компонентів"
 
-#: en/messages:2000
+#: en/messages:1999
 msgctxt "ho.opt.tool.gateprop"
 msgid "Basic editing of components"
 msgstr "Базове редагування компонентів"
 
-#: en/messages:2001
+#: en/messages:2000
 msgctxt "ho.opt.tool.undo"
 msgid "Undo and redo operations"
 msgstr "Дії зі скасовування та повторення дій"
 
-#: en/messages:2002
+#: en/messages:2001
 msgctxt "ho.opt.tool.zoom"
 msgid "Zoom in and zoom out"
 msgstr "Збільшення і зменшення масштабу"
 
-#: en/messages:2003
+#: en/messages:2002
 msgctxt "ho.opt.tool.mode"
 msgid "Select the editing tool"
 msgstr "Вибрати інструмент редагування"
 
-#: en/messages:2004
+#: en/messages:2003
 msgctxt "ho.opt.tool.module"
 msgid "Create, delete, rename,etc. of module definitions"
 msgstr "Створення, вилучення, перейменування тощо визначень модулів"
 
-#: en/messages:2005
+#: en/messages:2004
 msgctxt "ho.opt.tool.tech"
 msgid "Select default technology for components"
 msgstr "Вибір типової технології компонентів"
 
-#: en/messages:2006
+#: en/messages:2005
 msgctxt "ho.opt.tool.simctl"
 msgid "Start, stop and pause of simulator"
 msgstr "Запуск, зупинення та призупинення імітації"
 
-#: en/messages:2007
+#: en/messages:2006
 msgctxt "ho.opt.tool.simaux"
 msgid "Auxiliary simulator commands (read/write memory files, etc.)"
 msgstr "Допоміжні команди імітації (читання та запис файлів пам’яті тощо)"
 
-#: en/messages:2008
+#: en/messages:2007
 msgctxt "ho.opt.tool.simmode"
 msgid "Choose between the select and scroll tool in simulator."
 msgstr "Вибір між інструментами позначення та гортання у імітаторі."
 
-#: en/messages:2009
+#: en/messages:2008
 msgctxt "ho.opt.tool.symmode"
 msgid "Selecting editing tool in symbol editor"
 msgstr "Вибір інструмента редагування у редакторі символів"
 
-#: en/messages:2010
+#: en/messages:2009
 msgctxt "ho.opt.tool.symedit"
 msgid "Cut and paste operations for symbol editor"
 msgstr "Дії з вирізання та вставлення у редакторі символів"
 
-#: en/messages:2011
+#: en/messages:2010
 msgctxt "ho.opt.tool.symport"
 msgid "Port rotation operations for symbol editor"
 msgstr "Дії з обертання портів у редакторі символів"
 
-#: en/messages:2012
+#: en/messages:2011
 msgctxt "ho.opt.tool.symshift"
 msgid "Shift the bit map or portion of bitmap"
 msgstr "Зсунути растрове зображення або частину растрового зображення"
 
-#: en/messages:2013
+#: en/messages:2012
 msgctxt "ho.opt.tool.symopr"
 msgid "Miscellaneous symbol editor operations"
 msgstr "Різноманітні дії у редакторі символів"
 
-#: en/messages:2015
+#: en/messages:2014
 msgctxt "ho.opt.editor.movesel"
 msgid ""
 "If this option is enabled, a selected block of\n"
@@ -6134,19 +6124,19 @@ msgid ""
 "moved to a new location."
 msgstr "Якщо позначено цей пункт, позначений блог тексту\nможна буде захопити вказівником миші і\nперетягнути на нове місце."
 
-#: en/messages:2021
+#: en/messages:2020
 msgctxt "ho.opt.editor.format"
 msgid ""
 "If enabled, verilog source code will be automatically\n"
 "indented when pressing the tab key."
 msgstr "Якщо позначено, у початковий код verilog будуть автоматично\nдодаватися відступи у відповідь на натискання клавіші Tab."
 
-#: en/messages:2026
+#: en/messages:2025
 msgctxt "ho.opt.editor.indent"
 msgid "Number of spaces to indent per level."
 msgstr "Кількість пробілів у відступах на рівень."
 
-#: en/messages:2030
+#: en/messages:2029
 msgctxt "ho.opt.editor.rtab"
 msgid ""
 "Automatically indent the current line\n"
@@ -6154,21 +6144,21 @@ msgid ""
 "pressing the return key."
 msgstr "Автоматично додавати відступ до поточного\nрядка і табуляцію відповідного рівня у\nвідповідь на натискання клавіші Enter."
 
-#: en/messages:2036
+#: en/messages:2035
 msgctxt "ho.opt.editor.beginindent"
 msgid ""
 "Causes a begin..end block to be indented\n"
 "to the same level as its parent block."
 msgstr "Відступи у блоці begin..end буде встановлено на\nрівні його батьківського блоку."
 
-#: en/messages:2041
+#: en/messages:2040
 msgctxt "ho.opt.editor.colorize"
 msgid ""
 "Enable context-dependent colorization of\n"
 "code according to the options listed below."
 msgstr "Увімкнути контекстне розфарбовування коду\nвідповідно до вказаних нижче параметрів."
 
-#: en/messages:2046
+#: en/messages:2045
 msgctxt "ho.hdl.splitexp"
 msgid ""
 "Multiple modules in the HDL text will\n"
@@ -6178,7 +6168,7 @@ msgid ""
 "modifying module names as necessary."
 msgstr "Кратні модулі у HDL буде поділено на\nокремі модулі і визначенням нових\nмодулів, якщо потрібно. Усі конфлікти\nназв буде розв’язано незначною зміною\nназв модулів, якщо потрібно."
 
-#: en/messages:2054
+#: en/messages:2053
 msgctxt "ho.hdl.commentexp"
 msgid ""
 "Modules other than the first module or\n"
@@ -6186,70 +6176,70 @@ msgid ""
 "be converted to HDL comments."
 msgstr "Модулі, окрім першого або модуля, який\nвідповідає очікуваній назві, буде\nперетворено на коментарі HDL."
 
-#: en/messages:2060
+#: en/messages:2059
 msgctxt "ho.hdl.autoeditexp"
 msgid ""
 "Automatically edit the HDL description\n"
 "to fix the module name."
 msgstr "Автоматично змінити опис HDL для виправлення\nназви модуля."
 
-#: en/messages:2065
+#: en/messages:2064
 msgctxt "ho.hdl.cancelexp"
 msgid ""
 "Take no action and continue editing\n"
 "the current module."
 msgstr "Нічого не робити і продовжити\nредагування поточного модуля."
 
-#: en/messages:2070
+#: en/messages:2069
 msgctxt "ho.hdl.ignoreexp"
 msgid ""
 "Ignore the inconsistency and continue\n"
 "with the selected action."
 msgstr "Ігнорувати несумісність і продовжити\nвиконання вибраної дії."
 
-#: en/messages:2075
+#: en/messages:2074
 msgctxt "ho.new"
 msgid ""
 "Clear the current circuit,\n"
 "and start editing a new one."
 msgstr "Вилучити поточний ланцюг і\nрозпочати редагування нового."
 
-#: en/messages:2080
+#: en/messages:2079
 msgctxt "ho.open"
 msgid "Open a circuit from a file."
 msgstr "Відкрити схему з файла."
 
-#: en/messages:2081
+#: en/messages:2080
 msgctxt "ho.save"
 msgid "Save circuit to current file."
 msgstr "Зберегти схему до поточного файла."
 
-#: en/messages:2082
+#: en/messages:2081
 msgctxt "ho.saveas"
 msgid "Save circuit to specified file."
 msgstr "Зберегти схему до вказаного файла."
 
-#: en/messages:2083
+#: en/messages:2082
 msgctxt "ho.print"
 msgid "Print current circuit."
 msgstr "Надрукувати поточну схему."
 
-#: en/messages:2084
+#: en/messages:2083
 msgctxt "ho.library"
 msgid "Open the library manager."
 msgstr "Відкрити засіб керування бібліотекою."
 
-#: en/messages:2086
+#: en/messages:2085
 msgctxt "ho.symed.tab.normal"
 msgid "Edit the unselected symbol bitmap."
 msgstr "Редагувати зображення непозначеного символу."
 
-#: en/messages:2090
+#: en/messages:2089
 msgctxt "ho.symed.tab.select"
 msgid "Edit the selected symbol bitmap."
 msgstr "Редагувати зображення позначеного символу."
 
-#: en/messages:2094
+#: en/messages:2093
 msgctxt "ho.simmove"
 msgid ""
 "Select wires and modules, flip\n"
@@ -6258,7 +6248,7 @@ msgid ""
 "will show its current value."
 msgstr "Позначення дротів та модулів,\nперемикання та введення значень\nу DIP-перемикачах. Щоб переглянути\nпоточне значення на дроті,\nнаведіть вказівник миші на дріт,\nклацніть лівою кнопкою миші і\nутримуйте її."
 
-#: en/messages:2102
+#: en/messages:2101
 msgctxt "ho.move"
 msgid ""
 "Move/Connect - By clicking and dragging you can:\n"
@@ -6270,28 +6260,28 @@ msgid ""
 "Edit comment text"
 msgstr "Пересування або з’єднання — клацанням із\nперетягуванням ви можете виконати такі дії:\nВстановити позицію нового компонента\nПересунути компоненти і дроти\nЗ’єднати дроти\nПодвійним клацанням ви можете:\nРедагувати компонент, дріт та властивості порту\nРедагувати текст коментаря"
 
-#: en/messages:2112
+#: en/messages:2111
 msgctxt "ho.delgat"
 msgid ""
 "Delete Component - Use this\n"
 "tool to delete components."
 msgstr "Вилучення компонента — для\nвилучення компонентів."
 
-#: en/messages:2117
+#: en/messages:2116
 msgctxt "ho.cutw"
 msgid ""
 "Cut Wire - Use this\n"
 "tool to cut wires."
 msgstr "Розрізати дріт — для\nрозрізання провідників."
 
-#: en/messages:2122
+#: en/messages:2121
 msgctxt "ho.scroll"
 msgid ""
 "Scroll - Grab and drag the\n"
 "editing canvas."
 msgstr "Гортання — перетягніть\nполотно редагування."
 
-#: en/messages:2127
+#: en/messages:2126
 msgctxt "ho.inv"
 msgid ""
 "Invert - Use this tool to\n"
@@ -6299,7 +6289,7 @@ msgid ""
 "from component ports."
 msgstr "Інвертувати — для додавання\nабо вилучення інверторів\nіз портів компонента."
 
-#: en/messages:2133
+#: en/messages:2132
 msgctxt "ho.bitw"
 msgid ""
 "Net Attributes - Use this tool to change\n"
@@ -6309,7 +6299,7 @@ msgid ""
 "in the drop-down boxes to the right."
 msgstr "Атрибути ланцюга — цим інструментом можна\nскористатися для зміни атрибутів ланцюга.\nРозрядність і тип дроту ланцюгів, позначених\nза допомогою цього інструмента, буде змінено\nна вказані у спадних списках праворуч."
 
-#: en/messages:2141
+#: en/messages:2140
 msgctxt "ho.ipanel.select"
 msgid ""
 "Use \"standard\" modules\n"
@@ -6319,7 +6309,7 @@ msgid ""
 "bitmaped symbols."
 msgstr "«Стандартні» модулі\nпризначено для звичайного\nпрямокутного інтерфейсу.\n«Символьні» модулі\nпризначено для нетипових\nрастрових символів."
 
-#: en/messages:2149
+#: en/messages:2148
 msgctxt "ho.ipanel.addport"
 msgid ""
 "Add a port to the module. You\n"
@@ -6327,12 +6317,12 @@ msgid ""
 "last item to add port."
 msgstr "Додати до модуля порт. Ви також\nможете двічі клацнути за останнім\nпунктом у списку, щоб додати порт."
 
-#: en/messages:2155
+#: en/messages:2154
 msgctxt "ho.ipanel.deleteport"
 msgid "Delete the selected port."
 msgstr "Вилучити позначений порт."
 
-#: en/messages:2159
+#: en/messages:2158
 msgctxt "ho.ipanel.editport"
 msgid ""
 "Edit the selected port. You\n"
@@ -6340,7 +6330,7 @@ msgid ""
 "a field in a port."
 msgstr "Змінити позначений порт. Ви\nтакож можете двічі клацнути\nдля редагування поля у порту."
 
-#: en/messages:2165
+#: en/messages:2164
 msgctxt "ho.ipanel.generate"
 msgid ""
 "Generate a new interface for a\n"
@@ -6349,7 +6339,7 @@ msgid ""
 "in the module definition."
 msgstr "Створити інтерфейс для модуля\nна основі портів у списку\nпортів і елементах порту, що\nвикористовуються у визначенні модуля."
 
-#: en/messages:2172
+#: en/messages:2171
 msgctxt "ho.ipanel.updateall"
 msgid ""
 "Replace the interface on all\n"
@@ -6358,21 +6348,21 @@ msgid ""
 "here."
 msgstr "Замінити інтерфейс усіх екземплярів\nцього модуля канонічним інтерфейсом\nпоказаним тут."
 
-#: en/messages:2180
+#: en/messages:2179
 msgctxt "ho.ipanel.prot"
 msgid ""
 "Do not allow the definition of\n"
 "a module to be modified."
 msgstr "Не дозволяти внесення змін\nдо визначення модуля."
 
-#: en/messages:2185
+#: en/messages:2184
 msgctxt "ho.ipanel.protint"
 msgid ""
 "Do not allow the interface of\n"
 "a module to be modified."
 msgstr "Заборонити внесення змін до\nінтерфейсу модуля."
 
-#: en/messages:2190
+#: en/messages:2189
 msgctxt "ho.ipanel.proted"
 msgid ""
 "Do not allow the interface of a module to\n"
@@ -6382,135 +6372,135 @@ msgid ""
 "main edit window."
 msgstr "Не дозволяти внесення змін до інтерфейсу\nмодуля, окрім змін за допомогою\nінтерфейсу редактора. Скористайтеся\nдля запобігання випадковим змінам\nінтерфейсу у головному вікні редагування."
 
-#: en/messages:2198
+#: en/messages:2197
 msgctxt "ho.ipanel.scale"
 msgid ""
 "Scale the distance between ports\n"
 "as a module is resized."
 msgstr "Масштабувати відстань між портами,\nякщо розміри модуля змінюються."
 
-#: en/messages:2203
+#: en/messages:2202
 msgctxt "ho.ipanel.fix"
 msgid ""
 "Keep the distance between ports\n"
 "fixed even if the module is resized."
 msgstr "Зберігати відстань між портами,\nнавіть якщо розміри модуля змінюються."
 
-#: en/messages:2208
+#: en/messages:2207
 msgctxt "ho.mod.open"
 msgid "Open the selected module."
 msgstr "Відкрити позначений модуль."
 
-#: en/messages:2209
+#: en/messages:2208
 msgctxt "ho.mod.close"
 msgid "Close the current module."
 msgstr "Закрити поточний модуль."
 
-#: en/messages:2211
+#: en/messages:2210
 msgctxt "ho.mod.new"
 msgid "Create a new module type."
 msgstr "Створити тип модуля."
 
-#: en/messages:2212
+#: en/messages:2211
 msgctxt "ho.mod.del"
 msgid "Delete a module."
 msgstr "Вилучити модуль."
 
-#: en/messages:2213
+#: en/messages:2212
 msgctxt "ho.mod.copy"
 msgid "Copy a module."
 msgstr "Копіювати модуль."
 
-#: en/messages:2214
+#: en/messages:2213
 msgctxt "ho.mod.rename"
 msgid "Rename a module."
 msgstr "Перейменувати модуль."
 
-#: en/messages:2215
+#: en/messages:2214
 msgctxt "ho.mod.claim"
 msgid ""
 "Convert a library module to\n"
 "a regular module."
 msgstr "Перетворити модуль бібліотеки на\nзвичайний модуль."
 
-#: en/messages:2219
+#: en/messages:2218
 msgctxt "ho.mod.setroot"
 msgid ""
 "Designate a module to\n"
 "be the root module."
 msgstr "Позначити модуль як\nкореневий модуль."
 
-#: en/messages:2224
+#: en/messages:2223
 msgctxt "ho.mod.type.allparts"
 msgid "Set of Libraries"
 msgstr "Набір бібліотек"
 
-#: en/messages:2225
+#: en/messages:2224
 msgctxt "ho.mod.type.partlib"
 msgid "Library"
 msgstr "Бібліотека"
 
-#: en/messages:2226
+#: en/messages:2225
 msgctxt "ho.mod.type.part"
 msgid "Library module"
 msgstr "Модуль бібліотеки"
 
-#: en/messages:2227
+#: en/messages:2226
 msgctxt "ho.mod.type.unknown"
 msgid "Unknown module type"
 msgstr "Невідомий тип модуля"
 
-#: en/messages:2228
+#: en/messages:2227
 msgctxt "ho.mod.type.unused"
 msgid "Set of unused modules"
 msgstr "Набір невикористаних модулів"
 
-#: en/messages:2229
+#: en/messages:2228
 msgctxt "ho.mod.type.conflict"
 msgid "Module recursion"
 msgstr "Рекурсія модулів"
 
-#: en/messages:2230
+#: en/messages:2229
 msgctxt "ho.mod.type.root"
 msgid "Top-level module"
 msgstr "Модуль верхнього рівня"
 
-#: en/messages:2231
+#: en/messages:2230
 msgctxt "ho.mod.type.netlist"
 msgid "Netlist module"
 msgstr "Модуль списку ланцюгів"
 
-#: en/messages:2232
+#: en/messages:2231
 msgctxt "ho.mod.type.Lnetlist"
 msgid "Netlist module (locked)"
 msgstr "Модуль списку ланцюгів (заблокований)"
 
-#: en/messages:2233
+#: en/messages:2232
 msgctxt "ho.mod.type.hdl"
 msgid "HDL module"
 msgstr "Модуль HDL"
 
-#: en/messages:2234
+#: en/messages:2233
 msgctxt "ho.mod.type.Lhdl"
 msgid "HDL module (locked)"
 msgstr "Модуль HDL (заблокований)"
 
-#: en/messages:2236
+#: en/messages:2235
 msgctxt "ho.undo"
 msgid "Undo previous action(s)"
 msgstr "Скасувати попередні дії"
 
-#: en/messages:2237
+#: en/messages:2236
 msgctxt "ho.redo"
 msgid "Redo undone action(s)"
 msgstr "Повторити скасовані дії"
 
-#: en/messages:2239
+#: en/messages:2238
 msgctxt "ho.tab.edit"
 msgid "Primary editing mode."
 msgstr "Основний режим редагування."
 
-#: en/messages:2244
+#: en/messages:2243
 msgctxt "ho.tab.interface"
 msgid ""
 "Edit module interfaces. While in interface\n"
@@ -6519,19 +6509,19 @@ msgid ""
 "module to display all interface."
 msgstr "Редагувати інтерфейси модуля. У режимі\nінтерфейсу двічі клацніть на пункті модуля\nу списку модулів для редагування інтерфейсу\nабо на кореневому пункті, щоб переглянути\nувесь інтерфейс."
 
-#: en/messages:2252
+#: en/messages:2251
 msgctxt "ho.tab.simulate"
 msgid ""
 "Start the simulator, open the logic analyzer\n"
 "and execute any initialization scripts if defined."
 msgstr "Розпочати імітацію, відкрити засіб аналізу логіки\nі виконати усі скрипти ініціалізації, якщо такі визначено."
 
-#: en/messages:2258
+#: en/messages:2257
 msgctxt "ho.tab.cpath"
 msgid "Find critical paths in a circuit."
 msgstr "Знайти критичні шляхи у ланцюгу."
 
-#: en/messages:2262
+#: en/messages:2261
 msgctxt "ho.log"
 msgid ""
 "Log of TkGate messages including\n"
@@ -6539,7 +6529,7 @@ msgid ""
 "and simulator console output."
 msgstr "Журнал повідомлень TkGate із повідомленнями\nпро помилки, інформаційними повідомленнями\nта повідомленнями у консолі імітації."
 
-#: en/messages:2268
+#: en/messages:2267
 msgctxt "ho.simgo"
 msgid ""
 "Run simulator in continuous execution mode.\n"
@@ -6547,12 +6537,12 @@ msgid ""
 "only until the circuit reaches steady state."
 msgstr "Запустити імітатор у режимі неперервного виконання.\nЗауважте, що імітація комбінованих ланцюгів\nтриватиме лише до досягнення ланцюгом стабільного стану."
 
-#: en/messages:2274
+#: en/messages:2273
 msgctxt "ho.simpause"
 msgid "Pause a continuously running simulation."
 msgstr "Призупинити неперервну імітацію."
 
-#: en/messages:2278
+#: en/messages:2277
 msgctxt "ho.simstep"
 msgid ""
 "Step a fixed interval of time.\n"
@@ -6560,7 +6550,7 @@ msgid ""
 "window to set the step size."
 msgstr "Крок на фіксований проміжок часу.\nДля визначення розміру кроку\nвідкрийте вікно параметрів\nімітації."
 
-#: en/messages:2284
+#: en/messages:2283
 msgctxt "ho.simclock"
 msgid ""
 "Step a fixed number of clock\n"
@@ -6568,14 +6558,14 @@ msgid ""
 "window to set the step size."
 msgstr "Крок на фіксовану кількість\nциклів годинника. Для\nвизначення розміру кроку\nвідкрийте вікно параметрів\nімітації."
 
-#: en/messages:2290
+#: en/messages:2289
 msgctxt "ho.simstop"
 msgid ""
 "End the current simulation\n"
 "and return to edit mode."
 msgstr "Завершити поточну імітацію\nі повернутися до режиму редагування."
 
-#: en/messages:2295
+#: en/messages:2294
 msgctxt "ho.simbreak"
 msgid ""
 "Edit the current breakpoints. Simulation\n"
@@ -6584,38 +6574,38 @@ msgid ""
 "in both simulation mode and edit mode."
 msgstr "Редагування поточних точок зупинки. Імітацію\nбуде припинено, щойно буде виконано умову\nточки зупинки. Точки зупинки можна\nредагувати як у режимі імітації, так і у\nрежимі редагування."
 
-#: en/messages:2302
+#: en/messages:2301
 msgctxt "ho.simexec"
 msgid "Manage the set of active scripts."
 msgstr "Керувати набором активних скриптів."
 
-#: en/messages:2306
+#: en/messages:2305
 msgctxt "ho.simoptions"
 msgid "Set various options that control the simulation."
 msgstr "Встановити різноманітні параметри керування імітацією."
 
-#: en/messages:2310
+#: en/messages:2309
 msgctxt "ho.simload"
 msgid ""
 "Load memory with contents of\n"
 "a .mem file."
 msgstr "Завантажити до пам’яті вміст\nфайла .mem."
 
-#: en/messages:2315
+#: en/messages:2314
 msgctxt "ho.simdump"
 msgid ""
 "Dump the contents of a memory\n"
 "to a .mem file."
 msgstr "Створити дамп вмісту пам’яті\nдо файла .mem."
 
-#: en/messages:2320
+#: en/messages:2319
 msgctxt "ho.simview"
 msgid ""
 "View/modify the contents\n"
 "of a memory (RAM or ROM)."
 msgstr "Перегляд/Внесення змін до вмісту\nпам’яті (RAM або ROM)."
 
-#: en/messages:2326
+#: en/messages:2325
 msgctxt "ho.modlist"
 msgid ""
 "List of all modules currently loaded in\n"
@@ -6623,7 +6613,7 @@ msgid ""
 "edit window to create new instances."
 msgstr "Список поточних завантажених модулів за\nабеткою. Пункти модулів можна перетягти\nдо вікна редагування для створення\nекземпляра."
 
-#: en/messages:2332
+#: en/messages:2331
 msgctxt "ho.modtree"
 msgid ""
 "List of all modules currently in\n"
@@ -6631,7 +6621,7 @@ msgid ""
 "edit window to create new instances."
 msgstr "Список модулів у форматі ієрархії.\nПункти модулів можна перетягти до вікна\nредагування для створення екземпляра."
 
-#: en/messages:2338
+#: en/messages:2337
 msgctxt "ho.netlist"
 msgid ""
 "List of nets in the current module.\n"
@@ -6643,7 +6633,7 @@ msgid ""
 "visible."
 msgstr "Список ланцюгів у поточному модулі.\nСимвол ліворуч від назви позначає,\nє ланцюг одноразрядним (зелений)\nчи багаторозрядними (червоний).\n«A» у символі позначає те, що\nназву ланцюга позначено як\nвидиму."
 
-#: en/messages:2348
+#: en/messages:2347
 msgctxt "ho.ports"
 msgid ""
 "List of ports on the interface\n"
@@ -6653,7 +6643,7 @@ msgid ""
 "of the port."
 msgstr "Список портів інтерфейсу модуля,\nякий показано у вікні редагування.\nСимвол перед пунктом порту\nпозначає напрямок порту."
 
-#: en/messages:2356
+#: en/messages:2355
 msgctxt "ho.status.logo"
 msgid ""
 "Simulation status indicator. If the iron gate\n"
@@ -6664,17 +6654,17 @@ msgid ""
 "the simulation is running."
 msgstr "Індикатор стану імітації. Якщо показано\nпіктограму залізних воріт, TkGate працює у\nрежимі редагування. Якщо показано\nчотирибічний шлюз AND, TkGate працює у\nрежимі імітації. Якщо шлюз AND є стаціонарним,\nімітацію призупинено, якщо ж він рухається,\nвідбувається імітація."
 
-#: en/messages:2365
+#: en/messages:2364
 msgctxt "ho.status.msg"
 msgid "Messages from TkGate are displayed here."
 msgstr "Тут буде показано повідомлення TkGate."
 
-#: en/messages:2367
+#: en/messages:2366
 msgctxt "ho.status.block"
 msgid "The stack of modules being edited."
 msgstr "Стос модулів, які редагуються."
 
-#: en/messages:2369
+#: en/messages:2368
 msgctxt "ho.status.file"
 msgid ""
 "The current file being edited. A '*' indicates\n"
@@ -6682,29 +6672,29 @@ msgid ""
 "the last save."
 msgstr "Поточний редагований файл. «*» позначає,\nщо буфер було змінено з часу останнього\nзберігання."
 
-#: en/messages:2375
+#: en/messages:2374
 msgctxt "ho.print.selall"
 msgid "Print all modules currently loaded by TkGate."
 msgstr "Надрукувати усі модулі, які зараз завантажено TkGate."
 
-#: en/messages:2376
+#: en/messages:2375
 msgctxt "ho.print.selcur"
 msgid "Print only the current module in the TkGate edit window."
 msgstr "Надрукувати лише поточний модуль у вікні редагування TkGate."
 
-#: en/messages:2377
+#: en/messages:2376
 msgctxt "ho.print.seluse"
 msgid ""
 "Print all modules \"in use\". In use modules are\n"
 "those that are a descendant of the root module."
 msgstr "Вивести список усіх модулів, які «використовуються».\nВикористовуються ті модулі, які є підлеглими\nдля кореневого модуля."
 
-#: en/messages:2382
+#: en/messages:2381
 msgctxt "ho.print.fulltrace"
 msgid "Print the entire trace."
 msgstr "Надрукувати усе трасування."
 
-#: en/messages:2384
+#: en/messages:2383
 msgctxt "ho.print.parttrace"
 msgid ""
 "Print a portion of the trace. Enter the starting\n"
@@ -6713,29 +6703,29 @@ msgid ""
 "scope window (use shift-right to select long ranges)."
 msgstr "Друк частини трасування. Вкажіть початковий і\nкінцевий моменти часу за допомогою полів нижче\nабо скористайтеся правою кнопкою миші для вибору\nдіапазону у вікні логічного аналізатора\n(скористайтеся одночасним натисканням Shift і\nстрілки праворуч для вибору великого діапазону)."
 
-#: en/messages:2391
+#: en/messages:2390
 msgctxt "ho.print.parttracestart"
 msgid "Starting time of trace output."
 msgstr "Початковий час виведення трасування."
 
-#: en/messages:2392
+#: en/messages:2391
 msgctxt "ho.print.parttraceend"
 msgid "Ending time of trace output."
 msgstr "Кінцевий час виведення трасування."
 
-#: en/messages:2395
+#: en/messages:2394
 msgctxt "ho.print.selsel"
 msgid ""
 "Print only the modules selected below. Use\n"
 "the control key to select multiple modules."
 msgstr "Надрукувати лише позначені нижче модулі.\nСкористайтеся клавішею Ctrl для позначення\nдекількох модулів."
 
-#: en/messages:2400
+#: en/messages:2399
 msgctxt "ho.print.modlist"
 msgid "Select the modules to be printed."
 msgstr "Вибір модулів, які слід надрукувати."
 
-#: en/messages:2402
+#: en/messages:2401
 msgctxt "ho.print.timegraph"
 msgid ""
 "The display of the region selected\n"
@@ -6749,14 +6739,14 @@ msgid ""
 "up this dialog box."
 msgstr "Тут показано область, позначену для\nдруку. Зелена область — доступний\nдіапазон трасування, а сіра область —\nобласть, яку буде надруковано.\nСкористайтеся засобами вибору ліворуч\nдля позначення області або позначте\nобласть у вікні логічного аналізатора,\nперш ніж відкривати це діалогове вікно."
 
-#: en/messages:2414
+#: en/messages:2413
 msgctxt "ho.circuit.discchg"
 msgid ""
 "TkGate will not display a warning if you\n"
 "discard changes without saving."
 msgstr "TkGate не показуватиме попередження, якщо\nзміни буде відкинуто без збереження."
 
-#: en/messages:2419
+#: en/messages:2418
 msgctxt "ho.circuit.extbar"
 msgid ""
 "Newly created basic gates (AND, OR,\n"
@@ -6764,7 +6754,7 @@ msgid ""
 "many input gates."
 msgstr "Новостворені базові шлюзи (AND, OR,\nXOR) використовуватимуть смуги розширення\nдля обробки багатьох вхідних шлюзів."
 
-#: en/messages:2425
+#: en/messages:2424
 msgctxt "ho.circuit.shownet"
 msgid ""
 "Newly created switches and dips will\n"
@@ -6772,47 +6762,47 @@ msgid ""
 "them."
 msgstr "Новостворені перемикачі від початку\nпозначатимуться міткою з назвою\nвідповідного ланцюга."
 
-#: en/messages:2432
+#: en/messages:2431
 msgctxt "ho.circuit.autostart"
 msgid ""
 "If enabled, simulation will begin as\n"
 "soon as the simulation pane is selected."
 msgstr "Якщо позначено, імітація розпочинатиметься,\nщойно буде позначено панель імітації."
 
-#: en/messages:2437
+#: en/messages:2436
 msgctxt "ho.circuit.file"
 msgid ""
 "This is the file name from which the current\n"
 "circuit was loaded."
 msgstr "Це назва файла, з якого буде завантажено\nпоточний ланцюг."
 
-#: en/messages:2442
+#: en/messages:2441
 msgctxt "ho.circuit.ver"
 msgid ""
 "This is the version of TkGate that created\n"
 "the file that is currently loaded."
 msgstr "Це версія TkGate, у якій було створено\nфайл, який зараз завантажено."
 
-#: en/messages:2447
+#: en/messages:2446
 msgctxt "ho.circuit.encoding"
 msgid "Use this encoding for save files."
 msgstr "Кодування, яке буде використано для\nзбереження файлів."
 
-#: en/messages:2451
+#: en/messages:2450
 msgctxt "ho.circuit.language"
 msgid ""
 "Use fonts for this encoding to display\n"
 "circuit data."
 msgstr "Використовувати шрифти для цього кодування\nдля показу даних ланцюга."
 
-#: en/messages:2456
+#: en/messages:2455
 msgctxt "ho.circuit.title"
 msgid ""
 "Description of your circuit. This title is\n"
 "used on printed output."
 msgstr "Опис вашого ланцюга. Цей заголовок\nвикористано для друку результатів."
 
-#: en/messages:2461
+#: en/messages:2460
 msgctxt "ho.cmd.bitw"
 msgid ""
 "Wires selected with the ribbon\n"
@@ -6820,7 +6810,7 @@ msgid ""
 "bit width."
 msgstr "Для дротів, позначених за допомогою\nзасобу роздільного кабелю, буде\nвстановлено вказану розрядність."
 
-#: en/messages:2467
+#: en/messages:2466
 msgctxt "ho.edgat.signam"
 msgid ""
 "The name of the selected signal\n"
@@ -6829,7 +6819,7 @@ msgid ""
 "by editing it here."
 msgstr "Назва позначеного сигналу у\nпозначеному компоненті. Ви можете\nзмінити назву сигналу шляхом її\nредагування тут."
 
-#: en/messages:2474
+#: en/messages:2473
 msgctxt "ho.edgat.port"
 msgid ""
 "The name of the port for this\n"
@@ -6838,7 +6828,7 @@ msgid ""
 "module instances."
 msgstr "Назва порту для цього сигналу\nу компоненті. Вміст цього поля\nможна редагувати лише для\nекземплярів модуля."
 
-#: en/messages:2481
+#: en/messages:2480
 msgctxt "ho.edgat.iolab"
 msgid ""
 "The direction of the selected\n"
@@ -6847,7 +6837,7 @@ msgid ""
 "for module instances."
 msgstr "Спрямування позначеного сигналу\nу позначеному компоненті.\nВміст цього поля можна редагувати\nлише для екземплярів модуля."
 
-#: en/messages:2488
+#: en/messages:2487
 msgctxt "ho.edgat.bitlab"
 msgid ""
 "The bit width of the selected\n"
@@ -6856,90 +6846,90 @@ msgid ""
 "editing it here."
 msgstr "Розрядність позначеного сигналу у\nпозначеному компоненті.\nЗмінити розрядність можна шляхом\nїї редагування тут."
 
-#: en/messages:2495
+#: en/messages:2494
 msgctxt "ho.edgat.cycle"
 msgid "The total number of epochs in a clock cycle."
 msgstr "Загальна кількість епох у циклі годинника."
 
-#: en/messages:2496
+#: en/messages:2495
 msgctxt "ho.edgat.phase"
 msgid "The starting point of the cycle (in percent)."
 msgstr "Початкова позиція циклу (у відсотках)."
 
-#: en/messages:2497
+#: en/messages:2496
 msgctxt "ho.edgat.duty"
 msgid "The percent of the cycle, the clock is low."
 msgstr "Частка циклу, протягом якого рівень синхросигналу є низьким."
 
-#: en/messages:2500
+#: en/messages:2499
 msgctxt "ho.edgat.hide"
 msgid ""
 "Set this flag to disable\n"
 "display of component names."
 msgstr "Встановіть цей прапорець для вимикання\nпоказу назв компонентів."
 
-#: en/messages:2505
+#: en/messages:2504
 msgctxt "ho.edgat.gtype"
 msgid "Type of the component."
 msgstr "Тип компонента."
 
-#: en/messages:2506
+#: en/messages:2505
 msgctxt "ho.edgat.gname"
 msgid "Name of this component instance."
 msgstr "Назва цього екземпляра компонента."
 
-#: en/messages:2507
+#: en/messages:2506
 msgctxt "ho.edgat.ganchor"
 msgid "Set this flag to anchor the position of a component."
 msgstr "Встановіть цей прапорець для фіксування позиції компонента."
 
-#: en/messages:2508
+#: en/messages:2507
 msgctxt "ho.edgat.gx"
 msgid "X coordinate of component."
 msgstr "Координата компонента за X."
 
-#: en/messages:2509
+#: en/messages:2508
 msgctxt "ho.edgat.gy"
 msgid "Y coordinate of component."
 msgstr "Координата компонента за Y."
 
-#: en/messages:2511
+#: en/messages:2510
 msgctxt "ho.edgat.swstate"
 msgid ""
 "The initial state of the switch to use when\n"
 "starting a simulation."
 msgstr "Початковий стан перемикача, який буде\nвикористано на початку імітації."
 
-#: en/messages:2516
+#: en/messages:2515
 msgctxt "ho.edgat.dipstate"
 msgid ""
 "The initial state of the dip switch to use\n"
 "when starting a simulation."
 msgstr "Початковий стан перемикача DIP, який буде\nвикористано на початку імітації."
 
-#: en/messages:2521
+#: en/messages:2520
 msgctxt "ho.edgat.range"
 msgid "The range of bits to pull off a bus."
 msgstr "Діапазон бітів, які слід відвести з шини."
 
-#: en/messages:2523
+#: en/messages:2522
 msgctxt "ho.edgat.memfile"
 msgid ""
 "The file with the initial state for this memory.\n"
 "This file is read when the simulator is started."
 msgstr "Файл із початковим станом цієї пам’яті.\nЦей файл буде прочитано на початку імітації."
 
-#: en/messages:2528
+#: en/messages:2527
 msgctxt "ho.edgat.func"
 msgid "The function type of this module."
 msgstr "Тип функції цього модуля."
 
-#: en/messages:2529
+#: en/messages:2528
 msgctxt "ho.edgat.frame"
 msgid "The frame label."
 msgstr "Мітка рамки."
 
-#: en/messages:2531
+#: en/messages:2530
 msgctxt "ho.traceprint"
 msgid ""
 "Print the logic trace range selected\n"
@@ -6949,14 +6939,14 @@ msgid ""
 "view is used when there is no selection."
 msgstr "Надрукувати діапазон логічного трасування,\nпозначений за допомогою правої кнопки миші.\nДля розширення позначеної області можна\nскористатися комбінацією Shift-клацання правою.\nЯкщо нічого не позначено, буде використано\nдіапазон, видимий у вікні логічного аналізатора."
 
-#: en/messages:2539
+#: en/messages:2538
 msgctxt "ho.showxhair"
 msgid ""
 "If this button is depressed, a vertical crosshair\n"
 "line will be displayed in the scope window."
 msgstr "Якщо натиснуто цю кнопку, у вікні логічного аналізатора\nбуде показано вертикальну лінію візування."
 
-#: en/messages:2544
+#: en/messages:2543
 msgctxt "ho.opt.general.fontset"
 msgid ""
 "Specifies the basic font size to\n"
@@ -6965,7 +6955,7 @@ msgid ""
 "restarting TkGate."
 msgstr "Вказує базовий розмір шрифту у\nінтерфейсі TkGate. Щоб задіяти\nзмінене значення, вам доведеться\nперезапустити TkGate."
 
-#: en/messages:2551
+#: en/messages:2550
 msgctxt "ho.opt.sec.send"
 msgid ""
 "Enabling the $tkg$command() system task will allow\n"
@@ -6977,7 +6967,7 @@ msgid ""
 "option has a very high security risk."
 msgstr "Уможливлення завдання системи $tkg$command() надасть\nзмогу ланцюгам користувача надсилати довільні команди\nкерування імітацією до графічного інтерфейсу TkGate.\nЦе стосується і можливості виконувати довільні команди\nоболонки. Якщо засіб імітації буде використано для\nненадійних ланцюгів, варто вимкнути це завдання.\nУможливлення завдання може становити значну загрозу\nбезпеці даних системи."
 
-#: en/messages:2561
+#: en/messages:2560
 msgctxt "ho.opt.sec.open"
 msgid ""
 "Enabling the $fopen() system task will allow user\n"
@@ -6986,7 +6976,7 @@ msgid ""
 "high security risk."
 msgstr "Уможливлення завдання системи $fopen() надасть змогу\nланцюгам користувача записувати дані до будь-якого\nфайла, до якого має право записувати дані користувач\nTkGate. Уможливлення такого запису може становити\nзначну загрозу безпеці даних у системі."
 
-#: en/messages:2568
+#: en/messages:2567
 msgctxt "ho.opt.sec.writemem"
 msgid ""
 "Enabling the $writememb() and $writememh() system tasks\n"
@@ -6995,7 +6985,7 @@ msgid ""
 "has a high security risk."
 msgstr "Уможливлення завдань системи $writememb() і $writememh()\nнадасть змогу ланцюгам користувача записувати дані до\nбудь-яких файлів, доступ до запису яких має користувач,\nвід імені якого запущено TkGate. Уможливлення цих\nзавдань становить значну загрозу безпеці даних системи."
 
-#: en/messages:2575
+#: en/messages:2574
 msgctxt "ho.opt.sec.enqueue"
 msgid ""
 "Enabling the $tkg$recv() and $tkg$send() system tasks\n"
@@ -7004,7 +6994,7 @@ msgid ""
 "security risk."
 msgstr "Уможливлення завдань системи $tkg$recv() та $tkg$send() надасть\nзмогу віртуальним периферійним пристроям надсилати\nповідомлення ланцюгам TkGate. Уможливлення цих завдань\nстановить незначну загрозу безпеці даних системи."
 
-#: en/messages:2582
+#: en/messages:2581
 msgctxt "ho.opt.ssave"
 msgid ""
 "Perform consistency checks on circuit\n"
@@ -7013,7 +7003,7 @@ msgid ""
 "with the save file."
 msgstr "Виконувати перевірки цілісності файлів\nланцюгів до перезапису наявних збережених\nфайлів для убезпечення від проблем із\nзбереженим файлом."
 
-#: en/messages:2589
+#: en/messages:2588
 msgctxt "ho.opt.sec.exec"
 msgid ""
 "Fully enabling the $tkg$exec() system task allows user\n"
@@ -7022,7 +7012,7 @@ msgid ""
 "this option has a very high security risk."
 msgstr "Повне уможливлення завдання системи $tkg$exec() надасть змогу\nланцюгам користувача виконувати довільні команди tcl/tk,\nвключно із можливістю виконувати довільні команди оболонки.\nУможливлення цього завдання становити значну загрозу\nбезпеці даних системи."
 
-#: en/messages:2596
+#: en/messages:2595
 msgctxt "ho.opt.sec.regexec"
 msgid ""
 "Enabling the $tkg$exec() system task for registered functions\n"
@@ -7033,7 +7023,7 @@ msgid ""
 "this option has a medium security risk."
 msgstr "Уможливлення завдання системи $tkg$exec() для зареєстрованих\nфункцій надасть змогу ланцюгам користувача виконувати лише ті\nкоманди tcl/tk, які було зареєстровано як безпечні. Якщо усі\nфайли віртуальних периферійних пристроїв є надійними,\nуможливлення $tkg$exec() на цьому рівні має запобігти виконанню\nнебезпечних команд. Уможливлення цього завдання становить\nпомірну загрозу безпеці даних системи."
 
-#: en/messages:2605
+#: en/messages:2604
 msgctxt "ho.opt.sec.noexec"
 msgid ""
 "Fully disabling the $tkg$exec() command will prevent user\n"
@@ -7042,7 +7032,7 @@ msgid ""
 "option has a minimal security risk."
 msgstr "Повне вимикання команди $tkg$exec() не дасть змоги\nланцюгам користувача виконувати команди tcl/tk. Використання\nвіртуальних периферійних пристроїв стане неможливим.\nВибір цього варіанта становить незначну загрозу безпеці\nданих системи."
 
-#: en/messages:2612
+#: en/messages:2611
 msgctxt "ho.opt.sec.stop"
 msgid ""
 "If this setting is enabled, the simulation will be terminated\n"
@@ -7050,7 +7040,7 @@ msgid ""
 "a disabled feature."
 msgstr "Якщо позначено цей пункт, імітацію буде перервано, щойно\nбуде виявлено спробу ланцюга користувача виконати дію\nіз вимкненою можливістю."
 
-#: en/messages:2618
+#: en/messages:2617
 msgctxt "ho.opt.sec.warn"
 msgid ""
 "If this setting is enabled, the simulation will continue, but\n"
@@ -7058,14 +7048,14 @@ msgid ""
 "the user circuit to execute a disabled feature."
 msgstr "Якщо позначено цей пункт, імітація продовжуватиметься, але буде\nпоказано повідомлення про помилку, щойно буде виявлено будь-яку\nспробу ланцюга користувача виконати дію із вимкненою можливістю."
 
-#: en/messages:2624
+#: en/messages:2623
 msgctxt "ho.opt.sec.ignore"
 msgid ""
 "If this setting is enabled, use of any disabled features will\n"
 "be ignored and no error messages will be displayed."
 msgstr "Якщо позначено цей пункт, використання будь-яких вимкнених\nможливостей буде проігноровано, повідомлення про помилки\nпоказано не буде."
 
-#: en/messages:2629
+#: en/messages:2628
 msgctxt "ho.opt.html.browser"
 msgid ""
 "Command to be execute when the user clicks on a link to\n"
@@ -7073,7 +7063,7 @@ msgid ""
 "with the link URL."
 msgstr "Команда, яку буде виконано, коли користувач натисне\nпосилання у файлі html. «%s» у команді буде замінено\nна адресу посилання."
 
-#: en/messages:2635
+#: en/messages:2634
 msgctxt "ho.opt.html.email"
 msgid ""
 "Command to be execute when the user clicks on a link to\n"
@@ -7081,7 +7071,7 @@ msgid ""
 "replaced with the link URL."
 msgstr "Команда, яку буде виконано, коли користувач натисне\nпосилання у повідомленні ел. пошти. «%s» у команді буде\nзамінено на адресу посилання."
 
-#: en/messages:2641
+#: en/messages:2640
 msgctxt "ho.opt.fsave"
 msgid ""
 "Save TkGate internal cells with circuit\n"
@@ -7091,7 +7081,7 @@ msgid ""
 "exported to third party tools."
 msgstr "Зберігати внутрішні комірки TkGate із\nданими ланцюга. Це збільшить розмір\nзбереженого файла на приблизно 20% для\nтипового ланцюга, але надасть змогу\nекспортувати збережені файли до\nсторонніх програм."
 
-#: en/messages:2649
+#: en/messages:2648
 msgctxt "ho.opt.sorttraces"
 msgid ""
 "If this option is enabled, traces on the\n"
@@ -7101,7 +7091,7 @@ msgid ""
 "the order in which the probes were set."
 msgstr "Якщо буде позначено цей пункт, трасування\nу вікні логічного аналізатора буде показано\nупорядкованими. Якщо пункт не буде\nпозначено, трасування у вікні логічного\nаналізатора буде показано у порядку\nвстановлення зондувань."
 
-#: en/messages:2657
+#: en/messages:2656
 msgctxt "ho.opt.sim.noglitch"
 msgid ""
 "If this option is enabled, rapidly changing\n"
@@ -7112,7 +7102,7 @@ msgid ""
 "sequential circuits."
 msgstr "Якщо позначено цей пункт, швидка зміна\nвхідного сигналу компонента призведе до виведення\nз компонента простого зсунутого за фазою\nвхідного сигналу. Це може прибрати спонтанні\nподії і запобігти осциляціям у послідовних\nланцюгах на рівні шлюзів."
 
-#: en/messages:2666
+#: en/messages:2665
 msgctxt "ho.opt.sim.savetraces"
 msgid ""
 "Probes placed during a simulation run will\n"
@@ -7120,7 +7110,7 @@ msgid ""
 "the simulation of the same circuit."
 msgstr "Програма запам’ятовуватиме зонди, встановлені\nпід час імітації, і замінятиме їх під час\nперезапуску імітації того самого ланцюга."
 
-#: en/messages:2673
+#: en/messages:2672
 msgctxt "ho.opt.sim.tech"
 msgid ""
 "List of files to load as potential \"technology\"\n"
@@ -7128,14 +7118,14 @@ msgid ""
 "estimates for built-in components."
 msgstr "Список файлів для завантаження як потенційні\nфайли «технологій». Файли технологій задають\nзатримку і оцінки площі для вбудованих компонентів."
 
-#: en/messages:2679
+#: en/messages:2678
 msgctxt "ho.opt.sim.err"
 msgid ""
 "Select how warnings from the simulator\n"
 "should be handled."
 msgstr "Визначення способу обробки попереджень\nвід імітатора."
 
-#: en/messages:2684
+#: en/messages:2683
 msgctxt "ho.opt.sim.err.stopany"
 msgid ""
 "Do not simulate the circuit if there are any\n"
@@ -7143,7 +7133,7 @@ msgid ""
 "actual errors."
 msgstr "Не імітувати ланцюг, якщо щодо нього є\nпопередження, навіть якщо немає виявлених\nпомилок."
 
-#: en/messages:2690
+#: en/messages:2689
 msgctxt "ho.opt.sim.err.showall"
 msgid ""
 "Always show warnings in the circuit, even if\n"
@@ -7152,7 +7142,7 @@ msgid ""
 "warnings will be displayed in a separate window."
 msgstr "Завжди показувати попередження щодо ланцюга,\nнавіть якщо не виявлено помилок. Якщо буде\nвиявлено лише попередження, програма розпочне\nімітацію, а список попереджень буде показано\nу окремому вікні."
 
-#: en/messages:2697
+#: en/messages:2696
 msgctxt "ho.opt.sim.err.showiferr"
 msgid ""
 "Show warnings only if there are also errors\n"
@@ -7161,14 +7151,14 @@ msgid ""
 "will be started."
 msgstr "Показувати попередження, лише якщо у ланцюзі\nє помилки. Якщо щодо ланцюга зареєстровано лише\nпопередження, їх буде проігноровано, і\nпрограма розпочне імітацію."
 
-#: en/messages:2704
+#: en/messages:2703
 msgctxt "ho.opt.sim.err.ignore"
 msgid ""
 "Never display warning messages, even if there\n"
 "are errors in the circuit."
 msgstr "Ніколи не показувати попереджень, навіть якщо\nу ланцюгу немає помилок."
 
-#: en/messages:2709
+#: en/messages:2708
 msgctxt "ho.opt.lib.vpath"
 msgid ""
 "List of directories to search for TkGate library\n"
@@ -7176,14 +7166,14 @@ msgid ""
 "and contain modules useful for use in user circuits."
 msgstr "Список каталогів, у яких слід шукати файли бібліотек\nTkGate. Назви файлів бібліотек мають суфікс .v. Файли\nмістять модулі, корисні для використання у ланцюгах\nкористувачів."
 
-#: en/messages:2715
+#: en/messages:2714
 msgctxt "ho.opt.lib.vlib"
 msgid ""
 "List of libraries that should automatically be loaded\n"
 "when TkGate starts."
 msgstr "Список бібліотек, які буде автоматично завантажено\nпід час запуску TkGate."
 
-#: en/messages:2720
+#: en/messages:2719
 msgctxt "ho.opt.lib.vpd"
 msgid ""
 "List of directories to search for virtual peripheral\n"
@@ -7193,19 +7183,19 @@ msgid ""
 "circuit."
 msgstr "Список каталогів для пошуку віртуальних периферійних\nпристроїв. Назви файлів віртуальних периферійних пристроїв\nмають суфікси .tcl. У таких файлах типово реалізовано\nграфічний інтерфейс представлення периферійного\nпристрою, яким можна керувати у ланцюгу користувача."
 
-#: en/messages:2728
+#: en/messages:2727
 msgctxt "ho.opt.undolen"
 msgid "Maximum number of undo actions to retain."
 msgstr "Максимальна кількість записів дій, які\nзберігатимуться для скасовування."
 
-#: en/messages:2732
+#: en/messages:2731
 msgctxt "ho.opt.name"
 msgid ""
 "User name to be used on TkGate generated\n"
 "reports such as circuit printouts."
 msgstr "Ім’я користувача, яким слід скористатися у\nстворених TkGate звітах, зокрема роздруківках ланцюгів."
 
-#: en/messages:2737
+#: en/messages:2736
 msgctxt "ho.opt.site"
 msgid ""
 "The name of the site where TkGate is\n"
@@ -7213,7 +7203,7 @@ msgid ""
 "any printer or postscript output."
 msgstr "Назва системи, у якій встановлено TkGate.\nЦю назву буде використано для друку або\nвиведення у форматі PostScript."
 
-#: en/messages:2743
+#: en/messages:2742
 msgctxt "ho.opt.smooth"
 msgid ""
 "If this option is enabled, scrolling will\n"
@@ -7222,7 +7212,7 @@ msgid ""
 "off if there are any problems with your server."
 msgstr "Якщо позначено цей пункт, гортання буде\nоптимізовано використанням растрових копій,\nзамість перемальовування. Можете зняти позначку,\nякщо виникатимуть проблем з вашим сервером."
 
-#: en/messages:2750
+#: en/messages:2749
 msgctxt "ho.opt.clip"
 msgid ""
 "If this option is enabled, clipping will be\n"
@@ -7233,7 +7223,7 @@ msgid ""
 "problems on your display."
 msgstr "Якщо позначено цей пункт, під час\nперемальовування для оновлення вмісту\nлише показаної частини вікна буде використовуватися обрізання. Якщо ж\nпункт позначено не буде, відбуватиметься\nповне перемальовування усього показаного.\nЗнімайте позначку, лише якщо виникають\nпроблеми із показом зображення."
 
-#: en/messages:2759
+#: en/messages:2758
 msgctxt "ho.opt.showimage"
 msgid ""
 "Unset this option to suppress display of\n"
@@ -7241,7 +7231,7 @@ msgid ""
 "edge of dialog boxes."
 msgstr "Зніміть позначку з цього пункту для\nпридушення показу зображення та\nпояснювального тексту на краю діалогових\nвікон."
 
-#: en/messages:2766
+#: en/messages:2765
 msgctxt "ho.opt.outmove"
 msgid ""
 "If this option is enabled, only an outline\n"
@@ -7250,7 +7240,7 @@ msgid ""
 "with slow displays."
 msgstr "Якщо позначено цей пункт, під час перетягування\nбуде показано лише контури екземплярів модулів.\nЦим пунктом можна скористатися, якщо процесор\nкомп’ютера є малопотужним."
 
-#: en/messages:2773
+#: en/messages:2772
 msgctxt "ho.opt.bhelp"
 msgid ""
 "If this option is enabled, help balloons will\n"
@@ -7259,7 +7249,7 @@ msgid ""
 "mouse is over them."
 msgstr "Якщо позначено цей пункт, буде активовано\nпанелі підказок. На панелях підказок, подібних\nдо цієї, буде показано підказки щодо елементів\nінтерфейсу, на які ви наводитимете вказівник\nмиші."
 
-#: en/messages:2780
+#: en/messages:2779
 msgctxt "ho.opt.tearawaymenus"
 msgid ""
 "If enabled, the main menues will be detachable\n"
@@ -7267,7 +7257,7 @@ msgid ""
 "next time you restart TkGate."
 msgstr "Якщо позначено, головні меню можна буде\nвід’єднувати від решти інтерфейсу. Зміну\nпараметра буде задіяно лише після\nперезапуску TkGate."
 
-#: en/messages:2786
+#: en/messages:2785
 msgctxt "ho.opt.novice"
 msgid ""
 "If no other circuit is specified on the command\n"
@@ -7275,31 +7265,31 @@ msgid ""
 "the initial circuit on start up."
 msgstr "Якщо у рядку команди не задано інших ланцюгів,\nпісля запуску замість початкового ланцюга буде\nпоказано підручник з TkGate."
 
-#: en/messages:2792
+#: en/messages:2791
 msgctxt "ho.opt.blockDropConnect"
 msgid ""
 "Allow ports on module interfaces to be created\n"
 "by dropping free wires near an edge."
 msgstr "Дозволити створення портів у інтерфейсах модулів\nскиданням вільних дротів на місце поряд із краєм."
 
-#: en/messages:2797
+#: en/messages:2796
 msgctxt "ho.opt.debug"
 msgid ""
 "Enables several debugging features\n"
 "only useful to TkGate developers."
 msgstr "Вмикає декілька діагностичних можливостей,\nякі корисні лише розробникам TkGate."
 
-#: en/messages:2802
+#: en/messages:2801
 msgctxt "ho.opt.ckpt"
 msgid "Enable checkpointing of unsaved circuits."
 msgstr "Увімкнути контрольні точки у незбережених ланцюгах."
 
-#: en/messages:2803
+#: en/messages:2802
 msgctxt "ho.opt.ckptfreq"
 msgid "Frequency of checkpoints in seconds."
 msgstr "Періодичність контрольних точок у секундах."
 
-#: en/messages:2805
+#: en/messages:2804
 msgctxt "ho.opt.beak"
 msgid ""
 "Enable these totally useless features.\n"
@@ -7310,7 +7300,7 @@ msgid ""
 "to edit your .tkgate2-properties file."
 msgstr "Увімкнути ці зайві можливості. Якщо ви\nзнімете позначку з цього пункту, у діалоговому\nвікні більше не буде пункту зайвих\nможливостей. Єдиним способом побачити цей\nпункт знову є редагування файла\n.tkgate2-properties."
 
-#: en/messages:2814
+#: en/messages:2813
 msgctxt "ho.opt.miles"
 msgid ""
 "If this mode is enabled, TkGate will\n"
@@ -7318,7 +7308,7 @@ msgid ""
 "the user."
 msgstr "Якщо увімкнено цей режим, TkGate періодично\nзнущатиметься із інтелектуальних зусиль\nкористувача."
 
-#: en/messages:2820
+#: en/messages:2819
 msgctxt "ho.opt.bat"
 msgid ""
 "If this mode is enabled, TkGate will\n"
@@ -7326,26 +7316,26 @@ msgid ""
 "bat computer."
 msgstr "Якщо увімкнено цей режим, TkGate налаштує\nсередовище для розробки навчального\nкомп’ютера «bat»."
 
-#: en/messages:2826
+#: en/messages:2825
 msgctxt "ho.opt.trek"
 msgid "Beam me up Scotty!"
 msgstr "Піднімай мене, Скотті!"
 
-#: en/messages:2828
+#: en/messages:2827
 msgctxt "ho.opt.simstep"
 msgid ""
 "The number of epochs to advance when\n"
 "the step command is issued."
 msgstr "Кількість періодів, на які просуватиметься\nпрограма у відповідь на команду виконання кроку."
 
-#: en/messages:2833
+#: en/messages:2832
 msgctxt "ho.opt.ckstep"
 msgid ""
 "The number of clock cycles to advance\n"
 "when the clock step command is issued."
 msgstr "Кількість циклів годинника, на які просуватиметься\nпрограма у відповідь на команду виконання кроку."
 
-#: en/messages:2838
+#: en/messages:2837
 msgctxt "ho.opt.ckover"
 msgid ""
 "The number of epochs past rising edge\n"
@@ -7353,7 +7343,7 @@ msgid ""
 "step command is issued."
 msgstr "Кількість періодів за східним фронтом\nсигналу годинника, на які просуватиметься\nпрограма у відповідь на команду виконання кроку."
 
-#: en/messages:2844
+#: en/messages:2843
 msgctxt "ho.opt.vpopupdelay"
 msgid ""
 "The delay in milliseconds between pressing\n"
@@ -7365,7 +7355,7 @@ msgid ""
 "1 and 10000 are allowed."
 msgstr "Затримка у мілісекундах між моментом\nнатискання кнопки миші і показом значення\nсигналу. У деяких системах малі значення\nзатримки заважає можливості розпізнавання\nподвійного натискання. Якщо у вас виникають\nподібні проблеми, збільште значення.\nМожна використовувати значення від 1 до 10000."
 
-#: en/messages:2854
+#: en/messages:2853
 msgctxt "ho.opt.init"
 msgid ""
 "A simulation script file to execute\n"
@@ -7375,7 +7365,7 @@ msgid ""
 "circuit properties instead."
 msgstr "Файл скрипту імітації, який має\nбути автоматично виконано під час\nініціації ланцюга. Не використовуйте\nдля специфічних для ланцюга скриптів,\nкраще скористайтеся властивостями\nланцюга."
 
-#: en/messages:2862
+#: en/messages:2861
 msgctxt "ho.opt.ckall"
 msgid ""
 "If this mode is enabled, the clock step\n"
@@ -7383,7 +7373,7 @@ msgid ""
 "positive edge of any clock in the circuit."
 msgstr "Якщо увімкнено цей режим, команда кроку\nза часом призупинятиме імітацію на додатному\nкраю кожного тактового сигналу ланцюга."
 
-#: en/messages:2868
+#: en/messages:2867
 msgctxt "ho.opt.ckspec"
 msgid ""
 "If this mode is enabled, the clock step\n"
@@ -7393,7 +7383,7 @@ msgid ""
 "clock is attached."
 msgstr "Якщо увімкнено цей режим, команда кроку\nза часом призупинятиме імітацію лише на\nдодатному краю тактового сигналу вказаного\nгодинника. Скористайтеся назвою ланцюга, з\nяким з’єднано годинник."
 
-#: en/messages:2876
+#: en/messages:2875
 msgctxt "ho.opt.keybind"
 msgid ""
 "Specifies the basic style for key\n"
@@ -7404,7 +7394,7 @@ msgid ""
 "defined keybindings."
 msgstr "Визначає базовий стиль клавіатурних\nскорочень. Якщо ви зміните цей\nпараметр, клавіатурні скорочення\nбуде оновлено негайно, але щоб\nуможливити використання будь-яких\nвизначених користувачем скорочень,\nвам доведеться перезапустити TkGate."
 
-#: en/messages:2885
+#: en/messages:2884
 msgctxt "ho.deftech"
 msgid ""
 "Default technology for new components.\n"
@@ -7414,7 +7404,7 @@ msgid ""
 "click) and select the \"Delay\" tab."
 msgstr "Типова технологія для нових компонентів.\nВпливає на затримку компонентів. Щоб\nзмінити технологію певного компонента,\nвідкрийте вікно його властивостей\n(подвійне клацання) і перейдіть на\nвкладку «Затримка»."
 
-#: en/messages:2893
+#: en/messages:2892
 msgctxt "ho.techbut"
 msgid ""
 "Use delays from standard technology\n"
@@ -7424,26 +7414,26 @@ msgid ""
 "menu."
 msgstr "Використовувати затримки із стандартного\nфайла визначення технології. Щоб додати\nнетипові технології, додайте їх до списку\nу меню «Файл -> Параметри -> Імітувати»."
 
-#: en/messages:2901
+#: en/messages:2900
 msgctxt "ho.custbut"
 msgid "Set custom delay values for this component."
 msgstr "Встановити значення нетипової затримки для цього компонента."
 
-#: en/messages:2905
+#: en/messages:2904
 msgctxt "ho.contver"
 msgid ""
 "Continuously verify the integrity of internal\n"
 "data structures after every operation."
 msgstr "Неперервно перевіряти цілісність внутрішніх\nструктур даних після кожної операції."
 
-#: en/messages:2910
+#: en/messages:2909
 msgctxt "ho.simwatch"
 msgid ""
 "Display commands sent between\n"
 "the GUI and the simulator."
 msgstr "Показувати команди, що пересилаються\nз графічного інтерфейсу до імітатора."
 
-#: en/messages:2915
+#: en/messages:2914
 msgctxt "ho.symed.point"
 msgid ""
 "Pixel edit mode. Use the left\n"
@@ -7451,7 +7441,7 @@ msgid ""
 "the right button to clear them."
 msgstr "Режим редагування точок. Скористайтеся\nклацанням лівою кнопкою миші для\nвстановлення точок, а клацанням\nправою — для вилучення."
 
-#: en/messages:2921
+#: en/messages:2920
 msgctxt "ho.symed.line"
 msgid ""
 "Line mode. Use the left\n"
@@ -7459,7 +7449,7 @@ msgid ""
 "the right button to clear them."
 msgstr "Режим прямої. Скористайтеся\nклацанням лівою кнопкою миші для\nвстановлення точок, а клацанням\nправою — для вилучення."
 
-#: en/messages:2927
+#: en/messages:2926
 msgctxt "ho.symed.rect"
 msgid ""
 "Rectangle mode. Use the left\n"
@@ -7467,7 +7457,7 @@ msgid ""
 "the right button to clear them."
 msgstr "Режим прямокутника. Скористайтеся\nклацанням лівою кнопкою миші для\nвстановлення точок, а клацанням\nправою — для вилучення."
 
-#: en/messages:2933
+#: en/messages:2932
 msgctxt "ho.symed.fillrect"
 msgid ""
 "Filled rectangle mode. Use the\n"
@@ -7475,7 +7465,7 @@ msgid ""
 "and the right button to clear them."
 msgstr "Режим заповненого прямокутника.\nСкористайтеся клацанням лівою кнопкою\nмиші для встановлення точок, а\nклацанням правою — для вилучення."
 
-#: en/messages:2939
+#: en/messages:2938
 msgctxt "ho.symed.select"
 msgid ""
 "Bitmap select mode. Use the left\n"
@@ -7484,64 +7474,64 @@ msgid ""
 "operations on the selection."
 msgstr "Режим позначення растра. Натисніть\nліву кнопку миші для позначення\nобласті зображення, а потім\nскористайтеся діями з вирізання\nта вставлення позначеного."
 
-#: en/messages:2946
+#: en/messages:2945
 msgctxt "ho.symed.port"
 msgid ""
 "Port select mode. Select ports and\n"
 "move them or rotate them."
 msgstr "Режим позначення портів. Позначте порти,\nа потім пересуньте або оберніть їх."
 
-#: en/messages:2951
+#: en/messages:2950
 msgctxt "ho.symed.rshift"
 msgid "Shift selected pixels right."
 msgstr "Зсунути позначені пікселі праворуч."
 
-#: en/messages:2952
+#: en/messages:2951
 msgctxt "ho.symed.lshift"
 msgid "Shift selected pixels left."
 msgstr "Зсунути позначені пікселі ліворуч."
 
-#: en/messages:2953
+#: en/messages:2952
 msgctxt "ho.symed.ushift"
 msgid "Shift selected pixels up."
 msgstr "Зсунути позначені пікселі вгору."
 
-#: en/messages:2954
+#: en/messages:2953
 msgctxt "ho.symed.dshift"
 msgid "Shift selected pixels down."
 msgstr "Зсунути позначені пікселі вниз."
 
-#: en/messages:2955
+#: en/messages:2954
 msgctxt "ho.symed.cwrotate"
 msgid "Rotate selected pixels clockwise."
 msgstr "Обернути позначені пікселі за годинниковою стрілкою."
 
-#: en/messages:2956
+#: en/messages:2955
 msgctxt "ho.symed.ccwrotate"
 msgid "Rotate selected pixels counter-clockwise."
 msgstr "Обернути позначені пікселі проти годинникової стрілки."
 
-#: en/messages:2957
+#: en/messages:2956
 msgctxt "ho.symed.autobold"
 msgid "Make selected image bold."
 msgstr "Збільшити товщину ліній у позначеному зображенні."
 
-#: en/messages:2958
+#: en/messages:2957
 msgctxt "ho.symed.resize"
 msgid "Resize the image editor."
 msgstr "Змінити розміри редактора зображень."
 
-#: en/messages:2959
+#: en/messages:2958
 msgctxt "ho.symed.import"
 msgid "Import image from file."
 msgstr "Імпортувати зображення з файла."
 
-#: en/messages:2960
+#: en/messages:2959
 msgctxt "ho.symed.export"
 msgid "Export image to file."
 msgstr "Експортувати зображення до файла."
 
-#: en/messages:2962
+#: en/messages:2961
 msgctxt "ho.tool.currot"
 msgid ""
 "Displays the current default\n"
@@ -7550,82 +7540,82 @@ msgid ""
 "default rotation."
 msgstr "Показує поточне типове обертання.\nНатисніть цю кнопку, щоб змінити\nпоточне типове обертання."
 
-#: en/messages:2969
+#: en/messages:2968
 msgctxt "ho.tool.zoomin"
 msgid "Zoom in"
 msgstr "Збільшити"
 
-#: en/messages:2970
+#: en/messages:2969
 msgctxt "ho.tool.zoomout"
 msgid "Zoom out"
 msgstr "Зменшити"
 
-#: en/messages:2971
+#: en/messages:2970
 msgctxt "ho.tool.rotate"
 msgid "Rotate selected component(s) counter-clockwise."
 msgstr "Обернути позначені компоненти проти годинникової стрілки."
 
-#: en/messages:2972
+#: en/messages:2971
 msgctxt "ho.tool.brotate"
 msgid "Rotate selected component(s) clockwise."
 msgstr "Обернути позначені компоненти за годинниковою стрілкою."
 
-#: en/messages:2973
+#: en/messages:2972
 msgctxt "ho.tool.valgn"
 msgid "Align selected component(s) vertically."
 msgstr "Вирівняти позначені компоненти вертикально."
 
-#: en/messages:2974
+#: en/messages:2973
 msgctxt "ho.tool.halgn"
 msgid "Align selected component(s) horizontally."
 msgstr "Вирівняти позначені компоненти горизонтально."
 
-#: en/messages:2976
+#: en/messages:2975
 msgctxt "ho.tool.cut"
 msgid "Cut selection."
 msgstr "Вирізати позначене."
 
-#: en/messages:2977
+#: en/messages:2976
 msgctxt "ho.tool.copy"
 msgid "Copy selection."
 msgstr "Копіювати позначене."
 
-#: en/messages:2978
+#: en/messages:2977
 msgctxt "ho.tool.paste"
 msgid "Paste from cut buffer."
 msgstr "Вставити з буфера обміну."
 
-#: en/messages:2979
+#: en/messages:2978
 msgctxt "ho.tool.find"
 msgid "Find component, wire or text."
 msgstr "Знайти компонент, з’єднання або текст."
 
-#: en/messages:2981
+#: en/messages:2980
 msgctxt "ho.tool.addport"
 msgid "Add a port to the selected component."
 msgstr "Додати порти до позначеного компонента."
 
-#: en/messages:2982
+#: en/messages:2981
 msgctxt "ho.tool.anchor"
 msgid "Anchor the selected component(s)."
 msgstr "Заблокувати позначені компоненти."
 
-#: en/messages:2983
+#: en/messages:2982
 msgctxt "ho.tool.unanchor"
 msgid "Unanchor the selected component(s)."
 msgstr "Розблокувати позначені компоненти."
 
-#: en/messages:2984
+#: en/messages:2983
 msgctxt "ho.tool.replicate"
 msgid "Replicate a component."
 msgstr "Клонувати компонент."
 
-#: en/messages:2985
+#: en/messages:2984
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr "Вилучити позначене."
 
-#: en/messages:2988
+#: en/messages:2987
 msgctxt "license1"
 msgid ""
 "TkGate is free software; you can redistribute it and/or modify it\n"
@@ -7634,7 +7624,7 @@ msgid ""
 "(at your option) any later version."
 msgstr "TtGate — вільний програмний засіб; ви можете вільно розповсюджувати або\nзмінювати його при на умовах вільної ліцензії GNU General Public License, яку\nопублікували Free Software Foundation; або версії 2 цієї ліцензії, або (на ваш\nрозсуд) будь-якої подальшої версії."
 
-#: en/messages:2995
+#: en/messages:2993
 msgctxt "license2"
 msgid ""
 "TkGate is distributed in the hope that it will be useful, but\n"
@@ -7643,10 +7633,10 @@ msgid ""
 "GNU General Public License for more details."
 msgstr "TtGate розповсюджується з надією, що програма буде корисною, але без\nБУДЬ-ЯКИХ ГАРАНТІЙ; навіть не гарантується ПРИДАТНІСТЬ та ВІДПОВІДНІСТЬ\nБУДЬ-ЯКИМ ВИМОГАМ. Докладніше про це дивіться GNU General Public License."
 
-#: en/messages:3002
+#: en/messages:2999
 msgctxt "license3"
 msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with TkGate; if not, write to the Free Software Foundation,\n"
 "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
-msgstr "Ви маєте отримати копію GNU General Public License разом з TtGate; якщо це не\nтак, напишіть до Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\nBoston, MA 02110-1301 USA."
+msgstr "Ви маєте отримати копію GNU General Public License разом з TtGate; якщо це не\nтак, напишіть до Free Software Foundation, Inc., 51 Franklin Street, Fifth\nFloor, Boston, MA 02110-1301 USA."

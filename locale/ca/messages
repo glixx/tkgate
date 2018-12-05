@@ -6,22 +6,22 @@
 \language				català
 
 b.new	Nou...
-b.dismiss	Tornar
-b.close	Tancar
-b.ok	OK
-b.clear	Esborrar
-b.cancel	Cancel·lar
+b.dismiss	Ignora
+b.close	Tanca
+b.ok	D’acord
+b.clear	Neteja
+b.cancel	Cancel·la
 b.in	entrada
 b.out	sortida
 b.inout	bidireccional
-b.browse	Visualitzar...
+b.browse	Explora…
 b.label	Etiqueta
-b.find	Cercar
-b.edit	Editar...
-b.add	Afegir...
-b.delete	Esborrar
-b.remove	Suprimeix
-b.apply	Aplicar
+b.find	Cerca
+b.edit	Edita…
+b.add	Afegeix…
+b.delete	Suprimeix
+b.remove	Elimina
+b.apply	Aplica
 b.anchor	Anclar
 b.tech	Tecnologia
 tab.editintr	Interfície
@@ -448,7 +448,6 @@ circ.simulator	Simulació
 circ.timescale.unit	Unitats:
 circ.timescale.prec	Precissió:
 circ.sim.features	Característiques
-circ.sim.tv.after.2	-buit-
 libmgr.cap	Gestor de biblioteques
 libmgr.library	Biblioteca
 libmgr.description	Descripció
