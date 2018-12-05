@@ -1161,8 +1161,7 @@ opt.saveCells		Include cells in save files
 opt.showimage		Show side-bar images in dialog boxes
 opt.novice		Novice mode
 opt.blockDropConnect	Wire drop port creation
-opt.ckpoint.1		Do checkpointing every
-opt.ckpoint.2		commands.
+opt.ckpoint		Do checkpointing every %s commands
 opt.freq		Interval
 opt.beak		Enable Special Modes
 opt.bat			Bat
