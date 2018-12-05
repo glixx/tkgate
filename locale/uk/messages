@@ -1,9 +1,9 @@
-\language				українська
 \font-encoding			koi8-u
 \display-encoding		KOI8-U
 \messages-encoding		utf-8
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
+\language				українська
 
 b.new	Створити…
 b.dismiss	Відкинути

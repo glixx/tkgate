@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-04 12:16+0300\n"
+"POT-Creation-Date: 2018-12-05 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4463,11 +4463,6 @@ msgctxt "circ.sim.tv.after.1"
 msgid "Report timing violations after"
 msgstr ""
 
-#: en/messages:1533
-msgctxt "circ.sim.tv.after.2"
-msgid "-empty-"
-msgstr ""
-
 #: en/messages:1534
 msgctxt "circ.sim.tv.never"
 msgid "Never report timing violations."
@@ -7616,7 +7611,7 @@ msgid ""
 "(at your option) any later version."
 msgstr ""
 
-#: en/messages:2995
+#: en/messages:2994
 msgctxt "license2"
 msgid ""
 "TkGate is distributed in the hope that it will be useful, but\n"
@@ -7625,7 +7620,7 @@ msgid ""
 "GNU General Public License for more details."
 msgstr ""
 
-#: en/messages:3002
+#: en/messages:3000
 msgctxt "license3"
 msgid ""
 "You should have received a copy of the GNU General Public License\n"

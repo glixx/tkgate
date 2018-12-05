@@ -1,4 +1,3 @@
-\language				日本語
 \font-encoding			iso8859-1
 \messages-encoding		euc-jp
 \verilog-encoding		euc-jp
@@ -10,3 +9,4 @@
 @opt.tool.colwidth			30
 @opt.sidebar.width			*200
 @find.qual.pos			after
+\language				日本語

@@ -136,7 +136,8 @@ foreach pair $messagesLine2Key(m) {
 	set keyName [lindex $pair 1]
 	set msgVal $messagesHash($keyName,m)
 	regsub -all "\"" $msgVal "\\\"" msgVal
-	if {([string index $msgVal 0] != "`")} {
+	if {([string index $msgVal 0] != "`") &&
+	    ([string equal $msgVal "-empty-"] == 0)} {
 		puts $f0 ""
 		puts $f0 "#: $options_m:$str"
 		puts $f0 "msgctxt \"$keyName\""

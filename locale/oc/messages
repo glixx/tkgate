@@ -1,9 +1,9 @@
-\language				occitan
 \font-encoding			iso8859-15
 \display-encoding		iso8859-15
 \messages-encoding		utf-8
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
+\language				occitan
 
 b.new	Novèl...
 b.close	Tampar

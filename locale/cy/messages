@@ -1,9 +1,9 @@
-\language				cymraeg
 \font-encoding			iso8859-14
 \display-encoding		iso8859-14
 \messages-encoding		utf-8
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
+\language				cymraeg
 
 b.dismiss	Gwaredu
 b.close	Cau

@@ -1,9 +1,9 @@
-\language				lietuvių
 \font-encoding			iso8859-4
 \display-encoding		iso8859-4
 \messages-encoding		utf-8
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
+\language				lietuvių
 
 b.ok	Gerai
 b.clear	Išvalyti

@@ -138,44 +138,20 @@ do
 
     # delete resulted files
     rm -f $lang/messages
-    rm -f $lang/license.txt
+
     # determine messages-encoding
-    enc=`cat $lang/config.txt|sed "s|\t| |g" |grep messages-encoding|cut -d " " --fields=2`
+    enc=`cat $lang/config.txt|sed "s|\t\t| |g" |grep messages-encoding|cut -d " " --fields=2`
     # if messages-encoding is not empty
     if [ ! -z $enc ]
     then
-       echo "Converting $lang/messages.utf8 in $enc"
-       iconv -f UTF-8 -t $enc $lang/messages.utf8 > $lang/messages
+       echo "Converting $lang/messages.utf8 in $enc -> $lang/messages"
     # if messages-encoding is empty
     else
        echo "Missing messages-encoding in $lang/config.txt, using utf-8"
-       iconv -f UTF-8 -t UTF-8 $lang/messages.utf8 > $lang/messages
+       enc="utf-8"
     fi
-    # delete temporary file
-    rm -f $lang/messages.utf8
+    # converting
+    iconv -f UTF-8 -t $enc//TRANSLIT $lang/messages.utf8 > $lang/messages
 
-    if [ -f "$lang/messages" ]
-    then
-        d1=`cat $lang/messages|grep "license1"`
-        d2=`cat $lang/messages|grep "license2"`
-        d3=`cat $lang/messages|grep "license3"`
-        # if messages file has full text of licence
-        if [[ ! -z "$d1"  &&  ! -z "$d2"  &&  ! -z "$d3" ]]
-        then
-           echo "Creating $lang/license.txt"
-           # delete header before license1
-           cat $lang/messages |sed '1,/license1/ d' > $lang/license.txt
-           # delete -end- strings
-           sed -i "/-end-/d" $lang/license.txt
-           # replace license2* string on EOL
-           sed -i "s|license2.*$||g" $lang/license.txt
-           # replace license3* string on EOL
-           sed -i "s|license3.*$||g" $lang/license.txt
-        # if messages file has no full text of licence
-        else
-           echo "Do not create $lang/license.txt, not fully translated"
-        fi
-    else
-        echo "File $lang/messages does not exists"
-    fi
+    rm -f $lang/messages.utf8
 done
