@@ -1,0 +1,280 @@
+\font-encoding			iso8859-1
+\display-encoding		iso8859-1
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				dansk
+
+b.new	Ny ...
+b.dismiss	Afvis
+b.close	Luk
+b.ok	O.k.
+b.clear	Ryd
+b.cancel	Afbryd
+b.in	ind
+b.out	ud
+b.inout	indud
+b.browse	Gennemse ...
+b.label	Etiket
+b.find	Søg
+b.edit	Rediger ...
+b.add	Tilføj ...
+b.delete	Slet
+b.remove	Fjern
+b.apply	Anvend
+b.anchor	Anker
+b.tech	Teknologi
+tab.edit	Redigering
+tab.editintr	Grænseflade
+tab.simulate	Simuler
+tab.cpath	Kritisk sti
+fpattern.v	Verilog - netliste
+fpattern.vs	Verilog - skriptfiler
+fpattern.gdf	TkGate - forsinkelsesfil
+fpattern.xbm	X11-bitmap
+fpattern.mem	TkGate - hukommelsesaftryksfiler
+fpattern.all	Alle filer
+module.tree	Træ
+module.list	Liste
+module.box.libraries	Biblioteker
+sidetab.nets	Net
+sidetab.ports	Porte
+mm.add	Tilføj ...
+mm.delete	Slet
+mm.edit	Rediger ...
+mm.enable	Aktiver
+mm.disable	Deaktiver
+menu.file	0:Fil
+menu.edit	0:Rediger
+menu.tool	0:Værktøj
+menu.symbol	0:Symbol
+menu.simulate	0:Simuler
+menu.module	0:Modul
+menu.interface	0:Grænseflade
+menu.format	0:Format
+menu.make	0:Komponenter
+menu.help	0:Hjælp
+menu.file.new	0:Ny ...
+menu.file.open	0:Åbn ...
+menu.file.openlib	0:Bibliotekshåndtering ...
+menu.file.save	0:Gem
+menu.file.saveas	5:Gem som ...
+menu.file.print	0:Udskriv ...
+menu.file.quit	0:Afslut
+menu.file.cprop	0:Kredsløbsegenskaber ...
+menu.file.import	0:Importer billede ...
+menu.file.export	0:Eksporter billede ...
+menu.edit.undo	0:Genskab
+menu.edit.redo	0:Omgør
+menu.edit.cut	0:Klip
+menu.edit.copy	3:Kopier
+menu.edit.paste	0:Indsæt
+menu.edit.selall	0:Vælg alle
+menu.edit.find	0:Søg ...
+menu.edit.zoomin	5:Zoom ind
+menu.edit.zoomout	5:Zoom ud
+menu.tool.debug	0:Fejlsøg
+menu.tool.line	0:Linje
+menu.tool.rect	0:Rektangel
+menu.tool.fillrect	0:Fyld rektangel
+menu.tool.port	0:Port
+menu.tool.select	0:Vælg område
+menu.tool.options	0:Indstillinger ...
+menu.format.addport	4:Tilføj port
+menu.format.del	0:Slet
+menu.simulate.pause	0:Pause
+menu.module.open	0:Åbn
+menu.module.close	0:Luk
+menu.module.new	0:Ny ...
+menu.module.del	0:Slet ...
+menu.module.copy	1:Kopier ...
+menu.module.rename	0:Omdøb ...
+menu.module.prop	0:Egenskaber ...
+menu.module.interface	0:Grænseflade
+menu.module.interface.edit	0:Rediger ...
+menu.help.license	0:Licens ...
+menu.help.doc	0:Dokumentation ...
+menu.help.home	1:Hjemmeside
+menu.help.example	1:Eksempler
+menu.scope_file	0:Fil
+menu.scope_sim	0:Simuler
+menu.scope_help	0:Hjælp
+menu.scope_file.close	0:Luk
+menu.scope_trace.zoomin	5:Zoom ind
+menu.scope_trace.zoomout	5:Zoom ud
+menu.scope_sim.pause	0:Pause
+menu.scope_help.license	0:Licens ...
+menu.scope_help.doc	0:Dokumentation ...
+mod.intf	Grænseflade
+port.parms	Portparametre
+port.in	Ind
+port.out	Ud
+port.inout	IndUd
+gm.signals	Signaler
+gm.mem	Hukommelse
+gm.mod	Modul
+gm.comment	Kommentar
+gm.alu.lshift	Venstre skift
+gm.alu.rshift	Højre skift
+gm.mem.ram	RAM
+gm.mem.rom	ROM
+pop.make	Komponenter
+pop.tool	Værktøj
+pop.edit.paste	Indsæt
+pop.edit.cut	Klip
+pop.edit.copy	Kopier
+pop.port.in	Ind
+pop.port.out	Ud
+pop.port.inout	IndUd
+pop.wire.hidelabel	Skjul etiket
+pop.wire.hidealllabel	Skjul alle etiketter
+pop.wire.clearalllabel	Ryd alle etiketter
+pop.wire.showlabel	Vis etiket
+pop.gate.open	Åbn
+pop.gate.close	Luk
+pop.gate.addport	Tilføj port
+pop.gate.addinout	Tilføj IndUd ...
+pop.gate.delete	Slet
+pop.module.new	Ny ...
+pop.module.rename	Omdøb ...
+pop.interface	Grænseflade
+pop.interface.edit	Rediger ...
+pop.interface.replace	Erstat
+pop.igen.type	Type
+pop.igen.size	Størrelse
+pop.igen.delete	Slet
+pop.igen.in	ind
+pop.igen.out	ud
+pop.igen.inout	indud
+pop.igen.left	venstre
+pop.igen.right	højre
+pop.igen.top	top
+pop.igen.bottom	bund
+pop.igen.other	anden
+pop.library.mgr	Bibliotekshåndtering ...
+memview.title	Hukommelsesfremviser
+ifile	Fil
+imodule	Modul
+iblmodule	Moduler
+iports	Porte
+ibits	Bit:
+itype	Type:
+db.mod.name	Navn
+db.mod.file	Filnavn
+db.mod.type	Type
+db.mod.flags	Flag
+db.mod.dataprot	Forhindr redigering af moduldefinition.
+db.mod.intfprot	Forhindr alle grænsefladeændringer.
+db.mod.props	Egenskaber
+db.mod.inuse.0	Modul er ikke i brug.
+db.mod.inuse.1	Modul er i brug.
+db.mod.lmod.0	Modul er ikke blevet ændret siden indlæsning.
+db.mod.lmod.1	Modul er blevet ændret siden indlæsning.
+db.mod.smod.0	Modul er ikke blevet ændret siden sidste lagring.
+db.mod.smod.1	Modul er blevet ændret siden sidste lagring.
+db.mod.islib.1	Modul er en del af [%s]-biblioteket.
+db.mod.islib.0	Modul er ikke et biblioteksmodul.
+db.err.title	TkGate: Fejlliste
+db.err.caption	Fejlliste
+db.net.hide	Skjul navn
+db.net.bits	Bit-bredde
+db.net.type	Net-type
+db.net.port	Porttype
+db.net.in	ind
+db.net.out	ud
+db.net.inout	indud
+db.net.inets	Net
+db.newcirc.directory	Mappe:
+db.newcirc.cap	Nyt kredsløb
+db.newcirc.file	Filnavn
+db.gate.iotype	Type
+db.gate.bitw	Bit-bredde
+db.gate.cyclew	Periode
+db.gate.phase	Fase
+db.gate.port	Port
+db.gate.bitws	Bit
+db.gate.gtype	Type
+db.gate.hidenam	Skjul navn
+db.gate.anchor	Anker
+db.gate.memfilenam	Hukommelsesfil
+db.gate.modname	Type
+db.gate.details	Detaljer
+db.gate.text	Tekst
+db.gate.ports	Port
+db.gate.delay	Forsinkelse
+db.gate.parameters	Parametre
+db.gate.stddelay	Standardforsinkelse
+db.gate.custdelay	Tilpasset forsinkelse
+db.gate.catdiruse	Portplacering
+db.gate.edit	Rediger
+db.gate.delete	Slet
+db.gate.add	Tilføj
+db.gate.cat.asc.hdr	Stigende
+db.gate.tab.General.cap	Generelle egenskaber
+db.gate.tab.Parameters.cap	Modulparametre
+db.gate.tab.DIP.cap	DIP-egenskaber
+db.gate.tab.RAM.cap	RAM-egenskaber
+db.gate.tab.ROM.cap	ROM-egenskaber
+db.gate.tab.MODULE.cap	Modulegenskaber
+db.gate.tab.FRAME.cap	Rammeegenskaber
+db.gate.tab.LED.cap	LED-egenskaber
+db.gate.tab.AND.cap	AND-egenskaber
+db.gate.tab.OR.cap	OR-egenskaber
+db.gate.tab.XOR.cap	XOR-egenskaber
+db.gate.tab.MUX.cap	Mux-egenskaber
+db.gate.tab.DEMUX.cap	Demux-egenskaber
+db.gate.tab.COMMENT.cap	Tekstegenskaber
+db.gate.tab.Ports.exp	Tilføj, rediger eller slet porte på en instans.
+db.hdl.cancel	Afbryd
+print.file	Fil
+print.filename	Filnavn
+print.tab.modules	Moduler
+opt.treelabel	Indstillinger
+opt.interface	Grænseflade
+opt.simulate	Simuler
+opt.simulate.tech	Teknologi
+opt.library	Biblioteker
+opt.mods	Moduler
+opt.cpath	Kritisk sti
+opt.tool.file	Fil
+opt.tool.edit	Rediger
+opt.tool.gateprop	Komponenter
+opt.tool.module	Modul
+opt.tool.tech	Teknologi
+opt.tool.symport	Porte
+igen.port	Port
+igen.type	Type
+igen.size	Størrelse
+igen.bits	Bit
+igen.add	Tilføj
+igen.delete	Slet
+igen.edit	Rediger
+module.props	Modulegenskaber
+blklst.name	Navn
+find.result.module	Modul
+find.result.type	Type
+circ.file	Filnavn
+circ.flags	Indstillinger
+circ.library	Biblioteker
+verga.err.FUNCASTASK	Funktionen »%s« brugt som opgave.
+cprt.descr	Digitalt kredsløbsredigeringsprogram og simulator
+ho.mod.type.unknown	Ukendt modultype
+ho.mod.type.hdl	HDL-modul
+ho.tool.delete	Slet markeringen.
+license1	-begin-
+TtGate er fri software. Du kan redistribuere og/eller ændre programmet
+under betingelserne givet i GNU General Public License som udgives af
+Free Software Foundation; enten version 2 af licensen, eller (hvis du
+ønsker det) enhver senere version.
+-end-
+license2	-begin-
+Gossip distribueres i håb om at programmet er nyttigt, men uden
+NOGEN GARANTI, ikke engang underforstået garanti om at det er
+SALGBART eller PASSER TIL ET BESTEMT FORMÅL. Se GNU
+General Public License for detaljer.
+-end-
+license3	-begin-
+Du bør have modtaget en kopi af GNU General Public License sammen med
+TtGate. Hvis du ikke har det, kan du skrive til Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-end-

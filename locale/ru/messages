@@ -1,0 +1,2203 @@
+\font-encoding			koi8-r
+\display-encoding		KOI8-R
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				русский
+
+b.new	Создать...
+b.dismiss	Отклонить
+b.close	Закрыть
+b.ok	OK
+b.clear	Очистить
+b.cancel	Отмена
+b.in	вход
+b.out	выход
+b.inout	вход-выход
+b.browse	Просмотр...
+b.label	Надпись
+b.find	Найти
+b.edit	Редактировать...
+b.add	Добавить...
+b.delete	Удалить
+b.remove	Удалить
+b.apply	Применить
+b.anchor	Прикрепить
+b.tech	Технология
+tab.edit	Редактирование
+tab.editintr	Интерфейс
+tab.simulate	Симуляция
+tab.cpath	Критический путь
+fpattern.v	Список соединений Verilog
+fpattern.vs	Скрипт Verilog
+fpattern.gdf	Файл задержек TkGate
+fpattern.xbm	Растровое изображение X11
+fpattern.mem	Файлы образов памяти TkGate
+fpattern.all	Все файлы
+module.tree	Дерево
+module.list	Список
+module.box.libraries	Библиотеки
+sidetab.nets	Цепи
+sidetab.ports	Порты
+mm.add	Добавить...
+mm.delete	Удалить
+mm.edit	Редактировать...
+mm.enable	Включить
+mm.disable	Отключить
+menu.file	0:Файл
+menu.edit	0:Правка
+menu.tool	0:Инструменты
+menu.symbol	0:Символ
+menu.simulate	0:Симуляция
+menu.module	0:Модуль
+menu.interface	0:Интерфейс
+menu.format	0:Формат
+menu.make	0:Компоненты
+menu.help	0:Справка
+menu.file.new	0:Создать...
+menu.file.open	0:Открыть...
+menu.file.openlib	0:Управление библиотеками...
+menu.file.save	0:Сохранить
+menu.file.saveas	5:Сохранить как...
+menu.file.print	0:Печать...
+menu.file.quit	0:Выход
+menu.file.cprop	0:Параметры Схемы...
+menu.file.import	0:Импортировать изображение...
+menu.file.export	0:Экспортировать изображение...
+menu.edit.undo	0:Отменить
+menu.edit.redo	0:Повторить
+menu.edit.cut	0:Вырезать
+menu.edit.copy	3:Копировать
+menu.edit.paste	0:Вставить
+menu.edit.overlay	0:Вставка с наложением
+menu.edit.selall	0:Выделить Все
+menu.edit.find	0:Найти...
+menu.edit.zoomin	5:Увеличить
+menu.edit.zoomout	5:Уменьшить
+menu.edit.rshift	10:Сдвиг пикселей вправо
+menu.edit.lshift	10:Сдвиг пикселей влево
+menu.edit.ushift	10:Сдвиг пикселей вверх
+menu.edit.dshift	10:Сдвиг пикселей вниз
+menu.edit.cwrotate	11:Повернуть биты по часовой стрелке
+menu.edit.ccwrotate	15:Повернуть биты против часовой стрелки
+menu.edit.pcwrotate	12:Повернуть порт по часовой стрелке
+menu.edit.pccwrotate	16:Повернуть порт против часовой стрелки
+menu.edit.autobold	Сделать жирным
+menu.edit.resize	Изменить размер изображения
+menu.tool.move	0:Переместить/Соединить
+menu.tool.delg	0:Удалить компонент
+menu.tool.cutw	0:Разрезать провод
+menu.tool.inv	0:Обратить
+menu.tool.bitw	0:Разрядность
+menu.tool.debug	0:Отладка
+menu.tool.point	0:Точка
+menu.tool.line	0:Линия
+menu.tool.rect	0:Прямоугольник
+menu.tool.fillrect	0:Заполнить прямоугольник
+menu.tool.port	0:Порт
+menu.tool.select	0:Выбрать область
+menu.tool.options	0:Настройки...
+menu.format.addport	4:Добавить порт
+menu.format.ioset	0:Установить тип
+menu.format.anchor	0:Прикрепить выделенное
+menu.format.unanchor	0:Освободить выделенное
+menu.format.prop	0:Свойства экземпляра...
+menu.format.del	0:Удалить
+menu.format.settech	0:Установить технологию
+menu.format.rot	0:Поворот
+menu.format.rot.0	17:Поворот по умолчанию 0
+menu.format.rot.90	17:Поворот по умолчанию 90
+menu.format.rot.180	17:Поворот по умолчанию 180
+menu.format.rot.270	17:Поворот по умолчанию 270
+menu.format.rot.rotate	10:Повернуть по часовой стрелке
+menu.format.rot.brotate	0:Повернуть против часовой стрелки
+menu.format.algnv	6:Вертикальное выравнивание
+menu.format.algnh	6:Горизонтальное выравнивание
+menu.tool.tclshell	0:Оболочка Tcl
+menu.tool.rep	0:Клонирование
+menu.simulate.begin	0:Начать симуляцию
+menu.simulate.end	0:Закончить симуляцию
+menu.simulate.addprobe	0:Добавить/удалить зонд
+menu.simulate.run	0:Пуск
+menu.simulate.pause	0:Пауза
+menu.simulate.step	0:Шаг на эпоху(и)
+menu.simulate.cycle	5:Шаг на один цикл
+menu.simulate.break	0:Точка остановки...
+menu.simulate.script	1:Выполнить скрипт...
+menu.simulate.load	1:Загрузка памяти...
+menu.simulate.dump	1:Дамп памяти...
+menu.simulate.view	1:Просмотр памяти...
+menu.module.open	0:Открыть
+menu.module.close	0:Закрыть
+menu.module.new	0:Создать...
+menu.module.del	0:Удалить...
+menu.module.copy	1:Копировать...
+menu.module.rename	0:Переименовать...
+menu.module.claim	1:Затребовать...
+menu.module.setroot	1:Установить корневым...
+menu.module.prop	0:Параметры...
+menu.module.interface	0:Интерфейс
+menu.module.interface.set	0:Установить
+menu.module.interface.update	1:Синхронизировать
+menu.module.interface.updateall	6:Синхронизировать все...
+menu.module.interface.edit	0:Редактировать...
+menu.module.interface.auto	5:Автогенерация...
+menu.help.about	0:О программе...
+menu.help.license	0:Лицензионное соглашение...
+menu.help.doc	0:Документация...
+menu.help.tut	1:Обучающие Руководства
+menu.help.home	1:Домашняя Страница
+menu.help.example	1:Примеры
+menu.scope_file	0:Файл
+menu.scope_sim	0:Симуляция
+menu.scope_trace	0:Трассировка
+menu.scope_help	0:Справка
+menu.scope_file.ptrace	0:Печать трассировки...
+menu.scope_file.close	0:Закрыть
+menu.scope_trace.zoomin	5:Увеличить
+menu.scope_trace.zoomout	5:Уменьшить
+menu.scope_sim.addprobe	0:Добавить/удалить зонд
+menu.scope_sim.run	0:Пуск
+menu.scope_sim.pause	0:Пауза
+menu.scope_sim.step	0:Шаг на эпоху(и)
+menu.scope_sim.cycle	5:Шаг на один цикл
+menu.scope_sim.break	0:Точка остановки...
+menu.scope_sim.script	1:Выполнить скрипт...
+menu.scope_sim.load	1:Загрузка памяти...
+menu.scope_sim.dump	1:Дамп памяти...
+menu.scope_help.about	0:О программе...
+menu.scope_help.license	0:Лицензионное соглашение...
+menu.scope_help.doc	0:Документация...
+mod.intf	Интерфейс
+port.title	TkGate: Свойства порта
+port.parms	Параметры порта
+port.in	Вход
+port.out	Выход
+port.inout	Вход-выход
+gm.signals	Сигналы
+gm.io	Ввод/вывод
+gm.gate	Вентиль
+gm.rgate	Редукция
+gm.msi	СИС
+gm.alu	АЛУ
+gm.mem	Память
+gm.mod	Модуль
+gm.comment	Комментарий
+gm.script	Скрипт Verilog
+gm.frame	Рамка
+gm.signals.pullup	Подтяжка к питанию
+gm.signals.pulldown	Подтяжка к земле
+gm.signals.ground	Земля
+gm.signals.vdd	Питание
+gm.io.switch	Переключатель
+gm.io.dip	DIP-переключатель
+gm.io.merge	Объединение
+gm.io.clock	Генератор синхросигнала
+gm.io.led	Светодиод
+gm.io.ledbar	Панель светодиодов
+gm.io.ledhex	7-сег. индикатор (16 предст.)
+gm.io.leddec	7-сег. индикатор (10 предст.)
+gm.io.ledseg	7-сег. индикатор (прямое управление)
+gm.io.tty	TTY
+gm.gate.and	И
+gm.gate.nand	И-НЕ
+gm.gate.or	ИЛИ
+gm.gate.nor	ИЛИ-НЕ
+gm.gate.xor	ИСКЛ-ИЛИ
+gm.gate.xnor	ИСКЛ-ИЛИ-НЕ
+gm.gate.buf	Буфер
+gm.gate.inv	Инвертор
+gm.gate.tribuf	Буфер с тремя состояниями
+gm.gate.nmos	N-МОП
+gm.gate.pmos	P-МОП
+gm.rgate.and	И
+gm.rgate.nand	И-НЕ
+gm.rgate.or	ИЛИ
+gm.rgate.nor	ИЛИ-НЕ
+gm.rgate.xor	ИСКЛ-ИЛИ
+gm.rgate.xnor	ИСКЛ-ИЛИ-НЕ
+gm.alu.add	Сумматор
+gm.alu.mult	Умножитель
+gm.alu.div	Делитель
+gm.alu.lshift	Левый сдвиг
+gm.alu.rshift	Правый сдвиг
+gm.alu.arshift	Арифм. правый сдвиг
+gm.alu.roll	Вращение
+gm.mem.reg	Регистр
+gm.mem.ff	D триггер
+gm.mem.rff	Обр. D триггер
+gm.mem.ram	ОЗУ
+gm.mem.rom	ПЗУ
+gm.mem.jkff	JK триггер
+gm.mem.rjkff	Обр. JK триггер
+gm.msi.21mux	2-1 Мультиплексор
+gm.msi.41mux	4-1 Мультиплексор
+gm.msi.81mux	8-1 Мультиплексор
+gm.msi.12dec	1-2 Дешифратор
+gm.msi.14dec	1-4 Дешифратор
+gm.msi.18dec	1-8 Дешифратор
+gm.msi.12demux	1-2 Демультиплексор
+gm.msi.14demux	1-4 Демультиплексор
+gm.msi.18demux	1-8 Демультиплексор
+gm.mod.inst	Экземпляр модуля
+gm.mod.in	Вход модуля
+gm.mod.out	Выход модуля
+gm.mod.inout	Вход-выход модуля
+tutorial.prev	ПРЕДЫДУЩИЙ
+tutorial.next	СЛЕДУЮЩИЙ
+tutorial.chapter	СПИСОК РАЗДЕЛОВ
+tutorial.reload	ПЕРЕЗАГРУЗИТЬ
+pop.make	Компоненты
+pop.tool	Инструменты
+pop.edit.paste	Вставить
+pop.edit.cut	Вырезать
+pop.edit.copy	Копировать
+pop.port.in	Вход
+pop.port.out	Выход
+pop.port.inout	Вход-выход
+pop.wire.addseg	Добавить сегмент провода
+pop.wire.prop	Свойства цепи...
+pop.wire.hidesize	Скрыть разрядность
+pop.wire.showsize	Показать разрядность
+pop.wire.hidelabel	Скрыть надпись
+pop.wire.hidealllabel	Скрыть все надписи
+pop.wire.clearalllabel	Очистить все надписи
+pop.wire.showlabel	Показать надпись
+pop.gate.open	Открыть
+pop.gate.close	Закрыть
+pop.gate.prop	Свойства экземпляра...
+pop.gate.addport	Добавить порт
+pop.gate.addin	Добавить вход...
+pop.gate.addout	Добавить выход...
+pop.gate.addinout	Добавить вход-выход...
+pop.gate.anchor	Привязать/Освободить
+pop.gate.settech	Установить технологию
+pop.gate.delete	Удалить
+pop.gate.ioset	Установить тип
+pop.module.new	Создать...
+pop.module.del	Удалить...
+pop.module.copy	Копировать...
+pop.module.rename	Переименовать...
+pop.module.claim	Затребовать...
+pop.module.setroot	Установить корневым...
+pop.module.prop	Свойства модуля...
+pop.module.int	Редактировать интерфейс...
+pop.simulate.end	Завершить симуляцию
+pop.simulate.begin	Начать симуляцию
+pop.simulate.addprobe	Добавить/удалить зонд
+pop.simulate.delprobe	Удалить зонд
+pop.simulate.run	Пуск
+pop.simulate.pause	Пауза
+pop.simulate.step	Шаг на эпоху(и)
+pop.simulate.cycle	Шаг на один цикл
+pop.simulate.break	Точка остановки...
+pop.simulate.script	Выполнить скрипт...
+pop.simulate.load	Загрузка памяти...
+pop.simulate.dump	Дамп памяти...
+pop.simulate.view	Просмотр памяти...
+pop.interface	Интерфейс
+pop.interface.set	Установить по умолчанию
+pop.interface.update	Синхрониз. по умолчанию
+pop.interface.updateall	Синхрониз. все по умолчанию...
+pop.interface.edit	Редактировать...
+pop.interface.auto	Автогенерация...
+pop.interface.replace	Заменить
+pop.igen.type	Тип
+pop.igen.side	Сторона
+pop.igen.size	Размер
+pop.igen.delete	Удалить
+pop.igen.in	вход
+pop.igen.out	выход
+pop.igen.inout	вход-выход
+pop.igen.left	слева
+pop.igen.right	справа
+pop.igen.top	сверху
+pop.igen.bottom	снизу
+pop.igen.other	другой
+pop.library.mgr	Менеджер библиотек...
+pop.library.close	Выгрузить
+symed.tab.normal	Невыделенный
+symed.tab.select	Выделенный
+symed.link	Связать выделенное с невыделенным
+memview.title	Просмотр памяти
+memview.exp	-begin-
+Просматривайте и редактируйте
+содержимое компонента ОЗУ или ПЗУ.
+Выберите страницу памяти, затем
+вводите 16-ричные числа для изменения
+содержимого ячеек памяти.
+-end-
+scope.title	TkGate: Логический анализатор
+scope.emptymsg	Дважды щёлкните по проводнику чтобы добавить или удалить трассировку.
+comment.empty	[Дважды щёлкните для добавления текста.]
+ifile	Файл
+imodule	Модуль
+iblmodule	Модули
+iports	Порты
+ibits	Разрядн.:
+itype	Тип:
+db.mod.name	Имя
+db.mod.file	Имя файла
+db.mod.type	Тип
+db.mod.flags	Флаги
+db.mod.dataprot	Запретить изменение определения модуля.
+db.mod.intfprot	Запретить любые изменения интерфейса.
+db.mod.edprot	Запретить изменять интерфейс вне редактора.
+db.mod.props	Свойства
+db.mod.inuse.0	Модуль не используется.
+db.mod.inuse.1	Модуль используется.
+db.mod.lmod.0	Модуль не менялся с момента загрузки.
+db.mod.lmod.1	Модуль изменился с момента загрузки.
+db.mod.smod.0	Модуль не менялся после сохранения.
+db.mod.smod.1	Модуль изменился после сохранения.
+db.mod.islib.1	Модуль является частью [%s] библиотеки.
+db.mod.islib.0	Модуль не является библиотечным.
+db.mod.netlist	Список цепей
+db.mod.hdl	Verilog HDL
+db.mod.netexpl	-begin-
+Определить модуль, используя
+графический редактор для
+соединения элементов
+проводами.
+-end-
+db.mod.hdlexpl	-begin-
+Определить модуль, используя
+текстовый редактор Verilog
+описания.
+-end-
+db.err.title	TkGate: Список ошибок
+db.err.caption	Список ошибок
+db.err.explain.warn	-begin-
+В схеме были предупреждения, но симуляция будет продолжена. Вернитесь
+в режим редактирования для просмотра предупреждений.
+-end-
+db.err.explain.err	Схема содержит ошибки. TkGate не может начать симуляцию.
+db.err.neededit	Для просмотра ошибок и замечаний необходимо переключиться в режим редактирования.
+db.net.title	TkGate: Свойства цепи
+db.net.caption	Свойства цепи
+db.net.name	Название цепи
+db.net.hide	Скрыть имя
+db.net.bits	Разрядность
+db.net.type	Тип цепи
+db.net.port	Тип порта
+db.net.in	вход
+db.net.out	выход
+db.net.inout	вход-выход
+db.net.inets	Цепи
+db.newcirc.title	TkGate: Новая схема
+db.newcirc.directory	Каталог:
+db.newcirc.cap	Новая схема
+db.newcirc.exp	Отказаться от текущей схемы и начать новую...
+db.newcirc.file	Имя файла
+db.newcirc.topname	Имя модуля верхнего уровня
+db.gate.title	TKGate: Свойства компонента
+db.gate.signam	Имя сигнала
+db.gate.portnam	Имя порта
+db.gate.iotype	Тип
+db.gate.bitw	Разрядность
+db.gate.cyclew	Период
+db.gate.phase	Фаза
+db.gate.duty	Заполнение
+db.gate.waveform	Форма синхросигнала
+db.gate.port	Порт
+db.gate.bitws	Разр.
+db.gate.side	Сторона
+db.gate.gtype	Тип
+db.gate.gname	Имя экземпляра
+db.gate.hidenam	Скрыть имя
+db.gate.anchor	Прикрепить
+db.gate.cpbreak	Разделение критического пути
+db.gate.butstate	Состояние кнопки
+db.gate.dipval	Состояние переключателя
+db.gate.range	Битовый диапазон
+db.gate.memfilenam	Файл памяти
+db.gate.modname	Тип
+db.gate.general	Общие
+db.gate.details	Детали
+db.gate.text	Текст
+db.gate.ports	Порт
+db.gate.delay	Задержка
+db.gate.parameters	Параметры
+db.gate.stddelay	Стандартная задержка
+db.gate.custdelay	Специальная задержка
+db.gate.catdiruse	Размещение порта
+db.gate.edit	Правка
+db.gate.delete	Удалить
+db.gate.add	Добавить
+db.gate.ff.type	Расположение D-триггера
+db.gate.ff.normal.hdr	Прямое
+db.gate.ff.normal.exp	-begin-
+D-триггер с направлением данных
+слева направо.
+-end-
+db.gate.ff.reverse.hdr	Обратное
+db.gate.ff.reverse.exp	-begin-
+D-триггер с направлением данных
+справа налево.
+-end-
+db.gate.jkff.type	Расположение JK-триггера
+db.gate.jkff.normal.hdr	Прямое
+db.gate.jkff.normal.exp	-begin-
+JK-триггер с направлением данных
+слева направо.
+-end-
+db.gate.jkff.reverse.hdr	Обратное
+db.gate.jkff.reverse.exp	-begin-
+JK-триггер с направлением данных
+справа налево.
+-end-
+db.gate.cat.asc.hdr	По возрастанию
+db.gate.cat.dec.hdr	По убыванию
+db.gate.cat.asc.exp	Биты объединяются по возрастанию сверху вниз.
+db.gate.cat.dec.exp	Биты объединяются по убыванию сверху вниз.
+db.gate.cat.sigdir	Направление сигнала
+db.gate.cat.auto.hdr	Автоматически
+db.gate.cat.multin.hdr	Многовходовый
+db.gate.cat.singin.hdr	Одновходовый
+db.gate.cat.tran.hdr	Двунаправленный
+db.gate.cat.auto.exp	-begin-
+Определить направление сигнала автоматически
+по подключенным цепям.
+-end-
+db.gate.cat.multin.exp	-begin-
+Всегда считать множественную
+сторону входом.
+-end-
+db.gate.cat.singin.exp	Всегда считать одиночную сторону входом.
+db.gate.cat.tran.exp	-begin-
+Разрешить двунаправленную передачу сигнала.
+Нельзя подключить к переключателям и регистрам.
+-end-
+db.gate.tab.General.cap	Общие свойства
+db.gate.tab.Ports.cap	Свойства порта
+db.gate.tab.Delay.cap	Свойства задержки
+db.gate.tab.Parameters.cap	Свойства модуля
+db.gate.tab.CLOCK.cap	Свойства генератора синхросигналов
+db.gate.tab.SWITCH.cap	Свойства переключателя
+db.gate.tab.DIP.cap	Свойства DIP-переключателя
+db.gate.tab.TAP.cap	Tran Properties
+db.gate.tab.RAM.cap	Свойства ОЗУ
+db.gate.tab.ROM.cap	Свойства ПЗУ
+db.gate.tab.MODULE.cap	Свойства модуля
+db.gate.tab.FRAME.cap	Свойства рамки
+db.gate.tab.LED.cap	Свойства светодиода
+db.gate.tab.AND.cap	Свойства вентиля И
+db.gate.tab.OR.cap	Свойства вентиля ИЛИ
+db.gate.tab.XOR.cap	Свойства вентиля ИСКЛ. ИЛИ
+db.gate.tab.MUX.cap	Свойства мультиплексора
+db.gate.tab.DEMUX.cap	Свойства демультиплексора
+db.gate.tab.DECODER.cap	Свойства дешифратора
+db.gate.tab.CONCAT.cap	Свойства объединения
+db.gate.tab.COMMENT.cap	Текст
+db.gate.tab.FF.cap	Свойства D-триггера
+db.gate.tab.JKFF.cap	Свойства JK-триггера
+db.gate.tab.SCRIPT.cap	Свойства Verilog скрипта
+db.gate.tab.General.exp	Просмотр и редактирование основных свойств экземпляра.
+db.gate.tab.Ports.exp	Добавить, редактировать или удалить порты экземпляра.
+db.gate.tab.Delay.exp	-begin-
+Задержки могут быть установлены как технология или как специфичные
+для этого экземпляра значения.
+-end-
+db.gate.tab.Parameters.exp	-begin-
+Установите параметры для этого экземпляра модуля, если таковые
+определены. Параметры используются для определения задержек
+и констант, используемых в модуле.
+-end-
+db.gate.tab.details.exp	-begin-
+Установите здесь детальные параметры, специфичные
+для данного типа компонента.
+-end-
+db.gate.tab.COMMENT.exp	-begin-
+Введите текст, который будет отображаться в комментарии.
+Некоторые HTML тэги могут быть использованы (
+<h1> - <h3>, <a>, <p>, <font> и др.).
+-end-
+db.gate.tab.SCRIPT.exp	-begin-
+Здесь вводится произвольный Verilog код,
+который станет частью модуля.
+-end-
+db.gate.mparm.parameter	Параметр
+db.gate.mparm.value	Значение
+db.gate.mparm.exampleA	-begin-
+Этот модуль не имеет параметров. Параметры могут
+быть добавлены в текстовые модули Verilog. Значения
+параметров могут быть выбраны для каждого экземпляра
+модуля в данном диалоге. Параметры объявляются
+списком через точку с запятой, начиная с символа '#'.
+Ниже приведён пример определения модуля с параметром
+"base_value", который имеет значение по умолчанию 1'b1.
+-end-
+db.gate.mparm.exampleB	-begin-
+module foo #(.base_value(1'b1)) (Z,A,B);
+assign Z = A ^ B ^ base_value;
+endmodule
+-end-
+db.gate.switch.state	Начальное положение
+db.gate.switch.state.on.hdr	Вкл.
+db.gate.switch.state.on.exp	Переключатель будет в положении "Вкл." после начала симуляции.
+db.gate.switch.state.off.hdr	Выкл.
+db.gate.switch.state.off.exp	Переключатель будет в положении "Выкл." после начала симуляции.
+db.gate.switch.shownet	Отображать имя цепи
+db.gate.switch.shownet.on.hdr	Показать
+db.gate.switch.shownet.on.exp	Отображать имя цепи рядом с переключателем.
+db.gate.switch.shownet.off.hdr	Скрыть
+db.gate.switch.shownet.off.exp	Не отображать имя цепи рядом с переключателем.
+db.gate.dip.value	Начальное значение
+db.gate.dip.value.exp	Начальное значение DIP-переключателя после начала симуляции.
+db.gate.dip.value.hex	16-ричное значение:
+db.gate.dip.shownet	Отображать имя цепи
+db.gate.dip.shownet.on.hdr	Показать
+db.gate.dip.shownet.on.exp	Отображать имя цепи рядом с DIP-переключателем.
+db.gate.dip.shownet.off.hdr	Скрыть
+db.gate.dip.shownet.off.exp	Не отображать имя цепи рядом с DIP-переключателем.
+db.gate.tap.select	Ответвление бит
+db.gate.tap.exp.bit	Выберите биты для ответвления от многоразрядной шины.
+db.gate.tap.exp.bus	Выберите наименьший значащий бит из диапазона для ответвления от многоразрядной шины.
+db.gate.tap.lbl.bit	Бит:
+db.gate.tap.lbl.bus	МЗБ:
+db.gate.mux.dataorder	Упорядочивание входов
+db.gate.mux.ord1.hdr	Слева направо
+db.gate.mux.ord2.hdr	Справа налево
+db.gate.mux.ord1.exp	Упорядочить входы мультиплексора слева направо.
+db.gate.mux.ord2.exp	Упорядочить входы мультиплексора справа налево.
+db.gate.mux.select	Расположение входа выбора
+db.gate.mux.sel1.hdr	Слева
+db.gate.mux.sel2.hdr	Справа
+db.gate.mux.sel1.exp	-begin-
+Расположить селектор данных на левой стороне
+мультиплексора.
+-end-
+db.gate.mux.sel2.exp	-begin-
+Расположить селектор данных на правой стороне
+мультиплексора.
+-end-
+db.gate.demux.dataorder	Упорядочивание выходов
+db.gate.demux.ord1.hdr	Слева направо
+db.gate.demux.ord2.hdr	Справа налево
+db.gate.demux.ord1.exp	Упорядочить выходы демультиплексора слева направо.
+db.gate.demux.ord2.exp	Упорядочить выходы демультиплексора справа налево.
+db.gate.demux.select	Расположение входа выбора
+db.gate.demux.sel1.hdr	Слева
+db.gate.demux.sel2.hdr	Справа
+db.gate.demux.sel1.exp	-begin-
+Расположить селектор данных на левой стороне
+демультиплексора.
+-end-
+db.gate.demux.sel2.exp	-begin-
+Расположить селектор данных на правой стороне
+демультиплексора.
+-end-
+db.gate.decoder.dataorder	Упорядочивание выходов
+db.gate.decoder.ord1.hdr	Слева направо
+db.gate.decoder.ord2.hdr	Справа налево
+db.gate.decoder.ord1.exp	Упорядочить выходы дешифратора слева направо.
+db.gate.decoder.ord2.exp	Упорядочить выходы дешифратора справа налево.
+db.gate.decoder.select	Расположение разрешающего входа
+db.gate.decoder.sel1.hdr	Слева
+db.gate.decoder.sel2.hdr	Справа
+db.gate.decoder.sel1.exp	Расположить разрешающий вход дешифратора слева.
+db.gate.decoder.sel2.exp	Расположить разрешающий вход дешифратора справа.
+db.gate.aox.extbaruse	Использование полос расширения
+db.gate.aox.use.hdr	Полосы расширения
+db.gate.aox.nouse.hdr	Нет полос расширения
+db.gate.aox.use.exp	-begin-
+Базовые вентили (И, ИЛИ и т.д.)
+будут использовать полосы расширения
+по мере добавления портов.
+-end-
+db.gate.aox.nouse.exp	-begin-
+Базовые вентили (И, ИЛИ и т.д.) не
+будут использовать полосы расширения
+по мере добавления портов.
+-end-
+db.gate.led.type	Тип светодиода
+db.gate.led.bit.hdr	Бит
+db.gate.led.bar.hdr	Панель
+db.gate.led.hex.hdr	7-сегментный (16-ричный)
+db.gate.led.dec.hdr	7-сегментный (10-тичный)
+db.gate.led.seg.hdr	7-сегментный (Прямое управление)
+db.gate.led.bit.exp	Одиночный светодиод для отображения одноразрядных сигналов.
+db.gate.led.bar.exp	Панель светодиодов для многоразрядных сигналов.
+db.gate.led.hex.exp	-begin-
+7-ми сегментный светодиодный индикатор
+для отображения сигналов в 16-ричной форме.
+-end-
+db.gate.led.dec.exp	-begin-
+7-ми сегментный светодиодный индикатор
+для отображения сигналов в 10-тичной форме.
+-end-
+db.gate.led.seg.exp	-begin-
+Каждый разряд сигнала контролирует
+отдельный сегмент 7-ми сегментного
+светодиодного индикатора.
+-end-
+db.seq.back	<Назад
+db.seq.next	Дальше>
+db.hdl.namechange.title	Имя Verilog модуля изменено
+db.hdl.textdisp.title	Позиционирование текста Verilog
+db.hdl.savecap	Множество модулей
+db.hdl.saveexp	-begin-
+Текстовый буфер для модуля, который Вы только что редактировали,
+содержит более одного определения модуля. Выберите одно из
+действий, описанных справа.
+-end-
+db.hdl.autoedit	Авторедактирование
+db.hdl.split	Разделить
+db.hdl.comment	Закомментировать
+db.hdl.cancel	Отмена
+db.hdl.ignore	Игнорировать
+db.hdl.autoeditcap	Несоответствие имени
+db.hdl.autoeditexp	-begin-
+Текстовое описание модуля не соответствует
+ожидаемому имени. Выберите одно из действий,
+описанных справа для разрешения несоответствия.
+-end-
+db.dip.title	TkGate: значение DIP-переключателя
+cpath.cloops	-begin-
+В вашей схеме обнаружены комбинационные петли.
+Чтобы отобразить результаты анализа схемы, Вы
+должны либо разорвать петлю, либо пометить компоненты
+в петле как точки "Разделение критического пути".
+Цепи, в которых обнаружены петли, перечислены ниже.
+-end-
+print.title	TkGate: Печать
+print.config.title	TkGate: Настройка принтера
+print.scope.title	TkGate: Печать логического анализатора
+print.printer	Принтер:
+print.file	Файл
+print.prcmd	Команда печати:
+print.prname	Принтер
+print.advanced	Настройка...
+print.filename	Имя файла
+print.epssave	Сохранить как инкапсулированный PostScript.
+print.epcm	Эпох/cm
+print.estpg	Ожидается страниц
+print.all	Все
+print.avail	Доступные
+print.cur	Текущий
+print.use	Использованные
+print.sel	Выбранные
+print.inclib	Включая библиотечные модули.
+print.incunused	Включая неиспользуемые модули.
+print.papsz	Размер бумаги
+print.orient	Ориентация
+print.portrait	Портретная
+print.landscape	Альбомная
+print.2side	Двусторонняя печать
+print.opts	Параметры содержания
+print.scale	Масштабировать большие модули для соответствия странице.
+print.partition	Делить большие модули на несколько страниц.
+print.incidx	Включая индекс.
+print.incgraph	Включая граф. иерархии.
+print.4up	Печатать небольшие модули по четыре на странице.
+print.rangeselection	Выбор диапазона
+print.scaleselect	Выбор масштаба
+print.fulltr	Полная трассировка
+print.parttr	Частичная трассировка
+print.start	Начало
+print.range	Диапазон
+print.linelen	Длина строки
+print.filesel	Вывод в файл
+print.printersel	Вывод на принтер
+print.defaultprinter	Принтер по умолчанию
+print.pageset	Настройка страницы
+print.modulesel	Выбор модулей
+print.ok	Печать
+print.printtrace.cap	Печать трассировки
+print.printcirc.cap	Печать схемы
+print.printcirc.out.exp	-begin-
+Печать схемы на принтере либо в файл
+PostScript.
+-end-
+print.printcirc.page.exp	Выбор настроек принтера и страницы.
+print.printcirc.mod.exp	-begin-
+Выберите модули, которые
+будут напечатаны, и установите
+параметры, управляющие
+графическим представлением.
+-end-
+print.printtrace.trace.exp	-begin-
+Выберите временной диапазон,
+на котором построить вывод.
+Также укажите масштаб, чтобы
+вычислить ожидаемое число страниц.
+-end-
+print.tab.output	Вывод
+print.tab.modules	Модули
+print.tab.content	Содержание
+print.tab.advanced	Дополнительно
+opt.title	TkGate: Настройки
+opt.treelabel	Настройки
+opt.general	Общие
+opt.interface	Интерфейс
+opt.toolbars	Панели инструментов
+opt.toolbars.edit	Редактор
+opt.toolbars.sim	Симуляция
+opt.toolbars.symed	Редактор символов
+opt.editor	Verilog HDL
+opt.print	Печать
+opt.print.output	Вывод
+opt.print.content	Содержание
+opt.simulate	Симуляция
+opt.simulate.basic	Основные
+opt.simulate.tech	Технология
+opt.simulate.error	Обработка ошибок
+opt.library	Библиотеки
+opt.library.path	Путь
+opt.library.load	Автозагрузка
+opt.library.vpd	Виртуальные устройства
+opt.analysis	Анализ
+opt.color	Цвет
+opt.color.title	TkGate: Выбор цвета
+opt.color.edit	Редактор
+opt.color.scope	Логический анализатор
+opt.color.hdl	Редактор HDL
+opt.html	HTML
+opt.debug	Отладка
+opt.lib.load.available	Доступные библиотеки
+opt.lib.load.selected	Выбранные библиотеки
+opt.identity	Идентификация
+opt.site	Имя компьютера
+opt.username	Имя пользователя
+opt.libname	Имя библиотеки:
+opt.inst	Экземпляры
+opt.mods	Модули
+opt.modports	Порты модулей
+opt.frames	Рамки
+opt.comment	Комментарии
+opt.hlink	Гиперссылки
+opt.wire	Однобитные проводники
+opt.bus	Многобитные проводники
+opt.tools	Инструменты
+opt.background	Фон
+opt.cpath	Критический путь
+opt.grid	Сетка логического анализатора
+opt.logic1	Логическая единица
+opt.logic0	Логический ноль
+opt.float	Нестабильное
+opt.unknown	Неизвестный/конфликтный
+opt.offled	Выключенный светодиод
+opt.onled	Включенный светодиод
+opt.zled	Нестабильный светодиод
+opt.restdef	Восстановить по умолчанию
+opt.regudate	Обновление областей
+opt.smoothscroll	Плавная прокрутка
+opt.balloon	Разрешить всплывающие подсказки
+opt.tearawaymenus	Разрешить быстрые главные меню
+opt.safeSave	Безопасное сохранение
+opt.saveCells	Включать ячейки в сохранённые файлы
+opt.showimage	Показывать изображения в боковых панелях диалогов
+opt.novice	Режим новичка
+opt.blockDropConnect	Создание портов переносом проводника
+opt.ckpoint	Делать контрольные точки каждые %s команд
+opt.freq	Интервал
+opt.beak	Разрешить специальные режимы
+opt.bat	Летучая мышь
+opt.trek	Звёздный путь
+opt.miles	Майлз
+opt.contver	Автоматическая проверка целостности
+opt.showsimcmd	Показывать поток симулятора
+opt.estepsz	Размер шага эпохи
+opt.cstepsz	Размер шага синхросигнала
+opt.overstep	Перешагивание синхросигнала
+opt.sorttraces	Упорядочивать трассировки по алфавиту
+opt.vpopupdelay	Задержка всплывающих подсказок
+opt.posedge	Шаг заканчивается на фронте любого сигнала
+opt.setclock	Шаг заканчивается на фронте сигнала
+opt.delayfilepath	Файлы технологий
+opt.devfilepath	Путь к файлам виртуальных периферийных устройств
+opt.vlibpath	Путь к библиотеке модулей Verilog
+opt.vlibnames	Основные библиотеки
+opt.display	Отображение
+opt.interaction	Взаимодействие
+opt.input	Ввод
+opt.security	Безопасность
+opt.undolen	Максимальное число отмен операций
+opt.keybind	Стиль привязки клавиш
+opt.useless	Включить бесполезные возможности
+opt.features	Настройки сохранения файлов
+opt.simbase	Основные параметры симуляции
+opt.simclock	Настройки тактирования
+opt.cpopts	Настройки критического пути
+opt.maxpath	Максимальное число путей:
+opt.cpflash	Отображать с мигающим путем
+opt.general.fontset	Набор шрифтов
+opt.simulator.savetraces	Сохранять положение зондов между симуляциями.
+opt.simulator.noglitch	Включить подавление сбоев анализатора.
+opt.simulator.err	Обработка ошибок
+opt.simulator.stopany	Считать предупреждения ошибками.
+opt.simulator.showall	Всегда отображать предупреждения.
+opt.simulator.showiferr	Отображать предупреждения только вместе с ошибками.
+opt.simulator.ignore	Игнорировать все предупреждения.
+opt.tool.file	Файл
+opt.tool.edit	Правка
+opt.tool.gateopt	Вращение/выравнивание
+opt.tool.gateprop	Компоненты
+opt.tool.undo	Отмена/повтор
+opt.tool.zoom	Увеличение
+opt.tool.mode	Инструменты редактора
+opt.tool.module	Модуль
+opt.tool.tech	Технология
+opt.tool.simctl	Управление симулятором
+opt.tool.simaux	Команды симулятора
+opt.tool.simmode	Инструменты симулятора
+opt.tool.symmode	Инструменты редактора символов
+opt.tool.symedit	Вырезать/вставить
+opt.tool.symport	Порты
+opt.tool.symshift	Битовый сдвиг
+opt.tool.symopr	Битовые настройки
+opt.editor.features	Основные свойства редактора
+opt.editor.format	Включить автоматический отступ
+opt.editor.colorize	Включить подстветку синтаксиса
+opt.editor.comments	Комментарии
+opt.editor.strings	Строки
+opt.editor.reserved	Зарезервированные слова
+opt.editor.gateword	Встроенные вентили
+opt.editor.instword	Экземпляры модулей
+opt.editor.taskword	Системные задачи
+opt.editor.color	Цвет
+opt.editor.bold	Жирный
+opt.editor.italic	Курсив
+opt.editor.indentlevel	Отступ на уровень:
+opt.editor.beginindent	Сделать begin...end на одном уровне с родительским уровнем.
+opt.editor.movesel	Разрешить перетаскивание выделенного.
+opt.editor.returntab	Автоотступ после конца строки.
+opt.vercheck	-begin-
+Периодически проверять наличие новых версий TkGate в
+Интернете. Не включайте, если у Вас нет постоянного доступа к
+Интернет.
+-end-
+opt.sec.execlevel	Системная задача $tkg$exec()
+opt.sec.exec	полностью разрешена.
+opt.sec.regexec	разрешена только для зарегистрированных функций.
+opt.sec.noexec	отключена.
+opt.sec.simfeatures	Настройки симулятора
+opt.sec.send	Разрешить системную задачу $tkg$command().
+opt.sec.open	Разрешить системную задачу $fopen().
+opt.sec.writemem	Разрешить системные задачи $writememb() и $writememh().
+opt.sec.enqueue	Разрешить системные задачи $tkg$recv() и $tkg$send().
+opt.sec.handle	Обработка нарушений безопасности
+opt.sec.stop	Остановить симулятор, когда используется отключенная возможность.
+opt.sec.warn	Отображать предупреждающее сообщение, когда используется отключенная возможность.
+opt.sec.ignore	Игнорировать попытки использования отключенных возможностей.
+opt.html.linkopts	Настройки связи
+opt.html.browser	Команда браузера
+opt.html.email	Команда e-mail
+opt.debug.opt	Настройки отладки
+opt.color.editwin	Цвета окна редактирования
+opt.color.scopewin	Цвета окна логического анализатора
+opt.vlibadd.title	TkGate: Добавить библиотеку
+opt.gen.basetoolbar	Панели редактора
+opt.gen.simtoolbar	Панели режима симуляции
+opt.gen.symedtoolbar	Панели редактора символов
+opt.bbar.restore	Сбросить для страницы
+opt.bbar.restoreall	Сбросить все
+igen.title	TkGate: Генерация интерфейса модулей
+igen.port	Порт
+igen.type	Тип
+igen.side	Сторона
+igen.size	Размер
+igen.bits	Разр.
+igen.modname	Имя модуля:
+igen.add	Добавить
+igen.delete	Удалить
+igen.edit	Правка
+igen.mod	Использовать только порты из модуля.
+igen.int	Использовать только порты из интерфейса.
+igen.modint	Использовать порты из модуля и интерфейса.
+igen.portsel	Выбор портов
+igen.portpos	Расположение портов
+igen.portpos.keep	По возможности сохранить положение существующих портов.
+igen.portpos.renew	Перегенерировать положение всех портов.
+igen.caption	Генерация интерфейса
+igen.description	-begin-
+Создать новый интерфейс
+для модуля..
+-end-
+info.script.error	Ошибки в скрипте
+module.props.title	TkGate: Свойства модуля
+module.props	Свойства модуля
+ipanel.plist	Список портов
+ipanel.props	Свойства интерфейса
+ipanel.block	Стандарт.
+ipanel.symbol	Символ
+ipanel.autogen	Автогенерация...
+ipanel.updateall	Синхронизировать...
+ipanel.itype.select	Тип интерфейса
+ipanel.ppos.label	Расположение портов при изменении размеров блока:
+ipanel.ppos.fix	Фиксированное
+ipanel.ppos.scale	Масштабированное
+ipanel.warn.toblock	-begin-
+Вы собираетесь изменить тип интерфейса
+для данного модуля на "Блок".
+В результате текущие данные интерфейса
+будут потеряны.
+Сделать это?
+-end-
+ipanel.warn.tosymbol	-begin-
+Вы собираетесь изменить тип интерфейса
+для данного модуля на "Символ".
+В результате текущие данные интерфейса
+будут потеряны. Вам также необходимо
+создать растровое изображение для нового
+символа.
+Сделать это?
+-end-
+blklst.delete.title	TKGate: Удаление модуля
+blklst.copy.title	TKGate: Копирование модуля
+blklst.rename.title	TKGate: Переименование модуля
+blklst.claim.title	TKGate: Затребование модуля
+blklst.setroot.title	TKGate: Установка корневого модуля
+blklst.new.title	TKGate: Новый модуль
+blklst.claim	Затребовать модуль
+blklst.to	В
+blklst.from	Из
+blklst.name	Имя
+blklst.new.cap	Создать новый модуль
+blklst.del.cap	Удалить модуль
+blklst.copy.cap	Копировать модуль
+blklst.rename.cap	Переименовать модуль
+blklst.claim.cap	Затребовать модуль
+blklst.setroot.cap	Установить корневым модулем
+blklst.new.exp	-begin-
+Используйте этот диалог, чтобы создать
+определение нового модуля. Вы можете
+создать модуль как список соединений или
+текст на Verilog, но выбрав тип однажды,
+его нельзя изменить, не удалив и не
+создав определение модуля заново.
+-end-
+blklst.del.exp	-begin-
+Удалить определение и данные интерфейса указанного
+модуля. Существующие экземпляры модуля будут сохранены,
+но помечены как неопределённые.
+-end-
+blklst.copy.exp	-begin-
+Создать копию указанного определения модуля.
+Используйте, чтобы создать новый вариант
+существующего модуля.
+-end-
+blklst.rename.exp	-begin-
+Переименовать определение модуля. Эта операция
+затронет только определение, любые существующие
+экземпляры продолжат ссылаться на старое имя.
+-end-
+blklst.claim.exp	-begin-
+Преобразовать библиотечный модуль в обычный.
+Это позволит редактировать и сохранять модуль
+вместе с пользовательской схемой.
+-end-
+blklst.setroot.exp	Сделать указанный модуль корневым.
+find.title	TkGate: Найти объект
+find.label	Найти объекты
+find.exp	-begin-
+Искать текст в имени проводника, цепи,
+компонента или тексте комментария.
+Дважды щелкните на результате
+чтобы перейти к нему.
+-end-
+find.ignorecase	Игнорировать регистр
+find.result.module	Модуль
+find.result.type	Тип
+find.result.name	Имя объекта
+find.options	Настройки поиска
+find.results	Результаты поиска
+find.qual.contains	Содержит...
+find.qual.begins	Начинается...
+find.qual.ends	Заканчивается...
+find.qual.matches	Соответствует...
+find.dom.label	Искать объекты в:
+find.dom.gates	компонентах
+find.dom.nets	цепях
+find.dom.text	тексте комментариев
+find.search	Найти:
+find.target	Цель поиска
+circ.wintitle	TkGate: Свойства схемы
+circ.label	Свойства схемы
+circ.ident	Идентификация
+circ.filev	Версия файла
+circ.file	Имя файла
+circ.title	Заголовок схемы
+circ.encoding	Кодировка файла
+circ.lang	Язык файла
+circ.discchg	Не уведомлять о потере изменений.
+circ.flags	Настройки
+circ.defaults	Детали компонентов
+circ.extbar	Использовать расширительные полосы на вентилях И, ИЛИ, ИСКЛ-ИЛИ.
+circ.shownet	Показывать имя цепи на переключателях.
+circ.autostart	Включить автозапуск симуляции.
+circ.iniscript	Инициализационные скрипты
+circ.reallyupdate	Действительно обновить интерфейс у всех экземпляров '%s'?
+circ.reallyoverwrite	Действительно перезаписать существующий файл '%s'?
+circ.general	Общие
+circ.library	Библиотеки
+circ.script	Скрипты
+circ.simulator	Симуляция
+circ.timescale	Временной масштаб симуляции по умолчанию
+circ.timescale.unit	Ед. изм.:
+circ.timescale.prec	Точность:
+circ.sim.features	Свойства
+circ.sim.tv.title	Обработка нарушений времени
+circ.sim.tv.all	Докладывать обо всех нарушениях времени.
+circ.sim.tv.after.1	Докладывать о нарушениях времени после
+circ.sim.tv.never	Никогда не докладывать о нарушениях времени.
+circ.exp.general	-begin-
+Просмотр и редактирование свойств схемы.
+Данные свойства будут сохранены в файле схемы.
+-end-
+circ.exp.library	-begin-
+Выбор библиотек, используемых в данной схеме.
+Требования к библиотекам будут сохранены в
+файле схемы и автоматически загружены при
+следующем открытии файла.
+-end-
+circ.exp.script	-begin-
+Добавление скриптов, которые будут
+автоматически загружены и выполнены при
+запуске симуляции.
+-end-
+circ.exp.simulator	-begin-
+Просмотр и редактирование настроек симуляции
+для данной схемы.
+-end-
+libmgr.cap	Управление библиотеками
+libmgr.library	Библиотека
+libmgr.description	Описание
+libmgr.status	Состояние
+libmgr.status.load	Загружена
+libmgr.status.unload	Не загружена
+libmgr.status.loadp	[Загружена]
+libmgr.status.unloadp	[Не загружена]
+libmgr.exp	-begin-
+Выберите библиотеки, которые нужно
+загрузить или выгрузить.
+-end-
+libmgr.load	Загрузить
+libmgr.unload	Выгрузить
+libmgr.unloadall	Выгрузить все
+libmgr.notedit	-begin-
+Для управления библиотеками перейдите в режим
+редактирования схемы.
+-end-
+break.tab	Точки остановки
+break.id	ID
+break.state	S
+break.condition	Условие
+break.value	Значение
+sim.recursive	-begin-
+В '%s' обнаружено рекурсивное определение модуля.
+Нельзя начать симуляцию или выполнить анализ критических
+путей.
+-end-
+sim.hyperlinkstop	-begin-
+Симулятор запущен в настоящее время. Остановить
+симулятор и проследовать по ссылке?
+-end-
+cp.delay	Задержка пути:
+cp.pathl	Список путей:
+cp.numpath	Число путей:
+cp.recompute	Пересчитать
+err.notinsim	Не допускается когда симулятор активен.
+err.nomemselect	Память не выбрана.
+err.rootinterface	Нельзя установить интерфейс корневого модуля.
+err.nopin	Невозможно изменить выбранный вывод.
+err.badhex	Недопустимое 16-ричное значение '%s' проигнорировано.
+err.gatanchor	Компоненты привязаны и не могут быть перемещены.
+err.protdata	Невозможно редактировать защищённый или библиотечный модуль.
+err.badfind	Не удается найти цель '%s'.
+err.badopendel	Нельзя удалить открытый модуль.
+err.nosrcmod	Исходный модуль '%s' не найден.
+err.noerr	Невозможно найти ошибку.
+err.misserr	Неполная информация об ошибке (симулятор аварийно завершился?)
+err.nofunc	Ошибочное или отсутствующее имя функции для интерфейса модуля.
+err.wirerot	Выделенное нельзя повернуть из-за присоединённых проводников.
+err.badinadd	Нельзя добавить больше входов к выбранному компоненту.
+err.badoutadd	Нельзя добавить больше выходов к выбранному компоненту.
+err.badinoutadd	Нельзя добавить больше входов-выходов к выбранному компоненту.
+err.badpinchg	Нельзя изменить тип вывода у выбранного компонента.
+err.badnetname	В идентификаторе найдены недопустимые символы.
+err.netbcrename	Идентификатор переименован в '%s' из-за недопустимых символов.
+err.netconfnet	Идентификатор переименован в '%s' из-за конфликта имён.
+err.netconfgat	Идентификатор переименован для избежания конфликта со встроенным компонентом
+err.netconfkw	Идентификатор переименован для избежания конфликта с зарезервированным словом.
+err.badconsame	Соединение отклонено, поскольку проводники принадлежат одной цепи.
+err.badconptsp	Соединение отклонено, поскольку оба проводника являются питанием или выводами модуля.
+err.badconbitw	Соединение отклонено, поскольку не совпадает разрядность.
+err.badrange	Неположительные значения для трассировки запрещены.
+err.badlprcmd	Невозможно выполнить команду принтера '%s'.
+err.badpsopen	Невозможно открыть файл '%s' для вывода PostScript.
+err.badid	Недопустимый идентификатор '%s'.
+err.noinvgate	Для компонентов этого типа инвертеры не разрешены.
+err.protintf	Невозможно изменить защищённый интерфейс модуля '%s'.
+err.bkpt.badexp	Синтаксическая ошибка в выражении для точки остановки. Должно быть одно из: 'net', '!net', 'net==value', 'net!=value'
+err.bkpt.badnet	Неверное имя цепи '%s'. Имена должны начинаться с буквы и содержать только буквы, цифры и '.'.
+err.bkpt.badval	Синтаксическая ошибка в значении '%s'. Должна быть десятичная или Verilog константа.
+err.bkpt.toomany	Слишком много точек остановки. Должно быть не более %d.
+err.sim.badtmp	Не удаётся сохранить '%s' симулятора (возможно диск переполнен?)
+err.sim.syntx	Синтаксическая ошибка в команде '%s'.
+err.sim.noincl	Включаемый файл '%s' не найден.
+err.sim.badedge	Недопустимый индикатор фронта '%c' в команде синхронизации.
+err.sim.nobkpt	Не точки остановки '%s'.
+err.sim.nonet	Не удаётся найти цепь '%s'.
+err.sim.nogate	Не удаётся найти компонент '%s'.
+err.sim.badbin	Недопустимый символ в двоичной константе '%s'.
+err.sim.notswitch	Компонент '%s' не является переключателем или регистром.
+err.sim.badcmd	Неопознанная команда '%s' в инициализационном скрипте.
+err.sim.isrun	Симулятор уже запущен (используйте 'Ctrl-s e' для остановки).
+err.sim.run	Ошибка времени исполнения в момент %s:
+err.sim.cmd	Ошибка внутренней команды
+err.noteditpchg	Свойства можно менять только в режиме редактирования.
+err.badeditop	Недопустимая в режиме редактирования интерфейсов операция.
+err.badopen	Не удаётся открыть входной файл '%s'.
+err.badlibopen	Не удаётся открыть файл библиотеки '%s'.
+err.nomark	Установите курсор левой кнопкой мыши прежде чем выбрать тип компонента.
+err.badgate	Неизвестный тип компонента '%s'.
+err.badportadd	Нельзя добавлять порты к компонентам этого типа.
+err.modmissing	Нет текста модуля Verilog для "%s".
+err.modtoomany	Лишние определения модуля в "%s".
+err.modmismatch	Несоответствие имени модуля и текста определения "%s".
+err.manypages	-begin-
+В документе подозрительно много
+страниц. Стоит ли его печатать?
+-end-
+err.nojump	-begin-
+Функция 'перескочить-в-модуль' не может быть
+использована в режимах симуляции и анализа
+критических путей. Перейдите к нужному блоку
+вручную, выделив его и нажав клавишу '>'.
+Покинуть просматриваемый модуль можно, нажав
+клавишу '<'.
+-end-
+err.nomod	Модуль '%s' не определён.
+err.modlock	Логический блок заблокирован!
+err.closeroot	В списке модулей нет модуля более высокого уровня.
+err.editonly	Команда не допускается в режиме симуляции.
+err.simonly	Команда допускается только в режиме симуляции.
+err.deltop	Невозможно удалить модуль верхнего уровня '%s'.
+err.delprot	Невозможно удалить защищённый модуль '%s'.
+err.nodel	В выделении нет удаляемых компонентов.
+err.modnotdef	Модуль '%s' не определён.
+err.moddef	Модуль '%s' уже существует.
+err.primredef	Нельзя переопределить встроенное имя '%s'.
+err.primprefix	Недопустимое имя модуля '%s', начинается со встроенного префикса '%s'.
+err.iskeyword	Ключевое слово Verilog '%s' не может быть использовано в качестве идентификатора.
+err.noprop	Выделенный компонент не имеет редактируемых свойств.
+err.openscript	Не удаётся открыть скрипт симуляции '%s'
+err.oldversion	Загруженный файл '%s' с просроченным номером версии %s (текущая версия %s).
+err.futureversion	Загруженный файл '%s' был сохранён в TkGate версии %s (данная версия %s).
+err.badversion	Неизвестный номер версии. Используйте под свою ответственность.
+err.nodrive	Цепь %s не имеет драйвера в %s.
+err.noconn	Проводник %s{%d} не имеет соединений и удалён.
+err.oldportact	Щёлкните правой кнопкой на порте или ребре модуля для добавления/изменения порта.
+err.nomodule	Не выбран модуль.
+err.nomodop	Нет подходящих модулей для операции.
+err.protexec	Попытка выполнения защищённой команды '%s' в $tkg$exec().
+err.notwritable	Файл '%s' недоступен для записи.
+err.backupfail	Невозможно создать файл резервной копии '%s'.
+err.yy.badprop	Игнорируется неизвестное свойство схемы '%s'.
+err.yy.badpropval	Недопустимое значение '%s' свойства схемы '%s'.
+err.yy.baddata	Неверный тип данных для свойства схемы '%s'.
+err.yy.nosym	Нет символа для текущего модуля.
+err.yy.badicon	Недопустимый тип изображения '%s'.
+err.yy.toomuchdata	Слишком много данных изображения.
+err.yy.nosyminst	Отсутствует символ %d в экземпляре %s %s.
+err.yy.badmodprop	Игнорируется неизвестное свойство модуля '%s'.
+err.yy.badmoddata	Неверный тип данных для свойства property '%s'.
+err.yy.badprim	Неизвестное имя примитива '%s'.
+err.yy.nonet	Необъявленная цепь '%s'.
+err.yy.bogussave	Обнаружены неверные данные сохранения, схема может быть повреждена.
+err.yy.pinformat	Недопустимый формат имени вывода '%s'.
+err.yy.pinname	Имя вывода '%s' не определено для компонента '%s'
+err.yy.nonetpos	Нет цепи для позиции %d в компоненте %s.
+err.yy.baddirective	Недопустимая или некорректно сформированная директива '%s'.
+err.yy.badlocale	Неизвестная локаль '%s' в сохранённом файле. Используется английская.
+err.corruptnewsave	-begin-
+TkGate смог сохранить файл в '%s', но оказалось,
+что он повреждён. Если выключен режим создания
+контрольных точек, то попробуйте загрузить одну из
+них. Используйте 'tkgate -V' для проверки
+целостности сохранённого файла.
+-end-
+err.corruptsave	-begin-
+TkGate столкнулся с проблемой во время сохранения файла '%s'.
+Существующий файл не будет изменён, а повреждённый сохранён
+под именем '%s'. Если выключен режим создания контрольных
+точек, то попробуйте загрузить одну из них. Используйте
+'tkgate -V' для проверки целостности сохранённого файла.
+-end-
+err.badsave	-begin-
+При попытке открытия или записи файла '%s' возникла проблема.
+Проверьте права доступа для файла и каталога, в котором он
+находится, а также наличие свободного места на диске.
+-end-
+err.nosafesave	-begin-
+Во время сохранения файла '%s' возникла проблема. Можно попробовать
+ещё раз без проверки сохранённых данных. Нажмите "нет" и исходный
+файл останется неизменным. Нажмите "да" и файл будет перезаписан,
+но может оказаться повреждённым, если возникнет ошибка. Попробовать
+ненадёжное сохранение?
+-end-
+err.noback	-begin-
+Файл '%s' был создан в TkGate %s
+и не сможет быть прочитан в версии
+меньше текущей (%s) если его сохранить.
+-end-
+err.viewfile	Невозможно открыть файл '%s'.
+err.internal.nomod	внутренняя ошибка: невозможно найти модуль '%s'.
+msg.selwire	Выбран проводник %s с именем '%s'.
+msg.selgate	Выбран вентиль %s с именем '%s'.
+msg.selblock	Выбран блок %s с именем '%s'.
+msg.iselwire	Выбран порт '%s' в блоке '%s'.
+msg.iselgate	Выбран %s с именем '%s' (Неужели? Это сообщение должно быть невозможным).
+msg.iselblock	Выбран интерфейс модуля для '%s'.
+msg.modoverwt	Модуль назначения '%s' уже существует. Перезаписать?
+msg.foundgate	Найден компонент с именем '%s'.
+msg.foundwire	Найден проводник с именем '%s'.
+msg.searchagn	Целевая строка '%s' не найдена. Нажмите 'искать' для перезапуска поиска.
+msg.sim.chgtoroot	Режим симуляции требует, чтобы корневой модуль находился на вершине стека редактирования.
+msg.sim.nogatemod	Режим симуляции требует конкретного стека редактирования.
+msg.setinterface	Установить интерфейс для модуля '%s'.
+msg.needsel	Выберите экземпляр модуля.
+msg.wroteckpt	Создана контрольная точка в %s...
+msg.save	Схема сохранена в '%s'.
+msg.reallynew	Схема была изменена. Вы действительно хотите отказаться от изменений и создать новую схему?
+msg.reallyquit	Схема была изменена. Вы действительно хотите выйти?
+msg.notlib	Модуль '%s' не является библиотечным.
+miles.msg1	Только дурень расположил бы %s%s там. Майлз.
+miles.msg2	Это на самом деле очень плохое место для расположения %s%s, Майлз.
+miles.msg3	Это ужасное место для %s%s, Майлз.
+miles.msg4	Майлз, не будь дурнем, не располагай %s%sтам .
+miles.msg5	Только ты расположил бы %s%s там, Майлз.
+miles.msg6	Расположение %s%s там указывает на твою абсолютную тупость, Майлз.
+miles.msg7	Не пора ли оставить попытки, Майлз? Это тупо составленная цепь.
+miles.msg8a	Нет смысла продолжать, Майлз.
+miles.msg8b	Очевидно, тебе не суждено создавать цепи
+verga.err.OK	Не расстраивайся, наслаждайся жизнью.
+verga.err.INPORT	Несоответствие размера порта для входа '%s'.
+verga.err.OUTPORT	Несоответствие размера порта для выхода '%s'.
+verga.err.FLOATNET	Цепь '%s' не имеет драйверов (плавающая цепь).
+verga.err.DIRECTCONN	Оператор прямого соединения '=>' не поддерживается. Принимается как '*>'.
+verga.err.MEMADDR	Попытка записи в память %s с неизвестным адресом.
+verga.err.MEMBITS	Попытка записи в память %s с неизвестным диапазоном.
+verga.err.BADARRAYUSG	Массив '%s' использован в выражении без индекса.
+verga.err.BADARRAYLHS	Массив '%s' использован в левой части без индекса.
+verga.err.BADCLOSE	Попытка закрыть неоткрытый дескриптор в задаче '%s'.
+verga.err.BADAUTORNG	Автодиапазон [*] допускается только в декларации 'wire'.
+verga.err.BADGATERNG	Некорректное выражение диапазона экземпляров компонента.
+verga.err.BADARGVALUE	Некорректное значение аргумента '%s' в задаче '%s'.
+verga.err.DIVZERO	Деление на ноль.
+verga.err.NODIV	Деление/модуль не поддерживаются на этой машине - sizeof(short) должен быть 2.
+verga.err.BADEDGEEVENT	Событие на многоразрядной цепи '%s' не может иметь posedge/negedge.
+verga.err.NEEDEDGE	Необходимо указать фронт posedge или negedge в событии для %s.
+verga.err.ASGNEVENT	Ожидание события в присваивании не допускается.
+verga.err.PROTTASK	Выполнение защищённой системной задачи '%s' заблокировано.
+verga.err.NEEDIDENT	Ожидается идентификатор аргумента %s задачи '%s'.
+verga.err.BADOP	Ошибочный оператор в выражении '%s'.
+verga.err.NOREAD	Невозможно загрузить файл исходных текстов '%s'.
+verga.err.MEMFILE	Невозможно загрузить файл памяти '%s'.
+verga.err.WRONGMOD	Найден модуль '%s', а ожидался '%s'.
+verga.err.NOTPARM	Идентификатор '%s' в константном выражении не является параметром.
+verga.err.BADADDR	Недопустимый диапазон адресов у порта '%s'.
+verga.err.BADADDRSPEC	Недопустимая спецификация диапазона адресов '%s'.
+verga.err.BADCHAR	Недопустимый символ (%s) '%s'.
+verga.err.BADEVENT	Недопустимое выражение управления событиями.
+verga.err.BADCONSTOP	Недопустимый оператор в константном выражении.
+verga.err.BADXOP	Недопустимый оператор в выражении.
+verga.err.NETREDEF	Недопустимое переопределение цепи '%s'.
+verga.err.BADINOUT	Соединения входов-выходов у порта '%s' должны быть типа цепь-в-цепь.
+verga.err.MODUNDEF	Экземпляр неопределённого модуля '%s'.
+verga.err.BADASGNLHS	Неверная левая часть в 'assign'.
+verga.err.LHSNOTREG	Недопустимое использование '%s' в левой части присваивания.
+verga.err.BADLHS	Неверная левая часть в присваивании.
+verga.err.BADOUT	Неверное присваивание выходу.
+verga.err.NOTREG	Память должна объявляться как регистр.
+verga.err.PORTMIX	Сочетание именованных и неименованных портов в интерфейсе '%s' '%s'.
+verga.err.REPCASE	Более одного default: в выражении case.
+verga.err.NOMEM	Нет текущего элемента памяти в операции чтения памяти.
+verga.err.BADCMD	Нет такой команды '%s'.
+verga.err.CMDNOTNET	Нет такой цепи '%s' в команде '%s'.
+verga.err.MEMNONBLK	Неблокирующие присваивания памяти не реализованы.
+verga.err.NOTPPORT	Параметр '%s' не объявлен как порт.
+verga.err.REDEFP	Параметр переопределяет идентификатор '%s'.
+verga.err.PORTNOTDEF	Порт '%s' интерфейса '%s' не определен в модуле '%s'.
+verga.err.NOCONN	Порт '%s' не имеет соединений в интерфейсе '%s' '%s'.
+verga.err.MULTCONN	Порт '%s' имеет множественные соединения в интерфейсе '%s' '%s'.
+verga.err.PORTCOUNT	Количество портов не соответствует определению интерфейса '%s' '%s'.
+verga.err.BADPRTRANGE	Диапазон у порта '%s' не числовой.
+verga.err.BADARRAYRNG	Указание диапазона не допускается в ссылках на память '%s'.
+verga.err.CMDMODREDEF	Переопределение динамического модуля '%s'.
+verga.err.REDEF	Переопределение идентификатора %s.
+verga.err.PROTTASKSTOP	Симуляция остановлена при попытке выполнения защищённого системного задания '%s'.
+verga.err.NOTMEM	Указанная цепь '%s' не является памятью.
+verga.err.CMDNOTMEM	Указанная цепь '%s' не является памятью в команде '%s'.
+verga.err.SYNTAX	Синтаксическая ошибка.
+verga.err.TOOFEWPP	Слишком мало параметров портов в экземпляре %s.
+verga.err.OPENTOOMANY	Слишком много открытых файлов в задаче '%s'.
+verga.err.TOOMANYPP	Слишком много параметров портов в экземпляре %s.
+verga.err.NOTOP	Модуль верхнего уровня '%s' не определён.
+verga.err.BADOPEN	Невозможно открыть выходной файл '%s' в задаче '%s'.
+verga.err.CMDNOMOD	Неопределённый динамический модуль '%s' в команде '%s'.
+verga.err.BADEVENTNET	Неопределённая цепь '%s' в выражении управления событиями.
+verga.err.NOTASK	Неопределённая задача '%s'.
+verga.err.NOTDEF	Неопределённая переменная '%s'.
+verga.err.BADRANGE	Неподдерживаемый битовый диапазон [%s] в цепи '%s' (должен быть в форме [n:0]).
+verga.err.GATEUNIMP	Нереализованный тип компонента примитива в экземпляре '%s'.
+verga.err.USAGE	Использование: thyme [настройки][файлы...]
+verga.err.CLSDWRITE	Запись в закрытый дескриптор.
+verga.err.PRIMPTCOUNT	Неверное число портов у экземпляра компонента примитива '%s'.
+verga.err.CMDARGS	Неверное число аргументов у команды '%s'.
+verga.err.YYERROR	YYError - %s.
+verga.err.TASKARGS	Задача '%s' вызвана с неверным числом аргументов.
+verga.err.BADSTART	Недопустимое начальное значение в задаче '%s'.
+verga.err.BADSTOP	Недопустимое конечное значение $readmemb.
+verga.err.SPECTASKUSG	Задача '%s' должна использоваться в блоке specify.
+verga.err.BADSPECTASK	Задача '%s' не может использоваться в блоке specify.
+verga.err.TIMING	Нарушение времени в %s[%s] %s.
+verga.err.RAMDCHG	Линия данных изменилась во время разрешения записи в %s
+verga.err.RAMACHG	Линия адреса изменилась во время разрешения записи в %s
+verga.err.NOIFDEF	Нет соответствующего `ifdef/`ifndef для объявления %s.
+verga.err.BADSPECLVAL	Битовые диапазоны не поддерживаются при указании задержек путей.
+verga.err.PATHDITEM	Неподдерживаемая конструкция в модуле с указанием задержек путей.
+verga.err.PATHDINOUT	Использование 'inout' в модуле с указанием задержек путей не поддерживается.
+verga.err.PATHDLOOP	Циклы в модулях с указанием задержек путей не поддерживаются.
+verga.err.PATHDCOND	Задержки должны устанавливаться с помощью выражений # и блоков Specify.
+verga.err.TASKREDEF	Переопределение задачи или функции '%s' в модуле '%s'.
+verga.err.TASKASFUNC	Задача '%s' использована как функция.
+verga.err.FUNCASTASK	Функция '%s' использована как задача.
+verga.err.TASKBADTYPE	Нерегистровый тип использован в задаче или функции.
+verga.err.TASKBADPORT	В функциях допускается использование только входных портов.
+verga.err.TIMESCALEU	Недопустимые единицы измерения '%s' в объявлении `timescale.
+verga.err.TIMESCALEN	Неверный масштаб '%s' в объявлении `timescale (должно быть 1, 10 или 100).
+verga.err.TIMESCALES	Неверный синтаксис в объявлении `timescale.
+verga.err.TIMESCALEX	Единицы измерения должны быть большей точности в объявлении `timescale.
+verga.err.TIMESCALEAN	Проект содержит модули с объявлением и без объявления `timescale.
+verga.err.BADPORTTYPE	Неверный тип использован при объявлении порта '%s'
+verga.err.BADVALUE	Ошибочное числовое значение '%s'.
+verga.err.NONEXPCTL	Управление событиями @(*) применено не к выражению.
+verga.err.NONSTATCTL	Управление событиями @(*) применено не к утверждению.
+verga.err.MODREDEF	Переопределение модуля '%s'.
+verga.err.IE_TASK	Определение задачи '%s' найдено вне модуля - внутренняя ошибка.
+verga.err.IE_NONET	Не удалось найти цепь '%s' - внутренняя ошибка.
+verga.err.IE_NOOP	Не удалось найти описание оператора - внутренняя ошибка.
+verga.err.IE_BADEXP	Неожиданный тип выражения %s - внутренняя ошибка.
+verga.err.IE_BADVAR	Неопределённая переменная или неизвестная цепь - внутренняя ошибка.
+verga.err.IE_BADSTATE	Неожиданное внутреннее состояние в %s - внутренняя ошибка.
+verga.err.IE_RETURN	Выполненный байт-код BCReturn имеет пустой стек возврата - внутренняя ошибка.
+primitive.err.missing	Внутренняя ошибка: пропущено определения примитива для '%s'.
+primitive.err.nomodule	Внутренняя ошибка: пропущен 'module' в определении примитива для '%s'.
+primitive.err.nomodname	Внутренняя ошибка: не указано названия модуля в определении модуля '%s'.
+primitive.err.wrongname	Внутренняя ошибка: несоответствие названий модулей в определении модуля '%s'.
+cprt.about	О программе TkGate
+cprt.lic	Лицензия TkGate
+cprt.descr	Редактор и симулятор цифровых схем
+ho.setsel.allr	Переместить все элементы в список выбранных.
+ho.setsel.alll	Переместить все элементы в список невыбранных.
+ho.setsel.ltor	Переместить подсвеченные элементы в список выбранных.
+ho.setsel.rtol	Переместить подсвеченные элементы в список невыбранных.
+ho.net.in	Одноразрядный вход
+ho.net.out	Одноразрядный выход
+ho.net.inout	Одноразрядный вход-выход
+ho.net.in2	Многоразрядный вход
+ho.net.out2	Многоразрядный выход
+ho.net.inout2	Многоразрядный вход-выход
+ho.net.wire	Одноразрядный проводник (Видимое имя)
+ho.net.wire2	Многоразрядный проводник (Видимое имя)
+ho.net.hwire	Одноразрядный проводник (Скрытое имя)
+ho.net.hwire2	Многоразрядный проводник (Скрытое имя)
+ho.net.reg	Одноразрядный регистр
+ho.net.reg2	Многоразрядный регистр
+ho.opt.tool.file	Сохранение и загрузка файлов схем
+ho.opt.tool.edit	Операции копирования, вырезания и вставки
+ho.opt.tool.gateopt	Операции вращения и выравнивания компонентов
+ho.opt.tool.gateprop	Базовое редактирование компонентов
+ho.opt.tool.undo	Операции отмены и повторения действий
+ho.opt.tool.zoom	Увеличение и уменьшение
+ho.opt.tool.mode	Инструменты выделения и редактирования
+ho.opt.tool.module	Операции над определениями модулей
+ho.opt.tool.tech	Выбор технологии по умолчанию для компонентов
+ho.opt.tool.simctl	Управление симулятором
+ho.opt.tool.simaux	Вспомогательные команды симулятора (чтение/запись файлов памяти и др.)
+ho.opt.tool.simmode	Выбор инструментов выделения и прокрутки в симуляторе.
+ho.opt.tool.symmode	Выбор инструмента в редакторе символов
+ho.opt.tool.symedit	Операции копирования вырезания и вставки в редакторе символов
+ho.opt.tool.symport	Операции вращения портов в редакторе символов
+ho.opt.tool.symshift	Сдвиг изображения или части в редакторе
+ho.opt.tool.symopr	Дополнительные операции редактирования символов
+ho.opt.editor.movesel	-begin-
+Если включена эта возможность, то выделенный блок
+текста может быть захвачен курсором мыши и
+перемещён в новое место.
+-end-
+ho.opt.editor.format	-begin-
+Если включено, то исходный текст Verilog будет
+снабжаться отступами при нажатии клавиши tab.
+-end-
+ho.opt.editor.indent	Число пробелов в отступе на уровень.
+ho.opt.editor.rtab	-begin-
+Автоматический отступ текущей строки и
+табуляция на нужный уровень при нажатии
+Enter.
+-end-
+ho.opt.editor.beginindent	-begin-
+Заставляет блок begin..end получать отступ
+на тот же уровень, что и родительский.
+-end-
+ho.opt.editor.colorize	-begin-
+Включит подстветку синтаксиса в соответствии
+с настройками, перечисленными ниже.
+-end-
+ho.hdl.splitexp	-begin-
+Множественные модули в тексте Verilog
+будут разделены с созданием новых модулей
+при необходимости. Конфликты имён
+будут разрешены небольшими изменениями
+повторяющихся названий.
+-end-
+ho.hdl.commentexp	-begin-
+Все модули, кроме первого, или с именами,
+отличными от ожидаемых, будут преобразованы
+в комментарии Verilog.
+-end-
+ho.hdl.autoeditexp	-begin-
+Автоматически изменять Verilog-описание для
+исправления имени модуля.
+-end-
+ho.hdl.cancelexp	-begin-
+Не выполнять никаких действий и продолжить
+редактирование текущего модуля.
+-end-
+ho.hdl.ignoreexp	-begin-
+Игнорировать несоответствие и продолжить
+выбранное действие.
+-end-
+ho.new	-begin-
+Очистить текущую схему и начать
+редактировать новую.
+-end-
+ho.open	Загрузить схему из сохранённого файла.
+ho.save	Сохранить схему в текущий открытый файл.
+ho.saveas	Сохранить схему в указанный в диалоге сохранения файл.
+ho.print	Печать текущей схемы.
+ho.library	Открыть диалог управления библиотеками.
+ho.symed.tab.normal	Редактировать изображение невыделенного символа.
+ho.symed.tab.select	Редактировать изображение выделенного символа.
+ho.simmove	-begin-
+Выбор проводников и модулей, щёлкание
+переключателями и ввод значений в DIP-переключатели.
+Нажатие и удерживание левой кнопки мыши по проводнику
+позволяет видеть текущее значение.
+-end-
+ho.move	-begin-
+Перемещение/соединение - щёлкнув и перетаскивая, Вы можете:
+Установить положение курсора для создаваемых компонентов
+Двигать компоненты и проводники
+Соединять проводники
+Двойным щелчком Вы можете:
+Редактировать свойства компонента, проводника или модуля
+Редактировать текст комментария
+-end-
+ho.delgat	Удаление компонентов.
+ho.cutw	Разрезать проводник.
+ho.scroll	Перемещение канвы редактирования схемы.
+ho.inv	-begin-
+Инвертировать - используйте данный
+инструмент для добавления и удаления
+инвертеров на портах компонента.
+-end-
+ho.bitw	-begin-
+Атрибуты цепи - Разрядность и тип цепи,
+выделенной данным инструментом, будут изменены
+на те, что указаны в выпадающих списках справа.
+-end-
+ho.ipanel.select	-begin-
+Используйте "стандартные" модули
+для обычных прямоугольных интерфейсов.
+Используйте "символы" для произвольных
+изображений интерфейсов.
+-end-
+ho.ipanel.addport	-begin-
+Добавить порт к модулю. Можно
+также дважды щёлкнуть мышью после последнего
+элемента для создания нового порта.
+-end-
+ho.ipanel.deleteport	Удалить выделенный порт.
+ho.ipanel.editport	-begin-
+Редактировать выделенный порт.
+Также можно дважды щёлкнуть на
+любом поле описания порта для его
+изменения.
+-end-
+ho.ipanel.generate	-begin-
+Генерация нового интерфейса для
+модуля на основе списка портов
+и портов, задекларированных в
+определении модуля.
+-end-
+ho.ipanel.updateall	-begin-
+Заменить интерфейс всех экземпляров
+данного модуля каноническим
+интерфейсом, показанным здесь.
+-end-
+ho.ipanel.prot	-begin-
+Не разрешать изменение определения
+модуля.
+-end-
+ho.ipanel.protint	-begin-
+Не разрешать изменение интерфейса
+модуля.
+-end-
+ho.ipanel.proted	-begin-
+Не разрешать изменение интерфейса модуля,
+кроме как в редакторе интерфейсов.
+Используйте для предотвращения случайного
+изменения интерфейса в основном редакторе.
+-end-
+ho.ipanel.scale	-begin-
+Масштабировать расстояние между портами
+по мере изменения размеров модуля.
+-end-
+ho.ipanel.fix	-begin-
+Сохранять расстояние между портами неизменным
+при изменении размеров модуля.
+-end-
+ho.mod.open	Открыть выбранный модуль.
+ho.mod.close	Закрыть текущий модуль.
+ho.mod.new	Создать новый тип модулей.
+ho.mod.del	Удалить модуль.
+ho.mod.copy	Копировать модуль.
+ho.mod.rename	Переименовать модуль.
+ho.mod.claim	-begin-
+Преобразовать библиотечный модуль
+в обычный.
+-end-
+ho.mod.setroot	Назначить модуль корневым.
+ho.mod.type.allparts	Набор библиотек
+ho.mod.type.partlib	Библиотека
+ho.mod.type.part	Библиотечный модуль
+ho.mod.type.unknown	Неизвестный тип модуля
+ho.mod.type.unused	Набор неиспользуемых модулей
+ho.mod.type.conflict	Рекурсия модулей
+ho.mod.type.root	Модуль верхнего уровня
+ho.mod.type.netlist	Модуль список цепей
+ho.mod.type.Lnetlist	Модуль список цепей (блокированный)
+ho.mod.type.hdl	Модуль Verilog
+ho.mod.type.Lhdl	Модуль Verilog (блокированный)
+ho.undo	Отменить предыдущее действие
+ho.redo	Повторить отменённое действие
+ho.tab.edit	Основной режим редактирования.
+ho.tab.interface	-begin-
+Редактирование интерфейсов модулей. В данном
+режиме дважды щёлкните на модуле в списке,
+чтобы редактировать его интерфейс или на
+корневом модуле, чтобы отобразить все интерфейсы.
+-end-
+ho.tab.simulate	-begin-
+Запуск симулятора и логического анализатора, а
+также запуск скриптов, если они определены.
+-end-
+ho.tab.cpath	Поиск критического пути в схемах.
+ho.log	-begin-
+Журнал сообщений TkGate, включая
+сообщения об ошибках, информационные сообщения
+и вывод консоли симулятора.
+-end-
+ho.simgo	-begin-
+Запуск симулятора в режиме непрерывного исполнения.
+Заметьте, что комбинационные схемы всё равно
+моделируются до тех пор, пока сигналы не перестают
+изменяться.
+-end-
+ho.simpause	Приостановка непрерывной симуляции.
+ho.simstep	-begin-
+Шаг на фиксированный временной интервал.
+Размер шага можно установить в настройках
+симуляции.
+-end-
+ho.simclock	-begin-
+Шаг на фиксированное число шагов синхросигнала.
+Размер шага можно установить в настройках
+симуляции.
+-end-
+ho.simstop	-begin-
+Завершить текущую симуляцию и вернуться
+в режим редактирования схемы.
+-end-
+ho.simbreak	-begin-
+Редактирование точек остановки. Симуляция
+будет прервана, когда условие остановки
+станет истинным. Точки остановки можно
+изменять как в режиме редактирования схемы,
+так и в режиме симуляции.
+-end-
+ho.simexec	Управление набором активных скриптов.
+ho.simoptions	-begin-
+Установка различных параметров,
+управляющих симуляцией.
+-end-
+ho.simload	-begin-
+Загрузить память содержимым
+.mem файла.
+-end-
+ho.simdump	-begin-
+Дамп содержимого памяти в
+.mem файл.
+-end-
+ho.simview	-begin-
+Просмотр/изменение содержимого
+памяти (ОЗУ или ПЗУ).
+-end-
+ho.modlist	-begin-
+Список всех модулей в алфавитном порядке.
+Перетаскивайте модули в область редактирования
+чтобы создавать новые экземпляры.
+-end-
+ho.modtree	-begin-
+Список всех модулей в иерархическом виде.
+Перетаскивайте модули в область редактирования
+чтобы создавать новые экземпляры.
+-end-
+ho.netlist	-begin-
+Список цепей в текущем модуле.
+Символ слева от имени цепи показывает,
+является ли цепь однобитной (зелёный)
+или многобитной (красный). "A" означает,
+что цепь помечена как видимая.
+-end-
+ho.ports	-begin-
+Список портов в интерфейсе модуля, который
+редактируется в данный момент. Символ слева
+показывает направление порта.
+-end-
+ho.status.logo	-begin-
+Индикатор состояния программы. Если показан
+логотип Чугунные ворота -> TkGate в режиме редактирования.
+Если показан четвероногий вентиль И -> TkGate в режиме
+симуляции. Если вентиль И не движется -> симуляция
+приостановлена, а если он бежит -> симуляция запущена.
+-end-
+ho.status.msg	Здесь отображаются сообщения TkGate.
+ho.status.block	Стек модулей, которые редактируются.
+ho.status.file	-begin-
+Текущий редактируемый файл. Символ '*' показывает,
+что файл был изменён с момента последнего сохранения.
+-end-
+ho.print.selall	Печать всех модулей, загруженных в TkGate.
+ho.print.selcur	Печать только выбранного модуля в области редактирования TkGate.
+ho.print.seluse	-begin-
+Печать всех используемых модулей (тех, что
+являются потомками модуля верхнего уровня).
+-end-
+ho.print.fulltrace	Печать всей трассировки.
+ho.print.parttrace	-begin-
+Печать части трассировки. Введите начальное и конечное
+время в полях ввода или используйте правую кнопку мыши
+для выделения диапазона в окне логического анализатора
+(зажмите Shift для выбора длинных диапазонов).
+-end-
+ho.print.parttracestart	Начальное время вывода трассировки.
+ho.print.parttraceend	Конечное время вывода трассировки.
+ho.print.selsel	-begin-
+Печать только модулей, выбранных снизу.
+Используйте клавишу Ctrl для выбора
+нескольких модулей.
+-end-
+ho.print.modlist	Выбор модулей для печати.
+ho.print.timegraph	-begin-
+Здесь представлена область, выбранная для
+печати. Зелёная зона - это весь доступный
+диапазон данных трассировки, а серая обозначает
+выбранный для печати фрагмент. Используйте
+выделители слева для обозначения требуемой
+области или выберите область в окне логического
+анализатора перед тем, как вызвать этот диалог.
+-end-
+ho.circuit.discchg	-begin-
+TkGate не будет отображать предупреждение,
+если Вы отклоните изменения без сохранения.
+-end-
+ho.circuit.extbar	-begin-
+Вновь создаваемые базовые вентили (И, ИЛИ,
+ИСКЛ-ИЛИ) будут использовать расширительные полосы
+для объединения множества входов.
+-end-
+ho.circuit.shownet	-begin-
+Вновь создаваемые переключатели будут снабжены
+названиями цепей, к которым они подключены.
+-end-
+ho.circuit.autostart	-begin-
+Если включено, симуляция начинается
+сразу после активации вкладки "Симуляция".
+-end-
+ho.circuit.file	-begin-
+Имя файла, из которого была загружена
+текущая схема.
+-end-
+ho.circuit.ver	-begin-
+Версия TkGate, в которой был создан файл,
+загруженный в данный момент.
+-end-
+ho.circuit.encoding	Кодировка, используемая при сохранении файла.
+ho.circuit.language	-begin-
+Использовать шрифты для данной локализации при
+отображении данных схемы.
+-end-
+ho.circuit.title	Описание схемы, которое будет использовано при печати.
+ho.cmd.bitw	-begin-
+Проводники, выделенные инструментом
+"Разделенный кабель", получат эту
+разрядность.
+-end-
+ho.edgat.signam	-begin-
+Имя выделенного сигнала у выделенного
+компонента. Можно изменять имя сигнала,
+редактируя его здесь.
+-end-
+ho.edgat.port	-begin-
+Имя порта выделенного сигнала у
+выделенного компонента. Это поле
+можно изменять только у экземпляров
+модулей.
+-end-
+ho.edgat.iolab	-begin-
+Направление выделенного сигнала
+у выделенного компонента. Это поле
+можно изменять только у экземпляров
+модулей.
+-end-
+ho.edgat.bitlab	-begin-
+Разрядность выделенного сигнала у
+выделенного компонента. Здесь
+можно изменить разрядность.
+-end-
+ho.edgat.cycle	Общее число эпох в цикле синхронизации.
+ho.edgat.phase	Стартовая позиция цикла (в процентах).
+ho.edgat.duty	Доля цикла, в течении которой синхросигнал имеет низкий уровень.
+ho.edgat.hide	-begin-
+Установить этот флаг для отмены
+отображения имён компонентов.
+-end-
+ho.edgat.gtype	Тип компонента.
+ho.edgat.gname	Имя данного экземпляра компонента.
+ho.edgat.ganchor	Установите этот флаг чтобы привязать положение компонента.
+ho.edgat.gx	Координата X компонента.
+ho.edgat.gy	Координата Y компонента.
+ho.edgat.swstate	-begin-
+Начальное положение переключателя, которое будет
+использовано после начала симуляции.
+-end-
+ho.edgat.dipstate	-begin-
+Начальное положение DIP-переключателя, которое будет
+использовано после начала симуляции.
+-end-
+ho.edgat.range	Диапазон бит, который нужно отвести от шины.
+ho.edgat.memfile	-begin-
+Файл начального состояния для этой памяти.
+Данный файл будет прочитан после начала симуляции.
+-end-
+ho.edgat.func	Тип функции для этого модуля.
+ho.edgat.frame	Надпись на рамке.
+ho.traceprint	-begin-
+Печать диапазона логической трассировки,
+выделенная правой кнопкой мыши. Для увеличения
+выделения можно использовать Shift с
+правой кнопкой. Если выделение отсутствует,
+будет использован диапазон, видимый в окне
+логического анализатора.
+-end-
+ho.showxhair	-begin-
+Если нажата эта кнопка, то в окне логического
+анализатора будет показана вертикальная линия
+визирования.
+-end-
+ho.opt.general.fontset	-begin-
+Определяет базовый размер шрифтов, используемых
+в интерфейсе TkGate. Эта настройка вступит
+в силу после перезапуска TkGate.
+-end-
+ho.opt.sec.send	-begin-
+Включение системной задачи $tkg$command() позволяет
+пользовательским схемам посылать произвольные команды
+графическому интерфейсу TkGate, в том числе выполнять
+любые команды оболочки. Рекомендуется отключить данную
+возможность, если симулятор используется для запуска
+схем из ненадёжных источников. Включение этой возможности
+имеет высокий риск, связанный с безопасностью.
+-end-
+ho.opt.sec.open	-begin-
+Включение системной задачи $fopen() позволяет
+пользовательским схемам читать и записывать файлы в
+соответствии с правами, с которыми запущен TkGate.
+Включение этой возможности имеет высокий риск,
+связанный с безопасностью.
+-end-
+ho.opt.sec.writemem	-begin-
+Включение системных задач $writememb() и $writememh()
+позволит пользовательским схемам записывать файлы в
+соответствии с правами, с которыми запущен TkGate.
+Включение этой возможности имеет высокий риск,
+связанный с безопасностью.
+-end-
+ho.opt.sec.enqueue	-begin-
+Включение системных задач $tkg$recv() и $tkg$send()
+позволит виртуальным периферийным устройствам посылать
+команды пользовательским схемам TkGate. Включение этой
+возможности не несёт особого риска.
+-end-
+ho.opt.ssave	-begin-
+Выполнять проверки целостности файлов схем перед
+перезаписью существующих сохранённых файлов для
+подтверждения отсутствия ошибок сохранения.
+-end-
+ho.opt.sec.exec	-begin-
+Полное разрешение системной задачи $tkg$exec() позволит
+пользовательским схемам выполнять произвольные команды tcl/tk,
+включая возможность выполнять любые команды оболочки.
+Включение этой возможности имеет высокий риск,
+связанный с безопасностью.
+-end-
+ho.opt.sec.regexec	-begin-
+Включение системной задачи $tkg$exec() для зарегистрированных функций
+позволит пользовательским схемам выполнять только те команды tcl/tk,
+которые были зарегистрированы как безопасные. До тех пор, пока все
+файлы виртуальных периферийных устройств являются надёжными, включение
+этой возможности должно предотвращать исполнение опасных команд.
+Эта функция имеет средний уровень риска.
+-end-
+ho.opt.sec.noexec	-begin-
+Полный запрет системной задачи $tkg$exec() не позволит пользовательским
+схемам выполнять команды tcl/tk, что приведёт к невозможности использовать
+виртуальные периферийные устройства. Выбор этого варианта несёт наименьший
+риск для безопасности.
+-end-
+ho.opt.sec.stop	-begin-
+Если включена эта возможность, то при первой попытке выполнить запрещённую
+команду симуляция будет прервана.
+-end-
+ho.opt.sec.warn	-begin-
+Если включена эта возможность, то при попытке выполнить запрещённую
+команду симуляция будет продолжена, но будет выведено сообщение об ошибке.
+-end-
+ho.opt.sec.ignore	-begin-
+Если включена эта возможность, то попытки выполнить запрещённую
+команду будут игнорироваться, не будет выведено никаких сообщений.
+-end-
+ho.opt.html.browser	-begin-
+Команда, которая будет выполнена, когда пользователь
+перейдёт по ссылке на html файл. Конструкция "%s" в
+команде на URL ссылки.
+-end-
+ho.opt.html.email	-begin-
+Команда, которая будет выполнена, когда пользователь
+щёлкнет по ссылке для отправки сообщения электронной
+почты. Конструкция "%s" будет заменена на URL ссылки.
+-end-
+ho.opt.fsave	-begin-
+Сохранить внутренние ячейки TkGate вместе
+с данными схемы. Это увеличит размер файла
+приблизительно на 20% для типичной схемы,
+но облегчит преобразование сохранённых файлов
+для использования сторонними инструментами,
+поддерживающими Verilog.
+-end-
+ho.opt.sorttraces	-begin-
+Если включена эта функция, данные трассировки
+в окне логического анализатора будут отображаться
+в отсортированном виде. В противном случае
+данные будут отображаться в порядке установки
+зондов на сигналы.
+-end-
+ho.opt.sim.noglitch	-begin-
+Если включена эта функция, то быстро изменяющиеся
+входные сигналы компонента вызовут неопределённое
+значение выхода вместо просто сдвинутого во
+времени входного сигнала. Это может убрать
+спонтанные события и предотвратить осцилляции
+в последовательных схемах на уровне отдельных
+вентилей.
+-end-
+ho.opt.sim.savetraces	-begin-
+Зонды, установленные во время симуляции,
+будут сохранены и вновь установлены при
+перезапуске симуляции той же схемы.
+-end-
+ho.opt.sim.tech	-begin-
+Список файлов для загрузки в качестве потенциальных
+файлов технологий. Файлы технологий определяют
+задержки и ожидаемые площади для встроенных
+компонентов.
+-end-
+ho.opt.sim.err	-begin-
+Выбор способа обработки предупреждений
+от симулятора.
+-end-
+ho.opt.sim.err.stopany	-begin-
+Не симулировать схему если есть предупреждения,
+даже если нет ошибок.
+-end-
+ho.opt.sim.err.showall	-begin-
+Всегда отображать предупреждения в схемах,
+даже если нет ошибок. Если есть предупреждения,
+но нет ошибок, симулятор будет запущен, и в
+отдельном окне будет выведено предупреждение.
+-end-
+ho.opt.sim.err.showiferr	-begin-
+Показывать предупреждения только если присутствуют
+также и ошибки. Если есть предупреждения, но нет
+ошибок, предупреждения будут проигнорированы, а
+симулятор запущен.
+-end-
+ho.opt.sim.err.ignore	-begin-
+Никогда не отображать предупреждения. Даже
+если в схеме присутствуют ошибки.
+-end-
+ho.opt.lib.vpath	-begin-
+Список каталогов для поиска файлов библиотек TkGate.
+Библиотеки - это обычные схемы TkGate, содержащие
+полезные переиспользуемые модули.
+-end-
+ho.opt.lib.vlib	-begin-
+Список библиотек, которые должны быть автоматически
+загружены, когда запускается TkGate.
+-end-
+ho.opt.lib.vpd	-begin-
+Список каталогов поиска виртуальных периферийных
+устройств. Виртуальные периферийные устройства -
+это модули, написанные на tcl, обычно реализующие
+графический интерфейс пользователя, представляющий
+периферийные устройства, контролируемые
+пользовательскими схемами.
+-end-
+ho.opt.undolen	Максимальное число операций отмены.
+ho.opt.name	-begin-
+Имя пользователя, которое будет использовано
+в генерируемых TkGate отчётах, таких как
+распечатки схем.
+-end-
+ho.opt.site	-begin-
+Имя компьютера, где установлен TkGate.
+Это имя будет использовано во всех
+распечатках и postscript документах.
+-end-
+ho.opt.smooth	-begin-
+Если включена эта функция, прокрутка схемы в
+области редактирования будет оптимизирована с
+использованием растровых копий, вместо полной
+перерисовки. Следует отключить её, если при
+прокрутке схемы изображение портится.
+-end-
+ho.opt.clip	-begin-
+Если эта функция включена, то для обновления
+только видимой части области редактирования
+будет использоваться отсечение вместо полной
+перерисовки. Отключать только если имеются
+проблемы с отображением.
+-end-
+ho.opt.showimage	-begin-
+Отключите данную функцию для подавления
+отображения картинок и пояснительного текста
+в окнах диалога.
+-end-
+ho.opt.outmove	-begin-
+Если включена эта функция, то при перемещении
+экземпляров модулей на схеме будут отображаться
+только контуры. Использовать только на машинах
+с медленной видеоподсистемой.
+-end-
+ho.opt.bhelp	-begin-
+Если включена эта функция, всплывающие подсказки
+активированы. Всплывающие подсказки, такие как эта,
+предоставляют пояснения к элементам интерфейса
+когда указатель мыши оказывается над ними.
+-end-
+ho.opt.tearawaymenus	-begin-
+Если включено, главные меню являются отделяемыми
+от интерфейса. Эта возможность вступит в силу
+после перезапуска TkGate.
+-end-
+ho.opt.novice	-begin-
+Если файл схемы прямо не указан в командной строке,
+то при запуске будет открыто учебное руководство.
+-end-
+ho.opt.blockDropConnect	-begin-
+Позволяет создавать порты в интерфейсах модулей
+опусканием концов проводников около краёв
+модулей.
+-end-
+ho.opt.debug	-begin-
+Включает некоторые отладочные возможности,
+востребованные в основном разработчиками.
+-end-
+ho.opt.ckpt	Включение контрольных точек на несохранённых схемах.
+ho.opt.ckptfreq	Период создания контрольных точек в секундах.
+ho.opt.beak	-begin-
+Включение полностью бесполезных возможностей.
+Если отключить эту функцию, то поле включения
+бесполезных возможностей больше не возникнет
+в этом диалоге и для его включения нужно
+будет редактировать файл .tkgate2-properties.
+-end-
+ho.opt.miles	-begin-
+Если включен этот режим, TkGate будет
+периодически издеваться над
+интеллектуальными усилиями пользователя.
+-end-
+ho.opt.bat	-begin-
+Если включен этот режим, то TkGate настроит
+среду для разработки учебного примера
+"The bat computer".
+-end-
+ho.opt.trek	Телепортируй меня, Скотти!
+ho.opt.simstep	-begin-
+Число эпох, которые необходимо пройти,
+когда вызывается команда шаг.
+-end-
+ho.opt.ckstep	-begin-
+Число циклов синхросигнала, которые необходимо
+пройти, когда вызывается команда шаг
+синхросигнала.
+-end-
+ho.opt.ckover	-begin-
+Число эпох после восходящего фронта
+синхросигнала, которые необходимо пройти,
+когда вызывается команда шаг синхросигнала.
+-end-
+ho.opt.vpopupdelay	-begin-
+Задержка в миллисекундах между нажатием и удержанием
+кнопки мыши и отображением значения сигнала.
+На некоторых системах короткие значения задержки
+перекрываются с возможностью распознать двойной щелчок
+мыши. Если вы столкнулись с этой проблемой, попробуйте
+увеличить это значение.
+Допустимы значения от 1 до 10000.
+-end-
+ho.opt.init	-begin-
+Файл скрипта симуляции, который нужно
+автоматически запустить прежде чем
+начнётся симуляция любой схемы. Не
+использовать для скриптов, специфичных
+для конкретной схемы (для этого использовать
+диалог свойств схемы).
+-end-
+ho.opt.ckall	-begin-
+Если включен данный режим, то команда шага
+тактирующего сигнала остановит симуляцию на
+восходящем фронте любого тактирующего сигнала
+в схеме.
+-end-
+ho.opt.ckspec	-begin-
+Если включен данный режим, то команда шага
+тактирующего сигнала остановит симуляцию
+только на восходящем фронте указанного
+сигнала. Используйте имя цепи, к которой
+подключен сигнал.
+-end-
+ho.opt.keybind	-begin-
+Определяет базовый стиль привязки клавиш.
+Если изменить эту настройку, то привязки
+обновятся немедленно, но Вам придётся
+перезагрузить TkGate, чтобы увидеть
+пользовательские привязки.
+-end-
+ho.deftech	-begin-
+Технология по умолчанию для новых компонентов.
+Влияет на величину задержек прохождения сигнала.
+Для изменения технологии конкретного компонента
+выберите нужное значение на вкладке "Задержка"
+диалога свойств компонента.
+-end-
+ho.techbut	-begin-
+Использовать задержки из стандартного файла
+определения технологий. Для использования
+специальных технологий добавьте их
+в список в диалоге настроек TkGate
+"Инструменты -> Настройки -> Симуляция -> Технология".
+-end-
+ho.custbut	Установить специальные задержки для этого компонента.
+ho.contver	-begin-
+Непрерывно проверять целостность внутренних
+структур данных после каждой операции.
+-end-
+ho.simwatch	-begin-
+Показыть команды, пересылаемые между
+графическим интерфейсом и симулятором.
+-end-
+ho.symed.point	-begin-
+Режим редактирования пикселей. Используйте
+левую кнопку мыши для установки пикселей,
+а правую для очистки.
+-end-
+ho.symed.line	-begin-
+Режим линий. Левая кнопка мыши позволяет
+устанавливать пиксели линии, а правая
+очищать их.
+-end-
+ho.symed.rect	-begin-
+Режим прямоугольника. Используйте
+левую кнопку мыши для установки
+пикселей прямоугольника, а правую
+для их очистки.
+-end-
+ho.symed.fillrect	-begin-
+Режим заполненного прямоугольника.
+Используйте левую кнопку мыши для
+установки пикселей прямоугольника,
+а правую для их очистки.
+-end-
+ho.symed.select	-begin-
+Режим выделения изображения. Используйте
+левую кнопку мыши для выделения части
+изображения и выполнения операций
+копирования, вырезания и вставки.
+-end-
+ho.symed.port	-begin-
+Режим выделения портов. Выделите порты
+и перемещайте их, либо поворачивайте.
+-end-
+ho.symed.rshift	Сдвинуть выделенные пиксели вправо.
+ho.symed.lshift	Сдвинуть выделенные пиксели влево.
+ho.symed.ushift	Сдвинуть выделенные пиксели вверх.
+ho.symed.dshift	Сдвинуть выделенные пиксели вниз.
+ho.symed.cwrotate	Повернуть выделенные пиксели по часовой стрелке.
+ho.symed.ccwrotate	Повернуть выделенные пиксели против часовой стрелки.
+ho.symed.autobold	Сделать выделенный фрагмент жирным.
+ho.symed.resize	Изменить размер редактора изображения.
+ho.symed.import	Импортировать изображение из файла.
+ho.symed.export	Экспортировать изображение в файл.
+ho.tool.currot	-begin-
+Показан текущий поворот
+по умолчанию. Нажмите, чтобы
+изменить поворот элементов
+по умолчанию.
+-end-
+ho.tool.zoomin	Увеличить
+ho.tool.zoomout	Уменьшить
+ho.tool.rotate	Повернуть выбранные компоненты против часовой стрелки.
+ho.tool.brotate	Повернуть выбранные компоненты по часовой стрелке.
+ho.tool.valgn	Выровнять выбранные компоненты по вертикали.
+ho.tool.halgn	Выровнять выбранные компоненты по горизонтали.
+ho.tool.cut	Вырезать выделенное.
+ho.tool.copy	Копировать выделенное.
+ho.tool.paste	Вставить из буфера обмена.
+ho.tool.find	Найти компонент, проводник или текст.
+ho.tool.addport	Добавить порт к выделенному компоненту.
+ho.tool.anchor	Привязать выделенные компоненты.
+ho.tool.unanchor	Удалить привязку выделенного компонента.
+ho.tool.replicate	Клонировать компонент.
+ho.tool.delete	Удалить выделенное.
+license1	-begin-
+TkGate ― свободное программное обеспечение. Вы можете распространять
+или изменять его при условиях соответствия GNU General Public License,
+опубликованной Free Software Foundation; либо версии 2 лицензии, либо
+(на ваше усмотрение) любой более поздней версии.
+-end-
+license2	-begin-
+TkGate распространяется в надежде на то, что приложение будет полезно,
+но БЕЗ ВСЯКИХ ГАРАНТИЙ; не гарантируется даже ПРИГОДНОСТЬ или
+СООТВЕТСТВИЕ КАКИМ-ЛИБО ТРЕБОВАНИЯМ. Для получения дополнительной
+информации ознакомьтесь с GNU General Public License.
+-end-
+license3	-begin-
+Вы должны были получить копию GNU General Public License вместе с TkGate.
+Если этого не произошло, напишите в Free Software Foundation, Inc., 51
+Franklin Street, Fifth Floor, Boston, MA 02110-1301 США.
+-end-

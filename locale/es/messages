@@ -1,0 +1,795 @@
+\font-encoding			iso8859-1
+\display-encoding		iso8859-1
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				español
+
+b.new	Nuevo...
+b.dismiss	Volver
+b.close	Cerrar
+b.ok	OK
+b.clear	Borrar
+b.cancel	Cancelar
+b.in	entrada
+b.out	salida
+b.inout	bidireccional
+b.browse	Visualizar...
+b.label	Etiqueta
+b.find	Buscar
+b.edit	Editar...
+b.add	Añadir...
+b.delete	Borrar
+b.remove	Borrar
+b.apply	Aplicar
+b.anchor	Anclar
+b.tech	Tecnología
+tab.editintr	Interface
+tab.simulate	Simular
+tab.cpath	Caminos críticos
+fpattern.vs	Ficheros de Script de Verilog
+fpattern.xbm	mapa de bits X11
+fpattern.all	Todos los Ficheros
+module.tree	Árbol
+module.list	Lista
+module.box.libraries	Librerías
+sidetab.nets	Conexiones
+sidetab.ports	Puertos
+mm.add	Añadir...
+mm.delete	Borrar
+mm.edit	Editar...
+mm.enable	Activado
+mm.disable	Desactivado
+menu.file	0:Fichero
+menu.edit	0:Editar
+menu.tool	0:Herramientas
+menu.symbol	0:Símbolo
+menu.simulate	0:Simular
+menu.module	0:Módulo
+menu.interface	0:Interface
+menu.make	0:Insertar
+menu.help	0:Ayuda
+menu.file.new	0:Nuevo...
+menu.file.open	0:Abrir...
+menu.file.openlib	0:Abrir Libreria...
+menu.file.save	0:Salvar
+menu.file.saveas	5:Salvar como...
+menu.file.print	0:Imprimir...
+menu.file.quit	0:Salir
+menu.file.cprop	0:Propiedades del circuito...
+menu.file.import	0:Importar Imagen...
+menu.file.export	0:Exportar Imagen...
+menu.edit.undo	0:Deshacer
+menu.edit.redo	0:Rehacer
+menu.edit.cut	0:Cortar
+menu.edit.copy	3:Copiar
+menu.edit.paste	0:Pegar
+menu.edit.selall	0:Seleccionar Todo
+menu.edit.find	0:Buscar...
+menu.edit.zoomin	5:Acercar
+menu.edit.zoomout	5:Alejar
+menu.edit.resize	Redimensionar Mapa de bits
+menu.tool.move	0:Mover/Conectar
+menu.tool.delg	0:Borrar puerta
+menu.tool.cutw	0:Cortar cable
+menu.tool.inv	0:Invertir
+menu.tool.bitw	0:Anchura del bus
+menu.tool.debug	0:Depurar
+menu.tool.point	0:Punto
+menu.tool.line	0:Linea
+menu.tool.rect	0:Rectángulo
+menu.tool.fillrect	0:Rellenar Rectángulo
+menu.tool.port	0:Puerto
+menu.tool.select	0:Seleccionar Región
+menu.tool.options	0:Opciones...
+menu.format.addport	4:Añadir Puerto
+menu.format.ioset	0:Seleccionar Tipo
+menu.format.del	0:Borrar
+menu.format.rot	0:Rotación
+menu.format.algnv	6:Situar en Columna
+menu.format.algnh	6:Situar en Fila
+menu.tool.tclshell	0:Linea de comandos Tcl
+menu.tool.rep	0:Replicar
+menu.simulate.begin	0:Empezar Simulación
+menu.simulate.end	0:Terminar Simulación
+menu.simulate.run	0:Modo continuo
+menu.simulate.pause	0:Pausa
+menu.simulate.step	0:Paso a paso (tiempo)
+menu.simulate.cycle	5:Paso a paso (nº ciclos)
+menu.simulate.break	0:Punto de ruptura...
+menu.simulate.script	1:Ejecutar Guión...
+menu.simulate.view	1:Ver Memoria...
+menu.module.open	0:Abrir
+menu.module.close	0:Cerrar
+menu.module.new	0:Nuevo...
+menu.module.del	0:Borra...
+menu.module.copy	1:Copia...
+menu.module.rename	0:Renombra...
+menu.module.prop	0:Propiedades...
+menu.module.interface	0:Interface
+menu.module.interface.edit	0:Editar...
+menu.help.about	0:Acerca de...
+menu.help.license	0:Licencia...
+menu.help.doc	0:Documentación...
+menu.help.tut	1:Tutoriales
+menu.help.home	1:Página Principal
+menu.help.example	1:Ejemplos
+menu.scope_file	0:Fichero
+menu.scope_sim	0:Simular
+menu.scope_help	0:Ayuda
+menu.scope_file.ptrace	0:Visualizando Señal...
+menu.scope_file.close	0:Cerrar
+menu.scope_trace.zoomin	5:Acercar
+menu.scope_trace.zoomout	5:Alejar
+menu.scope_sim.run	0:Modo continuo
+menu.scope_sim.pause	0:Pausa
+menu.scope_sim.step	0:Paso a paso (tiempo)
+menu.scope_sim.cycle	5:Paso a paso (nº ciclos)
+menu.scope_sim.break	0:Punto de ruptura...
+menu.scope_sim.script	1:Ejecutar Guión...
+menu.scope_help.about	0:Acerca de...
+menu.scope_help.license	0:Licencia...
+menu.scope_help.doc	0:Documentación...
+mod.intf	Interface
+port.title	TkGate: Propiedades del Puerto
+port.parms	Parámetros de Puerto
+port.in	Entrada
+port.out	Salida
+port.inout	EntradaSalida
+gm.signals	Señales
+gm.io	Entrada/Salida
+gm.gate	Puerta
+gm.rgate	Reducción
+gm.msi	MSI
+gm.alu	ALU
+gm.mem	Memoria
+gm.mod	Módulo
+gm.comment	Comentario
+gm.script	Script Verilog
+gm.frame	Marco
+gm.io.switch	Conmutador
+gm.io.dip	Interruptores DIP
+gm.io.clock	Señal de Reloj
+gm.io.led	LED
+gm.io.ledbar	Barra de LEDs
+gm.io.ledhex	7-Seg. LED (HEXADECIMAL)
+gm.io.leddec	7-Seg. LED (DECIMAL)
+gm.io.ledseg	7-Seg. LED (Directo)
+gm.io.tty	TTY (Terminal)
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Buffer
+gm.gate.inv	Inversor
+gm.gate.tribuf	Buffer-Triestado
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
+gm.alu.add	Sumador
+gm.alu.mult	Multiplicador
+gm.alu.div	Divisor
+gm.alu.lshift	DespL. Izquierda
+gm.alu.rshift	DespL. Derecha
+gm.alu.arshift	DespL. Arit. Derecha
+gm.mem.reg	Registro
+gm.mem.ff	Flip-Flop D
+gm.mem.rff	Rev. D Flip-Flop
+gm.mem.ram	RAM
+gm.mem.rom	ROM
+gm.mem.jkff	JK Flip-Flop
+gm.mem.rjkff	Rev. JK Flip-Flop
+gm.msi.21mux	2-1 Multiplexor
+gm.msi.41mux	4-1 Multiplexor
+gm.msi.81mux	8-1 Multiplexor
+gm.msi.12dec	1-2 Decodificador
+gm.msi.14dec	1-4 Decodificador
+gm.msi.18dec	1-8 Decodificador
+gm.mod.inst	Inserta módulo
+gm.mod.in	Entrada Módulo
+gm.mod.out	Salida Módulo
+gm.mod.inout	Bidireccional Módulo
+tutorial.prev	PREVIO
+tutorial.next	SIGUIENTE
+tutorial.chapter	LISTA DE CAPÍTULOS
+tutorial.reload	RECARGAR
+pop.make	Componentes
+pop.tool	Heramienta
+pop.edit.paste	Pegar
+pop.edit.cut	Cortar
+pop.edit.copy	Copiar
+pop.port.in	Entrada
+pop.port.out	Salida
+pop.port.inout	EntradaSalida
+pop.wire.hidelabel	Ocultar Etiqueta
+pop.wire.hidealllabel	Ocultar Todas las Etiquetas
+pop.wire.clearalllabel	Limpiar Todas las Etiquetas
+pop.wire.showlabel	Mostrar Etiqueta
+pop.gate.open	Abrir
+pop.gate.close	Cerrar
+pop.gate.addport	Añadir Puerto
+pop.gate.addin	Añadir Entrada...
+pop.gate.addout	Añadir Salida...
+pop.gate.addinout	Añadir EntradaSalida...
+pop.gate.delete	Borrar
+pop.gate.ioset	Seleccionar Tipo
+pop.module.new	Nuevo...
+pop.module.del	Borrar...
+pop.module.copy	Copiar...
+pop.module.rename	Renombra...
+pop.simulate.end	Terminar Simulación
+pop.simulate.begin	Comenzar Simulación
+pop.simulate.run	Ejecutar
+pop.simulate.pause	Pausar
+pop.simulate.dump	Volcar Memoria...
+pop.simulate.view	Ver Memoria...
+pop.interface	Interface
+pop.interface.edit	Editar...
+pop.igen.type	Tipo
+pop.igen.delete	Borrar
+pop.igen.in	entrada
+pop.igen.out	salida
+pop.igen.inout	bidireccional
+pop.igen.left	izquierda
+pop.igen.right	derecha
+pop.igen.top	arriba
+pop.igen.bottom	abajo
+pop.igen.other	otro
+symed.tab.select	Seleccionado
+ifile	Fichero
+imodule	Módulo
+iblmodule	Módulos
+iports	Puertos
+ibits	Bits:
+itype	Tipo:
+db.mod.name	Nombre
+db.mod.file	Nombre del Fichero
+db.mod.type	Tipo
+db.mod.props	Propiedades
+db.mod.hdl	Verilog HDL
+db.err.caption	Lista de Errores
+db.net.name	Nombre Conexión
+db.net.hide	Nombre Oculto
+db.net.bits	Anchura Bus
+db.net.port	Tipo de Patilla
+db.net.in	entrada
+db.net.out	salida
+db.net.inout	bidireccional
+db.net.inets	Conexiones
+db.newcirc.file	Nombre del Fichero
+db.gate.signam	Nombre de la Señal
+db.gate.portnam	Nombre de la Patilla
+db.gate.iotype	Tipo
+db.gate.bitw	Anchura Bus
+db.gate.cyclew	Anchura Ciclo
+db.gate.phase	Fase
+db.gate.duty	Función
+db.gate.port	Patilla
+db.gate.bitws	Bits
+db.gate.gtype	Tipo
+db.gate.gname	Nombre de la Puerta
+db.gate.hidenam	Nombre Oculto
+db.gate.anchor	Anclar
+db.gate.cpbreak	Ruptura del camino crítico
+db.gate.butstate	Estado del Botón
+db.gate.dipval	Valor del conmutador
+db.gate.memfilenam	Fichero de Memoria
+db.gate.modname	Tipo
+db.gate.general	General
+db.gate.details	Detalles
+db.gate.ports	Patilla
+db.gate.delay	Retraso
+db.gate.stddelay	Retraso Normal
+db.gate.custdelay	Retraso Personalizado
+db.gate.delete	Borrar
+db.gate.tab.RAM.cap	Propiedades de la RAM
+db.gate.tab.ROM.cap	Propiedades de la ROM
+db.gate.led.type	Tipo de LED
+db.gate.led.bit.hdr	Bit
+db.gate.led.bar.hdr	Barra Grafica
+db.gate.led.hex.hdr	7-Segment (HEXADECIMAL)
+db.gate.led.dec.hdr	7-Segment (DECIMAL)
+db.gate.led.seg.hdr	7-Segment (Directo)
+db.hdl.cancel	Cancelar
+print.printer	Impresora:
+print.file	Fichero
+print.prcmd	Comando de Impresión:
+print.filename	Nombre del Fichero
+print.epssave	Salvar como Postscript Encapsulado.
+print.epcm	Periodo de tiempo/cm
+print.estpg	Páginas estimadas
+print.all	Todo
+print.cur	Actual
+print.use	Usados
+print.sel	Seleccionados
+print.inclib	Incluye módulos de libreria.
+print.papsz	Tamaño del Papel
+print.orient	Orientación
+print.portrait	Vertical
+print.landscape	Apaisada
+print.2side	Imprimir a doble cara
+print.opts	Opciones
+print.scale	Escalar módulos hasta completar página.
+print.partition	Dividir módulos grandes en varias páginas.
+print.incidx	Incluye indice.
+print.incgraph	Incluye gráfico de jerarquia.
+print.4up	Imprimir cuatro módulos pequeños por página.
+print.fulltr	Trazado completo
+print.parttr	Trazado parcial
+print.start	Empezar
+print.range	Rango
+print.ok	Imprimir
+print.tab.modules	Módulos
+opt.general	General
+opt.interface	Interface
+opt.editor	Verilog HDL
+opt.print	Imprimir
+opt.simulate	Simular
+opt.simulate.tech	Tecnología
+opt.library	Librerías
+opt.analysis	Análisis
+opt.color	Color
+opt.debug	Habilitar Depuración
+opt.site	Nombre de la Empresa
+opt.inst	Instancias
+opt.mods	Módulos
+opt.modports	Patillas de Módulos
+opt.frames	Marcos
+opt.comment	Comentarios
+opt.hlink	Hiperenlaces
+opt.wire	Cables simples (1 Bit)
+opt.bus	Buses
+opt.tools	Herramientas de Puerta
+opt.cpath	Caminos críticos
+opt.grid	Visualizar Rejilla
+opt.logic1	Lógica '1'
+opt.logic0	Lógica '0'
+opt.float	Flotante
+opt.unknown	Conflicto Desconocido
+opt.offled	LED apagado
+opt.onled	LED encendido
+opt.zled	LED flotante
+opt.restdef	Restaura opciones por defecto
+opt.regudate	Actualizar Región
+opt.smoothscroll	Desplazamiento Suave
+opt.balloon	Habilitar Globos de Ayuda
+opt.novice	Modo Novato
+opt.freq	Frecuencia
+opt.beak	Habilitar Modo Especial
+opt.bat	Bat
+opt.trek	Star Trek
+opt.miles	Miles
+opt.showsimcmd	Visualizar Cadena Simulada
+opt.estepsz	Ajuste Tiempo (Simulación paso a paso)
+opt.cstepsz	Ajuste nº ciclos (Simulación paso a paso)
+opt.overstep	Exceder Reloj
+opt.posedge	El reloj para después de todos los flancos
+opt.setclock	El reloj para en punto
+opt.delayfilepath	Ficheros de Retraso
+opt.cpopts	Opciones de los caminos críticos
+opt.maxpath	Máximo nº de caminos:
+opt.cpflash	Presentar como relampago
+opt.tool.file	Fichero
+opt.tool.gateprop	Componentes
+opt.tool.module	Módulo
+opt.tool.tech	Tecnología
+opt.tool.symport	Puertos
+opt.editor.comments	Comentarios
+opt.editor.color	Color
+opt.vercheck	-begin-
+Chequea de forma periódica si existen nuevas versiones del
+programa TKGATE en Internet. No habilitarla si no se dispone
+de una conexión permanente a la RED.
+-end-
+igen.port	Patilla
+igen.type	Tipo
+igen.bits	Bits
+igen.delete	Borrar
+blklst.to	a
+blklst.name	Nombre
+blklst.new.cap	Módulo nuevo
+blklst.del.cap	Borra Módulo
+find.result.module	Módulo
+find.result.type	Tipo
+circ.file	Nombre del Fichero
+circ.discchg	Descartar cambios.
+circ.iniscript	Guiones de Inicialización
+circ.general	General
+circ.library	Librerías
+cp.delay	Retraso del camino:
+cp.pathl	Lista de caminos:
+cp.numpath	Número de caminos:
+cp.recompute	Recómputo
+err.nopin	No puedo cambiar la patilla seleccionada.
+err.badhex	Valor hexadecimal incorrecto. Ignoro '%s'.
+err.gatanchor	Puertas Ancladas no pueden moverse.
+err.badfind	No puedo encontrar '%s' como destino.
+err.badopendel	No puedo borrar el módulo abierto.
+err.nosrcmod	No puedo encontrar '%s' como módulo fuente.
+err.noerr	No puedo indicarle el error.
+err.misserr	Error información incompleta (did the simulator crash?)
+err.badinadd	No puedo añadir más entradas a la puerta seleccionada.
+err.badoutadd	No puedo añadir más salidas a la puerta seleccionada.
+err.badinoutadd	No puedo añadir más lineas bidireccionales a la puerta.
+err.badpinchg	No puedo cambiar el tipo de patillas de la puerta.
+err.badnetname	He borrado caracteres incorrectos en el identificador.
+err.netbcrename	Identificador cambia a '%s' por caracteres incorrectos.
+err.netconfnet	Identificador cambia a '%s' debido a un conflicto.
+err.netconfgat	Identificador cambia debido a conflicto con nombre de puerta básica
+err.netconfkw	Identificador cambia debido a conflicto con palabra reservada.
+err.badconsame	Unión rechazada debido a que los cables forman parte de la misma conexión.
+err.badconptsp	Unión rechazada debido a que ambos cables son patillas de módulos o alimentación.
+err.badconbitw	Unión rechazada por no poderse emparejar la anchura de los dos buses.
+err.badrange	No se permite visualizar el rango no positivo de la señal.
+err.badlprcmd	No puedo ejecutar el comando '%s' de impresión.
+err.badpsopen	No puedo abrir el fichero '%s' para salida postscript.
+err.bkpt.badexp	Error de sintaxis en expresión para punto de ruptura. Debe ser una de las siguientes: 'conexión', '!conexión', 'conexión == valor', 'conexión != valor'
+err.bkpt.badnet	'%s' es un nombre incorrecto de conexión. Los nombres válidos deben empezar por una letra y contener sólo letras, números y el signo '.'.
+err.bkpt.badval	Error de sintaxis en el valor '%s'. Debe ser decimal o una constante en el estilo Verilog.
+err.bkpt.toomany	Demasiados puntos de ruptura. El máximo es de %d.
+err.sim.badtmp	No puedo salvar el fichero temporal '%s' para la simulación ( ¿ Disco lleno ? )
+err.sim.syntx	Error de sintaxis en el comando '%s'.
+err.sim.noincl	El fichero Include '%s' no se encuentra.
+err.sim.nobkpt	No existe punto de ruptura '%s'.
+err.sim.nonet	No puedo encontrar la conexión '%s'.
+err.sim.nogate	No puedo encontrar la puerta '%s'.
+err.sim.badbin	'%s' es un carácter incorrecto en constante binaria.
+err.sim.notswitch	La puerta '%s' no es un conmutador, dip o registro.
+err.sim.badcmd	No reconozco el comando '%s' en el guión de simulación.
+err.sim.isrun	El simulador está ejecutandose en estos momentos (Utiliza 'Ctrl-s e' para terminar).
+err.noteditpchg	Las propiedades sólo pueden cambiarse en modo Edición.
+err.badeditop	Operación ilegal en el modo de Edición.
+err.badopen	No se puede abrir el fichero '%s'.
+err.badlibopen	No puedo abrir la libreria '%s'.
+err.nomark	Por favor marca con el botón izquierdo antes de seleccionar el tipo de puerta.
+err.badgate	No conozco ese tipo de puerta.
+err.manypages	-begin-
+Hay un montón de páginas en
+este documento. ¿ Estás seguro
+de querer imprimirlo ?.
+-end-
+err.nojump	-begin-
+La posibilidad de 'saltar al módulo' no se
+puede utilizar en el modo de simulación o
+en el análisis de un camino crítico. Por
+favor navega de forma manual hasta el bloque
+de destino seleccionando los módulos adecuados
+y utilizando la opción '>' del teclado. Se
+acceder al módulo de nivel superior en la
+jerarquia actuando sobre la tecla '<'.
+-end-
+err.nomod	Módulo '%s' no está definido.
+err.modlock	!Este bloque lógico lo está visualizando!
+err.closeroot	No puedo cerrar el módulo principal. Utiliza la opción Salir del menú Fichero.
+err.editonly	Comando incorrecto en el modo de Simulación.
+err.simonly	Comando sólo válido en modo Simulación.
+err.nodel	No se puede borrar lo seleccionado.
+err.modnotdef	Módulo '%s' no definido.
+err.moddef	El bloque '%s' ya existe.
+err.noprop	No se pueden editar las propiedades de la puerta seleccionada.
+err.openscript	No puedo abrir el fichero de guión de simulación '%s'
+err.oldversion	Cargado fichero de la versión %s, obsoleta (la más reciente es la versión %s).
+err.futureversion	Fichero salvado en la versión %s, futura versión del programa tkgate (la versión actual es %s).
+err.badversion	Se desconoce el número de versión. Usada bajo su responsabilidad.
+err.nodrive	Conexión %s no posee entrada en el módulo %s.
+err.noconn	Cable %s{%d} no posee conexiones - lo borramos.
+err.noback	-begin-
+El fichero %s, se creará por el
+programa tkgate, y no puede leerse
+por versiones anteriores a la actual
+(%s), si decide salvarlo.
+-end-
+msg.selwire	Seleccionado cable denominado '%s'.
+msg.selgate	Seleccionado %s denominado '%s'.
+msg.selblock	Seleccionado bloque %s denominado '%s'.
+msg.modoverwt	Módulo de destino '%s' existe. ¿ Sobreescribir ?
+msg.foundgate	Encontrada puerta denominada '%s'.
+msg.foundwire	Encontrado cable denominado '%s'.
+msg.searchagn	Cadena destino '%s' no encontrada. Pulsa 'find' para reiniciar la búsqueda.
+msg.sim.chgtoroot	El modo Simulación requiere el módulo principal en la cima de la pila de Edición.
+msg.sim.nogatemod	Modo SimulaciónSimulation requiere un módulo concreto de pila.
+msg.setinterface	Ajustar el interfaz del módulo para '%s'.
+msg.needsel	Por favor selecciona una instancia de módulo.
+msg.wroteckpt	Chequea punto a %s...
+msg.save	Salva circuito como '%s'.
+msg.reallynew	El circuito se ha modificado. ¿ Realmente desea perder los cambios y crear uno nuevo ?
+msg.reallyquit	El circuito se ha modificado. ¿ Realmente desea salir ?
+msg.notlib	'%s' no es un módulo de libreria.
+miles.msg1	Sólo un loco colocaria %s%s aquí, Miles.
+miles.msg2	Es realmente un estúpido lugar donde colocar %s%s, Miles.
+miles.msg3	Es un lugar horrible para colocar %s%s, Miles.
+miles.msg4	Miles, debes estar loco si colocas %s%s aquí.
+miles.msg5	Sólo tu puedes colocar %s%s aquí, Miles.
+miles.msg6	Colocar %s%s aquí es un prueba más de que eres absolutamente estúpido, Miles.
+miles.msg7	No sabes lo que haces, Miles, es un circuito estúpido.
+miles.msg8a	Es inútil continuar, Miles.
+miles.msg8b	Es obvio que no puedes diseñar un circuito
+cprt.descr	Editor y simulador de circuitos digitales
+ho.new	-begin-
+Borra el circuito actual y,
+empieza a editar uno nuevo.
+-end-
+ho.move	-begin-
+Move/Connect - Pulsando y arrastrando el ratón puedes:
+Ajustar la posición de una puerta recién insertada
+Mover puertas y conexiones ya colocadas
+Conectar cables entre patillas de puertas
+Realizando una doble pulsación puedes:
+Editar las propiedades de puertas, conexiones y puertos
+Editar el texto de los comentarios
+-end-
+ho.delgat	-begin-
+Borrar puerta - Usa esta herramienta
+para borrar las puertas.
+-end-
+ho.cutw	-begin-
+Corta cables - Usa esta herramienta
+para desconectar cables.
+-end-
+ho.inv	-begin-
+Invertir - Usa esta herramienta
+para insertar o borrar inversiones
+de las patillas de las puertas.
+-end-
+ho.bitw	-begin-
+Anchura del Bus - Usa esta herramienta
+para cambiar el número de lineas del
+Bus. Introduce dicho número en la
+parte inferior derecha de la ventana.
+-end-
+ho.simgo	-begin-
+Si no estamos simulando, inicia la
+Simulación y ejecuta cualquier
+guión de inicialización. Si
+estamos simulando, se coloca en
+modo continuo o interactivo.
+-end-
+ho.simpause	Para la simulación en curso.
+ho.simstep	-begin-
+Avanza la simulación un
+intervalo de tiempo fijo.
+Abre el submenu Opciones de
+Simulación para ajustarlo.
+-end-
+ho.simclock	-begin-
+Avanza la simulación un
+número fijo de ciclos de
+reloj. Abre el submenu Opciones
+de Simulación para ajustarlo.
+-end-
+ho.simstop	-begin-
+Finaliza la simulación en curso
+y vuelve al modo de Edición.
+-end-
+ho.simbreak	-begin-
+Edita los puntos de ruptura. La Simulación
+se detendrá cuando la condición ajustada
+sea vuelva verdadera.
+-end-
+ho.simexec	Ejecuta un guión de simulación.
+ho.simload	-begin-
+Carga la memoria con el contenido
+de un fichero con extensión mem.
+-end-
+ho.simdump	-begin-
+Almacena el contenido de la memoria
+en un fichero con extensión mem.
+-end-
+ho.modlist	-begin-
+Lista todos los móulos actualmente cargados.
+El módulo principal, el superior en la jerarquia
+se indica con el signo "+", los módulos de libreria
+se visualizan entre paréntesis.
+-end-
+ho.netlist	-begin-
+Lista todas las conexiones del módulo actual.
+Conexiones marcadas con el signo "@" no presentan su
+nombre en el esquema (conexiones ocultas). Las
+conexiones BUS van seguidas del número de lineas
+que poseen.
+-end-
+ho.ports	-begin-
+Lista todas las patillas del módulo actual
+El signo '>' indica entrada, '<' indica salida,
+y '=' indica linea bidireccional.
+-end-
+ho.status.logo	-begin-
+Estado de la Simulación. Si se presenta una
+puerta de hierro estamos en el modo de Edición.
+Si se presenta una puerta AND con cuatro patas
+estamos en modo de simulación. Si la puerta
+está parada, la simulación está detenida y
+si está en movimiento, la simulación está en
+pleno funcionamiento.
+-end-
+ho.status.msg	Los mensajes del programa se presentan aquí.
+ho.status.block	La pila de módulos que están siendo editados.
+ho.status.file	-begin-
+Fichero actualmente editado. El signo '*' indica
+que el buffer se ha modificado desde la última
+vez que el fichero se salvo en disco.
+-end-
+ho.print.selall	Imprimir todos los módulos actualmente cargados en TKGate.
+ho.print.selcur	Imprimir sólo el módulo presente en la ventana de Edición de TKGate.
+ho.print.seluse	Imprime todos los módulos "en uso". Los módulos en uso son aquellos que descienden del principal siguiendo la jerarquia arborescente.
+ho.print.selsel	-begin-
+Imprime sólo los módulos seleccionados más abajo.
+Usa la tecla CONTROL para seleccionar más de uno.
+-end-
+ho.print.modlist	Selecciona los módulos a imprimir.
+ho.circuit.discchg	-begin-
+TkGate no presenta un aviso si descartas
+los cambios sin salvar.
+-end-
+ho.cmd.bitw	-begin-
+Cables seleccionados con el cursor
+pueden ajustarse a esta anchura de Bus.
+-end-
+ho.edgat.signam	-begin-
+El nombre de la señal seleccionada en la puerta.
+Puedes cambiar este nombre editandolo aquí.
+-end-
+ho.edgat.port	-begin-
+El nombre de la patilla para esta señal en esta
+puerta. Este campo sólo puede ser editado para
+intancias de módulos.
+-end-
+ho.edgat.iolab	-begin-
+La dirección de la señal seleccionada de esta
+puerta. Este campo sólo puede editarse en las
+instancias de módulos.
+-end-
+ho.edgat.bitlab	-begin-
+La anchura de Bus de la señal seleccionada de
+esta puerta. Se puede cambiar editandola aquí.
+-end-
+ho.edgat.cycle	El número total de periodos de tiempo en un ciclo de reloj.
+ho.edgat.phase	El punto inicial del ciclo (en %).
+ho.edgat.duty	El % del ciclo que el reloj está en estado bajo.
+ho.edgat.hide	-begin-
+Activa esta bandera para no
+visualizar el nombre de la puerta.
+-end-
+ho.edgat.gtype	Tipo de puerta.
+ho.edgat.gname	Nombre de esta instancia de puerta.
+ho.edgat.ganchor	Activa esta bandera para anclar la posición de la puerta.
+ho.edgat.gx	Coordenada X de la puerta.
+ho.edgat.gy	Coordenada Y de la puerta.
+ho.edgat.swstate	-begin-
+El estado inicial del conmutador cuando
+se inicia una sesión de Simulación.
+-end-
+ho.edgat.dipstate	-begin-
+El estado inicial de los interruptores DIP
+cuando se inicia una sesión de Simulación.
+-end-
+ho.edgat.range	El rango de bits a colocar en un bus.
+ho.edgat.memfile	-begin-
+El fichero con el estado inicial de esta memoria.
+Este fichero se lee cuando se inicia el Simulador.
+-end-
+ho.edgat.func	El tipo de función de este módulo.
+ho.edgat.frame	La etiqueta del panel.
+ho.opt.site	-begin-
+El nombre del lugar donde tkgate se ha instalado.
+Se utiliza en la salida impresa o fichero postscript.
+-end-
+ho.opt.smooth	-begin-
+Si esta opción está habilitada, el desplazamiento
+se optimiza al usar copias bitmap en lugar de un
+completo redibujado. Puedes colocarla en off si
+hay problemas con su servidor.
+-end-
+ho.opt.clip	-begin-
+Si esta opción está habilitada, Se actualiza solo
+la región actualmente expuesta del entorno de
+Edición. De lo contrario se redibuja todo.
+-end-
+ho.opt.outmove	-begin-
+Si esta opción está habilitada, sólo un recuadro
+que rodea a las instancias de módulos se dibuja
+mientras se arrastra este. Usa esta opción en las
+máquinas con micros y tarjetas gráficas lentas.
+-end-
+ho.opt.bhelp	-begin-
+Si esta opción está habilitada, los globos de ayuda
+se activan. Los globos de ayuda, como este mismo,
+proporciona una ayuda resumida sobre los elementos
+del interfaz, cuando el ratón se situa encima de ellos.
+-end-
+ho.opt.novice	-begin-
+Si no se especifica ningún circuito en la linea de
+comandos. El programa TkGate presenta un tutorial
+para iniciarse en el manejo del programa.
+-end-
+ho.opt.debug	-begin-
+Habilita algunas opciones de depuración. Sólo es
+util para desarrolladores del programa TkGate.
+-end-
+ho.opt.ckpt	Habilitat puntos de chequeo para circuitos no salvados.
+ho.opt.ckptfreq	Frecuencia de los puntos de chequeo en segundos.
+ho.opt.beak	-begin-
+Habilitar todas estas opciones.
+Si deshabilita esta opción, estos modos
+(y esta caja de diálogo) no aparece en
+el menú opciones. Sólo puede recuperarse
+editando el fichero .tkgate2-properties.
+-end-
+ho.opt.miles	-begin-
+Si este modo está habilitado, el programa insulta
+periodicamente la inteligencia del usuario.
+-end-
+ho.opt.bat	-begin-
+Si este modo está habilitado, el programa activará
+el entorno para diseñar un computador sencillo a
+partir de módulos.
+-end-
+ho.opt.trek	Ayudame Scotty!
+ho.opt.simstep	-begin-
+El número de periodos de tiempo que avanzamos
+si hemos activado el modo paso a paso por tiempo.
+-end-
+ho.opt.ckstep	-begin-
+El número de ciclos de reloj que avanzamos si
+hemos activado el modo paso a paso por nº de ciclos.
+-end-
+ho.opt.ckover	-begin-
+El número de periodos de tiempo después de un
+flanco de bajada de reloj que avanzamos si
+hemos activado el modo paso a paso.
+-end-
+ho.opt.init	-begin-
+El fichero de guión que se ejecuta de forma
+automática al iniciar la Simulación.
+-end-
+ho.opt.ckall	-begin-
+Si este modo se habilita, el comando paso a paso
+parará la simulación en el flanco de subida de
+cualquier reloj presente en el circuito.
+-end-
+ho.opt.ckspec	-begin-
+Si este modo está habilitado, el comando paso a paso
+parará la simulación es el flanco de subida de la
+señal de reloj especificada.
+-end-
+ho.deftech	-begin-
+La tecnología por defecto utilizada
+para las puertas recién creadas.
+Afecta al tiempo de retraso de las
+puertas. Para cambiar la tecnología
+de una puerta especifica, abrir la
+caja de propiedades ( doble click )
+y selecciona "Retraso".
+-end-
+ho.techbut	-begin-
+Usa retrasos para la tecnología standard de un fichero de
+definición. Para añadir tecnologias personalizadas, añadirlas
+en la lista del menú "Fichero -> Opciones -> Simulador".
+-end-
+ho.custbut	Ajustar valores de retrasos personalizados para esta puerta.
+ho.simwatch	-begin-
+Visualizar comandos enviados entre el entorno
+de visualización (GUI) y el Simulador.
+-end-
+license1	-begin-
+TtGate es software libre; puede redistribuirlo y/o modificarlo bajo los términos
+de la Licencia Pública General de GNU publicada por la Free Software
+Foundation; ya sea en su versión 2 ó (a su criterio)en una versión posterior.
+-end-
+license2	-begin-
+TtGate se distribuye con la esperanza que sea útil, pero SIN GARANTÍA; sin
+ninguna garantía implícita de COMERCIALIDAD o IDONEIDAD PARA UN FIN
+DETERMINADO. Mire la Licencia General GNU para más detalles.
+-end-
+license3	-begin-
+Debería haber recibido una copia de la Licencia Pública General de GNU junto
+con TtGate; si no es el caso, escriba a la Free Software Foundation, Inc., 51
+Franklin Street, Fifth Floor, Boston, MA 02110-1301 EE. UU.
+-end-

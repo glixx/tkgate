@@ -1,0 +1,24 @@
+\font-encoding			iso8859-1
+\display-encoding		iso8859-1
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				"bahasa Indonesia"
+
+db.gate.cat.auto.hdr	Oto
+license1	-begin-
+TtGate adalah perangkat lunak bebas; Anda dapat mendistribusikan ulang
+dan/atau mengubahnya di bawah ketentuan GNU General Public License
+sebagaimana dipublikasikan oleh Free Software Foundation; Lisensi versi 2,
+atau (sesuai pilihan Anda) menggunakan versi selanjutnya.
+-end-
+license2	-begin-
+TtGate didistribusikan dengan harapan dapat berguna, tetapi TANPA ADANYA
+JAMINAN; termasuk tanpa jaminan DAYA JUAL atau KELAIKAN UNTUK TUJUAN
+TERTENTU. Lihat GNU General Public License untuk rincian lebih lanjut.
+-end-
+license3	-begin-
+Anda seharusnya menerima salinan dari GNU General Public License bersama
+TtGate; jika tidak, kirimkan surat Anda ke Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+-end-
