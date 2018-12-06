@@ -1,4 +1,4 @@
-//: version "2.0"
+//: version "2.1-a2"
 //: property prefix = "_GG"
 //: property title = "size.v"
 
