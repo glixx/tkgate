@@ -235,7 +235,7 @@ wire [7:0] reg_out;    //: {0}(#:684,194)(50:684,230)(729,230){1}
   //: /line:""
   //: /line:"   <a href=\"action:newFile\">* Editieren einer neuen Schaltung</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@H/doc/index.html\">* Öffnen der Dokumentation </a>"
+  //: /line:"   <a href=\"file:///@H/doc/en/index.html\">* Öffnen der Dokumentation </a>"
   //: /end
   //: SWITCH g26 (b) @(56,134) /sn:0 /w:[ 0 ] /st:1 /dn:1
   _GGADD8 #(68, 70, 62, 64) g45 (.A(w19), .B(reg_out), .S(w22), .CI(w11), .CO(w24));   //: @(719,82) /sn:0 /w:[ 0 3 1 1 0 ]

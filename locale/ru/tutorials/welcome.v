@@ -240,7 +240,7 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: /line:""
   //: /line:"   <a href=\"action:newFile\">* Редактировать новую схему</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@H/doc/index.html\">* Просмотр документации</a>"
+  //: /line:"   <a href=\"file:///@H/doc/en/index.html\">* Просмотр документации</a>"
   //: /end
   //: SWITCH data_select (w28) @(52,268) /sn:0 /w:[ 0 ] /st:0 /dn:1
   //: SWITCH g12 (w1) @(340,87) /sn:0 /w:[ 0 ] /st:0 /dn:1

@@ -238,7 +238,7 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: /line:""
   //: /line:"   <a href=\"action:newFile\">* 新規回路を作成</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@H/doc/index.html\">*  ドキュメンテーションを読もう </a>"
+  //: /line:"   <a href=\"file:///@H/doc/en/index.html\">*  ドキュメンテーションを読もう </a>"
   //: /end
   //: SWITCH data_select (w28) @(52,268) /w:[ 0 ] /st:0 /dn:0
   //: SWITCH g12 (w1) @(340,73) /sn:0 /w:[ 0 ] /st:0 /dn:0
