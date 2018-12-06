@@ -342,7 +342,7 @@ int AOX_GateParmList(FILE *f,GCElement *g)
 	  fprintf(f,"%s",w->net->n_signame);
 	fprintf(f,")");
       } else
-	fprintf(f,"(%sw%x)",inv,(uintptr_t)w->net);
+	fprintf(f,"(%sw%lx)",inv,(uintptr_t)w->net);
     }
   }
   fprintf(f,");");

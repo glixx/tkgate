@@ -19,7 +19,7 @@
 DISTCLEANFILES=vgrammar.h vgrammar.c luthor.c
 
 BUILT_SOURCES=vgrammar.h
-AM_CFLAGS=-DTKGATE_HOMEDIR=\"$(pkgdatadir)\" @TOP_IPATH@ @COMMON_IPATH@ @TKGATE_IPATH@ $(PANGO_XFT_CFLAGS)
+AM_CFLAGS=-D_GNU_SOURCE -DUSE_INTERP_RESULT -DTKGATE_HOMEDIR=\"$(pkgdatadir)\" @TOP_IPATH@ @COMMON_IPATH@ @TKGATE_IPATH@ $(PANGO_XFT_CFLAGS)
 AM_YFLAGS=-d
 
 BASE_OBJS=adder.c and.c arshift.c ascii.c block.c breakpoint.c buffer.c \

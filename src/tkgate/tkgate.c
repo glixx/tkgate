@@ -618,8 +618,8 @@ void setLanguage(const char *lang)
 void parse_options(int argc,const char *argv[])
 {
   int c;
-  extern char *optarg;
-  extern int optind;
+//  extern char *optarg;
+//  extern int optind;
 #if OPTRESET
   extern int optreset;
 #endif
@@ -963,7 +963,8 @@ char *canonical_path(const char *ipath,char *rpath)
   } else {
     char cwd[PATH_MAX];
 
-    getcwd(cwd,PATH_MAX);
+    if (!getcwd(cwd,PATH_MAX))
+      return NULL;
     sprintf(rpath,"%s/%s",cwd,ipath);
   }
 

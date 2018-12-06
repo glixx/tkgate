@@ -92,7 +92,7 @@ GGateInfo gate_add_info = {
   0,
   "ADD",
   "add",0x0,
-  "psadder",psAdder,
+  "psadder",(char**)psAdder,
   -1,2,
 
   {{"+",	{"gm.alu",0},		{"gm.alu.add",0,0,100},	"gat_make ADD"},

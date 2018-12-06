@@ -3,8 +3,11 @@ dnl	This file is an input file used by the GNU "autoconf" program to
 dnl	generate the file "configure", which is run during TkGate installation
 dnl	to configure the system for the local environment.
 
-AC_INIT([tkgate],[2.1-a1],[hansen@tkgate.org],[tkgate],[http://www.tkgate.org])
-AM_INIT_AUTOMAKE([foreign])
+AC_INIT([tkgate],[2.1-a1],[starling13@gmail.com],[tkgate],[https://bitbucket.org/starling13/tkgate/])
+AC_CONFIG_MACRO_DIR([m4])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign std-options])
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 AC_PREREQ(2.69)
 AC_CONFIG_HEADER(config.h)
 AC_LANG(C)
@@ -20,6 +23,8 @@ AC_DEFINE(TKGATE_FULL_VERSION,	(TKGATE_VERSION TKGATE_VERSION_SUFFIX), [Full TkG
 AC_DEFINE(TKGATE_DESCRIPTION,	"Digital Circuit Editor and Simulator",	[Tkgate short description])
 AC_DEFINE(TKGATE_LOCALDOC,	"file:@H/doc/@L/index.html", 		[Local documentation location])
 AC_DEFINE(TKGATE_COPYRIGHT, 	"Copyright (C) 1987-2015 by Jeffery P. Hansen", [Copyright notice])
+AC_DEFINE(TKGATE_MAILCONTACT,	"starling13@gmail.com",			[Email address for support])
+AC_DEFINE(TKGATE_HOMEPAGE,	"https://bitbucket.org/starling13/tkgate",		[TkGate web page])
 
 #############################################################################
 #
@@ -121,12 +126,24 @@ fi
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_YACC
+AC_PATH_PROG(YACC_INST, $YACC)
+if test -z "$YACC_INST"; then
+   AC_MSG_ERROR([yacc or bison not found])
+fi
 AM_PROG_LEX
+AC_PATH_PROG(LEX_INST, $LEX)
+if test -z "$LEX_INST"; then
+   AC_MSG_ERROR([lex or flex not found])
+fi
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
-AC_PROG_RANLIB
 AC_PROG_CPP
 AC_PROG_INSTALL
+AC_PROG_LIBTOOL
+LT_INIT
+
+# Checks for compiler flags.
+TKG_CHECK_CFLAGS([-Wno-deprecated-declarations])
 
 # Checks for header files.
 AC_PATH_XTRA
@@ -136,6 +153,8 @@ AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS([limits.h malloc.h stdlib.h string.h sys/param.h sys/time.h unistd.h stdint.h])
 PKG_CHECK_MODULES(PANGO_XFT, pangoxft)
 TKG_CHECK_ICONV_H
+
+AC_SEARCH_LIBS([log], [m])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST

@@ -364,12 +364,12 @@ GatePainterXlib_createColor(GatePainter *self, const char *name)
 {
 	GateColor	result;
 	XColor		eXC;
-	int		res;
+	//int		res;
 
-	res = XAllocNamedColor(self->display, TkGate.CM, name, &result.xColor,
+	/*res =*/ XAllocNamedColor(self->display, TkGate.CM, name, &result.xColor,
 	    &eXC);
-	if (res != Success)
-		fprintf(stderr, "XAllocNamedColor: %d\n", res);
+	//if (res != Success)
+	//	fprintf(stderr, "XAllocNamedColor: %d\n", res);
 	
 	return (result);
 }
@@ -429,13 +429,13 @@ GatePainterPangoXft_drawString_new(GatePainter *_self, GatePainterContext *_gc, 
 #define self ((GatePainterPangoXft*)_self)
 #define gCont ((GatePainterPangoXftContext*)_gc)
 	
-	unsigned width, height, function, foreground;
+	unsigned width, height, function; //, foreground;
 	XGCValues result;
 	
 	XGetGCValues(self->display, gCont->gc,
 	  GCFunction | GCBackground | GCForeground, &result);
 	function = result.function;
-	foreground = result.foreground;
+	//foreground = result.foreground;
 	
 	GatePainterContext_print(_gc, stdout);
 	XSetFunction(self->display, gCont->gc, GXcopy);
@@ -444,7 +444,7 @@ GatePainterPangoXft_drawString_new(GatePainter *_self, GatePainterContext *_gc, 
 	pango_layout_set_text(gCont->layout, str, len);
 	pango_layout_set_font_description(gCont->layout,
 	  pango_font_describe(gCont->activeFont));
-	pango_layout_get_pixel_size(gCont->layout, &width, &height);
+	pango_layout_get_pixel_size(gCont->layout, (int*)&width, (int*)&height);
 	
 	XFillRectangle(self->display,self->pixmap, gCont->gc, 0,0, width,height);
 	XSetFunction(self->display, gCont->gc, function);
@@ -549,9 +549,9 @@ GatePainterXlibContext_print(GatePainterContext *self, FILE *stream)
 	XGetGCValues(self->painter->display, self->gc,
 	    GCFunction | GCForeground | GCBackground | GCFont, &result);
 	
-	fprintf(stream, "GatePainter context:\n"
-	    "\tfunction:   %d\n\tforeground: %lx\n\tbackground: %lx\n",
-	    result.function, result.foreground, result.background);
+	//fprintf(stream, "GatePainter context:\n"
+	//    "\tfunction:   %d\n\tforeground: %lx\n\tbackground: %lx\n",
+	//    result.function, result.foreground, result.background);
 }
 
 void
@@ -563,9 +563,9 @@ GatePainterPangoXftContext_print(GatePainterContext *_self, FILE *stream)
 	XGetGCValues(self->painter->display, self->gc,
 	    GCFunction | GCForeground | GCBackground | GCFont, &result);
 	
-	fprintf(stream, "GatePainter context:\n"
-	    "\tfunction:   %d\n\tforeground: %lx\n\tbackground: %lx\n",
-	    result.function, result.foreground, result.background);
+	//fprintf(stream, "GatePainter context:\n"
+	//    "\tfunction:   %d\n\tforeground: %lx\n\tbackground: %lx\n",
+	//    result.function, result.foreground, result.background);
 #undef self
 }
 

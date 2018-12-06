@@ -348,7 +348,7 @@ void addTags(const char *editFile,MsgTable *oldMT, MsgTable *editMT)
 {
   HashElem *he;
   FILE *f;
-  char buf[STRMAX], tag[STRMAX], msg[STRMAX];
+  char buf[STRMAX]; //, tag[STRMAX], msg[STRMAX];
   FILE *out = stdout;
 
   f = fopen(editFile, "r");

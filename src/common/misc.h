@@ -19,6 +19,7 @@
 #define __misc_h
 
 #include <stdio.h>
+#include "config.h"
 
 __BEGIN_DECLS
 
@@ -35,13 +36,13 @@ int strcasecmp(const char *s1,const char *s2);
 int strncasecmp(const char *s1,const char *s2,size_t n);
 #endif
 #if !HAVE_STRCASESTR
-const char *strcasestr(const char *big,const char *little);
+char *strcasestr(const char *big,const char *little);
 #endif
 #if !HAVE_STRSPN
 size_t strspn(const char *s,const char *charset);
 #endif
 #if !HAVE_STRCSPN
-size_t strspn(const char *s,const char *charset);
+size_t strcspn(const char *s,const char *charset);
 #endif
 #if !HAVE_STRDUP
 char *strdup(const char *s);

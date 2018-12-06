@@ -274,7 +274,7 @@ static int Search_hitTest(GSearchContext *S,const char *target,const char *text,
    */
   if (isHit) {
     if (lineNo > 0)
-      sprintf(buf,"%s %s %s@%d.%d",modName,typeName,objName,lineNo,(p-text));
+      sprintf(buf,"%s %s %s@%d.%ld",modName,typeName,objName,lineNo,(p-text));
     else
       sprintf(buf,"%s %s %s",modName,typeName,objName);
     sprintf(scount,"%d",(*count)++);

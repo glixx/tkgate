@@ -693,7 +693,7 @@ int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,Lis
   int lsize;			/* Base bit size of left-hand side */
   int rsize;			/* Base bit size of right-hand side */
   int size;			/* Bit size for assignment operation */
-  unsigned top_bc;		/* Branch position of top of statement */
+  //unsigned top_bc;		/* Branch position of top of statement */
   deltatime_t delay = 0;	/* Delay for assignment */
   Value *rhs_ret;		/* Return value of right-hand side */
   List lhs_list;		/* List of left-hand side nets */
@@ -720,7 +720,7 @@ int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,Lis
   /*
    * Generate bytecode for right-hand side.
    */
-  top_bc = CodeBlock_size(codeBlock);
+  //top_bc = CodeBlock_size(codeBlock);
   rhs_ret = Expr_generate(mia->mia_rhs,size, ModuleInst_getScope(mi), codeBlock);
   if (!rhs_ret) return 0;
 
@@ -747,14 +747,14 @@ int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,Lis
     Net *n;
     Value *nLsb;
     unsigned lhs_size;
-    int driver_id;
+    //int driver_id;
 
     if (Expr_lhsGenerate(lhs_e,ModuleInst_getScope(mi),codeBlock,&n,&nLsb,&lhs_size,0) < 0) {
       errorFile(ModuleItem_getPlace(mia),ERR_BADASGNLHS);
       return 0;
     }
 
-    driver_id = Net_addDriver(n);
+    /*driver_id =*/ Net_addDriver(n);
     BCAsgn_init(CodeBlock_nextEmpty(codeBlock),n,nLsb,rhs_ret,base_bit,lhs_size);
 
 #if 0

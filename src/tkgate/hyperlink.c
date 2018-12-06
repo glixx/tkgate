@@ -95,6 +95,8 @@ void Html_invoke_browser(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
+  FILE *unused;
+  int  sysret;
 
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.browserCommand);
@@ -109,11 +111,12 @@ void Html_invoke_browser(char *protocol,char * file)
     close(0);
     close(1);
     close(2);
-    fopen("/dev/null","r");
-    fopen("/dev/null","w");
-    fopen("/dev/null","w");
-    system(command);
-    exit(0);
+    unused = fopen("/dev/null","r");
+    unused = fopen("/dev/null","w");
+    unused = fopen("/dev/null","w");
+    (void)unused;
+    sysret = system(command);
+    exit(sysret);
   }
 }
 
@@ -127,6 +130,8 @@ void Html_invoke_email(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
+  FILE *unused;
+  int  sysret;
 
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.emailCommand);
@@ -141,11 +146,12 @@ void Html_invoke_email(char *protocol,char * file)
     close(0);
     close(1);
     close(2);
-    fopen("/dev/null","r");
-    fopen("/dev/null","w");
-    fopen("/dev/null","w");
-    system(command);
-    exit(0);
+    unused = fopen("/dev/null","r");
+    unused = fopen("/dev/null","w");
+    unused = fopen("/dev/null","w");
+    (void)unused;
+    sysret = system(command);
+    exit(sysret);
   }
 }
 

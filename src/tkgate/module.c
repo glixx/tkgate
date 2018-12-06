@@ -638,7 +638,7 @@ int GModuleDef_scanHDLModule(GModuleDef *M)
 
   getSimTempFile(tempFile);
 
-  sprintf(cmd,"%s -sq %s -D %u",r,tempFile,computestrhash(tempFile));
+  sprintf(cmd,"%s -sq %s -D %lu",r,tempFile,computestrhash(tempFile));
 
   f = fopen(tempFile, "w");
   if (!f) goto abortExit;

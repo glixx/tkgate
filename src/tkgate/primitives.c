@@ -51,6 +51,7 @@ static Primitive *Primitive_load(const char *name)
   char *body,*s;
   FILE *f;
   struct stat sb;
+  int nread;
 
   p->p_name = strdup(name);
   p->p_body = 0;
@@ -64,8 +65,9 @@ static Primitive *Primitive_load(const char *name)
   }
   body = (char*)malloc(sb.st_size+1);
 
-  fread(body, 1, sb.st_size, f);
+  nread = fread(body, 1, sb.st_size, f);
   fclose(f);
+  assert(nread == sb.st_size);
   body[sb.st_size] = 0;
 
   //

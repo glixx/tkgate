@@ -829,6 +829,14 @@ static void Html_popContext(Html *h)
   h->h_contextPool = hc;
 }
 
+static void on_image_changed(ClientData data,
+                             int x, int y,
+                             int width, int height,
+                             int image_width, int image_height)
+{
+  /* This space intentionally left blank. */
+}
+
 /*****************************************************************************
  *
  * Handle a <img> element.
@@ -868,7 +876,7 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   ob_touch(hc);
 
   DoTcl("gifI %s",gifFile);
-  hu->hu_image = Tk_GetImage(TkGate.tcl, Tk_MainWindow(TkGate.tcl), Tcl_GetStringResult(TkGate.tcl), 0, 0);
+  hu->hu_image = Tk_GetImage(TkGate.tcl, Tk_MainWindow(TkGate.tcl), Tcl_GetStringResult(TkGate.tcl), on_image_changed, 0);
   if (hu->hu_image)
     Tk_SizeOfImage(hu->hu_image, &width, &height);
 
@@ -1278,6 +1286,9 @@ void Html_format(Html *h)
       x += hu->hu_width;
       if (x > max_width) max_width = x;
       h->h_isVisible = 1;
+      break;
+    default:
+      /* For cases like HU_RULE */
       break;
     }
   }

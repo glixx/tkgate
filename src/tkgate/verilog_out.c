@@ -479,7 +479,7 @@ static void VerilogSaveModSymbol(FILE *f,GModSymbol *ms)
    * Generate the normal icon data
    */
   data = GModSymbol_getNormalIcon(ms,&x,&y);
-  fprintf(f,"//: /iconBegin normal %d %d %d\n",
+  fprintf(f,"//: /iconBegin normal %lu %d %d\n",
 	  strlen(data),x,y);
   p = data;
   while (copyline(buf,STRMAX,&p) >= 0) {
@@ -491,7 +491,7 @@ static void VerilogSaveModSymbol(FILE *f,GModSymbol *ms)
    * Generate the select icon data
    */
   data = GModSymbol_getSelectIcon(ms,&x,&y);
-  fprintf(f,"//: /iconBegin select %d %d %d\n",
+  fprintf(f,"//: /iconBegin select %lu %d %d\n",
 	  strlen(data),x,y);
   p = data;
   while (copyline(buf,STRMAX,&p) >= 0) {

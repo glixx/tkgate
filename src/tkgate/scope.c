@@ -102,7 +102,7 @@ void ReqScopeRedisplay()
  * Request a redraw of only the traces and the left origin
  *
  *****************************************************************************/
-void ReqScopeTraceRedisplay()
+void ReqScopeTraceRedisplay(void)
 {
   TkGate.idle_ev.trace_redraw = 1;
 
@@ -1038,7 +1038,8 @@ void GScope_fullUpdate(GScope *S)
 {
   extern int scope_active;
   Window R;
-  int i,X,Y,W,H,BW,DP;
+  int i, X, Y;
+  unsigned int W,H,BW,DP;
   double vs,ve,hs,he;
 
   if (!scope_active) return;

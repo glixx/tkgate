@@ -68,9 +68,9 @@ GetSysType()
 
 		if ((p = popen("uname", "r"))) {
 			char *x;
-			fgets(buf, 1024, p);
+			x = fgets(buf, 1024, p);
 			pclose(p);
-			if ((x = strrchr(buf, '\n')))
+			if (x && (x = strrchr(buf, '\n')))
 				*x = 0;
 		} else
 			strcpy(buf, "unknown");

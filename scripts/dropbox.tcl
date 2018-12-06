@@ -366,7 +366,7 @@ namespace eval Dropbox {
     }
 
     bind $w_top <Configure> "puts stdout {$w_top configured}"
-    # bind .dblist <Leave> { destroy .dblist }
+    #bind .dblist <Leave> { destroy .dblist }
     bind .dblist <Button-1> "Dropbox::listdnaction $w %W"
     bind .dblist <ButtonRelease-1> "Dropbox::listupaction $w %W"
     bind .dblist <Enter> "Dropbox::didEnter $w"

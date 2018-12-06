@@ -852,7 +852,7 @@ void RegisterGate(GGateInfo *gi)
  * Initialize special icons if we are running in interactive mode.
  *
  *****************************************************************************/
-void init_specials()
+void init_specials(void)
 {
   if (TkGate.tcl) {
     Pixmap P;
@@ -923,7 +923,7 @@ void init_specials()
  * Make the basic gate type info hash tables and initialize special objects
  *
  *****************************************************************************/
-void init_gateHashTables()
+void init_gateHashTables(void)
 {
   GateTypeHash = new_SHash();
   OldGateTypeHash = new_SHash();
@@ -1293,7 +1293,8 @@ void GetPinIOMark(GWire *w,int d,int iod,int atype,int *x,int *y,Icon **arrow)
     dx = 8;
     dy = 5;
     break;
-  case IODT_BOXED :
+  //case IODT_BOXED :
+  default:
     *arrow = boxmark[d][iod];
     dx = 12;
     dy = 7;

@@ -368,7 +368,7 @@ size_t recodeText(Encoder *encoder, char *toString,int len, const char *fromStri
   outPtr = toString;
   outSize = len;
 
-  result = iconv(encoder->ico, &inPtr, &inSize, &outPtr, &outSize);
+  result = iconv(encoder->ico, (char**)&inPtr, &inSize, &outPtr, &outSize);
   if (result == (size_t)-1) {
     perror("iconv");
     strncpy(toString,fromString,len);
@@ -406,7 +406,7 @@ char *recodeTextP(Encoder *encoder, const char *fromString)
   outPtr = outBuf;
 
   while (inSize > 0) {
-    result = iconv(encoder->ico, &inPtr, &inSize, &outPtr, &outSize);
+    result = iconv(encoder->ico, (char**)&inPtr, &inSize, &outPtr, &outSize);
     if (result == (size_t)-1) {
       perror("iconv");
       /* Coding error - returning intranslated string */

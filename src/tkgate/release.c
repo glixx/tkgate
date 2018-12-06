@@ -1,1 +1,1 @@
-char *release_date = "Jul 07 2015";
+char *release_date = "Sep 20 2017";

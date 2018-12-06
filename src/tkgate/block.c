@@ -2368,7 +2368,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
 	if (GNet_getNBits(pw[p]->net) != GNet_getNBits(w->net)) {
 	  if (!resizeTable)
 	    resizeTable = new_PHash_noob();
-	  PHash_insert(resizeTable,pw[p]->net,GNet_getNBits(w->net));
+	  PHash_insert(resizeTable,pw[p]->net,(void*)(long)GNet_getNBits(w->net));
 	}
 
 	if (draw_p)
@@ -2397,7 +2397,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
     for (he = Hash_first(resizeTable);he;he = Hash_next(resizeTable,he)) {
       GNet *n = (GNet*)PHashElem_key(he);
       GNet_draw(n);
-      net_setSize(n,(unsigned)HashElem_obj(he));
+      net_setSize(n,(unsigned)(long)HashElem_obj(he));
       GNet_draw(n);
     }
     delete_PHash(resizeTable);

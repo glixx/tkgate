@@ -577,7 +577,7 @@ int GWire_pickProbePosition(GWire *w,int *x,int *y)
   int orig_x = *x;
   int orig_y = *y;
   int best_d = 0x7ffffff;
-  int best_x, best_y;
+  int best_x = 0, best_y = 0;
   GWireNode *n;
 
 

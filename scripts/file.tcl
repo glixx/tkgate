@@ -42,9 +42,9 @@ namespace eval File {
   proc openNewFile {} {
     destroy .tkgnew
     if {[string index $File::newFileName 0] != "/"} {
-      gat_new $DirSelector::currentDir/$File::newFileName $File::newModuleName
+      gat_new "$DirSelector::currentDir/$File::newFileName" "$File::newModuleName"
     } else {
-      gat_new $File::newFileName $File::newModuleName
+      gat_new "$File::newFileName" "$File::newModuleName"
     }
   }
 
@@ -114,7 +114,7 @@ namespace eval File {
     global gf_filetypes gf_filter
 
 
-    set load [tk_getOpenFile -defaultextension $gf_filter -filetypes $gf_filetypes ]
+    set load [tk_getOpenFile -defaultextension $gf_filter -filetypes $gf_filetypes]
     if { $load != "" } {
       gat_load $load
     }
@@ -216,7 +216,7 @@ namespace eval DirSelector {
   proc setCurrentDir {m w d} {
     variable currentDir
 
-    set currentDir $d
+    set currentDir "$d"
     updateDirMenu $m $w
     updateDirContents $m $w
   }
@@ -230,26 +230,26 @@ namespace eval DirSelector {
   proc upDir {m w} {
     variable currentDir
 
-    setCurrentDir $m $w [file dirname $currentDir]
+    setCurrentDir $m $w [file dirname "$currentDir"]
   }
 
   proc chdir {m w d} {
     variable currentDir
 
-    if { [string range $d end-1 end] == "/"} {
+    if { [string range "$d" end-1 end] == "/"} {
       set d "$currentDir$d"
     } else {
       set d "$currentDir/$d"
     }
 
-    setCurrentDir $m $w $d
+    setCurrentDir $m $w "$d"
   }
 
   proc setfile {m w d} {
     variable filevariable
-    upvar \#0 $filevariable myfile
+    upvar \#0 "$filevariable" myfile
 
-    set myfile $d
+    set myfile "$d"
   }
 
   proc updateDirContents {m w} {
@@ -260,8 +260,8 @@ namespace eval DirSelector {
 
     $w delete all
 
-    set dirs [glob -directory $currentDir -types d -nocomplain "*"]
-    set files [glob -directory $currentDir -types f -nocomplain "*$extensions"]
+    set dirs [glob -directory "$currentDir" -types d -nocomplain "*"]
+    set files [glob -directory "$currentDir" -types f -nocomplain "*$extensions"]
 
     set dirs [lsort $dirs]
     set files [lsort $files]
@@ -277,17 +277,17 @@ namespace eval DirSelector {
 	set maxWidth 0
       }
 
-      set d [file tail $d]
+      set d [file tail "$d"]
       set iid [$w create image $x $y -image [gifI directory.gif] -anchor sw]
-      set id [$w create text [expr $x + 18] $y -text $d -anchor sw]
+      set id [$w create text [expr $x + 18] $y -text "$d" -anchor sw]
       scan [$w bbox $id] "%d %*d %d %*d" x1 x2
       set width [expr $x2 - $x1]
       if {$width > $maxWidth } { set maxWidth $width }
 
       $w bind $id <Button-1> "DirSelector::dirHighlight $w $id $iid"
       $w bind $iid <Button-1> "DirSelector::dirHighlight $w $id $iid"
-      $w bind $id <Double-Button-1> "DirSelector::chdir $m $w $d"
-      $w bind $iid <Double-Button-1> "DirSelector::chdir $m $w $d"
+      $w bind $id <Double-Button-1> "DirSelector::chdir $m $w \"$d\""
+      $w bind $iid <Double-Button-1> "DirSelector::chdir $m $w \"$d\""
 
       incr y 15
     }
@@ -298,15 +298,15 @@ namespace eval DirSelector {
 	set maxWidth 0
       }
 
-      set d [file tail $d]
+      set d [file tail "$d"]
       set iid [$w create image $x $y -image [gifI file_new.gif] -anchor sw]
-      set id [$w create text [expr $x + 18] $y -text $d -anchor sw]
+      set id [$w create text [expr $x + 18] $y -text "$d" -anchor sw]
       scan [$w bbox $id] "%d %*d %d %*d" x1 x2
       set width [expr $x2 - $x1]
       if {$width > $maxWidth } { set maxWidth $width }
 
-      $w bind $id <Button-1> "DirSelector::dirHighlight $w $id $iid; DirSelector::setfile $m $w $d"
-      $w bind $iid <Button-1> "DirSelector::dirHighlight $w $id $iid; DirSelector::setfile $m $w $d"
+      $w bind $id <Button-1> "DirSelector::dirHighlight $w $id $iid; DirSelector::setfile $m $w \"$d\""
+      $w bind $iid <Button-1> "DirSelector::dirHighlight $w $id $iid; DirSelector::setfile $m $w \"$d\""
       $w bind $id <Double-Button-1> "File::openNewFile"
       $w bind $iid <Double-Button-1> "File::openNewFile"
 
@@ -326,12 +326,12 @@ namespace eval DirSelector {
 
     $m delete 0 end
 
-    set d $currentDir
+    set d "$currentDir"
     set L {}
     set i 0
     while { $d != "/" } {
-      lappend L $d
-      set d [file dirname $d]
+      lappend L "$d"
+      set d [file dirname "$d"]
       incr i
 
       #
@@ -343,7 +343,7 @@ namespace eval DirSelector {
 
     for {set i [expr [llength $L] - 1]} { $i >= 0 } { incr i -1 } {
       set d [lindex $L $i]
-      $m add command -label $d -command "DirSelector::setCurrentDir $m $w $d"
+      $m add command -label "$d" -command "DirSelector::setCurrentDir $m $w \"$d\""
     }
   }
 
@@ -376,8 +376,8 @@ namespace eval DirSelector {
     # In that case, use the current working directory.
     #
     gat_editCircProps load DirSelector::temp
-    set DirSelector::currentDir  [file dirname $DirSelector::temp(file)]
-    if {[string compare -length [string length $tkg_gateHome] $DirSelector::currentDir $tkg_gateHome] == 0} {
+    set DirSelector::currentDir  [file dirname "$DirSelector::temp(file)"]
+    if {[string compare -length [string length "$tkg_gateHome"] "$DirSelector::currentDir" "$tkg_gateHome"] == 0} {
       set DirSelector::currentDir [pwd]
     }
 
