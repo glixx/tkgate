@@ -1,4 +1,4 @@
-//: version "2.0.0"
+//: version "2.1-a2"
 //: property encoding = "euc-jp"
 //: property locale = "ja"
 //: property prefix = "_GG"

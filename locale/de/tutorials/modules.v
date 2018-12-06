@@ -1,4 +1,4 @@
-//: version "2.0-b6"
+//: version "2.1-a2"
 //: property prefix = "_GG"
 //: property title = "module_tut.v"
 //: property discardChanges = 1

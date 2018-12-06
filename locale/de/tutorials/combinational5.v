@@ -1,4 +1,4 @@
-//: version "2.0-b6"
+//: version "2.1-a2"
 //: property encoding = "utf-8"
 //: property locale = "de"
 //: property prefix = "_GG"
