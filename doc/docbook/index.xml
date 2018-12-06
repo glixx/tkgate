@@ -4,7 +4,7 @@
 
 <book>
 	<bookinfo>
-		<title>TKGate 2.0</title>
+		<title>TKGate 2.1</title>
 		<subtitle>User documentation</subtitle>
 		<author>
 			<firstname>Jeffery</firstname><surname>P. Hansen</surname>
@@ -267,11 +267,11 @@ save file format. Previous versions of gate/xgate used a Lisp-like
 save file format.
 			</para>
 			<para>
-			The current version, TkGate 2.0, represents a substantial effort over
+			The current version, TkGate 2.1, represents a substantial effort over
 the previous 1.8 version. Whereas TkGate 1.8 was comprised of
-approximately 73,000 lines of C and Tcl, TkGate 2.0 nearly doubles
+approximately 73,000 lines of C and Tcl, TkGate 2.1 nearly doubles
 that line count with over 130,000 lines of C and Tcl. Major
-improvements added to TkGate 2.0 include an improved user interface,
+improvements added to TkGate 2.1 include an improved user interface,
 true Verilog format save files, Verilog-based simulation, a module
 interface editor, symbolic module interfaces and virtual peripheral
 devices.

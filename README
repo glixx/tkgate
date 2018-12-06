@@ -1,4 +1,4 @@
-TkGate 2.0 Release notes.
+TkGate 2.1 Release notes.
 
 See INSTALL for installation instructions.
 
@@ -40,7 +40,7 @@ MULTI-LINGUAL SUPPORT
 
 1) JAPANESE
 
-As of TkGate 2.0, Japanese support is automatically compiled in.  To use
+As of TkGate 2.1, Japanese support is automatically compiled in.  To use
 it, run tkgate with the -Lja option, or make sure your LANG environment
 variable is set to a Japanese locale (e.g., ja_JP.eucJP).  Attempting to
 run TkGate with an invalid locality value could cause it to core dump

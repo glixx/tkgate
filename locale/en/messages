@@ -1043,7 +1043,7 @@ print.modulesel		Module Selection
 
 ##############################################################################
 #
-# TkGate 2.0 print dialog strings
+# TkGate print dialog strings
 #
 print.ok			Print
 print.printtrace.cap		Print Trace

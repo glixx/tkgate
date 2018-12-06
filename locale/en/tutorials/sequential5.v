@@ -31,7 +31,7 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"syntax.  While the simulator is active, press <img src=sim_script.gif bgcolor=gray> to load a simulator script file."
   //: /line:"You can use a script file to set and remove probes, advance the simulation time,"
   //: /line:"set signal values and display messages in the TkGate log (<img src=log.gif bgcolor=gray>) window.  See"
-  //: /line:"the TkGate 2.0 documentation for details on how to write simulator scripts."
+  //: /line:"the TkGate 2.1 documentation for details on how to write simulator scripts."
   //: /end
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(clr), .CK(ck));   //: @(215,291) /sn:0 /w:[ 0 0 0 0 0 ]
   //: comment g1 @(10,410) /sn:0 /R:14 /anc:1

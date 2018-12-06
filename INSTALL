@@ -46,11 +46,11 @@ DEFAULT INSTALLATION
 *****************************************************************************
 INSTALLING MULTIPLE VERSIONS
 
-  To install tkgate-2.0 without affecting other installed versions do:
+  To install tkgate-2.1 without affecting other installed versions do:
 
-     ./configure --program-suffix=20
-     make pkgdatadir=/usr/local/share/tkgate-2.0
+     ./configure --program-suffix=21
+     make pkgdatadir=/usr/local/share/tkgate-2.1
      su
-     make pkgdatadir=/usr/local/share/tkgate-2.0 install
+     make pkgdatadir=/usr/local/share/tkgate-2.1 install
 
-  This will install tkgate with the executable name "tkgate20".
+  This will install tkgate with the executable name "tkgate21".

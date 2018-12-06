@@ -31,7 +31,7 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"Drücke bei aktivem Simulator <img src=sim_script.gif bgcolor=gray>, um die Skriptdatei in den Simulator zu laden."
   //: /line:"Man kann eine Skriptdatei benutzen, um Tastköpfe zu setzen und zu löschen, die Simulationszeit vorrücken zu lassen,"
   //: /line:"Signalwerte zu setzen und Meldungen im TkGate log (<img src=log.gif bgcolor=gray>) Fenster anzuzeigen.  Details"
-  //: /line:"zum Schreiben von Simulatorskipten sehe man in der TkGate 2.0 Dokumentation nach."
+  //: /line:"zum Schreiben von Simulatorskipten sehe man in der TkGate 2.1 Dokumentation nach."
   //: /end
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(clr), .CK(ck));   //: @(215,291) /sn:0 /w:[ 0 0 0 0 0 ]
   //: comment g1 @(10,410) /sn:0 /R:14 /anc:1
