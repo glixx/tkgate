@@ -462,10 +462,8 @@ namespace eval OptionDlg {
     checkbutton $w.fsave -variable opts_saveWithCells -text [m opt.saveCells]
 
     frame $w.cpe
-    set ckpoint [m opt.ckpoint]
-    set strList [split $ckpoint "%s"]
-    set ckpoint1 [lindex $strList 0]
-    set ckpoint2 [lindex $strList 2]
+    set ckpoint1 [lindex [split [m opt.ckpoint] "%s"] 0]
+    set ckpoint2 [lindex [split [m opt.ckpoint] "%s"] 2]
     checkbutton $w.cpe.b -variable opts_checkpointEnabled -text $ckpoint1
     incdecEntry $w.cpe.e -variable opts_checkpointFreq -width 4 -format %d
     label $w.cpe.l -text $ckpoint2
