@@ -13,8 +13,7 @@ can be loaded through the "Help" menu.  The examples range from a
 simple gate-level 3-bit adder to a 16-bit CPU programmed to play the
 "Animals" game.
 
-TkGate has a multi-language interface with support for Catalan, Czech,
-Welsh, German, English, Spanish, French, Italian, Japanese, Russian.
+TkGate has a multi-language interface.
 
 For more information on TkGate, see the TkGate web site at:
 

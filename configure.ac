@@ -71,7 +71,7 @@ TKGATE_LIBS=""
 #
 # Supported locales
 #
-TKGATE_LOCALES="ca cs cy de en es fr it ja ru"
+TKGATE_LOCALES=""
 AC_SUBST(TKGATE_LOCALES)
 
 #############################################################################
