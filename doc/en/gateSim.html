@@ -23,7 +23,7 @@ the next epoch that has work scheduled for it.
 
 <div class=rfig>
 <a name=hdleditor>
-<IMG SRC="fig/simulatetab.gif">
+<IMG SRC="../fig/simulatetab.gif">
 <br>
 <b>Figure 5.1: Simulator Mode Tab</b>
 </div>
@@ -36,7 +36,7 @@ immediately.
 
 <div class=rfig>
 <a name=simmodhier>
-<IMG SRC="fig/simmodhier.gif">
+<IMG SRC="../fig/simmodhier.gif">
 <br>
 <b>Figure 5.2: Simulator Mode Module Hierarchy</b>
 </div>
@@ -44,7 +44,7 @@ immediately.
 The simulation will be performed with the designated root module at
 the top-level.  The simulator internally expands any module instances
 in your circuit.  While the simulator is active, the Module Hierarchy
-View <img src=fig/modtree.gif> changes to show the hierarchy of module
+View <img src=../fig/modtree.gif> changes to show the hierarchy of module
 instances as shown in <a href="#simmodhier">Figure 5.2</a>.  In this
 mode, the display shows each instance of each module, rather than
 simply one entry per module.  The module name for the instance are
@@ -57,10 +57,10 @@ module, and ensure that any probes or signals viewed are for the
 instance you selected.
 <p>
 While the simulator is active you must navigate using either the
-Module Hierarchy <img src=fig/modtree.gif>, or by right clicking on a
-module and using "<img src="fig/blk_open.gif"> Open" and "<img
-src="fig/blk_close.gif"> Close".  You can not use the Module List <img
-src=fig/modlist.gif> view to navigate since TkGate can not tell which
+Module Hierarchy <img src=../fig/modtree.gif>, or by right clicking on a
+module and using "<img src="../fig/blk_open.gif"> Open" and "<img
+src="../fig/blk_close.gif"> Close".  You can not use the Module List <img
+src=../fig/modlist.gif> view to navigate since TkGate can not tell which
 instance of a module to open.
 
 <br style="clear: right;">
@@ -68,7 +68,7 @@ instance of a module to open.
 <h4>5.1.1 Simulator Console</h4>
 
 <div class=rfig>
-<a href="fig/simcon_msg.gif"><IMG SRC="fig/small-simcon_msg.gif"><br>
+<a href="../fig/simcon_msg.gif"><IMG SRC="../fig/small-simcon_msg.gif"><br>
 (Click to Enlarge)</a>
 <br><br>
 <b>Figure <![figure:hdleditor]>5.2: Simulator Console</b>
@@ -86,19 +86,19 @@ These four pages are:
 <tr><th width=60 align=left>Page</th><th align=left>Description</th></tr>
 <tr><td colspan=2><hr></td></tr>
 
-<tr><td><img src=fig/log.gif class=tool></td><td>
+<tr><td><img src=../fig/log.gif class=tool></td><td>
 <b>Message Page</b> - This page displays messages from the
 console.  Any output from <tt>$display</tt> or other system tasks
 generating output will be displayed here.</td></tr> 
 
-<tr><td><img src=fig/sim_break.gif class=tool></td><td>
+<tr><td><img src=../fig/sim_break.gif class=tool></td><td>
 <b>Breakpoint Page</b> - Displays breakpoints that have been set for
 the simulation and the status of those breakpoints.</td></tr> 
 
-<tr><td><img src=fig/sim_script.gif class=tool></td><td>
+<tr><td><img src=../fig/sim_script.gif class=tool></td><td>
 <b>Script Page</b> - Shows the loaded simulation scripts and their status.</td></tr> 
 
-<tr><td><img src=fig/simoptions.gif class=tool></td><td>
+<tr><td><img src=../fig/simoptions.gif class=tool></td><td>
 <b>Simulation Control Page</b> - Allows you to set options controlling
 the simulation such as the number of epochs to advance at a time when
 stepping through a simulation.  </td></tr>
@@ -118,7 +118,7 @@ These buttons are:
 <tr><th align=left width=60>Button</th><th align=left>Description</th></tr>
 <tr><td colspan=2><hr></td></tr>
 
-<tr><td><img src="fig/sim_go.gif" class=tool></td><td>
+<tr><td><img src="../fig/sim_go.gif" class=tool></td><td>
 
 <b>Run</b> - Enters continuous simulation mode.  The simulation will
 continue as long as there are events in the event queue.  If there are
@@ -127,16 +127,16 @@ continue indefinitely.  If the circuit is combinational, the
 simulation will continue until the circuit reaches quiescence.</td></tr>
 
 
-<tr><td><img src="fig/sim_pause.gif" class=tool></td><td>
+<tr><td><img src="../fig/sim_pause.gif" class=tool></td><td>
 <b>Pause</b> - Causes a continuously running simulation to stop.</td></tr>
 
-<tr><td><img src="fig/sim_step.gif" class=tool></td><td>
+<tr><td><img src="../fig/sim_step.gif" class=tool></td><td>
 <b>Step</b> - Causes the simulation to advance a fixed number of epochs.  The number of
 epochs to advance can be set on the simulation options menu.  You can also
 invoke this command with the space-bar.</td></tr>
 
 
-<tr><td><img src="fig/sim_clock.gif" class=tool></td><td>
+<tr><td><img src="../fig/sim_clock.gif" class=tool></td><td>
 <b>Clock Step</b> - Causes the simulation to advance to the rising edge of a clock.
 You can set the number of clock cycles to simulate and the number of
 epochs past the designated cycle to step (to allow time for registers
@@ -144,25 +144,25 @@ to change value).  The default is to trigger on any clock, but you can
 designate a specific clock in the simulator options menu.
 You can also invoke this command with the tab key.</td></tr>
 
-<tr><td><img src="fig/sim_stop.gif" class=tool></td><td>
+<tr><td><img src="../fig/sim_stop.gif" class=tool></td><td>
 <b>Stop</b> - Causes the simulation to be terminated and all probes to be deleted.</td></tr>
 
 </table>
 
 <div class=rfig>
 <a name=simcont>
-<a href="fig/simcon_opts.gif"><IMG SRC="fig/small-simcon_opts.gif"><br>
+<a href="../fig/simcon_opts.gif"><IMG SRC="../fig/small-simcon_opts.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 5.3: Simulator Console Control Page</b>
 </div>
 
 You can use the control page of the simulator console shown in <a
 href="#simcont">Figure 5.3</a> to control the effects of the step <img
-src="fig/sim_step.gif" class=tool> and clock step <img
-src="fig/sim_clock.gif" class=tool> buttons.  Enter the number of
-epochs to advance for each press of <img src="fig/sim_step.gif"
+src="../fig/sim_step.gif" class=tool> and clock step <img
+src="../fig/sim_clock.gif" class=tool> buttons.  Enter the number of
+epochs to advance for each press of <img src="../fig/sim_step.gif"
 class=tool> (or space-bar) into the "Epoch Step Size" box.  The clock
-step button <img src="fig/sim_clock.gif" class=tool> (or tab) will
+step button <img src="../fig/sim_clock.gif" class=tool> (or tab) will
 advance by the number of clock steps indicated in "Clock Cycle Step
 Size", plus an additional number of epochs entered in the "Clock
 Overstep" entry.
@@ -184,7 +184,7 @@ the number.  The radix characters using in TkGate are "b" for binary,
 
 <div class=rfig>
 <a name=valueDisplay>
-<IMG SRC="fig/showval.gif">
+<IMG SRC="../fig/showval.gif">
 <br>
 <b>Figure 5.3: Value Display</b>
 </div>
@@ -212,7 +212,7 @@ href="gateOptions.html#simulate">Simulate Options</a> dialog box.
 
 <div class=rfig>
 <a name=scopeWin>
-<a href="fig/scope.gif"><IMG SRC="fig/small-scope.gif"><br>
+<a href="../fig/scope.gif"><IMG SRC="../fig/small-scope.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 5.4: Scope Window</b>
 </div>
@@ -229,10 +229,10 @@ You can slide the range of time displayed in the scope window by using
 the scroll bar for coarse changes, or by clicking and dragging in the
 trace part of the window for fine grain control.  To zoom in, you can
 press the left mouse button while holding the shift key, press the '>'
-key, or press the <img src=fig/zoom_in.gif class=tool> button on the
+key, or press the <img src=../fig/zoom_in.gif class=tool> button on the
 toolbar.  To zoom out, you can press the right mouse button while
 holding the shift key, press the '<' key or press the <img
-src=fig/zoom_out.gif class=tool> button on the toolbar.
+src=../fig/zoom_out.gif class=tool> button on the toolbar.
 <p style="clear: right;">
 
 <div class=rfig>
@@ -240,37 +240,37 @@ src=fig/zoom_out.gif class=tool> button on the toolbar.
 <table border width=400>
 <TH>Scope</TH><TH >Description</TH>
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logic0.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logic0.gif"></TD>
 <TD>&nbsp;<b>0</b> - Logic 0 or false (1 bit signals only)</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logic1.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logic1.gif"></TD>
 <TD>&nbsp;<b>1</b> - Logic 1 or true (1 bit signals only)</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logicx.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logicx.gif"></TD>
 <TD>&nbsp;<b>x</b> - Unknown value</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logicz.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logicz.gif"></TD>
 <TD>&nbsp;<b>z</b> - Floating or high impedance</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logicL.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logicL.gif"></TD>
 <TD>&nbsp;<b>L</b> - Low (the signal is either floating or zero)</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logicH.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logicH.gif"></TD>
 <TD>&nbsp;<b>H</b> - High (the signal is either floating or one)</TD>
 </TR>
 
 <TR>
-<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="fig/logicdata.gif"></TD>
+<TD ALIGN=CENTER VALIGN=CENTER BGCOLOR="#FFFFFF"><img src="../fig/logicdata.gif"></TD>
 <TD>&nbsp;<b>Data</b> - Data value on a multi-bit wire.</TD>
 </TR>
 </table>
@@ -290,7 +290,7 @@ the x-axis represents an additional 5000ns past the base time value.
 The scope includes a cross hair that follows the mouse whenever it is
 in the scope window to help you correlate events across different
 traces.  You can enable or disable the cross hairs with the <img
-src=fig/show_xhair.gif class=tool> button on the toolbar.  The scope
+src=../fig/show_xhair.gif class=tool> button on the toolbar.  The scope
 window toolbar also includes some of the same simulation control and
 other simulation-related buttons that are on the main TkGate window.
 <p>
@@ -311,7 +311,7 @@ href="gateOptions.html#color">Color Options</a> dialog box.
 <h4>5.2.3 Printing Scope Traces</h4>
 
 <div class=rfig>
-<IMG SRC="fig/scopeSelection.gif"><br>
+<IMG SRC="../fig/scopeSelection.gif"><br>
 <b>Figure 5.6: Print Region Selection</b>
 </div>
 
@@ -324,7 +324,7 @@ again while holding the Shift key to expand or shrink the selected
 region.  If you print without making a selection, then the area of the
 trace visible in the scope window will be taken as the selection.
 <p>
-After you chosen a region, push the <img src=fig/file_print.gif
+After you chosen a region, push the <img src=../fig/file_print.gif
 class=tool> button on the toolbar of the scope window.  This will
 bring up the Scope Print dialog box having an "Output" and a "Content"
 page.  The "Output" page of this dialog box is the same as the
@@ -338,7 +338,7 @@ for inclusion in a document (e.g., by Latex).
 <p>
 
 <div class=rfig>
-<a href="fig/simprint.gif"><IMG SRC="fig/small-simprint.gif"><br>
+<a href="../fig/simprint.gif"><IMG SRC="../fig/small-simprint.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 5.7: Scope Print Dialog Box</b>
 </div>
@@ -374,12 +374,12 @@ also be described in this section.
 
 <div class=rfig>
 <center>
-<IMG SRC="fig/dipval.gif"><br><br>
+<IMG SRC="../fig/dipval.gif"><br><br>
 <b>Figure 5.8: Dip Value<br>Dialog Box</b>
 <br><br>
 
 <a name=tty>
-<img src=fig/tty.gif><br><br>
+<img src=../fig/tty.gif><br><br>
 <b>Figure 5.9<br>TTY Device</b><br><br>
 </center>
 </div>
@@ -414,14 +414,14 @@ Component</a> for information on how to use this device.
 
 <div class=rfig>
 <a name=simconbreak>
-<a href="fig/simcon_break.gif"><IMG SRC="fig/small-simcon_break.gif"><br>
+<a href="../fig/simcon_break.gif"><IMG SRC="../fig/small-simcon_break.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 5.10: Simulator Console Breakpoint Page</b>
 </div>
 
 Breakpoints can be used to set conditions which will cause a
 continuously running simulation to pause.  To display the breakpoints,
-press the <img src=fig/sim_break.gif class=tool> tab on the simulator
+press the <img src=../fig/sim_break.gif class=tool> tab on the simulator
 console as shown in <a href="#simconbreak">Figure 5.10</a>.  To add a
 new breakpoint, press the "Add..." button or double click on the next
 empty slot under "Condition".  You can enter any valid Verilog
@@ -430,10 +430,10 @@ of a breakpoint by double clicking on the expression.
 <p>
 Breakpoints will be activated for any non-zero value of their
 condition expression.  When one of the registered breakpoints is
-activated, the simulation will stop, and a <img src=fig/bp_stop.gif>
+activated, the simulation will stop, and a <img src=../fig/bp_stop.gif>
 symbol will appear in the "S" column of the breakpoint.  Breakpoints
 are only triggered on transitions.  If you press the <img
-src="fig/sim_go.gif" class=tool> button to resume the simulation, the
+src="../fig/sim_go.gif" class=tool> button to resume the simulation, the
 simulation will continue until the breakpoint expression makes a new
 transition to a non-zero value.
 <p>
@@ -444,11 +444,11 @@ breakpoint.  The state is indicated by one of the following symbols:
 <table class=display>
 <tr><th align=left width=50>State</th><th align=left>Description</th></tr>
 <tr><td colspan=2><hr></td></tr>
-<tr><td><img src=fig/bp_bad.gif></td><td><b>Error</b> - There is an error such as a syntax error or undefined variable error in the breakpoint expression.</td></tr>
-<tr><td><img src=fig/bp_go.gif></td><td><b>Go</b> - The breakpoint is active, but has not been tripped.</td></tr>
-<tr><td><img src=fig/bp_stop.gif></td><td><b>Stop</b> - The breakpoint has tripped, and simulation is stopped at this breakpoint.</td></tr>
-<tr><td><img src=fig/bp_disabled.gif></td><td><b>Disabled</b> - The breakpoint has been temporarily disabled.</td></tr>
-<tr><td><img src=fig/bp_standby.gif></td><td><b>Stand By</b> - The breakpoint is ready and will be active when the simulator starts.</td></tr>
+<tr><td><img src=../fig/bp_bad.gif></td><td><b>Error</b> - There is an error such as a syntax error or undefined variable error in the breakpoint expression.</td></tr>
+<tr><td><img src=../fig/bp_go.gif></td><td><b>Go</b> - The breakpoint is active, but has not been tripped.</td></tr>
+<tr><td><img src=../fig/bp_stop.gif></td><td><b>Stop</b> - The breakpoint has tripped, and simulation is stopped at this breakpoint.</td></tr>
+<tr><td><img src=../fig/bp_disabled.gif></td><td><b>Disabled</b> - The breakpoint has been temporarily disabled.</td></tr>
+<tr><td><img src=../fig/bp_standby.gif></td><td><b>Stand By</b> - The breakpoint is ready and will be active when the simulator starts.</td></tr>
 </table>
 <p>
 The "Value" column shows the current value of the breakpoint
@@ -475,7 +475,7 @@ memories.
 <tr><td colspan=2><hr></td></tr>
 
 <TR>
-<TD align=center><img src="fig/sim_load.gif" class=tool></TD>
+<TD align=center><img src="../fig/sim_load.gif" class=tool></TD>
 <TD><b>Load Memory</b> - Load memories from the selected file.  If a memory gate is selected, that memory
 will be the default memory to load.  If the memory file contains one or more "memory" keywords,
 the specified memory(ies) will be loaded with the contents of the file.  When loading a file,
@@ -484,7 +484,7 @@ will be searched.</TD>
 </TR>
 
 <TR>
-<TD align=center><img src="fig/sim_dump.gif" class=tool></TD>
+<TD align=center><img src="../fig/sim_dump.gif" class=tool></TD>
 <TD><b>Dump Memory</b> - Dumps the contents of the selected memory to a file.</TD>
 </TR>
 </table>
@@ -555,7 +555,7 @@ either syntax in your memory files.
 In the above examples, there was no explicit mention of the target
 memory.  For that reason, those file can only be loaded when you
 explicitly indicate the target memory either by clicking on before
-pressing <img src="fig/sim_load.gif" class=tool>, or by specifying the
+pressing <img src="../fig/sim_load.gif" class=tool>, or by specifying the
 memory as an argument in the <tt>$readmemh</tt> or <tt>$readmemb</tt>
 system task.
 <p>
@@ -608,7 +608,7 @@ given in a later section of this document.
 <h3>5.6 Simulation Scripts</h3>
 
 <div class=rfig>
-<a href="fig/simcon_script.gif"><IMG SRC="fig/small-simcon_script.gif"><br>
+<a href="../fig/simcon_script.gif"><IMG SRC="../fig/small-simcon_script.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 5.11: Simulator Console Script Manager Page</b>
 </div>
@@ -627,7 +627,7 @@ href=gateHDL.html>Verilog Modules</a>.
 <h4>5.6.1 Loading Simulator Scripts</h4>
 
 To load a simulator script, first press the <IMG
-SRC="fig/sim_script.gif" class=tool> tab on the simulator console.
+SRC="../fig/sim_script.gif" class=tool> tab on the simulator console.
 You can then press the "Add..." button or double click on the next
 empty slot.  The default extension for simulation scripts is ".vs".
 When loading a file, the current directory, the directory of the
@@ -644,11 +644,11 @@ the script.  The state is one of the following:
 <table class=display>
 <tr><th align=left width=50>State</th><th align=left>Description</th></tr>
 <tr><td colspan=2><hr></td></tr>
-<tr><td><img src=fig/bp_bad.gif></td><td><b>Error</b> - There is an error such as a syntax error or undefined variable error in the script.</td></tr>
-<tr><td><img src=fig/bp_go.gif></td><td><b>Go</b> - The script is active and running.</td></tr>
-<tr><td><img src=fig/ss_done.gif></td><td><b>Stop</b> - The script has completed executing.</td></tr>
-<tr><td><img src=fig/bp_disabled.gif></td><td><b>Disabled</b> - Execution of the script is disabled.</td></tr>
-<tr><td><img src=fig/bp_standby.gif></td><td><b>Stand By</b> - The script is ready and will execute when the simulator is started.</td></tr>
+<tr><td><img src=../fig/bp_bad.gif></td><td><b>Error</b> - There is an error such as a syntax error or undefined variable error in the script.</td></tr>
+<tr><td><img src=../fig/bp_go.gif></td><td><b>Go</b> - The script is active and running.</td></tr>
+<tr><td><img src=../fig/ss_done.gif></td><td><b>Stop</b> - The script has completed executing.</td></tr>
+<tr><td><img src=../fig/bp_disabled.gif></td><td><b>Disabled</b> - Execution of the script is disabled.</td></tr>
+<tr><td><img src=../fig/bp_standby.gif></td><td><b>Stand By</b> - The script is ready and will execute when the simulator is started.</td></tr>
 </table>
 
 
@@ -701,7 +701,7 @@ This example will step for 10 clock periods and print the value of the
 
 <div class=rfig>
 <a name=adder>
-<IMG SRC="fig/adder_circuit2.gif">
+<IMG SRC="../fig/adder_circuit2.gif">
 <br>
 <b>Figure 5.12: Full Adder Circuit</b>
 </div>
@@ -850,7 +850,7 @@ the user can view internal signal values.
 
 <div class=rfig>
 <a name=errbox>
-<a href="fig/simerr.gif"><IMG SRC="fig/small-simerr.gif"><br>
+<a href="../fig/simerr.gif"><IMG SRC="../fig/small-simerr.gif"><br>
 (Click to Enlarge)</a>
 <br><br>
 <b>Figure <![figure:hdleditor]>5.13: Simulator Error List</b>
@@ -866,7 +866,7 @@ then the line with the error will be highlighted.
 
 <div class=lfig>
 <a name=xhair>
-<img src=fig/simerr_circ.gif><br><br>
+<img src=../fig/simerr_circ.gif><br><br>
 <b>Figure <![figure:hdleditor]>5.14: Error Location Cross-hairs</b>
 </div>
 

@@ -2,6 +2,7 @@ Version 2.1-a2 - December 10, 2018
      * Localization update
      * Fix segfault on exit
      * Partial fix for whitespace in filenames
+     * Fix showing of pictures in documentation
 
 Version 2.1-a1 - June 19, 2015
      * Verga can parse output drive strengths for gates

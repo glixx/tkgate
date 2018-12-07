@@ -45,13 +45,13 @@ or memories.
 
 
 <div class=frame_rfig>
-<IMG SRC="fig/makemodinst1.gif"><br>
+<IMG SRC="../fig/makemodinst1.gif"><br>
 <b>1) Select a module from the module list.</b><br>
 <br>
-<IMG SRC="fig/makemodinst2.gif"><br>
+<IMG SRC="../fig/makemodinst2.gif"><br>
 <b>2) Drag to the insertion location.</b><br>
 <br>
-<IMG SRC="fig/makemodinst3.gif"><br>
+<IMG SRC="../fig/makemodinst3.gif"><br>
 <b>3) Release mouse button to create.</b><br><br>
 <b>Figure 3.1: Creating a Module Instance</b>
 </div>
@@ -67,7 +67,7 @@ exactly where you want it.
 <p>
 
 <div class=lfig>
-<a href="fig/modcreate.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modcreate.gif"><br>
+<a href="../fig/modcreate.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modcreate.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.2: Module Function Selection</b>
 </div>
@@ -112,28 +112,28 @@ layer and so on.
 <h4>3.3.1 Module Hierarchy View</h4>
 
 <div class=rfig>
-<IMG SRC="fig/multihierarchy.gif"><br><br>
+<IMG SRC="../fig/multihierarchy.gif"><br><br>
 <b>Figure 3.3: Module<br>Hierarchy View</b>
 </div>
 
 <p>
 TkGate's module hierarchy view displays the module hierarchy of your
 design.  Be sure you have selected <img class=tool
-src="fig/modtree.gif"> to see the hierarchical view.  When you are in
+src="../fig/modtree.gif"> to see the hierarchical view.  When you are in
 edit mode, the hierarchy is shown in terms of module implementations.
 That is, at each node in the tree, the children are the names of the
 modules which are used as instances at least once in the module.
 <p>
 Consider the example shown to the right.  The top-level module "main"
-is indicated by the <IMG SRC="fig/document.gif"> symbol next to it.
+is indicated by the <IMG SRC="../fig/document.gif"> symbol next to it.
 In this example, "main" uses one or more module instances of the
 "EUNIT", "IUNIT" and "MEMORY" modules.  The "REG16" module uses one or
 more instances of the "REG4" and "ZREG4" modules, but the <img
-src="fig/unknown.gif"> symbol next to "REG4" tells us that there is no
+src="../fig/unknown.gif"> symbol next to "REG4" tells us that there is no
 definition for that module.  The module "<font style="text-decoration:
 underline;" color=red>ZREG4</font>" shown in red with an underline
 indicates that that module is the current module in the editor.  The
-<img src="fig/conflict.gif"> symbol next to "EUNIT" underneath "ZREG4"
+<img src="../fig/conflict.gif"> symbol next to "EUNIT" underneath "ZREG4"
 indicates a conflict.  ZREG4 includes an instance of "EUNIT", but
 "ZREG4" itself is contained in an "EUNIT" (it is in "REG16" which is
 in "EUNIT").  Circuits containing conflicts can not be simulated, all
@@ -145,20 +145,20 @@ symbol showing its type.  The possible types are:
 <center>
 <table>
 <tr><th align=left width=100>Symbol</th><th align=left>Description</th></tr>
-<tr><td><img src="fig/document.gif"></td><td>The top-level module.</td></tr>
-<tr><td><img src="fig/mod_net.gif"></td><td>A normal net-list module.</td></tr>
-<tr><td><img src="fig/mod_hdl.gif"></td><td>A text HDL module.</td></tr>
-<tr><td><img src="fig/parts.gif"></td><td>Collection of module libraries.</td></tr>
-<tr><td><img src="fig/ichipdir.gif"></td><td>A module library</td></tr>
-<tr><td><img src="fig/chip.gif"></td><td>A module defined in a library.</td></tr>
-<tr><td><img src="fig/unused.gif"></td><td>Collection of modules defined but not used in the circuit.</td></tr>
-<tr><td><img src="fig/unknown.gif"></td><td>Reference to an undefined module in hierarchical list.</td></tr>
-<tr><td><img src="fig/conflict.gif"></td><td>Conflict/recursive definition in hierarchical list.</td></tr>
+<tr><td><img src="../fig/document.gif"></td><td>The top-level module.</td></tr>
+<tr><td><img src="../fig/mod_net.gif"></td><td>A normal net-list module.</td></tr>
+<tr><td><img src="../fig/mod_hdl.gif"></td><td>A text HDL module.</td></tr>
+<tr><td><img src="../fig/parts.gif"></td><td>Collection of module libraries.</td></tr>
+<tr><td><img src="../fig/ichipdir.gif"></td><td>A module library</td></tr>
+<tr><td><img src="../fig/chip.gif"></td><td>A module defined in a library.</td></tr>
+<tr><td><img src="../fig/unused.gif"></td><td>Collection of modules defined but not used in the circuit.</td></tr>
+<tr><td><img src="../fig/unknown.gif"></td><td>Reference to an undefined module in hierarchical list.</td></tr>
+<tr><td><img src="../fig/conflict.gif"></td><td>Conflict/recursive definition in hierarchical list.</td></tr>
 </table>
 </center>
 <p>
 HDL and net-list modules may also contain a "lock" on them (for
-example <img src="fig/mod_netL.gif">).  The lock indicates that
+example <img src="../fig/mod_netL.gif">).  The lock indicates that
 editing of that module has been disabled in the module options dialog
 box.
 
@@ -168,13 +168,13 @@ box.
 Double click on a module in the module hierarchy or module list view
 to open that module in the editor.  You can also right click on a
 module instance in the main editing window and select "<img
-src="fig/blk_open.gif"> Open".  When you use "<img
-src="fig/blk_open.gif"> Open" to open modules, TkGate will remember
+src="../fig/blk_open.gif"> Open".  When you use "<img
+src="../fig/blk_open.gif"> Open" to open modules, TkGate will remember
     the modules you have opened on a stack.  The modules on the stack will
 be displayed in red, with an underline under the module currently
 displayed in the editor.  To close a module, and return to the parent
 module on the stack, right click in a blank area on the canvas and
-select "<img src="fig/blk_close.gif"> Close".
+select "<img src="../fig/blk_close.gif"> Close".
 
 <br style="clear: right;">
 
@@ -185,13 +185,13 @@ select "<img src="fig/blk_close.gif"> Close".
 <h4>3.4.1 Creating Modules</h4>
 
 <div class=rfig>
-<a href="fig/modnew.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modnew.gif"><br>
+<a href="../fig/modnew.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modnew.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b><a name=modcreate>Figure 3.4: Module Creation</b>
 </div>
 
 To create a new module, press the <img class=tool
-src="fig/blk_new.gif"> button on the toolbar.  This will open the
+src="../fig/blk_new.gif"> button on the toolbar.  This will open the
 dialog box shown in <a href="#modcreate">Figure 3.4.</a> After you
 have opened the dialog box, choose a name for your module and enter it
 into the "Name" field.  Next, choose a module type.  A "netlist"
@@ -233,14 +233,14 @@ box you can use for a module.
 <h4>3.4.2 Editing Module Properties</h4>
 
 <div class=rfig>
-<a href="fig/modprops.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modprops.gif"><br>
+<a href="../fig/modprops.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modprops.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.5: Module Properties</b>
 </div>
 
 You can edit the property flags of a module by right clicking on the
 module name in the module list and selecting "<img class=tool
-src="fig/i_modprops.gif"> Properties...".  This will bring up a dialog
+src="../fig/i_modprops.gif"> Properties...".  This will bring up a dialog
 box like the one shown in <a href="#modcreate">Figure 3.5</a>.  The
 dialog box will show the name of the module, the name of the file from
 which that module was loaded, and the type of the module (netlist or
@@ -255,13 +255,13 @@ attributes of modules are the same as those previously described in
 
 <div class=rfig>
 <a name=moddelete>
-<a href="fig/moddel.gif" type="image/gif" target=_blank><IMG SRC="fig/small-moddel.gif"><br>
+<a href="../fig/moddel.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-moddel.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.6: Module Deletion</b>
 </div>
 
 To delete a module implementation, right click on a module in the module list and
-select "<img class=tool src=fig/blk_delete.gif> Delete".  This will
+select "<img class=tool src=../fig/blk_delete.gif> Delete".  This will
 bring up the dialog box shown in <a href="#moddelete">Figure 3.6</a>.
 Press "OK" to delete the module.  You can also change the module to be
 deleted by selecting its name from the drop down list.  Any instances
@@ -270,14 +270,14 @@ you attempt to simulate, you will get an undefined module error.
 
 <div class=lfig>
 <a name=modcopy>
-<a href="fig/modcopy.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modcopy.gif"><br>
+<a href="../fig/modcopy.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modcopy.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.7: Copying Modules</b>
 </div>
 <p>
 To copy a module implementation, right click on the module to be
 copied from the module list and select "<img class=tool
-src=fig/blk_copy.gif> Copy".  This will bring up a dialog
+src=../fig/blk_copy.gif> Copy".  This will bring up a dialog
 box like the one shown in <a href="#modcopy">Figure 3.7</a>.  Make sure the "From" field shows the
 name of the module you wish to copy.  Enter the name of the new module
 in the "To" field.  This will copy both the module definition and the
@@ -286,14 +286,14 @@ the "Unused" tree in the hierarchy view.
 <p>
 <div class=rfig>
 <a name=modrename>
-<a href="fig/modrename.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modrename.gif"><br>
+<a href="../fig/modrename.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modrename.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.8: Renaming Modules</b>
 </div>
 
 To rename a module implementation, right click on the module to be
 copied from the module list and select "<img class=tool
-src=fig/blk_rename.gif> Rename".  This will bring up a dialog
+src=../fig/blk_rename.gif> Rename".  This will bring up a dialog
 box like the one shown in <a href="#modrename">Figure 3.8</a>. Make sure the "From" field shows the
 name of the module you wish to copy.  Enter the new name for the
 module in the "To" field.
@@ -305,7 +305,7 @@ module in the "To" field.
 
 <div class=rfig>
 <a name=modclaim>
-<a href="fig/modclaim.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modclaim.gif"><br>
+<a href="../fig/modclaim.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modclaim.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.9: Claiming Modules</b>
 </div>
@@ -324,12 +324,12 @@ module.  If you later decide that you would like to revert to the
 library version, you can delete the module, and reload the library.
 <p>
 To claim a module, right click on the module to be copied from the
-module list and select "<img class=tool src=fig/blk_claim.gif> Claim".
+module list and select "<img class=tool src=../fig/blk_claim.gif> Claim".
 This will bring up a dialog box like the one shown in <a
 href="#modclaim">Figure 3.9</a>.  Make sure the "Name" field shows the
-name of the module you wish to claim.  The <img src="fig/chip.gif">
-symbol next to the module will change to <img src="fig/mod_net.gif">
-or <img src="fig/mod_hdl.gif"> to indicate that that module is now
+name of the module you wish to claim.  The <img src="../fig/chip.gif">
+symbol next to the module will change to <img src="../fig/mod_net.gif">
+or <img src="../fig/mod_hdl.gif"> to indicate that that module is now
 part of your design.
 <p>
 Only modules that are part of a library can be claimed.  If you
@@ -342,20 +342,20 @@ in your circuit, you will get an error message.
 
 <div class=rfig>
 <a name=setroot>
-<a href="fig/modsetroot.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modsetroot.gif"><br>
+<a href="../fig/modsetroot.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modsetroot.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.10: Setting Top-<br>Level Module</b>
 </div>
 
 The top-level module is the highest-level module in your hierarchy.
 It is the module that appears at the top of the hierarchy view and is
-indicated by the <img src="fig/document.gif"> symbol. When simulating
+indicated by the <img src="../fig/document.gif"> symbol. When simulating
 your circuit, only modules that are reachable from the top-level
 module are simulated.
 <p>
 
 To set the top-level module, right click on the module and select
-"<img class=tool src=fig/blk_root.gif> Set As Root".  This will bring
+"<img class=tool src=../fig/blk_root.gif> Set As Root".  This will bring
 up a dialog box like the one shown in <a href="#setroot">Figure
 3.10</a>.  Make sure the "Name" field shows the name of the correct
 module.  The module hierarchy view will be recomputed with the new
@@ -371,11 +371,11 @@ module as the top-level module.
 <a name=portfig>
 <table>
 <td>
-   <td style="background-color: white;"><IMG SRC="fig/port_in.gif"></td>
-   <td style="background-color: white;"><IMG SRC="fig/port_out.gif"></td>
+   <td style="background-color: white;"><IMG SRC="../fig/port_in.gif"></td>
+   <td style="background-color: white;"><IMG SRC="../fig/port_out.gif"></td>
 </tr>
 <td><td>a) Input Port</td><td>b) Output Port</td></tr>
-<td><td style="background-color: white;"><IMG SRC="fig/port_inout.gif"></td></tr>
+<td><td style="background-color: white;"><IMG SRC="../fig/port_inout.gif"></td></tr>
 <td><td>c) Inout Port</td></tr>
 </table>
 <b><a name=modcreate>Figure 3.11: Module Ports</b>
@@ -410,7 +410,7 @@ ports have been created on the interface.
 
 <div class=rfig>
 <a name=modintlist>
-<a href="fig/miindex.gif" type="image/gif" target=_blank><IMG SRC="fig/small-miindex.gif"><br>
+<a href="../fig/miindex.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-miindex.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.12: Module Interface List</b>
 </div>
@@ -430,7 +430,7 @@ edit mode then choose "Interface &rarr; Set" to make that instance the
 canonical instance, this is not the recommended way of creating
 interfaces.  The preferred way is to use the interface editor.  To use
 the interface editor, select the "<font class=tool><img 
-src="fig/editintr.gif">Interface</font>" tab in the main edit window.
+src="../fig/editintr.gif">Interface</font>" tab in the main edit window.
 <p>
 If you have the top-level module selected, the interface editor will
 display a graphical representation for the interfaces of all modules
@@ -452,7 +452,7 @@ create your own gates, you can create your own symbols for them.
 
 <div class=rfig>
 <a name=standardinterface>
-<a href="fig/mialu.gif" type="image/gif" target=_blank><IMG SRC="fig/small-mialu.gif"><br>
+<a href="../fig/mialu.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-mialu.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.13: Module Interface Editor</b>
 </div>
@@ -499,7 +499,7 @@ the interface.
 
 <div class=rfig>
 <a name=portparmfig>
-<a href="fig/portparms.gif" type="image/gif" target=_blank><IMG SRC="fig/small-portparms.gif"><br>
+<a href="../fig/portparms.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-portparms.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.14: Port Parameters</b>
 </div>
@@ -517,7 +517,7 @@ point you wish to add the port and select "Add Input..", "Add
 Output.." or "Add InOut..".  The Port Parameters dialog box will
 appear in this instance too allowing you to enter the port name and
 bit size.  To delete a port, use the <img class=tool
-src="fig/cut_curs.gif"> tool and "cut" the wire off the edge of the
+src="../fig/cut_curs.gif"> tool and "cut" the wire off the edge of the
 interface.
 <p>
 To reposition ports, grab them and slide them back and forth on the
@@ -531,7 +531,7 @@ list.
 
 <div class=rfig>
 <a name=interface_generator>
-<a href="fig/modgen.gif" type="image/gif" target=_blank><IMG SRC="fig/small-modgen.gif"><br>
+<a href="../fig/modgen.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-modgen.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.15: Interface Generator</b>
 </div>
@@ -579,7 +579,7 @@ will be generated from scratch.
 <h4>3.6.3 Symbolic Module Interfaces</h5>
 
 <div class=rfig>
-<a href="fig/miregs.gif" type="image/gif" target=_blank><IMG SRC="fig/small-miregs.gif"><br>
+<a href="../fig/miregs.gif" type="image/gif" target=_blank><IMG SRC="../fig/small-miregs.gif"><br>
 (Click to Enlarge)</a><br><br>
 <b>Figure 3.16: Symbol Interface Editor</b>
 </div>
@@ -597,7 +597,7 @@ symbol.  The "Unselected" version is the appearance when the symbol is
 not selected, and the "Selected" version is the appearance when you
 have selected it in the editor.  Normally you can just draw the
 "Unselected" version, copy and paste it into the "Unselected" version,
-then press the <img class=tool src="fig/symed_autobold.gif"> button on
+then press the <img class=tool src="../fig/symed_autobold.gif"> button on
 the toolbar to automatically boldify your symbol.  However, you may
 want to use the editor to do some final touch-ups.
 <p>
@@ -608,44 +608,44 @@ symbol:
 <tr><th align=left>Tool</th><th align=left>Description</th></tr>
 <tr><td colspan=2><hr></td></tr>
 
-<tr><td class=tlb><img class=tool src="fig/symed_point.gif"></td><td class=tld>
+<tr><td class=tlb><img class=tool src="../fig/symed_point.gif"></td><td class=tld>
 <b>Bit Tool</b> - Click the left mouse button to set a bit, and
 the right mouse button to clear a bit.  You can also press and hold
 the mouse button to set/clear multiple bits and you move the mouse.
 
-</td><tr><td class=tlb><img class=tool src="fig/symed_line.gif"></td><td class=tld>
+</td><tr><td class=tlb><img class=tool src="../fig/symed_line.gif"></td><td class=tld>
 <b>Line Tool</b> - Click and hold the left mouse button to set one end
 of the line, and drag the mouse to the other end and release to draw a
 line.  The same action with the right mouse button will clear a line.
 
-</td><tr><td class=tlb><img class=tool src="fig/symed_rect.gif"></td><td class=tld>
+</td><tr><td class=tlb><img class=tool src="../fig/symed_rect.gif"></td><td class=tld>
 <b>Rectangle Tool</b> - Click and hold the left mouse button to set
 one corner of the rectangle, and drag the mouse to the other corner
 and release to draw a rectangle.  The same action with the right mouse
 button will clear the rectangle.
 
-</td><tr><td class=tlb><img class=tool src="fig/symed_fillrect.gif"></td><td class=tld>
+</td><tr><td class=tlb><img class=tool src="../fig/symed_fillrect.gif"></td><td class=tld>
 <b>Filled Rectangle Tool</b> - Click and hold the left mouse button to
 set one corner of the filled rectangle, and drag the mouse to the
 other corner and release to draw a filled rectangle.  The same action
 with the right mouse button will clear the filled rectangle.
 
-</td><tr><td class=tlb><img class=tool src="fig/symed_port.gif"></td><td class=tld>
+</td><tr><td class=tlb><img class=tool src="../fig/symed_port.gif"></td><td class=tld>
 
 <b>Port Tool</b> - Use this tool to select and manipulate ports.
 Click and drag the port to move it.  Use the <img class=tool
-src="fig/symed_pcrot.gif"> and <img class=tool
-src="fig/symed_pccrot.gif"> buttons to rotate the port clockwise or
+src="../fig/symed_pcrot.gif"> and <img class=tool
+src="../fig/symed_pccrot.gif"> buttons to rotate the port clockwise or
 counter-clockwise.
 
-</td><tr><td class=tlb><img class=tool src="fig/symed_select.gif"></td><td class=tld>
+</td><tr><td class=tlb><img class=tool src="../fig/symed_select.gif"></td><td class=tld>
 
 <b>Area Select Tool</b> - This tool allows you to select a rectangular
 area, then use the cut, copy and paste tools.  There are two types of
 paste operations.  A normal paste <img class=tool
-src="fig/edit_paste.gif"> overwrites all bits with the contents of the
+src="../fig/edit_paste.gif"> overwrites all bits with the contents of the
 cut buffer.  The overlay paste <img class=tool
-src="fig/edit_overlay.gif">, pastes only the bits that are set in the
+src="../fig/edit_overlay.gif">, pastes only the bits that are set in the
 cut buffer, combining the cut buffer with the existing image.  The
 selection also limits the scope of the bit shifting and rotating
 operations to the selection.
@@ -656,12 +656,12 @@ operations to the selection.
 
 <p>
 
-You can also use the <img class=tool src="fig/symed_cwrotate.gif"> and
-<img class=tool src="fig/symed_ccwrotate.gif"> buttons to rotate the
+You can also use the <img class=tool src="../fig/symed_cwrotate.gif"> and
+<img class=tool src="../fig/symed_ccwrotate.gif"> buttons to rotate the
 image clockwise or counter-clockwise, or the shift buttons such as
-<img class=tool src="fig/arrow0.gif"> to shift the bits left, right,
+<img class=tool src="../fig/arrow0.gif"> to shift the bits left, right,
 up or down.  You can use the area selection tool <img class=tool
-src="fig/symed_select.gif"> to limit the scope of these operations to
+src="../fig/symed_select.gif"> to limit the scope of these operations to
 the selected area.
 
 <br style="clear: right;">
