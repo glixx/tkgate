@@ -2,10 +2,10 @@
 // by Jeffery P. Hansen
 //
 // For full picture use
-//  povray +SR230 +ER500 +W960 +H720 +A +D +P +i dragongate.pov
+//  povray +SR230 +ER500 +W960 +H720 +A +D +P +i dragongate2.pov
 //
 // For foot adjustment use:
-//  povray +SR430 +ER500 +SC125 +EC350 +W960 +H720 +A +D +P +i dragongate.pov
+//  povray +SR430 +ER500 +SC125 +EC350 +W960 +H720 +A +D +P +i dragongate2.pov
 //
 
 #declare showTrees = 0;
