@@ -1,5 +1,5 @@
 //: version "2.1-a2"
-//: property encoding = "iso8859-1"
+//: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
 //: property title = "index.v"
@@ -18,7 +18,7 @@ module main;    //: root_module
   //: /line:"create an interactive \"Coke Machine\""
   //: /line:"that can be controlled by a user circuit."
   //: /line:"Only the coke machine device itself is"
-  //: /line:"included.  Can you build a controller"
+  //: /line:"included. Can you build a controller"
   //: /line:"for it?"
   //: /line:""
   //: /end
@@ -44,6 +44,14 @@ module main;    //: root_module
   //: comment g6 @(20,552) /sn:0
   //: /line:"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
   //: /end
+  //: comment g7 @(787,27) /sn:0
+  //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"
+  //: /line:"<h3>Microcircuits 74xx</h3></a>"
+  //: /line:"A few examples of circuits"
+  //: /line:"using the standard"
+  //: /line:"74 series"
+  //: /line:"logic circuit library."
+  //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
   //: /line:"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
   //: /line:"Menagerie CPU</a></h3>"
@@ -55,7 +63,7 @@ module main;    //: root_module
   //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
   //: /line:"Combinational Logic</a></h3>"
   //: /line:"A simple 3-bit adder that you"
-  //: /line:"simulate.  Push the play button"
+  //: /line:"simulate. Push the play button"
   //: /line:"then click on the switches and"
   //: /line:"watch how the LEDs change."
   //: /line:""

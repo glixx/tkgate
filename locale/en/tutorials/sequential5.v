@@ -1,9 +1,12 @@
 //: version "2.1-a2"
-//: property encoding = "iso8859-1"
+//: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
-//: property title = "seqsim_tut.v"
+//: property title = "Sequential Simulation"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -28,9 +31,9 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:""
   //: /line:"In addition to interactive simulator control, you can also write a simulator script."
   //: /line:"Simulator script files have the extension \".vs\" and are written using Verilog"
-  //: /line:"syntax.  While the simulator is active, press <img src=sim_script.gif bgcolor=gray> to load a simulator script file."
+  //: /line:"syntax. While the simulator is active, press <img src=sim_script.gif bgcolor=gray> to load a simulator script file."
   //: /line:"You can use a script file to set and remove probes, advance the simulation time,"
-  //: /line:"set signal values and display messages in the TkGate log (<img src=log.gif bgcolor=gray>) window.  See"
+  //: /line:"set signal values and display messages in the TkGate log (<img src=log.gif bgcolor=gray>) window. See"
   //: /line:"the TkGate 2.1 documentation for details on how to write simulator scripts."
   //: /end
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(clr), .CK(ck));   //: @(215,291) /sn:0 /w:[ 0 0 0 0 0 ]
@@ -54,83 +57,13 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"  end"
   //: /line:"</font>"
   //: /end
-  //: DIP g6 (w7) @(199,191) /sn:0 /w:[ 0 ] /st:1
+  //: DIP g6 (w7) @(199,191) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: GROUND g9 (w3) @(252,257) /sn:0 /w:[ 0 ]
   //: LED g7 (reg_out) @(275,345) /sn:0 /R:2 /w:[ 5 ] /type:2
   _GGADD8 #(68, 70, 62, 64) g5 (.A(w7), .B(reg_out), .S(w2), .CI(w3), .CO(w9));   //: @(215,243) /sn:0 /w:[ 1 3 1 1 0 ]
   _GGCLOCK_P100_0_50 g0 (.Z(ck));   //: @(100,291) /sn:0 /w:[ 1 ] /omega:100 /phi:0 /duty:50
-  //: SWITCH reset (clr) @(303,286) /R:2 /w:[ 1 ] /st:1
+  //: SWITCH reset (clr) @(303,286) /R:2 /w:[ 1 ] /st:1 /dn:0
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
- // specify
-   // $setup(D,posedge CK, Dsetup);
-//    $hold(posedge CK,D, Dhold);
-//  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P100_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #50
-     forever
-       begin
-	  Z =  1'b1;
-	  #50;
-	  Z =  1'b0;
-	  #50;
-       end
-   
-endmodule // clock
-//: /builtinEnd
 

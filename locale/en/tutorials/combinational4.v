@@ -1,10 +1,13 @@
 //: version "2.1-a2"
-//: property encoding = "iso8859-1"
+//: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
-//: property title = "sim_tut.v"
+//: property title = "Combinational Simulation"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -18,16 +21,16 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
 //: enddecls
 
   //: LED g4 (w4) @(357,221) /sn:0 /w:[ 1 ] /type:1
-  //: SWITCH g3 (w1) @(279,173) /sn:0 /R:3 /w:[ 1 ] /st:0
+  //: SWITCH g3 (w1) @(279,173) /sn:0 /R:3 /w:[ 1 ] /st:0 /dn:0
   //: comment g13 @(10,10) /anc:1
   //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(dip switches)</b>"
   //: /line:""
   //: /line:"To change the value of a dip while simulating a circuit, first click on it to open a value dialog"
-  //: /line:"box.  Then enter the new value in hexidecimal and click <font color=red2>Apply</font>.  Start the simulator then try"
+  //: /line:"box. Then enter the new value in hexidecimal and click <font color=red2>Apply</font>. Start the simulator then try"
   //: /line:"changing the input values in the four-bit adder below and observe the output."
   //: /end
-  //: DIP g2 (w6) @(133,282) /sn:0 /R:1 /w:[ 0 ] /st:15
-  //: DIP g1 (w5) @(130,209) /sn:0 /R:1 /w:[ 0 ] /st:3
+  //: DIP g2 (w6) @(133,282) /sn:0 /R:1 /w:[ 0 ] /st:1 /dn:0
+  //: DIP g1 (w5) @(130,209) /sn:0 /R:1 /w:[ 0 ] /st:1 /dn:0
   //: comment g6 @(560,127) /sn:0 /anc:1
   //: /line:"<font color=green4>Hint: Remember, to start and unpause"
   //: /line:"the simulator press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab"
@@ -44,7 +47,7 @@ endmodule
 
 //: /netlistBegin ADD4
 module ADD4(A, Cout, Cin, B, S);
-//: interface  /sz:(64, 64) /bd:[ Ti0>Cin(34/64) Li0>A[3:0](16/64) Li1>B[3:0](41/64) Bo0<Cout(32/64) Ro0<S[3:0](27/64) ]
+//: interface  /sz:(64, 64) /bd:[ Ti0>Cin(34/64) Li0>A[3:0](16/64) Li1>B[3:0](41/64) Bo0<Cout(32/64) Ro0<S[3:0](27/64) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [3:0] B;    //: /sn:0 {0}(#:35,285)(#:49,285){1}
 input [3:0] A;    //: /sn:0 {0}(#:48,156)(#:79,156){1}
 output Cout;    //: /sn:0 {0}(358,477)(358,444){1}
@@ -85,7 +88,7 @@ endmodule
 
 //: /netlistBegin ADD1
 module ADD1(B, Cin, Cout, S, A);
-//: interface  /sz:(63, 50) /bd:[ Ti0>Cin(31/63) Li0>A(12/50) Li1>B(34/50) Bo0<Cout(31/63) Ro0<S(21/50) ]
+//: interface  /sz:(63, 50) /bd:[ Ti0>Cin(31/63) Li0>A(12/50) Li1>B(34/50) Bo0<Cout(31/63) Ro0<S(21/50) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input B;    //: /sn:0 {0}(113,161)(170,161){1}
 //: {2}(174,161)(222,161){3}
 //: {4}(172,159)(172,98)(217,98){5}
@@ -121,31 +124,4 @@ wire w0;    //: /sn:0 {0}(315,154)(272,154)(272,138){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 

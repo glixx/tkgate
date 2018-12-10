@@ -1,15 +1,18 @@
 //: version "2.1-a2"
-//: property encoding = "iso8859-1"
+//: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
-//: property title = "seqsim_tut.v"
+//: property title = "Sequential Simulation"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 //: require "timer"
 
 `timescale 1ns/1ns
 
 
-//: /symbolBegin: 680294000
+//: /symbolBegin: 185750768
 //: /iconBegin normal 815 5 5
 //: /data "#define bitmap_width 28"
 //: /data "#define bitmap_height 29"
@@ -62,73 +65,21 @@ wire w9;    //: /sn:0 {0}(224,233)(214,233){1}
   //: /line:"<h3>Sequential Simulation</h3> <b>(continuous simulation)</b>"
   //: /line:""
   //: /line:"Also like with a combinational circuit, you can press the <img src=sim_go.gif bgcolor=gray> button to unpause and simulate"
-  //: /line:"continously.  Try it with the circuit below.  This circuit contains a \"real-world-time\" oscilator"
-  //: /line:"that will cycle once per second.  Like in the previous example, you will need to reset it by"
+  //: /line:"continously. Try it with the circuit below. This circuit contains a \"real-world-time\" oscilator"
+  //: /line:"that will cycle once per second. Like in the previous example, you will need to reset it by"
   //: /line:"turning the \"reset\" switch off monentarily."
   //: /end
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(w4), .CK(ck));   //: @(248,283) /sn:0 /w:[ 0 0 0 0 1 ]
   //: comment g1 @(10,410) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
-  OSCILLATOR g10 (.Z(ck));   //: @(116, 283) /symbol:680294000 /sn:0 /w:[ 0 ]
-  //: DIP g6 (w7) @(232,183) /sn:0 /w:[ 0 ] /st:1
+  OSCILLATOR g10 (.Z(ck));   //: @(116, 283) /symbol:185750768 /sn:0 /w:[ 0 ]
+  //: DIP g6 (w7) @(232,183) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: GROUND g9 (w3) @(285,249) /sn:0 /w:[ 0 ]
   //: LED g7 (reg_out) @(306,349) /sn:0 /R:2 /w:[ 5 ] /type:2
   _GGADD8 #(68, 70, 62, 64) g5 (.A(w7), .B(reg_out), .S(w2), .CI(w3), .CO(w9));   //: @(248,235) /sn:0 /w:[ 1 3 1 1 0 ]
-  //: SWITCH reset (w4) @(326,266) /R:2 /w:[ 1 ] /st:1
+  //: SWITCH reset (w4) @(326,266) /R:2 /w:[ 1 ] /st:1 /dn:0
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
- // specify
-   // $setup(D,posedge CK, Dsetup);
-//    $hold(posedge CK,D, Dhold);
-//  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
 
