@@ -37,9 +37,9 @@ module main;    //: root_module
   //: /end
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
-  //: /line:"<h3>3-Bit Counter</h3></a>"
-  //: /line:"A 3-bitcounter implemented using"
-  //: /line:"three single-bit D-flip-flops."
+  //: /line:"<h3>4-Bit Counter</h3></a>"
+  //: /line:"A 4-bitcounter implemented using"
+  //: /line:"four single-bit D-flip-flops."
   //: /end
   //: comment g6 @(20,552) /sn:0
   //: /line:"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"

@@ -230,8 +230,8 @@ wire w2;    //: /sn:0 {0}(154,152)(169,152){1}
   //: /line:"button to set the default orientation"
   //: /line:"for newly created gates.</font>"
   //: /end
-  //: comment g0 @(10,310) /sn:0 /anc:1
-  //: /line:"<tutorial-navigation>"
+  //: comment g5 @(81,195) /sn:0 /anc:1
+  //: /line:"Unanchored Gate"
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"

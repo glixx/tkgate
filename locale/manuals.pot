@@ -124,9 +124,9 @@ msgstr ""
 
 msgid ""
 "<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">\n"
-"<h3>3-Bit Counter</h3></a>\n"
-"A 3-bitcounter implemented using\n"
-"three single-bit D-flip-flops."
+"<h3>4-Bit Counter</h3></a>\n"
+"A 4-bitcounter implemented using\n"
+"four single-bit D-flip-flops."
 msgstr ""
 
 msgid ""
