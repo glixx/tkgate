@@ -63,9 +63,7 @@ wire w9;    //: /sn:0 {0}(314,186)(280,186){1}
 //: /line:"<h3>Group Editing Features</h3> <b>(incremental selection)</b>"
   //: /line:""
   //: /line:"You can add or remove gates from the current selection by holding the <font color=red2>Control</font> key while"
-  //: /line:"you click on them. Use the selection box to select the gates below then click on a few"
-  //: /line:"of the gates with the <font color=red2>Control</font> key held down. Release the <font color=red2>Control</font> key and then try moving"
-  //: /line:"the selection with only some of the gates selected."
+  //: /line:"you click on them."
   //: /end
   _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(325,189) /sn:0 /w:[ 0 3 0 ]
   _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(233,186) /sn:0 /w:[ 3 3 3 ]

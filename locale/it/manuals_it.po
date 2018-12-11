@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
-"PO-Revision-Date: 2018-12-10 16:34+0300\n"
+"PO-Revision-Date: 2018-12-11 08:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -153,6 +153,15 @@ msgstr ""
 "1) Attiva la simulazione con \"Ctl-S b\"\n"
 "\n"
 
+msgid "8-Bit Counter"
+msgstr ""
+
+msgid "Address Resolution"
+msgstr ""
+
+msgid "Advanced Editing Methods"
+msgstr ""
+
 msgid ""
 "<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">\n"
 "<h3>3-Bit Counter</h3></a>\n"
@@ -245,6 +254,27 @@ msgid ""
 "<a href=\"#memory.m1\">* Main Memory</a>\n"
 "<a href=\"#memory.PC\">* Program Counter</a>\n"
 "\n"
+msgstr ""
+
+msgid "Combinational Simulation"
+msgstr ""
+
+msgid "Condition Code Handling"
+msgstr ""
+
+msgid "Creating a Circuit"
+msgstr ""
+
+msgid "Customizing TkGate"
+msgstr ""
+
+msgid "Editing Gates"
+msgstr ""
+
+msgid "Editing Wires"
+msgstr ""
+
+msgid "Flip-flop at the transistor level"
 msgstr ""
 
 msgid ""
@@ -417,9 +447,11 @@ msgid ""
 "extender bars"
 msgstr ""
 
+msgid "Group Editing Features"
+msgstr ""
+
 msgid ""
 "<h1 color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></h1>\n"
-"<font size=6 color=\"firebrick\">[Alpha Release]</font>\n"
 "\n"
 "<value-of name=\"tkgate-copyright\">\n"
 "TKGate comes with ABSOLUTELY NO WARRANTY; see 'Help...License' menu\n"
@@ -838,11 +870,7 @@ msgid ""
 "\n"
 "You can add or remove gates from the current selection by holding the <font "
 "color=red2>Control</font> key while\n"
-"you click on them. Use the selection box to select the gates below then "
-"click on a few\n"
-"of the gates with the <font color=red2>Control</font> key held down. Release "
-"the <font color=red2>Control</font> key and then try moving\n"
-"the selection with only some of the gates selected."
+"you click on them."
 msgstr ""
 
 msgid ""
@@ -917,7 +945,7 @@ msgid ""
 "time,\n"
 "set signal values and display messages in the TkGate log (<img src=log.gif "
 "bgcolor=gray>) window. See\n"
-"the TkGate 2.1 documentation for details on how to write simulator scripts."
+"the TkGate documentation for details on how to write simulator scripts."
 msgstr ""
 
 msgid ""
@@ -1229,6 +1257,18 @@ msgid ""
 "0E - <b>A</b> OR <b>B</b>"
 msgstr ""
 
+msgid "Main Memory"
+msgstr ""
+
+msgid "MDR Control"
+msgstr ""
+
+msgid "Microcode Next Address Generation"
+msgstr ""
+
+msgid "Microinstruction Decode"
+msgstr ""
+
 msgid "OR Gate Circuit"
 msgstr ""
 
@@ -1241,12 +1281,18 @@ msgid ""
 "counter</p>"
 msgstr ""
 
+msgid "Q Register Handling"
+msgstr ""
+
 msgid ""
 "Register R0 is hard-coded\n"
 "to always be set to 0."
 msgstr ""
 "Register R0 is hard-coded\n"
 "to always be set to 0."
+
+msgid "Sequential Simulation"
+msgstr ""
 
 msgid ""
 "Simulator Script Example:\n"
@@ -1266,17 +1312,23 @@ msgid ""
 "</font>"
 msgstr ""
 
+msgid "Standard Logic Microcircuits"
+msgstr ""
+
 msgid "Switches"
+msgstr ""
+
+msgid "Textual Verilog"
 msgstr ""
 
 msgid ""
 "The IR and OPR registers store the\n"
 "instruction and operand bytes of \n"
-"the current instruction. "
+"the current instruction."
 msgstr ""
 "I registri IR e OPR contengono\n"
 "l'istruzione e i bytes di operando \n"
-"dell'istruzione corrente. "
+"dell'istruzione corrente."
 
 msgid ""
 "The module to the left is an interface to a \"coke\" machine.\n"
@@ -1399,6 +1451,9 @@ msgstr ""
 "Termina la simulazione con un click su \"stop\"\n"
 "nella barra degli utensili."
 
+msgid "This is a frame"
+msgstr ""
+
 msgid ""
 "This is a trival example of an\n"
 "instruction unit. The mpc register\n"
@@ -1494,77 +1549,17 @@ msgstr ""
 "di sistema.\n"
 "\n"
 
-msgid "Unanchored Gate"
-msgstr ""
-
-msgid "Standard Logic Microcircuits"
-msgstr ""
-
-msgid "Welcome to TkGate Page"
-msgstr ""
-
 msgid "TTY Control"
-msgstr ""
-
-msgid "MDR Control"
-msgstr ""
-
-msgid "Main Memory"
-msgstr ""
-
-msgid "Address Resolution"
-msgstr ""
-
-msgid "Condition Code Handling"
-msgstr ""
-
-msgid "Microinstruction Decode"
-msgstr ""
-
-msgid "Microcode Next Address Generation"
-msgstr ""
-
-msgid "Q Register Handling"
-msgstr ""
-
-msgid "8-Bit Counter"
-msgstr ""
-
-msgid "Flip-flop at the transistor level"
-msgstr ""
-
-msgid "Sequential Simulation"
-msgstr ""
-
-msgid "Advanced Editing Methods"
-msgstr ""
-
-msgid "Editing Wires"
-msgstr ""
-
-msgid "Combinational Simulation"
-msgstr ""
-
-msgid "Group Editing Features"
-msgstr ""
-
-msgid "Customizing TkGate"
-msgstr ""
-
-msgid "Textual Verilog"
 msgstr ""
 
 msgid "Tutorial page"
 msgstr ""
 
+msgid "Unanchored Gate"
+msgstr ""
+
 msgid "Using Modules"
 msgstr ""
 
-msgid "Editing Gates"
-msgstr ""
-
-msgid "This is a frame"
-msgstr ""
-
-msgid "Creating a Circuit"
+msgid "Welcome to TkGate Page"
 msgstr ""

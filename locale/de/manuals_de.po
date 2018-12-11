@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
-"PO-Revision-Date: 2018-12-10 16:22+0300\n"
+"PO-Revision-Date: 2018-12-11 08:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -162,6 +162,15 @@ msgstr ""
 "\"Ctl-S b\" auf der Tastatur\n"
 "\n"
 
+msgid "8-Bit Counter"
+msgstr ""
+
+msgid "Address Resolution"
+msgstr "Addressauflösung"
+
+msgid "Advanced Editing Methods"
+msgstr ""
+
 msgid ""
 "<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">\n"
 "<h3>3-Bit Counter</h3></a>\n"
@@ -292,6 +301,27 @@ msgstr ""
 "<a href=\"#memory.m1\">* Hauptspeicher</a>\n"
 "<a href=\"#memory.PC\">* Programmzähler</a>\n"
 "\n"
+
+msgid "Combinational Simulation"
+msgstr ""
+
+msgid "Condition Code Handling"
+msgstr "Condition Code Behandlung"
+
+msgid "Creating a Circuit"
+msgstr ""
+
+msgid "Customizing TkGate"
+msgstr ""
+
+msgid "Editing Gates"
+msgstr ""
+
+msgid "Editing Wires"
+msgstr ""
+
+msgid "Flip-flop at the transistor level"
+msgstr ""
 
 msgid ""
 "<font color=green4>Hint: An alternate way to add or\n"
@@ -558,9 +588,11 @@ msgstr ""
 "Gatter mit\n"
 "Erweiterungsbalken"
 
+msgid "Group Editing Features"
+msgstr ""
+
 msgid ""
 "<h1 color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></h1>\n"
-"<font size=6 color=\"firebrick\">[Alpha Release]</font>\n"
 "\n"
 "<value-of name=\"tkgate-copyright\">\n"
 "TKGate comes with ABSOLUTELY NO WARRANTY; see 'Help...License' menu\n"
@@ -1296,20 +1328,13 @@ msgid ""
 "\n"
 "You can add or remove gates from the current selection by holding the <font "
 "color=red2>Control</font> key while\n"
-"you click on them. Use the selection box to select the gates below then "
-"click on a few\n"
-"of the gates with the <font color=red2>Control</font> key held down. Release "
-"the <font color=red2>Control</font> key and then try moving\n"
-"the selection with only some of the gates selected."
+"you click on them."
 msgstr ""
 "<h3>Editieren von Bausteingruppen</h3> <b>(inkrementelle Auswahl)</b>\n"
 "\n"
 "Es ist möglich, zur aktuellen Auswahl Gatter hinzuzufügen oder zu entfernen. "
 "Dazu hält man die <font color=red2>Strg</font> Taste gedrückt, während\n"
-"auf das Gatter geklickt wird. Wähle mit der Auswahlbox die Gatter unten aus "
-"und klicke dann auf einige, während die <font color=red2>Strg</font> Taste\n"
-"gedrückt bleibt. Gib die <font color=red2>Strg</font> Taste frei und "
-"versuche dann, die Auswahl mit nur einigen ausgewählten Gattern zu bewegen."
+"auf das Gatter geklickt wird."
 
 msgid ""
 "<h3>Group Editing Features</h3> <b>(rotation and anchoring)</b>\n"
@@ -1427,7 +1452,7 @@ msgid ""
 "time,\n"
 "set signal values and display messages in the TkGate log (<img src=log.gif "
 "bgcolor=gray>) window. See\n"
-"the TkGate 2.1 documentation for details on how to write simulator scripts."
+"the TkGate documentation for details on how to write simulator scripts."
 msgstr ""
 "<h3>Simulation von Schaltwerken</h3> <b>(Skripte)</b>\n"
 "\n"
@@ -1441,8 +1466,7 @@ msgstr ""
 "die Simulationszeit vorrücken zu lassen,\n"
 "Signalwerte zu setzen und Meldungen im TkGate log (<img src=log.gif "
 "bgcolor=gray>) Fenster anzuzeigen. Details\n"
-"zum Schreiben von Simulatorskipten sehe man in der TkGate 2.1 Dokumentation "
-"nach."
+"zum Schreiben von Simulatorskipten sehe man in der TkGate Dokumentation nach."
 
 msgid ""
 "<h3>Sequential Simulation</h3> <b>(stepped simulation)</b>\n"
@@ -1984,6 +2008,18 @@ msgid ""
 "0E - <b>A</b> OR <b>B</b>"
 msgstr ""
 
+msgid "Main Memory"
+msgstr "Hauptspeicher"
+
+msgid "MDR Control"
+msgstr "MDR Steuerung"
+
+msgid "Microcode Next Address Generation"
+msgstr "Mikrocode Erzeugung der nächsten Adresse"
+
+msgid "Microinstruction Decode"
+msgstr "Mikrobefehl decodieren"
+
 msgid "OR Gate Circuit"
 msgstr "OR-Gatterschaltung"
 
@@ -1996,12 +2032,18 @@ msgid ""
 "counter</p>"
 msgstr ""
 
+msgid "Q Register Handling"
+msgstr "Q Registerbehandlung"
+
 msgid ""
 "Register R0 is hard-coded\n"
 "to always be set to 0."
 msgstr ""
 "Register R0 ist immer\n"
 "auf 0 gesetzt."
+
+msgid "Sequential Simulation"
+msgstr ""
 
 msgid ""
 "Simulator Script Example:\n"
@@ -2036,17 +2078,23 @@ msgstr ""
 "  end\n"
 "</font>"
 
+msgid "Standard Logic Microcircuits"
+msgstr ""
+
 msgid "Switches"
 msgstr "Schalter"
+
+msgid "Textual Verilog"
+msgstr ""
 
 msgid ""
 "The IR and OPR registers store the\n"
 "instruction and operand bytes of \n"
-"the current instruction. "
+"the current instruction."
 msgstr ""
 "Die IR und OPR Register verwalten die\n"
 "Instruktions- und Operanden-Bytes der\n"
-"aktuellen Instruktion. "
+"aktuellen Instruktion."
 
 msgid ""
 "The module to the left is an interface to a \"coke\" machine.\n"
@@ -2205,6 +2253,9 @@ msgstr ""
 "Beende die Simulation durch Drücken des \"stop\"\n"
 "Knopfes auf der Knopfleiste."
 
+msgid "This is a frame"
+msgstr ""
+
 msgid ""
 "This is a trival example of an\n"
 "instruction unit. The mpc register\n"
@@ -2315,77 +2366,17 @@ msgstr ""
 "Systemtakt.\n"
 "\n"
 
-msgid "Unanchored Gate"
-msgstr "Nicht verankertes Gatter"
-
-msgid "Standard Logic Microcircuits"
-msgstr ""
-
-msgid "Welcome to TkGate Page"
-msgstr "Willkommen zu TkGate"
-
 msgid "TTY Control"
 msgstr "TTY Steuerung"
-
-msgid "MDR Control"
-msgstr "MDR Steuerung"
-
-msgid "Main Memory"
-msgstr "Hauptspeicher"
-
-msgid "Address Resolution"
-msgstr "Addressauflösung"
-
-msgid "Condition Code Handling"
-msgstr "Condition Code Behandlung"
-
-msgid "Microinstruction Decode"
-msgstr "Mikrobefehl decodieren"
-
-msgid "Microcode Next Address Generation"
-msgstr "Mikrocode Erzeugung der nächsten Adresse"
-
-msgid "Q Register Handling"
-msgstr "Q Registerbehandlung"
-
-msgid "8-Bit Counter"
-msgstr ""
-
-msgid "Flip-flop at the transistor level"
-msgstr ""
-
-msgid "Sequential Simulation"
-msgstr ""
-
-msgid "Advanced Editing Methods"
-msgstr ""
-
-msgid "Editing Wires"
-msgstr ""
-
-msgid "Combinational Simulation"
-msgstr ""
-
-msgid "Group Editing Features"
-msgstr ""
-
-msgid "Customizing TkGate"
-msgstr ""
-
-msgid "Textual Verilog"
-msgstr ""
 
 msgid "Tutorial page"
 msgstr ""
 
+msgid "Unanchored Gate"
+msgstr "Nicht verankertes Gatter"
+
 msgid "Using Modules"
 msgstr ""
 
-msgid "Editing Gates"
-msgstr ""
-
-msgid "This is a frame"
-msgstr ""
-
-msgid "Creating a Circuit"
-msgstr ""
+msgid "Welcome to TkGate Page"
+msgstr "Willkommen zu TkGate"

@@ -223,7 +223,6 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: SWITCH g26 (b) @(56,134) /sn:0 /w:[ 0 ] /st:1 /dn:1
   //: comment g0 @(279,271)
   //: /line:"<h1 color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></h1>"
-  //: /line:"<font size=6 color=\"firebrick\">[Alpha Release]</font>"
   //: /line:""
   //: /line:"<value-of name=\"tkgate-copyright\">"
   //: /line:"TKGate comes with ABSOLUTELY NO WARRANTY; see 'Help...License' menu"
