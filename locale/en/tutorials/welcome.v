@@ -229,7 +229,7 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: /line:"for license and warranty details. Report problems to <a href=\"mailto:starling13@gmail.com\"><value-of name=\"tkgate-mailcontact\"></a>"
   //: /line:"[released <value-of name=\"tkgate-release-date\">]"
   //: /line:""
-  //: /line:"<font size=5>Click on a link below to start using tkgate!"
+  //: /line:"<h3>Click on a link below to start using tkgate!</h3>"
   //: /line:""
   //: /line:"<a href=\"file:///@T/index.v\">* Go to the tutorial</a>"
   //: /line:""

@@ -35,7 +35,7 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
   //: DIP g2 (w6) @(133,282) /sn:0 /R:1 /w:[ 0 ] /st:15 /dn:0
   //: DIP g1 (w5) @(130,209) /sn:0 /R:1 /w:[ 0 ] /st:3 /dn:0
   //: comment g7 @(557,169) /sn:0 /anc:1
-  //: /line:"font color=green4>Hint: You can also navigate to modules"
+  //: /line:"<font color=green4>Hint: You can also navigate to modules"
   //: /line:"by right clicking and select <font color=red2>Open</font>"
   //: /line:"from the popup menu."
   //: /end
