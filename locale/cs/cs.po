@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
-"PO-Revision-Date: 2018-12-05 07:15+0000\n"
+"PO-Revision-Date: 2018-12-11 02:05+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/Magic/tkgate/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -473,7 +473,7 @@ msgstr ""
 #: en/messages:234
 msgctxt "menu.tool.port"
 msgid "0:Port"
-msgstr ""
+msgstr "0:Konektor"
 
 #: en/messages:235
 msgctxt "menu.tool.select"
@@ -488,7 +488,7 @@ msgstr ""
 #: en/messages:238
 msgctxt "menu.format.addport"
 msgid "4:Add Port"
-msgstr ""
+msgstr "4:Přidat konektor"
 
 #: en/messages:239
 msgctxt "menu.format.ioset"
@@ -1333,7 +1333,7 @@ msgstr ""
 #: en/messages:449
 msgctxt "pop.gate.addport"
 msgid "Add Port"
-msgstr ""
+msgstr "Přidat konektor"
 
 #: en/messages:450
 msgctxt "pop.gate.addin"
@@ -1393,7 +1393,7 @@ msgstr ""
 #: en/messages:462
 msgctxt "pop.module.claim"
 msgid "Claim..."
-msgstr ""
+msgstr "Konvertovat..."
 
 #: en/messages:463
 msgctxt "pop.module.setroot"
@@ -1443,12 +1443,12 @@ msgstr ""
 #: en/messages:474
 msgctxt "pop.simulate.step"
 msgid "Step Epoch(s)"
-msgstr ""
+msgstr "Posun o Jednotku(y) Času"
 
 #: en/messages:475
 msgctxt "pop.simulate.cycle"
 msgid "Step Cycle"
-msgstr ""
+msgstr "Posun o Hodinový Cyklus"
 
 #: en/messages:476
 msgctxt "pop.simulate.break"
@@ -1463,12 +1463,12 @@ msgstr ""
 #: en/messages:478
 msgctxt "pop.simulate.load"
 msgid "Load Memory..."
-msgstr ""
+msgstr "Nahrát Obraz Paměti..."
 
 #: en/messages:479
 msgctxt "pop.simulate.dump"
 msgid "Dump Memory..."
-msgstr ""
+msgstr "Uložit Obraz Paměti..."
 
 #: en/messages:480
 msgctxt "pop.simulate.view"
@@ -2054,7 +2054,7 @@ msgstr ""
 #: en/messages:662
 msgctxt "db.gate.ff.normal.hdr"
 msgid "Normal"
-msgstr ""
+msgstr "Normální"
 
 #: en/messages:663
 msgctxt "db.gate.ff.normal.exp"
@@ -2083,7 +2083,7 @@ msgstr ""
 #: en/messages:674
 msgctxt "db.gate.jkff.normal.hdr"
 msgid "Normal"
-msgstr ""
+msgstr "Normální"
 
 #: en/messages:675
 msgctxt "db.gate.jkff.normal.exp"
@@ -2484,7 +2484,7 @@ msgstr ""
 #: en/messages:851
 msgctxt "db.gate.tap.lbl.bit"
 msgid "Bit:"
-msgstr ""
+msgstr "Dioda:"
 
 #: en/messages:852
 msgctxt "db.gate.tap.lbl.bus"
@@ -2816,7 +2816,7 @@ msgid ""
 "components in the loop as a \"Critical Path Partition\"\n"
 "point. Nets at which a loop was detected are\n"
 "listed below."
-msgstr ""
+msgstr "Ve vašem obvodu byla zjištěna kombinační smyčka.\nAby bylo možno provést analýzu zpožděni v obvodu,\nmusíte buď přerušit smyčku, nebo označit některé\nz hradel ve smyčce jako bod \"Přerušení citlivé\ncesty\". Sítě, v nichž byla zjištěna smyčka, jsou\nvypsány níže."
 
 #: en/messages:999
 msgctxt "print.title"
@@ -2971,7 +2971,7 @@ msgstr "Tisknout malé moduly 4 na stránku."
 #: en/messages:1031
 msgctxt "print.rangeselection"
 msgid "Range Selection"
-msgstr ""
+msgstr "Výběr Rozsahu"
 
 #: en/messages:1032
 msgctxt "print.scaleselect"
@@ -4115,7 +4115,7 @@ msgstr ""
 #: en/messages:1369
 msgctxt "blklst.claim.title"
 msgid "TKGate: Claim Module"
-msgstr ""
+msgstr "TKGate: Konvertovat Modul"
 
 #: en/messages:1370
 msgctxt "blklst.setroot.title"
@@ -6321,7 +6321,7 @@ msgstr ""
 #: en/messages:2154
 msgctxt "ho.ipanel.deleteport"
 msgid "Delete the selected port."
-msgstr ""
+msgstr "Smazat vybraný konektor."
 
 #: en/messages:2158
 msgctxt "ho.ipanel.editport"
@@ -6390,7 +6390,7 @@ msgstr ""
 #: en/messages:2207
 msgctxt "ho.mod.open"
 msgid "Open the selected module."
-msgstr ""
+msgstr "Otevřít vybraný modul."
 
 #: en/messages:2208
 msgctxt "ho.mod.close"
@@ -6464,7 +6464,7 @@ msgstr ""
 #: en/messages:2229
 msgctxt "ho.mod.type.root"
 msgid "Top-level module"
-msgstr ""
+msgstr "Hlavní Modul"
 
 #: en/messages:2230
 msgctxt "ho.mod.type.netlist"
@@ -6515,12 +6515,12 @@ msgctxt "ho.tab.simulate"
 msgid ""
 "Start the simulator, open the logic analyzer\n"
 "and execute any initialization scripts if defined."
-msgstr ""
+msgstr "Spustit simulátor, otevřít logický analyzátor\na vykonat inicializační skripty, pokud jsou definovány."
 
 #: en/messages:2257
 msgctxt "ho.tab.cpath"
 msgid "Find critical paths in a circuit."
-msgstr ""
+msgstr "Najít citlivou cestu v obvodu."
 
 #: en/messages:2261
 msgctxt "ho.log"

@@ -8,14 +8,15 @@
 # ##############################################################################
 # 
 # Translators:
+# abuyop <abuyop@gmail.com>, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
-"PO-Revision-Date: 2018-12-05 07:15+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"PO-Revision-Date: 2018-12-10 04:01+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/Magic/tkgate/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,12 +27,12 @@ msgstr ""
 #: en/messages:106
 msgctxt "b.new"
 msgid "New..."
-msgstr ""
+msgstr "Baharu..."
 
 #: en/messages:107
 msgctxt "b.dismiss"
 msgid "Dismiss"
-msgstr ""
+msgstr "Singkir"
 
 #: en/messages:108
 msgctxt "b.close"
@@ -56,42 +57,42 @@ msgstr "Batal"
 #: en/messages:112
 msgctxt "b.in"
 msgid "in"
-msgstr ""
+msgstr "masuk"
 
 #: en/messages:113
 msgctxt "b.out"
 msgid "out"
-msgstr ""
+msgstr "keluar"
 
 #: en/messages:114
 msgctxt "b.inout"
 msgid "inout"
-msgstr ""
+msgstr "masukkeluar"
 
 #: en/messages:115
 msgctxt "b.browse"
 msgid "Browse..."
-msgstr ""
+msgstr "Layar..."
 
 #: en/messages:116
 msgctxt "b.label"
 msgid "Label"
-msgstr ""
+msgstr "Label"
 
 #: en/messages:117
 msgctxt "b.find"
 msgid "Find"
-msgstr ""
+msgstr "Cari"
 
 #: en/messages:118
 msgctxt "b.edit"
 msgid "Edit..."
-msgstr ""
+msgstr "Sunting..."
 
 #: en/messages:119
 msgctxt "b.add"
 msgid "Add..."
-msgstr ""
+msgstr "Tambah..."
 
 #: en/messages:120
 msgctxt "b.delete"
@@ -101,102 +102,102 @@ msgstr "Padam"
 #: en/messages:121
 msgctxt "b.remove"
 msgid "Remove"
-msgstr ""
+msgstr "Buang"
 
 #: en/messages:122
 msgctxt "b.apply"
 msgid "Apply"
-msgstr ""
+msgstr "Laksana"
 
 #: en/messages:123
 msgctxt "b.anchor"
 msgid "Anchor"
-msgstr ""
+msgstr "Penambat"
 
 #: en/messages:124
 msgctxt "b.tech"
 msgid "Technology"
-msgstr ""
+msgstr "Teknologi"
 
 #: en/messages:130
 msgctxt "tab.edit"
 msgid "Editing"
-msgstr ""
+msgstr "Menyunting"
 
 #: en/messages:131
 msgctxt "tab.editintr"
 msgid "Interface"
-msgstr ""
+msgstr "Antaramuka"
 
 #: en/messages:132
 msgctxt "tab.simulate"
 msgid "Simulate"
-msgstr ""
+msgstr "Simulasi"
 
 #: en/messages:133
 msgctxt "tab.cpath"
 msgid "Critical Path"
-msgstr ""
+msgstr "Laluan Kritikal"
 
 #: en/messages:139
 msgctxt "fpattern.v"
 msgid "Verilog Netlist"
-msgstr ""
+msgstr "Senarai Rangkaian Verilog"
 
 #: en/messages:140
 msgctxt "fpattern.vs"
 msgid "Verilog Script Files"
-msgstr ""
+msgstr "Fail Skrip Verilog"
 
 #: en/messages:141
 msgctxt "fpattern.gdf"
 msgid "TkGate Delay File"
-msgstr ""
+msgstr "Fail Lengah TkGate"
 
 #: en/messages:142
 msgctxt "fpattern.xbm"
 msgid "X11 bitmap"
-msgstr ""
+msgstr "Peta bit X11"
 
 #: en/messages:143
 msgctxt "fpattern.mem"
 msgid "TkGate Memory Image Files"
-msgstr ""
+msgstr "Fail Imej Ingatan TkGate"
 
 #: en/messages:144
 msgctxt "fpattern.all"
 msgid "All Files"
-msgstr ""
+msgstr "Semua Fail"
 
 #: en/messages:150
 msgctxt "module.tree"
 msgid "Tree"
-msgstr ""
+msgstr "Pepohon"
 
 #: en/messages:151
 msgctxt "module.list"
 msgid "List"
-msgstr ""
+msgstr "Senarai"
 
 #: en/messages:152
 msgctxt "module.box.libraries"
 msgid "Libraries"
-msgstr ""
+msgstr "Pustaka"
 
 #: en/messages:158
 msgctxt "sidetab.nets"
 msgid "Nets"
-msgstr ""
+msgstr "Rangkaian"
 
 #: en/messages:159
 msgctxt "sidetab.ports"
 msgid "Ports"
-msgstr ""
+msgstr "Port"
 
 #: en/messages:166
 msgctxt "mm.add"
 msgid "Add..."
-msgstr ""
+msgstr "Tambah..."
 
 #: en/messages:167
 msgctxt "mm.delete"
@@ -206,167 +207,167 @@ msgstr "Padam"
 #: en/messages:168
 msgctxt "mm.edit"
 msgid "Edit..."
-msgstr ""
+msgstr "Sunting..."
 
 #: en/messages:169
 msgctxt "mm.enable"
 msgid "Enable"
-msgstr ""
+msgstr "Benarkan"
 
 #: en/messages:170
 msgctxt "mm.disable"
 msgid "Disable"
-msgstr ""
+msgstr "Lumpuhkan"
 
 #: en/messages:180
 msgctxt "menu.file"
 msgid "0:File"
-msgstr ""
+msgstr "0:Fail"
 
 #: en/messages:181
 msgctxt "menu.edit"
 msgid "0:Edit"
-msgstr ""
+msgstr "0:Sunting"
 
 #: en/messages:182
 msgctxt "menu.tool"
 msgid "0:Tool"
-msgstr ""
+msgstr "0:Alatan"
 
 #: en/messages:183
 msgctxt "menu.symbol"
 msgid "0:Symbol"
-msgstr ""
+msgstr "0:Simbol"
 
 #: en/messages:184
 msgctxt "menu.simulate"
 msgid "0:Simulate"
-msgstr ""
+msgstr "0:Simulasi"
 
 #: en/messages:185
 msgctxt "menu.module"
 msgid "0:Module"
-msgstr ""
+msgstr "0:Modul"
 
 #: en/messages:186
 msgctxt "menu.interface"
 msgid "0:Interface"
-msgstr ""
+msgstr "0:Antaramuka"
 
 #: en/messages:187
 msgctxt "menu.format"
 msgid "0:Format"
-msgstr ""
+msgstr "0:Format"
 
 #: en/messages:188
 msgctxt "menu.make"
 msgid "0:Components"
-msgstr ""
+msgstr "0:Komponen"
 
 #: en/messages:189
 msgctxt "menu.help"
 msgid "0:Help"
-msgstr ""
+msgstr "0:Bantuan"
 
 #: en/messages:191
 msgctxt "menu.file.new"
 msgid "0:New..."
-msgstr ""
+msgstr "0:Baharu..."
 
 #: en/messages:192
 msgctxt "menu.file.open"
 msgid "0:Open..."
-msgstr ""
+msgstr "0:Buka..."
 
 #: en/messages:193
 msgctxt "menu.file.openlib"
 msgid "0:Library Manager..."
-msgstr ""
+msgstr "0:Pengurus Pustaka..."
 
 #: en/messages:194
 msgctxt "menu.file.save"
 msgid "0:Save"
-msgstr ""
+msgstr "0:Simpan"
 
 #: en/messages:195
 msgctxt "menu.file.saveas"
 msgid "5:Save As..."
-msgstr ""
+msgstr "5:Simpan Sebagai..."
 
 #: en/messages:196
 msgctxt "menu.file.print"
 msgid "0:Print..."
-msgstr ""
+msgstr "0:Cetak..."
 
 #: en/messages:197
 msgctxt "menu.file.quit"
 msgid "0:Quit"
-msgstr ""
+msgstr "0:Keluar"
 
 #: en/messages:198
 msgctxt "menu.file.cprop"
 msgid "0:Circuit Properties..."
-msgstr ""
+msgstr "0:Sifat Litar..."
 
 #: en/messages:199
 msgctxt "menu.file.import"
 msgid "0:Import Image..."
-msgstr ""
+msgstr "0:Import Imej..."
 
 #: en/messages:200
 msgctxt "menu.file.export"
 msgid "0:Export Image..."
-msgstr ""
+msgstr "0:Eksport Imej..."
 
 #: en/messages:202
 msgctxt "menu.edit.undo"
 msgid "0:Undo"
-msgstr ""
+msgstr "0:Buat Asal"
 
 #: en/messages:203
 msgctxt "menu.edit.redo"
 msgid "0:Redo"
-msgstr ""
+msgstr "0:Buat Semula"
 
 #: en/messages:204
 msgctxt "menu.edit.cut"
 msgid "0:Cut"
-msgstr ""
+msgstr "0:Potong"
 
 #: en/messages:205
 msgctxt "menu.edit.copy"
 msgid "3:Copy"
-msgstr ""
+msgstr "3:Salin"
 
 #: en/messages:206
 msgctxt "menu.edit.paste"
 msgid "0:Paste"
-msgstr ""
+msgstr "0:Tampal"
 
 #: en/messages:207
 msgctxt "menu.edit.overlay"
 msgid "0:Overlay Paste"
-msgstr ""
+msgstr "0:Tampal Tindihan"
 
 #: en/messages:208
 msgctxt "menu.edit.selall"
 msgid "0:Select All"
-msgstr ""
+msgstr "0:Pilih Semua"
 
 #: en/messages:209
 msgctxt "menu.edit.find"
 msgid "0:Find..."
-msgstr ""
+msgstr "0:Cari..."
 
 #: en/messages:210
 msgctxt "menu.edit.zoomin"
 msgid "5:Zoom In"
-msgstr ""
+msgstr "5:Zum Masuk"
 
 #: en/messages:211
 msgctxt "menu.edit.zoomout"
 msgid "5:Zoom Out"
-msgstr ""
+msgstr "5:Zum Keluar"
 
 #: en/messages:213
 msgctxt "menu.edit.rshift"
@@ -416,187 +417,187 @@ msgstr ""
 #: en/messages:222
 msgctxt "menu.edit.resize"
 msgid "Resize Bitmap"
-msgstr ""
+msgstr "Saiz Semula Peta Bit"
 
 #: en/messages:224
 msgctxt "menu.tool.move"
 msgid "0:Move/Connect"
-msgstr ""
+msgstr "0:Alih/Sambung"
 
 #: en/messages:225
 msgctxt "menu.tool.delg"
 msgid "0:Delete Component"
-msgstr ""
+msgstr "0:Padam Komponen"
 
 #: en/messages:226
 msgctxt "menu.tool.cutw"
 msgid "0:Cut Wire"
-msgstr ""
+msgstr "0:Potong Wayar"
 
 #: en/messages:227
 msgctxt "menu.tool.inv"
 msgid "0:Invert"
-msgstr ""
+msgstr "0:Songsang"
 
 #: en/messages:228
 msgctxt "menu.tool.bitw"
 msgid "0:Bit Width"
-msgstr ""
+msgstr "0:Lebar Bit"
 
 #: en/messages:229
 msgctxt "menu.tool.debug"
 msgid "0:Debug"
-msgstr ""
+msgstr "0:Nyahpepijat"
 
 #: en/messages:230
 msgctxt "menu.tool.point"
 msgid "0:Point"
-msgstr ""
+msgstr "0:Titik"
 
 #: en/messages:231
 msgctxt "menu.tool.line"
 msgid "0:Line"
-msgstr ""
+msgstr "0:Garisan"
 
 #: en/messages:232
 msgctxt "menu.tool.rect"
 msgid "0:Rectangle"
-msgstr ""
+msgstr "0:Segiempat"
 
 #: en/messages:233
 msgctxt "menu.tool.fillrect"
 msgid "0:Fill Rectangle"
-msgstr ""
+msgstr "0:Isi Segiempat"
 
 #: en/messages:234
 msgctxt "menu.tool.port"
 msgid "0:Port"
-msgstr ""
+msgstr "0:Port"
 
 #: en/messages:235
 msgctxt "menu.tool.select"
 msgid "0:Select Region"
-msgstr ""
+msgstr "0:Pilih Kawasan"
 
 #: en/messages:236
 msgctxt "menu.tool.options"
 msgid "0:Options..."
-msgstr ""
+msgstr "0:Pilihan..."
 
 #: en/messages:238
 msgctxt "menu.format.addport"
 msgid "4:Add Port"
-msgstr ""
+msgstr "4:Tambah Port"
 
 #: en/messages:239
 msgctxt "menu.format.ioset"
 msgid "0:Set Type"
-msgstr ""
+msgstr "0:Tetapkan Jenis"
 
 #: en/messages:240
 msgctxt "menu.format.anchor"
 msgid "0:Anchor Selected"
-msgstr ""
+msgstr "0:Penambat Dipilih"
 
 #: en/messages:241
 msgctxt "menu.format.unanchor"
 msgid "0:Unanchor Selected"
-msgstr ""
+msgstr "0:Nyahtambat Dipilih"
 
 #: en/messages:242
 msgctxt "menu.format.prop"
 msgid "0:Instance Properties..."
-msgstr ""
+msgstr "0:Sifat Kejadian..."
 
 #: en/messages:243
 msgctxt "menu.format.del"
 msgid "0:Delete"
-msgstr ""
+msgstr "0:Padam"
 
 #: en/messages:244
 msgctxt "menu.format.settech"
 msgid "0:Set Technology"
-msgstr ""
+msgstr "0:Tetapkan Teknologi"
 
 #: en/messages:245
 msgctxt "menu.format.rot"
 msgid "0:Rotation"
-msgstr ""
+msgstr "0:Putaran"
 
 #: en/messages:246
 msgctxt "menu.format.rot.0"
 msgid "17:Default Rotation 0"
-msgstr ""
+msgstr "17:Putaran Lalai 0"
 
 #: en/messages:247
 msgctxt "menu.format.rot.90"
 msgid "17:Default Rotation 90"
-msgstr ""
+msgstr "17:Putaran Lalai 90"
 
 #: en/messages:248
 msgctxt "menu.format.rot.180"
 msgid "17:Default Rotation 180"
-msgstr ""
+msgstr "17:Putaran Lalai 180"
 
 #: en/messages:249
 msgctxt "menu.format.rot.270"
 msgid "17:Default Rotation 270"
-msgstr ""
+msgstr "17:Putaran Lalai 270"
 
 #: en/messages:250
 msgctxt "menu.format.rot.rotate"
 msgid "10:Clockwise Rotate"
-msgstr ""
+msgstr "10:Putar Ikut Jam"
 
 #: en/messages:251
 msgctxt "menu.format.rot.brotate"
 msgid "0:Counter-Clockwise Rotate"
-msgstr ""
+msgstr "10:Putar Lawan Jam"
 
 #: en/messages:252
 msgctxt "menu.format.algnv"
 msgid "6:Align Ver."
-msgstr ""
+msgstr "6:Jajar Menegak"
 
 #: en/messages:253
 msgctxt "menu.format.algnh"
 msgid "6:Align Horz."
-msgstr ""
+msgstr "6:Jajar Mengufuk"
 
 #: en/messages:256
 msgctxt "menu.tool.tclshell"
 msgid "0:Tcl Shell"
-msgstr ""
+msgstr "0:Shell Tcl"
 
 #: en/messages:257
 msgctxt "menu.tool.rep"
 msgid "0:Replicate"
-msgstr ""
+msgstr "0:Replika"
 
 #: en/messages:259
 msgctxt "menu.simulate.begin"
 msgid "0:Begin Simulation"
-msgstr ""
+msgstr "0:Mula Simulasi"
 
 #: en/messages:260
 msgctxt "menu.simulate.end"
 msgid "0:End Simulation"
-msgstr ""
+msgstr "0:Tamat Simulasi"
 
 #: en/messages:261
 msgctxt "menu.simulate.addprobe"
 msgid "0:Add/Delete Probe"
-msgstr ""
+msgstr "0:Tambah/Padam Kuar"
 
 #: en/messages:262
 msgctxt "menu.simulate.run"
 msgid "0:Run"
-msgstr ""
+msgstr "0:Jalan"
 
 #: en/messages:263
 msgctxt "menu.simulate.pause"
 msgid "0:Pause"
-msgstr ""
+msgstr "0:Jeda"
 
 #: en/messages:264
 msgctxt "menu.simulate.step"
@@ -606,62 +607,62 @@ msgstr ""
 #: en/messages:265
 msgctxt "menu.simulate.cycle"
 msgid "5:Step Cycle"
-msgstr ""
+msgstr "5:Kitar Langkah"
 
 #: en/messages:266
 msgctxt "menu.simulate.break"
 msgid "0:Breakpoint..."
-msgstr ""
+msgstr "0:Titik Henti..."
 
 #: en/messages:267
 msgctxt "menu.simulate.script"
 msgid "1:Exec. Script..."
-msgstr ""
+msgstr "1:Lakukan Skrip..."
 
 #: en/messages:268
 msgctxt "menu.simulate.load"
 msgid "1:Load Memory..."
-msgstr ""
+msgstr "1:Muat Ingatan..."
 
 #: en/messages:269
 msgctxt "menu.simulate.dump"
 msgid "1:Dump Memory..."
-msgstr ""
+msgstr "1:Longgok Ingatan..."
 
 #: en/messages:270
 msgctxt "menu.simulate.view"
 msgid "1:View Memory..."
-msgstr ""
+msgstr "1:Lihat Ingatan..."
 
 #: en/messages:272
 msgctxt "menu.module.open"
 msgid "0:Open"
-msgstr ""
+msgstr "0:Buka"
 
 #: en/messages:273
 msgctxt "menu.module.close"
 msgid "0:Close"
-msgstr ""
+msgstr "0:Tutup"
 
 #: en/messages:274
 msgctxt "menu.module.new"
 msgid "0:New..."
-msgstr ""
+msgstr "0:Baharu..."
 
 #: en/messages:275
 msgctxt "menu.module.del"
 msgid "0:Delete..."
-msgstr ""
+msgstr "0:Padam..."
 
 #: en/messages:276
 msgctxt "menu.module.copy"
 msgid "1:Copy..."
-msgstr ""
+msgstr "1:Salin..."
 
 #: en/messages:277
 msgctxt "menu.module.rename"
 msgid "0:Rename..."
-msgstr ""
+msgstr "0:Nama Semula..."
 
 #: en/messages:278
 msgctxt "menu.module.claim"
@@ -671,127 +672,127 @@ msgstr ""
 #: en/messages:279
 msgctxt "menu.module.setroot"
 msgid "1:Set As Root..."
-msgstr ""
+msgstr "1:Tetapkan Sebagai Root..."
 
 #: en/messages:280
 msgctxt "menu.module.prop"
 msgid "0:Properties..."
-msgstr ""
+msgstr "0:Sifat..."
 
 #: en/messages:281
 msgctxt "menu.module.interface"
 msgid "0:Interface"
-msgstr ""
+msgstr "0:Antaramuka"
 
 #: en/messages:282
 msgctxt "menu.module.interface.set"
 msgid "0:Set As Default"
-msgstr ""
+msgstr "0:Tetapkan Sebagai Lalai"
 
 #: en/messages:283
 msgctxt "menu.module.interface.update"
 msgid "1:Sync. to Default"
-msgstr ""
+msgstr "1:Segerak ke Lalai"
 
 #: en/messages:284
 msgctxt "menu.module.interface.updateall"
 msgid "6:Sync. All to Default..."
-msgstr ""
+msgstr "6:Segerak Semua ke Lalai..."
 
 #: en/messages:285
 msgctxt "menu.module.interface.edit"
 msgid "0:Edit..."
-msgstr ""
+msgstr "0:Sunting..."
 
 #: en/messages:286
 msgctxt "menu.module.interface.auto"
 msgid "5:Auto Generate..."
-msgstr ""
+msgstr "5:Auto Jana..."
 
 #: en/messages:289
 msgctxt "menu.help.about"
 msgid "0:About..."
-msgstr ""
+msgstr "0:Perihal..."
 
 #: en/messages:290
 msgctxt "menu.help.license"
 msgid "0:License..."
-msgstr ""
+msgstr "0:Lesen..."
 
 #: en/messages:291
 msgctxt "menu.help.doc"
 msgid "0:Documentation..."
-msgstr ""
+msgstr "0:Dokumentasi..."
 
 #: en/messages:292
 msgctxt "menu.help.tut"
 msgid "1:Tutorials"
-msgstr ""
+msgstr "1:Tutorial"
 
 #: en/messages:293
 msgctxt "menu.help.home"
 msgid "1:Home Page"
-msgstr ""
+msgstr "1:Laman Sesawang"
 
 #: en/messages:294
 msgctxt "menu.help.example"
 msgid "1:Examples"
-msgstr ""
+msgstr "1:Contoh"
 
 #: en/messages:299
 msgctxt "menu.scope_file"
 msgid "0:File"
-msgstr ""
+msgstr "0:Fail"
 
 #: en/messages:300
 msgctxt "menu.scope_sim"
 msgid "0:Simulate"
-msgstr ""
+msgstr "0:Simulasi"
 
 #: en/messages:301
 msgctxt "menu.scope_trace"
 msgid "0:Trace"
-msgstr ""
+msgstr "0:Jejak"
 
 #: en/messages:302
 msgctxt "menu.scope_help"
 msgid "0:Help"
-msgstr ""
+msgstr "0:Bantuan"
 
 #: en/messages:304
 msgctxt "menu.scope_file.ptrace"
 msgid "0:Print Trace..."
-msgstr ""
+msgstr "0:Cetak Jejak..."
 
 #: en/messages:305
 msgctxt "menu.scope_file.close"
 msgid "0:Close"
-msgstr ""
+msgstr "0:Tutup"
 
 #: en/messages:306
 msgctxt "menu.scope_trace.zoomin"
 msgid "5:Zoom In"
-msgstr ""
+msgstr "5:Zum Masuk"
 
 #: en/messages:307
 msgctxt "menu.scope_trace.zoomout"
 msgid "5:Zoom Out"
-msgstr ""
+msgstr "5:Zum Keluar"
 
 #: en/messages:308
 msgctxt "menu.scope_sim.addprobe"
 msgid "0:Add/Delete Probe"
-msgstr ""
+msgstr "0:Tambah/Padam Kuar"
 
 #: en/messages:309
 msgctxt "menu.scope_sim.run"
 msgid "0:Run"
-msgstr ""
+msgstr "0:Jalan"
 
 #: en/messages:310
 msgctxt "menu.scope_sim.pause"
 msgid "0:Pause"
-msgstr ""
+msgstr "0:Jeda"
 
 #: en/messages:311
 msgctxt "menu.scope_sim.step"
@@ -801,82 +802,82 @@ msgstr ""
 #: en/messages:312
 msgctxt "menu.scope_sim.cycle"
 msgid "5:Step Cycle"
-msgstr ""
+msgstr "5:Kitar Langkah"
 
 #: en/messages:313
 msgctxt "menu.scope_sim.break"
 msgid "0:Breakpoint..."
-msgstr ""
+msgstr "0:Titik Henti..."
 
 #: en/messages:314
 msgctxt "menu.scope_sim.script"
 msgid "1:Exec. Script..."
-msgstr ""
+msgstr "1:Lakukan Skrip..."
 
 #: en/messages:315
 msgctxt "menu.scope_sim.load"
 msgid "1:Load Memory..."
-msgstr ""
+msgstr "1:Muat Ingatan..."
 
 #: en/messages:316
 msgctxt "menu.scope_sim.dump"
 msgid "1:Dump Memory..."
-msgstr ""
+msgstr "1:Longgok Ingatan..."
 
 #: en/messages:317
 msgctxt "menu.scope_help.about"
 msgid "0:About..."
-msgstr ""
+msgstr "0:Perihal..."
 
 #: en/messages:318
 msgctxt "menu.scope_help.license"
 msgid "0:License..."
-msgstr ""
+msgstr "0:Lesen..."
 
 #: en/messages:319
 msgctxt "menu.scope_help.doc"
 msgid "0:Documentation..."
-msgstr ""
+msgstr "0:Dokumentasi..."
 
 #: en/messages:321
 msgctxt "mod.intf"
 msgid "Interface"
-msgstr ""
+msgstr "Antaramuka"
 
 #: en/messages:323
 msgctxt "port.title"
 msgid "TkGate: Port Properties"
-msgstr ""
+msgstr "TkGate: Sifat Port"
 
 #: en/messages:324
 msgctxt "port.parms"
 msgid "Port Parameters"
-msgstr ""
+msgstr "Parameter Port"
 
 #: en/messages:325
 msgctxt "port.in"
 msgid "In"
-msgstr ""
+msgstr "Masuk"
 
 #: en/messages:326
 msgctxt "port.out"
 msgid "Out"
-msgstr ""
+msgstr "Keluar"
 
 #: en/messages:327
 msgctxt "port.inout"
 msgid "InOut"
-msgstr ""
+msgstr "MasukKeluar"
 
 #: en/messages:335
 msgctxt "gm.signals"
 msgid "Signals"
-msgstr ""
+msgstr "Isyarat"
 
 #: en/messages:336
 msgctxt "gm.io"
 msgid "I/O"
-msgstr ""
+msgstr "I/O"
 
 #: en/messages:337
 msgctxt "gm.gate"
@@ -891,427 +892,427 @@ msgstr ""
 #: en/messages:339
 msgctxt "gm.msi"
 msgid "MSI"
-msgstr ""
+msgstr "MSI"
 
 #: en/messages:340
 msgctxt "gm.alu"
 msgid "ALU"
-msgstr ""
+msgstr "ALU"
 
 #: en/messages:341
 msgctxt "gm.mem"
 msgid "Memory"
-msgstr ""
+msgstr "Ingatan"
 
 #: en/messages:342
 msgctxt "gm.mod"
 msgid "Module"
-msgstr ""
+msgstr "Modul"
 
 #: en/messages:343
 msgctxt "gm.comment"
 msgid "Comment"
-msgstr ""
+msgstr "Ulasan"
 
 #: en/messages:344
 msgctxt "gm.script"
 msgid "Verilog Script"
-msgstr ""
+msgstr "Skrip Verilog"
 
 #: en/messages:345
 msgctxt "gm.frame"
 msgid "Frame"
-msgstr ""
+msgstr "Bingkai"
 
 #: en/messages:347
 msgctxt "gm.signals.pullup"
 msgid "Pullup"
-msgstr ""
+msgstr "TolakAtas"
 
 #: en/messages:348
 msgctxt "gm.signals.pulldown"
 msgid "Pulldown"
-msgstr ""
+msgstr "TolakBawah"
 
 #: en/messages:349
 msgctxt "gm.signals.ground"
 msgid "Ground"
-msgstr ""
+msgstr "Bumi"
 
 #: en/messages:350
 msgctxt "gm.signals.vdd"
 msgid "Vdd"
-msgstr ""
+msgstr "Vdd"
 
 #: en/messages:352
 msgctxt "gm.io.switch"
 msgid "Switch"
-msgstr ""
+msgstr "Suis"
 
 #: en/messages:353
 msgctxt "gm.io.dip"
 msgid "DIP Switch"
-msgstr ""
+msgstr "Suis DIP"
 
 #: en/messages:355
 msgctxt "gm.io.merge"
 msgid "Concat"
-msgstr ""
+msgstr "Concat"
 
 #: en/messages:356
 msgctxt "gm.io.clock"
 msgid "Clock"
-msgstr ""
+msgstr "Jam"
 
 #: en/messages:358
 msgctxt "gm.io.led"
 msgid "LED"
-msgstr ""
+msgstr "LED"
 
 #: en/messages:359
 msgctxt "gm.io.ledbar"
 msgid "LED Bar"
-msgstr ""
+msgstr "Palang LED"
 
 #: en/messages:360
 msgctxt "gm.io.ledhex"
 msgid "7-Seg. LED (HEX)"
-msgstr ""
+msgstr "7-Seg. LED (HEX)"
 
 #: en/messages:361
 msgctxt "gm.io.leddec"
 msgid "7-Seg. LED (DEC)"
-msgstr ""
+msgstr "7-Seg. LED (DEC)"
 
 #: en/messages:362
 msgctxt "gm.io.ledseg"
 msgid "7-Seg. LED (Direct)"
-msgstr ""
+msgstr "7-Seg. LED (Terus)"
 
 #: en/messages:364
 msgctxt "gm.io.tty"
 msgid "TTY"
-msgstr ""
+msgstr "TTY"
 
 #: en/messages:366
 msgctxt "gm.gate.and"
 msgid "AND"
-msgstr ""
+msgstr "AND"
 
 #: en/messages:367
 msgctxt "gm.gate.nand"
 msgid "NAND"
-msgstr ""
+msgstr "NAND"
 
 #: en/messages:368
 msgctxt "gm.gate.or"
 msgid "OR"
-msgstr ""
+msgstr "OR"
 
 #: en/messages:369
 msgctxt "gm.gate.nor"
 msgid "NOR"
-msgstr ""
+msgstr "NOR"
 
 #: en/messages:370
 msgctxt "gm.gate.xor"
 msgid "XOR"
-msgstr ""
+msgstr "XOR"
 
 #: en/messages:371
 msgctxt "gm.gate.xnor"
 msgid "XNOR"
-msgstr ""
+msgstr "XNOR"
 
 #: en/messages:372
 msgctxt "gm.gate.buf"
 msgid "Buffer"
-msgstr ""
+msgstr "Penimbal"
 
 #: en/messages:373
 msgctxt "gm.gate.inv"
 msgid "Inverter"
-msgstr ""
+msgstr "Penyongsang"
 
 #: en/messages:374
 msgctxt "gm.gate.tribuf"
 msgid "Tri-Buffer"
-msgstr ""
+msgstr "Tri-Buffer"
 
 #: en/messages:375
 msgctxt "gm.gate.nmos"
 msgid "NMOS"
-msgstr ""
+msgstr "NMOS"
 
 #: en/messages:376
 msgctxt "gm.gate.pmos"
 msgid "PMOS"
-msgstr ""
+msgstr "PMOS"
 
 #: en/messages:378
 msgctxt "gm.rgate.and"
 msgid "AND"
-msgstr ""
+msgstr "AND"
 
 #: en/messages:379
 msgctxt "gm.rgate.nand"
 msgid "NAND"
-msgstr ""
+msgstr "NAND"
 
 #: en/messages:380
 msgctxt "gm.rgate.or"
 msgid "OR"
-msgstr ""
+msgstr "OR"
 
 #: en/messages:381
 msgctxt "gm.rgate.nor"
 msgid "NOR"
-msgstr ""
+msgstr "NOR"
 
 #: en/messages:382
 msgctxt "gm.rgate.xor"
 msgid "XOR"
-msgstr ""
+msgstr "XOR"
 
 #: en/messages:383
 msgctxt "gm.rgate.xnor"
 msgid "XNOR"
-msgstr ""
+msgstr "XNOR"
 
 #: en/messages:385
 msgctxt "gm.alu.add"
 msgid "Adder"
-msgstr ""
+msgstr "Penambah"
 
 #: en/messages:386
 msgctxt "gm.alu.mult"
 msgid "Multiplier"
-msgstr ""
+msgstr "Pengganda"
 
 #: en/messages:387
 msgctxt "gm.alu.div"
 msgid "Divider"
-msgstr ""
+msgstr "Pembahagi"
 
 #: en/messages:388
 msgctxt "gm.alu.lshift"
 msgid "Left Shift"
-msgstr ""
+msgstr "Anjak Kiri"
 
 #: en/messages:389
 msgctxt "gm.alu.rshift"
 msgid "Right Shift"
-msgstr ""
+msgstr "Anjak Kanan"
 
 #: en/messages:390
 msgctxt "gm.alu.arshift"
 msgid "Arith. Right Shift"
-msgstr ""
+msgstr "Arith. Anjak Kanan"
 
 #: en/messages:391
 msgctxt "gm.alu.roll"
 msgid "Roll"
-msgstr ""
+msgstr "Gulung"
 
 #: en/messages:393
 msgctxt "gm.mem.reg"
 msgid "Register"
-msgstr ""
+msgstr "Daftar"
 
 #: en/messages:394
 msgctxt "gm.mem.ff"
 msgid "D Flip-Flop"
-msgstr ""
+msgstr "Flip-Flop D"
 
 #: en/messages:395
 msgctxt "gm.mem.rff"
 msgid "Rev. D Flip-Flop"
-msgstr ""
+msgstr "Flip-Flop D Songsang"
 
 #: en/messages:396
 msgctxt "gm.mem.ram"
 msgid "RAM"
-msgstr ""
+msgstr "RAM"
 
 #: en/messages:397
 msgctxt "gm.mem.rom"
 msgid "ROM"
-msgstr ""
+msgstr "ROM"
 
 #: en/messages:399
 msgctxt "gm.mem.jkff"
 msgid "JK Flip-Flop"
-msgstr ""
+msgstr "Flip-Flop JK"
 
 #: en/messages:400
 msgctxt "gm.mem.rjkff"
 msgid "Rev. JK Flip-Flop"
-msgstr ""
+msgstr "Flip-Flop JK Songsang"
 
 #: en/messages:402
 msgctxt "gm.msi.21mux"
 msgid "2-1 Multiplexor"
-msgstr ""
+msgstr "Pemultipleks 2-1"
 
 #: en/messages:403
 msgctxt "gm.msi.41mux"
 msgid "4-1 Multiplexor"
-msgstr ""
+msgstr "Pemultipleks 4-1"
 
 #: en/messages:404
 msgctxt "gm.msi.81mux"
 msgid "8-1 Multiplexor"
-msgstr ""
+msgstr "Pemultipleks 8-1"
 
 #: en/messages:405
 msgctxt "gm.msi.12dec"
 msgid "1-2 Decoder"
-msgstr ""
+msgstr "Penyahkod 1-2"
 
 #: en/messages:406
 msgctxt "gm.msi.14dec"
 msgid "1-4 Decoder"
-msgstr ""
+msgstr "Penyahkod 1-4"
 
 #: en/messages:407
 msgctxt "gm.msi.18dec"
 msgid "1-8 Decoder"
-msgstr ""
+msgstr "Penyahkod 1-8"
 
 #: en/messages:408
 msgctxt "gm.msi.12demux"
 msgid "1-2 Demultiplexor"
-msgstr ""
+msgstr "Penyahmultipleks 1-2"
 
 #: en/messages:409
 msgctxt "gm.msi.14demux"
 msgid "1-4 Demultiplexor"
-msgstr ""
+msgstr "Penyahmultipleks 1-4"
 
 #: en/messages:410
 msgctxt "gm.msi.18demux"
 msgid "1-8 Demultiplexor"
-msgstr ""
+msgstr "Penyahmultipleks 1-8"
 
 #: en/messages:412
 msgctxt "gm.mod.inst"
 msgid "Module Instance"
-msgstr ""
+msgstr "Kejadian Modul"
 
 #: en/messages:413
 msgctxt "gm.mod.in"
 msgid "Module Input"
-msgstr ""
+msgstr "Input Modul"
 
 #: en/messages:414
 msgctxt "gm.mod.out"
 msgid "Module Output"
-msgstr ""
+msgstr "Output Modul"
 
 #: en/messages:415
 msgctxt "gm.mod.inout"
 msgid "Module Input-Output"
-msgstr ""
+msgstr "Input-Output Modul"
 
 #: en/messages:417
 msgctxt "tutorial.prev"
 msgid "PREVIOUS"
-msgstr ""
+msgstr "TERDAHULU"
 
 #: en/messages:418
 msgctxt "tutorial.next"
 msgid "NEXT"
-msgstr ""
+msgstr "BERIKUTNYA"
 
 #: en/messages:419
 msgctxt "tutorial.chapter"
 msgid "CHAPTER LIST"
-msgstr ""
+msgstr "SENARAI BAB"
 
 #: en/messages:420
 msgctxt "tutorial.reload"
 msgid "RELOAD"
-msgstr ""
+msgstr "MUAT SEMULA"
 
 #: en/messages:426
 msgctxt "pop.make"
 msgid "Components"
-msgstr ""
+msgstr "Komponen"
 
 #: en/messages:427
 msgctxt "pop.tool"
 msgid "Tool"
-msgstr ""
+msgstr "Alat"
 
 #: en/messages:429
 msgctxt "pop.edit.paste"
 msgid "Paste"
-msgstr ""
+msgstr "Tampal"
 
 #: en/messages:430
 msgctxt "pop.edit.cut"
 msgid "Cut"
-msgstr ""
+msgstr "Potong"
 
 #: en/messages:431
 msgctxt "pop.edit.copy"
 msgid "Copy"
-msgstr ""
+msgstr "Salin"
 
 #: en/messages:433
 msgctxt "pop.port.in"
 msgid "In"
-msgstr ""
+msgstr "Masuk"
 
 #: en/messages:434
 msgctxt "pop.port.out"
 msgid "Out"
-msgstr ""
+msgstr "Keluar"
 
 #: en/messages:435
 msgctxt "pop.port.inout"
 msgid "InOut"
-msgstr ""
+msgstr "MasukKeluar"
 
 #: en/messages:437
 msgctxt "pop.wire.addseg"
 msgid "Add Wire Segment"
-msgstr ""
+msgstr "Tambah Segmen Wayar"
 
 #: en/messages:438
 msgctxt "pop.wire.prop"
 msgid "Net Properties..."
-msgstr ""
+msgstr "Sifat Rangkaian..."
 
 #: en/messages:439
 msgctxt "pop.wire.hidesize"
 msgid "Hide Bit Width"
-msgstr ""
+msgstr "Sembunyi Lebar Bit"
 
 #: en/messages:440
 msgctxt "pop.wire.showsize"
 msgid "Show Bit Width"
-msgstr ""
+msgstr "Tunjuk Lebar Bit"
 
 #: en/messages:441
 msgctxt "pop.wire.hidelabel"
 msgid "Hide Label"
-msgstr ""
+msgstr "Sembunyi Label"
 
 #: en/messages:442
 msgctxt "pop.wire.hidealllabel"
 msgid "Hide All Labels"
-msgstr ""
+msgstr "Sembunyi Semua Label"
 
 #: en/messages:443
 msgctxt "pop.wire.clearalllabel"
 msgid "Clear All Labels"
-msgstr ""
+msgstr "Kosongkan Semua Label"
 
 #: en/messages:444
 msgctxt "pop.wire.showlabel"
 msgid "Show Label"
-msgstr ""
+msgstr "Tunjuk Label"
 
 #: en/messages:446
 msgctxt "pop.gate.open"
@@ -1326,37 +1327,37 @@ msgstr "Tutup"
 #: en/messages:448
 msgctxt "pop.gate.prop"
 msgid "Instance Properties..."
-msgstr ""
+msgstr "Sifat Kejadian..."
 
 #: en/messages:449
 msgctxt "pop.gate.addport"
 msgid "Add Port"
-msgstr ""
+msgstr "Tambah Port"
 
 #: en/messages:450
 msgctxt "pop.gate.addin"
 msgid "Add Input..."
-msgstr ""
+msgstr "Tambah Input..."
 
 #: en/messages:451
 msgctxt "pop.gate.addout"
 msgid "Add Output..."
-msgstr ""
+msgstr "Tambah Output..."
 
 #: en/messages:452
 msgctxt "pop.gate.addinout"
 msgid "Add InOut..."
-msgstr ""
+msgstr "Tambah InOut..."
 
 #: en/messages:453
 msgctxt "pop.gate.anchor"
 msgid "Anchor/Unanchor"
-msgstr ""
+msgstr "Tambat/Nyahtambat"
 
 #: en/messages:454
 msgctxt "pop.gate.settech"
 msgid "Set Technology"
-msgstr ""
+msgstr "Tetapkan Teknologi"
 
 #: en/messages:455
 msgctxt "pop.gate.delete"
@@ -1366,27 +1367,27 @@ msgstr "Padam"
 #: en/messages:456
 msgctxt "pop.gate.ioset"
 msgid "Set Type"
-msgstr ""
+msgstr "Tetapkan Jenis"
 
 #: en/messages:458
 msgctxt "pop.module.new"
 msgid "New..."
-msgstr ""
+msgstr "Baharu..."
 
 #: en/messages:459
 msgctxt "pop.module.del"
 msgid "Delete..."
-msgstr ""
+msgstr "Padam..."
 
 #: en/messages:460
 msgctxt "pop.module.copy"
 msgid "Copy..."
-msgstr ""
+msgstr "Salin..."
 
 #: en/messages:461
 msgctxt "pop.module.rename"
 msgid "Rename..."
-msgstr ""
+msgstr "Nama Semula..."
 
 #: en/messages:462
 msgctxt "pop.module.claim"
@@ -1396,47 +1397,47 @@ msgstr ""
 #: en/messages:463
 msgctxt "pop.module.setroot"
 msgid "Set As Root..."
-msgstr ""
+msgstr "Tetapkan Sebagai Root..."
 
 #: en/messages:464
 msgctxt "pop.module.prop"
 msgid "Module Properties..."
-msgstr ""
+msgstr "Sifat Modul..."
 
 #: en/messages:465
 msgctxt "pop.module.int"
 msgid "Edit Interface..."
-msgstr ""
+msgstr "Sunting Antaramuka..."
 
 #: en/messages:468
 msgctxt "pop.simulate.end"
 msgid "End Simulation"
-msgstr ""
+msgstr "Tamat Simulasi"
 
 #: en/messages:469
 msgctxt "pop.simulate.begin"
 msgid "Begin Simulation"
-msgstr ""
+msgstr "Mula Simulasi"
 
 #: en/messages:470
 msgctxt "pop.simulate.addprobe"
 msgid "Add/Delete Probe"
-msgstr ""
+msgstr "Tambah/Padam Kuar"
 
 #: en/messages:471
 msgctxt "pop.simulate.delprobe"
 msgid "Delete Probe"
-msgstr ""
+msgstr "Padam Kuar"
 
 #: en/messages:472
 msgctxt "pop.simulate.run"
 msgid "Run"
-msgstr ""
+msgstr "Jalan"
 
 #: en/messages:473
 msgctxt "pop.simulate.pause"
 msgid "Pause"
-msgstr ""
+msgstr "Jeda"
 
 #: en/messages:474
 msgctxt "pop.simulate.step"
@@ -1446,82 +1447,82 @@ msgstr ""
 #: en/messages:475
 msgctxt "pop.simulate.cycle"
 msgid "Step Cycle"
-msgstr ""
+msgstr "Kitar Langkah"
 
 #: en/messages:476
 msgctxt "pop.simulate.break"
 msgid "Breakpoint..."
-msgstr ""
+msgstr "Titik Henti..."
 
 #: en/messages:477
 msgctxt "pop.simulate.script"
 msgid "Exec. Script..."
-msgstr ""
+msgstr "Lakukan Skrip..."
 
 #: en/messages:478
 msgctxt "pop.simulate.load"
 msgid "Load Memory..."
-msgstr ""
+msgstr "Muat Ingatan..."
 
 #: en/messages:479
 msgctxt "pop.simulate.dump"
 msgid "Dump Memory..."
-msgstr ""
+msgstr "Longgok Ingatan..."
 
 #: en/messages:480
 msgctxt "pop.simulate.view"
 msgid "View Memory..."
-msgstr ""
+msgstr "Lihat Ingatan..."
 
 #: en/messages:482
 msgctxt "pop.interface"
 msgid "Interface"
-msgstr ""
+msgstr "Antaramuka"
 
 #: en/messages:483
 msgctxt "pop.interface.set"
 msgid "Set As Default"
-msgstr ""
+msgstr "Tetapkan Sebagai Lalai"
 
 #: en/messages:484
 msgctxt "pop.interface.update"
 msgid "Sync. to Default"
-msgstr ""
+msgstr "Segerak ke Lalai"
 
 #: en/messages:485
 msgctxt "pop.interface.updateall"
 msgid "Sync. All to Default..."
-msgstr ""
+msgstr "Segerak Semua ke Lalai..."
 
 #: en/messages:486
 msgctxt "pop.interface.edit"
 msgid "Edit..."
-msgstr ""
+msgstr "Sunting..."
 
 #: en/messages:487
 msgctxt "pop.interface.auto"
 msgid "Auto Generate..."
-msgstr ""
+msgstr "Auto Jana..."
 
 #: en/messages:488
 msgctxt "pop.interface.replace"
 msgid "Replace"
-msgstr ""
+msgstr "Ganti"
 
 #: en/messages:490
 msgctxt "pop.igen.type"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #: en/messages:491
 msgctxt "pop.igen.side"
 msgid "Side"
-msgstr ""
+msgstr "Sisi"
 
 #: en/messages:492
 msgctxt "pop.igen.size"
 msgid "Size"
-msgstr ""
+msgstr "Saiz"
 
 #: en/messages:493
 msgctxt "pop.igen.delete"
@@ -1531,72 +1532,72 @@ msgstr "Padam"
 #: en/messages:494
 msgctxt "pop.igen.in"
 msgid "in"
-msgstr ""
+msgstr "masu"
 
 #: en/messages:495
 msgctxt "pop.igen.out"
 msgid "out"
-msgstr ""
+msgstr "keluar"
 
 #: en/messages:496
 msgctxt "pop.igen.inout"
 msgid "inout"
-msgstr ""
+msgstr "masukkeluar"
 
 #: en/messages:497
 msgctxt "pop.igen.left"
 msgid "left"
-msgstr ""
+msgstr "kiri"
 
 #: en/messages:498
 msgctxt "pop.igen.right"
 msgid "right"
-msgstr ""
+msgstr "kanan"
 
 #: en/messages:499
 msgctxt "pop.igen.top"
 msgid "top"
-msgstr ""
+msgstr "atas"
 
 #: en/messages:500
 msgctxt "pop.igen.bottom"
 msgid "bottom"
-msgstr ""
+msgstr "bawah"
 
 #: en/messages:501
 msgctxt "pop.igen.other"
 msgid "other"
-msgstr ""
+msgstr "lain-lain"
 
 #: en/messages:503
 msgctxt "pop.library.mgr"
 msgid "Library Manager..."
-msgstr ""
+msgstr "Pengurus Pustaka..."
 
 #: en/messages:504
 msgctxt "pop.library.close"
 msgid "Unload"
-msgstr ""
+msgstr "Nyahmuat"
 
 #: en/messages:510
 msgctxt "symed.tab.normal"
 msgid "UnSelected"
-msgstr ""
+msgstr "NyahPilih"
 
 #: en/messages:511
 msgctxt "symed.tab.select"
 msgid "Selected"
-msgstr ""
+msgstr "Dipilih"
 
 #: en/messages:512
 msgctxt "symed.link"
 msgid "Link selected to unselected"
-msgstr ""
+msgstr "Pautan terpilih ke nyahpilih"
 
 #: en/messages:517
 msgctxt "memview.title"
 msgid "Memory Viewer"
-msgstr ""
+msgstr "Pelihat Ingatan"
 
 #: en/messages:518
 msgctxt "memview.exp"
@@ -1610,17 +1611,17 @@ msgstr ""
 #: en/messages:527
 msgctxt "scope.title"
 msgid "TkGate: Scope"
-msgstr ""
+msgstr "TkGate: Skop"
 
 #: en/messages:528
 msgctxt "scope.emptymsg"
 msgid "Double-click on a wire to add or delete a trace."
-msgstr ""
+msgstr "Dwi-klik pada wayar untuk tambah atau padam jejak."
 
 #: en/messages:529
 msgctxt "comment.empty"
 msgid "[Double click to add text.]"
-msgstr ""
+msgstr "[Dwi klik untuk tambah teks.]"
 
 #: en/messages:534
 msgctxt "ifile"
@@ -1630,22 +1631,22 @@ msgstr "Fail"
 #: en/messages:535
 msgctxt "imodule"
 msgid "Module"
-msgstr ""
+msgstr "Modul"
 
 #: en/messages:536
 msgctxt "iblmodule"
 msgid "Modules"
-msgstr ""
+msgstr "Modul"
 
 #: en/messages:537
 msgctxt "iports"
 msgid "Ports"
-msgstr ""
+msgstr "Port"
 
 #: en/messages:538
 msgctxt "ibits"
 msgid "Bits:"
-msgstr ""
+msgstr "Bit:"
 
 #: en/messages:539
 msgctxt "itype"
@@ -1660,17 +1661,17 @@ msgstr "Nama"
 #: en/messages:545
 msgctxt "db.mod.file"
 msgid "File Name"
-msgstr ""
+msgstr "Nama Fail"
 
 #: en/messages:546
 msgctxt "db.mod.type"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #: en/messages:547
 msgctxt "db.mod.flags"
 msgid "Flags"
-msgstr ""
+msgstr "Bendera"
 
 #: en/messages:548
 msgctxt "db.mod.dataprot"
@@ -1690,17 +1691,17 @@ msgstr ""
 #: en/messages:551
 msgctxt "db.mod.props"
 msgid "Properties"
-msgstr ""
+msgstr "Sifat"
 
 #: en/messages:552
 msgctxt "db.mod.inuse.0"
 msgid "Module is not in use."
-msgstr ""
+msgstr "Modul tidak digunakan."
 
 #: en/messages:553
 msgctxt "db.mod.inuse.1"
 msgid "Module is in use."
-msgstr ""
+msgstr "Modul sedang digunakan."
 
 #: en/messages:554
 msgctxt "db.mod.lmod.0"
@@ -1735,12 +1736,12 @@ msgstr ""
 #: en/messages:560
 msgctxt "db.mod.netlist"
 msgid "Netlist"
-msgstr ""
+msgstr "Senarai Rangkaian"
 
 #: en/messages:561
 msgctxt "db.mod.hdl"
 msgid "Verilog HDL"
-msgstr ""
+msgstr "HDL Verilog"
 
 #: en/messages:563
 msgctxt "db.mod.netexpl"
@@ -1766,7 +1767,7 @@ msgstr ""
 #: en/messages:579
 msgctxt "db.err.caption"
 msgid "Error List"
-msgstr ""
+msgstr "Senarai Ralat"
 
 #: en/messages:580
 msgctxt "db.err.explain.warn"
@@ -1790,72 +1791,72 @@ msgstr ""
 #: en/messages:595
 msgctxt "db.net.title"
 msgid "TkGate: Net Properties"
-msgstr ""
+msgstr "TkGate: Sifat Rangkaian"
 
 #: en/messages:596
 msgctxt "db.net.caption"
 msgid "Net Properties"
-msgstr ""
+msgstr "Sifat Rangkaian"
 
 #: en/messages:597
 msgctxt "db.net.name"
 msgid "Net Name"
-msgstr ""
+msgstr "Nama Rangkaian"
 
 #: en/messages:598
 msgctxt "db.net.hide"
 msgid "Hide Name"
-msgstr ""
+msgstr "Sembunyi Nama"
 
 #: en/messages:599
 msgctxt "db.net.bits"
 msgid "Bit Width"
-msgstr ""
+msgstr "Lebar Bit"
 
 #: en/messages:600
 msgctxt "db.net.type"
 msgid "Net Type"
-msgstr ""
+msgstr "Jenis Rangkaian"
 
 #: en/messages:601
 msgctxt "db.net.port"
 msgid "Port Type"
-msgstr ""
+msgstr "Jenis Port"
 
 #: en/messages:602
 msgctxt "db.net.in"
 msgid "in"
-msgstr ""
+msgstr "masuk"
 
 #: en/messages:603
 msgctxt "db.net.out"
 msgid "out"
-msgstr ""
+msgstr "keluar"
 
 #: en/messages:604
 msgctxt "db.net.inout"
 msgid "inout"
-msgstr ""
+msgstr "masukkeluar"
 
 #: en/messages:605
 msgctxt "db.net.inets"
 msgid "Nets"
-msgstr ""
+msgstr "Rangkaian"
 
 #: en/messages:611
 msgctxt "db.newcirc.title"
 msgid "TkGate: New Circuit"
-msgstr ""
+msgstr "TkGate: Litar Baharu"
 
 #: en/messages:612
 msgctxt "db.newcirc.directory"
 msgid "Directory:"
-msgstr ""
+msgstr "Direktori:"
 
 #: en/messages:613
 msgctxt "db.newcirc.cap"
 msgid "New Circuit"
-msgstr ""
+msgstr "Litar Baharu"
 
 #: en/messages:614
 msgctxt "db.newcirc.exp"
@@ -1867,127 +1868,127 @@ msgstr ""
 #: en/messages:618
 msgctxt "db.newcirc.file"
 msgid "File Name"
-msgstr ""
+msgstr "Nama Fail"
 
 #: en/messages:619
 msgctxt "db.newcirc.topname"
 msgid "Top Module Name"
-msgstr ""
+msgstr "Nama Modul Teratas"
 
 #: en/messages:626
 msgctxt "db.gate.title"
 msgid "TKGate: Component Properties"
-msgstr ""
+msgstr "TKGate: Sifat Komponen"
 
 #: en/messages:627
 msgctxt "db.gate.signam"
 msgid "Signal Name"
-msgstr ""
+msgstr "Nama Isyarat"
 
 #: en/messages:628
 msgctxt "db.gate.portnam"
 msgid "Port Name"
-msgstr ""
+msgstr "Nama Port"
 
 #: en/messages:629
 msgctxt "db.gate.iotype"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #: en/messages:630
 msgctxt "db.gate.bitw"
 msgid "Bit Width"
-msgstr ""
+msgstr "Lebar Bit"
 
 #: en/messages:631
 msgctxt "db.gate.cyclew"
 msgid "Period"
-msgstr ""
+msgstr "Tempoh"
 
 #: en/messages:632
 msgctxt "db.gate.phase"
 msgid "Phase"
-msgstr ""
+msgstr "Fasa"
 
 #: en/messages:633
 msgctxt "db.gate.duty"
 msgid "Duty"
-msgstr ""
+msgstr "Duti"
 
 #: en/messages:634
 msgctxt "db.gate.waveform"
 msgid "Clock Waveform"
-msgstr ""
+msgstr "Bentuk Gelombang Jam"
 
 #: en/messages:635
 msgctxt "db.gate.port"
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: en/messages:636
 msgctxt "db.gate.bitws"
 msgid "Bits"
-msgstr ""
+msgstr "Bit"
 
 #: en/messages:637
 msgctxt "db.gate.side"
 msgid "Side"
-msgstr ""
+msgstr "Sisi"
 
 #: en/messages:638
 msgctxt "db.gate.gtype"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #: en/messages:639
 msgctxt "db.gate.gname"
 msgid "Instance Name"
-msgstr ""
+msgstr "Nama Kejadian"
 
 #: en/messages:640
 msgctxt "db.gate.hidenam"
 msgid "Hide Name"
-msgstr ""
+msgstr "Sembunyi Nama"
 
 #: en/messages:641
 msgctxt "db.gate.anchor"
 msgid "Anchor"
-msgstr ""
+msgstr "Penambat"
 
 #: en/messages:642
 msgctxt "db.gate.cpbreak"
 msgid "Critical Path Partition"
-msgstr ""
+msgstr "Sekatan Laluan Kritikal"
 
 #: en/messages:643
 msgctxt "db.gate.butstate"
 msgid "Button State"
-msgstr ""
+msgstr "Keadaan Butang"
 
 #: en/messages:644
 msgctxt "db.gate.dipval"
 msgid "Switch Value"
-msgstr ""
+msgstr "Nilai Suis"
 
 #: en/messages:645
 msgctxt "db.gate.range"
 msgid "Bit Range"
-msgstr ""
+msgstr "Julat Bit"
 
 #: en/messages:646
 msgctxt "db.gate.memfilenam"
 msgid "Memory File"
-msgstr ""
+msgstr "Fail Ingatan"
 
 #: en/messages:647
 msgctxt "db.gate.modname"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #: en/messages:648
 msgctxt "db.gate.general"
 msgid "General"
-msgstr ""
+msgstr "Am"
 
 #: en/messages:649
 msgctxt "db.gate.details"
@@ -1997,37 +1998,37 @@ msgstr "Perincian"
 #: en/messages:650
 msgctxt "db.gate.text"
 msgid "Text"
-msgstr ""
+msgstr "Teks"
 
 #: en/messages:651
 msgctxt "db.gate.ports"
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: en/messages:652
 msgctxt "db.gate.delay"
 msgid "Delay"
-msgstr ""
+msgstr "Lengah"
 
 #: en/messages:653
 msgctxt "db.gate.parameters"
 msgid "Parameters"
-msgstr ""
+msgstr "Parameter"
 
 #: en/messages:654
 msgctxt "db.gate.stddelay"
 msgid "Standard Delay"
-msgstr ""
+msgstr "Lengah Piawai"
 
 #: en/messages:655
 msgctxt "db.gate.custdelay"
 msgid "Custom Delay"
-msgstr ""
+msgstr "Lengah Suai"
 
 #: en/messages:656
 msgctxt "db.gate.catdiruse"
 msgid "Port Placement"
-msgstr ""
+msgstr "Penggantian Port"
 
 #: en/messages:657
 msgctxt "db.gate.edit"
@@ -2042,17 +2043,17 @@ msgstr "Padam"
 #: en/messages:659
 msgctxt "db.gate.add"
 msgid "Add"
-msgstr ""
+msgstr "Tambah"
 
 #: en/messages:661
 msgctxt "db.gate.ff.type"
 msgid "D Flip-Flop Orientation"
-msgstr ""
+msgstr "Orientasi Flip-Flop D"
 
 #: en/messages:662
 msgctxt "db.gate.ff.normal.hdr"
 msgid "Normal"
-msgstr ""
+msgstr "Biasa"
 
 #: en/messages:663
 msgctxt "db.gate.ff.normal.exp"
@@ -2064,7 +2065,7 @@ msgstr ""
 #: en/messages:667
 msgctxt "db.gate.ff.reverse.hdr"
 msgid "Reversed"
-msgstr ""
+msgstr "Songsang"
 
 #: en/messages:668
 msgctxt "db.gate.ff.reverse.exp"
@@ -2076,12 +2077,12 @@ msgstr ""
 #: en/messages:673
 msgctxt "db.gate.jkff.type"
 msgid "JK Flip-Flop Orientation"
-msgstr ""
+msgstr "Orientasi Flip-Flop JK"
 
 #: en/messages:674
 msgctxt "db.gate.jkff.normal.hdr"
 msgid "Normal"
-msgstr ""
+msgstr "Biasa"
 
 #: en/messages:675
 msgctxt "db.gate.jkff.normal.exp"
@@ -2093,7 +2094,7 @@ msgstr ""
 #: en/messages:679
 msgctxt "db.gate.jkff.reverse.hdr"
 msgid "Reversed"
-msgstr ""
+msgstr "Songsang"
 
 #: en/messages:680
 msgctxt "db.gate.jkff.reverse.exp"
@@ -2105,12 +2106,12 @@ msgstr ""
 #: en/messages:685
 msgctxt "db.gate.cat.asc.hdr"
 msgid "Ascending"
-msgstr ""
+msgstr "Menaik"
 
 #: en/messages:686
 msgctxt "db.gate.cat.dec.hdr"
 msgid "Descending"
-msgstr ""
+msgstr "Menurun"
 
 #: en/messages:687
 msgctxt "db.gate.cat.asc.exp"
