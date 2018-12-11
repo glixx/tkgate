@@ -104,6 +104,11 @@ install-data-hook:
 	@for d in $(TKG_DATADIRS); do \
 	   cp -pR $(srcdir)/$$d $(DESTDIR)$(pkgdatadir); \
 	done
+	rm -f $(DESTDIR)$(pkgdatadir)/locale/*.sh
+	rm -f $(DESTDIR)$(pkgdatadir)/locale/*.pot
+	rm -f $(DESTDIR)$(pkgdatadir)/locale/*.tcl
+	rm -f $(DESTDIR)$(pkgdatadir)/locale/*/config.txt
+	rm -f $(DESTDIR)$(pkgdatadir)/locale/*/*.po
 
 uninstall-local:
 	@echo Uninstalling data files...
