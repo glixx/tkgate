@@ -1,9 +1,12 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "es"
 //: property prefix = "_GG"
 //: property title = "Tutorial page"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -12,7 +15,7 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g1 @(475,291) /sn:0 /R:14 /anc:1
-  //: /line:"<a href=\"welcome.v\">Go back to the TkGate main page.</a>"
+  //: /line:"<a href=\"welcome.v\">Volver a la página principal de TkGate.</a>"
   //: /end
   //: comment g0 @(476,49) /sn:0 /anc:1
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"
@@ -45,7 +48,4 @@ module PAGE1;    //: root_module
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

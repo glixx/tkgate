@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "es"
 //: property prefix = "_GG"
 //: property title = "Using Modules"
 //: property showSwitchNets = 0
@@ -211,7 +211,7 @@ wire w0;    //: /sn:0 {0}(348,183)(338,183)(338,153){1}
   //: /end
   //: IN g5 (I2) @(243,200) /sn:0 /w:[ 0 ]
   //: comment g14 @(76,306) /sn:0
-  //: /line:"<a href=\"#/PAGE8\">&lang;BACK TO TUTORIAL&rang;</a>"
+  //: /line:"<a href=\"#/PAGE8\">&lang;VOLVER AL TUTORIAL&rang;</a>"
   //: /end
   //: joint g23 (Z2) @(380, 186) /w:[ 2 1 4 -1 ]
   //: OUT g12 (Z3) @(445,251) /sn:0 /w:[ 1 ]
@@ -328,7 +328,7 @@ module PAGE4();
   //: /line:"since that view gives you a straight"
   //: /line:"alphabetical list of all module.</font>"
   //: /end
-  //: comment g1 @(9,13) /anc:1
+  //: comment g99 @(9,13) /anc:1
   //: /line:"<h3>Using Modules</h3> <b>(creating module instances)</b>"
   //: /line:""
   //: /line:"The easiest way to create a module instance is to find its name in the module list and"
@@ -443,7 +443,7 @@ wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
   //: /end
   _GGXOR2 #(8) g17 (.I0(C), .I1(X), .Z(w3));   //: @(293,129) /sn:0 /w:[ 7 3 0 ]
   //: comment g14 @(76,306) /sn:0
-  //: /line:"<a href=\"#/PAGE6\">&lang;BACK TO TUTORIAL&rang;</a>"
+  //: /line:"<a href=\"#/PAGE6\">&lang;VOLVER AL TUTORIAL&rang;</a>"
   //: /end
   //: OUT g5 (Z) @(343,258) /sn:0 /w:[ 1 ]
   //: IN g0 (A) @(84,135) /sn:0 /w:[ 1 ]

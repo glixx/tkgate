@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "es"
 //: property prefix = "_GG"
 //: property title = "Sequential Simulation"
 //: property showSwitchNets = 0
@@ -41,7 +41,7 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
   //: comment g10 @(495,118) /sn:0 /R:14 /anc:1
-  //: /line:"Simulator Script Example:"
+  //: /line:"<b>Simulator Script Example:</b>"
   //: /line:"<font face=courier>"
   //: /line:"initial"
   //: /line:"  begin"

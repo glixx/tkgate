@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "es"
 //: property prefix = "_GG"
 //: property title = "Editing Wires"
 //: property useExtBars = 0
@@ -53,7 +53,7 @@ wire w9;    //: /sn:0 {0}(249,152)(221,152){1}
 
   //: LED g37 (s0) @(307,155) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(9,10) /anc:1
- //: /line:"<h3>Editing Wires</h3> <b>(I/O inverters)</b>"
+  //: /line:"<h3>Editing Wires</h3> <b>(I/O inverters)</b>"
   //: /line:""
   //: /line:"To place or remove an inverter on a gate input or output, select the <img src=\"inv_curs.gif\" bgcolor=gray> tool"
   //: /line:"and click on the port at which you want to place or remove an inveter. Try"
