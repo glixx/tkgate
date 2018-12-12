@@ -1,25 +1,29 @@
 //: version "2.1-a2"
-//: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
-//: property discardChanges = 1
 //: property encoding = "utf-8"
 //: property locale = "de"
+//: property prefix = "_GG"
+//: property title = "Tutorial page"
+//: property showSwitchNets = 0
+//: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
+
+`timescale 1ns/1ns
 
 //: /netlistBegin PAGE1
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g1 @(433,291) /sn:0 /R:14
+  //: comment g1 @(475,291) /sn:0 /R:14 /anc:1
   //: /line:"<a href=\"welcome.v\">Zurück zur Hauptseite von TkGate.</a>"
   //: /end
-  //: comment g0 @(434,49) /sn:0 /anc:1
+  //: comment g0 @(476,49) /sn:0 /anc:1
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"
   //: /end
   //: comment g18 @(10,10) /sn:0 /anc:1
   //: /line:"<h1>Lernabschnitte:</h1>"
   //: /line:""
   //: /line:"<h3><a href=\"create.v\">1. Erzeugen einer Schaltung</a></h3>"
-  //:/line:" - Anfangen mit der Entwicklung einer einfachen Schaltung."
   //: /line:""
   //: /line:"<h3><a href=\"gates.v\">2. Gatter editieren</a></h3> - Grundlagen zum Konfigurieren von Gattern."
   //: /line:""
@@ -43,9 +47,8 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"<h3><a href=\"options.v\">10. Anpassen von TkGate</a></h3> - Konfigurieren nach eigenem Geschmack."
   //: /line:""
-  //: /line:""
-  //: /line:""
   //: /end
 
 endmodule
 //: /netlistEnd
+

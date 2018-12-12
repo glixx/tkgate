@@ -1,9 +1,12 @@
 //: version "2.1-a2"
-//: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
-//: property discardChanges = 1
 //: property encoding = "utf-8"
 //: property locale = "de"
+//: property prefix = "_GG"
+//: property title = "Advanced Editing Methods"
+//: property showSwitchNets = 0
+//: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -17,7 +20,8 @@ module PAGE1;    //: root_module
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Fortgeschrittene Editiertechniken</h3>"
   //: /line:""
-  //: /line:"In diesem Abschnitt lernen wir weitere Techniken, um noch effizienter Schaltungen in TkGate editieren zu können."
+  //: /line:"In diesem Abschnitt lernen wir weitere Techniken, um noch effizienter"
+  //: /line:"Schaltungen in TkGate editieren zu können."
   //: /end
   //: comment g0 @(150,93) /sn:0 /anc:1
   //: /line:"<img src=bigiface.gif>"
@@ -28,7 +32,7 @@ endmodule
 
 //: /netlistBegin PAGE6
 module PAGE6();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w23;    //: /sn:0 {0}(309,247)(319,247){1}
 wire w24;    //: /sn:0 {0}(319,194)(254,194){1}
 //: {2}(252,192)(252,134)(318,134){3}
@@ -49,7 +53,7 @@ wire w26;    //: /sn:0 {0}(335,194)(345,194){1}
   //: /line:"<h3>Leitungen editieren</h3> <b>(Erzeugen von Lötstellen)</b>"
   //: /line:""
   //: /line:"Nun noch einmal das gleiche, diesmal aber lasse das Invertereingangssegment näher am AND-Ausgang los,"
-  //: /line:"weg von der Lötstelle.  Diesmal wird eine neue Lötstelle automatischerzeugt."
+  //: /line:"weg von der Lötstelle. Diesmal wird eine neue Lötstelle automatischerzeugt."
   //: /line:""
   //: /end
   _GGNBUF #(2) g29 (.I(w23), .Z(w27));   //: @(325,247) /sn:0 /w:[ 1 0 ]
@@ -61,16 +65,16 @@ endmodule
 
 //: /netlistBegin PAGE3
 module PAGE3();
-//: interface  /sz:(40, 40) /bd:[ ]
-wire w6;    //: /sn:0 {0}(162,164)(202,164)(202,147)(227,147)(227,159)(252,159)(252,209)(178,209)(178,179){1}
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w4;    //: /sn:0 {0}(131,166)(141,166){1}
 wire w0;    //: /sn:0 {0}(131,161)(141,161){1}
+wire w1;    //: /sn:0 {0}(171,176)(171,201)(285,201)(285,164)(237,164)(237,144)(193,144)(193,164)(162,164){1}
 //: enddecls
 
   //: comment g4 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  _GGXOR2 #(8) g8 (.I0(w0), .I1(w4), .Z(w6));   //: @(152,164) /sn:0 /w:[ 1 1 0 ] /eb:0
+  _GGXOR2 #(8) g8 (.I0(w0), .I1(w4), .Z(w1));   //: @(152,164) /sn:0 /w:[ 1 1 1 ] /eb:0
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Leitungen editieren</h3> <b>(Automatische Schleifenerkennung)</b>"
   //: /line:""
@@ -84,7 +88,7 @@ endmodule
 
 //: /netlistBegin PAGE8
 module PAGE8();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w46;    //: /sn:0 {0}(421,254)(374,254)(374,196){1}
 //: {2}(376,194)(397,194)(397,127)(422,127){3}
 //: {4}(372,194)(339,194){5}
@@ -126,18 +130,18 @@ endmodule
 
 //: /netlistBegin PAGE9
 module PAGE9();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w6;    //: /sn:0 {0}(85,173)(100,173){1}
 wire w32;    //: /sn:0 {0}(316,199)(316,214){1}
 wire w7;    //: /sn:0 {0}(85,178)(100,178){1}
 wire w14;    //: /sn:0 {0}(107,216)(122,216){1}
 wire w16;    //: /sn:0 {0}(80,237)(95,237){1}
-wire w4;    //: /sn:0 {0}(99,157)(114,157){1}
+wire w4;    //: /sn:0 {0}(97,157)(112,157){1}
 wire w15;    //: /sn:0 {0}(80,232)(95,232){1}
 wire w19;    //: /sn:0 {0}(85,256)(100,256){1}
 wire w38;    //: /sn:0 {0}(335,190)(335,205){1}
 wire w0;    //: /sn:0 {0}(91,132)(106,132){1}
-wire w3;    //: /sn:0 {0}(99,152)(114,152){1}
+wire w3;    //: /sn:0 {0}(97,152)(112,152){1}
 wire w37;    //: /sn:0 {0}(333,154)(333,169){1}
 wire w34;    //: /sn:0 {0}(295,168)(295,183){1}
 wire w21;    //: /sn:0 {0}(359,164)(359,179){1}
@@ -163,7 +167,7 @@ wire w12;    //: /sn:0 {0}(71,213)(86,213){1}
 wire w10;    //: /sn:0 {0}(81,197)(96,197){1}
 wire w13;    //: /sn:0 {0}(71,218)(86,218){1}
 wire w27;    //: /sn:0 {0}(399,182)(399,197){1}
-wire w5;    //: /sn:0 {0}(135,155)(150,155){1}
+wire w5;    //: /sn:0 {0}(133,155)(148,155){1}
 wire w33;    //: /sn:0 {0}(300,168)(300,183){1}
 wire w29;    //: /sn:0 {0}(396,218)(396,233){1}
 wire w9;    //: /sn:0 {0}(81,192)(96,192){1}
@@ -171,36 +175,36 @@ wire w26;    //: /sn:0 {0}(375,204)(375,219){1}
 wire w39;    //: /sn:0 {0}(419,174)(419,189){1}
 //: enddecls
 
-  //: comment g4 @(10,310) /sn:0 /anc:1
+  _GGAND2 #(6) g3 (.I0(w9), .I1(w10), .Z(w11));   //: @(107,195) /sn:0 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g13 (.I0(w30), .I1(w31), .Z(w32));   //: @(316,189) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g2 (.I0(w6), .I1(w7), .Z(w8));   //: @(111,176) /sn:0 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g1 (.I0(w3), .I1(w4), .Z(w5));   //: @(123,155) /sn:0 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g16 (.I0(w27), .I1(w28), .Z(w29));   //: @(396,208) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g10 (.I0(w12), .I1(w13), .Z(w14));   //: @(97,216) /sn:0 /w:[ 1 1 0 ]
+  //: comment g19 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  _GGAND2 #(6) g8 (.I0(w21), .I1(w22), .Z(w23));   //: @(356,190) /sn:0 /R:3 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g3 (.I0(w9), .I1(w10), .Z(w11));   //: @(107,195) /sn:0 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g13 (.I0(w33), .I1(w34), .Z(w35));   //: @(297,194) /sn:0 /R:3 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g2 (.I0(w6), .I1(w7), .Z(w8));   //: @(111,176) /sn:0 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g1 (.I0(w3), .I1(w4), .Z(w5));   //: @(125,155) /sn:0 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g11 (.I0(w27), .I1(w28), .Z(w29));   //: @(396,208) /sn:0 /R:3 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g10 (.I0(w24), .I1(w25), .Z(w26));   //: @(375,194) /sn:0 /R:3 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g6 (.I0(w15), .I1(w16), .Z(w17));   //: @(106,235) /sn:0 /w:[ 1 1 0 ]
-  //: comment g9 @(10,10) /anc:1
+  _GGAND2 #(6) g6 (.I0(w18), .I1(w19), .Z(w20));   //: @(111,254) /sn:0 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g7 (.I0(w33), .I1(w34), .Z(w35));   //: @(297,194) /sn:0 /R:3 /w:[ 1 1 0 ]
+  //: comment g15 @(10,10) /anc:1
   //: /line:"<h3>Leitungen editieren</h3> <b>(Gatter ausrichten)</b>"
   //: /line:""
   //: /line:"Eine Gruppe von Gattern kann man durch Auswählen und Drücken von<img src=edit_valgn.gif bgcolor=gray> vertikal ausrichten"
   //: /line:"und mit <img src=edit_halgn.gif bgcolor=gray> horizontal. Versuche das mit der Gruppe von Gattern unten."
   //: /end
-  _GGAND2 #(6) g7 (.I0(w18), .I1(w19), .Z(w20));   //: @(111,254) /sn:0 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g15 (.I0(w39), .I1(w40), .Z(w41));   //: @(416,200) /sn:0 /R:3 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g5 (.I0(w12), .I1(w13), .Z(w14));   //: @(97,216) /sn:0 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g14 (.I0(w36), .I1(w37), .Z(w38));   //: @(335,180) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g17 (.I0(w24), .I1(w25), .Z(w26));   //: @(375,194) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g5 (.I0(w15), .I1(w16), .Z(w17));   //: @(106,235) /sn:0 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g14 (.I0(w21), .I1(w22), .Z(w23));   //: @(356,190) /sn:0 /R:3 /w:[ 1 1 0 ]
   _GGAND2 #(6) g0 (.I0(w0), .I1(w1), .Z(w2));   //: @(117,135) /sn:0 /w:[ 1 1 0 ]
-  _GGAND2 #(6) g12 (.I0(w30), .I1(w31), .Z(w32));   //: @(316,189) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g12 (.I0(w36), .I1(w37), .Z(w38));   //: @(335,180) /sn:0 /R:3 /w:[ 1 1 0 ]
+  _GGAND2 #(6) g18 (.I0(w39), .I1(w40), .Z(w41));   //: @(416,200) /sn:0 /R:3 /w:[ 1 1 0 ]
 
 endmodule
 //: /netlistEnd
 
 //: /netlistBegin PAGE7
 module PAGE7();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w7;    //: /sn:0 {0}(85,137)(95,137){1}
 wire w19;    //: /sn:0 {0}(322,140)(332,140){1}
 wire w21;    //: /sn:0 {0}(321,242)(331,242){1}
@@ -224,7 +228,7 @@ wire w9;    //: /sn:0 {0}(85,142)(95,142){1}
   //: /line:""
   //: /line:"Manchmal gibt es keine freien Enden von zwei Leitungen, die verbunden werden sollen. Klicke mit rechts auf den"
   //: /line:"mit dem AND-Gatter verbundenen Ausgang an der durch den Pfeil angezeigten Stelle. Wähle die"
-  //: /line:"<font color=red2>Leitungssegment hinzufügen</font> Option aus dem Popup Menu.  Jetzt kann"
+  //: /line:"<font color=red2>Leitungssegment hinzufügen</font> Option aus dem Popup Menu. Jetzt kann"
   //: /line:"die neu erzeugte Leitung zu den Puffereingängen hinzugefügt werden."
   //: /line:""
   //: /end
@@ -236,7 +240,7 @@ endmodule
 
 //: /netlistBegin PAGE5
 module PAGE5();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w24;    //: /sn:0 {0}(319,194)(254,194){1}
 //: {2}(252,192)(252,134)(318,134){3}
 //: {4}(250,194)(187,194){5}
@@ -256,7 +260,7 @@ wire w26;    //: /sn:0 {0}(335,194)(345,194){1}
   //: comment g9 @(10,9) /anc:1
   //: /line:"<h3>Leitungen editieren</h3> <b>(Erzeugen von Lötstellen)</b>"
   //: /line:""
-  //: /line:"Wähle das  <img src=\"mov_curs.gif\" bgcolor=gray> Werkzeug und ziehe den Eingang des Inverters in der Schaltung unten"
+  //: /line:"Wähle das <img src=\"mov_curs.gif\" bgcolor=gray> Werkzeug und ziehe den Eingang des Inverters in der Schaltung unten"
   //: /line:"nahe an die Lötstelle in der Mitte des AND-Gatterausgangssegments und lasse los. Die Leitung sollte sich"
   //: /line:"von selbst mit der Lötstelle verbinden."
   //: /line:""
@@ -270,15 +274,15 @@ endmodule
 
 //: /netlistBegin PAGE4
 module PAGE4();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w6;    //: /sn:0 {0}(325,245)(373,245){1}
 //: {2}(377,245)(468,245){3}
 //: {4}(375,243)(375,163)(436,163){5}
 wire w7;    //: /sn:0 {0}(421,158)(436,158){1}
 wire w4;    //: /sn:0 {0}(289,247)(304,247){1}
-wire w3;    //: /sn:0 {0}(61,247)(108,247){1}
-//: {2}(112,247)(199,247){3}
-//: {4}(110,245)(110,161)(169,161){5}
+wire w3;    //: /sn:0 {0}(61,247)(114,247){1}
+//: {2}(118,247)(201,247){3}
+//: {4}(116,245)(116,161)(169,161){5}
 wire w0;    //: /sn:0 {0}(289,242)(304,242){1}
 wire w1;    //: /sn:0 {0}(30,244)(40,244){1}
 wire w8;    //: /sn:0 {0}(190,159)(200,159){1}
@@ -290,7 +294,7 @@ wire w5;    //: /sn:0 {0}(159,156)(169,156){1}
   //: comment g4 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: joint g3 (w3) @(110, 247) /w:[ 2 4 1 -1 ]
+  //: joint g3 (w3) @(116, 247) /w:[ 2 4 1 -1 ]
   _GGAND2 #(6) g2 (.I0(w5), .I1(w3), .Z(w8));   //: @(180,159) /sn:0 /anc:1 /w:[ 1 5 0 ] /eb:0
   _GGOR2 #(6) g1 (.I0(w0), .I1(w4), .Z(w6));   //: @(315,245) /sn:0 /anc:1 /w:[ 1 1 0 ]
   //: comment g11 @(363,264) /sn:0 /anc:1
@@ -322,7 +326,7 @@ endmodule
 
 //: /netlistBegin PAGE2
 module PAGE2();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w14;    //: /sn:0 {0}(292,263)(226,263)(226,200)(245,200)(245,140)(178,140){1}
 wire w16;    //: /sn:0 {0}(313,266)(323,266){1}
 wire w15;    //: /sn:0 {0}(282,268)(292,268){1}
@@ -339,11 +343,11 @@ wire w12;    //: /sn:0 {0}(147,142)(157,142){1}
   //: /line:"<h3>Leitungen editieren</h3> <b>(Anziehungskraft)</b>"
   //: /line:""
   //: /line:"Klicke in der Schaltung unten auf die Leitung an der Stelle mit dem Pfeil und ziehe sie solange nach links"
-  //: /line:"bis sie mit dem anderen vertikalen Element nahezu auf Linie ist. Wird die Leitung losgelassen,  führt \"Anziehungskraft\" dazu,"
+  //: /line:"bis sie mit dem anderen vertikalen Element nahezu auf Linie ist. Wird die Leitung losgelassen, führt \"Anziehungskraft\" dazu,"
   //: /line:"daß die beiden vertikalen Segmente zu einem einzigen Segment einrasten."
   //: /line:""
   //: /end
-  //: comment g0 @(562,122) /sn:0 /anc:1
+  //: comment g0 @(500,122) /sn:0 /anc:1
   //: /line:"<font color=green4>Hinweis: Die automatische Bereinigung"
   //: /line:"beim Editieren von Leitungen kann durch"
   //: /line:"Halten der Alt Taste während der Bewegung"
@@ -358,7 +362,7 @@ endmodule
 
 //: /netlistBegin PAGE10
 module PAGE10();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 reg crete;    //: {0}(7:215,136)(359,136)(359,189){1}
 //: {2}(361,191)(416,191){3}
 //: {4}(359,193)(359,203){5}
@@ -373,18 +377,18 @@ wire athens;    //: {0}(416,186)(356,186){1}
 //: {2}(71:352,186)(292,186){3}
 //: {4}(354,188)(354,203){5}
 wire pheneos;    //: {0}(76:357,224)(357,254){1}
-wire olympos;    //: {0}(-15:437,189)(506,189){1}
+wire olympus;    //: {0}(-15:437,189)(506,189){1}
 wire delphi;    //: {0}(-22:299,241)(352,241)(352,254){1}
 //: enddecls
 
   //: comment g4 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: LED g37 (olympos) @(513,189) /sn:0 /R:3 /w:[ 1 ] /type:0
+  //: LED g37 (olympus) @(513,189) /sn:0 /R:3 /w:[ 1 ] /type:0
   _GGXOR2 #(8) Athena (.I0(ithaca), .I1(toledo), .Z(athens));   //: @(282,186) /w:[ 3 5 3 ] /eb:0
   _GGNAND2 #(4) Hermes (.I0(athens), .I1(crete), .Z(pheneos));   //: @(357,214) /R:3 /w:[ 5 5 0 ] /eb:0
   _GGNAND2 #(4) Hades (.I0(delphi), .I1(pheneos), .Z(styx));   //: @(355,265) /R:3 /w:[ 1 1 0 ] /eb:0
-  _GGXOR2 #(8) Zeus (.I0(athens), .I1(crete), .Z(olympos));   //: @(427,189) /w:[ 0 3 0 ] /eb:0
+  _GGXOR2 #(8) Zeus (.I0(athens), .I1(crete), .Z(olympus));   //: @(427,189) /w:[ 0 3 0 ] /eb:0
   //: joint g32 (athens) @(354, 186) /w:[ 1 -1 2 4 ]
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Leitungen editieren</h3> <b>(Suchen)</b>"
@@ -396,10 +400,10 @@ wire delphi;    //: {0}(-22:299,241)(352,241)(352,254){1}
   //: /line:""
   //: /end
   //: joint g29 (ithaca) @(261, 183) /w:[ 2 -1 1 4 ]
-  //: SWITCH Bob (toledo) @(196,243) /w:[ 0 ] /st:0
-  //: SWITCH Theseus (crete) @(198,136) /w:[ 0 ] /st:0
+  //: SWITCH Bob (toledo) @(196,243) /w:[ 0 ] /st:0 /dn:0
+  //: SWITCH Thesus (crete) @(198,136) /w:[ 0 ] /st:0 /dn:0
   _GGNAND2 #(4) Apollo (.I0(ithaca), .I1(toledo), .Z(delphi));   //: @(289,241) /w:[ 5 3 0 ] /eb:0
-  //: SWITCH Odysseus (ithaca) @(198,183) /w:[ 0 ] /st:0
+  //: SWITCH Odyseus (ithaca) @(198,183) /w:[ 0 ] /st:0 /dn:0
   //: comment g0 @(588,148) /sn:0
   //: /line:"<font color=green4>Hinweis: Das Suchwerkzeug schaut"
   //: /line:"in allen Modulen der Schaltung"
@@ -411,226 +415,4 @@ wire delphi;    //: {0}(-22:299,241)(352,241)(352,254){1}
 
 endmodule
 //: /netlistEnd
-
-//: /netlistBegin OLD
-module OLD();
-//: interface  /sz:(40, 40) /bd:[ ]
-wire w32;    //: /sn:0 {0}(624,293)(634,293){1}
-wire w6;    //: /sn:0 {0}(476,150)(516,150)(516,133)(541,133)(541,145)(566,145)(566,195)(492,195)(492,165){1}
-wire w7;    //: /sn:0 {0}(470,428)(480,428){1}
-wire w46;    //: /sn:0 {0}(724,568)(681,568)(681,559){1}
-//: {2}(683,557)(697,557)(697,519)(722,519){3}
-//: {4}(679,557)(646,557){5}
-wire w16;    //: /sn:0 {0}(543,101)(553,101){1}
-wire w14;    //: /sn:0 {0}(522,98)(512,98)(512,79)(531,79)(531,46)(478,46){1}
-wire w19;    //: /sn:0 {0}(604,430)(614,430){1}
-wire w15;    //: /sn:0 {0}(512,103)(522,103){1}
-wire w4;    //: /sn:0 {0}(445,152)(455,152){1}
-wire w38;    //: /sn:0 {0}(747,392)(757,392){1}
-wire w3;    //: /sn:0 {0}(475,285)(516,285){1}
-//: {2}(520,285)(573,285){3}
-//: {4}(518,283)(518,239)(548,239){5}
-wire w0;    //: /sn:0 {0}(445,147)(455,147){1}
-wire w37;    //: /sn:0 {0}(721,392)(731,392){1}
-wire w34;    //: /sn:0 {0}(744,361)(754,361){1}
-wire w21;    //: /sn:0 {0}(604,468)(614,468){1}
-wire w43;    //: /sn:0 {0}(615,554)(625,554){1}
-wire w31;    //: /sn:0 {0}(624,288)(634,288){1}
-wire w28;    //: /sn:0 {0}(655,291)(696,291){1}
-//: {2}(700,291)(753,291){3}
-//: {4}(698,289)(698,245)(728,245){5}
-wire w23;    //: /sn:0 {0}(537,388)(547,388){1}
-wire w41;    //: /sn:0 {0}(492,556)(502,556){1}
-wire w36;    //: /sn:0 {0}(632,363)(642,363){1}
-wire w20;    //: /sn:0 {0}(588,468)(576,468)(576,430)(588,430){1}
-wire w24;    //: /sn:0 {0}(547,360)(524,360){1}
-//: {2}(522,358)(522,329)(548,329){3}
-//: {4}(520,360)(482,360){5}
-wire w1;    //: /sn:0 {0}(444,282)(454,282){1}
-wire w25;    //: /sn:0 {0}(564,329)(574,329){1}
-wire w35;    //: /sn:0 {0}(632,358)(642,358){1}
-wire w8;    //: /sn:0 {0}(569,237)(579,237){1}
-wire w40;    //: /sn:0 {0}(554,475)(564,475){1}
-wire w18;    //: /sn:0 {0}(523,477)(533,477){1}
-wire w30;    //: /sn:0 {0}(749,243)(759,243){1}
-wire w22;    //: /sn:0 {0}(451,362)(461,362){1}
-wire w17;    //: /sn:0 {0}(533,472)(517,472)(517,431)(501,431){1}
-wire w2;    //: /sn:0 {0}(444,287)(454,287){1}
-wire w44;    //: /sn:0 {0}(615,559)(625,559){1}
-wire w12;    //: /sn:0 {0}(447,48)(457,48){1}
-wire w11;    //: /sn:0 {0}(447,43)(457,43){1}
-wire w10;    //: /sn:0 {0}(451,357)(461,357){1}
-wire w27;    //: /sn:0 {0}(563,388)(573,388){1}
-wire w13;    //: /sn:0 {0}(492,551)(502,551){1}
-wire w48;    //: /sn:0 {0}(738,519)(748,519){1}
-wire w5;    //: /sn:0 {0}(538,234)(548,234){1}
-wire w33;    //: /sn:0 {0}(728,361)(705,361){1}
-//: {2}(703,359)(703,330)(729,330){3}
-//: {4}(701,361)(663,361){5}
-wire w47;    //: /sn:0 {0}(740,568)(750,568){1}
-wire w29;    //: /sn:0 {0}(718,240)(728,240){1}
-wire w9;    //: /sn:0 {0}(470,433)(480,433){1}
-wire w42;    //: /sn:0 {0}(523,554)(541,554)(541,518){1}
-wire w39;    //: /sn:0 {0}(745,330)(755,330){1}
-wire w26;    //: /sn:0 {0}(563,360)(573,360){1}
-//: enddecls
-
-  //: comment g4 @(10,552) /sn:0 /R:14
-  //: /line:"<font color=gray>&lt;PREVIOUS</font>    <a href=\"index.v\">UP</a>   <a href=\"module:PART1\">NEXT></a>"
-  //: /end
-  _GGXOR2 #(8) g8 (.I0(w0), .I1(w4), .Z(w6));   //: @(466,150) /sn:0 /w:[ 1 1 0 ] /eb:0
-  //: frame g51 @(442,505) /sn:0 /wi:145 /ht:74 /tx:"Fig. 6a"
-  //: joint g37 (w33) @(703, 361) /w:[ 1 2 4 -1 ]
-  //: frame g34 @(437,317) /sn:0 /wi:160 /ht:88 /tx:"Fig. 4a"
-  //: joint g3 (w3) @(518, 285) /w:[ 2 4 1 -1 ]
-  _GGOR2 #(6) g13 (.I0(w17), .I1(w18), .Z(w40));   //: @(544,475) /sn:0 /w:[ 0 1 0 ] /eb:0
-  _GGAND2 #(6) g2 (.I0(w5), .I1(w3), .Z(w8));   //: @(559,237) /sn:0 /w:[ 1 5 0 ] /eb:0
-  //: comment g1 @(542,55) /sn:0
-  //: /line:"&lt;---"
-  //: /end
-  _GGAND2 #(6) g11 (.I0(w14), .I1(w15), .Z(w16));   //: @(533,101) /sn:0 /w:[ 0 1 0 ] /eb:0
-  //: joint g50 (w46) @(681, 557) /w:[ 2 -1 4 1 ]
-  _GGBUF #(4) g28 (.I(w24), .Z(w26));   //: @(553,360) /sn:0 /w:[ 0 0 ]
-  _GGAND2 #(6) g10 (.I0(w11), .I1(w12), .Z(w14));   //: @(468,46) /sn:0 /w:[ 1 1 1 ] /eb:0
-  _GGAND2 #(6) g32 (.I0(w29), .I1(w28), .Z(w30));   //: @(739,243) /sn:0 /w:[ 1 5 0 ] /eb:0
-  //: joint g27 (w24) @(522, 360) /w:[ 1 2 4 -1 ]
-  _GGBUF #(4) g19 (.I(w20), .Z(w19));   //: @(594,430) /sn:0 /w:[ 1 0 ]
-  _GGAND2 #(6) g38 (.I0(w35), .I1(w36), .Z(w33));   //: @(653,361) /sn:0 /w:[ 1 1 5 ] /eb:0
-  //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3>"
-  //: /line:""
-  //: /line:"1) Click on the wire in Fig. 1, drag it until it is nearly alligned"
-  //: /line:"with the other vertical segment and release it.  \"Gravity\" will cause"
-  //: /line:"them to snap together into a single segment."
-  //: /line:""
-  //: /line:"2) Grab the endpoint of the XOR output wire in Fig. 2, drag it up so that"
-  //: /line:"it crosses the horizontal segment next to the gate and release it.  TkGate"
-  //: /line:"will automatically remove the loop."
-  //: /line:""
-  //: /line:"3) Press <img src=\"cut_curs.gif\"> and click on the vertical wire segment in Fig. 3a.  TkGate will"
-  //: /line:"automatically remove the wire joint.  Now, click at the point indicated by"
-  //: /line:"the arrow in Fig. 3b.  The free wire end is automatically deleted."
-  //: /line:""
-  //: /line:"4) Press <img src=\"mov_curs.gif\"> then select and drag the input of the bottom buffer in Fig. 4a"
-  //: /line:"next to the wire joint and release it to connect it to the joint.  Try again in"
-  //: /line:"Fig. 4b, this time releasing it between the AND gate and the joint to"
-  //: /line:"create a new joint."
-  //: /line:""
-  //: /line:"5) Right click on the vertical segment indicated by the arrow in Fig. 5"
-  //: /line:"and select <font color=blue>Add Wire Segment</font> from the popup menu.  Grab the new wire"
-  //: /line:"end and drag it to the other horizontal segment and release it."
-  //: /line:""
-  //: /line:"6) In Figs. 6a and 6b, select the wire at the point indicated by the"
-  //: /line:"arrows and drag them left past the output point of the AND gate and"
-  //: /line:"past the position of the joint.  Tkgate will reroute the wires as necessary."
-  //: /line:""
-  //: /line:""
-  //: /line:""
-  //: /line:"  <font color=green4>Hint: You can disable the automatic cleanup features in wire"
-  //: /line:"  editing by holding the Alt key while moving wires.</font>"
-  //: /end
-  //: joint g31 (w28) @(698, 291) /w:[ 2 4 1 -1 ]
-  _GGAND2 #(6) g39 (.I0(w13), .I1(w41), .Z(w42));   //: @(513,554) /sn:0 /w:[ 1 1 0 ] /eb:0
-  _GGBUF #(4) g48 (.I(w46), .Z(w47));   //: @(730,568) /sn:0 /w:[ 0 0 ]
-  //: frame g43 @(617,222) /sn:0 /wi:160 /ht:85 /tx:"Fig. 3b"
-  _GGBUF #(4) g29 (.I(w23), .Z(w27));   //: @(553,388) /sn:0 /w:[ 1 0 ]
-  _GGAND2 #(6) g25 (.I0(w10), .I1(w22), .Z(w24));   //: @(472,360) /sn:0 /w:[ 1 1 5 ] /eb:0
-  //: frame g52 @(597,507) /sn:0 /wi:189 /ht:73 /tx:"Fig. 6b"
-  //: frame g42 @(437,221) /sn:0 /wi:163 /ht:83 /tx:"Fig. 3a"
-  _GGAND2 #(6) g5 (.I0(w7), .I1(w9), .Z(w17));   //: @(491,431) /sn:0 /w:[ 1 1 1 ] /eb:0
-  _GGAND2 #(6) g47 (.I0(w43), .I1(w44), .Z(w46));   //: @(636,557) /sn:0 /w:[ 1 1 5 ] /eb:0
-  _GGBUF #(4) g44 (.I(w37), .Z(w38));   //: @(737,392) /sn:0 /w:[ 1 0 ]
-  _GGBUF #(4) g36 (.I(w33), .Z(w34));   //: @(734,361) /sn:0 /w:[ 0 0 ]
-  //: comment g24 @(485,442) /sn:0
-  //: /line:"--->"
-  //: /end
-  //: frame g41 @(436,127) /sn:0 /wi:141 /ht:77 /tx:"Fig. 2"
-  _GGBUF #(4) g23 (.I(w20), .Z(w21));   //: @(594,468) /sn:0 /w:[ 0 0 ]
-  //: frame g40 @(434,30) /sn:0 /wi:147 /ht:86 /tx:"Fig. 1"
-  //: frame g46 @(440,416) /sn:0 /wi:190 /ht:75 /tx:"Fig. 5"
-  _GGBUF #(4) g45 (.I(w33), .Z(w39));   //: @(735,330) /sn:0 /w:[ 3 0 ]
-  //: frame g35 @(618,318) /sn:0 /wi:159 /ht:88 /tx:"Fig. 4b"
-  _GGBUF #(4) g26 (.I(w24), .Z(w25));   //: @(554,329) /sn:0 /w:[ 3 0 ]
-  _GGAND2 #(6) g0 (.I0(w1), .I1(w2), .Z(w3));   //: @(465,285) /sn:0 /w:[ 1 1 0 ] /eb:0
-  _GGAND2 #(6) g33 (.I0(w31), .I1(w32), .Z(w28));   //: @(645,291) /sn:0 /w:[ 1 1 0 ] /eb:0
-  //: comment g30 @(723,257) /sn:0
-  //: /line:"|"
-  //: /line:"v"
-  //: /end
-  _GGBUF #(4) g49 (.I(w46), .Z(w48));   //: @(728,519) /sn:0 /w:[ 3 0 ]
-
-endmodule
-//: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF #(.Diz(1)) (I, Z);
-   input  I;
-   output  Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNBUF #(.Diz(1)) (I, Z);
-   input  I;
-   output  Z;
-
-   assign #Diz Z = ~I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
 

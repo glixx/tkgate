@@ -2,9 +2,12 @@
 //: property encoding = "utf-8"
 //: property locale = "de"
 //: property prefix = "_GG"
-//: property title = "sim_tut.v"
+//: property title = "Combinational Simulation"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -39,15 +42,15 @@ wire S;    //: {0}(354,249)(-39:373,249)(373,221){1}
   //: comment g13 @(10,10) /anc:1
   //: /line:"<h3>Simulation von Schaltnetzen</h3> <b>(Starten des Simulators)</b>"
   //: /line:""
-  //: /line:"Drücke die \"<img src=\"simstart.gif\" bgcolor=gray> <font color=red2>Simulieren</font>\" Taste oberhalb der Hauptarbeitsfläche, um in die Simulation zu gelangen.  Beim ersten Eintritt in den"
+  //: /line:"Drücke die \"<img src=\"simstart.gif\" bgcolor=gray> <font color=red2>Simulieren</font>\" Taste oberhalb der Hauptarbeitsfläche, um in die Simulation zu gelangen. Beim ersten Eintritt in den"
   //: /line:"Simulationsmodus ist der Simulator im Pause-Zustand. Das wird durch den gedrückten <img src=sim_pause.gif bgcolor=gray> Knopf in der Simulations-Toolbar angezeigt."
-  //: /line:"Drücke den <img src=\"sim_go.gif\" bgcolor=gray> Knopf zum Start der Simulation.  Versuche nun, durch Klicken auf die Schalter die Schalterzustände zu ändern und"
-  //: /line:"beobachte, wie die LEDs sich ändern.  Der Simulator wird durch Druck auf den <img src=sim_stop.gif bgcolor=gray> Knopf gestoppt, wenn Du fertig bist."
+  //: /line:"Drücke den <img src=\"sim_go.gif\" bgcolor=gray> Knopf zum Start der Simulation. Versuche nun, durch Klicken auf die Schalter die Schalterzustände zu ändern und"
+  //: /line:"beobachte, wie die LEDs sich ändern. Der Simulator wird durch Druck auf den <img src=sim_stop.gif bgcolor=gray> Knopf gestoppt, wenn Du fertig bist."
   //: /line:"Gehe dann zur nächsten Seite."
   //: /end
-  //: SWITCH g3 (Cin) @(254,213) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g3 (Cin) @(254,213) /sn:0 /w:[ 0 ] /st:1 /dn:0
   _GGNAND2 #(4) g2 (.I0(A), .I1(B), .Z(w6));   //: @(252,314) /sn:0 /w:[ 9 5 1 ]
-  //: SWITCH g1 (B) @(136,316) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g1 (B) @(136,316) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: joint g11 (w1) @(288, 251) /w:[ 1 -1 2 4 ]
   //: LED g28 (A) @(170,208) /sn:0 /w:[ 5 ] /type:0
   //: joint g10 (Cin) @(293, 246) /w:[ 6 5 -1 8 ]
@@ -60,7 +63,7 @@ wire S;    //: {0}(354,249)(-39:373,249)(373,221){1}
   //: LED g25 (C) @(403,214) /sn:0 /w:[ 0 ] /type:0
   //: joint g5 (A) @(202, 248) /w:[ 1 2 -1 8 ]
   //: LED g26 (Cin) @(293,195) /sn:0 /w:[ 3 ] /type:0
-  //: SWITCH g0 (A) @(138,228) /sn:0 /w:[ 7 ] /st:0
+  //: SWITCH g0 (A) @(138,228) /sn:0 /w:[ 7 ] /st:0 /dn:0
   //: comment g12 @(10,410) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
@@ -69,31 +72,4 @@ wire S;    //: {0}(354,249)(-39:373,249)(373,221){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 

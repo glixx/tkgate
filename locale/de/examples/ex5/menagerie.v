@@ -3,17 +3,19 @@
 //: property locale = "de"
 //: property prefix = "_GG"
 //: property title = "menagerie.v"
+//: property showSwitchNets = 0
 //: property simAutoStart = 1
 //: property discardChanges = 1
+//: property timingViolationMode = 1
+//: property initTime = "3 us"
 //: script "menagerie.vs"
 
 //: require "tty"
-//: require "coke"
 
 `timescale 1ns/1ns
 
 
-//: /symbolBegin: 688806032
+//: /symbolBegin: 209652600
 //: /iconBegin normal 3404 0 0
 //: /data "#define bitmap_width 73"
 //: /data "#define bitmap_height 53"
@@ -125,7 +127,7 @@
 module main;    //: root_module
 reg _reset;    //: {0}(50:749,83)(749,31)(543,31){1}
 //: {2}(539,31)(353,31){3}
-//: {4}(349,31)(154,31){5}
+//: {4}(349,31)(176,31){5}
 //: {6}(351,33)(351,83){7}
 //: {8}(541,33)(541,83){9}
 wire w32;    //: /sn:0 {0}(589,342)(659,342){1}
@@ -151,7 +153,7 @@ wire w59;    //: /sn:0 {0}(455,255)(394,255){1}
 wire w53;    //: /sn:0 {0}(589,235)(659,235){1}
 wire clk;    //: {0}(50:694,83)(694,66)(494,66){1}
 //: {2}(490,66)(303,66){3}
-//: {4}(299,66)(146,66){5}
+//: {4}(299,66)(174,66){5}
 //: {6}(301,68)(301,83){7}
 //: {8}(492,68)(492,83){9}
 wire w57;    //: /sn:0 {0}(589,304)(659,304){1}
@@ -169,7 +171,7 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
 
   //: joint g4 (DATA) @(517, 473) /w:[ 1 2 4 -1 ]
   //: joint g3 (_reset) @(541, 31) /w:[ 1 -1 2 8 ]
-  //: comment g13 @(17,390) /sn:0
+  //: comment g13 @(9,438) /sn:0 /anc:1
   //: /line:"Highlights der Schaltung:"
   //: /line:"<a href=\"#memory.tty0\">* TTY Baustein</a>"
   //: /line:"<a href=\"#iunit.mpc\">* Microprogrammzähler</a>"
@@ -179,16 +181,16 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   //: /line:""
   //: /end
   //: joint g2 (clk) @(492, 66) /w:[ 1 -1 2 8 ]
-  //: comment g1 @(13,90)
+  //: comment g1 @(10,93) /anc:1
   //: /line:"Die Schaltung implementiert einen einfachen"
-  //: /line:"Mikroprozessor. Ein Simulationsskript startet" 
+  //: /line:"Mikroprozessor. Ein Simulationsskript startetn"
   //: /line:"sofort das Spiel \"Animals\", wenn man in den"
   //: /line:"Simulationsmodus geht. Klicke auf die unter-"
   //: /line:"schiedlichen Logikblöcke und drücke die '>'-"
   //: /line:"Taste um die Innenschaltungen zu sehen."
   //: /line:"Zum Elternmodul kommt man durch Drücken "
-  //: /line:"der '&lt;' Taste zurück.  Während des Simu-"
-  //: /line:"lationsmodus kann man auf Leitungen klicken," 
+  //: /line:"der '&lt;' Taste zurück. Während des Simu-"
+  //: /line:"lationsmodus kann man auf Leitungen klicken,"
   //: /line:"um die aktuellen Werte zu sehen oder man"
   //: /line:"setzt sie mit einem Doppelklick."
   //: /line:""
@@ -204,30 +206,30 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   //: /end
   IUNIT iunit (._CLR(_reset), .CK(clk), .IR(DATA), .COUT(w35), ._Z(w34), ._GT(w33), ._LT(w32), ._rdpc(w59), ._incmar(w0), ._rd(w44), .spc(w43), ._ldhmdr(w42), ._ldpc(w41), ._ldmar(w40), ._ldmdr(w39), ._incpc(w38), ._rdmdr(w37), ._wrt(w36), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), .SA(w45));   //: @(456, 84) /sz:(132, 353) /p:[ Ti0>9 Ti1>9 Bi0>3 Ri0>0 Ri1>0 Ri2>0 Ri3>0 Lo0<0 Lo1<0 Lo2<0 Lo3<0 Lo4<0 Lo5<0 Lo6<0 Lo7<0 Lo8<0 Lo9<0 Lo10<0 Ro0<0 Ro1<0 Ro2<0 Ro3<0 Ro4<0 Ro5<0 Ro6<0 Ro7<0 Ro8<0 Ro9<0 Ro10<0 Ro11<0 Ro12<0 Ro13<0 ]
   //: joint g6 (_reset) @(351, 31) /w:[ 3 -1 4 6 ]
-  //: comment g7 @(43,7) /sn:0
+  //: comment g9 @(13,47) /anc:1
+  //: /line:"Dies ist der"
+  //: /line:"Systemtakt."
+  //: /line:""
+  //: /end
+  //: comment g7 @(13,12) /sn:0 /anc:1
   //: /line:"Dies ist der"
   //: /line:"Resetschalter."
   //: /end
-  //: comment g9 @(43,50)
-  //: /line:"Dies ist der"
-  //: /line:"Systemtakt."
-  //: /line:" "
-  //: /end
   MEMORY memory (._CLR(_reset), .CK(clk), ._incmar(w0), ._rdpc(w59), ._ldhmdr(w42), .spc(w43), ._rd(w44), ._wrt(w36), ._rdmdr(w37), ._incpc(w38), ._ldmdr(w39), ._ldmar(w40), ._ldpc(w41), .DATA(DATA));   //: @(268, 84) /sz:(125, 353) /p:[ Ti0>7 Ti1>7 Ri0>1 Ri1>1 Ri2>1 Ri3>1 Ri4>1 Ri5>1 Ri6>1 Ri7>1 Ri8>1 Ri9>1 Ri10>1 Bt0=5 ]
-  //: comment g39 @(12,517) /sn:0
+  //: comment g39 @(11,544) /sn:0 /anc:1
   //: /line:"<a href=\"../index.v\">[ZURÜCK]</a>"
   //: /end
   EUNIT eunit (._CLR(_reset), .CK(clk), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .SA(w45), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), ._LT(w32), ._GT(w33), ._Z(w34), .COUT(w35), .DATA(DATA));   //: @(660, 84) /sz:(128, 353) /p:[ Ti0>0 Ti1>0 Li0>1 Li1>1 Li2>1 Li3>1 Li4>1 Li5>1 Li6>1 Li7>1 Li8>1 Li9>1 Li10>1 Li11>1 Li12>1 Li13>1 Lo0<1 Lo1<1 Lo2<1 Lo3<1 Bt0=0 ]
   //: joint g5 (clk) @(301, 66) /w:[ 3 -1 4 6 ]
-  _GGCLOCK_P3000_0_50 g0 (.Z(clk));   //: @(133,66) /sn:0 /w:[ 5 ] /omega:3000 /phi:0 /duty:50
-  //: SWITCH reset (_reset) @(137,31) /sn:0 /w:[ 5 ] /st:1
+  _GGCLOCK_P3000_0_50 g0 (.Z(clk));   //: @(161,66) /sn:0 /w:[ 5 ] /omega:3000 /phi:0 /duty:50
+  //: SWITCH reset (_reset) @(159,31) /sn:0 /w:[ 5 ] /st:1 /dn:1
 
 endmodule
 //: /netlistEnd
 
 //: /netlistBegin ALUshift
 module ALUshift(A, B, OUT, FUNC);
-//: interface  /sz:(170, 116) /bd:[ Ti0>A[15:0](34/170) Ti1>B[15:0](82/170) Ti2>FUNC[4:0](121/170) Bo0<OUT[15:0](85/170) ]
+//: interface  /sz:(170, 116) /bd:[ Ti0>A[15:0](34/170) Ti1>B[15:0](82/170) Ti2>FUNC[4:0](121/170) Bo0<OUT[15:0](85/170) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [15:0] B;    //: /sn:0 {0}(#:244,259)(244,197)(342,197){1}
 //: {2}(346,197)(446,197){3}
 //: {4}(450,197)(546,197){5}
@@ -277,8 +279,8 @@ endmodule
 
 //: /netlistBegin MEMORY
 module MEMORY(DATA, spc, _ldpc, _wrt, _rd, _ldmdr, _ldhmdr, _rdmdr, _rdpc, _CLR, _incmar, _ldmar, CK, _incpc);
-//: interface  /sz:(125, 353) /bd:[ Ti0>CK(33/125) Ti1>_CLR(83/125) Ri0>_ldpc(25/353) Ri1>_ldmar(42/353) Ri2>_ldmdr(57/353) Ri3>_incpc(73/353) Ri4>_rdmdr(88/353) Ri5>_wrt(104/353) Ri6>_rd(120/353) Ri7>spc(136/353) Ri8>_ldhmdr(155/353) Ri9>_rdpc(171/353) Ri10>_incmar(186/353) Bt0=DATA[15:0](60/125) ]
-input _rdpc;    //: /sn:0 {0}(259,285)(270,285)(270,306){1}
+//: interface  /sz:(125, 353) /bd:[ Ti0>CK(33/125) Ti1>_CLR(83/125) Ri0>_ldpc(25/353) Ri1>_ldmar(42/353) Ri2>_ldmdr(57/353) Ri3>_incpc(73/353) Ri4>_rdmdr(88/353) Ri5>_wrt(104/353) Ri6>_rd(120/353) Ri7>spc(136/353) Ri8>_ldhmdr(155/353) Ri9>_rdpc(171/353) Ri10>_incmar(186/353) Bt0=DATA[15:0](60/125) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
+input _rdpc;    //: /sn:0 {0}(260,288)(270,288)(270,306){1}
 input _rd;    //: /sn:0 {0}(671,557)(671,614){1}
 //: {2}(673,616)(708,616)(708,273)(740,273){3}
 //: {4}(669,616)(512,616){5}
@@ -293,18 +295,18 @@ input CK;    //: /sn:0 {0}(753,813)(742,813)(742,833)(618,833)(618,815){1}
 //: {8}(522,436)(130,436){9}
 //: {10}(128,434)(128,335){11}
 //: {12}(130,333)(321,333)(321,307)(326,307){13}
-//: {14}(128,331)(128,253)(151,253){15}
+//: {14}(128,331)(128,262)(151,262){15}
 //: {16}(126,436)(62,436){17}
 supply0 [7:0] w3;    //: /sn:0 {0}(#:683,269)(683,251)(662,251){1}
-input _CLR;    //: /sn:0 {0}(512,218)(512,201){1}
-//: {2}(514,199)(844,199)(844,327){3}
-//: {4}(842,329)(802,329){5}
-//: {6}(844,331)(844,770){7}
-//: {8}(842,772)(716,772)(716,808)(707,808){9}
-//: {10}(844,774)(844,808)(829,808){11}
-//: {12}(510,199)(409,199){13}
-//: {14}(405,199)(263,199)(263,248)(227,248){15}
-//: {16}(407,201)(407,302)(402,302){17}
+input _CLR;    //: /sn:0 {0}(707,808)(718,808)(718,770)(857,770){1}
+//: {2}(859,768)(859,570)(948,570)(948,461)(859,461)(859,331){3}
+//: {4}(859,327)(859,199)(514,199){5}
+//: {6}(510,199)(409,199){7}
+//: {8}(405,199)(263,199)(263,257)(227,257){9}
+//: {10}(407,201)(407,302)(402,302){11}
+//: {12}(512,201)(512,218){13}
+//: {14}(857,329)(802,329){15}
+//: {16}(859,772)(859,808)(829,808){17}
 input _ldhmdr;    //: /sn:0 {0}(673,103)(709,103){1}
 //: {2}(713,103)(871,103)(871,269){3}
 //: {4}(711,105)(711,137){5}
@@ -347,22 +349,22 @@ wire [7:0] mdrin;    //: /sn:0 {0}(#:520,552)(557,552){1}
 //: {2}(561,552)(663,552){3}
 //: {4}(559,550)(559,523){5}
 wire w46;    //: /sn:0 {0}(402,312)(417,312){1}
-wire w14;    //: /sn:0 {0}(254,129)(272,129)(272,258)(227,258){1}
+wire w14;    //: /sn:0 {0}(254,129)(272,129)(272,267)(227,267){1}
 wire w15;    //: /sn:0 {0}(691,711)(645,711){1}
 //: {2}(643,709)(643,672){3}
 //: {4}(641,711)(436,711){5}
 //: {6}(434,709)(434,512)(454,512){7}
 //: {8}(432,711)(365,711){9}
-wire [15:0] w19;    //: /sn:0 {0}(#:188,217)(188,243){1}
+wire [15:0] w19;    //: /sn:0 {0}(#:188,217)(188,252){1}
 wire [15:0] w4;    //: /sn:0 {0}(#:584,165)(614,165){1}
-wire [15:0] PC;    //: /sn:0 {0}(#:188,264)(188,309){1}
+wire [15:0] PC;    //: /sn:0 {0}(#:188,273)(188,309){1}
 //: {2}(190,311)(262,311){3}
 //: {4}(188,313)(188,348){5}
 //: {6}(190,350)(264,350)(264,364){7}
 //: {8}(186,350)(112,350){9}
 wire w;    //: /sn:0 {0}(802,339)(874,339)(874,290){1}
 wire DTR;    //: /sn:0 {0}(433,982)(565,982)(565,840){1}
-wire w37;    //: /sn:0 {0}(713,761)(722,761)(722,818)(707,818){1}
+wire w37;    //: /sn:0 {0}(713,761)(734,761)(734,818)(707,818){1}
 wire [7:0] w34;    //: /sn:0 {0}(#:555,834)(555,668)(571,668)(571,523){1}
 wire [15:0] w43;    //: /sn:0 {0}(#:363,297)(363,277){1}
 wire RTS;    //: /sn:0 {0}(433,958)(555,958)(555,840){1}
@@ -413,14 +415,13 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g4 (_rd) @(510, 616) /w:[ 5 6 8 -1 ]
   //: INOUT g8 (DATA) @(510,128) /sn:0 /R:3 /w:[ 13 ]
   //: joint g61 (w31) @(448, 763) /w:[ 2 8 1 -1 ]
-  //: joint g58 (_CLR) @(844, 772) /w:[ -1 7 8 10 ]
-  _GGREG8 #(10, 10, 20) g51 (.Q(RD), .D(mdr), .EN(w37), .CLR(_CLR), .CK(CK));   //: @(668,813) /sn:0 /w:[ 1 13 1 9 3 ]
+  _GGREG8 #(10, 10, 20) g51 (.Q(RD), .D(mdr), .EN(w37), .CLR(_CLR), .CK(CK));   //: @(668,813) /sn:0 /w:[ 1 13 1 0 3 ]
   //: IN g37 (spc) @(205,380) /sn:0 /w:[ 1 ]
   //: IN g34 (_ldpc) @(129,152) /sn:0 /w:[ 3 ]
   //: IN g13 (_wrt) @(397,508) /sn:0 /w:[ 7 ]
   //: joint g86 (_wrt) @(422, 508) /w:[ 4 -1 6 3 ]
   //: joint g55 (CK) @(524, 436) /w:[ 6 -1 8 5 ]
-  //: joint g3 (_CLR) @(512, 199) /w:[ 2 -1 12 1 ]
+  //: joint g3 (_CLR) @(512, 199) /w:[ 5 -1 6 12 ]
   //: comment g89 @(37,543) /sn:0
   //: /line:"Eine Adressleitung zum Hauptspeicher."
   //: /line:"Die Adresse kann im MAR (Memory Address"
@@ -433,15 +434,15 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: IN g77 (_ldmdr) @(671,80) /sn:0 /w:[ 1 ]
   _GGNAND2 #(6) g59 (.I0(!_wrt), .I1(w31), .Z(w37));   //: @(703,761) /sn:0 /w:[ 9 5 0 ] /eb:0
   _GGBUFIF16 #(4, 6) g72 (.Z(DATA), .I(PC), .E(~_rdpc));   //: @(268,311) /sn:0 /w:[ 0 3 1 ]
-  _GGREG16 #(10, 10, 20) PC (.Q(PC), .D(w19), .EN(w14), .CLR(_CLR), .CK(CK));   //: @(188,253) /w:[ 0 1 1 15 15 ]
+  _GGREG16 #(10, 10, 20) PC (.Q(PC), .D(w19), .EN(w14), .CLR(_CLR), .CK(CK));   //: @(188,262) /w:[ 0 1 1 9 15 ]
   //: GROUND g1 (w17) @(496,598) /sn:0 /w:[ 1 ]
   //: joint g64 (_wrt) @(422, 706) /w:[ 1 2 -1 8 ]
-  //: frame g16 @(110,659) /sn:0 /wi:762 /ht:347 /tx:"TTY Steuerung"
+  //: frame g16 @(87,659) /sn:0 /wi:786 /ht:351 /tx:"TTY Steuerung"
   _GGMUX4x8 #(12, 12) g11 (.I0(mdrin), .I1(w34), .I2(TD), .I3(w24), .S(w27), .Z(w13));   //: @(577,507) /sn:0 /R:2 /w:[ 5 1 1 1 0 1 ] /ss:0 /do:1
   assign {w35, CTS, DSR} = w33; //: CONCAT g50  @(790,853) /sn:0 /R:1 /w:[ 0 0 1 0 ] /dr:0 /tp:0 /drp:0
   _GGADD16 #(132, 134, 126, 128) g28 (.A(w6), .B(w21), .S(w9), .CI(w20), .CO(w22));   //: @(178,85) /sn:0 /w:[ 0 1 3 1 0 ]
   //: joint g78 (PC) @(188, 350) /w:[ 6 5 8 -1 ]
-  //: comment g87 @(210,776)
+  //: comment g87 @(212,793) /anc:1
   //: /line:"Diese DIP Schalter legen die"
   //: /line:"Adressen für den TTY Status"
   //: /line:"und die Datenregister fest."
@@ -454,8 +455,8 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g38 (DATA) @(549, 165) /w:[ 8 -1 7 10 ]
   //: IN g69 (_ldhmdr) @(671,103) /sn:0 /w:[ 0 ]
   //: IN g6 (_rdmdr) @(624,286) /sn:0 /R:1 /w:[ 0 ]
-  //: joint g57 (_CLR) @(844, 329) /w:[ -1 3 4 6 ]
-  _GGREG8 #(10, 10, 20) g53 (.Q(w33), .D(w36), .EN(w23), .CLR(_CLR), .CK(CK));   //: @(790,813) /sn:0 /w:[ 1 1 0 11 0 ]
+  //: joint g57 (_CLR) @(859, 329) /w:[ -1 4 14 3 ]
+  _GGREG8 #(10, 10, 20) g53 (.Q(w33), .D(w36), .EN(w23), .CLR(_CLR), .CK(CK));   //: @(790,813) /sn:0 /w:[ 1 1 0 17 0 ]
   _GGMUX2x8 #(8, 8) g9 (.I0(w13), .I1(w42), .S(_rd), .Z(w25));   //: @(763,273) /sn:0 /w:[ 0 0 3 0 ] /ss:0 /do:0
   _GGBUFIF8 #(4, 6) g7 (.Z(mdrin), .I(mdr), .E(_rd));   //: @(673,552) /sn:0 /R:2 /w:[ 3 11 0 ]
   //: joint g75 (DATA) @(373, 213) /w:[ -1 2 1 16 ]
@@ -468,59 +469,68 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGMUX2x8 #(8, 8) g68 (.I0(w5), .I1(w8), .S(~_ldhmdr), .Z(w42));   //: @(711,160) /sn:0 /R:1 /w:[ 1 1 5 1 ] /ss:1 /do:1
   //: GROUND g48 (w16) @(545,867) /sn:0 /w:[ 0 ]
   //: joint g43 (w18) @(274, 552) /w:[ 2 1 -1 4 ]
-  //: IN g73 (_rdpc) @(257,285) /sn:0 /w:[ 0 ]
+  //: IN g73 (_rdpc) @(258,288) /sn:0 /w:[ 0 ]
   _GGNAND2 #(6) g62 (.I0(!_wrt), .I1(w15), .Z(w26));   //: @(702,709) /sn:0 /w:[ 0 0 0 ] /eb:0
   //: VDD g29 (w20) @(252,70) /sn:0 /w:[ 0 ]
   _GGMUX2x16 #(8, 8) g25 (.I0(PC), .I1(mar), .S(~spc), .Z(w18));   //: @(274,380) /sn:0 /w:[ 7 3 0 0 ] /ss:0 /do:0
   //: joint g17 (DATA) @(510, 165) /w:[ 6 12 5 -1 ]
-  //: IN g88 (_CLR) @(512,220) /sn:0 /R:1 /w:[ 0 ]
+  //: IN g88 (_CLR) @(512,220) /sn:0 /R:1 /w:[ 13 ]
   //: joint g63 (w15) @(643, 711) /w:[ 1 2 4 -1 ]
   _GGNOR1x16 #(1) g42 (.I0(w30), .Z(w31));   //: @(356,763) /sn:0 /w:[ 0 0 ] /eb:0
   //: joint g52 (mdr) @(697, 377) /w:[ 6 8 -1 5 ]
+  //: comment back_link3 @(15,658) /sn:0 /anc:1
+  //: /line:"<a href=\"menagerie.v\">[ZURÜCK]</a>"
+  //: /end
   _GGNOR2 #(6) g83 (.I0(!_incmar), .I1(!_ldmar), .Z(w46));   //: @(427,312) /sn:0 /R:2 /w:[ 0 1 1 ] /eb:0
   //: joint g74 (PC) @(188, 311) /w:[ 2 1 -1 4 ]
   //: joint g56 (CK) @(618, 813) /w:[ 2 -1 4 1 ]
   //: frame g14 @(536,27) /sn:0 /wi:372 /ht:394 /tx:"MDR Steuerung"
-  //: joint g5 (_CLR) @(407, 199) /w:[ 13 -1 14 16 ]
+  //: joint g5 (_CLR) @(407, 199) /w:[ 7 -1 8 10 ]
   assign w34 = {w16, RTS, DTR}; //: CONCAT g47  @(555,835) /sn:0 /R:1 /w:[ 0 1 1 1 ] /dr:0 /tp:0 /drp:1
   //: joint g44 (w18) @(274, 708) /w:[ 6 5 -1 8 ]
   //: joint g79 (mar) @(363, 351) /w:[ -1 1 2 4 ]
   //: IN g80 (_incmar) @(325,241) /sn:0 /R:3 /w:[ 7 ]
+  //: joint g94 (_CLR) @(859, 770) /w:[ -1 2 1 16 ]
   //: joint g36 (_ldpc) @(146, 152) /w:[ 1 -1 2 4 ]
   _GGBUFIF16 #(4, 6) g21 (.Z(DATA), .I(w2), .E(~_rdmdr));   //: @(626,246) /sn:0 /R:2 /w:[ 11 1 1 ]
-  _GGREG8 #(10, 10, 20) mdr (.Q(mdr), .D(w25), .EN(w), .CLR(_CLR), .CK(CK));   //: @(763,334) /w:[ 7 1 0 5 7 ]
+  _GGREG8 #(10, 10, 20) mdr (.Q(mdr), .D(w25), .EN(w), .CLR(_CLR), .CK(CK));   //: @(763,334) /w:[ 7 1 0 15 7 ]
   _GGOR3 #(8) g84 (.I0(_wrt), .I1(w15), .I2(w31), .Z(w11));   //: @(465,512) /sn:0 /w:[ 5 7 9 1 ] /eb:0
   //: joint g85 (w15) @(434, 711) /w:[ 5 6 8 -1 ]
   //: joint g24 (CK) @(128, 436) /w:[ 9 10 16 -1 ]
-  //: DIP TTYSTATUS (w38) @(172,713) /R:1 /w:[ 0 ] /st:16
+  //: comment g92 @(748,473) /sn:0
+  //: /line:"This is data line. Datas read"
+  //: /line:"and write into MDR register"
+  //: /line:"(Memory data register)."
+  //: /end
+  //: DIP TTYSTATUS (w38) @(172,713) /R:1 /w:[ 0 ] /st:16 /dn:1
   _GGNOR1x16 #(1) g41 (.I0(w28), .Z(w15));   //: @(355,711) /sn:0 /w:[ 0 9 ] /eb:0
   //: IN g23 (_ldmar) @(458,245) /sn:0 /R:3 /w:[ 0 ]
   //: joint g60 (w31) @(633, 763) /w:[ 4 6 3 -1 ]
   _GGXOR2x16 #(8) g40 (.I0(w18), .I1(w40), .Z(w30));   //: @(312,763) /sn:0 /w:[ 9 1 1 ] /eb:0
   _GGMUX2x8 #(8, 8) g54 (.I0(mdr), .I1(w1), .S(w26), .Z(w36));   //: @(790,740) /sn:0 /w:[ 0 0 1 0 ] /ss:0 /do:0
   //: joint g81 (_incmar) @(325, 264) /w:[ 4 6 -1 3 ]
-  //: frame g93 @(354,466) /sn:0 /wi:421 /ht:164 /tx:"Hauptspeicher"
+  //: frame g93 @(349,467) /sn:0 /wi:389 /ht:160 /tx:"Hauptspeicher"
   assign w27 = {w31, w15}; //: CONCAT g46  @(638,667) /sn:0 /R:1 /w:[ 1 7 3 ] /dr:0 /tp:0 /drp:1
   //: joint g45 (mdrin) @(559, 552) /w:[ 2 4 1 -1 ]
   _GGNOR2 #(6) g35 (.I0(!_incpc), .I1(!_ldpc), .Z(w14));   //: @(244,129) /sn:0 /w:[ 0 0 0 ] /eb:0
   _GGMUX2x16 #(8, 8) g26 (.I0(w9), .I1(DATA), .S(~_ldpc), .Z(w19));   //: @(188,204) /sn:0 /w:[ 0 15 5 0 ] /ss:0 /do:0
   //: IN g0 (CK) @(60,436) /sn:0 /w:[ 17 ]
-  _GGREG16 #(10, 10, 20) mar (.Q(mar), .D(w43), .EN(w46), .CLR(_CLR), .CK(CK));   //: @(363,307) /w:[ 0 0 0 17 13 ]
+  _GGREG16 #(10, 10, 20) mar (.Q(mar), .D(w43), .EN(w46), .CLR(_CLR), .CK(CK));   //: @(363,307) /w:[ 0 0 0 11 13 ]
   _GGBUF16 #(4) g22 (.I(DATA), .Z(w4));   //: @(574,165) /sn:0 /w:[ 9 0 ]
   _GGNOR2 #(6) g70 (.I0(!_ldhmdr), .I1(!_ldmdr), .Z(w));   //: @(874,280) /sn:0 /R:3 /w:[ 3 0 1 ] /eb:0
-  //: comment g90 @(211,844) /sn:0
+  //: comment g90 @(212,843) /sn:0 /anc:1
   //: /line:"Dies ist das TTY-Gerät. Im Simulationsmodus"
   //: /line:"geht ein tty-Fenster auf, das diesem"
-  //: /line:"Gerät entspricht.  Auf das Gerät kann durch"
+  //: /line:"Gerät entspricht. Auf das Gerät kann durch"
   //: /line:"die simulierte CPU zugegriffen werden, indem"
   //: /line:"an Adressen gelesen oder geschrieben wird, "
   //: /line:"die durch die DIP-Schalter TTYSTATUS und"
   //: /line:"TTYDATA eingestellt sind."
   //: /end
-  //: DIP TTYDATA (w40) @(174,765) /R:1 /w:[ 0 ] /st:17
+  //: DIP TTYDATA (w40) @(174,765) /R:1 /w:[ 0 ] /st:17 /dn:1
   //: GROUND g66 (w1) @(825,693) /sn:0 /w:[ 1 ]
   //: joint g82 (_incmar) @(325, 281) /w:[ 1 2 -1 8 ]
-  TTY tty0 (.TD(TD), .DSR(DSR), .RTS(RTS), .RD(RD), .CTS(CTS), .DTR(DTR));   //: @(396, 962) /symbol:688806032 /w:[ 0 0 0 0 1 0 ]
+  TTY tty0 (.TD(TD), .DSR(DSR), .RTS(RTS), .RD(RD), .CTS(CTS), .DTR(DTR));   //: @(396, 962) /symbol:209652600 /w:[ 0 0 0 0 1 0 ]
   //: joint g12 (_rd) @(671, 616) /w:[ 2 1 4 -1 ]
   assign w2 = {w3, mdr}; //: CONCAT g18  @(657,246) /sn:0 /R:2 /w:[ 0 1 9 ] /dr:0 /tp:0 /drp:1
   //: IN g33 (_incpc) @(131,126) /sn:0 /w:[ 1 ]
@@ -533,7 +543,7 @@ endmodule
 
 //: /netlistBegin REG4
 module REG4(B, _ENA, SB, CK, _ENB, DIN, _WA, _CLR, SA, A);
-//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>SA[1:0](17/138) Li1>SB[1:0](33/138) Li2>_CLR(51/138) Li3>_ENA(70/138) Li4>_ENB(88/138) Li5>_WA(106/138) Li6>CK(123/138) Bo0<A[15:0](31/107) Bo1<B[15:0](79/107) ]
+//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>SA[1:0](17/138) Li1>SB[1:0](33/138) Li2>_CLR(51/138) Li3>_ENA(70/138) Li4>_ENB(88/138) Li5>_WA(106/138) Li6>CK(123/138) Bo0<A[15:0](31/107) Bo1<B[15:0](79/107) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output [15:0] B;    //: /sn:0 {0}(#:507,666)(507,615){1}
 input CK;    //: /sn:0 {0}(53,412)(175,412){1}
 //: {2}(179,412)(317,412){3}
@@ -628,7 +638,7 @@ endmodule
 
 //: /netlistBegin ALU
 module ALU(A, COUT, B, FUNC, CIN, _GT, _Z, OUT, _LT);
-//: interface  /sz:(107, 127) /bd:[ Ti0>B[15:0](79/107) Ti1>A[15:0](31/107) Li0>CIN(95/127) Li1>FUNC[4:0](18/127) Bo0<OUT[15:0](56/107) Ro0<COUT(69/127) Ro1<_LT(52/127) Ro2<_GT(37/127) Ro3<_Z(20/127) ]
+//: interface  /sz:(107, 127) /bd:[ Ti0>B[15:0](79/107) Ti1>A[15:0](31/107) Li0>CIN(95/127) Li1>FUNC[4:0](18/127) Bo0<OUT[15:0](56/107) Ro0<COUT(69/127) Ro1<_LT(52/127) Ro2<_GT(37/127) Ro3<_Z(20/127) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [15:0] B;    //: /sn:0 {0}(#:100,99)(269,99){1}
 //: {2}(273,99)(552,99)(552,171){3}
 //: {4}(271,101)(271,171){5}
@@ -653,10 +663,10 @@ output [15:0] OUT;    //: /sn:0 {0}(#:406,415)(406,429){1}
 //: {6}(406,467)(406,510){7}
 output COUT;    //: /sn:0 {0}(634,226)(674,226){1}
 wire w3;    //: /sn:0 {0}(410,467)(459,467){1}
-wire [2:0] w0;    //: /sn:0 {0}(#:306,402)(129,402)(129,133){1}
+wire [2:0] w0;    //: /sn:0 {0}(#:303,402)(129,402)(129,133){1}
 wire [15:0] w1;    //: /sn:0 {0}(#:416,386)(416,353)(559,353)(559,295){1}
 wire [15:0] w35;    //: /sn:0 {0}(#:274,289)(274,354)(396,354)(396,386){1}
-wire w2;    //: /sn:0 {0}(383,402)(327,402){1}
+wire w2;    //: /sn:0 {0}(383,402)(324,402){1}
 //: enddecls
 
   //: IN g4 (A) @(98,67) /sn:0 /w:[ 0 ]
@@ -674,7 +684,7 @@ wire w2;    //: /sn:0 {0}(383,402)(327,402){1}
   _GGOR1x16 #(1) g43 (.I0(OUT), .Z(_Z));   //: @(468,431) /sn:0 /w:[ 3 0 ] /eb:0
   //: joint g48 (_Z) @(490, 431) /w:[ 2 -1 1 4 ]
   //: OUT g42 (_Z) @(553,431) /sn:0 /w:[ 3 ]
-  _GGOR1x3 #(1) g5 (.I0(w0), .Z(w2));   //: @(317,402) /sn:0 /w:[ 0 1 ] /eb:0
+  _GGOR1x3 #(1) g5 (.I0(w0), .Z(w2));   //: @(314,402) /sn:0 /anc:1 /w:[ 0 1 ] /eb:0
   _GGNAND2 #(4) g47 (.I0(_LT), .I1(_Z), .Z(_GT));   //: @(522,503) /sn:0 /w:[ 5 5 0 ] /eb:0
   //: OUT g41 (OUT) @(406,507) /sn:0 /R:3 /w:[ 7 ]
   ALUbasic g54 (.FUNC(FUNC), .B(B), .A(A), .CIN(CIN), .OUT(w1), .COUT(COUT));   //: @(468, 172) /sz:(165, 122) /sn:0 /p:[ Ti0>5 Ti1>3 Ti2>3 Li0>1 Bo0<1 Ro0<0 ]
@@ -689,7 +699,7 @@ endmodule
 
 //: /netlistBegin IUNIT
 module IUNIT(CK, _LDQ, _WA, _rd, _DOUT, _rdmdr, _CLQ, FUNC, _CLR, _LDQH, SB, _ldmdr, IR, _ldmar, _incmar, _LDQL, SA, IDATA, _incpc, _LDDATA, COUT, _LT, _Z, spc, _ldpc, _wrt, _ldhmdr, _GT, AOP, BOP, _rdpc, CIN);
-//: interface  /sz:(132, 353) /bd:[ Ti0>CK(37/132) Ti1>_CLR(86/132) Li0>_incmar(187/353) Bi0>IR[15:0](62/132) Ri0>_LT(258/353) Ri1>_GT(276/353) Ri2>_Z(296/353) Ri3>COUT(314/353) Lo0<_wrt(105/353) Lo1<_rdmdr(89/353) Lo2<_incpc(74/353) Lo3<_ldmdr(58/353) Lo4<_ldmar(43/353) Lo5<_ldpc(26/353) Lo6<_ldhmdr(156/353) Lo7<spc(137/353) Lo8<_rd(121/353) Ro0<SA[3:0](18/353) Ro1<SB[3:0](33/353) Ro2<_WA(50/353) Ro3<AOP[1:0](65/353) Ro4<BOP[1:0](81/353) Ro5<FUNC[4:0](95/353) Ro6<IDATA[7:0](113/353) Ro7<_CLQ(133/353) Ro8<_LDQ(150/353) Ro9<CIN(165/353) Ro10<_LDDATA(182/353) Ro11<_LDQH(200/353) Ro12<_LDQL(220/353) Ro13<_DOUT(239/353) Lt0=_rdpc(172/353) ]
+//: interface  /sz:(132, 353) /bd:[ Ti0>CK(37/132) Ti1>_CLR(86/132) Li0>_incmar(187/353) Bi0>IR[15:0](62/132) Ri0>_LT(258/353) Ri1>_GT(276/353) Ri2>_Z(296/353) Ri3>COUT(314/353) Lo0<_wrt(105/353) Lo1<_rdmdr(89/353) Lo2<_incpc(74/353) Lo3<_ldmdr(58/353) Lo4<_ldmar(43/353) Lo5<_ldpc(26/353) Lo6<_ldhmdr(156/353) Lo7<spc(137/353) Lo8<_rd(121/353) Ro0<SA[3:0](18/353) Ro1<SB[3:0](33/353) Ro2<_WA(50/353) Ro3<AOP[1:0](65/353) Ro4<BOP[1:0](81/353) Ro5<FUNC[4:0](95/353) Ro6<IDATA[7:0](113/353) Ro7<_CLQ(133/353) Ro8<_LDQ(150/353) Ro9<CIN(165/353) Ro10<_LDDATA(182/353) Ro11<_LDQH(200/353) Ro12<_LDQL(220/353) Ro13<_DOUT(239/353) Lt0=_rdpc(172/353) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input _Z;    //: /sn:0 {0}(1162,361)(1137,361)(1137,358)(1115,358){1}
 input [15:0] IR;    //: /sn:0 {0}(#:59,70)(84,70){1}
 output _CLQ;    //: /sn:0 {0}(693,714)(488,714){1}
@@ -817,7 +827,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
 
   //: GROUND g8 (w11) @(372,1131) /sn:0 /w:[ 0 ]
   _GGNOR2 #(6) g4 (.I0(!w55), .I1(!ww), .Z(_SA));   //: @(880,356) /sn:0 /R:2 /w:[ 11 0 0 ] /eb:0
-  //: comment g61 @(366,789)
+  //: comment g61 @(366,789) /anc:1
   //: /line:"Dies ist die untere Hälfte"
   //: /line:"des Mikrobefehlsspeichers."
   //: /end
@@ -829,14 +839,17 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g51 (_LDQ) @(690,724) /sn:0 /w:[ 0 ]
   //: OUT g55 (_WA) @(690,754) /sn:0 /w:[ 0 ]
   //: OUT g58 (_rd) @(701,1037) /sn:0 /w:[ 1 ]
+  //: comment back_link @(7,95) /sn:0 /anc:1
+  //: /line:"<a href=\"menagerie.v\">[ZURÜCK]</a>"
+  //: /end
   _GGREG8 #(10, 10, 20) IR (.Q(IRR), .D(w6), .EN(_ldir), .CLR(_CLR), .CK(CK));   //: @(151,98) /w:[ 1 5 1 9 19 ]
   _GGREG4 #(10, 10, 20) g77 (.Q(w3), .D(w48), .EN(w0), .CLR(_CLR), .CK(CK));   //: @(1069,353) /sn:0 /R:3 /w:[ 0 1 1 3 13 ]
   //: GROUND g2 (w9) @(380,534) /sn:0 /w:[ 0 ]
   //: OUT g76 (_DOUT) @(701,1137) /sn:0 /w:[ 0 ]
-  //: comment g65 @(101,14)
+  //: comment g65 @(137,15) /anc:1
   //: /line:"Die IR und OPR Register verwalten die"
   //: /line:"Instruktions- und Operanden-Bytes der"
-  //: /line:"aktuellen Instruktion. "
+  //: /line:"aktuellen Instruktion."
   //: /end
   //: OUT g59 (_rdmdr) @(701,1047) /sn:0 /w:[ 1 ]
   _GGMUX2x3 #(8, 8) g72 (.I0(w38), .I1(w18), .S(w40), .Z(w44));   //: @(797,413) /sn:0 /R:2 /w:[ 1 1 0 1 ] /ss:0 /do:1
@@ -878,7 +891,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   _GGMUX2x5 #(8, 8) g73 (.I0(w7), .I1(w49), .S(w42), .Z(FUNC));   //: @(725,956) /sn:0 /R:1 /w:[ 1 1 0 1 ] /ss:1 /do:1
   _GGNOR2 #(6) g25 (.I0(!w55), .I1(!w32), .Z(_SA0));   //: @(890,384) /sn:0 /R:2 /w:[ 13 0 0 ] /eb:0
   //: GROUND g17 (w23) @(360,367) /sn:0 /w:[ 0 ]
-  //: comment g62 @(370,940)
+  //: comment g62 @(364,966) /anc:1
   //: /line:"Dies ist die obere Hälfte"
   //: /line:"des Mikrobefehlspeichers."
   //: /end
@@ -894,7 +907,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   assign {w4, w55, ww, w32} = w3; //: CONCAT g79  @(1030,353) /sn:0 /w:[ 1 0 3 3 1 ] /dr:0 /tp:0 /drp:0
   //: OUT g47 (IDATA) @(690,654) /sn:0 /w:[ 3 ]
   //: OUT g44 (_incpc) @(701,997) /sn:0 /w:[ 1 ]
-  //: comment g85 @(16,131) /sn:0
+  //: comment g85 @(7,126) /sn:0 /anc:1
   //: /line:"Dieser Block"
   //: /line:"decodiert"
   //: /line:"Befehle,"
@@ -911,8 +924,8 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: IN g21 (COUT) @(1163,375) /sn:0 /R:2 /w:[ 1 ]
   //: IN g24 (_LT) @(1168,345) /sn:0 /R:2 /w:[ 0 ]
   //: comment g84 @(694,22)
-  //: /line:"Hier ist ein einfaches Beispiel einer" 
-  //: /line:"Befehlseinheit.  Das mpc Register"
+  //: /line:"Hier ist ein einfaches Beispiel einer"
+  //: /line:"Befehlseinheit. Das mpc Register"
   //: /line:"enthält den Mikrobefehlszähler"
   //: /line:"und die beiden Register ans den"
   //: /line:"Datenausgängen der ROM m1 und m2"
@@ -947,7 +960,7 @@ endmodule
 
 //: /netlistBegin ZREG4
 module ZREG4(CK, SB, _ENA, B, DIN, _ENB, _WA, _CLR, SA, A);
-//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>SA[1:0](17/138) Li1>SB[1:0](33/138) Li2>_CLR(51/138) Li3>_ENA(70/138) Li4>_ENB(88/138) Li5>_WA(106/138) Li6>CK(123/138) Bo0<A[15:0](31/107) Bo1<B[15:0](79/107) ]
+//: interface  /sz:(107, 138) /bd:[ Ti0>DIN[15:0](52/107) Li0>SA[1:0](17/138) Li1>SB[1:0](33/138) Li2>_CLR(51/138) Li3>_ENA(70/138) Li4>_ENB(88/138) Li5>_WA(106/138) Li6>CK(123/138) Bo0<A[15:0](31/107) Bo1<B[15:0](79/107) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output [15:0] B;    //: /sn:0 {0}(#:507,666)(507,615){1}
 input CK;    //: /sn:0 {0}(46,421)(314,421){1}
 //: {2}(318,421)(463,421){3}
@@ -1037,7 +1050,7 @@ endmodule
 
 //: /netlistBegin OPRDEC
 module OPRDEC(SB, SA, FUNC, OPR, OM2, MAP, OM1, COND, IR);
-//: interface  /sz:(192, 126) /bd:[ Ti0>IR[7:0](19/192) Ti1>OPR[7:0](148/192) Bo0<MAP[7:0](23/192) Ro0<SA[3:0](21/126) Ro1<SB[3:0](41/126) Ro2<FUNC[4:0](60/126) Ro3<OM2[1:0](92/126) Ro4<COND[2:0](109/126) Ro5<OM1[1:0](76/126) ]
+//: interface  /sz:(192, 126) /bd:[ Ti0>IR[7:0](19/192) Ti1>OPR[7:0](148/192) Bo0<MAP[7:0](23/192) Ro0<SA[3:0](21/126) Ro1<SB[3:0](41/126) Ro2<FUNC[4:0](60/126) Ro3<OM2[1:0](92/126) Ro4<COND[2:0](109/126) Ro5<OM1[1:0](76/126) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [7:0] IR;    //: /sn:0 {0}(#:569,291)(430,291){1}
 //: {2}(429,291)(382,291){3}
 //: {4}(381,291)(356,291){5}
@@ -1116,7 +1129,7 @@ endmodule
 
 //: /netlistBegin REG16
 module REG16(DIN, SB, _ENA, SA, A, B, CK, _WA, _CLR, _ENB);
-//: interface  /sz:(108, 138) /bd:[ Ti0>DIN[15:0](53/108) Li0>_WA(101/138) Li1>_ENB(82/138) Li2>_ENA(66/138) Li3>_CLR(51/138) Li4>SB[3:0](33/138) Li5>SA[3:0](17/138) Li6>CK(118/138) Bo0<B[15:0](80/108) Bo1<A[15:0](32/108) ]
+//: interface  /sz:(108, 138) /bd:[ Ti0>DIN[15:0](53/108) Li0>_WA(101/138) Li1>_ENB(82/138) Li2>_ENA(66/138) Li3>_CLR(51/138) Li4>SB[3:0](33/138) Li5>SA[3:0](17/138) Li6>CK(118/138) Bo0<B[15:0](80/108) Bo1<A[15:0](32/108) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output [15:0] B;    //: /sn:0 {0}(#:1208,435)(1135,435){1}
 //: {2}(1133,433)(1133,336){3}
 //: {4}(1131,435)(882,435){5}
@@ -1237,7 +1250,7 @@ endmodule
 
 //: /netlistBegin ALUbasic
 module ALUbasic(B, A, OUT, COUT, CIN, FUNC);
-//: interface  /sz:(165, 122) /bd:[ Ti0>A[15:0](38/165) Ti1>B[15:0](84/165) Ti2>FUNC[4:0](125/165) Li0>CIN(54/122) Bo0<OUT[15:0](91/165) Ro0<COUT(54/122) ]
+//: interface  /sz:(165, 122) /bd:[ Ti0>A[15:0](38/165) Ti1>B[15:0](84/165) Ti2>FUNC[4:0](125/165) Li0>CIN(54/122) Bo0<OUT[15:0](91/165) Ro0<COUT(54/122) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [15:0] B;    //: /sn:0 {0}(#:717,363)(717,178)(600,178){1}
 //: {2}(596,178)(496,178){3}
 //: {4}(492,178)(386,178){5}
@@ -1320,7 +1333,7 @@ endmodule
 
 //: /netlistBegin EUNIT
 module EUNIT(_LDDATA, _CLR, SB, SA, AOP, BOP, _GT, _LDQ, _Z, _WA, CK, _CLQ, DATA, FUNC, _LT, _LDQH, _LDQL, CIN, IDATA, COUT, _DOUT);
-//: interface  /sz:(128, 353) /bd:[ Ti0>CK(34/128) Ti1>_CLR(89/128) Li0>SB[3:0](33/353) Li1>_WA(50/353) Li2>AOP[1:0](65/353) Li3>BOP[1:0](81/353) Li4>FUNC[4:0](95/353) Li5>IDATA[7:0](113/353) Li6>_CLQ(133/353) Li7>_LDQ(150/353) Li8>CIN(165/353) Li9>SA[3:0](18/353) Li10>_LDDATA(182/353) Li11>_LDQH(200/353) Li12>_LDQL(220/353) Li13>_DOUT(239/353) Lo0<COUT(314/353) Lo1<_Z(296/353) Lo2<_GT(276/353) Lo3<_LT(258/353) Bt0=DATA[15:0](67/128) ]
+//: interface  /sz:(128, 353) /bd:[ Ti0>CK(34/128) Ti1>_CLR(89/128) Li0>SB[3:0](33/353) Li1>_WA(50/353) Li2>AOP[1:0](65/353) Li3>BOP[1:0](81/353) Li4>FUNC[4:0](95/353) Li5>IDATA[7:0](113/353) Li6>_CLQ(133/353) Li7>_LDQ(150/353) Li8>CIN(165/353) Li9>SA[3:0](18/353) Li10>_LDDATA(182/353) Li11>_LDQH(200/353) Li12>_LDQL(220/353) Li13>_DOUT(239/353) Lo0<COUT(314/353) Lo1<_Z(296/353) Lo2<_GT(276/353) Lo3<_LT(258/353) Bt0=DATA[15:0](67/128) ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 output _Z;    //: /sn:0 {0}(646,543)(608,543){1}
 input _CLQ;    //: /sn:0 {0}(549,811)(497,811){1}
 output _LT;    //: /sn:0 {0}(645,575)(608,575){1}
@@ -1442,6 +1455,9 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
   _GGNOR2 #(6) g45 (.I0(!_LDQH), .I1(!_LDQ), .Z(w7));   //: @(840,809) /sn:0 /R:3 /w:[ 0 9 0 ] /eb:0
   _GGMUX2x8 #(8, 8) g35 (.I0(w12), .I1(w8), .S(_LDQ), .Z(w2));   //: @(761,739) /sn:0 /w:[ 1 5 3 0 ] /ss:0 /do:0
   //: IN g26 (CIN) @(473,618) /sn:0 /w:[ 0 ]
+  //: comment back_link1 @(200,196) /sn:0 /anc:1
+  //: /line:"<a href=\"menagerie.v\">[ZURÜCK]</a>"
+  //: /end
   //: IN g12 (IDATA) @(296,423) /sn:0 /w:[ 1 ]
   _GGMUX4x16 #(12, 12) g18 (.I0(w21), .I1(DATA), .I2(w35), .I3(w28), .S(BOP), .Z(w31));   //: @(614,481) /sn:0 /w:[ 3 11 3 0 1 0 ] /ss:0 /do:0
   //: OUT g30 (COUT) @(642,592) /sn:0 /w:[ 0 ]
@@ -1449,856 +1465,4 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGNAND3 #(.Diz(1)) (I0, I1, I2,  Z);
-   output  Z;
-   input   I0, I1, I2;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 & I2 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x2 #(.Diz(1)) (I0, I1,  Z);
-   output  [1:0] Z;
-   input   [1:0] I0, I1;
-   reg  [1:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x5 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [4:0] I0, I1;
-   input  S;
-   output  [4:0] Z;
-   reg 	   [4:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  5'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x4 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [3:0] I0, I1;
-   input  S;
-   output  [3:0] Z;
-   reg 	   [3:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  4'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ~( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGXOR2x16 #(.Diz(1)) (I0, I1,  Z);
-   output  [15:0] Z;
-   input   [15:0] I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGARSHIFT16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  (I >>> S);
-   
-endmodule // arshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x3 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [2:0] I0, I1;
-   input  S;
-   output  [2:0] Z;
-   reg 	   [2:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  3'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [7:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x16 #(.Diz(1)) (I0, I1,  Z);
-   output  [15:0] Z;
-   input   [15:0] I0, I1;
-   reg  [15:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG4 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [3:0] D;
-  output  [3:0] Q;
-  reg 	  [3:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 4'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x3 #(.Diz(1)) (I0, I1,  Z);
-   output  [2:0] Z;
-   input   [2:0] I0, I1;
-   reg  [2:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF3 #(.Diz(1)) (I, Z);
-   input  [2:0] I;
-   output  [2:0] Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGROM8x32 #(.Dout(1), .Dread(1)) (A, D, OE);
-   input  OE;
-   input   [7:0] A;
-   output  [31:0] D;
-   reg 	   [31:0] m[0:255];
-   wire    [31:0] X;
-
-   assign #Dread X = m[A];
-   assign #Dout D = (~OE) ? X : 32'bz;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNOR1x16 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [15:0] I0;
-
-   assign #Diz Z = ~ | I0;
-   
-endmodule // ror
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGLSHIFT16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  (I << S);
-   
-endmodule // lshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGROM8x8 #(.Dout(1), .Dread(1)) (A, D, OE);
-   input  OE;
-   input   [7:0] A;
-   output  [7:0] D;
-   reg 	   [7:0] m[0:255];
-   wire    [7:0] X;
-
-   assign #Dread X = m[A];
-   assign #Dout D = (~OE) ? X : 8'bz;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, I4, I5, I6, I7, S, Z);
-   input  I0, I1, I2, I3, I4, I5, I6, I7;
-   input  [2:0] S;
-   output  Z;
-   reg 	   Z;
-
-   always
-     begin
-	case (S)
-	  3'd0: Z <= #Dsz  I0;
-	  3'd1: Z <= #Dsz  I1;
-	  3'd2: Z <= #Dsz  I2;
-	  3'd3: Z <= #Dsz  I3;
-	  3'd4: Z <= #Dsz  I4;
-	  3'd5: Z <= #Dsz  I5;
-	  3'd6: Z <= #Dsz  I6;
-	  3'd7: Z <= #Dsz  I7;
-	  default: Z <= #Dsz  1'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR3 #(.Diz(1)) (I0, I1, I2,  Z);
-   output  Z;
-   input   I0, I1, I2;
-
-     assign #Diz Z = ( I0 | I1 | I2 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND1x4 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [3:0] I0;
-
-   assign #Diz Z =  & I0;
-   
-endmodule // rand
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNBUF #(.Diz(1)) (I, Z);
-   input  I;
-   output  Z;
-
-   assign #Diz Z = ~I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR1x3 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [2:0] I0;
-
-   assign #Diz Z =  | I0;
-   
-endmodule // ror
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUFIF16 #(.Dez(1), .Diz(1)) (Z, I, E);
-   input  [15:0] I;
-   input E;
-   output  [15:0] Z;
-
-   specify
-      (E *> Z) = Dez;
-      (I *> Z) = Diz;
-   endspecify
-
-   assign Z = E ? (I) : 16'bz;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG32 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [31:0] D;
-  output  [31:0] Q;
-  reg 	  [31:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 32'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD16 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [15:0] A,B;
-   output  [15:0] S;
-   wire    [15:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-   reg  [7:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x8 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [7:0] I0, I1;
-   input  S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGRAM16x8 #(.Dout(1),		// Output time
-	     .Dread(1),		// Read time
-	     .Dwrite(1),	// Write time
-	     .Daddr_setup(1),	// Address setup time
-	     .Daddr_hold(1),	// Address hold time
-	     .Ddata_hold(1))	// Data hold time
-	(A, D, WE, OE, CS);
-	    
-   input OE, WE, CS;
-   input  [15:0] A;
-   inout  [7:0] D;
-   reg 	  [7:0] m[0:65535];
-   wire   [7:0] X;
-   wire  doRead, doWrite;
-
-   specify
-      $setup(A, posedge doWrite, Daddr_setup);
-      $hold(negedge doWrite, A, Daddr_hold);
-      $hold(negedge doWrite, D, Ddata_hold);
-      $width(posedge doWrite, Dwrite);
-   endspecify
-
-   assign doRead = (!CS && !OE);
-   assign doWrite = (!CS && !WE);
-
-   //
-   // Value read from addressed memory
-   //
-   assign #Dread X = m[A];
-
-   //
-   // If chip-select and output-enable are asserted, output value from memory
-   //
-   assign #Dout D = doRead ? X : 8'bz;
-
-   //
-   // Look for conditions on which to write to memory
-   //
-   always @(doWrite or D or A)
-     if (doWrite)
-       m[A] <= #Dwrite D;
-
-   always @(D)
-     if (doWrite)
-       $error("`RAMDCHG %m[%M]");
-
-   always @(A)
-     if (doWrite)
-       $error("`RAMACHG %m[%M]");
-   
-
-endmodule // ram
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGREG16 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [15:0] D;
-  output  [15:0] Q;
-  reg 	  [15:0] Qreg;
- 
-  specify
-      $setup(D,posedge CK &&& (!EN && CLR), Dsetup);
-      $hold(posedge CK &&& (!EN && CLR),D, Dhold);
-  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 16'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGROLL16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  ((I << (S % 16)) | (I >> ((16 - S) % 16)));
-   
-endmodule // lshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR1x16 #(.Diz(1)) (I0, Z);
-   output  Z;
-   input   [15:0] I0;
-
-   assign #Diz Z =  | I0;
-   
-endmodule // ror
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX2x16 #(.Dsz(1), .Diz(1)) (I0, I1, S, Z);
-   input  [15:0] I0, I1;
-   input  S;
-   output  [15:0] Z;
-   reg 	   [15:0] Z;
-
-   always
-     begin
-	case (S)
-	  1'd0: Z <= #Dsz  I0;
-	  1'd1: Z <= #Dsz  I1;
-	  default: Z <= #Dsz  16'hx;
-	endcase // case(S)
-	@(S or I0 or I1);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P3000_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #1500
-     forever
-       begin
-	  Z =  1'b1;
-	  #1500;
-	  Z =  1'b0;
-	  #1500;
-       end
-   
-endmodule // clock
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNDECODER4 #(.Dez(1), .Diz(1)) (I, E, Z0, Z1, Z2, Z3);
-   input  [1:0] I;
-   input E;
-   output Z0, Z1, Z2, Z3;
-   wire  [3:0] Zcat;
-
-   specify
-      (E *> Z0) = Dez; 
-      (E *> Z1) = Dez; 
-      (E *> Z2) = Dez; 
-      (E *> Z3) = Dez;  
-      (I *> Z0) = Diz; 
-      (I *> Z1) = Diz; 
-      (I *> Z2) = Diz; 
-      (I *> Z3) = Diz;  
-   endspecify
-
-   assign Zcat = ~ ({4{E}} & (4'b1 << I));
-
-   assign Z0 = Zcat[0];
-   assign Z1 = Zcat[1];
-   assign Z2 = Zcat[2];
-   assign Z3 = Zcat[3]; 
-   
-endmodule // decoder
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGRSHIFT16 #(.Dsz(1), .Diz(1)) (I, Z , S);
-   input  [15:0] I;
-   input  [3:0] S;
-   output  [15:0] Z;
-
-   specify
-      (I *> Z) = Diz;
-      (S *> Z) = Dsz;
-   endspecify
-
-   assign Z =  (I >> S);
-   
-endmodule // rshift
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGDIV16 #(.Dab_q(1), .Dab_r(1)) (A, B, Q, R);
-   input   [15:0] A,B;
-   output  [15:0] Q,R;
-   
-   assign #Dab_q Q =  (A / B);
-   assign #Dab_r R =  (A % B);
-
-endmodule   // div
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUL16 #(.Dab_p(1)) (A, B, P);
-   input   [15:0] A,B;
-   output  [15:0] P;
-   
-   assign #Dab_p P =  (A * B);
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF5 #(.Diz(1)) (I, Z);
-   input  [4:0] I;
-   output  [4:0] Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX8x16 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, I4, I5, I6, I7, S, Z);
-   input  [15:0] I0, I1, I2, I3, I4, I5, I6, I7;
-   input  [2:0] S;
-   output  [15:0] Z;
-   reg 	   [15:0] Z;
-
-   always
-     begin
-	case (S)
-	  3'd0: Z <= #Dsz  I0;
-	  3'd1: Z <= #Dsz  I1;
-	  3'd2: Z <= #Dsz  I2;
-	  3'd3: Z <= #Dsz  I3;
-	  3'd4: Z <= #Dsz  I4;
-	  3'd5: Z <= #Dsz  I5;
-	  3'd6: Z <= #Dsz  I6;
-	  3'd7: Z <= #Dsz  I7;
-	  default: Z <= #Dsz  16'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3 or I4 or I5 or I6 or I7);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUF16 #(.Diz(1)) (I, Z);
-   input  [15:0] I;
-   output  [15:0] Z;
-
-   assign #Diz Z = I;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2x16 #(.Diz(1)) (I0, I1,  Z);
-   output  [15:0] Z;
-   input   [15:0] I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGBUFIF8 #(.Dez(1), .Diz(1)) (Z, I, E);
-   input  [7:0] I;
-   input E;
-   output  [7:0] Z;
-
-   specify
-      (E *> Z) = Dez;
-      (I *> Z) = Diz;
-   endspecify
-
-   assign Z = E ? (I) : 8'bz;
-   
-endmodule // buf
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x16 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [15:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [15:0] Z;
-   reg 	   [15:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  16'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
 

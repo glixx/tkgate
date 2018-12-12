@@ -127,7 +127,10 @@ do
            # FIXME: awk deletes more than 1 space everywhere
            a=`echo $line|awk -F "CCCCC" '{print $1}'`
            b=`echo $line|awk -F "CCCCC" '{print $2}'`
-           sed -i "s|$a|$b|g" $tmp_file1
+           if [ ! -z "$b" ]
+           then
+             sed -i "s|$a|$b|g" $tmp_file1
+           fi
         done
 
         # restore marks

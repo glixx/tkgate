@@ -1,9 +1,12 @@
 //: version "2.1-a2"
-//: property prefix = "_GG"
-//: property title = "module_tut.v"
-//: property discardChanges = 1
-//: property encoding= "utf-8"
+//: property encoding = "utf-8"
 //: property locale = "de"
+//: property prefix = "_GG"
+//: property title = "Using Modules"
+//: property showSwitchNets = 0
+//: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -11,12 +14,12 @@
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g3 @(259,83) /anc:1
+  //: comment g3 @(260,80) /anc:1
   //: /line:"Ein Modul ist ein gekapselte Stück Schaltungslogik, das in einer"
   //: /line:"größeren Schaltung eine bestimmte Aufgabe erfüllt, ganz ähnlich"
   //: /line:"wie ein Modul oder eine Klasse in einem Programm."
   //: /line:"Jedes Modul in TkGate hat eine \"Schnittstelle\" und"
-  //: /line:"eine  \"Definition\":"
+  //: /line:"eine \"Definition\":"
   //: /line:""
   //: /line:"  *  Die <i color=green4>Schnittstelle</i> beschreibt die äußere Erscheinung"
   //: /line:"     eines Moduls einschließlich der Größe der Box und der"
@@ -36,7 +39,7 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"In diesem Abschnitt wird gezeigt, wie man Module erzeugt, editiert und verwaltet."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,320) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -45,7 +48,7 @@ endmodule
 
 //: /netlistBegin PAGE6
 module PAGE6();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w4;    //: /sn:0 {0}(258,177)(273,177){1}
 wire w0;    //: /sn:0 {0}(200,161)(185,161){1}
 wire w3;    //: /sn:0 {0}(258,161)(273,161){1}
@@ -77,7 +80,7 @@ endmodule
 
 //: /netlistBegin PAGE3
 module PAGE3();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g4 @(576,89) /sn:0 /anc:1
@@ -86,29 +89,29 @@ module PAGE3();
   //: /line:"Namen PAGE1, PAGE2, etc.</font>"
   //: /end
   //: comment g3 @(23,72) /sn:0 /anc:1
-  //: /line:"<img src=document.gif>   Oberstes oder Wurzelmodul."
+  //: /line:"<img src=document.gif> Oberstes oder Wurzelmodul."
   //: /line:""
-  //: /line:"<img src=mod_net.gif>   Netzlistenmodul."
+  //: /line:"<img src=mod_net.gif> Netzlistenmodul."
   //: /line:""
-  //: /line:"<img src=mod_hdl.gif>   Verilog HDL Modul."
+  //: /line:"<img src=mod_hdl.gif> Verilog HDL Modul."
   //: /line:""
-  //: /line:"<img src=mod_netL.gif>   Verriegeltes Netzlistenmodul."
+  //: /line:"<img src=mod_netL.gif> Verriegeltes Netzlistenmodul."
   //: /line:""
-  //: /line:"<img src=mod_hdlL.gif>   Verriegeltes Verilog HDL Modul."
+  //: /line:"<img src=mod_hdlL.gif> Verriegeltes Verilog HDL Modul."
   //: /line:""
-  //: /line:"<img src=unused.gif>   Behälter für unbenutzte Module."
+  //: /line:"<img src=unused.gif> Behälter für unbenutzte Module."
   //: /line:""
   //: /end
-  //: comment g2 @(257,69) /anc:1
-  //: /line:"<img src=chip.gif>   Bibliotheksmodul."
+  //: comment g2 @(269,68) /anc:1
+   //: /line:"<img src=chip.gif> Bibliotheksmodul."
   //: /line:""
-  //: /line:"<img src=parts.gif>   Behälter für alle Bibliotheken."
+  //: /line:"<img src=parts.gif> Behälter für alle Bibliotheken."
   //: /line:""
-  //: /line:"<img src=ichipdir.gif>   Behälter für eine einzige Bibliothek."
+  //: /line:"<img src=ichipdir.gif> Behälter für eine einzige Bibliothek."
   //: /line:""
-  //: /line:"<img src=unknown.gif>   Benutzung eines undefinierten Moduls."
+  //: /line:"<img src=unknown.gif> Benutzung eines undefinierten Moduls."
   //: /line:""
-  //: /line:"<img src=conflict.gif>   Rekursive Einbindung eines Moduls."
+  //: /line:"<img src=conflict.gif> Rekursive Einbindung eines Moduls."
   //: /line:""
   //: /end
   //: comment g1 @(9,13) /anc:1
@@ -126,7 +129,7 @@ endmodule
 
 //: /netlistBegin ALU
 module ALU(F, A, B, Z);
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [7:0] B;    //: /sn:0 {0}(#:342,147)(342,184){1}
 //: {2}(344,186)(367,186){3}
 //: {4}(371,186)(425,186)(425,258){5}
@@ -168,7 +171,7 @@ endmodule
 
 //: /netlistBegin foo
 module foo(Z2, I3, Z1, I1, I2, Z3);
-//: interface  /sz:(41, 40) /bd:[ ]
+//: interface  /sz:(41, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input I2;    //: /sn:0 {0}(245,200)(275,200){1}
 //: {2}(277,198)(277,153)(292,153){3}
 //: {4}(277,202)(277,248)(348,248){5}
@@ -193,11 +196,11 @@ wire w0;    //: /sn:0 {0}(348,183)(338,183)(338,153){1}
   //: OUT g1 (Z1) @(445,154) /sn:0 /w:[ 0 ]
   _GGAND2 #(6) g11 (.I0(w0), .I1(Z2), .Z(Z1));   //: @(403,154) /sn:0 /w:[ 3 0 1 ] /eb:0
   //: comment g16 @(585,127) /sn:0
-  //: /line:"<font color=green4>Hinweis: Wurde das Modul durch Auswahl"
-  //: /line:"von <img src=blk_open.gif><font color=red2>Öffnen</font> aus dem Menu oder der"
-  //: /line:"Toolbar geöffnet, kann es durch Rechtsklick"
-  //: /line:"in die Planfläche mit Auswahl von"
-  //: /line:"<font color=red2>Schließen</font> wieder geschlossen werden."
+  //: /line:"<font color=green4>Hinweis: Falls dieses Modul durch Anwahl von"
+  //: /line:"<img src=blk_open.gif><font color=red2>Öffnen</font> aus Menu oder"
+  //: /line:"Toolbar geöffnet wurde, kann es durch einen Rechtsklick"
+  //: /line:"in das Editierfeld und die Anwahl von"
+  //: /line:"<font color=red2>Schließen</font> geschlossen werden."
   //: /end
   //: joint g10 (I2) @(277, 200) /w:[ -1 2 1 4 ]
   //: IN g19 (I1) @(244,128) /sn:0 /w:[ 1 ]
@@ -219,10 +222,10 @@ endmodule
 
 //: /netlistBegin PAGE8
 module PAGE8();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g3 @(500,160) /sn:0 /anc:1
+  //: comment g3 @(573,160) /sn:0 /anc:1
   //: /line:"<font color=green4>Hinweis: Falls die Änderung einer Modulschnittstelle"
   //: /line:"nicht gelingt, klicke rechts auf sie und"
   //: /line:"wähle <img src=i_modprops.gif></font><font color=red2>Moduleigenschaften...</font><font color=green4> und setze"
@@ -248,7 +251,7 @@ endmodule
 
 //: /netlistBegin PAGE9
 module PAGE9();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire [7:0] w3;    //: /sn:0 {0}(#:329,194)(314,194){1}
 wire [1:0] w0;    //: /sn:0 {0}(#:257,226)(272,226){1}
 wire [7:0] w1;    //: /sn:0 {0}(#:257,210)(272,210){1}
@@ -264,7 +267,7 @@ wire [7:0] w2;    //: /sn:0 {0}(#:257,194)(272,194){1}
   //: /line:""
   //: /line:"Modulschnittstellen, die im <img src=editmode.gif> <font color=red2>Edit</font> Modus erzeugt wurden, gehören nur zur speziellen Instanz, aus der sie geschaffen wurden."
   //: /line:"Um eine Schnittstelle zur Standardschnittstelle für neu erzeugte Modulinstanzen dieses Typs zu machen, klickt man mit rechts"
-  //: /line:"auf eine Schnittstelle und wählt <font color=red2>Schnittstelle &rarr;  Setzen</font>.  Versuche die Schnittstellen von jeder der beiden Instanzen"
+  //: /line:"auf eine Schnittstelle und wählt <font color=red2>Schnittstelle &rarr; Setzen</font>. Versuche die Schnittstellen von jeder der beiden Instanzen"
   //: /line:"der ALU Module unten zu setzen. Versuche dann, neue ALU Module durch Ziehen aus der Modulliste zu erzeugen."
   //: /end
   ALU g0 ();   //: @(130, 184) /sz:(40, 40) /sn:0 /p:[ ]
@@ -274,17 +277,17 @@ endmodule
 
 //: /netlistBegin PAGE7
 module PAGE7();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
   //: /line:"<h3>Module benutzen</h3> <b>(Automatische Schnittstellenerzeugung)</b>"
   //: /line:""
   //: /line:"Die Schnittstelle eines Moduls enthält Größe und Form der Box und Ort und Namen der Ports:"
-  //: /line:"Am einfachsten ist es, die Schnittstelle automatisch generieren zu lassen.  Automatische"
+  //: /line:"Am einfachsten ist es, die Schnittstelle automatisch generieren zu lassen. Automatische"
   //: /line:"Erzeugung nutzt die in der Definition festgelegten Ports zur Generierung der Schnittstelle."
   //: /line:"Klicke auf den Modullisten-Tab <img src=modlist.gif bgcolor=gray>, um automatisch eine Schnittstelle für das \"bar\" Modul"
-  //: /line:"zu erzeugen. Klicke mit rechts auf \"bar\" und wähle <font color=red2>Schnittstelle&rarr; Automatisch erzeugen...</font>."  
+  //: /line:"zu erzeugen. Klicke mit rechts auf \"bar\" und wähle <font color=red2>Schnittstelle&rarr; Automatisch erzeugen...</font>."
   //: /line:"Dann ziehe mit einem Linksklick das \"bar\" Modul auf die Planfläche, um die neue Schnittstelle"
   //: /line:"zu sehen."
   //: /line:""
@@ -298,7 +301,7 @@ endmodule
 
 //: /netlistBegin PAGE5
 module PAGE5();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
@@ -317,17 +320,17 @@ endmodule
 
 //: /netlistBegin PAGE4
 module PAGE4();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g2 @(545,102) /sn:0 /anc:1
+  //: comment g2 @(506,99) /sn:0 /anc:1
   //: /line:"<font color=green4>Hinweis: Man kann auch eine Modulinstanz"
   //: /line:"aus der Baumansicht ziehen und plazieren,"
   //: /line:"es ist aber leichter mit der Listenansicht,"
   //: /line:"weil es da eine alphabetische Sicht"
   //: /line:"auf alle Module gibt.</font>"
   //: /end
-  //: comment g1 @(9,13) /anc:1
+  //: comment g99 @(9,13) /anc:1
   //: /line:"<h3>Module benutzen</h3> <b>(Modulinstanzen erzeugen)</b>"
   //: /line:""
   //: /line:"Am leichtesten läßt sich eine Modulinstanz erzeugen, wenn man den Modulnamen in der Modulliste findet"
@@ -343,27 +346,27 @@ endmodule
 
 //: /netlistBegin PAGE2
 module PAGE2();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g3 @(620,6) /sn:0 /anc:1
+  //: comment g3 @(548,6) /sn:0 /anc:1
   //: /line:"<img src=modlistfig.gif>"
   //: /end
-  //: comment g2 @(620,346) /sn:0 /anc:1
+  //: comment g2 @(551,339) /sn:0 /anc:1
   //: /line:"<font color=green4>Beispiel einer Modulbaumansicht</font>"
   //: /end
   //: comment g1 @(9,13) /anc:1
   //: /line:"<h3>Module benutzen</h3> <b>(Modulliste)</b>"
   //: /line:""
   //: /line:"Die Menge der zur aktuellen Schaltung gehörenden Module wird auf der linken Seite der "
-  //: /line:"Schnittstelle gezeigt.  Man kann zwischen einer <i>Baumansicht</i> <img src=modtree.gif bgcolor=gray> (siehe Beispiel) und einer"
-  //: /line:"<i>Listenansicht</i> <img src=modlist.gif bgcolor=gray> entscheiden.  Die Baumansicht zeigt die Modulhierarchie, beginnend mit"
+  //: /line:"Schnittstelle gezeigt. Man kann zwischen einer <i>Baumansicht</i> <img src=modtree.gif bgcolor=gray> (siehe Beispiel) und einer"
+  //: /line:"<i>Listenansicht</i> <img src=modlist.gif bgcolor=gray> entscheiden. Die Baumansicht zeigt die Modulhierarchie, beginnend mit"
   //: /line:"einem obersten Wurzelmodul, das durch <img src=document.gif> symbolisiert wird. Module, die noch zur Schaltung"
   //: /line:"gehören, aber nirgends mehr in der Hierarchie benutzt werden, sind im \"<img src=unused.gif> Unbenutzten\""
-  //: /line:"Zweig gelistet.  Klicke auf <img src=hboxopen.gif>, um einen Zweig im Baum zu öffnen."
+  //: /line:"Zweig gelistet. Klicke auf <img src=hboxopen.gif>, um einen Zweig im Baum zu öffnen."
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -372,7 +375,7 @@ endmodule
 
 //: /netlistBegin PAGE10
 module PAGE10();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g2 @(10,310) /sn:0 /R:14
@@ -383,7 +386,7 @@ module PAGE10();
   //: /line:""
   //: /line:"Die Modulschnittstelle kann direkt mit TkGate's Schnittstellenmodus editiert werden. Klicke auf das <img src=editintr.gif> <font color=red2>Schnittstelle</font>n Tab"
   //: /line:"über dem dem Haupteditierfeld, um in diesen Modus zu gelangen. Details zu Benutzung dieses Modus stehen in der"
-  //: /line:"TkGate Dokumentation.  Klicke auf den <img src=editmode.gif> <font color=red2>Edit</font> Tab, um zum normalen Editiermodus zurückzukehren."
+  //: /line:"TkGate Dokumentation. Klicke auf den <img src=editmode.gif> <font color=red2>Edit</font> Tab, um zum normalen Editiermodus zurückzukehren."
   //: /end
 
 endmodule
@@ -391,7 +394,7 @@ endmodule
 
 //: /netlistBegin bar
 module bar(Y, X, C, B, Z, A);
-//: interface  /sz:(56, 72) /bd:[ Li0>C(48/72) Li1>B(32/72) Li2>A(16/72) Ro0<Z(48/72) Ro1<Y(32/72) Ro2<X(16/72) ]
+//: interface  /sz:(56, 72) /bd:[ Li0>C(48/72) Li1>B(32/72) Li2>A(16/72) Ro0<Z(48/72) Ro1<Y(32/72) Ro2<X(16/72) ] /pd: 0 /pi: 0 /pe: 0 /pp: 0
 //: property pptype=0
 input B;    //: /sn:0 {0}(86,207)(116,207){1}
 //: {2}(118,205)(118,160)(133,160){3}
@@ -436,10 +439,9 @@ wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
   //: joint g9 (C) @(137, 260) /w:[ 2 1 8 -1 ]
   //: comment g15 @(22,25)
   //: /line:"Dies ist die Definiton für das Modul \"bar\". Ports A, B und C sind Eingänge und Ports X, Y und Z sind"
-  //: /line:"Ausgänge.  Versuche, einen zusätzlichen Ausgangsport \"W\" aus dem Ausgang des XOR Gatters unten zu erzeugen."
-  //: /line:"Durch Rechtsklick an der Position, wo der Port erzeugt werden soll, und Anwahl von <font color=red2>Bausteine &rarr;   Module &rarr;   Modulausgang</font>"
-  //: /line:"aus dem Popup Menu.  Gib als Netznamen \"W\" in die Dialog box ein."
-  //: /line:""
+  //: /line:"Ausgänge. Versuche, einen zusätzlichen Ausgangsport \"W\" aus dem Ausgang des XOR Gatters unten zu erzeugen."
+  //: /line:"Durch Rechtsklick an der Position, wo der Port erzeugt werden soll, und Anwahl von <font color=red2>Bausteine &rarr; Module &rarr; Modulausgang</font>"
+  //: /line:"aus dem Popup Menu. Gib als Netznamen \"W\" in die Dialog box ein."
   //: /line:""
   //: /end
   _GGXOR2 #(8) g17 (.I0(C), .I1(X), .Z(w3));   //: @(293,129) /sn:0 /w:[ 7 3 0 ]
@@ -453,97 +455,4 @@ wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1, Z);
-output Z;
-input I0;
-input I1;
-
-  assign #Diz Z = I0 ^ I1;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-input [7:0] I0, I1, I2, I3;
-input [1:0] S;
-output [7:0] Z;
-reg [7:0] Z;
-
-  always @(*)
-    begin
-      case (S)
-          2'h0: Z <= #Dsz I0;
-          2'h1: Z <= #Dsz I1;
-          2'h2: Z <= #Dsz I2;
-          2'h3: Z <= #Dsz I3;
-        default: Z <= #Dsz  2'h0;
-      endcase
-    end
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2x8 #(.Diz(1)) (I0, I1, Z);
-output [7:0] Z;
-input [7:0] I0;
-input [7:0] I1;
-
-  assign #Diz Z = I0 | I1;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-input CI;
-output CO;
-input [7:0] A,B;
-output [7:0] S;
-
-  specify
-    (A,B *> S) = Dab_s;
-    (A,B *> CO) = Dab_co;
-    (CI *> S) = Dci_s;
-    (CI *> CO) = Dci_co;
-  endspecify
-
-  assign {CO,S} = A + B + CI;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x8 #(.Diz(1)) (I0, I1, Z);
-output [7:0] Z;
-input [7:0] I0;
-input [7:0] I1;
-
-  assign #Diz Z = I0 & I1;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1, Z);
-output Z;
-input I0;
-input I1;
-
-  assign #Diz Z = I0 & I1;
-
-endmodule
-//: /builtinEnd
 

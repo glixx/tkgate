@@ -1,4 +1,4 @@
-Microcode Symbole (total=57):
+Microcode Symbols (total=57):
   ---------------------------------------
   _mbdi                          000000b3
   _mbdr                          0000008d
@@ -59,8 +59,8 @@ Microcode Symbole (total=57):
   xalu_rr                        00000012
 
 
-Macrocode Symbole (total=69):
-  Global         Lokal
+Macrocode Symbols (total=69):
+  Global         Local
   ---------------------------------------
   buf                            000005f8
   dscrim                         00000795

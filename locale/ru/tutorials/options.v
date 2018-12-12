@@ -36,6 +36,9 @@ module PAGE3();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
+  //: comment g1 @(134,181) /sn:0 /anc:1
+  //: /line:"<img src=example_bindings.gif>"
+  //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Настройка TkGate</h3> <b>(изменение стиля назначения клавиш)</b>"
   //: /line:""
@@ -56,6 +59,9 @@ module PAGE2();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
+  //: comment g1 @(116,149) /sn:0 /anc:1
+  //: /line:"<img src=example_name.gif>"
+  //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Настрока TkGate</h3> <b>(Установка персональной идентификации)</b>"
   //: /line:""

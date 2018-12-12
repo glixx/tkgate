@@ -1,12 +1,12 @@
 //
-// Menagerie Initialisierungsskript
+// Menagerie Initialization Script
 //
 initial
   begin
-    $readmemh("menagerie.mem");	// Lade den Speicherauszug aus Datei.
-    _reset = 1'b0;		// Setze Resetleitung
-    repeat (3)			// Rücke drei Taktzyklen vor
+    $readmemh("menagerie.mem");	// Load the memory file.
+    _reset = 1'b0;		// Assert reset line
+    repeat (3)			// Advance three clock steps
       @ (posedge clk);
-    # 10;			// Rücke 10 Schritte nach der pos. Taktflanke vor
-    _reset = 1'b1;		// Setze Resetleitung zurück
+    # 10;			// Advance 10 steps past positive clock edge
+    _reset = 1'b1;		// Unassert reset line
   end

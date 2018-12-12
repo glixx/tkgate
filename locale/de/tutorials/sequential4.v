@@ -2,8 +2,11 @@
 //: property encoding = "utf-8"
 //: property locale = "de"
 //: property prefix = "_GG"
-//: property title = "seqsim_tut.v"
+//: property title = "Sequential Simulation"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 //: require "timer"
 
 `timescale 1ns/1ns
@@ -34,17 +37,17 @@ wire w9;    //: /sn:0 {0}(205,262)(195,262){1}
   //: /line:"im Beispiel auf der rechten Seite. Das führt zum Halt des Simulators, wenn das reg_out Signal den hexadezimalen Wert 42 hat."
   //: /line:"Vergiß nicht, nach der Eingabe des Haltepunkts <img src=sim_go.gif bgcolor=gray> zu drücken."
   //: /end
-  //: SWITCH g3 (w4) @(307,295) /sn:0 /R:2 /w:[ 1 ] /st:1
+  //: SWITCH g3 (w4) @(307,295) /sn:0 /R:2 /w:[ 1 ] /st:1 /dn:0
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(w4), .CK(ck));   //: @(229,312) /sn:0 /w:[ 0 0 0 0 0 ]
   //: comment g1 @(10,410) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
-  //: comment g10 @(515,140) /sn:0 /anc:1
+  //: comment g10 @(565,96) /sn:0 /anc:1
   //: /line:"<img src=breakp_example.gif>"
   //: /line:""
-  //: /line:"<h3>Beispiel zur Haltepunkteingabe.</h3>"
+  //: /line:"<b>Beispiel zur Haltepunkteingabe.</b>"
   //: /end
-  //: DIP g6 (w7) @(213,212) /sn:0 /w:[ 0 ] /st:1
+  //: DIP g6 (w7) @(213,212) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: LED g7 (reg_out) @(289,366) /sn:0 /R:2 /w:[ 5 ] /type:2
   //: GROUND g9 (w3) @(266,278) /sn:0 /w:[ 0 ]
   _GGADD8 #(68, 70, 62, 64) g5 (.A(w7), .B(reg_out), .S(w2), .CI(w3), .CO(w9));   //: @(229,264) /sn:0 /w:[ 1 3 1 1 0 ]
@@ -52,74 +55,4 @@ wire w9;    //: /sn:0 {0}(205,262)(195,262){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGREG8 #(.Dsetup(1), .Dhold(1), .Dck_q(1)) (Q, D, EN, CLR, CK);
-  input CK,EN,CLR;
-  input  [7:0] D;
-  output  [7:0] Q;
-  reg 	  [7:0] Qreg;
- 
- // specify
-   // $setup(D,posedge CK, Dsetup);
-//    $hold(posedge CK,D, Dhold);
-//  endspecify
-
-  assign #Dck_q Q = Qreg;
-
-  always @(posedge CK or negedge CLR)
-    if (CLR === 1'b0)
-      Qreg = 8'b0;
-    else if (CK === 1'b1 && EN === 1'b0)
-      Qreg = D;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGCLOCK_P100_0_50 (Z);
-   output Z;
-   reg 	  Z =  1'b0;
-
-   initial #50
-     forever
-       begin
-	  Z =  1'b1;
-	  #50;
-	  Z =  1'b0;
-	  #50;
-       end
-   
-endmodule // clock
-//: /builtinEnd
 

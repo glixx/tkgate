@@ -2,9 +2,12 @@
 //: property encoding = "utf-8"
 //: property locale = "de"
 //: property prefix = "_GG"
-//: property title = "sim_tut.v"
+//: property title = "Combinational Simulation"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -36,18 +39,18 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
 
   _GGXOR2 #(8) g4 (.I0(A), .I1(B), .Z(w1));   //: @(234,240) /sn:0 /w:[ 0 7 3 ]
   _GGNAND2 #(4) g8 (.I0(w0), .I1(w6), .Z(C));   //: @(332,301) /sn:0 /w:[ 0 0 1 ]
-  //: SWITCH g3 (Cin) @(241,202) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g3 (Cin) @(241,202) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: comment g13 @(10,10) /anc:1
   //: /line:"<h3>Simulation von Schaltnetzen</h3> <b>(Setzen von Tastköpfen)</b>"
   //: /line:""
-  //: /line:"Drücke erneut die \"<img src=\"simstart.gif\"> <font color=red2>Simulieren</font>\" Taste zum Eintritt in den Simulationsmodus.  Klicke diesmal auf eine Leitung, (z.B. die"
+  //: /line:"Drücke erneut die \"<img src=\"simstart.gif\"> <font color=red2>Simulieren</font>\" Taste zum Eintritt in den Simulationsmodus. Klicke diesmal auf eine Leitung, (z.B. die"
   //: /line:"mit \"S\" bezeichnete) und wähle \"Tastkopf hinzufügen/löschen\" aus dem Popup Menu. Damit wird ein Tastkopf"
-  //: /line:"auf diese Leitung gesetzt und ein Logikanalysatorfenster öffnet sich.  Setze auf einige andere Leitung ebenfalls Tastköpfe und löse den "
+  //: /line:"auf diese Leitung gesetzt und ein Logikanalysatorfenster öffnet sich. Setze auf einige andere Leitung ebenfalls Tastköpfe und löse den "
   //: /line:"Simulator durch Druck auf den <img src=sim_go.gif bgcolor=gray> Knopf aus dem Pause-Zustand. Klicke auf die Schalter, um ihre Zustände zu ändern und"
   //: /line:"beobachte, wie sich die Ausgabe im Logikanalysator ändert."
   //: /end
   _GGNAND2 #(4) g2 (.I0(A), .I1(B), .Z(w6));   //: @(239,303) /sn:0 /w:[ 9 5 1 ]
-  //: SWITCH g1 (B) @(123,305) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g1 (B) @(123,305) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: joint g11 (w1) @(275, 240) /w:[ 1 -1 2 4 ]
   //: joint g10 (Cin) @(280, 235) /w:[ 6 5 -1 8 ]
   //: LED g28 (A) @(157,197) /sn:0 /w:[ 5 ] /type:0
@@ -55,7 +58,7 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   //: joint g6 (B) @(178, 305) /w:[ 4 6 3 -1 ]
   _GGXOR2 #(8) g7 (.I0(Cin), .I1(w1), .Z(S));   //: @(331,238) /sn:0 /w:[ 7 0 0 ]
   _GGNAND2 #(4) g9 (.I0(w1), .I1(Cin), .Z(w0));   //: @(278,272) /sn:0 /R:3 /w:[ 5 9 1 ]
-  //: comment g15 @(545,254) /sn:0 /anc:1
+  //: comment g15 @(585,254) /sn:0 /anc:1
   //: /line:"<font color=green4>Hinweis: Normalerweise simuliert TkGate"
   //: /line:"Schaltnetze, bis alle Signale einen stabilen"
   //: /line:"Zustand erreicht haben. Der Simulator"
@@ -66,13 +69,13 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   //: LED g25 (C) @(390,203) /sn:0 /w:[ 0 ] /type:0
   //: LED g29 (B) @(156,286) /sn:0 /w:[ 9 ] /type:0
   //: joint g5 (A) @(189, 237) /w:[ 1 2 -1 8 ]
-  //: comment g14 @(545,172) /sn:0 /anc:1
+  //: comment g14 @(583,172) /sn:0 /anc:1
   //: /line:"<font color=green4>Hinweis: Zusätzlich kann man"
   //: /line:"den aktuellen Wert einer Leitung"
-  //: /line:"sehen wenn man klickt und die" 
+  //: /line:"sehen wenn man klickt und die"
   //: /line:"Maustaste einige Sekunden gedrückt hält.</font>"
   //: /end
-  //: SWITCH g0 (A) @(125,217) /sn:0 /w:[ 7 ] /st:0
+  //: SWITCH g0 (A) @(125,217) /sn:0 /w:[ 7 ] /st:0 /dn:0
   //: LED g26 (Cin) @(280,184) /sn:0 /w:[ 3 ] /type:0
   //: LED g18 (S) @(360,203) /sn:0 /w:[ 1 ] /type:0
   //: comment g12 @(10,410) /sn:0 /R:14 /anc:1
@@ -82,31 +85,4 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 
