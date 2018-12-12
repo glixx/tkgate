@@ -4,3 +4,5 @@
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
 \language				hrvatski
+@opt.sidebar.width			*350
+@opt.tree.width				*200
