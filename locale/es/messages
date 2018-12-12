@@ -4,87 +4,94 @@
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
 \language				español
+@opt.sidebar.width			*400
+@opt.tree.width				*250
 
-b.new	Nuevo...
-b.dismiss	Volver
+b.new	Nuevo…
+b.dismiss	Descartar
 b.close	Cerrar
-b.ok	OK
-b.clear	Borrar
+b.ok	Aceptar
+b.clear	Vaciar
 b.cancel	Cancelar
 b.in	entrada
 b.out	salida
 b.inout	bidireccional
-b.browse	Visualizar...
+b.browse	Examinar…
 b.label	Etiqueta
 b.find	Buscar
-b.edit	Editar...
-b.add	Añadir...
-b.delete	Borrar
-b.remove	Borrar
+b.edit	Editar…
+b.add	Añadir…
+b.delete	Eliminar
+b.remove	Quitar
 b.apply	Aplicar
 b.anchor	Anclar
 b.tech	Tecnología
-tab.editintr	Interface
+tab.edit	Edición
+tab.editintr	Interfaz
 tab.simulate	Simular
-tab.cpath	Caminos críticos
-fpattern.vs	Ficheros de Script de Verilog
-fpattern.xbm	mapa de bits X11
-fpattern.all	Todos los Ficheros
+tab.cpath	Ruta crítica
+fpattern.v	Lista de redes de Verilog
+fpattern.vs	Secuencias de órdenes de Verilog
+fpattern.gdf	Archivo de retardo de TkGate
+fpattern.xbm	Mapa de bits de X11
+fpattern.mem	Archivos de imagen de memoria de TkGate
+fpattern.all	Todos los archivos
 module.tree	Árbol
 module.list	Lista
-module.box.libraries	Librerías
-sidetab.nets	Conexiones
+module.box.libraries	Bibliotecas
+sidetab.nets	Redes
 sidetab.ports	Puertos
-mm.add	Añadir...
-mm.delete	Borrar
-mm.edit	Editar...
+mm.add	Añadir…
+mm.delete	Eliminar
+mm.edit	Editar…
 mm.enable	Activado
 mm.disable	Desactivado
-menu.file	0:Fichero
+menu.file	0:Archivo
 menu.edit	0:Editar
 menu.tool	0:Herramientas
 menu.symbol	0:Símbolo
 menu.simulate	0:Simular
 menu.module	0:Módulo
-menu.interface	0:Interface
-menu.make	0:Insertar
+menu.interface	0:Interfaz
+menu.format	0:Formato
+menu.make	0:Componentes
 menu.help	0:Ayuda
-menu.file.new	0:Nuevo...
-menu.file.open	0:Abrir...
-menu.file.openlib	0:Abrir Libreria...
-menu.file.save	0:Salvar
-menu.file.saveas	5:Salvar como...
-menu.file.print	0:Imprimir...
+menu.file.new	0:Nuevo…
+menu.file.open	0:Abrir…
+menu.file.openlib	0:Gestor de bibliotecas…
+menu.file.save	0:Guardar
+menu.file.saveas	5:Guardar como…
+menu.file.print	0:Imprimir…
 menu.file.quit	0:Salir
-menu.file.cprop	0:Propiedades del circuito...
-menu.file.import	0:Importar Imagen...
-menu.file.export	0:Exportar Imagen...
+menu.file.cprop	0:Propiedades del circuito…
+menu.file.import	0:Importar imagen…
+menu.file.export	0:Exportar imagen…
 menu.edit.undo	0:Deshacer
 menu.edit.redo	0:Rehacer
 menu.edit.cut	0:Cortar
 menu.edit.copy	3:Copiar
 menu.edit.paste	0:Pegar
-menu.edit.selall	0:Seleccionar Todo
+menu.edit.selall	0:Seleccionar todo
 menu.edit.find	0:Buscar...
 menu.edit.zoomin	5:Acercar
 menu.edit.zoomout	5:Alejar
-menu.edit.resize	Redimensionar Mapa de bits
-menu.tool.move	0:Mover/Conectar
-menu.tool.delg	0:Borrar puerta
+menu.edit.resize	Redimensionar mapa de bits
+menu.tool.move	0:Mover/conectar
+menu.tool.delg	0:Eliminar componente
 menu.tool.cutw	0:Cortar cable
 menu.tool.inv	0:Invertir
 menu.tool.bitw	0:Anchura del bus
 menu.tool.debug	0:Depurar
 menu.tool.point	0:Punto
-menu.tool.line	0:Linea
+menu.tool.line	0:Línea
 menu.tool.rect	0:Rectángulo
 menu.tool.fillrect	0:Rellenar Rectángulo
 menu.tool.port	0:Puerto
-menu.tool.select	0:Seleccionar Región
-menu.tool.options	0:Opciones...
-menu.format.addport	4:Añadir Puerto
-menu.format.ioset	0:Seleccionar Tipo
-menu.format.del	0:Borrar
+menu.tool.select	0:Seleccionar región
+menu.tool.options	0:Opciones…
+menu.format.addport	4:Añadir puerto
+menu.format.ioset	0:Establecer tipo
+menu.format.del	0:Eliminar
 menu.format.rot	0:Rotación
 menu.format.algnv	6:Situar en Columna
 menu.format.algnh	6:Situar en Fila
@@ -96,15 +103,17 @@ menu.simulate.run	0:Modo continuo
 menu.simulate.pause	0:Pausa
 menu.simulate.step	0:Paso a paso (tiempo)
 menu.simulate.cycle	5:Paso a paso (nº ciclos)
-menu.simulate.break	0:Punto de ruptura...
-menu.simulate.script	1:Ejecutar Guión...
-menu.simulate.view	1:Ver Memoria...
+menu.simulate.break	0:Punto de interrupción…
+menu.simulate.script	1:Ejecutar secuencia de órdenes…
+menu.simulate.load	1:Cargar memoria…
+menu.simulate.dump	1:Volcar memoria…
+menu.simulate.view	1:Ver memoria…
 menu.module.open	0:Abrir
 menu.module.close	0:Cerrar
-menu.module.new	0:Nuevo...
-menu.module.del	0:Borra...
-menu.module.copy	1:Copia...
-menu.module.rename	0:Renombra...
+menu.module.new	0:Nuevo…
+menu.module.del	0:Eliminar…
+menu.module.copy	1:Copiar…
+menu.module.rename	0:Cambiar nombre…
 menu.module.prop	0:Propiedades...
 menu.module.interface	0:Interface
 menu.module.interface.edit	0:Editar...
@@ -112,7 +121,7 @@ menu.help.about	0:Acerca de...
 menu.help.license	0:Licencia...
 menu.help.doc	0:Documentación...
 menu.help.tut	1:Tutoriales
-menu.help.home	1:Página Principal
+menu.help.home	1:Sitio web
 menu.help.example	1:Ejemplos
 menu.scope_file	0:Fichero
 menu.scope_sim	0:Simular
@@ -130,14 +139,14 @@ menu.scope_sim.script	1:Ejecutar Guión...
 menu.scope_help.about	0:Acerca de...
 menu.scope_help.license	0:Licencia...
 menu.scope_help.doc	0:Documentación...
-mod.intf	Interface
-port.title	TkGate: Propiedades del Puerto
-port.parms	Parámetros de Puerto
+mod.intf	Interfaz
+port.title	TkGate: Propiedades del puerto
+port.parms	Parámetros de puerto
 port.in	Entrada
 port.out	Salida
-port.inout	EntradaSalida
+port.inout	Entrada/salida
 gm.signals	Señales
-gm.io	Entrada/Salida
+gm.io	E/S
 gm.gate	Puerta
 gm.rgate	Reducción
 gm.msi	MSI
@@ -145,16 +154,16 @@ gm.alu	ALU
 gm.mem	Memoria
 gm.mod	Módulo
 gm.comment	Comentario
-gm.script	Script Verilog
+gm.script	Secuencia de órdenes de Verilog
 gm.frame	Marco
 gm.io.switch	Conmutador
 gm.io.dip	Interruptores DIP
-gm.io.clock	Señal de Reloj
+gm.io.clock	Reloj
 gm.io.led	LED
-gm.io.ledbar	Barra de LEDs
-gm.io.ledhex	7-Seg. LED (HEXADECIMAL)
-gm.io.leddec	7-Seg. LED (DECIMAL)
-gm.io.ledseg	7-Seg. LED (Directo)
+gm.io.ledbar	Barra de LED
+gm.io.ledhex	LED 7 sgms. (HEXADECIMAL)
+gm.io.leddec	LED 7 sgms. (DECIMAL)
+gm.io.ledseg	LED 7 sgms. (directo)
 gm.io.tty	TTY (Terminal)
 gm.gate.and	AND
 gm.gate.nand	NAND
@@ -214,26 +223,36 @@ pop.wire.clearalllabel	Limpiar Todas las Etiquetas
 pop.wire.showlabel	Mostrar Etiqueta
 pop.gate.open	Abrir
 pop.gate.close	Cerrar
-pop.gate.addport	Añadir Puerto
-pop.gate.addin	Añadir Entrada...
-pop.gate.addout	Añadir Salida...
-pop.gate.addinout	Añadir EntradaSalida...
-pop.gate.delete	Borrar
-pop.gate.ioset	Seleccionar Tipo
-pop.module.new	Nuevo...
-pop.module.del	Borrar...
-pop.module.copy	Copiar...
-pop.module.rename	Renombra...
-pop.simulate.end	Terminar Simulación
-pop.simulate.begin	Comenzar Simulación
+pop.gate.prop	Propiedades de instancia…
+pop.gate.addport	Añadir puerto
+pop.gate.addin	Añadir entrada…
+pop.gate.addout	Añadir salida…
+pop.gate.addinout	Añadir entrada/salida…
+pop.gate.anchor	Anclar/desanclar
+pop.gate.delete	Eliminar
+pop.gate.ioset	Establecer tipo
+pop.module.new	Nuevo…
+pop.module.del	Eliminar…
+pop.module.copy	Copiar…
+pop.module.rename	Cambiar nombre…
+pop.module.prop	Propiedades de módulo…
+pop.module.int	Editar interfaz…
+pop.simulate.end	Terminar simulación
+pop.simulate.begin	Comenzar simulación
 pop.simulate.run	Ejecutar
 pop.simulate.pause	Pausar
-pop.simulate.dump	Volcar Memoria...
-pop.simulate.view	Ver Memoria...
-pop.interface	Interface
-pop.interface.edit	Editar...
+pop.simulate.load	Cargar memoria…
+pop.simulate.dump	Volcar memoria…
+pop.simulate.view	Ver memoria…
+pop.interface	Interfaz
+pop.interface.set	Predeterminar
+pop.interface.edit	Editar…
+pop.interface.auto	Generación automática…
+pop.interface.replace	Reemplazar
 pop.igen.type	Tipo
-pop.igen.delete	Borrar
+pop.igen.side	Lado
+pop.igen.size	Tamaño
+pop.igen.delete	Eliminar
 pop.igen.in	entrada
 pop.igen.out	salida
 pop.igen.inout	bidireccional
@@ -242,19 +261,35 @@ pop.igen.right	derecha
 pop.igen.top	arriba
 pop.igen.bottom	abajo
 pop.igen.other	otro
+pop.library.mgr	Gestor de bibliotecas…
 symed.tab.select	Seleccionado
-ifile	Fichero
+symed.link	Enlazar seleccionados con deseleccionados
+memview.title	Visor de memoria
+comment.empty	[Clique dos veces para añadir texto.]
+ifile	Archivo
 imodule	Módulo
 iblmodule	Módulos
 iports	Puertos
 ibits	Bits:
 itype	Tipo:
 db.mod.name	Nombre
-db.mod.file	Nombre del Fichero
+db.mod.file	Nombre del archivo
 db.mod.type	Tipo
+db.mod.dataprot	Impedir la edición de la definición del módulo.
+db.mod.intfprot	Impedir todos los cambios a la interfaz.
+db.mod.edprot	Impedir cambios a la interfaz en el modo de edición.
 db.mod.props	Propiedades
+db.mod.inuse.0	El módulo no está utilizándose.
+db.mod.inuse.1	El módulo está utilizándose.
+db.mod.lmod.0	El módulo no se ha modificado desde que se cargó.
+db.mod.lmod.1	El módulo se ha modificado desde que se cargó.
+db.mod.smod.0	El módulo no se ha modificado desde que se guardó.
+db.mod.smod.1	El módulo se ha modificado desde que se guardó.
+db.mod.islib.1	El módulo forma parte de la biblioteca [%s].
+db.mod.islib.0	El módulo no forma parte de ninguna biblioteca.
 db.mod.hdl	Verilog HDL
-db.err.caption	Lista de Errores
+db.err.title	TkGate: Lista de errores
+db.err.caption	Lista de errores
 db.net.name	Nombre Conexión
 db.net.hide	Nombre Oculto
 db.net.bits	Anchura Bus

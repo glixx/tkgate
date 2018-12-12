@@ -4,6 +4,8 @@
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
 \language				íslenska
+@opt.sidebar.width			*350
+@opt.tree.width				*200
 
 itype	Gerð:
 db.gate.details	Ítarlegar

@@ -6,7 +6,8 @@
 \language				deutsch
 @db.gate.comment.width		*500
 @db.gate.comment.height		*450
-@opt.sidebar.width			*250
+@opt.sidebar.width			*350
+@opt.tree.width				*250
 
 b.new	Neu...
 b.dismiss	Beenden

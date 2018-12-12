@@ -4,6 +4,8 @@
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
 \language				slovenčina
+@opt.sidebar.width			*400
+@opt.tree.width				*250
 
 itype	Typ:
 db.gate.details	Podrobnosti

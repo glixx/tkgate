@@ -4,6 +4,8 @@
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
 \language				türkçe
+@opt.sidebar.width			*400
+@opt.tree.width				*250
 
 itype	Tip:
 opt.treelabel	Ayarlar

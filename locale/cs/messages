@@ -4,6 +4,8 @@
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
 \language				čeština
+@opt.sidebar.width			*400
+@opt.tree.width				*250
 
 b.dismiss	Zrušit
 b.close	Zavřít
@@ -57,6 +59,8 @@ menu.tool.cutw	0:Přerušit Vodič
 menu.tool.inv	0:Invertovat
 menu.tool.bitw	0:Bitová Šířka
 menu.tool.debug	0:Debug
+menu.tool.port	0:Konektor
+menu.format.addport	4:Přidat konektor
 menu.format.algnv	6:Uspořádat Ver.
 menu.format.algnh	6:Uspořádat Horiz.
 menu.simulate.begin	0:Začít Simulaci
@@ -158,7 +162,13 @@ gm.mod.in	Vstup Modulu
 gm.mod.out	Výstup Module
 gm.mod.inout	Vst./Výst. Modulu
 pop.gate.close	Zavřít
+pop.gate.addport	Přidat konektor
 pop.gate.delete	Smazat
+pop.module.claim	Konvertovat...
+pop.simulate.step	Posun o Jednotku(y) Času
+pop.simulate.cycle	Posun o Hodinový Cyklus
+pop.simulate.load	Nahrát Obraz Paměti...
+pop.simulate.dump	Uložit Obraz Paměti...
 pop.interface.edit	Upravit...
 pop.igen.type	Typ
 pop.igen.delete	Smazat
@@ -208,6 +218,9 @@ db.gate.delay	Zpoždění
 db.gate.stddelay	Standardní Zpoždění
 db.gate.custdelay	Definované Zpoždění
 db.gate.delete	Smazat
+db.gate.ff.normal.hdr	Normální
+db.gate.jkff.normal.hdr	Normální
+db.gate.tap.lbl.bit	Dioda:
 db.gate.led.type	Typ LED
 db.gate.led.bit.hdr	Dioda
 db.gate.led.bar.hdr	Panel diod
@@ -215,6 +228,14 @@ db.gate.led.hex.hdr	7-Segment (HEX)
 db.gate.led.dec.hdr	7-Segment (DEC)
 db.gate.led.seg.hdr	7-Segment (Přímý kód)
 db.hdl.cancel	Zrušit
+cpath.cloops	-begin-
+Ve vašem obvodu byla zjištěna kombinační smyčka.
+Aby bylo možno provést analýzu zpožděni v obvodu,
+musíte buď přerušit smyčku, nebo označit některé
+z hradel ve smyčce jako bod "Přerušení citlivé
+cesty". Sítě, v nichž byla zjištěna smyčka, jsou
+vypsány níže.
+-end-
 print.printer	Tiskárna:
 print.file	Soubor
 print.prcmd	Příkaz k Tisku:
@@ -238,6 +259,7 @@ print.partition	Rozdělit velké moduly do více stránek.
 print.incidx	Vložit index.
 print.incgraph	Vložit graf hierarchie.
 print.4up	Tisknout malé moduly 4 na stránku.
+print.rangeselection	Výběr Rozsahu
 print.fulltr	Úplná Stopa
 print.parttr	Část Stopy
 print.start	Start
@@ -309,6 +331,7 @@ igen.port	Konektor
 igen.type	Typ
 igen.bits	Bity
 igen.delete	Smazat
+blklst.claim.title	TKGate: Konvertovat Modul
 blklst.claim	Konvertovat Modul
 blklst.to	Do
 blklst.new.cap	Nový Modul
@@ -488,8 +511,16 @@ Bitová šířka - Použijte tento nástroj
 na změnu bitové šířky vodičů. Vložte počet
 bitů do políčka v pravém dolním rohu okna.
 -end-
+ho.ipanel.deleteport	Smazat vybraný konektor.
+ho.mod.open	Otevřít vybraný modul.
+ho.mod.type.root	Hlavní Modul
 ho.undo	Zpět o předchozí krok(y).
 ho.redo	Vpřed o zrušený krok(y).
+ho.tab.simulate	-begin-
+Spustit simulátor, otevřít logický analyzátor
+a vykonat inicializační skripty, pokud jsou definovány.
+-end-
+ho.tab.cpath	Najít citlivou cestu v obvodu.
 ho.simgo	-begin-
 Spustit simulátor v režimu stálého běhu.
 Poznámka: Simulace kombinačních obvodů
