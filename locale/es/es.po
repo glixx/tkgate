@@ -8,6 +8,7 @@
 # ##############################################################################
 # 
 # Translators:
+# Adolfo Jayme-Barrientos, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Andrey V. Skvotsov <starling13@gmail.com>, 2015
 # Miguel de Dios Matias <tres.14159@gmail.com>, 2016
@@ -16,8 +17,8 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
-"PO-Revision-Date: 2018-12-05 07:15+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"PO-Revision-Date: 2018-12-11 16:59+0000\n"
+"Last-Translator: Adolfo Jayme-Barrientos\n"
 "Language-Team: Spanish (http://www.transifex.com/Magic/tkgate/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,12 +29,12 @@ msgstr ""
 #: en/messages:106
 msgctxt "b.new"
 msgid "New..."
-msgstr "Nuevo..."
+msgstr "Nuevo…"
 
 #: en/messages:107
 msgctxt "b.dismiss"
 msgid "Dismiss"
-msgstr "Volver"
+msgstr "Descartar"
 
 #: en/messages:108
 msgctxt "b.close"
@@ -43,12 +44,12 @@ msgstr "Cerrar"
 #: en/messages:109
 msgctxt "b.ok"
 msgid "OK"
-msgstr "OK"
+msgstr "Aceptar"
 
 #: en/messages:110
 msgctxt "b.clear"
 msgid "Clear"
-msgstr "Borrar"
+msgstr "Vaciar"
 
 #: en/messages:111
 msgctxt "b.cancel"
@@ -73,7 +74,7 @@ msgstr "bidireccional"
 #: en/messages:115
 msgctxt "b.browse"
 msgid "Browse..."
-msgstr "Visualizar..."
+msgstr "Examinar…"
 
 #: en/messages:116
 msgctxt "b.label"
@@ -88,22 +89,22 @@ msgstr "Buscar"
 #: en/messages:118
 msgctxt "b.edit"
 msgid "Edit..."
-msgstr "Editar..."
+msgstr "Editar…"
 
 #: en/messages:119
 msgctxt "b.add"
 msgid "Add..."
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: en/messages:120
 msgctxt "b.delete"
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: en/messages:121
 msgctxt "b.remove"
 msgid "Remove"
-msgstr "Borrar"
+msgstr "Quitar"
 
 #: en/messages:122
 msgctxt "b.apply"
@@ -123,12 +124,12 @@ msgstr "Tecnología"
 #: en/messages:130
 msgctxt "tab.edit"
 msgid "Editing"
-msgstr ""
+msgstr "Edición"
 
 #: en/messages:131
 msgctxt "tab.editintr"
 msgid "Interface"
-msgstr "Interface"
+msgstr "Interfaz"
 
 #: en/messages:132
 msgctxt "tab.simulate"
@@ -138,37 +139,37 @@ msgstr "Simular"
 #: en/messages:133
 msgctxt "tab.cpath"
 msgid "Critical Path"
-msgstr "Caminos críticos"
+msgstr "Ruta crítica"
 
 #: en/messages:139
 msgctxt "fpattern.v"
 msgid "Verilog Netlist"
-msgstr ""
+msgstr "Lista de redes de Verilog"
 
 #: en/messages:140
 msgctxt "fpattern.vs"
 msgid "Verilog Script Files"
-msgstr "Ficheros de Script de Verilog"
+msgstr "Secuencias de órdenes de Verilog"
 
 #: en/messages:141
 msgctxt "fpattern.gdf"
 msgid "TkGate Delay File"
-msgstr ""
+msgstr "Archivo de retardo de TkGate"
 
 #: en/messages:142
 msgctxt "fpattern.xbm"
 msgid "X11 bitmap"
-msgstr "mapa de bits X11"
+msgstr "Mapa de bits de X11"
 
 #: en/messages:143
 msgctxt "fpattern.mem"
 msgid "TkGate Memory Image Files"
-msgstr ""
+msgstr "Archivos de imagen de memoria de TkGate"
 
 #: en/messages:144
 msgctxt "fpattern.all"
 msgid "All Files"
-msgstr "Todos los Ficheros"
+msgstr "Todos los archivos"
 
 #: en/messages:150
 msgctxt "module.tree"
@@ -183,12 +184,12 @@ msgstr "Lista"
 #: en/messages:152
 msgctxt "module.box.libraries"
 msgid "Libraries"
-msgstr "Librerías"
+msgstr "Bibliotecas"
 
 #: en/messages:158
 msgctxt "sidetab.nets"
 msgid "Nets"
-msgstr "Conexiones"
+msgstr "Redes"
 
 #: en/messages:159
 msgctxt "sidetab.ports"
@@ -198,17 +199,17 @@ msgstr "Puertos"
 #: en/messages:166
 msgctxt "mm.add"
 msgid "Add..."
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: en/messages:167
 msgctxt "mm.delete"
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: en/messages:168
 msgctxt "mm.edit"
 msgid "Edit..."
-msgstr "Editar..."
+msgstr "Editar…"
 
 #: en/messages:169
 msgctxt "mm.enable"
@@ -223,7 +224,7 @@ msgstr "Desactivado"
 #: en/messages:180
 msgctxt "menu.file"
 msgid "0:File"
-msgstr "0:Fichero"
+msgstr "0:Archivo"
 
 #: en/messages:181
 msgctxt "menu.edit"
@@ -253,17 +254,17 @@ msgstr "0:Módulo"
 #: en/messages:186
 msgctxt "menu.interface"
 msgid "0:Interface"
-msgstr "0:Interface"
+msgstr "0:Interfaz"
 
 #: en/messages:187
 msgctxt "menu.format"
 msgid "0:Format"
-msgstr ""
+msgstr "0:Formato"
 
 #: en/messages:188
 msgctxt "menu.make"
 msgid "0:Components"
-msgstr "0:Insertar"
+msgstr "0:Componentes"
 
 #: en/messages:189
 msgctxt "menu.help"
@@ -273,32 +274,32 @@ msgstr "0:Ayuda"
 #: en/messages:191
 msgctxt "menu.file.new"
 msgid "0:New..."
-msgstr "0:Nuevo..."
+msgstr "0:Nuevo…"
 
 #: en/messages:192
 msgctxt "menu.file.open"
 msgid "0:Open..."
-msgstr "0:Abrir..."
+msgstr "0:Abrir…"
 
 #: en/messages:193
 msgctxt "menu.file.openlib"
 msgid "0:Library Manager..."
-msgstr "0:Abrir Libreria..."
+msgstr "0:Gestor de bibliotecas…"
 
 #: en/messages:194
 msgctxt "menu.file.save"
 msgid "0:Save"
-msgstr "0:Salvar"
+msgstr "0:Guardar"
 
 #: en/messages:195
 msgctxt "menu.file.saveas"
 msgid "5:Save As..."
-msgstr "5:Salvar como..."
+msgstr "5:Guardar como…"
 
 #: en/messages:196
 msgctxt "menu.file.print"
 msgid "0:Print..."
-msgstr "0:Imprimir..."
+msgstr "0:Imprimir…"
 
 #: en/messages:197
 msgctxt "menu.file.quit"
@@ -308,17 +309,17 @@ msgstr "0:Salir"
 #: en/messages:198
 msgctxt "menu.file.cprop"
 msgid "0:Circuit Properties..."
-msgstr "0:Propiedades del circuito..."
+msgstr "0:Propiedades del circuito…"
 
 #: en/messages:199
 msgctxt "menu.file.import"
 msgid "0:Import Image..."
-msgstr "0:Importar Imagen..."
+msgstr "0:Importar imagen…"
 
 #: en/messages:200
 msgctxt "menu.file.export"
 msgid "0:Export Image..."
-msgstr "0:Exportar Imagen..."
+msgstr "0:Exportar imagen…"
 
 #: en/messages:202
 msgctxt "menu.edit.undo"
@@ -353,7 +354,7 @@ msgstr ""
 #: en/messages:208
 msgctxt "menu.edit.selall"
 msgid "0:Select All"
-msgstr "0:Seleccionar Todo"
+msgstr "0:Seleccionar todo"
 
 #: en/messages:209
 msgctxt "menu.edit.find"
@@ -418,17 +419,17 @@ msgstr ""
 #: en/messages:222
 msgctxt "menu.edit.resize"
 msgid "Resize Bitmap"
-msgstr "Redimensionar Mapa de bits"
+msgstr "Redimensionar mapa de bits"
 
 #: en/messages:224
 msgctxt "menu.tool.move"
 msgid "0:Move/Connect"
-msgstr "0:Mover/Conectar"
+msgstr "0:Mover/conectar"
 
 #: en/messages:225
 msgctxt "menu.tool.delg"
 msgid "0:Delete Component"
-msgstr "0:Borrar puerta"
+msgstr "0:Eliminar componente"
 
 #: en/messages:226
 msgctxt "menu.tool.cutw"
@@ -458,7 +459,7 @@ msgstr "0:Punto"
 #: en/messages:231
 msgctxt "menu.tool.line"
 msgid "0:Line"
-msgstr "0:Linea"
+msgstr "0:Línea"
 
 #: en/messages:232
 msgctxt "menu.tool.rect"
@@ -478,22 +479,22 @@ msgstr "0:Puerto"
 #: en/messages:235
 msgctxt "menu.tool.select"
 msgid "0:Select Region"
-msgstr "0:Seleccionar Región"
+msgstr "0:Seleccionar región"
 
 #: en/messages:236
 msgctxt "menu.tool.options"
 msgid "0:Options..."
-msgstr "0:Opciones..."
+msgstr "0:Opciones…"
 
 #: en/messages:238
 msgctxt "menu.format.addport"
 msgid "4:Add Port"
-msgstr "4:Añadir Puerto"
+msgstr "4:Añadir puerto"
 
 #: en/messages:239
 msgctxt "menu.format.ioset"
 msgid "0:Set Type"
-msgstr "0:Seleccionar Tipo"
+msgstr "0:Establecer tipo"
 
 #: en/messages:240
 msgctxt "menu.format.anchor"
@@ -513,7 +514,7 @@ msgstr ""
 #: en/messages:243
 msgctxt "menu.format.del"
 msgid "0:Delete"
-msgstr "0:Borrar"
+msgstr "0:Eliminar"
 
 #: en/messages:244
 msgctxt "menu.format.settech"
@@ -613,27 +614,27 @@ msgstr "5:Paso a paso (nº ciclos)"
 #: en/messages:266
 msgctxt "menu.simulate.break"
 msgid "0:Breakpoint..."
-msgstr "0:Punto de ruptura..."
+msgstr "0:Punto de interrupción…"
 
 #: en/messages:267
 msgctxt "menu.simulate.script"
 msgid "1:Exec. Script..."
-msgstr "1:Ejecutar Guión..."
+msgstr "1:Ejecutar secuencia de órdenes…"
 
 #: en/messages:268
 msgctxt "menu.simulate.load"
 msgid "1:Load Memory..."
-msgstr ""
+msgstr "1:Cargar memoria…"
 
 #: en/messages:269
 msgctxt "menu.simulate.dump"
 msgid "1:Dump Memory..."
-msgstr ""
+msgstr "1:Volcar memoria…"
 
 #: en/messages:270
 msgctxt "menu.simulate.view"
 msgid "1:View Memory..."
-msgstr "1:Ver Memoria..."
+msgstr "1:Ver memoria…"
 
 #: en/messages:272
 msgctxt "menu.module.open"
@@ -648,22 +649,22 @@ msgstr "0:Cerrar"
 #: en/messages:274
 msgctxt "menu.module.new"
 msgid "0:New..."
-msgstr "0:Nuevo..."
+msgstr "0:Nuevo…"
 
 #: en/messages:275
 msgctxt "menu.module.del"
 msgid "0:Delete..."
-msgstr "0:Borra..."
+msgstr "0:Eliminar…"
 
 #: en/messages:276
 msgctxt "menu.module.copy"
 msgid "1:Copy..."
-msgstr "1:Copia..."
+msgstr "1:Copiar…"
 
 #: en/messages:277
 msgctxt "menu.module.rename"
 msgid "0:Rename..."
-msgstr "0:Renombra..."
+msgstr "0:Cambiar nombre…"
 
 #: en/messages:278
 msgctxt "menu.module.claim"
@@ -733,7 +734,7 @@ msgstr "1:Tutoriales"
 #: en/messages:293
 msgctxt "menu.help.home"
 msgid "1:Home Page"
-msgstr "1:Página Principal"
+msgstr "1:Sitio web"
 
 #: en/messages:294
 msgctxt "menu.help.example"
@@ -843,17 +844,17 @@ msgstr "0:Documentación..."
 #: en/messages:321
 msgctxt "mod.intf"
 msgid "Interface"
-msgstr "Interface"
+msgstr "Interfaz"
 
 #: en/messages:323
 msgctxt "port.title"
 msgid "TkGate: Port Properties"
-msgstr "TkGate: Propiedades del Puerto"
+msgstr "TkGate: Propiedades del puerto"
 
 #: en/messages:324
 msgctxt "port.parms"
 msgid "Port Parameters"
-msgstr "Parámetros de Puerto"
+msgstr "Parámetros de puerto"
 
 #: en/messages:325
 msgctxt "port.in"
@@ -868,7 +869,7 @@ msgstr "Salida"
 #: en/messages:327
 msgctxt "port.inout"
 msgid "InOut"
-msgstr "EntradaSalida"
+msgstr "Entrada/salida"
 
 #: en/messages:335
 msgctxt "gm.signals"
@@ -878,7 +879,7 @@ msgstr "Señales"
 #: en/messages:336
 msgctxt "gm.io"
 msgid "I/O"
-msgstr "Entrada/Salida"
+msgstr "E/S"
 
 #: en/messages:337
 msgctxt "gm.gate"
@@ -918,7 +919,7 @@ msgstr "Comentario"
 #: en/messages:344
 msgctxt "gm.script"
 msgid "Verilog Script"
-msgstr "Script Verilog"
+msgstr "Secuencia de órdenes de Verilog"
 
 #: en/messages:345
 msgctxt "gm.frame"
@@ -963,7 +964,7 @@ msgstr ""
 #: en/messages:356
 msgctxt "gm.io.clock"
 msgid "Clock"
-msgstr "Señal de Reloj"
+msgstr "Reloj"
 
 #: en/messages:358
 msgctxt "gm.io.led"
@@ -973,22 +974,22 @@ msgstr "LED"
 #: en/messages:359
 msgctxt "gm.io.ledbar"
 msgid "LED Bar"
-msgstr "Barra de LEDs"
+msgstr "Barra de LED"
 
 #: en/messages:360
 msgctxt "gm.io.ledhex"
 msgid "7-Seg. LED (HEX)"
-msgstr "7-Seg. LED (HEXADECIMAL)"
+msgstr "LED 7 sgms. (HEXADECIMAL)"
 
 #: en/messages:361
 msgctxt "gm.io.leddec"
 msgid "7-Seg. LED (DEC)"
-msgstr "7-Seg. LED (DECIMAL)"
+msgstr "LED 7 sgms. (DECIMAL)"
 
 #: en/messages:362
 msgctxt "gm.io.ledseg"
 msgid "7-Seg. LED (Direct)"
-msgstr "7-Seg. LED (Directo)"
+msgstr "LED 7 sgms. (directo)"
 
 #: en/messages:364
 msgctxt "gm.io.tty"
@@ -1328,32 +1329,32 @@ msgstr "Cerrar"
 #: en/messages:448
 msgctxt "pop.gate.prop"
 msgid "Instance Properties..."
-msgstr ""
+msgstr "Propiedades de instancia…"
 
 #: en/messages:449
 msgctxt "pop.gate.addport"
 msgid "Add Port"
-msgstr "Añadir Puerto"
+msgstr "Añadir puerto"
 
 #: en/messages:450
 msgctxt "pop.gate.addin"
 msgid "Add Input..."
-msgstr "Añadir Entrada..."
+msgstr "Añadir entrada…"
 
 #: en/messages:451
 msgctxt "pop.gate.addout"
 msgid "Add Output..."
-msgstr "Añadir Salida..."
+msgstr "Añadir salida…"
 
 #: en/messages:452
 msgctxt "pop.gate.addinout"
 msgid "Add InOut..."
-msgstr "Añadir EntradaSalida..."
+msgstr "Añadir entrada/salida…"
 
 #: en/messages:453
 msgctxt "pop.gate.anchor"
 msgid "Anchor/Unanchor"
-msgstr ""
+msgstr "Anclar/desanclar"
 
 #: en/messages:454
 msgctxt "pop.gate.settech"
@@ -1363,32 +1364,32 @@ msgstr ""
 #: en/messages:455
 msgctxt "pop.gate.delete"
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: en/messages:456
 msgctxt "pop.gate.ioset"
 msgid "Set Type"
-msgstr "Seleccionar Tipo"
+msgstr "Establecer tipo"
 
 #: en/messages:458
 msgctxt "pop.module.new"
 msgid "New..."
-msgstr "Nuevo..."
+msgstr "Nuevo…"
 
 #: en/messages:459
 msgctxt "pop.module.del"
 msgid "Delete..."
-msgstr "Borrar..."
+msgstr "Eliminar…"
 
 #: en/messages:460
 msgctxt "pop.module.copy"
 msgid "Copy..."
-msgstr "Copiar..."
+msgstr "Copiar…"
 
 #: en/messages:461
 msgctxt "pop.module.rename"
 msgid "Rename..."
-msgstr "Renombra..."
+msgstr "Cambiar nombre…"
 
 #: en/messages:462
 msgctxt "pop.module.claim"
@@ -1403,22 +1404,22 @@ msgstr ""
 #: en/messages:464
 msgctxt "pop.module.prop"
 msgid "Module Properties..."
-msgstr ""
+msgstr "Propiedades de módulo…"
 
 #: en/messages:465
 msgctxt "pop.module.int"
 msgid "Edit Interface..."
-msgstr ""
+msgstr "Editar interfaz…"
 
 #: en/messages:468
 msgctxt "pop.simulate.end"
 msgid "End Simulation"
-msgstr "Terminar Simulación"
+msgstr "Terminar simulación"
 
 #: en/messages:469
 msgctxt "pop.simulate.begin"
 msgid "Begin Simulation"
-msgstr "Comenzar Simulación"
+msgstr "Comenzar simulación"
 
 #: en/messages:470
 msgctxt "pop.simulate.addprobe"
@@ -1463,27 +1464,27 @@ msgstr ""
 #: en/messages:478
 msgctxt "pop.simulate.load"
 msgid "Load Memory..."
-msgstr ""
+msgstr "Cargar memoria…"
 
 #: en/messages:479
 msgctxt "pop.simulate.dump"
 msgid "Dump Memory..."
-msgstr "Volcar Memoria..."
+msgstr "Volcar memoria…"
 
 #: en/messages:480
 msgctxt "pop.simulate.view"
 msgid "View Memory..."
-msgstr "Ver Memoria..."
+msgstr "Ver memoria…"
 
 #: en/messages:482
 msgctxt "pop.interface"
 msgid "Interface"
-msgstr "Interface"
+msgstr "Interfaz"
 
 #: en/messages:483
 msgctxt "pop.interface.set"
 msgid "Set As Default"
-msgstr ""
+msgstr "Predeterminar"
 
 #: en/messages:484
 msgctxt "pop.interface.update"
@@ -1498,17 +1499,17 @@ msgstr ""
 #: en/messages:486
 msgctxt "pop.interface.edit"
 msgid "Edit..."
-msgstr "Editar..."
+msgstr "Editar…"
 
 #: en/messages:487
 msgctxt "pop.interface.auto"
 msgid "Auto Generate..."
-msgstr ""
+msgstr "Generación automática…"
 
 #: en/messages:488
 msgctxt "pop.interface.replace"
 msgid "Replace"
-msgstr ""
+msgstr "Reemplazar"
 
 #: en/messages:490
 msgctxt "pop.igen.type"
@@ -1518,17 +1519,17 @@ msgstr "Tipo"
 #: en/messages:491
 msgctxt "pop.igen.side"
 msgid "Side"
-msgstr ""
+msgstr "Lado"
 
 #: en/messages:492
 msgctxt "pop.igen.size"
 msgid "Size"
-msgstr ""
+msgstr "Tamaño"
 
 #: en/messages:493
 msgctxt "pop.igen.delete"
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: en/messages:494
 msgctxt "pop.igen.in"
@@ -1573,7 +1574,7 @@ msgstr "otro"
 #: en/messages:503
 msgctxt "pop.library.mgr"
 msgid "Library Manager..."
-msgstr ""
+msgstr "Gestor de bibliotecas…"
 
 #: en/messages:504
 msgctxt "pop.library.close"
@@ -1593,12 +1594,12 @@ msgstr "Seleccionado"
 #: en/messages:512
 msgctxt "symed.link"
 msgid "Link selected to unselected"
-msgstr ""
+msgstr "Enlazar seleccionados con deseleccionados"
 
 #: en/messages:517
 msgctxt "memview.title"
 msgid "Memory Viewer"
-msgstr ""
+msgstr "Visor de memoria"
 
 #: en/messages:518
 msgctxt "memview.exp"
@@ -1622,12 +1623,12 @@ msgstr ""
 #: en/messages:529
 msgctxt "comment.empty"
 msgid "[Double click to add text.]"
-msgstr ""
+msgstr "[Clique dos veces para añadir texto.]"
 
 #: en/messages:534
 msgctxt "ifile"
 msgid "File"
-msgstr "Fichero"
+msgstr "Archivo"
 
 #: en/messages:535
 msgctxt "imodule"
@@ -1662,7 +1663,7 @@ msgstr "Nombre"
 #: en/messages:545
 msgctxt "db.mod.file"
 msgid "File Name"
-msgstr "Nombre del Fichero"
+msgstr "Nombre del archivo"
 
 #: en/messages:546
 msgctxt "db.mod.type"
@@ -1677,17 +1678,17 @@ msgstr ""
 #: en/messages:548
 msgctxt "db.mod.dataprot"
 msgid "Prevent editing of module definition."
-msgstr ""
+msgstr "Impedir la edición de la definición del módulo."
 
 #: en/messages:549
 msgctxt "db.mod.intfprot"
 msgid "Prevent all interface changes."
-msgstr ""
+msgstr "Impedir todos los cambios a la interfaz."
 
 #: en/messages:550
 msgctxt "db.mod.edprot"
 msgid "Prevent edit mode interface changes."
-msgstr ""
+msgstr "Impedir cambios a la interfaz en el modo de edición."
 
 #: en/messages:551
 msgctxt "db.mod.props"
@@ -1697,42 +1698,42 @@ msgstr "Propiedades"
 #: en/messages:552
 msgctxt "db.mod.inuse.0"
 msgid "Module is not in use."
-msgstr ""
+msgstr "El módulo no está utilizándose."
 
 #: en/messages:553
 msgctxt "db.mod.inuse.1"
 msgid "Module is in use."
-msgstr ""
+msgstr "El módulo está utilizándose."
 
 #: en/messages:554
 msgctxt "db.mod.lmod.0"
 msgid "Module has not been modified since loading."
-msgstr ""
+msgstr "El módulo no se ha modificado desde que se cargó."
 
 #: en/messages:555
 msgctxt "db.mod.lmod.1"
 msgid "Module has been modified since loading."
-msgstr ""
+msgstr "El módulo se ha modificado desde que se cargó."
 
 #: en/messages:556
 msgctxt "db.mod.smod.0"
 msgid "Module has not been modified since saving."
-msgstr ""
+msgstr "El módulo no se ha modificado desde que se guardó."
 
 #: en/messages:557
 msgctxt "db.mod.smod.1"
 msgid "Module has been modified since saving."
-msgstr ""
+msgstr "El módulo se ha modificado desde que se guardó."
 
 #: en/messages:558
 msgctxt "db.mod.islib.1"
 msgid "Module is part of [%s] library."
-msgstr ""
+msgstr "El módulo forma parte de la biblioteca [%s]."
 
 #: en/messages:559
 msgctxt "db.mod.islib.0"
 msgid "Module is not a library module."
-msgstr ""
+msgstr "El módulo no forma parte de ninguna biblioteca."
 
 #: en/messages:560
 msgctxt "db.mod.netlist"
@@ -1763,12 +1764,12 @@ msgstr ""
 #: en/messages:578
 msgctxt "db.err.title"
 msgid "TkGate: Error List"
-msgstr ""
+msgstr "TkGate: Lista de errores"
 
 #: en/messages:579
 msgctxt "db.err.caption"
 msgid "Error List"
-msgstr "Lista de Errores"
+msgstr "Lista de errores"
 
 #: en/messages:580
 msgctxt "db.err.explain.warn"
