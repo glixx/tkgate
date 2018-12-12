@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "it"
 //: property prefix = "_GG"
 //: property title = "combinational.v"
 //: property showSwitchNets = 0
@@ -64,19 +64,21 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: SWITCH g4 (B0) @(76,159) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: LED g37 (S2) @(310,416) /sn:0 /R:3 /w:[ 0 ] /type:0
   //: comment g34 @(351,22)
-  //: /line:"This circuit is a simple three-bit adder."
+  //: /line:"Questo circuito è un sommatore da tre bit."
   //: /line:""
-  //: /line:"Start the simualtor by pressing the \"play\""
-  //: /line:"button from the button bar. Then, set probes"
-  //: /line:"by double clicking on the S0, S1, S2 and C3"
-  //: /line:"wires (and any additional wires you wish to"
-  //: /line:"probe). Press the \"play\" button again to"
-  //: /line:"enter continuous simulation mode. In this"
-  //: /line:"mode, whenever you change a switch value"
-  //: /line:"(by clicking on it), the simulator will"
-  //: /line:"simulate until all values have stabalized."
-  //: /line:"End the simulation by pressing the \"stop\""
-  //: /line:"button on the button bar."
+  //: /line:"Attiva la simulazione cliccando sull'icona"
+  //: /line:"del \"Logic Analyzer\"."
+  //: /line:"Con un doppio click, aggancia sonde ai segnali "
+  //: /line:"S0, S1, S2 e C3 ed a tutti gli altri segnali"
+  //: /line:"che vuoi visualizzare. "
+  //: /line:"Attiva la simulazione continua cliccando "
+  //: /line:"su \"Play\". In questa modalità di funzionamento, "
+  //: /line:"appena commuti uno degli interruttori (click "
+  //: /line:"sull'interruttore), il simulatore si riattiva "
+  //: /line:"e calcola finchè tutti i valori sono di nuovo "
+  //: /line:"stabili."
+  //: /line:"Termina la simulazione con un click su \"stop\""
+  //: /line:"nella barra degli utensili."
   //: /end
   _GGXOR2 #(8) g13 (.I0(A1), .I1(B1), .Z(w10));   //: @(180,255) /sn:0 /w:[ 0 5 3 ] /eb:0
   //: SWITCH g3 (w0) @(217,37) /sn:0 /R:3 /w:[ 3 ] /st:0 /dn:0

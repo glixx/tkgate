@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "it"
 //: property prefix = "_GG"
 //: property title = "Creating a Circuit"
 //: property useExtBars = 0
@@ -67,7 +67,7 @@ wire w5;    //: /sn:0 {0}(309,232)(289,232)(289,140)(240,140){1}
   //: /line:"<img src=\"makejoint_example.gif\">"
   //: /end
   //: comment g9 @(10,10) /anc:1
- //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<h3>Creating a Simple Circuit</h3>"
   //: /line:""
   //: /line:"Now make the final connection. Grab the lower input terminal of the AND gate"
   //: /line:"and drag it down near the wire between the lower switch and the OR gate. Release"
@@ -144,9 +144,6 @@ wire w5;    //: /sn:0 {0}(204,142)(219,142){1}
   //: /line:""
   //: /line:"Finally, connect the wires. Begin by grabbing the end of the wire leading from one of the"
   //: /line:"switches with the left mouse button and drag it to the upper input terminal of the AND gate."
-  //: /end
-  //: comment g0 @(579,61) /sn:0 /anc:1
-  //: /line:"<img src=\"connect_example.gif\">"
   //: /end
   //: comment g0 @(550,71) /sn:0 /anc:1
   //: /line:"<img src=\"connect_example.gif\">"

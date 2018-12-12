@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "it"
 //: property prefix = "_GG"
 //: property title = "Sequential Simulation"
 //: property showSwitchNets = 0
@@ -28,7 +28,7 @@ wire w9;    //: /sn:0 {0}(205,262)(195,262){1}
   //: GROUND g4 (w0) @(288,334) /sn:0 /w:[ 1 ]
   //: joint g8 (reg_out) @(289, 349) /w:[ 2 -1 1 4 ]
   //: comment g13 @(14,12) /anc:1
- //: /line:"<h3>Sequential Simulation</h3> <b>(breakpoints)</b>"
+  //: /line:"<h3>Sequential Simulation</h3> <b>(breakpoints)</b>"
   //: /line:""
   //: /line:"You can use breakpoints to simulate a circuit until some condition holds. To add a"
   //: /line:"breakpoint click on the <img src=sim_break.gif bgcolor=gray> tab on the information box below the canvas, and press"

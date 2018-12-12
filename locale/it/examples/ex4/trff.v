@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "it"
 //: property prefix = "_GG"
 //: property title = "Flip-flop at the transistor level"
 //: property showSwitchNets = 0
@@ -61,21 +61,21 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: joint g11 (S) @(589, 94) /anc:1 /w:[ 1 -1 2 8 ]
   //: VDD g16 (w17) @(631,292) /sn:0 /anc:1 /w:[ 1 ]
   //: comment g28 @(26,299) /anc:1
-  //: /line:"3) Return the \"S\" switch to the off position"
-  //: /line:"and press the space bar 10 to 20 times. The"
-  //: /line:"\"Q\" and \"_Q\" signals will remain constant."
+  //: /line:"3) Rimetti l'interruttore \"S\" in posizione \"off\""
+  //: /line:"e inserisci di nuovo 10 .. 20 spazi."
+  //: /line:"\"Q\" e \"_Q\" mantengono il loro valore."
   //: /end
   //: joint g10 (Q) @(654, 383) /anc:1 /w:[ 1 2 8 14 ]
   //: LED g32 (Q) @(772,383) /sn:0 /R:3 /w:[ 0 ] /type:0
   //: SWITCH g19 (R) @(425,353) /sn:0 /anc:1 /w:[ 7 ] /st:0 /dn:0
   //: comment g27 @(25,193) /anc:1
-  //: /line:"2) Press the space bar 10 to 20 times to"
-  //: /line:"advance the simulator. Note that both the"
-  //: /line:"\"Q\" and \"_Q\" signals are in the unknown state."
-  //: /line:"Now turn on the \"S\" switch (by clicking on it)"
-  //: /line:"and press the space bar another 10 to 20"
-  //: /line:"times. The \"Q\" signal will go high and the"
-  //: /line:"\"_Q\" signal will go low."
+  //: /line:"2) Inserisci da 10 a 20 spazi per far avanzare"
+  //: /line:"la simulazione."
+  //: /line:"Osserva che sia \"Q\" che \"_Q\" hanno valore"
+  //: /line:"sconosciuto."
+  //: /line:"Ora clicca sull'interruttore \"S\" e inserisci "
+  //: /line:"di nuovo fra 10 e 20 spazi. "
+  //: /line:"\"Q\" passa al livello alto e \"_Q\" a quello basso."
   //: /line:""
   //: /end
   //: SWITCH g6 (S) @(419,94) /sn:0 /anc:1 /w:[ 7 ] /st:0 /dn:0
@@ -88,16 +88,16 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: /line:"<a href=\"../index.v\">[BACK]</a>"
   //: /end
   //: comment g29 @(26,355) /anc:1
-  //: /line:"4) Now turn the \"R\" switch off by clicking"
-  //: /line:"on it and press the space bar 10 to 20 times."
-  //: /line:"The \"_Q\" signal will go high and the \"Q\""
-  //: /line:"signal will go low."
+  //: /line:"4) Ora metti \"R\" il posizione \"on\" (click)"
+  //: /line:"e inserisci ancora 10 .. 20 spazi."
+  //: /line:"\"_Q\" commuta allo stato alto mentre \"Q\""
+  //: /line:"a quello basso."
   //: /end
   //: GROUND g17 (w14) @(601,461) /sn:0 /anc:1 /w:[ 5 ]
   //: comment g25 @(26,42)
-  //: /line:"This circuit is a simple flip-flop composed"
-  //: /line:"of two CMOS NOR gates implemented at the"
-  //: /line:"transistor level."
+  //: /line:"Questo circuito è un semplice flip-flop realizzato "
+  //: /line:"a livello di transistor con due porte NOR in tecnica"
+  //: /line:"CMOS."
   //: /end
   //: GROUND g5 (w13) @(606,237) /sn:0 /anc:1 /w:[ 5 ]
   _GGPMOS #(2, 1) g14 (.Z(Q), .S(w16), .G(R));   //: @(614,353) /sn:0 /anc:1 /w:[ 11 0 0 ]
@@ -120,9 +120,9 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: joint g18 (_Q) @(584, 323) /anc:1 /w:[ 14 13 -1 16 ]
   //: LED g33 (S) @(503,74) /sn:0 /w:[ 5 ] /type:0
   //: comment g30 @(23,420) /anc:1
-  //: /line:"5) Return the \"R\" switch to the off position"
-  //: /line:"and press the space bar 10 to 20 times. The"
-  //: /line:"\"Q\" and \"_Q\" signals will remain constant."
+  //: /line:"5) Ritorna con \"R\" in posizione \"off\""
+  //: /line:"e inserisci 10 .. 20 spazi."
+  //: /line:"\"Q\" e \"_Q\" mantengono il loro valore."
   //: /end
 
 endmodule

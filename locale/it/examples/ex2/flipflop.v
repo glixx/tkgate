@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "it"
 //: property prefix = "_GG"
 //: property title = "flipflop.v"
 //: property showSwitchNets = 0
