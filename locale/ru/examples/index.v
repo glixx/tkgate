@@ -48,7 +48,7 @@ module main;    //: root_module
   //: /line:"D-защёлок."
   //: /end
   //: comment g6 @(20,552) /sn:0
-  //: /line:" <font size=5><a href=\"@T/welcome.v\">Вернуться на главную страницу</a></font> "
+  //: /line:"<font size=5><a href=\"@T/welcome.v\">Вернуться на главную страницу</a></font>"
   //: /end
   //: comment g7 @(787,27) /sn:0
   //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"
@@ -71,7 +71,7 @@ module main;    //: root_module
   //: /line:"Простой 3-разрядный сумматор, который"
   //: /line:"можно запускать в симуляторе."
   //: /line:"Нажмите кнопку запуска, затем"
-  //: /line:"изменяйте значения переключателй и"
+  //: /line:"изменяйте значения переключателей и"
   //: /line:"смотрите, как меняются состояния"
   //: /line:"светодиодов."
   //: /line:""
@@ -79,4 +79,7 @@ module main;    //: root_module
 
 endmodule
 //: /netlistEnd
+
+
+`timescale 1ns/1ns
 

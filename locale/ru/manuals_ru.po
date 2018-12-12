@@ -68,7 +68,7 @@ msgstr ""
 "\n"
 
 msgid ""
-"2) To create a new textual verilog modules, press <img src=\"blk_new.gif\"> "
+"2) To create a new textual verilog modules, press <img src=\"blk_new.gif\">\n"
 "and set the type to HDL."
 msgstr ""
 "2) Чтобы создать новые текстовые модули Verilog нажмите <img src=\"blk_new.gif\">\n"
@@ -240,6 +240,11 @@ msgstr "<a href=\"#/PAGE8\">&lang;ВОЗВРАТ К РУКОВОДСТВУ&rang;
 
 msgid "<a href=\"welcome.v\">Go back to the TkGate main page.</a>"
 msgstr "<a href=\"welcome.v\">Вернуться к стартовой схеме TkGate.</a>"
+
+msgid ""
+"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
+msgstr ""
+"<font size=5><a href=\"@T/welcome.v\">Вернуться на главную страницу</a></font>"
 
 msgid ""
 "A module is an encapsulated piece of logic that can be made\n"
@@ -1728,7 +1733,7 @@ msgid "Sequential Simulation"
 msgstr "Последовательная симуляция"
 
 msgid ""
-"Simulator Script Example:\n"
+"<b>Simulator Script Example:</b>\n"
 "<font face=courier>\n"
 "initial\n"
 "  begin\n"

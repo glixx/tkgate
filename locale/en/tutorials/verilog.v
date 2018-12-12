@@ -77,7 +77,8 @@ wire w8;    //: /sn:0 {0}(102,205)(146,205)(146,177)(164,177){1}
   //: SWITCH g2 (w6) @(91,136) /sn:0 /w:[ 1 ] /st:1 /dn:0
   //: SWITCH g1 (w5) @(91,101) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: comment g6 @(49,232) /anc:1
-  //: /line:"2) To create a new textual verilog modules, press <img src=\"blk_new.gif\"> and set the type to HDL."
+  //: /line:"2) To create a new textual verilog modules, press <img src=\"blk_new.gif\">"
+  //: /line:"and set the type to HDL."
   //: /end
   //: comment g9 @(8,9) /anc:1
   //: /line:"<h3>Textual Verilog</h3>"

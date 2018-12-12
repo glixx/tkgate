@@ -3,6 +3,9 @@
 //: property locale = "en"
 //: property prefix = "_GG"
 //: property title = "index.v"
+//: property showSwitchNets = 0
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 

@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "последовательная симуляция"
+//: property title = "Последовательная симуляция"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -34,7 +34,7 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"написаны на <b>Verilog</b>. В режиме симуляции нажмите кнопку <img src=sim_script.gif bgcolor=gray> для загрузки скрипта"
   //: /line:"симуляции. Скрипт можно использовать для добавления и удаления зондов, управления"
   //: /line:"временем в симуляции, устанавливать значения сигналов и помещать сообщения в"
-  //: /line:"область сообщений TkGate (<img src=log.gif bgcolor=gray>). Обратитесь к документации TkGate 2.1 за информацией"
+  //: /line:"область сообщений TkGate (<img src=log.gif bgcolor=gray>). Обратитесь к документации TkGate за информацией"
   //: /line:"о написании скриптов симуляции."
   //: /end
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(clr), .CK(ck));   //: @(215,291) /sn:0 /w:[ 0 0 0 0 0 ]
@@ -46,13 +46,13 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"<font face=courier>"
   //: /line:"initial"
   //: /line:"  begin"
-  //: /line:"    $display(\"%t: Start of script\",$time);"
+  //: /line:"    $display(\"%t: Запуск скрипта\",$time);"
   //: /line:"    $tkg$probe(ck, reg_out, clr);"
-  //: /line:"    $display(\"%t: Set probes\",$time);"
+  //: /line:"    $display(\"%t: Установка зондов\",$time);"
   //: /line:"    clr = 1'b0;"
   //: /line:"    #200;"
   //: /line:"    clr = 1'b1;"
-  //: /line:"    $display(\"%t: Done with reset\",$time);"
+  //: /line:"    $display(\"%t: Завершено со сбросом\",$time);"
   //: /line:"    #500;"
   //: /line:"    $stop();"
   //: /line:"  end"

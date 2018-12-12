@@ -56,7 +56,7 @@ do
     sed -i 's|\]|BBBBB|g' $lang/$lang1.po
     # ""EOL" -> "
     sed -i "s|\"\"/\n\"|\"|g" $lang/$lang1.po
-    # delete empty strings
+    # delete EOL
     cat $lang/$lang1.po | tr -d '\n' > $lang/$lang2.po
     # \n -> ZZZZZ
     sed -i 's|\\n|ZZZZZ|g' $lang/$lang2.po

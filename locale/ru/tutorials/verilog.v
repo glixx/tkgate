@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "texver_tut.v"
+//: property title = "Текстовый Verilog"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -78,13 +78,13 @@ wire w8;    //: /sn:0 {0}(102,205)(146,205)(146,177)(164,177){1}
   //: SWITCH g1 (w5) @(91,101) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: comment g6 @(49,232) /anc:1
   //: /line:"2) Чтобы создать новые текстовые модули Verilog нажмите <img src=\"blk_new.gif\">"
-  //: /line:"и установите тип \"YDL\"."
+  //: /line:"и установите тип \"HDL\"."
   //: /end
   //: comment g9 @(8,9) /anc:1
   //: /line:"<h3>Текстовый Verilog</h3>"
   //: /line:""
   //: /line:"1) Щёлкните правой кнопкой мыши по модулю"
-  //: /line:"<b>foo</b> снизу и выберите <font color=blue>Открыть</blue>."
+  //: /line:"снизу и выберите <font color=blue>Открыть</blue>."
   //: /end
   //: comment g7 @(10,310) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"

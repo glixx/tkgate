@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "комбинационная симуляция"
+//: property title = "Комбинационная симуляция"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1

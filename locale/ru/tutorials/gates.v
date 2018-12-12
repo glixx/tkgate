@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "edit1_tut.v"
+//: property title = "Редактирование вентилей"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1

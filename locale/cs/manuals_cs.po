@@ -68,7 +68,7 @@ msgstr ""
 "\n"
 
 msgid ""
-"2) To create a new textual verilog modules, press <img src=\"blk_new.gif\"> "
+"2) To create a new textual verilog modules, press <img src=\"blk_new.gif\">\n"
 "and set the type to HDL."
 msgstr ""
 
@@ -215,6 +215,10 @@ msgid "<a href=\"#/PAGE8\">&lang;BACK TO TUTORIAL&rang;</a>"
 msgstr ""
 
 msgid "<a href=\"welcome.v\">Go back to the TkGate main page.</a>"
+msgstr ""
+
+msgid ""
+"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
 msgstr ""
 
 msgid ""
@@ -1129,7 +1133,7 @@ msgid "Sequential Simulation"
 msgstr "Simulace Sekv. Obvodu"
 
 msgid ""
-"Simulator Script Example:\n"
+"<b>Simulator Script Example:</b>\n"
 "<font face=courier>\n"
 "initial\n"
 "  begin\n"

@@ -223,24 +223,22 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: SWITCH g26 (b) @(56,134) /sn:0 /w:[ 0 ] /st:1 /dn:1
   //: comment g0 @(279,271)
   //: /line:"<h1 color=green4>Добро пожаловать в TkGate <value-of name=\"tkgate-version\"></h1>"
-  //: /line:"<h2 color=red>Альфа версия</h2>"
   //: /line:""
   //: /line:"<value-of name=\"tkgate-copyright\">"
-  //: /line:"  TKGate предоставляется БЕЗ ВСЯКИХ ГАРАНТИЙ; см. пункт меню <b>Справка &rarr;"
-  //: /line:"  Лицензионное соглашение</b> для получения дополнительной информации о"
-  //: /line:"  лицензии и гарантиях. Сообщайте о проблемах на <a href=\"mailto:starling13@gmail.com\"><value-of name=\"tkgate-mailcontact\"></a> (по-английски)."
-  //: /line:"  Русская локализация: А.В. Скворцов <a href=\"mailto:starling13@gmail.com\">starling13@gmail.com</a>"
-  //: /line:"  [выпуск от <value-of name=\"tkgate-release-date\">]"
+  //: /line:"TKGate предоставляется БЕЗ ВСЯКИХ ГАРАНТИЙ; см. пункт меню <b>Справка&rarr;"
+  //: /line:"Лицензионное соглашение</b> для получения дополнительной информации о"
+  //: /line:"лицензии и гарантиях. Сообщайте о проблемах на <a href=\"mailto:starling13@gmail.com\"><value-of name=\"tkgate-mailcontact\"></a> (по-английски)."
+  //: /line:"[выпуск от <value-of name=\"tkgate-release-date\">]"
   //: /line:""
   //: /line:"<h3>Перейдите по одной из ссылок чтобы начать использовать TkGate!</h3>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@T/index.v\">* Перейти к учебному руководству</a>"
+  //: /line:"<a href=\"file:///@T/index.v\">* Перейти к учебному руководству</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@E/index.v\">* Перейти к примерам схем</a>"
+  //: /line:"<a href=\"file:///@E/index.v\">* Перейти к примерам схем</a>"
   //: /line:""
-  //: /line:"   <a href=\"action:newFile\">* Редактировать новую схему</a>"
+  //: /line:"<a href=\"action:newFile\">* Редактировать новую схему</a>"
   //: /line:""
-  //: /line:"   <a href=\"file:///@H/doc/en/index.html\">* Просмотр документации</a>"
+  //: /line:"<a href=\"file:///@H/doc/en/index.html\">* Просмотр документации</a>"
   //: /end
   //: SWITCH data_select (w28) @(52,268) /sn:0 /w:[ 0 ] /st:0 /dn:1
   //: SWITCH g12 (w1) @(340,87) /sn:0 /w:[ 0 ] /st:0 /dn:1

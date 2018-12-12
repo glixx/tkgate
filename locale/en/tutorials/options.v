@@ -37,9 +37,6 @@ module PAGE3();
 //: enddecls
 
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<img src=example_bindings.gif>"
-  //: /end
-  //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Customizing TkGate</h3> <b>(setting your key beinding style)</b>"
   //: /line:""
   //: /line:"You can the basic key-binding style that you would like to use on the <font color=red2>Interface</font> tab of the options dialog"
