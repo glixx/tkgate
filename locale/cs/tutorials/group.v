@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
-//: property title = "Group Editing Features"
+//: property title = "Skupinove Úpravy"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
@@ -60,7 +60,7 @@ wire w9;    //: /sn:0 {0}(314,186)(280,186){1}
   //: SWITCH g25 (a0) @(149,183) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g29 (a0) @(212, 183) /w:[ 2 -1 1 4 ]
   //: comment g5 @(10,10) /anc:1
-//: /line:"<h3>Group Editing Features</h3> <b>(incremental selection)</b>"
+  //: /line:"<h3>Group Editing Features</h3> <b>(incremental selection)</b>"
   //: /line:""
   //: /line:"You can add or remove gates from the current selection by holding the <font color=red2>Control</font> key while"
   //: /line:"you click on them."
@@ -164,7 +164,7 @@ wire w9;    //: /sn:0 {0}(305,199)(277,199){1}
   //: SWITCH g25 (a0) @(157,196) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g29 (a0) @(220, 196) /w:[ 2 -1 1 4 ]
   //: comment g5 @(10,10) /anc:1
- //: /line:"<h3>Group Editing Features</h3> <b>(clipboard operations)</b>"
+  //: /line:"<h3>Group Editing Features</h3> <b>(clipboard operations)</b>"
   //: /line:""
   //: /line:"You can use Cut and Paste operations to cut or copy a group of gates to the clipboard"
   //: /line:"and paste it somewhere else. Select a group of gates then press the <img src=edit_cut.gif bgcolor=gray> or <img src=edit_copy.gif bgcolor=gray> buttons to"

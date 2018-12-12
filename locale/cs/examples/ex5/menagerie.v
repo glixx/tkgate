@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
 //: property title = "menagerie.v"
 //: property showSwitchNets = 0
@@ -207,13 +207,13 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   IUNIT iunit (._CLR(_reset), .CK(clk), .IR(DATA), .COUT(w35), ._Z(w34), ._GT(w33), ._LT(w32), ._rdpc(w59), ._incmar(w0), ._rd(w44), .spc(w43), ._ldhmdr(w42), ._ldpc(w41), ._ldmar(w40), ._ldmdr(w39), ._incpc(w38), ._rdmdr(w37), ._wrt(w36), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), .SA(w45));   //: @(456, 84) /sz:(132, 353) /p:[ Ti0>9 Ti1>9 Bi0>3 Ri0>0 Ri1>0 Ri2>0 Ri3>0 Lo0<0 Lo1<0 Lo2<0 Lo3<0 Lo4<0 Lo5<0 Lo6<0 Lo7<0 Lo8<0 Lo9<0 Lo10<0 Ro0<0 Ro1<0 Ro2<0 Ro3<0 Ro4<0 Ro5<0 Ro6<0 Ro7<0 Ro8<0 Ro9<0 Ro10<0 Ro11<0 Ro12<0 Ro13<0 ]
   //: joint g6 (_reset) @(351, 31) /w:[ 3 -1 4 6 ]
   //: comment g9 @(13,47) /anc:1
-  //: /line:"This is the"
-  //: /line:"system clock."
+  //: /line:"Toto jsou "
+  //: /line:"systémové hodiny."
   //: /line:""
   //: /end
   //: comment g7 @(13,12) /sn:0 /anc:1
-  //: /line:"This is the"
-  //: /line:"reset switch."
+  //: /line:"Toto je nulovací"
+  //: /line:"spínač."
   //: /end
   MEMORY memory (._CLR(_reset), .CK(clk), ._incmar(w0), ._rdpc(w59), ._ldhmdr(w42), .spc(w43), ._rd(w44), ._wrt(w36), ._rdmdr(w37), ._incpc(w38), ._ldmdr(w39), ._ldmar(w40), ._ldpc(w41), .DATA(DATA));   //: @(268, 84) /sz:(125, 353) /p:[ Ti0>7 Ti1>7 Ri0>1 Ri1>1 Ri2>1 Ri3>1 Ri4>1 Ri5>1 Ri6>1 Ri7>1 Ri8>1 Ri9>1 Ri10>1 Bt0=5 ]
   //: comment g39 @(11,544) /sn:0 /anc:1
@@ -423,10 +423,10 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g55 (CK) @(524, 436) /w:[ 6 -1 8 5 ]
   //: joint g3 (_CLR) @(512, 199) /w:[ 5 -1 6 12 ]
   //: comment g89 @(37,543) /sn:0
-  //: /line:"This is the memory address line."
-  //: /line:"The address can be selected from"
-  //: /line:"the MAR (Memory Address Register)"
-  //: /line:"or from the PC (Program Counter)."
+  //: /line:"Toto je adresní vodič paměti."
+  //: /line:"Adresa může být vybrána z"
+  //: /line:"paměťového registru adres (MAR)"
+  //: /line:"nebo z programového čítače (PC)."
   //: /end
   //: IN g2 (_rd) @(480,616) /sn:0 /w:[ 9 ]
   //: joint g65 (mdr) @(722, 676) /w:[ 1 2 12 -1 ]
@@ -437,15 +437,15 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGREG16 #(10, 10, 20) PC (.Q(PC), .D(w19), .EN(w14), .CLR(_CLR), .CK(CK));   //: @(188,262) /w:[ 0 1 1 9 15 ]
   //: GROUND g1 (w17) @(496,598) /sn:0 /w:[ 1 ]
   //: joint g64 (_wrt) @(422, 706) /w:[ 1 2 -1 8 ]
-  //: frame g16 @(87,659) /sn:0 /wi:786 /ht:351 /tx:"TTY Control"
+  //: frame g16 @(87,659) /sn:0 /wi:786 /ht:351 /tx:"Øízení TTY"
   _GGMUX4x8 #(12, 12) g11 (.I0(mdrin), .I1(w34), .I2(TD), .I3(w24), .S(w27), .Z(w13));   //: @(577,507) /sn:0 /R:2 /w:[ 5 1 1 1 0 1 ] /ss:0 /do:1
   assign {w35, CTS, DSR} = w33; //: CONCAT g50  @(790,853) /sn:0 /R:1 /w:[ 0 0 1 0 ] /dr:0 /tp:0 /drp:0
   _GGADD16 #(132, 134, 126, 128) g28 (.A(w6), .B(w21), .S(w9), .CI(w20), .CO(w22));   //: @(178,85) /sn:0 /w:[ 0 1 3 1 0 ]
   //: joint g78 (PC) @(188, 350) /w:[ 6 5 8 -1 ]
   //: comment g87 @(212,793) /anc:1
-  //: /line:"These dip switches specify the"
-  //: /line:"addresses for the tty status"
-  //: /line:"and data registers."
+  //: /line:"Tyto dip spínače specifikují"
+  //: /line:"adresy pro stav terminálu"
+  //: /line:"a jeho datové registry."
   //: /end
   //: joint g10 (CK) @(128, 333) /w:[ 12 14 -1 11 ]
   //: joint g27 (DATA) @(373, 165) /w:[ 4 -1 14 3 ]
@@ -484,7 +484,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGNOR2 #(6) g83 (.I0(!_incmar), .I1(!_ldmar), .Z(w46));   //: @(427,312) /sn:0 /R:2 /w:[ 0 1 1 ] /eb:0
   //: joint g74 (PC) @(188, 311) /w:[ 2 1 -1 4 ]
   //: joint g56 (CK) @(618, 813) /w:[ 2 -1 4 1 ]
-  //: frame g14 @(536,27) /sn:0 /wi:372 /ht:394 /tx:"MDR Control"
+  //: frame g14 @(536,27) /sn:0 /wi:372 /ht:394 /tx:"Øízení MDR"
   //: joint g5 (_CLR) @(407, 199) /w:[ 7 -1 8 10 ]
   assign w34 = {w16, RTS, DTR}; //: CONCAT g47  @(555,835) /sn:0 /R:1 /w:[ 0 1 1 1 ] /dr:0 /tp:0 /drp:1
   //: joint g44 (w18) @(274, 708) /w:[ 6 5 -1 8 ]
@@ -509,7 +509,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGXOR2x16 #(8) g40 (.I0(w18), .I1(w40), .Z(w30));   //: @(312,763) /sn:0 /w:[ 9 1 1 ] /eb:0
   _GGMUX2x8 #(8, 8) g54 (.I0(mdr), .I1(w1), .S(w26), .Z(w36));   //: @(790,740) /sn:0 /w:[ 0 0 1 0 ] /ss:0 /do:0
   //: joint g81 (_incmar) @(325, 264) /w:[ 4 6 -1 3 ]
-  //: frame g93 @(349,467) /sn:0 /wi:389 /ht:160 /tx:"Main Memory"
+  //: frame g93 @(349,467) /sn:0 /wi:389 /ht:160 /tx:"Hlavní Paměť"
   assign w27 = {w31, w15}; //: CONCAT g46  @(638,667) /sn:0 /R:1 /w:[ 1 7 3 ] /dr:0 /tp:0 /drp:1
   //: joint g45 (mdrin) @(559, 552) /w:[ 2 4 1 -1 ]
   _GGNOR2 #(6) g35 (.I0(!_incpc), .I1(!_ldpc), .Z(w14));   //: @(244,129) /sn:0 /w:[ 0 0 0 ] /eb:0
@@ -519,12 +519,12 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGBUF16 #(4) g22 (.I(DATA), .Z(w4));   //: @(574,165) /sn:0 /w:[ 9 0 ]
   _GGNOR2 #(6) g70 (.I0(!_ldhmdr), .I1(!_ldmdr), .Z(w));   //: @(874,280) /sn:0 /R:3 /w:[ 3 0 1 ] /eb:0
   //: comment g90 @(212,843) /sn:0 /anc:1
-  //: /line:"This is the tty. When simulation mode"
-  //: /line:"starts, a tty window will be popped up"
-  //: /line:"corresponding to this device. The device"
-  //: /line:"may be accessed through the simulated CPU"
-  //: /line:"by reading or writing the addresses indicated"
-  //: /line:"by the dip switches TTYSTATUS and TTYDATA."
+  //: /line:"Toto je terminál. Po vstupu do simulačního"
+  //: /line:"režimu, se objeví terminálové okno "
+  //: /line:"odpovídající tomuto zařízení. K zařízení"
+  //: /line:"je možno přistupovat přes simulovaný CPU"
+  //: /line:"čtením nebo zapsáním adresy určené"
+  //: /line:"dip spínači TTYSTATUS a TTYDATA."
   //: /end
   //: DIP TTYDATA (w40) @(174,765) /R:1 /w:[ 0 ] /st:17 /dn:1
   //: GROUND g66 (w1) @(825,693) /sn:0 /w:[ 1 ]
@@ -534,7 +534,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   assign w2 = {w3, mdr}; //: CONCAT g18  @(657,246) /sn:0 /R:2 /w:[ 0 1 9 ] /dr:0 /tp:0 /drp:1
   //: IN g33 (_incpc) @(131,126) /sn:0 /w:[ 1 ]
   //: GROUND g30 (w21) @(220,65) /sn:0 /w:[ 0 ]
-  //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Address Resolution"
+  //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Rozpoznání adresy"
   //: GROUND g49 (w24) @(595,544) /sn:0 /w:[ 0 ]
 
 endmodule
@@ -827,12 +827,11 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: GROUND g8 (w11) @(372,1131) /sn:0 /w:[ 0 ]
   _GGNOR2 #(6) g4 (.I0(!w55), .I1(!ww), .Z(_SA));   //: @(880,356) /sn:0 /R:2 /w:[ 11 0 0 ] /eb:0
   //: comment g61 @(366,789) /anc:1
-  //: /line:"This is the low half"
-  //: /line:"of the microinstruction"
-  //: /line:"memory."
+  //: /line:"Toto je spodní polovina"
+  //: /line:"paměti mikroinstrukcí."
   //: /end
   //: joint g37 (CK) @(264, 511) /w:[ 6 -1 8 5 ]
-  //: frame g86 @(741,228) /sn:0 /wi:482 /ht:251 /tx:"Condition Code Handling"
+  //: frame g86 @(741,228) /sn:0 /wi:482 /ht:251 /tx:"Manipulace S Kódem Podmínky"
   //: joint g13 (mp_nxtaddr) @(331, 731) /w:[ -1 2 8 1 ]
   //: IN g3 (CK) @(81,511) /sn:0 /w:[ 21 ]
   _GGREG32 #(10, 10, 20) g34 (.Q(mp_wrd0), .D(w26), .EN(w30), .CLR(w19), .CK(CK));   //: @(429,709) /sn:0 /R:1 /w:[ 0 0 0 0 3 ]
@@ -847,9 +846,9 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: GROUND g2 (w9) @(380,534) /sn:0 /w:[ 0 ]
   //: OUT g76 (_DOUT) @(701,1137) /sn:0 /w:[ 0 ]
   //: comment g65 @(137,15) /anc:1
-  //: /line:"The IR and OPR registers store the"
-  //: /line:"instruction and operand bytes of "
-  //: /line:"the current instruction."
+  //: /line:"Registry IR a OPR uchovávají"
+  //: /line:"kód a operandy právě "
+  //: /line:"prováděné instrukce."
   //: /end
   //: OUT g59 (_rdmdr) @(701,1047) /sn:0 /w:[ 1 ]
   _GGMUX2x3 #(8, 8) g72 (.I0(w38), .I1(w18), .S(w40), .Z(w44));   //: @(797,413) /sn:0 /R:2 /w:[ 1 1 0 1 ] /ss:0 /do:1
@@ -860,7 +859,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   _GGREG8 #(10, 10, 20) OPR (.Q(OPR), .D(w6), .EN(_ldopr), .CLR(_CLR), .CK(CK));   //: @(280,98) /w:[ 1 3 1 11 17 ]
   _GGROM8x32 #(10, 30) m2 (.A(mp_nxtaddr), .D(w10), .OE(w11));   //: @(372,1088) /w:[ 0 1 1 ]
   _GGREG8 #(10, 10, 20) mpc (.Q(mp_nxtaddr), .D(w13), .EN(w9), .CLR(_CLR), .CK(CK));   //: @(331,511) /w:[ 7 1 1 0 7 ]
-  //: frame g87 @(26,611) /sn:0 /wi:827 /ht:641 /tx:"Microinstruction Decode"
+  //: frame g87 @(26,611) /sn:0 /wi:827 /ht:641 /tx:"Dekódování Mikroinstrukce"
   assign w48 = {COUT, _Z, _LT, _GT}; //: CONCAT g78  @(1110,353) /sn:0 /R:2 /w:[ 0 0 1 1 1 ] /dr:0 /tp:0 /drp:1
   _GGMUX4x8 #(12, 12) g10 (.I0(w27), .I1(w23), .I2(w1), .I3(w12), .S(w14), .Z(w13));   //: @(331,417) /sn:0 /w:[ 3 1 0 1 1 0 ] /ss:0 /do:0
   //: OUT g50 (_CLQ) @(690,714) /sn:0 /w:[ 0 ]
@@ -886,15 +885,14 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: joint g67 (w6) @(151, 65) /w:[ 2 -1 1 4 ]
   //: GROUND g43 (w20) @(455,1042) /sn:0 /w:[ 1 ]
   //: joint g48 (IDATA) @(540, 654) /w:[ 2 1 4 -1 ]
-  //: frame g88 @(176,317) /sn:0 /wi:311 /ht:239 /tx:"Microcode Next Address Generation"
+  //: frame g88 @(176,317) /sn:0 /wi:311 /ht:239 /tx:"Generátor Další Adresy"
   //: joint g29 (ww) @(945, 358) /w:[ 2 4 1 -1 ]
   _GGMUX2x5 #(8, 8) g73 (.I0(w7), .I1(w49), .S(w42), .Z(FUNC));   //: @(725,956) /sn:0 /R:1 /w:[ 1 1 0 1 ] /ss:1 /do:1
   _GGNOR2 #(6) g25 (.I0(!w55), .I1(!w32), .Z(_SA0));   //: @(890,384) /sn:0 /R:2 /w:[ 13 0 0 ] /eb:0
   //: GROUND g17 (w23) @(360,367) /sn:0 /w:[ 0 ]
   //: comment g62 @(364,966) /anc:1
-  //: /line:"This is the high half"
-  //: /line:"of the microinstruction"
-  //: /line:"memory."
+  //: /line:"Toto je horní polovina"
+  //: /line:"pamět mikroinstrukcí."
   //: /end
   //: joint g63 (CK) @(264, 771) /w:[ 2 4 -1 1 ]
   //: GROUND g42 (w30) @(455,678) /sn:0 /w:[ 1 ]
@@ -909,31 +907,30 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g47 (IDATA) @(690,654) /sn:0 /w:[ 3 ]
   //: OUT g44 (_incpc) @(701,997) /sn:0 /w:[ 1 ]
   //: comment g85 @(7,126) /sn:0 /anc:1
-  //: /line:"This block"
-  //: /line:"decodes"
-  //: /line:"insructions"
-  //: /line:"producing"
-  //: /line:"a map index,"
-  //: /line:"register"
-  //: /line:"numbers,"
-  //: /line:"a function"
-  //: /line:"code and a"
-  //: /line:"condition"
-  //: /line:"code."
+  //: /line:"Tento blok"
+  //: /line:"dekóduje"
+  //: /line:"instrukce"
+  //: /line:"Výstupem je"
+  //: /line:"map index,"
+  //: /line:"čísla "
+  //: /line:"registrů,"
+  //: /line:"kód funkce"
+  //: /line:"a kód"
+  //: /line:"podmínky."
   //: /end
   //: OUT g36 (_LDDATA) @(690,734) /sn:0 /w:[ 0 ]
   //: IN g21 (COUT) @(1163,375) /sn:0 /R:2 /w:[ 1 ]
   //: IN g24 (_LT) @(1168,345) /sn:0 /R:2 /w:[ 0 ]
   //: comment g84 @(694,22)
-  //: /line:"This is a trival example of an"
-  //: /line:"instruction unit. The mpc register"
-  //: /line:"contains the micro-instruction"
-  //: /line:"program counter, and the two"
-  //: /line:"registers on the data out of ROMs"
-  //: /line:"m1 and m2 are the current micro-"
-  //: /line:"instructions. Note that since these"
-  //: /line:"are two separate registers the a"
-  //: /line:"single cycle jump delay."
+  //: /line:"Toto je triviální příklad "
+  //: /line:"jednotky instrukcí. Registr mpc "
+  //: /line:"obsahuje programový čítač"
+  //: /line:"mikroinstrukcí, a dva registry "
+  //: /line:"na data z pamětí ROM m1 a m2 "
+  //: /line:"uchovávají aktuální mikroinstrukce."
+  //: /line:"Všimněte si, že toto jsou dva"
+  //: /line:"oddělené registry se zpožděním "
+  //: /line:"jednoho cyklu po skoku."
   //: /end
   //: IN g23 (_Z) @(1164,361) /sn:0 /R:2 /w:[ 0 ]
   //: OUT g41 (spc) @(701,1067) /sn:0 /w:[ 1 ]
@@ -1016,8 +1013,8 @@ wire [15:0] w65;    //: /sn:0 {0}(#:369,556)(369,600){1}
   //: IN g2 (CK) @(44,421) /sn:0 /w:[ 0 ]
   //: joint g1 (w0) @(351, 477) /w:[ 2 -1 1 4 ]
   //: comment g16 @(157,445) /sn:0
-  //: /line:"Register R0 is hard-coded"
-  //: /line:"to always be set to 0."
+  //: /line:"Register R0 je natvrdo "
+  //: /line:"nastaven na 0."
   //: /end
   _GGREG16 #(10, 10, 20) R2 (.Q(R2), .D(DIN), .EN(w6), .CLR(_CLR), .CK(CK));   //: @(513,279) /w:[ 0 0 0 0 7 ]
   //: joint g11 (R3) @(525, 505) /w:[ 1 -1 2 4 ]
@@ -1416,7 +1413,7 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
   //: IN g1 (SA) @(308,251) /sn:0 /w:[ 0 ]
   //: IN g11 (AOP) @(418,479) /sn:0 /w:[ 0 ]
   //: IN g16 (BOP) @(553,481) /sn:0 /w:[ 0 ]
-  //: frame g50 @(422,693) /sn:0 /wi:442 /ht:238 /tx:"Q Register Handling"
+  //: frame g50 @(422,693) /sn:0 /wi:442 /ht:238 /tx:"Operace S Registrem Q"
   //: OUT g28 (_GT) @(642,560) /sn:0 /w:[ 0 ]
   //: IN g10 (_LDQ) @(671,739) /sn:0 /w:[ 0 ]
   _GGMUX4x16 #(12, 12) g19 (.I0(w21), .I1(DATA), .I2(w35), .I3(w36), .S(AOP), .Z(w38));   //: @(480,479) /sn:0 /w:[ 5 9 0 0 1 0 ] /ss:0 /do:0

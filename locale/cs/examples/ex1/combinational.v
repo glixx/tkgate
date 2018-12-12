@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
 //: property title = "combinational.v"
 //: property showSwitchNets = 0
@@ -64,19 +64,18 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: SWITCH g4 (B0) @(76,159) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: LED g37 (S2) @(310,416) /sn:0 /R:3 /w:[ 0 ] /type:0
   //: comment g34 @(351,22)
-  //: /line:"This circuit is a simple three-bit adder."
+  //: /line:"Tento obvod je jednoduchá tříbitová sčítačka."
   //: /line:""
-  //: /line:"Start the simualtor by pressing the \"play\""
-  //: /line:"button from the button bar. Then, set probes"
-  //: /line:"by double clicking on the S0, S1, S2 and C3"
-  //: /line:"wires (and any additional wires you wish to"
-  //: /line:"probe). Press the \"play\" button again to"
-  //: /line:"enter continuous simulation mode. In this"
-  //: /line:"mode, whenever you change a switch value"
-  //: /line:"(by clicking on it), the simulator will"
-  //: /line:"simulate until all values have stabalized."
-  //: /line:"End the simulation by pressing the \"stop\""
-  //: /line:"button on the button bar."
+  //: /line:"Spustěte simulátor stisknutím tlačítka \"Spustit\""
+  //: /line:"z horního panelu. Dvojitym kliknutím na vodiče"
+  //: /line:"S0, S1, S2 a C3 (a kterékoliv jiné vodiče, které"
+  //: /line:"chcete sledovat) následně nastavte sondy."
+  //: /line:"Stiskněte tlačítko \"Spustit\" znova. Simulace se"
+  //: /line:"přepne do režimu stálého běhu. Kdykoliv v tomto"
+  //: /line:"režimu změníte hodnotu spínače (kliknutím na"
+  //: /line:"něj), simulátor bude provádět simulaci dokud se "
+  //: /line:"všechny hodnoty neustálí. Ukončete simulaci "
+  //: /line:"stisknutím tlačítka \"Stop\" na horním panelu."
   //: /end
   _GGXOR2 #(8) g13 (.I0(A1), .I1(B1), .Z(w10));   //: @(180,255) /sn:0 /w:[ 0 5 3 ] /eb:0
   //: SWITCH g3 (w0) @(217,37) /sn:0 /R:3 /w:[ 3 ] /st:0 /dn:0

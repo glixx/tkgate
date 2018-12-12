@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
-//: property title = "Creating a Circuit"
+//: property title = "Vytvoření Obvodu"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
@@ -22,7 +22,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
 //: enddecls
 
   //: comment g8 @(313,208)
-  //: /line:"OR gate"
+  //: /line:"OR hradlo"
   //: /end
   //: joint g13 (w9) @(211, 237) /w:[ 1 2 4 -1 ]
   //: comment g1 @(10,310) /sn:0 /anc:1
@@ -30,10 +30,10 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
   //: /end
   _GGAND2 #(6) g11 (.I0(w3), .I1(w9), .Z(w8));   //: @(230,140) /sn:0 /w:[ 0 3 1 ]
   //: comment g6 @(115,104)
-  //: /line:"Switches"
+  //: /line:"Spínače"
   //: /end
   //: comment g7 @(208,112)
-  //: /line:"AND gate"
+  //: /line:"AND hradlo"
   //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Creating a Simple Circuit</h3>"
@@ -67,7 +67,7 @@ wire w5;    //: /sn:0 {0}(309,232)(289,232)(289,140)(240,140){1}
   //: /line:"<img src=\"makejoint_example.gif\">"
   //: /end
   //: comment g9 @(10,10) /anc:1
- //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<h3>Creating a Simple Circuit</h3>"
   //: /line:""
   //: /line:"Now make the final connection. Grab the lower input terminal of the AND gate"
   //: /line:"and drag it down near the wire between the lower switch and the OR gate. Release"
@@ -144,9 +144,6 @@ wire w5;    //: /sn:0 {0}(204,142)(219,142){1}
   //: /line:""
   //: /line:"Finally, connect the wires. Begin by grabbing the end of the wire leading from one of the"
   //: /line:"switches with the left mouse button and drag it to the upper input terminal of the AND gate."
-  //: /end
-  //: comment g0 @(579,61) /sn:0 /anc:1
-  //: /line:"<img src=\"connect_example.gif\">"
   //: /end
   //: comment g0 @(550,71) /sn:0 /anc:1
   //: /line:"<img src=\"connect_example.gif\">"

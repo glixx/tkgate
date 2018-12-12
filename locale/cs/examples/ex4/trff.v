@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
 //: property title = "Flip-flop at the transistor level"
 //: property showSwitchNets = 0
@@ -61,21 +61,20 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: joint g11 (S) @(589, 94) /anc:1 /w:[ 1 -1 2 8 ]
   //: VDD g16 (w17) @(631,292) /sn:0 /anc:1 /w:[ 1 ]
   //: comment g28 @(26,299) /anc:1
-  //: /line:"3) Return the \"S\" switch to the off position"
-  //: /line:"and press the space bar 10 to 20 times. The"
-  //: /line:"\"Q\" and \"_Q\" signals will remain constant."
+  //: /line:"3) Vraťte spínač \"S\" do pozice \"off\" a "
+  //: /line:"stiskněte mezerník 10 až 20 krát. Signály "
+  //: /line:"\"Q\" a\"_Q\" zůstanou na stejné úrovni."
   //: /end
   //: joint g10 (Q) @(654, 383) /anc:1 /w:[ 1 2 8 14 ]
   //: LED g32 (Q) @(772,383) /sn:0 /R:3 /w:[ 0 ] /type:0
   //: SWITCH g19 (R) @(425,353) /sn:0 /anc:1 /w:[ 7 ] /st:0 /dn:0
   //: comment g27 @(25,193) /anc:1
-  //: /line:"2) Press the space bar 10 to 20 times to"
-  //: /line:"advance the simulator. Note that both the"
-  //: /line:"\"Q\" and \"_Q\" signals are in the unknown state."
-  //: /line:"Now turn on the \"S\" switch (by clicking on it)"
-  //: /line:"and press the space bar another 10 to 20"
-  //: /line:"times. The \"Q\" signal will go high and the"
-  //: /line:"\"_Q\" signal will go low."
+  //: /line:"2) Stiskněte mezerník 10 až 20 krát a postupte "
+  //: /line:"v simulaci. Všimněte si, že oba signály \"Q\" a "
+  //: /line:"\"_Q\" jsou v neurčeném stavu. Nyní zapněte spínač "
+  //: /line:"\"S\" (kliknutím na něj) a stiskněte mezerník "
+  //: /line:"dalších 10 až 20 krát. Signál \"Q\" se dostane "
+  //: /line:"na úroveò log. 1 a signál \"_Q\" na úroveò log. 0."
   //: /line:""
   //: /end
   //: SWITCH g6 (S) @(419,94) /sn:0 /anc:1 /w:[ 7 ] /st:0 /dn:0
@@ -88,16 +87,16 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: /line:"<a href=\"../index.v\">[BACK]</a>"
   //: /end
   //: comment g29 @(26,355) /anc:1
-  //: /line:"4) Now turn the \"R\" switch off by clicking"
-  //: /line:"on it and press the space bar 10 to 20 times."
-  //: /line:"The \"_Q\" signal will go high and the \"Q\""
-  //: /line:"signal will go low."
+  //: /line:"4) Nyní vypněte spínač \"R\" (kliknutím"
+  //: /line:"na něj) a stiskněte mezerník 10 až 20 krát."
+  //: /line:"Signál \"_Q\" se dostane na úroveò log. 1"
+  //: /line:"a signál \"Q\"na úroveò log. 0."
   //: /end
   //: GROUND g17 (w14) @(601,461) /sn:0 /anc:1 /w:[ 5 ]
   //: comment g25 @(26,42)
-  //: /line:"This circuit is a simple flip-flop composed"
-  //: /line:"of two CMOS NOR gates implemented at the"
-  //: /line:"transistor level."
+  //: /line:"Toto je jednoduchý klopný obvod složený ze"
+  //: /line:"dvou CMOS NOR hradel implementovaných na"
+  //: /line:"tranzistorové úrovni."
   //: /end
   //: GROUND g5 (w13) @(606,237) /sn:0 /anc:1 /w:[ 5 ]
   _GGPMOS #(2, 1) g14 (.Z(Q), .S(w16), .G(R));   //: @(614,353) /sn:0 /anc:1 /w:[ 11 0 0 ]
@@ -109,20 +108,20 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   _GGNMOS #(2, 1) g0 (.Z(_Q), .S(w13), .G(Q));   //: @(565,182) /sn:0 /anc:1 /w:[ 9 3 5 ]
   //: joint g22 (R) @(533, 353) /anc:1 /w:[ 1 -1 2 8 ]
   //: comment g26 @(26,101) /anc:1
-  //: /line:"1) Begin the simulation by clicking on the"
-  //: /line:"\"Play\" button or by selecting \"Begin"
-  //: /line:"Simulation\" from the \"Simulate\" menu."
-  //: /line:"Set Probes on the \"S\", \"R\", \"Q\" and \"_Q\""
-  //: /line:"signals by double-clicking them. The \"_Q\""
-  //: /line:"signal is the \"Q\" with an overline."
+  //: /line:"1) Spustěte simulaci kliknutím na tlačítko"
+  //: /line:"\"Spustit\" nebo výběrem položky \"Začít "
+  //: /line:"Simulaci\" z menu \"Simulace\". Dvojitým "
+  //: /line:"kliknutím na vodiče \"S\", \"R\", \"Q\" a \"_Q\""
+  //: /line:"na ně nastavíte sondy. Signál \"_Q\" je "
+  //: /line:"negací signálu \"Q\"."
   //: /end
   _GGNMOS #(2, 1) g12 (.Z(Q), .S(w14), .G(R));   //: @(560,406) /sn:0 /anc:1 /w:[ 13 3 9 ]
   //: joint g18 (_Q) @(584, 323) /anc:1 /w:[ 14 13 -1 16 ]
   //: LED g33 (S) @(503,74) /sn:0 /w:[ 5 ] /type:0
   //: comment g30 @(23,420) /anc:1
-  //: /line:"5) Return the \"R\" switch to the off position"
-  //: /line:"and press the space bar 10 to 20 times. The"
-  //: /line:"\"Q\" and \"_Q\" signals will remain constant."
+  //: /line:"5) Vraťte spínač \"R\" do vypnutého stavu"
+  //: /line:"a stiskněte mezerník 10 až 20 krát. "
+  //: /line:"Signály \"Q\" a\"_Q\" zůstanou na stejné úrovni."
   //: /end
 
 endmodule

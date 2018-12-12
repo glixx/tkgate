@@ -1,9 +1,12 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
 //: property title = "Tutorial page"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -45,7 +48,4 @@ module PAGE1;    //: root_module
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

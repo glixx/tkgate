@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
 //: property title = "Standard Logic Microcircuits"
 //: property timingViolationMode = 2

@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "cs"
 //: property prefix = "_GG"
-//: property title = "Using Modules"
+//: property title = "Použití Modulů"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -328,7 +328,7 @@ module PAGE4();
   //: /line:"since that view gives you a straight"
   //: /line:"alphabetical list of all module.</font>"
   //: /end
-  //: comment g1 @(9,13) /anc:1
+  //: comment g99 @(9,13) /anc:1
   //: /line:"<h3>Using Modules</h3> <b>(creating module instances)</b>"
   //: /line:""
   //: /line:"The easiest way to create a module instance is to find its name in the module list and"
