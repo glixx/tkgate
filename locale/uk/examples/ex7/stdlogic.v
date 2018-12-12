@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
 //: property title = "Standard Logic Microcircuits"
 //: property timingViolationMode = 2
@@ -36,7 +36,7 @@ wire w5;    //: /sn:0 {0}(415,174)(479,174)(479,148){1}
   //: joint g4 (A_NET) @(215, 174) /w:[ 2 -1 1 4 ]
   //: joint g8 (w0) @(151, 380) /w:[ -1 2 1 4 ]
   //: comment back_link @(11,11) /sn:0 /anc:1
-  //: /line:"<a href=\"../index.v\">[BACK]</a>"
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   //: LED g1 (w5) @(479,141) /sn:0 /w:[ 1 ] /type:0
   //: DIP B_DIP (B_NET) @(42,228) /R:1 /w:[ 0 ] /st:10818 /dn:1

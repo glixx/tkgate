@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
 //: property title = "menagerie.v"
 //: property showSwitchNets = 0
@@ -217,7 +217,7 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   //: /end
   MEMORY memory (._CLR(_reset), .CK(clk), ._incmar(w0), ._rdpc(w59), ._ldhmdr(w42), .spc(w43), ._rd(w44), ._wrt(w36), ._rdmdr(w37), ._incpc(w38), ._ldmdr(w39), ._ldmar(w40), ._ldpc(w41), .DATA(DATA));   //: @(268, 84) /sz:(125, 353) /p:[ Ti0>7 Ti1>7 Ri0>1 Ri1>1 Ri2>1 Ri3>1 Ri4>1 Ri5>1 Ri6>1 Ri7>1 Ri8>1 Ri9>1 Ri10>1 Bt0=5 ]
   //: comment g39 @(11,544) /sn:0 /anc:1
-  //: /line:"<a href=\"../index.v\">[BACK]</a>"
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   EUNIT eunit (._CLR(_reset), .CK(clk), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .SA(w45), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), ._LT(w32), ._GT(w33), ._Z(w34), .COUT(w35), .DATA(DATA));   //: @(660, 84) /sz:(128, 353) /p:[ Ti0>0 Ti1>0 Li0>1 Li1>1 Li2>1 Li3>1 Li4>1 Li5>1 Li6>1 Li7>1 Li8>1 Li9>1 Li10>1 Li11>1 Li12>1 Li13>1 Lo0<1 Lo1<1 Lo2<1 Lo3<1 Bt0=0 ]
   //: joint g5 (clk) @(301, 66) /w:[ 3 -1 4 6 ]
@@ -479,7 +479,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGNOR1x16 #(1) g42 (.I0(w30), .Z(w31));   //: @(356,763) /sn:0 /w:[ 0 0 ] /eb:0
   //: joint g52 (mdr) @(697, 377) /w:[ 6 8 -1 5 ]
   //: comment back_link3 @(15,658) /sn:0 /anc:1
-  //: /line:"<a href=\"menagerie.v\">[BACK]</a>"
+  //: /line:"<a href=\"menagerie.v\">[НАЗАД]</a>"
   //: /end
   _GGNOR2 #(6) g83 (.I0(!_incmar), .I1(!_ldmar), .Z(w46));   //: @(427,312) /sn:0 /R:2 /w:[ 0 1 1 ] /eb:0
   //: joint g74 (PC) @(188, 311) /w:[ 2 1 -1 4 ]
@@ -509,7 +509,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGXOR2x16 #(8) g40 (.I0(w18), .I1(w40), .Z(w30));   //: @(312,763) /sn:0 /w:[ 9 1 1 ] /eb:0
   _GGMUX2x8 #(8, 8) g54 (.I0(mdr), .I1(w1), .S(w26), .Z(w36));   //: @(790,740) /sn:0 /w:[ 0 0 1 0 ] /ss:0 /do:0
   //: joint g81 (_incmar) @(325, 264) /w:[ 4 6 -1 3 ]
-  //: frame g93 @(349,467) /sn:0 /wi:389 /ht:160 /tx:"Main Memory"
+  //: frame g93 @(349,467) /sn:0 /wi:389 /ht:160 /tx:"Основна пам'ять"
   assign w27 = {w31, w15}; //: CONCAT g46  @(638,667) /sn:0 /R:1 /w:[ 1 7 3 ] /dr:0 /tp:0 /drp:1
   //: joint g45 (mdrin) @(559, 552) /w:[ 2 4 1 -1 ]
   _GGNOR2 #(6) g35 (.I0(!_incpc), .I1(!_ldpc), .Z(w14));   //: @(244,129) /sn:0 /w:[ 0 0 0 ] /eb:0
@@ -534,7 +534,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   assign w2 = {w3, mdr}; //: CONCAT g18  @(657,246) /sn:0 /R:2 /w:[ 0 1 9 ] /dr:0 /tp:0 /drp:1
   //: IN g33 (_incpc) @(131,126) /sn:0 /w:[ 1 ]
   //: GROUND g30 (w21) @(220,65) /sn:0 /w:[ 0 ]
-  //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Address Resolution"
+  //: frame g91 @(45,27) /sn:0 /wi:441 /ht:397 /tx:"Розрізнення адрес"
   //: GROUND g49 (w24) @(595,544) /sn:0 /w:[ 0 ]
 
 endmodule
@@ -832,7 +832,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: /line:"memory."
   //: /end
   //: joint g37 (CK) @(264, 511) /w:[ 6 -1 8 5 ]
-  //: frame g86 @(741,228) /sn:0 /wi:482 /ht:251 /tx:"Condition Code Handling"
+  //: frame g86 @(741,228) /sn:0 /wi:482 /ht:251 /tx:"Обробка умови у коді"
   //: joint g13 (mp_nxtaddr) @(331, 731) /w:[ -1 2 8 1 ]
   //: IN g3 (CK) @(81,511) /sn:0 /w:[ 21 ]
   _GGREG32 #(10, 10, 20) g34 (.Q(mp_wrd0), .D(w26), .EN(w30), .CLR(w19), .CK(CK));   //: @(429,709) /sn:0 /R:1 /w:[ 0 0 0 0 3 ]
@@ -840,7 +840,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g55 (_WA) @(690,754) /sn:0 /w:[ 0 ]
   //: OUT g58 (_rd) @(701,1037) /sn:0 /w:[ 1 ]
   //: comment back_link @(7,95) /sn:0 /anc:1
-  //: /line:"<a href=\"menagerie.v\">[BACK]</a>"
+  //: /line:"<a href=\"menagerie.v\">[НАЗАД]</a>"
   //: /end
   _GGREG8 #(10, 10, 20) IR (.Q(IRR), .D(w6), .EN(_ldir), .CLR(_CLR), .CK(CK));   //: @(151,98) /w:[ 1 5 1 9 19 ]
   _GGREG4 #(10, 10, 20) g77 (.Q(w3), .D(w48), .EN(w0), .CLR(_CLR), .CK(CK));   //: @(1069,353) /sn:0 /R:3 /w:[ 0 1 1 3 13 ]
@@ -860,7 +860,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   _GGREG8 #(10, 10, 20) OPR (.Q(OPR), .D(w6), .EN(_ldopr), .CLR(_CLR), .CK(CK));   //: @(280,98) /w:[ 1 3 1 11 17 ]
   _GGROM8x32 #(10, 30) m2 (.A(mp_nxtaddr), .D(w10), .OE(w11));   //: @(372,1088) /w:[ 0 1 1 ]
   _GGREG8 #(10, 10, 20) mpc (.Q(mp_nxtaddr), .D(w13), .EN(w9), .CLR(_CLR), .CK(CK));   //: @(331,511) /w:[ 7 1 1 0 7 ]
-  //: frame g87 @(26,611) /sn:0 /wi:827 /ht:641 /tx:"Microinstruction Decode"
+  //: frame g87 @(26,611) /sn:0 /wi:827 /ht:641 /tx:"Декодування мікроінструкцій"
   assign w48 = {COUT, _Z, _LT, _GT}; //: CONCAT g78  @(1110,353) /sn:0 /R:2 /w:[ 0 0 1 1 1 ] /dr:0 /tp:0 /drp:1
   _GGMUX4x8 #(12, 12) g10 (.I0(w27), .I1(w23), .I2(w1), .I3(w12), .S(w14), .Z(w13));   //: @(331,417) /sn:0 /w:[ 3 1 0 1 1 0 ] /ss:0 /do:0
   //: OUT g50 (_CLQ) @(690,714) /sn:0 /w:[ 0 ]
@@ -1457,7 +1457,7 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
   _GGMUX2x8 #(8, 8) g35 (.I0(w12), .I1(w8), .S(_LDQ), .Z(w2));   //: @(761,739) /sn:0 /w:[ 1 5 3 0 ] /ss:0 /do:0
   //: IN g26 (CIN) @(473,618) /sn:0 /w:[ 0 ]
   //: comment back_link1 @(200,196) /sn:0 /anc:1
-  //: /line:"<a href=\"menagerie.v\">[BACK]</a>"
+  //: /line:"<a href=\"menagerie.v\">[НАЗАД]</a>"
   //: /end
   //: IN g12 (IDATA) @(296,423) /sn:0 /w:[ 1 ]
   _GGMUX4x16 #(12, 12) g18 (.I0(w21), .I1(DATA), .I2(w35), .I3(w28), .S(BOP), .Z(w31));   //: @(614,481) /sn:0 /w:[ 3 11 3 0 1 0 ] /ss:0 /do:0

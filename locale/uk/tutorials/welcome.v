@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
+//: property title = "Вітаємо на сторінці TkGate"
 //: property discardChanges = 1
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"

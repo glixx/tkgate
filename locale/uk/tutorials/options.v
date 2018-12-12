@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Customizing TkGate"
+//: property title = "Налаштовування TkGate"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -36,7 +36,7 @@ module PAGE3();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g9 @(10,10) /anc:1
+  //: comment g1 @(134,181) /sn:0 /anc:1
   //: /line:"<img src=example_bindings.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
@@ -59,6 +59,9 @@ module PAGE2();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
+  //: comment g1 @(116,149) /sn:0 /anc:1
+  //: /line:"<img src=example_name.gif>"
+  //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Customizing TkGate</h3> <b>(setting your personal identification)</b>"
   //: /line:""

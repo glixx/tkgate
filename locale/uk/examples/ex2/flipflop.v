@@ -1,6 +1,6 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
 //: property title = "flipflop.v"
 //: property showSwitchNets = 0
@@ -88,7 +88,7 @@ wire w5;    //: /sn:0 {0}(335,221)(359,221){1}
   _GGXOR2 #(8) g15 (.I0(w5), .I1(w15), .Z(w16));   //: @(266,219) /sn:0 /w:[ 7 3 0 ] /eb:0
   //: joint g20 (w5) @(361, 221) /w:[ -1 2 1 8 ]
   //: comment g39 @(20,12) /sn:0
-  //: /line:"<a href=\"../index.v\">[BACK]</a>"
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   //: joint g29 (w6) @(471, 153) /w:[ 1 -1 2 12 ]
   //: joint g17 (w15) @(221, 221) /w:[ 2 1 4 6 ]

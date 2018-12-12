@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
+//: property title = "Вітаємо на сторінці TkGate"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -65,7 +65,7 @@ wire [2:0] w26;    //: /sn:0 {0}(#:328,193)(360,193){1}
   //: /line:"Problem</h1>"
   //: /end
   //: comment g39 @(20,438) /sn:0
-  //: /line:"<a href=\"../index.v\">[BACK]</a>"
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   //: LED g17 (w29) @(367,225) /sn:0 /R:3 /w:[ 1 ] /type:1
   //: LED g25 (BILLACK) @(367,289) /sn:0 /R:3 /w:[ 0 ] /type:0

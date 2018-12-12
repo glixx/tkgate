@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "8-Bit Counter"
+//: property title = "8-бітовий лічильник"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -26,9 +26,9 @@ wire [7:0] reg_out;    //: {0}(#:50:224,275)(224,332)(297,332)(297,173){1}
 
   _GGCLOCK_P100_0_50 g4 (.Z(ck));   //: @(43,264) /sn:0 /w:[ 1 ] /omega:100 /phi:0 /duty:50
   //: comment g8 @(41,205)
-  //: /line:"2) Place a probe"
-  //: /line:"on the clock line by"
-  //: /line:"double-clicking on it."
+  //: /line:"2) Розташуйте пробник"
+  //: /line:"на лінії тактового генератора,"
+  //: /line:"двічі клацнувши на ньому."
   //: /end
   //: DIP g3 (w4) @(208,104) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: comment g13 @(23,412)
@@ -60,7 +60,7 @@ wire [7:0] reg_out;    //: {0}(#:50:224,275)(224,332)(297,332)(297,173){1}
   //: /line:"double-clicking on it."
   //: /end
   //: comment g39 @(20,12) /sn:0
-  //: /line:"<a href=\"../index.v\">[BACK]</a>"
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   //: LED g17 (reg_out) @(386,171) /sn:0 /R:3 /w:[ 3 ] /type:2
   //: comment g5 @(14,33)

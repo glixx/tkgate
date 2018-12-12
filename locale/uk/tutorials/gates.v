@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Editing Gates"
+//: property title = "Редагування шлюзів"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
@@ -229,9 +229,6 @@ wire w2;    //: /sn:0 {0}(154,152)(169,152){1}
   //: /line:"<font color=green4>Hint: You can also use the <img src=\"rotation0.gif\" bgcolor=gray>"
   //: /line:"button to set the default orientation"
   //: /line:"for newly created gates.</font>"
-  //: /end
-  //: comment g5 @(81,195) /sn:0 /anc:1
-  //: /line:"Unanchored Gate"
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
