@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "ja"
 //: property prefix = "_GG"
-//: property title = "Advanced Editing Methods"
+//: property title = "基本の編集モード"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2

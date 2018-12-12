@@ -1,8 +1,8 @@
 //: version "2.1-a2"
 //: property encoding = "utf-8"
-//: property locale = "en"
+//: property locale = "ja"
 //: property prefix = "_GG"
-//: property title = "Sequential Simulation"
+//: property title = "順序回路のシミュレーション"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
