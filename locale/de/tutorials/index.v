@@ -24,6 +24,7 @@ module PAGE1;    //: root_module
   //: /line:"<h1>Lernabschnitte:</h1>"
   //: /line:""
   //: /line:"<h3><a href=\"create.v\">1. Erzeugen einer Schaltung</a></h3>"
+  //: /line:"- Anfangen mit der Entwicklung einer einfachen Schaltung."
   //: /line:""
   //: /line:"<h3><a href=\"gates.v\">2. Gatter editieren</a></h3> - Grundlagen zum Konfigurieren von Gattern."
   //: /line:""
