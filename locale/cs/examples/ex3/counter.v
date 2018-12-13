@@ -65,7 +65,8 @@ wire [7:0] reg_out;    //: {0}(#:50:224,275)(224,332)(297,332)(297,173){1}
   //: comment g5 @(14,33)
   //: /line:"Příklad: 8-Bitový čítač"
   //: /line:""
-  //: /line:"1) Spustěte simulaci klávesovou zkratkou \"Ctl-S b\""
+  //: /line:"1) Spustěte simulaci klávesovou"
+  //: /line:"zkratkou \"Ctl-S b\""
   //: /line:""
   //: /end
   //: joint g14 (reg_out) @(297, 171) /w:[ 2 4 -1 1 ]

@@ -107,7 +107,8 @@ wire w9;    //: /sn:0 {0}(286,192)(258,192){1}
   //: /line:"ausgewählt ist. Bereits existierende Namen können durch Linksklick mit Ziehen neu positioniert werden. Allerdings"
   //: /line:"kann der Name nur in der Nähe der assoziiierten Leitung verschoben werden. Wird die Markierung zu weit wegbewegt, kann sie"
   //: /line:"verlorengehen. Um einen neuen Namen zu vergeben, wählt man nach Rechtsklick auf die Leitung die <font color=red2>Namen anzeigen</font> Option."
-  //: /line:"Sie können auch eine bestimmte Beschriftung ausblenden (<font color=red2>Beschriftung ausblenden</font>) oder alle Beschriftungen für einen Draht ausblenden (<font color=red2>Alle Beschriftungen ausblenden</font>)."
+  //: /line:"Sie können auch eine bestimmte Beschriftung ausblenden (<font color=red2>Beschriftung ausblenden</font>) oder alle Beschriftungen für einen Draht"
+  //: /line:"ausblenden (<font color=red2>Alle Beschriftungen ausblenden</font>)."
   //: /end
   _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(257,271) /sn:0 /R:3 /w:[ 1 1 0 ]
   _GGNAND2 #(4) g28 (.I0(a0), .I1(b0), .Z(w7));   //: @(229,248) /sn:0 /w:[ 5 5 0 ]

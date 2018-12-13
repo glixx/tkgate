@@ -86,9 +86,9 @@ module PAGE3();
 //: enddecls
 
   //: comment g4 @(576,89) /sn:0 /anc:1
-  //: /line:"<font color=green4>Подсказка: Страницы данного руководства"
-  //: /line:"на самом деле являются модулями с названиями"
-  //: /line:"PAGE1, PAGE2 и т.д.</font>"
+  //: /line:"<font color=green4>Подсказка: Страницы данного"
+  //: /line:"руководства на самом деле являются"
+  //: /line:"модулями с названиями PAGE1, PAGE2 и т.д.</font>"
   //: /end
   //: comment g3 @(23,72) /sn:0 /anc:1
   //: /line:"<img src=document.gif> Корневой или модуль верхнего уровня."

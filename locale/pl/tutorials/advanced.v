@@ -300,7 +300,7 @@ wire w5;    //: /sn:0 {0}(159,156)(169,156){1}
   //: comment g11 @(363,264) /sn:0 /anc:1
   //: /line:"OR Gate Circuit"
   //: /end
-  //: comment g10 @(70,271) /sn:0 /anc:1
+  //: comment g10 @(70,264) /sn:0 /anc:1
   //: /line:"AND Gate Circuit"
   //: /end
   //: joint g6 (w6) @(375, 245) /w:[ 2 4 1 -1 ]

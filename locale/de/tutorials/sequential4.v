@@ -33,9 +33,9 @@ wire w9;    //: /sn:0 {0}(205,262)(195,262){1}
   //: /line:"Haltepunkte können verwendet werden, um eine Schaltung so lange zu simulieren, bis eine Bedingung erfüllt ist."
   //: /line:"Um einen Haltepunkt zu setzen klicke auf die <img src=sim_break.gif bgcolor=gray> Taste auf der Informationsbox"
   //: /line:"unterhalb der Arbeitsfläche und drücke den <font color=red2>Hinzufügen...</font> Knopf. Gib den Haltepunkt"
-  //: /line:"als Verilog-Ausdruck an. Starte den Simulator und versuche es mit dem Ausdruck \"reg_out == 8'h42\" wie"
-  //: /line:"im Beispiel auf der rechten Seite. Das führt zum Halt des Simulators, wenn das reg_out Signal den hexadezimalen Wert 42 hat."
-  //: /line:"Vergiß nicht, nach der Eingabe des Haltepunkts <img src=sim_go.gif bgcolor=gray> zu drücken."
+  //: /line:"als Verilog-Ausdruck an. Starte den Simulator und versuche es mit dem Ausdruck \"reg_out == 8'h42\""
+  //: /line:"wie im Beispiel auf der rechten Seite. Das führt zum Halt des Simulators, wenn das reg_out Signal"
+  //: /line:"den hexadezimalen Wert 42 hat. Vergiß nicht, nach der Eingabe des Haltepunkts <img src=sim_go.gif bgcolor=gray> zu drücken."
   //: /end
   //: SWITCH g3 (w4) @(307,295) /sn:0 /R:2 /w:[ 1 ] /st:1 /dn:0
   _GGREG8 #(10, 10, 20) g2 (.Q(reg_out), .D(w2), .EN(w0), .CLR(w4), .CK(ck));   //: @(229,312) /sn:0 /w:[ 0 0 0 0 0 ]

@@ -1,7 +1,8 @@
-\font-encoding			iso8859-1
-\messages-encoding		euc-jp
-\verilog-encoding		euc-jp
+\font-encoding			euc-jp
 \display-encoding		euc-jp
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
 @mm.width					8
 @db.gate.comment.width		600
 @db.gate.comment.height		450

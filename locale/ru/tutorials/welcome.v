@@ -227,7 +227,7 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   //: /line:"<value-of name=\"tkgate-copyright\">"
   //: /line:"TKGate предоставляется БЕЗ ВСЯКИХ ГАРАНТИЙ; см. пункт меню <b>Справка&rarr;"
   //: /line:"Лицензионное соглашение</b> для получения дополнительной информации о"
-  //: /line:"лицензии и гарантиях. Сообщайте о проблемах на <a href=\"mailto:starling13@gmail.com\"><value-of name=\"tkgate-mailcontact\"></a> (по-английски)."
+  //: /line:"лицензии и гарантиях. Сообщайте о проблемах на <a href=\"mailto:starling13@gmail.com\"><value-of name=\"tkgate-mailcontact\"></a>"
   //: /line:"[выпуск от <value-of name=\"tkgate-release-date\">]"
   //: /line:""
   //: /line:"<h3>Перейдите по одной из ссылок чтобы начать использовать TkGate!</h3>"

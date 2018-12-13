@@ -228,8 +228,8 @@ wire w9;    //: /sn:0 {0}(85,142)(95,142){1}
   //: /line:""
   //: /line:"Manchmal gibt es keine freien Enden von zwei Leitungen, die verbunden werden sollen. Klicke mit rechts auf den"
   //: /line:"mit dem AND-Gatter verbundenen Ausgang an der durch den Pfeil angezeigten Stelle. Wähle die"
-  //: /line:"<font color=red2>Leitungssegment hinzufügen</font> Option aus dem Popup Menu. Jetzt kann"
-  //: /line:"die neu erzeugte Leitung zu den Puffereingängen hinzugefügt werden."
+  //: /line:"<font color=red2>Leitungssegment hinzufügen</font> Option aus dem Popup Menu. Jetzt kann die neu erzeugte Leitung"
+  //: /line:"zu den Puffereingängen hinzugefügt werden."
   //: /line:""
   //: /end
   _GGAND2 #(6) g5 (.I0(w7), .I1(w9), .Z(w17));   //: @(106,140) /sn:0 /anc:1 /w:[ 1 1 1 ] /eb:0
@@ -300,7 +300,7 @@ wire w5;    //: /sn:0 {0}(159,156)(169,156){1}
   //: comment g11 @(363,264) /sn:0 /anc:1
   //: /line:"OR-Gatterschaltung"
   //: /end
-  //: comment g10 @(70,271) /sn:0 /anc:1
+  //: comment g10 @(70,264) /sn:0 /anc:1
   //: /line:"AND-Gatterschaltung"
   //: /end
   //: joint g6 (w6) @(375, 245) /w:[ 2 4 1 -1 ]
