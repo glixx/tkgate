@@ -8,7 +8,7 @@
 # ##############################################################################
 # 
 # Translators:
-# Yuri Chornoivan <yurchor@ukr.net>, 2018
+# Waldemar Stoczkowski, 2018
 # 
 #, fuzzy
 msgid ""
@@ -17,13 +17,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
 "PO-Revision-Date: 2018-12-10 23:25+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>, 2018\n"
-"Language-Team: Ukrainian (https://www.transifex.com/Magic/teams/44238/uk/)\n"
+"Last-Translator: Waldemar Stoczkowski, 2018\n"
+"Language-Team: Polish (https://www.transifex.com/Magic/teams/44238/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 msgid ""
 "1) Begin the simulation by clicking on the\n"
@@ -39,9 +39,6 @@ msgid ""
 "on the clock line by\n"
 "double-clicking on it."
 msgstr ""
-"2) Розташуйте пробник\n"
-"на лінії тактового генератора,\n"
-"двічі клацнувши на ньому."
 
 msgid ""
 "2) Press the space bar 10 to 20 times to\n"
@@ -58,8 +55,6 @@ msgid ""
 "2) To create a new textual verilog modules, press <img src=\"blk_new.gif\">\n"
 "and set the type to HDL."
 msgstr ""
-"2) Для створення нових текстових модулів verilog, натисніть <img src=\"blk_new.gif\">\n"
-"і встановіть тип HDL."
 
 msgid ""
 "3) Place a probe on the\n"
@@ -121,13 +116,13 @@ msgid ""
 msgstr ""
 
 msgid "8-Bit Counter"
-msgstr "8-бітовий лічильник"
+msgstr "Licznik 8-bitowy"
 
 msgid "Address Resolution"
-msgstr "Розрізнення адрес"
+msgstr "Rozpoznawanie adresów"
 
 msgid "Advanced Editing Methods"
-msgstr "Додаткові методи редагування"
+msgstr "Zaawansowane metody edycji"
 
 msgid ""
 "<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">\n"
@@ -161,19 +156,19 @@ msgid ""
 msgstr ""
 
 msgid "<a href=\"../index.v\">[BACK]</a>"
-msgstr "<a href=\"../index.v\">[НАЗАД]</a>"
+msgstr "<a href=\"../index.v\">[Wstecz]</a>"
 
 msgid "<a href=\"menagerie.v\">[BACK]</a>"
-msgstr "<a href=\"menagerie.v\">[НАЗАД]</a>"
+msgstr "<a href=\"menagerie.v\">[Wstecz]</a>"
 
 msgid "<a href=\"#/PAGE6\">&lang;BACK TO TUTORIAL&rang;</a>"
-msgstr "<a href=\"#/PAGE6\">&lang;НАЗАД ДО ПІДРУЧНИКА&rang;</a>"
+msgstr ""
 
 msgid "<a href=\"#/PAGE8\">&lang;BACK TO TUTORIAL&rang;</a>"
-msgstr "<a href=\"#/PAGE8\">&lang;НАЗАД ДО ПІДРУЧНИКА&rang;</a>"
+msgstr ""
 
 msgid "<a href=\"welcome.v\">Go back to the TkGate main page.</a>"
-msgstr "<a href=\"welcome.v\">Повернутися до основної сторінки TkGate.</a>"
+msgstr ""
 
 msgid ""
 "A module is an encapsulated piece of logic that can be made\n"
@@ -245,19 +240,19 @@ msgid "Combinational Simulation"
 msgstr ""
 
 msgid "Condition Code Handling"
-msgstr "Обробка умови у коді"
+msgstr ""
 
 msgid "Creating a Circuit"
-msgstr "Створення схеми"
+msgstr ""
 
 msgid "Customizing TkGate"
-msgstr "Налаштовування TkGate"
+msgstr ""
 
 msgid "Editing Gates"
-msgstr "Редагування шлюзів"
+msgstr ""
 
 msgid "Editing Wires"
-msgstr "Редагування дротів"
+msgstr ""
 
 msgid "Flip-flop at the transistor level"
 msgstr ""
@@ -428,7 +423,7 @@ msgid ""
 msgstr ""
 
 msgid "Group Editing Features"
-msgstr ""
+msgstr "Funkcje edycji grup"
 
 msgid ""
 "<h1 color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></h1>\n"
@@ -1065,7 +1060,7 @@ msgid ""
 msgstr ""
 
 msgid "Main Memory"
-msgstr "Основна пам'ять"
+msgstr ""
 
 msgid "MDR Control"
 msgstr ""
@@ -1074,7 +1069,7 @@ msgid "Microcode Next Address Generation"
 msgstr ""
 
 msgid "Microinstruction Decode"
-msgstr "Декодування мікроінструкцій"
+msgstr ""
 
 msgid "OR Gate Circuit"
 msgstr ""
@@ -1103,7 +1098,7 @@ msgid "Standard Logic Microcircuits"
 msgstr ""
 
 msgid "Switches"
-msgstr "Перемикачі"
+msgstr ""
 
 msgid "Textual Verilog"
 msgstr ""
@@ -1277,7 +1272,7 @@ msgid "TTY Control"
 msgstr ""
 
 msgid "Tutorial page"
-msgstr "Сторінка підручника"
+msgstr ""
 
 msgid "Unanchored Gate"
 msgstr ""
@@ -1286,4 +1281,4 @@ msgid "Using Modules"
 msgstr ""
 
 msgid "Welcome to TkGate Page"
-msgstr "Вітаємо на сторінці TkGate"
+msgstr ""

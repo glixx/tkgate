@@ -128,6 +128,17 @@ menu.scope_trace.zoomout	5:Oddal Zoom
 menu.scope_sim.run	0:Uruchom
 menu.scope_sim.pause	0:Pauza
 mod.intf	Interfejs
+gm.gate.and	I
+gm.gate.or	LUB
+gm.rgate.and	I
+gm.rgate.or	LUB
+gm.mem.ram	RAM
+gm.mem.rom	ROM
+tutorial.next	NASTĘPNY
+pop.edit.paste	Wklej
+pop.edit.cut	Wytnij
+pop.edit.copy	Kopiuj
+pop.gate.open	Otwórz
 pop.gate.close	Zamknij
 pop.gate.delete	Skasuj
 pop.module.new	Nowy...

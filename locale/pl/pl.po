@@ -11,13 +11,14 @@
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Begina Felicysym <begina.felicysym@wp.eu>, 2015
 # Dominik Adrian Grzywak, 2018
+# Waldemar Stoczkowski, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
-"PO-Revision-Date: 2018-12-05 07:15+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
+"PO-Revision-Date: 2018-12-12 18:57+0000\n"
+"Last-Translator: Waldemar Stoczkowski\n"
 "Language-Team: Polish (http://www.transifex.com/Magic/tkgate/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -998,7 +999,7 @@ msgstr ""
 #: en/messages:366
 msgctxt "gm.gate.and"
 msgid "AND"
-msgstr ""
+msgstr "I"
 
 #: en/messages:367
 msgctxt "gm.gate.nand"
@@ -1008,7 +1009,7 @@ msgstr ""
 #: en/messages:368
 msgctxt "gm.gate.or"
 msgid "OR"
-msgstr ""
+msgstr "LUB"
 
 #: en/messages:369
 msgctxt "gm.gate.nor"
@@ -1053,7 +1054,7 @@ msgstr ""
 #: en/messages:378
 msgctxt "gm.rgate.and"
 msgid "AND"
-msgstr ""
+msgstr "I"
 
 #: en/messages:379
 msgctxt "gm.rgate.nand"
@@ -1063,7 +1064,7 @@ msgstr ""
 #: en/messages:380
 msgctxt "gm.rgate.or"
 msgid "OR"
-msgstr ""
+msgstr "LUB"
 
 #: en/messages:381
 msgctxt "gm.rgate.nor"
@@ -1133,12 +1134,12 @@ msgstr ""
 #: en/messages:396
 msgctxt "gm.mem.ram"
 msgid "RAM"
-msgstr ""
+msgstr "RAM"
 
 #: en/messages:397
 msgctxt "gm.mem.rom"
 msgid "ROM"
-msgstr ""
+msgstr "ROM"
 
 #: en/messages:399
 msgctxt "gm.mem.jkff"
@@ -1223,7 +1224,7 @@ msgstr ""
 #: en/messages:418
 msgctxt "tutorial.next"
 msgid "NEXT"
-msgstr ""
+msgstr "NASTĘPNY"
 
 #: en/messages:419
 msgctxt "tutorial.chapter"
@@ -1248,17 +1249,17 @@ msgstr ""
 #: en/messages:429
 msgctxt "pop.edit.paste"
 msgid "Paste"
-msgstr ""
+msgstr "Wklej"
 
 #: en/messages:430
 msgctxt "pop.edit.cut"
 msgid "Cut"
-msgstr ""
+msgstr "Wytnij"
 
 #: en/messages:431
 msgctxt "pop.edit.copy"
 msgid "Copy"
-msgstr ""
+msgstr "Kopiuj"
 
 #: en/messages:433
 msgctxt "pop.port.in"
@@ -1318,7 +1319,7 @@ msgstr ""
 #: en/messages:446
 msgctxt "pop.gate.open"
 msgid "Open"
-msgstr ""
+msgstr "Otwórz"
 
 #: en/messages:447
 msgctxt "pop.gate.close"
