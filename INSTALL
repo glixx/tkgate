@@ -12,6 +12,7 @@ installation, see "INSTALLING MULTIPLE VERSIONS" below.
 
 4) Run the configuration script:
 
+      autoreconf -fi
       ./configure
 
 5) Compile TkGate using the command:
@@ -44,6 +45,7 @@ INSTALLING MULTIPLE VERSIONS
 
   To install tkgate-2.1 without affecting other installed versions do:
 
+     autoreconf -fi
      ./configure --program-suffix=21
      make pkgdatadir=/usr/local/share/tkgate-2.1
      su
