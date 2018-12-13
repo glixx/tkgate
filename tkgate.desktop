@@ -6,6 +6,7 @@ Type=Application
 Exec=tkgate
 Icon=tkgate
 Categories=Engineering;Electronics;Education;
+Keywords=circuit;simulator;sim;
 
 
 # Translations

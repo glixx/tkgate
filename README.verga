@@ -27,12 +27,11 @@ Commands sent from simulator to tkgate:
 stop @ <t>					Indicate simulator is stopped
 break <n> @ <t>					Indicate simulator is stopped at a breakpoint
 time @ <t>					Report of current simulator
-valueof <who> <net> <value>  @ <t>		Report value of a net to a tkgate listener
-comment <text>					Comment command.  Ignored by tkgate.
+valueof <who> <net> <value> @ <t>		Report value of a net to a tkgate listener
+comment <text>					Comment command. Ignored by tkgate.
 echo <text>					Text to be displayed as is.
 error file <text>				Error message with
 error gate <gate> <text>			Error occuring related to a gate/module
 error net <net> <text>				Error occuring related to a net
 error run <text>				Run-time error report
 error command <text>				Error in command from tkgate
-
