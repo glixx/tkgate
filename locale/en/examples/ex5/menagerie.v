@@ -848,7 +848,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g76 (_DOUT) @(701,1137) /sn:0 /w:[ 0 ]
   //: comment g65 @(137,15) /anc:1
   //: /line:"The IR and OPR registers store the"
-  //: /line:"instruction and operand bytes of "
+  //: /line:"instruction and operand bytes of"
   //: /line:"the current instruction."
   //: /end
   //: OUT g59 (_rdmdr) @(701,1047) /sn:0 /w:[ 1 ]

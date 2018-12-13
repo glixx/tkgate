@@ -42,12 +42,21 @@ fi
 
 for lang in $langs
 do
+    file_po="$lang/messages_$lang.po"
+    if [ ! -f "$file_po" ]
+    then
+       echo "File $file_po does not exists"
+       continue
+    fi
+
+    echo "Creating $lang/messages.utf8"
+
     # temporary files
     lang1="$lang"1
     lang2="$lang"2
 
     # delete header
-    cat $lang/messages_$lang.po |sed '1,/#: en\/messages/ d' > $lang/$lang1.po
+    cat $file_po |sed '1,/#: en\/messages/ d' > $lang/$lang1.po
     # delete comments
     sed -i '/en\/messages/d' $lang/$lang1.po
     # screened quotes \" -> YYYYY

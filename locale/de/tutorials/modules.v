@@ -358,7 +358,7 @@ module PAGE2();
   //: comment g1 @(9,13) /anc:1
   //: /line:"<h3>Module benutzen</h3> <b>(Modulliste)</b>"
   //: /line:""
-  //: /line:"Die Menge der zur aktuellen Schaltung gehörenden Module wird auf der linken Seite der "
+  //: /line:"Die Menge der zur aktuellen Schaltung gehörenden Module wird auf der linken Seite der"
   //: /line:"Schnittstelle gezeigt. Man kann zwischen einer <i>Baumansicht</i> <img src=modtree.gif bgcolor=gray> (siehe Beispiel) und einer"
   //: /line:"<i>Listenansicht</i> <img src=modlist.gif bgcolor=gray> entscheiden. Die Baumansicht zeigt die Modulhierarchie, beginnend mit"
   //: /line:"einem obersten Wurzelmodul, das durch <img src=document.gif> symbolisiert wird. Module, die noch zur Schaltung"

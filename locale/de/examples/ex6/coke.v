@@ -84,7 +84,7 @@ wire [2:0] w26;    //: /sn:0 {0}(#:328,193)(360,193){1}
   //: /line:"Münzen einwerfen und Banknoten in den Schlitz ziehen, drücke"
   //: /line:"die Getränkeknöpfe oder die Geldrückgabe. Diese Aktionen"
   //: /line:"erzeugen Signale, die an Deine Schaltung gesendet werden."
-  //: /line:"Eingänge der Steuerung können zur Beleuchtung und/oder für "
+  //: /line:"Eingänge der Steuerung können zur Beleuchtung und/oder für"
   //: /line:"den Getränkespender oder das Wechselgeld benutzt werden."
   //: /line:""
   //: /line:"Aufgaben:"

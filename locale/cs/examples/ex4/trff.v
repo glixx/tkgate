@@ -61,19 +61,19 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: joint g11 (S) @(589, 94) /anc:1 /w:[ 1 -1 2 8 ]
   //: VDD g16 (w17) @(631,292) /sn:0 /anc:1 /w:[ 1 ]
   //: comment g28 @(26,299) /anc:1
-  //: /line:"3) Vraťte spínač \"S\" do pozice \"off\" a "
-  //: /line:"stiskněte mezerník 10 až 20 krát. Signály "
+  //: /line:"3) Vraťte spínač \"S\" do pozice \"off\" a"
+  //: /line:"stiskněte mezerník 10 až 20 krát. Signály"
   //: /line:"\"Q\" a\"_Q\" zůstanou na stejné úrovni."
   //: /end
   //: joint g10 (Q) @(654, 383) /anc:1 /w:[ 1 2 8 14 ]
   //: LED g32 (Q) @(772,383) /sn:0 /R:3 /w:[ 0 ] /type:0
   //: SWITCH g19 (R) @(425,353) /sn:0 /anc:1 /w:[ 7 ] /st:0 /dn:0
   //: comment g27 @(25,193) /anc:1
-  //: /line:"2) Stiskněte mezerník 10 až 20 krát a postupte "
-  //: /line:"v simulaci. Všimněte si, že oba signály \"Q\" a "
-  //: /line:"\"_Q\" jsou v neurčeném stavu. Nyní zapněte spínač "
-  //: /line:"\"S\" (kliknutím na něj) a stiskněte mezerník "
-  //: /line:"dalších 10 až 20 krát. Signál \"Q\" se dostane "
+  //: /line:"2) Stiskněte mezerník 10 až 20 krát a postupte"
+  //: /line:"v simulaci. Všimněte si, že oba signály \"Q\" a"
+  //: /line:"\"_Q\" jsou v neurčeném stavu. Nyní zapněte spínač"
+  //: /line:"\"S\" (kliknutím na něj) a stiskněte mezerník"
+  //: /line:"dalších 10 až 20 krát. Signál \"Q\" se dostane"
   //: /line:"na úroveò log. 1 a signál \"_Q\" na úroveò log. 0."
   //: /line:""
   //: /end
@@ -109,10 +109,10 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: joint g22 (R) @(533, 353) /anc:1 /w:[ 1 -1 2 8 ]
   //: comment g26 @(26,101) /anc:1
   //: /line:"1) Spustěte simulaci kliknutím na tlačítko"
-  //: /line:"\"Spustit\" nebo výběrem položky \"Začít "
-  //: /line:"Simulaci\" z menu \"Simulace\". Dvojitým "
+  //: /line:"\"Spustit\" nebo výběrem položky \"Začít"
+  //: /line:"Simulaci\" z menu \"Simulace\". Dvojitým"
   //: /line:"kliknutím na vodiče \"S\", \"R\", \"Q\" a \"_Q\""
-  //: /line:"na ně nastavíte sondy. Signál \"_Q\" je "
+  //: /line:"na ně nastavíte sondy. Signál \"_Q\" je"
   //: /line:"negací signálu \"Q\"."
   //: /end
   _GGNMOS #(2, 1) g12 (.Z(Q), .S(w14), .G(R));   //: @(560,406) /sn:0 /anc:1 /w:[ 13 3 9 ]
@@ -120,7 +120,7 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: LED g33 (S) @(503,74) /sn:0 /w:[ 5 ] /type:0
   //: comment g30 @(23,420) /anc:1
   //: /line:"5) Vraťte spínač \"R\" do vypnutého stavu"
-  //: /line:"a stiskněte mezerník 10 až 20 krát. "
+  //: /line:"a stiskněte mezerník 10 až 20 krát."
   //: /line:"Signály \"Q\" a\"_Q\" zůstanou na stejné úrovni."
   //: /end
 

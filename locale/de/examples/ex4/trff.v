@@ -70,7 +70,7 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: SWITCH g19 (R) @(425,353) /sn:0 /anc:1 /w:[ 7 ] /st:0 /dn:0
   //: comment g27 @(25,193) /anc:1
   //: /line:"2) Drücke die Leertaste 10 bis 20 mal um den Simulator"
-  //: /line:"vorzurücken. Beachte, daß beide Signale, "
+  //: /line:"vorzurücken. Beachte, daß beide Signale,"
   //: /line:"\"Q\" und \"_Q\", im unbekannten Zustand sind."
   //: /line:"Schalte jetzt \"S\" ein (durch Draufklicken)"
   //: /line:"und drücke die Leertaste weitere 10 bis 20 Male"

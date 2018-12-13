@@ -73,8 +73,8 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: /line:"Stiskněte tlačítko \"Spustit\" znova. Simulace se"
   //: /line:"přepne do režimu stálého běhu. Kdykoliv v tomto"
   //: /line:"režimu změníte hodnotu spínače (kliknutím na"
-  //: /line:"něj), simulátor bude provádět simulaci dokud se "
-  //: /line:"všechny hodnoty neustálí. Ukončete simulaci "
+  //: /line:"něj), simulátor bude provádět simulaci dokud se"
+  //: /line:"všechny hodnoty neustálí. Ukončete simulaci"
   //: /line:"stisknutím tlačítka \"Stop\" na horním panelu."
   //: /end
   _GGXOR2 #(8) g13 (.I0(A1), .I1(B1), .Z(w10));   //: @(180,255) /sn:0 /w:[ 0 5 3 ] /eb:0

@@ -114,8 +114,6 @@ igen.delete	Verwijderen
 igen.edit	Wijzigen
 circ.flags	Opties
 circ.library	Bibliotheken
-ho.tool.zoomin	Inzoomen
-ho.tool.zoomout	Uitzoemen
 license1	-begin-
 TtGate is vrije software; u mag het opnieuw distribueren en/of wijzigen
 onder de voorwaarden van de GNU General Public License zoals gepubliceerd
@@ -133,3 +131,5 @@ U moet een kopie van de GNU General Public License hebben gekregen
 samen met TtGate; zoniet, schrijf dan naar de Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 -end-
+ho.tool.zoomin	Inzoomen
+ho.tool.zoomout	Uitzoemen

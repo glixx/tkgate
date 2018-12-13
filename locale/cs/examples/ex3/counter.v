@@ -41,21 +41,21 @@ wire [7:0] reg_out;    //: {0}(#:50:224,275)(224,332)(297,332)(297,173){1}
   _GGADD8 #(68, 70, 62, 64) g2 (.A(w4), .B(reg_out), .S(w5), .CI(w11), .CO(w12));   //: @(224,183) /sn:0 /w:[ 1 5 0 1 0 ]
   //: SWITCH g1 (w8) @(325,297) /sn:0 /R:1 /w:[ 1 ] /st:0 /dn:0
   //: comment g11 @(348,218)
-  //: /line:"5) Ujistěte se, že nulovací "
+  //: /line:"5) Ujistěte se, že nulovací"
   //: /line:"vodič CLR je v pozici \"off\""
   //: /line:"aby mohl být registr smazán."
   //: /end
   //: comment g10 @(255,56)
   //: /line:"4) Kliknutím na dip spínač, vložením"
   //: /line:"hodnoty \"1\" do dialogu, který se"
-  //: /line:"objeví a stiskutím \"OK\" se spínač "
+  //: /line:"objeví a stiskutím \"OK\" se spínač"
   //: /line:"nastaví na hodnotu 1."
   //: /end
   //: GROUND g6 (w11) @(269,203) /sn:0 /w:[ 0 ]
   //: SWITCH g7 (w9) @(324,232) /sn:0 /R:3 /w:[ 1 ] /st:0 /dn:0
   //: comment g9 @(198,355)
   //: /line:"3) Dvojitým kliknutím na"
-  //: /line:"výstup registru na něj "
+  //: /line:"výstup registru na něj"
   //: /line:"umístěte sondu."
   //: /end
   //: comment g39 @(20,12) /sn:0

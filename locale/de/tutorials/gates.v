@@ -97,7 +97,7 @@ wire w9;    //: /sn:0 {0}(249,152)(221,152){1}
   //: comment g2 @(11,10) /anc:1
   //: /line:"<h3>Editieren von Gattern</h3> <b>(Verschieben)</b>"
   //: /line:""
-  //: /line:"um ein Gatter zu bewegen, wähle es mit <img src=\"mov_curs.gif\" bgcolor=gray> aus und ziehe es an den neuen Ort. "
+  //: /line:"um ein Gatter zu bewegen, wähle es mit <img src=\"mov_curs.gif\" bgcolor=gray> aus und ziehe es an den neuen Ort."
   //: /line:"Versuche es mit der Beispielschaltung unten."
   //: /line:""
   //: /end

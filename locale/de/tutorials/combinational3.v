@@ -45,7 +45,7 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   //: /line:""
   //: /line:"Drücke erneut die \"<img src=\"simstart.gif\"> <font color=red2>Simulieren</font>\" Taste zum Eintritt in den Simulationsmodus. Klicke diesmal auf eine Leitung, (z.B. die"
   //: /line:"mit \"S\" bezeichnete) und wähle \"Tastkopf hinzufügen/löschen\" aus dem Popup Menu. Damit wird ein Tastkopf"
-  //: /line:"auf diese Leitung gesetzt und ein Logikanalysatorfenster öffnet sich. Setze auf einige andere Leitung ebenfalls Tastköpfe und löse den "
+  //: /line:"auf diese Leitung gesetzt und ein Logikanalysatorfenster öffnet sich. Setze auf einige andere Leitung ebenfalls Tastköpfe und löse den"
   //: /line:"Simulator durch Druck auf den <img src=sim_go.gif bgcolor=gray> Knopf aus dem Pause-Zustand. Klicke auf die Schalter, um ihre Zustände zu ändern und"
   //: /line:"beobachte, wie sich die Ausgabe im Logikanalysator ändert."
   //: /end
@@ -62,7 +62,7 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   //: /line:"<font color=green4>Hinweis: Normalerweise simuliert TkGate"
   //: /line:"Schaltnetze, bis alle Signale einen stabilen"
   //: /line:"Zustand erreicht haben. Der Simulator"
-  //: /line:"schreitet um eine Zeiteinheit fort, wenn die "
+  //: /line:"schreitet um eine Zeiteinheit fort, wenn die"
   //: /line:"Leertaste gedrückt wird.</font>"
   //: /end
   //: joint g31 (A) @(157, 217) /w:[ 3 4 6 -1 ]

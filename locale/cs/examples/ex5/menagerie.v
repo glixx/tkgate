@@ -207,7 +207,7 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   IUNIT iunit (._CLR(_reset), .CK(clk), .IR(DATA), .COUT(w35), ._Z(w34), ._GT(w33), ._LT(w32), ._rdpc(w59), ._incmar(w0), ._rd(w44), .spc(w43), ._ldhmdr(w42), ._ldpc(w41), ._ldmar(w40), ._ldmdr(w39), ._incpc(w38), ._rdmdr(w37), ._wrt(w36), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), .SA(w45));   //: @(456, 84) /sz:(132, 353) /p:[ Ti0>9 Ti1>9 Bi0>3 Ri0>0 Ri1>0 Ri2>0 Ri3>0 Lo0<0 Lo1<0 Lo2<0 Lo3<0 Lo4<0 Lo5<0 Lo6<0 Lo7<0 Lo8<0 Lo9<0 Lo10<0 Ro0<0 Ro1<0 Ro2<0 Ro3<0 Ro4<0 Ro5<0 Ro6<0 Ro7<0 Ro8<0 Ro9<0 Ro10<0 Ro11<0 Ro12<0 Ro13<0 ]
   //: joint g6 (_reset) @(351, 31) /w:[ 3 -1 4 6 ]
   //: comment g9 @(13,47) /anc:1
-  //: /line:"Toto jsou "
+  //: /line:"Toto jsou"
   //: /line:"systémové hodiny."
   //: /line:""
   //: /end
@@ -520,7 +520,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGNOR2 #(6) g70 (.I0(!_ldhmdr), .I1(!_ldmdr), .Z(w));   //: @(874,280) /sn:0 /R:3 /w:[ 3 0 1 ] /eb:0
   //: comment g90 @(212,843) /sn:0 /anc:1
   //: /line:"Toto je terminál. Po vstupu do simulačního"
-  //: /line:"režimu, se objeví terminálové okno "
+  //: /line:"režimu, se objeví terminálové okno"
   //: /line:"odpovídající tomuto zařízení. K zařízení"
   //: /line:"je možno přistupovat přes simulovaný CPU"
   //: /line:"čtením nebo zapsáním adresy určené"
@@ -847,7 +847,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g76 (_DOUT) @(701,1137) /sn:0 /w:[ 0 ]
   //: comment g65 @(137,15) /anc:1
   //: /line:"Registry IR a OPR uchovávají"
-  //: /line:"kód a operandy právě "
+  //: /line:"kód a operandy právě"
   //: /line:"prováděné instrukce."
   //: /end
   //: OUT g59 (_rdmdr) @(701,1047) /sn:0 /w:[ 1 ]
@@ -912,7 +912,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: /line:"instrukce"
   //: /line:"Výstupem je"
   //: /line:"map index,"
-  //: /line:"čísla "
+  //: /line:"čísla"
   //: /line:"registrů,"
   //: /line:"kód funkce"
   //: /line:"a kód"
@@ -922,14 +922,14 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: IN g21 (COUT) @(1163,375) /sn:0 /R:2 /w:[ 1 ]
   //: IN g24 (_LT) @(1168,345) /sn:0 /R:2 /w:[ 0 ]
   //: comment g84 @(694,22)
-  //: /line:"Toto je triviální příklad "
-  //: /line:"jednotky instrukcí. Registr mpc "
+  //: /line:"Toto je triviální příklad"
+  //: /line:"jednotky instrukcí. Registr mpc"
   //: /line:"obsahuje programový čítač"
-  //: /line:"mikroinstrukcí, a dva registry "
-  //: /line:"na data z pamětí ROM m1 a m2 "
+  //: /line:"mikroinstrukcí, a dva registry"
+  //: /line:"na data z pamětí ROM m1 a m2"
   //: /line:"uchovávají aktuální mikroinstrukce."
   //: /line:"Všimněte si, že toto jsou dva"
-  //: /line:"oddělené registry se zpožděním "
+  //: /line:"oddělené registry se zpožděním"
   //: /line:"jednoho cyklu po skoku."
   //: /end
   //: IN g23 (_Z) @(1164,361) /sn:0 /R:2 /w:[ 0 ]
@@ -1013,7 +1013,7 @@ wire [15:0] w65;    //: /sn:0 {0}(#:369,556)(369,600){1}
   //: IN g2 (CK) @(44,421) /sn:0 /w:[ 0 ]
   //: joint g1 (w0) @(351, 477) /w:[ 2 -1 1 4 ]
   //: comment g16 @(157,445) /sn:0
-  //: /line:"Register R0 je natvrdo "
+  //: /line:"Register R0 je natvrdo"
   //: /line:"nastaven na 0."
   //: /end
   _GGREG16 #(10, 10, 20) R2 (.Q(R2), .D(DIN), .EN(w6), .CLR(_CLR), .CK(CK));   //: @(513,279) /w:[ 0 0 0 0 7 ]

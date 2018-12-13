@@ -426,7 +426,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: /line:"Questo è il bus di indirizzi"
   //: /line:"di memoria."
   //: /line:"L'indirizzo può essere dato dal"
-  //: /line:"MAR (Memory Address Register) o "
+  //: /line:"MAR (Memory Address Register) o"
   //: /line:"dal PC (Program Counter)."
   //: /end
   //: IN g2 (_rd) @(480,616) /sn:0 /w:[ 9 ]
@@ -521,8 +521,8 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGBUF16 #(4) g22 (.I(DATA), .Z(w4));   //: @(574,165) /sn:0 /w:[ 9 0 ]
   _GGNOR2 #(6) g70 (.I0(!_ldhmdr), .I1(!_ldmdr), .Z(w));   //: @(874,280) /sn:0 /R:3 /w:[ 3 0 1 ] /eb:0
   //: comment g90 @(212,843) /sn:0 /anc:1
-  //: /line:"Questa è la tty. Quando si attiva la "
-  //: /line:"simulazione appare una finestra che "
+  //: /line:"Questa è la tty. Quando si attiva la"
+  //: /line:"simulazione appare una finestra che"
   //: /line:"corrisponde a questo dispositivo."
   //: /line:"La CPU simulata accede alla tty con"
   //: /line:"operazioni di lettura e di scrittura"
@@ -830,8 +830,8 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: GROUND g8 (w11) @(372,1131) /sn:0 /w:[ 0 ]
   _GGNOR2 #(6) g4 (.I0(!w55), .I1(!ww), .Z(_SA));   //: @(880,356) /sn:0 /R:2 /w:[ 11 0 0 ] /eb:0
   //: comment g61 @(366,789) /anc:1
-  //: /line:"Questa è la metà "
-  //: /line:"inferiore della memoria "
+  //: /line:"Questa è la metà"
+  //: /line:"inferiore della memoria"
   //: /line:"delle microistruzioni."
   //: /end
   //: joint g37 (CK) @(264, 511) /w:[ 6 -1 8 5 ]
@@ -851,7 +851,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g76 (_DOUT) @(701,1137) /sn:0 /w:[ 0 ]
   //: comment g65 @(137,15) /anc:1
   //: /line:"I registri IR e OPR contengono"
-  //: /line:"l'istruzione e i bytes di operando "
+  //: /line:"l'istruzione e i bytes di operando"
   //: /line:"dell'istruzione corrente."
   //: /end
   //: OUT g59 (_rdmdr) @(701,1047) /sn:0 /w:[ 1 ]
@@ -895,7 +895,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   _GGNOR2 #(6) g25 (.I0(!w55), .I1(!w32), .Z(_SA0));   //: @(890,384) /sn:0 /R:2 /w:[ 13 0 0 ] /eb:0
   //: GROUND g17 (w23) @(360,367) /sn:0 /w:[ 0 ]
   //: comment g62 @(364,966) /anc:1
-  //: /line:"Questa è la metà "
+  //: /line:"Questa è la metà"
   //: /line:"superiore della memoria"
   //: /line:"delle microistruzioni."
   //: /end

@@ -169,7 +169,7 @@ wire w9;    //: /sn:0 {0}(305,199)(277,199){1}
   //: /line:"<h3>Editieren von Bausteingruppen</h3> <b>(Zwischenablagefunktionen)</b>"
   //: /line:""
   //: /line:"Die Zwischenablage kann für das Ausschneiden oder Kopieren einer Gattergruppe genutzt werden, um sie nachher"
-  //: /line:" woanders wieder einzufügen. Wähle eine Gruppe von Gattern aus klicke dann auf die <img src=edit_cut.gif bgcolor=gray> oder <img src=edit_copy.gif bgcolor=gray> Knöpfe, um sie "
+  //: /line:" woanders wieder einzufügen. Wähle eine Gruppe von Gattern aus klicke dann auf die <img src=edit_cut.gif bgcolor=gray> oder <img src=edit_copy.gif bgcolor=gray> Knöpfe, um sie"
   //: /line:"in die Zwischenablage auszuschneiden oder zu kopieren. Zum Einfügen des Inhalts der Zwischenablage setzt man"
   //: /line:"erst mit einem Linksklick ein <img src=mark.gif>, dann drückt man den <img src=edit_paste.gif bgcolor=gray> Knopf und der Inhalt der Zwischenablage erscheint an dieser Stelle."
   //: /line:""

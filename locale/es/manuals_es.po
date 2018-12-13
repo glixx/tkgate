@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"5) Make sure the clear \n"
+"5) Make sure the clear\n"
 "line CLR is off to clear\n"
 "the register."
 msgstr ""
@@ -1105,7 +1105,7 @@ msgstr ""
 
 msgid ""
 "The IR and OPR registers store the\n"
-"instruction and operand bytes of \n"
+"instruction and operand bytes of\n"
 "the current instruction."
 msgstr ""
 

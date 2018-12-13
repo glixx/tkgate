@@ -24,34 +24,37 @@ b.add	Afegeix…
 b.delete	Suprimeix
 b.remove	Elimina
 b.apply	Aplica
-b.anchor	Anclar
+b.anchor	Ancora
 b.tech	Tecnologia
+tab.edit	Edició
 tab.editintr	Interfície
-tab.simulate	Simular
+tab.simulate	Simula
 tab.cpath	Camins crítics
+fpattern.xbm	Mapa de bits de l’X11
+fpattern.mem	Fitxers d’imatge de memòria del TkGate
 fpattern.all	Tots els fitxers
 module.tree	Arbre
 module.list	Llista
 module.box.libraries	Biblioteques
 sidetab.nets	Connexions
 sidetab.ports	Ports
-mm.add	Afegir...
-mm.delete	Esborrar
-mm.edit	Editar...
+mm.add	Afegeix…
+mm.delete	Suprimeix
+mm.edit	Edita…
 mm.enable	Habilita
 mm.disable	Inhabilita
 menu.file	0:Fitxer
 menu.edit	0:Editar
 menu.tool	0:Eines
 menu.symbol	0:Símbol
-menu.simulate	0:Simular
+menu.simulate	0:Simula
 menu.module	0:Mòdul
 menu.interface	0:Interfície
 menu.format	0:Format
-menu.make	0:Inserir
+menu.make	0:Components
 menu.help	0:Ajuda
 menu.file.new	0:Nou...
-menu.file.open	0:Obrir...
+menu.file.open	0:Obre…
 menu.file.openlib	0:Obrir llibreria...
 menu.file.save	0:Guardar
 menu.file.saveas	5:Guardar com...
@@ -571,6 +574,23 @@ miles.msg7	No saps què coi fas, Miles, es un circuit estúpid.
 miles.msg8a	És inútil continuar, Miles.
 miles.msg8b	És obvi que no pots dissenyar un circuit
 cprt.descr	Editor i simulador de circuits digitals
+license1	-begin-
+L'TtGate és programari lliure; podeu redistribuir-lo i/o modificar-lo sota els
+termes de la Llicència Pública General GNU tal com ha estat publicada per
+la Free Software Foundation; ja sigui la versió 2 de la Llicència o bé (si ho
+preferiu) qualsevol altra versió posterior.
+-end-
+license2	-begin-
+L'TtGate es distribueix amb l'expectativa que serà útil, però SENSE CAP
+GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o
+ADEQUACIÓ PER UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública
+General GNU per obtenir-ne més detalls.
+-end-
+license3	-begin-
+Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU
+juntament amb l'TtGate; en cas contrari, escriviu a la Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-end-
 ho.new	-begin-
 Esborra el circuit actual i
 n'edita un de nou.
@@ -843,20 +863,3 @@ de visualització (GUI) i el simulador.
 -end-
 ho.tool.zoomin	Apropa
 ho.tool.zoomout	Allunya
-license1	-begin-
-L'TtGate és programari lliure; podeu redistribuir-lo i/o modificar-lo sota els
-termes de la Llicència Pública General GNU tal com ha estat publicada per
-la Free Software Foundation; ja sigui la versió 2 de la Llicència o bé (si ho
-preferiu) qualsevol altra versió posterior.
--end-
-license2	-begin-
-L'TtGate es distribueix amb l'expectativa que serà útil, però SENSE CAP
-GARANTIA; ni tan sols la garantia implícita de COMERCIABILITAT o
-ADEQUACIÓ PER UN PROPÒSIT PARTICULAR. Vegeu la Llicència Pública
-General GNU per obtenir-ne més detalls.
--end-
-license3	-begin-
-Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU
-juntament amb l'TtGate; en cas contrari, escriviu a la Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
--end-

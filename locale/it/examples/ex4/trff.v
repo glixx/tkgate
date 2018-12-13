@@ -73,8 +73,8 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: /line:"la simulazione."
   //: /line:"Osserva che sia \"Q\" che \"_Q\" hanno valore"
   //: /line:"sconosciuto."
-  //: /line:"Ora clicca sull'interruttore \"S\" e inserisci "
-  //: /line:"di nuovo fra 10 e 20 spazi. "
+  //: /line:"Ora clicca sull'interruttore \"S\" e inserisci"
+  //: /line:"di nuovo fra 10 e 20 spazi."
   //: /line:"\"Q\" passa al livello alto e \"_Q\" a quello basso."
   //: /line:""
   //: /end
@@ -95,7 +95,7 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   //: /end
   //: GROUND g17 (w14) @(601,461) /sn:0 /anc:1 /w:[ 5 ]
   //: comment g25 @(26,42)
-  //: /line:"Questo circuito è un semplice flip-flop realizzato "
+  //: /line:"Questo circuito è un semplice flip-flop realizzato"
   //: /line:"a livello di transistor con due porte NOR in tecnica"
   //: /line:"CMOS."
   //: /end

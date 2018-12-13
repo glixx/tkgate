@@ -759,6 +759,21 @@ miles.msg7	このロクでなし回路の設計を諦めよ、マイスル。
 miles.msg8a	続けても、無駄だよ、マイルス。
 miles.msg8b	お前が回路を設計出来ないというのは、誰でも分かるよ
 verga.err.OK	心配しないで、笑ってください。
+license1	-begin-
+TtGate はフリーソフトウェアです; フリーソフトウェア財団が発行する GNU一
+般公衆利用許諾契約書の第二版、あるいはそれ以降の版が定める条項の下で本プログラ
+ムを再頒布または変更することができます。
+-end-
+license2	-begin-
+TtGate は役立つものであることを期待して配布されていますが、完全に無保証です。
+商用利用または特定の目的における適合性の保証はありません。
+詳細は GNU 一般公衆利用許諾契約書をご覧ください。
+-end-
+license3	-begin-
+あなたは、本プログラムと一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずです。
+そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, Fifth
+Floor, Boston, MA 02110-1301 USA まで手紙を書いてください。
+-end-
 ho.new	現在の回路を消して、新しい 回路を作成する。
 ho.open	回路ファイルを開く。
 ho.save	回路ファイルを保存する。
@@ -907,18 +922,3 @@ ho.tool.anchor	選択のゲートを移動不可にする。
 ho.tool.unanchor	選択のゲートを移動可能にする。
 ho.tool.replicate	ゲートを複製する。
 ho.tool.delete	選択のゲートを削除する。
-license1	-begin-
-TtGate はフリーソフトウェアです; フリーソフトウェア財団が発行する GNU一
-般公衆利用許諾契約書の第二版、あるいはそれ以降の版が定める条項の下で本プログラ
-ムを再頒布または変更することができます。
--end-
-license2	-begin-
-TtGate は役立つものであることを期待して配布されていますが、完全に無保証です。
-商用利用または特定の目的における適合性の保証はありません。
-詳細は GNU 一般公衆利用許諾契約書をご覧ください。
--end-
-license3	-begin-
-あなたは、本プログラムと一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずです。
-そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, Fifth
-Floor, Boston, MA 02110-1301 USA まで手紙を書いてください。
--end-

@@ -477,6 +477,22 @@ miles.msg6	Putting %s%s there is proof of your absolute stupidity, Miles.
 miles.msg7	Why don't you give up Miles, this is a stupid circuit.
 miles.msg8a	It's pointless to continue, Miles.
 miles.msg8b	It's obvious you can't design a circuit
+license1	-begin-
+TtGate je svobodný software; můžete jej šířit a/nebo modifikovat podle
+ustanovení GNU General Public License, vydávané Free Software
+Foundation; a to buď verze 2 této licence anebo (podle vlastního
+uvážení) kterékoliv pozdější verze.
+-end-
+license2	-begin-
+TtGate je rozšiřován v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY;
+neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO URČITÝ
+ÚČEL. Další podrobnosti hledejte v GNU General Public License.
+-end-
+license3	-begin-
+Kopii GNU General Public License byste měli obdržet spolu s programem TtGate;
+pokud se tak nestalo, napište o ni Free Software Foundation, Inc., 51 Temple
+Place, Suite 330, Boston, MA 02110-1301 USA.
+-end-
 ho.new	-begin-
 Smazat aktuální obvod
 a začít editovat nový.
@@ -781,20 +797,4 @@ datových struktur po každé operaci.
 ho.simwatch	-begin-
 Zaznamenat příkazy zasílané mezi
 GUI a simulátorem.
--end-
-license1	-begin-
-TtGate je svobodný software; můžete jej šířit a/nebo modifikovat podle
-ustanovení GNU General Public License, vydávané Free Software
-Foundation; a to buď verze 2 této licence anebo (podle vlastního
-uvážení) kterékoliv pozdější verze.
--end-
-license2	-begin-
-TtGate je rozšiřován v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY;
-neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO URČITÝ
-ÚČEL. Další podrobnosti hledejte v GNU General Public License.
--end-
-license3	-begin-
-Kopii GNU General Public License byste měli obdržet spolu s programem TtGate;
-pokud se tak nestalo, napište o ni Free Software Foundation, Inc., 51 Temple
-Place, Suite 330, Boston, MA 02110-1301 USA.
 -end-

@@ -398,8 +398,6 @@ blklst.to	Ke
 blklst.from	Dari
 blklst.name	Nama
 circ.flags	Pilihan
-ho.tool.zoomin	Zum masuk
-ho.tool.zoomout	Zum keluar
 license1	-begin-
 TtGate adalah perisian bebas; anda boleh mengedarkannya semula dan/atau
 mengubah suai di bawah syarat-syarat GNU General Public License seperti yang
@@ -417,3 +415,5 @@ Anda sepatutunya telah menerima satu salinan Lesen GNU General Public
 bersama TtGate; jika tidak, tulis kepada Free Software Foundation, Inc., 51
 Temple Place, Suite 330, Boston, MA 02110-1301 USA.
 -end-
+ho.tool.zoomin	Zum masuk
+ho.tool.zoomout	Zum keluar

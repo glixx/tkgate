@@ -169,24 +169,6 @@ igen.delete	Skasuj
 circ.general	Ogólne
 circ.library	Biblioteki
 cprt.descr	Symulator i edytor układów cyfrowych
-ho.symed.import	Importuj obraz z pliku.
-ho.symed.export	Eksportuj obraz do pliku.
-ho.tool.currot	-begin-
-Wyświetla aktualną domyślną
-rotację. Kliknij ten
-przycisk by zmienić aktualną
-domyślną rotację.
--end-
-ho.tool.zoomin	Powiększ
-ho.tool.zoomout	Pomniejsz
-ho.tool.valgn	Wyrównaj zaznaczone element(y) pionowo.
-ho.tool.halgn	Wyrównaj zaznaczone element(y) poziomo.
-ho.tool.cut	Wytnij zaznaczenie.
-ho.tool.copy	Skopiuj zaznaczenie.
-ho.tool.paste	Wklej z buforu wycięcia.
-ho.tool.addport	Dodaj port do zaznaczonego komponentu.
-ho.tool.replicate	Replikuj komponent.
-ho.tool.delete	Usuń zaznaczenie.
 license1	-begin-
 Program TtGate jest wolnym oprogramowaniem; można go rozprowadzać
 dalej i/lub modyfikować na warunkach Powszechnej Licencji Publicznej
@@ -207,3 +189,21 @@ Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli
 nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin Street,
 Fifth Floor, Boston, MA 02110-1301 USA.
 -end-
+ho.symed.import	Importuj obraz z pliku.
+ho.symed.export	Eksportuj obraz do pliku.
+ho.tool.currot	-begin-
+Wyświetla aktualną domyślną
+rotację. Kliknij ten
+przycisk by zmienić aktualną
+domyślną rotację.
+-end-
+ho.tool.zoomin	Powiększ
+ho.tool.zoomout	Pomniejsz
+ho.tool.valgn	Wyrównaj zaznaczone element(y) pionowo.
+ho.tool.halgn	Wyrównaj zaznaczone element(y) poziomo.
+ho.tool.cut	Wytnij zaznaczenie.
+ho.tool.copy	Skopiuj zaznaczenie.
+ho.tool.paste	Wklej z buforu wycięcia.
+ho.tool.addport	Dodaj port do zaznaczonego komponentu.
+ho.tool.replicate	Replikuj komponent.
+ho.tool.delete	Usuń zaznaczenie.
