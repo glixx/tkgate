@@ -18,6 +18,8 @@
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+# Author: Loginov Alexey (alexl@mageia.org)
+
 lang_param="$1"
 # if commandline parameter is present
 if [ ! -z "$lang_param" ]

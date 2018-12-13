@@ -18,6 +18,8 @@
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+# Author: Loginov Alexey (alexl@mageia.org)
+
 pot_file="manuals.pot"
 pot_tmp_file="tmp.pot"
 

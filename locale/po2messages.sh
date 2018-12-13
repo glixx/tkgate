@@ -18,6 +18,8 @@
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
+# Author: Loginov Alexey (alexl@mageia.org)
+
 convert="false"
 lang_param="$1"
 # if commandline parameter is present
@@ -45,7 +47,7 @@ do
     lang2="$lang"2
 
     # delete header
-    cat $lang/$lang.po |sed '1,/#: en\/messages/ d' > $lang/$lang1.po
+    cat $lang/messages_$lang.po |sed '1,/#: en\/messages/ d' > $lang/$lang1.po
     # delete comments
     sed -i '/en\/messages/d' $lang/$lang1.po
     # screened quotes \" -> YYYYY
