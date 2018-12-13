@@ -62,24 +62,35 @@ do
 
         # delete header
         sed -i '1,/^$/d' $tmp_file2
+        # \" -> TTTTT
+        sed -i 's|\\"|TTTTT|g' $tmp_file2
+        # msgid "" -> BBBBB
+        sed -i 's|msgid ""|BBBBB|g' $tmp_file2
+        # msgstr "" -> CCCCC
+        sed -i 's|msgstr ""|CCCCC|g' $tmp_file2
+        # delete EOL
+        cat $tmp_file2 | tr -d '\n' > $tmp_file3
+        mv -f $tmp_file3 $tmp_file2
+        # fix wrong auto-multilined strings
+        sed -i 's| ""| |g' $tmp_file2
+        # add EOL where it needed
+        sed -i 's|BBBBB|\nBBBBB\n|g' $tmp_file2
+        # add EOL where it needed
+        sed -i 's|CCCCC|\nCCCCC\n|g' $tmp_file2
+        # add EOL where it needed
+        sed -i 's|msgid|\nmsgid|g' $tmp_file2
+        # add EOL where it needed
+        sed -i 's|msgstr|\nmsgstr|g' $tmp_file2
+        # add EOL where it needed
+        sed -i 's|\\n""|\\n"\n"|g' $tmp_file2
         # add prefix XXXXX for  //: /line:
         sed -i 's|^"|XXXXX"|g' $tmp_file2
-        # delete \n
-        sed -i 's|\\n||g' $tmp_file2
         # delete empty strings
         sed -i '/^$/d' $tmp_file2
-        # mark EOL as AAAAA
-        sed -i 's|$|AAAAA|g' $tmp_file2
-        # msgid ""AAAAA -> BBBBB
-        sed -i 's|msgid ""AAAAA|BBBBB|g' $tmp_file2
         # msgid  -> BBBBB
         sed -i 's|msgid |BBBBB|g' $tmp_file2
-        # msgstr ""AAAAA -> CCCCC
-        sed -i 's|msgstr ""AAAAA|CCCCC|g' $tmp_file2
         # msgstr  -> CCCCC
         sed -i 's|msgstr |CCCCC|g' $tmp_file2
-        # \ -> YYYYY
-        sed -i 's|\\|YYYYY|g' $tmp_file2
         # & -> ZZZZZ
         sed -i 's|&|ZZZZZ|g' $tmp_file2
         # * -> DDDDD
@@ -90,6 +101,11 @@ do
         sed -i 's|     |PPPPP|g' $tmp_file2
         # [ -> OOOOO
         sed -i 's|\[|OOOOO|g' $tmp_file2
+        # mark EOL as AAAAA
+        sed -i 's|$|AAAAA|g' $tmp_file2
+        # fix wrong AAAAA adding
+        sed -i 's|BBBBBAAAAA|BBBBB|g' $tmp_file2
+        sed -i 's|CCCCCAAAAA|CCCCC|g' $tmp_file2
         # delete EOL
         cat $tmp_file2 | tr -d '\n' > $tmp_file3
         mv -f $tmp_file3 $tmp_file2
@@ -101,13 +117,15 @@ do
         sed -i "s|BBBBB||g" $tmp_file2
         # add empty string
         echo "" >> $tmp_file2
+        # delete \n
+        sed -i 's|\\n||g' $tmp_file2
         
         # mark EOL as AAAAA
         sed -i 's|$|AAAAA|g' $tmp_file1
         # add prefix XXXXX for  //: /line:
         sed -i 's|  //: /line:|XXXXX|g' $tmp_file1
-        # \" -> YYYYY
-        sed -i 's|\\|YYYYY|g' $tmp_file1
+        # \" -> TTTTT
+        sed -i 's|\\"|TTTTT|g' $tmp_file1
         # & -> ZZZZZ
         sed -i 's|&|ZZZZZ|g' $tmp_file1
         # * -> DDDDD
@@ -135,7 +153,7 @@ do
 
         # restore marks
         sed -i "s|AAAAA|\n|g" $tmp_file1
-        sed -i 's|YYYYY|\\|g' $tmp_file1
+        sed -i 's|TTTTT|\\"|g' $tmp_file1
         sed -i 's|XXXXXXXXXX|  //: /line:|g' $tmp_file1
         sed -i 's|XXXXX|  //: /line:|g' $tmp_file1
         sed -i 's|ZZZZZ|\&|g' $tmp_file1
