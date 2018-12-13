@@ -1,4 +1,4 @@
-//: version "2.1-a2"
+//: version "2.1"
 //: property prefix = "_GG"
 //: property title = "Welcome to TkGate Page"
 //: property discardChanges = 1

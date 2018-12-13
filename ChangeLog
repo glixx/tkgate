@@ -1,4 +1,4 @@
-Version 2.1-a2 - December 17, 2018
+Version 2.1 - December 17, 2018
      * Localization update
      * Fix segfault on exit
      * Partial fix for whitespace in filenames
