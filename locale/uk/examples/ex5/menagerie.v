@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "menagerie.v"
+//: property title = "Menagerie CPU"
 //: property showSwitchNets = 0
 //: property simAutoStart = 1
 //: property discardChanges = 1

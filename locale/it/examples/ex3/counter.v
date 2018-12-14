@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "it"
 //: property prefix = "_GG"
-//: property title = "8-Bit Counter"
+//: property title = "Contatore a 8-Bit"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2

@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "cs"
 //: property prefix = "_GG"
-//: property title = "8-Bit Counter"
+//: property title = "8-Bitový čítač"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2

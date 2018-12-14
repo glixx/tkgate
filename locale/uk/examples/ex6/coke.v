@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Вітаємо на сторінці TkGate"
+//: property title = "Coke Machine"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"

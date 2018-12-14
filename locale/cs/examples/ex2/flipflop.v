@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "cs"
 //: property prefix = "_GG"
-//: property title = "flipflop.v"
+//: property title = "4-Bitový čítač"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"

@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "index.v"
+//: property title = "Страница Учебных примеров"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -14,8 +14,8 @@ module main;    //: root_module
 //: enddecls
 
   //: comment g4 @(553,317) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex6/coke.v\"><img src=example_coke.gif>"
-  //: /line:"Автомат газировки</a></h3>"
+  //: /line:"<a href=\"ex6/coke.v\"><img src=example_coke.gif>"
+  //: /line:"<h3>Автомат газировки</h3></a>"
   //: /line:"Этот пример использует механизм"
   //: /line:"виртуальных периферийных устройств (ВПУ)"
   //: /line:"TkGate для создания интерактивной модели"
@@ -59,15 +59,15 @@ module main;    //: root_module
   //: /line:"серии 74."
   //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
-  //: /line:"Компьютер \"Зверинец\"</a></h3>"
+  //: /line:"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
+  //: /line:"<h3>Компьютер \"Зверинец\"</h3></a>"
   //: /line:"Простой микропроцессор с микрокодом,"
   //: /line:"который выполняет игру \"Животные\""
   //: /line:"во время симуляции."
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
-  //: /line:"Комбинационная логика</a></h3>"
+  //: /line:"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
+  //: /line:"<h3>Комбинационная логика</h3></a>"
   //: /line:"Простой 3-разрядный сумматор, который"
   //: /line:"можно запускать в симуляторе."
   //: /line:"Нажмите кнопку запуска, затем"

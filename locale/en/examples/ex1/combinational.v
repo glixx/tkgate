@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
-//: property title = "combinational.v"
+//: property title = "Combinational Logic"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -66,7 +66,7 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: comment g34 @(351,22)
   //: /line:"This circuit is a simple three-bit adder."
   //: /line:""
-  //: /line:"Start the simualtor by pressing the \"play\""
+  //: /line:"Start the simulator by pressing the \"play\""
   //: /line:"button from the button bar. Then, set probes"
   //: /line:"by double clicking on the S0, S1, S2 and C3"
   //: /line:"wires (and any additional wires you wish to"

@@ -9,6 +9,7 @@
 # 
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2018
+# AlexL <loginov.alex.valer@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
 "PO-Revision-Date: 2018-12-10 23:25+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>, 2018\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/Magic/teams/44238/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,6 +73,9 @@ msgid ""
 "and press the space bar 10 to 20 times. The\n"
 "\"Q\" and \"_Q\" signals will remain constant."
 msgstr ""
+
+msgid "4-Bit Counter"
+msgstr "4-бітовий лічильник"
 
 msgid ""
 "4) Now turn the \"R\" switch off by clicking\n"
@@ -241,6 +245,12 @@ msgid ""
 "\n"
 msgstr ""
 
+msgid "Coke Machine"
+msgstr ""
+
+msgid "Combinational Logic"
+msgstr ""
+
 msgid "Combinational Simulation"
 msgstr ""
 
@@ -258,6 +268,9 @@ msgstr "Редагування шлюзів"
 
 msgid "Editing Wires"
 msgstr "Редагування дротів"
+
+msgid "Example page"
+msgstr ""
 
 msgid "Flip-flop at the transistor level"
 msgstr ""
@@ -493,8 +506,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">\n"
-"Combinational Logic</a></h3>\n"
+"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">\n"
+"<h3>Combinational Logic</h3></a>\n"
 "A simple 3-bit adder that you\n"
 "simulate. Push the play button\n"
 "then click on the switches and\n"
@@ -503,16 +516,16 @@ msgid ""
 msgstr ""
 
 msgid ""
-"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">\n"
-"Menagerie CPU</a></h3>\n"
+"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">\n"
+"<h3>Menagerie CPU</h3></a>\n"
 "A simple microcode-based CPU that\n"
 "will play the \"Animals\" game on a\n"
 "TTY device when simulated."
 msgstr ""
 
 msgid ""
-"<h3><a href=\"ex6/coke.v\"><img src=example_coke.gif>\n"
-"Coke Machine</a></h3>\n"
+"<a href=\"ex6/coke.v\"><img src=example_coke.gif>\n"
+"<h3>Coke Machine</h3></a>\n"
 "This example uses TkGate's Viritual\n"
 "Peripheral Device (VPD) mechanism to\n"
 "create an interactive \"Coke Machine\"\n"
@@ -1070,6 +1083,9 @@ msgstr "Основна пам'ять"
 msgid "MDR Control"
 msgstr ""
 
+msgid "Menagerie CPU"
+msgstr ""
+
 msgid "Microcode Next Address Generation"
 msgstr ""
 
@@ -1189,7 +1205,7 @@ msgstr ""
 msgid ""
 "This circuit is a simple three-bit adder.\n"
 "\n"
-"Start the simualtor by pressing the \"play\"\n"
+"Start the simulator by pressing the \"play\"\n"
 "button from the button bar. Then, set probes\n"
 "by double clicking on the S0, S1, S2 and C3\n"
 "wires (and any additional wires you wish to\n"

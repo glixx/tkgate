@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "it"
 //: property prefix = "_GG"
-//: property title = "combinational.v"
+//: property title = "Combinational Logic"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2

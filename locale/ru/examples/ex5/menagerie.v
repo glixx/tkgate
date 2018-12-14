@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "menagerie.v"
+//: property title = "Компьютер \"Зверинец\""
 //: property showSwitchNets = 0
 //: property simAutoStart = 1
 //: property discardChanges = 1

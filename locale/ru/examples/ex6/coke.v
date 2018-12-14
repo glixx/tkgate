@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "Страница Добро пожаловать в TkGate"
+//: property title = "Автомат газировки"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"

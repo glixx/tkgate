@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "ja"
 //: property prefix = "_GG"
-//: property title = "index.v"
+//: property title = "Example page"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -14,8 +14,8 @@ module main;    //: root_module
 //: enddecls
 
   //: comment g4 @(553,317) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex6/coke.v\"><img src=example_coke.gif>"
-  //: /line:"Coke Machine</a></h3>"
+  //: /line:"<a href=\"ex6/coke.v\"><img src=example_coke.gif>"
+  //: /line:"<h3>Coke Machine</h3></a>"
   //: /line:"This example uses TkGate's Viritual"
   //: /line:"Peripheral Device (VPD) mechanism to"
   //: /line:"create an interactive \"Coke Machine\""
@@ -56,15 +56,15 @@ module main;    //: root_module
   //: /line:"logic circuit library."
   //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
-  //: /line:"Menagerie CPU</a></h3>"
+  //: /line:"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
+  //: /line:"<h3>Menagerie CPU</h3></a>"
   //: /line:"A simple microcode-based CPU that"
   //: /line:"will play the \"Animals\" game on a"
   //: /line:"TTY device when simulated."
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
-  //: /line:"Combinational Logic</a></h3>"
+  //: /line:"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
+  //: /line:"<h3>Combinational Logic</h3></a>"
   //: /line:"A simple 3-bit adder that you"
   //: /line:"simulate. Push the play button"
   //: /line:"then click on the switches and"

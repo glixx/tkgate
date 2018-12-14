@@ -183,12 +183,17 @@ do
              fi
              # translation for "Tutorial Chapters"
              sed -i "s|\. $c</a>|. $d</a>|g" $tmp_file1
+             # translation for "Example Page"
+             sed -i "s|$c</h3></a>|$d</h3></a>|g" $tmp_file1
            fi
         done
         if [ "$lang" = "ja" ]
         then
            sed -i "s|<h3>||g" ./ja/tutorials/index.v
            sed -i "s|</h3>||g" ./ja/tutorials/index.v
+           # commented while no Japanese translations
+           #sed -i "s|<h3>||g" ./ja/examples/index.v
+           #sed -i "s|</h3>||g" ./ja/examples/index.v
         fi
 
         # restore marks

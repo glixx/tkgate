@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "es"
 //: property prefix = "_GG"
-//: property title = "flipflop.v"
+//: property title = "4-Bit Counter"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
