@@ -1222,7 +1222,7 @@ msgstr ""
 "\n"
 "Вы можете поворачивать (при помощи <img src=edit_rotate.gif bgcolor=gray> и <img src=edit_brotate.gif bgcolor=gray>) и привязывать\n"
 "(при помощи <img src=anchor.gif bgcolor=gray> и <img src=unanchor.gif bgcolor=gray>) группы точно также, как и отдельные\n"
-"вентили (см. <a href=gates.v>Редактирование вентилей</a> раздел). Попробуйте\n"
+"вентили (см. раздел <a href=gates.v>Редактирование вентилей</a>). Попробуйте\n"
 "на схеме снизу."
 
 msgid ""

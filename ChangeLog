@@ -5,7 +5,7 @@ Version 2.1 - December 17, 2018
      * Fix showing of pictures and using style in documentation
      * Add manuals about circuits 74xx for all languages
      * Gettext support for messages, examples, tutorials
-     * Partially mingw support
+     * Partially cygwin support
 
 Version 2.1-a1 - June 19, 2015
      * Verga can parse output drive strengths for gates
