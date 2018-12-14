@@ -185,6 +185,11 @@ do
              sed -i "s|\. $c</a>|. $d</a>|g" $tmp_file1
            fi
         done
+        if [ "$lang" = "ja" ]
+        then
+           sed -i "s|<h3>||g" ./ja/tutorials/index.v
+           sed -i "s|</h3>||g" ./ja/tutorials/index.v
+        fi
 
         # restore marks
         sed -i "s|AAAAA|\n|g" $tmp_file1
