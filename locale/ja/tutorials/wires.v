@@ -22,7 +22,7 @@ module PAGE1;    //: root_module
   //: /line:"<img src=netprops.gif>"
   //: /end
   //: comment MAIN_TEXT1 @(10,10) /anc:1
-  //: /line:"<h3>ワイヤの編集</h3>"
+  //: /line:"ワイヤの編集"
   //: /line:""
   //: /line:"このチュートリアルでは、TkGateの基本編集機能を紹介する。"
   //: /end

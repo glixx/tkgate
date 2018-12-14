@@ -39,7 +39,7 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"In diesem Abschnitt wird gezeigt, wie man Module erzeugt, editiert und verwaltet."
   //: /end
-  //: comment g0 @(10,320) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -58,10 +58,10 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
 //: enddecls
 
   bar g4 (.C(w2), .B(w1), .A(w0), .Z(w5), .Y(w4), .X(w3));   //: @(201, 145) /sz:(56, 72) /sn:0 /p:[ Li0>0 Li1>0 Li2>0 Ro0<0 Ro1<0 Ro2<0 ]
-  //: comment g3 @(10,310) /sn:0 /R:14
+  //: comment g3 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
@@ -71,7 +71,7 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
   //: /line:"ermöglicht das Editieren der Moduldefinition. Alternativ dazu kann man auch auf eine Modulinstanz rechtsklicken"
   //: /line:"und <font color=red2>Öffnen</font> aus dem Popup Menu wählen."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -120,7 +120,7 @@ module PAGE3();
   //: /line:"Folgende Symbole werden in der Baum- oder Listenansicht der Module verwendet:"
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -242,7 +242,7 @@ module PAGE8();
   //: /line:" * Um einen Port wieder zu löschen, wählt man das <img src=cut_curs.gif> Werkzeug und schneidet die Leitung am Modul ab."
   //: /line:" * Mit einem Doppelklick auf einem Port mit dem <img src=mov_curs.gif> Werkzeug können die Porteigenschaften editiert werden."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -259,7 +259,7 @@ wire [7:0] w2;    //: /sn:0 {0}(#:257,194)(272,194){1}
 //: enddecls
 
   ALU g3 (.A(w2), .B(w1), .F(w0), .Z(w3));   //: @(273, 178) /sz:(40, 64) /sn:0 /p:[ Li0>1 Li1>1 Li2>1 Ro0<1 ]
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
@@ -292,7 +292,7 @@ module PAGE7();
   //: /line:"zu sehen."
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -311,7 +311,7 @@ module PAGE5();
   //: /line:"und wähle, ob es ein graphisches Netzlistenmodul oder ein textuelles HDL Modul werden soll."
   //: /line:"Versuche, ein neues Modul namens \"CPU\" zu erzeugen."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -337,7 +337,7 @@ module PAGE4();
   //: /line:"und ihn in die aktuelle Schaltung hineinzieht. Versuche, durch Umschalten mit <img src=modlist.gif> auf die Listenansicht"
   //: /line:"einzustellen und ziehe mehere Instanzen des \"bar\" Moduls ins aktuelle Editierfenster."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -378,7 +378,7 @@ module PAGE10();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(11,22) /anc:1

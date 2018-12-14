@@ -121,7 +121,7 @@ do
         echo "" >> $tmp_file2
         # delete \n
         sed -i 's|\\n||g' $tmp_file2
-        
+
         # mark EOL as AAAAA
         sed -i 's|$|AAAAA|g' $tmp_file1
         # add prefix XXXXX for  //: /line:
@@ -147,6 +147,17 @@ do
            # FIXME: awk deletes more than 1 space everywhere
            a=`echo $line|awk -F "CCCCC" '{print $1}'`
            b=`echo $line|awk -F "CCCCC" '{print $2}'`
+           # FIXME: Japanese does not work with <h1>, </h1>, <h2>, </h2>, <h3>, </h3> tags
+           if [ "$lang" = "ja" ]
+           then
+              b=`echo $b|sed "s|<h1 color=|<font color=|g"`
+              b=`echo $b|sed "s|<h1>||g"`
+              b=`echo $b|sed "s|</h1>||g"`
+              b=`echo $b|sed "s|<h2>||g"`
+              b=`echo $b|sed "s|</h2>||g"`
+              b=`echo $b|sed "s|<h3>||g"`
+              b=`echo $b|sed "s|</h3>||g"`
+           fi
            if [ ! -z "$b" ]
            then
              sed -i "s|$a|$b|g" $tmp_file1

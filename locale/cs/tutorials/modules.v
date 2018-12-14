@@ -38,7 +38,7 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"In this chapter, you will learn how to create, edit and manage modules."
   //: /end
-  //: comment g0 @(10,320) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -57,10 +57,10 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
 //: enddecls
 
   bar g4 (.C(w2), .B(w1), .A(w0), .Z(w5), .Y(w4), .X(w3));   //: @(201, 145) /sz:(56, 72) /sn:0 /p:[ Li0>0 Li1>0 Li2>0 Ro0<0 Ro1<0 Ro2<0 ]
-  //: comment g3 @(10,310) /sn:0 /R:14
+  //: comment g3 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
@@ -70,7 +70,7 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
   //: /line:"tree or list view. Alternatively you can right click on an instance of the module and select"
   //: /line:"<font color=red2>Open</font> from the popup menu."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -119,7 +119,7 @@ module PAGE3();
   //: /line:"The following symbols are used in the module tree and list view:"
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -241,7 +241,7 @@ module PAGE8();
   //: /line:" * To delete a port, select the <img src=cut_curs.gif> tool and cut the wire off of the module."
   //: /line:" * To edit port properties, double click on the port with the <img src=mov_curs.gif> tool."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -258,7 +258,7 @@ wire [7:0] w2;    //: /sn:0 {0}(#:257,194)(272,194){1}
 //: enddecls
 
   ALU g3 (.A(w2), .B(w1), .F(w0), .Z(w3));   //: @(273, 178) /sz:(40, 64) /sn:0 /p:[ Li0>1 Li1>1 Li2>1 Ro0<1 ]
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
@@ -290,7 +290,7 @@ module PAGE7();
   //: /line:"the new interface."
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -309,7 +309,7 @@ module PAGE5();
   //: /line:"and select whether you wish to create it as a \"netlist\" (graphical) module or an"
   //: /line:"HDL (textual) module. Try creating a new module named \"CPU\"."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -335,7 +335,7 @@ module PAGE4();
   //: /line:"drag it into the current circuit. Try switching to the list view by pressing <img src=modlist.gif> then"
   //: /line:"dragging several instances of the \"bar\" module into the current edit window."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -375,7 +375,7 @@ module PAGE10();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(11,22) /anc:1
