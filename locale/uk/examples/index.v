@@ -34,7 +34,7 @@ module main;    //: root_module
   //: /end
   //: comment g2 @(551,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex3/counter.v\"><img src=\"example_counter.gif\">"
-  //: /line:"<h3>8-Bit Counter</h3></a>"
+  //: /line:"<h3>8-бітовий лічильник</h3></a>"
   //: /line:"A counter implemented using the"
   //: /line:"register and adder devices."
   //: /end

@@ -62,7 +62,7 @@ wire w9;    //: /sn:0 {0}(224,233)(214,233){1}
   //: joint g8 (reg_out) @(306, 327) /w:[ 2 -1 1 4 ]
   //: GROUND g4 (w0) @(310,309) /sn:0 /w:[ 1 ]
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3> <b>(continuous simulation)</b>"
+  //: /line:"<h3>Simulace Sekv. Obvodu</h3> <b>(continuous simulation)</b>"
   //: /line:""
   //: /line:"Also like with a combinational circuit, you can press the <img src=sim_go.gif bgcolor=gray> button to unpause and simulate"
   //: /line:"continously. Try it with the circuit below. This circuit contains a \"real-world-time\" oscilator"

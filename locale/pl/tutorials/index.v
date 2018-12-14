@@ -29,7 +29,7 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"<h3><a href=\"wires.v\">3. Editing Wires</a></h3> - The basics of editing wires."
   //: /line:""
-  //: /line:"<h3><a href=\"group.v\">4. Group Editing Features</a></h3> - Operate on groups of gates."
+  //: /line:"<h3><a href=\"group.v\">4. Funkcje edycji grup</a></h3> - Operate on groups of gates."
   //: /line:""
   //: /line:"<h3><a href=\"modules.v\">5. Using Modules</a></h3> - Using modules in your circuit."
   //: /line:""

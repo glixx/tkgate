@@ -23,11 +23,11 @@ module PAGE1;    //: root_module
   //: comment g18 @(10,10) /sn:0 /anc:1
   //: /line:"<h1>Tutorial Chapters:</h1>"
   //: /line:""
-  //: /line:"<h3><a href=\"create.v\">1. Creating a Circuit</a></h3> - Get started by creating a simple circuit."
+  //: /line:"<h3><a href=\"create.v\">1. Створення схеми</a></h3> - Get started by creating a simple circuit."
   //: /line:""
-  //: /line:"<h3><a href=\"gates.v\">2. Editing Gates</a></h3> - The basics of editing gates."
+  //: /line:"<h3><a href=\"gates.v\">2. Редагування шлюзів</a></h3> - The basics of editing gates."
   //: /line:""
-  //: /line:"<h3><a href=\"wires.v\">3. Editing Wires</a></h3> - The basics of editing wires."
+  //: /line:"<h3><a href=\"wires.v\">3. Редагування дротів</a></h3> - The basics of editing wires."
   //: /line:""
   //: /line:"<h3><a href=\"group.v\">4. Group Editing Features</a></h3> - Operate on groups of gates."
   //: /line:""
@@ -42,7 +42,7 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"<h3><a href=\"verilog.v\">9. Textual Verilog</a></h3> - Create modules with textual Verilog descriptions."
   //: /line:""
-  //: /line:"<h3><a href=\"options.v\">10. Customizing TkGate</a></h3> - Customize TkGate to suit your tastes."
+  //: /line:"<h3><a href=\"options.v\">10. Налаштовування TkGate</a></h3> - Customize TkGate to suit your tastes."
   //: /line:""
   //: /end
 

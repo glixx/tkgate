@@ -40,7 +40,7 @@ module PAGE3();
   //: /line:"<img src=example_bindings.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Customizing TkGate</h3> <b>(setting your key beinding style)</b>"
+  //: /line:"<h3>Personalización de TkGate</h3> <b>(setting your key beinding style)</b>"
   //: /line:""
   //: /line:"You can the basic key-binding style that you would like to use on the <font color=red2>Interface</font> tab of the options dialog"
   //: /line:"box. Currently you can choose between \"emacs\"-style and \"Windows\"-style. Chosing one of these"
@@ -63,7 +63,7 @@ module PAGE2();
   //: /line:"<img src=example_name.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Customizing TkGate</h3> <b>(setting your personal identification)</b>"
+  //: /line:"<h3>Personalización de TkGate</h3> <b>(setting your personal identification)</b>"
   //: /line:""
   //: /line:"To set your TkGate options, open the options dilaog box by selecting <font color=red2>File &rarr; Options</font> from the"
   //: /line:"main menu. Enter your site name and user name in the \"Identity\" dialog box. The values you enter"

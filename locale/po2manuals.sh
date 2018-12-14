@@ -177,10 +177,12 @@ do
              d=`echo $b|sed 's|^"||g'|sed 's|"AAAAA$||g'`
              if [ "$lang" = "ja" ]
              then
-                sed -i "s|\"<h3>$c</h3>\"|\"$d\"|g" $tmp_file1
+                sed -i "s|<h3>$c</h3>|$d|g" $tmp_file1
              else
-                sed -i "s|\"<h3>$c</h3>\"|\"<h3>$d</h3>\"|g" $tmp_file1
+                sed -i "s|<h3>$c</h3>|<h3>$d</h3>|g" $tmp_file1
              fi
+             # translation for "Tutorial Chapters"
+             sed -i "s|\. $c</a>|. $d</a>|g" $tmp_file1
            fi
         done
 

@@ -53,7 +53,7 @@ wire w9;    //: /sn:0 {0}(249,152)(221,152){1}
 
   //: LED g37 (s0) @(307,155) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(9,10) /anc:1
-  //: /line:"<h3>Editing Wires</h3> <b>(I/O inverters)</b>"
+  //: /line:"<h3>Редагування дротів</h3> <b>(I/O inverters)</b>"
   //: /line:""
   //: /line:"To place or remove an inverter on a gate input or output, select the <img src=\"inv_curs.gif\" bgcolor=gray> tool"
   //: /line:"and click on the port at which you want to place or remove an inveter. Try"
@@ -101,7 +101,7 @@ wire w9;    //: /sn:0 {0}(286,192)(258,192){1}
 
   //: LED g37 (s0) @(344,195) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(7,10)
-  //: /line:"<h3>Editing Wires</h3> <b>(wire labels)</b>"
+  //: /line:"<h3>Редагування дротів</h3> <b>(wire labels)</b>"
   //: /line:""
   //: /line:"Wire label editing is performed with the <img src=mov_curs.gif bgcolor=gray> tool. Select this tool if it is not already selected. Existing"
   //: /line:"wire labels can be moved by left clicking and dragging the label to a new position. Wire labels can only"
@@ -151,7 +151,7 @@ wire w9;    //: /sn:0 {0}(249,152)(221,152){1}
 
   //: LED g37 (s0) @(307,155) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(9,10) /anc:1
-  //: /line:"<h3>Editing Wires</h3> <b>(cutting)</b>"
+  //: /line:"<h3>Редагування дротів</h3> <b>(cutting)</b>"
   //: /line:""
   //: /line:"To cut a wire, select the <img src=\"cut_curs.gif\" bgcolor=gray> tool and click on a wire at the point you wish to cut. Try"
   //: /line:"using the wire cutter tool to cut some of the wires in the circuit below."
@@ -191,7 +191,7 @@ wire w2;    //: /sn:0 {0}(85,181)(244,181){1}
   //: DIP g8 (w3) @(184,160) /sn:0 /w:[ 0 ] /st:66 /dn:0
   //: GROUND g4 (w5) @(339,213) /sn:0 /w:[ 0 ]
   //: comment g2 @(9,10) /anc:1
-  //: /line:"<h3>Editing Wires</h3> <b>(bit widths)</b>"
+  //: /line:"<h3>Редагування дротів</h3> <b>(bit widths)</b>"
   //: /line:""
   //: /line:"To change the bit size of one or more wires, first enter the desired bit size in the"
   //: /line:"bit size selector <img src=\"size_example.gif\">. Next, choose the <img src=\"size_curs.gif\" bgcolor=gray> tool, and click on each wire"

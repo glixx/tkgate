@@ -64,7 +64,7 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(editing module definitions)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(editing module definitions)</b>"
   //: /line:""
   //: /line:"To edit the definition of a module you have created, double click on its name in the module name"
   //: /line:"tree or list view. Alternatively you can right click on an instance of the module and select"
@@ -114,7 +114,7 @@ module PAGE3();
   //: /line:""
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(module list symbols)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(module list symbols)</b>"
   //: /line:""
   //: /line:"The following symbols are used in the module tree and list view:"
   //: /line:""
@@ -233,7 +233,7 @@ module PAGE8();
   //: /end
   foo g2 ();   //: @(208, 163) /sz:(40, 40) /sn:0 /p:[ ]
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(manual interface generation)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(manual interface generation)</b>"
   //: /line:""
   //: /line:"You can also manually create and edit the interface of a module:"
   //: /line:" * To change the size of the interface, left-click on an edge or corner and drag it with the mouse."
@@ -262,7 +262,7 @@ wire [7:0] w2;    //: /sn:0 {0}(#:257,194)(272,194){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(updating the default interface)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(updating the default interface)</b>"
   //: /line:""
   //: /line:"Module interfaces constructed in <img src=editmode.gif> <font color=red2>Edit</font> mode, apply only to the specific instance that you created."
   //: /line:"To make an interface the default for newly created instance of modules of that type, right click"
@@ -280,7 +280,7 @@ module PAGE7();
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(automatic interface generation)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(automatic interface generation)</b>"
   //: /line:""
   //: /line:"The interface of a module includes the size and shape of the box as well as the location and names"
   //: /line:"of the ports. The easiest way to create an interface is to use automatic generation. Automatic"
@@ -303,7 +303,7 @@ module PAGE5();
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(creating module definitions)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(creating module definitions)</b>"
   //: /line:""
   //: /line:"To create a new module, press the <img src=blk_new.gif> button. Enter the name for the new module"
   //: /line:"and select whether you wish to create it as a \"netlist\" (graphical) module or an"
@@ -329,7 +329,7 @@ module PAGE4();
   //: /line:"alphabetical list of all module.</font>"
   //: /end
   //: comment g99 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(creating module instances)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(creating module instances)</b>"
   //: /line:""
   //: /line:"The easiest way to create a module instance is to find its name in the module list and"
   //: /line:"drag it into the current circuit. Try switching to the list view by pressing <img src=modlist.gif> then"
@@ -354,7 +354,7 @@ module PAGE2();
   //: /line:"<font color=green4>Module Tree View Example</font>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(module list)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(module list)</b>"
   //: /line:""
   //: /line:"The set of modules in the current circuit is shown on the left-hand side of the interface. You"
   //: /line:"can choose between a <i>tree view</i> <img src=modtree.gif bgcolor=gray> (see example) and a <i>list view</i> <img src=modlist.gif bgcolor=gray>. The tree view shows"
@@ -379,7 +379,7 @@ module PAGE10();
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g1 @(11,22) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(interface editor)</b>"
+  //: /line:"<h3>Použití Modulů</h3> <b>(interface editor)</b>"
   //: /line:""
   //: /line:"You can directly edit the module interface using TkGate's interface mode. Click on the <img src=editintr.gif> <font color=red2>Interface</font>"
   //: /line:"tab over the main canvas to enter this mode. Details on how to use this mode are given in the TkGate"

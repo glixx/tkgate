@@ -46,7 +46,7 @@ wire w5;    //: /sn:0 {0}(292,169)(307,169){1}
   //: /end
   _GGOR2 #(6) g3 (.I0(w3), .I1(w4), .Z(w5));   //: @(282,169) /sn:0 /anc:1 /w:[ 1 1 0 ]
   //: comment g2 @(10,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Anchoring)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Anchoring)</b>"
   //: /line:""
   //: /line:"You can prevent a gate from being accidentally moved by selecting it and pressing"
   //: /line:"the <img src=anchor.gif bgcolor=gray> button to set an anchor. You can remove an anchor with the <img src=unanchor.gif bgcolor=gray> button."
@@ -94,7 +94,7 @@ wire w9;    //: /sn:0 {0}(249,152)(221,152){1}
 
   //: LED g37 (s0) @(307,155) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(11,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Repositioning)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Repositioning)</b>"
   //: /line:""
   //: /line:"To move a gate, select it with the <img src=\"mov_curs.gif\" bgcolor=gray> tool and drag it to a new location. Try"
   //: /line:"it on the sample circuit below."
@@ -155,7 +155,7 @@ wire w9;    //: /sn:0 {0}(77,270)(92,270){1}
   _GGAND4 #(10) g4 (.I0(w7), .I1(w8), .I2(w10), .I3(w20), .Z(w9));   //: @(67,270) /sn:0 /w:[ 1 1 1 1 0 ]
   _GGAND3 #(8) g3 (.I0(w3), .I1(w4), .I2(w6), .Z(w5));   //: @(65,218) /sn:0 /w:[ 1 1 1 0 ]
   //: comment g2 @(11,13) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Adding Inputs)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Adding Inputs)</b>"
   //: /line:""
   //: /line:"Some gates (e.g., AND gates) can have a variable number of inputs or outputs. To add inputs (or"
   //: /line:"outputs) to these gates, select the gate and press the <img src=addport.gif bgcolor=gray> button. Also, some gates may have multiple styles"
@@ -184,7 +184,7 @@ module PAGE7();
 
   //: frame g3 @(306,228) /sn:0 /wi:167 /ht:69 /tx:"This is a frame"
   //: comment g2 @(10,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Comments and Frames)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Comments and Frames)</b>"
   //: /line:""
   //: /line:"There are two special \"gates\" that you can use for annotating your circuit specification: comments and frames."
   //: /line:"Neither of these \"gates\" has any effect on the simulation results."
@@ -218,7 +218,7 @@ wire w2;    //: /sn:0 {0}(154,152)(169,152){1}
 //: enddecls
 
   //: comment g2 @(10,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Rotation)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Rotation)</b>"
   //: /line:""
   //: /line:"The orientation of a gate can be changed by selecting it and pressing the <img src=\"edit_rotate.gif\" bgcolor=gray> button"
   //: /line:"(or <font color=red2>Tab</font> key) to rotate it counter-clockwise and the <img src=\"edit_brotate.gif\" bgcolor=gray> button (or <font color=red2>Shift-Tab</font> key) to"
@@ -260,7 +260,7 @@ wire w9;    //: /sn:0 {0}(256,165)(228,165){1}
 
   //: LED g37 (s0) @(314,168) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(10,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Deletion)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Deletion)</b>"
   //: /line:""
   //: /line:"To delete a gate, select it with the <img src=\"mov_curs.gif\" bgcolor=gray> tool and press the <font color=red2>Delete</font> key. Try it on the sample circuit below."
   //: /end
@@ -306,7 +306,7 @@ wire w9;    //: /sn:0 {0}(256,165)(228,165){1}
 
   //: LED g37 (s0) @(314,168) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(10,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3> <b>(Properties)</b>"
+  //: /line:"<h3>Редагування шлюзів</h3> <b>(Properties)</b>"
   //: /line:""
   //: /line:"You can also open the properties box of a gate by double clicking on it. Try"
   //: /line:"double clicking on some of the gates in the circuit below. Through the properties"
