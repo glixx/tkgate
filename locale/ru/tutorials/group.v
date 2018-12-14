@@ -116,7 +116,8 @@ wire w9;    //: /sn:0 {0}(298,192)(270,192){1}
   //: /line:""
   //: /line:"Вы можете поворачивать (при помощи <img src=edit_rotate.gif bgcolor=gray> и <img src=edit_brotate.gif bgcolor=gray>) и привязывать"
   //: /line:"(при помощи <img src=anchor.gif bgcolor=gray> и <img src=unanchor.gif bgcolor=gray>) группы точно также, как и отдельные"
-  //: /line:"вентили (см. <a href=gates.v>Editing Gates</a> раздел). Попробуйте на схеме снизу."
+  //: /line:"вентили (см. <a href=gates.v>Редактирование вентилей</a> раздел). Попробуйте"
+  //: /line:"на схеме снизу."
   //: /end
   _GGXOR2 #(8) g24 (.I0(w9), .I1(c0), .Z(s0));   //: @(309,195) /sn:0 /w:[ 0 3 0 ]
   _GGXOR2 #(8) g23 (.I0(a0), .I1(b0), .Z(w9));   //: @(234,192) /sn:0 /w:[ 3 3 3 ]
