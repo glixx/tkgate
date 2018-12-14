@@ -19,7 +19,7 @@ module PAGE1;    //: root_module
   //: /line:"<img src=bigcircuit.gif>"
   //: /end
   //: comment g5 @(10,10) /anc:1
-  //: /line:"<h3>Group Editing Features</h3>"
+  //: /line:"<h3>Funkcje edycji grup</h3>"
   //: /line:""
   //: /line:"In this chapter, you will learn about how to do editing operations on groups of gates."
   //: /end

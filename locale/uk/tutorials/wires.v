@@ -22,7 +22,7 @@ module PAGE1;    //: root_module
   //: /line:"<img src=netprops.gif>"
   //: /end
   //: comment MAIN_TEXT1 @(10,10) /anc:1
-  //: /line:"<h3>Editing Wires</h3>"
+  //: /line:"<h3>Редагування дротів</h3>"
   //: /line:""
   //: /line:"This chapter will introduce the basic wire editing features of TkGate."
   //: /end

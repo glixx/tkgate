@@ -142,6 +142,7 @@ do
         cat $tmp_file1 | tr -d '\n' > $tmp_file3
         mv -f $tmp_file3 $tmp_file1
 
+        # usual translation
         cat $tmp_file2|while read line
         do
            # FIXME: awk deletes more than 1 space everywhere
@@ -161,6 +162,25 @@ do
            if [ ! -z "$b" ]
            then
              sed -i "s|$a|$b|g" $tmp_file1
+           fi
+        done
+
+        # special additional translation
+        cat $tmp_file2|while read line
+        do
+           # FIXME: awk deletes more than 1 space everywhere
+           a=`echo $line|awk -F "CCCCC" '{print $1}'`
+           b=`echo $line|awk -F "CCCCC" '{print $2}'`
+           if [ ! -z "$b" ]
+           then
+             c=`echo $a|sed 's|^"||g'|sed 's|"AAAAA$||g'`
+             d=`echo $b|sed 's|^"||g'|sed 's|"AAAAA$||g'`
+             if [ "$lang" = "ja" ]
+             then
+                sed -i "s|\"<h3>$c</h3>\"|\"$d\"|g" $tmp_file1
+             else
+                sed -i "s|\"<h3>$c</h3>\"|\"<h3>$d</h3>\"|g" $tmp_file1
+             fi
            fi
         done
 

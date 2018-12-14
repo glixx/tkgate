@@ -34,7 +34,7 @@ module PAGE1;    //: root_module
   //: /line:"<img src=bigmodule.gif>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3>"
+  //: /line:"<h3>Použití Modulů</h3>"
   //: /line:""
   //: /line:"In this chapter, you will learn how to create, edit and manage modules."
   //: /end

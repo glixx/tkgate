@@ -16,7 +16,7 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g2 @(10,10) /anc:1
-  //: /line:"<h3>Editing Gates</h3>"
+  //: /line:"<h3>Úpravy Vodičů</h3>"
   //: /line:""
   //: /line:"This chapter will introduce some of the basic circuit editing features of TkGate."
   //: /end

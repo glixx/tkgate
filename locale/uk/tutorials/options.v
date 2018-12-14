@@ -19,7 +19,7 @@ module PAGE1;    //: root_module
   //: /line:"<img src=iface.gif>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Customizing TkGate</h3>"
+  //: /line:"<h3>Налаштовування TkGate</h3>"
   //: /line:""
   //: /line:"This chapter introduces some of the options that can be customized in TkGate. Your option settings"
   //: /line:"are stored in a file named \".tkgate2-preferences\" in your home directory."
