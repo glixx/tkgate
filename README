@@ -6,25 +6,25 @@ See INSTALL for installation instructions.
 SAVE FILE DIFFERENCES WITH PAST VERSIONS
 
 2.0-b5 and earlier
-   The DEMUX device was redesigned in 2.0-b5.  When reading earlier save files,
+   The DEMUX device was redesigned in 2.0-b5. When reading earlier save files,
    any instance of DEMUX are translated to OLDDEMUX which have the original
    definition.
 
 1.8.x and earlier
    Substantial changes in save file format were made in the transition from
-   1.8.x to 2.0.  The new format is expected to be compliant with 3rd party
-   verilog tools.  TkGate 2.0 can read files from earlier versions of tkgate
+   1.8.x to 2.0. The new format is expected to be compliant with 3rd party
+   verilog tools. TkGate 2.0 can read files from earlier versions of tkgate
    but can only write 2.0 format files which will be unreadable by earlier
    versions of tkgate.
 
 1.6h and earlier
-   These versions do not support the "extender bar" style of basic gates.  Files
+   These versions do not support the "extender bar" style of basic gates. Files
    saved by later versions may either not load properly, or may have input wires
    in odd places when loaded under old versions of tkgate.
 
 1.5c and earlier
    Positions of wire "tap" elements have changed slightly due to the new method
-   for drawing buses.  When reading old files, the positions will be slightly
+   for drawing buses. When reading old files, the positions will be slightly
    modified to fit the new scheme, but if you save the file, wire positions will
    be slightly off when rereading from an old version of tkgate.
 
@@ -32,7 +32,7 @@ SAVE FILE DIFFERENCES WITH PAST VERSIONS
 
 1.4c and earlier
    Multi-technology delay specification, and per-gate delay specification is
-   not supported.  If any delays other than "default" are used, the file may
+   not supported. If any delays other than "default" are used, the file may
    not be readable by older versions of tkgate.
 
 *****************************************************************************
@@ -40,17 +40,14 @@ MULTI-LINGUAL SUPPORT
 
 1) JAPANESE
 
-As of TkGate 2.1, Japanese support is automatically compiled in.  To use
+As of TkGate 2.1, Japanese support is automatically compiled in. To use
 it, run tkgate with the -Lja option, or make sure your LANG environment
-variable is set to a Japanese locale (e.g., ja_JP.eucJP).  Attempting to
-run TkGate with an invalid locality value could cause it to core dump
-in the tcl/tk initialization routines.  You must also set up kanji
-conversion and input servers in order to input Japanese.  Currently,
-Japanese is only supported in comments and "frames".
+variable is set to a Japanese locale (e.g., ja_JP.eucJP). You must also
+set up kanji conversion and input servers in order to input Japanese.
 
 There are many ways of configuring kanji conversion and input servers,
-so I will not go into all of them here.  I have tested tkgate with
-canna.  Make the following changes to enable Japanese input:
+so I will not go into all of them here. I have tested tkgate with
+canna. Make the following changes to enable Japanese input:
 
 In .xinitrc:
 
@@ -61,9 +58,9 @@ In .cshrc:
    setenv XMODIFIERS "@im=kinput2"
 
 To enter switch between English input and Japanese input use the
-command <shift-space>.  While Japanese messages are enabled for any
+command <shift-space>. While Japanese messages are enabled for any
 locale name that starts with "ja", the locale must be set to "ja_JP.eucJP"
-in order to enable Japanese input.  Using the '-Lja' switch will also
+in order to enable Japanese input. Using the '-Lja' switch will also
 ensure that the environment variables are set correctly.
 
 2) RUSSIAN

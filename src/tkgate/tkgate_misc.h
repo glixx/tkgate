@@ -166,8 +166,8 @@ typedef struct locale_str Locale;
 
 #define SCROLL_LIMIT 100
 
-#define TKG_GATEWIN_HEIGHT	500
-#define TKG_GATEWIN_WIDTH	500
+#define TKG_GATEWIN_HEIGHT	600
+#define TKG_GATEWIN_WIDTH	800
 
 /*
   Codes for logErrorMessage
