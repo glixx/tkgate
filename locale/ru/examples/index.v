@@ -1,8 +1,8 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "index.v"
+//: property title = "Страница Учебных примеров"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -14,15 +14,15 @@ module main;    //: root_module
 //: enddecls
 
   //: comment g4 @(553,317) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex6/coke.v\"><img src=example_coke.gif>"
-  //: /line:"Автомат газировки</a></h3>"
+  //: /line:"<a href=\"ex6/coke.v\"><img src=example_coke.gif>"
+  //: /line:"<h3>Автомат газировки</h3></a>"
   //: /line:"Этот пример использует механизм"
   //: /line:"виртуальных периферийных устройств (ВПУ)"
   //: /line:"TkGate для создания интерактивной модели"
   //: /line:"\"Автомат газировки\", которой можно управлять"
   //: /line:"с помощью пользовательской схемы."
-  //: /line:"Включена только модель. Сможете ли Вы построить"
-  //: /line:"контроллер для неё?"
+  //: /line:"Включена только модель. Сможете ли Вы"
+  //: /line:"построить контроллер для неё?"
   //: /line:""
   //: /end
   //: comment g3 @(32,317) /sn:0 /anc:1
@@ -48,7 +48,7 @@ module main;    //: root_module
   //: /line:"D-защёлок."
   //: /end
   //: comment g6 @(20,552) /sn:0
-  //: /line:" <font size=5><a href=\"@T/welcome.v\">Вернуться на главную страницу</a></font> "
+  //: /line:"<font size=5><a href=\"@T/welcome.v\">Вернуться на главную страницу</a></font>"
   //: /end
   //: comment g7 @(787,27) /sn:0
   //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"
@@ -59,19 +59,19 @@ module main;    //: root_module
   //: /line:"серии 74."
   //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
-  //: /line:"Компьютер \"Зверинец\"</a></h3>"
+  //: /line:"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
+  //: /line:"<h3>Компьютер \"Зверинец\"</h3></a>"
   //: /line:"Простой микропроцессор с микрокодом,"
   //: /line:"который выполняет игру \"Животные\""
   //: /line:"во время симуляции."
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
-  //: /line:"<h3><a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
-  //: /line:"Комбинационная логика</a></h3>"
+  //: /line:"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
+  //: /line:"<h3>Комбинационная логика</h3></a>"
   //: /line:"Простой 3-разрядный сумматор, который"
   //: /line:"можно запускать в симуляторе."
   //: /line:"Нажмите кнопку запуска, затем"
-  //: /line:"изменяйте значения переключателй и"
+  //: /line:"изменяйте значения переключателей и"
   //: /line:"смотрите, как меняются состояния"
   //: /line:"светодиодов."
   //: /line:""
@@ -79,4 +79,7 @@ module main;    //: root_module
 
 endmodule
 //: /netlistEnd
+
+
+`timescale 1ns/1ns
 

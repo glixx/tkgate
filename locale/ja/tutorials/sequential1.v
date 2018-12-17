@@ -1,10 +1,13 @@
-//: version "2.0-b6"
-//: property encoding = "euc-jp"
+//: version "2.1"
+//: property encoding = "utf-8"
 //: property locale = "ja"
 //: property prefix = "_GG"
-//: property title = "seqsim_tut.v"
+//: property title = "順序回路のシミュレーション"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -13,7 +16,7 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3>"
+  //: /line:"<font color=purple>順序回路のシミュレーション</font>"
   //: /line:""
   //: /line:"This chapter builds on the previous chapter about simulating combinational circuits and introduces"
   //: /line:"simulator features that are useful for simulating sequential circuits."
@@ -27,7 +30,4 @@ module PAGE1;    //: root_module
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

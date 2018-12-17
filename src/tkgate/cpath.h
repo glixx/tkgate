@@ -31,7 +31,7 @@ void cpath_show(int n,const char *pelems[]);
 void cpath_reshow();
 void cpath_draw(int x1,int y1,int x2,int y2);
 void cpath_flash();
-void cpath_initNetDelayTable();
+void cpath_initNetDelayTable(void);
 void cpath_flushNetDelayTable();
 void cpath_registerNetAlias(const char *alias_name,const char *canon_name);
 void cpath_registerNetDelay(const char *name,int fd,int bd);

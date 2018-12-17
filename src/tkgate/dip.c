@@ -15,8 +15,10 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
+
 #include "tkgate.h"
 #include "switch.h"
+#include "print.h"
 
 #define CENTER_JUST	(BetweenTopAndBottom|BetweenLeftAndRight)
 

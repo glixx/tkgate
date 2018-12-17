@@ -22,6 +22,9 @@
    */
 #undef HAVE_ALLOCA_H
 
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
 #undef HAVE_DOPRNT
 
@@ -157,6 +160,9 @@
    slash. */
 #undef LSTAT_FOLLOWS_SLASHED_SYMLINK
 
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
+#undef LT_OBJDIR
+
 /* Name of package */
 #undef PACKAGE
 
@@ -181,6 +187,9 @@
 /* Define as the return type of signal handlers (`int' or `void'). */
 #undef RETSIGTYPE
 
+/* The size of `unsigned', as computed by sizeof. */
+#undef SIZEOF_UNSIGNED
+
 /* If using the C implementation of alloca, define if you know the
    direction of stack growth for your system; otherwise it will be
    automatically deduced at runtime.
@@ -204,8 +213,14 @@
 /* Full TkGate version number */
 #undef TKGATE_FULL_VERSION
 
+/* TkGate web page */
+#undef TKGATE_HOMEPAGE
+
 /* Local documentation location */
 #undef TKGATE_LOCALDOC
+
+/* Email address for support */
+#undef TKGATE_MAILCONTACT
 
 /* Backup location for TkGate home directory */
 #undef TKGATE_SECONDARYHOME

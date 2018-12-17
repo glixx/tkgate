@@ -17,6 +17,9 @@
 
     Last edit by hansen on Thu Feb 12 14:50:38 2009
 ****************************************************************************/
+
+#include <stdlib.h>
+
 #include "tkgate.h"
 
 static GModuleDef *hdl_active_module = 0;

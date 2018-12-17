@@ -1,8 +1,8 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "sim_tut.v"
+//: property title = "Комбинационная симуляция"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
@@ -18,7 +18,7 @@ module PAGE1;    //: root_module
   //: comment g13 @(10,10) /anc:1
   //: /line:"<h3>Симуляция комбинационных схем</h3>"
   //: /line:""
-  //: /line:"TkGate использует основанный на <b>Verilog</b> дискретно-событийный симулятор для моделирования "
+  //: /line:"TkGate использует основанный на <b>Verilog</b> дискретно-событийный симулятор для моделирования"
   //: /line:"описания схемы. В данном разделе описаны основы имитации комбинационных схем."
   //: /end
   //: comment g0 @(191,165) /sn:0 /anc:1

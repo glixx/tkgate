@@ -16,6 +16,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include "tkgate.h"
+#include "comment.h"
 
 static GCElement *Script_Make(EditState **es,GModuleDef *env,int GType,
 			      int x,int y,int r,const char *Name,int noWires,

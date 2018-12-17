@@ -50,14 +50,14 @@
 #define MAXACTIVE 100		/* Maximum number of active traces */
 #define MAXMARK 2		/* Maximum number of marks */
 
-typedef struct value GValue;
+typedef struct value GateValue;
 struct value {
   simtime_t	v_time;		/* Time which value becomes effective */
   short		v_code;		/* value code (see VC_ macros) */
   char 		*v_hexValue;	/* Value string for multi-bit values */
   char 		*v_dpyHexValue;	/* Currently displayed hex value */
-  GValue 	*v_next;	/* Next change in value */
-  GValue 	*v_prev;	/* Previous change in value */
+  GateValue 	*v_next;	/* Next change in value */
+  GateValue 	*v_prev;	/* Previous change in value */
 };
 
 typedef struct trace {
@@ -66,9 +66,9 @@ typedef struct trace {
   char 		*t_visName;	/* Visible part of PrintName */
   char 		*t_dVisName;	/* Deletable ref to VisName */
   int 		t_nBits;	/* Number of bits of signal */
-  GValue 	*t_first;	/* First value entry */
-  GValue 	*t_last;	/* Latest change in value */
-  GValue 	*t_current;	/* Current value entry visible on left side of scope */
+  GateValue 	*t_first;	/* First value entry */
+  GateValue 	*t_last;	/* Latest change in value */
+  GateValue 	*t_current;	/* Current value entry visible on left side of scope */
 } GTrace;
 
 typedef struct scope {
@@ -114,7 +114,7 @@ GTrace *new_GTrace(const char *name,const char *printName,int nbits, simtime_t c
 void delete_GTrace(GTrace*);
 void trace_observe(GTrace *T,simtime_t time,int vcode,const char *hexValue);
 
-GValue *new_Value(simtime_t CurTime,int Code,const char *Value,GValue *Prev);
+GateValue *new_Value(simtime_t CurTime,int Code,const char *Value,GateValue *Prev);
 
 
 void Scope_stepTo(simtime_t t);
@@ -151,6 +151,6 @@ void GScope_pickInterval(simtime_t *R,simtime_t *I,simtime_t precision);
 void GScope_saveProbes(GScope *S);
 void GScope_postFullName(GTrace *t);
 
-void ReqScopeTraceRedisplay();
+void ReqScopeTraceRedisplay(void);
 
 #endif

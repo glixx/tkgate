@@ -1,8 +1,8 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "seqsim_tut.v"
+//: property title = "Последовательная симуляция"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1

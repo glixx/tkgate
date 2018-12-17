@@ -1,8 +1,8 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "menagerie.v"
+//: property title = "Компьютер \"Зверинец\""
 //: property showSwitchNets = 0
 //: property simAutoStart = 1
 //: property discardChanges = 1
@@ -178,13 +178,14 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   //: /line:"<a href=\"#eunit.alu\">* АЛУ</a>"
   //: /line:"<a href=\"#memory.m1\">* Основная память</a>"
   //: /line:"<a href=\"#memory.PC\">* Программный счётчик</a>"
+  //: /line:""
   //: /end
   //: joint g2 (clk) @(492, 66) /w:[ 1 -1 2 8 ]
   //: comment g1 @(10,93) /anc:1
   //: /line:"Данная схема содержит несложный"
   //: /line:"процессор. Симуляционный скрипт"
   //: /line:"заставляет его исполнять игру"
-  //: /line:"\"Animals\", как только Вы активируете"
+  //: /line:"\"Животные\", как только Вы активируете"
   //: /line:"режим симуляции. Выбирайте различные"
   //: /line:"модули и нажимайте '&gt;' чтобы"
   //: /line:"рассмотреть вложенные схемы. Вы"
@@ -203,20 +204,22 @@ wire w39;    //: /sn:0 {0}(455,141)(394,141){1}
   //: /line:"<a href=\"menagerie.mem\">* Файл инициализации памяти</a>"
   //: /line:"<a href=\"menagerie.vs\">* Скрипт симуляции</a>"
   //: /line:"<a href=\"menagerie.map\">* Карта символов</a>"
+  //: /line:""
   //: /end
   IUNIT iunit (._CLR(_reset), .CK(clk), .IR(DATA), .COUT(w35), ._Z(w34), ._GT(w33), ._LT(w32), ._rdpc(w59), ._incmar(w0), ._rd(w44), .spc(w43), ._ldhmdr(w42), ._ldpc(w41), ._ldmar(w40), ._ldmdr(w39), ._incpc(w38), ._rdmdr(w37), ._wrt(w36), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), .SA(w45));   //: @(456, 84) /sz:(132, 353) /p:[ Ti0>9 Ti1>9 Bi0>3 Ri0>0 Ri1>0 Ri2>0 Ri3>0 Lo0<0 Lo1<0 Lo2<0 Lo3<0 Lo4<0 Lo5<0 Lo6<0 Lo7<0 Lo8<0 Lo9<0 Lo10<0 Ro0<0 Ro1<0 Ro2<0 Ro3<0 Ro4<0 Ro5<0 Ro6<0 Ro7<0 Ro8<0 Ro9<0 Ro10<0 Ro11<0 Ro12<0 Ro13<0 ]
   //: joint g6 (_reset) @(351, 31) /w:[ 3 -1 4 6 ]
   //: comment g9 @(13,47) /anc:1
   //: /line:"Это генератор"
-  //: /line:"синхросигнала"
+  //: /line:"синхросигнала."
+  //: /line:""
   //: /end
   //: comment g7 @(13,12) /sn:0 /anc:1
   //: /line:"Это переключатель"
-  //: /line:"сброса"
+  //: /line:"сброса."
   //: /end
   MEMORY memory (._CLR(_reset), .CK(clk), ._incmar(w0), ._rdpc(w59), ._ldhmdr(w42), .spc(w43), ._rd(w44), ._wrt(w36), ._rdmdr(w37), ._incpc(w38), ._ldmdr(w39), ._ldmar(w40), ._ldpc(w41), .DATA(DATA));   //: @(268, 84) /sz:(125, 353) /p:[ Ti0>7 Ti1>7 Ri0>1 Ri1>1 Ri2>1 Ri3>1 Ri4>1 Ri5>1 Ri6>1 Ri7>1 Ri8>1 Ri9>1 Ri10>1 Bt0=5 ]
   //: comment g39 @(11,544) /sn:0 /anc:1
-  //: /line:" <a href=\"../index.v\">[НАЗАД]</a> "
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   EUNIT eunit (._CLR(_reset), .CK(clk), ._DOUT(w58), ._LDQL(w57), ._LDQH(w56), ._LDDATA(w55), .SA(w45), .CIN(w54), ._LDQ(w53), ._CLQ(w52), .IDATA(w51), .FUNC(w50), .BOP(w49), .AOP(w48), ._WA(w47), .SB(w46), ._LT(w32), ._GT(w33), ._Z(w34), .COUT(w35), .DATA(DATA));   //: @(660, 84) /sz:(128, 353) /p:[ Ti0>0 Ti1>0 Li0>1 Li1>1 Li2>1 Li3>1 Li4>1 Li5>1 Li6>1 Li7>1 Li8>1 Li9>1 Li10>1 Li11>1 Li12>1 Li13>1 Lo0<1 Lo1<1 Lo2<1 Lo3<1 Bt0=0 ]
   //: joint g5 (clk) @(301, 66) /w:[ 3 -1 4 6 ]
@@ -479,7 +482,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   _GGNOR1x16 #(1) g42 (.I0(w30), .Z(w31));   //: @(356,763) /sn:0 /w:[ 0 0 ] /eb:0
   //: joint g52 (mdr) @(697, 377) /w:[ 6 8 -1 5 ]
   //: comment back_link3 @(15,658) /sn:0 /anc:1
-  //: /line:" <a href=\"menagerie.v\">[НАЗАД]</a> "
+  //: /line:"<a href=\"menagerie.v\">[НАЗАД]</a>"
   //: /end
   _GGNOR2 #(6) g83 (.I0(!_incmar), .I1(!_ldmar), .Z(w46));   //: @(427,312) /sn:0 /R:2 /w:[ 0 1 1 ] /eb:0
   //: joint g74 (PC) @(188, 311) /w:[ 2 1 -1 4 ]
@@ -498,7 +501,7 @@ wire w26;    //: /sn:0 {0}(712,709)(745,709)(745,740)(767,740){1}
   //: joint g85 (w15) @(434, 711) /w:[ 5 6 8 -1 ]
   //: joint g24 (CK) @(128, 436) /w:[ 9 10 16 -1 ]
   //: comment g92 @(748,473) /sn:0
-  //: /line:"Это линия данных. Данные читаются "
+  //: /line:"Это линия данных. Данные читаются"
   //: /line:"и записываются в регистр MDR"
   //: /line:"(Memory data register)."
   //: /end
@@ -839,7 +842,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: OUT g55 (_WA) @(690,754) /sn:0 /w:[ 0 ]
   //: OUT g58 (_rd) @(701,1037) /sn:0 /w:[ 1 ]
   //: comment back_link @(7,95) /sn:0 /anc:1
-  //: /line:" <a href=\"menagerie.v\">[НАЗАД]</a> "
+  //: /line:"<a href=\"menagerie.v\">[НАЗАД]</a>"
   //: /end
   _GGREG8 #(10, 10, 20) IR (.Q(IRR), .D(w6), .EN(_ldir), .CLR(_CLR), .CK(CK));   //: @(151,98) /w:[ 1 5 1 9 19 ]
   _GGREG4 #(10, 10, 20) g77 (.Q(w3), .D(w48), .EN(w0), .CLR(_CLR), .CK(CK));   //: @(1069,353) /sn:0 /R:3 /w:[ 0 1 1 3 13 ]
@@ -848,7 +851,7 @@ wire [31:0] w26;    //: /sn:0 {0}(#:418,709)(385,709){1}
   //: comment g65 @(137,15) /anc:1
   //: /line:"Регистры IR и OPR хранят"
   //: /line:"инструкцию и байт операнда"
-  //: /line:"для текущей операции. "
+  //: /line:"для текущей операции."
   //: /end
   //: OUT g59 (_rdmdr) @(701,1047) /sn:0 /w:[ 1 ]
   _GGMUX2x3 #(8, 8) g72 (.I0(w38), .I1(w18), .S(w40), .Z(w44));   //: @(797,413) /sn:0 /R:2 /w:[ 1 1 0 1 ] /ss:0 /do:1
@@ -1010,8 +1013,8 @@ wire [15:0] w65;    //: /sn:0 {0}(#:369,556)(369,600){1}
   //: IN g2 (CK) @(44,421) /sn:0 /w:[ 0 ]
   //: joint g1 (w0) @(351, 477) /w:[ 2 -1 1 4 ]
   //: comment g16 @(157,445) /sn:0
-  //: /line:"Register R0 is hard-coded"
-  //: /line:"to always be set to 0."
+  //: /line:"Регистр R0 жёстко закодирован"
+  //: /line:"и всегда устанавливается в 0."
   //: /end
   _GGREG16 #(10, 10, 20) R2 (.Q(R2), .D(DIN), .EN(w6), .CLR(_CLR), .CK(CK));   //: @(513,279) /w:[ 0 0 0 0 7 ]
   //: joint g11 (R3) @(525, 505) /w:[ 1 -1 2 4 ]
@@ -1451,7 +1454,7 @@ wire w9;    //: /sn:0 {0}(659,834)(706,834)(706,793){1}
   _GGMUX2x8 #(8, 8) g35 (.I0(w12), .I1(w8), .S(_LDQ), .Z(w2));   //: @(761,739) /sn:0 /w:[ 1 5 3 0 ] /ss:0 /do:0
   //: IN g26 (CIN) @(473,618) /sn:0 /w:[ 0 ]
   //: comment back_link1 @(200,196) /sn:0 /anc:1
-  //: /line:" <a href=\"menagerie.v\">[НАЗАД]</a> "
+  //: /line:"<a href=\"menagerie.v\">[НАЗАД]</a>"
   //: /end
   //: IN g12 (IDATA) @(296,423) /sn:0 /w:[ 1 ]
   _GGMUX4x16 #(12, 12) g18 (.I0(w21), .I1(DATA), .I2(w35), .I3(w28), .S(BOP), .Z(w31));   //: @(614,481) /sn:0 /w:[ 3 11 3 0 1 0 ] /ss:0 /do:0

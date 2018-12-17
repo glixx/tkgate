@@ -874,8 +874,8 @@ void usage()
 
 int main(int argc,char *argv[])
 {
-  extern char *optarg;
-  extern int optind;
+  //extern char *optarg;
+  //extern int optind;
 #if OPTRESET
   extern int optreset;
 #endif

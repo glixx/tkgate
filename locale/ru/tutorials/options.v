@@ -1,4 +1,4 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
@@ -23,8 +23,6 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"Этот раздел описывает некоторые настройки TkGate. Ваши настройки хранятся в файле"
   //: /line:"\".tkgate2-preferences\" в Вашем домашнем каталоге."
-  //: /line:""
-  //: /line:""
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
@@ -38,10 +36,13 @@ module PAGE3();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
+  //: comment g1 @(134,181) /sn:0 /anc:1
+  //: /line:"<img src=example_bindings.gif>"
+  //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Настройка TkGate</h3> <b>(изменение стиля назначения клавиш)</b>"
   //: /line:""
-  //: /line:"Вы можете изменять стиль привязки клавиш с группе \"Интерфейс\" диалога настроек. В настоящее"
+  //: /line:"Вы можете изменять стиль привязки клавиш в группе \"Интерфейс\" диалога настроек. В настоящее"
   //: /line:"время можно выбирать между стилями \"emacs\" и \"Windows\". Выбор стиля привязки сделает вызов"
   //: /line:"таких операций как копирование/вставка аналогичными Windows или Emacs. Однако, операции работы"
   //: /line:"с вентилями будут использовать одни и те же клавиши."
@@ -58,6 +59,9 @@ module PAGE2();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
+  //: comment g1 @(116,149) /sn:0 /anc:1
+  //: /line:"<img src=example_name.gif>"
+  //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Настрока TkGate</h3> <b>(Установка персональной идентификации)</b>"
   //: /line:""

@@ -46,7 +46,7 @@ static char *font_family_names[FF_MAX] = {
 /*
  * Font sizes we support.  These correspond to the 7 font sizes levels in html.
  */
-static int font_sizes[FS_MAX] = {8, 8, 10, 12, 14, 18, 24};
+static int font_sizes[FS_MAX] = {6, 8, 10, 12, 14, 18, 24};
 static int kanji_font_sizes[FS_MAX] = {9, 9, 11, 13, 15, 18, 25};
 
 /*
@@ -110,12 +110,12 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
   }
 }
 
-XFontStruct *GetXFont(fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom)
+XFontStruct *GetXFont(GateFont font,int zoom)
 {
   char fontName[STRMAX];
   XFontStruct *xfs;
 
-  getFontName(fontName,ff,fp,fs,zoom);
+  getFontName(fontName,font.family,font.prop,font.size,zoom);
 
   xfs = XLoadQueryFont(TkGate.D,fontName);
   if (!xfs) xfs = XLoadQueryFont(TkGate.D,"fixed");
@@ -127,9 +127,11 @@ XFontStruct *GetXFont(fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom)
 XFontStruct **GetXFonts(fontfamily_t ff,fontprop_t fp,fontsize_t fs)
 {
   int z;
+  
+  GateFont	font = { .family = ff, .prop = fp, .size = fs };
 
   for (z = 1;z <= ZOOM_MAX;z++) {
-    xfonts[ff][fp][fs][z] = GetXFont(ff,fp,fs,z);
+    xfonts[ff][fp][fs][z] = GetXFont(font,z);
   }
 
   return xfonts[ff][fp][fs];

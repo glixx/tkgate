@@ -17,10 +17,24 @@
 
     Last edit by hansen on Wed Mar 18 04:23:18 2009
 ****************************************************************************/
-#include "tkgate.h"
+
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
+#include <stdlib.h>
+#include <string.h>
+#endif
 
 #include <dirent.h>
 #include <pwd.h>
+
+#include "tkgate.h"
+#include "print.h"
 
 void MSS_init();			/* Module symbol table initialization */
 
@@ -306,7 +320,6 @@ void doVerifyLoad()
   MSS_init();
   init_gates();
 
-
   TkGate.circuit = new_Circuit();
   TkGate.ed = (EditData*) malloc(sizeof(EditData));
   TkGate.errl = (ErrorList*) malloc(sizeof(ErrorList));
@@ -434,7 +447,6 @@ void commandLinePrint()
   int i;
   GPrintOpt PO;
   extern PaperSize paperSizes[];
-
 
   TkGate.tcl = 0;
   init_gates();
@@ -606,8 +618,8 @@ void setLanguage(const char *lang)
 void parse_options(int argc,const char *argv[])
 {
   int c;
-  extern char *optarg;
-  extern int optind;
+//  extern char *optarg;
+//  extern int optind;
 #if OPTRESET
   extern int optreset;
 #endif
@@ -951,7 +963,8 @@ char *canonical_path(const char *ipath,char *rpath)
   } else {
     char cwd[PATH_MAX];
 
-    getcwd(cwd,PATH_MAX);
+    if (!getcwd(cwd,PATH_MAX))
+      return NULL;
     sprintf(rpath,"%s/%s",cwd,ipath);
   }
 
@@ -961,8 +974,6 @@ char *canonical_path(const char *ipath,char *rpath)
   while ((p = strstr(rpath,"//"))) {
     memmove(p,p+1,strlen(p+1)+1);
   }
-
-
 
   /*
    * Handle any

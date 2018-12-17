@@ -17,10 +17,18 @@
 
     Last edit by hansen on Fri Feb 13 22:29:46 2009
 ****************************************************************************/
-#include "tkgate.h"
 
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cassert>
+#else
+#include <stdlib.h>
 #include <assert.h>
+#endif
+
 #include <dirent.h>
+
+#include "tkgate.h"
 
 extern int is_verbose;
 
@@ -125,7 +133,7 @@ static Locale *getLocaleDescriptor(const char *locale)
 /*
  * Find the set of locales that are available
  */
-void init_localeSet()
+void init_localeSet(void)
 {
   char dirName[STRMAX];
   DIR *d;
@@ -347,7 +355,6 @@ void localization_Setup(Tcl_Interp *tcl)
     exit(1);
   }
 
-
   /*
    * Get the locale code
    */
@@ -379,7 +386,6 @@ void localization_Setup(Tcl_Interp *tcl)
   if (strcmp(lang,"en") != 0) {
     verifyMessagesFile(message_table,englishLocale);
   }
-
 
   if (tcl) {
     Tcl_SetVar(tcl,"lang",lang,TCL_GLOBAL_ONLY);

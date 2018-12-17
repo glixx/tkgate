@@ -17,9 +17,11 @@
 
     Last edit by hansen on Sat Sep 26 18:35:12 2009
 ****************************************************************************/
-#include "tkgate.h"
 
+#include <stdlib.h>
 #include <assert.h>
+
+#include "tkgate.h"
 
 #define MAXDEPTH	128
 

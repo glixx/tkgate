@@ -17,12 +17,21 @@
 
     Last edit by hansen on Sat Jan 17 00:30:11 2009
 ****************************************************************************/
-#include "tkgate.h"
 
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdio>
+#include <cassert>
+#else
+#include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
+#endif
+
 #include <ctype.h>
 #include <stdarg.h>
-#include <assert.h>
+
+#include "tkgate.h"
 
 int istruevalue(const char *s);
 
@@ -56,6 +65,7 @@ void expandSpecialDirs(char *file)
   strreplace(file,"@E",exampleDir,1);
   strreplace(file,"@H",home,1);
   strreplace(file,"@C",curFileDir,1);
+  strreplace(file,"@L",TkGate.locale->l_code,1);
   strreplace(file,"@",home,1);
 }
 
@@ -85,6 +95,8 @@ void Html_invoke_browser(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
+  FILE *unused;
+  int  sysret;
 
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.browserCommand);
@@ -99,11 +111,12 @@ void Html_invoke_browser(char *protocol,char * file)
     close(0);
     close(1);
     close(2);
-    fopen("/dev/null","r");
-    fopen("/dev/null","w");
-    fopen("/dev/null","w");
-    system(command);
-    exit(0);
+    unused = fopen("/dev/null","r");
+    unused = fopen("/dev/null","w");
+    unused = fopen("/dev/null","w");
+    (void)unused;
+    sysret = system(command);
+    exit(sysret);
   }
 }
 
@@ -117,6 +130,8 @@ void Html_invoke_email(char *protocol,char * file)
   char url[STRMAX];
   char command[STRMAX];
   char *p;
+  FILE *unused;
+  int  sysret;
 
   sprintf(url,"%s:%s",protocol,file);
   sprintf(command,"%s",TkGate.emailCommand);
@@ -131,11 +146,12 @@ void Html_invoke_email(char *protocol,char * file)
     close(0);
     close(1);
     close(2);
-    fopen("/dev/null","r");
-    fopen("/dev/null","w");
-    fopen("/dev/null","w");
-    system(command);
-    exit(0);
+    unused = fopen("/dev/null","r");
+    unused = fopen("/dev/null","w");
+    unused = fopen("/dev/null","w");
+    (void)unused;
+    sysret = system(command);
+    exit(sysret);
   }
 }
 

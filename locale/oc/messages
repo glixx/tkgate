@@ -1,0 +1,65 @@
+\font-encoding			iso8859-15
+\display-encoding		iso8859-15
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				occitan
+@opt.sidebar.width			*400
+@opt.tree.width				*250
+
+b.new	Novèl...
+b.close	Tampar
+b.ok	D'acòrdi
+b.cancel	Anullar
+b.add	Apondre...
+b.delete	Suprimir
+fpattern.all	Totes los fichièrs
+module.list	Lista
+module.box.libraries	Bibliotèca
+mm.add	Apondre...
+mm.delete	Suprimir
+menu.file.save	0:Enregistrar
+menu.file.print	0:Imprimir...
+menu.file.quit	0:Quitar
+menu.edit.undo	0:Desfar
+menu.edit.redo	0:Refar
+menu.edit.cut	0:Talhar
+menu.edit.copy	3:Copiar
+menu.edit.paste	0:Pegar
+pop.gate.close	Tampar
+pop.gate.delete	Suprimir
+pop.module.new	Novèl...
+pop.igen.delete	Suprimir
+itype	Tipe :
+db.mod.name	Nom
+db.gate.details	Detalhs
+db.gate.delete	Suprimir
+db.gate.cat.auto.hdr	Auto
+db.gate.switch.shownet.on.hdr	Afichar
+db.gate.dip.shownet.on.hdr	Afichar
+db.hdl.cancel	Anullar
+opt.treelabel	Opcions
+opt.library	Bibliotèca
+igen.delete	Suprimir
+blklst.to	A
+blklst.from	De
+blklst.name	Nom
+circ.flags	Opcions
+circ.library	Bibliotèca
+license1	-begin-
+TkGate es liure, lo podètz redistribuir e/o lo modificar segon los tèrmes
+de la Licéncia Publica Generala GNU publicada per la Free Software
+Foundation (version 2 o alara tota autra version ulteriora causida per vos).
+-end-
+license2	-begin-
+TkGate es distribuit perque es potencialament utile, mas SENS CAP DE
+GARANTIDA, ni explicita ni implicita, inclusas las garantidas de
+comercializacion o d'adaptacion dins una tòca especifica. Reportatz-vos
+a la Licéncia Publica Generala GNU per mai de detalhs.
+-end-
+license3	-begin-
+Vos cal aver recebut una còpia de la Licéncia Publica Generala GNU en
+meteis temps qu'aqueste programa; foguèsse pas lo cas, escrivètz a la
+Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+MA 02110-1301, Estats Units.
+-end-

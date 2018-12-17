@@ -28,7 +28,6 @@
  */
 #define p_tolower(c) (isupper(c) ? tolower(c) : (c))
 
-
 const char *
 article(const char *m)
 {
@@ -56,7 +55,7 @@ strend(char *s)
 }
 
 /*
- * return the cpu type. 
+ * return the cpu type.
  */
 char *
 GetSysType()
@@ -69,9 +68,9 @@ GetSysType()
 
 		if ((p = popen("uname", "r"))) {
 			char *x;
-			fgets(buf, 1024, p);
+			x = fgets(buf, 1024, p);
 			pclose(p);
-			if ((x = strrchr(buf, '\n')))
+			if (x && (x = strrchr(buf, '\n')))
 				*x = 0;
 		} else
 			strcpy(buf, "unknown");
@@ -318,7 +317,7 @@ getNextToken(char **text, char **token_begin, char **token_end)
 	for (;;) {
 
 		/*
-		 * Skip any whitespace 
+		 * Skip any whitespace
 		 */
 		for (; *p; p++) {
 			if (!isspace(*p))
@@ -594,7 +593,6 @@ strdup(const char *s)
 }
 #endif
 
-
 int
 rotateX(int x, int y, int r)
 {
@@ -627,4 +625,20 @@ rotateY(int x, int y, int r)
 		return x;
 	}
 	return 0;
+}
+
+int istruevalue(const char *s)
+{
+  int n;
+
+  if (sscanf(s,"%d",&n) == 1) {
+    return (n != 0);
+  }
+
+  if (strcasecmp(s,"t") == 0) return 1;
+  if (strcasecmp(s,"y") == 0) return 1;
+  if (strcasecmp(s,"true") == 0) return 1;
+  if (strcasecmp(s,"yes") == 0) return 1;
+
+  return 0;
 }

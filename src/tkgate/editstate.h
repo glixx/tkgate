@@ -165,7 +165,7 @@ void GSearchContext_goto(const char *spec);
 
 GModuleDef *env_findModule(const char *n);
 GModuleDef *env_findAdd(const char *name,int isMain);
-int env_rename(const char *old,const char *new);
+int env_rename(const char *old,const char *newName);
 GModuleDef *env_defineModule(const char *name,int);
 int env_delete(EditState*,const char*);
 GModuleDef *env_removeModule(const char *name,int force);

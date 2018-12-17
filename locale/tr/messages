@@ -1,0 +1,27 @@
+\font-encoding			iso8859-3
+\display-encoding		iso8859-3
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				türkçe
+@opt.sidebar.width			*400
+@opt.tree.width				*250
+
+itype	Tip:
+opt.treelabel	Ayarlar
+circ.flags	Ayarlar
+license1	-begin-
+TtGate özgür yazılımdır; onu Özgür Yazılım Vakfı tarafındanyayınlanan GNU
+Genel Kamul Lisansı 2 sürümü ya da (tercihen) daha sonraki sürümleri
+koşullarında yeniden dağıtabilir ya dadeğistirebilirsiniz.
+-end-
+license2	-begin-
+TtGate kullanışlı olması umuduyla dağıtılmaktadır, ama herhangi bir GARANTİ
+içermez, SATILABİLİRLİKya da HERHANGİ BİR AMACA UYGUNLUK için
+GARANTİ ima etmez. Ayrıntılı bilgi için GNU Genel Kamu Lisansını inceleyin.
+TtGate ile birlikte GNU Genel Kamu Lisansının bir kopyasını almış olmalısınız.
+-end-
+license3	-begin-
+Aksi halde bu adrese yazılı olarak bildirin: Free Software Foundation, Inc.,
+51 Temple Place, Suite 330, Boston, MA 02110-1301 USA.
+-end-

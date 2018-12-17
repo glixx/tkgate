@@ -1,4 +1,4 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
@@ -36,7 +36,7 @@ wire w5;    //: /sn:0 {0}(415,174)(479,174)(479,148){1}
   //: joint g4 (A_NET) @(215, 174) /w:[ 2 -1 1 4 ]
   //: joint g8 (w0) @(151, 380) /w:[ -1 2 1 4 ]
   //: comment back_link @(11,11) /sn:0 /anc:1
-  //: /line:" <a href=\"../index.v\">[НАЗАД]</a> "
+  //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   //: LED g1 (w5) @(479,141) /sn:0 /w:[ 1 ] /type:0
   //: DIP B_DIP (B_NET) @(42,228) /R:1 /w:[ 0 ] /st:10818 /dn:1
@@ -48,7 +48,7 @@ wire w5;    //: /sn:0 {0}(415,174)(479,174)(479,148){1}
   //: joint g7 (w3) @(165, 323) /w:[ -1 2 1 4 ]
   //: joint g9 (OP_NET) @(111, 416) /w:[ 2 4 1 -1 ]
   //: comment REF_ARITH @(230,7) /sn:0 /anc:1
-  //: /line:"  Арифметические (M=0)"
+  //: /line:"Арифметические (M=0)"
   //: /line:"<b>A</b>"
   //: /line:"<b>A</b> ИЛИ <b>B</b>"
   //: /line:"<b>A</b> ИЛИ НЕ <b>B</b>"
@@ -61,7 +61,7 @@ wire w5;    //: /sn:0 {0}(415,174)(479,174)(479,148){1}
   //: SWITCH CI (w3) @(42,323) /w:[ 0 ] /st:1 /dn:1
   //: joint g5 (B_NET) @(180, 190) /w:[ 2 -1 1 4 ]
   //: comment REF_LOGIC @(90,7) /sn:0 /anc:1
-  //: /line:"     Логические (M=1)"
+  //: /line:"Логические (M=1)"
   //: /line:"00 - НЕ <b>A</b>"
   //: /line:"01 - <b>A</b> НЕ-ИЛИ <b>B</b>"
   //: /line:"02 - НЕ <b>A</b> И <b>B</b>"

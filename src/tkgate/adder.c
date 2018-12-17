@@ -27,7 +27,6 @@
 
 static void Adder_WriteCellDef(FILE *f,GCellSpec *gcs);
 
-
 static iconDimensions add_iconDims[] = {
   {0,  0,  59, 28, 29, 15},
   {60, 0,  28, 59, 15, 29},
@@ -67,7 +66,7 @@ GPadLoc adder_S_loc[] = {
 	{0,-13,0,-13,D_UP},
 	{-13,0,-13,0,D_LEFT}};
 
-static char *psAdder[] = {
+static const char *psAdder[] = {
   "%",
   "% x y r adder",
   "%",
@@ -93,7 +92,7 @@ GGateInfo gate_add_info = {
   0,
   "ADD",
   "add",0x0,
-  "psadder",psAdder,
+  "psadder",(char**)psAdder,
   -1,2,
 
   {{"+",	{"gm.alu",0},		{"gm.alu.add",0,0,100},	"gat_make ADD"},

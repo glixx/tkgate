@@ -42,7 +42,7 @@
  * Compiler "CFLAG" options.  Need to rerun "./configure" to become effective.
  *
  ******************************************************************************/
-#define TKGATE_CFLAGS -O2 -g -Wall
+#define TKGATE_CFLAGS -O2 -g -Wall -Werror -Wno-error=unused-function
 
 
 /******************************************************************************

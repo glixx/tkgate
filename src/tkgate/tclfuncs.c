@@ -17,14 +17,25 @@
 
     Last edit by hansen on Tue May  5 20:53:56 2009
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdio>
+#include <cassert>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
+#include <string.h>
+#endif
+
 #include <pwd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <assert.h>
-#include <string.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 char *readprintcapentry(char *buf,int N,FILE *f)
 {
@@ -2105,7 +2116,7 @@ static int gat_getTraceData(ClientData _d,Tcl_Interp *tcl,int argc,const char *a
   }
 
   for (i = 0;i < Scope->NumTraces;i++) {
-    GValue *v;
+    GateValue *v;
     for (v = Scope->Traces[i]->t_first;v;v = v->v_next)
       if (v->v_code != VC_UNRECORDED)
 	break;
@@ -2521,8 +2532,8 @@ static int gat_zoom(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   XSetFont(TkGate.D, TkGate.moduleGC,		TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.modportGC,		TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.frameGC,		TkGate.textXF[zoom]->fid);
-  XSetFont(TkGate.D, TkGate.commentGC,		TkGate.textXF[zoom]->fid);
-  XSetFont(TkGate.D, TkGate.hyperlinkGC,		TkGate.textXF[zoom]->fid);
+  XSetFont(TkGate.D, GatePainterContext_gc(TkGate.commentContext),TkGate.textXF[zoom]->fid);
+  XSetFont(TkGate.D, TkGate.hyperlinkGC,	TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.wireGC,		TkGate.stextXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.busGC,		TkGate.stextXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.selWireGC,		TkGate.stextbXF[zoom]->fid);

@@ -23,7 +23,6 @@ table.tbar {  padding-left: 30 }
 th.tbar-b { text-align: left; width: 75;}
 th.tbar-d { text-align: left; }
 
-
 table.truthtable { table-layout: fixed; font-family: courier; border-collapse: collapse; }
 td.ttleft { border-right: 1px solid black; width: 45; height: 25; text-align: center;}
 td.tttop { border-bottom: 1px solid black; width: 25; }

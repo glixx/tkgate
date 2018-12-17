@@ -1,9 +1,12 @@
-//: version "2.0-b6"
-//: property encoding = "euc-jp"
+//: version "2.1"
+//: property encoding = "utf-8"
 //: property locale = "ja"
 //: property prefix = "_GG"
-//: property title = "module_tut.v"
+//: property title = "モジュールの使い方"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -11,31 +14,31 @@
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g3 @(259,83) /anc:1
+  //: comment g3 @(260,80) /anc:1
   //: /line:"A module is an encapsulated piece of logic that can be made"
   //: /line:"to serve a purpose in a circuit, similar to a function call"
-  //: /line:"in a program.  Each module in TkGate has an \"interface\" and"
+  //: /line:"in a program. Each module in TkGate has an \"interface\" and"
   //: /line:"a \"definition\":"
   //: /line:""
   //: /line:"  *  The <i color=green4>interface</i> describes the external"
   //: /line:"     appearance of a module including the size of the box and"
-  //: /line:"     the positions of the ports on it.  TkGate supports \"block\""
+  //: /line:"     the positions of the ports on it. TkGate supports \"block\""
   //: /line:"     interfaces and \"symbol\" interfaces."
   //: /line:"  "
   //: /line:"  *  The <i color=green4>definition</i> describes the internal"
-  //: /line:"     logic that the module implements.  TkGate supports \"netlist\""
+  //: /line:"     logic that the module implements. TkGate supports \"netlist\""
   //: /line:"     and \"HDL\" modules."
   //: /line:""
   //: /end
   //: comment g2 @(10,65) /sn:0 /anc:1
   //: /line:"<img src=bigmodule.gif>"
   //: /end
-  //: comment g1 @(9,13)
-  //: /line:"<h3>Using Modules</h3>"
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font>"
   //: /line:""
   //: /line:"In this chapter, you will learn how to create, edit and manage modules."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -44,7 +47,7 @@ endmodule
 
 //: /netlistBegin PAGE6
 module PAGE6();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire w4;    //: /sn:0 {0}(258,177)(273,177){1}
 wire w0;    //: /sn:0 {0}(200,161)(185,161){1}
 wire w3;    //: /sn:0 {0}(258,161)(273,161){1}
@@ -54,20 +57,20 @@ wire w5;    //: /sn:0 {0}(258,193)(273,193){1}
 //: enddecls
 
   bar g4 (.C(w2), .B(w1), .A(w0), .Z(w5), .Y(w4), .X(w3));   //: @(201, 145) /sz:(56, 72) /sn:0 /p:[ Li0>0 Li1>0 Li2>0 Ro0<0 Ro1<0 Ro2<0 ]
-  //: comment g3 @(10,310) /sn:0 /R:14
+  //: comment g3 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: comment g1 @(9,13)
-  //: /line:"<h3>Using Modules</h3> <b>(editing module definitions)</b>"
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(editing module definitions)</b>"
   //: /line:""
   //: /line:"To edit the definition of a module you have created, double click on its name in the module name"
-  //: /line:"tree or list view.  Alternatively you can right click on an instance of the module and select"
+  //: /line:"tree or list view. Alternatively you can right click on an instance of the module and select"
   //: /line:"<font color=red2>Open</font> from the popup menu."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -76,7 +79,7 @@ endmodule
 
 //: /netlistBegin PAGE3
 module PAGE3();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g4 @(576,89) /sn:0 /anc:1
@@ -85,38 +88,38 @@ module PAGE3();
   //: /line:"names PAGE1, PAGE2, etc.</font>"
   //: /end
   //: comment g3 @(23,72) /sn:0 /anc:1
-  //: /line:"<img src=document.gif>   Top-level or root module."
+  //: /line:"<img src=document.gif> Top-level or root module."
   //: /line:""
-  //: /line:"<img src=mod_net.gif>   Netlist module."
+  //: /line:"<img src=mod_net.gif> Netlist module."
   //: /line:""
-  //: /line:"<img src=mod_hdl.gif>   Verilog HDL module."
+  //: /line:"<img src=mod_hdl.gif> Verilog HDL module."
   //: /line:""
-  //: /line:"<img src=mod_netL.gif>   Locked netlist module."
+  //: /line:"<img src=mod_netL.gif> Locked netlist module."
   //: /line:""
-  //: /line:"<img src=mod_hdlL.gif>   Locked Verilog HDL module."
+  //: /line:"<img src=mod_hdlL.gif> Locked Verilog HDL module."
   //: /line:""
-  //: /line:"<img src=unused.gif>   Container for unused modules."
-  //: /line:""
-  //: /end
-  //: comment g2 @(257,69) /anc:1
-  //: /line:"<img src=chip.gif>   Library module."
-  //: /line:""
-  //: /line:"<img src=parts.gif>   Container for all libraries."
-  //: /line:""
-  //: /line:"<img src=ichipdir.gif>   Container for a single library."
-  //: /line:""
-  //: /line:"<img src=unknown.gif>   Use of an undefined module."
-  //: /line:""
-  //: /line:"<img src=conflict.gif>   Recursive inclusion of a module."
+  //: /line:"<img src=unused.gif> Container for unused modules."
   //: /line:""
   //: /end
-  //: comment g1 @(9,13)
-  //: /line:"<h3>Using Modules</h3> <b>(module list symbols)</b>"
+  //: comment g2 @(269,68) /anc:1
+   //: /line:"<img src=chip.gif> Library module."
+  //: /line:""
+  //: /line:"<img src=parts.gif> Container for all libraries."
+  //: /line:""
+  //: /line:"<img src=ichipdir.gif> Container for a single library."
+  //: /line:""
+  //: /line:"<img src=unknown.gif> Use of an undefined module."
+  //: /line:""
+  //: /line:"<img src=conflict.gif> Recursive inclusion of a module."
+  //: /line:""
+  //: /end
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(module list symbols)</b>"
   //: /line:""
   //: /line:"The following symbols are used in the module tree and list view:"
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -125,7 +128,7 @@ endmodule
 
 //: /netlistBegin ALU
 module ALU(F, A, B, Z);
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input [7:0] B;    //: /sn:0 {0}(#:342,147)(342,184){1}
 //: {2}(344,186)(367,186){3}
 //: {4}(371,186)(425,186)(425,258){5}
@@ -167,7 +170,7 @@ endmodule
 
 //: /netlistBegin foo
 module foo(Z2, I3, Z1, I1, I2, Z3);
-//: interface  /sz:(41, 40) /bd:[ ]
+//: interface  /sz:(41, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 input I2;    //: /sn:0 {0}(245,200)(275,200){1}
 //: {2}(277,198)(277,153)(292,153){3}
 //: {4}(277,202)(277,248)(348,248){5}
@@ -218,7 +221,7 @@ endmodule
 
 //: /netlistBegin PAGE8
 module PAGE8();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g3 @(573,160) /sn:0 /anc:1
@@ -229,8 +232,8 @@ module PAGE8();
   //: /line:"in the dialog box.</font>"
   //: /end
   foo g2 ();   //: @(208, 163) /sz:(40, 40) /sn:0 /p:[ ]
-  //: comment g1 @(9,13)
-  //: /line:"<h3>Using Modules</h3> <b>(manual interface generation)</b>"
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(manual interface generation)</b>"
   //: /line:""
   //: /line:"You can also manually create and edit the interface of a module:"
   //: /line:" * To change the size of the interface, left-click on an edge or corner and drag it with the mouse."
@@ -238,7 +241,7 @@ module PAGE8();
   //: /line:" * To delete a port, select the <img src=cut_curs.gif> tool and cut the wire off of the module."
   //: /line:" * To edit port properties, double click on the port with the <img src=mov_curs.gif> tool."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -247,7 +250,7 @@ endmodule
 
 //: /netlistBegin PAGE9
 module PAGE9();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 wire [7:0] w3;    //: /sn:0 {0}(#:329,194)(314,194){1}
 wire [1:0] w0;    //: /sn:0 {0}(#:257,226)(272,226){1}
 wire [7:0] w1;    //: /sn:0 {0}(#:257,210)(272,210){1}
@@ -255,15 +258,15 @@ wire [7:0] w2;    //: /sn:0 {0}(#:257,194)(272,194){1}
 //: enddecls
 
   ALU g3 (.A(w2), .B(w1), .F(w0), .Z(w3));   //: @(273, 178) /sz:(40, 64) /sn:0 /p:[ Li0>1 Li1>1 Li2>1 Ro0<1 ]
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: comment g1 @(9,13)
-  //: /line:"<h3>Using Modules</h3> <b>(updating the default interface)</b>"
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(updating the default interface)</b>"
   //: /line:""
   //: /line:"Module interfaces constructed in <img src=editmode.gif> <font color=red2>Edit</font> mode, apply only to the specific instance that you created."
   //: /line:"To make an interface the default for newly created instance of modules of that type, right click"
-  //: /line:"on an interface and select <font color=red2>Interface &rarr;  Set</font>.  Try setting the interface to each of the two instances of"
+  //: /line:"on an interface and select <font color=red2>Interface &rarr; Set</font>. Try setting the interface to each of the two instances of"
   //: /line:"ALU modules below, then try creating new ALU modules by dragging them from the module list."
   //: /end
   ALU g0 ();   //: @(130, 184) /sz:(40, 40) /sn:0 /p:[ ]
@@ -273,21 +276,21 @@ endmodule
 
 //: /netlistBegin PAGE7
 module PAGE7();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(automatic interface generation)</b>"
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(automatic interface generation)</b>"
   //: /line:""
   //: /line:"The interface of a module includes the size and shape of the box as well as the location and names"
-  //: /line:"of the ports.  The easiest way to create an interface is to use automatic generation.  Automatic"
-  //: /line:"generation uses the ports referenced in the definition to create the interface.  To automatically"
+  //: /line:"of the ports. The easiest way to create an interface is to use automatic generation. Automatic"
+  //: /line:"generation uses the ports referenced in the definition to create the interface. To automatically"
   //: /line:"create an interface for the \"bar\" module, first click on the module list tab <img src=modlist.gif bgcolor=gray>, then right click on \"bar\""
-  //: /line:"and select <font color=red2>Interface &rarr;  Auto Generate...</font>  Now left click and drag the bar module onto the canvas to see"
+  //: /line:"and select <font color=red2>Interface &rarr; Auto Generate...</font> Now left click and drag the bar module onto the canvas to see"
   //: /line:"the new interface."
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -296,17 +299,17 @@ endmodule
 
 //: /netlistBegin PAGE5
 module PAGE5();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g1 @(9,13)
-  //: /line:"<h3>Using Modules</h3> <b>(creating module definitions)</b>"
+  //: comment g1 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(creating module definitions)</b>"
   //: /line:""
-  //: /line:"To create a new module, press the <img src=blk_new.gif> button.  Enter the name for the new module"
+  //: /line:"To create a new module, press the <img src=blk_new.gif> button. Enter the name for the new module"
   //: /line:"and select whether you wish to create it as a \"netlist\" (graphical) module or an"
-  //: /line:"HDL (textual) module.  Try creating a new module named \"CPU\"."
+  //: /line:"HDL (textual) module. Try creating a new module named \"CPU\"."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14
+  //: comment g0 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -315,24 +318,24 @@ endmodule
 
 //: /netlistBegin PAGE4
 module PAGE4();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g2 @(545,102) /sn:0
+  //: comment g2 @(506,99) /sn:0 /anc:1
   //: /line:"<font color=green4>Hint: You can also drag and drop"
   //: /line:"module instance from the tree view,"
   //: /line:"but it is easier to use the list view"
   //: /line:"since that view gives you a straight"
   //: /line:"alphabetical list of all module.</font>"
   //: /end
-  //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(creating module instances)</b>"
+  //: comment g99 @(9,13) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(creating module instances)</b>"
   //: /line:""
   //: /line:"The easiest way to create a module instance is to find its name in the module list and"
-  //: /line:"drag it into the current circuit.  Try switching to the list view by pressing <img src=modlist.gif> then"
+  //: /line:"drag it into the current circuit. Try switching to the list view by pressing <img src=modlist.gif> then"
   //: /line:"dragging several instances of the \"bar\" module into the current edit window."
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -341,26 +344,26 @@ endmodule
 
 //: /netlistBegin PAGE2
 module PAGE2();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
   //: comment g3 @(548,6) /sn:0 /anc:1
   //: /line:"<img src=modlistfig.gif>"
   //: /end
-  //: comment g2 @(554,346) /sn:0 /anc:1
+  //: comment g2 @(551,339) /sn:0 /anc:1
   //: /line:"<font color=green4>Module Tree View Example</font>"
   //: /end
   //: comment g1 @(9,13) /anc:1
-  //: /line:"<h3>Using Modules</h3> <b>(module list)</b>"
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(module list)</b>"
   //: /line:""
-  //: /line:"The set of modules in the current circuit is shown on the left-hand side of the interface.  You"
-  //: /line:"can choose between a <i>tree view</i> <img src=modtree.gif bgcolor=gray> (see example) and a <i>list view</i> <img src=modlist.gif bgcolor=gray>.  The tree view shows"
-  //: /line:"the module hierarchy starting at a top-level root module indicated by the <img src=document.gif> symbol.  Modules"
+  //: /line:"The set of modules in the current circuit is shown on the left-hand side of the interface. You"
+  //: /line:"can choose between a <i>tree view</i> <img src=modtree.gif bgcolor=gray> (see example) and a <i>list view</i> <img src=modlist.gif bgcolor=gray>. The tree view shows"
+  //: /line:"the module hierarchy starting at a top-level root module indicated by the <img src=document.gif> symbol. Modules"
   //: /line:"which are still in the circuit, but are not used anywhere in the hierarchy are listed under the"
-  //: /line:"\"<img src=unused.gif> Unused\" branch.  Click on <img src=hboxopen.gif> to open a branch on the tree."
+  //: /line:"\"<img src=unused.gif> Unused\" branch. Click on <img src=hboxopen.gif> to open a branch on the tree."
   //: /line:""
   //: /end
-  //: comment g0 @(10,310) /sn:0 /R:14 /anc:1
+  //: comment g0 @(10,370) /sn:0 /R:14 /anc:1
   //: /line:"<tutorial-navigation>"
   //: /end
 
@@ -369,18 +372,18 @@ endmodule
 
 //: /netlistBegin PAGE10
 module PAGE10();
-//: interface  /sz:(40, 40) /bd:[ ]
+//: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: comment g2 @(10,310) /sn:0 /R:14
+  //: comment g2 @(10,370) /sn:0 /R:14
   //: /line:"<tutorial-navigation>"
   //: /end
-  //: comment g1 @(11,22)
-  //: /line:"<h3>Using Modules</h3> <b>(interface editor)</b>"
+  //: comment g1 @(11,22) /anc:1
+  //: /line:"<font color=purple>モジュールの使い方</font> <b>(interface editor)</b>"
   //: /line:""
-  //: /line:"You can directly edit the module interface using TkGate's interface mode.  Click on the <img src=editintr.gif> <font color=red2>Interface</font>"
-  //: /line:"tab over the main canvas to enter this mode.  Details on how to use this mode are given in the TkGate"
-  //: /line:"documentation.  Click on the <img src=editmode.gif> <font color=red2>Edit</font> tab to return to the normal editing mode."
+  //: /line:"You can directly edit the module interface using TkGate's interface mode. Click on the <img src=editintr.gif> <font color=red2>Interface</font>"
+  //: /line:"tab over the main canvas to enter this mode. Details on how to use this mode are given in the TkGate"
+  //: /line:"documentation. Click on the <img src=editmode.gif> <font color=red2>Edit</font> tab to return to the normal editing mode."
   //: /end
 
 endmodule
@@ -388,7 +391,7 @@ endmodule
 
 //: /netlistBegin bar
 module bar(Y, X, C, B, Z, A);
-//: interface  /sz:(56, 72) /bd:[ Li0>C(48/72) Li1>B(32/72) Li2>A(16/72) Ro0<Z(48/72) Ro1<Y(32/72) Ro2<X(16/72) ]
+//: interface  /sz:(56, 72) /bd:[ Li0>C(48/72) Li1>B(32/72) Li2>A(16/72) Ro0<Z(48/72) Ro1<Y(32/72) Ro2<X(16/72) ] /pd: 0 /pi: 0 /pe: 0 /pp: 0
 //: property pptype=0
 input B;    //: /sn:0 {0}(86,207)(116,207){1}
 //: {2}(118,205)(118,160)(133,160){3}
@@ -433,10 +436,9 @@ wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
   //: joint g9 (C) @(137, 260) /w:[ 2 1 8 -1 ]
   //: comment g15 @(22,25)
   //: /line:"This is the definition for module \"bar\". Ports A, B and C are inputs, and ports X, Y and Z are"
-  //: /line:"outputs.  Try adding an additional output port \"W\" from the output of the XOR gate below."
-  //: /line:"Right click at the position you want to create the port then select <font color=red2>Make &rarr;   Module &rarr;   Module"
-  //: /line:"Output</font> from the popup menu.  Enter \"W\" for the net name in the dialog box."
-  //: /line:""
+  //: /line:"outputs. Try adding an additional output port \"W\" from the output of the XOR gate below."
+  //: /line:"Right click at the position you want to create the port then select <font color=red2>Make &rarr; Module &rarr; Module"
+  //: /line:"Output</font> from the popup menu. Enter \"W\" for the net name in the dialog box."
   //: /line:""
   //: /end
   _GGXOR2 #(8) g17 (.I0(C), .I1(X), .Z(w3));   //: @(293,129) /sn:0 /w:[ 7 3 0 ]
@@ -450,102 +452,4 @@ wire w3;    //: /sn:0 {0}(303,129)(318,129){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGMUX4x8 #(.Dsz(1), .Diz(1)) (I0, I1, I2, I3, S, Z);
-   input  [7:0] I0, I1, I2, I3;
-   input  [1:0] S;
-   output  [7:0] Z;
-   reg 	   [7:0] Z;
-
-   always
-     begin
-	case (S)
-	  2'd0: Z <= #Dsz  I0;
-	  2'd1: Z <= #Dsz  I1;
-	  2'd2: Z <= #Dsz  I2;
-	  2'd3: Z <= #Dsz  I3;
-	  default: Z <= #Dsz  8'hx;
-	endcase // case(S)
-	@(S or I0 or I1 or I2 or I3);
-     end
-      
-endmodule // mux
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGOR2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-
-     assign #Diz Z = ( I0 | I1 );
-   
-endmodule // or
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGADD8 #(.Dab_s(1), .Dab_co(1), .Dci_s(1), .Dci_co(1)) (A, B, S, CI, CO);
-   input  CI;
-   output CO;
-   input   [7:0] A,B;
-   output  [7:0] S;
-   wire    [7:0] _S;
-   wire   _CO;
-   
-   specify
-      (A,B *> S) = Dab_s;
-      (A,B *> CO) = Dab_co;
-      (CI *> S) = Dci_s;
-      (CI *> CO) = Dci_co;
-   endspecify
-
-   assign {_CO,_S} = A + B + CI;
-
-   assign CO =  _CO;
-   assign S =  _S;
-
-endmodule
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2x8 #(.Diz(1)) (I0, I1,  Z);
-   output  [7:0] Z;
-   input   [7:0] I0, I1;
-   reg  [7:0] Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 

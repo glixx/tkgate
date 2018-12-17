@@ -1,10 +1,13 @@
-//: version "2.0-b6"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "de"
 //: property prefix = "_GG"
-//: property title = "sim_tut.v"
+//: property title = "Combinational Simulation"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -28,7 +31,4 @@ module PAGE1;    //: root_module
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

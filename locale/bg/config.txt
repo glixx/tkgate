@@ -1,0 +1,8 @@
+\font-encoding			iso8859-5
+\display-encoding		iso8859-5
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				български
+@opt.sidebar.width			*400
+@opt.tree.width				*250

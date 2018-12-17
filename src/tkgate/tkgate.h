@@ -23,14 +23,14 @@
 
 #include "config.h"
 
+#ifndef _GNU_SOURCE
 #define _GNU_SOURCE
+#endif
 
 #include <ctype.h>
 #include <errno.h>
 #include <limits.h>
-#include <signal.h>
 #include <stdarg.h>
-#include <stdlib.h>
 #if HAVE_STRING_H
 #include <string.h>
 #endif
@@ -68,7 +68,6 @@
 #include "misc.h"
 #include "text.h"
 #include "ycmalloc.h"
-#include "html.h"
 #include "expr.h"
 #include "delay.h"
 #include "icon.h"
@@ -86,7 +85,6 @@
 #include "gates.h"
 #include "generic.h"
 #include "functions.h"
-#include "print.h"
 #include "message.h"
 #include "object.h"
 #include "cpath.h"
@@ -95,6 +93,7 @@
 #include "editstate.h"
 #include "circuit.h"
 #include "primitives.h"
+#include "gate_painter.h"
 
 #if TCL_MAJOR_VERSION != 8
 #error This program has not been tested with versions of tcl/tk other than 8.*
@@ -257,7 +256,6 @@ struct EditData_str {
 
   int scr_x,scr_y;		/* Scrolling origin point */
 
-
   /*
    * Used for hand scroll
    */
@@ -320,6 +318,11 @@ struct TkGateParams_str {
   XrmDatabase	rdb;		/* The resource database */
   int		bitorder;	/* Order of bits in image data */
   int           byteorder;      /* Order of bytes in image data */
+  
+  GatePainter	*painterW;	/* editing window painter */
+  GatePainterContext *commentContext;
+  
+  GatePainter	*painterScopeW;	/* scope window painter */
 
   TkgGateWin	*gw;		/* Tcl/Tk view of main window. */
 
@@ -335,7 +338,7 @@ struct TkGateParams_str {
   GC moduleGC;			/* GC for modules (variable font)  */
   GC modportGC;			/* GC for module ports  (variable font) */
   GC frameGC;			/* Dashed line GC for frames  (variable font) */
-  GC commentGC;			/* GC for comments (variable font) */
+  //GC commentGC;			/* GC for comments (variable font) */
   GC imageGC;			/* GC for images */
   GC hyperlinkGC;		/* GC for hyperlink comments (variable font) */
   GC wireGC;			/* GC for wire drawing */
@@ -363,8 +366,8 @@ struct TkGateParams_str {
   int ledoff_pixel;		/* Pixel value for off leds */
   int ledon_pixel;		/* Pixel value for on leds */
   int ledunknown_pixel;		/* Pixel value for led with unknown input */
-  int comment_pixel;		/* Pixel value for comments */
-  int hyperlink_pixel;		/* Pixel value for hyperlinks */
+  GateColor comment_color;	/* Color for comment regular text */
+  GateColor hyperlink_color;	/* Color for hyperlinks */
 
   IdleEv idle_ev;		/* Idle event flags */
   PopState popstate;		/* Popup menu state */
@@ -419,9 +422,22 @@ typedef struct{
   New_Tcl_CmdProc	*func;
 } Tkg_Command;
 
+void init_cursors(void);
+void init_localeSet(void);
+void init_mainWindow(Tcl_Interp *tcl);
+void init_tclProcs(Tcl_Interp *tcl);
+
+void Comment_addLine(GCElement *g,const char *text);
+void Comment_flushLines(GCElement *g);
+void FlagScrolling(void);
+void HandScroll_drop(EditState *es);
+void HandScroll_move(EditState *es);
+void HandScroll_set(EditState *es);
+void SwitchDip_getCompositeName(GCElement *g,char *compositeName);
+void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
+void guessPortName(char *buf,GCElement *g,int orient,int dir,int nbits);
+
 int Tkg_GetColor(const char *name);
-
-
 
 void configureMainWindow(Tcl_Interp *);
 void message(int,const char*,...);
@@ -433,7 +449,6 @@ void logError(int code,const char *fname,int lnum,const char *s,...);
 
 void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs);
 void GCellSpec_writeEndModule(FILE *f,GCellSpec *gcs);
-
 
 unsigned transition_type(int from,int to);
 
@@ -447,12 +462,10 @@ void SetUpCursors();
 void MouseoverCursor(int cursorType);
 void MakeHashTables();
 
-
 int DoTcl(const char*,...);
 int DoTclL(const char*,...);
 int DoTclV(const char*,int,const char**);
 void InitTclProcs(Tcl_Interp *tcl);
-
 
 void mark_draw();
 void mark_flush();
@@ -483,7 +496,6 @@ void UpdateModifiedIndicator();
 void FlagRedraw();
 void SynchronizeInterface();
 
-
 void SetBatCursor();
 void ClearErrorMark();
 void DrawErrorPositionMark();
@@ -512,9 +524,9 @@ void mk_gate(int x,int y,GGateInfo *gi,int rot,int selected);
 char *filterParen(char *buf,const char *s);
 
 int dce_DrawString(GC gc,int x,int y,int p,const char *s);
-int RelPosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
-int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
-void GKDrawString(Display *D,Window W,GC gc,int x,int y,const char *s,int l);
+int RelPosDrawString(GatePainter*,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
+int PosDrawString(GatePainter*,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
+void GKDrawString(GatePainter *,GC gc,int x,int y,const char *s,int l);
 int GKTextWidth(XFontStruct *F,const char *S,int l);
 void DrawTextCursor(Window W,int x,int y);
 

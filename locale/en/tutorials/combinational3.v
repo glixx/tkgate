@@ -1,10 +1,13 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
+//: version "2.1"
+//: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
-//: property title = "sim_tut.v"
+//: property title = "Combinational Simulation"
 //: property useExtBars = 0
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -36,18 +39,18 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
 
   _GGXOR2 #(8) g4 (.I0(A), .I1(B), .Z(w1));   //: @(234,240) /sn:0 /w:[ 0 7 3 ]
   _GGNAND2 #(4) g8 (.I0(w0), .I1(w6), .Z(C));   //: @(332,301) /sn:0 /w:[ 0 0 1 ]
-  //: SWITCH g3 (Cin) @(241,202) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g3 (Cin) @(241,202) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: comment g13 @(10,10) /anc:1
   //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(setting probes)</b>"
   //: /line:""
-  //: /line:"Press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab again, to enter simulation mode.  This time right click on a wire (e.g., the"
-  //: /line:"one labeled \"S\") and slect \"Add/Delete Probe\" from the popup menu.  The will set a probe on that"
-  //: /line:"wire and bring up the logic analyzer window.  Set probes on some more wires, then unpause the"
-  //: /line:"simulator by pressing <img src=sim_go.gif bgcolor=gray>.  Click on the switches to change their state and observe how the logic"
+  //: /line:"Press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab again, to enter simulation mode. This time right click on a wire (e.g., the"
+  //: /line:"one labeled \"S\") and slect \"Add/Delete Probe\" from the popup menu. The will set a probe on that"
+  //: /line:"wire and bring up the logic analyzer window. Set probes on some more wires, then unpause the"
+  //: /line:"simulator by pressing <img src=sim_go.gif bgcolor=gray>. Click on the switches to change their state and observe how the logic"
   //: /line:"analyzer is updated."
   //: /end
   _GGNAND2 #(4) g2 (.I0(A), .I1(B), .Z(w6));   //: @(239,303) /sn:0 /w:[ 9 5 1 ]
-  //: SWITCH g1 (B) @(123,305) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g1 (B) @(123,305) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: joint g11 (w1) @(275, 240) /w:[ 1 -1 2 4 ]
   //: joint g10 (Cin) @(280, 235) /w:[ 6 5 -1 8 ]
   //: LED g28 (A) @(157,197) /sn:0 /w:[ 5 ] /type:0
@@ -58,7 +61,7 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   //: comment g15 @(585,254) /sn:0 /anc:1
   //: /line:"<font color=green4>Hint: Normally, TkGate will simulate"
   //: /line:"combinational circuits until all signals"
-  //: /line:"have reached a steady state.  You can"
+  //: /line:"have reached a steady state. You can"
   //: /line:"hit the space bar to advance the"
   //: /line:"simulator by one time unit.</font>"
   //: /end
@@ -72,7 +75,7 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   //: /line:"by clicking and holding the mouse"
   //: /line:"button down for a few seconds.</font>"
   //: /end
-  //: SWITCH g0 (A) @(125,217) /sn:0 /w:[ 7 ] /st:0
+  //: SWITCH g0 (A) @(125,217) /sn:0 /w:[ 7 ] /st:0 /dn:0
   //: LED g26 (Cin) @(280,184) /sn:0 /w:[ 3 ] /type:0
   //: LED g18 (S) @(360,203) /sn:0 /w:[ 1 ] /type:0
   //: comment g12 @(10,410) /sn:0 /R:14 /anc:1
@@ -82,31 +85,4 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 

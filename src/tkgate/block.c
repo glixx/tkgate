@@ -17,10 +17,19 @@
 
     Last edit by hansen on Sun Feb 22 16:55:03 2009
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <string.h>
+#endif
+
 #include <unistd.h>
+
 #include "tkgate.h"
+#include "print.h"
 #include "yybasic.h"
 
 #define BLOCK_STUBLEN	15
@@ -498,7 +507,7 @@ void block_drawnamelist(GWire *w,int s,int d,int iod)
   for (;w;w = w->next) {
     if (w->name) {
       block_getwirexy(w,d,&x,&y,&p);
-      RelPosDrawString(TkGate.W,F,TkGate.modportGC,x,y,w->name,p);
+      RelPosDrawString(TkGate.painterW,F,TkGate.modportGC,x,y,w->name,p);
     }
     DrawPinIOMark(w,d,iod,IODT_PORT);
   }
@@ -739,9 +748,10 @@ void Block_PSDrawWireName(GPrint *P,GWire *w,int Dir,int IODir)
     HtmlFont font[1];
     int x,y,p;
     Icon *arrow;
+    GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
     block_getwirexy(w,Dir,&x,&y,&p);
-    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x,y,w->name,p);
+    PSDrawText(P,HtmlFont_init(font,gateFont,8),x,y,w->name,p);
     GetPinIOMark(w,Dir,IODir,IODT_PORT,&x,&y,&arrow);
     switch (IODir) {
     case IN :
@@ -765,8 +775,7 @@ void Block_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
   int i;
   GWire *w;
   HtmlFont font[1];
-
-
+  GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
   fprintf(P->p_f,"%d %d %d %d box\n",g->xpos,g->ypos,
 	  g->u.block.gwidth,g->u.block.gheight);
@@ -786,13 +795,13 @@ void Block_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
       h = 8;
 
     sprintf(B,"(%s)",g->ename);
-    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),
+    PSDrawText(P,HtmlFont_init(font,gateFont,8),
 	       g->xpos + (g->u.block.gwidth / 2),
 	       g->ypos + (g->u.block.gheight / 2)+h,
 	       B,BetweenLeftAndRight | BetweenTopAndBottom);
   }
   if (g->u.block.moduleName) {
-    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,10),
+    PSDrawText(P,HtmlFont_init(font,gateFont, 10),
 	       g->xpos + (g->u.block.gwidth / 2),
 	       g->ypos + (g->u.block.gheight / 2),
 	       g->u.block.moduleName,
@@ -2359,7 +2368,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
 	if (GNet_getNBits(pw[p]->net) != GNet_getNBits(w->net)) {
 	  if (!resizeTable)
 	    resizeTable = new_PHash_noob();
-	  PHash_insert(resizeTable,pw[p]->net,GNet_getNBits(w->net));
+	  PHash_insert(resizeTable,pw[p]->net,(void*)(long)GNet_getNBits(w->net));
 	}
 
 	if (draw_p)
@@ -2388,7 +2397,7 @@ void block_updateInterface(GCElement *g,GModuleDef *m)
     for (he = Hash_first(resizeTable);he;he = Hash_next(resizeTable,he)) {
       GNet *n = (GNet*)PHashElem_key(he);
       GNet_draw(n);
-      net_setSize(n,(unsigned)HashElem_obj(he));
+      net_setSize(n,(unsigned)(long)HashElem_obj(he));
       GNet_draw(n);
     }
     delete_PHash(resizeTable);

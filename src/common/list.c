@@ -16,11 +16,13 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
 #include <stdlib.h>
+#include <malloc.h>
+#include "misc.h"
 #include "list.h"
 
 List *new_List()
 {
-  List *L = (List*) malloc(sizeof(List));
+  List *L = MALLOC(List);
 
   List_init(L);
 
@@ -36,7 +38,7 @@ void delete_List(List *L)
 
 List *copy_List(List *L)
 {
-  List *CL = (List*) malloc(sizeof(List));
+  List *CL = MALLOC(List);
   ListElem *E;
 
   List_init(CL);
@@ -66,7 +68,7 @@ void List_flush(List *L)
 
 void List_addToHead(List *L,void *p)
 {
-  ListElem *E = (ListElem*)malloc(sizeof(ListElem));
+  ListElem *E = MALLOC(ListElem);
 
   if (L->first) L->first->prev = E;
   E->obj = p;
@@ -79,7 +81,7 @@ void List_addToHead(List *L,void *p)
 
 void List_addToTail(List *L,void *p)
 {
-  ListElem *E = (ListElem*)malloc(sizeof(ListElem));
+  ListElem *E = MALLOC(ListElem);
 
   if (L->last) L->last->next = E;
   E->obj = p;
@@ -184,7 +186,8 @@ void *List_find(List *L,const void *obj,elemcmp_f *cmpfunc)
 void List_sort(List *L,elemcmp_f *cmpfunc)
 {
   if (List_numElems(L) > 1) {
-    void **a = (void**) malloc(sizeof(void*)*List_numElems(L));
+/*    void **a = (void**) malloc(sizeof(void*)*List_numElems(L));*/
+	  void **a = (void**)calloc(List_numElems(L), sizeof (void*));
     ListElem *le;
     int i;
 

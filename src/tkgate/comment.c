@@ -196,7 +196,7 @@ void Comment_flushLines(GCElement *g)
 
 void Comment_addLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
+  TextLine *L = OM_MALLOC(TextLine);
 
   ob_touch(L);
   L->text = ob_strdup(text);
@@ -416,7 +416,7 @@ GCElement *Comment_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 
 void Comment_Draw(GCElement *g,int md)
 {
-  GC gc = TkGate.commentGC;
+  GC gc = GatePainterContext_gc(TkGate.commentContext);
   int x,y;
 
   Comment_buildHtml(g);

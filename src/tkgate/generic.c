@@ -17,13 +17,23 @@
 
     Last edit by hansen on Sat Feb 21 16:44:18 2009
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cassert>
+#else
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#endif
+
 #include <ctype.h>
 
 #include "tkgate.h"
+#include "print.h"
 
 void init_and();
 void init_or();
@@ -424,8 +434,9 @@ void Err_ChangePin(EditState *es,GCElement *g)
 void Generic_DrawGateLabel(GPrint *P,GCElement *g,const char *text)
 {
   HtmlFont font[1];
+  GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
-  PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),
+  PSDrawText(P,HtmlFont_init(font,gateFont,8),
 	     g->xpos+g->typeinfo->lpos[g->orient].x,
 	     g->ypos+g->typeinfo->lpos[g->orient].y,
 	     text,g->typeinfo->lpos[g->orient].just);

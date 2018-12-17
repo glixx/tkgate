@@ -1,8 +1,8 @@
-//: version "2.0-b10"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "ru"
 //: property prefix = "_GG"
-//: property title = "edit1_tut.v"
+//: property title = "Редактирование вентилей"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
@@ -149,8 +149,8 @@ wire w9;    //: /sn:0 {0}(77,270)(92,270){1}
 //: enddecls
 
   //: comment g8 @(149,126) /sn:0 /anc:1
-  //: /line:"вентили с расширительными"
-  //: /line:"панелями"
+  //: /line:"вентили с расшири-"
+  //: /line:"тельными панелями"
   //: /end
   _GGAND4 #(10) g4 (.I0(w7), .I1(w8), .I2(w10), .I3(w20), .Z(w9));   //: @(67,270) /sn:0 /w:[ 1 1 1 1 0 ]
   _GGAND3 #(8) g3 (.I0(w3), .I1(w4), .I2(w6), .Z(w5));   //: @(65,218) /sn:0 /w:[ 1 1 1 0 ]

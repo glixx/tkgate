@@ -39,10 +39,19 @@ Handling characteristics of SymModules:
   module definition.
 *
 ***************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstring>
+#else
 #include <stdlib.h>
 #include <string.h>
+#endif
+
 #include <unistd.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 void SymBlock_Draw(GCElement *g,int md);
 int SymBlock_HitDistance(GCElement *g,int x,int y);
@@ -433,7 +442,7 @@ void SymBlock_VerSave(FILE *f,GCElement *g)
   }
   fprintf(f,");");
 
-  fprintf(f,"   //: @(%d, %d) /symbol:%u",g->xpos,g->ypos,(uintptr_t)ms);
+  fprintf(f,"   //: @(%d, %d) /symbol:%lu",g->xpos,g->ypos,(uintptr_t)ms);
 
   if (!g->show_name) fprintf(f," /sn:%d",g->show_name);
   if (g->anchored) fprintf(f," /anc:1");

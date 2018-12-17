@@ -1,3 +1,12 @@
+Version 2.1 - December 17, 2018
+     * Localization update
+     * Fix segfault on exit
+     * Partial fix for whitespace in filenames
+     * Fix showing of pictures and using style in documentation
+     * Add manuals about circuits 74xx for all languages
+     * Gettext support for messages, examples, tutorials
+     * Partially cygwin support
+
 Version 2.1-a1 - June 19, 2015
      * Verga can parse output drive strengths for gates
      * Corrected tri0 and tri1 net signals with only 1 drive in Verga
@@ -77,7 +86,7 @@ Version 2.0-b7 - February 23, 2009
      * Fixed bug causing excessive calls to html formatter in comments objects.
 
 Version 2.0-b6 - February 12, 2009
-     * Created new "Scripts" tab in Circuit Properties dialog box.  Moved list
+     * Created new "Scripts" tab in Circuit Properties dialog box. Moved list
 	of start-up scripts to the new page.
      * Moved the "Auto Start" option from the "General" page to the "Simulation"
 	page in the Circuit Properties box.
@@ -93,7 +102,7 @@ Version 2.0-b6 - February 6, 2009
      * Improved handling of locales
      * Tabbing in dialog boxes added
      * Reorganized main menus
-     * Renamed DEMUX as DECODER.  Added a properly defined DEMUX.
+     * Renamed DEMUX as DECODER. Added a properly defined DEMUX.
      * Updated most of the Japanese locale strings
      * Updated all German locale strings and tutorials
      * Added JK Flip-Flop
@@ -110,7 +119,7 @@ Version 2.0-b4 - January 10, 2009
      * Cleaned up interface look.
      * Fixed sizing problem with dialog boxes that sometimes caused clipping
        of the dialog box elements.
-     * Fixed simulator bug in register initialization.  Registers were not
+     * Fixed simulator bug in register initialization. Registers were not
        being initialized until end of time step 0 and were triggering events.
      * Fixed problem with initial display of flip-flop type in properties
        dialog box.
@@ -206,7 +215,7 @@ Version 2.0-a5 - May 22, 2007
 Version 2.0-a1 - February 7, 2007
      * Updated interface.
      * Support for textual Verilog module definitions.
-     * All gates are now rotatable.  Use Tab/Backtab to rotate selection.
+     * All gates are now rotatable. Use Tab/Backtab to rotate selection.
      * Automatic interface generator.
      * Support for user defined symbols.
      * Hierarchical module browser.
@@ -278,14 +287,14 @@ Version 1.6i - February 5, 2002
       * Fixed problem with using some right mouse button popup commands
 	when zoomed.
       * Increased delay between a mouse press and hold on a signal and the
-	pop-up showing the signal value while in simulation mode.  The previous
+	pop-up showing the signal value while in simulation mode. The previous
 	short delay interfered with detection of a double click on some systems
-	and thus made it difficult to set probes.  It now also possible to
+	and thus made it difficult to set probes. It now also possible to
 	customize this delay through the simulator page on options dialogue box.
       * Disabled bug allowing net options to be modified while in simulator mode.
       * Added alternate probe set/remove command using 'P' keyboard shortcut
 	or menu.
-      * Initial support for "hierarchy graph" for Postscript output added.  This
+      * Initial support for "hierarchy graph" for Postscript output added. This
 	support is currently limited to graphs that fit on a single page.
       * Fixed several bugs that could sometimes cause a core dump and/or
 	save file corruption when manipulating "wire tap" elements.
@@ -297,7 +306,7 @@ Version 1.6i - February 5, 2002
       * Changed port add/editing so that an "*unnamed*" signal will be assigned
 	a standard generated name.
       * Fixed bugs with port on editing through properties dialog box on modules.
-      * Fixed problem with panic save feature.  The panic save feature causes
+      * Fixed problem with panic save feature. The panic save feature causes
 	tkgate to attempt to save the current circuit in PANIC.v if a core dump
 	is detected.
       * Produces less confusing messages when running under an unsupported locale.
@@ -310,7 +319,7 @@ Version 1.6h - June 11, 2001
       * Fixed bug that allowed creation of meaningless inverters on wire taps.
       * Fixed core dump bug with "replicating" wire taps.
       * Fixed serious problem with cut/paste causing internal data structures
-	and save file data to become corrupt.  The problem occured when gates
+	and save file data to become corrupt. The problem occured when gates
 	attached to the same net were included in the cut, but one or more of
 	the joints/taps on the net were not included in the cut causing a
 	partitioning of the net.
@@ -379,15 +388,15 @@ Version 1.5 - June 26, 2000
       * Support for multiple gate 'technologies' and per-gate delay
 	specification added.
 
-      * Menu and shortcut internals updated.  Shortcuts and menus for gate
-	definitions now contained in the gate definition files.  This is a
-	precursor to supporting user-definiable primitives.  The new shortcut
+      * Menu and shortcut internals updated. Shortcuts and menus for gate
+	definitions now contained in the gate definition files. This is a
+	precursor to supporting user-definiable primitives. The new shortcut
 	definition method allows keyboard shortcuts to be defined in .tkgaterc
 	file.
 
       * Better recovery from syntax errors in input files.
 
-      * Accedental editing of library modules disabled.  An explicit "Claim"
+      * Accedental editing of library modules disabled. An explicit "Claim"
         command was added to convert library modules to user modules.
 
       * Bug fixes
@@ -432,7 +441,7 @@ Version 1.4b - June 7, 2000
 
       * Fixed problems with Japanese input
 
-      * Created a seperate directory for Japanese tutorials.  Selection of the
+      * Created a seperate directory for Japanese tutorials. Selection of the
         tutorial directory depends on the selected interface language. Currently
         only a small portion of the tutorial have been translated.
 

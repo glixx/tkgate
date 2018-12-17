@@ -127,7 +127,6 @@ AC_DEFUN([TKG_CHECK_ICONV_H],[
   fi
 ])
 
-
 #--------------------------------------------------------------------
 # TKG_WORDSIZE
 #
@@ -141,14 +140,10 @@ AC_DEFUN([TKG_CHECK_ICONV_H],[
 #
 #--------------------------------------------------------------------
 AC_DEFUN([TKG_WORDSIZE],[
-  AC_CACHE_CHECK([word size], wordsize_cv_,
-    AC_RUN_IFELSE([AC_LANG_SOURCE([int main() {return sizeof(unsigned) == 8 ? 0 : 1;}])],
-	[wordsize_cv_=64], [wordsize_cv_=32]))
-  if test $wordsize_cv_ = 32; then
-    AC_DEFINE(TKGATE_WORDSIZE, 32, [Word size of machine.])
-  else
-    AC_DEFINE(TKGATE_WORDSIZE, 64, [Word size of machine.])
-  fi
+  AC_CHECK_SIZEOF([unsigned])
+  AS_IF([test "$ac_cv_sizeof_unsigned" -eq 8],
+        [AC_DEFINE(TKGATE_WORDSIZE, 64, [Word size of machine.])],
+        [AC_DEFINE(TKGATE_WORDSIZE, 32, [Word size of machine.])])
 ])
 
 #--------------------------------------------------------------------
@@ -159,25 +154,10 @@ AC_DEFUN([TKG_WORDSIZE],[
 #	values			List to merge
 #
 # Results:
-#	Sets the variable TKGATE_WORDSIZE to 32 or 64
+#	Same as input.  Previous version mangled -framework switches.
 #
 #--------------------------------------------------------------------
-AC_DEFUN([TKG_MERGE],[
-   L=""
-   for v in $2; do
-     add_ok=1
-     for q in $L; do
-	if test X$q = X$v; then
-	  add_ok=0
-	  break
-        fi
-     done
-     if test "$add_ok" = "1"; then
-       L="$L $v"
-     fi
-   done
-   $1=$L
-])
+AC_DEFUN([TKG_MERGE],[$1="$2"])
 
 #--------------------------------------------------------------------
 # TKG_GETTCLTRYDIRS
@@ -509,6 +489,20 @@ AC_DEFUN([TKG_MAKELIBEXEC],[
   fi
 
   cd ..
+
+])
+
+AC_DEFUN([TKG_CHECK_CFLAGS],[
+  AC_MSG_CHECKING([if $CC supports $1])
+  AC_LANG_PUSH([C])
+  tkg_saved_CFLAGS="$CFLAGS"
+  CFLAGS="$1"
+  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([])],
+                    [AC_MSG_RESULT([yes])]
+                    CFLAGS="$tkg_saved_CFLAGS $1",
+                    [AC_MSG_RESULT([no])]
+                    CFLAGS="$tkg_saved_CFLAGS")
+  AC_LANG_POP([C])
 
 ])
 

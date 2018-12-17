@@ -559,8 +559,8 @@ void SDNull_generate(StatDecl *sd, Scope *scope, CodeBlock *cb)
 static void SDTask_generateUserTask(SDTask *t,Scope *scope,UserTask *ut,CodeBlock *cb)
 {
   ListElem *le;
-  unsigned top_bc, end_bc;
-  void **sargs;
+  //unsigned top_bc, end_bc;
+  void **sargs = NULL;
   int i;
 
   if (UserTask_getType(ut) != UTT_TASK) {
@@ -579,7 +579,7 @@ static void SDTask_generateUserTask(SDTask *t,Scope *scope,UserTask *ut,CodeBloc
   /*
    * Remember the top of the code we are generating
    */
-  top_bc = CodeBlock_size(cb);
+  //top_bc = CodeBlock_size(cb);
   if (t->t_nargs)
     sargs = (void**) malloc(sizeof(void*)*t->t_nargs);
 
@@ -617,7 +617,7 @@ static void SDTask_generateUserTask(SDTask *t,Scope *scope,UserTask *ut,CodeBloc
       break;
     }
   }
-  end_bc = CodeBlock_size(cb);
+  //end_bc = CodeBlock_size(cb);
 
   if (UserTask_isAuto(ut))
     UserTask_generateInlineCall(ut,sargs,cb);

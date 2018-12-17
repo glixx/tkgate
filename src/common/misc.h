@@ -18,7 +18,12 @@
 #ifndef __misc_h
 #define __misc_h
 
+#include <stdio.h>
+#include "config.h"
+
 __BEGIN_DECLS
+
+#define MALLOC(T)	((T*) malloc(sizeof (T)))
 
 /*
  * Functions that we may need to provide ourself if they are not available
@@ -31,13 +36,13 @@ int strcasecmp(const char *s1,const char *s2);
 int strncasecmp(const char *s1,const char *s2,size_t n);
 #endif
 #if !HAVE_STRCASESTR
-const char *strcasestr(const char *big,const char *little);
+char *strcasestr(const char *big,const char *little);
 #endif
 #if !HAVE_STRSPN
 size_t strspn(const char *s,const char *charset);
 #endif
 #if !HAVE_STRCSPN
-size_t strspn(const char *s,const char *charset);
+size_t strcspn(const char *s,const char *charset);
 #endif
 #if !HAVE_STRDUP
 char *strdup(const char *s);
@@ -80,7 +85,7 @@ typedef struct {
   int revision;		/* Revision */
   int alpha;		/* Alpha level */
   int beta;		/* Beta level */
-  int rc;       /* release candidate level */
+  int rc;		/* release candidate level */
 } Version;
 
 typedef struct {
@@ -119,9 +124,11 @@ const char *bitrangeSpec(int n);
 
 #define tv_to_ms(tv) ( ((unsigned long long)(tv)->tv_sec)*1000 + (tv)->tv_usec/1000)
 
+int istruevalue(const char *s);
+
 typedef enum boolean_en {
-  FALSE = 0,
-  TRUE = 1
+  GATE_FALSE = 0,
+  GATE_TRUE = 1
 } Boolean;
 
 __END_DECLS

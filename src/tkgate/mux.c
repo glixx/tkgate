@@ -17,7 +17,9 @@
 
     Last edit by hansen on Fri May  1 20:41:18 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define MUX_IN 0
 #define MUX_SEL 1

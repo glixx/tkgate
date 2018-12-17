@@ -1,11 +1,12 @@
-//: version "2.0-b6"
+//: version "2.1"
 //: property encoding = "utf-8"
 //: property locale = "de"
 //: property prefix = "_GG"
-//: property title = "combinational.v"
+//: property title = "Schaltnetz"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
-//: require "tty"
-//: require "coke"
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -60,7 +61,7 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
 //: enddecls
 
   _GGNAND2 #(4) g8 (.I0(w4), .I1(w0), .Z(w6));   //: @(215,128) /sn:0 /R:3 /w:[ 5 5 1 ] /eb:0
-  //: SWITCH g4 (B0) @(76,159) /sn:0 /w:[ 0 ] /st:1
+  //: SWITCH g4 (B0) @(76,159) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: LED g37 (S2) @(310,416) /sn:0 /R:3 /w:[ 0 ] /type:0
   //: comment g34 @(351,22)
   //: /line:"Ein einfacher 3-Bit-Addierer."
@@ -69,7 +70,7 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: /line:"Knopfes aus der Knopfleiste. Setze dann Tastköpfe"
   //: /line:"durch Doppelklick auf die Leitungen S0, S1, S2 and C3"
   //: /line:"(und beliebige zusätzliche Leitungen, die getastet"
-  //: /line:"werden sollen).  Drücke wieder den \"Abspielen\" Knopf"
+  //: /line:"werden sollen). Drücke wieder den \"Abspielen\" Knopf"
   //: /line:"um in den kontinuierlichen Simulationsmodus einzutreten."
   //: /line:"Immer, wenn sich ein Schalterwert ändert (durch Klicken)"
   //: /line:"simuliert der Simulator so lange, bis sich alle Werte"
@@ -78,7 +79,7 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: /line:"Knopfes auf der Knopfleiste."
   //: /end
   _GGXOR2 #(8) g13 (.I0(A1), .I1(B1), .Z(w10));   //: @(180,255) /sn:0 /w:[ 0 5 3 ] /eb:0
-  //: SWITCH g3 (w0) @(217,37) /sn:0 /R:3 /w:[ 3 ] /st:0
+  //: SWITCH g3 (w0) @(217,37) /sn:0 /R:3 /w:[ 3 ] /st:0 /dn:0
   _GGXOR2 #(8) g2 (.I0(w0), .I1(w4), .Z(S0));   //: @(250,95) /sn:0 /w:[ 0 0 1 ] /eb:0
   _GGXOR2 #(8) g1 (.I0(A0), .I1(B0), .Z(w4));   //: @(184,97) /sn:0 /w:[ 0 5 3 ] /eb:0
   _GGNAND2 #(4) g16 (.I0(A1), .I1(B1), .Z(w13));   //: @(180,315) /sn:0 /w:[ 5 3 1 ] /eb:0
@@ -94,7 +95,7 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: joint g7 (B0) @(146, 159) /w:[ 2 4 1 -1 ]
   //: joint g31 (w19) @(209, 413) /w:[ 1 2 -1 4 ]
   //: joint g20 (w11) @(213, 250) /w:[ 1 2 -1 4 ]
-  //: SWITCH g15 (B1) @(81,317) /sn:0 /w:[ 0 ] /st:0
+  //: SWITCH g15 (B1) @(81,317) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: comment g39 @(20,12) /sn:0
   //: /line:"<a href=\"../index.v\">[ZURÜCK]</a>"
   //: /end
@@ -106,43 +107,16 @@ wire S2;    //: {0}(50:303,416)(252,416){1}
   //: LED g36 (S1) @(310,253) /sn:0 /R:3 /w:[ 0 ] /type:0
   _GGXOR2 #(8) g24 (.I0(A2), .I1(B2), .Z(w18));   //: @(176,418) /sn:0 /w:[ 0 5 3 ] /eb:0
   //: joint g21 (w10) @(208, 255) /w:[ 1 -1 2 4 ]
-  //: SWITCH g23 (A2) @(79,415) /sn:0 /w:[ 3 ] /st:0
+  //: SWITCH g23 (A2) @(79,415) /sn:0 /w:[ 3 ] /st:0 /dn:0
   //: LED g35 (S0) @(310,95) /sn:0 /R:3 /w:[ 0 ] /type:0
-  //: SWITCH g26 (B2) @(83,480) /sn:0 /w:[ 0 ] /st:0
+  //: SWITCH g26 (B2) @(83,480) /sn:0 /w:[ 0 ] /st:0 /dn:0
   _GGNAND2 #(4) g22 (.I0(w13), .I1(w14), .Z(w19));   //: @(209,340) /sn:0 /R:3 /w:[ 0 0 3 ] /eb:0
-  //: SWITCH g0 (A0) @(78,94) /sn:0 /w:[ 3 ] /st:0
+  //: SWITCH g0 (A0) @(78,94) /sn:0 /w:[ 3 ] /st:0 /dn:0
   //: joint g18 (B1) @(144, 317) /w:[ 2 4 1 -1 ]
-  //: SWITCH g12 (A1) @(79,252) /sn:0 /w:[ 3 ] /st:1
+  //: SWITCH g12 (A1) @(79,252) /sn:0 /w:[ 3 ] /st:0 /dn:0
   _GGNAND2 #(4) g33 (.I0(w21), .I1(w22), .Z(C3));   //: @(205,503) /sn:0 /R:3 /w:[ 0 0 1 ] /eb:0
   _GGNAND2 #(4) g30 (.I0(w18), .I1(w19), .Z(w22));   //: @(207,449) /sn:0 /R:3 /w:[ 5 5 1 ] /eb:0
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
-
-
-//: /builtinBegin
-module _GGXOR2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-
-     assign #Diz Z = ( I0 ^ I1 );
-   
-endmodule // xor
-
-//: /builtinEnd
-
-
-//: /builtinBegin
-module _GGNAND2 #(.Diz(1)) (I0, I1,  Z);
-   output  Z;
-   input   I0, I1;
-   reg  Z;
-
-   assign #Diz Z = ~( I0 & I1 );
-   
-endmodule // and
-//: /builtinEnd
 

@@ -17,19 +17,30 @@
 
     Last edit by hansen on Wed Mar 18 05:15:53 2009
 ****************************************************************************/
+
+#ifdef __cplusplus
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cassert>
+#else
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
-#include <unistd.h>
 #include <string.h>
 #include <assert.h>
+#endif
+
+#include <ctype.h>
+#include <unistd.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 GModuleDef *new_GModuleDef(const char *name)
 {
   GModuleDef *M;
 
-  M = (GModuleDef*) ob_malloc(sizeof(GModuleDef),"GModuleDef");
+  M = OM_MALLOC(GModuleDef);
 
   M->m_name = ob_strdup(name);
   M->m_fileName = 0;
@@ -106,7 +117,6 @@ void GModuleDef_claim(GModuleDef *M)
   M->m_libName = 0;
   M->m_isLib = 0;
 }
-
 
 GNet *GModuleDef_findNet(GModuleDef *M,const char *name)
 {
@@ -444,7 +454,7 @@ void GModuleDef_getBBX(GModuleDef *M,TargetDev_e target, int *minX,int *maxX,int
 
     *minX = *minY = 0;
     *maxX = maxLen;
-    *maxY = numLines*(int)(1.2*hdl_font.size);
+    *maxY = numLines*(int)(1.2*hdl_font.gateFont.size);
   }
 }
 
@@ -628,7 +638,7 @@ int GModuleDef_scanHDLModule(GModuleDef *M)
 
   getSimTempFile(tempFile);
 
-  sprintf(cmd,"%s -sq %s -D %u",r,tempFile,computestrhash(tempFile));
+  sprintf(cmd,"%s -sq %s -D %lu",r,tempFile,computestrhash(tempFile));
 
   f = fopen(tempFile, "w");
   if (!f) goto abortExit;

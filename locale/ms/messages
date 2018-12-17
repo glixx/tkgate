@@ -1,0 +1,473 @@
+\font-encoding			iso8859-6
+\display-encoding		iso8859-6
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				"bahasa Melayu"
+@opt.sidebar.width			*400
+@opt.tree.width				*250
+
+b.new	Baharu...
+b.dismiss	Singkir
+b.close	Tutup
+b.ok	OK
+b.clear	Kosongkan
+b.cancel	Batal
+b.in	masuk
+b.out	keluar
+b.inout	masukkeluar
+b.browse	Layar...
+b.label	Label
+b.find	Cari
+b.edit	Sunting...
+b.add	Tambah...
+b.delete	Padam
+b.remove	Buang
+b.apply	Laksana
+b.anchor	Penambat
+b.tech	Teknologi
+tab.edit	Menyunting
+tab.editintr	Antaramuka
+tab.simulate	Simulasi
+tab.cpath	Laluan Kritikal
+fpattern.v	Senarai Rangkaian Verilog
+fpattern.vs	Fail Skrip Verilog
+fpattern.gdf	Fail Lengah TkGate
+fpattern.xbm	Peta bit X11
+fpattern.mem	Fail Imej Ingatan TkGate
+fpattern.all	Semua Fail
+module.tree	Pepohon
+module.list	Senarai
+module.box.libraries	Pustaka
+sidetab.nets	Rangkaian
+sidetab.ports	Port
+mm.add	Tambah...
+mm.delete	Padam
+mm.edit	Sunting...
+mm.enable	Benarkan
+mm.disable	Lumpuhkan
+menu.file	0:Fail
+menu.edit	0:Sunting
+menu.tool	0:Alatan
+menu.symbol	0:Simbol
+menu.simulate	0:Simulasi
+menu.module	0:Modul
+menu.interface	0:Antaramuka
+menu.format	0:Format
+menu.make	0:Komponen
+menu.help	0:Bantuan
+menu.file.new	0:Baharu...
+menu.file.open	0:Buka...
+menu.file.openlib	0:Pengurus Pustaka...
+menu.file.save	0:Simpan
+menu.file.saveas	5:Simpan Sebagai...
+menu.file.print	0:Cetak...
+menu.file.quit	0:Keluar
+menu.file.cprop	0:Sifat Litar...
+menu.file.import	0:Import Imej...
+menu.file.export	0:Eksport Imej...
+menu.edit.undo	0:Buat Asal
+menu.edit.redo	0:Buat Semula
+menu.edit.cut	0:Potong
+menu.edit.copy	3:Salin
+menu.edit.paste	0:Tampal
+menu.edit.overlay	0:Tampal Tindihan
+menu.edit.selall	0:Pilih Semua
+menu.edit.find	0:Cari...
+menu.edit.zoomin	5:Zum Masuk
+menu.edit.zoomout	5:Zum Keluar
+menu.edit.resize	Saiz Semula Peta Bit
+menu.tool.move	0:Alih/Sambung
+menu.tool.delg	0:Padam Komponen
+menu.tool.cutw	0:Potong Wayar
+menu.tool.inv	0:Songsang
+menu.tool.bitw	0:Lebar Bit
+menu.tool.debug	0:Nyahpepijat
+menu.tool.point	0:Titik
+menu.tool.line	0:Garisan
+menu.tool.rect	0:Segiempat
+menu.tool.fillrect	0:Isi Segiempat
+menu.tool.port	0:Port
+menu.tool.select	0:Pilih Kawasan
+menu.tool.options	0:Pilihan...
+menu.format.addport	4:Tambah Port
+menu.format.ioset	0:Tetapkan Jenis
+menu.format.anchor	0:Penambat Dipilih
+menu.format.unanchor	0:Nyahtambat Dipilih
+menu.format.prop	0:Sifat Kejadian...
+menu.format.del	0:Padam
+menu.format.settech	0:Tetapkan Teknologi
+menu.format.rot	0:Putaran
+menu.format.rot.0	17:Putaran Lalai 0
+menu.format.rot.90	17:Putaran Lalai 90
+menu.format.rot.180	17:Putaran Lalai 180
+menu.format.rot.270	17:Putaran Lalai 270
+menu.format.rot.rotate	10:Putar Ikut Jam
+menu.format.rot.brotate	10:Putar Lawan Jam
+menu.format.algnv	6:Jajar Menegak
+menu.format.algnh	6:Jajar Mengufuk
+menu.tool.tclshell	0:Shell Tcl
+menu.tool.rep	0:Replika
+menu.simulate.begin	0:Mula Simulasi
+menu.simulate.end	0:Tamat Simulasi
+menu.simulate.addprobe	0:Tambah/Padam Kuar
+menu.simulate.run	0:Jalan
+menu.simulate.pause	0:Jeda
+menu.simulate.cycle	5:Kitar Langkah
+menu.simulate.break	0:Titik Henti...
+menu.simulate.script	1:Lakukan Skrip...
+menu.simulate.load	1:Muat Ingatan...
+menu.simulate.dump	1:Longgok Ingatan...
+menu.simulate.view	1:Lihat Ingatan...
+menu.module.open	0:Buka
+menu.module.close	0:Tutup
+menu.module.new	0:Baharu...
+menu.module.del	0:Padam...
+menu.module.copy	1:Salin...
+menu.module.rename	0:Nama Semula...
+menu.module.setroot	1:Tetapkan Sebagai Root...
+menu.module.prop	0:Sifat...
+menu.module.interface	0:Antaramuka
+menu.module.interface.set	0:Tetapkan Sebagai Lalai
+menu.module.interface.update	1:Segerak ke Lalai
+menu.module.interface.updateall	6:Segerak Semua ke Lalai...
+menu.module.interface.edit	0:Sunting...
+menu.module.interface.auto	5:Auto Jana...
+menu.help.about	0:Perihal...
+menu.help.license	0:Lesen...
+menu.help.doc	0:Dokumentasi...
+menu.help.tut	1:Tutorial
+menu.help.home	1:Laman Sesawang
+menu.help.example	1:Contoh
+menu.scope_file	0:Fail
+menu.scope_sim	0:Simulasi
+menu.scope_trace	0:Jejak
+menu.scope_help	0:Bantuan
+menu.scope_file.ptrace	0:Cetak Jejak...
+menu.scope_file.close	0:Tutup
+menu.scope_trace.zoomin	5:Zum Masuk
+menu.scope_trace.zoomout	5:Zum Keluar
+menu.scope_sim.addprobe	0:Tambah/Padam Kuar
+menu.scope_sim.run	0:Jalan
+menu.scope_sim.pause	0:Jeda
+menu.scope_sim.cycle	5:Kitar Langkah
+menu.scope_sim.break	0:Titik Henti...
+menu.scope_sim.script	1:Lakukan Skrip...
+menu.scope_sim.load	1:Muat Ingatan...
+menu.scope_sim.dump	1:Longgok Ingatan...
+menu.scope_help.about	0:Perihal...
+menu.scope_help.license	0:Lesen...
+menu.scope_help.doc	0:Dokumentasi...
+mod.intf	Antaramuka
+port.title	TkGate: Sifat Port
+port.parms	Parameter Port
+port.in	Masuk
+port.out	Keluar
+port.inout	MasukKeluar
+gm.signals	Isyarat
+gm.io	I/O
+gm.msi	MSI
+gm.alu	ALU
+gm.mem	Ingatan
+gm.mod	Modul
+gm.comment	Ulasan
+gm.script	Skrip Verilog
+gm.frame	Bingkai
+gm.signals.pullup	TolakAtas
+gm.signals.pulldown	TolakBawah
+gm.signals.ground	Bumi
+gm.signals.vdd	Vdd
+gm.io.switch	Suis
+gm.io.dip	Suis DIP
+gm.io.merge	Concat
+gm.io.clock	Jam
+gm.io.led	LED
+gm.io.ledbar	Palang LED
+gm.io.ledhex	7-Seg. LED (HEX)
+gm.io.leddec	7-Seg. LED (DEC)
+gm.io.ledseg	7-Seg. LED (Terus)
+gm.io.tty	TTY
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Penimbal
+gm.gate.inv	Penyongsang
+gm.gate.tribuf	Tri-Buffer
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
+gm.alu.add	Penambah
+gm.alu.mult	Pengganda
+gm.alu.div	Pembahagi
+gm.alu.lshift	Anjak Kiri
+gm.alu.rshift	Anjak Kanan
+gm.alu.arshift	Arith. Anjak Kanan
+gm.alu.roll	Gulung
+gm.mem.reg	Daftar
+gm.mem.ff	Flip-Flop D
+gm.mem.rff	Flip-Flop D Songsang
+gm.mem.ram	RAM
+gm.mem.rom	ROM
+gm.mem.jkff	Flip-Flop JK
+gm.mem.rjkff	Flip-Flop JK Songsang
+gm.msi.21mux	Pemultipleks 2-1
+gm.msi.41mux	Pemultipleks 4-1
+gm.msi.81mux	Pemultipleks 8-1
+gm.msi.12dec	Penyahkod 1-2
+gm.msi.14dec	Penyahkod 1-4
+gm.msi.18dec	Penyahkod 1-8
+gm.msi.12demux	Penyahmultipleks 1-2
+gm.msi.14demux	Penyahmultipleks 1-4
+gm.msi.18demux	Penyahmultipleks 1-8
+gm.mod.inst	Kejadian Modul
+gm.mod.in	Input Modul
+gm.mod.out	Output Modul
+gm.mod.inout	Input-Output Modul
+tutorial.prev	TERDAHULU
+tutorial.next	BERIKUTNYA
+tutorial.chapter	SENARAI BAB
+tutorial.reload	MUAT SEMULA
+pop.make	Komponen
+pop.tool	Alat
+pop.edit.paste	Tampal
+pop.edit.cut	Potong
+pop.edit.copy	Salin
+pop.port.in	Masuk
+pop.port.out	Keluar
+pop.port.inout	MasukKeluar
+pop.wire.addseg	Tambah Segmen Wayar
+pop.wire.prop	Sifat Rangkaian...
+pop.wire.hidesize	Sembunyi Lebar Bit
+pop.wire.showsize	Tunjuk Lebar Bit
+pop.wire.hidelabel	Sembunyi Label
+pop.wire.hidealllabel	Sembunyi Semua Label
+pop.wire.clearalllabel	Kosongkan Semua Label
+pop.wire.showlabel	Tunjuk Label
+pop.gate.open	Buka
+pop.gate.close	Tutup
+pop.gate.prop	Sifat Kejadian...
+pop.gate.addport	Tambah Port
+pop.gate.addin	Tambah Input...
+pop.gate.addout	Tambah Output...
+pop.gate.addinout	Tambah InOut...
+pop.gate.anchor	Tambat/Nyahtambat
+pop.gate.settech	Tetapkan Teknologi
+pop.gate.delete	Padam
+pop.gate.ioset	Tetapkan Jenis
+pop.module.new	Baharu...
+pop.module.del	Padam...
+pop.module.copy	Salin...
+pop.module.rename	Nama Semula...
+pop.module.setroot	Tetapkan Sebagai Root...
+pop.module.prop	Sifat Modul...
+pop.module.int	Sunting Antaramuka...
+pop.simulate.end	Tamat Simulasi
+pop.simulate.begin	Mula Simulasi
+pop.simulate.addprobe	Tambah/Padam Kuar
+pop.simulate.delprobe	Padam Kuar
+pop.simulate.run	Jalan
+pop.simulate.pause	Jeda
+pop.simulate.cycle	Kitar Langkah
+pop.simulate.break	Titik Henti...
+pop.simulate.script	Lakukan Skrip...
+pop.simulate.load	Muat Ingatan...
+pop.simulate.dump	Longgok Ingatan...
+pop.simulate.view	Lihat Ingatan...
+pop.interface	Antaramuka
+pop.interface.set	Tetapkan Sebagai Lalai
+pop.interface.update	Segerak ke Lalai
+pop.interface.updateall	Segerak Semua ke Lalai...
+pop.interface.edit	Sunting...
+pop.interface.auto	Auto Jana...
+pop.interface.replace	Ganti
+pop.igen.type	Jenis
+pop.igen.side	Sisi
+pop.igen.size	Saiz
+pop.igen.delete	Padam
+pop.igen.in	masu
+pop.igen.out	keluar
+pop.igen.inout	masukkeluar
+pop.igen.left	kiri
+pop.igen.right	kanan
+pop.igen.top	atas
+pop.igen.bottom	bawah
+pop.igen.other	lain-lain
+pop.library.mgr	Pengurus Pustaka...
+pop.library.close	Nyahmuat
+symed.tab.normal	NyahPilih
+symed.tab.select	Dipilih
+symed.link	Pautan terpilih ke nyahpilih
+memview.title	Pelihat Ingatan
+scope.title	TkGate: Skop
+scope.emptymsg	Dwi-klik pada wayar untuk tambah atau padam jejak.
+comment.empty	[Dwi klik untuk tambah teks.]
+ifile	Fail
+imodule	Modul
+iblmodule	Modul
+iports	Port
+ibits	Bit:
+itype	Jenis:
+db.mod.name	Nama
+db.mod.file	Nama Fail
+db.mod.type	Jenis
+db.mod.flags	Bendera
+db.mod.props	Sifat
+db.mod.inuse.0	Modul tidak digunakan.
+db.mod.inuse.1	Modul sedang digunakan.
+db.mod.netlist	Senarai Rangkaian
+db.mod.hdl	HDL Verilog
+db.mod.netexpl	-begin-
+Takrif modul menggunakan
+penyunting bergrafik untuk
+sambungkan wayar antara
+komponen.
+-end-
+db.err.caption	Senarai Ralat
+db.net.title	TkGate: Sifat Rangkaian
+db.net.caption	Sifat Rangkaian
+db.net.name	Nama Rangkaian
+db.net.hide	Sembunyi Nama
+db.net.bits	Lebar Bit
+db.net.type	Jenis Rangkaian
+db.net.port	Jenis Port
+db.net.in	masuk
+db.net.out	keluar
+db.net.inout	masukkeluar
+db.net.inets	Rangkaian
+db.newcirc.title	TkGate: Litar Baharu
+db.newcirc.directory	Direktori:
+db.newcirc.cap	Litar Baharu
+db.newcirc.file	Nama Fail
+db.newcirc.topname	Nama Modul Teratas
+db.gate.title	TKGate: Sifat Komponen
+db.gate.signam	Nama Isyarat
+db.gate.portnam	Nama Port
+db.gate.iotype	Jenis
+db.gate.bitw	Lebar Bit
+db.gate.cyclew	Tempoh
+db.gate.phase	Fasa
+db.gate.duty	Duti
+db.gate.waveform	Bentuk Gelombang Jam
+db.gate.port	Port
+db.gate.bitws	Bit
+db.gate.side	Sisi
+db.gate.gtype	Jenis
+db.gate.gname	Nama Kejadian
+db.gate.hidenam	Sembunyi Nama
+db.gate.anchor	Penambat
+db.gate.cpbreak	Sekatan Laluan Kritikal
+db.gate.butstate	Keadaan Butang
+db.gate.dipval	Nilai Suis
+db.gate.range	Julat Bit
+db.gate.memfilenam	Fail Ingatan
+db.gate.modname	Jenis
+db.gate.general	Am
+db.gate.details	Perincian
+db.gate.text	Teks
+db.gate.ports	Port
+db.gate.delay	Lengah
+db.gate.parameters	Parameter
+db.gate.stddelay	Lengah Piawai
+db.gate.custdelay	Lengah Suai
+db.gate.catdiruse	Penggantian Port
+db.gate.edit	Sunting
+db.gate.delete	Padam
+db.gate.add	Tambah
+db.gate.ff.type	Orientasi Flip-Flop D
+db.gate.ff.normal.hdr	Biasa
+db.gate.ff.reverse.hdr	Songsang
+db.gate.jkff.type	Orientasi Flip-Flop JK
+db.gate.jkff.normal.hdr	Biasa
+db.gate.jkff.reverse.hdr	Songsang
+db.gate.cat.asc.hdr	Menaik
+db.gate.cat.dec.hdr	Menurun
+db.gate.tab.TAP.cap	Sifat Tran
+db.gate.tab.DEMUX.cap	Sifat Penyahmultipleks
+db.gate.switch.state	Keadaan Suis Awal
+db.gate.switch.shownet.on.hdr	Tunjuk
+db.gate.dip.shownet.on.hdr	Tunjuk
+db.gate.decoder.ord2.hdr	Kanan-ke-Kiri
+db.gate.led.seg.hdr	7-Segmen (Terus)
+db.hdl.cancel	Batal
+print.file	Fail
+print.ok	Cetak
+print.tab.advanced	Lanjutan
+opt.treelabel	Pilihan
+opt.interface	Antaramuka
+opt.toolbars.symed	Penyunting Simbol
+opt.print	Cetak
+opt.library.vpd	VPD
+opt.color.hdl	Penyunting HDL
+opt.identity	Identiti
+opt.mods	Modul
+opt.background	Latar Belakang
+opt.zled	LED Terapung
+opt.keybind	Gaya Pengikatan Kekunci
+opt.simbase	Pilihan Simulasi Asas
+opt.general.fontset	Set Fon
+opt.simulator.savetraces	Simpan lokasi suar antara perjalanan simulasi.
+opt.tool.file	Fail
+opt.tool.edit	Sunting
+opt.tool.symedit	Potong/Tampal
+opt.tool.symshift	Anjak Bit
+igen.type	Jenis
+igen.delete	Padam
+igen.edit	Sunting
+module.props.title	TkGate: Sifat Modul
+blklst.delete.title	TKGate: Padam Modul
+blklst.to	Ke
+blklst.from	Dari
+blklst.name	Nama
+find.results	Keputusan Gelintar
+find.qual.contains	Mengandungi...
+circ.filev	Versi Fail
+circ.flags	Pilihan
+circ.sim.tv.all	Laporkan semua pelanggaran pemasaan.
+circ.sim.tv.after.1	Pelanggaran pemasaan laporan selepas
+cp.delay	Lengah Laluan:
+err.badoutadd	Tidak dapat tambah lagi output ke komponen terpilih.
+err.bkpt.toomany	Terlalu banyak titik henti. Maksimum ialah %d.
+err.moddef	Modul '%s' sudah wujud.
+err.noprop	Komponen terpilih tidak mempunyai sifat boleh sunting.
+err.yy.baddirective	Arahan '%s' terbentuk tidak sah atau teruk.
+msg.sim.nogatemod	Mod simulasi memerlukan tindakan modul konkrit.
+verga.err.TOOMANYPP	Terlalu banyak port parameter pada kejadian %s.
+license1	-begin-
+TtGate adalah perisian bebas; anda boleh mengedarkannya semula dan/atau
+mengubah suai di bawah syarat-syarat GNU General Public License seperti yang
+diterbitkan oleh Free Software Foundation; sama ada Lesen versi 2, atau (atas
+pilihan anda) mana-mana versi selepas ini.
+-end-
+license2	-begin-
+TtGate diedarkan dengan harapan bahawa ia akan menjadi berguna, tetapi
+TANPA SEBARANG WARANTI; tanpa jaminan yang tersirat MERCHANTABILITY
+atau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat Lesen Awam Am GNU
+untuk maklumat lanjut.
+-end-
+license3	-begin-
+Anda sepatutunya telah menerima satu salinan Lesen GNU General Public
+bersama TtGate; jika tidak, tulis kepada Free Software Foundation, Inc., 51
+Temple Place, Suite 330, Boston, MA 02110-1301 USA.
+-end-
+ho.opt.tool.gateprop	Penyuntingan asas komponen
+ho.ipanel.select	-begin-
+Guna modul "standard"
+untuk antaramuka segiempat
+biasa. Guna modul
+"symbol" untuk simbol
+berpeta bit suai.
+-end-
+ho.mod.type.unused	Set modul tidak digunakan
+ho.mod.type.hdl	Modul HDL
+ho.print.selall	Cetak semua modul semasa dimuatkan oleh TkGate.
+ho.symed.resize	Saiz semula penyunting imej.
+ho.tool.zoomin	Zum masuk
+ho.tool.zoomout	Zum keluar

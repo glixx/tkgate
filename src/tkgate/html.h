@@ -15,17 +15,28 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
+
 #ifndef __html_h
 #define __html_h
+
+#include "fonts.h"
+
 
 /*
  * HTML unit types
  */
-#define HU_TEXT		0			/* Text string */
-#define HU_RULE		1			/* Horizontal rule */
-#define HU_BREAK	2			/* Line break */
-#define HU_NEWLINE	3			/* New line */
-#define HU_IMAGE	4			/* In-line image */
+typedef enum _hutype_t {
+	HU_TEXT = 0,
+#define HU_TEXT		HU_TEXT		/* Text string */
+	HU_RULE = 1,
+#define HU_RULE		HU_RULE		/* Horizontal rule */
+	HU_BREAK = 2,
+#define HU_BREAK	HU_BREAK	/* Line break */
+	HU_NEWLINE = 3,
+#define HU_NEWLINE	HU_NEWLINE	/* New line */
+	HU_IMAGE = 4
+#define HU_IMAGE	HU_IMAGE	/* In-line image */
+} hutype_t;
 
 /*
  * Types of html elements
@@ -60,10 +71,8 @@ typedef struct Html_str Html;
  * HtmlFont - Font description
  */
 struct HtmlFont_str {
-  fontfamily_t		family;			/* Current font family */
-  fontprop_t		props;			/* Current font properties */
-  fontsize_t		size;			/* Current font size index */
-  fontsize_t		points;			/* Current font size in points*/
+  GateFont	gateFont;		/* base font part */
+  fontsize_t	points;			/* Current font size in points*/
 };
 
 /*
@@ -76,7 +85,8 @@ struct HtmlFont_str {
  */
 struct HtmlContext_str {
   HtmlFont		hc_font;		/* Font */
-  int			hc_pixel;		/* Pixel color */
+  //int			hc_pixel;		/* Pixel color */
+  GateColor		hc_pixelColor;
 
   char			*hc_link;		/* Associated hyperlink */
   char			*hc_tag;		/* Associated tag */
@@ -91,8 +101,7 @@ struct HtmlContext_str {
   XFontStruct		*hc_xFont;		/* The XFontStruct font definition */
   int			hc_is16bit;		/* Is this a 16-bit font (e.g., Japanese) */
   int			hc_spaceWidth;		/* Width of a space */
-  int			hc_ascent;		/* Ascent of the current font */
-  int			hc_descent;		/* Descent of the current font */
+  GateFontMetrics	hc_fontMetrics;		/* Metrics of the current font */
 };
 
 /*
@@ -103,7 +112,7 @@ struct HtmlContext_str {
  *
  */
 struct HtmlUnit_str {
-  int			hu_type;		/* Type of unit */
+  hutype_t		hu_type;		/* Type of unit */
   char			*hu_text;		/* Text in the unit */
   int			hu_x,hu_y;		/* Position of unit (relative to block origin) */
   HtmlContext		*hu_context;		/* Context of the unit */
@@ -168,7 +177,7 @@ const char *Html_getLink(Html*,int x,int y);	/* Get hyperlink referenced at (x,y
 void Html_psPrint(Html *h,GPrint *P,int x,int y);
 
 int HtmlFont_isEqual(const HtmlFont*,const HtmlFont*);	/* Return non-zero if fonts are equal */
-HtmlFont *HtmlFont_init(HtmlFont*,fontfamily_t,fontprop_t,fontsize_t);
+HtmlFont *HtmlFont_init(HtmlFont*,GateFont,fontsize_t points);
 void HtmlFont_print(HtmlFont*,FILE*);
 void HtmlContext_print(const HtmlContext * context, FILE * fp);
 
@@ -178,8 +187,8 @@ void Hyperlink_cancel();			/* Cancel any selected hyperlink */
 int Hyperlink_isPending();
 const char *Hyperlink_getAt(int x,int y);	/* Return the hyperlink at the specified location */
 
-#define HtmlContext_fontAscent(hc) (hc)->hc_ascent
-#define HtmlContext_fontDescent(hc) (hc)->hc_descent
+#define HtmlContext_fontAscent(hc) (hc)->hc_fontMetrics.ascent
+#define HtmlContext_fontDescent(hc) (hc)->hc_fontMetrics.descent
 
 
 #endif

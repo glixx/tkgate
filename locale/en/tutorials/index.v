@@ -1,9 +1,12 @@
-//: version "2.0-b6"
-//: property encoding = "iso8859-1"
+//: version "2.1"
+//: property encoding = "utf-8"
 //: property locale = "en"
 //: property prefix = "_GG"
-//: property title = "Welcome to TkGate Page"
+//: property title = "Tutorial page"
+//: property showSwitchNets = 0
 //: property discardChanges = 1
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
 
 `timescale 1ns/1ns
 
@@ -11,10 +14,10 @@
 module PAGE1;    //: root_module
 //: enddecls
 
-  //: comment g1 @(433,291) /sn:0 /R:14
+  //: comment g1 @(475,291) /sn:0 /R:14 /anc:1
   //: /line:"<a href=\"welcome.v\">Go back to the TkGate main page.</a>"
   //: /end
-  //: comment g0 @(434,49) /sn:0 /anc:1
+  //: comment g0 @(476,49) /sn:0 /anc:1
   //: /line:"<a href=\"welcome.v\"><img src=\"biggatelogo.gif\"></a>"
   //: /end
   //: comment g18 @(10,10) /sn:0 /anc:1
@@ -33,7 +36,7 @@ module PAGE1;    //: root_module
   //: /line:"<h3><a href=\"advanced.v\">6. Advanced Editing Techniques</a></h3> - Learn advanced editing tricks."
   //: /line:""
   //: /line:"<h3><a href=\"combinational1.v\">7. Combinational Simulation</a></h3> - Simulate a circuit with"
-  //: /line:"    combinational logic."
+  //: /line:"combinational logic."
   //: /line:""
   //: /line:"<h3><a href=\"sequential1.v\">8. Sequential Simulation</a></h3> - Simulate a circuit with sequential logic."
   //: /line:""
@@ -41,13 +44,8 @@ module PAGE1;    //: root_module
   //: /line:""
   //: /line:"<h3><a href=\"options.v\">10. Customizing TkGate</a></h3> - Customize TkGate to suit your tastes."
   //: /line:""
-  //: /line:""
-  //: /line:""
   //: /end
 
 endmodule
 //: /netlistEnd
-
-
-`timescale 1ns/1ns
 

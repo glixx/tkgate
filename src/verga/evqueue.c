@@ -640,6 +640,7 @@ void Event_print(Event *e)
   case EV_DRIVER  : printf("[DRIVER]");break;
   case EV_STROBE  : printf("[STROBE]");break;
   case EV_PROBE   : printf("[PROBE]");break;
+  default: break; // EV_MEM et al
   }
 }
 
@@ -1307,7 +1308,7 @@ void EvQueue_interactiveMainEventLoop(EvQueue *Q)
       if (EvQueue_isRunning(Q) && EvQueue_pending(Q) == 0)
 	vgio_printf("readystop @ %llu (qempty - %d - %d)\n",Q->eq_curTime,EvQueue_isRunning(Q), EvQueue_pending(Q));
       else
-	vgio_printf("stop @ %llu (stoped - %d - %d)\n",Q->eq_curTime,EvQueue_isRunning(Q), EvQueue_pending(Q));
+	vgio_printf("stop @ %llu (stopped - %d - %d)\n",Q->eq_curTime,EvQueue_isRunning(Q), EvQueue_pending(Q));
 
 
       input_ready(1);

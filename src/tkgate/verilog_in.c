@@ -463,7 +463,7 @@ int VerilogOpenLibrary(const char *name)
   return 0;
 }
 
-void yyerror(char *err,...)
+void yyerror(const char *err,...)
 {
   char buf[STRMAX];
   extern int quietMode;
@@ -504,7 +504,9 @@ int ParseVersion(const char *version,Version *V)
   V->alpha = V->beta = 0;
   V->revision = 0;
 
-  if (sscanf(version,"%d.%d.%d-a%d",&V->major,&V->minor,&V->revision,&V->alpha) == 4) {
+  if (sscanf(version,"%d.%d-uog",&V->major,&V->minor) == 2) {
+    return 0;
+  } else if (sscanf(version,"%d.%d.%d-a%d",&V->major,&V->minor,&V->revision,&V->alpha) == 4) {
     return 0;
   } else if (sscanf(version,"%d.%d.%d-b%d",&V->major,&V->minor,&V->revision,&V->beta) == 4) {
     return 0;
