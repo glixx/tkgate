@@ -324,6 +324,12 @@ db.mod.inuse.0	Modul tidak digunakan.
 db.mod.inuse.1	Modul sedang digunakan.
 db.mod.netlist	Senarai Rangkaian
 db.mod.hdl	HDL Verilog
+db.mod.netexpl	-begin-
+Takrif modul menggunakan
+penyunting bergrafik untuk
+sambungkan wayar antara
+komponen.
+-end-
 db.err.caption	Senarai Ralat
 db.net.title	TkGate: Sifat Rangkaian
 db.net.caption	Sifat Rangkaian
@@ -383,21 +389,57 @@ db.gate.jkff.normal.hdr	Biasa
 db.gate.jkff.reverse.hdr	Songsang
 db.gate.cat.asc.hdr	Menaik
 db.gate.cat.dec.hdr	Menurun
+db.gate.tab.TAP.cap	Sifat Tran
+db.gate.tab.DEMUX.cap	Sifat Penyahmultipleks
+db.gate.switch.state	Keadaan Suis Awal
 db.gate.switch.shownet.on.hdr	Tunjuk
 db.gate.dip.shownet.on.hdr	Tunjuk
+db.gate.decoder.ord2.hdr	Kanan-ke-Kiri
+db.gate.led.seg.hdr	7-Segmen (Terus)
 db.hdl.cancel	Batal
 print.file	Fail
 print.ok	Cetak
+print.tab.advanced	Lanjutan
 opt.treelabel	Pilihan
+opt.interface	Antaramuka
+opt.toolbars.symed	Penyunting Simbol
 opt.print	Cetak
+opt.library.vpd	VPD
+opt.color.hdl	Penyunting HDL
+opt.identity	Identiti
+opt.mods	Modul
+opt.background	Latar Belakang
+opt.zled	LED Terapung
+opt.keybind	Gaya Pengikatan Kekunci
+opt.simbase	Pilihan Simulasi Asas
+opt.general.fontset	Set Fon
+opt.simulator.savetraces	Simpan lokasi suar antara perjalanan simulasi.
 opt.tool.file	Fail
 opt.tool.edit	Sunting
+opt.tool.symedit	Potong/Tampal
+opt.tool.symshift	Anjak Bit
+igen.type	Jenis
 igen.delete	Padam
 igen.edit	Sunting
+module.props.title	TkGate: Sifat Modul
+blklst.delete.title	TKGate: Padam Modul
 blklst.to	Ke
 blklst.from	Dari
 blklst.name	Nama
+find.results	Keputusan Gelintar
+find.qual.contains	Mengandungi...
+circ.filev	Versi Fail
 circ.flags	Pilihan
+circ.sim.tv.all	Laporkan semua pelanggaran pemasaan.
+circ.sim.tv.after.1	Pelanggaran pemasaan laporan selepas
+cp.delay	Lengah Laluan:
+err.badoutadd	Tidak dapat tambah lagi output ke komponen terpilih.
+err.bkpt.toomany	Terlalu banyak titik henti. Maksimum ialah %d.
+err.moddef	Modul '%s' sudah wujud.
+err.noprop	Komponen terpilih tidak mempunyai sifat boleh sunting.
+err.yy.baddirective	Arahan '%s' terbentuk tidak sah atau teruk.
+msg.sim.nogatemod	Mod simulasi memerlukan tindakan modul konkrit.
+verga.err.TOOMANYPP	Terlalu banyak port parameter pada kejadian %s.
 license1	-begin-
 TtGate adalah perisian bebas; anda boleh mengedarkannya semula dan/atau
 mengubah suai di bawah syarat-syarat GNU General Public License seperti yang
@@ -415,5 +457,17 @@ Anda sepatutunya telah menerima satu salinan Lesen GNU General Public
 bersama TtGate; jika tidak, tulis kepada Free Software Foundation, Inc., 51
 Temple Place, Suite 330, Boston, MA 02110-1301 USA.
 -end-
+ho.opt.tool.gateprop	Penyuntingan asas komponen
+ho.ipanel.select	-begin-
+Guna modul "standard"
+untuk antaramuka segiempat
+biasa. Guna modul
+"symbol" untuk simbol
+berpeta bit suai.
+-end-
+ho.mod.type.unused	Set modul tidak digunakan
+ho.mod.type.hdl	Modul HDL
+ho.print.selall	Cetak semua modul semasa dimuatkan oleh TkGate.
+ho.symed.resize	Saiz semula penyunting imej.
 ho.tool.zoomin	Zum masuk
 ho.tool.zoomout	Zum keluar

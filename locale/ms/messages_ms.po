@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-13 13:20+0300\n"
-"PO-Revision-Date: 2018-12-13 04:00+0000\n"
+"PO-Revision-Date: 2018-12-16 12:42+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/Magic/tkgate/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -1749,7 +1749,7 @@ msgid ""
 "Define module using a\n"
 "graphical editor to connect\n"
 "wires between components."
-msgstr ""
+msgstr "Takrif modul menggunakan\npenyunting bergrafik untuk\nsambungkan wayar antara\nkomponen."
 
 #: en/messages:569
 msgctxt "db.mod.hdlexpl"
@@ -2214,7 +2214,7 @@ msgstr ""
 #: en/messages:734
 msgctxt "db.gate.tab.TAP.cap"
 msgid "Tran Properties"
-msgstr ""
+msgstr "Sifat Tran"
 
 #: en/messages:735
 msgctxt "db.gate.tab.RAM.cap"
@@ -2264,7 +2264,7 @@ msgstr ""
 #: en/messages:744
 msgctxt "db.gate.tab.DEMUX.cap"
 msgid "Demux Properties"
-msgstr ""
+msgstr "Sifat Penyahmultipleks"
 
 #: en/messages:745
 msgctxt "db.gate.tab.DECODER.cap"
@@ -2376,7 +2376,7 @@ msgstr ""
 #: en/messages:823
 msgctxt "db.gate.switch.state"
 msgid "Initial Switch State"
-msgstr ""
+msgstr "Keadaan Suis Awal"
 
 #: en/messages:824
 msgctxt "db.gate.switch.state.on.hdr"
@@ -2607,7 +2607,7 @@ msgstr ""
 #: en/messages:899
 msgctxt "db.gate.decoder.ord2.hdr"
 msgid "Right-to-Left"
-msgstr ""
+msgstr "Kanan-ke-Kiri"
 
 #: en/messages:900
 msgctxt "db.gate.decoder.ord1.exp"
@@ -2703,7 +2703,7 @@ msgstr ""
 #: en/messages:939
 msgctxt "db.gate.led.seg.hdr"
 msgid "7-Segment (Direct)"
-msgstr ""
+msgstr "7-Segmen (Terus)"
 
 #: en/messages:941
 msgctxt "db.gate.led.bit.exp"
@@ -3095,7 +3095,7 @@ msgstr ""
 #: en/messages:1081
 msgctxt "print.tab.advanced"
 msgid "Advanced"
-msgstr ""
+msgstr "Lanjutan"
 
 #: en/messages:1098
 msgctxt "opt.title"
@@ -3115,7 +3115,7 @@ msgstr ""
 #: en/messages:1102
 msgctxt "opt.interface"
 msgid "Interface"
-msgstr ""
+msgstr "Antaramuka"
 
 #: en/messages:1103
 msgctxt "opt.toolbars"
@@ -3135,7 +3135,7 @@ msgstr ""
 #: en/messages:1106
 msgctxt "opt.toolbars.symed"
 msgid "Symbol Editor"
-msgstr ""
+msgstr "Penyunting Simbol"
 
 #: en/messages:1107
 msgctxt "opt.editor"
@@ -3195,7 +3195,7 @@ msgstr ""
 #: en/messages:1118
 msgctxt "opt.library.vpd"
 msgid "VPD"
-msgstr ""
+msgstr "VPD"
 
 #: en/messages:1119
 msgctxt "opt.analysis"
@@ -3225,7 +3225,7 @@ msgstr ""
 #: en/messages:1124
 msgctxt "opt.color.hdl"
 msgid "HDL Editor"
-msgstr ""
+msgstr "Penyunting HDL"
 
 #: en/messages:1125
 msgctxt "opt.html"
@@ -3250,7 +3250,7 @@ msgstr ""
 #: en/messages:1131
 msgctxt "opt.identity"
 msgid "Identity"
-msgstr ""
+msgstr "Identiti"
 
 #: en/messages:1132
 msgctxt "opt.site"
@@ -3275,7 +3275,7 @@ msgstr ""
 #: en/messages:1136
 msgctxt "opt.mods"
 msgid "Modules"
-msgstr ""
+msgstr "Modul"
 
 #: en/messages:1137
 msgctxt "opt.modports"
@@ -3315,7 +3315,7 @@ msgstr ""
 #: en/messages:1144
 msgctxt "opt.background"
 msgid "Background"
-msgstr ""
+msgstr "Latar Belakang"
 
 #: en/messages:1145
 msgctxt "opt.cpath"
@@ -3360,7 +3360,7 @@ msgstr ""
 #: en/messages:1153
 msgctxt "opt.zled"
 msgid "Floating LED"
-msgstr ""
+msgstr "LED Terapung"
 
 #: en/messages:1154
 msgctxt "opt.restdef"
@@ -3535,7 +3535,7 @@ msgstr ""
 #: en/messages:1188
 msgctxt "opt.keybind"
 msgid "Key Binding Style"
-msgstr ""
+msgstr "Gaya Pengikatan Kekunci"
 
 #: en/messages:1189
 msgctxt "opt.useless"
@@ -3550,7 +3550,7 @@ msgstr ""
 #: en/messages:1191
 msgctxt "opt.simbase"
 msgid "Basic Simulator Options"
-msgstr ""
+msgstr "Pilihan Simulasi Asas"
 
 #: en/messages:1192
 msgctxt "opt.simclock"
@@ -3575,12 +3575,12 @@ msgstr ""
 #: en/messages:1198
 msgctxt "opt.general.fontset"
 msgid "Font Set"
-msgstr ""
+msgstr "Set Fon"
 
 #: en/messages:1200
 msgctxt "opt.simulator.savetraces"
 msgid "Save probe locations between simulation runs."
-msgstr ""
+msgstr "Simpan lokasi suar antara perjalanan simulasi."
 
 #: en/messages:1201
 msgctxt "opt.simulator.noglitch"
@@ -3680,7 +3680,7 @@ msgstr ""
 #: en/messages:1222
 msgctxt "opt.tool.symedit"
 msgid "Cut/Paste"
-msgstr ""
+msgstr "Potong/Tampal"
 
 #: en/messages:1223
 msgctxt "opt.tool.symport"
@@ -3690,7 +3690,7 @@ msgstr ""
 #: en/messages:1224
 msgctxt "opt.tool.symshift"
 msgid "Bit Shift"
-msgstr ""
+msgstr "Anjak Bit"
 
 #: en/messages:1225
 msgctxt "opt.tool.symopr"
@@ -3923,7 +3923,7 @@ msgstr ""
 #: en/messages:1294
 msgctxt "igen.type"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 #: en/messages:1295
 msgctxt "igen.side"
@@ -4015,7 +4015,7 @@ msgstr ""
 #: en/messages:1323
 msgctxt "module.props.title"
 msgid "TkGate: Module Properties"
-msgstr ""
+msgstr "TkGate: Sifat Modul"
 
 #: en/messages:1324
 msgctxt "module.props"
@@ -4099,7 +4099,7 @@ msgstr ""
 #: en/messages:1366
 msgctxt "blklst.delete.title"
 msgid "TKGate: Module Delete"
-msgstr ""
+msgstr "TKGate: Padam Modul"
 
 #: en/messages:1367
 msgctxt "blklst.copy.title"
@@ -4273,12 +4273,12 @@ msgstr ""
 #: en/messages:1447
 msgctxt "find.results"
 msgid "Search Results"
-msgstr ""
+msgstr "Keputusan Gelintar"
 
 #: en/messages:1456
 msgctxt "find.qual.contains"
 msgid "Contains..."
-msgstr ""
+msgstr "Mengandungi..."
 
 #: en/messages:1457
 msgctxt "find.qual.begins"
@@ -4343,7 +4343,7 @@ msgstr ""
 #: en/messages:1488
 msgctxt "circ.filev"
 msgid "File Version"
-msgstr ""
+msgstr "Versi Fail"
 
 #: en/messages:1489
 msgctxt "circ.file"
@@ -4458,12 +4458,12 @@ msgstr ""
 #: en/messages:1530
 msgctxt "circ.sim.tv.all"
 msgid "Report all timing violations."
-msgstr ""
+msgstr "Laporkan semua pelanggaran pemasaan."
 
 #: en/messages:1531
 msgctxt "circ.sim.tv.after.1"
 msgid "Report timing violations after"
-msgstr ""
+msgstr "Pelanggaran pemasaan laporan selepas"
 
 #: en/messages:1533
 msgctxt "circ.sim.tv.never"
@@ -4608,7 +4608,7 @@ msgstr ""
 #: en/messages:1612
 msgctxt "cp.delay"
 msgid "Path Delay:"
-msgstr ""
+msgstr "Lengah Laluan:"
 
 #: en/messages:1613
 msgctxt "cp.pathl"
@@ -4703,7 +4703,7 @@ msgstr ""
 #: en/messages:1636
 msgctxt "err.badoutadd"
 msgid "Can't add any more outputs to selected component."
-msgstr ""
+msgstr "Tidak dapat tambah lagi output ke komponen terpilih."
 
 #: en/messages:1637
 msgctxt "err.badinoutadd"
@@ -4807,7 +4807,7 @@ msgstr ""
 #: en/messages:1658
 msgctxt "err.bkpt.toomany"
 msgid "Too many breakpoints. Maximum is %d."
-msgstr ""
+msgstr "Terlalu banyak titik henti. Maksimum ialah %d."
 
 #: en/messages:1660
 msgctxt "err.sim.badtmp"
@@ -4993,7 +4993,7 @@ msgstr ""
 #: en/messages:1713
 msgctxt "err.moddef"
 msgid "The module '%s' already exists."
-msgstr ""
+msgstr "Modul '%s' sudah wujud."
 
 #: en/messages:1714
 msgctxt "err.primredef"
@@ -5013,7 +5013,7 @@ msgstr ""
 #: en/messages:1717
 msgctxt "err.noprop"
 msgid "Selected component has no editable properites."
-msgstr ""
+msgstr "Komponen terpilih tidak mempunyai sifat boleh sunting."
 
 #: en/messages:1718
 msgctxt "err.openscript"
@@ -5155,7 +5155,7 @@ msgstr ""
 #: en/messages:1747
 msgctxt "err.yy.baddirective"
 msgid "Illegal or badly formed directive '%s'."
-msgstr ""
+msgstr "Arahan  '%s' terbentuk tidak sah atau teruk."
 
 #: en/messages:1748
 msgctxt "err.yy.badlocale"
@@ -5276,7 +5276,7 @@ msgstr ""
 #: en/messages:1811
 msgctxt "msg.sim.nogatemod"
 msgid "Simulation mode requires concrete module stack."
-msgstr ""
+msgstr "Mod simulasi memerlukan tindakan modul konkrit."
 
 #: en/messages:1812
 msgctxt "msg.setinterface"
@@ -5669,7 +5669,7 @@ msgstr ""
 #: en/messages:1899
 msgctxt "verga.err.TOOMANYPP"
 msgid "Too many parameter ports on instance %s."
-msgstr ""
+msgstr "Terlalu banyak port parameter pada kejadian %s."
 
 #: en/messages:1900
 msgctxt "verga.err.NOTOP"
@@ -6075,7 +6075,7 @@ msgstr ""
 #: en/messages:2019
 msgctxt "ho.opt.tool.gateprop"
 msgid "Basic editing of components"
-msgstr ""
+msgstr "Penyuntingan asas komponen"
 
 #: en/messages:2020
 msgctxt "ho.opt.tool.undo"
@@ -6333,7 +6333,7 @@ msgid ""
 "interfaces. Use \"symbol\"\n"
 "modules for custom\n"
 "bitmaped symbols."
-msgstr ""
+msgstr "Guna modul \"standard\"\nuntuk antaramuka segiempat\nbiasa. Guna modul\n\"symbol\" untuk simbol\nberpeta bit suai."
 
 #: en/messages:2168
 msgctxt "ho.ipanel.addport"
@@ -6479,7 +6479,7 @@ msgstr ""
 #: en/messages:2247
 msgctxt "ho.mod.type.unused"
 msgid "Set of unused modules"
-msgstr ""
+msgstr "Set modul tidak digunakan"
 
 #: en/messages:2248
 msgctxt "ho.mod.type.conflict"
@@ -6504,7 +6504,7 @@ msgstr ""
 #: en/messages:2252
 msgctxt "ho.mod.type.hdl"
 msgid "HDL module"
-msgstr ""
+msgstr "Modul HDL"
 
 #: en/messages:2253
 msgctxt "ho.mod.type.Lhdl"
@@ -6701,7 +6701,7 @@ msgstr ""
 #: en/messages:2394
 msgctxt "ho.print.selall"
 msgid "Print all modules currently loaded by TkGate."
-msgstr ""
+msgstr "Cetak semua modul semasa dimuatkan oleh TkGate."
 
 #: en/messages:2395
 msgctxt "ho.print.selcur"
@@ -7545,7 +7545,7 @@ msgstr ""
 #: en/messages:2977
 msgctxt "ho.symed.resize"
 msgid "Resize the image editor."
-msgstr ""
+msgstr "Saiz semula penyunting imej."
 
 #: en/messages:2978
 msgctxt "ho.symed.import"
