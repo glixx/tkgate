@@ -16,7 +16,7 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g13 @(14,12) /anc:1
-  //: /line:"順序回路のシミュレーション"
+  //: /line:"<font color=purple>順序回路のシミュレーション</font>"
   //: /line:""
   //: /line:"This chapter builds on the previous chapter about simulating combinational circuits and introduces"
   //: /line:"simulator features that are useful for simulating sequential circuits."

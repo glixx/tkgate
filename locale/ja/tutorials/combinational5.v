@@ -22,7 +22,7 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
 
   //: LED g4 (w4) @(357,221) /sn:0 /w:[ 1 ] /type:1
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(the instance hierarchy)</b>"
+  //: /line:"<font color=purple>Combinational Circuit Simulation</font> <b>(the instance hierarchy)</b>"
   //: /line:""
   //: /line:"While the simulator is active, the hierarchical module list displays the hierarchy by instance"
   //: /line:"rather than by module. This is because the state (i.e., net values) for each instance of a module"

@@ -40,7 +40,7 @@ wire S;    //: {0}(354,249)(-39:373,249)(373,221){1}
   _GGNAND2 #(4) g8 (.I0(w0), .I1(w6), .Z(C));   //: @(345,312) /sn:0 /w:[ 0 0 1 ]
   _GGXOR2 #(8) g4 (.I0(A), .I1(B), .Z(w1));   //: @(247,251) /sn:0 /w:[ 0 7 3 ]
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(starting the simulator)</b>"
+  //: /line:"<font color=purple>Combinational Circuit Simulation</font> <b>(starting the simulator)</b>"
   //: /line:""
   //: /line:"Press the \"<img src=\"simstart.gif\" bgcolor=gray> <font color=red2>Simulate</font>\" tab above the main canvas to enter simulation mode. When you first enter simulation"
   //: /line:"mode, the simulator will be paused as indicated by the depressed <img src=sim_pause.gif bgcolor=gray> button on the simulator tool bar. Press"

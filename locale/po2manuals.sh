@@ -148,17 +148,6 @@ do
            # FIXME: awk deletes more than 1 space everywhere
            a=`echo $line|awk -F "CCCCC" '{print $1}'`
            b=`echo $line|awk -F "CCCCC" '{print $2}'`
-           # FIXME: Japanese does not work with <h1>, </h1>, <h2>, </h2>, <h3>, </h3> tags
-           if [ "$lang" = "ja" ]
-           then
-              b=`echo $b|sed "s|<h1 color=|<font color=|g"`
-              b=`echo $b|sed "s|<h1>||g"`
-              b=`echo $b|sed "s|</h1>||g"`
-              b=`echo $b|sed "s|<h2>||g"`
-              b=`echo $b|sed "s|</h2>||g"`
-              b=`echo $b|sed "s|<h3>||g"`
-              b=`echo $b|sed "s|</h3>||g"`
-           fi
            if [ ! -z "$b" ]
            then
              sed -i "s|$a|$b|g" $tmp_file1
@@ -175,25 +164,24 @@ do
            then
              c=`echo $a|sed 's|^"||g'|sed 's|"AAAAA$||g'`
              d=`echo $b|sed 's|^"||g'|sed 's|"AAAAA$||g'`
-             if [ "$lang" = "ja" ]
-             then
-                sed -i "s|<h3>$c</h3>|$d|g" $tmp_file1
-             else
-                sed -i "s|<h3>$c</h3>|<h3>$d</h3>|g" $tmp_file1
-             fi
+             sed -i "s|<h3>$c</h3>|<h3>$d</h3>|g" $tmp_file1
              # translation for "Tutorial Chapters"
              sed -i "s|\. $c</a>|. $d</a>|g" $tmp_file1
              # translation for "Example Page"
              sed -i "s|$c</h3></a>|$d</h3></a>|g" $tmp_file1
            fi
         done
+
+        # FIXME: Japanese does not work with <h1>, </h1>, <h2>, </h2>, <h3>, </h3> tags -> colorizing
         if [ "$lang" = "ja" ]
         then
-           sed -i "s|<h3>||g" ./ja/tutorials/index.v
-           sed -i "s|</h3>||g" ./ja/tutorials/index.v
-           # commented while no Japanese translations
-           #sed -i "s|<h3>||g" ./ja/examples/index.v
-           #sed -i "s|</h3>||g" ./ja/examples/index.v
+           sed -i "s|<h1 color=|<font color=|g" $tmp_file1
+           sed -i "s|<h1>|<font color=chocolate>|g" $tmp_file1
+           sed -i "s|</h1>|</font>|g" $tmp_file1
+           sed -i "s|<h2>|<font color=darkorchid>|g" $tmp_file1
+           sed -i "s|</h2>|</font>|g" $tmp_file1
+           sed -i "s|<h3>|<font color=purple>|g" $tmp_file1
+           sed -i "s|</h3>|</font>|g" $tmp_file1
         fi
 
         # restore marks

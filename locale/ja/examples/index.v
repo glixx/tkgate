@@ -15,7 +15,7 @@ module main;    //: root_module
 
   //: comment g4 @(553,317) /sn:0 /anc:1
   //: /line:"<a href=\"ex6/coke.v\"><img src=example_coke.gif>"
-  //: /line:"<h3>Coke Machine</h3></a>"
+  //: /line:"<font color=purple>Coke Machine</font></a>"
   //: /line:"This example uses TkGate's Viritual"
   //: /line:"Peripheral Device (VPD) mechanism to"
   //: /line:"create an interactive \"Coke Machine\""
@@ -27,20 +27,20 @@ module main;    //: root_module
   //: /end
   //: comment g3 @(32,317) /sn:0 /anc:1
   //: /line:"<a href=\"ex4/trff.v\"><img src=\"example_trff.gif\">"
-  //: /line:"<h3>Transistor-Level FF</h3></a>"
+  //: /line:"<font color=purple>Transistor-Level FF</font></a>"
   //: /line:"A flop-flop implemented using"
   //: /line:"nmos and pmos devices."
   //: /line:""
   //: /end
   //: comment g2 @(551,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex3/counter.v\"><img src=\"example_counter.gif\">"
-  //: /line:"<h3>8-Bit Counter</h3></a>"
+  //: /line:"<font color=purple>8-Bit Counter</font></a>"
   //: /line:"A counter implemented using the"
   //: /line:"register and adder devices."
   //: /end
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
-  //: /line:"<h3>4-Bit Counter</h3></a>"
+  //: /line:"<font color=purple>4-Bit Counter</font></a>"
   //: /line:"A 4-bitcounter implemented using"
   //: /line:"four single-bit D-flip-flops."
   //: /end
@@ -49,7 +49,7 @@ module main;    //: root_module
   //: /end
   //: comment g7 @(787,27) /sn:0
   //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"
-  //: /line:"<h3>Microcircuits 74xx</h3></a>"
+  //: /line:"<font color=purple>Microcircuits 74xx</font></a>"
   //: /line:"A few examples of circuits"
   //: /line:"using the standard"
   //: /line:"74 series"
@@ -57,14 +57,14 @@ module main;    //: root_module
   //: /end
   //: comment g5 @(301,317) /sn:0 /anc:1
   //: /line:"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">"
-  //: /line:"<h3>Menagerie CPU</h3></a>"
+  //: /line:"<font color=purple>Menagerie CPU</font></a>"
   //: /line:"A simple microcode-based CPU that"
   //: /line:"will play the \"Animals\" game on a"
   //: /line:"TTY device when simulated."
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
-  //: /line:"<h3>Combinational Logic</h3></a>"
+  //: /line:"<font color=purple>Combinational Logic</font></a>"
   //: /line:"A simple 3-bit adder that you"
   //: /line:"simulate. Push the play button"
   //: /line:"then click on the switches and"

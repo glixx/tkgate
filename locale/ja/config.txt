@@ -3,6 +3,7 @@
 \messages-encoding		utf-8
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
+\language				日本語
 @mm.width					8
 @db.gate.comment.width		600
 @db.gate.comment.height		450
@@ -10,4 +11,3 @@
 @opt.tool.colwidth			30
 @opt.sidebar.width			*200
 @find.qual.pos			after
-\language				日本語

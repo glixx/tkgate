@@ -36,7 +36,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
   //: /line:"ANDゲート"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<font color=purple>Creating a Simple Circuit</font>"
   //: /line:""
   //: /line:"In this chapter, we will walk through the steps of creating the simple circuit shown below."
   //: /end
@@ -67,7 +67,7 @@ wire w5;    //: /sn:0 {0}(309,232)(289,232)(289,140)(240,140){1}
   //: /line:"<img src=\"makejoint_example.gif\">"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<font color=purple>Creating a Simple Circuit</font>"
   //: /line:""
   //: /line:"Now make the final connection. Grab the lower input terminal of the AND gate"
   //: /line:"and drag it down near the wire between the lower switch and the OR gate. Release"
@@ -100,7 +100,7 @@ wire w2;    //: /sn:0 {0}(240,140)(255,140){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<font color=purple>Creating a Simple Circuit</font>"
   //: /line:""
   //: /line:"Now create an OR gate. Right click in the dashed line box then select"
   //: /line:"<font color=red2>Make &rarr; Gate &rarr; OR</font> from the popup menu."
@@ -140,7 +140,7 @@ wire w5;    //: /sn:0 {0}(204,142)(219,142){1}
   //: /line:"a connectable wire end.</font>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<font color=purple>Creating a Simple Circuit</font>"
   //: /line:""
   //: /line:"Finally, connect the wires. Begin by grabbing the end of the wire leading from one of the"
   //: /line:"switches with the left mouse button and drag it to the upper input terminal of the AND gate."
@@ -164,7 +164,7 @@ module PAGE2();
   //: /end
   //: frame g1 @(208,124) /sn:0 /wi:76 /ht:43 /tx:""
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<font color=purple>Creating a Simple Circuit</font>"
   //: /line:""
   //: /line:"Start by creating an AND gate. Right click in the dashed line box then select"
   //: /line:"<font color=red2>Make &rarr; Gate &rarr; AND</font> from the popup menu."
@@ -195,7 +195,7 @@ wire w5;    //: /sn:0 {0}(342,239)(357,239){1}
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Creating a Simple Circuit</h3>"
+  //: /line:"<font color=purple>Creating a Simple Circuit</font>"
   //: /line:""
   //: /line:"Next create two switches. Right click in each of the two dashed line box then"
   //: /line:"select <font color=red2>Make &rarr; I/O &rarr; Switch</font> from the popup menu."

@@ -27,7 +27,7 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: joint g8 (reg_out) @(275, 328) /w:[ 2 -1 1 4 ]
   //: GROUND g4 (w0) @(274,313) /sn:0 /w:[ 1 ]
   //: comment g13 @(14,12)
-  //: /line:"順序回路のシミュレーション <b>(scripts)</b>"
+  //: /line:"<font color=purple>順序回路のシミュレーション</font> <b>(scripts)</b>"
   //: /line:""
   //: /line:"In addition to interactive simulator control, you can also write a simulator script."
   //: /line:"Simulator script files have the extension \".vs\" and are written using Verilog"

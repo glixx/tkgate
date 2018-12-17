@@ -18,7 +18,7 @@ module PAGE1;    //: root_module
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Advanced Editing Techniques</h3>"
+  //: /line:"<font color=purple>Advanced Editing Techniques</font>"
   //: /line:""
   //: /line:"In this chapter you will learn some additional techniques to be more efficient at editing circuits"
   //: /line:"in TkGate."
@@ -50,7 +50,7 @@ wire w26;    //: /sn:0 {0}(335,194)(345,194){1}
   _GGBUF #(4) g28 (.I(w24), .Z(w26));   //: @(325,194) /sn:0 /w:[ 0 0 ]
   //: joint g27 (w24) @(252, 194) /w:[ 1 2 4 -1 ]
   //: comment g9 @(10,9) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Joint Creation)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Joint Creation)</b>"
   //: /line:""
   //: /line:"Now try the same thing again, but this time drop the inverter input closer to the AND gate output"
   //: /line:"away from the joint. This time a new joint is automatically created."
@@ -76,7 +76,7 @@ wire w1;    //: /sn:0 {0}(171,176)(171,201)(285,201)(285,164)(237,164)(237,144)(
   //: /end
   _GGXOR2 #(8) g8 (.I0(w0), .I1(w4), .Z(w1));   //: @(152,164) /sn:0 /w:[ 1 1 1 ] /eb:0
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Automatic Loop Deletion)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Automatic Loop Deletion)</b>"
   //: /line:""
   //: /line:"Grab the endpoint of the XOR output wire in the circuit below. Drag it up until it crosses the"
   //: /line:"horizontal segment next to the gate and release it. TkGate will automatically remove the loop."
@@ -108,7 +108,7 @@ wire w47;    //: /sn:0 {0}(437,254)(447,254){1}
   _GGAND2 #(6) hari (.I0(w43), .I1(w44), .Z(w46));   //: @(329,194) /sn:0 /anc:1 /w:[ 1 1 5 ] /eb:0
   //: joint g50 (w46) @(374, 194) /anc:1 /w:[ 2 -1 4 1 ]
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Rerouting)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Rerouting)</b>"
   //: /line:""
   //: /line:"TkGate will automatically reroute wires that do not leave a gate or joint on the correct"
   //: /line:"direction. Try grabbing the wire indicated by the arrow in the two examples below and drag"
@@ -187,7 +187,7 @@ wire w39;    //: /sn:0 {0}(419,174)(419,189){1}
   _GGAND2 #(6) g6 (.I0(w18), .I1(w19), .Z(w20));   //: @(111,254) /sn:0 /w:[ 1 1 0 ]
   _GGAND2 #(6) g7 (.I0(w33), .I1(w34), .Z(w35));   //: @(297,194) /sn:0 /R:3 /w:[ 1 1 0 ]
   //: comment g15 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Gate Alignment)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Gate Alignment)</b>"
   //: /line:""
   //: /line:"You can align a group of gates by selecting them and then pressing the <img src=edit_valgn.gif bgcolor=gray> to align them vertically,"
   //: /line:"and <img src=edit_halgn.gif bgcolor=gray> to align them horizontally. Try it on the groups of gates below."
@@ -224,7 +224,7 @@ wire w9;    //: /sn:0 {0}(85,142)(95,142){1}
   //: /end
   _GGBUF #(4) g19 (.I(w20), .Z(w19));   //: @(312,140) /sn:0 /anc:1 /w:[ 1 0 ]
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Wire Segments)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Wire Segments)</b>"
   //: /line:""
   //: /line:"Sometime there may not be a free end of two wires you want to connect. Right click on the"
   //: /line:"wire connected to the AND gate output at the position indicated by the arrow. Select the"
@@ -258,7 +258,7 @@ wire w26;    //: /sn:0 {0}(335,194)(345,194){1}
   _GGBUF #(4) g28 (.I(w24), .Z(w26));   //: @(325,194) /sn:0 /w:[ 0 0 ]
   //: joint g27 (w24) @(252, 194) /w:[ 1 2 4 -1 ]
   //: comment g9 @(10,9) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Joint Creation)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Joint Creation)</b>"
   //: /line:""
   //: /line:"Select the <img src=\"mov_curs.gif\" bgcolor=gray> tool and drag the input of the inverter in the circuit below. Drag the input close"
   //: /line:"to the joint in the middle of the AND gate output and release it. The wire should attach itself to"
@@ -308,7 +308,7 @@ wire w5;    //: /sn:0 {0}(159,156)(169,156){1}
   //: /line:"<font color=blue4 size=7>&dArr;</font>"
   //: /end
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Automatic Wire Cleanup)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Automatic Wire Cleanup)</b>"
   //: /line:""
   //: /line:"Select the <img src=\"cut_curs.gif\" bgcolor=gray> tool and cut the wire at the position indicated by the arrow in the AND Gate"
   //: /line:"Circuit. TkGate will automatically remove the wire joint. Now cut the wire at the position indicated"
@@ -340,7 +340,7 @@ wire w12;    //: /sn:0 {0}(147,142)(157,142){1}
   _GGAND2 #(6) g11 (.I0(w14), .I1(w15), .Z(w16));   //: @(303,266) /sn:0 /w:[ 0 1 0 ] /eb:0
   _GGAND2 #(6) g10 (.I0(w11), .I1(w12), .Z(w14));   //: @(168,140) /sn:0 /w:[ 1 1 1 ] /eb:0
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Gravity)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Gravity)</b>"
   //: /line:""
   //: /line:"Click on the wire indicated by the arrow in the circuit below and drag it until it is nearly"
   //: /line:"alligned with the other vertical segment. When you release the wire, \"gravity\" will cause"
@@ -390,7 +390,7 @@ wire delphi;    //: {0}(-22:299,241)(352,241)(352,254){1}
   _GGXOR2 #(8) Zeus (.I0(athens), .I1(crete), .Z(olympus));   //: @(427,189) /w:[ 0 3 0 ] /eb:0
   //: joint g32 (athens) @(354, 186) /w:[ 1 -1 2 4 ]
   //: comment g9 @(10,10) /anc:1
-  //: /line:"<h3>Wire Editing</h3> <b>(Search)</b>"
+  //: /line:"<font color=purple>Wire Editing</font> <b>(Search)</b>"
   //: /line:""
   //: /line:"You can search your circuit for a wire or gate with a specific name by using the search tool. Click"
   //: /line:"on the <img src=edit_find.gif bgcolor=gray> tool to open it. The list of matches will by dynamically updated as you type the target"

@@ -222,14 +222,14 @@ wire [7:0] w29;    //: /sn:0 {0}(#:141,339)(141,281){1}
   _GGADD8 #(68, 70, 62, 64) g45 (.A(w19), .B(reg_out), .S(w22), .CI(w11), .CO(w24));   //: @(719,82) /sn:0 /w:[ 0 3 1 1 0 ]
   //: SWITCH g26 (b) @(56,134) /sn:0 /w:[ 0 ] /st:1 /dn:1
   //: comment g0 @(279,271)
-  //: /line:"<h1 color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></h1>"
+  //: /line:"<font color=green4>Welcome to TkGate <value-of name=\"tkgate-version\"></font>"
   //: /line:""
   //: /line:"<value-of name=\"tkgate-copyright\">"
   //: /line:"TKGate comes with ABSOLUTELY NO WARRANTY; see 'Help...License' menu"
   //: /line:"for license and warranty details. Report problems to <a href=\"mailto:starling13@gmail.com\"><value-of name=\"tkgate-mailcontact\"></a>"
   //: /line:"[released <value-of name=\"tkgate-release-date\">]"
   //: /line:""
-  //: /line:"<h3>Click on a link below to start using tkgate!</h3>"
+  //: /line:"<font color=purple>Click on a link below to start using tkgate!</font>"
   //: /line:""
   //: /line:"<a href=\"file:///@T/index.v\">* Go to the tutorial</a>"
   //: /line:""

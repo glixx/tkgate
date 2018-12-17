@@ -19,7 +19,7 @@ module PAGE1;    //: root_module
   //: /line:"<img src=bigcircuit.gif>"
   //: /end
   //: comment g5 @(10,10) /anc:1
-  //: /line:"グループの編集機能"
+  //: /line:"<font color=purple>グループの編集機能</font>"
   //: /line:""
   //: /line:"In this chapter, you will learn about how to do editing operations on groups of gates."
   //: /end
@@ -60,7 +60,7 @@ wire w9;    //: /sn:0 {0}(314,186)(280,186){1}
   //: SWITCH g25 (a0) @(149,183) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g29 (a0) @(212, 183) /w:[ 2 -1 1 4 ]
   //: comment g5 @(10,10) /anc:1
-  //: /line:"グループの編集機能 <b>(incremental selection)</b>"
+  //: /line:"<font color=purple>グループの編集機能</font> <b>(incremental selection)</b>"
   //: /line:""
   //: /line:"You can add or remove gates from the current selection by holding the <font color=red2>Control</font> key while"
   //: /line:"you click on them."
@@ -112,7 +112,7 @@ wire w9;    //: /sn:0 {0}(298,192)(270,192){1}
   //: SWITCH g25 (a0) @(150,189) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g29 (a0) @(213, 189) /w:[ 2 -1 1 4 ]
   //: comment g5 @(10,10) /anc:1
-  //: /line:"グループの編集機能 <b>(rotation and anchoring)</b>"
+  //: /line:"<font color=purple>グループの編集機能</font> <b>(rotation and anchoring)</b>"
   //: /line:""
   //: /line:"You can rotate (with <img src=edit_rotate.gif bgcolor=gray> and <img src=edit_brotate.gif bgcolor=gray>) and anchor (with <img src=anchor.gif bgcolor=gray> and <img src=unanchor.gif bgcolor=gray>) a group of gates in the same"
   //: /line:"way as you did for single gates in the <a href=gates.v>Editing Gates</a> chapter. Try it on the circuit below."
@@ -164,7 +164,7 @@ wire w9;    //: /sn:0 {0}(305,199)(277,199){1}
   //: SWITCH g25 (a0) @(157,196) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g29 (a0) @(220, 196) /w:[ 2 -1 1 4 ]
   //: comment g5 @(10,10) /anc:1
-  //: /line:"グループの編集機能 <b>(clipboard operations)</b>"
+  //: /line:"<font color=purple>グループの編集機能</font> <b>(clipboard operations)</b>"
   //: /line:""
   //: /line:"You can use Cut and Paste operations to cut or copy a group of gates to the clipboard"
   //: /line:"and paste it somewhere else. Select a group of gates then press the <img src=edit_cut.gif bgcolor=gray> or <img src=edit_copy.gif bgcolor=gray> buttons to"
@@ -220,7 +220,7 @@ wire w9;    //: /sn:0 {0}(313,188)(285,188){1}
   //: SWITCH g25 (a0) @(149,185) /sn:0 /w:[ 0 ] /st:0 /dn:0
   //: joint g29 (a0) @(228, 185) /w:[ 2 -1 1 4 ]
   //: comment g5 @(10,10) /anc:1
-  //: /line:"グループの編集機能 <b>(selection and movement)</b>"
+  //: /line:"<font color=purple>グループの編集機能</font> <b>(selection and movement)</b>"
   //: /line:""
   //: /line:"To select a group of gates, press and hold the left mouse button above and to the left"
   //: /line:"of the group, then drag the cursor diagonally accross the group to open the selection box."

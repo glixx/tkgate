@@ -23,7 +23,7 @@ wire w0;    //: /sn:0 {0}(277,319)(277,286){1}
   //: LED g4 (w4) @(357,221) /sn:0 /w:[ 1 ] /type:1
   //: SWITCH g3 (w1) @(279,173) /sn:0 /R:3 /w:[ 1 ] /st:0 /dn:0
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(dip switches)</b>"
+  //: /line:"<font color=purple>Combinational Circuit Simulation</font> <b>(dip switches)</b>"
   //: /line:""
   //: /line:"To change the value of a dip while simulating a circuit, first click on it to open a value dialog"
   //: /line:"box. Then enter the new value in hexidecimal and click <font color=red2>Apply</font>. Start the simulator then try"

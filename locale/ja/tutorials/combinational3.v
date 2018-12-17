@@ -41,7 +41,7 @@ wire S;    //: {0}(341,238)(-39:360,238)(360,210){1}
   _GGNAND2 #(4) g8 (.I0(w0), .I1(w6), .Z(C));   //: @(332,301) /sn:0 /w:[ 0 0 1 ]
   //: SWITCH g3 (Cin) @(241,202) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: comment g13 @(10,10) /anc:1
-  //: /line:"<h3>Combinational Circuit Simulation</h3> <b>(setting probes)</b>"
+  //: /line:"<font color=purple>Combinational Circuit Simulation</font> <b>(setting probes)</b>"
   //: /line:""
   //: /line:"Press the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</font>\" tab again, to enter simulation mode. This time right click on a wire (e.g., the"
   //: /line:"one labeled \"S\") and slect \"Add/Delete Probe\" from the popup menu. The will set a probe on that"
