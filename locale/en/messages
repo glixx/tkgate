@@ -2985,6 +2985,7 @@ button to change the current
 default rotation.
 -end-
 
+
 ho.tool.zoomin		Zoom in
 ho.tool.zoomout		Zoom out
 ho.tool.rotate		Rotate selected component(s) counter-clockwise.
@@ -3002,3 +3003,7 @@ ho.tool.anchor		Anchor the selected component(s).
 ho.tool.unanchor	Unanchor the selected component(s).
 ho.tool.replicate	Replicate a component.
 ho.tool.delete		Delete the selection.
+
+#ho.opt.circuit.extbar	TODO
+#ho.opt.circuit.shownet	TODO
+#ho.circuit.shownet	TODO
