@@ -1,0 +1,30 @@
+\font-encoding			iso8859-9
+\display-encoding		iso8859-9
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				azərbaycanca
+
+itype	Növ:
+db.gate.details	Ətraflı
+opt.treelabel	Ümumi
+circ.flags	Ümumi
+license1	-begin-
+TkGate pulsuz proqram təminatıdır; Bunu GNU Ümumi Xalq
+Lisenziyasının şərtləri altında yenidən yaya bilər, üstündə
+düzəlişlər edə bilərsiniz. Sözü keçən lisenziya Free Software
+Foundation tərəfindən üəbul edilib;həm 2-ci həm də daha
+sonrakı buraxılışlar.
+-end-
+license2	-begin-
+TkGate faydalı olacağı ümidiylə yayılmaqdadır, amma HEÇ BİR
+TƏMİNAT VERMƏDƏN; SATMA və ya XÜSUSİ MƏQSƏDLƏR
+üçün də təminat verilmir. Təfsilatı üçün GNU Ümumi Xalq
+Lisenziyasına baxın.
+-end-
+license3	-begin-
+Siz GNU Ümumi Xalq Lisenziyasının bir nösxəsini proqramla
+birlikdə almış olmalısınız; almadınızsa, Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301 USA ünvanına yazın.
+-end-

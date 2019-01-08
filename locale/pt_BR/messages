@@ -1,0 +1,27 @@
+\font-encoding			iso8859-1
+\display-encoding		iso8859-1
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				"português do Brasil"
+@opt.sidebar.width			*400
+@opt.tree.width				*250
+
+cprt.descr	Editor circuito digital e simulador
+license1	-begin-
+TtGate é um software livre; você pode redistribuí-lo e/ou modificá-lo sob os
+termos da Licença Pública Geral GNU (GPL) como publicada pela Fundação do
+Software Livre; seja a versão 2 da Licença ou (se preferir) qualquer versão mais
+recente.
+-end-
+license2	-begin-
+O TtGate é distribuído na esperança de que seja útil, mas SEM NENHUMA
+GARANTIA; até mesmo sem a garantia implícita de COMERCIALIZAÇÃO ou de
+ADAPTAÇÃO A UM PROPÓSITO EM PARTICULAR. Veja a Licença Pública Geral
+GNU (GPL) para mais detalhes.
+-end-
+license3	-begin-
+Você deve ter recebido uma cópia da Licença Pública Geral GNU (GPL) junto
+com o TtGate; se não, escreva para a Free Software Foundation, Inc. 51 Franklin
+Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-end-

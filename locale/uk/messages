@@ -1,0 +1,2255 @@
+\font-encoding			koi8-u
+\display-encoding		KOI8-U
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				українська
+@opt.sidebar.width			*400
+@opt.tree.width				*250
+
+b.new	Створити…
+b.dismiss	Відкинути
+b.close	Закрити
+b.ok	Гаразд
+b.clear	Спорожнити
+b.cancel	Скасувати
+b.in	вхід
+b.out	вихід
+b.inout	вхід-вихід
+b.browse	Вибрати…
+b.label	Мітка
+b.find	Знайти
+b.edit	Змінити…
+b.add	Додати…
+b.delete	Вилучити
+b.remove	Вилучити
+b.apply	Застосувати
+b.anchor	Зафіксувати
+b.tech	Технологія
+tab.edit	Редагування
+tab.editintr	Інтерфейс
+tab.simulate	Імітувати
+tab.cpath	Критичний ланцюжок
+fpattern.v	Список з’єднань Verilog
+fpattern.vs	файли скриптів Verilog
+fpattern.gdf	файл затримок TkGate
+fpattern.xbm	растр X11
+fpattern.mem	файли образів пам’яті TkGate
+fpattern.all	усі файли
+module.tree	Дерево
+module.list	Список
+module.box.libraries	Бібліотеки
+sidetab.nets	Ланцюжки
+sidetab.ports	Порти
+mm.add	Додати…
+mm.delete	Вилучити
+mm.edit	Змінити…
+mm.enable	Увімкнути
+mm.disable	Вимкнути
+menu.file	0:Файл
+menu.edit	0:Зміни
+menu.tool	0:Інструмент
+menu.symbol	0:Символ
+menu.simulate	0:Імітувати
+menu.module	0:Модуль
+menu.interface	0:Інтерфейс
+menu.format	0:Формат
+menu.make	0:Компоненти
+menu.help	0:Довідка
+menu.file.new	0:Створити…
+menu.file.open	0:Відкрити…
+menu.file.openlib	0:Керування бібліотеками…
+menu.file.save	0:Зберегти
+menu.file.saveas	5:Зберегти як…
+menu.file.print	0:Надрукувати…
+menu.file.quit	0:Вийти
+menu.file.cprop	0:Властивості схеми…
+menu.file.import	0:Імпортувати зображення…
+menu.file.export	0:Експортувати зображення…
+menu.edit.undo	0:Вернути
+menu.edit.redo	0:Повторити
+menu.edit.cut	0:Вирізати
+menu.edit.copy	3:Копіювати
+menu.edit.paste	0:Вставити
+menu.edit.overlay	0:Вставити накладку
+menu.edit.selall	0:Позначити все
+menu.edit.find	0:Знайти…
+menu.edit.zoomin	5:Збільшити
+menu.edit.zoomout	5:Зменшити
+menu.edit.rshift	10:Бітовий зсув праворуч
+menu.edit.lshift	10:Бітовий зсув ліворуч
+menu.edit.ushift	10:Бітовий зсув вгору
+menu.edit.dshift	10:Бітовий зсув вниз
+menu.edit.cwrotate	11:Бітове обертання за год. стрілкою
+menu.edit.ccwrotate	15:Бітове обертання проти год. стрілки
+menu.edit.pcwrotate	12:Обертати порт за год. стрілкою
+menu.edit.pccwrotate	16:Обертати порт проти год. стрілки
+menu.edit.autobold	Зробити жирнішим
+menu.edit.resize	Змінити розмір растру
+menu.tool.move	0:Пересунути/З’єднати
+menu.tool.delg	0:Вилучити компонент
+menu.tool.cutw	0:Розрізати дріт
+menu.tool.inv	0:Інвертувати
+menu.tool.bitw	0:Розрядність
+menu.tool.debug	0:Діагностика
+menu.tool.point	0:Точка
+menu.tool.line	0:Лінія
+menu.tool.rect	0:Прямокутник
+menu.tool.fillrect	0:Заповнений прямокутник
+menu.tool.port	0:Порт
+menu.tool.select	0:Позначити область
+menu.tool.options	0:Параметри…
+menu.format.addport	4:Додати порт
+menu.format.ioset	0:Встановити тип
+menu.format.anchor	0:Зафіксувати позначене
+menu.format.unanchor	0:Розблокувати позначене
+menu.format.prop	0:Властивості екземпляра…
+menu.format.del	0:Вилучити
+menu.format.settech	0:Встановити технологію
+menu.format.rot	0:Обертання
+menu.format.rot.0	17:Типове обертання 0
+menu.format.rot.90	17:Типове обертання 90
+menu.format.rot.180	17:Типове обертання 180
+menu.format.rot.270	17:Типове обертання 270
+menu.format.rot.rotate	10:Обертати за год. стрілкою
+menu.format.rot.brotate	0:Обертати проти год. стрілки
+menu.format.algnv	6:Вирівняти верт.
+menu.format.algnh	6:Вирівняти гор.
+menu.tool.tclshell	0:Оболонка Tcl
+menu.tool.rep	0:Клонування
+menu.simulate.begin	0:Почати імітацію
+menu.simulate.end	0:Завершити імітацію
+menu.simulate.addprobe	0:Додати/Вилучити зондування
+menu.simulate.run	0:Виконати
+menu.simulate.pause	0:Пауза
+menu.simulate.step	0:Крок на епохи
+menu.simulate.cycle	5:Крок на цикл
+menu.simulate.break	0:Точка зупинки…
+menu.simulate.script	1:Виконати скрипт…
+menu.simulate.load	1:Завантажити пам’ять…
+menu.simulate.dump	1:Дамп пам’яті…
+menu.simulate.view	1:Переглянути пам’ять…
+menu.module.open	0:Відкрити
+menu.module.close	0:Закрити
+menu.module.new	0:Створити…
+menu.module.del	0:Вилучити…
+menu.module.copy	1:Копіювати…
+menu.module.rename	0:Перейменувати…
+menu.module.claim	1:Вимагати…
+menu.module.setroot	1:Зробити кореневим…
+menu.module.prop	0:Властивості…
+menu.module.interface	0:Інтерфейс
+menu.module.interface.set	0:Зробити типовим
+menu.module.interface.update	1:Синхронізувати з типовим
+menu.module.interface.updateall	6:Синхронізувати усе з типовим…
+menu.module.interface.edit	0:Змінити…
+menu.module.interface.auto	5:Автоматично створити…
+menu.help.about	0:Про програму…
+menu.help.license	0:Ліцензування…
+menu.help.doc	0:Документація…
+menu.help.tut	1:Настанови
+menu.help.home	1:Домашня сторінка
+menu.help.example	1:Приклади
+menu.scope_file	0:Файл
+menu.scope_sim	0:Імітувати
+menu.scope_trace	0:Трасувати
+menu.scope_help	0:Довідка
+menu.scope_file.ptrace	0:Надрукувати трасування…
+menu.scope_file.close	0:Закрити
+menu.scope_trace.zoomin	5:Збільшити
+menu.scope_trace.zoomout	5:Зменшити
+menu.scope_sim.addprobe	0:Додати/Вилучити зондування
+menu.scope_sim.run	0:Виконати
+menu.scope_sim.pause	0:Пауза
+menu.scope_sim.step	0:Крок на епохи
+menu.scope_sim.cycle	5:Крок на цикл
+menu.scope_sim.break	0:Точка зупинки…
+menu.scope_sim.script	1:Виконати скрипт…
+menu.scope_sim.load	1:Завантажити пам’ять…
+menu.scope_sim.dump	1:Дамп пам’яті…
+menu.scope_help.about	0:Про програму…
+menu.scope_help.license	0:Ліцензування…
+menu.scope_help.doc	0:Документація…
+mod.intf	Інтерфейс
+port.title	TkGate: Параметри порту
+port.parms	Параметри порту
+port.in	Вхід
+port.out	Вихід
+port.inout	Вхід-вихід
+gm.signals	Сигнали
+gm.io	В/В
+gm.gate	Шлюз
+gm.rgate	Редукція
+gm.msi	СІС
+gm.alu	АЛП
+gm.mem	Пам'ять
+gm.mod	Модуль
+gm.comment	Коментар
+gm.script	скрипт Verilog
+gm.frame	Рамка
+gm.signals.pullup	Підтяжка до живлення
+gm.signals.pulldown	Підтяжка до землі
+gm.signals.ground	Земля
+gm.signals.vdd	Живлення
+gm.io.switch	Перемикач
+gm.io.dip	DIP-перемикач
+gm.io.merge	Об’єднання
+gm.io.clock	Годинник
+gm.io.led	Світлодіод
+gm.io.ledbar	Панель світлодіодів
+gm.io.ledhex	7-сег. індикатор (шістн.)
+gm.io.leddec	7-сег. індикатор (десятк.)
+gm.io.ledseg	7-сег. індикатор (безп. керування)
+gm.io.tty	TTY
+gm.gate.and	AND
+gm.gate.nand	NAND
+gm.gate.or	OR
+gm.gate.nor	NOR
+gm.gate.xor	XOR
+gm.gate.xnor	XNOR
+gm.gate.buf	Буфер
+gm.gate.inv	Інвертор
+gm.gate.tribuf	Потрійний буфер
+gm.gate.nmos	NMOS
+gm.gate.pmos	PMOS
+gm.rgate.and	AND
+gm.rgate.nand	NAND
+gm.rgate.or	OR
+gm.rgate.nor	NOR
+gm.rgate.xor	XOR
+gm.rgate.xnor	XNOR
+gm.alu.add	Додавальник
+gm.alu.mult	Множник
+gm.alu.div	Дільник
+gm.alu.lshift	Зсув ліворуч
+gm.alu.rshift	Зсув праворуч
+gm.alu.arshift	Арифм. зсув праворуч
+gm.alu.roll	Обертання
+gm.mem.reg	Регістр
+gm.mem.ff	D-тригер
+gm.mem.rff	Звор. D-тригер
+gm.mem.ram	RAM
+gm.mem.rom	ROM
+gm.mem.jkff	JK-тригер
+gm.mem.rjkff	Звор. JK-тригер
+gm.msi.21mux	2-1-мультиплексор
+gm.msi.41mux	4-1-мультиплексор
+gm.msi.81mux	8-1-мультиплексор
+gm.msi.12dec	1-2-декодер
+gm.msi.14dec	1-4-декодер
+gm.msi.18dec	1-8-декодер
+gm.msi.12demux	1-2-демультиплексор
+gm.msi.14demux	1-4-демультиплексор
+gm.msi.18demux	1-8-демультиплексор
+gm.mod.inst	Екземпляр модуля
+gm.mod.in	Вхід модуля
+gm.mod.out	Вихід модуля
+gm.mod.inout	Вхід-вихід модуля
+tutorial.prev	НАЗАД
+tutorial.next	ДАЛІ
+tutorial.chapter	СПИСОК РОЗДІЛІВ
+tutorial.reload	ПЕРЕЗАВАНТАЖИТИ
+pop.make	Компоненти
+pop.tool	Інструмент
+pop.edit.paste	Вставити
+pop.edit.cut	Вирізати
+pop.edit.copy	Копіювати
+pop.port.in	Вхід
+pop.port.out	Вихід
+pop.port.inout	Вхід-вихід
+pop.wire.addseg	Додати сегмент дроту
+pop.wire.prop	Властивості ланцюга…
+pop.wire.hidesize	Приховати розрядність
+pop.wire.showsize	Показати розрядність
+pop.wire.hidelabel	Приховати мітку
+pop.wire.hidealllabel	Приховати усі мітки
+pop.wire.clearalllabel	Зняти усі мітки
+pop.wire.showlabel	Показати мітку
+pop.gate.open	Відкрити
+pop.gate.close	Закрити
+pop.gate.prop	Властивості екземпляра…
+pop.gate.addport	Додати порт
+pop.gate.addin	Додати вхід…
+pop.gate.addout	Додати вихід…
+pop.gate.addinout	Додати вхід-вихід…
+pop.gate.anchor	Зафіксувати/Розблокувати
+pop.gate.settech	Встановити технологію
+pop.gate.delete	Вилучити
+pop.gate.ioset	Встановити тип
+pop.module.new	Створити…
+pop.module.del	Вилучити…
+pop.module.copy	Копіювати…
+pop.module.rename	Перейменувати…
+pop.module.claim	Вимагати…
+pop.module.setroot	Зробити кореневим…
+pop.module.prop	Властивості модуля…
+pop.module.int	Змінити інтерфейс…
+pop.simulate.end	Завершити імітацію
+pop.simulate.begin	Почати імітацію
+pop.simulate.addprobe	Додати/Вилучити зондування
+pop.simulate.delprobe	Вилучити зондування
+pop.simulate.run	Запустити
+pop.simulate.pause	Пауза
+pop.simulate.step	Крок на епохи
+pop.simulate.cycle	Крок на цикл
+pop.simulate.break	Точка зупинки…
+pop.simulate.script	Виконати скрипт…
+pop.simulate.load	Завантажити пам’ять…
+pop.simulate.dump	Дамп пам’яті…
+pop.simulate.view	Переглянути пам’ять…
+pop.interface	Інтерфейс
+pop.interface.set	Зробити типовим
+pop.interface.update	Синхронізувати з типовим
+pop.interface.updateall	Синхронізувати усе з типовим…
+pop.interface.edit	Змінити…
+pop.interface.auto	Автоматично створити…
+pop.interface.replace	Замінити
+pop.igen.type	Тип
+pop.igen.side	Бік
+pop.igen.size	Розмір
+pop.igen.delete	Вилучити
+pop.igen.in	вхід
+pop.igen.out	вихід
+pop.igen.inout	вхід-вихід
+pop.igen.left	ліворуч
+pop.igen.right	праворуч
+pop.igen.top	вгорі
+pop.igen.bottom	внизу
+pop.igen.other	інший
+pop.library.mgr	Керування бібліотеками…
+pop.library.close	Вивантажити
+symed.tab.normal	Не позначено
+symed.tab.select	Позначено
+symed.link	Пов’язати позначене з непозначеним
+memview.title	Перегляд пам’яті
+memview.exp	-begin-
+Перегляд і редагування вмісту оперативної
+або постійної пам’яті. Виберіть сторінку
+пам’яті, потім введіть нові шістнадцяткові
+значення для зміни вмісту пам’яті.
+-end-
+scope.title	TkGate: Логічний аналізатор
+scope.emptymsg	Двічі клацніть на провіднику, щоб додати або вилучити трасування.
+comment.empty	[Двічі клацніть, щоб додати текст.]
+ifile	Файл
+imodule	Модуль
+iblmodule	Модулі
+iports	Порти
+ibits	Розряд.:
+itype	Тип:
+db.mod.name	Назва
+db.mod.file	Назва файла
+db.mod.type	Тип
+db.mod.flags	Прапорці
+db.mod.dataprot	Запобігати редагуванню визначення модуля.
+db.mod.intfprot	Запобігати усім змінам інтерфейсу.
+db.mod.edprot	Запобігати змінам режиму редагування інтерфейсу.
+db.mod.props	Властивості
+db.mod.inuse.0	Модуль не використовується.
+db.mod.inuse.1	Модуль використовується.
+db.mod.lmod.0	Модуль не було змінено з часу завантаження.
+db.mod.lmod.1	Модуль було змінено з часу завантаження.
+db.mod.smod.0	Модуль не було змінено з часу збереження.
+db.mod.smod.1	Модуль було змінено з часу збереження.
+db.mod.islib.1	Модуль є частиною бібліотеки [%s].
+db.mod.islib.0	Модуль не є частиною бібліотеки.
+db.mod.netlist	Список з’єднань
+db.mod.hdl	Verilog HDL
+db.mod.netexpl	-begin-
+Визначення модуля за допомогою
+графічного редактора або
+з’єднання компонентів дротами.
+-end-
+db.mod.hdlexpl	-begin-
+Визначити модуль за допомогою
+текстового редактора для опису
+поведінки у Verilog.
+-end-
+db.err.title	TkGate: Список помилок
+db.err.caption	Список помилок
+db.err.explain.warn	-begin-
+У вашому ланцюзі є недоліки, але імітацію можна продовжити. Поверніться до режиму редагування,
+щоб ознайомитися із зауваженнями.
+-end-
+db.err.explain.err	У вашому ланцюзі є помилки. Подальша імітація за допомогою TkGate неможлива.
+db.err.neededit	Вам слід перемкнутися на режим редагування до переходу до зауважень.
+db.net.title	TkGate: Властивості ланцюга
+db.net.caption	Властивості ланцюга
+db.net.name	Назва ланцюга
+db.net.hide	Приховати назву
+db.net.bits	Розрядність
+db.net.type	Тип ланцюга
+db.net.port	Тип порту
+db.net.in	вхід
+db.net.out	вихід
+db.net.inout	вхід-вихід
+db.net.inets	Ланцюжки
+db.newcirc.title	TkGate: Нова схема
+db.newcirc.directory	Каталог:
+db.newcirc.cap	Нова схема
+db.newcirc.exp	-begin-
+Відкинути поточний ланцюг і почати редагування
+нового.
+-end-
+db.newcirc.file	Назва файла
+db.newcirc.topname	Назва модуля верхнього рівня
+db.gate.title	TKGate: Властивості компонента
+db.gate.signam	Назва сигналу
+db.gate.portnam	Назва порту
+db.gate.iotype	Тип
+db.gate.bitw	Розрядність
+db.gate.cyclew	Період
+db.gate.phase	Фаза
+db.gate.duty	Заповнення
+db.gate.waveform	Форма сигналу синхр.
+db.gate.port	Порт
+db.gate.bitws	Розр.
+db.gate.side	Бік
+db.gate.gtype	Тип
+db.gate.gname	Назва екземпляра
+db.gate.hidenam	Приховати назву
+db.gate.anchor	Зафіксувати
+db.gate.cpbreak	Поділ на критичні ланцюжки
+db.gate.butstate	Стан кнопки
+db.gate.dipval	Стан перемикача
+db.gate.range	Бітовий діапазон
+db.gate.memfilenam	Файл пам’яті
+db.gate.modname	Тип
+db.gate.general	Загальне
+db.gate.details	Подробиці
+db.gate.text	Текст
+db.gate.ports	Порт
+db.gate.delay	Затримка
+db.gate.parameters	Параметри
+db.gate.stddelay	Стандартна затримка
+db.gate.custdelay	Нетипова затримка
+db.gate.catdiruse	Розташування порту
+db.gate.edit	Змінити
+db.gate.delete	Вилучити
+db.gate.add	Додати
+db.gate.ff.type	Орієнтація D-тригера
+db.gate.ff.normal.hdr	Пряме
+db.gate.ff.normal.exp	-begin-
+D-тригер із потоком даних
+зліва праворуч.
+-end-
+db.gate.ff.reverse.hdr	Зворотне
+db.gate.ff.reverse.exp	-begin-
+D-тригер із потоком даних
+справа ліворуч.
+-end-
+db.gate.jkff.type	Орієнтація JK-тригера
+db.gate.jkff.normal.hdr	Пряме
+db.gate.jkff.normal.exp	-begin-
+JK-тригер із потоком даних
+зліва праворуч.
+-end-
+db.gate.jkff.reverse.hdr	Зворотне
+db.gate.jkff.reverse.exp	-begin-
+JK-тригер із потоком даних
+справа ліворуч.
+-end-
+db.gate.cat.asc.hdr	За зростанням
+db.gate.cat.dec.hdr	За спаданням
+db.gate.cat.asc.exp	Біти об’єднуються за зростанням згори вниз.
+db.gate.cat.dec.exp	Біти об’єднуються за спаданням згори вниз.
+db.gate.cat.sigdir	Напрям сигналу
+db.gate.cat.auto.hdr	Авто
+db.gate.cat.multin.hdr	Багатовходовий
+db.gate.cat.singin.hdr	Одновходовий
+db.gate.cat.tran.hdr	Двобічний
+db.gate.cat.auto.exp	-begin-
+Визначити напрямок сигналу автоматично
+за з’єднаннями.
+-end-
+db.gate.cat.multin.exp	-begin-
+Завжди вважати сторону із багатьма портами
+вхідною.
+-end-
+db.gate.cat.singin.exp	-begin-
+Завжди вважати сторону із одним портом
+вхідною.
+-end-
+db.gate.cat.tran.exp	-begin-
+Дозволити двоспрямоване передавання сигналів.
+Не можна з’єднувати із перемикачами або регістрами.
+-end-
+db.gate.tab.General.cap	Загальні властивості
+db.gate.tab.Ports.cap	Властивості порту
+db.gate.tab.Delay.cap	Властивості затримки
+db.gate.tab.Parameters.cap	Параметри модуля
+db.gate.tab.CLOCK.cap	Властивості годинника
+db.gate.tab.SWITCH.cap	Властивості перемикача
+db.gate.tab.DIP.cap	Властивості DIP-перемикача
+db.gate.tab.TAP.cap	Властивості двоспрямованого
+db.gate.tab.RAM.cap	Властивості ОПП
+db.gate.tab.ROM.cap	Властивості ППП
+db.gate.tab.MODULE.cap	Властивості модуля
+db.gate.tab.FRAME.cap	Властивості рамки
+db.gate.tab.LED.cap	Властивості світлодіода
+db.gate.tab.AND.cap	Властивості AND
+db.gate.tab.OR.cap	Властивості OR
+db.gate.tab.XOR.cap	Властивості XOR
+db.gate.tab.MUX.cap	Властивості мультиплексора
+db.gate.tab.DEMUX.cap	Властивості демультиплексора
+db.gate.tab.DECODER.cap	Властивості декодера
+db.gate.tab.CONCAT.cap	Властивості об’єднання
+db.gate.tab.COMMENT.cap	Властивості тексту
+db.gate.tab.FF.cap	Властивості D-тригера
+db.gate.tab.JKFF.cap	Властивості JK-тригера
+db.gate.tab.SCRIPT.cap	Властивості скрипту Verilog
+db.gate.tab.General.exp	Перегляд і внесення змін до базових властивостей екземпляра.
+db.gate.tab.Ports.exp	Додавання, редагування та вилучення портів екземпляра.
+db.gate.tab.Delay.exp	-begin-
+Затримку можна вказати як пов’язану із технологією або як специфічні
+значення цього екземпляра.
+-end-
+db.gate.tab.Parameters.exp	-begin-
+Встановити параметри модуля для цього екземпляра модуля, якщо такі визначено.
+Параметри модуля використовуються для налаштовування затримок і сталих значень, що використовуються у модулі.
+-end-
+db.gate.tab.details.exp	-begin-
+Тут можна вказати докладні властивості
+компонента, пов’язані із типом.
+-end-
+db.gate.tab.COMMENT.exp	-begin-
+Вказати текст, який буде показано як коментар.
+Тут можна використовувати обмежений набір команд
+html, зокрема команди посилань.
+-end-
+db.gate.tab.SCRIPT.exp	-begin-
+Тут можна ввести довільний код Verilog, який буде
+включено до цього модуля як частину.
+-end-
+db.gate.mparm.parameter	Параметр
+db.gate.mparm.value	Значення
+db.gate.mparm.exampleA	-begin-
+У цього модуля немає параметрів. Параметри можна
+додати до текстових модулів Verilog. Значення
+кожного з параметрів можна змінити для кожного з
+екземплярів за допомогою цього діалогового вікна.
+Параметри модулів оголошуються у списках, які
+подаються у дужках і починаються з символу «#».
+Нижче наведено приклад оголошення модуля із
+параметром під назвою «base_value», який має
+типове значення 1'b1.
+-end-
+db.gate.mparm.exampleB	-begin-
+module foo #(.base_value(1'b1)) (Z,A,B);
+assign Z = A ^ B ^ base_value;
+endmodule
+-end-
+db.gate.switch.state	Початковий стан перемикача
+db.gate.switch.state.on.hdr	Увімкн.
+db.gate.switch.state.on.exp	Перемикач на початку імітації перебуває у стані «увімкнено».
+db.gate.switch.state.off.hdr	Вимкн.
+db.gate.switch.state.off.exp	Перемикач на початку імітації перебуває у стані «вимкнено».
+db.gate.switch.shownet	Показати назву ланцюжка
+db.gate.switch.shownet.on.hdr	Показати
+db.gate.switch.shownet.on.exp	Показувати назву з’єднання поряд із перемикачем.
+db.gate.switch.shownet.off.hdr	Приховати
+db.gate.switch.shownet.off.exp	Не показувати назву з’єднання поряд із перемикачем.
+db.gate.dip.value	Початкове значення DIP
+db.gate.dip.value.exp	Значення перемикача DIP на початку імітації.
+db.gate.dip.value.hex	Шістн. значення:
+db.gate.dip.shownet	Показати назву ланцюжка
+db.gate.dip.shownet.on.hdr	Показати
+db.gate.dip.shownet.on.exp	Показувати назву з’єднання поряд із DIP-перемикачем.
+db.gate.dip.shownet.off.hdr	Приховати
+db.gate.dip.shownet.off.exp	Не показувати назву з’єднання поряд із DIP-перемикачем.
+db.gate.tap.select	Вибір відгалуження
+db.gate.tap.exp.bit	Виберіть біт, який слід відгалузити від багатобітової шини.
+db.gate.tap.exp.bus	Виберіть найменший значимий біт діапазону бітів, який слід відгалузити від багатобітової шини.
+db.gate.tap.lbl.bit	Біт:
+db.gate.tap.lbl.bus	ЛО:
+db.gate.mux.dataorder	Упорядковування входів
+db.gate.mux.ord1.hdr	Зліва праворуч
+db.gate.mux.ord2.hdr	Справа ліворуч
+db.gate.mux.ord1.exp	Упорядкувати входи мультиплексора зліва праворуч.
+db.gate.mux.ord2.exp	Упорядкувати входи мультиплексора справа ліворуч.
+db.gate.mux.select	Розташування селектора
+db.gate.mux.sel1.hdr	Зліва
+db.gate.mux.sel2.hdr	Справа
+db.gate.mux.sel1.exp	-begin-
+Розташовувати селектор даних у мультиплексорі
+ліворуч.
+-end-
+db.gate.mux.sel2.exp	-begin-
+Розташовувати селектор даних у мультиплексорі
+праворуч.
+-end-
+db.gate.demux.dataorder	Упорядковування виходів
+db.gate.demux.ord1.hdr	Зліва праворуч
+db.gate.demux.ord2.hdr	Справа ліворуч
+db.gate.demux.ord1.exp	Упорядковування виходів демультиплексора зліва праворуч.
+db.gate.demux.ord2.exp	Упорядковування виходів демультиплексора справа ліворуч.
+db.gate.demux.select	Розташування входу вибору
+db.gate.demux.sel1.hdr	Зліва
+db.gate.demux.sel2.hdr	Справа
+db.gate.demux.sel1.exp	Розташовувати вхід селектора у лівій частині демультиплексора.
+db.gate.demux.sel2.exp	Розташовувати вхід селектора у правій частині демультиплексора.
+db.gate.decoder.dataorder	Упорядковування виходів
+db.gate.decoder.ord1.hdr	Зліва праворуч
+db.gate.decoder.ord2.hdr	Справа ліворуч
+db.gate.decoder.ord1.exp	Упорядковування виходів дешифратора зліва праворуч.
+db.gate.decoder.ord2.exp	Упорядковування виходів дешифратора справа ліворуч.
+db.gate.decoder.select	Розташування дозвільного входу
+db.gate.decoder.sel1.hdr	Зліва
+db.gate.decoder.sel2.hdr	Справа
+db.gate.decoder.sel1.exp	Розташовувати дозвільний вхід у лівій частині дешифратора.
+db.gate.decoder.sel2.exp	Розташовувати дозвільний вхід у правій частині дешифратора.
+db.gate.aox.extbaruse	Використання смуг розширення
+db.gate.aox.use.hdr	Смуги розширення
+db.gate.aox.nouse.hdr	Без смуг розширення
+db.gate.aox.use.exp	-begin-
+Базові шлюзи (AND, OR тощо)
+використовуватимуть смуги
+розширення для входів.
+-end-
+db.gate.aox.nouse.exp	-begin-
+Базові шлюзи (AND, OR тощо)
+не використовуватимуть смуги
+розширення для входів.
+-end-
+db.gate.led.type	Тип світлодіода
+db.gate.led.bit.hdr	Біт
+db.gate.led.bar.hdr	Стовпчикова діаграма
+db.gate.led.hex.hdr	7-сегментний (шістнадц.)
+db.gate.led.dec.hdr	7-сегментний (десятковий)
+db.gate.led.seg.hdr	7-сегментний (безпосереднє керування)
+db.gate.led.bit.exp	Одинарний світлодіод для показу однобітових сигналів.
+db.gate.led.bar.exp	Панель світлодіодів по одній смузі на біт.
+db.gate.led.hex.exp	Показувати сигнал як шістнадцяткове число.
+db.gate.led.dec.exp	Показувати сигнал як десяткове число.
+db.gate.led.seg.exp	Біти сигналів безпосередньо керують сегментами світлодіода.
+db.seq.back	<Назад
+db.seq.next	Далі>
+db.hdl.namechange.title	Змінено назву модуля HDL
+db.hdl.textdisp.title	Розташування тексту HDL
+db.hdl.savecap	Декілька модулів
+db.hdl.saveexp	-begin-
+Текстовий буфер для модуля, який ви щойно редагували, містить декілька
+визначень модуля. Будь ласка, виберіть одну з трьох дій, описаних
+праворуч.
+-end-
+db.hdl.autoedit	Авторедагування
+db.hdl.split	Розділити
+db.hdl.comment	Закоментувати
+db.hdl.cancel	Скасувати
+db.hdl.ignore	Ігнорувати
+db.hdl.autoeditcap	Невідповідність назв
+db.hdl.autoeditexp	-begin-
+Текстовий опис модуля не відповідає очікуваній
+назві. Будь ласка, праворуч виберіть варіант
+для керування розходженням.
+-end-
+db.dip.title	TkGate: значення DIP
+cpath.cloops	-begin-
+У вашому ланцюгу виявлено комбінаційні петлі.
+Для виконання аналізу затримок цього ланцюга
+вам слід або розірвати петлі або позначити
+частину компонентів циклу як точки «Поділу
+критичного шляху». Ланцюги з петлями наведено
+у списку нижче.
+-end-
+print.title	TkGate: Друк
+print.config.title	TkGate: Налаштування друку
+print.scope.title	TkGate: Друк логічного аналізатора
+print.printer	Принтер:
+print.file	Файл
+print.prcmd	Команда друку:
+print.prname	Принтер
+print.advanced	Додатково…
+print.filename	Назва файла
+print.epssave	Зберегти у форматі EPS.
+print.epcm	Епох/см
+print.estpg	Має бути сторінок
+print.all	Всі
+print.avail	Доступні
+print.cur	Поточне
+print.use	Використані
+print.sel	Вибрані
+print.inclib	Включити модулі бібліотек.
+print.incunused	Включити невикористані модулі.
+print.papsz	Розмір аркуша
+print.orient	Орієнтація
+print.portrait	Книжкова
+print.landscape	Альбомна
+print.2side	Двобічний друк
+print.opts	Параметри вмісту
+print.scale	Масштабувати великі модулі так, щоб вони вміщалися на сторінку.
+print.partition	Ділити великі модулі на декілька сторінок.
+print.incidx	Включити покажчик.
+print.incgraph	Включити граф ієрархії.
+print.4up	Друкувати малі модулі по чотири на сторінку.
+print.rangeselection	Вибір діапазону
+print.scaleselect	Вибір масштабу
+print.fulltr	Повне трасування
+print.parttr	Часткове трасування
+print.start	Початок
+print.range	Діапазон
+print.linelen	Довжина рядка
+print.filesel	Виведення до файла
+print.printersel	Виведення на принтер
+print.defaultprinter	Типовий принтер
+print.pageset	Налаштування сторінки
+print.modulesel	Вибір модулів
+print.ok	Друк
+print.printtrace.cap	Друк трасування
+print.printcirc.cap	Друк схеми
+print.printcirc.out.exp	-begin-
+Виберіть режим друку:
+на принтері чи до файла
+PostScript.
+-end-
+print.printcirc.page.exp	-begin-
+Тут можна вибрати параметри
+сторінки і принтера.
+-end-
+print.printcirc.mod.exp	-begin-
+Виберіть модулі для друку
+і встановіть параметри
+керування представленням.
+-end-
+print.printtrace.trace.exp	-begin-
+Виберіть діапазон часу,
+для якого слід отримати
+результату. Також
+вкажіть масштаб для
+оцінки кількості сторінок.
+-end-
+print.tab.output	Виведення
+print.tab.modules	Модулі
+print.tab.content	Вміст
+print.tab.advanced	Додатково
+opt.title	TkGate: Параметри
+opt.treelabel	Параметри
+opt.general	Загальне
+opt.interface	Інтерфейс
+opt.toolbars	Панелі інструментів
+opt.toolbars.edit	Редактор
+opt.toolbars.sim	Моделювання
+opt.toolbars.symed	Редактор символів
+opt.editor	Verilog HDL
+opt.print	Друк
+opt.print.output	Виведення
+opt.print.content	Вміст
+opt.simulate	Імітувати
+opt.simulate.basic	Основні
+opt.simulate.tech	Технологія
+opt.simulate.error	Обробка помилок
+opt.library	Бібліотеки
+opt.library.path	Шлях
+opt.library.load	Автозавантаження
+opt.library.vpd	Віртуальні пристрої
+opt.analysis	Аналіз
+opt.color	Колір
+opt.color.title	TkGate: Вибір кольору
+opt.color.edit	Редактор
+opt.color.scope	Логічний аналізатор
+opt.color.hdl	Редактор HDL
+opt.html	HTML
+opt.debug	Діагностика
+opt.lib.load.available	Доступні бібліотеки
+opt.lib.load.selected	Позначені бібліотеки
+opt.identity	Профіль
+opt.site	Назва сайта
+opt.username	Ім'я користувача
+opt.libname	Назва бібліотеки:
+opt.inst	Екземпляри
+opt.mods	Модулі
+opt.modports	Порти модулів
+opt.frames	Рамки
+opt.comment	Коментарі
+opt.hlink	Гіперпосилання
+opt.wire	Однорозрядні дроти
+opt.bus	Багатобітові дроти
+opt.tools	Інструменти
+opt.background	Тло
+opt.cpath	Критичний ланцюжок
+opt.grid	Сітка логічного аналізатора
+opt.logic1	Логічна одиниця
+opt.logic0	Логічний нуль
+opt.float	Нестабільне
+opt.unknown	Невідомий/Конфлікт
+opt.offled	Вимкнений світлодіод
+opt.onled	Увімкнений світлодіод
+opt.zled	Нестабільний світлодіод
+opt.restdef	Відновити типові параметри
+opt.regudate	Оновлення областей
+opt.smoothscroll	Плавне гортання
+opt.balloon	Увімкнути контекстну довідку
+opt.tearawaymenus	Увімкнути спрощені головні меню
+opt.safeSave	Безпечне зберігання
+opt.saveCells	Включати до збережених файлів комірки
+opt.showimage	Показувати бічні зображення у діалогових вікнах
+opt.novice	Режим початківця
+opt.blockDropConnect	Створення портів перенесенням дроту
+opt.ckpoint	Контрольні точки кожні %s команд
+opt.freq	Інтервал
+opt.beak	Увімкнути спеціальні режими
+opt.bat	Bat
+opt.trek	Star Trek
+opt.miles	Майлзе
+opt.contver	Автоматична перевірка цілісності
+opt.showsimcmd	Показувати потік імітації
+opt.estepsz	Розмір кроку епохи
+opt.cstepsz	Розмір кроку циклу годинника
+opt.overstep	Переступання годинника
+opt.sorttraces	Упорядкувати трасування за абеткою
+opt.vpopupdelay	Затримка появи підказок
+opt.posedge	Крок завершується на фронті будь-якого сигналу
+opt.setclock	Крок завершується на фронті сигналу
+opt.delayfilepath	Файли технологій
+opt.devfilepath	Шлях до файла віртуальних периферійних пристроїв
+opt.vlibpath	Шлях до бібліотек Verilog
+opt.vlibnames	Основні бібліотеки
+opt.display	Показ
+opt.interaction	Взаємодія
+opt.input	Введення
+opt.security	Безпека
+opt.undolen	Максимальна кількість дій для скасовування
+opt.keybind	Стиль прив’язування клавіш
+opt.useless	Увімкнути непотрібні можливості
+opt.features	Параметри збереження файлів
+opt.simbase	Основні параметри імітації
+opt.simclock	Параметри годинника
+opt.cpopts	Параметри критичного шляху
+opt.maxpath	Максимальна кількість шляхів:
+opt.cpflash	Показувати блиманням шляху
+opt.general.fontset	Набір шрифтів
+opt.simulator.savetraces	Зберігати позиції зондування між запусками імітації.
+opt.simulator.noglitch	Увімкнути придушення похибок імітатора.
+opt.simulator.err	Обробка помилок
+opt.simulator.stopany	Вважати попередження помилками.
+opt.simulator.showall	Показувати попередження завжди.
+opt.simulator.showiferr	Показувати лише попередження пов’язані із помилками.
+opt.simulator.ignore	Ігнорувати усі попередження.
+opt.tool.file	Файл
+opt.tool.edit	Змінити
+opt.tool.gateopt	Обертання/Вирівнювання
+opt.tool.gateprop	Компоненти
+opt.tool.undo	Скасування/Повторення
+opt.tool.zoom	Масштаб
+opt.tool.mode	Засоби редактора
+opt.tool.module	Модуль
+opt.tool.tech	Технологія
+opt.tool.simctl	Керування імітатором
+opt.tool.simaux	Команди імітатора
+opt.tool.simmode	Засоби імітації
+opt.tool.symmode	Засоби редактора символів
+opt.tool.symedit	Вирізати/Вставити
+opt.tool.symport	Порти
+opt.tool.symshift	Бітовий зсув
+opt.tool.symopr	Бітові налаштування
+opt.editor.features	Основні можливості редактора
+opt.editor.format	Увімкнути автоматичні відступи
+opt.editor.colorize	Увімкнути розфарбовування коду
+opt.editor.comments	Коментарі
+opt.editor.strings	Рядки
+opt.editor.reserved	Зарезервовані слова
+opt.editor.gateword	Вбудовані шлюзи
+opt.editor.instword	Екземпляри модулів
+opt.editor.taskword	Завдання системи
+opt.editor.color	Колір
+opt.editor.bold	Жирний
+opt.editor.italic	Курсив
+opt.editor.indentlevel	Відступ на рівень:
+opt.editor.beginindent	begin...end на одному рівні із батьківським рівнем.
+opt.editor.movesel	Увімкнути перетягування зі скиданням позначеного.
+opt.editor.returntab	Автовідступ після розриву рядка.
+opt.vercheck	-begin-
+Періодично шукати нові версії TkGate у інтернеті.
+Не вмикайте, якщо у комп’ютера немає постійного
+з’єднання із інтернетом.
+-end-
+opt.sec.execlevel	Завдання системи $tkg$exec()
+opt.sec.exec	повністю увімкнено.
+opt.sec.regexec	увімкнено лише для зареєстрованих функцій.
+opt.sec.noexec	вимкнено.
+opt.sec.simfeatures	Можливості імітатора
+opt.sec.send	Уможливити системне завдання $tkg$command().
+opt.sec.open	Уможливити системне завдання $fopen().
+opt.sec.writemem	Уможливити системні завдання $writememb() і $writememh().
+opt.sec.enqueue	Уможливити системні завдання $tkg$recv() і $tkg$send().
+opt.sec.handle	Обробка порушень захисту
+opt.sec.stop	Зупиняти імітатор, якщо використано вимкнену можливість.
+opt.sec.warn	Показувати попередження, якщо використано вимкнену можливість.
+opt.sec.ignore	Ігнорувати спроби використання вимкнених можливостей.
+opt.html.linkopts	Параметри зв’язку
+opt.html.browser	Команда браузера
+opt.html.email	Команда ел. пошти
+opt.debug.opt	Параметри діагностики
+opt.color.editwin	Кольори вікна редагування
+opt.color.scopewin	Кольори вікна логічного аналізатора
+opt.vlibadd.title	TkGate: Додавання бібліотеки
+opt.gen.basetoolbar	Панелі редактора
+opt.gen.simtoolbar	Панелі режиму імітації
+opt.gen.symedtoolbar	Панелі редактора символів
+opt.bbar.restore	Відновити типові параметри сторінки
+opt.bbar.restoreall	Відновити усі типові значення
+igen.title	TkGate: Створення інтерфейсу модулів
+igen.port	Порт
+igen.type	Тип
+igen.side	Бік
+igen.size	Розмір
+igen.bits	Розр.
+igen.modname	Назва модуля:
+igen.add	Додати
+igen.delete	Вилучити
+igen.edit	Змінити
+igen.mod	Використовувати лише використані у модулі порти.
+igen.int	Використовувати лише порти із наявного інтерфейсу.
+igen.modint	Використовувати порти з модуля і інтерфейсу.
+igen.portsel	Вибір портів
+igen.portpos	Розташування портів
+igen.portpos.keep	Зберігати наявні розташування портів, якщо можна.
+igen.portpos.renew	Повторно визначити розташування усіх портів.
+igen.caption	Створення інтерфейсу
+igen.description	-begin-
+Створити інтерфейс для
+модуля.
+-end-
+info.script.error	Помилки у скрипті
+module.props.title	TkGate: Властивості модуля
+module.props	Властивості модуля
+ipanel.plist	Список портів
+ipanel.props	Властивості інтерфейсу
+ipanel.block	Стандартний
+ipanel.symbol	Символ
+ipanel.autogen	Автоматично створити…
+ipanel.updateall	Синхронізувати усе…
+ipanel.itype.select	Тип інтерфейсу
+ipanel.ppos.label	Розташування портів при зміні розмірів блока:
+ipanel.ppos.fix	Фіксоване
+ipanel.ppos.scale	Масштабоване
+ipanel.warn.toblock	-begin-
+Зараз тип інтерфейсу для цього
+модуля буде змінено на «Блок».
+Це призведе до втрати даних
+поточного інтерфейсу.
+Ви справді цього хочете?
+-end-
+ipanel.warn.tosymbol	-begin-
+Зараз тип інтерфейсу цього
+модуля може бути змінено на
+«символ». Це призведе до знищення
+поточних даних інтерфейсу.
+Вам також доведеться створити
+растрове зображення для нового
+символу.
+Ви справді цього хочете?
+-end-
+blklst.delete.title	TKGate: Вилучення модуля
+blklst.copy.title	TKGate: Копіювання модуля
+blklst.rename.title	TKGate: Перейменування модуля
+blklst.claim.title	TKGate: Вимагання модуля
+blklst.setroot.title	TKGate: Встановлення кореневого модуля
+blklst.new.title	TKGate: Новий модуль
+blklst.claim	Вимагати модуль
+blklst.to	У
+blklst.from	З
+blklst.name	Назва
+blklst.new.cap	Створити модуль
+blklst.del.cap	Вилучити модуль
+blklst.copy.cap	Копіювати модуль
+blklst.rename.cap	Перейменувати модуль
+blklst.claim.cap	Вимагати модуль
+blklst.setroot.cap	Зробити модуль кореневим
+blklst.new.exp	-begin-
+Цим діалоговим вікном можна
+скористатися для створення
+визначення нового модуля. Ви
+можете створити модуль як
+список ланцюгів або модуль HDL,
+але після створення ви не зможете
+змінити тип модуля без вилучення
+і повторного збирання модуля.
+-end-
+blklst.del.exp	-begin-
+Вилучити визначення і дані інтерфейсу для
+вказаного модуля. Наявні екземпляри
+вилученого модуля буде збережено, але
+їх буде позначено як невизначені.
+-end-
+blklst.copy.exp	-begin-
+Створити копію вказаного визначення модуля. Цією дією можна скористатися
+для створення нового варіанта наявного модуля.
+-end-
+blklst.rename.exp	-begin-
+Змінити назву визначення модуля. Ця дія вплине на визначення,
+усі екземпляри цього модуля вказуватимуть на стару назву
+модуля.
+-end-
+blklst.claim.exp	-begin-
+Перетворити модуль бібліотеки на модуль користувача. Таке перетворення
+надасть змогу редагувати та зберігати модуль разом із ланцюгом користувача.
+-end-
+blklst.setroot.exp	Зробити вказаний модуль модулем найвищого рівня.
+find.title	TkGate: Знайти об’єкт
+find.label	Знайти об’єкти
+find.exp	-begin-
+Пошук тексту у назвах
+компонентів, назвах дротів
+та у тексті коментарів.
+Двічі клацніть на пункті
+результату, щоб перейти до
+відповідного запису.
+-end-
+find.ignorecase	Без урахування регістру
+find.result.module	Модуль
+find.result.type	Тип
+find.result.name	Назва об'єкта
+find.options	Параметри пошуку
+find.results	Результати пошуку
+find.qual.contains	Містить…
+find.qual.begins	Починається з…
+find.qual.ends	Закінчується на…
+find.qual.matches	Є відповідником…
+find.dom.label	Шукати об’єкти у:
+find.dom.gates	компонентах
+find.dom.nets	ланцюжках
+find.dom.text	тексті коментарів
+find.search	Знайти:
+find.target	Мета пошуку
+circ.wintitle	TkGate: Властивості схеми
+circ.label	Властивості схеми
+circ.ident	Ідентифікація
+circ.filev	Версія файла
+circ.file	Назва файла
+circ.title	Заголовок схеми
+circ.encoding	Кодування файла
+circ.lang	Мова файла
+circ.discchg	Не попереджати про відкидання змін.
+circ.flags	Параметри
+circ.defaults	Типові параметри компонента
+circ.extbar	Використовувати смуги розширення для шлюзів AND, OR і XOR.
+circ.shownet	Показувати назву ланцюга на перемикачах.
+circ.autostart	Увімкнути автозапуск для імітації.
+circ.iniscript	Скрипти ініціалізації
+circ.reallyupdate	Ви справді хочете оновити інтерфейс усіх екземплярів «%s»?
+circ.reallyoverwrite	Ви справді хочете перезаписати наявний файл «%s»?
+circ.general	Загальне
+circ.library	Бібліотеки
+circ.script	Скрипти
+circ.simulator	Моделювання
+circ.timescale	Типовий масштаб за часом імітації
+circ.timescale.unit	Одиниця:
+circ.timescale.prec	Точність:
+circ.sim.features	Можливості
+circ.sim.tv.title	Обробка порушень обмежень за часом
+circ.sim.tv.all	Повідомляти про усі порушення часового режиму.
+circ.sim.tv.after.1	Повідомляти про порушення після
+circ.sim.tv.never	Ніколи не звітувати щодо порушення часових обмежень.
+circ.exp.general	-begin-
+Перегляд і внесення змін до специфічних
+властивостей ланцюга. Ці властивості буде
+збережено із ланцюгом.
+-end-
+circ.exp.library	-begin-
+Виберіть бібліотеки, потрібні для цього ланцюга.
+Вимоги щодо бібліотек зберігаються разом із
+ланцюгом, їх буде автоматично завантажено під
+час завантаження цього ланцюга.
+-end-
+circ.exp.script	-begin-
+Додайте скрипти імітації, які має бути
+автоматично прочитано і виконано під
+імітації цього ланцюга.
+-end-
+circ.exp.simulator	Перегляд налаштувань імітації цієї схеми і внесення до них змін.
+libmgr.cap	Керування бібліотеками
+libmgr.library	Бібліотека
+libmgr.description	Опис
+libmgr.status	Стан
+libmgr.status.load	Завантажено
+libmgr.status.unload	Не завантажено
+libmgr.status.loadp	[Завантажено]
+libmgr.status.unloadp	[Не завантажено]
+libmgr.exp	Позначте бібліотеки, які слід завантажити або вивантажити.
+libmgr.load	Завантажити
+libmgr.unload	Вивантажити
+libmgr.unloadall	Вивантажити усе
+libmgr.notedit	Для відкриття вікна засобу керування бібліотекою слід перейти у режим редагування схеми.
+break.tab	Точки зупинки
+break.id	Ід.
+break.state	S
+break.condition	Умова
+break.value	Значення
+sim.recursive	-begin-
+Виявлено рекурсивне визначення модулів
+у «%s». Запуск імітації або аналіз
+критичного шляху неможливий.
+-end-
+sim.hyperlinkstop	-begin-
+Зараз працює імітатор. Хочете зупинити
+імітацію і перейти за посиланням?
+-end-
+cp.delay	Затримка шляху:
+cp.pathl	Список шляхів:
+cp.numpath	Кількість шляхів:
+cp.recompute	Переобчислити
+err.notinsim	Заборонено, доки працює імітатор.
+err.nomemselect	Пам’ять не вказано.
+err.rootinterface	Неможливо встановити інтерфейс кореневого модуля.
+err.nopin	Не можна змінювати позначене виведення.
+err.badhex	Некоректне шістнадцяткове значення «%s» проігноровано.
+err.gatanchor	Компоненти зафіксовано, їх не можна пересувати.
+err.protdata	Не можна вносити зміни до захищеного модуля або модуля бібліотеки.
+err.badfind	Не вдалося знайти ціль «%s».
+err.badopendel	Не можна вилучати відкриті модулі.
+err.nosrcmod	Не знайдено модуля походження «%s».
+err.noerr	Не вдалося знайти місце помилки.
+err.misserr	Дані щодо помилки є неповними (аварійне завершення імітації?)
+err.nofunc	Помилкова назва функції для інтерфейсу модуля або не вказано таку назву.
+err.wirerot	Позначений фрагмент не можна обертати через наявні з’єднання.
+err.badinadd	До позначеного компонента неможливо додати ще входи.
+err.badoutadd	До позначеного компонента неможливо додати ще виходи.
+err.badinoutadd	До позначеного компонента неможливо додати ще входи-виходи.
+err.badpinchg	Не можна змінювати тип виведення для позначеного компонента.
+err.badnetname	З ідентифікатора вилучено некоректні символи.
+err.netbcrename	Назву ідентифікатора змінено на «%s» через наявність некоректних символів.
+err.netconfnet	Назву ідентифікатора змінено на «%s» через конфлікт назв.
+err.netconfgat	Назву ідентифікатора змінено для запобігання конфлікту із назвою вбудованого компонента
+err.netconfkw	Назву ідентифікатора змінено з метою запобігання конфлікту із зарезервованим словом.
+err.badconsame	У з’єднанні відмовлено, оскільки дроти є частинами одного ланцюга.
+err.badconptsp	У з’єднанні відмовлено, оскільки обидва дроти є портами модуля або живлення.
+err.badconbitw	У з’єднанні відмовлено, оскільки не збігаються бітові ширини.
+err.badrange	Не можна використовувати недодатний діапазон для трасування області.
+err.badlprcmd	Не вдалося виконати команду друку «%s».
+err.badpsopen	Не вдалося відкрити файл «%s» для виведення даних PostScript.
+err.badid	Некоректний ідентифікатор «%s».
+err.noinvgate	Інвертори не можна використовувати для компонентів цього типу.
+err.protintf	Не вдалося змінити захищений інтерфейс модуля «%s».
+err.bkpt.badexp	Синтаксична помилка у виразі для точки зупинки.. У виразі мало бути використано один з таких варіантів: «ланцюг», «!ланцюг», «ланцюг==значення», «ланцюг!=значення»
+err.bkpt.badnet	Некоректна назва ланцюга, «%s». Назви мають починатися з літери і містити лише літери, цифри та символи «.».
+err.bkpt.badval	Синтаксична помилка у значенні «%s». Має бути стала у десятковому форматі або форматі verilog.
+err.bkpt.toomany	Забагато точок зупинки. Максимальна можлива кількість — %d.
+err.sim.badtmp	Не вдалося зберегти тимчасовий файл «%s» для імітатора (немає місця на диску?)
+err.sim.syntx	Синтаксична помилка у команді «%s».
+err.sim.noincl	Включений файл «%s» не знайдено.
+err.sim.badedge	Некоректний індикатор краю, «%c», у команді синхронізації.
+err.sim.nobkpt	Немає такої точки зупинки, «%s».
+err.sim.nonet	Не вдалося знайти ланцюга «%s».
+err.sim.nogate	Не вдалося знайти компонент «%s».
+err.sim.badbin	Некоректний символ у бінарній сталій, «%s».
+err.sim.notswitch	Компонент «%s» не є перемикачем або регістром.
+err.sim.badcmd	Нерозпізнана команда «%s» у скрипті імітації.
+err.sim.isrun	Імітатор вже запущено (скористайтеся «Ctrl-s e», щоб завершити).
+err.sim.run	Помилка під час виконання у момент %s:
+err.sim.cmd	Помилка внутрішньої команди
+err.noteditpchg	Властивості можна змінювати у режимі редагування.
+err.badeditop	Неприпустима дія у режимі редагування інтерфейсу.
+err.badopen	Не вдалося відкрити файл вхідних даних «%s».
+err.badlibopen	Не вдалося відкрити файл бібліотеки «%s».
+err.nomark	Будь ласка, встановіть позначку за допомогою клацання лівою кнопкою миші, перш ніж вибирати тип компонента.
+err.badgate	Невідомий тип компонента «%s».
+err.badportadd	До компонентів цього типу не можна додавати порти.
+err.modmissing	Немає тексту модуля HDL для модуля «%s».
+err.modtoomany	Зайві визначення модуля у модулі «%s».
+err.modmismatch	Невідповідність назв між текстовим визначенням і назвою модуля у «%s».
+err.manypages	-begin-
+У цьому документі надто багато
+сторінок. Ви справді хочете
+його надрукувати?
+-end-
+err.nojump	-begin-
+Можливістю переходу до модуля не можна скористатися
+у режимах імітації або аналізу критичного шляху.
+Будь ласка, перейдіть вручну до блоку призначення
+позначенням модулів і відкриттям їх за
+допомогою натискання клавіші «>». Полишити
+модуль можна за допомогою натискання клавіші «<».
+-end-
+err.nomod	Модуль «%s» не визначено.
+err.modlock	Логічний блок заблоковано!
+err.closeroot	У стосі модулів не відкрито модулів вищого рівня.
+err.editonly	Команда не є коректною у режимі імітації.
+err.simonly	Команда є коректною лише у режимі імітації.
+err.deltop	Не можна вилучати модуль вищого рівня «%s».
+err.delprot	Не можна вилучати захищений модуль «%s».
+err.nodel	Немає придатних до вилучення позначених фрагментів.
+err.modnotdef	Модуль «%s» не визначено.
+err.moddef	Модуль «%s» вже існує.
+err.primredef	Назву вбудованого елемента «%s» не можна перевизначати.
+err.primprefix	Неприпустима назва модуля «%s» починається із вбудованого префікса «%s».
+err.iskeyword	Ключове слово Verilog «%s» не можна використовувати як ідентифікатор.
+err.noprop	У позначеного компонента немає придатних до редагування властивостей.
+err.openscript	Не вдалося відкрити файл скрипту імітації «%s»
+err.oldversion	Завантажено файл «%s» із застарілим номером версії %s (поточна версія — %s).
+err.futureversion	Завантажений файл «%s» збережено у новішій версії TkGate %s (поточна версії — %s).
+err.badversion	Невідомий номер версії. Можливі непередбачувані наслідки використання.
+err.nodrive	У ланцюга %s немає збуджувача у модулі %s.
+err.noconn	Дріт %s{%d} ні з чим не з’єднано. Вилучаємо.
+err.oldportact	Будь ласка, клацніть правою кнопкою миші на порті або краю модуля для додавання порту або внесення змін до нього.
+err.nomodule	Немає позначеного модуля.
+err.nomodop	Для дії немає відповідних модулів.
+err.protexec	Спроба виконання захищеної команди «%s» у $tkg$exec().
+err.notwritable	Файл «%s» є непридатним до запису.
+err.backupfail	Не вдалося створити файл резервної копії, «%s».
+err.yy.badprop	Ігноруємо невідому властивість схеми «%s».
+err.yy.badpropval	Помилкове значення «%s» властивості ланцюга «%s».
+err.yy.baddata	Визначено помилковий тип даних для властивості ланцюга «%s».
+err.yy.nosym	Немає символу для поточного модуля.
+err.yy.badicon	Помилковий тип піктограми, «%s».
+err.yy.toomuchdata	Забагато даних піктограми.
+err.yy.nosyminst	Пропущено символ %d у екземплярі %s %s.
+err.yy.badmodprop	Ігноруємо невідому властивість модуля «%s».
+err.yy.badmoddata	Визначено помилковий тип даних для властивості модуля «%s».
+err.yy.badprim	Невідома назва примітива «%s».
+err.yy.nonet	Неоголошений ланцюг «%s».
+err.yy.bogussave	Виявлено зайві дані. Ймовірно, ланцюг пошкоджено.
+err.yy.pinformat	Некоректний формат назви входу «%s».
+err.yy.pinname	Назви виходу «%s» не визначено для компонента типу «%s»
+err.yy.nonetpos	Немає ланцюга для позиції %d у компоненті %s.
+err.yy.baddirective	Помилкова інструкція «%s» або формат інструкції є помилковим.
+err.yy.badlocale	Невідома локаль «%s» у збереженому файлі. Використовуємо англійську.
+err.corruptnewsave	-begin-
+TkGate вдалося зберегти ваш файл до «%s», але дані,
+здається, пошкоджено. Якщо увімкнено режим створення
+контрольних точок, спробуйте завантажити один з
+файлів контрольних точок. Скористайтеся командою
+«tkgate -V» для перевірки цілісності збереженого файла.
+-end-
+err.corruptsave	-begin-
+TkGate виявлено проблему під час спроби зберегти файл «%s».
+Наявний файл не змінено, а пошкоджений файл було записано
+до «%s». Якщо увімкнено режим контрольних точок, ви
+можете спробувати завантажити один з файлів контрольних
+точок. Ви також можете скористатися командою «tkgate -V»
+для перевірки цілісності збереженого файла.
+-end-
+err.badsave	-begin-
+Під час спроби відрити файл «%s» для читання чи запису. Переконайтеся,
+що правильно встановлено права доступу до файла або каталогу, а на диску досить місця.
+-end-
+err.nosafesave	-begin-
+Під час спроби зберегти «%s» виникли проблеми. Якщо хочете, можете
+спробувати зберегти дані без перевірки. Якщо ви виберете варіант
+«ні», початковий файл залишиться незмінним. Якщо буде вибрано
+варіант «так», початковий файл буде перезаписано, а дані може
+бути знищено, якщо виникнуть проблеми. Хочете спробувати
+зберегти дані без перевірки?
+-end-
+err.noback	-begin-
+Файл «%s» було створено у TkGate
+%s, отже його, ймовірно, не
+можна буде прочитати у версіях,
+що передують поточній версії (%s)
+після збереження.
+-end-
+err.viewfile	Не вдалося відкрити файл «%s».
+err.internal.nomod	внутрішня помилка: не вдалося знайти модуль «%s».
+msg.selwire	Позначено дріт %s із назвою «%s».
+msg.selgate	Позначено шлюз %s із назвою «%s».
+msg.selblock	Позначено блок %s із назвою «%s».
+msg.iselwire	Позначено порт «%s» у блоці «%s».
+msg.iselgate	Позначено %s із назвою «%s» (Що? Цього повідомлення не мало б бути).
+msg.iselblock	Позначено інтерфейсу модуля для «%s».
+msg.modoverwt	Модуль призначення «%s» вже існує. Перезаписати?
+msg.foundgate	Знайдено компонент із назвою «%s».
+msg.foundwire	Знайдено дріт із назвою «%s».
+msg.searchagn	Рядок призначення «%s» не знайдено. Натисніть «Знайти», щоб перезапустити пошук.
+msg.sim.chgtoroot	Для режиму імітації кореневий модуль має бути на верхівці стосу редагування.
+msg.sim.nogatemod	Для режиму імітації потрібне конкретний стос модулів.
+msg.setinterface	Встановити інтерфейс модуля для «%s».
+msg.needsel	Будь ласка, виберіть екземпляр модуля.
+msg.wroteckpt	Створено контрольну точку у %s…
+msg.save	Ланцюг збережено до «%s».
+msg.reallynew	До ланцюга було внесено зміни. Ви справді хочете відкинути внесені зміни і створити новий ланцюг?
+msg.reallyquit	До ланцюга було внесено зміни. Ви справді хочете завершити роботу програми?
+msg.notlib	Модуль «%s» не є модулем бібліотеки.
+miles.msg1	Лише дурень розташував би %s%s там, Майлзе.
+miles.msg2	Це насправді дуже погане місце для %s%s, Майлзе.
+miles.msg3	Це жахливе місце для %s%s, Майлзе.
+miles.msg4	Майлзе, не будь дурнем, не розташовуй там %s%s.
+miles.msg5	Лише ти розташував би %s%s там. Майлзе.
+miles.msg6	Розташовування там %s%s вказує на твою абсолютну тупість, Майлзе.
+miles.msg7	Чи не час полишити спроби? Це дуже тупо складений ланцюг.
+miles.msg8a	Немає сенсу продовжувати, Майлзе.
+miles.msg8b	Очевидно, тобі не судилося створювати ланцюги
+verga.err.OK	Не переймайся, насолоджуйся життям.
+verga.err.INPORT	Невідповідність розміру порту на вхідному порту «%s».
+verga.err.OUTPORT	Невідповідність розміру порту на вихідному порту «%s».
+verga.err.FLOATNET	Ланцюг «%s» не має збуджувачів (невстановлений ланцюг).
+verga.err.DIRECTCONN	Підтримки безпосереднього оператора з’єднання, «=>», не передбачено. Вважаємо, що вказано «*>».
+verga.err.MEMADDR	Спроба запису до пам’яті %s із невідомою адресою.
+verga.err.MEMBITS	Спроба запису до пам’яті %s із невідомим діапазоном бітів.
+verga.err.BADARRAYUSG	Масив «%s» використано у виразі без індексу.
+verga.err.BADARRAYLHS	Масив «%s» використано без індексу лівій частині рівності.
+verga.err.BADCLOSE	Спроба закриття невідкритого дескриптора у завданні «%s».
+verga.err.BADAUTORNG	Автодіапазон [*] можна використовувати лише разом із оголошенням «wire».
+verga.err.BADGATERNG	Некоректний вираз діапазону екземплярів компонента.
+verga.err.BADARGVALUE	Помилкове значення аргументу «%s» у завданні «%s».
+verga.err.DIVZERO	Ділення на нуль.
+verga.err.NODIV	Підтримки ділення або модуля на цій машині не передбачено — sizeof(short) має бути рівним 2.
+verga.err.BADEDGEEVENT	Подія у багаторозрядному ланцюгу «%s» не може мати posedge/negedge.
+verga.err.NEEDEDGE	Слід вказати posedge або negedge для події %s.
+verga.err.ASGNEVENT	Не можна використовувати очікування події у інструкції надання значення.
+verga.err.PROTTASK	Виконання захищеного системного завдання «%s» заблоковано.
+verga.err.NEEDIDENT	Мало бути вказано ідентифікатор аргументу %s завдання «%s».
+verga.err.BADOP	Помилковий оператор у виразі «%s».
+verga.err.NOREAD	Не вдалося завантажити файл із початковим кодом «%s».
+verga.err.MEMFILE	Не вдалося відкрити файл пам’яті «%s».
+verga.err.WRONGMOD	Знайдено модуль «%s», хоча мав бути «%s».
+verga.err.NOTPARM	Ідентифікатор «%s» у сталому виразі не є параметром.
+verga.err.BADADDR	Некоректний діапазон адрес на порту «%s».
+verga.err.BADADDRSPEC	Некоректна специфікація діапазону адрес «%s».
+verga.err.BADCHAR	Некоректний символ (%s) «%s».
+verga.err.BADEVENT	Некоректний вираз керування подіями.
+verga.err.BADCONSTOP	Некоректний оператор у сталому виразі.
+verga.err.BADXOP	Некоректний оператор у виразі.
+verga.err.NETREDEF	Некоректне перевизначення ланцюга «%s».
+verga.err.BADINOUT	З’єднання входів-виходів на порту «%s» мають належати до типу «ланцюг-ланцюг».
+verga.err.MODUNDEF	Екземпляр невизначеного модуля «%s».
+verga.err.BADASGNLHS	Помилкова ліва частина у «assign».
+verga.err.LHSNOTREG	Некоректне використання «%s» у лівій частині виразу встановлення значення.
+verga.err.BADLHS	Некоректна ліва частина виразу встановлення значення.
+verga.err.BADOUT	Некоректне встановлення значення виходу.
+verga.err.NOTREG	Пам’ять слід оголошувати як регістр.
+verga.err.PORTMIX	Суміш іменованих і неіменованих портів на інтерфейсі «%s» «%s».
+verga.err.REPCASE	Декілька default: у інструкції case.
+verga.err.NOMEM	У прочитаному файлі немає даних поточного вмісту пам’яті.
+verga.err.BADCMD	Немає такої команди: «%s».
+verga.err.CMDNOTNET	Немає ланцюга «%s» у команді «%s».
+verga.err.MEMNONBLK	Встановлення значень у пам’яті без блокування не реалізовано.
+verga.err.NOTPPORT	Параметр «%s» не оголошено як порт.
+verga.err.REDEFP	Параметр перевизначає ідентифікатор «%s».
+verga.err.PORTNOTDEF	Порт «%s» на інтерфейсі «%s» не визначено у модулі «%s».
+verga.err.NOCONN	Порт «%s» не з’єднано на інтерфейс «%s» «%s».
+verga.err.MULTCONN	У порту «%s» є декілька з’єднань на інтерфейсі «%s» «%s».
+verga.err.PORTCOUNT	Кількість портів не відповідає визначенню інтерфейсу «%s» «%s».
+verga.err.BADPRTRANGE	Діапазон на порту «%s» не є числовим.
+verga.err.BADARRAYRNG	Специфікацію діапазону заборонено для посилань на пам’ять у «%s».
+verga.err.CMDMODREDEF	Перевизначення динамічного модуля «%s».
+verga.err.REDEF	Перевизначення ідентифікатора %s.
+verga.err.PROTTASKSTOP	Імітацію припинено під час спроби виконання захищеного завдання системи «%s».
+verga.err.NOTMEM	Вказаний ланцюг «%s» не є ланцюгом пам’яті.
+verga.err.CMDNOTMEM	Вказаний ланцюг «%s» не є ланцюгом пам’яті у команді «%s».
+verga.err.SYNTAX	Синтаксична помилка.
+verga.err.TOOFEWPP	Занадто мало портів параметрів у екземплярі %s.
+verga.err.OPENTOOMANY	У завданні «%s» відкрито забагато файлів.
+verga.err.TOOMANYPP	Забагато портів параметрів у екземплярі %s.
+verga.err.NOTOP	Модуль верхнього рівня «%s» не визначено.
+verga.err.BADOPEN	Не вдалося відкрити файл виведення даних «%s» у завданні «%s».
+verga.err.CMDNOMOD	Невизначений динамічний модуль «%s» у команді «%s».
+verga.err.BADEVENTNET	Невизначений ланцюг «%s» у виразі керування подіями.
+verga.err.NOTASK	Невизначене завдання «%s».
+verga.err.NOTDEF	Невизначена змінна «%s».
+verga.err.BADRANGE	Непідтримуваний діапазон бітів [%s] у ланцюгу «%s» (має бути вказано у формі [n:0]).
+verga.err.GATEUNIMP	Нереалізований тип компонента примітива у екземплярі «%s».
+verga.err.USAGE	Користування: thyme [параметри][файли...]
+verga.err.CLSDWRITE	Запис до закритого дескриптора.
+verga.err.PRIMPTCOUNT	Помилкова кількість портів у екземпляра компонента примітива «%s».
+verga.err.CMDARGS	Помилкова кількість аргументів у команді «%s».
+verga.err.YYERROR	YYError — %s.
+verga.err.TASKARGS	Завдання «%s» викликано із помилковою кількістю аргументів.
+verga.err.BADSTART	Некоректне початкове значення у завданні «%s».
+verga.err.BADSTOP	Помилкове кінцеве значення у $readmemb.
+verga.err.SPECTASKUSG	Завдання «%s» слід використовувати у блоці specify.
+verga.err.BADSPECTASK	Завдання «%s» не можна використовувати у блоці specify.
+verga.err.TIMING	Порушення часових обмежень у %s[%s] %s.
+verga.err.RAMDCHG	Зміни у каналі даних під час дозволу на запис до %s
+verga.err.RAMACHG	Зміни у каналі адресування під час дозволу на запис до %s
+verga.err.NOIFDEF	Немає відповідної пари `ifdef/`ifndef для оголошення %s.
+verga.err.BADSPECLVAL	Підтримки бітових діапазонів у дескрипторах затримок шляхів не передбачено.
+verga.err.PATHDITEM	Непідтримувана конструкція у модулі із специфікацією затримок шляхів.
+verga.err.PATHDINOUT	Підтримки використання «inout» у модулі із специфікацією затримки шляху не передбачено.
+verga.err.PATHDLOOP	Підтримки петель у модулях із специфікацією затримки шляхів не передбачено.
+verga.err.PATHDCOND	Запис затримки має складатися із виразу з # та визначення блоку.
+verga.err.TASKREDEF	Перевизначення завдання або функції «%s» у модулі «%s».
+verga.err.TASKASFUNC	Завдання «%s» використано як функцію.
+verga.err.FUNCASTASK	Функцію «%s» використано як завдання.
+verga.err.TASKBADTYPE	У завданні або функції використано нерегістровий тип.
+verga.err.TASKBADPORT	У функціях можна використовувати лише вхідні порти.
+verga.err.TIMESCALEU	Некоректні одиниці «%s» у оголошенні `timescale.
+verga.err.TIMESCALEN	Некоректний масштаб «%s» у оголошенні `timescale (має бути 1, 10 або 100).
+verga.err.TIMESCALES	Некоректна синтаксична конструкція у оголошенні `timescale.
+verga.err.TIMESCALEX	Одиниці виміру мають бути більшими за точність у оголошенні `timescale.
+verga.err.TIMESCALEAN	У проекті є модулі з `timescale і без цього оголошення.
+verga.err.BADPORTTYPE	Для порту «%s» використано оголошення некоректного типу
+verga.err.BADVALUE	Помилкове числове значення «%s».
+verga.err.NONEXPCTL	Керування подіями @(*) застосовано не до виразу.
+verga.err.NONSTATCTL	Керування подіями @(*) застосовано не до інструкції.
+verga.err.MODREDEF	Перевизначення модуля «%s».
+verga.err.IE_TASK	Визначення завдання «%s» виявлено поза модулем — внутрішня помилка.
+verga.err.IE_NONET	Не вдалося знайти ланцюг «%s» — внутрішня помилка.
+verga.err.IE_NOOP	Не вдалося знайти опису оператора — внутрішня помилка.
+verga.err.IE_BADEXP	Неочікуваний тип виразу %s — внутрішня помилка.
+verga.err.IE_BADVAR	Невизначена змінна або невідомий ланцюг — внутрішня помилка.
+verga.err.IE_BADSTATE	Неочікуваний внутрішній стан у %s — внутрішня помилка.
+verga.err.IE_RETURN	Виконано байтовий код BCReturn із порожнім стеком повернутих даних — внутрішня помилка.
+primitive.err.missing	Внутрішня помилка: пропущено визначення примітива для «%s».
+primitive.err.nomodule	Внутрішня помилка: пропущено «module» у визначенні примітива для «%s».
+primitive.err.nomodname	Внутрішня помилка: не вказано назви модуля у визначенні модуля «%s».
+primitive.err.wrongname	Внутрішня помилка: невідповідність назв модулів у визначенні модуля «%s».
+cprt.about	Про TkGate
+cprt.lic	Умови ліцензування TkGate
+cprt.descr	Редактор та імітатор для цифрових схем
+license1	-begin-
+TtGate — вільний програмний засіб; ви можете вільно розповсюджувати або
+змінювати його при на умовах вільної ліцензії GNU General Public License, яку
+опублікували Free Software Foundation; або версії 2 цієї ліцензії, або (на ваш
+розсуд) будь-якої подальшої версії.
+-end-
+license2	-begin-
+TtGate розповсюджується з надією, що програма буде корисною, але без
+БУДЬ-ЯКИХ ГАРАНТІЙ; навіть не гарантується ПРИДАТНІСТЬ та ВІДПОВІДНІСТЬ
+БУДЬ-ЯКИМ ВИМОГАМ. Докладніше про це дивіться GNU General Public License.
+-end-
+license3	-begin-
+Ви маєте отримати копію GNU General Public License разом з TtGate; якщо це не
+так, напишіть до Free Software Foundation, Inc., 51 Franklin Street, Fifth
+Floor, Boston, MA 02110-1301 USA.
+-end-
+ho.setsel.allr	Пересунути усі записи до списку позначених.
+ho.setsel.alll	Пересунути усі записи до списку непозначених.
+ho.setsel.ltor	Пересунути підсвічені записи до списку позначених.
+ho.setsel.rtol	Пересунути підсвічені записи до списку непозначених.
+ho.net.in	Однорозрядний вхід
+ho.net.out	Однорозрядний вихід
+ho.net.inout	Однорозрядний вхід-вихід
+ho.net.in2	Багаторозрядний вхід
+ho.net.out2	Багаторозрядний вихід
+ho.net.inout2	Багаторозрядний вхід-вихід
+ho.net.wire	Однорозрядний дріт (видима назва)
+ho.net.wire2	Багаторозрядний дріт (видима назва)
+ho.net.hwire	Однорозрядний дріт (прихована назва)
+ho.net.hwire2	Багаторозрядний дріт (прихована назва)
+ho.net.reg	Однорозрядний регістр
+ho.net.reg2	Багаторозрядний регістр
+ho.opt.tool.file	Збереження і завантаження файлів схем
+ho.opt.tool.edit	Дії з вирізання, вставлення та пошуку
+ho.opt.tool.gateopt	Дії з обертання та вирівнювання компонентів
+ho.opt.tool.gateprop	Базове редагування компонентів
+ho.opt.tool.undo	Дії зі скасовування та повторення дій
+ho.opt.tool.zoom	Збільшення і зменшення масштабу
+ho.opt.tool.mode	Вибрати інструмент редагування
+ho.opt.tool.module	Створення, вилучення, перейменування тощо визначень модулів
+ho.opt.tool.tech	Вибір типової технології компонентів
+ho.opt.tool.simctl	Запуск, зупинення та призупинення імітації
+ho.opt.tool.simaux	Допоміжні команди імітації (читання та запис файлів пам’яті тощо)
+ho.opt.tool.simmode	Вибір між інструментами позначення та гортання у імітаторі.
+ho.opt.tool.symmode	Вибір інструмента редагування у редакторі символів
+ho.opt.tool.symedit	Дії з вирізання та вставлення у редакторі символів
+ho.opt.tool.symport	Дії з обертання портів у редакторі символів
+ho.opt.tool.symshift	Зсунути растрове зображення або частину растрового зображення
+ho.opt.tool.symopr	Різноманітні дії у редакторі символів
+ho.opt.editor.movesel	-begin-
+Якщо позначено цей пункт, позначений блог тексту
+можна буде захопити вказівником миші і
+перетягнути на нове місце.
+-end-
+ho.opt.editor.format	-begin-
+Якщо позначено, у початковий код verilog будуть автоматично
+додаватися відступи у відповідь на натискання клавіші Tab.
+-end-
+ho.opt.editor.indent	Кількість пробілів у відступах на рівень.
+ho.opt.editor.rtab	-begin-
+Автоматично додавати відступ до поточного
+рядка і табуляцію відповідного рівня у
+відповідь на натискання клавіші Enter.
+-end-
+ho.opt.editor.beginindent	-begin-
+Відступи у блоці begin..end буде встановлено на
+рівні його батьківського блоку.
+-end-
+ho.opt.editor.colorize	-begin-
+Увімкнути контекстне розфарбовування коду
+відповідно до вказаних нижче параметрів.
+-end-
+ho.hdl.splitexp	-begin-
+Кратні модулі у HDL буде поділено на
+окремі модулі і визначенням нових
+модулів, якщо потрібно. Усі конфлікти
+назв буде розв’язано незначною зміною
+назв модулів, якщо потрібно.
+-end-
+ho.hdl.commentexp	-begin-
+Модулі, окрім першого або модуля, який
+відповідає очікуваній назві, буде
+перетворено на коментарі HDL.
+-end-
+ho.hdl.autoeditexp	-begin-
+Автоматично змінити опис HDL для виправлення
+назви модуля.
+-end-
+ho.hdl.cancelexp	-begin-
+Нічого не робити і продовжити
+редагування поточного модуля.
+-end-
+ho.hdl.ignoreexp	-begin-
+Ігнорувати несумісність і продовжити
+виконання вибраної дії.
+-end-
+ho.new	-begin-
+Вилучити поточний ланцюг і
+розпочати редагування нового.
+-end-
+ho.open	Відкрити схему з файла.
+ho.save	Зберегти схему до поточного файла.
+ho.saveas	Зберегти схему до вказаного файла.
+ho.print	Надрукувати поточну схему.
+ho.library	Відкрити засіб керування бібліотекою.
+ho.symed.tab.normal	Редагувати зображення непозначеного символу.
+ho.symed.tab.select	Редагувати зображення позначеного символу.
+ho.simmove	-begin-
+Позначення дротів та модулів,
+перемикання та введення значень
+у DIP-перемикачах. Щоб переглянути
+поточне значення на дроті,
+наведіть вказівник миші на дріт,
+клацніть лівою кнопкою миші і
+утримуйте її.
+-end-
+ho.move	-begin-
+Пересування або з’єднання — клацанням із
+перетягуванням ви можете виконати такі дії:
+Встановити позицію нового компонента
+Пересунути компоненти і дроти
+З’єднати дроти
+Подвійним клацанням ви можете:
+Редагувати компонент, дріт та властивості порту
+Редагувати текст коментаря
+-end-
+ho.delgat	-begin-
+Вилучення компонента — для
+вилучення компонентів.
+-end-
+ho.cutw	-begin-
+Розрізати дріт — для
+розрізання провідників.
+-end-
+ho.scroll	-begin-
+Гортання — перетягніть
+полотно редагування.
+-end-
+ho.inv	-begin-
+Інвертувати — для додавання
+або вилучення інверторів
+із портів компонента.
+-end-
+ho.bitw	-begin-
+Атрибути ланцюга — цим інструментом можна
+скористатися для зміни атрибутів ланцюга.
+Розрядність і тип дроту ланцюгів, позначених
+за допомогою цього інструмента, буде змінено
+на вказані у спадних списках праворуч.
+-end-
+ho.ipanel.select	-begin-
+«Стандартні» модулі
+призначено для звичайного
+прямокутного інтерфейсу.
+«Символьні» модулі
+призначено для нетипових
+растрових символів.
+-end-
+ho.ipanel.addport	-begin-
+Додати до модуля порт. Ви також
+можете двічі клацнути за останнім
+пунктом у списку, щоб додати порт.
+-end-
+ho.ipanel.deleteport	Вилучити позначений порт.
+ho.ipanel.editport	-begin-
+Змінити позначений порт. Ви
+також можете двічі клацнути
+для редагування поля у порту.
+-end-
+ho.ipanel.generate	-begin-
+Створити інтерфейс для модуля
+на основі портів у списку
+портів і елементах порту, що
+використовуються у визначенні модуля.
+-end-
+ho.ipanel.updateall	-begin-
+Замінити інтерфейс усіх екземплярів
+цього модуля канонічним інтерфейсом
+показаним тут.
+-end-
+ho.ipanel.prot	-begin-
+Не дозволяти внесення змін
+до визначення модуля.
+-end-
+ho.ipanel.protint	-begin-
+Заборонити внесення змін до
+інтерфейсу модуля.
+-end-
+ho.ipanel.proted	-begin-
+Не дозволяти внесення змін до інтерфейсу
+модуля, окрім змін за допомогою
+інтерфейсу редактора. Скористайтеся
+для запобігання випадковим змінам
+інтерфейсу у головному вікні редагування.
+-end-
+ho.ipanel.scale	-begin-
+Масштабувати відстань між портами,
+якщо розміри модуля змінюються.
+-end-
+ho.ipanel.fix	-begin-
+Зберігати відстань між портами,
+навіть якщо розміри модуля змінюються.
+-end-
+ho.mod.open	Відкрити позначений модуль.
+ho.mod.close	Закрити поточний модуль.
+ho.mod.new	Створити тип модуля.
+ho.mod.del	Вилучити модуль.
+ho.mod.copy	Копіювати модуль.
+ho.mod.rename	Перейменувати модуль.
+ho.mod.claim	-begin-
+Перетворити модуль бібліотеки на
+звичайний модуль.
+-end-
+ho.mod.setroot	-begin-
+Позначити модуль як
+кореневий модуль.
+-end-
+ho.mod.type.allparts	Набір бібліотек
+ho.mod.type.partlib	Бібліотека
+ho.mod.type.part	Модуль бібліотеки
+ho.mod.type.unknown	Невідомий тип модуля
+ho.mod.type.unused	Набір невикористаних модулів
+ho.mod.type.conflict	Рекурсія модулів
+ho.mod.type.root	Модуль верхнього рівня
+ho.mod.type.netlist	Модуль списку ланцюгів
+ho.mod.type.Lnetlist	Модуль списку ланцюгів (заблокований)
+ho.mod.type.hdl	Модуль HDL
+ho.mod.type.Lhdl	Модуль HDL (заблокований)
+ho.undo	Скасувати попередні дії
+ho.redo	Повторити скасовані дії
+ho.tab.edit	Основний режим редагування.
+ho.tab.interface	-begin-
+Редагувати інтерфейси модуля. У режимі
+інтерфейсу двічі клацніть на пункті модуля
+у списку модулів для редагування інтерфейсу
+або на кореневому пункті, щоб переглянути
+увесь інтерфейс.
+-end-
+ho.tab.simulate	-begin-
+Розпочати імітацію, відкрити засіб аналізу логіки
+і виконати усі скрипти ініціалізації, якщо такі визначено.
+-end-
+ho.tab.cpath	Знайти критичні шляхи у ланцюгу.
+ho.log	-begin-
+Журнал повідомлень TkGate із повідомленнями
+про помилки, інформаційними повідомленнями
+та повідомленнями у консолі імітації.
+-end-
+ho.simgo	-begin-
+Запустити імітатор у режимі неперервного виконання.
+Зауважте, що імітація комбінованих ланцюгів
+триватиме лише до досягнення ланцюгом стабільного стану.
+-end-
+ho.simpause	Призупинити неперервну імітацію.
+ho.simstep	-begin-
+Крок на фіксований проміжок часу.
+Для визначення розміру кроку
+відкрийте вікно параметрів
+імітації.
+-end-
+ho.simclock	-begin-
+Крок на фіксовану кількість
+циклів годинника. Для
+визначення розміру кроку
+відкрийте вікно параметрів
+імітації.
+-end-
+ho.simstop	-begin-
+Завершити поточну імітацію
+і повернутися до режиму редагування.
+-end-
+ho.simbreak	-begin-
+Редагування поточних точок зупинки. Імітацію
+буде припинено, щойно буде виконано умову
+точки зупинки. Точки зупинки можна
+редагувати як у режимі імітації, так і у
+режимі редагування.
+-end-
+ho.simexec	Керувати набором активних скриптів.
+ho.simoptions	Встановити різноманітні параметри керування імітацією.
+ho.simload	-begin-
+Завантажити до пам’яті вміст
+файла .mem.
+-end-
+ho.simdump	-begin-
+Створити дамп вмісту пам’яті
+до файла .mem.
+-end-
+ho.simview	-begin-
+Перегляд/Внесення змін до вмісту
+пам’яті (RAM або ROM).
+-end-
+ho.modlist	-begin-
+Список поточних завантажених модулів за
+абеткою. Пункти модулів можна перетягти
+до вікна редагування для створення
+екземпляра.
+-end-
+ho.modtree	-begin-
+Список модулів у форматі ієрархії.
+Пункти модулів можна перетягти до вікна
+редагування для створення екземпляра.
+-end-
+ho.netlist	-begin-
+Список ланцюгів у поточному модулі.
+Символ ліворуч від назви позначає,
+є ланцюг одноразрядним (зелений)
+чи багаторозрядними (червоний).
+«A» у символі позначає те, що
+назву ланцюга позначено як
+видиму.
+-end-
+ho.ports	-begin-
+Список портів інтерфейсу модуля,
+який показано у вікні редагування.
+Символ перед пунктом порту
+позначає напрямок порту.
+-end-
+ho.status.logo	-begin-
+Індикатор стану імітації. Якщо показано
+піктограму залізних воріт, TkGate працює у
+режимі редагування. Якщо показано
+чотирибічний шлюз AND, TkGate працює у
+режимі імітації. Якщо шлюз AND є стаціонарним,
+імітацію призупинено, якщо ж він рухається,
+відбувається імітація.
+-end-
+ho.status.msg	Тут буде показано повідомлення TkGate.
+ho.status.block	Стос модулів, які редагуються.
+ho.status.file	-begin-
+Поточний редагований файл. «*» позначає,
+що буфер було змінено з часу останнього
+зберігання.
+-end-
+ho.print.selall	Надрукувати усі модулі, які зараз завантажено TkGate.
+ho.print.selcur	Надрукувати лише поточний модуль у вікні редагування TkGate.
+ho.print.seluse	-begin-
+Вивести список усіх модулів, які «використовуються».
+Використовуються ті модулі, які є підлеглими
+для кореневого модуля.
+-end-
+ho.print.fulltrace	Надрукувати усе трасування.
+ho.print.parttrace	-begin-
+Друк частини трасування. Вкажіть початковий і
+кінцевий моменти часу за допомогою полів нижче
+або скористайтеся правою кнопкою миші для вибору
+діапазону у вікні логічного аналізатора
+(скористайтеся одночасним натисканням Shift і
+стрілки праворуч для вибору великого діапазону).
+-end-
+ho.print.parttracestart	Початковий час виведення трасування.
+ho.print.parttraceend	Кінцевий час виведення трасування.
+ho.print.selsel	-begin-
+Надрукувати лише позначені нижче модулі.
+Скористайтеся клавішею Ctrl для позначення
+декількох модулів.
+-end-
+ho.print.modlist	Вибір модулів, які слід надрукувати.
+ho.print.timegraph	-begin-
+Тут показано область, позначену для
+друку. Зелена область — доступний
+діапазон трасування, а сіра область —
+область, яку буде надруковано.
+Скористайтеся засобами вибору ліворуч
+для позначення області або позначте
+область у вікні логічного аналізатора,
+перш ніж відкривати це діалогове вікно.
+-end-
+ho.circuit.discchg	-begin-
+TkGate не показуватиме попередження, якщо
+зміни буде відкинуто без збереження.
+-end-
+ho.circuit.extbar	-begin-
+Новостворені базові шлюзи (AND, OR,
+XOR) використовуватимуть смуги розширення
+для обробки багатьох вхідних шлюзів.
+-end-
+ho.circuit.shownet	-begin-
+Новостворені перемикачі від початку
+позначатимуться міткою з назвою
+відповідного ланцюга.
+-end-
+ho.circuit.autostart	-begin-
+Якщо позначено, імітація розпочинатиметься,
+щойно буде позначено панель імітації.
+-end-
+ho.circuit.file	-begin-
+Це назва файла, з якого буде завантажено
+поточний ланцюг.
+-end-
+ho.circuit.ver	-begin-
+Це версія TkGate, у якій було створено
+файл, який зараз завантажено.
+-end-
+ho.circuit.encoding	-begin-
+Кодування, яке буде використано для
+збереження файлів.
+-end-
+ho.circuit.language	-begin-
+Використовувати шрифти для цього кодування
+для показу даних ланцюга.
+-end-
+ho.circuit.title	-begin-
+Опис вашого ланцюга. Цей заголовок
+використано для друку результатів.
+-end-
+ho.cmd.bitw	-begin-
+Для дротів, позначених за допомогою
+засобу роздільного кабелю, буде
+встановлено вказану розрядність.
+-end-
+ho.edgat.signam	-begin-
+Назва позначеного сигналу у
+позначеному компоненті. Ви можете
+змінити назву сигналу шляхом її
+редагування тут.
+-end-
+ho.edgat.port	-begin-
+Назва порту для цього сигналу
+у компоненті. Вміст цього поля
+можна редагувати лише для
+екземплярів модуля.
+-end-
+ho.edgat.iolab	-begin-
+Спрямування позначеного сигналу
+у позначеному компоненті.
+Вміст цього поля можна редагувати
+лише для екземплярів модуля.
+-end-
+ho.edgat.bitlab	-begin-
+Розрядність позначеного сигналу у
+позначеному компоненті.
+Змінити розрядність можна шляхом
+її редагування тут.
+-end-
+ho.edgat.cycle	Загальна кількість епох у циклі годинника.
+ho.edgat.phase	Початкова позиція циклу (у відсотках).
+ho.edgat.duty	Частка циклу, протягом якого рівень синхросигналу є низьким.
+ho.edgat.hide	-begin-
+Встановіть цей прапорець для вимикання
+показу назв компонентів.
+-end-
+ho.edgat.gtype	Тип компонента.
+ho.edgat.gname	Назва цього екземпляра компонента.
+ho.edgat.ganchor	Встановіть цей прапорець для фіксування позиції компонента.
+ho.edgat.gx	Координата компонента за X.
+ho.edgat.gy	Координата компонента за Y.
+ho.edgat.swstate	-begin-
+Початковий стан перемикача, який буде
+використано на початку імітації.
+-end-
+ho.edgat.dipstate	-begin-
+Початковий стан перемикача DIP, який буде
+використано на початку імітації.
+-end-
+ho.edgat.range	Діапазон бітів, які слід відвести з шини.
+ho.edgat.memfile	-begin-
+Файл із початковим станом цієї пам’яті.
+Цей файл буде прочитано на початку імітації.
+-end-
+ho.edgat.func	Тип функції цього модуля.
+ho.edgat.frame	Мітка рамки.
+ho.traceprint	-begin-
+Надрукувати діапазон логічного трасування,
+позначений за допомогою правої кнопки миші.
+Для розширення позначеної області можна
+скористатися комбінацією Shift-клацання правою.
+Якщо нічого не позначено, буде використано
+діапазон, видимий у вікні логічного аналізатора.
+-end-
+ho.showxhair	-begin-
+Якщо натиснуто цю кнопку, у вікні логічного аналізатора
+буде показано вертикальну лінію візування.
+-end-
+ho.opt.general.fontset	-begin-
+Вказує базовий розмір шрифту у
+інтерфейсі TkGate. Щоб задіяти
+змінене значення, вам доведеться
+перезапустити TkGate.
+-end-
+ho.opt.sec.send	-begin-
+Уможливлення завдання системи $tkg$command() надасть
+змогу ланцюгам користувача надсилати довільні команди
+керування імітацією до графічного інтерфейсу TkGate.
+Це стосується і можливості виконувати довільні команди
+оболонки. Якщо засіб імітації буде використано для
+ненадійних ланцюгів, варто вимкнути це завдання.
+Уможливлення завдання може становити значну загрозу
+безпеці даних системи.
+-end-
+ho.opt.sec.open	-begin-
+Уможливлення завдання системи $fopen() надасть змогу
+ланцюгам користувача записувати дані до будь-якого
+файла, до якого має право записувати дані користувач
+TkGate. Уможливлення такого запису може становити
+значну загрозу безпеці даних у системі.
+-end-
+ho.opt.sec.writemem	-begin-
+Уможливлення завдань системи $writememb() і $writememh()
+надасть змогу ланцюгам користувача записувати дані до
+будь-яких файлів, доступ до запису яких має користувач,
+від імені якого запущено TkGate. Уможливлення цих
+завдань становить значну загрозу безпеці даних системи.
+-end-
+ho.opt.sec.enqueue	-begin-
+Уможливлення завдань системи $tkg$recv() та $tkg$send() надасть
+змогу віртуальним периферійним пристроям надсилати
+повідомлення ланцюгам TkGate. Уможливлення цих завдань
+становить незначну загрозу безпеці даних системи.
+-end-
+ho.opt.ssave	-begin-
+Виконувати перевірки цілісності файлів
+ланцюгів до перезапису наявних збережених
+файлів для убезпечення від проблем із
+збереженим файлом.
+-end-
+ho.opt.sec.exec	-begin-
+Повне уможливлення завдання системи $tkg$exec() надасть змогу
+ланцюгам користувача виконувати довільні команди tcl/tk,
+включно із можливістю виконувати довільні команди оболонки.
+Уможливлення цього завдання становити значну загрозу
+безпеці даних системи.
+-end-
+ho.opt.sec.regexec	-begin-
+Уможливлення завдання системи $tkg$exec() для зареєстрованих
+функцій надасть змогу ланцюгам користувача виконувати лише ті
+команди tcl/tk, які було зареєстровано як безпечні. Якщо усі
+файли віртуальних периферійних пристроїв є надійними,
+уможливлення $tkg$exec() на цьому рівні має запобігти виконанню
+небезпечних команд. Уможливлення цього завдання становить
+помірну загрозу безпеці даних системи.
+-end-
+ho.opt.sec.noexec	-begin-
+Повне вимикання команди $tkg$exec() не дасть змоги
+ланцюгам користувача виконувати команди tcl/tk. Використання
+віртуальних периферійних пристроїв стане неможливим.
+Вибір цього варіанта становить незначну загрозу безпеці
+даних системи.
+-end-
+ho.opt.sec.stop	-begin-
+Якщо позначено цей пункт, імітацію буде перервано, щойно
+буде виявлено спробу ланцюга користувача виконати дію
+із вимкненою можливістю.
+-end-
+ho.opt.sec.warn	-begin-
+Якщо позначено цей пункт, імітація продовжуватиметься, але буде
+показано повідомлення про помилку, щойно буде виявлено будь-яку
+спробу ланцюга користувача виконати дію із вимкненою можливістю.
+-end-
+ho.opt.sec.ignore	-begin-
+Якщо позначено цей пункт, використання будь-яких вимкнених
+можливостей буде проігноровано, повідомлення про помилки
+показано не буде.
+-end-
+ho.opt.html.browser	-begin-
+Команда, яку буде виконано, коли користувач натисне
+посилання у файлі html. «%s» у команді буде замінено
+на адресу посилання.
+-end-
+ho.opt.html.email	-begin-
+Команда, яку буде виконано, коли користувач натисне
+посилання у повідомленні ел. пошти. «%s» у команді буде
+замінено на адресу посилання.
+-end-
+ho.opt.fsave	-begin-
+Зберігати внутрішні комірки TkGate із
+даними ланцюга. Це збільшить розмір
+збереженого файла на приблизно 20% для
+типового ланцюга, але надасть змогу
+експортувати збережені файли до
+сторонніх програм.
+-end-
+ho.opt.sorttraces	-begin-
+Якщо буде позначено цей пункт, трасування
+у вікні логічного аналізатора буде показано
+упорядкованими. Якщо пункт не буде
+позначено, трасування у вікні логічного
+аналізатора буде показано у порядку
+встановлення зондувань.
+-end-
+ho.opt.sim.noglitch	-begin-
+Якщо позначено цей пункт, швидка зміна
+вхідного сигналу компонента призведе до виведення
+з компонента простого зсунутого за фазою
+вхідного сигналу. Це може прибрати спонтанні
+події і запобігти осциляціям у послідовних
+ланцюгах на рівні шлюзів.
+-end-
+ho.opt.sim.savetraces	-begin-
+Програма запам’ятовуватиме зонди, встановлені
+під час імітації, і замінятиме їх під час
+перезапуску імітації того самого ланцюга.
+-end-
+ho.opt.sim.tech	-begin-
+Список файлів для завантаження як потенційні
+файли «технологій». Файли технологій задають
+затримку і оцінки площі для вбудованих компонентів.
+-end-
+ho.opt.sim.err	-begin-
+Визначення способу обробки попереджень
+від імітатора.
+-end-
+ho.opt.sim.err.stopany	-begin-
+Не імітувати ланцюг, якщо щодо нього є
+попередження, навіть якщо немає виявлених
+помилок.
+-end-
+ho.opt.sim.err.showall	-begin-
+Завжди показувати попередження щодо ланцюга,
+навіть якщо не виявлено помилок. Якщо буде
+виявлено лише попередження, програма розпочне
+імітацію, а список попереджень буде показано
+у окремому вікні.
+-end-
+ho.opt.sim.err.showiferr	-begin-
+Показувати попередження, лише якщо у ланцюзі
+є помилки. Якщо щодо ланцюга зареєстровано лише
+попередження, їх буде проігноровано, і
+програма розпочне імітацію.
+-end-
+ho.opt.sim.err.ignore	-begin-
+Ніколи не показувати попереджень, навіть якщо
+у ланцюгу немає помилок.
+-end-
+ho.opt.lib.vpath	-begin-
+Список каталогів, у яких слід шукати файли бібліотек
+TkGate. Назви файлів бібліотек мають суфікс .v. Файли
+містять модулі, корисні для використання у ланцюгах
+користувачів.
+-end-
+ho.opt.lib.vlib	-begin-
+Список бібліотек, які буде автоматично завантажено
+під час запуску TkGate.
+-end-
+ho.opt.lib.vpd	-begin-
+Список каталогів для пошуку віртуальних периферійних
+пристроїв. Назви файлів віртуальних периферійних пристроїв
+мають суфікси .tcl. У таких файлах типово реалізовано
+графічний інтерфейс представлення периферійного
+пристрою, яким можна керувати у ланцюгу користувача.
+-end-
+ho.opt.undolen	-begin-
+Максимальна кількість записів дій, які
+зберігатимуться для скасовування.
+-end-
+ho.opt.name	-begin-
+Ім’я користувача, яким слід скористатися у
+створених TkGate звітах, зокрема роздруківках ланцюгів.
+-end-
+ho.opt.site	-begin-
+Назва системи, у якій встановлено TkGate.
+Цю назву буде використано для друку або
+виведення у форматі PostScript.
+-end-
+ho.opt.smooth	-begin-
+Якщо позначено цей пункт, гортання буде
+оптимізовано використанням растрових копій,
+замість перемальовування. Можете зняти позначку,
+якщо виникатимуть проблем з вашим сервером.
+-end-
+ho.opt.clip	-begin-
+Якщо позначено цей пункт, під час
+перемальовування для оновлення вмісту
+лише показаної частини вікна буде використовуватися обрізання. Якщо ж
+пункт позначено не буде, відбуватиметься
+повне перемальовування усього показаного.
+Знімайте позначку, лише якщо виникають
+проблеми із показом зображення.
+-end-
+ho.opt.showimage	-begin-
+Зніміть позначку з цього пункту для
+придушення показу зображення та
+пояснювального тексту на краю діалогових
+вікон.
+-end-
+ho.opt.outmove	-begin-
+Якщо позначено цей пункт, під час перетягування
+буде показано лише контури екземплярів модулів.
+Цим пунктом можна скористатися, якщо процесор
+комп’ютера є малопотужним.
+-end-
+ho.opt.bhelp	-begin-
+Якщо позначено цей пункт, буде активовано
+панелі підказок. На панелях підказок, подібних
+до цієї, буде показано підказки щодо елементів
+інтерфейсу, на які ви наводитимете вказівник
+миші.
+-end-
+ho.opt.tearawaymenus	-begin-
+Якщо позначено, головні меню можна буде
+від’єднувати від решти інтерфейсу. Зміну
+параметра буде задіяно лише після
+перезапуску TkGate.
+-end-
+ho.opt.novice	-begin-
+Якщо у рядку команди не задано інших ланцюгів,
+після запуску замість початкового ланцюга буде
+показано підручник з TkGate.
+-end-
+ho.opt.blockDropConnect	-begin-
+Дозволити створення портів у інтерфейсах модулів
+скиданням вільних дротів на місце поряд із краєм.
+-end-
+ho.opt.debug	-begin-
+Вмикає декілька діагностичних можливостей,
+які корисні лише розробникам TkGate.
+-end-
+ho.opt.ckpt	Увімкнути контрольні точки у незбережених ланцюгах.
+ho.opt.ckptfreq	Періодичність контрольних точок у секундах.
+ho.opt.beak	-begin-
+Увімкнути ці зайві можливості. Якщо ви
+знімете позначку з цього пункту, у діалоговому
+вікні більше не буде пункту зайвих
+можливостей. Єдиним способом побачити цей
+пункт знову є редагування файла
+.tkgate2-properties.
+-end-
+ho.opt.miles	-begin-
+Якщо увімкнено цей режим, TkGate періодично
+знущатиметься із інтелектуальних зусиль
+користувача.
+-end-
+ho.opt.bat	-begin-
+Якщо увімкнено цей режим, TkGate налаштує
+середовище для розробки навчального
+комп’ютера «bat».
+-end-
+ho.opt.trek	Піднімай мене, Скотті!
+ho.opt.simstep	-begin-
+Кількість періодів, на які просуватиметься
+програма у відповідь на команду виконання кроку.
+-end-
+ho.opt.ckstep	-begin-
+Кількість циклів годинника, на які просуватиметься
+програма у відповідь на команду виконання кроку.
+-end-
+ho.opt.ckover	-begin-
+Кількість періодів за східним фронтом
+сигналу годинника, на які просуватиметься
+програма у відповідь на команду виконання кроку.
+-end-
+ho.opt.vpopupdelay	-begin-
+Затримка у мілісекундах між моментом
+натискання кнопки миші і показом значення
+сигналу. У деяких системах малі значення
+затримки заважає можливості розпізнавання
+подвійного натискання. Якщо у вас виникають
+подібні проблеми, збільште значення.
+Можна використовувати значення від 1 до 10000.
+-end-
+ho.opt.init	-begin-
+Файл скрипту імітації, який має
+бути автоматично виконано під час
+ініціації ланцюга. Не використовуйте
+для специфічних для ланцюга скриптів,
+краще скористайтеся властивостями
+ланцюга.
+-end-
+ho.opt.ckall	-begin-
+Якщо увімкнено цей режим, команда кроку
+за часом призупинятиме імітацію на додатному
+краю кожного тактового сигналу ланцюга.
+-end-
+ho.opt.ckspec	-begin-
+Якщо увімкнено цей режим, команда кроку
+за часом призупинятиме імітацію лише на
+додатному краю тактового сигналу вказаного
+годинника. Скористайтеся назвою ланцюга, з
+яким з’єднано годинник.
+-end-
+ho.opt.keybind	-begin-
+Визначає базовий стиль клавіатурних
+скорочень. Якщо ви зміните цей
+параметр, клавіатурні скорочення
+буде оновлено негайно, але щоб
+уможливити використання будь-яких
+визначених користувачем скорочень,
+вам доведеться перезапустити TkGate.
+-end-
+ho.deftech	-begin-
+Типова технологія для нових компонентів.
+Впливає на затримку компонентів. Щоб
+змінити технологію певного компонента,
+відкрийте вікно його властивостей
+(подвійне клацання) і перейдіть на
+вкладку «Затримка».
+-end-
+ho.techbut	-begin-
+Використовувати затримки із стандартного
+файла визначення технології. Щоб додати
+нетипові технології, додайте їх до списку
+у меню «Файл -> Параметри -> Імітувати».
+-end-
+ho.custbut	Встановити значення нетипової затримки для цього компонента.
+ho.contver	-begin-
+Неперервно перевіряти цілісність внутрішніх
+структур даних після кожної операції.
+-end-
+ho.simwatch	-begin-
+Показувати команди, що пересилаються
+з графічного інтерфейсу до імітатора.
+-end-
+ho.symed.point	-begin-
+Режим редагування точок. Скористайтеся
+клацанням лівою кнопкою миші для
+встановлення точок, а клацанням
+правою — для вилучення.
+-end-
+ho.symed.line	-begin-
+Режим прямої. Скористайтеся
+клацанням лівою кнопкою миші для
+встановлення точок, а клацанням
+правою — для вилучення.
+-end-
+ho.symed.rect	-begin-
+Режим прямокутника. Скористайтеся
+клацанням лівою кнопкою миші для
+встановлення точок, а клацанням
+правою — для вилучення.
+-end-
+ho.symed.fillrect	-begin-
+Режим заповненого прямокутника.
+Скористайтеся клацанням лівою кнопкою
+миші для встановлення точок, а
+клацанням правою — для вилучення.
+-end-
+ho.symed.select	-begin-
+Режим позначення растра. Натисніть
+ліву кнопку миші для позначення
+області зображення, а потім
+скористайтеся діями з вирізання
+та вставлення позначеного.
+-end-
+ho.symed.port	-begin-
+Режим позначення портів. Позначте порти,
+а потім пересуньте або оберніть їх.
+-end-
+ho.symed.rshift	Зсунути позначені пікселі праворуч.
+ho.symed.lshift	Зсунути позначені пікселі ліворуч.
+ho.symed.ushift	Зсунути позначені пікселі вгору.
+ho.symed.dshift	Зсунути позначені пікселі вниз.
+ho.symed.cwrotate	Обернути позначені пікселі за годинниковою стрілкою.
+ho.symed.ccwrotate	Обернути позначені пікселі проти годинникової стрілки.
+ho.symed.autobold	Збільшити товщину ліній у позначеному зображенні.
+ho.symed.resize	Змінити розміри редактора зображень.
+ho.symed.import	Імпортувати зображення з файла.
+ho.symed.export	Експортувати зображення до файла.
+ho.tool.currot	-begin-
+Показує поточне типове обертання.
+Натисніть цю кнопку, щоб змінити
+поточне типове обертання.
+-end-
+ho.tool.zoomin	Збільшити
+ho.tool.zoomout	Зменшити
+ho.tool.rotate	Обернути позначені компоненти проти годинникової стрілки.
+ho.tool.brotate	Обернути позначені компоненти за годинниковою стрілкою.
+ho.tool.valgn	Вирівняти позначені компоненти вертикально.
+ho.tool.halgn	Вирівняти позначені компоненти горизонтально.
+ho.tool.cut	Вирізати позначене.
+ho.tool.copy	Копіювати позначене.
+ho.tool.paste	Вставити з буфера обміну.
+ho.tool.find	Знайти компонент, з’єднання або текст.
+ho.tool.addport	Додати порти до позначеного компонента.
+ho.tool.anchor	Заблокувати позначені компоненти.
+ho.tool.unanchor	Розблокувати позначені компоненти.
+ho.tool.replicate	Клонувати компонент.
+ho.tool.delete	Вилучити позначене.

@@ -1,0 +1,8 @@
+\font-encoding			iso8859-15
+\display-encoding		iso8859-15
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				occitan
+@opt.sidebar.width			*400
+@opt.tree.width				*250

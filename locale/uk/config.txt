@@ -1,0 +1,8 @@
+\font-encoding			koi8-u
+\display-encoding		KOI8-U
+\messages-encoding		utf-8
+\verilog-encoding		utf-8
+\postscript-encoding	utf-8
+\language				українська
+@opt.sidebar.width			*400
+@opt.tree.width				*250
