@@ -694,7 +694,7 @@ int MIAssign_pathdGenerate(MIAssign *mia,ModuleInst *mi,CodeBlock *codeBlock,Lis
   int rsize;			/* Base bit size of right-hand side */
   int size;			/* Bit size for assignment operation */
   /*@TODO: to remove*/
-  /*unsigned top_bc;		/* Branch position of top of statement */*/
+  /*unsigned top_bc;		/* Branch position of top of statement */
   deltatime_t delay = 0;	/* Delay for assignment */
   Value *rhs_ret;		/* Return value of right-hand side */
   List lhs_list;		/* List of left-hand side nets */
