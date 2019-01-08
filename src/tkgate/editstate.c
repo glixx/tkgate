@@ -546,7 +546,7 @@ EditState *new_EditState()
 {
   EditState *es;
 
-  es = (EditState*) ob_malloc(sizeof(EditState),"EditState");
+  es = OM_MALLOC(EditState);
 
   editstate_Init(es);
 

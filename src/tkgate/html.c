@@ -309,7 +309,7 @@ HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,font
 
 HtmlTag *new_HtmlTag()
 {
-  HtmlTag *ht = (HtmlTag*) ob_malloc(sizeof(HtmlTag),"HtmlTag");
+  HtmlTag *ht = OM_MALLOC(HtmlTag);
 
   ht->ht_name = 0;
   ht->ht_numOptions = 0;

@@ -457,7 +457,7 @@ void Circuit_unloadAllLibraries(Circuit *c)
 
 GrabbedLabel *new_GrabbedLabel()
 {
-  GrabbedLabel *gl = (GrabbedLabel *) ob_malloc(sizeof(GrabbedLabel),"GrabbedLabel");
+  GrabbedLabel *gl = OM_MALLOC(GrabbedLabel);
 
   gl->net = 0;
   gl->label = 0;

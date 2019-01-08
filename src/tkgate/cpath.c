@@ -41,7 +41,7 @@ SHash *net_alias_table = 0;
 
 NetAliasList *new_NetAliasList()
 {
-  NetAliasList *al = (NetAliasList *) ob_malloc(sizeof(NetAliasList),"NetAliasList");
+  NetAliasList *al = OM_MALLOC(NetAliasList);
 
   al->length = 0;
   al->names = (char**) ob_malloc(sizeof(char*) * NETALIASLIST_STEPSIZE,"char*[]");

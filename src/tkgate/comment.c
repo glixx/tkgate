@@ -213,7 +213,7 @@ void Comment_addLine(GCElement *g,const char *text)
 
 void Comment_prependLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
+  TextLine *L = OM_MALLOC(TextLine);
 
   L->text = ob_strdup(text);
   L->next = g->u.comment.first;

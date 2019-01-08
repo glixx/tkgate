@@ -63,7 +63,7 @@ void ClearErrorMark()
 
 ErrorList *new_ErrorList()
 {
-  ErrorList *el = (ErrorList*) ob_malloc(sizeof(ErrorList),"ErrorList");
+  ErrorList *el = OM_MALLOC(ErrorList);
   el->errlist = 0;
   el->curerr = 0;
   el->errors = 0;
@@ -94,7 +94,7 @@ static GEScript *ErrorList_getScript(ErrorList *el, int line)
 
 static GError *new_GError(const char *errText)
 {
-  GError *e = (GError*) ob_malloc(sizeof(GError),"GError");
+  GError *e = OM_MALLOC(GError);
 
   e->e_id = 0;
   e->e_level = 0;
@@ -714,7 +714,7 @@ void Error_decode(char *emsg)
 
 void Error_scriptBegin(const char *name,int line)
 {
-  GEScript *es = (GEScript*) ob_malloc(sizeof(GEScript),"GEScript");
+  GEScript *es = OM_MALLOC(GEScript);
 
   es->es_name = ob_strdup(name);
   es->es_beginLine = line;
