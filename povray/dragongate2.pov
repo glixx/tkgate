@@ -584,7 +584,7 @@ texture {
         object { char_E translate -2*x translate 88*y rotate (AngleStart+5*AngleStep)*z }
         object { char_2 translate -2*x translate 88*y rotate (AngleStart+6.5*AngleStep)*z }
         object { char_Period translate -2*x translate 88*y rotate (AngleStart+7.25*AngleStep)*z }
-        object { char_0 translate -2*x translate 88*y rotate (AngleStart+8*AngleStep)*z }
+        object { char_1 translate -2*x translate 88*y rotate (AngleStart+8*AngleStep)*z }
 	scale <1.0,1.0,0.5>
       }
 
