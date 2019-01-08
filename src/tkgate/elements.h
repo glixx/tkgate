@@ -21,6 +21,8 @@
 #ifndef __elements_h
 #define __elements_h
 
+#include "html.h"
+
 /*****************************************************************************
  * Net types used to mark nets in HDL modules.
  *****************************************************************************/
@@ -250,11 +252,11 @@ typedef struct gKeyMenuEnt {
  */
 struct gateinfo {
   int		code;					/* Code number for gate */
-  char		*name;					/* Name of this gate type */
+  const char	*name;					/* Name of this gate type */
   char		*vnames;				/* Verilog names */
   unsigned	vmask;					/* Verilog name mutating ports */
-  char		*psprint;				/* Postscript display function for gate */
-  char		**psdef;				/* Postscript definition for gate */
+  const char	*psprint;				/* Postscript display function for gate */
+  char	**psdef;					/* Postscript definition for gate */
 
   int		gi_multiPad;				/* Pad used to generate number of ports of gate */
   int		gi_bitPad;				/* Pad used to generate bit size of gate */

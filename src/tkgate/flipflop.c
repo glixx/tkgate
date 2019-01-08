@@ -17,7 +17,9 @@
 
     Last edit by hansen on Tue Feb  3 15:33:02 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 static void FF_WriteCellDef(FILE *f,GCellSpec *gcs);
 static GCElement *FF_Make(EditState **es,GModuleDef *env,int GType,

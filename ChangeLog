@@ -1,3 +1,12 @@
+Version 2.1 - December 17, 2018
+     * Localization update
+     * Fix segfault on exit
+     * Partial fix for whitespace in filenames
+     * Fix showing of pictures and using style in documentation
+     * Add manuals about circuits 74xx for all languages
+     * Gettext support for messages, examples, tutorials
+     * Partially cygwin support
+
 Version 2.1-a1 - June 19, 2015
      * Verga can parse output drive strengths for gates
      * Corrected tri0 and tri1 net signals with only 1 drive in Verga

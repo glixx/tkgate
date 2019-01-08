@@ -19,6 +19,7 @@
 ****************************************************************************/
 
 #include "tkgate.h"
+#include "print.h"
 
 #define AOX_WIRESPACE	5	/* Space between ports when using extender bars */
 #define AOX_HOOK	5
@@ -222,7 +223,6 @@ static void AOX_adjustWires(GCElement *g)
   N = wire_numOnPad(g->wires[AND_IN]);
   L = AOX_WIRESPACE*(N+1);
 
-
   switch (g->orient) {
   case 0 :
     wx = g->xpos + g->typeinfo->Pad[AND_IN].Loc[g->orient].x1;
@@ -342,7 +342,7 @@ int AOX_GateParmList(FILE *f,GCElement *g)
 	  fprintf(f,"%s",w->net->n_signame);
 	fprintf(f,")");
       } else
-	fprintf(f,"(%sw%x)",inv,(uintptr_t)w->net);
+	fprintf(f,"(%sw%lx)",inv,(uintptr_t)w->net);
     }
   }
   fprintf(f,");");

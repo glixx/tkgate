@@ -19,8 +19,11 @@
 ****************************************************************************/
 #include <stdlib.h>
 #include <string.h>
+
 #include <unistd.h>
+
 #include "tkgate.h"
+#include "print.h"
 #include "yybasic.h"
 
 #define BLOCK_STUBLEN	15

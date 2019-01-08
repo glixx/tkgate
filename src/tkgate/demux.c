@@ -17,7 +17,9 @@
 
     Last edit by hansen on Mon Jan 19 18:14:35 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define DEMUX_F 0
 #define DEMUX_S 1

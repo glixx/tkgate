@@ -17,7 +17,9 @@
 
     Last edit by hansen on Mon Jan 19 23:41:17 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define REV_PADS	4		/* First four pads subject to mirror */
 #define JKFF_Q		0

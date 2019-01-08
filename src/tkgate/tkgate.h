@@ -68,7 +68,6 @@
 #include "misc.h"
 #include "text.h"
 #include "ycmalloc.h"
-#include "html.h"
 #include "expr.h"
 #include "delay.h"
 #include "icon.h"
@@ -86,7 +85,6 @@
 #include "gates.h"
 #include "generic.h"
 #include "functions.h"
-#include "print.h"
 #include "message.h"
 #include "object.h"
 #include "cpath.h"
@@ -256,7 +254,6 @@ struct EditData_str {
   int sx,sy;			/* Point of saved mouse activity (circuit coordinates) */
 
   int scr_x,scr_y;		/* Scrolling origin point */
-
 
   /*
    * Used for hand scroll
@@ -434,7 +431,6 @@ void logError(int code,const char *fname,int lnum,const char *s,...);
 void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs);
 void GCellSpec_writeEndModule(FILE *f,GCellSpec *gcs);
 
-
 unsigned transition_type(int from,int to);
 
 Encoder *getEncoder(const char *toCode,const char *fromCode);
@@ -447,12 +443,10 @@ void SetUpCursors();
 void MouseoverCursor(int cursorType);
 void MakeHashTables();
 
-
 int DoTcl(const char*,...);
 int DoTclL(const char*,...);
 int DoTclV(const char*,int,const char**);
 void InitTclProcs(Tcl_Interp *tcl);
-
 
 void mark_draw();
 void mark_flush();
@@ -482,7 +476,6 @@ void ClearModified();
 void UpdateModifiedIndicator();
 void FlagRedraw();
 void SynchronizeInterface();
-
 
 void SetBatCursor();
 void ClearErrorMark();

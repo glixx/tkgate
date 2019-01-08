@@ -28,10 +28,11 @@
 #include <string.h>
 #include <assert.h>
 #include <math.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 /***********************************************************************/
-
 
 static void choose_trace_interval(simtime_t *e_per_l,simtime_t *e_inter)
 {
@@ -408,7 +409,6 @@ static void GPrint_outputTraceScale(GPrint *P,int y,simtime_t tstart)
       fprintf(P->p_f,"(%s) %g %d rCT\n",GPrint_formatTime(P,buf,t),x,y-PTRC_SCLABPOS);
   }
 }
-
 
 void GPrint_printTracePage(GPrint *P,GPage *PG)
 {

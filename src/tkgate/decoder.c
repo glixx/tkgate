@@ -17,7 +17,9 @@
 
     Last edit by hansen on Fri May  1 20:41:14 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define DECODER_IN 0
 #define DECODER_EN 1

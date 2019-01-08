@@ -17,7 +17,10 @@
 
     Last edit by hansen on Mon Jan 19 18:14:05 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+
+#include "print.h"
 
 #define CLOCK_OUT 0
 #define CLOCKPARAMXOFFSET 0

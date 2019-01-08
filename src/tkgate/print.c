@@ -41,11 +41,12 @@
  *
  *****************************************************************************/
 
-#include "tkgate.h"
-
 #include <assert.h>
 #include <math.h>
 #include <pwd.h>
+
+#include "tkgate.h"
+#include "print.h"
 
 /*
  * Font change codes

@@ -17,14 +17,18 @@
 
     Last edit by hansen on Tue May  5 20:53:56 2009
 ****************************************************************************/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <pwd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <assert.h>
 #include <string.h>
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 char *readprintcapentry(char *buf,int N,FILE *f)
 {
@@ -2050,7 +2054,6 @@ static int gat_cleanUp(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[]
   gateCleanUp();
   return TCL_OK;
 }
-
 
 static int gat_tracePrint(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
 {

@@ -17,7 +17,9 @@
 
     Last edit by hansen on Mon Jan 19 18:16:01 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define LOGICIN_OUT 0
 

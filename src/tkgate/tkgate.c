@@ -17,10 +17,12 @@
 
     Last edit by hansen on Wed Mar 18 04:23:18 2009
 ****************************************************************************/
-#include "tkgate.h"
 
 #include <dirent.h>
 #include <pwd.h>
+
+#include "tkgate.h"
+#include "print.h"
 
 void MSS_init();			/* Module symbol table initialization */
 
@@ -306,7 +308,6 @@ void doVerifyLoad()
   MSS_init();
   init_gates();
 
-
   TkGate.circuit = new_Circuit();
   TkGate.ed = (EditData*) malloc(sizeof(EditData));
   TkGate.errl = (ErrorList*) malloc(sizeof(ErrorList));
@@ -435,13 +436,11 @@ void commandLinePrint()
   GPrintOpt PO;
   extern PaperSize paperSizes[];
 
-
   TkGate.tcl = 0;
   init_gates();
   TkGate.ed = (EditData*) malloc(sizeof(EditData));
   TkGate.errl = (ErrorList*) malloc(sizeof(ErrorList));
   TkGate.circuit = new_Circuit(0);
-
 
   for (i = 0;i < numLoads;i++) {
     VerilogOpen(&TkGate.circuit->es,loadList[i],(i > 0));
@@ -457,7 +456,6 @@ void commandLinePrint()
    * Apply default options
    */
   commandLinePrintSetup(&PO);
-
 
   if (print_file) {
     PO.po_file = print_file;
@@ -509,7 +507,6 @@ void commandLinePrint()
     }
   }
 
-
   /*
    * Check for valid paper size and convert to expected case if necessary.
    */
@@ -522,7 +519,6 @@ void commandLinePrint()
       fprintf(stderr,"tkgate: Unknown paper size '%s'\n",PO.po_paper);
       exit(1);
   }
-
 
   ob_begin_frame("Print");
   /*  Html_setFormatTarget(HT_FORCEPRINT);*/
@@ -961,8 +957,6 @@ char *canonical_path(const char *ipath,char *rpath)
   while ((p = strstr(rpath,"//"))) {
     memmove(p,p+1,strlen(p+1)+1);
   }
-
-
 
   /*
    * Handle any

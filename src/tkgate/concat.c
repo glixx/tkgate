@@ -17,7 +17,9 @@
 
     Last edit by hansen on Mon Jan 19 18:14:18 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 /*
  * Flags for Concat_writeWireNums

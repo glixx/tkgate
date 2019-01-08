@@ -17,9 +17,11 @@
 
     Last edit by hansen on Mon Jan 19 18:18:37 2009
 ****************************************************************************/
-#include <stdlib.h>
-#include "tkgate.h"
 
+#include <stdlib.h>
+
+#include "tkgate.h"
+#include "print.h"
 
 GCElement *Tap_Make(EditState **es,GModuleDef *env,int GType,
 			  int x,int y,int r,const char *Name,int noWires,const char**,int);

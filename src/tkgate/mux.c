@@ -17,14 +17,15 @@
 
     Last edit by hansen on Fri May  1 20:41:18 2009
 ****************************************************************************/
+
 #include "tkgate.h"
+#include "print.h"
 
 #define MUX_IN 0
 #define MUX_SEL 1
 #define MUX_OUT 2
 
 static void Mux_WriteCellDef(FILE *f,GCellSpec *gcs);
-
 
 /*
  * Some of these are shared by the Demux element.  These have a MuxDemux_ prefix.

@@ -19,7 +19,9 @@
 ****************************************************************************/
 #include <stdlib.h>
 #include <string.h>
+
 #include "tkgate.h"
+#include "print.h"
 
 static char *psFrame[] = {
   "%",

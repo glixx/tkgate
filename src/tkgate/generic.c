@@ -17,6 +17,7 @@
 
     Last edit by hansen on Sat Feb 21 16:44:18 2009
 ****************************************************************************/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -24,6 +25,7 @@
 #include <ctype.h>
 
 #include "tkgate.h"
+#include "print.h"
 
 void init_and();
 void init_or();
