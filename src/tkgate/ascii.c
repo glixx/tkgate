@@ -19,12 +19,15 @@
 ****************************************************************************/
 #include <stdio.h>
 #include <ctype.h>
-#include <sys/time.h>
 #include <stdarg.h>
-#include "tkgate.h"
+#include <string.h>
 #if HAVE_ICONV_H
 #include <iconv.h>
 #endif
+
+#include <sys/time.h>
+
+#include "tkgate.h"
 
 int guiActive = 0;
 
@@ -299,13 +302,13 @@ static SHash *iconv_translators = 0;
 Encoder *getEncoder(const char *toCode,const char *fromCode)
 {
   char key[STRMAX];
-  Encoder *encoder = 0;
+  Encoder *encoder = NULL;
 
   /*
    * If either encoding is null, return null encoder.
    */
-  if (strcmp(toCode,"null") == 0) return 0;
-  if (strcmp(fromCode,"null") == 0) return 0;
+  if (strcmp(toCode,"null") == 0) return NULL;
+  if (strcmp(fromCode,"null") == 0) return NULL;
 
   /*
    * Allocate a new translator table
@@ -324,7 +327,7 @@ Encoder *getEncoder(const char *toCode,const char *fromCode)
   /*
    * Try to create the translator, return 0 (and an error) if we could not.
    */
-  encoder = (Encoder*) malloc(sizeof(Encoder));
+  encoder = MALLOC(Encoder);
   encoder->fromCode = strdup(fromCode);
   encoder->toCode = strdup(toCode);
   encoder->ico = iconv_open(toCode,fromCode);

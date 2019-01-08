@@ -17,6 +17,7 @@
 
     Last edit by hansen on Sat Feb 21 17:45:19 2009
 ****************************************************************************/
+
 #include "tkgate.h"
 
 #define AOX_WIRESPACE	5	/* Space between ports when using extender bars */

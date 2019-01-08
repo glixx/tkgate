@@ -498,7 +498,7 @@ int Comment_EditProps(GCElement *g,int isLoadDialog)
     }
     if (Comment_buildHtml(g)) {
       gate_delete(g,TkGate.circuit->es->env,1);
-      return -1;		// Indicate we deleted the gate
+      return -1;		/* Indicate we deleted the gate */
     }
    }
   return 0;

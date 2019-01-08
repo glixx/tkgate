@@ -139,4 +139,4 @@ int NHash_remove(Hash*,intptr_t);
 
 __END_DECLS
 
-#endif // __hash_h
+#endif /* __hash_h */

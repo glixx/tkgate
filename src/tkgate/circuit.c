@@ -102,7 +102,7 @@ void Timescale_save(Timescale *ts, FILE *f)
 
 Circuit *new_Circuit()
 {
-  Circuit *c = (Circuit*) ob_malloc(sizeof(Circuit),"Circuit");
+  Circuit *c = OM_MALLOC(Circuit);
   extern Timescale defaultTimescale;
 
   c->currentFile = new_CurrentFile();

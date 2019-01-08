@@ -63,7 +63,7 @@ static const char *findSymbol(int code)
 
 static int *intdup(int n)
 {
-  int *p = (int*)malloc(sizeof(int));
+  int *p = MALLOC(int);
   *p = n;
   return p;
 }

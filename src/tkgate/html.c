@@ -48,12 +48,15 @@ Special pre-processed tags:
 #include <ctype.h>
 #include <sys/time.h>
 #include <stdarg.h>
+#include <strings.h>
+
 #include "tkgate.h"
 
-//
-// Testing only
-//
-//#include <X11/Xatom.h>
+/*
+ * Testing only
+ *
+ *#include <X11/Xatom.h>
+ */
 
 
 /*
@@ -254,23 +257,6 @@ static HtmlContext default_context = {
   1,
   0
 };
-
-
-int istruevalue(const char *s)
-{
-  int n;
-
-  if (sscanf(s,"%d",&n) == 1) {
-    return (n != 0);
-  }
-
-  if (strcasecmp(s,"t") == 0) return 1;
-  if (strcasecmp(s,"y") == 0) return 1;
-  if (strcasecmp(s,"true") == 0) return 1;
-  if (strcasecmp(s,"yes") == 0) return 1;
-
-  return 0;
-}
 
 static Encoder *Html_getEncoder(Html *h)
 {

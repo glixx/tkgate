@@ -70,7 +70,7 @@ void yc_pushpool()
 */
 void yc_poppool()
 {
-  long i;
+  unsigned i;
   struct yc_pool_elem *D = 0;
 
   while (yc_pool) {

@@ -182,7 +182,7 @@ void Hash_init(Hash *H,int use_ob)
 
 void Hash_uninit(Hash *H,HashElemDelFunc *hdel)
 {
-  int i;
+  unsigned i;
 
   HT_TOUCH(H,H);
   HT_TOUCH(H,H->elems);
@@ -201,7 +201,7 @@ void Hash_uninit(Hash *H,HashElemDelFunc *hdel)
 
 HashElem *Hash_first(Hash *H)
 {
-  int i;
+  unsigned i;
 
   H->loop_ok = 1;		/* This debugging flag does not need an ob_touch */
   for (i = 0;i < H->size;i++)
@@ -212,7 +212,7 @@ HashElem *Hash_first(Hash *H)
 
 HashElem *Hash_next(Hash *H,HashElem *E)
 {
-  int A;
+  unsigned A;
 
   if (!H->loop_ok) {
     printf("echo Illegal sequential hash table access.\n");
@@ -225,7 +225,7 @@ HashElem *Hash_next(Hash *H,HashElem *E)
     if (H->elems[A])
       return H->elems[A];
 
-  return 0;
+  return NULL;
 }
 
 /*
@@ -375,7 +375,7 @@ int SHash_remove(Hash *H,const char *key)
 
 void Hash_flush(Hash *H,HashElemDelFunc *hdel)
 {
-  int i;
+  unsigned i;
 
   HT_TOUCH(H,H);
   HT_TOUCH(H,H->elems);

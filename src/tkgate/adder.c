@@ -27,7 +27,6 @@
 
 static void Adder_WriteCellDef(FILE *f,GCellSpec *gcs);
 
-
 static iconDimensions add_iconDims[] = {
   {0,  0,  59, 28, 29, 15},
   {60, 0,  28, 59, 15, 29},
@@ -67,7 +66,7 @@ GPadLoc adder_S_loc[] = {
 	{0,-13,0,-13,D_UP},
 	{-13,0,-13,0,D_LEFT}};
 
-static char *psAdder[] = {
+static const char *psAdder[] = {
   "%",
   "% x y r adder",
   "%",
@@ -90,20 +89,54 @@ static char *psAdder[] = {
 };
 
 GGateInfo gate_add_info = {
-  0,
-  "ADD",
-  "add",0x0,
-  "psadder",psAdder,
-  -1,2,
-
-  {{"+",	{"gm.alu",0},		{"gm.alu.add",0,0,100},	"gat_make ADD"},
-   {0}},
-
-
-  add_iconDims,
-
-  5,{{"A",IN,8,1,adder_A_loc},
-       {"B",IN,8,1,adder_B_loc},
+  0,         /* code */
+  "ADD",     /* name */
+  "add",     /* vnames */
+  0x0,       /* vmaks */
+  "psadder", /* psprint */
+  psAdder,   /* psdef */
+  -1,        /* gi_multiPad */
+   2,        /* gi_bitPad */
+  
+  {          /* cmds */
+    {        /* 0 */
+      "+",   /* key_seq */
+      {      /* root */
+        "gm.alu", /* name */
+        0         /* ul */
+      },
+      {      /* entry */
+        "gm.alu.add", /* name */
+        0,   /* ul */
+        NULL,/* gtag */
+	100  /* order */
+      },
+      "gat_make ADD", /* command */
+      0 /* accel_label_only */
+    },
+    {         /* 1 */
+      NULL    /* key_seq */
+    }
+  },
+  add_iconDims /* dim */,
+  5,           /* NumPads */
+  {            /* Pad */
+    {          /* 0 */
+      "A",     /* name */
+      IN,      /* iotype */
+      8,       /* size */
+      1,       /* num */
+      adder_A_loc, /* Loc */
+      0        /* CanAdd */
+    },
+    {          /* 1 */
+      "B",     /* name */
+      IN,      /* iotype */
+      8,       /* size */
+      1,       /* num */
+      adder_B_loc, /* Loc */
+      0        /* CanAdd */
+    },
        {"S",OUT,8,1,adder_S_loc},
        {"CI",IN,1,1,adder_Ci_loc},
        {"CO",OUT,1,1,adder_Co_loc}},

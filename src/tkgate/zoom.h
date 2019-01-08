@@ -29,6 +29,7 @@ void ZCopyArea(Display *display,Drawable src,Drawable dest,GC gc,int src_x,int s
 void ZCopyPlane(Display *display,Drawable src,Drawable dest,GC gc,int src_x,int src_y,
 		unsigned width,unsigned height,int dest_x,int dest_y,unsigned long plane);
 
-//void unZoomMetrics(Tk_FontMetrics *);
+/*@TODO: to remove*/
+/*void unZoomMetrics(Tk_FontMetrics *);*/
 
 #endif

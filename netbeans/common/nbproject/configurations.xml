@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="95">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="common" displayName="common" projectFiles="true">
       <itemPath>../../src/common/hash.c</itemPath>
@@ -46,12 +46,15 @@
           <incDir>
             <pElem>../..</pElem>
           </incDir>
+          <commandLine>-Wextra</commandLine>
           <warningLevel>2</warningLevel>
         </cTool>
         <archiverTool>
-          <output>../build/${CND_CONF}/libcommon.a</output>
+          <output>./dist/${CND_CONF}/libcommon.a</output>
         </archiverTool>
       </compileType>
+      <item path="../../src/common/hash.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="../../src/common/hash.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../src/common/list.c" ex="false" tool="0" flavor2="0">

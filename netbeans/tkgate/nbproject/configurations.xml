@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="95">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="tkgate" displayName="tkgate" projectFiles="true">
       <itemPath>../../src/tkgate/adder.c</itemPath>
@@ -39,8 +39,6 @@
       <itemPath>../../src/tkgate/frame.c</itemPath>
       <itemPath>../../src/tkgate/functions.c</itemPath>
       <itemPath>../../src/tkgate/functions.h</itemPath>
-      <itemPath>../../src/tkgate/gate_painter.c</itemPath>
-      <itemPath>../../src/tkgate/gate_painter.h</itemPath>
       <itemPath>../../src/tkgate/gates.c</itemPath>
       <itemPath>../../src/tkgate/gates.h</itemPath>
       <itemPath>../../src/tkgate/generic.c</itemPath>
@@ -159,16 +157,16 @@
       <toolsSet>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
-        <rebuildPropChanged>false</rebuildPropChanged>
+        <rebuildPropChanged>true</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
           <incDir>
             <pElem>../..</pElem>
-            <pElem>/usr/include/tcl</pElem>
             <pElem>../../src/common</pElem>
+            <pElem>/usr/include/tcl8.6</pElem>
           </incDir>
-          <commandLine>`pkg-config --cflags pangoxft`</commandLine>
+          <commandLine>-Wextra</commandLine>
           <preprocessorList>
             <Elem>TKGATE_HOMEDIR=NULL</Elem>
           </preprocessorList>
@@ -184,17 +182,16 @@
                             AC="true"
                             BL="true"
                             WD="../common"
-                            BC="${MAKE}  -f Makefile CONF=Debug"
-                            CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="../build/${CND_CONF}/libcommon.a">
+                            BC="${MAKE} -j4 -f Makefile CONF=Debug"
+                            CC="${MAKE} -j4 -f Makefile CONF=Debug clean"
+                            OP="./dist/${CND_CONF}/libcommon.a">
               </makeArtifact>
             </linkerLibProjectItem>
-            <linkerLibLibItem>X11</linkerLibLibItem>
-            <linkerLibLibItem>tcl8.6</linkerLibLibItem>
             <linkerLibStdlibItem>Mathematics</linkerLibStdlibItem>
+            <linkerLibLibItem>X11</linkerLibLibItem>
             <linkerLibLibItem>tk8.6</linkerLibLibItem>
+            <linkerLibLibItem>tcl8.6</linkerLibLibItem>
           </linkerLibItems>
-          <commandLine>`pkg-config --libs pangoxft`</commandLine>
         </linkerTool>
       </compileType>
       <item path="../../src/tkgate/adder.c" ex="false" tool="0" flavor2="0">
@@ -270,10 +267,6 @@
       <item path="../../src/tkgate/functions.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="../../src/tkgate/functions.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../src/tkgate/gates.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -561,10 +554,6 @@
       <item path="../../src/tkgate/functions.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="../../src/tkgate/functions.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../src/tkgate/gates.c" ex="false" tool="0" flavor2="0">
       </item>

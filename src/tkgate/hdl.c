@@ -31,15 +31,14 @@ int hdl_isactive;
  *
  *****************************************************************************/
 typedef struct {
-  char *comment_start;		// Start of comments for module.
-  char *module_line;		// Pointer to beginning of line with "module" in it.
-  char *name;			// Pointer to beginning of module name
-  int name_len;			// Number of characters in module name.
-  int module_length;		// Total length of module
-  char *endmodule_line;		// Pointer to beginning of line with "endmodule" in it.
-  char *module_end;		// End of module definition
+  char *comment_start;		/* Start of comments for module. */
+  char *module_line;		/* Pointer to beginning of line with "module" in it. */
+  char *name;			/* Pointer to beginning of module name */
+  int name_len;			/* Number of characters in module name. */
+  int module_length;		/* Total length of module */
+  char *endmodule_line;		/* Pointer to beginning of line with "endmodule" in it. */
+  char *module_end;		/* End of module definition */
 } HdlModuleData;
-
 
 /*****************************************************************************
  *
