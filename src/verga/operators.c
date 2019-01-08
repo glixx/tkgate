@@ -941,7 +941,8 @@ int Value_div(Value *r,Value *a,Value *b,Value *c)
 {
   unsigned mask = SSWORDMASK;
   int wc = SSNUMWORDS(r->nbits);
-  int ecode;
+  /*@TODO: to remove*/
+  /*int ecode;*/
 
   r->flags = (ValueFlags)(a->flags | b->flags);
 
@@ -953,7 +954,7 @@ int Value_div(Value *r,Value *a,Value *b,Value *c)
   a->one[wc-1] &= mask;
   b->one[wc-1] &= mask;
 
-  ecode = multint_div(r->one,a->one,b->one,wc);
+  /*ecode =*/ multint_div(r->one,a->one,b->one,wc);
 
   Value_normalize(r);
 

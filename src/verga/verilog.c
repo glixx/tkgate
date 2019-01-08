@@ -674,11 +674,12 @@ void VerSpecTask(const char *name,List *args)
  *****************************************************************************/
 void VerSpecify(Expr *cond,spectype_t ptype,Expr *lhs,Expr *rhs,Expr *value)
 {
-  Specify *s;
+  /*@TODO: to remove?*/
+  /*Specify *s;*/
   SpecifyStat *specstat = new_SpecifyStat(cond,ptype, lhs, rhs, value);
 
   ModuleDecl_makeSpecify(cur.mod);
-  s = ModuleDecl_getSpecify(cur.mod);
+  /*s = ModuleDecl_getSpecify(cur.mod);*/
 
   Specify_addStat(ModuleDecl_getSpecify(cur.mod), specstat);
 }

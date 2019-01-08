@@ -268,7 +268,8 @@ static int Circuit_dpath_generate_assign(Circuit *c, ModuleInst *mi, Scope *port
   int lsize;			/* Base bit size of left-hand side */
   int rsize;			/* Base bit size of right-hand side */
   int size;			/* Bit size for assignment operation */
-  unsigned top_bc;		/* Branch position of top of statement */
+  /*@TODO: to remove*/
+  /*unsigned top_bc;		/* Branch position of top of statement */
   Value *rhs_ret;		/* Return value of right-hand side */
   List lhs_list;		/* List of left-hand side nets */
   ListElem *le;			/* Iterator for left-hand-side components */
@@ -287,7 +288,8 @@ static int Circuit_dpath_generate_assign(Circuit *c, ModuleInst *mi, Scope *port
   /*
    * Generate bytecode for right-hand side.
    */
-  top_bc = CodeBlock_size(codeBlock);
+  /*@TODO: to remove*/
+  /*top_bc = CodeBlock_size(codeBlock);*/
   rhs_ret = Expr_generate(mia->mia_rhs,size, port_scope, codeBlock);
   if (!rhs_ret) return -1;
 

@@ -476,7 +476,6 @@ void gate_doReplication(EditState *es)
   w = ex-sx + bd;
   h = ey-sy + bd;
 
-
   sx = g->xpos;
   sy = g->ypos;
   ex = TkGate.ed->tx;

@@ -640,6 +640,7 @@ void Event_print(Event *e)
   case EV_DRIVER  : printf("[DRIVER]");break;
   case EV_STROBE  : printf("[STROBE]");break;
   case EV_PROBE   : printf("[PROBE]");break;
+  default: break; // EV_MEM et al
   }
 }
 
