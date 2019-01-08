@@ -53,17 +53,18 @@ proc showLicense {} {
   global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description lang tkg_gateHome
 
   set L {}
-  lappend L "    TkGate $tkg_progVer - [m cprt.descr]"
+  lappend L "TkGate $tkg_progVer - [m cprt.descr]"
   lappend L ""
-  lappend L "    $tkg_copyright"
+  lappend L "$tkg_copyright"
+  lappend L ""
+  lappend L "[m license1]"
+  lappend L ""
+  lappend L "[m license2]"
+  lappend L ""
+  lappend L "[m license3]"
   lappend L ""
 
-  set licensePath "$tkg_gateHome/locale/$lang/license.txt"
-  if { [file exists $licensePath] == 0 } {
-    puts "Cannot locate $licensePath, using en version"
-    set licensePath "$tkg_gateHome/locale/en/license.txt"
-  }
-  showDocFile [m cprt.lic] $licensePath $L
+  showDocFile [m cprt.lic] "" $L
 }
 
 proc showDocumentation {} {
