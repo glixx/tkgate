@@ -44,30 +44,31 @@
 		<graphic fileref="../fig/biggatelogo.gif"/>
 		<legalnotice>
 			<para>
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2 of the License, or (at your option) any
+later version.
 			</para>
 			<para>
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public
+License for more details.
 			</para>
 			<para>
 You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-			</para>
+with this program; if not, write to the Free Software Foundation, Inc., 51
+Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+      </para>
 		</legalnotice>
 		<abstract>
 			<para>
 TkGate is a graphical editor and&nbsp; event-driven simulator for digital
 circuits with a tcl/tk-based interface.&nbsp; Supported circuit elements
 include basic gates (AND, OR, etc.), tri-state gates, adders, multipliers,
-registers, memories and mos transistors.&nbsp; Hierarchical design is also
-supported with support for user defined modules.&nbsp; Save files are based
+registers, memories and mos transistors.&nbsp; Hierarchical design is
+also supported with support for user defined modules.&nbsp; Save file
+are based
 on the Verilog netlist format.
 			</para>
 		</abstract>
@@ -77,15 +78,15 @@ on the Verilog netlist format.
 		<title>Introduction to TkGate</title>
 		<abstract>
 			<para>
-TkGate is a digital circuit editor and simulator with a Tcl/Tk-based
-interface. TkGate includes a large number of built-in devices
-including basic gates, memories, ttys and modules for hierarchical
-design. The simulator can be controlled either interactively or
-through a simulation script. Memory contents can be loaded from
-files, and a microcode/macrocode compiler (gmac) is included to create
-TkGate memory files from a high-level description. The simulator
-supports continuous simulation, single step simulation (by clock or
-epoch) and breakpoints. Save files are in a Verilog-like format.
+TkGate is a digital circuit editor and simulator with a Tcl/Tk-based interface.
+TkGate includes a large number of built-in devices including basic gates,
+memories, ttys and modules for hierarchical design. The simulator can be
+controlled either interactively or through a simulation script.  Memory
+contents can be loaded from files, and a microcode/macrocode compile
+(gmac) is included to create TkGate memory files from a high-leve
+description. The simulator supports continuous simulation, single step
+simulation (by clock or epoch) and breakpoints. Save files are in 
+ Verilog-like format.
 			</para>
 			<para>
 A TkGate circuit is divided into one or more modules, with one of the
@@ -1188,6 +1189,93 @@ inverter on that port, one will be added.  If there is already an
 inverter on that port, the inverter will be removed.
 				</para>
 			</sect2>
+			<sect2>
+			  <title>Wire Bit-Size and Type Tool</title>
+			  <figure>
+					<title>Wire Type Selector</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="../fig/wiretype.gif" />
+						</imageobject>
+          </mediaobject>
+        </figure>
+			  <para>
+You can use the <inlinegraphic fileref="../fig/size_curs.gif"/> tool to change
+the bit-size and type of one or more wires. Use the "Bits" and "Type" selectors
+next to the button to set the desired bit size and type. Any wires you click on
+with this cursor will be set to the size and type displayed. The set of possible
+wire types and their interpretation are described in the section on writing Text
+Verilog Modules. In most cases you should use the "wire" wire type. The wire
+size and type can also be set by double clicking on a wire to open the Wire
+Properties dialog box.
+			  </para>
+			</sect2>
+			<sect2>
+			  <title>Wire Bit-Size and Type Tool</title>
+			  <para>
+You can use the <inlinegraphic fileref="../fig/zoom_in.gif"/> and
+<inlinegraphic fileref="../fig/zoom_out.gif"/> buttons to zoom in and zoom out.
+There are four zoom levels.
+			  </para>
+      </sect2>
+		</sect1>
+		<sect1>
+  		<title>
+  		  Gate Properties
+	  	</title>
+	  	<para>
+Gate parameters can be edited by double clicking on a gate, or by selecting the
+gate and then invoking the "Properties..." command from the "Gate" menu.  
+The property dialog box is contains up to four pages which can be selected
+through the tabs at the top. The "General" page contains basic properties
+that are common to all gate types, the "Port" page allows editing of ports on
+the gate, the optional "Details" page contains additional properties that are
+special to particular gate types, and the optional "Delay" page allows editing of
+delay parameters of gates. 
+	  	</para>
+	  	<sect2>
+	  	  <title>General Properties</title>
+	  	  <para>
+	  	    The properties which can be edited on the "General" page shown to the
+	  	    right are:
+	  	  </para>
+	  	  <itemizedlist>
+	  	    <listitem><para>
+	  	      <emphasis role="strong">Gate Type:</emphasis> The type of the gate.  This property is immutable.
+          </para></listitem>
+	  	    <listitem><para>
+	  	      <emphasis role="strong">Gate Name:</emphasis> The name of the gate.  This must be a unique identifier
+            for the gate within the module.  Gate names must start with a
+            letter or the '_' character, and must contain only letters digits
+            and the '_' character.  If you attempt to use a gate name which is
+            used by another circuit element in the same module, or attempt to
+            use illegal character, the name will by automatically adjusted by
+            removing the illegal characters, or by appending or prepending
+            characters.
+          </para></listitem>
+          <listitem><para>
+            <emphasis role="strong">Hide Name:</emphasis> A flag to indicate whether or not the name for the gate
+            should be displayed.  The default is not to display names unless
+            this option is explicitly set.
+          </para></listitem>
+          <listitem><para>
+            <emphasis role="strong">Anchor:</emphasis> A flag to indicate whether or not the gate can be moved
+            using the mouse.  A selection containing gates with this option
+            active cannot be moved. This option is useful if you want to
+            prevent accidentally moving a gate.
+          </para></listitem>
+          <listitem><para>
+            <emphasis role="strong">X/Y:</emphasis> The screen position of the gate.  Values can be manually
+            entered even if a gate is anchored.
+          </para></listitem>
+          <listitem><para>
+            <emphasis role="strong">Critical Path Partition:</emphasis> Makes the selected element a partition
+            point for the purpose of critical path analysis. Paths through
+            an element with this property will not be considered for the
+            purpose of critical path analysis.
+          </para></listitem>
+	  	  </itemizedlist>
+	  	</sect2>
 		</sect1>
 	</chapter>
 </book>
