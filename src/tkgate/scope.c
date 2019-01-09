@@ -122,7 +122,7 @@ void ReqScopeTraceRedisplay()
  *      n		Number of bits of trace
  *
  *****************************************************************************/
-int isTransition(GScope *s,GValue *v,int n)
+int isTransition(GScope *s,GateValue *v,int n)
 {
   if (!v || !v->v_next) return 0;
 
@@ -169,7 +169,7 @@ void GTrace_adjust(GTrace *T,simtime_t LTime)
  *	LTime		Time at left side of scope window
  *
  *****************************************************************************/
-int GScope_getXPos(GScope *S,GValue *V,simtime_t LTime)
+int GScope_getXPos(GScope *S,GateValue *V,simtime_t LTime)
 {
   simtime_t T;
 
@@ -197,7 +197,7 @@ int GScope_getXPos(GScope *S,GValue *V,simtime_t LTime)
  *	nbits		Number of bits in trace
  *
  *****************************************************************************/
-GC GValue_getColor(GValue *V,int nbits)
+GC GValue_getColor(GateValue *V,int nbits)
 {
   switch (V->v_code) {
   case VC_UNRECORDED :
@@ -226,7 +226,7 @@ GC GValue_getColor(GValue *V,int nbits)
   return TkGate.scopeOneGC;
 }
 
-void GTrace_drawTransValue(GTrace *T,GValue *V,GScope *S,int y,
+void GTrace_drawTransValue(GTrace *T,GateValue *V,GScope *S,int y,
 			   simtime_t LTime,int isFullUpdate)
 {
   int x,nextX,width;
@@ -304,7 +304,7 @@ unsigned transition_type(int from,int to)
   return trans[from][to];
 }
 
-void GTrace_updateTransition(GTrace *T,GValue *V,GScope *S,int y,int x1,int x2,simtime_t LTime,int isFullUpdate)
+void GTrace_updateTransition(GTrace *T,GateValue *V,GScope *S,int y,int x1,int x2,simtime_t LTime,int isFullUpdate)
 {
   if (isTransition(S,V,T->t_nBits)) {
     GC gc;
@@ -344,7 +344,7 @@ void GTrace_updateTransition(GTrace *T,GValue *V,GScope *S,int y,int x1,int x2,s
   }
 }
 
-void GTrace_updateValue(GTrace *T,GValue *V,int y,int x1,int x2)
+void GTrace_updateValue(GTrace *T,GateValue *V,int y,int x1,int x2)
 {
   GC gc = GValue_getColor(V,T->t_nBits);
 
@@ -433,7 +433,7 @@ void GTrace_update(GTrace *T,GScope *S,int y,simtime_t LTime,int isFullUpdate)
 {
   /*    int lasttime,value,vcode,*/
   int x1,x2;
-  GValue *V;
+  GateValue *V;
 
   GTrace_adjust(T,LTime);
 
@@ -1038,7 +1038,8 @@ void GScope_fullUpdate(GScope *S)
 {
   extern int scope_active;
   Window R;
-  int i,X,Y,W,H,BW,DP;
+  int i, X, Y;
+  unsigned int W,H,BW,DP;
   double vs,ve,hs,he;
 
   if (!scope_active) return;
@@ -1348,7 +1349,7 @@ GTrace *new_GTrace(const char *name,const char *printName,int nBits,simtime_t cu
 
 void delete_GTrace(GTrace *T)
 {
-  GValue *V;
+  GateValue *V;
 
   ob_free(T->t_name);
   ob_free(T->t_printName);
@@ -1376,11 +1377,11 @@ GTrace *GScope_findTrace(GScope *S,const char *Name)
 }
 
 
-GValue *new_Value(simtime_t CurTime,int Code,const char *value,GValue *Prev)
+GateValue *new_Value(simtime_t CurTime,int Code,const char *value,GateValue *Prev)
 {
-  GValue *V;
+  GateValue *V;
 
-  V = (GValue *) ob_malloc(sizeof(GValue),"GValue");
+  V = OM_MALLOC(GateValue);
   V->v_time = CurTime;
   V->v_code = Code;
   if (value) {

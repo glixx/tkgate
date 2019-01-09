@@ -246,7 +246,6 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
   {0,0,0,0}
 };
 
-
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
@@ -268,11 +267,10 @@ static Encoder *Html_getEncoder(Html *h)
 
 int HtmlFont_isEqual(const HtmlFont *a,const HtmlFont *b)
 {
-  if (a->family != b->family) return 0;
-  if (a->props != b->props) return 0;
-  if (a->size != b->size) return 0;
-  if (a->points != b->points) return 0;
-  return 1;
+  if (memcmp(a, b, sizeof(HtmlFont)) == 0)
+    return 1;
+  else
+    return 0;
 }
 
 void HtmlFont_updatePoints(HtmlFont *font)
@@ -333,7 +331,6 @@ void delete_HtmlTag(HtmlTag *ht)
   }
   ob_free(ht);
 }
-
 
 /*****************************************************************************
  * Break down an options string into tags and values.  Return the
@@ -401,7 +398,7 @@ HtmlTag *Html_parseTag(const char *tag)
   return ht;
 }
 
-static int  HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
+static int HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
 {
   switch (hc->hc_html->h_target) {
   case TD_X11 :
@@ -496,7 +493,7 @@ static void delete_HtmlContext(HtmlContext *hc)
 
 static HtmlUnit *new_HtmlUnit(const char *text,int len,HtmlContext *hc)
 {
-  HtmlUnit *hu = ob_malloc(sizeof(HtmlUnit),"HtmlUnit");
+  HtmlUnit *hu = OM_MALLOC(HtmlUnit);
 
   hu->hu_type = HU_TEXT;
   hu->hu_text = ob_malloc(len+1,"char*");
@@ -511,7 +508,7 @@ static HtmlUnit *new_HtmlUnit(const char *text,int len,HtmlContext *hc)
 
 static HtmlUnit *new_HtmlUnit_T(int htype,HtmlContext *hc)
 {
-  HtmlUnit *hu = ob_malloc(sizeof(HtmlUnit),"HtmlUnit");
+  HtmlUnit *hu = OM_MALLOC(HtmlUnit);
 
   hu->hu_type = htype;
   hu->hu_text =0;
@@ -535,7 +532,7 @@ static void delete_HtmlUnit(HtmlUnit *hu)
 
 Html *new_Html(TargetDev_e target)
 {
-  Html *h = (Html*) ob_malloc(sizeof(Html),"Html");
+  Html *h = OM_MALLOC(Html);
 
   h->h_reqWidth = 100;
   h->h_width = h->h_reqWidth;
@@ -573,7 +570,6 @@ void delete_Html(Html *h)
     next_hc = hc->hc_next;
     delete_HtmlContext(hc);
   }
-
 
   ob_free(h);
 }
@@ -841,6 +837,14 @@ static void Html_popContext(Html *h)
 
   hc->hc_next = h->h_contextPool;
   h->h_contextPool = hc;
+}
+
+static void on_image_changed(ClientData data,
+                             int x, int y,
+                             int width, int height,
+                             int image_width, int image_height)
+{
+  /* This space intentionally left blank. */
 }
 
 /*****************************************************************************

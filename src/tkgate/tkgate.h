@@ -428,8 +428,8 @@ void pickValidName(char *buf,const char *name,const char *base,SHash *H);
 
 void logError(int code,const char *fname,int lnum,const char *s,...);
 
-void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs);
-void GCellSpec_writeEndModule(FILE *f,GCellSpec *gcs);
+void GCellSpec_writeBeginModule(GCellSpec *gcs, FILE *f);
+void GCellSpec_writeEndModule(GCellSpec *gcs, FILE *f);
 
 unsigned transition_type(int from,int to);
 

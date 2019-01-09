@@ -602,8 +602,10 @@ void setLanguage(const char *lang)
 void parse_options(int argc,const char *argv[])
 {
   int c;
+  /*
   extern char *optarg;
   extern int optind;
+  */
 #if OPTRESET
   extern int optreset;
 #endif

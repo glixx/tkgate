@@ -27,7 +27,6 @@
 extern int sync_Xserver;
 extern int did_interface_resize;
 
-
 /*
  * This is a kludge to prevent a problem that can occur when a hyperlink leads
  * to a file that has a hyperlink in the same location such as the <PREVIOUS
@@ -49,9 +48,7 @@ int gat_scope(ClientData d,Tcl_Interp *tcl,int argc,const char *argv[]);
  *****************************************************************************/
 TkGateParams TkGate;
 
-
 static int did_doubleclick = 0;	/* Did we just do a double click */
-
 
 static Tk_ConfigSpec configSpecs[] = {
   {TK_CONFIG_COLOR, "-background", "background", "Background",     		"white", Tk_Offset(TkgGateWin,bgColor), 0, 0},
@@ -400,7 +397,6 @@ void initGCs()
   else
     TkGate.ktextXF = 0;
 
-
   TkGate.inst_pixel = Tkg_GetColor("blue");
   TkGate.ledoff_pixel = Tkg_GetColor("firebrick4");
   TkGate.ledon_pixel = Tkg_GetColor("red");
@@ -433,7 +429,6 @@ void initGCs()
   TkGate.scopeUnknownGC = Tkg_createGC(GXcopy,"red",TkGate.stextXF[1]);
   TkGate.scopeClearGC   = Tkg_createGC(GXcopy,"white",TkGate.stextXF[1]);
 
-
   XSetLineAttributes(TkGate.D,TkGate.busGC,2,LineSolid,CapButt,JoinMiter);
   XSetLineAttributes(TkGate.D,TkGate.selBusGC,3,LineSolid,CapButt,JoinMiter);
   XSetLineAttributes(TkGate.D,TkGate.selWireGC,2,LineSolid,CapButt,JoinMiter);
@@ -453,7 +448,6 @@ void initGCs()
   TkGate.bitGC = XCreateGC(TkGate.D,bitPM,mask,&values);
   XFreePixmap(TkGate.D,bitPM);
 }
-
 
 /*****************************************************************************
  *

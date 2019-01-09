@@ -74,7 +74,7 @@ Pixmap Pixmap_register(char *name,unsigned char data[],unsigned w,unsigned h)
     return None;
 
   P = (Pixmap*) malloc(sizeof(Pixmap));
-  *P = XCreatePixmapFromBitmapData(TkGate.D,TkGate.root,data,w,h,1,0,1);
+  *P = XCreatePixmapFromBitmapData(TkGate.D,TkGate.root,(char*)data,w,h,1,0,1);
   SHash_insert(icon_pixmaps,name,P);
   Pixmap_initZoomSet(*P,w,h);
 

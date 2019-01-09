@@ -1143,7 +1143,7 @@ int editstate_getInterfaceMode()
  *****************************************************************************/
 EditState *EditState_moveToError(int n,EditState *es)
 {
-  GError *E;
+  GateError *E;
 
   if (!TkGate.errl->errors) {
     message(0,msgLookup("err.misserr"));

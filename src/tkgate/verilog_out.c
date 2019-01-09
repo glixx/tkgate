@@ -15,18 +15,20 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
 #include <assert.h>
+#include <pwd.h>
+
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <pwd.h>
+
 #include "tkgate.h"
 
 static SHash *cellsUsed;	/* Table of all built-in cells used */
-
 
 /*
  * Return a string representing a port type from a gate type code.  If the gate is
@@ -194,7 +196,7 @@ int VerilogBasicGateParmList(FILE *f,GCElement *g)
       if (w->net->n_signame)
 	fprintf(f,"(%s%s)",inv,w->net->n_signame);
       else
-	fprintf(f,"(%sw%lx)",inv,(uintptr_t)w->net);
+	fprintf(f,"(%sw%p)", inv, w->net);
     }
   }
   fprintf(f,");");
@@ -340,7 +342,7 @@ static void VerilogSaveOneNet(FILE *f,GNet *n)
   if (n->n_signame)
     fprintf(f,"%s;    ",n->n_signame);
   else
-    fprintf(f,"w%lx;    ",(uintptr_t)n);
+    fprintf(f,"w%p;    ", n);
 
   fprintf(f,"//:");
   if (!n->n_show_name)
@@ -472,13 +474,13 @@ static void VerilogSaveModSymbol(FILE *f,GModSymbol *ms)
   if (!ms) return;
 
   fprintf(f,"\n");
-  fprintf(f,"//: /symbolBegin: %lu\n",(uintptr_t)ms);
+  fprintf(f,"//: /symbolBegin: %p\n", ms);
 
   /*
    * Generate the normal icon data
    */
   data = GModSymbol_getNormalIcon(ms,&x,&y);
-  fprintf(f,"//: /iconBegin normal %d %d %d\n",
+  fprintf(f,"//: /iconBegin normal %lu %d %d\n",
 	  strlen(data),x,y);
   p = data;
   while (copyline(buf,STRMAX,&p) >= 0) {
@@ -490,7 +492,7 @@ static void VerilogSaveModSymbol(FILE *f,GModSymbol *ms)
    * Generate the select icon data
    */
   data = GModSymbol_getSelectIcon(ms,&x,&y);
-  fprintf(f,"//: /iconBegin select %d %d %d\n",
+  fprintf(f,"//: /iconBegin select %lu %d %d\n",
 	  strlen(data),x,y);
   p = data;
   while (copyline(buf,STRMAX,&p) >= 0) {
@@ -531,7 +533,7 @@ static void VerilogSaveModInterface(FILE *f,GModuleDef *M)
   if (!g) return;
 
   if (GCElement_getType(g) == GC_SYMBLOCK) {
-    fprintf(f,"//: /symbol:%lu\n",(uintptr_t)g->u.block.symbol);
+    fprintf(f,"//: /symbol:%p\n", g->u.block.symbol);
   }
 
   gi = g->typeinfo;
@@ -938,8 +940,8 @@ int isWritable(const char *name)
 {
   char dirName[STRMAX],*p;
   struct stat sb;
-  int gid = getgid();
-  int uid = getuid();
+  gid_t gid = getgid();
+  uid_t uid = getuid();
 
   /*
    * If the file exists, look at its permissions
@@ -1099,7 +1101,7 @@ int VerilogSave(const char *name)
   }
 }
 
-void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs)
+void GCellSpec_writeBeginModule(GCellSpec *gcs, FILE *f)
 {
   GGateInfo *gi = gcs->gc_info;
   int N = gi->NumPads;
@@ -1167,8 +1169,10 @@ void GCellSpec_writePortDecls(FILE *f,GCellSpec *gcs)
   }
 }
 
-void GCellSpec_writeEndModule(FILE *f,GCellSpec *gcs)
+void GCellSpec_writeEndModule(GCellSpec *self, FILE *f)
 {
+  GATE_UNUSED(self);
+	
   fprintf(f,"\n");
   fprintf(f,"endmodule\n");
   fprintf(f,"//: /builtinEnd\n\n");

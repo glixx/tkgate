@@ -15,17 +15,25 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ****************************************************************************/
+
 #ifndef __html_h
 #define __html_h
 
 /*
  * HTML unit types
  */
-#define HU_TEXT		0			/* Text string */
-#define HU_RULE		1			/* Horizontal rule */
-#define HU_BREAK	2			/* Line break */
-#define HU_NEWLINE	3			/* New line */
-#define HU_IMAGE	4			/* In-line image */
+typedef enum _hutype_t {
+	HU_TEXT = 0,
+#define HU_TEXT		HU_TEXT		/* Text string */
+	HU_RULE = 1,
+#define HU_RULE		HU_RULE		/* Horizontal rule */
+	HU_BREAK = 2,
+#define HU_BREAK	HU_BREAK	/* Line break */
+	HU_NEWLINE = 3,
+#define HU_NEWLINE	HU_NEWLINE	/* New line */
+	HU_IMAGE = 4
+#define HU_IMAGE	HU_IMAGE	/* In-line image */
+} hutype_t;
 
 /*
  * Types of html elements
@@ -103,7 +111,7 @@ struct HtmlContext_str {
  *
  */
 struct HtmlUnit_str {
-  int			hu_type;		/* Type of unit */
+  hutype_t		hu_type;		/* Type of unit */
   char			*hu_text;		/* Text in the unit */
   int			hu_x,hu_y;		/* Position of unit (relative to block origin) */
   HtmlContext		*hu_context;		/* Context of the unit */

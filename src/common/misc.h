@@ -24,7 +24,13 @@
 
 __BEGIN_DECLS
 
+/**
+ * @brief Convinience macro for frequent call (T*) malloc(sizeof (T))
+ * @param T datatype to allocate an instance of
+ */
 #define MALLOC(T)	((T*) malloc(sizeof (T)))
+
+#define GATE_UNUSED(p) (void)p
 
 /*
  * Functions that we may need to provide ourself if they are not available

@@ -305,7 +305,7 @@ static void GPrint_outputTrace(GPrint *P,GTrace *T,int y,int pg_tstart)
   simtime_t tend = imin(pg_tstart + P->p_trace.ti_scaleLength,P->p_trace.ti_end);
   simtime_t tstart = imax(pg_tstart,P->p_trace.ti_start);
   char buf[STRMAX];
-  GValue *pV,*V;
+  GateValue *pV,*V;
   const char *name;
 
   name = strchr(T->t_name,'.');
