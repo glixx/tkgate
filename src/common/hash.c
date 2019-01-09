@@ -48,9 +48,21 @@ typedef struct hash_vtable_str {
 /*
  * Standard function replacements for object memory handling.
  */
-static void *h_malloc(int size,char *name) { return malloc(size); }
-static void *h_calloc(int n,int size,char *name) { return calloc(n,size);}
-static void nop_touch(void *p) {}
+static void *h_malloc(int size,char *name)
+{
+  GATE_UNUSED(name);
+  return malloc(size);
+}
+
+static void *h_calloc(int n,int size,char *name)
+{
+  GATE_UNUSED(name);
+  return calloc(n,size);
+}
+static void nop_touch(void *p)
+{
+  GATE_UNUSED(p);
+}
 
 #define HT_MALLOC(H,size,name)   (*((HashVTable*)H->vtable)->hv_malloc)(size,name)
 #define HT_CALLOC(H,n,size,name) (*((HashVTable*)H->vtable)->hv_calloc)(n,size,name)
