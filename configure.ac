@@ -3,9 +3,9 @@ dnl	This file is an input file used by the GNU "autoconf" program to
 dnl	generate the file "configure", which is run during TkGate installation
 dnl	to configure the system for the local environment.
 
-AC_INIT([tkgate],[2.1],[starling13@gmail.com],[tkgate],[https://bitbucket.org/starling13/tkgate/])
+AC_INIT([tkgate],[2.1.1],[starling13@gmail.com],[tkgate],[https://bitbucket.org/starling13/tkgate/])
 AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE([-Wall -Werror foreign std-options])
+AM_INIT_AUTOMAKE([-Wall foreign std-options])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 AC_PREREQ(2.69)
@@ -152,7 +152,7 @@ AC_FUNC_ALLOCA
 AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS([limits.h malloc.h stdlib.h string.h sys/param.h sys/time.h unistd.h stdint.h])
-PKG_CHECK_MODULES(PANGO_XFT, pangoxft)
+#PKG_CHECK_MODULES(PANGO_XFT, pangoxft)
 TKG_CHECK_ICONV_H
 
 AC_SEARCH_LIBS([log], [m])

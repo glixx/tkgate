@@ -27,7 +27,6 @@
 
 static void Mux_WriteCellDef(FILE *f,GCellSpec *gcs);
 
-
 /*
  * Some of these are shared by the Demux element.  These have a MuxDemux_ prefix.
  */

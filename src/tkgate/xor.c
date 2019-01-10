@@ -67,11 +67,14 @@ static char *psXOr[] = {
 };
 
 GGateInfo gate_xor_info = {
-  0,
-  "XOR",
-  "xor:xnor",0x2,
-  "psxor",psXOr,
-  0,0,
+  0,         /* code */
+  "XOR",     /* name */
+  "xor:xnor",/* vnames */ 
+  0x2,       /* vmask */
+  "psxor",   /* psprint */
+  psXOr,     /* psdef */
+  0,         /* gi_multiPad */
+  0,         /* gi_bitPad */
 
   {{"x",	{"gm.gate",0},		{"gm.gate.xor",0,0,300},	"gat_make XOR"},
    {"X",	{"gm.gate",0},		{"gm.gate.xnor",0,0,301},	"gat_make XOR -invert Z"},
@@ -83,9 +86,9 @@ GGateInfo gate_xor_info = {
 
   2,{{"I",IN,1,2,and_in_loc,1},{"Z",OUT,1,1,and_out_loc,0}},
   {{0,-12,CT},{12,0,LJ},{0,-12,CT},{12,0,LJ}},
-  {1},
+  {1, 0, 0, 0, 0, 0}, /* flags */
 
-  {"Diz",0},
+  {"Diz", NULL},   /* delayNames */
 
   AOX_Make,
   AOX_WriteCellDef,
@@ -107,7 +110,13 @@ GGateInfo gate_xor_info = {
   AOX_PSWrite,
   AOX_EditProps,
   AOX_VerSave,
-  AOX_SetProp
+  AOX_SetProp,
+  NULL,  /* VersionDelta */
+  NULL,  /* WireSnap */
+  { NULL, },  /* icon */
+  NULL,  /* delay_defs */
+  0,     /* num_delays */
+  { NULL }  /* altIcon */
 };
 
 void init_xor()

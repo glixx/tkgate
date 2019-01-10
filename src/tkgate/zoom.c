@@ -52,9 +52,9 @@ void ZFillRectangle(Display *D, Drawable d,GC gc,int x,int y,unsigned width,unsi
   XFillRectangle(D,d,gc,Z*x,Z*y,Z*width,Z*height);
 }
 
-void ZDrawString(GatePainter *painter,GC gc,int x,int y,char *string,int length)
+void ZDrawString(Display *D,Drawable d,GC gc,int x,int y,char *string,int length)
 {
-	GatePainter_drawString(painter, gc,Z*x,Z*y,string,length);
+  XDrawString(D,d,gc,Z*x,Z*y,string,length);
 }
 
 void ZDrawString16(Display *D,Drawable d,GC gc,int x,int y,XChar2b *string,int length)

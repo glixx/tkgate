@@ -461,7 +461,6 @@ int gat_scope(ClientData data, Tcl_Interp *tcl, int argc, const char *argv[])
 
   Scope = sw;
   TkGate.ScopeW = Tk_WindowId(sw->win);
-  GatePainter_setDrawable(TkGate.painterScopeW, Tk_WindowId(sw->win));
 
   Tk_CreateEventHandler(w, ExposureMask|StructureNotifyMask, scopeWinEvent, sw);
   Tcl_CreateCommand(tcl, Tk_PathName(w), scopeWinCommand, sw, scopeWinDestroy);

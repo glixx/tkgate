@@ -114,7 +114,7 @@ void Html_invoke_browser(char *protocol,char * file)
     unused = fopen("/dev/null","r");
     unused = fopen("/dev/null","w");
     unused = fopen("/dev/null","w");
-    (void)unused;
+    GATE_UNUSED(unused);
     sysret = system(command);
     exit(sysret);
   }
@@ -149,7 +149,7 @@ void Html_invoke_email(char *protocol,char * file)
     unused = fopen("/dev/null","r");
     unused = fopen("/dev/null","w");
     unused = fopen("/dev/null","w");
-    (void)unused;
+    GATE_UNUSED(unused);
     sysret = system(command);
     exit(sysret);
   }

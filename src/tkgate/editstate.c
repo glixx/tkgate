@@ -549,7 +549,7 @@ EditState *new_EditState()
 {
   EditState *es;
 
-  es = (EditState*) ob_malloc(sizeof(EditState),"EditState");
+  es = OM_MALLOC(EditState);
 
   editstate_Init(es);
 
@@ -587,8 +587,7 @@ void editstate_update(EditState *es)
     XSetClipRectangles(TkGate.D,TkGate.moduleGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.modportGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.frameGC,0,0,&cr,1,YXSorted);
-    XSetClipRectangles(TkGate.D,GatePainterContext_gc(TkGate.commentContext),
-	0,0,&cr,1,YXSorted);
+    XSetClipRectangles(TkGate.D,TkGate.commentGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.hyperlinkGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.wireGC,0,0,&cr,1,YXSorted);
     XSetClipRectangles(TkGate.D,TkGate.busGC,0,0,&cr,1,YXSorted);
@@ -634,7 +633,7 @@ void editstate_update(EditState *es)
     XSetClipMask(TkGate.D,TkGate.moduleGC,None);
     XSetClipMask(TkGate.D,TkGate.modportGC,None);
     XSetClipMask(TkGate.D,TkGate.frameGC,None);
-    XSetClipMask(TkGate.D,GatePainterContext_gc(TkGate.commentContext),None);
+    XSetClipMask(TkGate.D,TkGate.commentGC,None);
     XSetClipMask(TkGate.D,TkGate.hyperlinkGC,None);
     XSetClipMask(TkGate.D,TkGate.wireGC,None);
     XSetClipMask(TkGate.D,TkGate.busGC,None);

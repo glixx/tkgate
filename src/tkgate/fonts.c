@@ -110,12 +110,12 @@ void getFontName(char *fullName,fontfamily_t ff,fontprop_t fp,fontsize_t fs,int 
   }
 }
 
-XFontStruct *GetXFont(GateFont font,int zoom)
+XFontStruct *GetXFont(fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom)
 {
   char fontName[STRMAX];
   XFontStruct *xfs;
 
-  getFontName(fontName,font.family,font.prop,font.size,zoom);
+  getFontName(fontName,ff,fp,fs,zoom);
 
   xfs = XLoadQueryFont(TkGate.D,fontName);
   if (!xfs) xfs = XLoadQueryFont(TkGate.D,"fixed");
@@ -127,11 +127,9 @@ XFontStruct *GetXFont(GateFont font,int zoom)
 XFontStruct **GetXFonts(fontfamily_t ff,fontprop_t fp,fontsize_t fs)
 {
   int z;
-  
-  GateFont	font = { .family = ff, .prop = fp, .size = fs };
 
   for (z = 1;z <= ZOOM_MAX;z++) {
-    xfonts[ff][fp][fs][z] = GetXFont(font,z);
+    xfonts[ff][fp][fs][z] = GetXFont(ff,fp,fs,z);
   }
 
   return xfonts[ff][fp][fs];

@@ -467,7 +467,6 @@ void led_PSdrawname(GPrint *P,GCElement *g,char *ename,int ax,int ay,int w,int h
 {
   int x,y;
   HtmlFont font[1];
-  GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
   if (g->selected)
     XSetFont(TkGate.D,TkGate.instGC,TkGate.textbXF[TkGate.circuit->zoom_factor]->fid);
@@ -484,7 +483,7 @@ void led_PSdrawname(GPrint *P,GCElement *g,char *ename,int ax,int ay,int w,int h
   } else
     y = ay-5;
 
-  PSDrawText(P,HtmlFont_init(font,gateFont,8),
+  PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),
 	     x,y,ename,BetweenLeftAndRight|AtBaseline);
 }
 
@@ -737,7 +736,6 @@ void Led_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
   int n;
   int x,y,x2,y2,w,h;
   HtmlFont font[1];
-  GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
   Led_GetExtents(g,TD_PRINT,&x,&y,&x2,&y2,0);
   w = x2-x;
@@ -768,13 +766,13 @@ void Led_PSWrite(GPrint *P,GModLayout *L,GCElement *g)
 
   switch (g->u.led.ltype) {
   case LT_HEX :
-    PSDrawText(P,HtmlFont_init(font,gateFont,8),x+w/2+3,y+30,"16",AtLeft|AtTop);
+    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x+w/2+3,y+30,"16",AtLeft|AtTop);
     break;
   case LT_SEG :
-    PSDrawText(P,HtmlFont_init(font,gateFont,8),x+w/2+3,y+30,"D",AtLeft|AtTop);
+    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x+w/2+3,y+30,"D",AtLeft|AtTop);
     break;
   case LT_DEC :
-    PSDrawText(P,HtmlFont_init(font,gateFont,8),x+w/2+3,y+30,"10",AtLeft|AtTop);
+    PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),x+w/2+3,y+30,"10",AtLeft|AtTop);
     break;
   }
 }

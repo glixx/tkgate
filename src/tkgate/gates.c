@@ -1293,7 +1293,7 @@ void GetPinIOMark(GWire *w,int d,int iod,int atype,int *x,int *y,Icon **arrow)
     dx = 8;
     dy = 5;
     break;
-  //case IODT_BOXED :
+  /*case IODT_BOXED : */
   default:
     *arrow = boxmark[d][iod];
     dx = 12;

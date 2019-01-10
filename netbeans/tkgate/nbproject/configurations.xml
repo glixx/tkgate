@@ -39,8 +39,6 @@
       <itemPath>../../src/tkgate/frame.c</itemPath>
       <itemPath>../../src/tkgate/functions.c</itemPath>
       <itemPath>../../src/tkgate/functions.h</itemPath>
-      <itemPath>../../src/tkgate/gate_painter.c</itemPath>
-      <itemPath>../../src/tkgate/gate_painter.h</itemPath>
       <itemPath>../../src/tkgate/gates.c</itemPath>
       <itemPath>../../src/tkgate/gates.h</itemPath>
       <itemPath>../../src/tkgate/generic.c</itemPath>
@@ -270,10 +268,6 @@
       <item path="../../src/tkgate/functions.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="../../src/tkgate/functions.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../src/tkgate/gates.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -561,10 +555,6 @@
       <item path="../../src/tkgate/functions.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="../../src/tkgate/functions.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="../../src/tkgate/gate_painter.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../src/tkgate/gates.c" ex="false" tool="0" flavor2="0">
       </item>

@@ -346,8 +346,7 @@ void setGCcolors()
   Tkg_setColor(TkGate.moduleGC,		GXxor, Tcl_GetVar(TkGate.tcl,"tkg_moduleColor",TCL_GLOBAL_ONLY));
   Tkg_setColor(TkGate.modportGC,		GXxor, Tcl_GetVar(TkGate.tcl,"tkg_modulePortColor",TCL_GLOBAL_ONLY));
   Tkg_setColor(TkGate.frameGC,		GXxor, Tcl_GetVar(TkGate.tcl,"tkg_frameColor",TCL_GLOBAL_ONLY));
-  Tkg_setColor(GatePainterContext_gc(TkGate.commentContext),
-      GXxor, Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
+  Tkg_setColor(TkGate.commentGC,		GXxor, Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
   Tkg_setColor(TkGate.imageGC,		GXcopy, Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
   Tkg_setColor(TkGate.hyperlinkGC,	GXxor, Tcl_GetVar(TkGate.tcl,"tkg_hyperlinkColor",TCL_GLOBAL_ONLY));
   Tkg_setColor(TkGate.wireGC,		GXxor, Tcl_GetVar(TkGate.tcl,"tkg_wireColor",TCL_GLOBAL_ONLY));
@@ -370,6 +369,9 @@ void setGCcolors()
   TkGate.ledoff_pixel     = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_offLedColor",TCL_GLOBAL_ONLY));
   TkGate.ledon_pixel      = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_onLedColor",TCL_GLOBAL_ONLY));
   TkGate.ledunknown_pixel = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_zLedColor",TCL_GLOBAL_ONLY));
+
+  TkGate.comment_pixel = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
+  TkGate.hyperlink_pixel = Tkg_GetColor(Tcl_GetVar(TkGate.tcl,"tkg_hyperlinkColor",TCL_GLOBAL_ONLY));
 }
 
 /*****************************************************************************
@@ -404,6 +406,7 @@ void initGCs()
   TkGate.moduleGC     = Tkg_createGC(GXxor,"magenta4",TkGate.textXF[1]);
   TkGate.modportGC    = Tkg_createGC(GXxor,"cyan4",TkGate.textXF[1]);
   TkGate.frameGC      = Tkg_createGC(GXxor,"tan4",TkGate.textXF[1]);
+  TkGate.commentGC    = Tkg_createGC(GXxor,"tan4",TkGate.textXF[1]);
   TkGate.imageGC      = Tkg_createGC(GXcopy,"tan4",TkGate.textXF[1]);
   TkGate.hyperlinkGC  = Tkg_createGC(GXxor,"tan4",TkGate.textXF[1]);
   TkGate.wireGC       = Tkg_createGC(GXxor,"green4",TkGate.stextXF[1]);
@@ -458,20 +461,6 @@ static void initGateParms(TkgGateWin *gw,TkGateParams *P)
   Tk_MakeWindowExist(gw->win);
 
   P->W = Tk_WindowId(gw->win);
-  
-  P->painterW = (GatePainter*)new_GatePainterXlib();
-  GatePainter_init(P->painterW, P->D, P->W); /* Initializing editing window painter */
-  P->commentContext = GatePainter_createContext(P->painterW);
-  *GatePainterContext_gcRef(TkGate.commentContext) =
-      Tkg_createGC(GXxor,"tan4",TkGate.textXF[1]);
-  
-  P->comment_color = GatePainter_getColor(P->painterW,
-      Tcl_GetVar(TkGate.tcl,"tkg_commentColor",TCL_GLOBAL_ONLY));
-  P->hyperlink_color = GatePainter_getColor(P->painterW,
-      Tcl_GetVar(TkGate.tcl,"tkg_hyperlinkColor",TCL_GLOBAL_ONLY));
-  
-  P->painterScopeW = (GatePainter*)new_GatePainterXlib();
-  GatePainter_init(P->painterScopeW, P->D, None); /* Initializing scope window painter */
 
   P->circuit->es = new_EditState();
   TkGate.circuit->no_set_modify = 1;

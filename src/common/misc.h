@@ -20,10 +20,17 @@
 
 #include <stdio.h>
 #include "config.h"
+#include <sys/cdefs.h>
 
 __BEGIN_DECLS
 
+/**
+ * @brief Convinience macro for frequent call (T*) malloc(sizeof (T))
+ * @param T datatype to allocate an instance of
+ */
 #define MALLOC(T)	((T*) malloc(sizeof (T)))
+
+#define GATE_UNUSED(p) (void)p
 
 /*
  * Functions that we may need to provide ourself if they are not available
@@ -36,7 +43,7 @@ int strcasecmp(const char *s1,const char *s2);
 int strncasecmp(const char *s1,const char *s2,size_t n);
 #endif
 #if !HAVE_STRCASESTR
-char *strcasestr(const char *big,const char *little);
+const char *strcasestr(const char *big,const char *little);
 #endif
 #if !HAVE_STRSPN
 size_t strspn(const char *s,const char *charset);
@@ -133,4 +140,4 @@ typedef enum boolean_en {
 
 __END_DECLS
 
-#endif
+#endif /* __misc_h */
