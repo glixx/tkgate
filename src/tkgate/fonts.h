@@ -78,4 +78,4 @@ int getKanjiFontSize(int fs);
 int getFontSize(int fs);
 const char *getFontFamilyName(fontfamily_t ff);
 
-#endif
+#endif /* __tkgate_fonts_h */

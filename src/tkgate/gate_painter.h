@@ -25,6 +25,9 @@
 
 #include <X11/Xft/Xft.h>
 
+/**
+ * @brief Color description
+ */
 struct _GateColor {
 	XColor		xColor;
 	XftColor	xftColor;
@@ -57,14 +60,15 @@ typedef struct _GatePainterContext GatePainterContext;
 /**
  * @brief initialize painter object
  * 
+ * @param self object
  * @param display X display to use
  * @param draw drawable object to paint on
  */
-void GatePainter_init(GatePainter*, Display *display, Drawable draw);
+void GatePainter_init(GatePainter*, Display*, Drawable);
 
 /**
  * @brief destroy painter object and free resources
- * @param 
+ * @param self object
  */
 void GatePainter_destroy(GatePainter*);
 
@@ -77,7 +81,14 @@ void GatePainter_destroy(GatePainter*);
  * @param str string characters
  * @param len length of the string
  */
-void GatePainter_drawString_new(GatePainter*, GatePainterContext*, int, int, const char*, int);
+void GatePainter_drawString_new(
+  GatePainter*,
+  GatePainterContext*,
+  int,
+  int,
+  const char*,
+  int);
+
 void GatePainter_drawString(GatePainter*, GC, int, int, const char*, int);
 
 GatePainterContext * GatePainter_createContext(GatePainter*);
