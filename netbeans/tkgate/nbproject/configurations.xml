@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="95">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="tkgate" displayName="tkgate" projectFiles="true">
       <itemPath>../../src/tkgate/adder.c</itemPath>
@@ -165,8 +165,8 @@
         <cTool>
           <incDir>
             <pElem>../..</pElem>
-            <pElem>/usr/include/tcl</pElem>
             <pElem>../../src/common</pElem>
+            <pElem>/usr/include/tcl8.6</pElem>
           </incDir>
           <commandLine>`pkg-config --cflags pangoxft`</commandLine>
           <preprocessorList>
@@ -184,9 +184,9 @@
                             AC="true"
                             BL="true"
                             WD="../common"
-                            BC="${MAKE}  -f Makefile CONF=Debug"
-                            CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="../build/${CND_CONF}/libcommon.a">
+                            BC="${MAKE} -j4 -f Makefile CONF=Debug"
+                            CC="${MAKE} -j4 -f Makefile CONF=Debug clean"
+                            OP="build/${CND_CONF}/libcommon.a">
               </makeArtifact>
             </linkerLibProjectItem>
             <linkerLibLibItem>X11</linkerLibLibItem>
