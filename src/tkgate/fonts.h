@@ -58,19 +58,7 @@ typedef enum _FontSize_t {
 #define FS_MAX		FS_MAX
 } fontsize_t;
 
-typedef struct _GateFont {
-	fontfamily_t	family;
-	fontprop_t	prop;
-	fontsize_t	size;
-} GateFont;
-
-typedef struct _GateFontMetrics {
-	int	ascent;
-	int	descent;
-} GateFontMetrics;
-
-XFontStruct *_GetXFont(fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
-XFontStruct *GetXFont(GateFont,int zoom);
+XFontStruct *GetXFont(fontfamily_t ff,fontprop_t fp,fontsize_t fs,int zoom);
 XFontStruct **GetXFonts(fontfamily_t,fontprop_t,fontsize_t);
 void UnloadAllFonts();
 

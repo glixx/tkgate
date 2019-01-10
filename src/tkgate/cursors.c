@@ -151,7 +151,7 @@ int mouseoverState = CANCELMOUSEOVER;
 
 void Cursor_register(int id,Cursor C)
 {
-  Cursor *pC = (Cursor*)ob_malloc(sizeof(Cursor),"Cursor");
+  Cursor *pC = OM_MALLOC(Cursor);
   *pC = C;
   NHash_insert(GateCursors,id,pC);
 }

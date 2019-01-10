@@ -18,16 +18,16 @@
 #ifndef __primitives_h
 #define __primitives_h
 
-#define PARMSPEC_MAXPARMS	64	// Maximum number of parameters
+#define PARMSPEC_MAXPARMS	64	/* Maximum number of parameters */
 
 typedef struct Primitive_str {
-  const char	*p_name;		// Name of this primitive built-in cell
-  const char	*p_body;		// Full body of this primitive
-  const char	*p_end;			// End of full body of this primitive
-  const char	*p_nameStart;		// Pointer into body for start of module name
-  const char	*p_nameEnd;		// Pointer into body after end of module name
-  const char	*p_parmStart;		// Pointer into body for start of parameter list
-  const char	*p_parmEnd;		// Pointer into body for end of parameter list
+  const char	*p_name;		/* Name of this primitive built-in cell */
+  const char	*p_body;		/* Full body of this primitive */
+  const char	*p_end;			/* End of full body of this primitive */
+  const char	*p_nameStart;		/* Pointer into body for start of module name */
+  const char	*p_nameEnd;		/* Pointer into body after end of module name */
+  const char	*p_parmStart;		/* Pointer into body for start of parameter list */
+  const char	*p_parmEnd;		/* Pointer into body for end of parameter list */
 } Primitive;
 
 typedef struct PrimParmSpec_str {
@@ -40,8 +40,6 @@ typedef struct PrimParm_str {
   PrimParmSpec		pp_specs[PARMSPEC_MAXPARMS];
 } PrimParm;
 
-
-
 void Primitive_write(FILE *f,const char *name,GCellSpec *gcs,PrimParm *primParm);
 
 void PrimParm_init(PrimParm *primParm);
@@ -52,5 +50,4 @@ void PrimParm_invSet(PrimParm *primParm,const char *name,int isInv);
 void PrimParm_rangeSet(PrimParm *primParm,const char *name,int rangeMax);
 void PrimParm_intSet(PrimParm *primParm,const char *name,int n);
 
-#endif
-
+#endif /* __primitives_h */

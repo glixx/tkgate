@@ -2532,7 +2532,7 @@ static int gat_zoom(ClientData _d,Tcl_Interp *tcl,int argc,const char *argv[])
   XSetFont(TkGate.D, TkGate.moduleGC,		TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.modportGC,		TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.frameGC,		TkGate.textXF[zoom]->fid);
-  XSetFont(TkGate.D, GatePainterContext_gc(TkGate.commentContext),TkGate.textXF[zoom]->fid);
+  XSetFont(TkGate.D, TkGate.commentGC,		TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.hyperlinkGC,	TkGate.textXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.wireGC,		TkGate.stextXF[zoom]->fid);
   XSetFont(TkGate.D, TkGate.busGC,		TkGate.stextXF[zoom]->fid);

@@ -18,11 +18,7 @@
     Last edit by hansen on Mon Jan 19 18:18:37 2009
 ****************************************************************************/
 
-#ifdef __cplusplus
-#include <cstdlib>
-#else
 #include <stdlib.h>
-#endif
 
 #include "tkgate.h"
 #include "print.h"

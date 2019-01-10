@@ -502,3 +502,4 @@ void GrabbedLabel_set(GNet *net,int ox,int oy,int p)
   gl->oy = oy;
   gl->position = p;
 }
+

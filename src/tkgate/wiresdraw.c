@@ -69,6 +69,7 @@ static void tweekPoint(XPoint *p,XPoint *q)
  *****************************************************************************/
 void GWireNode_getLabelPos(GWireNode *n,GNet *net,int *x,int *y,int *p)
 {
+  GATE_UNUSED(net);
   //  n->showSide
   if (n->out) {
     if (n->y != n->out->y) {
@@ -206,6 +207,8 @@ void GWireNode_displaySize(GWireNode *n,GNet *net)
 */
 void wire_drawend(GWireNode *n,GWireNode *n2,int s,short *x,short *y)
 {
+  GATE_UNUSED(s);
+
   static int xval[] = {0,0,-1,1};
   static int yval[] = {-1,1,0,0};
   int d,inv;

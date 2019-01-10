@@ -125,7 +125,7 @@ int fontheight(XFontStruct *F)
     when in fact it may be whatever is set in the gc.  For now, since kanji
     is only allowed in comments and frames, this should not be a problem.
 */
-void GKDrawString(GatePainter *painter,GC gc,int x,int y,const char *ps,int l)
+void GKDrawString(Display *D,Window W,GC gc,int x,int y,const char *ps,int l)
 {
   if (TkGate.japaneseMode) {
     char buf[STRMAX];
@@ -139,13 +139,12 @@ void GKDrawString(GatePainter *painter,GC gc,int x,int y,const char *ps,int l)
       if ((s[0] & 0x80)) {		/* Kanji segment */
 	for (m = 0;m < l && (s[m] & 0x80);m++);
 	for (i = 0;i < m;i++) s[i] &= 0x7f;
-	/* TODO fixme */
-	//ZDrawString16(D,W,TkGate.kanjiGC,x,y,(XChar2b*)s,m/2);
+	ZDrawString16(D,W,TkGate.kanjiGC,x,y,(XChar2b*)s,m/2);
 	if (m != l) x += KANJIFONT_WIDTH*(m/2);
 	for (i = 0;i < m;i++) s[i] |= 0x80;
       } else {				/* non-Kanji segment */
 	for (m = 0;m < l && !(s[m] & 0x80);m++);
-	ZDrawString(painter,gc,x,y,s,m);
+	ZDrawString(D,W,gc,x,y,s,m);
 	if (m != l) x += XTextWidth(TkGate.textXF[TkGate.circuit->zoom_factor],s,m);
       }
 
@@ -156,7 +155,7 @@ void GKDrawString(GatePainter *painter,GC gc,int x,int y,const char *ps,int l)
     /*
      * If not handling Japanese, don't do any special processing.
      */
-    ZDrawString(painter,gc,x,y,(char*)ps,l);
+    ZDrawString(D,W,gc,x,y,(char*)ps,l);
   }
 }
 
@@ -199,7 +198,7 @@ int GKTextWidth(XFontStruct *F,const char *ps,int l)
   }
 }
 
-int PosDrawString(GatePainter *painter,XFontStruct *F,GC gc,int x,int y,const char *S,int p){
+int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p){
   int x_w,y_w;
 
   if (!F) F = TkGate.textXF[1];
@@ -210,13 +209,13 @@ int PosDrawString(GatePainter *painter,XFontStruct *F,GC gc,int x,int y,const ch
     y_w = fontheight(F);
 
     if (p & BetweenLeftAndRight) {
-      ZDrawLine(TkGate.D,GatePainter_drawable(painter),gc,x - x_w/2,y - 2*y_w/3,
+      ZDrawLine(TkGate.D,W,gc,x - x_w/2,y - 2*y_w/3,
 		x + x_w/2,y - 2*y_w/3);
     } else if (p & AtRight) {
-      ZDrawLine(TkGate.D,GatePainter_drawable(painter),gc,x - x_w,y - 2*y_w/3,
+      ZDrawLine(TkGate.D,W,gc,x - x_w,y - 2*y_w/3,
 		x,y - 2*y_w/3);
     } else if (p & AtLeft) {
-      ZDrawLine(TkGate.D,GatePainter_drawable(painter),gc,x,y - 2*y_w/3,
+      ZDrawLine(TkGate.D,W,gc,x,y - 2*y_w/3,
 		x + x_w,y - 2*y_w/3);
     }
   } else
@@ -235,19 +234,19 @@ int PosDrawString(GatePainter *painter,XFontStruct *F,GC gc,int x,int y,const ch
     y -= F->descent;
 
 
-  GKDrawString(painter,gc,x,y,S,strlen(S));
+  GKDrawString(TkGate.D,W,gc,x,y,S,strlen(S));
 
   return x_w + x;
 }
 
 int dce_DrawString(GC gc,int x,int y,int p,const char *s)
 {
-  return PosDrawString(TkGate.painterW,0,gc,ctow_x(x),ctow_y(y),s,p);
+  return PosDrawString(TkGate.W,0,gc,ctow_x(x),ctow_y(y),s,p);
 }
 
-int RelPosDrawString(GatePainter *painter,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
+int RelPosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p)
 {
-  int ex = PosDrawString(painter,F,gc,ctow_x(x),ctow_y(y),S,p);
+  int ex = PosDrawString(W,F,gc,ctow_x(x),ctow_y(y),S,p);
   return wtoc_x(ex);
 }
 
@@ -302,13 +301,13 @@ static SHash *iconv_translators = 0;
 Encoder *getEncoder(const char *toCode,const char *fromCode)
 {
   char key[STRMAX];
-  Encoder *encoder = 0;
+  Encoder *encoder = NULL;
 
   /*
    * If either encoding is null, return null encoder.
    */
-  if (strcmp(toCode,"null") == 0) return 0;
-  if (strcmp(fromCode,"null") == 0) return 0;
+  if (strcmp(toCode,"null") == 0) return NULL;
+  if (strcmp(fromCode,"null") == 0) return NULL;
 
   /*
    * Allocate a new translator table
@@ -327,7 +326,7 @@ Encoder *getEncoder(const char *toCode,const char *fromCode)
   /*
    * Try to create the translator, return 0 (and an error) if we could not.
    */
-  encoder = (Encoder*) malloc(sizeof(Encoder));
+  encoder = MALLOC(Encoder);
   encoder->fromCode = strdup(fromCode);
   encoder->toCode = strdup(toCode);
   encoder->ico = iconv_open(toCode,fromCode);

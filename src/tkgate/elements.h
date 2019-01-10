@@ -256,7 +256,7 @@ struct gateinfo {
   char		*vnames;				/* Verilog names */
   unsigned	vmask;					/* Verilog name mutating ports */
   const char	*psprint;				/* Postscript display function for gate */
-  char	**psdef;				/* Postscript definition for gate */
+  char	**psdef;					/* Postscript definition for gate */
 
   int		gi_multiPad;				/* Pad used to generate number of ports of gate */
   int		gi_bitPad;				/* Pad used to generate bit size of gate */

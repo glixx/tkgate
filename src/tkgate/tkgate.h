@@ -93,7 +93,6 @@
 #include "editstate.h"
 #include "circuit.h"
 #include "primitives.h"
-#include "gate_painter.h"
 
 #if TCL_MAJOR_VERSION != 8
 #error This program has not been tested with versions of tcl/tk other than 8.*
@@ -318,11 +317,6 @@ struct TkGateParams_str {
   XrmDatabase	rdb;		/* The resource database */
   int		bitorder;	/* Order of bits in image data */
   int           byteorder;      /* Order of bytes in image data */
-  
-  GatePainter	*painterW;	/* editing window painter */
-  GatePainterContext *commentContext;
-  
-  GatePainter	*painterScopeW;	/* scope window painter */
 
   TkgGateWin	*gw;		/* Tcl/Tk view of main window. */
 
@@ -338,7 +332,7 @@ struct TkGateParams_str {
   GC moduleGC;			/* GC for modules (variable font)  */
   GC modportGC;			/* GC for module ports  (variable font) */
   GC frameGC;			/* Dashed line GC for frames  (variable font) */
-  //GC commentGC;			/* GC for comments (variable font) */
+  GC commentGC;			/* GC for comments (variable font) */
   GC imageGC;			/* GC for images */
   GC hyperlinkGC;		/* GC for hyperlink comments (variable font) */
   GC wireGC;			/* GC for wire drawing */
@@ -366,8 +360,8 @@ struct TkGateParams_str {
   int ledoff_pixel;		/* Pixel value for off leds */
   int ledon_pixel;		/* Pixel value for on leds */
   int ledunknown_pixel;		/* Pixel value for led with unknown input */
-  GateColor comment_color;	/* Color for comment regular text */
-  GateColor hyperlink_color;	/* Color for hyperlinks */
+  int comment_pixel;		/* Pixel value for comments */
+  int hyperlink_pixel;		/* Pixel value for hyperlinks */
 
   IdleEv idle_ev;		/* Idle event flags */
   PopState popstate;		/* Popup menu state */
@@ -447,8 +441,8 @@ void pickValidName(char *buf,const char *name,const char *base,SHash *H);
 
 void logError(int code,const char *fname,int lnum,const char *s,...);
 
-void GCellSpec_writeBeginModule(FILE *f,GCellSpec *gcs);
-void GCellSpec_writeEndModule(FILE *f,GCellSpec *gcs);
+void GCellSpec_writeBeginModule(GCellSpec *gcs, FILE *f);
+void GCellSpec_writeEndModule(GCellSpec *gcs, FILE *f);
 
 unsigned transition_type(int from,int to);
 
@@ -524,9 +518,9 @@ void mk_gate(int x,int y,GGateInfo *gi,int rot,int selected);
 char *filterParen(char *buf,const char *s);
 
 int dce_DrawString(GC gc,int x,int y,int p,const char *s);
-int RelPosDrawString(GatePainter*,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
-int PosDrawString(GatePainter*,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
-void GKDrawString(GatePainter *,GC gc,int x,int y,const char *s,int l);
+int RelPosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
+int PosDrawString(Window W,XFontStruct *F,GC gc,int x,int y,const char *S,int p);
+void GKDrawString(Display *D,Window W,GC gc,int x,int y,const char *s,int l);
 int GKTextWidth(XFontStruct *F,const char *S,int l);
 void DrawTextCursor(Window W,int x,int y);
 

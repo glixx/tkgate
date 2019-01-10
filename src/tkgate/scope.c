@@ -264,14 +264,14 @@ void GTrace_drawTransValue(GTrace *T,GateValue *V,GScope *S,int y,
     char *s = V->v_dpyHexValue;
     gc = TkGate.scopeClearGC;
 
-    GatePainter_drawString(TkGate.painterScopeW, gc,x+2,y-ScopeLOW-3,s,strlen(s));
+    XDrawString(TkGate.D,TkGate.ScopeW,gc,x+2,y-ScopeLOW-3,s,strlen(s));
     ob_free(V->v_dpyHexValue);
     V->v_dpyHexValue = 0;
   }
 
   if (*new_dpy) {
     gc = GValue_getColor(V,T->t_nBits);
-    GatePainter_drawString(TkGate.painterScopeW, gc,x+2,y-ScopeLOW-3,new_dpy,strlen(new_dpy));
+    XDrawString(TkGate.D,TkGate.ScopeW,gc,x+2,y-ScopeLOW-3,new_dpy,strlen(new_dpy));
   }
   V->v_dpyHexValue = ob_strdup(new_dpy);
 }
@@ -652,7 +652,7 @@ void GTrace_draw(GTrace *T,GScope *S,int y,int doName)
     PosDrawString(TkGate.ScopeW,NULL,gc,10,y-ScopeTEXTPOS,
 		  T->t_visName,AtLeft);
 #endif
-    GatePainter_drawString(TkGate.painterScopeW, gc,10,y-ScopeTEXTPOS,
+    XDrawString(TkGate.D,TkGate.ScopeW,gc,10,y-ScopeTEXTPOS,
 		T->t_visName,strlen(T->t_visName));
     XSetFont(TkGate.D,gc,TkGate.stextXF[1]->fid);
   }
@@ -914,7 +914,7 @@ static void GScope_drawBaseTime(GScope *S,simtime_t base,int y)
     break;
   }
 
-  GatePainter_drawString(TkGate.painterScopeW,TkGate.scopeGridGC,
+  XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
 	      10,y,buf,strlen(buf));
 }
 
@@ -1011,7 +1011,7 @@ static void GScope_drawScale(GScope *S,int doTicks)
       sprintf(buf,format,tick);
 
       text_w = GKTextWidth(TkGate.textXF[1],buf,strlen(buf))/2;
-      GatePainter_drawString(TkGate.painterScopeW, TkGate.scopeGridGC,
+      XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
 		  ScopeLEFTMARGIN+(int)((T-S->s_leftTime)*UnitSize-text_w),
 		  y,buf,strlen(buf));
     }
@@ -1092,7 +1092,7 @@ void GScope_fullUpdate(GScope *S)
     ve = 1.0;
     hs = 0.0;
     he = 1.0;
-    GatePainter_drawString(TkGate.painterScopeW,TkGate.scopeGridGC,
+    XDrawString(TkGate.D,TkGate.ScopeW,TkGate.scopeGridGC,
 		20,H/2,buf,strlen(buf));
   }
 
@@ -1381,7 +1381,7 @@ GateValue *new_Value(simtime_t CurTime,int Code,const char *value,GateValue *Pre
 {
   GateValue *V;
 
-  V = (GateValue *) ob_malloc(sizeof(GateValue),"GValue");
+  V = OM_MALLOC(GateValue);
   V->v_time = CurTime;
   V->v_code = Code;
   if (value) {

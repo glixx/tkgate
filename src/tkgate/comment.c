@@ -213,7 +213,7 @@ void Comment_addLine(GCElement *g,const char *text)
 
 void Comment_prependLine(GCElement *g,const char *text)
 {
-  TextLine *L = (TextLine*) ob_malloc(sizeof(TextLine),"TextLine");
+  TextLine *L = OM_MALLOC(TextLine);
 
   L->text = ob_strdup(text);
   L->next = g->u.comment.first;
@@ -416,7 +416,7 @@ GCElement *Comment_Copy(GModuleDef *M,GCElement *g,int x,int y,unsigned flags)
 
 void Comment_Draw(GCElement *g,int md)
 {
-  GC gc = GatePainterContext_gc(TkGate.commentContext);
+  GC gc = TkGate.commentGC;
   int x,y;
 
   Comment_buildHtml(g);
@@ -498,7 +498,7 @@ int Comment_EditProps(GCElement *g,int isLoadDialog)
     }
     if (Comment_buildHtml(g)) {
       gate_delete(g,TkGate.circuit->es->env,1);
-      return -1;		// Indicate we deleted the gate
+      return -1;		/* Indicate we deleted the gate */
     }
    }
   return 0;

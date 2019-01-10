@@ -34,6 +34,6 @@ int Expr_eval(Expr *e,int *rval,EValueLookup *f,void *d);
 
 void delete_Expr(Expr *e);
 
-const extern char *expr_errsym;
+extern const char *expr_errsym;
 
 #endif

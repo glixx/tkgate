@@ -52,10 +52,12 @@ Special pre-processed tags:
 #include "tkgate.h"
 #include "print.h"
 
-//
-// Testing only
-//
-//#include <X11/Xatom.h>
+/*
+ * Testing only
+ *
+ *#include <X11/Xatom.h>
+ */
+
 
 /*
  * Step size for extending the array of html tag options.
@@ -247,8 +249,8 @@ HtmlSpecialSpec htmlSpecialSpecs[] = {
 #define DATA_STEP_SIZE			512
 
 static HtmlContext default_context = {
-  .hc_font = { .gateFont = {FF_HELVETICA, FP_ROMAN, FS_NORMAL} },
-  .hc_pixelColor.xColor.pixel = 0,
+  .hc_font = {FF_HELVETICA, FP_ROMAN, FS_NORMAL},
+  .hc_pixel = 0,
   .hc_link = 0,
   .hc_tag = 0,
   .hc_preformat = 1,
@@ -266,29 +268,31 @@ static Encoder *Html_getEncoder(Html *h)
 int HtmlFont_isEqual(const HtmlFont *a,const HtmlFont *b)
 {
   if (memcmp(a, b, sizeof(HtmlFont)) == 0)
-    return (1);
+    return 1;
   else
-    return (0);
+    return 0;
 }
 
 void HtmlFont_updatePoints(HtmlFont *font)
 {
-  if (font->gateFont.family == FF_KANJI)
-    font->points = getKanjiFontSize(font->gateFont.size);
+  if (font->family == FF_KANJI)
+    font->points = getKanjiFontSize(font->size);
   else
-    font->points = getFontSize(font->gateFont.size);
+    font->points = getFontSize(font->size);
 }
 
-HtmlFont *HtmlFont_init(HtmlFont *font,GateFont gateFont,fontsize_t points)
+
+HtmlFont *HtmlFont_init(HtmlFont *font,fontfamily_t family,fontprop_t props,fontsize_t points)
 {
   int i;
 
   ob_touch(font);
-  
-  memcpy(&font->gateFont, &gateFont, sizeof (GateFont));
+
+  font->family = family;
+  font->props = props;
   font->points = points;
 
-  if (gateFont.family != FF_KANJI) {
+  if (family != FF_KANJI) {
     for (i = 0;i < FS_MAX;i++)
       if (getFontSize(i) >= points) break;
   } else {
@@ -296,7 +300,7 @@ HtmlFont *HtmlFont_init(HtmlFont *font,GateFont gateFont,fontsize_t points)
       if (getKanjiFontSize(i) >= points) break;
   }
   if (i >= FS_MAX) i = FS_MAX - 1;
-  font->gateFont.size = i;
+  font->size = i;
 
   return font;
 }
@@ -305,9 +309,11 @@ HtmlTag *new_HtmlTag()
 {
   HtmlTag *ht = OM_MALLOC(HtmlTag);
 
-  memset(ht, 0, sizeof (HtmlTag));
+  ht->ht_name = 0;
+  ht->ht_numOptions = 0;
+  ht->ht_options = 0;
 
-  return (ht);
+  return ht;
 }
 
 void delete_HtmlTag(HtmlTag *ht)
@@ -399,8 +405,7 @@ static int HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
     if (hc->hc_is16bit)
       return XTextWidth16(hc->hc_xFont,(XChar2b*)text,len/2);
     else
-      return GatePainterContext_textWidth(TkGate.commentContext,
-	  hc->hc_font.gateFont, text, len);
+      return XTextWidth(hc->hc_xFont,text,len);
   case TD_PRINT :
     return PSStringWidth(&hc->hc_font,text,len);
   }
@@ -410,7 +415,7 @@ static int HtmlContext_stringWidth(HtmlContext *hc,const char *text,int len)
 void HtmlFont_print(HtmlFont *hf,FILE *f)
 {
   char name[STRMAX];
-  getFontName(name,hf->gateFont.family,hf->gateFont.prop,hf->gateFont.size,1);
+  getFontName(name,hf->family,hf->props,hf->size,1);
   fprintf(f,"%s",name);
 }
 
@@ -419,39 +424,36 @@ static void HtmlContext_activateFont(HtmlContext *hc)
   ob_touch(hc);
 
   switch (hc->hc_html->h_target) {
-  case TD_X11 : {
+  case TD_X11 :
 #ifdef DEBUG
     printf("%p: activate-x ",hc);HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
-    
-    hc->hc_xFont = GetXFont(hc->hc_font.gateFont, TkGate.circuit->zoom_factor);
-    hc->hc_is16bit = (hc->hc_font.gateFont.family == FF_KANJI);
+
+    hc->hc_xFont  = GetXFont(hc->hc_font.family, hc->hc_font.props, hc->hc_font.size, TkGate.circuit->zoom_factor);
+    hc->hc_is16bit = (hc->hc_font.family == FF_KANJI);
 
     if (hc->hc_is16bit)
       hc->hc_spaceWidth = XTextWidth16(hc->hc_xFont, (XChar2b*)"  ", 1);
     else
-      hc->hc_spaceWidth = GatePainterContext_textWidth(
-	  TkGate.commentContext, hc->hc_font.gateFont, " ", 1);
+      hc->hc_spaceWidth = XTextWidth(hc->hc_xFont, " ", 1);
 
-    hc->hc_fontMetrics = GatePainterContext_fontMetrics(
-      TkGate.commentContext, &hc->hc_font.gateFont);
-  }
+    hc->hc_ascent = hc->hc_xFont->ascent;
+    hc->hc_descent = hc->hc_xFont->descent;
     break;
   case TD_PRINT :
 #ifdef DEBUG
     printf("activate-ps ");HtmlFont_print(&hc->hc_font,stdout);printf("\n");
 #endif
     hc->hc_xFont = 0;
-    hc->hc_is16bit = (hc->hc_font.gateFont.family == FF_KANJI);
+    hc->hc_is16bit = (hc->hc_font.family == FF_KANJI);
 
     if (hc->hc_is16bit)
       hc->hc_spaceWidth = PSStringWidth(&hc->hc_font,"  ",2);
     else
       hc->hc_spaceWidth = PSStringWidth(&hc->hc_font," ",1);
 
-    hc->hc_fontMetrics.ascent = (int)(hc->hc_font.points*0.2);
-    hc->hc_fontMetrics.descent = (int)(hc->hc_font.points*1.2) -
-      hc->hc_fontMetrics.descent;
+    hc->hc_descent = (int)(hc->hc_font.points*0.2);
+    hc->hc_ascent = (int)(hc->hc_font.points*1.2) - hc->hc_descent;
     break;
   }
 }
@@ -459,12 +461,12 @@ static void HtmlContext_activateFont(HtmlContext *hc)
 static HtmlContext *new_HtmlContext(HtmlContext *base,Html *html)
 {
   HtmlContext *hc = OM_MALLOC(HtmlContext);
-  
+
   if (base)
     *hc = *base;
   else {
     *hc = default_context;
-    hc->hc_pixelColor = TkGate.comment_color;
+    hc->hc_pixel = TkGate.comment_pixel;
   }
 
   hc->hc_html = html;
@@ -850,7 +852,7 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   const char *gifFile = "blk_copy.gif";
   int i;
 
-  hc->hc_pixelColor = notAColor;
+  hc->hc_pixel = -1;
 
   ob_touch(hu);
 
@@ -863,8 +865,7 @@ void Html_handle_img(Html *h, HtmlTag *tag)
       gifFile = ob_strdup(buf);
     } else if (strcasecmp(tag->ht_options[i].hto_label, "bgcolor") == 0) {
       ob_touch(hc);
-      hc->hc_pixelColor = GatePainter_getColor(TkGate.painterW,
-	  tag->ht_options[i].hto_value);
+      hc->hc_pixel = Tkg_GetColor(tag->ht_options[i].hto_value);
     }
   }
 
@@ -883,8 +884,8 @@ void Html_handle_img(Html *h, HtmlTag *tag)
   hu->hu_text = 0;
   hu->hu_width = width;
 
-  hc->hc_fontMetrics.descent = h->h_context->hc_fontMetrics.descent;
-  hc->hc_fontMetrics.ascent = height - hc->hc_fontMetrics.descent;
+  hc->hc_descent = h->h_context->hc_descent;
+  hc->hc_ascent = height - hc->hc_descent;
 }
 
 /*****************************************************************************
@@ -944,22 +945,20 @@ void HtmlContext_handle_modifiers(HtmlContext *hc,HtmlTag *tag)
 
       for (j = 0;j < FF_MAX;j++)
 	if (strcasecmp(getFontFamilyName(j),value) == 0)
-	  hc->hc_font.gateFont.family = j;
+	  hc->hc_font.family = j;
     } else if (strcasecmp(label,"size") == 0) {
       /*
        * Scan font size.  We decrement the scanned size to convert from the
        * html specification to our internal size code.
        */
-      if (sscanf(value,"%d",(int*)&hc->hc_font.gateFont.size) == 1)
-	--hc->hc_font.gateFont.size;
+      if (sscanf(value,"%d",&hc->hc_font.size) == 1) hc->hc_font.size--;
       HtmlFont_updatePoints(&hc->hc_font);
     } else if (strcasecmp(label,"color") == 0) {
       ob_touch(hc);
-      if (hc->hc_html->h_target == TD_X11) {
-	hc->hc_pixelColor = GatePainter_getColor(TkGate.painterW, value);
-      }
+      if (hc->hc_html->h_target == TD_X11)
+	hc->hc_pixel = Tkg_GetColor(value);
       else
-	hc->hc_pixelColor = GatePainter_getColor(TkGate.painterW, "balack");
+	hc->hc_pixel = 0;
     }
   }
 }
@@ -976,22 +975,22 @@ void Html_handle_basic(Html *h, HtmlTag *tag)
 
   ob_touch(hc);
   if (strcasecmp(tag->ht_name,"b") == 0) {
-    hc->hc_font.gateFont.prop |= FP_BOLD;
+    hc->hc_font.props |= FP_BOLD;
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"i") == 0) {
-    hc->hc_font.gateFont.prop |= FP_ITALIC;
+    hc->hc_font.props |= FP_ITALIC;
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"tt") == 0) {
-    hc->hc_font.gateFont.family = FF_COURIER;
+    hc->hc_font.family = FF_COURIER;
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"big") == 0) {
-    if (hc->hc_font.gateFont.size + 1  < FS_MAX)
-      ++hc->hc_font.gateFont.size;
+    if (hc->hc_font.size + 1  < FS_MAX)
+      hc->hc_font.size++;
     HtmlFont_updatePoints(&hc->hc_font);
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"small") == 0) {
-    if (hc->hc_font.gateFont.size - 1  >= 0)
-      --hc->hc_font.gateFont.size;
+    if (hc->hc_font.size - 1  >= 0)
+      hc->hc_font.size--;
     HtmlFont_updatePoints(&hc->hc_font);
     HtmlContext_handle_modifiers(hc,tag);
   } else if (strcasecmp(tag->ht_name,"font") == 0) {
@@ -1015,14 +1014,14 @@ void Html_handle_heading(Html *h, HtmlTag *tag)
 
   ob_touch(hc);
 
-  hc->hc_font.gateFont.prop |= FP_BOLD;
+  hc->hc_font.props |= FP_BOLD;
 
   if (strcasecmp(tag->ht_name,"h1") == 0) {
-    hc->hc_font.gateFont.size = FS_XHUGE;
+    hc->hc_font.size = FS_XHUGE;
   } else if (strcasecmp(tag->ht_name,"h2") == 0) {
-    hc->hc_font.gateFont.size = FS_HUGE;
+    hc->hc_font.size = FS_HUGE;
   } else if (strcasecmp(tag->ht_name,"h3") == 0) {
-    hc->hc_font.gateFont.size = FS_LARGE;
+    hc->hc_font.size = FS_LARGE;
   }
 
   HtmlFont_updatePoints(&hc->hc_font);
@@ -1039,7 +1038,7 @@ void Html_handle_a(Html *h, HtmlTag *ht)
   int i;
 
   ob_touch(hc);
-  hc->hc_pixelColor = TkGate.hyperlink_color;
+  hc->hc_pixel = TkGate.hyperlink_pixel;
   HtmlContext_activateFont(hc);
 
   for (i = 0;i < ht->ht_numOptions;i++) {
@@ -1179,7 +1178,7 @@ void Html_partition(Html *h,char *data)
         if (!(*q & 0x80)) break;
 
       hc = new_HtmlContext(h->h_context,h);
-      hc->hc_font.gateFont.family = FF_KANJI;
+      hc->hc_font.family = FF_KANJI;
       HtmlFont_updatePoints(&hc->hc_font);
       HtmlContext_activateFont(hc);
       Html_pushContext(h,hc);
@@ -1336,16 +1335,13 @@ void Html_psPrint(Html *h,GPrint *P,int x,int y)
  *****************************************************************************/
 void Html_draw(Html *h,int x,int y)
 {
-  GC gc = GatePainterContext_gc(TkGate.commentContext);
+  GC gc = TkGate.commentGC;
   GC igc = TkGate.imageGC;
   HtmlUnit *hu;
   HtmlContext *last_hc = 0;
-  
-  GatePainterContext_print(TkGate.commentContext, stdout);
 
   x = ctow_x(x)*TkGate.circuit->zoom_factor;
   y = ctow_y(y)*TkGate.circuit->zoom_factor;
-
 #ifdef DEBUG
   Locale_print(h->h_locale, stdout);
 #endif
@@ -1361,34 +1357,34 @@ void Html_draw(Html *h,int x,int y)
        * Update properties only if there was a change.
        */
       if (hc != last_hc) {
-	GatePainterContext_setFont(TkGate.commentContext, hc->hc_font.gateFont);
+	    XSetFont(TkGate.D,gc,hc->hc_xFont->fid);
 
-	if (!GateColor_equals(&hc->hc_pixelColor, &notAColor)) {
-          Tkg_changeColor(gc, GXxor, hc->hc_pixelColor.xColor.pixel);
-	  GatePainterContext_setColor(TkGate.commentContext, hc->hc_pixelColor);
-	}
+	    if (hc->hc_pixel >= 0)
+          Tkg_changeColor(gc, GXxor, hc->hc_pixel);
         last_hc = hc;
       }
-      
-      if (hc->hc_font.gateFont.family == FF_KANJI) {
+
+      if (hc->hc_font.family == FF_KANJI) {
 	    XDrawString16( TkGate.D,
                        TkGate.W,
                        gc,
                        hu->hu_x + x,hu->hu_y + y,
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
-      }/* else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
-	      XCreateFontSet
-	      Xutf8DrawString(TkGate.D, TkGate.W,gc, XFontSet
+      } else if (strcmp(h->h_locale->l_encDisplay, "utf-8") == 0) {
+        XDrawString16( TkGate.D,
+                       TkGate.W,
+                       gc,
                        hu->hu_x + x,hu->hu_y + y,
                        (XChar2b*)hu->hu_text,
                        strlen(hu->hu_text)/2 );
-      } */else {
-	  GatePainter_drawString_new( TkGate.painterW,
-	                          TkGate.commentContext,
-	                          hu->hu_x + x, hu->hu_y + y,
-		                  hu->hu_text,
-		                  strlen(hu->hu_text) );
+      } else {
+	    XDrawString( TkGate.D,
+                     TkGate.W,
+                     gc,
+                     hu->hu_x + x,hu->hu_y + y,
+		             hu->hu_text,
+		             strlen(hu->hu_text) );
       }
 
       break;
@@ -1399,8 +1395,8 @@ void Html_draw(Html *h,int x,int y)
 	int base_x = hu->hu_x + x;
 	int base_y = hu->hu_y + y - HtmlContext_fontAscent(hc);
 
-	if (!GateColor_equals(&hc->hc_pixelColor, &notAColor)) {
-	  XSetForeground(TkGate.D,igc,hc->hc_pixelColor.xColor.pixel);
+	if (hc->hc_pixel >= 0) {
+	  XSetForeground(TkGate.D,igc,hc->hc_pixel);
 	  ZFillRectangle(TkGate.D,TkGate.W,igc, base_x,base_y, width, height);
 	} else
 	  XSetForeground(TkGate.D,igc,XWhitePixelOfScreen(TkGate.S));
@@ -1467,6 +1463,7 @@ void HtmlContext_print(const HtmlContext * context, FILE * fp)
 {
   fputs("Html context:    ", fp);
 
+  fprintf(fp, "\tpixel color:         %d\n", context->hc_pixel);
   fprintf(fp, "\tassociated hyperlink:%s\n", context->hc_link);
   fprintf(fp, "\tassociated tag:      %s\n", context->hc_tag);
   fprintf(fp, "\tpreformat:           %d\n", context->hc_preformat);

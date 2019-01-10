@@ -71,8 +71,10 @@ typedef struct Html_str Html;
  * HtmlFont - Font description
  */
 struct HtmlFont_str {
-  GateFont	gateFont;		/* base font part */
-  fontsize_t	points;			/* Current font size in points*/
+  fontfamily_t		family;			/* Current font family */
+  fontprop_t		props;			/* Current font properties */
+  fontsize_t		size;			/* Current font size index */
+  fontsize_t		points;			/* Current font size in points*/
 };
 
 /*
@@ -85,8 +87,7 @@ struct HtmlFont_str {
  */
 struct HtmlContext_str {
   HtmlFont		hc_font;		/* Font */
-  //int			hc_pixel;		/* Pixel color */
-  GateColor		hc_pixelColor;
+  int			hc_pixel;		/* Pixel color */
 
   char			*hc_link;		/* Associated hyperlink */
   char			*hc_tag;		/* Associated tag */
@@ -101,7 +102,8 @@ struct HtmlContext_str {
   XFontStruct		*hc_xFont;		/* The XFontStruct font definition */
   int			hc_is16bit;		/* Is this a 16-bit font (e.g., Japanese) */
   int			hc_spaceWidth;		/* Width of a space */
-  GateFontMetrics	hc_fontMetrics;		/* Metrics of the current font */
+  int			hc_ascent;		/* Ascent of the current font */
+  int			hc_descent;		/* Descent of the current font */
 };
 
 /*
@@ -177,7 +179,7 @@ const char *Html_getLink(Html*,int x,int y);	/* Get hyperlink referenced at (x,y
 void Html_psPrint(Html *h,GPrint *P,int x,int y);
 
 int HtmlFont_isEqual(const HtmlFont*,const HtmlFont*);	/* Return non-zero if fonts are equal */
-HtmlFont *HtmlFont_init(HtmlFont*,GateFont,fontsize_t points);
+HtmlFont *HtmlFont_init(HtmlFont*,fontfamily_t,fontprop_t,fontsize_t);
 void HtmlFont_print(HtmlFont*,FILE*);
 void HtmlContext_print(const HtmlContext * context, FILE * fp);
 
@@ -187,8 +189,8 @@ void Hyperlink_cancel();			/* Cancel any selected hyperlink */
 int Hyperlink_isPending();
 const char *Hyperlink_getAt(int x,int y);	/* Return the hyperlink at the specified location */
 
-#define HtmlContext_fontAscent(hc) (hc)->hc_fontMetrics.ascent
-#define HtmlContext_fontDescent(hc) (hc)->hc_fontMetrics.descent
+#define HtmlContext_fontAscent(hc) (hc)->hc_ascent
+#define HtmlContext_fontDescent(hc) (hc)->hc_descent
 
 
 #endif

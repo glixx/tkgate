@@ -434,9 +434,8 @@ void Err_ChangePin(EditState *es,GCElement *g)
 void Generic_DrawGateLabel(GPrint *P,GCElement *g,const char *text)
 {
   HtmlFont font[1];
-  GateFont gateFont = {FF_HELVETICA,FP_ROMAN};
 
-  PSDrawText(P,HtmlFont_init(font,gateFont,8),
+  PSDrawText(P,HtmlFont_init(font,FF_HELVETICA,FP_ROMAN,8),
 	     g->xpos+g->typeinfo->lpos[g->orient].x,
 	     g->ypos+g->typeinfo->lpos[g->orient].y,
 	     text,g->typeinfo->lpos[g->orient].just);
@@ -1221,9 +1220,9 @@ void makeMakeMenu(const char *m)
  *****************************************************************************/
 void Generic_WriteCellDef(FILE *f,GCellSpec *gcs)
 {
-  GCellSpec_writeBeginModule(f,gcs);
+  GCellSpec_writeBeginModule(gcs, f);
   fprintf(f,"  // Definition pending\n");
-  GCellSpec_writeEndModule(f,gcs);
+  GCellSpec_writeEndModule(gcs, f);
 }
 
 /*****************************************************************************
