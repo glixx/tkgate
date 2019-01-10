@@ -459,7 +459,7 @@ static void initGateParms(TkgGateWin *gw,TkGateParams *P)
 
   P->W = Tk_WindowId(gw->win);
   
-  P->painterW = (GatePainter*)new_GatePainterXlib();
+  P->painterW = (GatePainter*)new_GatePainterPangoXft();
   GatePainter_init(P->painterW, P->D, P->W); /* Initializing editing window painter */
   P->commentContext = GatePainter_createContext(P->painterW);
   *GatePainterContext_gcRef(TkGate.commentContext) =
@@ -524,7 +524,6 @@ void RescanHDLModules()
     ob_end_frame();
   }
 }
-
 
 /*****************************************************************************
  *
@@ -753,7 +752,6 @@ void scrollbar_bbx_update()
   scrollbar_update();
 }
 
-
 /*****************************************************************************
  *
  * Parse a scroll distance specification.
@@ -806,7 +804,6 @@ static int parseScrollDistance(int argc,const char *argv[],int org,int min_c,int
     *new_org_c = -(max_c + SCROLL_LIMIT);
   if (-*new_org_c < min_c - range_c - SCROLL_LIMIT)
     *new_org_c = -(min_c - range_c - SCROLL_LIMIT);
-
 
   return old_new_org_c != *new_org_c;
 }
@@ -912,7 +909,6 @@ void doScroll(int dx,int dy)
 static int gateWinCommand(ClientData data, Tcl_Interp *tcl, int argc, const char *argv[])
 {
   TkgGateWin *gw = (TkgGateWin*) data;
-
 
   if (strcmp(argv[1],"xview") == 0) {
     TkGate.idle_ev.scroll_new_x = TkGate.circuit->org_x;
@@ -1144,7 +1140,6 @@ int DoTclL(const char *cmd,...)
     printf("   while executing: %s\n",cmd);
   }
 
-
   return r;
 }
 
@@ -1174,11 +1169,8 @@ int DoTclV(const char *cmd,int nargs,const char **args)
     printf("   while executing: %s\n",cmd);
   }
 
-
   return r;
 }
-
-
 
 /*****************************************************************************
  *
@@ -1254,7 +1246,6 @@ static int tkg_buttonPress(ClientData data, Tcl_Interp *tcl, int argc, const cha
     mark_post();
     break;
   }
-
 
   showSelectedName();
 
@@ -1337,7 +1328,6 @@ int getCheckpointFilename(char *checkPointFile,const char *fileName,size_t size)
   if (*p == '#' && p[strlen(p)-1] == '#')
     return -1;
 
-
   /*
    * Create the checkpoint file name.
    */
@@ -1413,7 +1403,6 @@ static void checkMouseoverAction(int x,int y)
   } else
     MouseoverCursor(CANCELMOUSEOVER);
 
-
   /*
    * Update the status line if mouse is over a link
    */
@@ -1426,7 +1415,6 @@ static void checkMouseoverAction(int x,int y)
     visible_link = link;
   }
 }
-
 
 /*****************************************************************************
  *
@@ -1540,7 +1528,6 @@ static int tkg_buttonRelease(ClientData data, Tcl_Interp *tcl, int argc, const c
   return ret;
 }
 
-
 /*****************************************************************************
  *
  * Handler function for button motion events in the tkgate edit window.
@@ -1576,7 +1563,6 @@ static int tkg_buttonMotion(ClientData data, Tcl_Interp *tcl, int argc, const ch
    */
   if (!(state & (Button1Mask|Button2Mask)))
     return TCL_OK;
-
 
   /*
    * Special handling for scrolling
@@ -1701,4 +1687,3 @@ void init_mainWindow(Tcl_Interp *tcl)
 		    ,(ClientData)root
 		    ,0);
 }
-
