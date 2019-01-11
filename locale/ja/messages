@@ -3,6 +3,7 @@
 \messages-encoding		utf-8
 \verilog-encoding		utf-8
 \postscript-encoding	utf-8
+\language				日本語
 @mm.width					8
 @db.gate.comment.width		600
 @db.gate.comment.height		450
@@ -10,7 +11,6 @@
 @opt.tool.colwidth			30
 @opt.sidebar.width			*200
 @find.qual.pos			after
-\language				日本語
 
 b.new	新規く...
 b.dismiss	閉じる
@@ -923,3 +923,4 @@ ho.tool.anchor	選択のゲートを移動不可にする。
 ho.tool.unanchor	選択のゲートを移動可能にする。
 ho.tool.replicate	ゲートを複製する。
 ho.tool.delete	選択のゲートを削除する。
+circ.sim.tv.after.2	-empty-

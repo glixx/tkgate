@@ -432,6 +432,7 @@ circ.filev	Versi Fail
 circ.flags	Pilihan
 circ.sim.tv.all	Laporkan semua pelanggaran pemasaan.
 circ.sim.tv.after.1	Pelanggaran pemasaan laporan selepas
+circ.sim.tv.after.2	-empty-
 cp.delay	Lengah Laluan:
 err.badoutadd	Tidak dapat tambah lagi output ke komponen terpilih.
 err.bkpt.toomany	Terlalu banyak titik henti. Maksimum ialah %d.

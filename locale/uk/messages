@@ -1040,6 +1040,7 @@ circ.sim.features	Можливості
 circ.sim.tv.title	Обробка порушень обмежень за часом
 circ.sim.tv.all	Повідомляти про усі порушення часового режиму.
 circ.sim.tv.after.1	Повідомляти про порушення після
+circ.sim.tv.after.2	-empty-
 circ.sim.tv.never	Ніколи не звітувати щодо порушення часових обмежень.
 circ.exp.general	-begin-
 Перегляд і внесення змін до специфічних

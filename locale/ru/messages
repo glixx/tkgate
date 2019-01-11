@@ -1042,6 +1042,7 @@ circ.sim.features	Свойства
 circ.sim.tv.title	Обработка нарушений времени
 circ.sim.tv.all	Докладывать обо всех нарушениях времени.
 circ.sim.tv.after.1	Докладывать о нарушениях времени после
+circ.sim.tv.after.2	-empty-
 circ.sim.tv.never	Никогда не докладывать о нарушениях времени.
 circ.exp.general	-begin-
 Просмотр и редактирование свойств схемы.
