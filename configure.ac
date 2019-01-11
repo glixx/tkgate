@@ -3,7 +3,7 @@ dnl	This file is an input file used by the GNU "autoconf" program to
 dnl	generate the file "configure", which is run during TkGate installation
 dnl	to configure the system for the local environment.
 
-AC_INIT([tkgate],[2.1.1],[starling13@gmail.com],[tkgate],[https://bitbucket.org/starling13/tkgate/])
+AC_INIT([tkgate],[2.2],[starling13@gmail.com],[tkgate],[https://bitbucket.org/starling13/tkgate/])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([-Wall foreign std-options])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -16,8 +16,8 @@ AC_LANG(C)
 #
 # TkGate version and identifying information.
 #
-AC_DEFINE(TKGATE_VERSION, 	"2.1",					[Base TkGate version number])
-AC_SUBST(TKGATE_VERSION,	2.1)
+AC_DEFINE(TKGATE_VERSION, 	"2.2",					[Base TkGate version number])
+AC_SUBST(TKGATE_VERSION,	2.2)
 AC_DEFINE(TKGATE_VERSION_SUFFIX,"",					[TkGate version suffix])
 AC_DEFINE(TKGATE_FULL_VERSION,	(TKGATE_VERSION TKGATE_VERSION_SUFFIX), [Full TkGate version number])
 AC_DEFINE(TKGATE_DESCRIPTION,	"Digital Circuit Editor and Simulator",	[Tkgate short description])
