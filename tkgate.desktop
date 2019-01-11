@@ -63,3 +63,7 @@ Comment[fr]=Simulateur de circuits numériques évenementiel avec un éditeur gr
 GenericName[fr]=Éditeur et simulateur de circuits numériques
 Name[fr]=TkGate
 Icon[fr]=tkgate
+Comment[nl]=Gebeurtenis gestuurde digitale circuit simulator met een tcl/tk-gebaseerde grafische editor
+GenericName[nl]=Digitale circuit editor en simulator
+Name[nl]=TkGate
+Icon[nl]=tkgate
