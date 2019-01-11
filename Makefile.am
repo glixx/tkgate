@@ -28,7 +28,7 @@ TKG_DATADIRS=scripts bindings doc gdf images locale primitives vlib vpd test
 #
 # List of data which will be included in distribution
 #
-TKG_DISTITEMS=$(TKG_DATADIRS) povray pkg-comment pkg-descr
+TKG_DISTITEMS=$(TKG_DATADIRS) pkg-comment pkg-descr
 
 #
 # Subdirectories in which more makefiles can be found
