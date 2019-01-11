@@ -108,7 +108,7 @@ AH_BOTTOM([
 # TkGate Installation Directories
 #
 currentDirectory=`pwd`
-AC_DEFINE_UNQUOTED(TKGATE_SECONDARYHOME, "$currentDirectory", [Backup location for TkGate home directory])
+AC_DEFINE_UNQUOTED(TKGATE_SECONDARYHOME, TKGATE_HOMEDIR, [Backup location for TkGate home directory])
 
 #------------------------------------------------------------------------
 # Standard compiler checks

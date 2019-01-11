@@ -57,6 +57,10 @@
 #include <iconv.h>
 #endif
 
+/* necessary since tcl-tk 8.6 */
+#define USE_INTERP_RESULT
+#define USE_INTERP_ERRORLINE
+/******************************/
 #include "tcl.h"
 #include "tk.h"
 #include "fonts.h"

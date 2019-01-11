@@ -18,6 +18,10 @@
     Last edit by hansen on Tue Jan 27 23:21:37 2009
 ****************************************************************************/
 #include <stdlib.h>
+/* necessary since tcl-tk 8.6 */
+#define USE_INTERP_RESULT
+#define USE_INTERP_ERRORLINE
+/******************************/
 #include "tcl.h"
 #include "tk.h"
 
