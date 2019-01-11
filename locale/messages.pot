@@ -1,6 +1,6 @@
 # This file is part of TkGate project
 # Copyright (C) 1987-2015 by Jeffery P. Hansen
-# Copyright (C) 2015-2018 by Andrey V. Skvortsov
+# Copyright (C) 2015-2019 by Andrey V. Skvortsov
 # This file is distributed under the same license as the TkGate package.
 #
 # ##############################################################################
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-13 13:20+0300\n"
+"POT-Creation-Date: 2019-01-11 13:20+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"

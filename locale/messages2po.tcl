@@ -1,7 +1,7 @@
 #! /usr/bin/tclsh
 
 #   Copyright (C) 1987-2015 by Jeffery P. Hansen
-#   Copyright (C) 2015-2018 by Andrey V. Skvortsov
+#   Copyright (C) 2015-2019 by Andrey V. Skvortsov
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -134,7 +134,7 @@ parseFile $fLocMsg l
 
 puts $fLoc "# This file is part of TkGate project"
 puts $fLoc "# Copyright (C) 1987-2015 by Jeffery P. Hansen"
-puts $fLoc "# Copyright (C) 2015-2018 by Andrey V. Skvortsov"
+puts $fLoc "# Copyright (C) 2015-2019 by Andrey V. Skvortsov"
 puts $fLoc "# This file is distributed under the same license as the TkGate package."
 puts $fLoc "#"
 puts $fLoc "# ##############################################################################"
