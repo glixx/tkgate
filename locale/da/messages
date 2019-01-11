@@ -280,3 +280,4 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ho.mod.type.unknown	Ukendt modultype
 ho.mod.type.hdl	HDL-modul
 ho.tool.delete	Slet markeringen.
+circ.sim.tv.after.2	-empty-

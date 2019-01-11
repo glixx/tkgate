@@ -144,6 +144,15 @@ do
     sed -i 's|AAAAA|[|g' $lang/messages.utf8
     # restore ]
     sed -i 's|BBBBB|]|g' $lang/messages.utf8
+    # add not translatable string
+    str1=`cat $lang/messages|grep circ.sim.tv.after.1`
+    str2="circ.sim.tv.after.2	-empty-"
+    if [ ! -z "$str1" ]
+    then
+      sed -i "s|$str1|$str1\n$str2|g" $lang/messages.utf8
+    else
+      echo "$str2" >> $lang/messages.utf8
+    fi
     # delete temporary files
     rm -f $lang/$lang1.po
     rm -f $lang/$lang2.po

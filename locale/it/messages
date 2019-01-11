@@ -472,3 +472,4 @@ Verifica continuamente l'integrità delle strutture dati
 interne dopo ogni operazione.
 -end-
 ho.simwatch	Visualizza i comandi scambiati fra GUI e simulatore.
+circ.sim.tv.after.2	-empty-
