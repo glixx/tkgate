@@ -329,7 +329,7 @@ static void verifyMessagesFile(SHash *H,Locale *englishLocale)
   fclose(f);
 
   if (!is_verbose && no_msg_count > 0) {
-    logError(ERL_ERROR,"No localized strings for %d messages.  Use 'tkgate -v' for details.",no_msg_count);
+//    logError(ERL_ERROR,"No localized strings for %d messages.  Use 'tkgate -v' for details.",no_msg_count);
   }
 }
 
