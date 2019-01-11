@@ -1,17 +1,17 @@
 -----------------------------------------------------------------------------
-Features still needed for 2.0 before beta 3 release:
+Features still needed for 2.2
 	- Print options
 	- Hand tool scrolling
 	- Copyright update
 
 -----------------------------------------------------------------------------
-Features still needed for 2.0 before final release:
+Features still needed for 2.2 before final release:
 
 	- implement the anti-glitch algorithm from 1.8.5
 	- complete balloon help messages
 
 -----------------------------------------------------------------------------
-Features for 2.1:
+Features for 2.2:
 	- Debug symbol editor.
 	- PDF output of designs.
 	- EPSF output of scope traces.

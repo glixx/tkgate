@@ -1,4 +1,4 @@
-//: version "2.1"
+//: version "2.2"
 
 module ALU(F, B, N, C, A, Z);
 //: interface  /sz:(180, 121) /bd:[ Ri0>B[7:0](21/121) Ri1>A[7:0](58/121) Ri2>F[3:0](105/121) Lo0<C[7:0](32/121) Lo1<Z(80/121) Lo2<N(106/121) ]
