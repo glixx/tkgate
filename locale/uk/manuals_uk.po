@@ -10,6 +10,7 @@
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
+# Andrew Lashkayev <zombyg@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-05 17:04+0300\n"
 "PO-Revision-Date: 2018-12-10 23:25+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
+"Last-Translator: Andrew Lashkayev <zombyg@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/Magic/teams/44238/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,12 @@ msgid ""
 "signals by double-clicking them. The \"_Q\"\n"
 "signal is the \"Q\" with an overline."
 msgstr ""
+"1) Почніть симуляцію, натиснувши на кнопку\"пуск\"\n"
+"або выбравши пункт меню\n"
+"\"Симуляція\" -> \"Почати симуляцію\".\n"
+"Встановіть зонди на сигналах \"S\", \"R\",\n"
+"\"Q\" і \"_Q\", двічі клацнувши по ним.\n"
+"Сигнал \"_Q\" - це \"Q\" с поміткою."
 
 msgid ""
 "2) Place a probe\n"

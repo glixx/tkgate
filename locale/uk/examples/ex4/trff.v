@@ -109,12 +109,12 @@ wire _Q;    //: {0}(50:759,159)(694,159){1}
   _GGNMOS #(2, 1) g0 (.Z(_Q), .S(w13), .G(Q));   //: @(565,182) /sn:0 /anc:1 /w:[ 9 3 5 ]
   //: joint g22 (R) @(533, 353) /anc:1 /w:[ 1 -1 2 8 ]
   //: comment g26 @(26,101) /anc:1
-  //: /line:"1) Begin the simulation by clicking on the"
-  //: /line:"\"Play\" button or by selecting \"Begin"
-  //: /line:"Simulation\" from the \"Simulate\" menu."
-  //: /line:"Set Probes on the \"S\", \"R\", \"Q\" and \"_Q\""
-  //: /line:"signals by double-clicking them. The \"_Q\""
-  //: /line:"signal is the \"Q\" with an overline."
+  //: /line:"1) Почніть симуляцію, натиснувши на кнопку\"пуск\""
+  //: /line:"або выбравши пункт меню"
+  //: /line:"\"Симуляція\" -> \"Почати симуляцію\"."
+  //: /line:"Встановіть зонди на сигналах \"S\", \"R\","
+  //: /line:"\"Q\" і \"_Q\", двічі клацнувши по ним."
+  //: /line:"Сигнал \"_Q\" - це \"Q\" с поміткою."
   //: /end
   _GGNMOS #(2, 1) g12 (.Z(Q), .S(w14), .G(R));   //: @(560,406) /sn:0 /anc:1 /w:[ 13 3 9 ]
   //: joint g18 (_Q) @(584, 323) /anc:1 /w:[ 14 13 -1 16 ]
