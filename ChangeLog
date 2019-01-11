@@ -1,3 +1,8 @@
+Version 2.2 - January 11, 2019
+     * Fix build against a non-glibc libc or against a glibc
+     * Enable Tcl_Interp result (necessary since tcl-tk 8.6)
+     * Make the build reproducible
+
 Version 2.1 - December 17, 2018
      * Localization update
      * Fix segfault on exit
