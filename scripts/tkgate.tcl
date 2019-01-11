@@ -56,7 +56,7 @@ set baseScriptSet {
   spreadsheet wizard frame info blocktree blockops blocklist netlist
   portlist sidebar menu memview popups setselector status print scope toolbar
   message errbox editgate find circuit simulator simopts breakpoint
-  scriptmgr vpd file optionsdialog cpath license undo action symboledit
+  scriptmgr vpd file optionsdialog cpath showing undo action symboledit
   hdledit library debug init
 }
 
