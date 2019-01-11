@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #   Copyright (C) 1987-2015 by Jeffery P. Hansen
-#   Copyright (C) 2015-2018 by Andrey V. Skvortsov
+#   Copyright (C) 2015-2019 by Andrey V. Skvortsov
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -104,7 +104,7 @@ rm -f $pot_file
 # add header
 echo '# This file is part of TkGate project' >> $pot_file
 echo '# Copyright (C) 1987-2015 by Jeffery P. Hansen' >> $pot_file
-echo '# Copyright (C) 2015-2018 by Andrey V. Skvortsov' >> $pot_file
+echo '# Copyright (C) 2015-2019 by Andrey V. Skvortsov' >> $pot_file
 echo '# This file is distributed under the same license as the TkGate package.' >> $pot_file
 echo '# ' >> $pot_file
 echo '# ##############################################################################' >> $pot_file
@@ -116,7 +116,7 @@ echo 'msgid ""' >> $pot_file
 echo 'msgstr ""' >> $pot_file
 echo '"Project-Id-Version: tkgate\n"' >> $pot_file
 echo '"Report-Msgid-Bugs-To: \n"' >> $pot_file
-echo '"POT-Creation-Date: 2018-12-05 17:04+0300\n"' >> $pot_file
+echo '"POT-Creation-Date: 2019-01-11 17:04+0300\n"' >> $pot_file
 echo '"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"' >> $pot_file
 echo '"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"' >> $pot_file
 echo '"Language-Team: LANGUAGE <LL@li.org>\n"' >> $pot_file

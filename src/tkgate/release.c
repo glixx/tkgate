@@ -1,1 +1,1 @@
-char *release_date = "Dec 17 2018";
+char *release_date = "Jan 11 2019";
