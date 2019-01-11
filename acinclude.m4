@@ -104,11 +104,13 @@ fi
 #--------------------------------------------------------------------
 AC_DEFUN([TKG_CHECK_ICONV_H],[
   AC_MSG_CHECKING([for iconv.h])
+  AC_CHECK_HEADER([iconv.h],[iconv_h_dir=/nonexistent],[
   for p in $TKGATE_INCDIRS; do
     if test -f $p/iconv.h; then
       iconv_h_dir=$p
     fi
   done
+  ])
   for p in $TKGATE_LIBDIRS; do
     if test -f $p/libiconv.a; then
       iconv_lib_dir=$p
