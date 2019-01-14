@@ -1,5 +1,6 @@
 /****************************************************************************
     Copyright (C) 1987-2015 by Jeffery P. Hansen
+    Copyright (C) 2015-2019 by Andrey V. Skvortsov
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,8 +16,8 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-    Last edit by Skvortsov on Wed Jun 17 17:15:02 2015
 ****************************************************************************/
+
 #include "tkgate.h"
 
 static iconDimensions pulldown_iconDims[] = {

@@ -1,5 +1,6 @@
 /****************************************************************************
     Copyright (C) 1987-2015 by Jeffery P. Hansen
+    Copyright (C) 2015-2019 by Andrey V. Skvortsov
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,7 +18,6 @@
 ****************************************************************************/
 /*
    ycmalloc.cc: Temporary Memory Pool
-   Last edit by hansen on Sun Jun  5 17:18:16 2005
 */
 /*
    The temporary memory pool is used to store return values

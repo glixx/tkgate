@@ -1,5 +1,5 @@
 /****************************************************************************
-    This file is part of Verga Verilog 1995/2001 simulator for TkGate
+    This file is part of Verga Verilog 1995/2019 simulator for TkGate
     Copyright (C) 1987-2015 by Jeffery P. Hansen
     Copyright (C) 2015-2019 by Andrey V. Skvortsov
 

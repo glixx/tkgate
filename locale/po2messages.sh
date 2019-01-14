@@ -18,7 +18,7 @@
 #   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-# Author: Loginov Alexey (alexl@mageia.org)
+# Author: Alexey Loginov (alexl@mageia.org)
 
 convert="false"
 lang_param="$1"

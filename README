@@ -86,6 +86,7 @@ CREDITS
     examples improvements and packaging for Mageia Linux.
   * Thanks to Pietro Cerutti for Tcl/Tk-8.6 patch.
   * Thanks to Kirill Bychkov for porting to OpenBSD.
+  * Thanks to Georges Khaznadar for porting to Debian.
 
 *****************************************************************************
 TRANSLATIONS

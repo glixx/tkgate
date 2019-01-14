@@ -1,5 +1,5 @@
 
-This directory contains tools used for tkgate development.  It is not
+This directory contains tools used for tkgate development. It is not
 necessary to compile or install these if you only wish to use tkgate.
 
 colors		Used for generating the color palette in the tkgate

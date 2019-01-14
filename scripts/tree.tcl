@@ -37,6 +37,8 @@
 # This file contains modifications by Jeffery P. Hansen.  Modifications to
 # this file only can be considered public domain.
 #
+# Copyright (C) 2015-2019 by Andrey V. Skvortsov
+#
 
 image create photo idir -data {
     R0lGODdhEAAQAPIAAAAAAHh4eLi4uPj4APj4+P///wAAAAAAACwAAAAAEAAQAAADPVi63P4w

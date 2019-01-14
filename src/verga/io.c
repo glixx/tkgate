@@ -1,5 +1,6 @@
 /****************************************************************************
     Copyright (C) 1987-2015 by Jeffery P. Hansen
+    Copyright (C) 2015-2019 by Andrey V. Skvortsov
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,8 +16,8 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-    Last edit by hansen on Wed Oct 25 10:50:09 2006
 ****************************************************************************/
+
 #include <signal.h>
 #include <errno.h>
 #include "thyme.h"

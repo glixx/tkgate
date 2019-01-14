@@ -22,7 +22,7 @@
 # and it helps to see translators' errors
 # You need gettext installed
 
-# Author: Loginov Alexey (alexl@mageia.org)
+# Author: Alexey Loginov (alexl@mageia.org)
 
 result_file="converting_test.diff"
 rm -f $result_file
