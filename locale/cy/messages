@@ -367,12 +367,12 @@ err.badlibopen	Methu agor ffeil rhaglengell '%s'.
 err.nomark	Gosodwch nod efo botwm chwith y llygoden cyn dewis math o giat.
 err.badgate	Math giat anhysbys.
 err.badportadd	Methu ychwanegu pyrth i giatiau o'r math yma.
-err.manypages	-begin-
+err.manypages	-fillbegin-
 Mae 'na gryn dipyn o dudalennau
 yn y ddogfen yma. Ydych yn sicr
 yr ydych eisiau ei argraffu?
 -end-
-err.nojump	-begin-
+err.nojump	-fillbegin-
 Ni ellir y nodwedd 'neidio-i-fodiwl' gael ei
 ddefnyddio mewn modd efelychu neu dadansoddiad
 llwybr allweddol. Symudwch a llaw i'r bloc
@@ -395,7 +395,7 @@ err.badversion	Rhif fersiwn anhysbys. Defnyddiwch ar eich menter eich hun.
 err.nodrive	Nid oes gan rwyd %s yrrydd ym modiwl %s.
 err.noconn	Nid oes gan y wifren %s{%d} gysylltiadau - dileuwyd.
 err.oldportact	De-gliciwch ar ymyl y porth neu modiwl i ychwanegu/newid y porth.
-err.noback	-begin-
+err.noback	-fillbegin-
 Creuwyd y ffeil gan tkgate
 %s, ac efallai nid yw'n ddarllenadwy
 gan fersiynau cynharach na'r
@@ -487,7 +487,9 @@ efelychiad a gweithredu unrhyw sgriptiau
 ymgychwyn. Os mae efelychiad yn rhedeg,
 rhedeg yr efelychiad yn barhaol.
 -end-
-ho.simpause	Seibio efelychiad sy'n rhedeg yn barhaol.
+ho.simpause	-begin-
+Seibio efelychiad sy'n rhedeg yn barhaol.
+-end-
 ho.simstep	-begin-
 Camu cyfnod penodol o amser.
 Agor y ffenest dewisiadau efelychiad
@@ -507,7 +509,9 @@ Golygu'r torbwyntiau cyfredol. Arhosir
 yr efelychiad pan bydd amod torbwynt yn
 dod yn wir.
 -end-
-ho.simexec	Gweithredu sgript efelychiad.
+ho.simexec	-begin-
+Gweithredu sgript efelychiad.
+-end-
 ho.simload	-begin-
 Llwytho cof efo cynnwys
 ffeil .mem.
@@ -620,7 +624,9 @@ Darllenir y ffeil yma pan ddechreuir yr efelychydd.
 -end-
 ho.edgat.func	Math ffwythiant y modiwl yma.
 ho.edgat.frame	Label y ffram.
-ho.opt.undolen	Uchafrif gweithrediadau datwneud i gadw.
+ho.opt.undolen	-begin-
+Uchafrif gweithrediadau datwneud i gadw.
+-end-
 ho.opt.site	-begin-
 Enw'r safle lle gosodir tkgate. Defnyddir
 yr enw yma ar unrhyw allbwn argraffydd neu

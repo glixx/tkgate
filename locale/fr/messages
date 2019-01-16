@@ -295,7 +295,7 @@ symed.tab.normal	Déselectionné
 symed.tab.select	Selectionné
 symed.link	Lier sélectionné à déselectionné
 memview.title	Inspecteur de Mémoire
-memview.exp	-begin-
+memview.exp	-fillbegin-
 Inspecter et modifier les contenus d'un
 composant RAM ou ROM. Choisissez une
 page mémoire et tapez de nouvelles valeurs
@@ -343,12 +343,16 @@ en Verilog.
 -end-
 db.err.title	TkGate: Erreurs
 db.err.caption	Erreurs
-db.err.explain.warn	-begin-
+db.err.explain.warn	-fillbegin-
 Des avertissements sont présents dans le circuit, mais la simulation va continuer. Retournez
 en mode édition pour examiner les avertissements.
 -end-
-db.err.explain.err	Erreurs présentes dans le circuit. TkGate ne peut pas poursuivre la simulation.
-db.err.neededit	Vous devez aller en mode Édition avant d'examiner les avertissements.
+db.err.explain.err	-fillbegin-
+Erreurs présentes dans le circuit. TkGate ne peut pas poursuivre la simulation.
+-end-
+db.err.neededit	-fillbegin-
+Vous devez aller en mode Édition avant d'examiner les avertissements.
+-end-
 db.net.title	TkGate: Propriétés
 db.net.caption	Propriétés
 db.net.name	Nom de la connexion
@@ -363,7 +367,7 @@ db.net.inets	Connexion
 db.newcirc.title	TkGate: Nouveau Circuit
 db.newcirc.directory	Dossier:
 db.newcirc.cap	Nouveau Circuit
-db.newcirc.exp	-begin-
+db.newcirc.exp	-fillbegin-
 Abandonner le circuit en cours et commencer
 un nouveau circuit.
 -end-
@@ -680,7 +684,7 @@ err.badopen	Impossible d'ouvrir le fichier '%s'.
 err.badlibopen	Impossible d'ouvrir la bibliothèque '%s'.
 err.nomark	Poser une marque avec le bouton gauche de la souris avant de choisir un type d'élément, SVP.
 err.badgate	Type d'élément inconnu.
-err.manypages	-begin-
+err.manypages	-fillbegin-
 Le document que vous voulez imprimer
 contient de très nombreuses pages.
 Êtes vous sur de vouloir l'imprimer ?
@@ -699,7 +703,7 @@ err.futureversion	Chargement d'un fichier avec un numéro de version (%s) futur 
 err.badversion	Numéro de version inconnu. À vos risques et périls.
 err.nodrive	Le réseau %s n'a pas de driver dans le module %s.
 err.noconn	Le fil %s{%d} n'est pas connecté -> supprimé.
-err.noback	-begin-
+err.noback	-fillbegin-
 Ce fichier a été créé avec tkgate %s,
 et peut ne pas être lisible par une
 version antérieure à la version actuelle (%s),
@@ -808,7 +812,9 @@ La simulation sera stoppée
 si l'une des conditions des
 points d'arrêt devient vraie.
 -end-
-ho.simexec	Exécuter un script de simulation.
+ho.simexec	-begin-
+Exécuter un script de simulation.
+-end-
 ho.simload	-begin-
 Charger la mémoire avec le contenu
 d'un fichier ".mem".
@@ -890,7 +896,9 @@ Vous pouvez changer le nombre de bits en le modifiant ici.
 ho.edgat.cycle	Le nombre total de quanta de temps dans un cycle d'horloge.
 ho.edgat.phase	Le point de départ du cycle (en pourcentage).
 ho.edgat.duty	Le pourcentage du cycle pendant lequel le signal d'horloge est bas.
-ho.edgat.hide	Désactive l'affichage du nom de l'élément.
+ho.edgat.hide	-begin-
+Désactive l'affichage du nom de l'élément.
+-end-
 ho.edgat.gtype	Type de l'élément.
 ho.edgat.gname	Nom de cette instance d'élément.
 ho.edgat.ganchor	Activer pour ancrer un élément.
@@ -995,7 +1003,9 @@ Utiliser les délais de la technologie standard.
 Pour ajouter une technologie personnalisée,
 utiliser le menu "Fichier -> Options -> Simulation".
 -end-
-ho.custbut	Régler les délais pour cette porte.
+ho.custbut	-begin-
+Régler les délais pour cette porte.
+-end-
 ho.simwatch	-begin-
 Affichage des commandes échangées
 entre le simulateur et l'interface graphique.

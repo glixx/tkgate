@@ -226,7 +226,9 @@ db.gate.tab.XOR.cap	XOR-egenskaber
 db.gate.tab.MUX.cap	Mux-egenskaber
 db.gate.tab.DEMUX.cap	Demux-egenskaber
 db.gate.tab.COMMENT.cap	Tekstegenskaber
-db.gate.tab.Ports.exp	Tilføj, rediger eller slet porte på en instans.
+db.gate.tab.Ports.exp	-fillbegin-
+Tilføj, rediger eller slet porte på en instans.
+-end-
 db.hdl.cancel	Afbryd
 print.file	Fil
 print.filename	Filnavn

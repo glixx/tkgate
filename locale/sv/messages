@@ -320,7 +320,7 @@ symed.tab.normal	Avmarkerad
 symed.tab.select	Markerad
 symed.link	Länka markerad till avmarkerad
 memview.title	Minnesvisare
-memview.exp	-begin-
+memview.exp	-fillbegin-
 Visa och ändra innehållet i en RAM-
 eller ROM-komponent. Välj minnessida,
 och skriva sedan nya hexvärden för att

@@ -316,7 +316,7 @@ symed.tab.normal	Nicht ausgewählt
 symed.tab.select	Ausgewählt
 symed.link	Ausgewähltes mit Unausgewähltem verlinken
 memview.title	Speicherauszug
-memview.exp	-begin-
+memview.exp	-fillbegin-
 Ansehen und Modifizieren des
 Speicherinhalts von RAM oder ROM.
 Zum Ändern des Speicherinhalts wähle
@@ -363,12 +363,16 @@ in Verilog zu beschreiben.
 -end-
 db.err.title	TkGate: Fehlerliste
 db.err.caption	Fehlerliste
-db.err.explain.warn	-begin-
+db.err.explain.warn	-fillbegin-
 In der Schaltung gab es Warnhinweise, die Simulation wird aber fortgesetzt.
 Im Editiermodus kann man die Warnhinweise sehen.
 -end-
-db.err.explain.err	In der Schaltung gab es Fehler. TkGate kann die Simulation nicht fortsetzen.
-db.err.neededit	Zum Navigieren zu den Warnungen muß erst in den Editiermodus geschaltet werden.
+db.err.explain.err	-fillbegin-
+In der Schaltung gab es Fehler. TkGate kann die Simulation nicht fortsetzen.
+-end-
+db.err.neededit	-fillbegin-
+Zum Navigieren zu den Warnungen muß erst in den Editiermodus geschaltet werden.
+-end-
 db.net.title	TkGate: Netzeigenschaften
 db.net.caption	Netzeigenschaften
 db.net.name	Netzname
@@ -383,7 +387,7 @@ db.net.inets	Netze
 db.newcirc.title	TkGate: Neue Schaltung
 db.newcirc.directory	Verzeichnis:
 db.newcirc.cap	Neue Schaltung
-db.newcirc.exp	-begin-
+db.newcirc.exp	-fillbegin-
 Die aktuelle Schaltung verwerfen und
 eine neue Schaltung bearbeiten.
 -end-
@@ -425,48 +429,52 @@ db.gate.delete	Löschen
 db.gate.add	Hinzufügen
 db.gate.ff.type	D-Flipflop Ausrichtung
 db.gate.ff.normal.hdr	Normal
-db.gate.ff.normal.exp	-begin-
+db.gate.ff.normal.exp	-fillbegin-
 Datenfluß im D-Flipflop
 von links nach rechts.
 -end-
 db.gate.ff.reverse.hdr	Umgekehrt
-db.gate.ff.reverse.exp	-begin-
+db.gate.ff.reverse.exp	-fillbegin-
 Datenfluß im D-Flipflop
 von rechts nach links.
 -end-
 db.gate.jkff.type	JK Flipflop Ausrichtung
 db.gate.jkff.normal.hdr	Normal
-db.gate.jkff.normal.exp	-begin-
+db.gate.jkff.normal.exp	-fillbegin-
 Datenfluß im JK-Flipflop
 von links nach rechts.
 -end-
 db.gate.jkff.reverse.hdr	Umgekehrt
-db.gate.jkff.reverse.exp	-begin-
+db.gate.jkff.reverse.exp	-fillbegin-
 Datenfluß im JK-Flipflop
 von rechts nach links.
 -end-
 db.gate.cat.asc.hdr	Aufsteigend
 db.gate.cat.dec.hdr	Absteigend
-db.gate.cat.asc.exp	Bits werden in aufsteigender Ordnung von oben nach unten zusammengeführt.
-db.gate.cat.dec.exp	Bits werden in absteigender Ordnung von oben nach unten zusammengeführt.
+db.gate.cat.asc.exp	-fillbegin-
+Bits werden in aufsteigender Ordnung von oben nach unten zusammengeführt.
+-end-
+db.gate.cat.dec.exp	-fillbegin-
+Bits werden in absteigender Ordnung von oben nach unten zusammengeführt.
+-end-
 db.gate.cat.sigdir	Signalrichtung
 db.gate.cat.auto.hdr	Auto
 db.gate.cat.multin.hdr	Mehrfacheingang
 db.gate.cat.singin.hdr	Einzelner Eingang
 db.gate.cat.tran.hdr	Bidirektional
-db.gate.cat.auto.exp	-begin-
+db.gate.cat.auto.exp	-fillbegin-
 Die Signalrichtung wird automatisch
 aus den verbundenen Teilschaltungen erschlossen.
 -end-
-db.gate.cat.multin.exp	-begin-
+db.gate.cat.multin.exp	-fillbegin-
 Die Seite mit Mehrfachleitung wird
 immer als Eingang angenommen.
 -end-
-db.gate.cat.singin.exp	-begin-
+db.gate.cat.singin.exp	-fillbegin-
 Die Seite mit der Einzelleitung wird
 immer als Eingang angenommen.
 -end-
-db.gate.cat.tran.exp	-begin-
+db.gate.cat.tran.exp	-fillbegin-
 Bidirektionaler Signalfluß (transmission)
 ist erlaubt. Kann nicht mit Schaltern
 oder Registern verbunden werden.
@@ -495,27 +503,31 @@ db.gate.tab.COMMENT.cap	Text Eigenschaften
 db.gate.tab.FF.cap	D-Flipflop Eigenschaften
 db.gate.tab.JKFF.cap	JK-Flipflop Eigenschaften
 db.gate.tab.SCRIPT.cap	Verilogskript
-db.gate.tab.General.exp	Die grundlegenden Eigenschaften einer Instanz ansehen und verändern.
-db.gate.tab.Ports.exp	Hinzufügen, Editieren oder Löschen von Ports einer Instanz.
-db.gate.tab.Delay.exp	-begin-
+db.gate.tab.General.exp	-fillbegin-
+Die grundlegenden Eigenschaften einer Instanz ansehen und verändern.
+-end-
+db.gate.tab.Ports.exp	-fillbegin-
+Hinzufügen, Editieren oder Löschen von Ports einer Instanz.
+-end-
+db.gate.tab.Delay.exp	-fillbegin-
 Die Verzögerung kann entweder durch Angabe der Technologie oder
 durch spezielle Werte für diese Instanz festgelegt werden.
 -end-
-db.gate.tab.Parameters.exp	-begin-
+db.gate.tab.Parameters.exp	-fillbegin-
 Festlegen der Modulparameter dieser Modulinstanz, falls welche
 definiert sind. Modulparameter werden zur Definition von
 Verzögerungen und konstanten Werten in Moduln verwendet.
 -end-
-db.gate.tab.details.exp	-begin-
+db.gate.tab.details.exp	-fillbegin-
 Genaue Festlegung der typspezifischen
 Eigenschaften eines Gatters.
 -end-
-db.gate.tab.COMMENT.exp	-begin-
+db.gate.tab.COMMENT.exp	-fillbegin-
 Festlegung des Textes für einen Kommentar.
 In beschränktem Umfang können HTML Tags
 einschließlich Links verwendet werden.
 -end-
-db.gate.tab.SCRIPT.exp	-begin-
+db.gate.tab.SCRIPT.exp	-fillbegin-
 Hier kann zum Modul ein Stück beliebig
 formatierter Verilog-Quellcode hinzugefügt
 werden.
@@ -558,49 +570,69 @@ db.gate.tap.lbl.bus	LSB:
 db.gate.mux.dataorder	Eingangsordnung
 db.gate.mux.ord1.hdr	Links-nach-rechts
 db.gate.mux.ord2.hdr	Rechts-nach-links
-db.gate.mux.ord1.exp	Ordne MUX-Eingänge von links nach rechts.
-db.gate.mux.ord2.exp	Ordne MUX-Eingänge von rechts nach links.
+db.gate.mux.ord1.exp	-fillbegin-
+Ordne MUX-Eingänge von links nach rechts.
+-end-
+db.gate.mux.ord2.exp	-fillbegin-
+Ordne MUX-Eingänge von rechts nach links.
+-end-
 db.gate.mux.select	Auswahlstil
 db.gate.mux.sel1.hdr	Auf der Linken
 db.gate.mux.sel2.hdr	Auf der Rechten
-db.gate.mux.sel1.exp	-begin-
+db.gate.mux.sel1.exp	-fillbegin-
 Setze den Datenselektor auf der linken Seite
 des Gatters.
 -end-
-db.gate.mux.sel2.exp	-begin-
+db.gate.mux.sel2.exp	-fillbegin-
 Setze den Datenselektor auf der rechten Seite
 des Gatters.
 -end-
 db.gate.demux.dataorder	Ausgangsordnung
 db.gate.demux.ord1.hdr	Links-nach-rechts
 db.gate.demux.ord2.hdr	Rechts-nach-links
-db.gate.demux.ord1.exp	Ordne DEMUX-Ausgänge von links nach rechts.
-db.gate.demux.ord2.exp	Ordne DEMUX-Ausgänge von rechts nach links.
+db.gate.demux.ord1.exp	-fillbegin-
+Ordne DEMUX-Ausgänge von links nach rechts.
+-end-
+db.gate.demux.ord2.exp	-fillbegin-
+Ordne DEMUX-Ausgänge von rechts nach links.
+-end-
 db.gate.demux.select	Wähle die Positionierung
 db.gate.demux.sel1.hdr	Auf der Linken
 db.gate.demux.sel2.hdr	Auf der Rechten
-db.gate.demux.sel1.exp	Plaziere den Select-Eingang auf der linken Seite des DEMUX.
-db.gate.demux.sel2.exp	Plaziere den Select-Eingang auf der rechten Seite des DEMUX.
+db.gate.demux.sel1.exp	-fillbegin-
+Plaziere den Select-Eingang auf der linken Seite des DEMUX.
+-end-
+db.gate.demux.sel2.exp	-fillbegin-
+Plaziere den Select-Eingang auf der rechten Seite des DEMUX.
+-end-
 db.gate.decoder.dataorder	Ausgangsordnung
 db.gate.decoder.ord1.hdr	Links-nach-rechts
 db.gate.decoder.ord2.hdr	Rechts-nach-links
-db.gate.decoder.ord1.exp	Ordne die Decoderausgänge von links nach rechts.
-db.gate.decoder.ord2.exp	Ordne die Decoderausgänge von rechts nach links.
+db.gate.decoder.ord1.exp	-fillbegin-
+Ordne die Decoderausgänge von links nach rechts.
+-end-
+db.gate.decoder.ord2.exp	-fillbegin-
+Ordne die Decoderausgänge von rechts nach links.
+-end-
 db.gate.decoder.select	Plazierung des Enable-Eingangs
 db.gate.decoder.sel1.hdr	Auf der Linken
 db.gate.decoder.sel2.hdr	Auf der Rechten
-db.gate.decoder.sel1.exp	Plaziere den Enable-Eingang auf der linken DECODER-Seite.
-db.gate.decoder.sel2.exp	Plaziere den Enable-Eingang auf der rechten DECODER-Seite.
+db.gate.decoder.sel1.exp	-fillbegin-
+Plaziere den Enable-Eingang auf der linken DECODER-Seite.
+-end-
+db.gate.decoder.sel2.exp	-fillbegin-
+Plaziere den Enable-Eingang auf der rechten DECODER-Seite.
+-end-
 db.gate.aox.extbaruse	Nutzung von Erweiterungsbalken
 db.gate.aox.use.hdr	Erweiterungsbalken
 db.gate.aox.nouse.hdr	Keine Erweiterungsbalken
-db.gate.aox.use.exp	-begin-
+db.gate.aox.use.exp	-fillbegin-
 Beim Hinzufügen von Eingängen an
 Grundgattern (AND, OR, etc.) werden
 diese an Erweiterungsbalken
 angebracht.
 -end-
-db.gate.aox.nouse.exp	-begin-
+db.gate.aox.nouse.exp	-fillbegin-
 Beim Hinzufügen von Eingängen an
 Grundgattern (AND, OR, etc.) werden
 keine Erweiterungsbalken verwendet.
@@ -611,15 +643,25 @@ db.gate.led.bar.hdr	Balkenanzeige
 db.gate.led.hex.hdr	7-Segment (HEX)
 db.gate.led.dec.hdr	7-Segment (DEC)
 db.gate.led.seg.hdr	7-Segment (Direkt)
-db.gate.led.bit.exp	Einzelne LED-Anzeige für 1-Bit-Signale.
-db.gate.led.bar.exp	LED Balkenanzeige mit einem Balken pro Bit.
-db.gate.led.hex.exp	Hexadezimale Anzeige des Signals.
-db.gate.led.dec.exp	Dezimale Anzeige des Signals.
-db.gate.led.seg.exp	Die Signalbits steuern direkt die LED-Segmente a-g.
+db.gate.led.bit.exp	-fillbegin-
+Einzelne LED-Anzeige für 1-Bit-Signale.
+-end-
+db.gate.led.bar.exp	-fillbegin-
+LED Balkenanzeige mit einem Balken pro Bit.
+-end-
+db.gate.led.hex.exp	-fillbegin-
+Hexadezimale Anzeige des Signals.
+-end-
+db.gate.led.dec.exp	-fillbegin-
+Dezimale Anzeige des Signals.
+-end-
+db.gate.led.seg.exp	-fillbegin-
+Die Signalbits steuern direkt die LED-Segmente a-g.
+-end-
 db.seq.back	<Zurück
 db.seq.next	Weiter>
 db.hdl.savecap	Mehrfach-Module
-db.hdl.saveexp	-begin-
+db.hdl.saveexp	-fillbegin-
 Der Textpuffer des gerade editierten Moduls enthält mehr als eine
 Moduldefinition. Bitte wähle eine der drei Aktionen auf der rechten
 Seite aus.
@@ -630,13 +672,13 @@ db.hdl.comment	Kommentar
 db.hdl.cancel	Abbrechen
 db.hdl.ignore	Ignorieren
 db.hdl.autoeditcap	Der Name paßt nicht
-db.hdl.autoeditexp	-begin-
+db.hdl.autoeditexp	-fillbegin-
 Die Textbeschreibung des Moduls paßt nicht
 zum erwarteten Namen. Wähle eine der Optionen
 rechts, um dieses Problem zu beseitigen.
 -end-
 db.dip.title	TkGate: Dip-Wert
-cpath.cloops	-begin-
+cpath.cloops	-fillbegin-
 In der kombinatorischen Schaltung wurde eine
 Rückkopplung entdeckt. Um für diese Schaltung
 eine Verzögerungsanalyse durchführen zu können,
@@ -691,21 +733,21 @@ print.modulesel	Modulauswahl
 print.ok	Drucken
 print.printtrace.cap	Signaldiagramm drucken
 print.printcirc.cap	Schaltung drucken
-print.printcirc.out.exp	-begin-
+print.printcirc.out.exp	-fillbegin-
 Wahl der Druckausgabe:
 direkt zum Drucker oder
 in eine PostScript-Datei.
 -end-
-print.printcirc.page.exp	-begin-
+print.printcirc.page.exp	-fillbegin-
 Auswahl der Optionen für den
 Seitenaufbau und den Drucker.
 -end-
-print.printcirc.mod.exp	-begin-
+print.printcirc.mod.exp	-fillbegin-
 Auswahl der zu druckenden
 Modul, Einstellung der
 Optionen für die Darstellung.
 -end-
-print.printtrace.trace.exp	-begin-
+print.printtrace.trace.exp	-fillbegin-
 Auswahl des Zeitbereichs für die Ausgabe und
 Einstellung der Skalierung, um die ungefähre
 Seitenzahl zu berechnen.
@@ -948,7 +990,7 @@ blklst.copy.cap	Modul kopieren
 blklst.rename.cap	Modul umbenennen
 blklst.claim.cap	Modul aneignen
 blklst.setroot.cap	Wurzel-Modul festlegen
-blklst.new.exp	-begin-
+blklst.new.exp	-fillbegin-
 Mit dieser Dialogbox wird eine neue
 Moduldefinition erzeugt. Das Modul kann
 als Netzliste oder HDL Modul erzeugt werden.
@@ -956,32 +998,34 @@ Einmal erzeugt, kann der Typ aber nicht
 geändert werden; es muß gelöscht und neu
 erzeugt werden.
 -end-
-blklst.del.exp	-begin-
+blklst.del.exp	-fillbegin-
 Löschen der Definition und Schnittstellendaten
 des angegebenen Moduls. Existierende Instanzen
 des gelöschten Moduls beleiben erhalten, werden
 aber als undefiniert markiert.
 -end-
-blklst.copy.exp	-begin-
+blklst.copy.exp	-fillbegin-
 Erzeugen einer Kopie der angegebenen Moduldefinition.
 Damit kann eine Variante eines existierenden Moduls
 erschaffen werden.
 -end-
-blklst.rename.exp	-begin-
+blklst.rename.exp	-fillbegin-
 Umbenennen einer Moduldefinition. Diese Operation
 betrifft nur die Definition, alle existierenden
 Instanzen dieses Moduls verweisen weiterhin auf den
 alten Modulnamen.
 -end-
-blklst.claim.exp	-begin-
+blklst.claim.exp	-fillbegin-
 Umwandeln eines Bibliotheksmoduls in ein Benutzermodul.
 Damit kann das Modul editiert und zusammen mit der
 eigenen Schaltung gesichert werden.
 -end-
-blklst.setroot.exp	Mache das angegebene Modul zum obersten (Top-Level).
+blklst.setroot.exp	-fillbegin-
+Mache das angegebene Modul zum obersten (Top-Level).
+-end-
 find.title	TkGate: Objekte finden
 find.label	Objekte finden
-find.exp	-begin-
+find.exp	-fillbegin-
 Suche den Mustertext entweder in
 Gatternamen, Leitungsnamen oder in
 Kommentaren. Ein Doppelklick auf das
@@ -1018,8 +1062,12 @@ circ.extbar	Erweiterungsleisten für AND, OR und XOR benutzen.
 circ.shownet	Zeige bei Schaltern und DIP-Schaltern den Netznamen.
 circ.autostart	Automatischen Simulationsstart einschalten.
 circ.iniscript	Initialisierungsskripte
-circ.reallyupdate	Sollen wirklich alle '%s' Instanzen der Schnittstelle geändert werden?
-circ.reallyoverwrite	Soll die bereits existierende Datei '%s' wirklich überschrieben werden?
+circ.reallyupdate	-fillbegin-
+Sollen wirklich alle '%s' Instanzen der Schnittstelle geändert werden?
+-end-
+circ.reallyoverwrite	-fillbegin-
+Soll die bereits existierende Datei '%s' wirklich überschrieben werden?
+-end-
 circ.general	Allgemein
 circ.library	Bibliotheken
 circ.script	Skripte
@@ -1032,21 +1080,23 @@ circ.sim.tv.title	Verletzung von Zeitbedingungen: Behandlung
 circ.sim.tv.all	Über alle Verletzungen von Zeitbedingungen informieren.
 circ.sim.tv.after.1	Über Verletzungen von Zeitbedingungen nachher informieren
 circ.sim.tv.after.2	-empty-
-circ.exp.general	-begin-
+circ.exp.general	-fillbegin-
 Betrachten und Modifizieren schaltungsspezifischer Eigenschaften.
 Diese Eigenschaften werden beim Speichern der Schaltung mitgesichert.
 -end-
-circ.exp.library	-begin-
+circ.exp.library	-fillbegin-
 Auswählen der von dieser Schaltung benutzten Bibliotheken.
 Die Bibliotheksangaben werden mit der Schaltung gesichert,
 sie werden beim nächsten Laden der Schaltung automatisch eingelesen.
 -end-
-circ.exp.script	-begin-
+circ.exp.script	-fillbegin-
 Hinzufügen von Simulationsskripten, die vor
 Beginn der Simulation automatisch gelesen
 und ausgeführt werden sollen.
 -end-
-circ.exp.simulator	Anzeige und Modifikation der Simulationseinstellungen dieser Schaltung.
+circ.exp.simulator	-fillbegin-
+Anzeige und Modifikation der Simulationseinstellungen dieser Schaltung.
+-end-
 libmgr.cap	Bibliotheksverwaltung
 libmgr.library	Bibliothek
 libmgr.description	Beschreibung
@@ -1055,14 +1105,14 @@ libmgr.status.load	Geladen
 libmgr.status.unload	Nicht geladen
 libmgr.status.loadp	[Geladen]
 libmgr.status.unloadp	[Nicht geladen]
-libmgr.exp	-begin-
+libmgr.exp	-fillbegin-
 Wähle zu ladende oder zu entfernende
 Bibliotheken aus.
 -end-
 libmgr.load	Laden
 libmgr.unload	Entfernen
 libmgr.unloadall	Alle entfernen
-libmgr.notedit	-begin-
+libmgr.notedit	-fillbegin-
 Die Bibliotheksverwaltung kann nur im
 Editiermodus der Schaltung geöffnet werden.
 -end-
@@ -1071,12 +1121,12 @@ break.id	ID
 break.state	S
 break.condition	Bedingung
 break.value	Wert
-sim.recursive	-begin-
+sim.recursive	-fillbegin-
 Rekursive Moduldefinition in '%s' gefunden.
 Simulator kann nicht gestartet werden.
 Keine kritische Pfadanalyse möglich.
 -end-
-sim.hyperlinkstop	-begin-
+sim.hyperlinkstop	-fillbegin-
 Der Simulator läuft gerade. Soll die Simulation
 beendet und dem Link gefolgt werden?
 -end-
@@ -1142,11 +1192,11 @@ err.badportadd	Zu diesem Gattertyp ist Hinzufügen von Ports nicht möglich.
 err.modmissing	HDL Modultext fehlt für Modul "%s".
 err.modtoomany	Überzählige Moduldefinitionen in Modul "%s".
 err.modmismatch	Namens-mismatch zwischen Textdefinition und Modulname in "%s".
-err.manypages	-begin-
+err.manypages	-fillbegin-
 Dieses Dokument hat entsetzlich viele Seiten!
 Soll es tatsächlich gedruckt werden?
 -end-
-err.nojump	-begin-
+err.nojump	-fillbegin-
 Die Funktion 'Springe-zum-Modul' kann bei der
 Simulation und bei der Analyse Kritischer Pfade
 nicht genutzt werden. Stattdessen sollte von
@@ -1198,24 +1248,24 @@ err.yy.pinname	Pinname '%s' ist für Gattertyp '%s' nicht definiert.
 err.yy.nonetpos	Kein Netz für Position %d in Gatter %s.
 err.yy.baddirective	Illegale oder fehlerhafte Direktive '%s'.
 err.yy.badlocale	Unbekannte locale '%s' in der Datei. Benutze die engl. locale.
-err.corruptnewsave	-begin-
+err.corruptnewsave	-fillbegin-
 TkGate konnte die Datei in '%s' sichern, sie scheint aber
 korrupt zu sein. Sind Aufsetzpunkte definiert: Lade eine
 der Checkpoint Dateien. 'tkgate -V' prüft die Integrität
 einer abgespeicherten Datei.
 -end-
-err.corruptsave	-begin-
+err.corruptsave	-fillbegin-
 TkGate hat ein Problem bei der Sicherung der Datei '%s' entdeckt. Die
 existierende Datei wurde nicht modifiziert, die beschädigte Datei
 wurde nach '%s' geschrieben. Ist die Verwendung von Aufsetzpunkten
 eingeschaltet, kann versuchsweise eine der Checkpoint-Dateien geladen
 werden. 'tkgate -V' prüft die Integrität einer abgespeicherten Datei.
 -end-
-err.badsave	-begin-
+err.badsave	-fillbegin-
 Beim Öffnen oder Schreiben in Datei '%s' gab es ein Problem. Bitte
 Datei/Verzeichnisrechte und/oder verfügbaren Plattenplatz überprüfen.
 -end-
-err.nosafesave	-begin-
+err.nosafesave	-fillbegin-
 Beim Versuch der Sicherung von Datei '%s' ist ein Problem aufgetreten.
 Es ist möglich, einen erneuten Versuch ohne Sicherungsvalidierung zu
 starten. Bei Antwort "nein" bleibt die Originaldatei unverändert.
@@ -1223,7 +1273,7 @@ Bei Antwort "ja" wird die Originaldatei überschrieben, wird aber
 ggf. beim Auftreten eines Fehlers zerstört. Soll eine unvalidierte
 Sicherung versucht werden?
 -end-
-err.noback	-begin-
+err.noback	-fillbegin-
 Die Datei wurde von TkGate,
 Version %s, erzeugt und ist
 nach Sichern mit der aktuellen
@@ -1439,7 +1489,9 @@ ho.opt.editor.format	-begin-
 Verilog Quellcode wird automatisch eingerückt,
 wenn die TAB-Taste gedrückt wird.
 -end-
-ho.opt.editor.indent	Anzahl der Leerzeichen pro Einrückungsstufe.
+ho.opt.editor.indent	-begin-
+Anzahl der Leerzeichen pro Einrückungsstufe.
+-end-
 ho.opt.editor.rtab	-begin-
 Automatisches Einrücken der aktuellen Zeile
 und Tabulation zur entsprechenden Einrückung
@@ -1486,8 +1538,12 @@ ho.save	Sichern der Schaltung in die aktuelle Datei.
 ho.saveas	Sichern der Schaltung in eine neue Datei.
 ho.print	Drucken der aktuellen Schaltung.
 ho.library	Laden einer Bibliotheksdatei.
-ho.symed.tab.normal	Editieren der nicht ausgewählten Symbol-Bitmap.
-ho.symed.tab.select	Editieren der ausgewählten Symbol-Bitmap.
+ho.symed.tab.normal	-begin-
+Editieren der nicht ausgewählten Symbol-Bitmap.
+-end-
+ho.symed.tab.select	-begin-
+Editieren der ausgewählten Symbol-Bitmap.
+-end-
 ho.simmove	-begin-
 Wähle Leitungen und Module aus,
 bediene die Schalter und gib DIP
@@ -1537,7 +1593,9 @@ Einen Port zu einem Modul hinzu-
 fügen. Doppelklicken nach dem
 letzten Item bewirkt dasselbe.
 -end-
-ho.ipanel.deleteport	Löschen des ausgewählten Ports.
+ho.ipanel.deleteport	-begin-
+Löschen des ausgewählten Ports.
+-end-
 ho.ipanel.editport	-begin-
 Editieren des ausgewählten Ports.
 Ein Feld in einem Port wird mit
@@ -1606,7 +1664,9 @@ ho.mod.type.hdl	HDL Modul
 ho.mod.type.Lhdl	HDL Modul (locked)
 ho.undo	Undo früherer Aktion(en)
 ho.redo	Redo von Undo-Aktion(en)
-ho.tab.edit	Primärer Editiermodus.
+ho.tab.edit	-begin-
+Primärer Editiermodus.
+-end-
 ho.tab.interface	-begin-
 Editieren der Modulschnittstellen.
 Ein Doppelklick im Schnittstellenmodus
@@ -1620,7 +1680,9 @@ Start des Simulators, Öffnen des
 Logikanalysators und Ausführen aller
 festgelegten Initialisierungsskripte.
 -end-
-ho.tab.cpath	Suche die kritischen Pfade einer Schaltung.
+ho.tab.cpath	-begin-
+Suche die kritischen Pfade einer Schaltung.
+-end-
 ho.log	-begin-
 Log von TkGate Meldungen:
 Fehlermeldungen, informelle Meldungen
@@ -1657,7 +1719,9 @@ Editieren der aktuellen Haltepunkte.
 Die Simulation hält, wenn eine
 Haltepunktbedingung wahr wird.
 -end-
-ho.simexec	Verwalten der Sammlung aktiver Skripte.
+ho.simexec	-begin-
+Verwalten der Sammlung aktiver Skripte.
+-end-
 ho.simoptions	-begin-
 Setzen verschiedener Optionen, die die
 Simulation steuern.
@@ -1772,7 +1836,9 @@ ho.circuit.ver	-begin-
 Die TkGate-Version, mit der die aktuelle Datei
 erzeugt wurde.
 -end-
-ho.circuit.encoding	Benutze diese Codierung für die Dateisicherung.
+ho.circuit.encoding	-begin-
+Benutze diese Codierung für die Dateisicherung.
+-end-
 ho.circuit.language	-begin-
 Nutze Fonts mit dieser Codierung zur Anzeige
 von Schaltungsdaten.
@@ -2011,7 +2077,9 @@ Dateierweiterung und implementieren typischerweise
 ein GUI, das das periphere Gerät repräsentiert und
 das von einer benutzerschaltung gesteuert wird.
 -end-
-ho.opt.undolen	Maximale Zahl der aufzuhebenden Undo-Aktionen.
+ho.opt.undolen	-begin-
+Maximale Zahl der aufzuhebenden Undo-Aktionen.
+-end-
 ho.opt.name	-begin-
 Benutzername, der auf allen von TkGate
 produzierten Reports, z.B. Schaltungs-
@@ -2163,7 +2231,9 @@ zu entwickeln, füge man sie zu
 der Liste im "Datei -> Optionen
 -> Simulation"-Menu hinzu.
 -end-
-ho.custbut	Setze eigene Verzögerungszeitwerte für dieses Gatter.
+ho.custbut	-begin-
+Setze eigene Verzögerungszeitwerte für dieses Gatter.
+-end-
 ho.contver	-begin-
 Verifiziere die Integrität der internen
 Datenstrukturen nach jeder Operation.

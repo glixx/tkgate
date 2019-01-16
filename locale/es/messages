@@ -485,12 +485,12 @@ err.badopen	No se puede abrir el fichero '%s'.
 err.badlibopen	No puedo abrir la libreria '%s'.
 err.nomark	Por favor marca con el botón izquierdo antes de seleccionar el tipo de puerta.
 err.badgate	No conozco ese tipo de puerta.
-err.manypages	-begin-
+err.manypages	-fillbegin-
 Hay un montón de páginas en
 este documento. ¿ Estás seguro
 de querer imprimirlo ?.
 -end-
-err.nojump	-begin-
+err.nojump	-fillbegin-
 La posibilidad de 'saltar al módulo' no se
 puede utilizar en el modo de simulación o
 en el análisis de un camino crítico. Por
@@ -515,7 +515,7 @@ err.futureversion	Fichero salvado en la versión %s, futura versión del program
 err.badversion	Se desconoce el número de versión. Usada bajo su responsabilidad.
 err.nodrive	Conexión %s no posee entrada en el módulo %s.
 err.noconn	Cable %s{%d} no posee conexiones - lo borramos.
-err.noback	-begin-
+err.noback	-fillbegin-
 El fichero %s, se creará por el
 programa tkgate, y no puede leerse
 por versiones anteriores a la actual
@@ -601,7 +601,9 @@ guión de inicialización. Si
 estamos simulando, se coloca en
 modo continuo o interactivo.
 -end-
-ho.simpause	Para la simulación en curso.
+ho.simpause	-begin-
+Para la simulación en curso.
+-end-
 ho.simstep	-begin-
 Avanza la simulación un
 intervalo de tiempo fijo.
@@ -623,7 +625,9 @@ Edita los puntos de ruptura. La Simulación
 se detendrá cuando la condición ajustada
 sea vuelva verdadera.
 -end-
-ho.simexec	Ejecuta un guión de simulación.
+ho.simexec	-begin-
+Ejecuta un guión de simulación.
+-end-
 ho.simload	-begin-
 Carga la memoria con el contenido
 de un fichero con extensión mem.
@@ -668,7 +672,9 @@ vez que el fichero se salvo en disco.
 -end-
 ho.print.selall	Imprimir todos los módulos actualmente cargados en TKGate.
 ho.print.selcur	Imprimir sólo el módulo presente en la ventana de Edición de TKGate.
-ho.print.seluse	Imprime todos los módulos "en uso". Los módulos en uso son aquellos que descienden del principal siguiendo la jerarquia arborescente.
+ho.print.seluse	-begin-
+Imprime todos los módulos "en uso". Los módulos en uso son aquellos que descienden del principal siguiendo la jerarquia arborescente.
+-end-
 ho.print.selsel	-begin-
 Imprime sólo los módulos seleccionados más abajo.
 Usa la tecla CONTROL para seleccionar más de uno.
@@ -823,7 +829,9 @@ Usa retrasos para la tecnología standard de un fichero de
 definición. Para añadir tecnologias personalizadas, añadirlas
 en la lista del menú "Fichero -> Opciones -> Simulador".
 -end-
-ho.custbut	Ajustar valores de retrasos personalizados para esta puerta.
+ho.custbut	-begin-
+Ajustar valores de retrasos personalizados para esta puerta.
+-end-
 ho.simwatch	-begin-
 Visualizar comandos enviados entre el entorno
 de visualización (GUI) y el Simulador.

@@ -512,12 +512,12 @@ err.badopen	No puc obrir el fitxer '%s'.
 err.badlibopen	No puc obrir la llibreria '%s'.
 err.nomark	Per favor marca amb el botó esquerra abans de seleccionar el tipus de porta.
 err.badgate	No connexió aquest tipus de porta.
-err.manypages	-begin-
+err.manypages	-fillbegin-
 Hi ha MOLTES pàgines en aquest
 document. ¿ Estàs segur
 que vols imprimir-lo ?.
 -end-
-err.nojump	-begin-
+err.nojump	-fillbegin-
 La possibilitat de 'saltar al mòdul' no es
 pot usar en el mode de simulació o
 en l'anàlisi d'un camí crític. Per
@@ -542,7 +542,7 @@ err.futureversion	Fitxer salvat en la versió %s, futura versió del programa tk
 err.badversion	Es desconeix el número de versió. Usada sota la seva responsabilitat.
 err.nodrive	Connexió %s no posseeix entrada en el mòdul %s.
 err.noconn	Cable %s{%d} no posseeix connexions - l'esborrem.
-err.noback	-begin-
+err.noback	-fillbegin-
 El fitxer %s, es crearà per el
 programa tkgate, y no podrà llegir-se
 per a versions anteriors a l'actual
@@ -631,7 +631,9 @@ guió d'inicializació. Si
 estem simulant, es col·loca en
 mode continu o interactiu.
 -end-
-ho.simpause	Atura la simulació en curs.
+ho.simpause	-begin-
+Atura la simulació en curs.
+-end-
 ho.simstep	-begin-
 Avança la simulació un
 interval de temps fix.
@@ -653,7 +655,9 @@ Edita els punts de ruptura. La simulació
 s'aturarà quan la condició especificada
 sigui certa.
 -end-
-ho.simexec	Executa un guió de simulació.
+ho.simexec	-begin-
+Executa un guió de simulació.
+-end-
 ho.simload	-begin-
 Carrega la memòria amb el contingut
 d'un fitxer amb extensió .mem.
@@ -856,7 +860,9 @@ Usa retards per la tecnologia estàndard d'un fitxer de
 definició. Per afegir tecnologies personalitzades, afegir-les
 a la llista del menú "Fitxer -> Opcions -> Simulador".
 -end-
-ho.custbut	Ajustar valors de retards personalitzats per aquesta porta.
+ho.custbut	-begin-
+Ajustar valors de retards personalitzats per aquesta porta.
+-end-
 ho.simwatch	-begin-
 Visualitzar comandes enviades entre l'entorn
 de visualització (GUI) i el simulador.
