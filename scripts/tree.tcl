@@ -144,11 +144,11 @@ namespace eval Tree {
     set dir [file dirname $v]
     set n [file tail $v]
     if {![info exists treeData($w:$dir:open)]} {
-      error "parent item \"$dir\" is missing"
+      error "[format [m err.v] $dir]"
     }
     set i [lsearch -exact $treeData($w:$dir:children) $n]
     if {$i>=0} {
-      error "item \"$v\" already exists"
+      error "[format [m err.v] $v]"
     }
     lappend treeData($w:$dir:children) $n
     if { $treeData($w:sorted) } {

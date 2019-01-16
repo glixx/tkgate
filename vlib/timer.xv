@@ -1,6 +1,7 @@
 //: version "2.2"
+//: property encoding = "utf-8"
 //: property prefix = "_GG"
-//: property title = "Ocillators and One-Shots with absolute time delays"
+//: property title = "timer"
 
 //: /symbolBegin: 140917008
 //: /iconBegin normal 815 5 5

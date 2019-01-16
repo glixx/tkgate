@@ -1,8 +1,7 @@
 //: version "2.2"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: property encoding = "utf-8"
 //: property prefix = "_GG"
-//: property title = "Coke Machine Interface"
+//: property title = "cokemachine"
 
 `timescale 1ns/1ns
 

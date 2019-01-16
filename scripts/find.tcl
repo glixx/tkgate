@@ -271,7 +271,7 @@ namespace eval Find {
     global simOn
 
     if { $simOn } {
-      errmsg "'Find' not supported in simulation mode."
+      errmsg "[m err.find.sim]"
       return
     }
 

@@ -218,12 +218,20 @@ opt.simulate.tech	Tecnologia
 opt.library	Bibliotecas
 opt.mods	Módulos
 opt.cpath	Caminho Crítico
+opt.security	Segurança
+opt.simclock	Opções do Relógio
 opt.tool.file	Ficheiro
 opt.tool.edit	Editar
 opt.tool.gateprop	Componentes
 opt.tool.module	Módulo
 opt.tool.tech	Tecnologia
+opt.tool.symedit	Cortar/Colar
 opt.tool.symport	Portas
+opt.editor.comments	Comentários
+opt.editor.color	Cor
+opt.editor.bold	Negrito
+opt.editor.italic	Itálico
+opt.editor.indentlevel	Indentação por nível:
 igen.port	Porta
 igen.type	Tipo
 igen.size	Tamanho

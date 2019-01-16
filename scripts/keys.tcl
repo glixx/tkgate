@@ -85,8 +85,7 @@ array set keysymTable {
   ISO_Left_Tab       "BackTab"
 }
 
-
-
+set keysymTable(space) "[m space]"
 
 namespace eval KeyBinding {
   variable wgroups
@@ -190,7 +189,7 @@ namespace eval KeyBinding {
   proc beautify {keyseq} {
 
     if {[regexp "(.|<\[^>\]+>)(.|<\[^>\]+>)?" $keyseq X key1 key2] <= 0 } {
-      error "Illegal key definition."
+      error "[m err.key.def]"
     }
 
     if { $key2 == "" } {
@@ -275,7 +274,7 @@ namespace eval KeyBinding {
     parseargs $args {-groups -perm}
 
     if {[regexp "(.|<\[^>\]+>)(.|<\[^>\]+>)?" $keyseq X key1 key2] <= 0 } {
-      error "Illegal key definition."
+      error "[m err.key.def]"
     }
 
     if {[regexp "<KeyPress-(.)>" $key1 X KP] > 0} { set key1 $KP }

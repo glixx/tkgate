@@ -54,9 +54,11 @@ namespace eval LibraryMgr {
     while {![eof $f]} {
       set s [gets $f]
 
-      if {[regexp "//: *property *title *= *(.*)" $s all title]} {
+      if {[regexp "//: *property *title *= *\"(.*)\"" $s all title]} {
 	close $f
-	return $title
+	set title0 [m $title]
+	if { $title0 == "<no-msg: $title>" } {return \"$title\"}
+	return \"[m $title]\"
       }
     }
     close $f
@@ -161,9 +163,9 @@ namespace eval LibraryMgr {
     #
     if { $libStatus($name) != $libReqStatus($name) } {
       if { $libReqStatus($name) } {
-	set status " \[load\]"
+	set status " [m load]"
       } else {
-	set status " \[unload\]"
+	set status " [m unload]"
       }
       $w create text $x $y -text $status -anchor sw -font $boldFont -fill red -tags $name
       set x [expr $x + [font measure $boldFont $status]]

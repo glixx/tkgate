@@ -651,7 +651,7 @@ namespace eval TabBox {
       set tablabels($w) $tabs($w)
     }
     if { [llength $tablabels($w)] != [llength $tabs($w)] } {
-      error "-tablabels and -tabs must be of equal length"
+      error "[m err.tab.len]"
     }
 
     switch $tabside($w) {

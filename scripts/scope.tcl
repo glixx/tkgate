@@ -151,8 +151,8 @@ namespace eval Scope {
 }
 
 proc scope_test {} {
-  button .make -text Scope -command makeScope
-  button .print -text Print -command printDlg
+  button .make -text "[m opt.color.scope]" -command makeScope
+  button .print -text "[m opt.print]" -command printDlg
   pack .make .print -fill x
   wm geometry . +0+0
 }

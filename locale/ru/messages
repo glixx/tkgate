@@ -43,7 +43,7 @@ sidetab.nets	Цепи
 sidetab.ports	Порты
 mm.add	Добавить...
 mm.delete	Удалить
-mm.edit	Редактировать...
+mm.edit	Редакт-ть...
 mm.enable	Включить
 mm.disable	Отключить
 menu.file	0:Файл
@@ -924,7 +924,7 @@ ipanel.props	Свойства интерфейса
 ipanel.block	Стандарт.
 ipanel.symbol	Символ
 ipanel.autogen	Автогенерация...
-ipanel.updateall	Синхронизировать...
+ipanel.updateall	Синхронизировать
 ipanel.itype.select	Тип интерфейса
 ipanel.ppos.label	Расположение портов при изменении размеров блока:
 ipanel.ppos.fix	Фиксированное
@@ -2204,3 +2204,94 @@ ho.tool.anchor	Привязать выделенные компоненты.
 ho.tool.unanchor	Удалить привязку выделенного компонента.
 ho.tool.replicate	Клонировать компонент.
 ho.tool.delete	Удалить выделенное.
+cpath.critpath	TKGate: Критические пути
+err.simdiedread	Аварийное завершение работы симулятора (ошибка чтения).
+err.simdiedeof	Аварийное завершение работы симулятора (символ конца файла при чтении данных).
+err.fail.analyz	Не удалось запустить анализатор '%s'
+err.find.sim	Поиск не поддерживается в режиме симуляции.
+err.key.def	Недопустимое определение ключа.
+showdoc	TkGate: Документация
+mem.addr	Адрес
+mem.data	Данные
+mem.time	Время
+mem.title	TkGate: Память %s
+mem.last.read	Последний доступ для чтения
+mem.last.write	Последний доступ для записи
+mem.page	Страница
+err.bad.opt1	Недопустимая опция '%s'.
+err.bad.opt2	Должна быть одна из: %s
+misc.tcl.shell	TKGate: Оболочка Tcl
+misc.cmd	Команда
+lib.mngr	TKGate: Управление библиотеками
+err.no.master	Не найдено основы. Возможно, '%s' не является подчинённым элементом?
+err.unknown.opt	Неизвестная опция '%s'
+err.no.widget	Не указаны виджеты для настройки
+txt.widget	Текстовый виджет
+sim.watch	TkGate: Наблюдение за симуляцией
+err.start.sim	Не удалось запустить симулятор '%s'
+err.simdiedwrite	Аварийное завершение работы симулятора (при записи).
+err.simdiedflush	Аварийное завершение работы симулятора (при вытирании).
+err.tab.len	-tablabels и -tabs должны иметь одинаковую длину
+err.dir	Родительский элемент '%s' отсутствует
+err.v	Элемент '%s' уже существует.
+wizard.back	Назад
+wizard.next	Далее
+wizard.cancel	Отмена
+wizard.finish	Готово
+loaded.vpds	Загруженные вирт. устройства
+argument	Аргумент
+failing	Неудача
+letter	Лист
+legal	Легал
+tabloid	Таблоид
+executive	Экзекьютив
+inches	дюйм
+millimeters	мм
+one	один
+two	два
+three	три
+four	четыре
+space	Пробел
+load	[загружено]
+unload	[выгружено]
+short_hlink	Гиперссылка
+state.off	выкл
+state.on	вкл
+state.float	нестаб.
+line_comment	линейный комментарий
+block_comment	блочный комментарий
+short_comment	Коммент.
+experiment	ЭКСПЕРИМЕНТАЛЬНО
+unused	Резерв
+script	Скрипт
+coke	Кола
+diet_coke	Диет. кола
+root_beer	Корн. пиво
+pocari_sweat	Пот Покари
+dr_pepper	Д-р Пеппер
+bill_scanner	Сканер купюр
+coke_machine	Автомат газировки
+no_change	Нет сдачи
+insert_dollar	Вставить доллар
+chg	Сдача
+bill_in	Вход
+bill_out	Выход
+commit	Совершить
+retins	Выдать
+soda	Сода
+reset	Сброс
+bogus	фейк
+empty	пусто
+collected	Собрано
+inserted	Вставлено
+change	Сдача
+no_n_change	-begin-
+нет
+сдачи
+-end-
+74xx	Микросхемы стандартной логики серии 74
+74xxgatelevel	Модели вентилей verilog серии 74
+cokemachine	Интерфейс автомата газировки
+m68xx	Микросхемы Motorola 68xx
+timer	Осцилляторы и импульс. устройства с абсолют. задержками
+ttydevice	Интерактивный терминал TTY

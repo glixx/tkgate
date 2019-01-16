@@ -281,7 +281,7 @@ proc blocklist_tabs {w tab} {
 }
 
 proc tkg_blockListTest {} {
-  button .open -text Open -command tkg_blockListTestSetup
+  button .open -text "[m pop.gate.open]" -command tkg_blockListTestSetup
   pack .open
 }
 

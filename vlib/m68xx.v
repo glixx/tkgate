@@ -1,8 +1,7 @@
 //: version "2.2"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: property encoding = "utf-8"
 //: property prefix = "_GG"
-//: property title = "Motorola 68xx chips"
+//: property title = "m68xx"
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
 //: require "74xx"

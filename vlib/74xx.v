@@ -1,8 +1,7 @@
 //: version "2.2"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: property encoding = "utf-8"
 //: property prefix = "_GG"
-//: property title = "74 series standart logic circuits"
+//: property title = "74xx"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"

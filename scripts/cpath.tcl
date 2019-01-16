@@ -183,7 +183,7 @@ proc tkg_cpathAddLoop {n} {
 
     toplevel $w
     wm resizable $w 0 0
-    wm title $w "TKGate: Critical Paths (EXPERIMENTAL)"
+    wm title $w "[m cpath.critpath] ([m experiment])"
     wm geometry $w [offsetgeometry . 50 50]
     wm transient $w .
 
@@ -226,7 +226,7 @@ proc tkg_cpathBox {} {
 
     toplevel $w
     wm resizable $w 0 0
-    wm title $w "TKGate: Critical Paths (EXPERIMENTAL)"
+    wm title $w "[m cpath.critpath] ([m experiment])"
     wm geometry $w [offsetgeometry . 50 50]
     wm transient $w .
 
@@ -299,14 +299,14 @@ proc tkg_readAnalyzer {} {
     catch { set analyOn 0 }
     catch { close $simId }
     gat_setMajorMode edit
-    errmsg "Simulator has died (read error)."
+    errmsg "[m err.simdiedread]"
     return
   }
   if { $command == "" && [eof $simId] } {
     catch { set analyOn 0 }
     catch { close $simId }
     gat_setMajorMode edit
-    errmsg "Simulator has died (eof in read)."
+    errmsg "[m err.simdiedeof]"
     return
   }
 
@@ -347,7 +347,7 @@ proc tkg_startAnalyzer {fname} {
   set cur_numCPath $tkg_numCPath
 
   if { [catch { set simId [open "|$simExec -a -D $delayFile $basename $fname" r+ ] } ] } {
-    errmsg "Failed to start analyzer '${simExec}'"
+    errmsg "[format [m err.fail.analyz] ${simExec}]"
     return
   }
 
