@@ -119,12 +119,12 @@ err.badopen	Impossibile aprire il file '%s'.
 err.badlibopen	Impossibile aprire il file di libreria '%s'.
 err.nomark	Posiziona un punto di riferimento con il tasto sinstro del mouse prima di scegliere un gate.
 err.badportadd	Impossibile aggiungere porte a un gate di questo tipo.
-err.manypages	-begin-
+err.manypages	-fillbegin-
 C'è una quantità tremenda di pagine
 in questo documento!
 Sei sicuro di volerlo stampare?
 -end-
-err.nojump	-begin-
+err.nojump	-fillbegin-
 L'opzione 'jump-to-module' non è disponibile
 nella modalità di simulazione o di analisi del
 percorso critico.
@@ -150,13 +150,13 @@ err.nodrive	Il collegamento %s non ha driver nel modulo %s.
 err.noconn	Il filo %s{%d} non ha collegamenti - cancellato.
 err.oldportact	Clicca con il tasto destro sul port o sul bordo del modulo per aggiungere/modificare un port.
 err.backupfail	Non riesco a creare il file di backup '%s'.
-err.corruptnewsave	-begin-
+err.corruptnewsave	-fillbegin-
 TkGate è riuscito a salvare il file '%s', ma sembra rovinato.
 Se hai abilitato la modalità "checkpointing" prova a caricare
 uno dei files di "checkpoint". Usa 'tkgate -V' per verificare
 l'integrità di un file di salvataggio.
 -end-
-err.corruptsave	-begin-
+err.corruptsave	-fillbegin-
 TkGate ha riscontrato un problema nel salvataggio del file '%s'.
 Il file esistente è stato lasciato intatto e il file danneggiato
 è stato salvato in '%s'. Se hai abilitato la modalità "checkpointing"
@@ -164,17 +164,17 @@ puoi provare a caricare uno dei files di "checkpoint".
 Puoi anche usare 'tkgate -V' per verificare l'integrità
 di un file di salvataggio.
 -end-
-err.badsave	-begin-
+err.badsave	-fillbegin-
 C'è un problema ad aprire o a salvare il file '%s'.
 Controlla le protezioni del file/directory e/o lo spazio disco.
 -end-
-err.nosafesave	-begin-
+err.nosafesave	-fillbegin-
 C'è un problema a salvare '%s'. Se vuoi, puoi ritentare senza validazione.
 Se rispondi "no", il file originale rimane inalterato.
 Se rispondi "yes" il file originale verrà sovrascritto, ma potrebbe venir distrutto se si verifica un problema.
 Vuoi tentare un salvataggio senza validazione?
 -end-
-err.noback	-begin-
+err.noback	-fillbegin-
 Il file è stato creato con TkGate %s.
 Se lo salvi, è probabile che non possa venir
 riletto da versioni precedenti a questa (%s).
@@ -234,7 +234,9 @@ Mette il simulatore in modalità di simulazione continua.
 Nota che per circuiti combinatori il simulatore calcola
 solo fino al raggiungimento dello stato stazionario.
 -end-
-ho.simpause	Mette in pausa il simulatore.
+ho.simpause	-begin-
+Mette in pausa il simulatore.
+-end-
 ho.simstep	-begin-
 Avanza per un intervallo di tempo fisso.
 Definisci la durata dell'intervallo ("Epoch Step Size")
@@ -245,14 +247,20 @@ Avanza per una quantità fissa di cicli di clock.
 Definisci la durata dell'intervallo ("Step size")
 nel formulario di opzioni del simulatore.
 -end-
-ho.simstop	Termina la simulazione e torna alla modalità di disegno.
+ho.simstop	-begin-
+Termina la simulazione e torna alla modalità di disegno.
+-end-
 ho.simbreak	-begin-
 Modifica i breakpoints.
 La simulazione viene sospesa non appena
 la condizione di un breakpoint è verificata.
 -end-
-ho.simload	Carica un file.mem in memoria.
-ho.simdump	Scarica il contenuto di una memoria in un file.mem.
+ho.simload	-begin-
+Carica un file.mem in memoria.
+-end-
+ho.simdump	-begin-
+Scarica il contenuto di una memoria in un file.mem.
+-end-
 ho.modlist	-begin-
 Elenco di tutti i moduli caricati.
 Il modulo "top-level" è indicato con il segno "+".
@@ -334,7 +342,9 @@ Qui puoi cambiare il numero di bit del segnale.
 ho.edgat.cycle	Il numero di epoche in un ciclo di clock.
 ho.edgat.phase	L'inizio del ciclo (in percento).
 ho.edgat.duty	La percentuale del ciclo, il clock è basso.
-ho.edgat.hide	Attiva questo flag per nascondere il nome della porta logica.
+ho.edgat.hide	-begin-
+Attiva questo flag per nascondere il nome della porta logica.
+-end-
 ho.edgat.gtype	Tipo di porta.
 ho.edgat.gname	Nome di questa istanza di porta logica.
 ho.edgat.ganchor	Attiva questo flag per fissare la posizione di una porta logica.
@@ -355,7 +365,9 @@ Il file viene letto quando il simulatore viene attivato.
 -end-
 ho.edgat.func	Il tipo di funzione di questo modulo.
 ho.edgat.frame	L'etichetta del riquadro.
-ho.traceprint	Stampa la traccia.
+ho.traceprint	-begin-
+Stampa la traccia.
+-end-
 ho.showxhair	-begin-
 Se questo pulsante è attivato, nella finestra
 delle tracce il cursore è una linea verticale.
@@ -367,7 +379,9 @@ ordinate in ordine alfabetico.
 Se l'opzione è disabilitata, le tracce vengono
 mostrate nell'ordine in cui sono state richiamate.
 -end-
-ho.opt.undolen	Quantità massima di comandi da mantenere nella lista "undo".
+ho.opt.undolen	-begin-
+Quantità massima di comandi da mantenere nella lista "undo".
+-end-
 ho.opt.site	-begin-
 Nome del sito di istallazione di TkGate.
 Questo nome appare sui documenti stampati.
@@ -422,8 +436,12 @@ Se questa opzione è attiva, TkGate si predispone
 per progettare un computer di Batman...
 -end-
 ho.opt.trek	Lanciami Scotty! (...da Star Trek...)
-ho.opt.simstep	Quantità di epoche di avanzamento per il comando "Step Epoch(s)".
-ho.opt.ckstep	Quantità di cicli di clock di avanzamento per il comando "Step Cycle".
+ho.opt.simstep	-begin-
+Quantità di epoche di avanzamento per il comando "Step Epoch(s)".
+-end-
+ho.opt.ckstep	-begin-
+Quantità di cicli di clock di avanzamento per il comando "Step Cycle".
+-end-
 ho.opt.ckover	-begin-
 La quantità di epoche da simulare oltre il fianco positivo
 del clock per il comando "Step Cycle".
@@ -466,10 +484,14 @@ Per aggiungere tecnologie personalizzate,
 inseriscile nella lista nel menu
 "File -> Options -> Simulate".
 -end-
-ho.custbut	Imposta valori di ritardo personalizzati per questa porta.
+ho.custbut	-begin-
+Imposta valori di ritardo personalizzati per questa porta.
+-end-
 ho.contver	-begin-
 Verifica continuamente l'integrità delle strutture dati
 interne dopo ogni operazione.
 -end-
-ho.simwatch	Visualizza i comandi scambiati fra GUI e simulatore.
+ho.simwatch	-begin-
+Visualizza i comandi scambiati fra GUI e simulatore.
+-end-
 circ.sim.tv.after.2	-empty-

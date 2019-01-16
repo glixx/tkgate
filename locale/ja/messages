@@ -269,7 +269,7 @@ db.net.inout	入出
 db.net.inets	ネット
 db.newcirc.directory	ディレクトリ:
 db.newcirc.cap	新規回路
-db.newcirc.exp	-begin-
+db.newcirc.exp	-fillbegin-
 現在の回路の編集を
 辞めて、新しい回路を
 編集し始める。
@@ -310,12 +310,12 @@ db.gate.delete	削除
 db.gate.add	追加
 db.gate.ff.type	フリップフロップの方位決定
 db.gate.ff.normal.hdr	普通
-db.gate.ff.normal.exp	-begin-
+db.gate.ff.normal.exp	-fillbegin-
 データが左から右へ
 流すフリップフロップ。
 -end-
 db.gate.ff.reverse.hdr	反射
-db.gate.ff.reverse.exp	-begin-
+db.gate.ff.reverse.exp	-fillbegin-
 データが右から左へ
 流すフリップフロップ。
 -end-
@@ -323,20 +323,28 @@ db.gate.jkff.normal.hdr	普通
 db.gate.jkff.reverse.hdr	反射
 db.gate.cat.asc.hdr	昇順
 db.gate.cat.dec.hdr	降順
-db.gate.cat.asc.exp	ビットは上下に昇順で連結する。
-db.gate.cat.dec.exp	ビットは上下に降順で連結する。
+db.gate.cat.asc.exp	-fillbegin-
+ビットは上下に昇順で連結する。
+-end-
+db.gate.cat.dec.exp	-fillbegin-
+ビットは上下に降順で連結する。
+-end-
 db.gate.cat.sigdir	信号方向
 db.gate.cat.auto.hdr	自動
 db.gate.cat.multin.hdr	多入力
 db.gate.cat.singin.hdr	多出力
 db.gate.cat.tran.hdr	入出
-db.gate.cat.auto.exp	-begin-
+db.gate.cat.auto.exp	-fillbegin-
 信号の方向を自動的
 に判断する。
 -end-
-db.gate.cat.multin.exp	いつも多ポート側が入力として扱う。
-db.gate.cat.singin.exp	いつも単位のポート側が入力として扱う。
-db.gate.cat.tran.exp	-begin-
+db.gate.cat.multin.exp	-fillbegin-
+いつも多ポート側が入力として扱う。
+-end-
+db.gate.cat.singin.exp	-fillbegin-
+いつも単位のポート側が入力として扱う。
+-end-
+db.gate.cat.tran.exp	-fillbegin-
 双方向の信号の伝播(tran)を許す。
 スイッチやレジスタにの接続は不可です。
 -end-
@@ -360,15 +368,25 @@ db.gate.tab.DEMUX.cap	Demux特徴
 db.gate.tab.CONCAT.cap	Concat特徴
 db.gate.tab.COMMENT.cap	テキスト特徴
 db.gate.tab.FF.cap	フリップフロップ特徴
-db.gate.tab.General.exp	インスタンスの基本特徴を表示、又は編集する。
-db.gate.tab.Ports.exp	インスタンスのポートを追加、編集、又は削除する。
-db.gate.tab.Delay.exp	インスタンスの遅延はテクノロジでも、個々でも設定可能である。
-db.gate.tab.Parameters.exp	-begin-
+db.gate.tab.General.exp	-fillbegin-
+インスタンスの基本特徴を表示、又は編集する。
+-end-
+db.gate.tab.Ports.exp	-fillbegin-
+インスタンスのポートを追加、編集、又は削除する。
+-end-
+db.gate.tab.Delay.exp	-fillbegin-
+インスタンスの遅延はテクノロジでも、個々でも設定可能である。
+-end-
+db.gate.tab.Parameters.exp	-fillbegin-
 モジュールのパラメターが定義している場合、ここでその値を設定出来る。モ
 ジュールのパラメターは遅延値、コンスタントなどに利用されている。
 -end-
-db.gate.tab.details.exp	ゲート次第の設定を行う。
-db.gate.tab.COMMENT.exp	コメントのテキストを入力する。ある程度のhtmlやハイパーリンクなども利用出来る。
+db.gate.tab.details.exp	-fillbegin-
+ゲート次第の設定を行う。
+-end-
+db.gate.tab.COMMENT.exp	-fillbegin-
+コメントのテキストを入力する。ある程度のhtmlやハイパーリンクなども利用出来る。
+-end-
 db.gate.mparm.parameter	パラメタ
 db.gate.mparm.value	値
 db.gate.mparm.exampleA	-begin-
@@ -385,44 +403,76 @@ db.gate.mparm.exampleA	-begin-
 db.gate.mux.dataorder	入力の順序
 db.gate.mux.ord1.hdr	左から右へ
 db.gate.mux.ord2.hdr	右から左へ
-db.gate.mux.ord1.exp	MUXの入力の順序を左から右へにする。
-db.gate.mux.ord2.exp	MUXの入力の順序を右から左へにする。
+db.gate.mux.ord1.exp	-fillbegin-
+MUXの入力の順序を左から右へにする。
+-end-
+db.gate.mux.ord2.exp	-fillbegin-
+MUXの入力の順序を右から左へにする。
+-end-
 db.gate.mux.select	セレクタの箇所
-db.gate.mux.sel1.exp	セレクタの入力を左側におく。
-db.gate.mux.sel2.exp	セレクタの入力を右側におく。
+db.gate.mux.sel1.exp	-fillbegin-
+セレクタの入力を左側におく。
+-end-
+db.gate.mux.sel2.exp	-fillbegin-
+セレクタの入力を右側におく。
+-end-
 db.gate.demux.dataorder	出力の順序
 db.gate.demux.ord1.hdr	左から右へ
 db.gate.demux.ord2.hdr	右から左へ
-db.gate.demux.ord1.exp	DEMUXの出力の順序を左から右へにする。
-db.gate.demux.ord2.exp	DEMUXの出力の順序を右から左へにする。
+db.gate.demux.ord1.exp	-fillbegin-
+DEMUXの出力の順序を左から右へにする。
+-end-
+db.gate.demux.ord2.exp	-fillbegin-
+DEMUXの出力の順序を右から左へにする。
+-end-
 db.gate.decoder.dataorder	出力の順序
 db.gate.decoder.ord1.hdr	左から右へ
 db.gate.decoder.ord2.hdr	右から左へ
 db.gate.aox.extbaruse	拡張バーを利用
 db.gate.aox.use.hdr	拡張バー
 db.gate.aox.nouse.hdr	拡張バーを利用しない
-db.gate.aox.use.exp	基本ゲート(AND, OR, など)に入力を追加する時、拡張バーが利用される。
-db.gate.aox.nouse.exp	基本ゲート(AND, OR, など)に入力を追加する時、拡張バーは利用されない。
+db.gate.aox.use.exp	-fillbegin-
+基本ゲート(AND, OR, など)に入力を追加する時、拡張バーが利用される。
+-end-
+db.gate.aox.nouse.exp	-fillbegin-
+基本ゲート(AND, OR, など)に入力を追加する時、拡張バーは利用されない。
+-end-
 db.gate.led.type	LEDのタイプ
 db.gate.led.bit.hdr	ビット
 db.gate.led.bar.hdr	バー・グラフ
-db.gate.led.bit.exp	一ビットの信号の為の単位のLED。
-db.gate.led.bar.exp	LEDのバー・グラフ。一ビットにつき、一つのバーが利用される。
-db.gate.led.hex.exp	信号を16進数で表示する。
-db.gate.led.dec.exp	信号を10進数で表示する。
-db.gate.led.seg.exp	各セグメントを別々に制御する。
+db.gate.led.bit.exp	-fillbegin-
+一ビットの信号の為の単位のLED。
+-end-
+db.gate.led.bar.exp	-fillbegin-
+LEDのバー・グラフ。一ビットにつき、一つのバーが利用される。
+-end-
+db.gate.led.hex.exp	-fillbegin-
+信号を16進数で表示する。
+-end-
+db.gate.led.dec.exp	-fillbegin-
+信号を10進数で表示する。
+-end-
+db.gate.led.seg.exp	-fillbegin-
+各セグメントを別々に制御する。
+-end-
 db.seq.back	<前へ
 db.seq.next	次へ>
 db.hdl.savecap	複数のモジュール
-db.hdl.saveexp	テキストのバッファに複数のモジュールの定義がある。右側のアクションのいずれかを選択すてください。
+db.hdl.saveexp	-fillbegin-
+テキストのバッファに複数のモジュールの定義がある。右側のアクションのいずれかを選択すてください。
+-end-
 db.hdl.autoedit	自動変数
 db.hdl.split	分離
 db.hdl.comment	コメント
 db.hdl.cancel	キャンセル
 db.hdl.ignore	無視する
 db.hdl.autoeditcap	名前が一等しない
-db.hdl.autoeditexp	テキストでのモジュール名と期待した名前が一等しない。右側のアクションのいずれかを選択すてください。
-cpath.cloops	回路に組合せのループが発見された。クリティカル ・パスの解析を行ないたければ、ループ上のネット を切ったり、ループ上のゲートを「クリティカル・ パス分割点」にしたりする必要がある。
+db.hdl.autoeditexp	-fillbegin-
+テキストでのモジュール名と期待した名前が一等しない。右側のアクションのいずれかを選択すてください。
+-end-
+cpath.cloops	-fillbegin-
+回路に組合せのループが発見された。クリティカル ・パスの解析を行ないたければ、ループ上のネット を切ったり、ループ上のゲートを「クリティカル・ パス分割点」にしたりする必要がある。
+-end-
 print.printer	プリンター:
 print.file	ファイル
 print.prcmd	印刷コマンド:
@@ -461,17 +511,17 @@ print.modulesel	モジュールの選択
 print.ok	印刷
 print.printtrace.cap	トレースの印刷
 print.printcirc.cap	回路図の印刷
-print.printcirc.out.exp	-begin-
+print.printcirc.out.exp	-fillbegin-
 回路図の印刷先が
 プリンタかファイル
 か選択する。
 -end-
-print.printcirc.mod.exp	-begin-
+print.printcirc.mod.exp	-fillbegin-
 印刷するモジュール
 や印刷の様子を選択
 る。
 -end-
-print.printtrace.trace.exp	-begin-
+print.printtrace.trace.exp	-fillbegin-
 時間の範囲を選択する。
 又、スケールによって、
 必要のページ数を表か
@@ -594,7 +644,9 @@ opt.editor.indentlevel	レブル毎のインデントのスペース数:
 opt.editor.beginindent	「begin..end」のインデントを囲まれるれべると会わせる。
 opt.editor.movesel	選択のドラッグ・アンド・ドロップを有効にする。
 opt.editor.returntab	リターンを押す時、自動インデントを有効にする。
-opt.vercheck	定期的に tkgate の新しいバージョンをインターネットで チェックする。常時接続でなければ有効にしないこと。
+opt.vercheck	-begin-
+定期的に tkgate の新しいバージョンをインターネットで チェックする。常時接続でなければ有効にしないこと。
+-end-
 opt.color.editwin	編集ウィンドウの色づけ
 opt.color.scopewin	スコープ・ウィンドウの色づけ
 opt.bbar.restore	ページの設定をデフォルトにする
@@ -628,7 +680,9 @@ blklst.rename.cap	モジュールの改名
 blklst.claim.cap	モジュールの取得
 blklst.setroot.cap	トップ・モジュールの選択
 find.label	探索
-find.exp	ゲート名、ネット名、 コメントなどの中に 指定ストリングを 探索する。
+find.exp	-fillbegin-
+ゲート名、ネット名、 コメントなどの中に 指定ストリングを 探索する。
+-end-
 find.ignorecase	ケースを無視する
 find.result.module	モジュール
 find.result.type	タイプ
@@ -663,11 +717,13 @@ libmgr.description	説明
 libmgr.status	状態
 libmgr.status.load	利用
 libmgr.status.unload	非利用
-libmgr.exp	利用するライブラリを選択する。
+libmgr.exp	-fillbegin-
+利用するライブラリを選択する。
+-end-
 libmgr.load	利用
 libmgr.unload	非利用
 libmgr.unloadall	全てを非利用
-libmgr.notedit	-begin-
+libmgr.notedit	-fillbegin-
 回路図のエディタが開いている時のみ、
 ライブラリのマネジャーが利用出来る。
 -end-
@@ -718,8 +774,12 @@ err.badopen	回路ファイル「%s」が見つからない。
 err.badlibopen	ライブラリ・ファイル「%s」が見つからない。
 err.nomark	ゲート種を選ぶ前に、マウスで位置を設定してください。
 err.badportadd	選択されたゲートにポートは追加不可。
-err.manypages	ページ数が極めて大きい。 本当に印刷しますか?
-err.nojump	現在、'jump-to-module'機能はシミュレーション・モードで使用出来ない。 トップ・モジュールより、「>」や「<」のコマンドでモジュールを開けてください。
+err.manypages	-fillbegin-
+ページ数が極めて大きい。 本当に印刷しますか?
+-end-
+err.nojump	-fillbegin-
+現在、'jump-to-module'機能はシミュレーション・モードで使用出来ない。 トップ・モジュールより、「>」や「<」のコマンドでモジュールを開けてください。
+-end-
 err.nomod	モジュール「%s」は定義していない。
 err.modlock	モジュールがロックしている!
 err.closeroot	トップ・モジュールが閉じれない。
@@ -737,11 +797,21 @@ err.nodrive	ネット%sはモジュール%sに信号のソースがない。
 err.noconn	ワイヤ%s{%d}は接続がない（削除した）。
 err.oldportact	ポートやモジュールの端に右クリックして下さい。
 err.backupfail	バックアップ・ファイル'%s'が作成出来なかった。
-err.corruptnewsave	TkGateは'%s'にセーブ出来たが、ファイルが混乱されているみたい。もしチェッ ク・ポイントを利用していれば、チェック・ポイントのファイルを使ってみてく ださい。'tkgate -V'でファイルをチェック出来る。
-err.corruptsave	'%s'をセーブしようとしている時、TkGateに内部問題が発見した。元々のファイ ルはそのまま残してある。混乱されている可能性のあるファイルは'%s'にセーブ した。もしチェック・ポイントを利用していれば、チェック・ポイントのファイ ルを使ってみてください。'tkgate -V'でファイルをチェック出来る。
-err.badsave	'%s'をセーブ出来なかった。ファイルのプロテクションや空きディスク量を確認 してください。
-err.nosafesave	'%s'の安全セーブを行うための一時のファイルが作成出来なかったから、直接セー ブしなくてはならない。「NO」にクリックすれば、元々のファイルはそのまま残 す。「YES」にクリックすれば、セーブするが、セーブ途中に問題が起こったら、 回路データが破壊される可能性がある。直接セーブしてみましょうか?
-err.noback	tkgateバージョン%sで作られたファイルである。保存すると、 tkgateの古いバージョンに読み込めないことがある（現在の バージョンは%sである）。
+err.corruptnewsave	-fillbegin-
+TkGateは'%s'にセーブ出来たが、ファイルが混乱されているみたい。もしチェッ ク・ポイントを利用していれば、チェック・ポイントのファイルを使ってみてく ださい。'tkgate -V'でファイルをチェック出来る。
+-end-
+err.corruptsave	-fillbegin-
+'%s'をセーブしようとしている時、TkGateに内部問題が発見した。元々のファイ ルはそのまま残してある。混乱されている可能性のあるファイルは'%s'にセーブ した。もしチェック・ポイントを利用していれば、チェック・ポイントのファイ ルを使ってみてください。'tkgate -V'でファイルをチェック出来る。
+-end-
+err.badsave	-fillbegin-
+'%s'をセーブ出来なかった。ファイルのプロテクションや空きディスク量を確認 してください。
+-end-
+err.nosafesave	-fillbegin-
+'%s'の安全セーブを行うための一時のファイルが作成出来なかったから、直接セー ブしなくてはならない。「NO」にクリックすれば、元々のファイルはそのまま残 す。「YES」にクリックすれば、セーブするが、セーブ途中に問題が起こったら、 回路データが破壊される可能性がある。直接セーブしてみましょうか?
+-end-
+err.noback	-fillbegin-
+tkgateバージョン%sで作られたファイルである。保存すると、 tkgateの古いバージョンに読み込めないことがある（現在の バージョンは%sである）。
+-end-
 msg.selwire	%sというワイヤが選択された。
 msg.modoverwt	モジュール「%s」が既に定義されている。定義しなおしますか?
 msg.foundgate	%sというゲートが見つかった。
@@ -775,7 +845,9 @@ license3	-begin-
 そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, Fifth
 Floor, Boston, MA 02110-1301 USA まで手紙を書いてください。
 -end-
-ho.new	現在の回路を消して、新しい 回路を作成する。
+ho.new	-begin-
+現在の回路を消して、新しい 回路を作成する。
+-end-
 ho.open	回路ファイルを開く。
 ho.save	回路ファイルを保存する。
 ho.print	回路ファイルを印刷する。
@@ -790,72 +862,158 @@ ho.move	-begin-
 ポートの属性を編集する
 コメントのテキストの属性を編集する
 -end-
-ho.delgat	このツールでゲートを削除する。
-ho.cutw	このツールでワイヤを切断する。
-ho.inv	このツールで、ゲートの入出力に 否定を付けたり、消したりする。
-ho.bitw	このツールでワイヤのビット幅を 変更する。ビット幅を右下の入力 ボックスに入力してください。
+ho.delgat	-begin-
+このツールでゲートを削除する。
+-end-
+ho.cutw	-begin-
+このツールでワイヤを切断する。
+-end-
+ho.inv	-begin-
+このツールで、ゲートの入出力に 否定を付けたり、消したりする。
+-end-
+ho.bitw	-begin-
+このツールでワイヤのビット幅を 変更する。ビット幅を右下の入力 ボックスに入力してください。
+-end-
 ho.mod.open	選択されたモジュールを開く。
 ho.mod.close	現在のモジュールを閉じる。
 ho.mod.type.partlib	ライブラリ名
 ho.undo	最近行った変化を元通りにする。
 ho.redo	undoした変化をやり直す
-ho.tab.simulate	シミュレータを開始し、論理アナライザのウィンドを 開き、そして初期化スクリプトが定義している場合、 そのスクリプトを実行する。
-ho.tab.cpath	回路のクリティカル・パスを探索する。
-ho.simgo	シミュレータを動かす。組合せ回路の場合、 信号が変わらなくなる時、シミュレーションの時間 が一時停止する。
-ho.simpause	シミュレータの一時停止。
-ho.simstep	シミュレータを一定数のエポックだけ動かす。 ステップ数はシミュレートの設定による。
-ho.simclock	シミュレータを一定数のクロック・サイクル だけ動かす。 ステップ数はシミュレートの設定による。
-ho.simstop	シミュレータを停止して、 編集モードに戻る。
-ho.simbreak	シミュレータのブレークポイント を編集する。
-ho.simexec	スクリプトを実行する。
-ho.simload	メモリ・ファイルを読み込む。
-ho.simdump	メモリ・ファイルに書き出す。
-ho.modlist	読み込んであるモジュールの一覧表。 トップのモジュールの名前に「+」が 付いている。ライブラリのモジュール は括弧に囲まれている。
-ho.netlist	現在のモジュールの一覧表。名前を隠して いるネットの名前に「@」が付いている。 マルチ・ビットのネットの名前の後に ビットのレンジを表示している。
-ho.ports	現在のモジュールのポートの一覧表。 入力に「>」、出力に「<」、入出力に 「=」が付いている。
-ho.status.logo	現在のモードが表示されている。鉄のゲート は編集モードを表す。ANDゲートはシミュレー ション・モードを表す。ANDゲートが走って いる時、シミュレーションの時間が動いている。
+ho.tab.simulate	-begin-
+シミュレータを開始し、論理アナライザのウィンドを 開き、そして初期化スクリプトが定義している場合、 そのスクリプトを実行する。
+-end-
+ho.tab.cpath	-begin-
+回路のクリティカル・パスを探索する。
+-end-
+ho.simgo	-begin-
+シミュレータを動かす。組合せ回路の場合、 信号が変わらなくなる時、シミュレーションの時間 が一時停止する。
+-end-
+ho.simpause	-begin-
+シミュレータの一時停止。
+-end-
+ho.simstep	-begin-
+シミュレータを一定数のエポックだけ動かす。 ステップ数はシミュレートの設定による。
+-end-
+ho.simclock	-begin-
+シミュレータを一定数のクロック・サイクル だけ動かす。 ステップ数はシミュレートの設定による。
+-end-
+ho.simstop	-begin-
+シミュレータを停止して、 編集モードに戻る。
+-end-
+ho.simbreak	-begin-
+シミュレータのブレークポイント を編集する。
+-end-
+ho.simexec	-begin-
+スクリプトを実行する。
+-end-
+ho.simload	-begin-
+メモリ・ファイルを読み込む。
+-end-
+ho.simdump	-begin-
+メモリ・ファイルに書き出す。
+-end-
+ho.modlist	-begin-
+読み込んであるモジュールの一覧表。 トップのモジュールの名前に「+」が 付いている。ライブラリのモジュール は括弧に囲まれている。
+-end-
+ho.netlist	-begin-
+現在のモジュールの一覧表。名前を隠して いるネットの名前に「@」が付いている。 マルチ・ビットのネットの名前の後に ビットのレンジを表示している。
+-end-
+ho.ports	-begin-
+現在のモジュールのポートの一覧表。 入力に「>」、出力に「<」、入出力に 「=」が付いている。
+-end-
+ho.status.logo	-begin-
+現在のモードが表示されている。鉄のゲート は編集モードを表す。ANDゲートはシミュレー ション・モードを表す。ANDゲートが走って いる時、シミュレーションの時間が動いている。
+-end-
 ho.status.msg	tkgateよりのメッセージがここに表示される。
 ho.status.block	現在のモジュールのパス。
-ho.status.file	現在編集中のファイル名が表示されている。「*」 という記号がついている時、保存していない変更 がある。
+ho.status.file	-begin-
+現在編集中のファイル名が表示されている。「*」 という記号がついている時、保存していない変更 がある。
+-end-
 ho.print.selall	全ての読み込んでいるモジュールを印刷する。
 ho.print.selcur	現在のモジュールのみを印刷する。
-ho.print.seluse	使用中のモジュールのみ印刷する。
-ho.print.selsel	以下にマークしているモジュールのみを印刷する。 コントロール・キーで複数のモジュールを選択 出来る。
+ho.print.seluse	-begin-
+使用中のモジュールのみ印刷する。
+-end-
+ho.print.selsel	-begin-
+以下にマークしているモジュールのみを印刷する。 コントロール・キーで複数のモジュールを選択 出来る。
+-end-
 ho.print.modlist	印刷するモジュールを選択する。
-ho.circuit.discchg	有効にすると、変更ありの回路を 保存しないで閉じるとき警告しない。
-ho.circuit.extbar	基本ゲート(AND, OR, XOR)の入力数が 3本以上の時、拡張バーは利用する。
-ho.cmd.bitw	カーソルで選択されたワイヤは表示 されているビット幅に設定される。
-ho.edgat.signam	選択されたゲートの選択された ネットである。名前が変更出来る。
-ho.edgat.port	選択されたゲートの選択された ネットのポート名である。モジュール のゲートの場合のみ変更出来る。
-ho.edgat.iolab	選択されたゲートの選択された ネットのポート方向である。モジュール のゲートの場合のみ変更出来る。
-ho.edgat.bitlab	選択されたゲートの選択された ネットのビット幅である。変更出来る。
+ho.circuit.discchg	-begin-
+有効にすると、変更ありの回路を 保存しないで閉じるとき警告しない。
+-end-
+ho.circuit.extbar	-begin-
+基本ゲート(AND, OR, XOR)の入力数が 3本以上の時、拡張バーは利用する。
+-end-
+ho.cmd.bitw	-begin-
+カーソルで選択されたワイヤは表示 されているビット幅に設定される。
+-end-
+ho.edgat.signam	-begin-
+選択されたゲートの選択された ネットである。名前が変更出来る。
+-end-
+ho.edgat.port	-begin-
+選択されたゲートの選択された ネットのポート名である。モジュール のゲートの場合のみ変更出来る。
+-end-
+ho.edgat.iolab	-begin-
+選択されたゲートの選択された ネットのポート方向である。モジュール のゲートの場合のみ変更出来る。
+-end-
+ho.edgat.bitlab	-begin-
+選択されたゲートの選択された ネットのビット幅である。変更出来る。
+-end-
 ho.edgat.cycle	一サイクルのエポック数。
 ho.edgat.phase	クロックのフェーズ（パーセントで設定する）
 ho.edgat.duty	クロック・サイクルの何パーセントが論理0であるか。
-ho.edgat.hide	有効にするとゲート名が表示されない。
+ho.edgat.hide	-begin-
+有効にするとゲート名が表示されない。
+-end-
 ho.edgat.gtype	ゲートの種類。
 ho.edgat.gname	ゲートの名前。
 ho.edgat.ganchor	有効にすると、ゲートが移動不可になる。
 ho.edgat.gx	ゲートのX位置。
 ho.edgat.gy	ゲートのY位置。
-ho.edgat.swstate	シミュレーションを始める時の初期の値である。
-ho.edgat.dipstate	シミュレーションを始める時の初期の値である。
+ho.edgat.swstate	-begin-
+シミュレーションを始める時の初期の値である。
+-end-
+ho.edgat.dipstate	-begin-
+シミュレーションを始める時の初期の値である。
+-end-
 ho.edgat.range	マルチビットの信号のサブ・レンジである。
-ho.edgat.memfile	メモリの初期の値のファイルを指定する。 シミュレーションを始める時、このファイル が読み込まれる。
+ho.edgat.memfile	-begin-
+メモリの初期の値のファイルを指定する。 シミュレーションを始める時、このファイル が読み込まれる。
+-end-
 ho.edgat.func	モジュールの機能。
 ho.edgat.frame	フレームのラベル。
-ho.opt.site	回路などを印刷する時、このサイト名が表示される。
-ho.opt.smooth	この設定を有効にすると、回路をスクロールする時、 ビットマップのコピーを利用して、効率よく スクロールできる。Xサーバの問題があれば、この 設定を無効にすれば良い。
-ho.opt.clip	有効にすると、ウインドウの部分領域の 再描画を行なう。そうでなければ常に 全領域を再描画する。
-ho.opt.outmove	有効にすると、モジュールを移動する時、 ワイヤなどはマウスのボタンを離すまで 移動しない。画面の表示が遅い時に便利である。
-ho.opt.bhelp	有効にすると、このメッセージの様な「ヘルプ・ バルーン」が表示される。
-ho.opt.novice	有効にすると、初心者モードになる。 初心者モードでは、tkgateが立ち上がる時、 チュートリアルが自動的に読み込まれる。
-ho.opt.debug	有効にすると、デバグ機能が使える。 開発者以外に、あまり役に立たない。
+ho.opt.site	-begin-
+回路などを印刷する時、このサイト名が表示される。
+-end-
+ho.opt.smooth	-begin-
+この設定を有効にすると、回路をスクロールする時、 ビットマップのコピーを利用して、効率よく スクロールできる。Xサーバの問題があれば、この 設定を無効にすれば良い。
+-end-
+ho.opt.clip	-begin-
+有効にすると、ウインドウの部分領域の 再描画を行なう。そうでなければ常に 全領域を再描画する。
+-end-
+ho.opt.outmove	-begin-
+有効にすると、モジュールを移動する時、 ワイヤなどはマウスのボタンを離すまで 移動しない。画面の表示が遅い時に便利である。
+-end-
+ho.opt.bhelp	-begin-
+有効にすると、このメッセージの様な「ヘルプ・ バルーン」が表示される。
+-end-
+ho.opt.novice	-begin-
+有効にすると、初心者モードになる。 初心者モードでは、tkgateが立ち上がる時、 チュートリアルが自動的に読み込まれる。
+-end-
+ho.opt.debug	-begin-
+有効にすると、デバグ機能が使える。 開発者以外に、あまり役に立たない。
+-end-
 ho.opt.ckpt	有効にすると、tkgateはチェックポイント保存のファイルを作る。
 ho.opt.ckptfreq	チェックポイント保存を何クリック毎に行なうか。
-ho.opt.beak	全然役に立たない機能を有効にする。この機能を 無効にすると、このスイッチはダイアログ ボックスから消え、.tkgate2-propertiesを編集しない限り 戻らない。
-ho.opt.miles	有効にすると、tkgateは時々ユーザを 馬鹿にしたり、悪口を言ったりする。
-ho.opt.bat	有効にすると、バットマンのコンピュータを 設計する為に「役にたつ」機能が使える。
+ho.opt.beak	-begin-
+全然役に立たない機能を有効にする。この機能を 無効にすると、このスイッチはダイアログ ボックスから消え、.tkgate2-propertiesを編集しない限り 戻らない。
+-end-
+ho.opt.miles	-begin-
+有効にすると、tkgateは時々ユーザを 馬鹿にしたり、悪口を言ったりする。
+-end-
+ho.opt.bat	-begin-
+有効にすると、バットマンのコンピュータを 設計する為に「役にたつ」機能が使える。
+-end-
 ho.opt.trek	転送しろ、スコッティ！
 ho.opt.simstep	-begin-
 シミュレータのステップ・コマンドで
@@ -905,9 +1063,15 @@ ho.techbut	-begin-
 「シミュレート」 のメニューを開いて、
 ファイルのリストに追加 して下さい。
 -end-
-ho.custbut	このゲート専用の遅延値を指定する。
-ho.contver	マウス操作を行なう時、内部構造を自動的に 確認して、不正の所を知らす。
-ho.simwatch	シミュレータとGUIの間のコマンドを表示する。
+ho.custbut	-begin-
+このゲート専用の遅延値を指定する。
+-end-
+ho.contver	-begin-
+マウス操作を行なう時、内部構造を自動的に 確認して、不正の所を知らす。
+-end-
+ho.simwatch	-begin-
+シミュレータとGUIの間のコマンドを表示する。
+-end-
 ho.tool.zoomin	ズーム・イン
 ho.tool.zoomout	ズーム・アウト
 ho.tool.rotate	選択のゲートを非時計周りに回転する。

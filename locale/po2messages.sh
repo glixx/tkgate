@@ -111,12 +111,16 @@ do
         a1=`echo $line|cut -d "\"" --fields=2`
         # print msgctxt entry and tab into file
         printf "$a1\t" >> $lang/messages.utf8
+        # determine -fillbegin-
+        fillbegin=`cat en/messages|sed 's/\t//g'|grep "^$a1\-fillbegin\-"`
+        # determine -begin-
+        begin=`cat en/messages|sed 's/\t//g'|grep "^$a1\-begin\-"`
     fi
     # if msgstr is not empty (has translation)
     if [ ! -z "$b" ]
     then
         # if string is not multiline
-        if [ -z "$c" ]
+        if [ -z "$c" ] && [ -z "$fillbegin" ] && [ -z "$begin" ]
         then
             # msgstr entry
             b1=`echo $line|cut -d "\"" --fields=2`
@@ -126,8 +130,13 @@ do
         else
             # msgstr entry
             b1=`echo $line|cut -d "\"" --fields=2`
-            # add -begin- into file 
-            echo "-begin-" >> $lang/messages.utf8
+            # add -begin- or -fillbegin into file
+            if [ -z "$fillbegin" ]
+            then
+              echo "-begin-" >> $lang/messages.utf8
+            else
+              echo "-fillbegin-" >> $lang/messages.utf8
+            fi
             # add msgstr entry into file
             echo $b1 >> $lang/messages.utf8
             # add -end- into file

@@ -228,7 +228,7 @@ db.gate.led.hex.hdr	7-Segment (HEX)
 db.gate.led.dec.hdr	7-Segment (DEC)
 db.gate.led.seg.hdr	7-Segment (Přímý kód)
 db.hdl.cancel	Zrušit
-cpath.cloops	-begin-
+cpath.cloops	-fillbegin-
 Ve vašem obvodu byla zjištěna kombinační smyčka.
 Aby bylo možno provést analýzu zpožděni v obvodu,
 musíte buď přerušit smyčku, nebo označit některé
@@ -392,12 +392,12 @@ err.badlibopen	Nelze otevřít knihovní soubor '%s'.
 err.nomark	Před výběrem typu hradla nastavte značku levým tlačítkem myši.
 err.badgate	Neznámý typ hradla.
 err.badportadd	Nelze přidat konektory k hradlům tohoto typu.
-err.manypages	-begin-
+err.manypages	-fillbegin-
 V tomto dokumentu je příšerně
 mnoho stránek. Jste si jisti,
 že je chcete všechny tisknout?
 -end-
-err.nojump	-begin-
+err.nojump	-fillbegin-
 Vlastnost 'jump-to-module' nemůže být použita
 v režimu simulace nebo analýzy citlivé cesty.
 Přemístěte se prosím ručně do cílového bloku
@@ -422,31 +422,31 @@ err.nodrive	Síť %s nemá žádný driver v modulu %s.
 err.noconn	Vodič %s{%d} není nikam připojen - byl smazán.
 err.oldportact	Pro přidání/úpravu konektoru klikněte pravým tlačítkem na konektor nebo okraj modulu.
 err.backupfail	Nelze vytvořit záložní soubor '%s'.
-err.corruptnewsave	-begin-
+err.corruptnewsave	-fillbegin-
 Aplikace TkGate uložila váš soubor jako '%s', ale zdá se být
 poškozený. Pokud máte povoleno průběžné ukládání, zkuste
 nahrát některý z průběžně uložených souboru. Pro kontrolu
 integrity uloženého souboru použijte příkaz 'TkGate -V'
 -end-
-err.corruptsave	-begin-
+err.corruptsave	-fillbegin-
 Pří pokusu uložit soubor '%s' aplikace TkGate zjistila problém.
 Existující soubor nebyl změněn a poškozený soubor byl zapsán
 jako '%s'. Pokud máte povoleno průběžné ukládání, zkuste
 nahrát některý z průběžně uložených souboru. Pro kontrolu
 integrity uloženého souboru můžete použít příkaz 'TkGate -V'.
 -end-
-err.badsave	-begin-
+err.badsave	-fillbegin-
 Při pokusu otevřít nebo uložit soubor '%s' došlo k chybě. Zkontrolujte
 přístupová práva souboru/adresáře a/nebo místo na disku.
 -end-
-err.nosafesave	-begin-
+err.nosafesave	-fillbegin-
 Při pokusu uložit soubor '%s' se vyskytl problém. Pokud chcete, zkuste
 to znova bez ověření korektnosti uložení. Pokud stisknete "ne", původní
 soubor zůstane nezměněn. Pokus stisknete "ano", původní soubor bude
 přepsán, ale může být zničen, pokud se vyskytnou problémy. Chcete zkusit
 soubor uložit bez ověření korektnosti uložení?
 -end-
-err.noback	-begin-
+err.noback	-fillbegin-
 Soubor byl vytvořen v TkGate
 verze %s, a nemusí být čitelný
 verzemi staršími než aktuální
@@ -527,7 +527,9 @@ Bitová šířka - Použijte tento nástroj
 na změnu bitové šířky vodičů. Vložte počet
 bitů do políčka v pravém dolním rohu okna.
 -end-
-ho.ipanel.deleteport	Smazat vybraný konektor.
+ho.ipanel.deleteport	-begin-
+Smazat vybraný konektor.
+-end-
 ho.mod.open	Otevřít vybraný modul.
 ho.mod.type.root	Hlavní Modul
 ho.undo	Zpět o předchozí krok(y).
@@ -536,13 +538,17 @@ ho.tab.simulate	-begin-
 Spustit simulátor, otevřít logický analyzátor
 a vykonat inicializační skripty, pokud jsou definovány.
 -end-
-ho.tab.cpath	Najít citlivou cestu v obvodu.
+ho.tab.cpath	-begin-
+Najít citlivou cestu v obvodu.
+-end-
 ho.simgo	-begin-
 Spustit simulátor v režimu stálého běhu.
 Poznámka: Simulace kombinačních obvodů
 probíhá jen dokud obvod nedosáhne ustálený stav.
 -end-
-ho.simpause	Pozastavit právě běžící simulaci.
+ho.simpause	-begin-
+Pozastavit právě běžící simulaci.
+-end-
 ho.simstep	-begin-
 Posunout se o pevný počet jednotek času.
 Otevřete okno s možnostmi simulace pro
@@ -562,7 +568,9 @@ Upravit aktuální kontrolní body. Simulace
 se zastaví ve chvíli, kdy se podmínka v
 kontrolním bodě stane pravdivou.
 -end-
-ho.simexec	Vykonat simulační skript.
+ho.simexec	-begin-
+Vykonat simulační skript.
+-end-
 ho.simload	-begin-
 Nahrát obsah paměti
 z .mem souboru.
@@ -680,7 +688,9 @@ Není-li tato možnost aktivní, stopy v okně
 simulace se zobrazí v tom pořadí, v jakém
 byly nastaveny sondy.
 -end-
-ho.opt.undolen	Maximální počet kroků zpátky, které se budou pamatovat.
+ho.opt.undolen	-begin-
+Maximální počet kroků zpátky, které se budou pamatovat.
+-end-
 ho.opt.site	-begin-
 Jméno organizace, kde je TkGate nainstalováno.
 Toto jméno se použije na všech výstupech na
@@ -789,7 +799,9 @@ Použít zpoždění ze souboru definujícího standardní
 technologii. Nové technologie můžete přidat v menu
 "Soubor -> Možnosti -> Simulace".
 -end-
-ho.custbut	Nastavit vlastní hodnoty zpoždění pro toto hradlo.
+ho.custbut	-begin-
+Nastavit vlastní hodnoty zpoždění pro toto hradlo.
+-end-
 ho.contver	-begin-
 Stále ověřovat integritu vnitřních
 datových struktur po každé operaci.
