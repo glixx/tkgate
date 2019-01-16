@@ -1275,10 +1275,10 @@ proc entryManager {cmd args} {
       set variable [lindex $args 5]
       if { $c == 3 } {
 	Dropbox::new $W -variable $variable -width [expr $width - 3] -bd 1 -highlightthickness 0
-	Dropbox::itemadd $W "one"
-	Dropbox::itemadd $W "two"
-	Dropbox::itemadd $W "three"
-	Dropbox::itemadd $W "four"
+	Dropbox::itemadd $W "[m one]"
+	Dropbox::itemadd $W "[m two]"
+	Dropbox::itemadd $W "[m three]"
+	Dropbox::itemadd $W "[m four]"
 
 	return 1
       }

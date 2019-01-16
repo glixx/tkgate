@@ -574,7 +574,7 @@ namespace eval CokeMachine {
     set y2 [expr $y + 8]
 
     $w create rectangle $x1 $y1 $x2 $y2 -fill white -tags $tag
-    $w create text $x $y -text "bogus" -font empty_f -tags $tag
+    $w create text $x $y -text "[m bogus]" -font empty_f -tags $tag
   }
 
   #############################################################################
@@ -1052,7 +1052,7 @@ namespace eval CokeMachine {
     parseargs $args {-title -id}
 
     frame $w -bd 2 -relief raised -bg $bcolor
-    label $w.e -text empty -font empty_f -bg "\#a05010" -fg "\#904000" -borderwidth 0
+    label $w.e -text "[m empty]" -font empty_f -bg "\#a05010" -fg "\#904000" -borderwidth 0
     label $w.l -text $title -width 12 -font button_f -bg $bcolor
     pack $w.l -side bottom
     pack $w.e -side top -anchor w
@@ -1071,12 +1071,12 @@ namespace eval CokeMachine {
   #
   proc evButtonBox {w n args} {
     frame $w
-    evButton $w.b0 $n -title Coke -id 0
-    evButton $w.b1 $n -title Coke -id 1
-    evButton $w.b2 $n -title "Diet Coke" -id 2
-    evButton $w.b3 $n -title "Root Beer" -id 3
-    evButton $w.b4 $n -title "Pocari Sweat" -id 4
-    evButton $w.b5 $n -title "Dr. Pepper" -id 5
+    evButton $w.b0 $n -title "[m coke]" -id 0
+    evButton $w.b1 $n -title "[m coke]" -id 1
+    evButton $w.b2 $n -title "[m diet_coke]" -id 2
+    evButton $w.b3 $n -title "[m root_beer]" -id 3
+    evButton $w.b4 $n -title "[m pocari_sweat]" -id 4
+    evButton $w.b5 $n -title "[m dr_pepper]" -id 5
     pack $w.b0
     pack $w.b1
     pack $w.b2
@@ -1113,7 +1113,7 @@ namespace eval CokeMachine {
     $w create line 65 10 65 32 -width 4
 
     #
-    label $w.e -text "no\nchange" -font empty_f -bg "\#a05010" -fg "\#904000" -borderwidth 0
+    label $w.e -text "[m no_n_change]" -font empty_f -bg "\#a05010" -fg "\#904000" -borderwidth 0
     $w create window 10 10 -window $w.e -anchor nw
 
     # coin return lever
@@ -1243,7 +1243,7 @@ namespace eval CokeMachine {
     set y1 120
     set y2 150
 
-    $w create text $x_cent $y1 -text "Bill Scanner" -anchor s
+    $w create text $x_cent $y1 -text "[m bill_scanner]" -anchor s
     $w create rectangle $x1 $y1 $x2 $y2 -fill white -outline black -width 2
   }
 
@@ -1282,9 +1282,9 @@ namespace eval CokeMachine {
     $w create polygon $x3 $y1 $x3 $y3 $x1 $y4 $x1 $y5 $x3 $y6 $x3 $y7 $x5 $y7 $x5 $y6 \
 	$x4 $y6 $x2 $y5 $x2 $y4 $x4 $y3 $x5 $y3 $x5 $y1 -width 2 -fill white -outline black
 
-    $w create text [expr $x_cent + 7] $y6 -text Collected -anchor s
-    $w create text $x_cent $y1 -text Inserted -anchor s
-    $w create text $x_cent 279 -text Change -anchor s
+    $w create text [expr $x_cent + 7] $y6 -text "[m collected]" -anchor s
+    $w create text $x_cent $y1 -text "[m inserted]" -anchor s
+    $w create text $x_cent 279 -text "[m change]" -anchor s
 
     #
     # Repository for money that has been used to purchase a product
@@ -1392,7 +1392,7 @@ namespace eval CokeMachine {
     #
     # "Soda" title on top of machine
     #
-    label $w.title -text Soda -font title_f -background $color -foreground white
+    label $w.title -text "[m soda]" -font title_f -background $color -foreground white
     place $w.title -x [expr $mWidth/2] -y 60 -anchor center
 
     #
@@ -1522,7 +1522,7 @@ namespace eval CokeMachine {
     set i 0
     set w ""
 
-    set w [VPD::createWindow "Coke Machine $n" -shutdowncommand "CokeMachine::unpost $n"]
+    set w [VPD::createWindow "[m coke_machine] $n" -shutdowncommand "CokeMachine::unpost $n"]
     set coke_w($n) $w
 
     canvas $w.c -width [expr 125 + 2*$mWidth] -height [expr 100 + $mHeight]
@@ -1534,7 +1534,7 @@ namespace eval CokeMachine {
     $w.c create window 75 25 -window $w.c.ext -anchor nw
     $w.c create window [expr 100 + $mWidth] 25 -window $w.c.int -anchor nw
 
-    button $w.c.reset -text Reset -command "CokeMachine::resetMachine $n 0; CokeMachine::resetMachine $n 1"
+    button $w.c.reset -text "[m reset]" -command "CokeMachine::resetMachine $n 0; CokeMachine::resetMachine $n 1"
     $w.c create window 4 [expr 25 + $mHeight] -window $w.c.reset -anchor sw
 
     makeCoinList $w.c $n
@@ -1623,26 +1623,26 @@ if {![info exists tkgate_isInitialized]} {
 
   frame $w.b
   pack $w.b -fill both
-  checkbutton $w.b.nochg -text "No Change" -variable CokeMachine::noChange(test)
+  checkbutton $w.b.nochg -text "[m no_change]" -variable CokeMachine::noChange(test)
   pack $w.b.nochg -side left -padx 5 -pady 5
 
   if {$CokeMachine::useDollar(test)} {
-    checkbutton $w.b.insdol -text "Insert Dollar" -variable CokeMachine::billLight(test)
+    checkbutton $w.b.insdol -text "[m insert_dollar]" -variable CokeMachine::billLight(test)
     pack $w.b.insdol -side left -padx 5 -pady 5
   }
 
-  button $w.b.chg25 -text "Chg 25" -command "CokeMachine::ejectChange test 25"
-  button $w.b.chg10 -text "Chg 10" -command "CokeMachine::ejectChange test 10"
-  button $w.b.chg5 -text "Chg 5" -command "CokeMachine::ejectChange test 5"
+  button $w.b.chg25 -text "[m chg] 25" -command "CokeMachine::ejectChange test 25"
+  button $w.b.chg10 -text "[m chg] 10" -command "CokeMachine::ejectChange test 10"
+  button $w.b.chg5 -text "[m chg] 5" -command "CokeMachine::ejectChange test 5"
   pack $w.b.chg25 $w.b.chg10 $w.b.chg5 -side left -padx 5 -pady 5
 
   if {$CokeMachine::useDollar(test)} {
-    button $w.b.billin -text "Bill In" -command "CokeMachine::billIn test"
-    button $w.b.billout -text "Bill Out" -command "CokeMachine::billOut test"
+    button $w.b.billin -text "[m bill_in]" -command "CokeMachine::billIn test"
+    button $w.b.billout -text "[m bill_out]" -command "CokeMachine::billOut test"
     pack $w.b.billin $w.b.billout -side left -padx 5 -pady 5
   }
 
-  button $w.b.commit -text "Commit" -command "CokeMachine::commitInserted test"
+  button $w.b.commit -text "[m commit]" -command "CokeMachine::commitInserted test"
   pack $w.b.commit -side left -padx 5 -pady 5
 
 
@@ -1658,7 +1658,7 @@ if {![info exists tkgate_isInitialized]} {
     pack $w.b2.d$i -side left -padx 5 -pady 5
   }
 
-  button $w.b2.rins -text "RETINS" -command "CokeMachine::returnInserted test"
+  button $w.b2.rins -text "[m retins]" -command "CokeMachine::returnInserted test"
   pack $w.b2.rins -padx 5 -pady 5 -side left
 
   #############################################################################

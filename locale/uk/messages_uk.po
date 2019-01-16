@@ -1,6 +1,6 @@
 # This file is part of TkGate project
 # Copyright (C) 1987-2015 by Jeffery P. Hansen
-# Copyright (C) 2015-2018 by Andrey V. Skvortsov
+# Copyright (C) 2015-2019 by Andrey V. Skvortsov
 # This file is distributed under the same license as the TkGate package.
 # 
 # ##############################################################################
@@ -8,15 +8,15 @@
 # ##############################################################################
 # 
 # Translators:
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Yuri Chornoivan <yurchor@ukr.net>, 2015,2018
+# AlexL <loginov.alex.valer@gmail.com>, 2018-2019
+# Yuri Chornoivan <yurchor@ukr.net>, 2015,2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-13 13:20+0300\n"
-"PO-Revision-Date: 2018-12-13 04:00+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"POT-Creation-Date: 2019-01-16 12:42+0300\n"
+"PO-Revision-Date: 2019-01-16 02:46+0000\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/Magic/tkgate/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7566,77 +7566,519 @@ msgid ""
 "default rotation."
 msgstr "Показує поточне типове обертання.\nНатисніть цю кнопку, щоб змінити\nпоточне типове обертання."
 
-#: en/messages:2988
+#: en/messages:2989
 msgctxt "ho.tool.zoomin"
 msgid "Zoom in"
 msgstr "Збільшити"
 
-#: en/messages:2989
+#: en/messages:2990
 msgctxt "ho.tool.zoomout"
 msgid "Zoom out"
 msgstr "Зменшити"
 
-#: en/messages:2990
+#: en/messages:2991
 msgctxt "ho.tool.rotate"
 msgid "Rotate selected component(s) counter-clockwise."
 msgstr "Обернути позначені компоненти проти годинникової стрілки."
 
-#: en/messages:2991
+#: en/messages:2992
 msgctxt "ho.tool.brotate"
 msgid "Rotate selected component(s) clockwise."
 msgstr "Обернути позначені компоненти за годинниковою стрілкою."
 
-#: en/messages:2992
+#: en/messages:2993
 msgctxt "ho.tool.valgn"
 msgid "Align selected component(s) vertically."
 msgstr "Вирівняти позначені компоненти вертикально."
 
-#: en/messages:2993
+#: en/messages:2994
 msgctxt "ho.tool.halgn"
 msgid "Align selected component(s) horizontally."
 msgstr "Вирівняти позначені компоненти горизонтально."
 
-#: en/messages:2995
+#: en/messages:2996
 msgctxt "ho.tool.cut"
 msgid "Cut selection."
 msgstr "Вирізати позначене."
 
-#: en/messages:2996
+#: en/messages:2997
 msgctxt "ho.tool.copy"
 msgid "Copy selection."
 msgstr "Копіювати позначене."
 
-#: en/messages:2997
+#: en/messages:2998
 msgctxt "ho.tool.paste"
 msgid "Paste from cut buffer."
 msgstr "Вставити з буфера обміну."
 
-#: en/messages:2998
+#: en/messages:2999
 msgctxt "ho.tool.find"
 msgid "Find component, wire or text."
 msgstr "Знайти компонент, з’єднання або текст."
 
-#: en/messages:3000
+#: en/messages:3001
 msgctxt "ho.tool.addport"
 msgid "Add a port to the selected component."
 msgstr "Додати порти до позначеного компонента."
 
-#: en/messages:3001
+#: en/messages:3002
 msgctxt "ho.tool.anchor"
 msgid "Anchor the selected component(s)."
 msgstr "Заблокувати позначені компоненти."
 
-#: en/messages:3002
+#: en/messages:3003
 msgctxt "ho.tool.unanchor"
 msgid "Unanchor the selected component(s)."
 msgstr "Розблокувати позначені компоненти."
 
-#: en/messages:3003
+#: en/messages:3004
 msgctxt "ho.tool.replicate"
 msgid "Replicate a component."
 msgstr "Клонувати компонент."
 
-#: en/messages:3004
+#: en/messages:3005
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr "Вилучити позначене."
+
+#: en/messages:3011
+msgctxt "cpath.critpath"
+msgid "TKGate: Critical Paths"
+msgstr "TKGate: Критичні ланцюжки"
+
+#: en/messages:3012
+msgctxt "err.simdiedread"
+msgid "Simulator has died (read error)."
+msgstr "Аварійне завершення роботи імітатора (помилка читання)."
+
+#: en/messages:3013
+msgctxt "err.simdiedeof"
+msgid "Simulator has died (eof in read)."
+msgstr "Аварійне завершення роботи імітатора (символ кінця файла при читанні даних)."
+
+#: en/messages:3014
+msgctxt "err.fail.analyz"
+msgid "Failed to start analyzer '%s'"
+msgstr "Не вдалося запустити засіб аналізу «%s»"
+
+#: en/messages:3015
+msgctxt "err.find.sim"
+msgid "'Find' not supported in simulation mode."
+msgstr "У режимі моделювання підтримки функції «Знайти» не передбачено."
+
+#: en/messages:3016
+msgctxt "err.key.def"
+msgid "Illegal key definition."
+msgstr "Некоректне визначення ключа."
+
+#: en/messages:3017
+msgctxt "showdoc"
+msgid "TkGate: Documentation"
+msgstr "TkGate: документація"
+
+#: en/messages:3018
+msgctxt "mem.addr"
+msgid "Address"
+msgstr "Адреса"
+
+#: en/messages:3019
+msgctxt "mem.data"
+msgid "Data"
+msgstr "Дані"
+
+#: en/messages:3020
+msgctxt "mem.time"
+msgid "Time"
+msgstr "Час"
+
+#: en/messages:3021
+msgctxt "mem.title"
+msgid "TkGate: Memory %s"
+msgstr "TkGate: %s пам'яті"
+
+#: en/messages:3022
+msgctxt "mem.last.read"
+msgid "Last Read Access"
+msgstr "Останній доступ для читання"
+
+#: en/messages:3023
+msgctxt "mem.last.write"
+msgid "Last Write Access"
+msgstr "Останній доступ для запису"
+
+#: en/messages:3024
+msgctxt "mem.page"
+msgid "Page"
+msgstr "Сторінка"
+
+#: en/messages:3025
+msgctxt "err.bad.opt1"
+msgid "Bad option '%s'."
+msgstr "Помилкове значення параметра «%s»."
+
+#: en/messages:3026
+msgctxt "err.bad.opt2"
+msgid "Must be one of: %s"
+msgstr "Має бути одним з таких значень: %s"
+
+#: en/messages:3027
+msgctxt "misc.tcl.shell"
+msgid "TKGate: Tcl Shell"
+msgstr "TKGate: оболонка Tcl"
+
+#: en/messages:3028
+msgctxt "misc.cmd"
+msgid "Command"
+msgstr "Команда"
+
+#: en/messages:3029
+msgctxt "lib.mngr"
+msgid "TKGate: Library Manager"
+msgstr "TKGate: керування бібліотеками"
+
+#: en/messages:3030
+msgctxt "err.no.master"
+msgid "No master found. Perhaps '%s' is not a pane slave?"
+msgstr "Не знайдено основи. Можливо, «%s» не є підлеглим елементом?"
+
+#: en/messages:3031
+msgctxt "err.unknown.opt"
+msgid "Unknown option '%s'"
+msgstr "Невідомий параметр «%s»"
+
+#: en/messages:3032
+msgctxt "err.no.widget"
+msgid "No widgets specified to configure"
+msgstr "Не вказано віджетів для налаштовування"
+
+#: en/messages:3033
+msgctxt "txt.widget"
+msgid "Text widget"
+msgstr "Текстовий віджет"
+
+#: en/messages:3034
+msgctxt "sim.watch"
+msgid "TkGate: Simulation Watch"
+msgstr "TkGate: перегляд моделювання"
+
+#: en/messages:3035
+msgctxt "err.start.sim"
+msgid "Failed to start simulator '%s'"
+msgstr "Не вдалося запустити імітатор «%s»"
+
+#: en/messages:3036
+msgctxt "err.simdiedwrite"
+msgid "Simulator has died (in write)."
+msgstr "Аварійне завершення роботи імітатора (записування)."
+
+#: en/messages:3037
+msgctxt "err.simdiedflush"
+msgid "Simulator has died (in flush)."
+msgstr "Аварійне завершення роботи імітатора (витирання)."
+
+#: en/messages:3038
+msgctxt "err.tab.len"
+msgid "-tablabels and -tabs must be of equal length"
+msgstr "-tablabels і -tabs повинні мати однакову довжину"
+
+#: en/messages:3039
+msgctxt "err.dir"
+msgid "Parent item '%s' is missing"
+msgstr "Не вистачає батьківського запису «%s»"
+
+#: en/messages:3040
+msgctxt "err.v"
+msgid "Item '%s' already exists"
+msgstr "Запис «%s» вже існує"
+
+#: en/messages:3041
+msgctxt "wizard.back"
+msgid "Back"
+msgstr "Назад"
+
+#: en/messages:3042
+msgctxt "wizard.next"
+msgid "Next"
+msgstr "Далі"
+
+#: en/messages:3043
+msgctxt "wizard.cancel"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: en/messages:3044
+msgctxt "wizard.finish"
+msgid "Finish"
+msgstr "Завершити"
+
+#: en/messages:3045
+msgctxt "loaded.vpds"
+msgid "Loaded VPDs"
+msgstr "Завантажені віртуальні пристрої"
+
+#: en/messages:3046
+msgctxt "argument"
+msgid "Argument"
+msgstr "Аргумент"
+
+#: en/messages:3047
+msgctxt "failing"
+msgid "Failing"
+msgstr "Помилка"
+
+#: en/messages:3048
+msgctxt "letter"
+msgid "Letter"
+msgstr "Лист"
+
+#: en/messages:3049
+msgctxt "legal"
+msgid "Legal"
+msgstr "Леґал"
+
+#: en/messages:3050
+msgctxt "tabloid"
+msgid "Tabloid"
+msgstr "Таблоїд"
+
+#: en/messages:3051
+msgctxt "executive"
+msgid "Executive"
+msgstr "Екзек’ютів"
+
+#: en/messages:3052
+msgctxt "inches"
+msgid "in."
+msgstr "дюйм"
+
+#: en/messages:3053
+msgctxt "millimeters"
+msgid "mm"
+msgstr "мм"
+
+#: en/messages:3054
+msgctxt "one"
+msgid "one"
+msgstr "один"
+
+#: en/messages:3055
+msgctxt "two"
+msgid "two"
+msgstr "два"
+
+#: en/messages:3056
+msgctxt "three"
+msgid "three"
+msgstr "три"
+
+#: en/messages:3057
+msgctxt "four"
+msgid "four"
+msgstr "чотири"
+
+#: en/messages:3058
+msgctxt "space"
+msgid "Space"
+msgstr "Пробіл"
+
+#: en/messages:3059
+msgctxt "load"
+msgid "[load]"
+msgstr "[завантаження]"
+
+#: en/messages:3060
+msgctxt "unload"
+msgid "[unload]"
+msgstr "[розвантаження]"
+
+#: en/messages:3061
+msgctxt "short_hlink"
+msgid "Hyperlink"
+msgstr "Гіперпосилання"
+
+#: en/messages:3062
+msgctxt "state.off"
+msgid "off"
+msgstr "вимкнено"
+
+#: en/messages:3063
+msgctxt "state.on"
+msgid "on"
+msgstr "увімкнено"
+
+#: en/messages:3064
+msgctxt "state.float"
+msgid "float"
+msgstr "float"
+
+#: en/messages:3065
+msgctxt "line_comment"
+msgid "line comment"
+msgstr "рядковий коментар"
+
+#: en/messages:3066
+msgctxt "block_comment"
+msgid "block comment"
+msgstr "блоковий коментар"
+
+#: en/messages:3067
+msgctxt "short_comment"
+msgid "Comment"
+msgstr "Коментар"
+
+#: en/messages:3068
+msgctxt "experiment"
+msgid "EXPERIMENTAL"
+msgstr "ЕКСПЕРИМЕНТАЛЬНЕ"
+
+#: en/messages:3070
+msgctxt "unused"
+msgid "Unused"
+msgstr "Резерв"
+
+#: en/messages:3071
+msgctxt "script"
+msgid "Script"
+msgstr "Скрипт"
+
+#: en/messages:3073
+msgctxt "coke"
+msgid "Coke"
+msgstr "Кола"
+
+#: en/messages:3074
+msgctxt "diet_coke"
+msgid "Diet Coke"
+msgstr "Дієт. кола"
+
+#: en/messages:3075
+msgctxt "root_beer"
+msgid "Root Beer"
+msgstr "Корен. пиво"
+
+#: en/messages:3076
+msgctxt "pocari_sweat"
+msgid "Pocari Sweat"
+msgstr "Покарі"
+
+#: en/messages:3077
+msgctxt "dr_pepper"
+msgid "Dr. Pepper"
+msgstr "Д-р Пеппер"
+
+#: en/messages:3078
+msgctxt "bill_scanner"
+msgid "Bill Scanner"
+msgstr "Білл Сканер"
+
+#: en/messages:3079
+msgctxt "coke_machine"
+msgid "Coke Machine"
+msgstr "Автомат газованої води"
+
+#: en/messages:3080
+msgctxt "no_change"
+msgid "No Change"
+msgstr "Ні здачі"
+
+#: en/messages:3081
+msgctxt "insert_dollar"
+msgid "Insert Dollar"
+msgstr "Вставте долар"
+
+#: en/messages:3082
+msgctxt "chg"
+msgid "Chg"
+msgstr "Решта"
+
+#: en/messages:3083
+msgctxt "bill_in"
+msgid "Bill In"
+msgstr "Вхід"
+
+#: en/messages:3084
+msgctxt "bill_out"
+msgid "Bill Out"
+msgstr "Вихід"
+
+#: en/messages:3085
+msgctxt "commit"
+msgid "Commit"
+msgstr "Надіслати"
+
+#: en/messages:3086
+msgctxt "retins"
+msgid "RETINS"
+msgstr "RETINS"
+
+#: en/messages:3087
+msgctxt "soda"
+msgid "Soda"
+msgstr "Сода"
+
+#: en/messages:3088
+msgctxt "reset"
+msgid "Reset"
+msgstr "Скинути"
+
+#: en/messages:3089
+msgctxt "bogus"
+msgid "bogus"
+msgstr "фейк"
+
+#: en/messages:3090
+msgctxt "empty"
+msgid "empty"
+msgstr "порожньо"
+
+#: en/messages:3091
+msgctxt "collected"
+msgid "Collected"
+msgstr "Зібрано"
+
+#: en/messages:3092
+msgctxt "inserted"
+msgid "Inserted"
+msgstr "Вставлено"
+
+#: en/messages:3093
+msgctxt "change"
+msgid "Change"
+msgstr "Решта"
+
+#: en/messages:3095
+msgctxt "no_n_change"
+msgid ""
+"no\n"
+"change"
+msgstr "ні\nздачі"
+
+#: en/messages:3100
+msgctxt "74xx"
+msgid "74-series standard logic circuits"
+msgstr "Ланцюги стандартної логіки 74-ї серії"
+
+#: en/messages:3101
+msgctxt "74xxgatelevel"
+msgid "74-series gate level verilog models"
+msgstr "Моделі Verilog шлюзових рівнів 74-ї серії"
+
+#: en/messages:3102
+msgctxt "cokemachine"
+msgid "Coke Machine Interface"
+msgstr "Інтерфейс автомата газованої води"
+
+#: en/messages:3103
+msgctxt "m68xx"
+msgid "Motorola 68xx chips"
+msgstr "Мікросхеми Motorola 68xx"
+
+#: en/messages:3104
+msgctxt "timer"
+msgid "Oscillators and One-Shots with absolute time delays"
+msgstr "Осцилятори та імпул. пристрої із затрим. у абсолют. часі"
+
+#: en/messages:3105
+msgctxt "ttydevice"
+msgid "Interactive TTY Device"
+msgstr "Інтерактивний пристрій TTY"

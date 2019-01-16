@@ -381,12 +381,12 @@ namespace eval BlockTree {
       if {[catch { set BlockTree::used($m) } ] && [isModule $m]} {
 
 	if {!$did_unused} {
-	  Tree::newitem $modtree_w.t /|Unused -image $typeimages(unused) -imagehelp $typeimagehelp(unused)
+	  Tree::newitem $modtree_w.t /|[m unused] -image $typeimages(unused) -imagehelp $typeimagehelp(unused)
 	  set did_unused 1
 	}
-	Tree::newitem $modtree_w.t /|Unused/$m -image $typeimages($mtype($m)) -imagehelp $typeimagehelp($mtype($m))
+	Tree::newitem $modtree_w.t /|[m unused]/$m -image $typeimages($mtype($m)) -imagehelp $typeimagehelp($mtype($m))
 	foreach c $children($m) {
-	  rebuildAt /|Unused/$m/$c $c
+	  rebuildAt /|[m unused]/$m/$c $c
 	}
       }
     }

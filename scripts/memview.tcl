@@ -610,9 +610,9 @@ namespace eval MemView {
 
     frame $w -bd 1 -relief solid
     label $w.l -text $label -bg $bg
-    label $w.addr_l -text "Address:"
-    label $w.data_l -text "Data:"
-    label $w.time_l -text "Time:"
+    label $w.addr_l -text "[m mem.addr]:"
+    label $w.data_l -text "[m mem.data]:"
+    label $w.time_l -text "[m mem.time]:"
     label $w.addr_v -textvariable MemView::lastAddr($name:$type) -width 15 -anchor w
     label $w.data_v -textvariable MemView::lastData($name:$type) -width 15 -anchor w
     label $w.time_v -textvariable MemView::lastTime($name:$type) -width 15 -anchor w
@@ -658,7 +658,7 @@ namespace eval MemView {
     for {set i 0} { [catch { set w [toplevel .memview$i] }] } { incr i } { }
     set mv_w($name) $w
 
-    wm title $w "TkGate: Memory $title"
+    wm title $w "[format [m mem.title] $title]"
     wm geometry $w [offsetgeometry . 50 50]
     wm transient $w .
 
@@ -669,14 +669,14 @@ namespace eval MemView {
     frame $w.bottom
     button $w.bottom.dismiss -text [m b.dismiss] -command "MemView::dismiss $name"
 
-    accessInfo $w.bottom.read -label "Last Read Access" -bg $readColor -type read -name $name
-    accessInfo $w.bottom.write -label "Last Write Access" -bg $writeColor -type write -name $name
+    accessInfo $w.bottom.read -label "[m mem.last.read]" -bg $readColor -type read -name $name
+    accessInfo $w.bottom.write -label "[m mem.last.write]" -bg $writeColor -type write -name $name
     pack $w.bottom.read $w.bottom.write -side left -padx 5 -pady 5
     pack $w.bottom.dismiss -side right -padx 5 -pady 5 -anchor se
     pack $w.bottom -fill both -side bottom
 
     frame $w.top
-    label $w.top.base_l -text "Page: "
+    label $w.top.base_l -text "[m mem.page]: "
     incdecEntry $w.top.base -width 12 -variable MemView::reqBaseAddr($name) -format %x -validatecommand hexValidate
 
 

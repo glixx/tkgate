@@ -64,24 +64,26 @@ set pd_filetypes {
 #    pd_printPgSizeName
 #
 set paperSizeTable {
-  {Letter	"Letter (8 1/2 x 11 in.)"	215	279}
-  {Legal	"Legal (8 1/2 x 14 in.)"	215	355}
-  {Tabloid	"Tabloid (11 x 17 in.)"		279	431}
-  {Executive	"Executive (7 1/2 x 10 in.)"	190	254}
-  {A4		"A4 (210 x 297 mm)"		210	297}
-  {A3		"A3 (297 x 420 mm)"		297	420}
-  {A2		"A2 (420 x 594 mm)"		420	594}
-  {A1		"A1 (594 x 841 mm)"		594	841}
-  {B5		"B5 (176 x 250 mm)"		176	250}
-  {B4		"B4 (250 x 353 mm)"		250	353}
-  {B3		"B3 (353 x 500 mm)"		353	500}
-  {B2		"B2 (500 x 707 mm)"		500	707}
-  {SRA2		"SRA2 (450 x 640 mm)"		450	640}
-  {RA2		"RA2 (430 x 610 mm)"		430	610}
-  {yatsugiri	"yatsugiri (6.5 x 8.5 in)"	165	215}
-  {mutsugiri	"mutsugiri (8 x 10 in)"		203	254}
-  {yotsugiri	"yotsugiri (10 x 12 in)"	254	304}
+  {Letter	"[m letter] (8 1/2 x 11 [m inches])"	215	279}
+  {Legal	"[m legal] (8 1/2 x 14 [m inches])"	215	355}
+  {Tabloid	"[m tabloid] (11 x 17 [m inches])"		279	431}
+  {Executive	"[m executive] (7 1/2 x 10 [m inches])"	190	254}
+  {A4		"A4 (210 x 297 [m millimeters])"		210	297}
+  {A3		"A3 (297 x 420 [m millimeters])"		297	420}
+  {A2		"A2 (420 x 594 [m millimeters])"		420	594}
+  {A1		"A1 (594 x 841 [m millimeters])"		594	841}
+  {B5		"B5 (176 x 250 [m millimeters])"		176	250}
+  {B4		"B4 (250 x 353 [m millimeters])"		250	353}
+  {B3		"B3 (353 x 500 [m millimeters])"		353	500}
+  {B2		"B2 (500 x 707 [m millimeters])"		500	707}
+  {SRA2		"SRA2 (450 x 640 [m millimeters])"		450	640}
+  {RA2		"RA2 (430 x 610 [m millimeters])"		430	610}
+  {yatsugiri	"yatsugiri (6.5 x 8.5 [m inches])"	165	215}
+  {mutsugiri	"mutsugiri (8 x 10 [m inches])"		203	254}
+  {yotsugiri	"yotsugiri (10 x 12 [m inches])"	254	304}
 }
+
+set paperSizeTable [subst $paperSizeTable]
 
 #############################################################################
 #

@@ -84,18 +84,18 @@ proc showDocumentation {} {
     lappend L ""
     lappend L "$tkg_copyright"
     lappend L ""
-    lappend L "Currently there is no built-in documentation for TkGate other than the"
-    lappend L "balloon help which can be activated by placing the mouse cursor over"
-    lappend L "interface elements, and the online tutorials availble. Documentation"
-    lappend L "can be found by pointing your Web browser at the TkGate home page:"
-    lappend L ""
+#    lappend L "Currently there is no built-in documentation for TkGate other than the"
+#    lappend L "balloon help which can be activated by placing the mouse cursor over"
+#    lappend L "interface elements, and the online tutorials available. Documentation"
+#    lappend L "can be found by pointing your Web browser at the TkGate home page:"
+#    lappend L ""
     lappend L "   $tkg_homepage"
     lappend L ""
-    lappend L "or through the copy of the documentation included in this distribution at:"
-    lappend L ""
-    lappend L "   $tkg_localdoc"
+#    lappend L "or through the copy of the documentation included in this distribution at:"
+#    lappend L ""
+#    lappend L "   $tkg_localdoc"
 
-    showDocFile "TkGate Documentation" "" $L
+    showDocFile [m showdoc] "" $L
   }
 }
 

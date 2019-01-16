@@ -540,12 +540,12 @@ namespace eval OptionDlg {
     text $w.c -bg white -width 1 -height 1 -font hdlFont -yscrollcommand "$w.vb set"
     scrollbar $w.vb -orient vertical -command "$w.c yview"
 
-    $w.c insert end "// line comment\n"
+    $w.c insert end "// [m line_comment]\n"
     $w.c insert end "module foo(X,Y,Z,A,B);\n"
     $w.c insert end "  output X,Y,Z;\n"
     $w.c insert end "  input A,B;\n"
     $w.c insert end "  reg Z;\n"
-    $w.c insert end "   /* block comment */\n"
+    $w.c insert end "   /* [m block_comment] */\n"
     $w.c insert end "  initial\n"
     $w.c insert end "    \$display(\"start\");\n"
     $w.c insert end "  and g1(X,A,B);\n"
@@ -661,8 +661,8 @@ namespace eval OptionDlg {
   proc setupSampleEdit {c w} {
     global bd
 
-    $c create text 75 105 -text Comment -justify left -anchor w	-tags $w.commc
-    $c create text 155 105 -text Hyperlink -justify left -anchor w -tags $w.hlinkc
+    $c create text 75 105 -text "[m short_comment]" -justify left -anchor w	-tags $w.commc
+    $c create text 155 105 -text "[m short_hlink]" -justify left -anchor w -tags $w.hlinkc
 
     $c create line 2 75 20 75				-tags $w.wirec
     $c create line 2 85 20 85				-tags $w.wirec
@@ -677,20 +677,20 @@ namespace eval OptionDlg {
     $c create bitmap 75 65 -bitmap "@$bd/sampleled.b"	-tags $w.instc
     $c create bitmap 75 65 -bitmap "@$bd/sampleledI.b"	-tags $w.offledc
     $c create rectangle 74 79 76 81			-tags $w.instc
-    $c create text 75 53 -text off 			-tags $w.commc
+    $c create text 75 53 -text [m state.off] 			-tags $w.commc
 
 
     $c create text 173 80 -text Q -justify right -anchor e -tags $w.modpc
     $c create line 175 80 200 80  200 65			-tags $w.wirec
     $c create bitmap 200 65 -bitmap "@$bd/sampleled.b"	-tags $w.instc
     $c create bitmap 200 65 -bitmap "@$bd/sampleledI.b"	-tags $w.onledc
-    $c create text 200 53 -text on 			-tags $w.commc
+    $c create text 200 53 -text [m state.on] 			-tags $w.commc
 
     $c create text 173 40 -text Z -justify right -anchor e -tags $w.modpc
     $c create line 175 40 200 40  200 25			-tags $w.wirec
     $c create bitmap 200 25 -bitmap "@$bd/sampleled.b"	-tags $w.instc
     $c create bitmap 200 25 -bitmap "@$bd/sampleledI.b"	-tags $w.zledc
-    $c create text 200 13 -text float 			-tags $w.commc
+    $c create text 200 13 -text [m state.float] 			-tags $w.commc
 
 
     $c create line 2 40 100 40 -width 2			-tags $w.busc
@@ -705,7 +705,7 @@ namespace eval OptionDlg {
 
     $c create rectangle 10 60 60 100 -dash {3 3}		-tags $w.framec
     $c create rectangle 15 55 47 65 -fill white -outline white
-    $c create text 30 60 -text AND 			-tags $w.framec
+    $c create text 30 60 -text [m gm.gate.and] 			-tags $w.framec
 
     $c create line 140 0  140 25				-tags $w.wirec
     $c create line 140 90 140 120				-tags $w.wirec

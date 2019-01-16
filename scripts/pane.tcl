@@ -137,7 +137,7 @@ proc pane {opt args} {
 		}
 	    }
 	    return -code error \
-		    "no master found. perhaps $args is not a pane slave?"
+		    "[format [m err.no.master] $args]"
 	}
 	default { eval pane_config [list $opt] $args }
     }
@@ -198,11 +198,11 @@ proc pane {opt args} {
 	    -handlel*	{ set opt(hlk) $val }
 	    -dec*	{ set opt(dec) $val }
 	    -f*         { set opt(frc) $val } 
-	    default	{ return -code error "unknown option \"$arg\"" }
+	    default	{ return -code error "[format [m err.unknown.opt] $arg]" }
 	}
     }
     if {[string match {} $wids]} {
-	return -code error "no widgets specified to configure"
+	return -code error "[m err.no.widget]"
     }
     if {[string compare {} $opt(par)]} {
 	set p $opt(par)
@@ -341,7 +341,7 @@ if [info exists embed_args] {
     pane [listbox .0.0] [listbox .0.1] -dynamic 1
     pane [frame .1.0] [frame .1.1] -dyn 1
     pane [listbox .1.0.0] [listbox .1.0.1] [listbox .1.0.2] -orient vertical
-    pack [label .1.1.0 -text "Text widget:"] -fill x
+    pack [label .1.1.0 -text "[m txt.widget]:"] -fill x
     pack [text .1.1.1] -fill both -expand 1
     set i [info procs]
     foreach w {.0.0 .0.1 .1.0.0 .1.0.1 .1.0.2 .1.1.1} { eval $w insert end $i }

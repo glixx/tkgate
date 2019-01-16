@@ -166,29 +166,31 @@ foreach pair $messagesLine2Key(l) {
 	set origMsgVal $messagesHash($keyName,m)
 	regsub -all "\"" $origMsgVal "\\\"" origMsgVal
 
-	puts $fLoc ""
-	puts $fLoc "#: $options(l):$str"
-	puts $fLoc "msgctxt \"$keyName\""
-	
-	# Put original message
-	set line "msgid "
-	set strList [split $origMsgVal "\n"]
-	if {[llength $strList] > 1} {
-		set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
-	} else {
-		set line "$line\"[lindex $strList 0]\""
-	}
-	puts $fLoc $line
-	
-	# Put translated message
-	set line "msgstr "
-	set strList [split $msgVal "\n"]
-	if {[llength $strList] > 1} {
-		set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
-	} else {
-		set line "$line\"[lindex $strList 0]\""
-	}
-	puts $fLoc $line
+	if {![string equal $keyName "circ.sim.tv.after.2"]} {
+        puts $fLoc ""
+        puts $fLoc "#: $options(l):$str"
+        puts $fLoc "msgctxt \"$keyName\""
+        
+        # Put original message
+        set line "msgid "
+        set strList [split $origMsgVal "\n"]
+        if {[llength $strList] > 1} {
+            set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
+        } else {
+            set line "$line\"[lindex $strList 0]\""
+        }
+        puts $fLoc $line
+        
+        # Put translated message
+        set line "msgstr "
+        set strList [split $msgVal "\n"]
+        if {[llength $strList] > 1} {
+            set line "$line\"\"\n\"[join $strList \\n\"\n\"]\""
+        } else {
+            set line "$line\"[lindex $strList 0]\""
+        }
+        puts $fLoc $line
+    }
 }
 
 close $fLoc

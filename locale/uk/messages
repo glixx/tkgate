@@ -2254,3 +2254,94 @@ ho.tool.anchor	Заблокувати позначені компоненти.
 ho.tool.unanchor	Розблокувати позначені компоненти.
 ho.tool.replicate	Клонувати компонент.
 ho.tool.delete	Вилучити позначене.
+cpath.critpath	TKGate: Критичні ланцюжки
+err.simdiedread	Аварійне завершення роботи імітатора (помилка читання).
+err.simdiedeof	Аварійне завершення роботи імітатора (символ кінця файла при читанні даних).
+err.fail.analyz	Не вдалося запустити засіб аналізу «%s»
+err.find.sim	У режимі моделювання підтримки функції «Знайти» не передбачено.
+err.key.def	Некоректне визначення ключа.
+showdoc	TkGate: документація
+mem.addr	Адреса
+mem.data	Дані
+mem.time	Час
+mem.title	TkGate: %s пам'яті
+mem.last.read	Останній доступ для читання
+mem.last.write	Останній доступ для запису
+mem.page	Сторінка
+err.bad.opt1	Помилкове значення параметра «%s».
+err.bad.opt2	Має бути одним з таких значень: %s
+misc.tcl.shell	TKGate: оболонка Tcl
+misc.cmd	Команда
+lib.mngr	TKGate: керування бібліотеками
+err.no.master	Не знайдено основи. Можливо, «%s» не є підлеглим елементом?
+err.unknown.opt	Невідомий параметр «%s»
+err.no.widget	Не вказано віджетів для налаштовування
+txt.widget	Текстовий віджет
+sim.watch	TkGate: перегляд моделювання
+err.start.sim	Не вдалося запустити імітатор «%s»
+err.simdiedwrite	Аварійне завершення роботи імітатора (записування).
+err.simdiedflush	Аварійне завершення роботи імітатора (витирання).
+err.tab.len	-tablabels і -tabs повинні мати однакову довжину
+err.dir	Не вистачає батьківського запису «%s»
+err.v	Запис «%s» вже існує
+wizard.back	Назад
+wizard.next	Далі
+wizard.cancel	Скасувати
+wizard.finish	Завершити
+loaded.vpds	Завантажені віртуальні пристрої
+argument	Аргумент
+failing	Помилка
+letter	Лист
+legal	Леґал
+tabloid	Таблоїд
+executive	Екзек’ютів
+inches	дюйм
+millimeters	мм
+one	один
+two	два
+three	три
+four	чотири
+space	Пробіл
+load	[завантаження]
+unload	[розвантаження]
+short_hlink	Гіперпосилання
+state.off	вимкнено
+state.on	увімкнено
+state.float	float
+line_comment	рядковий коментар
+block_comment	блоковий коментар
+short_comment	Коментар
+experiment	ЕКСПЕРИМЕНТАЛЬНЕ
+unused	Резерв
+script	Скрипт
+coke	Кола
+diet_coke	Дієт. кола
+root_beer	Корен. пиво
+pocari_sweat	Покарі
+dr_pepper	Д-р Пеппер
+bill_scanner	Білл Сканер
+coke_machine	Автомат газованої води
+no_change	Ні здачі
+insert_dollar	Вставте долар
+chg	Решта
+bill_in	Вхід
+bill_out	Вихід
+commit	Надіслати
+retins	RETINS
+soda	Сода
+reset	Скинути
+bogus	фейк
+empty	порожньо
+collected	Зібрано
+inserted	Вставлено
+change	Решта
+no_n_change	-begin-
+ні
+здачі
+-end-
+74xx	Ланцюги стандартної логіки 74-ї серії
+74xxgatelevel	Моделі Verilog шлюзових рівнів 74-ї серії
+cokemachine	Інтерфейс автомата газованої води
+m68xx	Мікросхеми Motorola 68xx
+timer	Осцилятори та імпул. пристрої із затрим. у абсолют. часі
+ttydevice	Інтерактивний пристрій TTY

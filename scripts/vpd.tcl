@@ -274,7 +274,7 @@ namespace eval VPD {
 
     if {[llength $loaded] > 0} {
       global tkg_statusMessage
-      InfoPanel::log "\[Loaded VPDs: $loaded\]" -noshow 1
+      InfoPanel::log "\[[m loaded.vpds]: $loaded\]" -noshow 1
     }
   }
 }

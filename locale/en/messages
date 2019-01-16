@@ -3007,3 +3007,99 @@ ho.tool.delete		Delete the selection.
 #ho.opt.circuit.extbar	TODO
 #ho.opt.circuit.shownet	TODO
 #ho.circuit.shownet	TODO
+
+cpath.critpath		TKGate: Critical Paths
+err.simdiedread		Simulator has died (read error).
+err.simdiedeof		Simulator has died (eof in read).
+err.fail.analyz		Failed to start analyzer '%s'
+err.find.sim		'Find' not supported in simulation mode.
+err.key.def			Illegal key definition.
+showdoc				TkGate: Documentation
+mem.addr			Address
+mem.data			Data
+mem.time			Time
+mem.title			TkGate: Memory %s
+mem.last.read		Last Read Access
+mem.last.write		Last Write Access
+mem.page			Page
+err.bad.opt1		Bad option '%s'.
+err.bad.opt2		Must be one of: %s
+misc.tcl.shell		TKGate: Tcl Shell
+misc.cmd			Command
+lib.mngr			TKGate: Library Manager
+err.no.master		No master found. Perhaps '%s' is not a pane slave?
+err.unknown.opt		Unknown option '%s'
+err.no.widget		No widgets specified to configure
+txt.widget			Text widget
+sim.watch			TkGate: Simulation Watch
+err.start.sim		Failed to start simulator '%s'
+err.simdiedwrite	Simulator has died (in write).
+err.simdiedflush	Simulator has died (in flush).
+err.tab.len			-tablabels and -tabs must be of equal length
+err.dir				Parent item '%s' is missing
+err.v				Item '%s' already exists
+wizard.back			Back
+wizard.next			Next
+wizard.cancel		Cancel
+wizard.finish		Finish
+loaded.vpds			Loaded VPDs
+argument			Argument
+failing				Failing
+letter				Letter
+legal				Legal
+tabloid				Tabloid
+executive			Executive
+inches				in.
+millimeters			mm
+one					one
+two					two
+three				three
+four				four
+space				Space
+load				[load]
+unload				[unload]
+short_hlink			Hyperlink
+state.off			off
+state.on			on
+state.float			float
+line_comment		line comment
+block_comment		block comment
+short_comment		Comment
+experiment			EXPERIMENTAL
+#main				main
+unused				Unused
+script				Script
+
+coke				Coke
+diet_coke			Diet Coke
+root_beer			Root Beer
+pocari_sweat		Pocari Sweat
+dr_pepper			Dr. Pepper
+bill_scanner		Bill Scanner
+coke_machine		Coke Machine
+no_change			No Change
+insert_dollar		Insert Dollar
+chg					Chg
+bill_in				Bill In
+bill_out			Bill Out
+commit				Commit
+retins				RETINS
+soda				Soda
+reset				Reset
+bogus				bogus
+empty				empty
+collected			Collected
+inserted			Inserted
+change				Change
+
+no_n_change	-begin-
+no
+change
+-end-
+
+74xx				74-series standard logic circuits
+74xxgatelevel		74-series gate level verilog models
+cokemachine			Coke Machine Interface
+m68xx				Motorola 68xx chips
+timer				Oscillators and One-Shots with absolute time delays
+ttydevice			Interactive TTY Device

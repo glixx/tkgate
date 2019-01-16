@@ -395,7 +395,7 @@ if { $dropbox_debug } {
   Dropbox::new .db2 -width 10 -command box_changed -value Oo-Toro -entry 1
   Dropbox::new .db3 -width 10 -command box_changed -value Diplodocus
 
-  button .dismiss -text Dismiss -command { destroy . }
+  button .dismiss -text "[m b.dismiss]" -command { destroy . }
   pack .db1 .db2 .db3 .dismiss -padx 10 -pady 10
 
   Dropbox::itemadd .db1 Foo

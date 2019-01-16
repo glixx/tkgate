@@ -318,7 +318,7 @@ proc parseargs {argv nameset args} {
       lappend R $sw
       set argv [lrange $argv 1 end]
     } else {
-      error "bad option \"$sw\" must be one of: $nameset"
+      error "[format [m err.bad.opt1] $sw] [format [m err.bad.opt2] $nameset]"
       return
     }
 
@@ -1043,15 +1043,15 @@ proc shellWindow {} {
     return
   }
 
-  wm title $w "TKGate: Tcl Shell"
+  wm title $w "[m misc.tcl.shell]"
 
-  button $w.dismiss -text Dismiss -command "destroy $w"
+  button $w.dismiss -text "[m b.dismiss]" -command "destroy $w"
   pack $w.dismiss -side bottom -anchor e -padx 5 -pady 5
 
   frame $w.b
   pack $w.b -side bottom -fill x -expand 1
 
-  label $w.b.l -text "Command: "
+  label $w.b.l -text "[m misc.cmd]: "
   pack $w.b.l -side left -padx 5 -pady 5
 
   entry $w.b.e -textvariable shellCommand

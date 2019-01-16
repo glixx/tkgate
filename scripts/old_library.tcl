@@ -37,7 +37,9 @@ namespace eval LibraryMgr {
 
       if {[lindex $s 0] == "//:" && [lindex $s 1] == "property" && [lindex $s 2] == "title"} {
 	close $f
-	return [lindex $s 4]
+	set title0 [m [lindex $s 4]]
+	if { $title0 == "<no-msg: [lindex $s 4]>" } {return [lindex $s 4]}
+	return [m [lindex $s 4]]
       }
     }
     close $f
@@ -233,7 +235,7 @@ namespace eval LibraryMgr {
 
     if {[catch {toplevel $w}]} return
     wm resizable $w 0 0
-    wm title $w "TKGate: Library Manager"
+    wm title $w "[m lib.mngr]"
     wm geometry $w [offsetgeometry . 50 50]
     wm transient $w .
 

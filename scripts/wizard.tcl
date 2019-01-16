@@ -122,9 +122,9 @@ namespace eval Wizard {
     pack $w.x -pady 5
     pack $w.bb -fill x
 
-    button $w.bb.back   -text "<Back" -command "Wizard::back $w"
-    button $w.bb.next   -text "Next>" -command "Wizard::next $w"
-    button $w.bb.cancel -text "Cancel" -command "$Wizard::props($w:finish) $w 0"
+    button $w.bb.back   -text "<[m wizard.back]" -command "Wizard::back $w"
+    button $w.bb.next   -text "[m wizard.next]>" -command "Wizard::next $w"
+    button $w.bb.cancel -text [m wizard.cancel] -command "$Wizard::props($w:finish) $w 0"
     pack $w.bb.cancel $w.bb.next $w.bb.back -side right -anchor e -padx 5 -pady 5
 
     bind $w.bb.back <Return> "Wizard::back $w"
@@ -140,7 +140,7 @@ namespace eval Wizard {
 	Wizard::setpage $rw Fee
       }
       Fee {
-	Wizard::buttons $rw "<Back" disabled "Next>" normal
+	Wizard::buttons $rw "<[m wizard.back]" disabled "[m wizard.next]>" normal
 
 	label $w.l -text Fee
 	pack $w.l
@@ -149,7 +149,7 @@ namespace eval Wizard {
 	Wizard::setpage $rw Fei
       }
       Fei {
-	Wizard::buttons $rw "<Back" normal "Next>" normal
+	Wizard::buttons $rw "<[m wizard.back]" normal "[m wizard.next]>" normal
 
 	label $w.l -text Fei
 	pack $w.l
@@ -161,7 +161,7 @@ namespace eval Wizard {
 	Wizard::setpage $rw Fee
       }
       Foe {
-	Wizard::buttons $rw "<Back" normal "Next>" normal
+	Wizard::buttons $rw "<[m wizard.back]" normal "[m wizard.next]>" normal
 
 	label $w.l -text Foe
 	pack $w.l
@@ -173,7 +173,7 @@ namespace eval Wizard {
 	Wizard::setpage $rw Fei
       }
       Fum {
-	Wizard::buttons $rw "<Back" normal "Finish" normal
+	Wizard::buttons $rw "<Back" normal [m wizard.finish] normal
 
 	label $w.l -text Fum
 	pack $w.l

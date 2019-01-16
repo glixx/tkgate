@@ -1,8 +1,7 @@
 //: version "2.2"
-//: property encoding = "iso8859-1"
-//: property locale = "en"
+//: property encoding = "utf-8"
 //: property prefix = "_GG"
-//: property title = "Ocillators and One-Shots with absolute time delays"
+//: property title = "timer"
 
 `timescale 1ns/1ns
 

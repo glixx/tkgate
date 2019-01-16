@@ -60,7 +60,7 @@ namespace eval SimWatcher {
     }
 
     wm resizable $w 0 0
-    wm title $w "TkGate: Simulation Watch"
+    wm title $w "[m sim.watch]"
     wm geometry $w [offsetgeometry . 50 50]
 
     bind $w <Destroy> SimWatcher::destroyNotify
@@ -129,7 +129,7 @@ proc tkg_startSim {fname initTime} {
   # Start up the simulator
   #
   if { [catch { set simId [open "|$simCmd" r+ ] } ] } {
-    errmsg "Failed to start simulator '${simExec}'"
+    errmsg "[format [m err.start.sim] ${simExec}]"
     return
   }
 
@@ -157,12 +157,12 @@ proc tkg_readSim {} {
 
   if { [catch { set command [gets $simId] } ] } {
     gat_setMajorMode edit
-    errmsg "Simulator has died (read error)."
+    errmsg "[m err.simdiedread]"
     return
   }
   if { $command == "" && [eof $simId] } {
     gat_setMajorMode edit
-    errmsg "Simulator has died (eof in read)."
+    errmsg "[m err.simdiedeof]"
     return
   }
 
@@ -509,7 +509,7 @@ namespace eval Simulator {
     if { [catch { puts $simId $msg }] } {
       gat_setMajorMode edit
       if {!$ignoreerrors} {
-	errmsg "Simulator has died (in write)."
+	errmsg "[m err.simdiedwrite]"
       }
       return 0
     }
@@ -522,7 +522,7 @@ namespace eval Simulator {
     global simId
     if { [catch { flush $simId } ] } {
       gat_setMajorMode edit
-      errmsg "Simulator has died (in flush)."
+      errmsg "[m err.simdiedflush]"
       return
     }
   }

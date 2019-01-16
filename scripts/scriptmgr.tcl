@@ -353,7 +353,7 @@ namespace eval ScriptMgr {
 	  -entrycommand ScriptMgr::manager -expandcol 2 -resize 1
     SpreadSheet::addcolumn $w.t.smlist.lb -width 4 -header ID
     SpreadSheet::addcolumn $w.t.smlist.lb -width 3 -header S -type image
-    SpreadSheet::addcolumn $w.t.smlist.lb -width 50 -header Script
+    SpreadSheet::addcolumn $w.t.smlist.lb -width 50 -header "[m script]"
     pack $w.t.smlist.lb -side left -fill both -expand 1
 
     scrollbar $w.t.smlist.vb -orient vertical -command "SpreadSheet::yview $w.t.smlist.lb"

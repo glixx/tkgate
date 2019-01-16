@@ -2054,7 +2054,7 @@ namespace eval HdlEditor {} {
       set pos [$text_w search -backwards $search_string insert]
       if {$pos < 0 } {
 	if { $search_status == "" } bell
-	set search_status "Failing "
+	set search_status "[m failing] "
 	updateSearchStatus
 	return
       }
@@ -2103,7 +2103,7 @@ namespace eval HdlEditor {} {
       set pos [$text_w search $search_string insert]
       if {$pos < 0 } {
 	if { $search_status == "" } bell
-	set search_status "Failing "
+	set search_status "[m failing] "
 	updateSearchStatus
 	return
       }
@@ -2181,7 +2181,7 @@ namespace eval HdlEditor {} {
 	set pos [$text_w search $search_string insert-[expr [string length $search_string] - 1]chars]
 	if {$pos < 0 } {
 	  if { $search_status == "" } bell
-	  set search_status "Failing "
+	  set search_status "[m failing] "
 	  updateSearchStatus
 	  return 1
 	}
@@ -2194,7 +2194,7 @@ namespace eval HdlEditor {} {
 	set pos [$text_w search -backwards $search_string insert+[string length $search_string]chars]
 	if {$pos < 0 } {
 	  if { $search_status == "" } bell
-	  set search_status "Failing "
+	  set search_status "[m failing] "
 	  updateSearchStatus
 	  return 1
 	}
@@ -2265,7 +2265,7 @@ namespace eval HdlEditor {} {
       set argument_string "$argument_string$c"
       if {[scan $argument_string %d argument] != 1 } { set argument 1 }
       if { $argument > 500 } { set argument 500 }
-      set tkg_statusMessage "Argument: $argument_string"
+      set tkg_statusMessage "[m argument]: $argument_string"
       return 1
     } else {
       set argument_active 0
@@ -2433,7 +2433,7 @@ namespace eval HdlEditor {} {
     set argument_active 1
     set argument_string ""
     set argument 4
-    set tkg_statusMessage "Argument: "
+    set tkg_statusMessage "[m argument]: "
   }
 
   proc doLowercaseWord {} {
