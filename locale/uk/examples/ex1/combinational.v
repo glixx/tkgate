@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Combinational Logic"
+//: property title = "Комбінаційна логіка"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2

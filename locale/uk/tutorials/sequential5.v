@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Sequential Simulation"
+//: property title = "Моделювання послідовності елементів"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -27,7 +27,7 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: joint g8 (reg_out) @(275, 328) /w:[ 2 -1 1 4 ]
   //: GROUND g4 (w0) @(274,313) /sn:0 /w:[ 1 ]
   //: comment g13 @(14,12)
-  //: /line:"<h3>Sequential Simulation</h3> <b>(scripts)</b>"
+  //: /line:"<h3>Моделювання послідовності елементів</h3> <b>(scripts)</b>"
   //: /line:""
   //: /line:"In addition to interactive simulator control, you can also write a simulator script."
   //: /line:"Simulator script files have the extension \".vs\" and are written using Verilog"
@@ -41,17 +41,17 @@ wire w9;    //: /sn:0 {0}(191,241)(181,241){1}
   //: /line:"<tutorial-navigation byfile=1>"
   //: /end
   //: comment g10 @(495,118) /sn:0 /R:14 /anc:1
-  //: /line:"<b>Simulator Script Example:</b>"
+  //: /line:"<b>Приклад скрипту імітації:</b>"
   //: /line:"<font face=courier>"
   //: /line:"initial"
   //: /line:"  begin"
-  //: /line:"    $display(\"%t: Start of script\",$time);"
+  //: /line:"    $display(\"%t: запуск скрипту\",$time);"
   //: /line:"    $tkg$probe(ck, reg_out, clr);"
-  //: /line:"    $display(\"%t: Set probes\",$time);"
+  //: /line:"    $display(\"%t: встановлення зондів\",$time);"
   //: /line:"    clr = 1'b0;"
   //: /line:"    #200;"
   //: /line:"    clr = 1'b1;"
-  //: /line:"    $display(\"%t: Done with reset\",$time);"
+  //: /line:"    $display(\"%t: завершено скидання до початкових значень\",$time);"
   //: /line:"    #500;"
   //: /line:"    $stop();"
   //: /line:"  end"

@@ -298,10 +298,10 @@ wire w5;    //: /sn:0 {0}(159,156)(169,156){1}
   _GGAND2 #(6) g2 (.I0(w5), .I1(w3), .Z(w8));   //: @(180,159) /sn:0 /anc:1 /w:[ 1 5 0 ] /eb:0
   _GGOR2 #(6) g1 (.I0(w0), .I1(w4), .Z(w6));   //: @(315,245) /sn:0 /anc:1 /w:[ 1 1 0 ]
   //: comment g11 @(363,264) /sn:0 /anc:1
-  //: /line:"OR Gate Circuit"
+  //: /line:"Схема із ключем АБО"
   //: /end
   //: comment g10 @(70,264) /sn:0 /anc:1
-  //: /line:"AND Gate Circuit"
+  //: /line:"Схема із шлюзом І"
   //: /end
   //: joint g6 (w6) @(375, 245) /w:[ 2 4 1 -1 ]
   //: comment g7 @(413,213) /sn:0 /anc:1

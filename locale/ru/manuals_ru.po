@@ -1,6 +1,6 @@
 # This file is part of TkGate project
 # Copyright (C) 1987-2015 by Jeffery P. Hansen
-# Copyright (C) 2015-2018 by Andrey V. Skvortsov
+# Copyright (C) 2015-2019 by Andrey V. Skvortsov
 # This file is distributed under the same license as the TkGate package.
 # 
 # ##############################################################################
@@ -8,16 +8,16 @@
 # ##############################################################################
 # 
 # Translators:
-# AlexL <loginov.alex.valer@gmail.com>, 2018
+# AlexL <loginov.alex.valer@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-05 17:04+0300\n"
+"POT-Creation-Date: 2019-01-11 17:04+0300\n"
 "PO-Revision-Date: 2018-12-10 23:25+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2018\n"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/Magic/teams/44238/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -170,11 +170,33 @@ msgstr ""
 msgid "8-Bit Counter"
 msgstr "8-ми разрядный счётчик"
 
+msgid "aardvark"
+msgstr "трубкозуб"
+
 msgid "Address Resolution"
 msgstr "Разрешение адреса"
 
 msgid "Advanced Editing Methods"
 msgstr "Расширенные методы редактирования"
+
+msgid ""
+"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">\n"
+"<h3>Combinational Logic</h3></a>\n"
+"A simple 3-bit adder that you\n"
+"simulate. Push the play button\n"
+"then click on the switches and\n"
+"watch how the LEDs change.\n"
+"\n"
+msgstr ""
+"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">\n"
+"<h3>Комбинационная логика</h3></a>\n"
+"Простой 3-разрядный сумматор, который\n"
+"можно запускать в симуляторе.\n"
+"Нажмите кнопку запуска, затем\n"
+"изменяйте значения переключателей и\n"
+"смотрите, как меняются состояния\n"
+"светодиодов.\n"
+"\n"
 
 msgid ""
 "<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">\n"
@@ -212,6 +234,42 @@ msgstr ""
 "Триггер, реализованный с\n"
 "использованием Н-МОП и П-МОП\n"
 "элементов.\n"
+"\n"
+
+msgid ""
+"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">\n"
+"<h3>Menagerie CPU</h3></a>\n"
+"A simple microcode-based CPU that\n"
+"will play the \"Animals\" game on a\n"
+"TTY device when simulated."
+msgstr ""
+"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">\n"
+"<h3>Компьютер \"Зверинец\"</h3></a>\n"
+"Простой микропроцессор с микрокодом,\n"
+"который выполняет игру \"Животные\"\n"
+"во время симуляции."
+
+msgid ""
+"<a href=\"ex6/coke.v\"><img src=example_coke.gif>\n"
+"<h3>Coke Machine</h3></a>\n"
+"This example uses TkGate's Viritual\n"
+"Peripheral Device (VPD) mechanism to\n"
+"create an interactive \"Coke Machine\"\n"
+"that can be controlled by a user circuit.\n"
+"Only the coke machine device itself is\n"
+"included. Can you build a controller\n"
+"for it?\n"
+"\n"
+msgstr ""
+"<a href=\"ex6/coke.v\"><img src=example_coke.gif>\n"
+"<h3>Автомат газировки</h3></a>\n"
+"Этот пример использует механизм\n"
+"виртуальных периферийных устройств (ВПУ)\n"
+"TkGate для создания интерактивной модели\n"
+"\"Автомат газировки\", которой можно управлять\n"
+"с помощью пользовательской схемы.\n"
+"Включена только модель. Сможете ли Вы\n"
+"построить контроллер для неё?\n"
 "\n"
 
 msgid ""
@@ -307,6 +365,12 @@ msgstr ""
 "<b>A</b> И <b>B</b> - 1\n"
 "<b>A</b> ИЛИ <b>B</b>"
 
+msgid "<br>Think of an animal and I will try to guess what it is.<br>"
+msgstr "<br>Загадайте животное, а я постараюсь угадать его.<br>"
+
+msgid "<br>Welcome to Animals.<br>"
+msgstr "<br>Добро пожаловать в Животные.<br>"
+
 msgid ""
 "<b>Simulator Script Example:</b>\n"
 "<font face=courier>\n"
@@ -380,6 +444,9 @@ msgstr "Редактирование вентилей"
 
 msgid "Editing Wires"
 msgstr "Редактирование проводников"
+
+msgid "Enter a question that would distinguish a %s from a %s.<br>></br>"
+msgstr "Введите вопрос, который бы отличал %s от %s.<br>></br>"
 
 msgid "Example page"
 msgstr "Страница Учебных примеров"
@@ -760,61 +827,6 @@ msgstr ""
 "\n"
 "В данном разделе рассматриваются дополнительные техники редактирования,\n"
 "которые позволяют сделать работу с TkGate более эффективной."
-
-msgid ""
-"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">\n"
-"<h3>Combinational Logic</h3></a>\n"
-"A simple 3-bit adder that you\n"
-"simulate. Push the play button\n"
-"then click on the switches and\n"
-"watch how the LEDs change.\n"
-"\n"
-msgstr ""
-"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">\n"
-"<h3>Комбинационная логика</h3></a>\n"
-"Простой 3-разрядный сумматор, который\n"
-"можно запускать в симуляторе.\n"
-"Нажмите кнопку запуска, затем\n"
-"изменяйте значения переключателей и\n"
-"смотрите, как меняются состояния\n"
-"светодиодов.\n"
-"\n"
-
-msgid ""
-"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">\n"
-"<h3>Menagerie CPU</h3></a>\n"
-"A simple microcode-based CPU that\n"
-"will play the \"Animals\" game on a\n"
-"TTY device when simulated."
-msgstr ""
-"<a href=\"ex5/menagerie.v\"><img src=\"example_menagerie.gif\">\n"
-"<h3>Компьютер \"Зверинец\"</h3></a>\n"
-"Простой микропроцессор с микрокодом,\n"
-"который выполняет игру \"Животные\"\n"
-"во время симуляции."
-
-msgid ""
-"<a href=\"ex6/coke.v\"><img src=example_coke.gif>\n"
-"<h3>Coke Machine</h3></a>\n"
-"This example uses TkGate's Viritual\n"
-"Peripheral Device (VPD) mechanism to\n"
-"create an interactive \"Coke Machine\"\n"
-"that can be controlled by a user circuit.\n"
-"Only the coke machine device itself is\n"
-"included. Can you build a controller\n"
-"for it?\n"
-"\n"
-msgstr ""
-"<a href=\"ex6/coke.v\"><img src=example_coke.gif>\n"
-"<h3>Автомат газировки</h3></a>\n"
-"Этот пример использует механизм\n"
-"виртуальных периферийных устройств (ВПУ)\n"
-"TkGate для создания интерактивной модели\n"
-"\"Автомат газировки\", которой можно управлять\n"
-"с помощью пользовательской схемы.\n"
-"Включена только модель. Сможете ли Вы\n"
-"построить контроллер для неё?\n"
-"\n"
 
 msgid ""
 "<h3>Combinational Circuit Simulation</h3> <b>(dip switches)</b>\n"
@@ -1654,6 +1666,15 @@ msgstr ""
 "меню <font color=red2>Добавить сегмент провода</font>. Теперь можно соединить появившийся сегмент со входами буферов.\n"
 "\n"
 
+msgid "I could not guess your animal. What was your animal?</br>"
+msgstr "Я не смог угадать ваше животное. Какое было ваше животное?</br>"
+
+msgid "I currently know %d animals.<br><br>"
+msgstr "В настоящее время я знаю %d животных.<br><br>"
+
+msgid "I guessed your animal!!!<br><br>"
+msgstr "Я угадал ваше животное!!!<br><br>"
+
 msgid ""
 "<img src=breakp_example.gif>\n"
 "\n"
@@ -1713,6 +1734,9 @@ msgstr ""
 "<img src=unused.gif> Контейнер неиспользуемых модулей.\n"
 "\n"
 
+msgid "Is the animal you are thinking of a %s?</br>"
+msgstr "Вы загадали животное %s?</br>"
+
 msgid ""
 "Logical (M=1)\n"
 "00 - NOT <b>A</b>\n"
@@ -1749,11 +1773,17 @@ msgstr "Генерация следующего адреса микроопер�
 msgid "Microinstruction Decode"
 msgstr "Декодирование микроопераций"
 
+msgid "no"
+msgstr "нет"
+
 msgid "OR Gate Circuit"
 msgstr "Схема с вентилем ИЛИ"
 
 msgid "OR gate"
 msgstr "Вентиль ИЛИ"
+
+msgid "Please type 'yes' or 'no'.<br>"
+msgstr "Пожалуйста, введите 'да' или 'нет'.<br>"
 
 msgid ""
 "<p>Move switcher in logical 1\n"
@@ -1785,6 +1815,9 @@ msgstr "Переключатели"
 
 msgid "Textual Verilog"
 msgstr "Текстовый Verilog"
+
+msgid "The correct answer for a %s is?</br>"
+msgstr "Корректный ответ для %s?</br>"
 
 msgid ""
 "The IR and OPR registers store the\n"
@@ -2076,3 +2109,6 @@ msgstr "Использование модулей"
 
 msgid "Welcome to TkGate Page"
 msgstr "Страница Добро пожаловать в TkGate"
+
+msgid "yes"
+msgstr "да"

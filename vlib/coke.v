@@ -54,7 +54,7 @@ module cokemachine(DISP, ELIGHT, CHGCOM, CHGQ, CHGD, CHGN, NOCHG, BILLIN, BILLOU
   input BILLIN, BILLOUT;          // Move bill in or out
   input BILLLT;                   // Insert bill light
   input RETINS;                   // Return inserted coins
-  input INSACK;                   // Acknoeledge a coin insertion 
+  input INSACK;                   // Acknowledge a coin insertion
   input [7:0] COST;               // Cost per drink in nickles
   input _RESET;                   // Reset the coke machine.
   

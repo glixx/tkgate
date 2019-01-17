@@ -22,7 +22,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
 //: enddecls
 
   //: comment g8 @(313,208)
-  //: /line:"OR gate"
+  //: /line:"Ключ АБО"
   //: /end
   //: joint g13 (w9) @(211, 237) /w:[ 1 2 4 -1 ]
   //: comment g1 @(10,310) /sn:0 /anc:1
@@ -33,7 +33,7 @@ wire w10;    //: /sn:0 {0}(335,235)(345,235){1}
   //: /line:"Перемикачі"
   //: /end
   //: comment g7 @(208,112)
-  //: /line:"AND gate"
+  //: /line:"І-шлюз"
   //: /end
   //: comment g9 @(10,10) /anc:1
   //: /line:"<h3>Creating a Simple Circuit</h3>"

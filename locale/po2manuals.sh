@@ -53,7 +53,7 @@ do
     cp -af en/examples $lang/
     cp -af en/tutorials $lang/
     
-    for file_v in `find ./$lang -name *.v`
+    for file_v in `find ./$lang -regex '.*\(v\|gm\).*'`
     do
         echo "Working with $file_v"
         tmp_file1=$file_v
@@ -101,13 +101,13 @@ do
         sed -i 's|  |UUUUU|g' $tmp_file2
         # five spaces -> PPPPP
         sed -i 's|     |PPPPP|g' $tmp_file2
-        # [ -> OOOOO
-        sed -i 's|\[|OOOOO|g' $tmp_file2
-        # mark EOL as AAAAA
-        sed -i 's|$|AAAAA|g' $tmp_file2
-        # fix wrong AAAAA adding
-        sed -i 's|BBBBBAAAAA|BBBBB|g' $tmp_file2
-        sed -i 's|CCCCCAAAAA|CCCCC|g' $tmp_file2
+        # [ -> MMMMM
+        sed -i 's|\[|MMMMM|g' $tmp_file2
+        # mark EOL as IIIII
+        sed -i 's|$|IIIII|g' $tmp_file2
+        # fix wrong IIIII adding
+        sed -i 's|BBBBBIIIII|BBBBB|g' $tmp_file2
+        sed -i 's|CCCCCIIIII|CCCCC|g' $tmp_file2
         # delete EOL
         cat $tmp_file2 | tr -d '\n' > $tmp_file3
         mv -f $tmp_file3 $tmp_file2
@@ -122,8 +122,8 @@ do
         # delete \n
         sed -i 's|\\n||g' $tmp_file2
 
-        # mark EOL as AAAAA
-        sed -i 's|$|AAAAA|g' $tmp_file1
+        # mark EOL as IIIII
+        sed -i 's|$|IIIII|g' $tmp_file1
         # add prefix XXXXX for  //: /line:
         sed -i 's|  //: /line:|XXXXX|g' $tmp_file1
         # \" -> TTTTT
@@ -136,8 +136,8 @@ do
         sed -i 's|  |UUUUU|g' $tmp_file1
         # five spaces -> PPPPP
         sed -i 's|     |PPPPP|g' $tmp_file1
-        # [ -> OOOOO
-        sed -i 's|\[|OOOOO|g' $tmp_file1
+        # [ -> MMMMM
+        sed -i 's|\[|MMMMM|g' $tmp_file1
         # delete EOL
         cat $tmp_file1 | tr -d '\n' > $tmp_file3
         mv -f $tmp_file3 $tmp_file1
@@ -148,11 +148,26 @@ do
            # FIXME: awk deletes more than 1 space everywhere
            a=`echo $line|awk -F "CCCCC" '{print $1}'`
            b=`echo $line|awk -F "CCCCC" '{print $2}'`
-           if [ ! -z "$b" ]
+           if [ ! -z "$b" ] && [ ! "$tmp_file1" = "./$lang/examples/ex5/menagerie.gm" ]
            then
              sed -i "s|$a|$b|g" $tmp_file1
+           else
+             # translate menagerie.gm
+             sed -i 's|\\n|<br>|g' ./$lang/examples/ex5/menagerie.gm
+             sed -i 's|%s|sssss|g' ./$lang/examples/ex5/menagerie.gm
+             sed -i 's|%d|ddddd|g' ./$lang/examples/ex5/menagerie.gm
+             a=`echo $a|sed 's|IIIII||g'|sed 's|XXXXX||g'|sed 's|</br>"| "|g'|sed 's|%s|sssss|g'|sed 's|%d|ddddd|g'`
+             b=`echo $b|sed 's|IIIII||g'|sed 's|XXXXX||g'|sed 's|</br>"| "|g'|sed 's|%s|sssss|g'|sed 's|%d|ddddd|g'`
+             if [ ! -z "$a" ] && [ ! -z "$b" ]
+             then
+                sed -i "s|$a,0|$b,0|g" $tmp_file1
+             fi
            fi
         done
+        # restore modifications for menagerie.gm
+        sed -i 's|<br>|\\n|g' ./$lang/examples/ex5/menagerie.gm
+        sed -i 's|sssss|%s|g' ./$lang/examples/ex5/menagerie.gm
+        sed -i 's|ddddd|%d|g' ./$lang/examples/ex5/menagerie.gm
 
         # special additional translation
         cat $tmp_file2|while read line
@@ -162,8 +177,8 @@ do
            b=`echo $line|awk -F "CCCCC" '{print $2}'`
            if [ ! -z "$b" ]
            then
-             c=`echo $a|sed 's|^"||g'|sed 's|"AAAAA$||g'`
-             d=`echo $b|sed 's|^"||g'|sed 's|"AAAAA$||g'`
+             c=`echo $a|sed 's|^"||g'|sed 's|"IIIII$||g'`
+             d=`echo $b|sed 's|^"||g'|sed 's|"IIIII$||g'`
              sed -i "s|<h3>$c</h3>|<h3>$d</h3>|g" $tmp_file1
              # translation for "Tutorial Chapters"
              sed -i "s|\. $c</a>|. $d</a>|g" $tmp_file1
@@ -185,13 +200,13 @@ do
         fi
 
         # restore marks
-        sed -i "s|AAAAA|\n|g" $tmp_file1
+        sed -i "s|IIIII|\n|g" $tmp_file1
         sed -i 's|TTTTT|\\"|g' $tmp_file1
         sed -i 's|XXXXXXXXXX|  //: /line:|g' $tmp_file1
         sed -i 's|XXXXX|  //: /line:|g' $tmp_file1
         sed -i 's|ZZZZZ|\&|g' $tmp_file1
         sed -i 's|DDDDD|*|g' $tmp_file1
-        sed -i 's|OOOOO|[|g' $tmp_file1
+        sed -i 's|MMMMM|[|g' $tmp_file1
         sed -i 's|UUUUU|  |g' $tmp_file1
         sed -i 's|PPPPP|     |g' $tmp_file1
 

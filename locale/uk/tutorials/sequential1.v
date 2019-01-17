@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Sequential Simulation"
+//: property title = "Моделювання послідовності елементів"
 //: property useExtBars = 0
 //: property showSwitchNets = 0
 //: property discardChanges = 1
@@ -16,7 +16,7 @@ module PAGE1;    //: root_module
 //: enddecls
 
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3>"
+  //: /line:"<h3>Моделювання послідовності елементів</h3>"
   //: /line:""
   //: /line:"This chapter builds on the previous chapter about simulating combinational circuits and introduces"
   //: /line:"simulator features that are useful for simulating sequential circuits."
