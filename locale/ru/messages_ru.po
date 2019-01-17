@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-16 12:42+0300\n"
-"PO-Revision-Date: 2019-01-16 02:43+0000\n"
+"PO-Revision-Date: 2019-01-17 02:21+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/Magic/tkgate/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -8061,7 +8061,7 @@ msgstr "Микросхемы стандартной логики серии 74"
 #: en/messages:3101
 msgctxt "74xxgatelevel"
 msgid "74-series gate level verilog models"
-msgstr "Модели вентилей verilog серии 74"
+msgstr "Модели вентилей уровня verilog серии 74"
 
 #: en/messages:3102
 msgctxt "cokemachine"

@@ -42,7 +42,7 @@ wire w5;    //: /sn:0 {0}(292,169)(307,169){1}
 //: enddecls
 
   //: comment g4 @(247,195) /sn:0 /anc:1
-  //: /line:"Anchored Gate"
+  //: /line:"Прив'язаний шлюз"
   //: /end
   _GGOR2 #(6) g3 (.I0(w3), .I1(w4), .Z(w5));   //: @(282,169) /sn:0 /anc:1 /w:[ 1 1 0 ]
   //: comment g2 @(10,10) /anc:1
@@ -62,7 +62,7 @@ wire w5;    //: /sn:0 {0}(292,169)(307,169){1}
   //: /line:"flag in the popup menu.</font>"
   //: /end
   //: comment g5 @(81,195) /sn:0 /anc:1
-  //: /line:"Unanchored Gate"
+  //: /line:"Неприв'язаний шлюз"
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"
@@ -182,7 +182,7 @@ module PAGE7();
 //: interface  /sz:(40, 40) /bd:[ ] /pd: 0 /pi: 0 /pe: 0 /pp: 1
 //: enddecls
 
-  //: frame g3 @(306,228) /sn:0 /wi:167 /ht:69 /tx:"This is a frame"
+  //: frame g3 @(306,228) /sn:0 /wi:167 /ht:69 /tx:"Це рамка"
   //: comment g2 @(10,10) /anc:1
   //: /line:"<h3>Редагування шлюзів</h3> <b>(Comments and Frames)</b>"
   //: /line:""
@@ -199,8 +199,8 @@ module PAGE7();
   //: /line:""
   //: /end
   //: comment g1 @(70,240) /sn:0
-  //: /line:"<h2>This is a comment</h2>"
-  //: /line:"<p>It uses <b>html</b> markup.</p>"
+  //: /line:"<h2>Це коментар</h2>"
+  //: /line:"<p>У ньому використано розмітку <b>html</b>.</p>"
   //: /end
   //: comment g0 @(10,310) /sn:0 /anc:1
   //: /line:"<tutorial-navigation>"

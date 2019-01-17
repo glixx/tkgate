@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Textual Verilog"
+//: property title = "Текстовий Verilog"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -18,7 +18,7 @@ module PAGE1;    //: root_module
   //: /line:"<tutorial-navigation>"
   //: /end
   //: comment g9 @(8,9) /anc:1
-  //: /line:"<h3>Textual Verilog</h3>"
+  //: /line:"<h3>Текстовий Verilog</h3>"
   //: /line:""
   //: /line:"The TkGate simulator is based on the Verilog hardware description language. As such, any"
   //: /line:"modules you design using the graphical editor are translated into Verilog before being simulated."
@@ -81,7 +81,7 @@ wire w8;    //: /sn:0 {0}(102,205)(146,205)(146,177)(164,177){1}
   //: /line:"і встановіть тип HDL."
   //: /end
   //: comment g9 @(8,9) /anc:1
-  //: /line:"<h3>Textual Verilog</h3>"
+  //: /line:"<h3>Текстовий Verilog</h3>"
   //: /line:""
   //: /line:"1) Right click on the module below and select <font color=blue>Open</blue>."
   //: /end

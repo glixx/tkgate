@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Standard Logic Microcircuits"
+//: property title = "Мікросхеми стандартної логіки"
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
 //: require "74xx"
@@ -48,15 +48,15 @@ wire w5;    //: /sn:0 {0}(415,174)(479,174)(479,148){1}
   //: joint g7 (w3) @(165, 323) /w:[ -1 2 1 4 ]
   //: joint g9 (OP_NET) @(111, 416) /w:[ 2 4 1 -1 ]
   //: comment REF_ARITH @(230,7) /sn:0 /anc:1
-  //: /line:"Arithmetic (M=0)"
+  //: /line:"Арифметичні (M=0)"
   //: /line:"<b>A</b>"
-  //: /line:"<b>A</b> OR <b>B</b>"
-  //: /line:"<b>A</b> OR NOT <b>B</b>"
-  //: /line:"(<b>A</b> OR <b>B</b>)+(<b>A</b> AND NOT <b>B</b>)"
+  //: /line:"<b>A</b> АБО <b>B</b>"
+  //: /line:"<b>A</b> АБО НІ <b>B</b>"
+  //: /line:"(<b>A</b> АБО <b>B</b>)+(<b>A</b> АБО НІ <b>B</b>)"
   //: /line:"<b>A</b> - <b>B</b> - 1"
   //: /line:"<b>A</b> + <b>B</b>"
-  //: /line:"<b>A</b> AND <b>B</b> - 1"
-  //: /line:"<b>A</b> OR <b>B</b>"
+  //: /line:"<b>A</b> І <b>B</b> - 1"
+  //: /line:"<b>A</b> АБО <b>B</b>"
   //: /end
   //: SWITCH CI (w3) @(42,323) /w:[ 0 ] /st:1 /dn:1
   //: joint g5 (B_NET) @(180, 190) /w:[ 2 -1 1 4 ]

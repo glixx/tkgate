@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Sequential Simulation"
+//: property title = "Моделювання послідовності елементів"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -28,7 +28,7 @@ wire w9;    //: /sn:0 {0}(182,236)(172,236){1}
   //: joint g8 (reg_out) @(265, 327) /w:[ 2 -1 1 4 ]
   //: GROUND g4 (w0) @(268,312) /sn:0 /w:[ 1 ]
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3> <b>(stepped simulation)</b>"
+  //: /line:"<h3>Моделювання послідовності елементів</h3> <b>(stepped simulation)</b>"
   //: /line:""
   //: /line:"Start the simulator by pressing the \"<img src=\"simstart.gif\"> <font color=red2>Simulate</a>\" tab just as with a combinational circuit. Next, set probes"
   //: /line:"on the \"ck\" and \"reg_out\" signals by right clicking and selecting <font color=red2>Add/Delete</font> probe. Now advance"

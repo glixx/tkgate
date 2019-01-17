@@ -77,9 +77,9 @@ wire w5;    //: /sn:0 {0}(335,221)(359,221){1}
   _GGAND2 #(6) g19 (.I0(w5), .I1(w15), .Z(w19));   //: @(386,254) /sn:0 /w:[ 9 7 0 ] /eb:0
   //: joint g6 (w6) @(177, 153) /w:[ 5 -1 6 8 ]
   //: comment LABEL_COUNTER @(10,84) /sn:0 /anc:1
-  //: /line:"<p>Move switcher in logical 1"
-  //: /line:"state to run"
-  //: /line:"counter</p>"
+  //: /line:"<p>Перемкніть перемикач у стан"
+  //: /line:"логічної 1, щоб запустити"
+  //: /line:"лічильник</p>"
   //: /end
   //: joint g7 (w6) @(314, 153) /w:[ 3 -1 4 10 ]
   //: GROUND g9 (w4) @(502,205) /sn:0 /w:[ 0 ]

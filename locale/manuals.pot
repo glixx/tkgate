@@ -120,6 +120,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"aardvark"
+msgstr ""
+
+msgid ""
 "Address Resolution"
 msgstr ""
 
@@ -251,6 +255,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"<br>Think of an animal and I will try to guess what it is.<br>"
+msgstr ""
+
+msgid ""
+"<br>Welcome to Animals.<br>"
+msgstr ""
+
+msgid ""
 "<b>Simulator Script Example:</b>\n"
 "<font face=courier>\n"
 "initial\n"
@@ -308,6 +320,10 @@ msgstr ""
 
 msgid ""
 "Editing Wires"
+msgstr ""
+
+msgid ""
+"Enter a question that would distinguish a %s from a %s.<br>></br>"
 msgstr ""
 
 msgid ""
@@ -1045,6 +1061,18 @@ msgid ""
 msgstr ""
 
 msgid ""
+"I could not guess your animal. What was your animal?</br>"
+msgstr ""
+
+msgid ""
+"I currently know %d animals.<br><br>"
+msgstr ""
+
+msgid ""
+"I guessed your animal!!!<br><br>"
+msgstr ""
+
+msgid ""
 "<img src=breakp_example.gif>\n"
 "\n"
 "<b>Breakpoint Entry Example.</b>"
@@ -1076,6 +1104,10 @@ msgid ""
 "\n"
 "<img src=unused.gif> Container for unused modules.\n"
 "\n"
+msgstr ""
+
+msgid ""
+"Is the animal you are thinking of a %s?</br>"
 msgstr ""
 
 msgid ""
@@ -1111,11 +1143,19 @@ msgid ""
 msgstr ""
 
 msgid ""
+"no"
+msgstr ""
+
+msgid ""
 "OR Gate Circuit"
 msgstr ""
 
 msgid ""
 "OR gate"
+msgstr ""
+
+msgid ""
+"Please type 'yes' or 'no'.<br>"
 msgstr ""
 
 msgid ""
@@ -1147,6 +1187,10 @@ msgstr ""
 
 msgid ""
 "Textual Verilog"
+msgstr ""
+
+msgid ""
+"The correct answer for a %s is?</br>"
 msgstr ""
 
 msgid ""
@@ -1334,5 +1378,9 @@ msgstr ""
 
 msgid ""
 "Welcome to TkGate Page"
+msgstr ""
+
+msgid ""
+"yes"
 msgstr ""
 

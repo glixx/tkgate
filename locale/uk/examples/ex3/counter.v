@@ -55,25 +55,25 @@ wire [7:0] reg_out;    //: {0}(#:50:224,275)(224,332)(297,332)(297,173){1}
   //: GROUND g6 (w11) @(269,203) /sn:0 /w:[ 0 ]
   //: SWITCH g7 (w9) @(324,232) /sn:0 /R:3 /w:[ 1 ] /st:0 /dn:0
   //: comment g9 @(198,355)
-  //: /line:"3) Place a probe on the"
-  //: /line:"register output by"
-  //: /line:"double-clicking on it."
+  //: /line:"3) Розташуйте зонд на"
+  //: /line:"виході регістра подвійним"
+  //: /line:"клацанням на ньому."
   //: /end
   //: comment g39 @(20,12) /sn:0
   //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"
   //: /end
   //: LED g17 (reg_out) @(386,171) /sn:0 /R:3 /w:[ 3 ] /type:2
   //: comment g5 @(14,33)
-  //: /line:"8-Bit Counter Example"
+  //: /line:"Приклад 8-бітового лічильника"
   //: /line:""
-  //: /line:"1) Start simulation by typing \"Ctl-S b\""
+  //: /line:"1) Розпочніть імітацію натисканням «Ctrl+S B»"
   //: /line:""
   //: /end
   //: joint g14 (reg_out) @(297, 171) /w:[ 2 4 -1 1 ]
   _GGREG8 #(10, 10, 20) g0 (.Q(reg_out), .D(w5), .EN(w8), .CLR(w9), .CK(ck));   //: @(224,264) /sn:0 /w:[ 0 1 0 0 0 ]
   //: comment g12 @(309,316)
-  //: /line:"6) Make sure the enable"
-  //: /line:"line EN is off"
+  //: /line:"6) Переконайтеся, що лінію"
+  //: /line:"вмикання EN вимкнено"
   //: /end
 
 endmodule

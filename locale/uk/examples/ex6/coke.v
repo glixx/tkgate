@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Coke Machine"
+//: property title = "Автомат газованої води"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -61,8 +61,8 @@ wire [2:0] w26;    //: /sn:0 {0}(#:328,193)(360,193){1}
   //: LED g15 (w18) @(363,129) /sn:0 /R:3 /w:[ 1 ] /type:1
   //: LED g20 (w34) @(367,273) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g31 @(19,-4) /sn:0
-  //: /line:"<h1 color=red>Coke Machine"
-  //: /line:"Problem</h1>"
+  //: /line:"<h1 color=red>Проблема із автоматом"
+  //: /line:"газованої води</h1>"
   //: /end
   //: comment g39 @(20,438) /sn:0
   //: /line:"<a href=\"../index.v\">[НАЗАД]</a>"

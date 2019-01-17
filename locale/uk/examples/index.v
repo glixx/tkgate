@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Example page"
+//: property title = "Сторінка прикладів"
 //: property showSwitchNets = 0
 //: property timingViolationMode = 2
 //: property initTime = "0 ns"
@@ -15,7 +15,7 @@ module main;    //: root_module
 
   //: comment g4 @(553,317) /sn:0 /anc:1
   //: /line:"<a href=\"ex6/coke.v\"><img src=example_coke.gif>"
-  //: /line:"<h3>Coke Machine</h3></a>"
+  //: /line:"<h3>Автомат газованої води</h3></a>"
   //: /line:"This example uses TkGate's Viritual"
   //: /line:"Peripheral Device (VPD) mechanism to"
   //: /line:"create an interactive \"Coke Machine\""
@@ -35,17 +35,17 @@ module main;    //: root_module
   //: comment g2 @(551,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex3/counter.v\"><img src=\"example_counter.gif\">"
   //: /line:"<h3>8-бітовий лічильник</h3></a>"
-  //: /line:"A counter implemented using the"
-  //: /line:"register and adder devices."
+  //: /line:"Лічильник реалізовано за допомогою"
+  //: /line:"регістра і суматорів."
   //: /end
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
   //: /line:"<h3>4-бітовий лічильник</h3></a>"
-  //: /line:"A 4-bitcounter implemented using"
-  //: /line:"four single-bit D-flip-flops."
+  //: /line:"4-бітовий лічильник реалізовано за допомогою"
+  //: /line:"чотирьох однобітових D-тригерів."
   //: /end
   //: comment g6 @(20,552) /sn:0
-  //: /line:"<font size=5><a href=\"@T/welcome.v\">Go back to the TkGate main page</a></font>"
+  //: /line:"<font size=5><a href=\"@T/welcome.v\">Повернутися до основної сторінки TkGate.</a></font>"
   //: /end
   //: comment g7 @(787,27) /sn:0
   //: /line:"<a href=\"ex7/stdlogic.v\"><img src=\"example_counter.gif\">"
@@ -64,7 +64,7 @@ module main;    //: root_module
   //: /end
   //: comment g0 @(32,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex1/combinational.v\"><img src=\"example_combinational.gif\">"
-  //: /line:"<h3>Combinational Logic</h3></a>"
+  //: /line:"<h3>Комбінаційна логіка</h3></a>"
   //: /line:"A simple 3-bit adder that you"
   //: /line:"simulate. Push the play button"
   //: /line:"then click on the switches and"

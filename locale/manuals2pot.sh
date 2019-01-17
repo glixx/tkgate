@@ -34,6 +34,9 @@ do
     echo "" >> $pot_tmp_file
 done
 
+# find translatable strings from menagerie.gm
+cat ./en/examples/ex5/menagerie.gm |grep "\.byte"|cut -d "\"" --fields=2|grep -v "^?"|sed -E '/^\\n$/d'|sed 's|\\n|<br>|g' |sed 's|^|//: property title = "|g' |sed 's|$|"\n|g'|sed 's| "$|</br>"|g' >> $pot_tmp_file
+
 # mark comment as XXXXX
 sed -i 's|^.*//: comment.*$|XXXXX|g' $pot_file
 # delete parts of /line:

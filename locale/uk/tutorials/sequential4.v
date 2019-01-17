@@ -2,7 +2,7 @@
 //: property encoding = "utf-8"
 //: property locale = "uk"
 //: property prefix = "_GG"
-//: property title = "Sequential Simulation"
+//: property title = "Моделювання послідовності елементів"
 //: property showSwitchNets = 0
 //: property discardChanges = 1
 //: property timingViolationMode = 2
@@ -28,7 +28,7 @@ wire w9;    //: /sn:0 {0}(205,262)(195,262){1}
   //: GROUND g4 (w0) @(288,334) /sn:0 /w:[ 1 ]
   //: joint g8 (reg_out) @(289, 349) /w:[ 2 -1 1 4 ]
   //: comment g13 @(14,12) /anc:1
-  //: /line:"<h3>Sequential Simulation</h3> <b>(breakpoints)</b>"
+  //: /line:"<h3>Моделювання послідовності елементів</h3> <b>(breakpoints)</b>"
   //: /line:""
   //: /line:"You can use breakpoints to simulate a circuit until some condition holds. To add a"
   //: /line:"breakpoint click on the <img src=sim_break.gif bgcolor=gray> tab on the information box below the canvas, and press"
@@ -45,7 +45,7 @@ wire w9;    //: /sn:0 {0}(205,262)(195,262){1}
   //: comment g10 @(565,96) /sn:0 /anc:1
   //: /line:"<img src=breakp_example.gif>"
   //: /line:""
-  //: /line:"<b>Breakpoint Entry Example.</b>"
+  //: /line:"<b>Приклад додавання точки зупину.</b>"
   //: /end
   //: DIP g6 (w7) @(213,212) /sn:0 /w:[ 0 ] /st:1 /dn:0
   //: LED g7 (reg_out) @(289,366) /sn:0 /R:2 /w:[ 5 ] /type:2
