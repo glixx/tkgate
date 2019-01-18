@@ -49,7 +49,7 @@ proc showDocFile {label file L} {
 }
 
 proc showLicense {} {
-  global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description lang tkg_gateHome
+  global bd tkg_progVer tkg_copyright
 
   set L {}
   lappend L "TkGate $tkg_progVer - [m cprt.descr]"
@@ -64,17 +64,10 @@ proc showLicense {} {
   lappend L ""
 
   showDocFile [m cprt.lic] "" $L
-
-#  set licensePath "$tkg_gateHome/locale/$lang/license.txt"
-#  if { [file exists $licensePath] == 0 } {
-#    puts "Cannot locate $licensePath, using en version"
-#    set licensePath "$tkg_gateHome/locale/en/license.txt"
-#  }
-#  showDocFile [m cprt.lic] $licensePath $L
 }
 
 proc showDocumentation {} {
-  global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description tkg_homepage tkg_localdoc
+  global bd tkg_progVer tkg_copyright tkg_homepage tkg_localdoc
 
   gat_dohyperlink $tkg_localdoc
 
@@ -87,9 +80,9 @@ proc showDocumentation {} {
 #    lappend L "Currently there is no built-in documentation for TkGate other than the"
 #    lappend L "balloon help which can be activated by placing the mouse cursor over"
 #    lappend L "interface elements, and the online tutorials available. Documentation"
-#    lappend L "can be found by pointing your Web browser at the TkGate home page:"
+#    lappend L "can be found by pointing your Web browser at the TkGate homepage:"
 #    lappend L ""
-    lappend L "   $tkg_homepage"
+    lappend L "$tkg_homepage"
     lappend L ""
 #    lappend L "or through the copy of the documentation included in this distribution at:"
 #    lappend L ""
@@ -100,7 +93,7 @@ proc showDocumentation {} {
 }
 
 proc showAbout {} {
-  global bd tkg_progVer tkg_copyright tkg_mailContact tkg_description
+  global bd tkg_progVer tkg_copyright tkg_homepage
 
   if { [catch { toplevel .about}] } {
     catch { raise .about }
@@ -110,7 +103,7 @@ proc showAbout {} {
 
   button .about.dismiss -text [m b.dismiss] -command "destroy .about"
   label .about.logo -relief groove -image [gifI biggatelogo.gif]
-  label .about.label -text "TKGate $tkg_progVer - [m cprt.descr]\n$tkg_copyright\n$tkg_mailContact"
+  label .about.label -text "TKGate $tkg_progVer - [m cprt.descr]\n$tkg_copyright\n$tkg_homepage"
 
   pack .about.logo -padx 10 -pady 10  -ipadx 10 -ipady 10
   pack .about.label -padx 10 -pady 10

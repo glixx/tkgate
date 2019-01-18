@@ -475,7 +475,8 @@ namespace eval OptionDlg {
     helpon $w.ssave [m ho.opt.ssave]
     helpon $w.fsave [m ho.opt.fsave]
     helpon $w.cpe.b [m ho.opt.ckpt]
-    helpon $w.cpe.l [m ho.opt.ckptfreq]
+    helpon $w.cpe.e [m ho.opt.ckptfreq]
+    helpon $w.cpe.l [m ho.opt.ckpt]
   }
 
   proc frameIdentity {w} {
