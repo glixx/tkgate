@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-16 12:42+0300\n"
-"PO-Revision-Date: 2019-01-17 02:21+0000\n"
+"PO-Revision-Date: 2019-01-18 04:54+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/Magic/tkgate/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -6125,7 +6125,7 @@ msgstr "Выбор инструмента в редакторе символов
 #: en/messages:2029
 msgctxt "ho.opt.tool.symedit"
 msgid "Cut and paste operations for symbol editor"
-msgstr "Операции копирования вырезания и вставки в редакторе символов"
+msgstr "Операции копирования, вырезания и вставки в редакторе символов"
 
 #: en/messages:2030
 msgctxt "ho.opt.tool.symport"
@@ -6323,7 +6323,7 @@ msgid ""
 "and wire type of nets selected with this\n"
 "tool will be changed to the those shown\n"
 "in the drop-down boxes to the right."
-msgstr "Атрибуты цепи - Разрядность и тип цепи,\nвыделенной данным инструментом, будут изменены\nна те, что указаны в выпадающих списках справа."
+msgstr "Атрибуты цепи - Разрядность и тип цепи,\nвыделенные данным инструментом, будут изменены\nна те, что указаны в выпадающих списках справа."
 
 #: en/messages:2160
 msgctxt "ho.ipanel.select"
@@ -6834,7 +6834,7 @@ msgid ""
 "Wires selected with the ribbon\n"
 "cable tool will be set to this\n"
 "bit width."
-msgstr "Проводники, выделенные инструментом\n\"Разделенный кабель\", получат эту\nразрядность."
+msgstr "Проводники, выделенные инструментом\n\"Разделённый кабель\", получат эту\nразрядность."
 
 #: en/messages:2486
 msgctxt "ho.edgat.signam"
