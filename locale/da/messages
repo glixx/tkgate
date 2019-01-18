@@ -260,7 +260,7 @@ find.result.type	Type
 circ.file	Filnavn
 circ.flags	Indstillinger
 circ.library	Biblioteker
-verga.err.FUNCASTASK	Funktionen »%s« brugt som opgave.
+verga.err.FUNCASTASK	Funktionen '%s' brugt som opgave.
 cprt.descr	Digitalt kredsløbsredigeringsprogram og simulator
 license1	-begin-
 TtGate er fri software. Du kan redistribuere og/eller ændre programmet

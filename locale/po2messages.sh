@@ -162,6 +162,10 @@ do
     else
       echo "$str2" >> $lang/messages.utf8
     fi
+    # FIXME while no utf-8 support
+    sed -i "s|«|'|g" $lang/messages.utf8
+    sed -i "s|»|'|g" $lang/messages.utf8
+    sed -i "s|—|-|g" $lang/messages.utf8
     # delete temporary files
     rm -f $lang/$lang1.po
     rm -f $lang/$lang2.po

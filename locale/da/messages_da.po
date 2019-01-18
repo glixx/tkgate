@@ -1,6 +1,6 @@
 # This file is part of TkGate project
 # Copyright (C) 1987-2015 by Jeffery P. Hansen
-# Copyright (C) 2015-2018 by Andrey V. Skvortsov
+# Copyright (C) 2015-2019 by Andrey V. Skvortsov
 # This file is distributed under the same license as the TkGate package.
 # 
 # ##############################################################################
@@ -8,14 +8,14 @@
 # ##############################################################################
 # 
 # Translators:
-# AlexL <loginov.alex.valer@gmail.com>, 2018
+# AlexL <loginov.alex.valer@gmail.com>, 2018-2019
 # Joe Hansen <joedalton2@yahoo.dk>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-13 13:20+0300\n"
-"PO-Revision-Date: 2018-12-13 04:00+0000\n"
+"POT-Creation-Date: 2019-01-16 12:42+0300\n"
+"PO-Revision-Date: 2019-01-18 01:38+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/Magic/tkgate/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -5819,7 +5819,7 @@ msgstr ""
 #: en/messages:1929
 msgctxt "verga.err.FUNCASTASK"
 msgid "Function '%s' used as task."
-msgstr "Funktionen »%s« brugt som opgave."
+msgstr "Funktionen '%s' brugt som opgave."
 
 #: en/messages:1930
 msgctxt "verga.err.TASKBADTYPE"
@@ -7566,77 +7566,519 @@ msgid ""
 "default rotation."
 msgstr ""
 
-#: en/messages:2988
+#: en/messages:2989
 msgctxt "ho.tool.zoomin"
 msgid "Zoom in"
 msgstr ""
 
-#: en/messages:2989
+#: en/messages:2990
 msgctxt "ho.tool.zoomout"
 msgid "Zoom out"
 msgstr ""
 
-#: en/messages:2990
+#: en/messages:2991
 msgctxt "ho.tool.rotate"
 msgid "Rotate selected component(s) counter-clockwise."
 msgstr ""
 
-#: en/messages:2991
+#: en/messages:2992
 msgctxt "ho.tool.brotate"
 msgid "Rotate selected component(s) clockwise."
 msgstr ""
 
-#: en/messages:2992
+#: en/messages:2993
 msgctxt "ho.tool.valgn"
 msgid "Align selected component(s) vertically."
 msgstr ""
 
-#: en/messages:2993
+#: en/messages:2994
 msgctxt "ho.tool.halgn"
 msgid "Align selected component(s) horizontally."
 msgstr ""
 
-#: en/messages:2995
+#: en/messages:2996
 msgctxt "ho.tool.cut"
 msgid "Cut selection."
 msgstr ""
 
-#: en/messages:2996
+#: en/messages:2997
 msgctxt "ho.tool.copy"
 msgid "Copy selection."
 msgstr ""
 
-#: en/messages:2997
+#: en/messages:2998
 msgctxt "ho.tool.paste"
 msgid "Paste from cut buffer."
 msgstr ""
 
-#: en/messages:2998
+#: en/messages:2999
 msgctxt "ho.tool.find"
 msgid "Find component, wire or text."
 msgstr ""
 
-#: en/messages:3000
+#: en/messages:3001
 msgctxt "ho.tool.addport"
 msgid "Add a port to the selected component."
 msgstr ""
 
-#: en/messages:3001
+#: en/messages:3002
 msgctxt "ho.tool.anchor"
 msgid "Anchor the selected component(s)."
 msgstr ""
 
-#: en/messages:3002
+#: en/messages:3003
 msgctxt "ho.tool.unanchor"
 msgid "Unanchor the selected component(s)."
 msgstr ""
 
-#: en/messages:3003
+#: en/messages:3004
 msgctxt "ho.tool.replicate"
 msgid "Replicate a component."
 msgstr ""
 
-#: en/messages:3004
+#: en/messages:3005
 msgctxt "ho.tool.delete"
 msgid "Delete the selection."
 msgstr "Slet markeringen."
+
+#: en/messages:3011
+msgctxt "cpath.critpath"
+msgid "TKGate: Critical Paths"
+msgstr ""
+
+#: en/messages:3012
+msgctxt "err.simdiedread"
+msgid "Simulator has died (read error)."
+msgstr ""
+
+#: en/messages:3013
+msgctxt "err.simdiedeof"
+msgid "Simulator has died (eof in read)."
+msgstr ""
+
+#: en/messages:3014
+msgctxt "err.fail.analyz"
+msgid "Failed to start analyzer '%s'"
+msgstr ""
+
+#: en/messages:3015
+msgctxt "err.find.sim"
+msgid "'Find' not supported in simulation mode."
+msgstr ""
+
+#: en/messages:3016
+msgctxt "err.key.def"
+msgid "Illegal key definition."
+msgstr ""
+
+#: en/messages:3017
+msgctxt "showdoc"
+msgid "TkGate: Documentation"
+msgstr ""
+
+#: en/messages:3018
+msgctxt "mem.addr"
+msgid "Address"
+msgstr ""
+
+#: en/messages:3019
+msgctxt "mem.data"
+msgid "Data"
+msgstr ""
+
+#: en/messages:3020
+msgctxt "mem.time"
+msgid "Time"
+msgstr ""
+
+#: en/messages:3021
+msgctxt "mem.title"
+msgid "TkGate: Memory %s"
+msgstr ""
+
+#: en/messages:3022
+msgctxt "mem.last.read"
+msgid "Last Read Access"
+msgstr ""
+
+#: en/messages:3023
+msgctxt "mem.last.write"
+msgid "Last Write Access"
+msgstr ""
+
+#: en/messages:3024
+msgctxt "mem.page"
+msgid "Page"
+msgstr ""
+
+#: en/messages:3025
+msgctxt "err.bad.opt1"
+msgid "Bad option '%s'."
+msgstr ""
+
+#: en/messages:3026
+msgctxt "err.bad.opt2"
+msgid "Must be one of: %s"
+msgstr ""
+
+#: en/messages:3027
+msgctxt "misc.tcl.shell"
+msgid "TKGate: Tcl Shell"
+msgstr ""
+
+#: en/messages:3028
+msgctxt "misc.cmd"
+msgid "Command"
+msgstr ""
+
+#: en/messages:3029
+msgctxt "lib.mngr"
+msgid "TKGate: Library Manager"
+msgstr ""
+
+#: en/messages:3030
+msgctxt "err.no.master"
+msgid "No master found. Perhaps '%s' is not a pane slave?"
+msgstr ""
+
+#: en/messages:3031
+msgctxt "err.unknown.opt"
+msgid "Unknown option '%s'"
+msgstr ""
+
+#: en/messages:3032
+msgctxt "err.no.widget"
+msgid "No widgets specified to configure"
+msgstr ""
+
+#: en/messages:3033
+msgctxt "txt.widget"
+msgid "Text widget"
+msgstr ""
+
+#: en/messages:3034
+msgctxt "sim.watch"
+msgid "TkGate: Simulation Watch"
+msgstr ""
+
+#: en/messages:3035
+msgctxt "err.start.sim"
+msgid "Failed to start simulator '%s'"
+msgstr ""
+
+#: en/messages:3036
+msgctxt "err.simdiedwrite"
+msgid "Simulator has died (in write)."
+msgstr ""
+
+#: en/messages:3037
+msgctxt "err.simdiedflush"
+msgid "Simulator has died (in flush)."
+msgstr ""
+
+#: en/messages:3038
+msgctxt "err.tab.len"
+msgid "-tablabels and -tabs must be of equal length"
+msgstr ""
+
+#: en/messages:3039
+msgctxt "err.dir"
+msgid "Parent item '%s' is missing"
+msgstr ""
+
+#: en/messages:3040
+msgctxt "err.v"
+msgid "Item '%s' already exists"
+msgstr ""
+
+#: en/messages:3041
+msgctxt "wizard.back"
+msgid "Back"
+msgstr ""
+
+#: en/messages:3042
+msgctxt "wizard.next"
+msgid "Next"
+msgstr ""
+
+#: en/messages:3043
+msgctxt "wizard.cancel"
+msgid "Cancel"
+msgstr ""
+
+#: en/messages:3044
+msgctxt "wizard.finish"
+msgid "Finish"
+msgstr ""
+
+#: en/messages:3045
+msgctxt "loaded.vpds"
+msgid "Loaded VPDs"
+msgstr ""
+
+#: en/messages:3046
+msgctxt "argument"
+msgid "Argument"
+msgstr ""
+
+#: en/messages:3047
+msgctxt "failing"
+msgid "Failing"
+msgstr ""
+
+#: en/messages:3048
+msgctxt "letter"
+msgid "Letter"
+msgstr ""
+
+#: en/messages:3049
+msgctxt "legal"
+msgid "Legal"
+msgstr ""
+
+#: en/messages:3050
+msgctxt "tabloid"
+msgid "Tabloid"
+msgstr ""
+
+#: en/messages:3051
+msgctxt "executive"
+msgid "Executive"
+msgstr ""
+
+#: en/messages:3052
+msgctxt "inches"
+msgid "in."
+msgstr ""
+
+#: en/messages:3053
+msgctxt "millimeters"
+msgid "mm"
+msgstr ""
+
+#: en/messages:3054
+msgctxt "one"
+msgid "one"
+msgstr ""
+
+#: en/messages:3055
+msgctxt "two"
+msgid "two"
+msgstr ""
+
+#: en/messages:3056
+msgctxt "three"
+msgid "three"
+msgstr ""
+
+#: en/messages:3057
+msgctxt "four"
+msgid "four"
+msgstr ""
+
+#: en/messages:3058
+msgctxt "space"
+msgid "Space"
+msgstr ""
+
+#: en/messages:3059
+msgctxt "load"
+msgid "[load]"
+msgstr ""
+
+#: en/messages:3060
+msgctxt "unload"
+msgid "[unload]"
+msgstr ""
+
+#: en/messages:3061
+msgctxt "short_hlink"
+msgid "Hyperlink"
+msgstr ""
+
+#: en/messages:3062
+msgctxt "state.off"
+msgid "off"
+msgstr ""
+
+#: en/messages:3063
+msgctxt "state.on"
+msgid "on"
+msgstr ""
+
+#: en/messages:3064
+msgctxt "state.float"
+msgid "float"
+msgstr ""
+
+#: en/messages:3065
+msgctxt "line_comment"
+msgid "line comment"
+msgstr ""
+
+#: en/messages:3066
+msgctxt "block_comment"
+msgid "block comment"
+msgstr ""
+
+#: en/messages:3067
+msgctxt "short_comment"
+msgid "Comment"
+msgstr ""
+
+#: en/messages:3068
+msgctxt "experiment"
+msgid "EXPERIMENTAL"
+msgstr ""
+
+#: en/messages:3070
+msgctxt "unused"
+msgid "Unused"
+msgstr ""
+
+#: en/messages:3071
+msgctxt "script"
+msgid "Script"
+msgstr ""
+
+#: en/messages:3073
+msgctxt "coke"
+msgid "Coke"
+msgstr ""
+
+#: en/messages:3074
+msgctxt "diet_coke"
+msgid "Diet Coke"
+msgstr ""
+
+#: en/messages:3075
+msgctxt "root_beer"
+msgid "Root Beer"
+msgstr ""
+
+#: en/messages:3076
+msgctxt "pocari_sweat"
+msgid "Pocari Sweat"
+msgstr ""
+
+#: en/messages:3077
+msgctxt "dr_pepper"
+msgid "Dr. Pepper"
+msgstr ""
+
+#: en/messages:3078
+msgctxt "bill_scanner"
+msgid "Bill Scanner"
+msgstr ""
+
+#: en/messages:3079
+msgctxt "coke_machine"
+msgid "Coke Machine"
+msgstr ""
+
+#: en/messages:3080
+msgctxt "no_change"
+msgid "No Change"
+msgstr ""
+
+#: en/messages:3081
+msgctxt "insert_dollar"
+msgid "Insert Dollar"
+msgstr ""
+
+#: en/messages:3082
+msgctxt "chg"
+msgid "Chg"
+msgstr ""
+
+#: en/messages:3083
+msgctxt "bill_in"
+msgid "Bill In"
+msgstr ""
+
+#: en/messages:3084
+msgctxt "bill_out"
+msgid "Bill Out"
+msgstr ""
+
+#: en/messages:3085
+msgctxt "commit"
+msgid "Commit"
+msgstr ""
+
+#: en/messages:3086
+msgctxt "retins"
+msgid "RETINS"
+msgstr ""
+
+#: en/messages:3087
+msgctxt "soda"
+msgid "Soda"
+msgstr ""
+
+#: en/messages:3088
+msgctxt "reset"
+msgid "Reset"
+msgstr ""
+
+#: en/messages:3089
+msgctxt "bogus"
+msgid "bogus"
+msgstr ""
+
+#: en/messages:3090
+msgctxt "empty"
+msgid "empty"
+msgstr ""
+
+#: en/messages:3091
+msgctxt "collected"
+msgid "Collected"
+msgstr ""
+
+#: en/messages:3092
+msgctxt "inserted"
+msgid "Inserted"
+msgstr ""
+
+#: en/messages:3093
+msgctxt "change"
+msgid "Change"
+msgstr ""
+
+#: en/messages:3095
+msgctxt "no_n_change"
+msgid ""
+"no\n"
+"change"
+msgstr ""
+
+#: en/messages:3100
+msgctxt "74xx"
+msgid "74-series standard logic circuits"
+msgstr ""
+
+#: en/messages:3101
+msgctxt "74xxgatelevel"
+msgid "74-series gate level verilog models"
+msgstr ""
+
+#: en/messages:3102
+msgctxt "cokemachine"
+msgid "Coke Machine Interface"
+msgstr ""
+
+#: en/messages:3103
+msgctxt "m68xx"
+msgid "Motorola 68xx chips"
+msgstr ""
+
+#: en/messages:3104
+msgctxt "timer"
+msgid "Oscillators and One-Shots with absolute time delays"
+msgstr ""
+
+#: en/messages:3105
+msgctxt "ttydevice"
+msgid "Interactive TTY Device"
+msgstr ""
