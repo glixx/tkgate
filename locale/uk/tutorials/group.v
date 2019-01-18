@@ -208,8 +208,8 @@ wire w9;    //: /sn:0 {0}(313,188)(285,188){1}
 
   //: LED g37 (s0) @(371,191) /sn:0 /R:3 /w:[ 1 ] /type:0
   //: comment g2 @(609,113) /sn:0 /anc:1
-  //: /line:"<font color=green4>Hint: Click in a blank area to"
-  //: /line:"unselect a group."
+  //: /line:"<font color=green4>Підказка: клацніть на порожньому місці,"
+  //: /line:"що зняти позначення з групи."
   //: /line:""
   //: /end
   _GGNAND2 #(4) g1 (.I0(w7), .I1(w4), .Z(c1));   //: @(284,267) /sn:0 /R:3 /w:[ 1 1 0 ]

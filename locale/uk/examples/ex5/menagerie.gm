@@ -1403,17 +1403,17 @@ top_node:
 	.short	0		// Pointer to "no" node
 	.byte	"aardvark",0	// Animal name or question text
 
-welcome: .byte	"\nWelcome to Animals.\n",0
+welcome: .byte	"\nВітаємо у «Тваринах».\n",0
 think:	.byte	"\nThink of an animal and I will try to guess what it is.\n",0
-numk:	.byte	"I currently know %d animals.\n\n",0
+numk:	.byte	"Зараз мені відомі %d тварин.\n\n",0
 isita: 	.byte	"Is the animal you are thinking of a %s? ",0
-yes:	.byte	"yes",0
+yes:	.byte	"так",0
 no:	.byte	"no",0
-yesno:	.byte	"Please type 'yes' or 'no'.\n",0
-winmsg:	.byte	"I guessed your animal!!!\n\n",0
-loosemsg: .byte	"I could not guess your animal. What was your animal? ",0
-dscrim:	.byte	"Enter a question that would distinguish a %s from a %s.\n> ",0
-which:	.byte	"The correct answer for a %s is? ",0
+yesno:	.byte	"Будь ласка, введіть «так» або «ні».\n",0
+winmsg:	.byte	"Я вгадав вашу тварину!!!\n\n",0
+loosemsg: .byte	"Не вдалося вгадати вашу тварину. Що це була за тварина? ",0
+dscrim:	.byte	"Введіть питання, яке має розрізнити %s від %s.\n> ",0
+which:	.byte	"Яка правильна відповідь на %s? ",0
 nl:	.byte	"\n",0
 qprompt: .byte	"? ",0
 mend:

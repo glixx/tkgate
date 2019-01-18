@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: tkgate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-16 12:42+0300\n"
-"PO-Revision-Date: 2019-01-16 02:46+0000\n"
+"PO-Revision-Date: 2019-01-17 23:52+0000\n"
 "Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/Magic/tkgate/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -8019,7 +8019,7 @@ msgstr "Сода"
 #: en/messages:3088
 msgctxt "reset"
 msgid "Reset"
-msgstr "Скинути"
+msgstr "Скид"
 
 #: en/messages:3089
 msgctxt "bogus"

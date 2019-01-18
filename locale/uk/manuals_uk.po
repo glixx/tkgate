@@ -290,7 +290,7 @@ msgid "<br>Think of an animal and I will try to guess what it is.<br>"
 msgstr ""
 
 msgid "<br>Welcome to Animals.<br>"
-msgstr ""
+msgstr "<br>Вітаємо у «Тваринах».<br>"
 
 msgid ""
 "<b>Simulator Script Example:</b>\n"
@@ -360,7 +360,7 @@ msgid "Editing Wires"
 msgstr "Редагування дротів"
 
 msgid "Enter a question that would distinguish a %s from a %s.<br>></br>"
-msgstr ""
+msgstr "Введіть питання, яке має розрізнити %s від %s.<br>></br>"
 
 msgid "Example page"
 msgstr "Сторінка прикладів"
@@ -380,6 +380,9 @@ msgid ""
 "unselect a group.\n"
 "\n"
 msgstr ""
+"<font color=green4>Підказка: клацніть на порожньому місці,\n"
+"що зняти позначення з групи.\n"
+"\n"
 
 msgid ""
 "<font color=green4>Hint: Hitting the <font color=red2>Delete</font> key will\n"
@@ -1118,13 +1121,13 @@ msgid ""
 msgstr ""
 
 msgid "I could not guess your animal. What was your animal?</br>"
-msgstr ""
+msgstr "Не вдалося вгадати вашу тварину. Що це була за тварина?</br>"
 
 msgid "I currently know %d animals.<br><br>"
-msgstr ""
+msgstr "Зараз мені відомі %d тварин.<br><br>"
 
 msgid "I guessed your animal!!!<br><br>"
-msgstr ""
+msgstr "Я вгадав вашу тварину!!!<br><br>"
 
 msgid ""
 "<img src=breakp_example.gif>\n"
@@ -1203,7 +1206,7 @@ msgid "OR gate"
 msgstr "Ключ АБО"
 
 msgid "Please type 'yes' or 'no'.<br>"
-msgstr ""
+msgstr "Будь ласка, введіть «так» або «ні».<br>"
 
 msgid ""
 "<p>Move switcher in logical 1\n"
@@ -1237,7 +1240,7 @@ msgid "Textual Verilog"
 msgstr "Текстовий Verilog"
 
 msgid "The correct answer for a %s is?</br>"
-msgstr ""
+msgstr "Яка правильна відповідь на %s?</br>"
 
 msgid ""
 "The IR and OPR registers store the\n"
@@ -1420,4 +1423,4 @@ msgid "Welcome to TkGate Page"
 msgstr "Вітаємо на сторінці TkGate"
 
 msgid "yes"
-msgstr ""
+msgstr "так"
