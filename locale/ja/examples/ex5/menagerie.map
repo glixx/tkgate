@@ -59,77 +59,79 @@ Microcode Symbols (total=57):
   xalu_rr                        00000012
 
 
-Macrocode Symbols (total=69):
+Macrocode Symbols (total=71):
   Global         Local
   ---------------------------------------
-  buf                            000005f8
-  dscrim                         00000795
-  find_animal                    0000017a
-                 done            0000025e
-                 get_response    000001a6
-                 say_no          0000023e
-                 say_yes         0000021e
+  buf                            000005e8
+  dscrim                         00000784
+  find_animal                    0000016c
+                 done            00000250
+                 get_response    00000198
+                 say_no          00000230
+                 say_yes         00000210
                  tree            fffffffe
-  get_final                      00000264
-                 L1              0000037c
-                 L2              000003e8
-                 L3              00000404
+  get_final                      00000256
+                 L1              0000036c
+                 L2              000003d8
+                 L3              000003f4
                  animal_node     fffffffc
                  discrim_node    fffffffa
-                 done            00000420
-                 get_response    00000268
-                 loose           000002f0
+                 done            00000410
+                 get_response    0000025a
+                 loose           000002e0
                  tree            fffffffe
-                 win             000002de
-  gets                           00000570
-                 bell            000005d4
-                 cwait           00000576
-                 del_char        000005b8
-                 done            000005e6
-  isita                          000006f7
-  known                          00000678
-  loosemsg                       0000075e
+                 win             000002ce
+  gets                           00000560
+                 bell            000005c4
+                 cwait           00000566
+                 del_char        000005a8
+                 done            000005d6
+  isita                          000006e7
+  known                          00000668
+  loosemsg                       0000074e
   main                           00000112
-                 loop            0000013e
-  malloc                         00000426
-  mend                           000007f6
-  nl                             000007f1
-  no                             00000724
+                 loop            00000130
+  malloc                         00000416
+  mend                           000007e5
+  nl                             000007e0
+  no                             00000714
   no_b                           00000002
-  nprint                         000004e8
-                 zprint          000004fe
-  nprint_aux                     0000050c
-                 done            00000546
-  nsize                          00000064
-  numk                           000006d8
-  print                          00000430
-                 done            0000044c
-                 loop            00000434
-  printf                         0000044e
-                 L1              00000474
-                 L2              000004a2
+  nprint                         000004d4
+                 zprint          000004ea
+  nprint_aux                     000004f8
+                 digit           fffffffe
+                 done            00000532
+  nsize                          00000068
+  numk                           000006c8
+  print                          00000420
+                 done            0000043c
+                 loop            00000424
+  printf                         0000043e
+                 L1              00000464
+                 L2              00000492
                  arg             fffffffc
-                 cout            000004d4
-                 done            000004e6
-                 loop            0000045c
+                 cout            000004c0
+                 done            000004d2
+                 loop            0000044c
                  ptr             fffffffe
-  qprompt                        000007f3
-  root                           0000067a
+  qprompt                        000007e2
+  root                           0000066a
   sdone                          0000010e
   start                          00000100
-  strcmp                         00000548
-                 done            0000056e
-                 loop            00000550
+  strcmp                         00000534
+                 done            0000055e
+                 eos             0000055a
+                 loop            0000053c
   text                           00000004
-  think                          0000069f
-  top_node                       0000067c
+  think                          0000068f
+  top_node                       0000066c
   ttydata                        00000011
   ttystatus                      00000010
-  welcome                        00000689
-  which                          000007d0
-  winmsg                         00000743
-  yes                            00000720
+  welcome                        00000679
+  which                          000007bf
+  winmsg                         00000733
+  yes                            00000710
   yes_b                          00000000
-  yesno                          00000727
+  yesno                          00000717
 
 

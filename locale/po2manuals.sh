@@ -218,4 +218,16 @@ do
         
         echo "Done for $file_v"
     done
+#    # compile menagerie.gm
+#    for file in `find ./$lang -name menagerie.gm`
+#    do
+#    mem=`echo $file|sed 's|.gm|.mem|g'`
+#    map=`echo $file|sed 's|.gm|.map|g'`
+#    if [ ! -z "$mem" ] && [ ! -z "$map" ] && [ ! -z "$file" ]
+#    then
+#        echo "Command: gmac -o $mem -m $map $file"
+#        gmac -o $mem -m $map $file
+#        echo "Done for command"
+#    fi
+#    done
 done
