@@ -41,8 +41,8 @@ module main;    //: root_module
   //: comment g1 @(299,30) /sn:0 /anc:1
   //: /line:"<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">"
   //: /line:"<h3>4-бітовий лічильник</h3></a>"
-  //: /line:"4-бітовий лічильник реалізовано за допомогою"
-  //: /line:"чотирьох однобітових D-тригерів."
+  //: /line:"4-бітовий лічильник реалізовано за допо-"
+  //: /line:"могою чотирьох однобітових D-тригерів."
   //: /end
   //: comment g6 @(20,552) /sn:0
   //: /line:"<font size=5><a href=\"@T/welcome.v\">Повернутися до основної сторінки TkGate.</a></font>"

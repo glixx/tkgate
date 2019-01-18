@@ -1403,13 +1403,13 @@ top_node:
 	.short	0		// Pointer to "no" node
 	.byte	"aardvark",0	// Animal name or question text
 
-welcome: .byte	"\nВітаємо у «Тваринах».\n",0
+welcome: .byte	"\nВітаємо у 'Тваринах'.\n",0
 think:	.byte	"\nThink of an animal and I will try to guess what it is.\n",0
 numk:	.byte	"Зараз мені відомі %d тварин.\n\n",0
 isita: 	.byte	"Is the animal you are thinking of a %s? ",0
 yes:	.byte	"так",0
 no:	.byte	"no",0
-yesno:	.byte	"Будь ласка, введіть «так» або «ні».\n",0
+yesno:	.byte	"Будь ласка, введіть 'так' або 'ні'.\n",0
 winmsg:	.byte	"Я вгадав вашу тварину!!!\n\n",0
 loosemsg: .byte	"Не вдалося вгадати вашу тварину. Що це була за тварина? ",0
 dscrim:	.byte	"Введіть питання, яке має розрізнити %s від %s.\n> ",0

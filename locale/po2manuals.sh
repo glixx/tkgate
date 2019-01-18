@@ -215,7 +215,12 @@ do
 
         # add lang
         sed -i "s|//: property locale = \"en\"|//: property locale = \"$lang\"|g" $tmp_file1
-        
+
+        # FIXME while no utf-8 support
+        sed -i "s|«|'|g" $tmp_file1
+        sed -i "s|»|'|g" $tmp_file1
+        sed -i "s|—|-|g" $tmp_file1
+
         echo "Done for $file_v"
     done
 #    # compile menagerie.gm

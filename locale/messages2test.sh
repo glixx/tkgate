@@ -34,6 +34,12 @@ msguniq "$lang/$lang"1.po -o "$lang/$lang"3.po
 msguniq "$lang/messages_$lang".po -o "$lang/$lang"2.po
 cat $lang/"$lang"3.po |sed '1,/#: / d' > $lang/"$lang"4.po
 cat $lang/"$lang"2.po |sed '1,/#: / d' > $lang/"$lang"5.po
+
+# FIXME while no utf-8 support
+sed -i "s|«|'|g" $lang/"$lang"5.po
+sed -i "s|»|'|g" $lang/"$lang"5.po
+sed -i "s|—|-|g" $lang/"$lang"5.po
+
 diff -u "$lang/$lang"4.po "$lang/$lang"5.po > $lang/1.diff
 sed -i "/$lang\/messages/d" $lang/1.diff
 sed -i '/en\/messages/d' $lang/1.diff

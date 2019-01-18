@@ -8,7 +8,7 @@
 # ##############################################################################
 # 
 # Translators:
-# AlexL <loginov.alex.valer@gmail.com>, 2018
+# AlexL <loginov.alex.valer@gmail.com>, 2019
 # Yuri Chornoivan <yurchor@ukr.net>, 2019
 # 
 #, fuzzy
@@ -139,7 +139,8 @@ msgid ""
 msgstr ""
 "Приклад 8-бітового лічильника\n"
 "\n"
-"1) Розпочніть імітацію натисканням «Ctrl+S B»\n"
+"1) Розпочніть імітацію натисканням\n"
+"«Ctrl+S B»\n"
 "\n"
 
 msgid "8-Bit Counter"
@@ -172,8 +173,8 @@ msgid ""
 msgstr ""
 "<a href=\"ex2/flipflop.v\"><img src=\"example_flipflop.gif\">\n"
 "<h3>4-бітовий лічильник</h3></a>\n"
-"4-бітовий лічильник реалізовано за допомогою\n"
-"чотирьох однобітових D-тригерів."
+"4-бітовий лічильник реалізовано за допо-\n"
+"могою чотирьох однобітових D-тригерів."
 
 msgid ""
 "<a href=\"ex3/counter.v\"><img src=\"example_counter.gif\">\n"
