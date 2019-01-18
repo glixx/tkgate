@@ -31,7 +31,7 @@ set tkg_doBackupOnSave		1
 set tkg_wantCheckpoint		0
 set tkg_simDefaultDelayFile	"${tkg_gateHome}/gdf/default.gdf"
 set treeItemHeight		17
-set tkg_standardEncodings	{iso8859-1 iso8859-2 euc-jp utf-8}
+set tkg_standardEncodings	{iso8859-1 iso8859-2 iso8859-3 iso8859-4 iso8859-5 iso8859-6 iso8859-9 iso8859-14 iso8859-15 euc-jp utf-8 koi8-r koi8-u}
 set lastKeyPressTime		0
 
 ######################################################################
