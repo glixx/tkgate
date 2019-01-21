@@ -1,18 +1,18 @@
 #
-# This is the simulator script for the menagerie cpu example.  It
+# This is the simulator script for the menagerie cpu example. It
 # is registered to run automatically when the example is simulated.
 #
 
 #
 # Initialize the memories with the data in the menagerie.mem file.
-# The menagerie.mem file was compiled using gmac from the menagerie.gm 
+# The menagerie.mem file was compiled using gmac from the menagerie.gm
 # file.
 #
 load "menagerie.mem"
 
 #
-# Set the zoom factor for the scope.  This command will zoom out
-# three steps to show a larger time range. 
+# Set the zoom factor for the scope. This command will zoom out
+# three steps to show a larger time range.
 #
 zoom 3
 
@@ -25,14 +25,14 @@ zoom 3
 
 #
 # Set the reset (active low) line to '0', step two clocks and
-# then set the reset line back to '1'.  This sequence resets
-# the cpu. 
+# then set the reset line back to '1'. This sequence resets
+# the cpu.
 #
 set reset 1'b0
 clock +2
 set reset 1'b1
 
 #
-# Start simulating the circuit in continous mode.
+# Start simulating the circuit in continuous mode.
 #
 run
