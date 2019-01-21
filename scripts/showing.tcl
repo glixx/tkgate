@@ -67,26 +67,20 @@ proc showLicense {} {
 }
 
 proc showDocumentation {} {
-  global bd tkg_progVer tkg_copyright tkg_homepage tkg_localdoc
+  global bd tkg_progVer tkg_copyright tkg_homepage tkg_localdoc tkg_gateHome
 
-  gat_dohyperlink $tkg_localdoc
-
-  if {0} {
+  if { [file exists $tkg_gateHome[lreplace [split $tkg_localdoc H] 0 0]] == 1} {
+     gat_dohyperlink $tkg_localdoc
+  } else {
     set L {}
     lappend L "TkGate $tkg_progVer - [m cprt.descr]"
     lappend L ""
     lappend L "$tkg_copyright"
     lappend L ""
-#    lappend L "Currently there is no built-in documentation for TkGate other than the"
-#    lappend L "balloon help which can be activated by placing the mouse cursor over"
-#    lappend L "interface elements, and the online tutorials available. Documentation"
-#    lappend L "can be found by pointing your Web browser at the TkGate homepage:"
-#    lappend L ""
+    lappend L "[m no_docs]"
+    lappend L ""
     lappend L "$tkg_homepage"
     lappend L ""
-#    lappend L "or through the copy of the documentation included in this distribution at:"
-#    lappend L ""
-#    lappend L "   $tkg_localdoc"
 
     showDocFile [m showdoc] "" $L
   }

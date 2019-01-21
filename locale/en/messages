@@ -3103,3 +3103,10 @@ cokemachine			Coke Machine Interface
 m68xx				Motorola 68xx chips
 timer				Oscillators and One-Shots with absolute time delays
 ttydevice			Interactive TTY Device
+
+no_docs	-begin-
+Documentation was not installed. You need to install the copy of the
+documentation included in distribution. But you still have tutorials,
+examples and balloon help, which can be activated by placing the mouse
+cursor over interface elements.
+-end-
