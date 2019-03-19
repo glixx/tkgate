@@ -228,6 +228,7 @@ namespace eval SpreadSheet {
     clearselection $w
 
     if { $r >= $parms($w:height) } { return 0 }
+    if { $parms($w:numrows) == 0 } { return 0 }
 
     set er [getEffectiveRow $w $r]
 
