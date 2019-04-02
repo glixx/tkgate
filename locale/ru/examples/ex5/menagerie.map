@@ -63,7 +63,7 @@ Macrocode Symbols (total=71):
   Global         Local
   ---------------------------------------
   buf                            000005e8
-  dscrim                         00000784
+  dscrim                         00000867
   find_animal                    0000016c
                  done            00000250
                  get_response    00000198
@@ -86,15 +86,15 @@ Macrocode Symbols (total=71):
                  cwait           00000566
                  del_char        000005a8
                  done            000005d6
-  isita                          000006e7
+  isita                          00000757
   known                          00000668
-  loosemsg                       0000074e
+  loosemsg                       000007fc
   main                           00000112
                  loop            00000130
   malloc                         00000416
-  mend                           000007e5
-  nl                             000007e0
-  no                             00000714
+  mend                           000008e7
+  nl                             000008e2
+  no                             00000788
   no_b                           00000002
   nprint                         000004d4
                  zprint          000004ea
@@ -102,7 +102,7 @@ Macrocode Symbols (total=71):
                  digit           fffffffe
                  done            00000532
   nsize                          00000068
-  numk                           000006c8
+  numk                           00000713
   print                          00000420
                  done            0000043c
                  loop            00000424
@@ -114,7 +114,7 @@ Macrocode Symbols (total=71):
                  done            000004d2
                  loop            0000044c
                  ptr             fffffffe
-  qprompt                        000007e2
+  qprompt                        000008e4
   root                           0000066a
   sdone                          0000010e
   start                          00000100
@@ -123,15 +123,15 @@ Macrocode Symbols (total=71):
                  eos             0000055a
                  loop            0000053c
   text                           00000004
-  think                          0000068f
+  think                          000006ba
   top_node                       0000066c
   ttydata                        00000011
   ttystatus                      00000010
-  welcome                        00000679
-  which                          000007bf
-  winmsg                         00000733
-  yes                            00000710
+  welcome                        00000683
+  which                          000008b6
+  winmsg                         000007cd
+  yes                            00000783
   yes_b                          00000000
-  yesno                          00000717
+  yesno                          0000078f
 
 

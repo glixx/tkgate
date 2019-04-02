@@ -54,9 +54,9 @@ set tkg_borderSize		2
 #
 # Executable for simulator
 #
-if {[file exists "${tkg_gateHome}/libexec/verga"]}{
+if { [file exists "${tkg_gateHome}/libexec/verga"] } {
    set simExec "${tkg_gateHome}/libexec/verga"
-}else{
+} else {
    set simExec "/usr/bin/verga"
 }
 

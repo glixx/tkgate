@@ -171,8 +171,17 @@ void Html_invoke_file(char * file)
     memmove(file+3,file,strlen(file)+1);
     memmove(file,"@C/",3);
   }
+  
+
+  struct stat st;
+  char tmpFile[STRMAX];
+  strcpy(tmpFile,file);
+  expandSpecialDirs(tmpFile);
+  if (stat(tmpFile,&st)==-1) strreplace(file,"@L","en",1);  
+
   expandSpecialDirs(file);
 
+  
   /*
    * See if there is a label
    */
