@@ -69,21 +69,7 @@ proc showLicense {} {
 proc showDocumentation {} {
   global bd tkg_progVer tkg_copyright tkg_homepage tkg_localdoc tkg_gateHome
 
-  if { [file exists $tkg_gateHome[lreplace [split $tkg_localdoc H] 0 0]] == 1} {
-     gat_dohyperlink $tkg_localdoc
-  } else {
-    set L {}
-    lappend L "TkGate $tkg_progVer - [m cprt.descr]"
-    lappend L ""
-    lappend L "$tkg_copyright"
-    lappend L ""
-    lappend L "[m no_docs]"
-    lappend L ""
-    lappend L "$tkg_homepage"
-    lappend L ""
-
-    showDocFile [m showdoc] "" $L
-  }
+  gat_dohyperlink $tkg_localdoc
 }
 
 proc showAbout {} {
