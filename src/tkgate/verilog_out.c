@@ -27,6 +27,7 @@
 
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 
 #include "tkgate.h"
 
@@ -889,6 +890,7 @@ static int check_file(const char *name)
 {
   char cmd[STRMAX];
   int pid = 0,status = 0;
+  struct stat st;
 
 #if 0
   /* Mess with the file to simulate corruption. */
@@ -897,6 +899,10 @@ static int check_file(const char *name)
 #endif
 
   sprintf(cmd,"%s/libexec/tkgate",TkGate.homedir);
+  if (stat(cmd,&st)==-1){
+     sprintf(cmd,"/usr/bin/tkgate");
+  }
+  
   if (!(pid = fork())) {
     execl(cmd,cmd,"-Vq",name,(char*)NULL);
     exit(1);
